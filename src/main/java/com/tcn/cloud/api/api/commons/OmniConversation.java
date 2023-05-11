@@ -100,6 +100,47 @@ private static final long serialVersionUID = 0L;
      * @return The campaignShortenUrl.
      */
     boolean getCampaignShortenUrl();
+
+    /**
+     * <pre>
+     * payment portal ids
+     * </pre>
+     *
+     * <code>repeated string payment_portal_ids = 4 [json_name = "paymentPortalIds"];</code>
+     * @return A list containing the paymentPortalIds.
+     */
+    java.util.List<java.lang.String>
+        getPaymentPortalIdsList();
+    /**
+     * <pre>
+     * payment portal ids
+     * </pre>
+     *
+     * <code>repeated string payment_portal_ids = 4 [json_name = "paymentPortalIds"];</code>
+     * @return The count of paymentPortalIds.
+     */
+    int getPaymentPortalIdsCount();
+    /**
+     * <pre>
+     * payment portal ids
+     * </pre>
+     *
+     * <code>repeated string payment_portal_ids = 4 [json_name = "paymentPortalIds"];</code>
+     * @param index The index of the element to return.
+     * @return The paymentPortalIds at the given index.
+     */
+    java.lang.String getPaymentPortalIds(int index);
+    /**
+     * <pre>
+     * payment portal ids
+     * </pre>
+     *
+     * <code>repeated string payment_portal_ids = 4 [json_name = "paymentPortalIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the paymentPortalIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getPaymentPortalIdsBytes(int index);
   }
   /**
    * <pre>
@@ -120,6 +161,8 @@ private static final long serialVersionUID = 0L;
     private ConversationDetails() {
       campaignName_ = "";
       supportEmail_ = "";
+      paymentPortalIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
     @java.lang.Override
@@ -251,6 +294,59 @@ private static final long serialVersionUID = 0L;
       return campaignShortenUrl_;
     }
 
+    public static final int PAYMENT_PORTAL_IDS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList paymentPortalIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * payment portal ids
+     * </pre>
+     *
+     * <code>repeated string payment_portal_ids = 4 [json_name = "paymentPortalIds"];</code>
+     * @return A list containing the paymentPortalIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getPaymentPortalIdsList() {
+      return paymentPortalIds_;
+    }
+    /**
+     * <pre>
+     * payment portal ids
+     * </pre>
+     *
+     * <code>repeated string payment_portal_ids = 4 [json_name = "paymentPortalIds"];</code>
+     * @return The count of paymentPortalIds.
+     */
+    public int getPaymentPortalIdsCount() {
+      return paymentPortalIds_.size();
+    }
+    /**
+     * <pre>
+     * payment portal ids
+     * </pre>
+     *
+     * <code>repeated string payment_portal_ids = 4 [json_name = "paymentPortalIds"];</code>
+     * @param index The index of the element to return.
+     * @return The paymentPortalIds at the given index.
+     */
+    public java.lang.String getPaymentPortalIds(int index) {
+      return paymentPortalIds_.get(index);
+    }
+    /**
+     * <pre>
+     * payment portal ids
+     * </pre>
+     *
+     * <code>repeated string payment_portal_ids = 4 [json_name = "paymentPortalIds"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the paymentPortalIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getPaymentPortalIdsBytes(int index) {
+      return paymentPortalIds_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -274,6 +370,9 @@ private static final long serialVersionUID = 0L;
       if (campaignShortenUrl_ != false) {
         output.writeBool(3, campaignShortenUrl_);
       }
+      for (int i = 0; i < paymentPortalIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, paymentPortalIds_.getRaw(i));
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -292,6 +391,14 @@ private static final long serialVersionUID = 0L;
       if (campaignShortenUrl_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(3, campaignShortenUrl_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < paymentPortalIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(paymentPortalIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getPaymentPortalIdsList().size();
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -314,6 +421,8 @@ private static final long serialVersionUID = 0L;
           .equals(other.getSupportEmail())) return false;
       if (getCampaignShortenUrl()
           != other.getCampaignShortenUrl()) return false;
+      if (!getPaymentPortalIdsList()
+          .equals(other.getPaymentPortalIdsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -332,6 +441,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CAMPAIGN_SHORTEN_URL_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getCampaignShortenUrl());
+      if (getPaymentPortalIdsCount() > 0) {
+        hash = (37 * hash) + PAYMENT_PORTAL_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getPaymentPortalIdsList().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -470,6 +583,8 @@ private static final long serialVersionUID = 0L;
         campaignName_ = "";
         supportEmail_ = "";
         campaignShortenUrl_ = false;
+        paymentPortalIds_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         return this;
       }
 
@@ -512,6 +627,10 @@ private static final long serialVersionUID = 0L;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.campaignShortenUrl_ = campaignShortenUrl_;
         }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          paymentPortalIds_.makeImmutable();
+          result.paymentPortalIds_ = paymentPortalIds_;
+        }
       }
 
       @java.lang.Override
@@ -538,6 +657,16 @@ private static final long serialVersionUID = 0L;
         }
         if (other.getCampaignShortenUrl() != false) {
           setCampaignShortenUrl(other.getCampaignShortenUrl());
+        }
+        if (!other.paymentPortalIds_.isEmpty()) {
+          if (paymentPortalIds_.isEmpty()) {
+            paymentPortalIds_ = other.paymentPortalIds_;
+            bitField0_ |= 0x00000008;
+          } else {
+            ensurePaymentPortalIdsIsMutable();
+            paymentPortalIds_.addAll(other.paymentPortalIds_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -580,6 +709,12 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000004;
                 break;
               } // case 24
+              case 34: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensurePaymentPortalIdsIsMutable();
+                paymentPortalIds_.add(s);
+                break;
+              } // case 34
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -821,6 +956,153 @@ private static final long serialVersionUID = 0L;
       public Builder clearCampaignShortenUrl() {
         bitField0_ = (bitField0_ & ~0x00000004);
         campaignShortenUrl_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList paymentPortalIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensurePaymentPortalIdsIsMutable() {
+        if (!paymentPortalIds_.isModifiable()) {
+          paymentPortalIds_ = new com.google.protobuf.LazyStringArrayList(paymentPortalIds_);
+        }
+        bitField0_ |= 0x00000008;
+      }
+      /**
+       * <pre>
+       * payment portal ids
+       * </pre>
+       *
+       * <code>repeated string payment_portal_ids = 4 [json_name = "paymentPortalIds"];</code>
+       * @return A list containing the paymentPortalIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getPaymentPortalIdsList() {
+        paymentPortalIds_.makeImmutable();
+        return paymentPortalIds_;
+      }
+      /**
+       * <pre>
+       * payment portal ids
+       * </pre>
+       *
+       * <code>repeated string payment_portal_ids = 4 [json_name = "paymentPortalIds"];</code>
+       * @return The count of paymentPortalIds.
+       */
+      public int getPaymentPortalIdsCount() {
+        return paymentPortalIds_.size();
+      }
+      /**
+       * <pre>
+       * payment portal ids
+       * </pre>
+       *
+       * <code>repeated string payment_portal_ids = 4 [json_name = "paymentPortalIds"];</code>
+       * @param index The index of the element to return.
+       * @return The paymentPortalIds at the given index.
+       */
+      public java.lang.String getPaymentPortalIds(int index) {
+        return paymentPortalIds_.get(index);
+      }
+      /**
+       * <pre>
+       * payment portal ids
+       * </pre>
+       *
+       * <code>repeated string payment_portal_ids = 4 [json_name = "paymentPortalIds"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the paymentPortalIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getPaymentPortalIdsBytes(int index) {
+        return paymentPortalIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * payment portal ids
+       * </pre>
+       *
+       * <code>repeated string payment_portal_ids = 4 [json_name = "paymentPortalIds"];</code>
+       * @param index The index to set the value at.
+       * @param value The paymentPortalIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPaymentPortalIds(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensurePaymentPortalIdsIsMutable();
+        paymentPortalIds_.set(index, value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * payment portal ids
+       * </pre>
+       *
+       * <code>repeated string payment_portal_ids = 4 [json_name = "paymentPortalIds"];</code>
+       * @param value The paymentPortalIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPaymentPortalIds(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensurePaymentPortalIdsIsMutable();
+        paymentPortalIds_.add(value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * payment portal ids
+       * </pre>
+       *
+       * <code>repeated string payment_portal_ids = 4 [json_name = "paymentPortalIds"];</code>
+       * @param values The paymentPortalIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPaymentPortalIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensurePaymentPortalIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, paymentPortalIds_);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * payment portal ids
+       * </pre>
+       *
+       * <code>repeated string payment_portal_ids = 4 [json_name = "paymentPortalIds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPaymentPortalIds() {
+        paymentPortalIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * payment portal ids
+       * </pre>
+       *
+       * <code>repeated string payment_portal_ids = 4 [json_name = "paymentPortalIds"];</code>
+       * @param value The bytes of the paymentPortalIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPaymentPortalIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensurePaymentPortalIdsIsMutable();
+        paymentPortalIds_.add(value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }

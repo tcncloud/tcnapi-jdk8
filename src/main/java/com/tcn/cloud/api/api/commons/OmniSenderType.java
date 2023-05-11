@@ -24,6 +24,10 @@ public enum OmniSenderType
    * <code>OMNI_SENDER_TYPE_MANAGER = 3;</code>
    */
   OMNI_SENDER_TYPE_MANAGER(3),
+  /**
+   * <code>OMNI_SENDER_TYPE_FLOW = 4;</code>
+   */
+  OMNI_SENDER_TYPE_FLOW(4),
   UNRECOGNIZED(-1),
   ;
 
@@ -43,6 +47,10 @@ public enum OmniSenderType
    * <code>OMNI_SENDER_TYPE_MANAGER = 3;</code>
    */
   public static final int OMNI_SENDER_TYPE_MANAGER_VALUE = 3;
+  /**
+   * <code>OMNI_SENDER_TYPE_FLOW = 4;</code>
+   */
+  public static final int OMNI_SENDER_TYPE_FLOW_VALUE = 4;
 
 
   public final int getNumber() {
@@ -73,6 +81,7 @@ public enum OmniSenderType
       case 1: return OMNI_SENDER_TYPE_CUSTOMER;
       case 2: return OMNI_SENDER_TYPE_SYSTEM;
       case 3: return OMNI_SENDER_TYPE_MANAGER;
+      case 4: return OMNI_SENDER_TYPE_FLOW;
       default: return null;
     }
   }

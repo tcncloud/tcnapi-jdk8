@@ -229,6 +229,11 @@ public final class OmnichannelEventsProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_audit_OmnichannelSystemMessageUnitsEvent_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_audit_OmnichannelPaymentLinkSentEvent_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_audit_OmnichannelPaymentLinkSentEvent_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -470,11 +475,14 @@ public final class OmnichannelEventsProto {
       "sageUnits\"}\n\"OmnichannelSystemMessageUni" +
       "tsEvent\0222\n\007message\030\001 \001(\0132\030.api.commons.O" +
       "mniMessageR\007message\022#\n\rmessage_units\030\002 \001" +
-      "(\005R\014messageUnitsB\243\001\n#com.tcn.cloud.api.a" +
-      "pi.commons.auditB\026OmnichannelEventsProto" +
-      "P\001\242\002\003ACA\252\002\021Api.Commons.Audit\312\002\021Api\\Commo" +
-      "ns\\Audit\342\002\035Api\\Commons\\Audit\\GPBMetadata" +
-      "\352\002\023Api::Commons::Auditb\006proto3"
+      "(\005R\014messageUnits\"i\n\037OmnichannelPaymentLi" +
+      "nkSentEvent\0222\n\007message\030\001 \001(\0132\030.api.commo" +
+      "ns.OmniMessageR\007message\022\022\n\004link\030\002 \001(\tR\004l" +
+      "inkB\243\001\n#com.tcn.cloud.api.api.commons.au" +
+      "ditB\026OmnichannelEventsProtoP\001\242\002\003ACA\252\002\021Ap" +
+      "i.Commons.Audit\312\002\021Api\\Commons\\Audit\342\002\035Ap" +
+      "i\\Commons\\Audit\\GPBMetadata\352\002\023Api::Commo" +
+      "ns::Auditb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -740,6 +748,12 @@ public final class OmnichannelEventsProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_OmnichannelSystemMessageUnitsEvent_descriptor,
         new java.lang.String[] { "Message", "MessageUnits", });
+    internal_static_api_commons_audit_OmnichannelPaymentLinkSentEvent_descriptor =
+      getDescriptor().getMessageTypes().get(43);
+    internal_static_api_commons_audit_OmnichannelPaymentLinkSentEvent_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_audit_OmnichannelPaymentLinkSentEvent_descriptor,
+        new java.lang.String[] { "Message", "Link", });
     com.tcn.cloud.api.api.commons.OmnichannelProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
   }

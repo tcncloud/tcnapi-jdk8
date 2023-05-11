@@ -400,6 +400,14 @@ public enum EventType
   OMNICHANNEL_SYSTEM_MESSAGE_UNITS(356),
   /**
    * <pre>
+   * omnichannel payment link was sent
+   * </pre>
+   *
+   * <code>OMNICHANNEL_PAYMENT_LINK_SENT = 357;</code>
+   */
+  OMNICHANNEL_PAYMENT_LINK_SENT(357),
+  /**
+   * <pre>
    * ASM
    * agent logs into asm
    * </pre>
@@ -1071,6 +1079,14 @@ public enum EventType
   public static final int OMNICHANNEL_SYSTEM_MESSAGE_UNITS_VALUE = 356;
   /**
    * <pre>
+   * omnichannel payment link was sent
+   * </pre>
+   *
+   * <code>OMNICHANNEL_PAYMENT_LINK_SENT = 357;</code>
+   */
+  public static final int OMNICHANNEL_PAYMENT_LINK_SENT_VALUE = 357;
+  /**
+   * <pre>
    * ASM
    * agent logs into asm
    * </pre>
@@ -1439,6 +1455,7 @@ public enum EventType
       case 354: return OMNICHANNEL_MANAGER_MESSAGE_UNITS;
       case 355: return OMNICHANNEL_CUSTOMER_MESSAGE_UNITS;
       case 356: return OMNICHANNEL_SYSTEM_MESSAGE_UNITS;
+      case 357: return OMNICHANNEL_PAYMENT_LINK_SENT;
       case 400: return ASM_AGENT_LOGIN;
       case 401: return ASM_OPEN_VOICE;
       case 402: return ASM_OPEN_OMNI_AGENT;

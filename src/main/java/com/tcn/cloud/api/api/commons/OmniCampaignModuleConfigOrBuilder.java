@@ -502,30 +502,42 @@ public interface OmniCampaignModuleConfigOrBuilder extends
 
   /**
    * <pre>
-   * Payment Portal Sids
+   * Payment Portal Ids
    * </pre>
    *
-   * <code>repeated int64 payment_portal_sids = 19 [json_name = "paymentPortalSids"];</code>
-   * @return A list containing the paymentPortalSids.
+   * <code>repeated string payment_portal_ids = 19 [json_name = "paymentPortalIds"];</code>
+   * @return A list containing the paymentPortalIds.
    */
-  java.util.List<java.lang.Long> getPaymentPortalSidsList();
+  java.util.List<java.lang.String>
+      getPaymentPortalIdsList();
   /**
    * <pre>
-   * Payment Portal Sids
+   * Payment Portal Ids
    * </pre>
    *
-   * <code>repeated int64 payment_portal_sids = 19 [json_name = "paymentPortalSids"];</code>
-   * @return The count of paymentPortalSids.
+   * <code>repeated string payment_portal_ids = 19 [json_name = "paymentPortalIds"];</code>
+   * @return The count of paymentPortalIds.
    */
-  int getPaymentPortalSidsCount();
+  int getPaymentPortalIdsCount();
   /**
    * <pre>
-   * Payment Portal Sids
+   * Payment Portal Ids
    * </pre>
    *
-   * <code>repeated int64 payment_portal_sids = 19 [json_name = "paymentPortalSids"];</code>
+   * <code>repeated string payment_portal_ids = 19 [json_name = "paymentPortalIds"];</code>
    * @param index The index of the element to return.
-   * @return The paymentPortalSids at the given index.
+   * @return The paymentPortalIds at the given index.
    */
-  long getPaymentPortalSids(int index);
+  java.lang.String getPaymentPortalIds(int index);
+  /**
+   * <pre>
+   * Payment Portal Ids
+   * </pre>
+   *
+   * <code>repeated string payment_portal_ids = 19 [json_name = "paymentPortalIds"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the paymentPortalIds at the given index.
+   */
+  com.google.protobuf.ByteString
+      getPaymentPortalIdsBytes(int index);
 }

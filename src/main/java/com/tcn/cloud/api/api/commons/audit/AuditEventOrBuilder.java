@@ -1365,6 +1365,33 @@ public interface AuditEventOrBuilder extends
 
   /**
    * <pre>
+   * an event for when a payment link is sent
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelPaymentLinkSentEvent omnichannel_payment_link_sent_event = 357 [json_name = "omnichannelPaymentLinkSentEvent"];</code>
+   * @return Whether the omnichannelPaymentLinkSentEvent field is set.
+   */
+  boolean hasOmnichannelPaymentLinkSentEvent();
+  /**
+   * <pre>
+   * an event for when a payment link is sent
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelPaymentLinkSentEvent omnichannel_payment_link_sent_event = 357 [json_name = "omnichannelPaymentLinkSentEvent"];</code>
+   * @return The omnichannelPaymentLinkSentEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent getOmnichannelPaymentLinkSentEvent();
+  /**
+   * <pre>
+   * an event for when a payment link is sent
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelPaymentLinkSentEvent omnichannel_payment_link_sent_event = 357 [json_name = "omnichannelPaymentLinkSentEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEventOrBuilder getOmnichannelPaymentLinkSentEventOrBuilder();
+
+  /**
+   * <pre>
    *&#47; Asm events 400
    * agent logged into asm event
    * </pre>

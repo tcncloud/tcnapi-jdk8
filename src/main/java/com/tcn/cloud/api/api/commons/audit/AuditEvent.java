@@ -101,6 +101,7 @@ private static final long serialVersionUID = 0L;
     OMNICHANNEL_MANAGER_MESSAGE_UNITS_EVENT(354),
     OMNICHANNEL_CUSTOMER_MESSAGE_UNITS_EVENT(355),
     OMNICHANNEL_SYSTEM_MESSAGE_UNITS_EVENT(356),
+    OMNICHANNEL_PAYMENT_LINK_SENT_EVENT(357),
     ASM_AGENT_LOGIN_EVENT(400),
     ASM_OPEN_VOICE_EVENT(401),
     ASM_OPEN_OMNI_AGENT_EVENT(402),
@@ -200,6 +201,7 @@ private static final long serialVersionUID = 0L;
         case 354: return OMNICHANNEL_MANAGER_MESSAGE_UNITS_EVENT;
         case 355: return OMNICHANNEL_CUSTOMER_MESSAGE_UNITS_EVENT;
         case 356: return OMNICHANNEL_SYSTEM_MESSAGE_UNITS_EVENT;
+        case 357: return OMNICHANNEL_PAYMENT_LINK_SENT_EVENT;
         case 400: return ASM_AGENT_LOGIN_EVENT;
         case 401: return ASM_OPEN_VOICE_EVENT;
         case 402: return ASM_OPEN_OMNI_AGENT_EVENT;
@@ -2499,6 +2501,49 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.audit.OmnichannelSystemMessageUnitsEvent.getDefaultInstance();
   }
 
+  public static final int OMNICHANNEL_PAYMENT_LINK_SENT_EVENT_FIELD_NUMBER = 357;
+  /**
+   * <pre>
+   * an event for when a payment link is sent
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelPaymentLinkSentEvent omnichannel_payment_link_sent_event = 357 [json_name = "omnichannelPaymentLinkSentEvent"];</code>
+   * @return Whether the omnichannelPaymentLinkSentEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasOmnichannelPaymentLinkSentEvent() {
+    return eventCase_ == 357;
+  }
+  /**
+   * <pre>
+   * an event for when a payment link is sent
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelPaymentLinkSentEvent omnichannel_payment_link_sent_event = 357 [json_name = "omnichannelPaymentLinkSentEvent"];</code>
+   * @return The omnichannelPaymentLinkSentEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent getOmnichannelPaymentLinkSentEvent() {
+    if (eventCase_ == 357) {
+       return (com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * an event for when a payment link is sent
+   * </pre>
+   *
+   * <code>.api.commons.audit.OmnichannelPaymentLinkSentEvent omnichannel_payment_link_sent_event = 357 [json_name = "omnichannelPaymentLinkSentEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEventOrBuilder getOmnichannelPaymentLinkSentEventOrBuilder() {
+    if (eventCase_ == 357) {
+       return (com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent.getDefaultInstance();
+  }
+
   public static final int ASM_AGENT_LOGIN_EVENT_FIELD_NUMBER = 400;
   /**
    * <pre>
@@ -4149,6 +4194,9 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 356) {
       output.writeMessage(356, (com.tcn.cloud.api.api.commons.audit.OmnichannelSystemMessageUnitsEvent) event_);
     }
+    if (eventCase_ == 357) {
+      output.writeMessage(357, (com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent) event_);
+    }
     if (eventCase_ == 400) {
       output.writeMessage(400, (com.tcn.cloud.api.api.commons.audit.AsmAgentLoginEvent) event_);
     }
@@ -4471,6 +4519,10 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 356) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(356, (com.tcn.cloud.api.api.commons.audit.OmnichannelSystemMessageUnitsEvent) event_);
+    }
+    if (eventCase_ == 357) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(357, (com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent) event_);
     }
     if (eventCase_ == 400) {
       size += com.google.protobuf.CodedOutputStream
@@ -4831,6 +4883,10 @@ private static final long serialVersionUID = 0L;
         if (!getOmnichannelSystemMessageUnitsEvent()
             .equals(other.getOmnichannelSystemMessageUnitsEvent())) return false;
         break;
+      case 357:
+        if (!getOmnichannelPaymentLinkSentEvent()
+            .equals(other.getOmnichannelPaymentLinkSentEvent())) return false;
+        break;
       case 400:
         if (!getAsmAgentLoginEvent()
             .equals(other.getAsmAgentLoginEvent())) return false;
@@ -5187,6 +5243,10 @@ private static final long serialVersionUID = 0L;
       case 356:
         hash = (37 * hash) + OMNICHANNEL_SYSTEM_MESSAGE_UNITS_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getOmnichannelSystemMessageUnitsEvent().hashCode();
+        break;
+      case 357:
+        hash = (37 * hash) + OMNICHANNEL_PAYMENT_LINK_SENT_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getOmnichannelPaymentLinkSentEvent().hashCode();
         break;
       case 400:
         hash = (37 * hash) + ASM_AGENT_LOGIN_EVENT_FIELD_NUMBER;
@@ -5618,6 +5678,9 @@ private static final long serialVersionUID = 0L;
       if (omnichannelSystemMessageUnitsEventBuilder_ != null) {
         omnichannelSystemMessageUnitsEventBuilder_.clear();
       }
+      if (omnichannelPaymentLinkSentEventBuilder_ != null) {
+        omnichannelPaymentLinkSentEventBuilder_.clear();
+      }
       if (asmAgentLoginEventBuilder_ != null) {
         asmAgentLoginEventBuilder_.clear();
       }
@@ -5982,6 +6045,10 @@ private static final long serialVersionUID = 0L;
       if (eventCase_ == 356 &&
           omnichannelSystemMessageUnitsEventBuilder_ != null) {
         result.event_ = omnichannelSystemMessageUnitsEventBuilder_.build();
+      }
+      if (eventCase_ == 357 &&
+          omnichannelPaymentLinkSentEventBuilder_ != null) {
+        result.event_ = omnichannelPaymentLinkSentEventBuilder_.build();
       }
       if (eventCase_ == 400 &&
           asmAgentLoginEventBuilder_ != null) {
@@ -6350,6 +6417,10 @@ private static final long serialVersionUID = 0L;
         }
         case OMNICHANNEL_SYSTEM_MESSAGE_UNITS_EVENT: {
           mergeOmnichannelSystemMessageUnitsEvent(other.getOmnichannelSystemMessageUnitsEvent());
+          break;
+        }
+        case OMNICHANNEL_PAYMENT_LINK_SENT_EVENT: {
+          mergeOmnichannelPaymentLinkSentEvent(other.getOmnichannelPaymentLinkSentEvent());
           break;
         }
         case ASM_AGENT_LOGIN_EVENT: {
@@ -6886,6 +6957,13 @@ private static final long serialVersionUID = 0L;
               eventCase_ = 356;
               break;
             } // case 2850
+            case 2858: {
+              input.readMessage(
+                  getOmnichannelPaymentLinkSentEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 357;
+              break;
+            } // case 2858
             case 3202: {
               input.readMessage(
                   getAsmAgentLoginEventFieldBuilder().getBuilder(),
@@ -16095,6 +16173,184 @@ private static final long serialVersionUID = 0L;
       eventCase_ = 356;
       onChanged();
       return omnichannelSystemMessageUnitsEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEventOrBuilder> omnichannelPaymentLinkSentEventBuilder_;
+    /**
+     * <pre>
+     * an event for when a payment link is sent
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelPaymentLinkSentEvent omnichannel_payment_link_sent_event = 357 [json_name = "omnichannelPaymentLinkSentEvent"];</code>
+     * @return Whether the omnichannelPaymentLinkSentEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasOmnichannelPaymentLinkSentEvent() {
+      return eventCase_ == 357;
+    }
+    /**
+     * <pre>
+     * an event for when a payment link is sent
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelPaymentLinkSentEvent omnichannel_payment_link_sent_event = 357 [json_name = "omnichannelPaymentLinkSentEvent"];</code>
+     * @return The omnichannelPaymentLinkSentEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent getOmnichannelPaymentLinkSentEvent() {
+      if (omnichannelPaymentLinkSentEventBuilder_ == null) {
+        if (eventCase_ == 357) {
+          return (com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 357) {
+          return omnichannelPaymentLinkSentEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * an event for when a payment link is sent
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelPaymentLinkSentEvent omnichannel_payment_link_sent_event = 357 [json_name = "omnichannelPaymentLinkSentEvent"];</code>
+     */
+    public Builder setOmnichannelPaymentLinkSentEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent value) {
+      if (omnichannelPaymentLinkSentEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        omnichannelPaymentLinkSentEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 357;
+      return this;
+    }
+    /**
+     * <pre>
+     * an event for when a payment link is sent
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelPaymentLinkSentEvent omnichannel_payment_link_sent_event = 357 [json_name = "omnichannelPaymentLinkSentEvent"];</code>
+     */
+    public Builder setOmnichannelPaymentLinkSentEvent(
+        com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent.Builder builderForValue) {
+      if (omnichannelPaymentLinkSentEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        omnichannelPaymentLinkSentEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 357;
+      return this;
+    }
+    /**
+     * <pre>
+     * an event for when a payment link is sent
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelPaymentLinkSentEvent omnichannel_payment_link_sent_event = 357 [json_name = "omnichannelPaymentLinkSentEvent"];</code>
+     */
+    public Builder mergeOmnichannelPaymentLinkSentEvent(com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent value) {
+      if (omnichannelPaymentLinkSentEventBuilder_ == null) {
+        if (eventCase_ == 357 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 357) {
+          omnichannelPaymentLinkSentEventBuilder_.mergeFrom(value);
+        } else {
+          omnichannelPaymentLinkSentEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 357;
+      return this;
+    }
+    /**
+     * <pre>
+     * an event for when a payment link is sent
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelPaymentLinkSentEvent omnichannel_payment_link_sent_event = 357 [json_name = "omnichannelPaymentLinkSentEvent"];</code>
+     */
+    public Builder clearOmnichannelPaymentLinkSentEvent() {
+      if (omnichannelPaymentLinkSentEventBuilder_ == null) {
+        if (eventCase_ == 357) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 357) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        omnichannelPaymentLinkSentEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * an event for when a payment link is sent
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelPaymentLinkSentEvent omnichannel_payment_link_sent_event = 357 [json_name = "omnichannelPaymentLinkSentEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent.Builder getOmnichannelPaymentLinkSentEventBuilder() {
+      return getOmnichannelPaymentLinkSentEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * an event for when a payment link is sent
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelPaymentLinkSentEvent omnichannel_payment_link_sent_event = 357 [json_name = "omnichannelPaymentLinkSentEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEventOrBuilder getOmnichannelPaymentLinkSentEventOrBuilder() {
+      if ((eventCase_ == 357) && (omnichannelPaymentLinkSentEventBuilder_ != null)) {
+        return omnichannelPaymentLinkSentEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 357) {
+          return (com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * an event for when a payment link is sent
+     * </pre>
+     *
+     * <code>.api.commons.audit.OmnichannelPaymentLinkSentEvent omnichannel_payment_link_sent_event = 357 [json_name = "omnichannelPaymentLinkSentEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEventOrBuilder> 
+        getOmnichannelPaymentLinkSentEventFieldBuilder() {
+      if (omnichannelPaymentLinkSentEventBuilder_ == null) {
+        if (!(eventCase_ == 357)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent.getDefaultInstance();
+        }
+        omnichannelPaymentLinkSentEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent, com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent.Builder, com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 357;
+      onChanged();
+      return omnichannelPaymentLinkSentEventBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
