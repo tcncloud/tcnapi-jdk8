@@ -658,14 +658,6 @@ public enum EventType
   SCORECARDS_CREATE_AUTO_EVALUATION_EVENT(521),
   /**
    * <pre>
-   * update evaluation event
-   * </pre>
-   *
-   * <code>SCORECARDS_UPDATE_EVALUATION_EVENT = 522;</code>
-   */
-  SCORECARDS_UPDATE_EVALUATION_EVENT(522),
-  /**
-   * <pre>
    *Tickets Events
    * create event
    * </pre>
@@ -1345,14 +1337,6 @@ public enum EventType
   public static final int SCORECARDS_CREATE_AUTO_EVALUATION_EVENT_VALUE = 521;
   /**
    * <pre>
-   * update evaluation event
-   * </pre>
-   *
-   * <code>SCORECARDS_UPDATE_EVALUATION_EVENT = 522;</code>
-   */
-  public static final int SCORECARDS_UPDATE_EVALUATION_EVENT_VALUE = 522;
-  /**
-   * <pre>
    *Tickets Events
    * create event
    * </pre>
@@ -1503,7 +1487,6 @@ public enum EventType
       case 519: return SCORECARDS_UPDATE_SCORECARD_QUESTION_EVENT;
       case 520: return SCORECARDS_DELETE_SCORECARD_QUESTION_EVENT;
       case 521: return SCORECARDS_CREATE_AUTO_EVALUATION_EVENT;
-      case 522: return SCORECARDS_UPDATE_EVALUATION_EVENT;
       case 600: return TICKET_CREATE_EVENT;
       case 601: return TICKET_EDIT_EVENT;
       case 602: return TICKET_CLOSE_EVENT;

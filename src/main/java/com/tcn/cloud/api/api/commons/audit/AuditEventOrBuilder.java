@@ -2235,33 +2235,6 @@ public interface AuditEventOrBuilder extends
 
   /**
    * <pre>
-   * evaluation library evaluation updated
-   * </pre>
-   *
-   * <code>.api.commons.audit.ScorecardsUpdateEvaluationEvent scorecards_update_evaluation_event = 522 [json_name = "scorecardsUpdateEvaluationEvent"];</code>
-   * @return Whether the scorecardsUpdateEvaluationEvent field is set.
-   */
-  boolean hasScorecardsUpdateEvaluationEvent();
-  /**
-   * <pre>
-   * evaluation library evaluation updated
-   * </pre>
-   *
-   * <code>.api.commons.audit.ScorecardsUpdateEvaluationEvent scorecards_update_evaluation_event = 522 [json_name = "scorecardsUpdateEvaluationEvent"];</code>
-   * @return The scorecardsUpdateEvaluationEvent.
-   */
-  com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEvent getScorecardsUpdateEvaluationEvent();
-  /**
-   * <pre>
-   * evaluation library evaluation updated
-   * </pre>
-   *
-   * <code>.api.commons.audit.ScorecardsUpdateEvaluationEvent scorecards_update_evaluation_event = 522 [json_name = "scorecardsUpdateEvaluationEvent"];</code>
-   */
-  com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEventOrBuilder getScorecardsUpdateEvaluationEventOrBuilder();
-
-  /**
-   * <pre>
    *Tickets Events
    * EDIT update event
    * </pre>

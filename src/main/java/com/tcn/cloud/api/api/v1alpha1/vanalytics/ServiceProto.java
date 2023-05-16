@@ -59,173 +59,181 @@ public final class ServiceProto {
   static {
     java.lang.String[] descriptorData = {
       "\n%api/v1alpha1/vanalytics/service.proto\022" +
-      "\027api.v1alpha1.vanalytics\032$api/v1alpha1/v" +
-      "analytics/filter.proto\032\"api/v1alpha1/van" +
-      "alytics/flag.proto\032)api/v1alpha1/vanalyt" +
-      "ics/flag_filter.proto\032)api/v1alpha1/vana" +
-      "lytics/flag_review.proto\032+api/v1alpha1/v" +
-      "analytics/flag_snapshot.proto\032-api/v1alp" +
-      "ha1/vanalytics/flag_transcript.proto\0324ap" +
-      "i/v1alpha1/vanalytics/flag_transcript_fi" +
-      "lter.proto\032(api/v1alpha1/vanalytics/tran" +
-      "script.proto\032\034google/api/annotations.pro" +
-      "to\032\037google/protobuf/timestamp.proto\"r\n\014A" +
-      "uditRequest\0220\n\005since\030\002 \001(\0132\032.google.prot" +
-      "obuf.TimestampR\005since\0220\n\005until\030\003 \001(\0132\032.g" +
-      "oogle.protobuf.TimestampR\005until\"\304\001\n\rAudi" +
-      "tResponse\022\035\n\naudio_time\030\001 \001(\001R\taudioTime" +
-      "\022*\n\021billed_audio_time\030\002 \001(\001R\017billedAudio" +
-      "Time\0229\n\nlast_usage\030\003 \001(\0132\032.google.protob" +
-      "uf.TimestampR\tlastUsage\022-\n\022billed_transc" +
-      "ripts\030\004 \001(\003R\021billedTranscripts\"S\n\026GetRec" +
-      "ordingUrlRequest\022%\n\016transcript_sid\030\002 \001(\003" +
-      "R\rtranscriptSid\022\022\n\004kind\030\004 \001(\tR\004kind\"+\n\027G" +
-      "etRecordingUrlResponse\022\020\n\003url\030\001 \001(\tR\003url" +
-      "\"T\n\026ListBillingSpanRequest\022\033\n\tpage_size\030" +
-      "\001 \001(\rR\010pageSize\022\035\n\npage_token\030\002 \001(\tR\tpag" +
-      "eToken\"}\n\027ListBillingSpanResponse\022&\n\017nex" +
-      "t_page_token\030\001 \001(\tR\rnextPageToken\022:\n\005spa" +
-      "ns\030\002 \003(\0132$.api.v1alpha1.vanalytics.Billi" +
-      "ngSpanR\005spans\"\277\001\n\013BillingSpan\022\024\n\005calls\030\001" +
-      " \001(\003R\005calls\022\024\n\005hours\030\002 \001(\003R\005hours\022\022\n\004cos" +
-      "t\030\003 \001(\001R\004cost\0229\n\nstart_time\030\004 \001(\0132\032.goog" +
-      "le.protobuf.TimestampR\tstartTime\0225\n\010end_" +
-      "time\030\005 \001(\0132\032.google.protobuf.TimestampR\007" +
-      "endTime2\216\'\n\nVanalytics\022\214\001\n\005Audit\022%.api.v" +
-      "1alpha1.vanalytics.AuditRequest\032&.api.v1" +
-      "alpha1.vanalytics.AuditResponse\"4\202\323\344\223\002.\"" +
-      ")/api/v1alpha1/vanalytics/vanalytics/aud" +
-      "it:\001*\022\264\001\n\017GetRecordingUrl\022/.api.v1alpha1" +
-      ".vanalytics.GetRecordingUrlRequest\0320.api" +
-      ".v1alpha1.vanalytics.GetRecordingUrlResp" +
-      "onse\">\202\323\344\223\0028\"3/api/v1alpha1/vanalytics/v" +
-      "analytics/getrecordingurl:\001*\022\264\001\n\017ListBil" +
-      "lingSpan\022/.api.v1alpha1.vanalytics.ListB" +
-      "illingSpanRequest\0320.api.v1alpha1.vanalyt" +
-      "ics.ListBillingSpanResponse\">\202\323\344\223\0028\"3/ap" +
-      "i/v1alpha1/vanalytics/vanalytics/listbil" +
-      "lingspan:\001*\022\220\001\n\006Search\022&.api.v1alpha1.va" +
-      "nalytics.SearchRequest\032\'.api.v1alpha1.va" +
-      "nalytics.SearchResponse\"5\202\323\344\223\002/\"*/api/v1" +
-      "alpha1/vanalytics/vanalytics/search:\001*\022\330" +
-      "\001\n\030ListTranscriptGroupNames\0228.api.v1alph" +
-      "a1.vanalytics.ListTranscriptGroupNamesRe" +
-      "quest\0329.api.v1alpha1.vanalytics.ListTran" +
-      "scriptGroupNamesResponse\"G\202\323\344\223\002A\"</api/v" +
-      "1alpha1/vanalytics/vanalytics/listtransc" +
-      "riptgroupnames:\001*\022\314\001\n\025BulkDeleteTranscri" +
-      "pts\0225.api.v1alpha1.vanalytics.BulkDelete" +
-      "TranscriptsRequest\0326.api.v1alpha1.vanaly" +
-      "tics.BulkDeleteTranscriptsResponse\"D\202\323\344\223" +
-      "\002>\"9/api/v1alpha1/vanalytics/vanalytics/" +
-      "bulkdeletetranscripts:\001*\022\320\001\n\026BulkRestore" +
-      "Transcripts\0226.api.v1alpha1.vanalytics.Bu" +
-      "lkRestoreTranscriptsRequest\0327.api.v1alph" +
-      "a1.vanalytics.BulkRestoreTranscriptsResp" +
-      "onse\"E\202\323\344\223\002?\":/api/v1alpha1/vanalytics/v" +
-      "analytics/bulkrestoretranscripts:\001*\022\324\001\n\027" +
-      "ListAgentResponseValues\0227.api.v1alpha1.v" +
-      "analytics.ListAgentResponseValuesRequest" +
-      "\0328.api.v1alpha1.vanalytics.ListAgentResp" +
-      "onseValuesResponse\"F\202\323\344\223\002@\";/api/v1alpha" +
-      "1/vanalytics/vanalytics/listagentrespons" +
-      "evalues:\001*\022\232\001\n\014CreateFilter\022,.api.v1alph" +
-      "a1.vanalytics.CreateFilterRequest\032\037.api." +
-      "v1alpha1.vanalytics.Filter\";\202\323\344\223\0025\"0/api" +
-      "/v1alpha1/vanalytics/vanalytics/createfi" +
-      "lter:\001*\022\244\001\n\013ListFilters\022+.api.v1alpha1.v" +
-      "analytics.ListFiltersRequest\032,.api.v1alp" +
-      "ha1.vanalytics.ListFiltersResponse\":\202\323\344\223" +
-      "\0024\"//api/v1alpha1/vanalytics/vanalytics/" +
-      "listfilters:\001*\022\232\001\n\014UpdateFilter\022,.api.v1" +
-      "alpha1.vanalytics.UpdateFilterRequest\032\037." +
-      "api.v1alpha1.vanalytics.Filter\";\202\323\344\223\0025\"0" +
-      "/api/v1alpha1/vanalytics/vanalytics/upda" +
-      "tefilter:\001*\022\250\001\n\014DeleteFilter\022,.api.v1alp" +
-      "ha1.vanalytics.DeleteFilterRequest\032-.api" +
-      ".v1alpha1.vanalytics.DeleteFilterRespons" +
-      "e\";\202\323\344\223\0025\"0/api/v1alpha1/vanalytics/vana" +
-      "lytics/deletefilter:\001*\022\221\001\n\tGetFilter\022).a" +
-      "pi.v1alpha1.vanalytics.GetFilterRequest\032" +
-      "\037.api.v1alpha1.vanalytics.Filter\"8\202\323\344\223\0022" +
-      "\"-/api/v1alpha1/vanalytics/vanalytics/ge" +
-      "tfilter:\001*\022\211\001\n\007GetFlag\022\'.api.v1alpha1.va" +
-      "nalytics.GetFlagRequest\032\035.api.v1alpha1.v" +
-      "analytics.Flag\"6\202\323\344\223\0020\"+/api/v1alpha1/va" +
-      "nalytics/vanalytics/getflag:\001*\022\222\001\n\nCreat" +
-      "eFlag\022*.api.v1alpha1.vanalytics.CreateFl" +
-      "agRequest\032\035.api.v1alpha1.vanalytics.Flag" +
-      "\"9\202\323\344\223\0023\"./api/v1alpha1/vanalytics/vanal" +
-      "ytics/createflag:\001*\022\234\001\n\tListFlags\022).api." +
-      "v1alpha1.vanalytics.ListFlagsRequest\032*.a" +
-      "pi.v1alpha1.vanalytics.ListFlagsResponse" +
-      "\"8\202\323\344\223\0022\"-/api/v1alpha1/vanalytics/vanal" +
-      "ytics/listflags:\001*\022\222\001\n\nUpdateFlag\022*.api." +
-      "v1alpha1.vanalytics.UpdateFlagRequest\032\035." +
-      "api.v1alpha1.vanalytics.Flag\"9\202\323\344\223\0023\"./a" +
-      "pi/v1alpha1/vanalytics/vanalytics/update" +
-      "flag:\001*\022\240\001\n\nDeleteFlag\022*.api.v1alpha1.va" +
-      "nalytics.DeleteFlagRequest\032+.api.v1alpha" +
-      "1.vanalytics.DeleteFlagResponse\"9\202\323\344\223\0023\"" +
-      "./api/v1alpha1/vanalytics/vanalytics/del" +
-      "eteflag:\001*\022\252\001\n\020CreateFlagReview\0220.api.v1" +
-      "alpha1.vanalytics.CreateFlagReviewReques" +
-      "t\032#.api.v1alpha1.vanalytics.FlagReview\"?" +
-      "\202\323\344\223\0029\"4/api/v1alpha1/vanalytics/vanalyt" +
-      "ics/createflagreview:\001*\022\310\001\n\024BulkCreateFl" +
-      "agReview\0224.api.v1alpha1.vanalytics.BulkC" +
-      "reateFlagReviewRequest\0325.api.v1alpha1.va" +
-      "nalytics.BulkCreateFlagReviewResponse\"C\202" +
-      "\323\344\223\002=\"8/api/v1alpha1/vanalytics/vanalyti" +
-      "cs/bulkcreateflagreview:\001*\022\264\001\n\017ListFlagR" +
-      "eviews\022/.api.v1alpha1.vanalytics.ListFla" +
-      "gReviewsRequest\0320.api.v1alpha1.vanalytic" +
-      "s.ListFlagReviewsResponse\">\202\323\344\223\0028\"3/api/" +
-      "v1alpha1/vanalytics/vanalytics/listflagr" +
-      "eviews:\001*\022\310\001\n\024CreateFlagTranscript\0224.api" +
-      ".v1alpha1.vanalytics.CreateFlagTranscrip" +
-      "tRequest\0325.api.v1alpha1.vanalytics.Creat" +
-      "eFlagTranscriptResponse\"C\202\323\344\223\002=\"8/api/v1" +
-      "alpha1/vanalytics/vanalytics/createflagt" +
-      "ranscript:\001*\022\314\001\n\025SearchFlagTranscripts\0225" +
-      ".api.v1alpha1.vanalytics.SearchFlagTrans" +
+      "\027api.v1alpha1.vanalytics\032\027annotations/au" +
+      "thz.proto\032$api/v1alpha1/vanalytics/filte" +
+      "r.proto\032\"api/v1alpha1/vanalytics/flag.pr" +
+      "oto\032)api/v1alpha1/vanalytics/flag_filter" +
+      ".proto\032)api/v1alpha1/vanalytics/flag_rev" +
+      "iew.proto\032+api/v1alpha1/vanalytics/flag_" +
+      "snapshot.proto\032-api/v1alpha1/vanalytics/" +
+      "flag_transcript.proto\0324api/v1alpha1/vana" +
+      "lytics/flag_transcript_filter.proto\032(api" +
+      "/v1alpha1/vanalytics/transcript.proto\032\034g" +
+      "oogle/api/annotations.proto\032\037google/prot" +
+      "obuf/timestamp.proto\"r\n\014AuditRequest\0220\n\005" +
+      "since\030\002 \001(\0132\032.google.protobuf.TimestampR" +
+      "\005since\0220\n\005until\030\003 \001(\0132\032.google.protobuf." +
+      "TimestampR\005until\"\304\001\n\rAuditResponse\022\035\n\nau" +
+      "dio_time\030\001 \001(\001R\taudioTime\022*\n\021billed_audi" +
+      "o_time\030\002 \001(\001R\017billedAudioTime\0229\n\nlast_us" +
+      "age\030\003 \001(\0132\032.google.protobuf.TimestampR\tl" +
+      "astUsage\022-\n\022billed_transcripts\030\004 \001(\003R\021bi" +
+      "lledTranscripts\"S\n\026GetRecordingUrlReques" +
+      "t\022%\n\016transcript_sid\030\002 \001(\003R\rtranscriptSid" +
+      "\022\022\n\004kind\030\004 \001(\tR\004kind\"+\n\027GetRecordingUrlR" +
+      "esponse\022\020\n\003url\030\001 \001(\tR\003url\"T\n\026ListBilling" +
+      "SpanRequest\022\033\n\tpage_size\030\001 \001(\rR\010pageSize" +
+      "\022\035\n\npage_token\030\002 \001(\tR\tpageToken\"}\n\027ListB" +
+      "illingSpanResponse\022&\n\017next_page_token\030\001 " +
+      "\001(\tR\rnextPageToken\022:\n\005spans\030\002 \003(\0132$.api." +
+      "v1alpha1.vanalytics.BillingSpanR\005spans\"\277" +
+      "\001\n\013BillingSpan\022\024\n\005calls\030\001 \001(\003R\005calls\022\024\n\005" +
+      "hours\030\002 \001(\003R\005hours\022\022\n\004cost\030\003 \001(\001R\004cost\0229" +
+      "\n\nstart_time\030\004 \001(\0132\032.google.protobuf.Tim" +
+      "estampR\tstartTime\0225\n\010end_time\030\005 \001(\0132\032.go" +
+      "ogle.protobuf.TimestampR\007endTime2\246)\n\nVan" +
+      "alytics\022\226\001\n\005Audit\022%.api.v1alpha1.vanalyt" +
+      "ics.AuditRequest\032&.api.v1alpha1.vanalyti" +
+      "cs.AuditResponse\">\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002.\")/api" +
+      "/v1alpha1/vanalytics/vanalytics/audit:\001*" +
+      "\022\276\001\n\017GetRecordingUrl\022/.api.v1alpha1.vana" +
+      "lytics.GetRecordingUrlRequest\0320.api.v1al" +
+      "pha1.vanalytics.GetRecordingUrlResponse\"" +
+      "H\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0028\"3/api/v1alpha1/vanalyt" +
+      "ics/vanalytics/getrecordingurl:\001*\022\276\001\n\017Li" +
+      "stBillingSpan\022/.api.v1alpha1.vanalytics." +
+      "ListBillingSpanRequest\0320.api.v1alpha1.va" +
+      "nalytics.ListBillingSpanResponse\"H\272\270\221\002\005\n" +
+      "\003\010\364\003\202\323\344\223\0028\"3/api/v1alpha1/vanalytics/van" +
+      "alytics/listbillingspan:\001*\022\232\001\n\006Search\022&." +
+      "api.v1alpha1.vanalytics.SearchRequest\032\'." +
+      "api.v1alpha1.vanalytics.SearchResponse\"?" +
+      "\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002/\"*/api/v1alpha1/vanalyti" +
+      "cs/vanalytics/search:\001*\022\342\001\n\030ListTranscri" +
+      "ptGroupNames\0228.api.v1alpha1.vanalytics.L" +
+      "istTranscriptGroupNamesRequest\0329.api.v1a" +
+      "lpha1.vanalytics.ListTranscriptGroupName" +
+      "sResponse\"Q\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002A\"</api/v1alph" +
+      "a1/vanalytics/vanalytics/listtranscriptg" +
+      "roupnames:\001*\022\326\001\n\025BulkDeleteTranscripts\0225" +
+      ".api.v1alpha1.vanalytics.BulkDeleteTrans" +
       "criptsRequest\0326.api.v1alpha1.vanalytics." +
-      "SearchFlagTranscriptsResponse\"D\202\323\344\223\002>\"9/" +
-      "api/v1alpha1/vanalytics/vanalytics/searc" +
-      "hflagtranscripts:\001*\022\252\001\n\020CreateFlagFilter" +
-      "\0220.api.v1alpha1.vanalytics.CreateFlagFil" +
-      "terRequest\032#.api.v1alpha1.vanalytics.Fla" +
-      "gFilter\"?\202\323\344\223\0029\"4/api/v1alpha1/vanalytic" +
-      "s/vanalytics/createflagfilter:\001*\022\264\001\n\017Lis" +
-      "tFlagFilters\022/.api.v1alpha1.vanalytics.L" +
-      "istFlagFiltersRequest\0320.api.v1alpha1.van" +
-      "alytics.ListFlagFiltersResponse\">\202\323\344\223\0028\"" +
-      "3/api/v1alpha1/vanalytics/vanalytics/lis" +
-      "tflagfilters:\001*\022\270\001\n\020DeleteFlagFilter\0220.a" +
-      "pi.v1alpha1.vanalytics.DeleteFlagFilterR" +
-      "equest\0321.api.v1alpha1.vanalytics.DeleteF" +
-      "lagFilterResponse\"?\202\323\344\223\0029\"4/api/v1alpha1" +
-      "/vanalytics/vanalytics/deleteflagfilter:" +
-      "\001*\022\274\001\n\021ListFlagSnapshots\0221.api.v1alpha1." +
-      "vanalytics.ListFlagSnapshotsRequest\0322.ap" +
-      "i.v1alpha1.vanalytics.ListFlagSnapshotsR" +
-      "esponse\"@\202\323\344\223\002:\"5/api/v1alpha1/vanalytic" +
-      "s/vanalytics/listflagSnapshots:\001*\022\334\001\n\031Li" +
-      "stFlagTranscriptFilters\0229.api.v1alpha1.v" +
-      "analytics.ListFlagTranscriptFiltersReque" +
-      "st\032:.api.v1alpha1.vanalytics.ListFlagTra" +
-      "nscriptFiltersResponse\"H\202\323\344\223\002B\"=/api/v1a" +
-      "lpha1/vanalytics/vanalytics/listflagtran" +
-      "scriptfilters:\001*B\267\001\n)com.tcn.cloud.api.a" +
-      "pi.v1alpha1.vanalyticsB\014ServiceProtoP\001\242\002" +
-      "\003AVV\252\002\027Api.V1alpha1.Vanalytics\312\002\027Api\\V1a" +
-      "lpha1\\Vanalytics\342\002#Api\\V1alpha1\\Vanalyti" +
-      "cs\\GPBMetadata\352\002\031Api::V1alpha1::Vanalyti" +
-      "csb\006proto3"
+      "BulkDeleteTranscriptsResponse\"N\272\270\221\002\005\n\003\010\372" +
+      "\003\202\323\344\223\002>\"9/api/v1alpha1/vanalytics/vanaly" +
+      "tics/bulkdeletetranscripts:\001*\022\332\001\n\026BulkRe" +
+      "storeTranscripts\0226.api.v1alpha1.vanalyti" +
+      "cs.BulkRestoreTranscriptsRequest\0327.api.v" +
+      "1alpha1.vanalytics.BulkRestoreTranscript" +
+      "sResponse\"O\272\270\221\002\005\n\003\010\372\003\202\323\344\223\002?\":/api/v1alph" +
+      "a1/vanalytics/vanalytics/bulkrestoretran" +
+      "scripts:\001*\022\336\001\n\027ListAgentResponseValues\0227" +
+      ".api.v1alpha1.vanalytics.ListAgentRespon" +
+      "seValuesRequest\0328.api.v1alpha1.vanalytic" +
+      "s.ListAgentResponseValuesResponse\"P\272\270\221\002\005" +
+      "\n\003\010\364\003\202\323\344\223\002@\";/api/v1alpha1/vanalytics/va" +
+      "nalytics/listagentresponsevalues:\001*\022\244\001\n\014" +
+      "CreateFilter\022,.api.v1alpha1.vanalytics.C" +
+      "reateFilterRequest\032\037.api.v1alpha1.vanaly" +
+      "tics.Filter\"E\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0025\"0/api/v1al" +
+      "pha1/vanalytics/vanalytics/createfilter:" +
+      "\001*\022\256\001\n\013ListFilters\022+.api.v1alpha1.vanaly" +
+      "tics.ListFiltersRequest\032,.api.v1alpha1.v" +
+      "analytics.ListFiltersResponse\"D\272\270\221\002\005\n\003\010\364" +
+      "\003\202\323\344\223\0024\"//api/v1alpha1/vanalytics/vanaly" +
+      "tics/listfilters:\001*\022\244\001\n\014UpdateFilter\022,.a" +
+      "pi.v1alpha1.vanalytics.UpdateFilterReque" +
+      "st\032\037.api.v1alpha1.vanalytics.Filter\"E\272\270\221" +
+      "\002\005\n\003\010\364\003\202\323\344\223\0025\"0/api/v1alpha1/vanalytics/" +
+      "vanalytics/updatefilter:\001*\022\262\001\n\014DeleteFil" +
+      "ter\022,.api.v1alpha1.vanalytics.DeleteFilt" +
+      "erRequest\032-.api.v1alpha1.vanalytics.Dele" +
+      "teFilterResponse\"E\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0025\"0/api" +
+      "/v1alpha1/vanalytics/vanalytics/deletefi" +
+      "lter:\001*\022\233\001\n\tGetFilter\022).api.v1alpha1.van" +
+      "alytics.GetFilterRequest\032\037.api.v1alpha1." +
+      "vanalytics.Filter\"B\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0022\"-/ap" +
+      "i/v1alpha1/vanalytics/vanalytics/getfilt" +
+      "er:\001*\022\223\001\n\007GetFlag\022\'.api.v1alpha1.vanalyt" +
+      "ics.GetFlagRequest\032\035.api.v1alpha1.vanaly" +
+      "tics.Flag\"@\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0020\"+/api/v1alph" +
+      "a1/vanalytics/vanalytics/getflag:\001*\022\234\001\n\n" +
+      "CreateFlag\022*.api.v1alpha1.vanalytics.Cre" +
+      "ateFlagRequest\032\035.api.v1alpha1.vanalytics" +
+      ".Flag\"C\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0023\"./api/v1alpha1/v" +
+      "analytics/vanalytics/createflag:\001*\022\246\001\n\tL" +
+      "istFlags\022).api.v1alpha1.vanalytics.ListF" +
+      "lagsRequest\032*.api.v1alpha1.vanalytics.Li" +
+      "stFlagsResponse\"B\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0022\"-/api/" +
+      "v1alpha1/vanalytics/vanalytics/listflags" +
+      ":\001*\022\234\001\n\nUpdateFlag\022*.api.v1alpha1.vanaly" +
+      "tics.UpdateFlagRequest\032\035.api.v1alpha1.va" +
+      "nalytics.Flag\"C\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0023\"./api/v1" +
+      "alpha1/vanalytics/vanalytics/updateflag:" +
+      "\001*\022\252\001\n\nDeleteFlag\022*.api.v1alpha1.vanalyt" +
+      "ics.DeleteFlagRequest\032+.api.v1alpha1.van" +
+      "alytics.DeleteFlagResponse\"C\272\270\221\002\005\n\003\010\364\003\202\323" +
+      "\344\223\0023\"./api/v1alpha1/vanalytics/vanalytic" +
+      "s/deleteflag:\001*\022\264\001\n\020CreateFlagReview\0220.a" +
+      "pi.v1alpha1.vanalytics.CreateFlagReviewR" +
+      "equest\032#.api.v1alpha1.vanalytics.FlagRev" +
+      "iew\"I\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0029\"4/api/v1alpha1/van" +
+      "alytics/vanalytics/createflagreview:\001*\022\322" +
+      "\001\n\024BulkCreateFlagReview\0224.api.v1alpha1.v" +
+      "analytics.BulkCreateFlagReviewRequest\0325." +
+      "api.v1alpha1.vanalytics.BulkCreateFlagRe" +
+      "viewResponse\"M\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002=\"8/api/v1a" +
+      "lpha1/vanalytics/vanalytics/bulkcreatefl" +
+      "agreview:\001*\022\276\001\n\017ListFlagReviews\022/.api.v1" +
+      "alpha1.vanalytics.ListFlagReviewsRequest" +
+      "\0320.api.v1alpha1.vanalytics.ListFlagRevie" +
+      "wsResponse\"H\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0028\"3/api/v1alp" +
+      "ha1/vanalytics/vanalytics/listflagreview" +
+      "s:\001*\022\322\001\n\024CreateFlagTranscript\0224.api.v1al" +
+      "pha1.vanalytics.CreateFlagTranscriptRequ" +
+      "est\0325.api.v1alpha1.vanalytics.CreateFlag" +
+      "TranscriptResponse\"M\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002=\"8/a" +
+      "pi/v1alpha1/vanalytics/vanalytics/create" +
+      "flagtranscript:\001*\022\326\001\n\025SearchFlagTranscri" +
+      "pts\0225.api.v1alpha1.vanalytics.SearchFlag" +
+      "TranscriptsRequest\0326.api.v1alpha1.vanaly" +
+      "tics.SearchFlagTranscriptsResponse\"N\272\270\221\002" +
+      "\005\n\003\010\364\003\202\323\344\223\002>\"9/api/v1alpha1/vanalytics/v" +
+      "analytics/searchflagtranscripts:\001*\022\264\001\n\020C" +
+      "reateFlagFilter\0220.api.v1alpha1.vanalytic" +
+      "s.CreateFlagFilterRequest\032#.api.v1alpha1" +
+      ".vanalytics.FlagFilter\"I\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0029" +
+      "\"4/api/v1alpha1/vanalytics/vanalytics/cr" +
+      "eateflagfilter:\001*\022\276\001\n\017ListFlagFilters\022/." +
+      "api.v1alpha1.vanalytics.ListFlagFiltersR" +
+      "equest\0320.api.v1alpha1.vanalytics.ListFla" +
+      "gFiltersResponse\"H\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0028\"3/api" +
+      "/v1alpha1/vanalytics/vanalytics/listflag" +
+      "filters:\001*\022\302\001\n\020DeleteFlagFilter\0220.api.v1" +
+      "alpha1.vanalytics.DeleteFlagFilterReques" +
+      "t\0321.api.v1alpha1.vanalytics.DeleteFlagFi" +
+      "lterResponse\"I\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0029\"4/api/v1a" +
+      "lpha1/vanalytics/vanalytics/deleteflagfi" +
+      "lter:\001*\022\306\001\n\021ListFlagSnapshots\0221.api.v1al" +
+      "pha1.vanalytics.ListFlagSnapshotsRequest" +
+      "\0322.api.v1alpha1.vanalytics.ListFlagSnaps" +
+      "hotsResponse\"J\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002:\"5/api/v1a" +
+      "lpha1/vanalytics/vanalytics/listflagSnap" +
+      "shots:\001*\022\346\001\n\031ListFlagTranscriptFilters\0229" +
+      ".api.v1alpha1.vanalytics.ListFlagTranscr" +
+      "iptFiltersRequest\032:.api.v1alpha1.vanalyt" +
+      "ics.ListFlagTranscriptFiltersResponse\"R\272" +
+      "\270\221\002\005\n\003\010\364\003\202\323\344\223\002B\"=/api/v1alpha1/vanalytic" +
+      "s/vanalytics/listflagtranscriptfilters:\001" +
+      "*B\267\001\n)com.tcn.cloud.api.api.v1alpha1.van" +
+      "alyticsB\014ServiceProtoP\001\242\002\003AVV\252\002\027Api.V1al" +
+      "pha1.Vanalytics\312\002\027Api\\V1alpha1\\Vanalytic" +
+      "s\342\002#Api\\V1alpha1\\Vanalytics\\GPBMetadata\352" +
+      "\002\031Api::V1alpha1::Vanalyticsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.tcn.cloud.api.annotations.AuthzProto.getDescriptor(),
           com.tcn.cloud.api.api.v1alpha1.vanalytics.FilterProto.getDescriptor(),
           com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagProto.getDescriptor(),
           com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagFilterProto.getDescriptor(),
@@ -281,9 +289,11 @@ public final class ServiceProto {
         new java.lang.String[] { "Calls", "Hours", "Cost", "StartTime", "EndTime", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.tcn.cloud.api.annotations.AuthzProto.authz);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.tcn.cloud.api.annotations.AuthzProto.getDescriptor();
     com.tcn.cloud.api.api.v1alpha1.vanalytics.FilterProto.getDescriptor();
     com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagProto.getDescriptor();
     com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagFilterProto.getDescriptor();

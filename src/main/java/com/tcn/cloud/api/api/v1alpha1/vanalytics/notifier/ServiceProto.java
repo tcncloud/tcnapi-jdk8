@@ -35,30 +35,31 @@ public final class ServiceProto {
     java.lang.String[] descriptorData = {
       "\n.api/v1alpha1/vanalytics/notifier/servi" +
       "ce.proto\022 api.v1alpha1.vanalytics.notifi" +
-      "er\032\034google/api/annotations.proto\032\037google" +
-      "/protobuf/timestamp.proto\"/\n\020GetNotifyRe" +
-      "quest\022\033\n\tnotify_id\030\001 \001(\tR\010notifyId\"\335\001\n\006N" +
-      "otify\022\033\n\tnotify_id\030\001 \001(\tR\010notifyId\0220\n\024st" +
-      "art_transcript_sid\030\002 \001(\003R\022startTranscrip" +
-      "tSid\022,\n\022end_transcript_sid\030\003 \001(\003R\020endTra" +
-      "nscriptSid\022\031\n\010flag_sid\030\004 \001(\003R\007flagSid\022;\n" +
-      "\013create_time\030\005 \001(\0132\032.google.protobuf.Tim" +
-      "estampR\ncreateTime2\267\001\n\010Notifier\022\252\001\n\tGetN" +
-      "otify\0222.api.v1alpha1.vanalytics.notifier" +
-      ".GetNotifyRequest\032(.api.v1alpha1.vanalyt" +
-      "ics.notifier.Notify\"?\202\323\344\223\0029\"4/api/v1alph" +
-      "a1/vanalytics/notifier/notifier/getnotif" +
-      "y:\001*B\346\001\n2com.tcn.cloud.api.api.v1alpha1." +
-      "vanalytics.notifierB\014ServiceProtoP\001\242\002\004AV" +
-      "VN\252\002 Api.V1alpha1.Vanalytics.Notifier\312\002 " +
-      "Api\\V1alpha1\\Vanalytics\\Notifier\342\002,Api\\V" +
-      "1alpha1\\Vanalytics\\Notifier\\GPBMetadata\352" +
-      "\002#Api::V1alpha1::Vanalytics::Notifierb\006p" +
-      "roto3"
+      "er\032\027annotations/authz.proto\032\034google/api/" +
+      "annotations.proto\032\037google/protobuf/times" +
+      "tamp.proto\"/\n\020GetNotifyRequest\022\033\n\tnotify" +
+      "_id\030\001 \001(\tR\010notifyId\"\335\001\n\006Notify\022\033\n\tnotify" +
+      "_id\030\001 \001(\tR\010notifyId\0220\n\024start_transcript_" +
+      "sid\030\002 \001(\003R\022startTranscriptSid\022,\n\022end_tra" +
+      "nscript_sid\030\003 \001(\003R\020endTranscriptSid\022\031\n\010f" +
+      "lag_sid\030\004 \001(\003R\007flagSid\022;\n\013create_time\030\005 " +
+      "\001(\0132\032.google.protobuf.TimestampR\ncreateT" +
+      "ime2\301\001\n\010Notifier\022\264\001\n\tGetNotify\0222.api.v1a" +
+      "lpha1.vanalytics.notifier.GetNotifyReque" +
+      "st\032(.api.v1alpha1.vanalytics.notifier.No" +
+      "tify\"I\272\270\221\002\005\n\003\010\364\003\202\323\344\223\0029\"4/api/v1alpha1/va" +
+      "nalytics/notifier/notifier/getnotify:\001*B" +
+      "\346\001\n2com.tcn.cloud.api.api.v1alpha1.vanal" +
+      "ytics.notifierB\014ServiceProtoP\001\242\002\004AVVN\252\002 " +
+      "Api.V1alpha1.Vanalytics.Notifier\312\002 Api\\V" +
+      "1alpha1\\Vanalytics\\Notifier\342\002,Api\\V1alph" +
+      "a1\\Vanalytics\\Notifier\\GPBMetadata\352\002#Api" +
+      "::V1alpha1::Vanalytics::Notifierb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.tcn.cloud.api.annotations.AuthzProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
@@ -76,9 +77,11 @@ public final class ServiceProto {
         new java.lang.String[] { "NotifyId", "StartTranscriptSid", "EndTranscriptSid", "FlagSid", "CreateTime", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.tcn.cloud.api.annotations.AuthzProto.authz);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.tcn.cloud.api.annotations.AuthzProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
   }
