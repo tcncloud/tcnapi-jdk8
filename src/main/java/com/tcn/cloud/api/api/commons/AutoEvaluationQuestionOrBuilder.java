@@ -114,4 +114,14 @@ public interface AutoEvaluationQuestionOrBuilder extends
    * @return The riskLevel.
    */
   com.tcn.cloud.api.api.commons.RiskLevel getRiskLevel();
+
+  /**
+   * <pre>
+   * Whether the flag expression matched.
+   * </pre>
+   *
+   * <code>bool expression_matched = 14 [json_name = "expressionMatched"];</code>
+   * @return The expressionMatched.
+   */
+  boolean getExpressionMatched();
 }

@@ -945,6 +945,37 @@ public final class ScorecardsGrpc {
     return getScoreEvaluationMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationRequest,
+      com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationResponse> getUpdateEvaluationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateEvaluation",
+      requestType = com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationRequest.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationRequest,
+      com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationResponse> getUpdateEvaluationMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationResponse> getUpdateEvaluationMethod;
+    if ((getUpdateEvaluationMethod = ScorecardsGrpc.getUpdateEvaluationMethod) == null) {
+      synchronized (ScorecardsGrpc.class) {
+        if ((getUpdateEvaluationMethod = ScorecardsGrpc.getUpdateEvaluationMethod) == null) {
+          ScorecardsGrpc.getUpdateEvaluationMethod = getUpdateEvaluationMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationRequest, com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateEvaluation"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ScorecardsMethodDescriptorSupplier("UpdateEvaluation"))
+              .build();
+        }
+      }
+    }
+    return getUpdateEvaluationMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.scorecards.GetEvaluationRequest,
       com.tcn.cloud.api.api.v1alpha1.scorecards.GetEvaluationResponse> getGetEvaluationMethod;
 
@@ -1698,6 +1729,16 @@ public final class ScorecardsGrpc {
 
     /**
      * <pre>
+     * UpdateEvaluation updates an evaluation
+     * </pre>
+     */
+    default void updateEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateEvaluationMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * GetEvaluation gets an evaluation
      * </pre>
      */
@@ -2187,6 +2228,17 @@ public final class ScorecardsGrpc {
 
     /**
      * <pre>
+     * UpdateEvaluation updates an evaluation
+     * </pre>
+     */
+    public void updateEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateEvaluationMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * GetEvaluation gets an evaluation
      * </pre>
      */
@@ -2644,6 +2696,16 @@ public final class ScorecardsGrpc {
     public com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationResponse scoreEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getScoreEvaluationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * UpdateEvaluation updates an evaluation
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationResponse updateEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateEvaluationMethod(), getCallOptions(), request);
     }
 
     /**
@@ -3126,6 +3188,17 @@ public final class ScorecardsGrpc {
 
     /**
      * <pre>
+     * UpdateEvaluation updates an evaluation
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationResponse> updateEvaluation(
+        com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateEvaluationMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * GetEvaluation gets an evaluation
      * </pre>
      */
@@ -3299,19 +3372,20 @@ public final class ScorecardsGrpc {
   private static final int METHODID_CREATE_EVALUATION = 27;
   private static final int METHODID_DELETE_EVALUATION = 28;
   private static final int METHODID_SCORE_EVALUATION = 29;
-  private static final int METHODID_GET_EVALUATION = 30;
-  private static final int METHODID_LIST_EVALUATIONS = 31;
-  private static final int METHODID_CREATE_EVALUATION_QUESTION = 32;
-  private static final int METHODID_UPDATE_EVALUATION_QUESTION = 33;
-  private static final int METHODID_DELETE_EVALUATION_QUESTION = 34;
-  private static final int METHODID_SAMPLE_CALLS_BY_CATEGORY = 35;
-  private static final int METHODID_CREATE_AUTO_QUESTION = 36;
-  private static final int METHODID_UPDATE_AUTO_QUESTION = 37;
-  private static final int METHODID_DELETE_AUTO_QUESTION = 38;
-  private static final int METHODID_GET_AUTO_QUESTION = 39;
-  private static final int METHODID_GET_AUTO_EVALUATION = 40;
-  private static final int METHODID_LIST_AUTO_EVALUATIONS = 41;
-  private static final int METHODID_DELETE_AUTO_EVALUATION = 42;
+  private static final int METHODID_UPDATE_EVALUATION = 30;
+  private static final int METHODID_GET_EVALUATION = 31;
+  private static final int METHODID_LIST_EVALUATIONS = 32;
+  private static final int METHODID_CREATE_EVALUATION_QUESTION = 33;
+  private static final int METHODID_UPDATE_EVALUATION_QUESTION = 34;
+  private static final int METHODID_DELETE_EVALUATION_QUESTION = 35;
+  private static final int METHODID_SAMPLE_CALLS_BY_CATEGORY = 36;
+  private static final int METHODID_CREATE_AUTO_QUESTION = 37;
+  private static final int METHODID_UPDATE_AUTO_QUESTION = 38;
+  private static final int METHODID_DELETE_AUTO_QUESTION = 39;
+  private static final int METHODID_GET_AUTO_QUESTION = 40;
+  private static final int METHODID_GET_AUTO_EVALUATION = 41;
+  private static final int METHODID_LIST_AUTO_EVALUATIONS = 42;
+  private static final int METHODID_DELETE_AUTO_EVALUATION = 43;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -3449,6 +3523,10 @@ public final class ScorecardsGrpc {
         case METHODID_SCORE_EVALUATION:
           serviceImpl.scoreEvaluation((com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_EVALUATION:
+          serviceImpl.updateEvaluation((com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationResponse>) responseObserver);
           break;
         case METHODID_GET_EVALUATION:
           serviceImpl.getEvaluation((com.tcn.cloud.api.api.v1alpha1.scorecards.GetEvaluationRequest) request,
@@ -3731,6 +3809,13 @@ public final class ScorecardsGrpc {
               com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationResponse>(
                 service, METHODID_SCORE_EVALUATION)))
         .addMethod(
+          getUpdateEvaluationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationRequest,
+              com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationResponse>(
+                service, METHODID_UPDATE_EVALUATION)))
+        .addMethod(
           getGetEvaluationMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -3899,6 +3984,7 @@ public final class ScorecardsGrpc {
               .addMethod(getCreateEvaluationMethod())
               .addMethod(getDeleteEvaluationMethod())
               .addMethod(getScoreEvaluationMethod())
+              .addMethod(getUpdateEvaluationMethod())
               .addMethod(getGetEvaluationMethod())
               .addMethod(getListEvaluationsMethod())
               .addMethod(getCreateEvaluationQuestionMethod())
