@@ -133,6 +133,7 @@ private static final long serialVersionUID = 0L;
     SCORECARDS_UPDATE_SCORECARD_QUESTION_EVENT(519),
     SCORECARDS_DELETE_SCORECARD_QUESTION_EVENT(520),
     SCORECARDS_CREATE_AUTO_EVALUATION_EVENT(521),
+    SCORECARDS_UPDATE_EVALUATION_EVENT(522),
     TICKET_EVENT(601),
     COMPLIANCE_RND_QUERY_EVENT(700),
     COMPLIANCE_RND_QUERY_CACHED_EVENT(701),
@@ -233,6 +234,7 @@ private static final long serialVersionUID = 0L;
         case 519: return SCORECARDS_UPDATE_SCORECARD_QUESTION_EVENT;
         case 520: return SCORECARDS_DELETE_SCORECARD_QUESTION_EVENT;
         case 521: return SCORECARDS_CREATE_AUTO_EVALUATION_EVENT;
+        case 522: return SCORECARDS_UPDATE_EVALUATION_EVENT;
         case 601: return TICKET_EVENT;
         case 700: return COMPLIANCE_RND_QUERY_EVENT;
         case 701: return COMPLIANCE_RND_QUERY_CACHED_EVENT;
@@ -3883,6 +3885,49 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.audit.ScorecardsCreateAutoEvaluationEvent.getDefaultInstance();
   }
 
+  public static final int SCORECARDS_UPDATE_EVALUATION_EVENT_FIELD_NUMBER = 522;
+  /**
+   * <pre>
+   * evaluation library evaluation updated
+   * </pre>
+   *
+   * <code>.api.commons.audit.ScorecardsUpdateEvaluationEvent scorecards_update_evaluation_event = 522 [json_name = "scorecardsUpdateEvaluationEvent"];</code>
+   * @return Whether the scorecardsUpdateEvaluationEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasScorecardsUpdateEvaluationEvent() {
+    return eventCase_ == 522;
+  }
+  /**
+   * <pre>
+   * evaluation library evaluation updated
+   * </pre>
+   *
+   * <code>.api.commons.audit.ScorecardsUpdateEvaluationEvent scorecards_update_evaluation_event = 522 [json_name = "scorecardsUpdateEvaluationEvent"];</code>
+   * @return The scorecardsUpdateEvaluationEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEvent getScorecardsUpdateEvaluationEvent() {
+    if (eventCase_ == 522) {
+       return (com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEvent.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * evaluation library evaluation updated
+   * </pre>
+   *
+   * <code>.api.commons.audit.ScorecardsUpdateEvaluationEvent scorecards_update_evaluation_event = 522 [json_name = "scorecardsUpdateEvaluationEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEventOrBuilder getScorecardsUpdateEvaluationEventOrBuilder() {
+    if (eventCase_ == 522) {
+       return (com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEvent.getDefaultInstance();
+  }
+
   public static final int TICKET_EVENT_FIELD_NUMBER = 601;
   /**
    * <pre>
@@ -4290,6 +4335,9 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 521) {
       output.writeMessage(521, (com.tcn.cloud.api.api.commons.audit.ScorecardsCreateAutoEvaluationEvent) event_);
     }
+    if (eventCase_ == 522) {
+      output.writeMessage(522, (com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEvent) event_);
+    }
     if (eventCase_ == 601) {
       output.writeMessage(601, (com.tcn.cloud.api.api.commons.audit.TicketEvent) event_);
     }
@@ -4647,6 +4695,10 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 521) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(521, (com.tcn.cloud.api.api.commons.audit.ScorecardsCreateAutoEvaluationEvent) event_);
+    }
+    if (eventCase_ == 522) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(522, (com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEvent) event_);
     }
     if (eventCase_ == 601) {
       size += com.google.protobuf.CodedOutputStream
@@ -5011,6 +5063,10 @@ private static final long serialVersionUID = 0L;
         if (!getScorecardsCreateAutoEvaluationEvent()
             .equals(other.getScorecardsCreateAutoEvaluationEvent())) return false;
         break;
+      case 522:
+        if (!getScorecardsUpdateEvaluationEvent()
+            .equals(other.getScorecardsUpdateEvaluationEvent())) return false;
+        break;
       case 601:
         if (!getTicketEvent()
             .equals(other.getTicketEvent())) return false;
@@ -5371,6 +5427,10 @@ private static final long serialVersionUID = 0L;
       case 521:
         hash = (37 * hash) + SCORECARDS_CREATE_AUTO_EVALUATION_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getScorecardsCreateAutoEvaluationEvent().hashCode();
+        break;
+      case 522:
+        hash = (37 * hash) + SCORECARDS_UPDATE_EVALUATION_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getScorecardsUpdateEvaluationEvent().hashCode();
         break;
       case 601:
         hash = (37 * hash) + TICKET_EVENT_FIELD_NUMBER;
@@ -5774,6 +5834,9 @@ private static final long serialVersionUID = 0L;
       if (scorecardsCreateAutoEvaluationEventBuilder_ != null) {
         scorecardsCreateAutoEvaluationEventBuilder_.clear();
       }
+      if (scorecardsUpdateEvaluationEventBuilder_ != null) {
+        scorecardsUpdateEvaluationEventBuilder_.clear();
+      }
       if (ticketEventBuilder_ != null) {
         ticketEventBuilder_.clear();
       }
@@ -6174,6 +6237,10 @@ private static final long serialVersionUID = 0L;
           scorecardsCreateAutoEvaluationEventBuilder_ != null) {
         result.event_ = scorecardsCreateAutoEvaluationEventBuilder_.build();
       }
+      if (eventCase_ == 522 &&
+          scorecardsUpdateEvaluationEventBuilder_ != null) {
+        result.event_ = scorecardsUpdateEvaluationEventBuilder_.build();
+      }
       if (eventCase_ == 601 &&
           ticketEventBuilder_ != null) {
         result.event_ = ticketEventBuilder_.build();
@@ -6545,6 +6612,10 @@ private static final long serialVersionUID = 0L;
         }
         case SCORECARDS_CREATE_AUTO_EVALUATION_EVENT: {
           mergeScorecardsCreateAutoEvaluationEvent(other.getScorecardsCreateAutoEvaluationEvent());
+          break;
+        }
+        case SCORECARDS_UPDATE_EVALUATION_EVENT: {
+          mergeScorecardsUpdateEvaluationEvent(other.getScorecardsUpdateEvaluationEvent());
           break;
         }
         case TICKET_EVENT: {
@@ -7181,6 +7252,13 @@ private static final long serialVersionUID = 0L;
               eventCase_ = 521;
               break;
             } // case 4170
+            case 4178: {
+              input.readMessage(
+                  getScorecardsUpdateEvaluationEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 522;
+              break;
+            } // case 4178
             case 4810: {
               input.readMessage(
                   getTicketEventFieldBuilder().getBuilder(),
@@ -21887,6 +21965,184 @@ private static final long serialVersionUID = 0L;
       eventCase_ = 521;
       onChanged();
       return scorecardsCreateAutoEvaluationEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEvent, com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEvent.Builder, com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEventOrBuilder> scorecardsUpdateEvaluationEventBuilder_;
+    /**
+     * <pre>
+     * evaluation library evaluation updated
+     * </pre>
+     *
+     * <code>.api.commons.audit.ScorecardsUpdateEvaluationEvent scorecards_update_evaluation_event = 522 [json_name = "scorecardsUpdateEvaluationEvent"];</code>
+     * @return Whether the scorecardsUpdateEvaluationEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasScorecardsUpdateEvaluationEvent() {
+      return eventCase_ == 522;
+    }
+    /**
+     * <pre>
+     * evaluation library evaluation updated
+     * </pre>
+     *
+     * <code>.api.commons.audit.ScorecardsUpdateEvaluationEvent scorecards_update_evaluation_event = 522 [json_name = "scorecardsUpdateEvaluationEvent"];</code>
+     * @return The scorecardsUpdateEvaluationEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEvent getScorecardsUpdateEvaluationEvent() {
+      if (scorecardsUpdateEvaluationEventBuilder_ == null) {
+        if (eventCase_ == 522) {
+          return (com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 522) {
+          return scorecardsUpdateEvaluationEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * evaluation library evaluation updated
+     * </pre>
+     *
+     * <code>.api.commons.audit.ScorecardsUpdateEvaluationEvent scorecards_update_evaluation_event = 522 [json_name = "scorecardsUpdateEvaluationEvent"];</code>
+     */
+    public Builder setScorecardsUpdateEvaluationEvent(com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEvent value) {
+      if (scorecardsUpdateEvaluationEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        scorecardsUpdateEvaluationEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 522;
+      return this;
+    }
+    /**
+     * <pre>
+     * evaluation library evaluation updated
+     * </pre>
+     *
+     * <code>.api.commons.audit.ScorecardsUpdateEvaluationEvent scorecards_update_evaluation_event = 522 [json_name = "scorecardsUpdateEvaluationEvent"];</code>
+     */
+    public Builder setScorecardsUpdateEvaluationEvent(
+        com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEvent.Builder builderForValue) {
+      if (scorecardsUpdateEvaluationEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        scorecardsUpdateEvaluationEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 522;
+      return this;
+    }
+    /**
+     * <pre>
+     * evaluation library evaluation updated
+     * </pre>
+     *
+     * <code>.api.commons.audit.ScorecardsUpdateEvaluationEvent scorecards_update_evaluation_event = 522 [json_name = "scorecardsUpdateEvaluationEvent"];</code>
+     */
+    public Builder mergeScorecardsUpdateEvaluationEvent(com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEvent value) {
+      if (scorecardsUpdateEvaluationEventBuilder_ == null) {
+        if (eventCase_ == 522 &&
+            event_ != com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 522) {
+          scorecardsUpdateEvaluationEventBuilder_.mergeFrom(value);
+        } else {
+          scorecardsUpdateEvaluationEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 522;
+      return this;
+    }
+    /**
+     * <pre>
+     * evaluation library evaluation updated
+     * </pre>
+     *
+     * <code>.api.commons.audit.ScorecardsUpdateEvaluationEvent scorecards_update_evaluation_event = 522 [json_name = "scorecardsUpdateEvaluationEvent"];</code>
+     */
+    public Builder clearScorecardsUpdateEvaluationEvent() {
+      if (scorecardsUpdateEvaluationEventBuilder_ == null) {
+        if (eventCase_ == 522) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 522) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        scorecardsUpdateEvaluationEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * evaluation library evaluation updated
+     * </pre>
+     *
+     * <code>.api.commons.audit.ScorecardsUpdateEvaluationEvent scorecards_update_evaluation_event = 522 [json_name = "scorecardsUpdateEvaluationEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEvent.Builder getScorecardsUpdateEvaluationEventBuilder() {
+      return getScorecardsUpdateEvaluationEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * evaluation library evaluation updated
+     * </pre>
+     *
+     * <code>.api.commons.audit.ScorecardsUpdateEvaluationEvent scorecards_update_evaluation_event = 522 [json_name = "scorecardsUpdateEvaluationEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEventOrBuilder getScorecardsUpdateEvaluationEventOrBuilder() {
+      if ((eventCase_ == 522) && (scorecardsUpdateEvaluationEventBuilder_ != null)) {
+        return scorecardsUpdateEvaluationEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 522) {
+          return (com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * evaluation library evaluation updated
+     * </pre>
+     *
+     * <code>.api.commons.audit.ScorecardsUpdateEvaluationEvent scorecards_update_evaluation_event = 522 [json_name = "scorecardsUpdateEvaluationEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEvent, com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEvent.Builder, com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEventOrBuilder> 
+        getScorecardsUpdateEvaluationEventFieldBuilder() {
+      if (scorecardsUpdateEvaluationEventBuilder_ == null) {
+        if (!(eventCase_ == 522)) {
+          event_ = com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEvent.getDefaultInstance();
+        }
+        scorecardsUpdateEvaluationEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEvent, com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEvent.Builder, com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 522;
+      onChanged();
+      return scorecardsUpdateEvaluationEventBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

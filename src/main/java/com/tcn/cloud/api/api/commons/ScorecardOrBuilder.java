@@ -252,7 +252,7 @@ public interface ScorecardOrBuilder extends
    *
    * <code>bool is_ad_hoc = 16 [json_name = "isAdHoc", deprecated = true];</code>
    * @deprecated api.commons.Scorecard.is_ad_hoc is deprecated.
-   *     See api/commons/scorecards.proto;l=281
+   *     See api/commons/scorecards.proto;l=282
    * @return The isAdHoc.
    */
   @java.lang.Deprecated boolean getIsAdHoc();
@@ -297,4 +297,23 @@ public interface ScorecardOrBuilder extends
    */
   com.google.protobuf.ByteString
       getCustomFieldKeysBytes(int index);
+
+  /**
+   * <pre>
+   * call types supported by scorecard
+   * </pre>
+   *
+   * <code>.api.commons.CallType.Enum call_type = 20 [json_name = "callType"];</code>
+   * @return The enum numeric value on the wire for callType.
+   */
+  int getCallTypeValue();
+  /**
+   * <pre>
+   * call types supported by scorecard
+   * </pre>
+   *
+   * <code>.api.commons.CallType.Enum call_type = 20 [json_name = "callType"];</code>
+   * @return The callType.
+   */
+  com.tcn.cloud.api.api.commons.CallType.Enum getCallType();
 }
