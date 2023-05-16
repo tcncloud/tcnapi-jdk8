@@ -24,224 +24,236 @@ public final class ServiceProto {
   static {
     java.lang.String[] descriptorData = {
       "\n%api/v1alpha1/scorecards/service.proto\022" +
-      "\027api.v1alpha1.scorecards\032-api/v1alpha1/s" +
-      "corecards/auto_evaluation.proto\032+api/v1a" +
-      "lpha1/scorecards/auto_question.proto\032&ap" +
-      "i/v1alpha1/scorecards/category.proto\032(ap" +
-      "i/v1alpha1/scorecards/evaluation.proto\0321" +
-      "api/v1alpha1/scorecards/evaluation_quest" +
-      "ion.proto\032&api/v1alpha1/scorecards/quest" +
-      "ion.proto\032\'api/v1alpha1/scorecards/score" +
-      "card.proto\0320api/v1alpha1/scorecards/scor" +
-      "ecard_question.proto\032%api/v1alpha1/score" +
-      "cards/section.proto\032\034google/api/annotati" +
-      "ons.proto2\213A\n\nScorecards\022\264\001\n\017CreateScore" +
-      "card\022/.api.v1alpha1.scorecards.CreateSco" +
-      "recardRequest\0320.api.v1alpha1.scorecards." +
-      "CreateScorecardResponse\">\202\323\344\223\0028\"3/api/v1" +
-      "alpha1/scorecards/scorecards/createscore" +
-      "card:\001*\022\260\001\n\016ListScorecards\022..api.v1alpha" +
-      "1.scorecards.ListScorecardsRequest\032/.api" +
-      ".v1alpha1.scorecards.ListScorecardsRespo" +
-      "nse\"=\202\323\344\223\0027\"2/api/v1alpha1/scorecards/sc" +
-      "orecards/listscorecards:\001*\022\264\001\n\017UpdateSco" +
-      "recard\022/.api.v1alpha1.scorecards.UpdateS" +
-      "corecardRequest\0320.api.v1alpha1.scorecard" +
-      "s.UpdateScorecardResponse\">\202\323\344\223\0028\"3/api/" +
-      "v1alpha1/scorecards/scorecards/updatesco" +
-      "recard:\001*\022\264\001\n\017DeleteScorecard\022/.api.v1al" +
-      "pha1.scorecards.DeleteScorecardRequest\0320" +
-      ".api.v1alpha1.scorecards.DeleteScorecard" +
-      "Response\">\202\323\344\223\0028\"3/api/v1alpha1/scorecar" +
-      "ds/scorecards/deletescorecard:\001*\022\250\001\n\014Get" +
-      "Scorecard\022,.api.v1alpha1.scorecards.GetS" +
-      "corecardRequest\032-.api.v1alpha1.scorecard" +
-      "s.GetScorecardResponse\";\202\323\344\223\0025\"0/api/v1a" +
-      "lpha1/scorecards/scorecards/getscorecard" +
-      ":\001*\022\260\001\n\016CreateQuestion\022..api.v1alpha1.sc" +
-      "orecards.CreateQuestionRequest\032/.api.v1a" +
-      "lpha1.scorecards.CreateQuestionResponse\"" +
-      "=\202\323\344\223\0027\"2/api/v1alpha1/scorecards/scorec" +
-      "ards/createquestion:\001*\022\254\001\n\rListQuestions" +
-      "\022-.api.v1alpha1.scorecards.ListQuestions" +
-      "Request\032..api.v1alpha1.scorecards.ListQu" +
-      "estionsResponse\"<\202\323\344\223\0026\"1/api/v1alpha1/s" +
-      "corecards/scorecards/listquestions:\001*\022\260\001" +
-      "\n\016UpdateQuestion\022..api.v1alpha1.scorecar" +
-      "ds.UpdateQuestionRequest\032/.api.v1alpha1." +
-      "scorecards.UpdateQuestionResponse\"=\202\323\344\223\002" +
-      "7\"2/api/v1alpha1/scorecards/scorecards/u" +
-      "pdatequestion:\001*\022\260\001\n\016DeleteQuestion\022..ap" +
-      "i.v1alpha1.scorecards.DeleteQuestionRequ" +
-      "est\032/.api.v1alpha1.scorecards.DeleteQues" +
-      "tionResponse\"=\202\323\344\223\0027\"2/api/v1alpha1/scor" +
-      "ecards/scorecards/deletequestion:\001*\022\244\001\n\013" +
-      "GetQuestion\022+.api.v1alpha1.scorecards.Ge" +
-      "tQuestionRequest\032,.api.v1alpha1.scorecar" +
-      "ds.GetQuestionResponse\":\202\323\344\223\0024\"//api/v1a" +
-      "lpha1/scorecards/scorecards/getquestion:" +
-      "\001*\022\304\001\n\023BulkCreateQuestions\0223.api.v1alpha" +
-      "1.scorecards.BulkCreateQuestionsRequest\032" +
-      "4.api.v1alpha1.scorecards.BulkCreateQues" +
-      "tionsResponse\"B\202\323\344\223\002<\"7/api/v1alpha1/sco" +
-      "recards/scorecards/bulkcreatequestions:\001" +
-      "*\022\260\001\n\016CreateCategory\022..api.v1alpha1.scor" +
-      "ecards.CreateCategoryRequest\032/.api.v1alp" +
-      "ha1.scorecards.CreateCategoryResponse\"=\202" +
-      "\323\344\223\0027\"2/api/v1alpha1/scorecards/scorecar" +
-      "ds/createcategory:\001*\022\260\001\n\016ListCategories\022" +
-      "..api.v1alpha1.scorecards.ListCategories" +
-      "Request\032/.api.v1alpha1.scorecards.ListCa" +
-      "tegoriesResponse\"=\202\323\344\223\0027\"2/api/v1alpha1/" +
-      "scorecards/scorecards/listcategories:\001*\022" +
-      "\260\001\n\016UpdateCategory\022..api.v1alpha1.scorec" +
-      "ards.UpdateCategoryRequest\032/.api.v1alpha" +
-      "1.scorecards.UpdateCategoryResponse\"=\202\323\344" +
-      "\223\0027\"2/api/v1alpha1/scorecards/scorecards" +
-      "/updatecategory:\001*\022\260\001\n\016DeleteCategory\022.." +
-      "api.v1alpha1.scorecards.DeleteCategoryRe" +
-      "quest\032/.api.v1alpha1.scorecards.DeleteCa" +
-      "tegoryResponse\"=\202\323\344\223\0027\"2/api/v1alpha1/sc" +
-      "orecards/scorecards/deletecategory:\001*\022\244\001" +
-      "\n\013GetCategory\022+.api.v1alpha1.scorecards." +
-      "GetCategoryRequest\032,.api.v1alpha1.scorec" +
-      "ards.GetCategoryResponse\":\202\323\344\223\0024\"//api/v" +
+      "\027api.v1alpha1.scorecards\032\027annotations/au" +
+      "thz.proto\032-api/v1alpha1/scorecards/auto_" +
+      "evaluation.proto\032+api/v1alpha1/scorecard" +
+      "s/auto_question.proto\032&api/v1alpha1/scor" +
+      "ecards/category.proto\032(api/v1alpha1/scor" +
+      "ecards/evaluation.proto\0321api/v1alpha1/sc" +
+      "orecards/evaluation_question.proto\032&api/" +
+      "v1alpha1/scorecards/question.proto\032\'api/" +
+      "v1alpha1/scorecards/scorecard.proto\0320api" +
+      "/v1alpha1/scorecards/scorecard_question." +
+      "proto\032%api/v1alpha1/scorecards/section.p" +
+      "roto\032\034google/api/annotations.proto2\322D\n\nS" +
+      "corecards\022\276\001\n\017CreateScorecard\022/.api.v1al" +
+      "pha1.scorecards.CreateScorecardRequest\0320" +
+      ".api.v1alpha1.scorecards.CreateScorecard" +
+      "Response\"H\272\270\221\002\005\n\003\010\301\014\202\323\344\223\0028\"3/api/v1alpha" +
+      "1/scorecards/scorecards/createscorecard:" +
+      "\001*\022\277\001\n\016ListScorecards\022..api.v1alpha1.sco" +
+      "recards.ListScorecardsRequest\032/.api.v1al" +
+      "pha1.scorecards.ListScorecardsResponse\"L" +
+      "\272\270\221\002\n\n\003\010\301\014\n\003\010\302\014\202\323\344\223\0027\"2/api/v1alpha1/sco" +
+      "recards/scorecards/listscorecards:\001*\022\276\001\n" +
+      "\017UpdateScorecard\022/.api.v1alpha1.scorecar" +
+      "ds.UpdateScorecardRequest\0320.api.v1alpha1" +
+      ".scorecards.UpdateScorecardResponse\"H\272\270\221" +
+      "\002\005\n\003\010\301\014\202\323\344\223\0028\"3/api/v1alpha1/scorecards/" +
+      "scorecards/updatescorecard:\001*\022\276\001\n\017Delete" +
+      "Scorecard\022/.api.v1alpha1.scorecards.Dele" +
+      "teScorecardRequest\0320.api.v1alpha1.scorec" +
+      "ards.DeleteScorecardResponse\"H\272\270\221\002\005\n\003\010\301\014" +
+      "\202\323\344\223\0028\"3/api/v1alpha1/scorecards/scoreca" +
+      "rds/deletescorecard:\001*\022\267\001\n\014GetScorecard\022" +
+      ",.api.v1alpha1.scorecards.GetScorecardRe" +
+      "quest\032-.api.v1alpha1.scorecards.GetScore" +
+      "cardResponse\"J\272\270\221\002\n\n\003\010\301\014\n\003\010\302\014\202\323\344\223\0025\"0/ap" +
+      "i/v1alpha1/scorecards/scorecards/getscor" +
+      "ecard:\001*\022\272\001\n\016CreateQuestion\022..api.v1alph" +
+      "a1.scorecards.CreateQuestionRequest\032/.ap" +
+      "i.v1alpha1.scorecards.CreateQuestionResp" +
+      "onse\"G\272\270\221\002\005\n\003\010\301\014\202\323\344\223\0027\"2/api/v1alpha1/sc" +
+      "orecards/scorecards/createquestion:\001*\022\266\001" +
+      "\n\rListQuestions\022-.api.v1alpha1.scorecard" +
+      "s.ListQuestionsRequest\032..api.v1alpha1.sc" +
+      "orecards.ListQuestionsResponse\"F\272\270\221\002\005\n\003\010" +
+      "\301\014\202\323\344\223\0026\"1/api/v1alpha1/scorecards/score" +
+      "cards/listquestions:\001*\022\272\001\n\016UpdateQuestio" +
+      "n\022..api.v1alpha1.scorecards.UpdateQuesti" +
+      "onRequest\032/.api.v1alpha1.scorecards.Upda" +
+      "teQuestionResponse\"G\272\270\221\002\005\n\003\010\301\014\202\323\344\223\0027\"2/a" +
+      "pi/v1alpha1/scorecards/scorecards/update" +
+      "question:\001*\022\272\001\n\016DeleteQuestion\022..api.v1a" +
+      "lpha1.scorecards.DeleteQuestionRequest\032/" +
+      ".api.v1alpha1.scorecards.DeleteQuestionR" +
+      "esponse\"G\272\270\221\002\005\n\003\010\301\014\202\323\344\223\0027\"2/api/v1alpha1" +
+      "/scorecards/scorecards/deletequestion:\001*" +
+      "\022\256\001\n\013GetQuestion\022+.api.v1alpha1.scorecar" +
+      "ds.GetQuestionRequest\032,.api.v1alpha1.sco" +
+      "recards.GetQuestionResponse\"D\272\270\221\002\005\n\003\010\301\014\202" +
+      "\323\344\223\0024\"//api/v1alpha1/scorecards/scorecar" +
+      "ds/getquestion:\001*\022\316\001\n\023BulkCreateQuestion" +
+      "s\0223.api.v1alpha1.scorecards.BulkCreateQu" +
+      "estionsRequest\0324.api.v1alpha1.scorecards" +
+      ".BulkCreateQuestionsResponse\"L\272\270\221\002\005\n\003\010\301\014" +
+      "\202\323\344\223\002<\"7/api/v1alpha1/scorecards/scoreca" +
+      "rds/bulkcreatequestions:\001*\022\272\001\n\016CreateCat" +
+      "egory\022..api.v1alpha1.scorecards.CreateCa" +
+      "tegoryRequest\032/.api.v1alpha1.scorecards." +
+      "CreateCategoryResponse\"G\272\270\221\002\005\n\003\010\301\014\202\323\344\223\0027" +
+      "\"2/api/v1alpha1/scorecards/scorecards/cr" +
+      "eatecategory:\001*\022\277\001\n\016ListCategories\022..api" +
+      ".v1alpha1.scorecards.ListCategoriesReque" +
+      "st\032/.api.v1alpha1.scorecards.ListCategor" +
+      "iesResponse\"L\272\270\221\002\n\n\003\010\301\014\n\003\010\302\014\202\323\344\223\0027\"2/api" +
+      "/v1alpha1/scorecards/scorecards/listcate" +
+      "gories:\001*\022\272\001\n\016UpdateCategory\022..api.v1alp" +
+      "ha1.scorecards.UpdateCategoryRequest\032/.a" +
+      "pi.v1alpha1.scorecards.UpdateCategoryRes" +
+      "ponse\"G\272\270\221\002\005\n\003\010\301\014\202\323\344\223\0027\"2/api/v1alpha1/s" +
+      "corecards/scorecards/updatecategory:\001*\022\272" +
+      "\001\n\016DeleteCategory\022..api.v1alpha1.scoreca" +
+      "rds.DeleteCategoryRequest\032/.api.v1alpha1" +
+      ".scorecards.DeleteCategoryResponse\"G\272\270\221\002" +
+      "\005\n\003\010\301\014\202\323\344\223\0027\"2/api/v1alpha1/scorecards/s" +
+      "corecards/deletecategory:\001*\022\256\001\n\013GetCateg" +
+      "ory\022+.api.v1alpha1.scorecards.GetCategor" +
+      "yRequest\032,.api.v1alpha1.scorecards.GetCa" +
+      "tegoryResponse\"D\272\270\221\002\005\n\003\010\301\014\202\323\344\223\0024\"//api/v" +
       "1alpha1/scorecards/scorecards/getcategor" +
-      "y:\001*\022\324\001\n\027CreateScorecardQuestion\0227.api.v" +
+      "y:\001*\022\336\001\n\027CreateScorecardQuestion\0227.api.v" +
       "1alpha1.scorecards.CreateScorecardQuesti" +
       "onRequest\0328.api.v1alpha1.scorecards.Crea" +
-      "teScorecardQuestionResponse\"F\202\323\344\223\002@\";/ap" +
-      "i/v1alpha1/scorecards/scorecards/creates" +
-      "corecardquestion:\001*\022\324\001\n\027UpdateScorecardQ" +
-      "uestion\0227.api.v1alpha1.scorecards.Update" +
-      "ScorecardQuestionRequest\0328.api.v1alpha1." +
-      "scorecards.UpdateScorecardQuestionRespon" +
-      "se\"F\202\323\344\223\002@\";/api/v1alpha1/scorecards/sco" +
-      "recards/updatescorecardquestion:\001*\022\324\001\n\027D" +
-      "eleteScorecardQuestion\0227.api.v1alpha1.sc" +
-      "orecards.DeleteScorecardQuestionRequest\032" +
-      "8.api.v1alpha1.scorecards.DeleteScorecar" +
-      "dQuestionResponse\"F\202\323\344\223\002@\";/api/v1alpha1" +
-      "/scorecards/scorecards/deletescorecardqu" +
-      "estion:\001*\022\310\001\n\024GetScorecardQuestion\0224.api" +
-      ".v1alpha1.scorecards.GetScorecardQuestio" +
-      "nRequest\0325.api.v1alpha1.scorecards.GetSc" +
-      "orecardQuestionResponse\"C\202\323\344\223\002=\"8/api/v1" +
+      "teScorecardQuestionResponse\"P\272\270\221\002\005\n\003\010\301\014\202" +
+      "\323\344\223\002@\";/api/v1alpha1/scorecards/scorecar" +
+      "ds/createscorecardquestion:\001*\022\336\001\n\027Update" +
+      "ScorecardQuestion\0227.api.v1alpha1.scoreca" +
+      "rds.UpdateScorecardQuestionRequest\0328.api" +
+      ".v1alpha1.scorecards.UpdateScorecardQues" +
+      "tionResponse\"P\272\270\221\002\005\n\003\010\301\014\202\323\344\223\002@\";/api/v1a" +
+      "lpha1/scorecards/scorecards/updatescorec" +
+      "ardquestion:\001*\022\336\001\n\027DeleteScorecardQuesti" +
+      "on\0227.api.v1alpha1.scorecards.DeleteScore" +
+      "cardQuestionRequest\0328.api.v1alpha1.score" +
+      "cards.DeleteScorecardQuestionResponse\"P\272" +
+      "\270\221\002\005\n\003\010\301\014\202\323\344\223\002@\";/api/v1alpha1/scorecard" +
+      "s/scorecards/deletescorecardquestion:\001*\022" +
+      "\322\001\n\024GetScorecardQuestion\0224.api.v1alpha1." +
+      "scorecards.GetScorecardQuestionRequest\0325" +
+      ".api.v1alpha1.scorecards.GetScorecardQue" +
+      "stionResponse\"M\272\270\221\002\005\n\003\010\301\014\202\323\344\223\002=\"8/api/v1" +
       "alpha1/scorecards/scorecards/getscorecar" +
-      "dquestion:\001*\022\254\001\n\rCreateSection\022-.api.v1a" +
+      "dquestion:\001*\022\266\001\n\rCreateSection\022-.api.v1a" +
       "lpha1.scorecards.CreateSectionRequest\032.." +
       "api.v1alpha1.scorecards.CreateSectionRes" +
-      "ponse\"<\202\323\344\223\0026\"1/api/v1alpha1/scorecards/" +
-      "scorecards/createsection:\001*\022\250\001\n\014ListSect" +
-      "ions\022,.api.v1alpha1.scorecards.ListSecti" +
-      "onsRequest\032-.api.v1alpha1.scorecards.Lis" +
-      "tSectionsResponse\";\202\323\344\223\0025\"0/api/v1alpha1" +
-      "/scorecards/scorecards/listsections:\001*\022\254" +
-      "\001\n\rUpdateSection\022-.api.v1alpha1.scorecar" +
-      "ds.UpdateSectionRequest\032..api.v1alpha1.s" +
-      "corecards.UpdateSectionResponse\"<\202\323\344\223\0026\"" +
-      "1/api/v1alpha1/scorecards/scorecards/upd" +
-      "atesection:\001*\022\240\001\n\nGetSection\022*.api.v1alp" +
-      "ha1.scorecards.GetSectionRequest\032+.api.v" +
-      "1alpha1.scorecards.GetSectionResponse\"9\202" +
+      "ponse\"F\272\270\221\002\005\n\003\010\301\014\202\323\344\223\0026\"1/api/v1alpha1/s" +
+      "corecards/scorecards/createsection:\001*\022\262\001" +
+      "\n\014ListSections\022,.api.v1alpha1.scorecards" +
+      ".ListSectionsRequest\032-.api.v1alpha1.scor" +
+      "ecards.ListSectionsResponse\"E\272\270\221\002\005\n\003\010\301\014\202" +
+      "\323\344\223\0025\"0/api/v1alpha1/scorecards/scorecar" +
+      "ds/listsections:\001*\022\266\001\n\rUpdateSection\022-.a" +
+      "pi.v1alpha1.scorecards.UpdateSectionRequ" +
+      "est\032..api.v1alpha1.scorecards.UpdateSect" +
+      "ionResponse\"F\272\270\221\002\005\n\003\010\301\014\202\323\344\223\0026\"1/api/v1al" +
+      "pha1/scorecards/scorecards/updatesection" +
+      ":\001*\022\252\001\n\nGetSection\022*.api.v1alpha1.scorec" +
+      "ards.GetSectionRequest\032+.api.v1alpha1.sc" +
+      "orecards.GetSectionResponse\"C\272\270\221\002\005\n\003\010\301\014\202" +
       "\323\344\223\0023\"./api/v1alpha1/scorecards/scorecar" +
-      "ds/getsection:\001*\022\254\001\n\rDeleteSection\022-.api" +
+      "ds/getsection:\001*\022\266\001\n\rDeleteSection\022-.api" +
       ".v1alpha1.scorecards.DeleteSectionReques" +
       "t\032..api.v1alpha1.scorecards.DeleteSectio" +
-      "nResponse\"<\202\323\344\223\0026\"1/api/v1alpha1/scoreca" +
-      "rds/scorecards/deletesection:\001*\022\320\001\n\026Crea" +
-      "teQuestionCategory\0226.api.v1alpha1.scorec" +
-      "ards.CreateQuestionCategoryRequest\0327.api" +
-      ".v1alpha1.scorecards.CreateQuestionCateg" +
-      "oryResponse\"E\202\323\344\223\002?\":/api/v1alpha1/score" +
-      "cards/scorecards/createquestioncategory:" +
-      "\001*\022\320\001\n\026DeleteQuestionCategory\0226.api.v1al" +
-      "pha1.scorecards.DeleteQuestionCategoryRe" +
-      "quest\0327.api.v1alpha1.scorecards.DeleteQu" +
-      "estionCategoryResponse\"E\202\323\344\223\002?\":/api/v1a" +
-      "lpha1/scorecards/scorecards/deletequesti" +
-      "oncategory:\001*\022\270\001\n\020CreateEvaluation\0220.api" +
-      ".v1alpha1.scorecards.CreateEvaluationReq" +
-      "uest\0321.api.v1alpha1.scorecards.CreateEva" +
-      "luationResponse\"?\202\323\344\223\0029\"4/api/v1alpha1/s" +
+      "nResponse\"F\272\270\221\002\005\n\003\010\301\014\202\323\344\223\0026\"1/api/v1alph" +
+      "a1/scorecards/scorecards/deletesection:\001" +
+      "*\022\332\001\n\026CreateQuestionCategory\0226.api.v1alp" +
+      "ha1.scorecards.CreateQuestionCategoryReq" +
+      "uest\0327.api.v1alpha1.scorecards.CreateQue" +
+      "stionCategoryResponse\"O\272\270\221\002\005\n\003\010\301\014\202\323\344\223\002?\"" +
+      ":/api/v1alpha1/scorecards/scorecards/cre" +
+      "atequestioncategory:\001*\022\332\001\n\026DeleteQuestio" +
+      "nCategory\0226.api.v1alpha1.scorecards.Dele" +
+      "teQuestionCategoryRequest\0327.api.v1alpha1" +
+      ".scorecards.DeleteQuestionCategoryRespon" +
+      "se\"O\272\270\221\002\005\n\003\010\301\014\202\323\344\223\002?\":/api/v1alpha1/scor" +
+      "ecards/scorecards/deletequestioncategory" +
+      ":\001*\022\302\001\n\020CreateEvaluation\0220.api.v1alpha1." +
+      "scorecards.CreateEvaluationRequest\0321.api" +
+      ".v1alpha1.scorecards.CreateEvaluationRes" +
+      "ponse\"I\272\270\221\002\005\n\003\010\302\014\202\323\344\223\0029\"4/api/v1alpha1/s" +
       "corecards/scorecards/createevaluation:\001*" +
-      "\022\270\001\n\020DeleteEvaluation\0220.api.v1alpha1.sco" +
+      "\022\302\001\n\020DeleteEvaluation\0220.api.v1alpha1.sco" +
       "recards.DeleteEvaluationRequest\0321.api.v1" +
       "alpha1.scorecards.DeleteEvaluationRespon" +
-      "se\"?\202\323\344\223\0029\"4/api/v1alpha1/scorecards/sco" +
-      "recards/deleteevaluation:\001*\022\264\001\n\017ScoreEva" +
-      "luation\022/.api.v1alpha1.scorecards.ScoreE" +
-      "valuationRequest\0320.api.v1alpha1.scorecar" +
-      "ds.ScoreEvaluationResponse\">\202\323\344\223\0028\"3/api" +
-      "/v1alpha1/scorecards/scorecards/scoreeva" +
-      "luation:\001*\022\270\001\n\020UpdateEvaluation\0220.api.v1" +
-      "alpha1.scorecards.UpdateEvaluationReques" +
-      "t\0321.api.v1alpha1.scorecards.UpdateEvalua" +
-      "tionResponse\"?\202\323\344\223\0029\"4/api/v1alpha1/scor" +
-      "ecards/scorecards/updateevaluation:\001*\022\254\001" +
-      "\n\rGetEvaluation\022-.api.v1alpha1.scorecard" +
-      "s.GetEvaluationRequest\032..api.v1alpha1.sc" +
-      "orecards.GetEvaluationResponse\"<\202\323\344\223\0026\"1" +
+      "se\"I\272\270\221\002\005\n\003\010\302\014\202\323\344\223\0029\"4/api/v1alpha1/scor" +
+      "ecards/scorecards/deleteevaluation:\001*\022\276\001" +
+      "\n\017ScoreEvaluation\022/.api.v1alpha1.scoreca" +
+      "rds.ScoreEvaluationRequest\0320.api.v1alpha" +
+      "1.scorecards.ScoreEvaluationResponse\"H\272\270" +
+      "\221\002\005\n\003\010\302\014\202\323\344\223\0028\"3/api/v1alpha1/scorecards" +
+      "/scorecards/scoreevaluation:\001*\022\302\001\n\020Updat" +
+      "eEvaluation\0220.api.v1alpha1.scorecards.Up" +
+      "dateEvaluationRequest\0321.api.v1alpha1.sco" +
+      "recards.UpdateEvaluationResponse\"I\272\270\221\002\005\n" +
+      "\003\010\302\014\202\323\344\223\0029\"4/api/v1alpha1/scorecards/sco" +
+      "recards/updateevaluation:\001*\022\266\001\n\rGetEvalu" +
+      "ation\022-.api.v1alpha1.scorecards.GetEvalu" +
+      "ationRequest\032..api.v1alpha1.scorecards.G" +
+      "etEvaluationResponse\"F\272\270\221\002\005\n\003\010\302\014\202\323\344\223\0026\"1" +
       "/api/v1alpha1/scorecards/scorecards/gete" +
-      "valuation:\001*\022\264\001\n\017ListEvaluations\022/.api.v" +
+      "valuation:\001*\022\276\001\n\017ListEvaluations\022/.api.v" +
       "1alpha1.scorecards.ListEvaluationsReques" +
       "t\0320.api.v1alpha1.scorecards.ListEvaluati" +
-      "onsResponse\">\202\323\344\223\0028\"3/api/v1alpha1/score" +
-      "cards/scorecards/listevaluations:\001*\022\333\001\n\030" +
-      "CreateEvaluationQuestion\0228.api.v1alpha1." +
-      "scorecards.CreateEvaluationQuestionReque" +
-      "st\0329.api.v1alpha1.scorecards.CreateEvalu" +
-      "ationQuestionResponse\"J\210\002\001\202\323\344\223\002A\"</api/v" +
-      "1alpha1/scorecards/scorecards/createeval" +
-      "uationquestion:\001*\022\330\001\n\030UpdateEvaluationQu" +
-      "estion\0228.api.v1alpha1.scorecards.UpdateE" +
-      "valuationQuestionRequest\0329.api.v1alpha1." +
-      "scorecards.UpdateEvaluationQuestionRespo" +
-      "nse\"G\202\323\344\223\002A\"</api/v1alpha1/scorecards/sc" +
-      "orecards/updateevaluationquestion:\001*\022\330\001\n" +
-      "\030DeleteEvaluationQuestion\0228.api.v1alpha1" +
-      ".scorecards.DeleteEvaluationQuestionRequ" +
-      "est\0329.api.v1alpha1.scorecards.DeleteEval" +
-      "uationQuestionResponse\"G\202\323\344\223\002A\"</api/v1a" +
+      "onsResponse\"H\272\270\221\002\005\n\003\010\302\014\202\323\344\223\0028\"3/api/v1al" +
+      "pha1/scorecards/scorecards/listevaluatio" +
+      "ns:\001*\022\345\001\n\030CreateEvaluationQuestion\0228.api" +
+      ".v1alpha1.scorecards.CreateEvaluationQue" +
+      "stionRequest\0329.api.v1alpha1.scorecards.C" +
+      "reateEvaluationQuestionResponse\"T\210\002\001\272\270\221\002" +
+      "\005\n\003\010\302\014\202\323\344\223\002A\"</api/v1alpha1/scorecards/s" +
+      "corecards/createevaluationquestion:\001*\022\342\001" +
+      "\n\030UpdateEvaluationQuestion\0228.api.v1alpha" +
+      "1.scorecards.UpdateEvaluationQuestionReq" +
+      "uest\0329.api.v1alpha1.scorecards.UpdateEva" +
+      "luationQuestionResponse\"Q\272\270\221\002\005\n\003\010\302\014\202\323\344\223\002" +
+      "A\"</api/v1alpha1/scorecards/scorecards/u" +
+      "pdateevaluationquestion:\001*\022\342\001\n\030DeleteEva" +
+      "luationQuestion\0228.api.v1alpha1.scorecard" +
+      "s.DeleteEvaluationQuestionRequest\0329.api." +
+      "v1alpha1.scorecards.DeleteEvaluationQues" +
+      "tionResponse\"Q\272\270\221\002\005\n\003\010\302\014\202\323\344\223\002A\"</api/v1a" +
       "lpha1/scorecards/scorecards/deleteevalua" +
-      "tionquestion:\001*\022\314\001\n\025SampleCallsByCategor" +
+      "tionquestion:\001*\022\326\001\n\025SampleCallsByCategor" +
       "y\0225.api.v1alpha1.scorecards.SampleCallsB" +
       "yCategoryRequest\0326.api.v1alpha1.scorecar" +
-      "ds.SampleCallsByCategoryResponse\"D\202\323\344\223\002>" +
-      "\"9/api/v1alpha1/scorecards/scorecards/sa" +
-      "mplecallsbycategory:\001*\022\300\001\n\022CreateAutoQue" +
-      "stion\0222.api.v1alpha1.scorecards.CreateAu" +
-      "toQuestionRequest\0323.api.v1alpha1.scoreca" +
-      "rds.CreateAutoQuestionResponse\"A\202\323\344\223\002;\"6" +
-      "/api/v1alpha1/scorecards/scorecards/crea" +
-      "teautoquestion:\001*\022\300\001\n\022UpdateAutoQuestion" +
-      "\0222.api.v1alpha1.scorecards.UpdateAutoQue" +
-      "stionRequest\0323.api.v1alpha1.scorecards.U" +
-      "pdateAutoQuestionResponse\"A\202\323\344\223\002;\"6/api/" +
-      "v1alpha1/scorecards/scorecards/updateaut" +
-      "oquestion:\001*\022\300\001\n\022DeleteAutoQuestion\0222.ap" +
-      "i.v1alpha1.scorecards.DeleteAutoQuestion" +
-      "Request\0323.api.v1alpha1.scorecards.Delete" +
-      "AutoQuestionResponse\"A\202\323\344\223\002;\"6/api/v1alp" +
+      "ds.SampleCallsByCategoryResponse\"N\272\270\221\002\005\n" +
+      "\003\010\302\014\202\323\344\223\002>\"9/api/v1alpha1/scorecards/sco" +
+      "recards/samplecallsbycategory:\001*\022\312\001\n\022Cre" +
+      "ateAutoQuestion\0222.api.v1alpha1.scorecard" +
+      "s.CreateAutoQuestionRequest\0323.api.v1alph" +
+      "a1.scorecards.CreateAutoQuestionResponse" +
+      "\"K\272\270\221\002\005\n\003\010\301\014\202\323\344\223\002;\"6/api/v1alpha1/scorec" +
+      "ards/scorecards/createautoquestion:\001*\022\312\001" +
+      "\n\022UpdateAutoQuestion\0222.api.v1alpha1.scor" +
+      "ecards.UpdateAutoQuestionRequest\0323.api.v" +
+      "1alpha1.scorecards.UpdateAutoQuestionRes" +
+      "ponse\"K\272\270\221\002\005\n\003\010\301\014\202\323\344\223\002;\"6/api/v1alpha1/s" +
+      "corecards/scorecards/updateautoquestion:" +
+      "\001*\022\312\001\n\022DeleteAutoQuestion\0222.api.v1alpha1" +
+      ".scorecards.DeleteAutoQuestionRequest\0323." +
+      "api.v1alpha1.scorecards.DeleteAutoQuesti" +
+      "onResponse\"K\272\270\221\002\005\n\003\010\301\014\202\323\344\223\002;\"6/api/v1alp" +
       "ha1/scorecards/scorecards/deleteautoques" +
-      "tion:\001*\022\264\001\n\017GetAutoQuestion\022/.api.v1alph" +
+      "tion:\001*\022\276\001\n\017GetAutoQuestion\022/.api.v1alph" +
       "a1.scorecards.GetAutoQuestionRequest\0320.a" +
       "pi.v1alpha1.scorecards.GetAutoQuestionRe" +
-      "sponse\">\202\323\344\223\0028\"3/api/v1alpha1/scorecards" +
-      "/scorecards/getautoquestion:\001*\022\274\001\n\021GetAu" +
-      "toEvaluation\0221.api.v1alpha1.scorecards.G" +
-      "etAutoEvaluationRequest\0322.api.v1alpha1.s" +
-      "corecards.GetAutoEvaluationResponse\"@\202\323\344" +
-      "\223\002:\"5/api/v1alpha1/scorecards/scorecards" +
-      "/getautoevaluation:\001*\022\304\001\n\023ListAutoEvalua" +
-      "tions\0223.api.v1alpha1.scorecards.ListAuto" +
-      "EvaluationsRequest\0324.api.v1alpha1.scorec" +
-      "ards.ListAutoEvaluationsResponse\"B\202\323\344\223\002<" +
-      "\"7/api/v1alpha1/scorecards/scorecards/li" +
-      "stautoevaluations:\001*\022\310\001\n\024DeleteAutoEvalu" +
-      "ation\0224.api.v1alpha1.scorecards.DeleteAu" +
-      "toEvaluationRequest\0325.api.v1alpha1.score" +
-      "cards.DeleteAutoEvaluationResponse\"C\202\323\344\223" +
+      "sponse\"H\272\270\221\002\005\n\003\010\301\014\202\323\344\223\0028\"3/api/v1alpha1/" +
+      "scorecards/scorecards/getautoquestion:\001*" +
+      "\022\306\001\n\021GetAutoEvaluation\0221.api.v1alpha1.sc" +
+      "orecards.GetAutoEvaluationRequest\0322.api." +
+      "v1alpha1.scorecards.GetAutoEvaluationRes" +
+      "ponse\"J\272\270\221\002\005\n\003\010\302\014\202\323\344\223\002:\"5/api/v1alpha1/s" +
+      "corecards/scorecards/getautoevaluation:\001" +
+      "*\022\316\001\n\023ListAutoEvaluations\0223.api.v1alpha1" +
+      ".scorecards.ListAutoEvaluationsRequest\0324" +
+      ".api.v1alpha1.scorecards.ListAutoEvaluat" +
+      "ionsResponse\"L\272\270\221\002\005\n\003\010\302\014\202\323\344\223\002<\"7/api/v1a" +
+      "lpha1/scorecards/scorecards/listautoeval" +
+      "uations:\001*\022\322\001\n\024DeleteAutoEvaluation\0224.ap" +
+      "i.v1alpha1.scorecards.DeleteAutoEvaluati" +
+      "onRequest\0325.api.v1alpha1.scorecards.Dele" +
+      "teAutoEvaluationResponse\"M\272\270\221\002\005\n\003\010\302\014\202\323\344\223" +
       "\002=\"8/api/v1alpha1/scorecards/scorecards/" +
       "deleteautoevaluation:\001*B\267\001\n)com.tcn.clou" +
       "d.api.api.v1alpha1.scorecardsB\014ServicePr" +
@@ -253,6 +265,7 @@ public final class ServiceProto {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.tcn.cloud.api.annotations.AuthzProto.getDescriptor(),
           com.tcn.cloud.api.api.v1alpha1.scorecards.AutoEvaluationProto.getDescriptor(),
           com.tcn.cloud.api.api.v1alpha1.scorecards.AutoQuestionProto.getDescriptor(),
           com.tcn.cloud.api.api.v1alpha1.scorecards.CategoryProto.getDescriptor(),
@@ -266,9 +279,11 @@ public final class ServiceProto {
         });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.tcn.cloud.api.annotations.AuthzProto.authz);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.tcn.cloud.api.annotations.AuthzProto.getDescriptor();
     com.tcn.cloud.api.api.v1alpha1.scorecards.AutoEvaluationProto.getDescriptor();
     com.tcn.cloud.api.api.v1alpha1.scorecards.AutoQuestionProto.getDescriptor();
     com.tcn.cloud.api.api.v1alpha1.scorecards.CategoryProto.getDescriptor();
