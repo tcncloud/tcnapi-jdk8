@@ -133,7 +133,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>string country_code = 3 [json_name = "countryCode", deprecated = true];</code>
    * @deprecated api.v0alpha.ScenarioData.country_code is deprecated.
-   *     See api/v0alpha/compliance.proto;l=849
+   *     See api/v0alpha/compliance.proto;l=1304
    * @return The countryCode.
    */
   @java.lang.Override
@@ -152,7 +152,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>string country_code = 3 [json_name = "countryCode", deprecated = true];</code>
    * @deprecated api.v0alpha.ScenarioData.country_code is deprecated.
-   *     See api/v0alpha/compliance.proto;l=849
+   *     See api/v0alpha/compliance.proto;l=1304
    * @return The bytes for countryCode.
    */
   @java.lang.Override
@@ -1653,7 +1653,7 @@ java.lang.String defaultValue) {
     /**
      * <code>string country_code = 3 [json_name = "countryCode", deprecated = true];</code>
      * @deprecated api.v0alpha.ScenarioData.country_code is deprecated.
-     *     See api/v0alpha/compliance.proto;l=849
+     *     See api/v0alpha/compliance.proto;l=1304
      * @return The countryCode.
      */
     @java.lang.Deprecated public java.lang.String getCountryCode() {
@@ -1671,7 +1671,7 @@ java.lang.String defaultValue) {
     /**
      * <code>string country_code = 3 [json_name = "countryCode", deprecated = true];</code>
      * @deprecated api.v0alpha.ScenarioData.country_code is deprecated.
-     *     See api/v0alpha/compliance.proto;l=849
+     *     See api/v0alpha/compliance.proto;l=1304
      * @return The bytes for countryCode.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -1690,7 +1690,7 @@ java.lang.String defaultValue) {
     /**
      * <code>string country_code = 3 [json_name = "countryCode", deprecated = true];</code>
      * @deprecated api.v0alpha.ScenarioData.country_code is deprecated.
-     *     See api/v0alpha/compliance.proto;l=849
+     *     See api/v0alpha/compliance.proto;l=1304
      * @param value The countryCode to set.
      * @return This builder for chaining.
      */
@@ -1705,7 +1705,7 @@ java.lang.String defaultValue) {
     /**
      * <code>string country_code = 3 [json_name = "countryCode", deprecated = true];</code>
      * @deprecated api.v0alpha.ScenarioData.country_code is deprecated.
-     *     See api/v0alpha/compliance.proto;l=849
+     *     See api/v0alpha/compliance.proto;l=1304
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearCountryCode() {
@@ -1717,7 +1717,7 @@ java.lang.String defaultValue) {
     /**
      * <code>string country_code = 3 [json_name = "countryCode", deprecated = true];</code>
      * @deprecated api.v0alpha.ScenarioData.country_code is deprecated.
-     *     See api/v0alpha/compliance.proto;l=849
+     *     See api/v0alpha/compliance.proto;l=1304
      * @param value The bytes for countryCode to set.
      * @return This builder for chaining.
      */
