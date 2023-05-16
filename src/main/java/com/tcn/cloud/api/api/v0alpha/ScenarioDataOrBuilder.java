@@ -37,14 +37,14 @@ public interface ScenarioDataOrBuilder extends
   /**
    * <code>string country_code = 3 [json_name = "countryCode", deprecated = true];</code>
    * @deprecated api.v0alpha.ScenarioData.country_code is deprecated.
-   *     See api/v0alpha/compliance.proto;l=849
+   *     See api/v0alpha/compliance.proto;l=1304
    * @return The countryCode.
    */
   @java.lang.Deprecated java.lang.String getCountryCode();
   /**
    * <code>string country_code = 3 [json_name = "countryCode", deprecated = true];</code>
    * @deprecated api.v0alpha.ScenarioData.country_code is deprecated.
-   *     See api/v0alpha/compliance.proto;l=849
+   *     See api/v0alpha/compliance.proto;l=1304
    * @return The bytes for countryCode.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString

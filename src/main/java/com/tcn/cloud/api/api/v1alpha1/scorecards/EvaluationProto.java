@@ -25,16 +25,6 @@ public final class EvaluationProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v1alpha1_scorecards_CreateEvaluationResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_scorecards_UpdateEvaluationRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_scorecards_UpdateEvaluationRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v1alpha1_scorecards_UpdateEvaluationResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v1alpha1_scorecards_UpdateEvaluationResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v1alpha1_scorecards_DeleteEvaluationRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -85,47 +75,40 @@ public final class EvaluationProto {
     java.lang.String[] descriptorData = {
       "\n(api/v1alpha1/scorecards/evaluation.pro" +
       "to\022\027api.v1alpha1.scorecards\032\034api/commons" +
-      "/scorecards.proto\032 google/protobuf/field" +
-      "_mask.proto\"R\n\027CreateEvaluationRequest\0227" +
+      "/scorecards.proto\"R\n\027CreateEvaluationReq" +
+      "uest\0227\n\nevaluation\030\001 \001(\0132\027.api.commons.E" +
+      "valuationR\nevaluation\"S\n\030CreateEvaluatio" +
+      "nResponse\0227\n\nevaluation\030\001 \001(\0132\027.api.comm" +
+      "ons.EvaluationR\nevaluation\">\n\027DeleteEval" +
+      "uationRequest\022#\n\revaluation_id\030\002 \001(\003R\014ev" +
+      "aluationId\"S\n\030DeleteEvaluationResponse\0227" +
       "\n\nevaluation\030\001 \001(\0132\027.api.commons.Evaluat" +
-      "ionR\nevaluation\"S\n\030CreateEvaluationRespo" +
-      "nse\0227\n\nevaluation\030\001 \001(\0132\027.api.commons.Ev" +
-      "aluationR\nevaluation\"\217\001\n\027UpdateEvaluatio" +
-      "nRequest\0227\n\nevaluation\030\001 \001(\0132\027.api.commo" +
-      "ns.EvaluationR\nevaluation\022;\n\013update_mask" +
-      "\030\002 \001(\0132\032.google.protobuf.FieldMaskR\nupda" +
-      "teMask\"S\n\030UpdateEvaluationResponse\0227\n\nev" +
-      "aluation\030\001 \001(\0132\027.api.commons.EvaluationR" +
-      "\nevaluation\">\n\027DeleteEvaluationRequest\022#" +
-      "\n\revaluation_id\030\002 \001(\003R\014evaluationId\"S\n\030D" +
-      "eleteEvaluationResponse\0227\n\nevaluation\030\001 " +
-      "\001(\0132\027.api.commons.EvaluationR\nevaluation" +
-      "\";\n\024GetEvaluationRequest\022#\n\revaluation_i" +
-      "d\030\002 \001(\003R\014evaluationId\"P\n\025GetEvaluationRe" +
-      "sponse\0227\n\nevaluation\030\001 \001(\0132\027.api.commons" +
-      ".EvaluationR\nevaluation\"=\n\026ScoreEvaluati" +
-      "onRequest\022#\n\revaluation_id\030\003 \001(\003R\014evalua" +
-      "tionId\"R\n\027ScoreEvaluationResponse\0227\n\neva" +
-      "luation\030\001 \001(\0132\027.api.commons.EvaluationR\n" +
-      "evaluation\"\337\001\n\026ListEvaluationsRequest\022\033\n" +
-      "\tscorer_id\030\002 \003(\tR\010scorerId\022:\n\014completed_" +
-      "at\030\003 \001(\0132\027.api.commons.TimeFilterR\013compl" +
-      "etedAt\022!\n\014category_ids\030\004 \003(\003R\013categoryId" +
-      "s\022$\n\016agent_user_ids\030\005 \003(\tR\014agentUserIds\022" +
-      "#\n\rscorecard_ids\030\006 \003(\003R\014scorecardIds\"T\n\027" +
-      "ListEvaluationsResponse\0229\n\013evaluations\030\001" +
-      " \003(\0132\027.api.commons.EvaluationR\013evaluatio" +
-      "nsB\272\001\n)com.tcn.cloud.api.api.v1alpha1.sc" +
-      "orecardsB\017EvaluationProtoP\001\242\002\003AVS\252\002\027Api." +
-      "V1alpha1.Scorecards\312\002\027Api\\V1alpha1\\Score" +
-      "cards\342\002#Api\\V1alpha1\\Scorecards\\GPBMetad" +
-      "ata\352\002\031Api::V1alpha1::Scorecardsb\006proto3"
+      "ionR\nevaluation\";\n\024GetEvaluationRequest\022" +
+      "#\n\revaluation_id\030\002 \001(\003R\014evaluationId\"P\n\025" +
+      "GetEvaluationResponse\0227\n\nevaluation\030\001 \001(" +
+      "\0132\027.api.commons.EvaluationR\nevaluation\"=" +
+      "\n\026ScoreEvaluationRequest\022#\n\revaluation_i" +
+      "d\030\003 \001(\003R\014evaluationId\"R\n\027ScoreEvaluation" +
+      "Response\0227\n\nevaluation\030\001 \001(\0132\027.api.commo" +
+      "ns.EvaluationR\nevaluation\"\337\001\n\026ListEvalua" +
+      "tionsRequest\022\033\n\tscorer_id\030\002 \003(\tR\010scorerI" +
+      "d\022:\n\014completed_at\030\003 \001(\0132\027.api.commons.Ti" +
+      "meFilterR\013completedAt\022!\n\014category_ids\030\004 " +
+      "\003(\003R\013categoryIds\022$\n\016agent_user_ids\030\005 \003(\t" +
+      "R\014agentUserIds\022#\n\rscorecard_ids\030\006 \003(\003R\014s" +
+      "corecardIds\"T\n\027ListEvaluationsResponse\0229" +
+      "\n\013evaluations\030\001 \003(\0132\027.api.commons.Evalua" +
+      "tionR\013evaluationsB\272\001\n)com.tcn.cloud.api." +
+      "api.v1alpha1.scorecardsB\017EvaluationProto" +
+      "P\001\242\002\003AVS\252\002\027Api.V1alpha1.Scorecards\312\002\027Api" +
+      "\\V1alpha1\\Scorecards\342\002#Api\\V1alpha1\\Scor" +
+      "ecards\\GPBMetadata\352\002\031Api::V1alpha1::Scor" +
+      "ecardsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.tcn.cloud.api.api.commons.ScorecardsProto.getDescriptor(),
-          com.google.protobuf.FieldMaskProto.getDescriptor(),
         });
     internal_static_api_v1alpha1_scorecards_CreateEvaluationRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -139,68 +122,55 @@ public final class EvaluationProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_scorecards_CreateEvaluationResponse_descriptor,
         new java.lang.String[] { "Evaluation", });
-    internal_static_api_v1alpha1_scorecards_UpdateEvaluationRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_api_v1alpha1_scorecards_UpdateEvaluationRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_scorecards_UpdateEvaluationRequest_descriptor,
-        new java.lang.String[] { "Evaluation", "UpdateMask", });
-    internal_static_api_v1alpha1_scorecards_UpdateEvaluationResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_api_v1alpha1_scorecards_UpdateEvaluationResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v1alpha1_scorecards_UpdateEvaluationResponse_descriptor,
-        new java.lang.String[] { "Evaluation", });
     internal_static_api_v1alpha1_scorecards_DeleteEvaluationRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_api_v1alpha1_scorecards_DeleteEvaluationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_scorecards_DeleteEvaluationRequest_descriptor,
         new java.lang.String[] { "EvaluationId", });
     internal_static_api_v1alpha1_scorecards_DeleteEvaluationResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_api_v1alpha1_scorecards_DeleteEvaluationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_scorecards_DeleteEvaluationResponse_descriptor,
         new java.lang.String[] { "Evaluation", });
     internal_static_api_v1alpha1_scorecards_GetEvaluationRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_api_v1alpha1_scorecards_GetEvaluationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_scorecards_GetEvaluationRequest_descriptor,
         new java.lang.String[] { "EvaluationId", });
     internal_static_api_v1alpha1_scorecards_GetEvaluationResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_api_v1alpha1_scorecards_GetEvaluationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_scorecards_GetEvaluationResponse_descriptor,
         new java.lang.String[] { "Evaluation", });
     internal_static_api_v1alpha1_scorecards_ScoreEvaluationRequest_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_api_v1alpha1_scorecards_ScoreEvaluationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_scorecards_ScoreEvaluationRequest_descriptor,
         new java.lang.String[] { "EvaluationId", });
     internal_static_api_v1alpha1_scorecards_ScoreEvaluationResponse_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_api_v1alpha1_scorecards_ScoreEvaluationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_scorecards_ScoreEvaluationResponse_descriptor,
         new java.lang.String[] { "Evaluation", });
     internal_static_api_v1alpha1_scorecards_ListEvaluationsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_api_v1alpha1_scorecards_ListEvaluationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_scorecards_ListEvaluationsRequest_descriptor,
         new java.lang.String[] { "ScorerId", "CompletedAt", "CategoryIds", "AgentUserIds", "ScorecardIds", });
     internal_static_api_v1alpha1_scorecards_ListEvaluationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_api_v1alpha1_scorecards_ListEvaluationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_scorecards_ListEvaluationsResponse_descriptor,
         new java.lang.String[] { "Evaluations", });
     com.tcn.cloud.api.api.commons.ScorecardsProto.getDescriptor();
-    com.google.protobuf.FieldMaskProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
