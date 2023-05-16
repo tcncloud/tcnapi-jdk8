@@ -92,19 +92,19 @@ private static final long serialVersionUID = 0L;
   public static final int INTEGRATION_ID_FIELD_NUMBER = 4;
   private int integrationId_ = 0;
   /**
-   * <code>.api.commons.public.IntegrationType integration_id = 4 [json_name = "integrationId"];</code>
+   * <code>.api.commons.integrations.IntegrationType integration_id = 4 [json_name = "integrationId"];</code>
    * @return The enum numeric value on the wire for integrationId.
    */
   @java.lang.Override public int getIntegrationIdValue() {
     return integrationId_;
   }
   /**
-   * <code>.api.commons.public.IntegrationType integration_id = 4 [json_name = "integrationId"];</code>
+   * <code>.api.commons.integrations.IntegrationType integration_id = 4 [json_name = "integrationId"];</code>
    * @return The integrationId.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.public.IntegrationType getIntegrationId() {
-    com.tcn.cloud.api.api.commons.public.IntegrationType result = com.tcn.cloud.api.api.commons.public.IntegrationType.forNumber(integrationId_);
-    return result == null ? com.tcn.cloud.api.api.commons.public.IntegrationType.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.IntegrationType getIntegrationId() {
+    com.tcn.cloud.api.api.commons.integrations.IntegrationType result = com.tcn.cloud.api.api.commons.integrations.IntegrationType.forNumber(integrationId_);
+    return result == null ? com.tcn.cloud.api.api.commons.integrations.IntegrationType.UNRECOGNIZED : result;
   }
 
   public static final int NAME_FIELD_NUMBER = 5;
@@ -228,7 +228,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, id_);
     }
-    if (integrationId_ != com.tcn.cloud.api.api.commons.public.IntegrationType.INTEGRATION_TYPE_UNKNOWN.getNumber()) {
+    if (integrationId_ != com.tcn.cloud.api.api.commons.integrations.IntegrationType.INTEGRATION_TYPE_UNKNOWN.getNumber()) {
       output.writeEnum(4, integrationId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
@@ -252,7 +252,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, id_);
     }
-    if (integrationId_ != com.tcn.cloud.api.api.commons.public.IntegrationType.INTEGRATION_TYPE_UNKNOWN.getNumber()) {
+    if (integrationId_ != com.tcn.cloud.api.api.commons.integrations.IntegrationType.INTEGRATION_TYPE_UNKNOWN.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(4, integrationId_);
     }
@@ -705,14 +705,14 @@ private static final long serialVersionUID = 0L;
 
     private int integrationId_ = 0;
     /**
-     * <code>.api.commons.public.IntegrationType integration_id = 4 [json_name = "integrationId"];</code>
+     * <code>.api.commons.integrations.IntegrationType integration_id = 4 [json_name = "integrationId"];</code>
      * @return The enum numeric value on the wire for integrationId.
      */
     @java.lang.Override public int getIntegrationIdValue() {
       return integrationId_;
     }
     /**
-     * <code>.api.commons.public.IntegrationType integration_id = 4 [json_name = "integrationId"];</code>
+     * <code>.api.commons.integrations.IntegrationType integration_id = 4 [json_name = "integrationId"];</code>
      * @param value The enum numeric value on the wire for integrationId to set.
      * @return This builder for chaining.
      */
@@ -723,20 +723,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.public.IntegrationType integration_id = 4 [json_name = "integrationId"];</code>
+     * <code>.api.commons.integrations.IntegrationType integration_id = 4 [json_name = "integrationId"];</code>
      * @return The integrationId.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.public.IntegrationType getIntegrationId() {
-      com.tcn.cloud.api.api.commons.public.IntegrationType result = com.tcn.cloud.api.api.commons.public.IntegrationType.forNumber(integrationId_);
-      return result == null ? com.tcn.cloud.api.api.commons.public.IntegrationType.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.api.commons.integrations.IntegrationType getIntegrationId() {
+      com.tcn.cloud.api.api.commons.integrations.IntegrationType result = com.tcn.cloud.api.api.commons.integrations.IntegrationType.forNumber(integrationId_);
+      return result == null ? com.tcn.cloud.api.api.commons.integrations.IntegrationType.UNRECOGNIZED : result;
     }
     /**
-     * <code>.api.commons.public.IntegrationType integration_id = 4 [json_name = "integrationId"];</code>
+     * <code>.api.commons.integrations.IntegrationType integration_id = 4 [json_name = "integrationId"];</code>
      * @param value The integrationId to set.
      * @return This builder for chaining.
      */
-    public Builder setIntegrationId(com.tcn.cloud.api.api.commons.public.IntegrationType value) {
+    public Builder setIntegrationId(com.tcn.cloud.api.api.commons.integrations.IntegrationType value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -746,7 +746,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.public.IntegrationType integration_id = 4 [json_name = "integrationId"];</code>
+     * <code>.api.commons.integrations.IntegrationType integration_id = 4 [json_name = "integrationId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearIntegrationId() {

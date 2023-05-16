@@ -42,19 +42,19 @@ private static final long serialVersionUID = 0L;
   public static final int TRANSACTION_TYPE_FIELD_NUMBER = 1;
   private int transactionType_ = 0;
   /**
-   * <code>.api.commons.public.TransactionType transaction_type = 1 [json_name = "transactionType"];</code>
+   * <code>.api.commons.integrations.TransactionType transaction_type = 1 [json_name = "transactionType"];</code>
    * @return The enum numeric value on the wire for transactionType.
    */
   @java.lang.Override public int getTransactionTypeValue() {
     return transactionType_;
   }
   /**
-   * <code>.api.commons.public.TransactionType transaction_type = 1 [json_name = "transactionType"];</code>
+   * <code>.api.commons.integrations.TransactionType transaction_type = 1 [json_name = "transactionType"];</code>
    * @return The transactionType.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.public.TransactionType getTransactionType() {
-    com.tcn.cloud.api.api.commons.public.TransactionType result = com.tcn.cloud.api.api.commons.public.TransactionType.forNumber(transactionType_);
-    return result == null ? com.tcn.cloud.api.api.commons.public.TransactionType.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.TransactionType getTransactionType() {
+    com.tcn.cloud.api.api.commons.integrations.TransactionType result = com.tcn.cloud.api.api.commons.integrations.TransactionType.forNumber(transactionType_);
+    return result == null ? com.tcn.cloud.api.api.commons.integrations.TransactionType.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -71,7 +71,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (transactionType_ != com.tcn.cloud.api.api.commons.public.TransactionType.TRANSACTION_TYPE_PAYMENT.getNumber()) {
+    if (transactionType_ != com.tcn.cloud.api.api.commons.integrations.TransactionType.TRANSACTION_TYPE_PAYMENT.getNumber()) {
       output.writeEnum(1, transactionType_);
     }
     getUnknownFields().writeTo(output);
@@ -83,7 +83,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (transactionType_ != com.tcn.cloud.api.api.commons.public.TransactionType.TRANSACTION_TYPE_PAYMENT.getNumber()) {
+    if (transactionType_ != com.tcn.cloud.api.api.commons.integrations.TransactionType.TRANSACTION_TYPE_PAYMENT.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(1, transactionType_);
     }
@@ -351,14 +351,14 @@ private static final long serialVersionUID = 0L;
 
     private int transactionType_ = 0;
     /**
-     * <code>.api.commons.public.TransactionType transaction_type = 1 [json_name = "transactionType"];</code>
+     * <code>.api.commons.integrations.TransactionType transaction_type = 1 [json_name = "transactionType"];</code>
      * @return The enum numeric value on the wire for transactionType.
      */
     @java.lang.Override public int getTransactionTypeValue() {
       return transactionType_;
     }
     /**
-     * <code>.api.commons.public.TransactionType transaction_type = 1 [json_name = "transactionType"];</code>
+     * <code>.api.commons.integrations.TransactionType transaction_type = 1 [json_name = "transactionType"];</code>
      * @param value The enum numeric value on the wire for transactionType to set.
      * @return This builder for chaining.
      */
@@ -369,20 +369,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.public.TransactionType transaction_type = 1 [json_name = "transactionType"];</code>
+     * <code>.api.commons.integrations.TransactionType transaction_type = 1 [json_name = "transactionType"];</code>
      * @return The transactionType.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.public.TransactionType getTransactionType() {
-      com.tcn.cloud.api.api.commons.public.TransactionType result = com.tcn.cloud.api.api.commons.public.TransactionType.forNumber(transactionType_);
-      return result == null ? com.tcn.cloud.api.api.commons.public.TransactionType.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.api.commons.integrations.TransactionType getTransactionType() {
+      com.tcn.cloud.api.api.commons.integrations.TransactionType result = com.tcn.cloud.api.api.commons.integrations.TransactionType.forNumber(transactionType_);
+      return result == null ? com.tcn.cloud.api.api.commons.integrations.TransactionType.UNRECOGNIZED : result;
     }
     /**
-     * <code>.api.commons.public.TransactionType transaction_type = 1 [json_name = "transactionType"];</code>
+     * <code>.api.commons.integrations.TransactionType transaction_type = 1 [json_name = "transactionType"];</code>
      * @param value The transactionType to set.
      * @return This builder for chaining.
      */
-    public Builder setTransactionType(com.tcn.cloud.api.api.commons.public.TransactionType value) {
+    public Builder setTransactionType(com.tcn.cloud.api.api.commons.integrations.TransactionType value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -392,7 +392,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.public.TransactionType transaction_type = 1 [json_name = "transactionType"];</code>
+     * <code>.api.commons.integrations.TransactionType transaction_type = 1 [json_name = "transactionType"];</code>
      * @return This builder for chaining.
      */
     public Builder clearTransactionType() {

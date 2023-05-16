@@ -8,26 +8,26 @@ public interface ListAvailablePaymentFieldsResOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .api.commons.public.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
+   * <code>repeated .api.commons.integrations.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.commons.public.FieldDefinition> 
+  java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> 
       getPaymentFieldsList();
   /**
-   * <code>repeated .api.commons.public.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
+   * <code>repeated .api.commons.integrations.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
    */
-  com.tcn.cloud.api.api.commons.public.FieldDefinition getPaymentFields(int index);
+  com.tcn.cloud.api.api.commons.integrations.FieldDefinition getPaymentFields(int index);
   /**
-   * <code>repeated .api.commons.public.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
+   * <code>repeated .api.commons.integrations.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
    */
   int getPaymentFieldsCount();
   /**
-   * <code>repeated .api.commons.public.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
+   * <code>repeated .api.commons.integrations.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.public.FieldDefinitionOrBuilder> 
+  java.util.List<? extends com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> 
       getPaymentFieldsOrBuilderList();
   /**
-   * <code>repeated .api.commons.public.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
+   * <code>repeated .api.commons.integrations.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
    */
-  com.tcn.cloud.api.api.commons.public.FieldDefinitionOrBuilder getPaymentFieldsOrBuilder(
+  com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder getPaymentFieldsOrBuilder(
       int index);
 }

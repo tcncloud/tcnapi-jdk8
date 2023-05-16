@@ -74,13 +74,13 @@ public interface GetPortalLinksByDateRangeReqOrBuilder extends
   int getPageNum();
 
   /**
-   * <code>.api.commons.public.RequestMethod method_id = 7 [json_name = "methodId"];</code>
+   * <code>.api.commons.integrations.RequestMethod method_id = 7 [json_name = "methodId"];</code>
    * @return The enum numeric value on the wire for methodId.
    */
   int getMethodIdValue();
   /**
-   * <code>.api.commons.public.RequestMethod method_id = 7 [json_name = "methodId"];</code>
+   * <code>.api.commons.integrations.RequestMethod method_id = 7 [json_name = "methodId"];</code>
    * @return The methodId.
    */
-  com.tcn.cloud.api.api.commons.public.RequestMethod getMethodId();
+  com.tcn.cloud.api.api.commons.integrations.RequestMethod getMethodId();
 }

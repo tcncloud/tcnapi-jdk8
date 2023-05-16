@@ -8,13 +8,13 @@ public interface TransactionResultOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api.commons.public.TransactionResult result = 1 [json_name = "result"];</code>
+   * <code>.api.commons.integrations.TransactionResult result = 1 [json_name = "result"];</code>
    * @return The enum numeric value on the wire for result.
    */
   int getResultValue();
   /**
-   * <code>.api.commons.public.TransactionResult result = 1 [json_name = "result"];</code>
+   * <code>.api.commons.integrations.TransactionResult result = 1 [json_name = "result"];</code>
    * @return The result.
    */
-  com.tcn.cloud.api.api.commons.public.TransactionResult getResult();
+  com.tcn.cloud.api.api.commons.integrations.TransactionResult getResult();
 }

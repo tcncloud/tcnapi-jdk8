@@ -83,7 +83,7 @@ public interface ProvidedFieldOrBuilder extends
    *  - provided by the verification/invoice/payment api call
    * </pre>
    *
-   * <code>.api.commons.public.FieldSource provided_by = 3 [json_name = "providedBy"];</code>
+   * <code>.api.commons.integrations.FieldSource provided_by = 3 [json_name = "providedBy"];</code>
    * @return The enum numeric value on the wire for providedBy.
    */
   int getProvidedByValue();
@@ -95,10 +95,10 @@ public interface ProvidedFieldOrBuilder extends
    *  - provided by the verification/invoice/payment api call
    * </pre>
    *
-   * <code>.api.commons.public.FieldSource provided_by = 3 [json_name = "providedBy"];</code>
+   * <code>.api.commons.integrations.FieldSource provided_by = 3 [json_name = "providedBy"];</code>
    * @return The providedBy.
    */
-  com.tcn.cloud.api.api.commons.public.FieldSource getProvidedBy();
+  com.tcn.cloud.api.api.commons.integrations.FieldSource getProvidedBy();
 
   /**
    * <pre>

@@ -80,7 +80,7 @@ public interface PaymentLinkConfigOrBuilder extends
    * which integration will be used in the links
    * </pre>
    *
-   * <code>.api.commons.public.IntegrationType integration_id = 6 [json_name = "integrationId", deprecated = true];</code>
+   * <code>.api.commons.integrations.IntegrationType integration_id = 6 [json_name = "integrationId", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.integration_id is deprecated.
    *     See api/v1alpha1/integrations/service.proto;l=499
    * @return The enum numeric value on the wire for integrationId.
@@ -91,19 +91,19 @@ public interface PaymentLinkConfigOrBuilder extends
    * which integration will be used in the links
    * </pre>
    *
-   * <code>.api.commons.public.IntegrationType integration_id = 6 [json_name = "integrationId", deprecated = true];</code>
+   * <code>.api.commons.integrations.IntegrationType integration_id = 6 [json_name = "integrationId", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.integration_id is deprecated.
    *     See api/v1alpha1/integrations/service.proto;l=499
    * @return The integrationId.
    */
-  @java.lang.Deprecated com.tcn.cloud.api.api.commons.public.IntegrationType getIntegrationId();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.integrations.IntegrationType getIntegrationId();
 
   /**
    * <pre>
    * the verification method. This is used if there is no collection_id to enrich link data
    * </pre>
    *
-   * <code>.api.commons.public.RequestMethod verification_method_id = 7 [json_name = "verificationMethodId", deprecated = true];</code>
+   * <code>.api.commons.integrations.RequestMethod verification_method_id = 7 [json_name = "verificationMethodId", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.verification_method_id is deprecated.
    *     See api/v1alpha1/integrations/service.proto;l=501
    * @return The enum numeric value on the wire for verificationMethodId.
@@ -114,34 +114,34 @@ public interface PaymentLinkConfigOrBuilder extends
    * the verification method. This is used if there is no collection_id to enrich link data
    * </pre>
    *
-   * <code>.api.commons.public.RequestMethod verification_method_id = 7 [json_name = "verificationMethodId", deprecated = true];</code>
+   * <code>.api.commons.integrations.RequestMethod verification_method_id = 7 [json_name = "verificationMethodId", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.verification_method_id is deprecated.
    *     See api/v1alpha1/integrations/service.proto;l=501
    * @return The verificationMethodId.
    */
-  @java.lang.Deprecated com.tcn.cloud.api.api.commons.public.RequestMethod getVerificationMethodId();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.integrations.RequestMethod getVerificationMethodId();
 
   /**
-   * <code>.api.commons.public.RequestMethod invoice_method_id = 8 [json_name = "invoiceMethodId", deprecated = true];</code>
+   * <code>.api.commons.integrations.RequestMethod invoice_method_id = 8 [json_name = "invoiceMethodId", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.invoice_method_id is deprecated.
    *     See api/v1alpha1/integrations/service.proto;l=502
    * @return The enum numeric value on the wire for invoiceMethodId.
    */
   @java.lang.Deprecated int getInvoiceMethodIdValue();
   /**
-   * <code>.api.commons.public.RequestMethod invoice_method_id = 8 [json_name = "invoiceMethodId", deprecated = true];</code>
+   * <code>.api.commons.integrations.RequestMethod invoice_method_id = 8 [json_name = "invoiceMethodId", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.invoice_method_id is deprecated.
    *     See api/v1alpha1/integrations/service.proto;l=502
    * @return The invoiceMethodId.
    */
-  @java.lang.Deprecated com.tcn.cloud.api.api.commons.public.RequestMethod getInvoiceMethodId();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.integrations.RequestMethod getInvoiceMethodId();
 
   /**
    * <pre>
    * which method will be called when a payment portal link is process
    * </pre>
    *
-   * <code>.api.commons.public.RequestMethod payment_method_id = 9 [json_name = "paymentMethodId", deprecated = true];</code>
+   * <code>.api.commons.integrations.RequestMethod payment_method_id = 9 [json_name = "paymentMethodId", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.payment_method_id is deprecated.
    *     See api/v1alpha1/integrations/service.proto;l=504
    * @return The enum numeric value on the wire for paymentMethodId.
@@ -152,12 +152,12 @@ public interface PaymentLinkConfigOrBuilder extends
    * which method will be called when a payment portal link is process
    * </pre>
    *
-   * <code>.api.commons.public.RequestMethod payment_method_id = 9 [json_name = "paymentMethodId", deprecated = true];</code>
+   * <code>.api.commons.integrations.RequestMethod payment_method_id = 9 [json_name = "paymentMethodId", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.payment_method_id is deprecated.
    *     See api/v1alpha1/integrations/service.proto;l=504
    * @return The paymentMethodId.
    */
-  @java.lang.Deprecated com.tcn.cloud.api.api.commons.public.RequestMethod getPaymentMethodId();
+  @java.lang.Deprecated com.tcn.cloud.api.api.commons.integrations.RequestMethod getPaymentMethodId();
 
   /**
    * <pre>

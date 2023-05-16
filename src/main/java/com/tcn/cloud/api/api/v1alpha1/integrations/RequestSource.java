@@ -42,19 +42,19 @@ private static final long serialVersionUID = 0L;
   public static final int REQUEST_SOURCE_FIELD_NUMBER = 1;
   private int requestSource_ = 0;
   /**
-   * <code>.api.commons.public.RequestSource request_source = 1 [json_name = "requestSource"];</code>
+   * <code>.api.commons.integrations.RequestSource request_source = 1 [json_name = "requestSource"];</code>
    * @return The enum numeric value on the wire for requestSource.
    */
   @java.lang.Override public int getRequestSourceValue() {
     return requestSource_;
   }
   /**
-   * <code>.api.commons.public.RequestSource request_source = 1 [json_name = "requestSource"];</code>
+   * <code>.api.commons.integrations.RequestSource request_source = 1 [json_name = "requestSource"];</code>
    * @return The requestSource.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.public.RequestSource getRequestSource() {
-    com.tcn.cloud.api.api.commons.public.RequestSource result = com.tcn.cloud.api.api.commons.public.RequestSource.forNumber(requestSource_);
-    return result == null ? com.tcn.cloud.api.api.commons.public.RequestSource.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.RequestSource getRequestSource() {
+    com.tcn.cloud.api.api.commons.integrations.RequestSource result = com.tcn.cloud.api.api.commons.integrations.RequestSource.forNumber(requestSource_);
+    return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestSource.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -71,7 +71,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (requestSource_ != com.tcn.cloud.api.api.commons.public.RequestSource.REQUEST_SOURCE_IVR.getNumber()) {
+    if (requestSource_ != com.tcn.cloud.api.api.commons.integrations.RequestSource.REQUEST_SOURCE_IVR.getNumber()) {
       output.writeEnum(1, requestSource_);
     }
     getUnknownFields().writeTo(output);
@@ -83,7 +83,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (requestSource_ != com.tcn.cloud.api.api.commons.public.RequestSource.REQUEST_SOURCE_IVR.getNumber()) {
+    if (requestSource_ != com.tcn.cloud.api.api.commons.integrations.RequestSource.REQUEST_SOURCE_IVR.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(1, requestSource_);
     }
@@ -351,14 +351,14 @@ private static final long serialVersionUID = 0L;
 
     private int requestSource_ = 0;
     /**
-     * <code>.api.commons.public.RequestSource request_source = 1 [json_name = "requestSource"];</code>
+     * <code>.api.commons.integrations.RequestSource request_source = 1 [json_name = "requestSource"];</code>
      * @return The enum numeric value on the wire for requestSource.
      */
     @java.lang.Override public int getRequestSourceValue() {
       return requestSource_;
     }
     /**
-     * <code>.api.commons.public.RequestSource request_source = 1 [json_name = "requestSource"];</code>
+     * <code>.api.commons.integrations.RequestSource request_source = 1 [json_name = "requestSource"];</code>
      * @param value The enum numeric value on the wire for requestSource to set.
      * @return This builder for chaining.
      */
@@ -369,20 +369,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.public.RequestSource request_source = 1 [json_name = "requestSource"];</code>
+     * <code>.api.commons.integrations.RequestSource request_source = 1 [json_name = "requestSource"];</code>
      * @return The requestSource.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.public.RequestSource getRequestSource() {
-      com.tcn.cloud.api.api.commons.public.RequestSource result = com.tcn.cloud.api.api.commons.public.RequestSource.forNumber(requestSource_);
-      return result == null ? com.tcn.cloud.api.api.commons.public.RequestSource.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.api.commons.integrations.RequestSource getRequestSource() {
+      com.tcn.cloud.api.api.commons.integrations.RequestSource result = com.tcn.cloud.api.api.commons.integrations.RequestSource.forNumber(requestSource_);
+      return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestSource.UNRECOGNIZED : result;
     }
     /**
-     * <code>.api.commons.public.RequestSource request_source = 1 [json_name = "requestSource"];</code>
+     * <code>.api.commons.integrations.RequestSource request_source = 1 [json_name = "requestSource"];</code>
      * @param value The requestSource to set.
      * @return This builder for chaining.
      */
-    public Builder setRequestSource(com.tcn.cloud.api.api.commons.public.RequestSource value) {
+    public Builder setRequestSource(com.tcn.cloud.api.api.commons.integrations.RequestSource value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -392,7 +392,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.public.RequestSource request_source = 1 [json_name = "requestSource"];</code>
+     * <code>.api.commons.integrations.RequestSource request_source = 1 [json_name = "requestSource"];</code>
      * @return This builder for chaining.
      */
     public Builder clearRequestSource() {

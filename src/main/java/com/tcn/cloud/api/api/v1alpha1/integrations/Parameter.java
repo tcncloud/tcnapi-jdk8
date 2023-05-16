@@ -103,7 +103,7 @@ private static final long serialVersionUID = 0L;
    * right now this will be STRING, NUMBER, BOOL
    * </pre>
    *
-   * <code>.api.commons.public.ValueType param_type = 2 [json_name = "paramType"];</code>
+   * <code>.api.commons.integrations.ValueType param_type = 2 [json_name = "paramType"];</code>
    * @return The enum numeric value on the wire for paramType.
    */
   @java.lang.Override public int getParamTypeValue() {
@@ -115,12 +115,12 @@ private static final long serialVersionUID = 0L;
    * right now this will be STRING, NUMBER, BOOL
    * </pre>
    *
-   * <code>.api.commons.public.ValueType param_type = 2 [json_name = "paramType"];</code>
+   * <code>.api.commons.integrations.ValueType param_type = 2 [json_name = "paramType"];</code>
    * @return The paramType.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.public.ValueType getParamType() {
-    com.tcn.cloud.api.api.commons.public.ValueType result = com.tcn.cloud.api.api.commons.public.ValueType.forNumber(paramType_);
-    return result == null ? com.tcn.cloud.api.api.commons.public.ValueType.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.ValueType getParamType() {
+    com.tcn.cloud.api.api.commons.integrations.ValueType result = com.tcn.cloud.api.api.commons.integrations.ValueType.forNumber(paramType_);
+    return result == null ? com.tcn.cloud.api.api.commons.integrations.ValueType.UNRECOGNIZED : result;
   }
 
   public static final int REQUIRED_FIELD_NUMBER = 3;
@@ -329,7 +329,7 @@ private static final long serialVersionUID = 0L;
    * what type of data value we accept
    * </pre>
    *
-   * <code>.api.commons.public.Validation validation = 10 [json_name = "validation"];</code>
+   * <code>.api.commons.integrations.Validation validation = 10 [json_name = "validation"];</code>
    * @return The enum numeric value on the wire for validation.
    */
   @java.lang.Override public int getValidationValue() {
@@ -340,12 +340,12 @@ private static final long serialVersionUID = 0L;
    * what type of data value we accept
    * </pre>
    *
-   * <code>.api.commons.public.Validation validation = 10 [json_name = "validation"];</code>
+   * <code>.api.commons.integrations.Validation validation = 10 [json_name = "validation"];</code>
    * @return The validation.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.public.Validation getValidation() {
-    com.tcn.cloud.api.api.commons.public.Validation result = com.tcn.cloud.api.api.commons.public.Validation.forNumber(validation_);
-    return result == null ? com.tcn.cloud.api.api.commons.public.Validation.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.Validation getValidation() {
+    com.tcn.cloud.api.api.commons.integrations.Validation result = com.tcn.cloud.api.api.commons.integrations.Validation.forNumber(validation_);
+    return result == null ? com.tcn.cloud.api.api.commons.integrations.Validation.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -365,7 +365,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
     }
-    if (paramType_ != com.tcn.cloud.api.api.commons.public.ValueType.VALUE_TYPE_UNKNOWN.getNumber()) {
+    if (paramType_ != com.tcn.cloud.api.api.commons.integrations.ValueType.VALUE_TYPE_UNKNOWN.getNumber()) {
       output.writeEnum(2, paramType_);
     }
     if (required_ != false) {
@@ -389,7 +389,7 @@ private static final long serialVersionUID = 0L;
     if (templateLocked_ != false) {
       output.writeBool(9, templateLocked_);
     }
-    if (validation_ != com.tcn.cloud.api.api.commons.public.Validation.VALIDATION_NONE.getNumber()) {
+    if (validation_ != com.tcn.cloud.api.api.commons.integrations.Validation.VALIDATION_NONE.getNumber()) {
       output.writeEnum(10, validation_);
     }
     getUnknownFields().writeTo(output);
@@ -404,7 +404,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
     }
-    if (paramType_ != com.tcn.cloud.api.api.commons.public.ValueType.VALUE_TYPE_UNKNOWN.getNumber()) {
+    if (paramType_ != com.tcn.cloud.api.api.commons.integrations.ValueType.VALUE_TYPE_UNKNOWN.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(2, paramType_);
     }
@@ -434,7 +434,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(9, templateLocked_);
     }
-    if (validation_ != com.tcn.cloud.api.api.commons.public.Validation.VALIDATION_NONE.getNumber()) {
+    if (validation_ != com.tcn.cloud.api.api.commons.integrations.Validation.VALIDATION_NONE.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(10, validation_);
     }
@@ -970,7 +970,7 @@ private static final long serialVersionUID = 0L;
      * right now this will be STRING, NUMBER, BOOL
      * </pre>
      *
-     * <code>.api.commons.public.ValueType param_type = 2 [json_name = "paramType"];</code>
+     * <code>.api.commons.integrations.ValueType param_type = 2 [json_name = "paramType"];</code>
      * @return The enum numeric value on the wire for paramType.
      */
     @java.lang.Override public int getParamTypeValue() {
@@ -982,7 +982,7 @@ private static final long serialVersionUID = 0L;
      * right now this will be STRING, NUMBER, BOOL
      * </pre>
      *
-     * <code>.api.commons.public.ValueType param_type = 2 [json_name = "paramType"];</code>
+     * <code>.api.commons.integrations.ValueType param_type = 2 [json_name = "paramType"];</code>
      * @param value The enum numeric value on the wire for paramType to set.
      * @return This builder for chaining.
      */
@@ -998,13 +998,13 @@ private static final long serialVersionUID = 0L;
      * right now this will be STRING, NUMBER, BOOL
      * </pre>
      *
-     * <code>.api.commons.public.ValueType param_type = 2 [json_name = "paramType"];</code>
+     * <code>.api.commons.integrations.ValueType param_type = 2 [json_name = "paramType"];</code>
      * @return The paramType.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.public.ValueType getParamType() {
-      com.tcn.cloud.api.api.commons.public.ValueType result = com.tcn.cloud.api.api.commons.public.ValueType.forNumber(paramType_);
-      return result == null ? com.tcn.cloud.api.api.commons.public.ValueType.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.api.commons.integrations.ValueType getParamType() {
+      com.tcn.cloud.api.api.commons.integrations.ValueType result = com.tcn.cloud.api.api.commons.integrations.ValueType.forNumber(paramType_);
+      return result == null ? com.tcn.cloud.api.api.commons.integrations.ValueType.UNRECOGNIZED : result;
     }
     /**
      * <pre>
@@ -1012,11 +1012,11 @@ private static final long serialVersionUID = 0L;
      * right now this will be STRING, NUMBER, BOOL
      * </pre>
      *
-     * <code>.api.commons.public.ValueType param_type = 2 [json_name = "paramType"];</code>
+     * <code>.api.commons.integrations.ValueType param_type = 2 [json_name = "paramType"];</code>
      * @param value The paramType to set.
      * @return This builder for chaining.
      */
-    public Builder setParamType(com.tcn.cloud.api.api.commons.public.ValueType value) {
+    public Builder setParamType(com.tcn.cloud.api.api.commons.integrations.ValueType value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1031,7 +1031,7 @@ private static final long serialVersionUID = 0L;
      * right now this will be STRING, NUMBER, BOOL
      * </pre>
      *
-     * <code>.api.commons.public.ValueType param_type = 2 [json_name = "paramType"];</code>
+     * <code>.api.commons.integrations.ValueType param_type = 2 [json_name = "paramType"];</code>
      * @return This builder for chaining.
      */
     public Builder clearParamType() {
@@ -1583,7 +1583,7 @@ private static final long serialVersionUID = 0L;
      * what type of data value we accept
      * </pre>
      *
-     * <code>.api.commons.public.Validation validation = 10 [json_name = "validation"];</code>
+     * <code>.api.commons.integrations.Validation validation = 10 [json_name = "validation"];</code>
      * @return The enum numeric value on the wire for validation.
      */
     @java.lang.Override public int getValidationValue() {
@@ -1594,7 +1594,7 @@ private static final long serialVersionUID = 0L;
      * what type of data value we accept
      * </pre>
      *
-     * <code>.api.commons.public.Validation validation = 10 [json_name = "validation"];</code>
+     * <code>.api.commons.integrations.Validation validation = 10 [json_name = "validation"];</code>
      * @param value The enum numeric value on the wire for validation to set.
      * @return This builder for chaining.
      */
@@ -1609,24 +1609,24 @@ private static final long serialVersionUID = 0L;
      * what type of data value we accept
      * </pre>
      *
-     * <code>.api.commons.public.Validation validation = 10 [json_name = "validation"];</code>
+     * <code>.api.commons.integrations.Validation validation = 10 [json_name = "validation"];</code>
      * @return The validation.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.public.Validation getValidation() {
-      com.tcn.cloud.api.api.commons.public.Validation result = com.tcn.cloud.api.api.commons.public.Validation.forNumber(validation_);
-      return result == null ? com.tcn.cloud.api.api.commons.public.Validation.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.api.commons.integrations.Validation getValidation() {
+      com.tcn.cloud.api.api.commons.integrations.Validation result = com.tcn.cloud.api.api.commons.integrations.Validation.forNumber(validation_);
+      return result == null ? com.tcn.cloud.api.api.commons.integrations.Validation.UNRECOGNIZED : result;
     }
     /**
      * <pre>
      * what type of data value we accept
      * </pre>
      *
-     * <code>.api.commons.public.Validation validation = 10 [json_name = "validation"];</code>
+     * <code>.api.commons.integrations.Validation validation = 10 [json_name = "validation"];</code>
      * @param value The validation to set.
      * @return This builder for chaining.
      */
-    public Builder setValidation(com.tcn.cloud.api.api.commons.public.Validation value) {
+    public Builder setValidation(com.tcn.cloud.api.api.commons.integrations.Validation value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1640,7 +1640,7 @@ private static final long serialVersionUID = 0L;
      * what type of data value we accept
      * </pre>
      *
-     * <code>.api.commons.public.Validation validation = 10 [json_name = "validation"];</code>
+     * <code>.api.commons.integrations.Validation validation = 10 [json_name = "validation"];</code>
      * @return This builder for chaining.
      */
     public Builder clearValidation() {

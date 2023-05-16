@@ -8,15 +8,15 @@ public interface IntegrationTypeSummaryOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api.commons.public.IntegrationType integration_type = 1 [json_name = "integrationType"];</code>
+   * <code>.api.commons.integrations.IntegrationType integration_type = 1 [json_name = "integrationType"];</code>
    * @return The enum numeric value on the wire for integrationType.
    */
   int getIntegrationTypeValue();
   /**
-   * <code>.api.commons.public.IntegrationType integration_type = 1 [json_name = "integrationType"];</code>
+   * <code>.api.commons.integrations.IntegrationType integration_type = 1 [json_name = "integrationType"];</code>
    * @return The integrationType.
    */
-  com.tcn.cloud.api.api.commons.public.IntegrationType getIntegrationType();
+  com.tcn.cloud.api.api.commons.integrations.IntegrationType getIntegrationType();
 
   /**
    * <code>.api.v1alpha1.integrations.TransactionSummary integration_summary = 2 [json_name = "integrationSummary"];</code>

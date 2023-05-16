@@ -113,7 +113,7 @@ private static final long serialVersionUID = 0L;
    * identifies which integration handler this is
    * </pre>
    *
-   * <code>.api.commons.public.IntegrationType integration_id = 2 [json_name = "integrationId"];</code>
+   * <code>.api.commons.integrations.IntegrationType integration_id = 2 [json_name = "integrationId"];</code>
    * @return The enum numeric value on the wire for integrationId.
    */
   @java.lang.Override public int getIntegrationIdValue() {
@@ -124,12 +124,12 @@ private static final long serialVersionUID = 0L;
    * identifies which integration handler this is
    * </pre>
    *
-   * <code>.api.commons.public.IntegrationType integration_id = 2 [json_name = "integrationId"];</code>
+   * <code>.api.commons.integrations.IntegrationType integration_id = 2 [json_name = "integrationId"];</code>
    * @return The integrationId.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.public.IntegrationType getIntegrationId() {
-    com.tcn.cloud.api.api.commons.public.IntegrationType result = com.tcn.cloud.api.api.commons.public.IntegrationType.forNumber(integrationId_);
-    return result == null ? com.tcn.cloud.api.api.commons.public.IntegrationType.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.IntegrationType getIntegrationId() {
+    com.tcn.cloud.api.api.commons.integrations.IntegrationType result = com.tcn.cloud.api.api.commons.integrations.IntegrationType.forNumber(integrationId_);
+    return result == null ? com.tcn.cloud.api.api.commons.integrations.IntegrationType.UNRECOGNIZED : result;
   }
 
   public static final int DESCRIPTION_FIELD_NUMBER = 3;
@@ -270,7 +270,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * the plugin fields for this integration.
    * These fields should be set on the plugin level and not the runtime.
-   * key is a value starting at api.commons.public.Visiblity.VISIBILITY_GROUP
+   * key is a value starting at api.commons.integrations.Visiblity.VISIBILITY_GROUP
    * and ending at 99 more than that value, or parameters marked VISIBILITY_ANYWHERE
    * </pre>
    *
@@ -294,7 +294,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * the plugin fields for this integration.
    * These fields should be set on the plugin level and not the runtime.
-   * key is a value starting at api.commons.public.Visiblity.VISIBILITY_GROUP
+   * key is a value starting at api.commons.integrations.Visiblity.VISIBILITY_GROUP
    * and ending at 99 more than that value, or parameters marked VISIBILITY_ANYWHERE
    * </pre>
    *
@@ -308,7 +308,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * the plugin fields for this integration.
    * These fields should be set on the plugin level and not the runtime.
-   * key is a value starting at api.commons.public.Visiblity.VISIBILITY_GROUP
+   * key is a value starting at api.commons.integrations.Visiblity.VISIBILITY_GROUP
    * and ending at 99 more than that value, or parameters marked VISIBILITY_ANYWHERE
    * </pre>
    *
@@ -329,7 +329,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Parameter defaultValue) {
    * <pre>
    * the plugin fields for this integration.
    * These fields should be set on the plugin level and not the runtime.
-   * key is a value starting at api.commons.public.Visiblity.VISIBILITY_GROUP
+   * key is a value starting at api.commons.integrations.Visiblity.VISIBILITY_GROUP
    * and ending at 99 more than that value, or parameters marked VISIBILITY_ANYWHERE
    * </pre>
    *
@@ -364,7 +364,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Parameter defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
     }
-    if (integrationId_ != com.tcn.cloud.api.api.commons.public.IntegrationType.INTEGRATION_TYPE_UNKNOWN.getNumber()) {
+    if (integrationId_ != com.tcn.cloud.api.api.commons.integrations.IntegrationType.INTEGRATION_TYPE_UNKNOWN.getNumber()) {
       output.writeEnum(2, integrationId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
@@ -391,7 +391,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Parameter defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
     }
-    if (integrationId_ != com.tcn.cloud.api.api.commons.public.IntegrationType.INTEGRATION_TYPE_UNKNOWN.getNumber()) {
+    if (integrationId_ != com.tcn.cloud.api.api.commons.integrations.IntegrationType.INTEGRATION_TYPE_UNKNOWN.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(2, integrationId_);
     }
@@ -923,7 +923,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Parameter defaultValue) {
      * identifies which integration handler this is
      * </pre>
      *
-     * <code>.api.commons.public.IntegrationType integration_id = 2 [json_name = "integrationId"];</code>
+     * <code>.api.commons.integrations.IntegrationType integration_id = 2 [json_name = "integrationId"];</code>
      * @return The enum numeric value on the wire for integrationId.
      */
     @java.lang.Override public int getIntegrationIdValue() {
@@ -934,7 +934,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Parameter defaultValue) {
      * identifies which integration handler this is
      * </pre>
      *
-     * <code>.api.commons.public.IntegrationType integration_id = 2 [json_name = "integrationId"];</code>
+     * <code>.api.commons.integrations.IntegrationType integration_id = 2 [json_name = "integrationId"];</code>
      * @param value The enum numeric value on the wire for integrationId to set.
      * @return This builder for chaining.
      */
@@ -949,24 +949,24 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Parameter defaultValue) {
      * identifies which integration handler this is
      * </pre>
      *
-     * <code>.api.commons.public.IntegrationType integration_id = 2 [json_name = "integrationId"];</code>
+     * <code>.api.commons.integrations.IntegrationType integration_id = 2 [json_name = "integrationId"];</code>
      * @return The integrationId.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.public.IntegrationType getIntegrationId() {
-      com.tcn.cloud.api.api.commons.public.IntegrationType result = com.tcn.cloud.api.api.commons.public.IntegrationType.forNumber(integrationId_);
-      return result == null ? com.tcn.cloud.api.api.commons.public.IntegrationType.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.api.commons.integrations.IntegrationType getIntegrationId() {
+      com.tcn.cloud.api.api.commons.integrations.IntegrationType result = com.tcn.cloud.api.api.commons.integrations.IntegrationType.forNumber(integrationId_);
+      return result == null ? com.tcn.cloud.api.api.commons.integrations.IntegrationType.UNRECOGNIZED : result;
     }
     /**
      * <pre>
      * identifies which integration handler this is
      * </pre>
      *
-     * <code>.api.commons.public.IntegrationType integration_id = 2 [json_name = "integrationId"];</code>
+     * <code>.api.commons.integrations.IntegrationType integration_id = 2 [json_name = "integrationId"];</code>
      * @param value The integrationId to set.
      * @return This builder for chaining.
      */
-    public Builder setIntegrationId(com.tcn.cloud.api.api.commons.public.IntegrationType value) {
+    public Builder setIntegrationId(com.tcn.cloud.api.api.commons.integrations.IntegrationType value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -980,7 +980,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Parameter defaultValue) {
      * identifies which integration handler this is
      * </pre>
      *
-     * <code>.api.commons.public.IntegrationType integration_id = 2 [json_name = "integrationId"];</code>
+     * <code>.api.commons.integrations.IntegrationType integration_id = 2 [json_name = "integrationId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearIntegrationId() {
@@ -1424,7 +1424,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Parameter defaultValue) {
      * <pre>
      * the plugin fields for this integration.
      * These fields should be set on the plugin level and not the runtime.
-     * key is a value starting at api.commons.public.Visiblity.VISIBILITY_GROUP
+     * key is a value starting at api.commons.integrations.Visiblity.VISIBILITY_GROUP
      * and ending at 99 more than that value, or parameters marked VISIBILITY_ANYWHERE
      * </pre>
      *
@@ -1448,7 +1448,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Parameter defaultValue) {
      * <pre>
      * the plugin fields for this integration.
      * These fields should be set on the plugin level and not the runtime.
-     * key is a value starting at api.commons.public.Visiblity.VISIBILITY_GROUP
+     * key is a value starting at api.commons.integrations.Visiblity.VISIBILITY_GROUP
      * and ending at 99 more than that value, or parameters marked VISIBILITY_ANYWHERE
      * </pre>
      *
@@ -1462,7 +1462,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Parameter defaultValue) {
      * <pre>
      * the plugin fields for this integration.
      * These fields should be set on the plugin level and not the runtime.
-     * key is a value starting at api.commons.public.Visiblity.VISIBILITY_GROUP
+     * key is a value starting at api.commons.integrations.Visiblity.VISIBILITY_GROUP
      * and ending at 99 more than that value, or parameters marked VISIBILITY_ANYWHERE
      * </pre>
      *
@@ -1483,7 +1483,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Parameter defaultValue) {
      * <pre>
      * the plugin fields for this integration.
      * These fields should be set on the plugin level and not the runtime.
-     * key is a value starting at api.commons.public.Visiblity.VISIBILITY_GROUP
+     * key is a value starting at api.commons.integrations.Visiblity.VISIBILITY_GROUP
      * and ending at 99 more than that value, or parameters marked VISIBILITY_ANYWHERE
      * </pre>
      *
@@ -1510,7 +1510,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Parameter defaultValue) {
      * <pre>
      * the plugin fields for this integration.
      * These fields should be set on the plugin level and not the runtime.
-     * key is a value starting at api.commons.public.Visiblity.VISIBILITY_GROUP
+     * key is a value starting at api.commons.integrations.Visiblity.VISIBILITY_GROUP
      * and ending at 99 more than that value, or parameters marked VISIBILITY_ANYWHERE
      * </pre>
      *
@@ -1536,7 +1536,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Parameter defaultValue) {
      * <pre>
      * the plugin fields for this integration.
      * These fields should be set on the plugin level and not the runtime.
-     * key is a value starting at api.commons.public.Visiblity.VISIBILITY_GROUP
+     * key is a value starting at api.commons.integrations.Visiblity.VISIBILITY_GROUP
      * and ending at 99 more than that value, or parameters marked VISIBILITY_ANYWHERE
      * </pre>
      *
@@ -1556,7 +1556,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Parameter defaultValue) {
      * <pre>
      * the plugin fields for this integration.
      * These fields should be set on the plugin level and not the runtime.
-     * key is a value starting at api.commons.public.Visiblity.VISIBILITY_GROUP
+     * key is a value starting at api.commons.integrations.Visiblity.VISIBILITY_GROUP
      * and ending at 99 more than that value, or parameters marked VISIBILITY_ANYWHERE
      * </pre>
      *

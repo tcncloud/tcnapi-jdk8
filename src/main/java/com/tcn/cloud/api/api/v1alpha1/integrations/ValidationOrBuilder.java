@@ -8,13 +8,13 @@ public interface ValidationOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api.commons.public.Validation enum = 1 [json_name = "enum"];</code>
+   * <code>.api.commons.integrations.Validation enum = 1 [json_name = "enum"];</code>
    * @return The enum numeric value on the wire for enum.
    */
   int getEnumValue();
   /**
-   * <code>.api.commons.public.Validation enum = 1 [json_name = "enum"];</code>
+   * <code>.api.commons.integrations.Validation enum = 1 [json_name = "enum"];</code>
    * @return The enum.
    */
-  com.tcn.cloud.api.api.commons.public.Validation getEnum();
+  com.tcn.cloud.api.api.commons.integrations.Validation getEnum();
 }

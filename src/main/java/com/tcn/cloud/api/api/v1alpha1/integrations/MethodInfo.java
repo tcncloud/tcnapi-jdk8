@@ -110,7 +110,7 @@ private static final long serialVersionUID = 0L;
    * identifies which method this is
    * </pre>
    *
-   * <code>.api.commons.public.RequestMethod method_id = 2 [json_name = "methodId"];</code>
+   * <code>.api.commons.integrations.RequestMethod method_id = 2 [json_name = "methodId"];</code>
    * @return The enum numeric value on the wire for methodId.
    */
   @java.lang.Override public int getMethodIdValue() {
@@ -121,12 +121,12 @@ private static final long serialVersionUID = 0L;
    * identifies which method this is
    * </pre>
    *
-   * <code>.api.commons.public.RequestMethod method_id = 2 [json_name = "methodId"];</code>
+   * <code>.api.commons.integrations.RequestMethod method_id = 2 [json_name = "methodId"];</code>
    * @return The methodId.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.public.RequestMethod getMethodId() {
-    com.tcn.cloud.api.api.commons.public.RequestMethod result = com.tcn.cloud.api.api.commons.public.RequestMethod.forNumber(methodId_);
-    return result == null ? com.tcn.cloud.api.api.commons.public.RequestMethod.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.RequestMethod getMethodId() {
+    com.tcn.cloud.api.api.commons.integrations.RequestMethod result = com.tcn.cloud.api.api.commons.integrations.RequestMethod.forNumber(methodId_);
+    return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestMethod.UNRECOGNIZED : result;
   }
 
   public static final int TX_TYPE_FIELD_NUMBER = 3;
@@ -136,7 +136,7 @@ private static final long serialVersionUID = 0L;
    * what type of method call this is: PAYMENT, INQUIRY, or VERIFY
    * </pre>
    *
-   * <code>.api.commons.public.TransactionType tx_type = 3 [json_name = "txType"];</code>
+   * <code>.api.commons.integrations.TransactionType tx_type = 3 [json_name = "txType"];</code>
    * @return The enum numeric value on the wire for txType.
    */
   @java.lang.Override public int getTxTypeValue() {
@@ -147,12 +147,12 @@ private static final long serialVersionUID = 0L;
    * what type of method call this is: PAYMENT, INQUIRY, or VERIFY
    * </pre>
    *
-   * <code>.api.commons.public.TransactionType tx_type = 3 [json_name = "txType"];</code>
+   * <code>.api.commons.integrations.TransactionType tx_type = 3 [json_name = "txType"];</code>
    * @return The txType.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.public.TransactionType getTxType() {
-    com.tcn.cloud.api.api.commons.public.TransactionType result = com.tcn.cloud.api.api.commons.public.TransactionType.forNumber(txType_);
-    return result == null ? com.tcn.cloud.api.api.commons.public.TransactionType.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.TransactionType getTxType() {
+    com.tcn.cloud.api.api.commons.integrations.TransactionType result = com.tcn.cloud.api.api.commons.integrations.TransactionType.forNumber(txType_);
+    return result == null ? com.tcn.cloud.api.api.commons.integrations.TransactionType.UNRECOGNIZED : result;
   }
 
   public static final int PARAMS_FIELD_NUMBER = 4;
@@ -449,10 +449,10 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Parameter defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
     }
-    if (methodId_ != com.tcn.cloud.api.api.commons.public.RequestMethod.REQUEST_METHOD_UNKNOWN.getNumber()) {
+    if (methodId_ != com.tcn.cloud.api.api.commons.integrations.RequestMethod.REQUEST_METHOD_UNKNOWN.getNumber()) {
       output.writeEnum(2, methodId_);
     }
-    if (txType_ != com.tcn.cloud.api.api.commons.public.TransactionType.TRANSACTION_TYPE_PAYMENT.getNumber()) {
+    if (txType_ != com.tcn.cloud.api.api.commons.integrations.TransactionType.TRANSACTION_TYPE_PAYMENT.getNumber()) {
       output.writeEnum(3, txType_);
     }
     for (int i = 0; i < params_.size(); i++) {
@@ -482,11 +482,11 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Parameter defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
     }
-    if (methodId_ != com.tcn.cloud.api.api.commons.public.RequestMethod.REQUEST_METHOD_UNKNOWN.getNumber()) {
+    if (methodId_ != com.tcn.cloud.api.api.commons.integrations.RequestMethod.REQUEST_METHOD_UNKNOWN.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(2, methodId_);
     }
-    if (txType_ != com.tcn.cloud.api.api.commons.public.TransactionType.TRANSACTION_TYPE_PAYMENT.getNumber()) {
+    if (txType_ != com.tcn.cloud.api.api.commons.integrations.TransactionType.TRANSACTION_TYPE_PAYMENT.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, txType_);
     }
@@ -1093,7 +1093,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Parameter defaultValue) {
      * identifies which method this is
      * </pre>
      *
-     * <code>.api.commons.public.RequestMethod method_id = 2 [json_name = "methodId"];</code>
+     * <code>.api.commons.integrations.RequestMethod method_id = 2 [json_name = "methodId"];</code>
      * @return The enum numeric value on the wire for methodId.
      */
     @java.lang.Override public int getMethodIdValue() {
@@ -1104,7 +1104,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Parameter defaultValue) {
      * identifies which method this is
      * </pre>
      *
-     * <code>.api.commons.public.RequestMethod method_id = 2 [json_name = "methodId"];</code>
+     * <code>.api.commons.integrations.RequestMethod method_id = 2 [json_name = "methodId"];</code>
      * @param value The enum numeric value on the wire for methodId to set.
      * @return This builder for chaining.
      */
@@ -1119,24 +1119,24 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Parameter defaultValue) {
      * identifies which method this is
      * </pre>
      *
-     * <code>.api.commons.public.RequestMethod method_id = 2 [json_name = "methodId"];</code>
+     * <code>.api.commons.integrations.RequestMethod method_id = 2 [json_name = "methodId"];</code>
      * @return The methodId.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.public.RequestMethod getMethodId() {
-      com.tcn.cloud.api.api.commons.public.RequestMethod result = com.tcn.cloud.api.api.commons.public.RequestMethod.forNumber(methodId_);
-      return result == null ? com.tcn.cloud.api.api.commons.public.RequestMethod.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.api.commons.integrations.RequestMethod getMethodId() {
+      com.tcn.cloud.api.api.commons.integrations.RequestMethod result = com.tcn.cloud.api.api.commons.integrations.RequestMethod.forNumber(methodId_);
+      return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestMethod.UNRECOGNIZED : result;
     }
     /**
      * <pre>
      * identifies which method this is
      * </pre>
      *
-     * <code>.api.commons.public.RequestMethod method_id = 2 [json_name = "methodId"];</code>
+     * <code>.api.commons.integrations.RequestMethod method_id = 2 [json_name = "methodId"];</code>
      * @param value The methodId to set.
      * @return This builder for chaining.
      */
-    public Builder setMethodId(com.tcn.cloud.api.api.commons.public.RequestMethod value) {
+    public Builder setMethodId(com.tcn.cloud.api.api.commons.integrations.RequestMethod value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1150,7 +1150,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Parameter defaultValue) {
      * identifies which method this is
      * </pre>
      *
-     * <code>.api.commons.public.RequestMethod method_id = 2 [json_name = "methodId"];</code>
+     * <code>.api.commons.integrations.RequestMethod method_id = 2 [json_name = "methodId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearMethodId() {
@@ -1166,7 +1166,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Parameter defaultValue) {
      * what type of method call this is: PAYMENT, INQUIRY, or VERIFY
      * </pre>
      *
-     * <code>.api.commons.public.TransactionType tx_type = 3 [json_name = "txType"];</code>
+     * <code>.api.commons.integrations.TransactionType tx_type = 3 [json_name = "txType"];</code>
      * @return The enum numeric value on the wire for txType.
      */
     @java.lang.Override public int getTxTypeValue() {
@@ -1177,7 +1177,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Parameter defaultValue) {
      * what type of method call this is: PAYMENT, INQUIRY, or VERIFY
      * </pre>
      *
-     * <code>.api.commons.public.TransactionType tx_type = 3 [json_name = "txType"];</code>
+     * <code>.api.commons.integrations.TransactionType tx_type = 3 [json_name = "txType"];</code>
      * @param value The enum numeric value on the wire for txType to set.
      * @return This builder for chaining.
      */
@@ -1192,24 +1192,24 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Parameter defaultValue) {
      * what type of method call this is: PAYMENT, INQUIRY, or VERIFY
      * </pre>
      *
-     * <code>.api.commons.public.TransactionType tx_type = 3 [json_name = "txType"];</code>
+     * <code>.api.commons.integrations.TransactionType tx_type = 3 [json_name = "txType"];</code>
      * @return The txType.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.public.TransactionType getTxType() {
-      com.tcn.cloud.api.api.commons.public.TransactionType result = com.tcn.cloud.api.api.commons.public.TransactionType.forNumber(txType_);
-      return result == null ? com.tcn.cloud.api.api.commons.public.TransactionType.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.api.commons.integrations.TransactionType getTxType() {
+      com.tcn.cloud.api.api.commons.integrations.TransactionType result = com.tcn.cloud.api.api.commons.integrations.TransactionType.forNumber(txType_);
+      return result == null ? com.tcn.cloud.api.api.commons.integrations.TransactionType.UNRECOGNIZED : result;
     }
     /**
      * <pre>
      * what type of method call this is: PAYMENT, INQUIRY, or VERIFY
      * </pre>
      *
-     * <code>.api.commons.public.TransactionType tx_type = 3 [json_name = "txType"];</code>
+     * <code>.api.commons.integrations.TransactionType tx_type = 3 [json_name = "txType"];</code>
      * @param value The txType to set.
      * @return This builder for chaining.
      */
-    public Builder setTxType(com.tcn.cloud.api.api.commons.public.TransactionType value) {
+    public Builder setTxType(com.tcn.cloud.api.api.commons.integrations.TransactionType value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1223,7 +1223,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Parameter defaultValue) {
      * what type of method call this is: PAYMENT, INQUIRY, or VERIFY
      * </pre>
      *
-     * <code>.api.commons.public.TransactionType tx_type = 3 [json_name = "txType"];</code>
+     * <code>.api.commons.integrations.TransactionType tx_type = 3 [json_name = "txType"];</code>
      * @return This builder for chaining.
      */
     public Builder clearTxType() {

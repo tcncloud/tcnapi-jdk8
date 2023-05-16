@@ -8,26 +8,26 @@ public interface ListAvailableVerificationFieldsResOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .api.commons.public.FieldDefinition verification_fields = 2 [json_name = "verificationFields"];</code>
+   * <code>repeated .api.commons.integrations.FieldDefinition verification_fields = 2 [json_name = "verificationFields"];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.commons.public.FieldDefinition> 
+  java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> 
       getVerificationFieldsList();
   /**
-   * <code>repeated .api.commons.public.FieldDefinition verification_fields = 2 [json_name = "verificationFields"];</code>
+   * <code>repeated .api.commons.integrations.FieldDefinition verification_fields = 2 [json_name = "verificationFields"];</code>
    */
-  com.tcn.cloud.api.api.commons.public.FieldDefinition getVerificationFields(int index);
+  com.tcn.cloud.api.api.commons.integrations.FieldDefinition getVerificationFields(int index);
   /**
-   * <code>repeated .api.commons.public.FieldDefinition verification_fields = 2 [json_name = "verificationFields"];</code>
+   * <code>repeated .api.commons.integrations.FieldDefinition verification_fields = 2 [json_name = "verificationFields"];</code>
    */
   int getVerificationFieldsCount();
   /**
-   * <code>repeated .api.commons.public.FieldDefinition verification_fields = 2 [json_name = "verificationFields"];</code>
+   * <code>repeated .api.commons.integrations.FieldDefinition verification_fields = 2 [json_name = "verificationFields"];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.public.FieldDefinitionOrBuilder> 
+  java.util.List<? extends com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> 
       getVerificationFieldsOrBuilderList();
   /**
-   * <code>repeated .api.commons.public.FieldDefinition verification_fields = 2 [json_name = "verificationFields"];</code>
+   * <code>repeated .api.commons.integrations.FieldDefinition verification_fields = 2 [json_name = "verificationFields"];</code>
    */
-  com.tcn.cloud.api.api.commons.public.FieldDefinitionOrBuilder getVerificationFieldsOrBuilder(
+  com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder getVerificationFieldsOrBuilder(
       int index);
 }

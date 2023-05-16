@@ -7,7 +7,7 @@ package com.tcn.cloud.api.api.v1alpha1.integrations;
  * <pre>
  * This type only exists because typescript can't handle
  * a map with an enum as a value from another packages
- * map&lt;string, api.commons.public.Validation&gt;
+ * map&lt;string, api.commons.integrations.Validation&gt;
  * </pre>
  *
  * Protobuf type {@code api.v1alpha1.integrations.Validation}
@@ -48,19 +48,19 @@ private static final long serialVersionUID = 0L;
   public static final int ENUM_FIELD_NUMBER = 1;
   private int enum_ = 0;
   /**
-   * <code>.api.commons.public.Validation enum = 1 [json_name = "enum"];</code>
+   * <code>.api.commons.integrations.Validation enum = 1 [json_name = "enum"];</code>
    * @return The enum numeric value on the wire for enum.
    */
   @java.lang.Override public int getEnumValue() {
     return enum_;
   }
   /**
-   * <code>.api.commons.public.Validation enum = 1 [json_name = "enum"];</code>
+   * <code>.api.commons.integrations.Validation enum = 1 [json_name = "enum"];</code>
    * @return The enum.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.public.Validation getEnum() {
-    com.tcn.cloud.api.api.commons.public.Validation result = com.tcn.cloud.api.api.commons.public.Validation.forNumber(enum_);
-    return result == null ? com.tcn.cloud.api.api.commons.public.Validation.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.Validation getEnum() {
+    com.tcn.cloud.api.api.commons.integrations.Validation result = com.tcn.cloud.api.api.commons.integrations.Validation.forNumber(enum_);
+    return result == null ? com.tcn.cloud.api.api.commons.integrations.Validation.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -77,7 +77,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (enum_ != com.tcn.cloud.api.api.commons.public.Validation.VALIDATION_NONE.getNumber()) {
+    if (enum_ != com.tcn.cloud.api.api.commons.integrations.Validation.VALIDATION_NONE.getNumber()) {
       output.writeEnum(1, enum_);
     }
     getUnknownFields().writeTo(output);
@@ -89,7 +89,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (enum_ != com.tcn.cloud.api.api.commons.public.Validation.VALIDATION_NONE.getNumber()) {
+    if (enum_ != com.tcn.cloud.api.api.commons.integrations.Validation.VALIDATION_NONE.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(1, enum_);
     }
@@ -223,7 +223,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * This type only exists because typescript can't handle
    * a map with an enum as a value from another packages
-   * map&lt;string, api.commons.public.Validation&gt;
+   * map&lt;string, api.commons.integrations.Validation&gt;
    * </pre>
    *
    * Protobuf type {@code api.v1alpha1.integrations.Validation}
@@ -363,14 +363,14 @@ private static final long serialVersionUID = 0L;
 
     private int enum_ = 0;
     /**
-     * <code>.api.commons.public.Validation enum = 1 [json_name = "enum"];</code>
+     * <code>.api.commons.integrations.Validation enum = 1 [json_name = "enum"];</code>
      * @return The enum numeric value on the wire for enum.
      */
     @java.lang.Override public int getEnumValue() {
       return enum_;
     }
     /**
-     * <code>.api.commons.public.Validation enum = 1 [json_name = "enum"];</code>
+     * <code>.api.commons.integrations.Validation enum = 1 [json_name = "enum"];</code>
      * @param value The enum numeric value on the wire for enum to set.
      * @return This builder for chaining.
      */
@@ -381,20 +381,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.public.Validation enum = 1 [json_name = "enum"];</code>
+     * <code>.api.commons.integrations.Validation enum = 1 [json_name = "enum"];</code>
      * @return The enum.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.public.Validation getEnum() {
-      com.tcn.cloud.api.api.commons.public.Validation result = com.tcn.cloud.api.api.commons.public.Validation.forNumber(enum_);
-      return result == null ? com.tcn.cloud.api.api.commons.public.Validation.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.api.commons.integrations.Validation getEnum() {
+      com.tcn.cloud.api.api.commons.integrations.Validation result = com.tcn.cloud.api.api.commons.integrations.Validation.forNumber(enum_);
+      return result == null ? com.tcn.cloud.api.api.commons.integrations.Validation.UNRECOGNIZED : result;
     }
     /**
-     * <code>.api.commons.public.Validation enum = 1 [json_name = "enum"];</code>
+     * <code>.api.commons.integrations.Validation enum = 1 [json_name = "enum"];</code>
      * @param value The enum to set.
      * @return This builder for chaining.
      */
-    public Builder setEnum(com.tcn.cloud.api.api.commons.public.Validation value) {
+    public Builder setEnum(com.tcn.cloud.api.api.commons.integrations.Validation value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -404,7 +404,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.public.Validation enum = 1 [json_name = "enum"];</code>
+     * <code>.api.commons.integrations.Validation enum = 1 [json_name = "enum"];</code>
      * @return This builder for chaining.
      */
     public Builder clearEnum() {

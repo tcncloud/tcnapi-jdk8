@@ -53,7 +53,7 @@ private static final long serialVersionUID = 0L;
      * the single flow we are interested in checking
      * </pre>
      *
-     * <code>.api.commons.public.Flow flow = 3 [json_name = "flow"];</code>
+     * <code>.api.commons.integrations.Flow flow = 3 [json_name = "flow"];</code>
      * @return Whether the flow field is set.
      */
     boolean hasFlow();
@@ -62,25 +62,25 @@ private static final long serialVersionUID = 0L;
      * the single flow we are interested in checking
      * </pre>
      *
-     * <code>.api.commons.public.Flow flow = 3 [json_name = "flow"];</code>
+     * <code>.api.commons.integrations.Flow flow = 3 [json_name = "flow"];</code>
      * @return The flow.
      */
-    com.tcn.cloud.api.api.commons.public.Flow getFlow();
+    com.tcn.cloud.api.api.commons.integrations.Flow getFlow();
     /**
      * <pre>
      * the single flow we are interested in checking
      * </pre>
      *
-     * <code>.api.commons.public.Flow flow = 3 [json_name = "flow"];</code>
+     * <code>.api.commons.integrations.Flow flow = 3 [json_name = "flow"];</code>
      */
-    com.tcn.cloud.api.api.commons.public.FlowOrBuilder getFlowOrBuilder();
+    com.tcn.cloud.api.api.commons.integrations.FlowOrBuilder getFlowOrBuilder();
 
     /**
      * <pre>
      * the location the flow will check for fields
      * </pre>
      *
-     * <code>.api.commons.public.FlowFieldLoc loc = 4 [json_name = "loc"];</code>
+     * <code>.api.commons.integrations.FlowFieldLoc loc = 4 [json_name = "loc"];</code>
      * @return The enum numeric value on the wire for loc.
      */
     int getLocValue();
@@ -89,10 +89,10 @@ private static final long serialVersionUID = 0L;
      * the location the flow will check for fields
      * </pre>
      *
-     * <code>.api.commons.public.FlowFieldLoc loc = 4 [json_name = "loc"];</code>
+     * <code>.api.commons.integrations.FlowFieldLoc loc = 4 [json_name = "loc"];</code>
      * @return The loc.
      */
-    com.tcn.cloud.api.api.commons.public.FlowFieldLoc getLoc();
+    com.tcn.cloud.api.api.commons.integrations.FlowFieldLoc getLoc();
   }
   /**
    * Protobuf type {@code api.v1alpha1.integrations.ListFlowFieldNamesReq.Entity}
@@ -131,13 +131,13 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int FLOW_FIELD_NUMBER = 3;
-    private com.tcn.cloud.api.api.commons.public.Flow flow_;
+    private com.tcn.cloud.api.api.commons.integrations.Flow flow_;
     /**
      * <pre>
      * the single flow we are interested in checking
      * </pre>
      *
-     * <code>.api.commons.public.Flow flow = 3 [json_name = "flow"];</code>
+     * <code>.api.commons.integrations.Flow flow = 3 [json_name = "flow"];</code>
      * @return Whether the flow field is set.
      */
     @java.lang.Override
@@ -149,23 +149,23 @@ private static final long serialVersionUID = 0L;
      * the single flow we are interested in checking
      * </pre>
      *
-     * <code>.api.commons.public.Flow flow = 3 [json_name = "flow"];</code>
+     * <code>.api.commons.integrations.Flow flow = 3 [json_name = "flow"];</code>
      * @return The flow.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.public.Flow getFlow() {
-      return flow_ == null ? com.tcn.cloud.api.api.commons.public.Flow.getDefaultInstance() : flow_;
+    public com.tcn.cloud.api.api.commons.integrations.Flow getFlow() {
+      return flow_ == null ? com.tcn.cloud.api.api.commons.integrations.Flow.getDefaultInstance() : flow_;
     }
     /**
      * <pre>
      * the single flow we are interested in checking
      * </pre>
      *
-     * <code>.api.commons.public.Flow flow = 3 [json_name = "flow"];</code>
+     * <code>.api.commons.integrations.Flow flow = 3 [json_name = "flow"];</code>
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.public.FlowOrBuilder getFlowOrBuilder() {
-      return flow_ == null ? com.tcn.cloud.api.api.commons.public.Flow.getDefaultInstance() : flow_;
+    public com.tcn.cloud.api.api.commons.integrations.FlowOrBuilder getFlowOrBuilder() {
+      return flow_ == null ? com.tcn.cloud.api.api.commons.integrations.Flow.getDefaultInstance() : flow_;
     }
 
     public static final int LOC_FIELD_NUMBER = 4;
@@ -175,7 +175,7 @@ private static final long serialVersionUID = 0L;
      * the location the flow will check for fields
      * </pre>
      *
-     * <code>.api.commons.public.FlowFieldLoc loc = 4 [json_name = "loc"];</code>
+     * <code>.api.commons.integrations.FlowFieldLoc loc = 4 [json_name = "loc"];</code>
      * @return The enum numeric value on the wire for loc.
      */
     @java.lang.Override public int getLocValue() {
@@ -186,12 +186,12 @@ private static final long serialVersionUID = 0L;
      * the location the flow will check for fields
      * </pre>
      *
-     * <code>.api.commons.public.FlowFieldLoc loc = 4 [json_name = "loc"];</code>
+     * <code>.api.commons.integrations.FlowFieldLoc loc = 4 [json_name = "loc"];</code>
      * @return The loc.
      */
-    @java.lang.Override public com.tcn.cloud.api.api.commons.public.FlowFieldLoc getLoc() {
-      com.tcn.cloud.api.api.commons.public.FlowFieldLoc result = com.tcn.cloud.api.api.commons.public.FlowFieldLoc.forNumber(loc_);
-      return result == null ? com.tcn.cloud.api.api.commons.public.FlowFieldLoc.UNRECOGNIZED : result;
+    @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.FlowFieldLoc getLoc() {
+      com.tcn.cloud.api.api.commons.integrations.FlowFieldLoc result = com.tcn.cloud.api.api.commons.integrations.FlowFieldLoc.forNumber(loc_);
+      return result == null ? com.tcn.cloud.api.api.commons.integrations.FlowFieldLoc.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -211,7 +211,7 @@ private static final long serialVersionUID = 0L;
       if (flow_ != null) {
         output.writeMessage(3, getFlow());
       }
-      if (loc_ != com.tcn.cloud.api.api.commons.public.FlowFieldLoc.FFL_ANY.getNumber()) {
+      if (loc_ != com.tcn.cloud.api.api.commons.integrations.FlowFieldLoc.FFL_ANY.getNumber()) {
         output.writeEnum(4, loc_);
       }
       getUnknownFields().writeTo(output);
@@ -227,7 +227,7 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getFlow());
       }
-      if (loc_ != com.tcn.cloud.api.api.commons.public.FlowFieldLoc.FFL_ANY.getNumber()) {
+      if (loc_ != com.tcn.cloud.api.api.commons.integrations.FlowFieldLoc.FFL_ANY.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(4, loc_);
       }
@@ -522,15 +522,15 @@ private static final long serialVersionUID = 0L;
       }
       private int bitField0_;
 
-      private com.tcn.cloud.api.api.commons.public.Flow flow_;
+      private com.tcn.cloud.api.api.commons.integrations.Flow flow_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.tcn.cloud.api.api.commons.public.Flow, com.tcn.cloud.api.api.commons.public.Flow.Builder, com.tcn.cloud.api.api.commons.public.FlowOrBuilder> flowBuilder_;
+          com.tcn.cloud.api.api.commons.integrations.Flow, com.tcn.cloud.api.api.commons.integrations.Flow.Builder, com.tcn.cloud.api.api.commons.integrations.FlowOrBuilder> flowBuilder_;
       /**
        * <pre>
        * the single flow we are interested in checking
        * </pre>
        *
-       * <code>.api.commons.public.Flow flow = 3 [json_name = "flow"];</code>
+       * <code>.api.commons.integrations.Flow flow = 3 [json_name = "flow"];</code>
        * @return Whether the flow field is set.
        */
       public boolean hasFlow() {
@@ -541,12 +541,12 @@ private static final long serialVersionUID = 0L;
        * the single flow we are interested in checking
        * </pre>
        *
-       * <code>.api.commons.public.Flow flow = 3 [json_name = "flow"];</code>
+       * <code>.api.commons.integrations.Flow flow = 3 [json_name = "flow"];</code>
        * @return The flow.
        */
-      public com.tcn.cloud.api.api.commons.public.Flow getFlow() {
+      public com.tcn.cloud.api.api.commons.integrations.Flow getFlow() {
         if (flowBuilder_ == null) {
-          return flow_ == null ? com.tcn.cloud.api.api.commons.public.Flow.getDefaultInstance() : flow_;
+          return flow_ == null ? com.tcn.cloud.api.api.commons.integrations.Flow.getDefaultInstance() : flow_;
         } else {
           return flowBuilder_.getMessage();
         }
@@ -556,9 +556,9 @@ private static final long serialVersionUID = 0L;
        * the single flow we are interested in checking
        * </pre>
        *
-       * <code>.api.commons.public.Flow flow = 3 [json_name = "flow"];</code>
+       * <code>.api.commons.integrations.Flow flow = 3 [json_name = "flow"];</code>
        */
-      public Builder setFlow(com.tcn.cloud.api.api.commons.public.Flow value) {
+      public Builder setFlow(com.tcn.cloud.api.api.commons.integrations.Flow value) {
         if (flowBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -576,10 +576,10 @@ private static final long serialVersionUID = 0L;
        * the single flow we are interested in checking
        * </pre>
        *
-       * <code>.api.commons.public.Flow flow = 3 [json_name = "flow"];</code>
+       * <code>.api.commons.integrations.Flow flow = 3 [json_name = "flow"];</code>
        */
       public Builder setFlow(
-          com.tcn.cloud.api.api.commons.public.Flow.Builder builderForValue) {
+          com.tcn.cloud.api.api.commons.integrations.Flow.Builder builderForValue) {
         if (flowBuilder_ == null) {
           flow_ = builderForValue.build();
         } else {
@@ -594,13 +594,13 @@ private static final long serialVersionUID = 0L;
        * the single flow we are interested in checking
        * </pre>
        *
-       * <code>.api.commons.public.Flow flow = 3 [json_name = "flow"];</code>
+       * <code>.api.commons.integrations.Flow flow = 3 [json_name = "flow"];</code>
        */
-      public Builder mergeFlow(com.tcn.cloud.api.api.commons.public.Flow value) {
+      public Builder mergeFlow(com.tcn.cloud.api.api.commons.integrations.Flow value) {
         if (flowBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0) &&
             flow_ != null &&
-            flow_ != com.tcn.cloud.api.api.commons.public.Flow.getDefaultInstance()) {
+            flow_ != com.tcn.cloud.api.api.commons.integrations.Flow.getDefaultInstance()) {
             getFlowBuilder().mergeFrom(value);
           } else {
             flow_ = value;
@@ -617,7 +617,7 @@ private static final long serialVersionUID = 0L;
        * the single flow we are interested in checking
        * </pre>
        *
-       * <code>.api.commons.public.Flow flow = 3 [json_name = "flow"];</code>
+       * <code>.api.commons.integrations.Flow flow = 3 [json_name = "flow"];</code>
        */
       public Builder clearFlow() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -634,9 +634,9 @@ private static final long serialVersionUID = 0L;
        * the single flow we are interested in checking
        * </pre>
        *
-       * <code>.api.commons.public.Flow flow = 3 [json_name = "flow"];</code>
+       * <code>.api.commons.integrations.Flow flow = 3 [json_name = "flow"];</code>
        */
-      public com.tcn.cloud.api.api.commons.public.Flow.Builder getFlowBuilder() {
+      public com.tcn.cloud.api.api.commons.integrations.Flow.Builder getFlowBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getFlowFieldBuilder().getBuilder();
@@ -646,14 +646,14 @@ private static final long serialVersionUID = 0L;
        * the single flow we are interested in checking
        * </pre>
        *
-       * <code>.api.commons.public.Flow flow = 3 [json_name = "flow"];</code>
+       * <code>.api.commons.integrations.Flow flow = 3 [json_name = "flow"];</code>
        */
-      public com.tcn.cloud.api.api.commons.public.FlowOrBuilder getFlowOrBuilder() {
+      public com.tcn.cloud.api.api.commons.integrations.FlowOrBuilder getFlowOrBuilder() {
         if (flowBuilder_ != null) {
           return flowBuilder_.getMessageOrBuilder();
         } else {
           return flow_ == null ?
-              com.tcn.cloud.api.api.commons.public.Flow.getDefaultInstance() : flow_;
+              com.tcn.cloud.api.api.commons.integrations.Flow.getDefaultInstance() : flow_;
         }
       }
       /**
@@ -661,14 +661,14 @@ private static final long serialVersionUID = 0L;
        * the single flow we are interested in checking
        * </pre>
        *
-       * <code>.api.commons.public.Flow flow = 3 [json_name = "flow"];</code>
+       * <code>.api.commons.integrations.Flow flow = 3 [json_name = "flow"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.tcn.cloud.api.api.commons.public.Flow, com.tcn.cloud.api.api.commons.public.Flow.Builder, com.tcn.cloud.api.api.commons.public.FlowOrBuilder> 
+          com.tcn.cloud.api.api.commons.integrations.Flow, com.tcn.cloud.api.api.commons.integrations.Flow.Builder, com.tcn.cloud.api.api.commons.integrations.FlowOrBuilder> 
           getFlowFieldBuilder() {
         if (flowBuilder_ == null) {
           flowBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.tcn.cloud.api.api.commons.public.Flow, com.tcn.cloud.api.api.commons.public.Flow.Builder, com.tcn.cloud.api.api.commons.public.FlowOrBuilder>(
+              com.tcn.cloud.api.api.commons.integrations.Flow, com.tcn.cloud.api.api.commons.integrations.Flow.Builder, com.tcn.cloud.api.api.commons.integrations.FlowOrBuilder>(
                   getFlow(),
                   getParentForChildren(),
                   isClean());
@@ -683,7 +683,7 @@ private static final long serialVersionUID = 0L;
        * the location the flow will check for fields
        * </pre>
        *
-       * <code>.api.commons.public.FlowFieldLoc loc = 4 [json_name = "loc"];</code>
+       * <code>.api.commons.integrations.FlowFieldLoc loc = 4 [json_name = "loc"];</code>
        * @return The enum numeric value on the wire for loc.
        */
       @java.lang.Override public int getLocValue() {
@@ -694,7 +694,7 @@ private static final long serialVersionUID = 0L;
        * the location the flow will check for fields
        * </pre>
        *
-       * <code>.api.commons.public.FlowFieldLoc loc = 4 [json_name = "loc"];</code>
+       * <code>.api.commons.integrations.FlowFieldLoc loc = 4 [json_name = "loc"];</code>
        * @param value The enum numeric value on the wire for loc to set.
        * @return This builder for chaining.
        */
@@ -709,24 +709,24 @@ private static final long serialVersionUID = 0L;
        * the location the flow will check for fields
        * </pre>
        *
-       * <code>.api.commons.public.FlowFieldLoc loc = 4 [json_name = "loc"];</code>
+       * <code>.api.commons.integrations.FlowFieldLoc loc = 4 [json_name = "loc"];</code>
        * @return The loc.
        */
       @java.lang.Override
-      public com.tcn.cloud.api.api.commons.public.FlowFieldLoc getLoc() {
-        com.tcn.cloud.api.api.commons.public.FlowFieldLoc result = com.tcn.cloud.api.api.commons.public.FlowFieldLoc.forNumber(loc_);
-        return result == null ? com.tcn.cloud.api.api.commons.public.FlowFieldLoc.UNRECOGNIZED : result;
+      public com.tcn.cloud.api.api.commons.integrations.FlowFieldLoc getLoc() {
+        com.tcn.cloud.api.api.commons.integrations.FlowFieldLoc result = com.tcn.cloud.api.api.commons.integrations.FlowFieldLoc.forNumber(loc_);
+        return result == null ? com.tcn.cloud.api.api.commons.integrations.FlowFieldLoc.UNRECOGNIZED : result;
       }
       /**
        * <pre>
        * the location the flow will check for fields
        * </pre>
        *
-       * <code>.api.commons.public.FlowFieldLoc loc = 4 [json_name = "loc"];</code>
+       * <code>.api.commons.integrations.FlowFieldLoc loc = 4 [json_name = "loc"];</code>
        * @param value The loc to set.
        * @return This builder for chaining.
        */
-      public Builder setLoc(com.tcn.cloud.api.api.commons.public.FlowFieldLoc value) {
+      public Builder setLoc(com.tcn.cloud.api.api.commons.integrations.FlowFieldLoc value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -740,7 +740,7 @@ private static final long serialVersionUID = 0L;
        * the location the flow will check for fields
        * </pre>
        *
-       * <code>.api.commons.public.FlowFieldLoc loc = 4 [json_name = "loc"];</code>
+       * <code>.api.commons.integrations.FlowFieldLoc loc = 4 [json_name = "loc"];</code>
        * @return This builder for chaining.
        */
       public Builder clearLoc() {

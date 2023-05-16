@@ -162,7 +162,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue);
    * flow name, type and options used
    * </pre>
    *
-   * <code>.api.commons.public.PaymentFlow payment_flow = 6 [json_name = "paymentFlow"];</code>
+   * <code>.api.commons.integrations.PaymentFlow payment_flow = 6 [json_name = "paymentFlow"];</code>
    * @return Whether the paymentFlow field is set.
    */
   boolean hasPaymentFlow();
@@ -171,16 +171,16 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue);
    * flow name, type and options used
    * </pre>
    *
-   * <code>.api.commons.public.PaymentFlow payment_flow = 6 [json_name = "paymentFlow"];</code>
+   * <code>.api.commons.integrations.PaymentFlow payment_flow = 6 [json_name = "paymentFlow"];</code>
    * @return The paymentFlow.
    */
-  com.tcn.cloud.api.api.commons.public.PaymentFlow getPaymentFlow();
+  com.tcn.cloud.api.api.commons.integrations.PaymentFlow getPaymentFlow();
   /**
    * <pre>
    * flow name, type and options used
    * </pre>
    *
-   * <code>.api.commons.public.PaymentFlow payment_flow = 6 [json_name = "paymentFlow"];</code>
+   * <code>.api.commons.integrations.PaymentFlow payment_flow = 6 [json_name = "paymentFlow"];</code>
    */
-  com.tcn.cloud.api.api.commons.public.PaymentFlowOrBuilder getPaymentFlowOrBuilder();
+  com.tcn.cloud.api.api.commons.integrations.PaymentFlowOrBuilder getPaymentFlowOrBuilder();
 }

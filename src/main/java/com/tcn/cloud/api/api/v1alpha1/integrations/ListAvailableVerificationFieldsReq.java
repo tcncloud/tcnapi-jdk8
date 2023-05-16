@@ -43,9 +43,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VERIFICATION_FIELD_NUMBER = 1;
-  private com.tcn.cloud.api.api.commons.public.VerificationFlow verification_;
+  private com.tcn.cloud.api.api.commons.integrations.VerificationFlow verification_;
   /**
-   * <code>.api.commons.public.VerificationFlow verification = 1 [json_name = "verification"];</code>
+   * <code>.api.commons.integrations.VerificationFlow verification = 1 [json_name = "verification"];</code>
    * @return Whether the verification field is set.
    */
   @java.lang.Override
@@ -53,19 +53,19 @@ private static final long serialVersionUID = 0L;
     return verification_ != null;
   }
   /**
-   * <code>.api.commons.public.VerificationFlow verification = 1 [json_name = "verification"];</code>
+   * <code>.api.commons.integrations.VerificationFlow verification = 1 [json_name = "verification"];</code>
    * @return The verification.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.public.VerificationFlow getVerification() {
-    return verification_ == null ? com.tcn.cloud.api.api.commons.public.VerificationFlow.getDefaultInstance() : verification_;
+  public com.tcn.cloud.api.api.commons.integrations.VerificationFlow getVerification() {
+    return verification_ == null ? com.tcn.cloud.api.api.commons.integrations.VerificationFlow.getDefaultInstance() : verification_;
   }
   /**
-   * <code>.api.commons.public.VerificationFlow verification = 1 [json_name = "verification"];</code>
+   * <code>.api.commons.integrations.VerificationFlow verification = 1 [json_name = "verification"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.public.VerificationFlowOrBuilder getVerificationOrBuilder() {
-    return verification_ == null ? com.tcn.cloud.api.api.commons.public.VerificationFlow.getDefaultInstance() : verification_;
+  public com.tcn.cloud.api.api.commons.integrations.VerificationFlowOrBuilder getVerificationOrBuilder() {
+    return verification_ == null ? com.tcn.cloud.api.api.commons.integrations.VerificationFlow.getDefaultInstance() : verification_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -378,31 +378,31 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.tcn.cloud.api.api.commons.public.VerificationFlow verification_;
+    private com.tcn.cloud.api.api.commons.integrations.VerificationFlow verification_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.public.VerificationFlow, com.tcn.cloud.api.api.commons.public.VerificationFlow.Builder, com.tcn.cloud.api.api.commons.public.VerificationFlowOrBuilder> verificationBuilder_;
+        com.tcn.cloud.api.api.commons.integrations.VerificationFlow, com.tcn.cloud.api.api.commons.integrations.VerificationFlow.Builder, com.tcn.cloud.api.api.commons.integrations.VerificationFlowOrBuilder> verificationBuilder_;
     /**
-     * <code>.api.commons.public.VerificationFlow verification = 1 [json_name = "verification"];</code>
+     * <code>.api.commons.integrations.VerificationFlow verification = 1 [json_name = "verification"];</code>
      * @return Whether the verification field is set.
      */
     public boolean hasVerification() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.api.commons.public.VerificationFlow verification = 1 [json_name = "verification"];</code>
+     * <code>.api.commons.integrations.VerificationFlow verification = 1 [json_name = "verification"];</code>
      * @return The verification.
      */
-    public com.tcn.cloud.api.api.commons.public.VerificationFlow getVerification() {
+    public com.tcn.cloud.api.api.commons.integrations.VerificationFlow getVerification() {
       if (verificationBuilder_ == null) {
-        return verification_ == null ? com.tcn.cloud.api.api.commons.public.VerificationFlow.getDefaultInstance() : verification_;
+        return verification_ == null ? com.tcn.cloud.api.api.commons.integrations.VerificationFlow.getDefaultInstance() : verification_;
       } else {
         return verificationBuilder_.getMessage();
       }
     }
     /**
-     * <code>.api.commons.public.VerificationFlow verification = 1 [json_name = "verification"];</code>
+     * <code>.api.commons.integrations.VerificationFlow verification = 1 [json_name = "verification"];</code>
      */
-    public Builder setVerification(com.tcn.cloud.api.api.commons.public.VerificationFlow value) {
+    public Builder setVerification(com.tcn.cloud.api.api.commons.integrations.VerificationFlow value) {
       if (verificationBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -416,10 +416,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.public.VerificationFlow verification = 1 [json_name = "verification"];</code>
+     * <code>.api.commons.integrations.VerificationFlow verification = 1 [json_name = "verification"];</code>
      */
     public Builder setVerification(
-        com.tcn.cloud.api.api.commons.public.VerificationFlow.Builder builderForValue) {
+        com.tcn.cloud.api.api.commons.integrations.VerificationFlow.Builder builderForValue) {
       if (verificationBuilder_ == null) {
         verification_ = builderForValue.build();
       } else {
@@ -430,13 +430,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.public.VerificationFlow verification = 1 [json_name = "verification"];</code>
+     * <code>.api.commons.integrations.VerificationFlow verification = 1 [json_name = "verification"];</code>
      */
-    public Builder mergeVerification(com.tcn.cloud.api.api.commons.public.VerificationFlow value) {
+    public Builder mergeVerification(com.tcn.cloud.api.api.commons.integrations.VerificationFlow value) {
       if (verificationBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
           verification_ != null &&
-          verification_ != com.tcn.cloud.api.api.commons.public.VerificationFlow.getDefaultInstance()) {
+          verification_ != com.tcn.cloud.api.api.commons.integrations.VerificationFlow.getDefaultInstance()) {
           getVerificationBuilder().mergeFrom(value);
         } else {
           verification_ = value;
@@ -449,7 +449,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.public.VerificationFlow verification = 1 [json_name = "verification"];</code>
+     * <code>.api.commons.integrations.VerificationFlow verification = 1 [json_name = "verification"];</code>
      */
     public Builder clearVerification() {
       bitField0_ = (bitField0_ & ~0x00000001);
@@ -462,33 +462,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.public.VerificationFlow verification = 1 [json_name = "verification"];</code>
+     * <code>.api.commons.integrations.VerificationFlow verification = 1 [json_name = "verification"];</code>
      */
-    public com.tcn.cloud.api.api.commons.public.VerificationFlow.Builder getVerificationBuilder() {
+    public com.tcn.cloud.api.api.commons.integrations.VerificationFlow.Builder getVerificationBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
       return getVerificationFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.public.VerificationFlow verification = 1 [json_name = "verification"];</code>
+     * <code>.api.commons.integrations.VerificationFlow verification = 1 [json_name = "verification"];</code>
      */
-    public com.tcn.cloud.api.api.commons.public.VerificationFlowOrBuilder getVerificationOrBuilder() {
+    public com.tcn.cloud.api.api.commons.integrations.VerificationFlowOrBuilder getVerificationOrBuilder() {
       if (verificationBuilder_ != null) {
         return verificationBuilder_.getMessageOrBuilder();
       } else {
         return verification_ == null ?
-            com.tcn.cloud.api.api.commons.public.VerificationFlow.getDefaultInstance() : verification_;
+            com.tcn.cloud.api.api.commons.integrations.VerificationFlow.getDefaultInstance() : verification_;
       }
     }
     /**
-     * <code>.api.commons.public.VerificationFlow verification = 1 [json_name = "verification"];</code>
+     * <code>.api.commons.integrations.VerificationFlow verification = 1 [json_name = "verification"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.public.VerificationFlow, com.tcn.cloud.api.api.commons.public.VerificationFlow.Builder, com.tcn.cloud.api.api.commons.public.VerificationFlowOrBuilder> 
+        com.tcn.cloud.api.api.commons.integrations.VerificationFlow, com.tcn.cloud.api.api.commons.integrations.VerificationFlow.Builder, com.tcn.cloud.api.api.commons.integrations.VerificationFlowOrBuilder> 
         getVerificationFieldBuilder() {
       if (verificationBuilder_ == null) {
         verificationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.public.VerificationFlow, com.tcn.cloud.api.api.commons.public.VerificationFlow.Builder, com.tcn.cloud.api.api.commons.public.VerificationFlowOrBuilder>(
+            com.tcn.cloud.api.api.commons.integrations.VerificationFlow, com.tcn.cloud.api.api.commons.integrations.VerificationFlow.Builder, com.tcn.cloud.api.api.commons.integrations.VerificationFlowOrBuilder>(
                 getVerification(),
                 getParentForChildren(),
                 isClean());

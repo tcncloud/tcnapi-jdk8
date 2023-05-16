@@ -20,15 +20,15 @@ public interface IntegrationConfigOrBuilder extends
       getIdBytes();
 
   /**
-   * <code>.api.commons.public.IntegrationType integration_id = 4 [json_name = "integrationId"];</code>
+   * <code>.api.commons.integrations.IntegrationType integration_id = 4 [json_name = "integrationId"];</code>
    * @return The enum numeric value on the wire for integrationId.
    */
   int getIntegrationIdValue();
   /**
-   * <code>.api.commons.public.IntegrationType integration_id = 4 [json_name = "integrationId"];</code>
+   * <code>.api.commons.integrations.IntegrationType integration_id = 4 [json_name = "integrationId"];</code>
    * @return The integrationId.
    */
-  com.tcn.cloud.api.api.commons.public.IntegrationType getIntegrationId();
+  com.tcn.cloud.api.api.commons.integrations.IntegrationType getIntegrationId();
 
   /**
    * <code>string name = 6 [json_name = "name"];</code>
@@ -145,13 +145,13 @@ public interface IntegrationConfigOrBuilder extends
   com.tcn.cloud.api.api.v1alpha1.integrations.ConditionsOrBuilder getCondsOrBuilder();
 
   /**
-   * <code>.api.commons.public.RequestMethod method_id = 15 [json_name = "methodId"];</code>
+   * <code>.api.commons.integrations.RequestMethod method_id = 15 [json_name = "methodId"];</code>
    * @return The enum numeric value on the wire for methodId.
    */
   int getMethodIdValue();
   /**
-   * <code>.api.commons.public.RequestMethod method_id = 15 [json_name = "methodId"];</code>
+   * <code>.api.commons.integrations.RequestMethod method_id = 15 [json_name = "methodId"];</code>
    * @return The methodId.
    */
-  com.tcn.cloud.api.api.commons.public.RequestMethod getMethodId();
+  com.tcn.cloud.api.api.commons.integrations.RequestMethod getMethodId();
 }

@@ -118,7 +118,7 @@ private static final long serialVersionUID = 0L;
    * the id of handler we want to trigger
    * </pre>
    *
-   * <code>.api.commons.public.IntegrationType integration_id = 3 [json_name = "integrationId"];</code>
+   * <code>.api.commons.integrations.IntegrationType integration_id = 3 [json_name = "integrationId"];</code>
    * @return The enum numeric value on the wire for integrationId.
    */
   @java.lang.Override public int getIntegrationIdValue() {
@@ -129,12 +129,12 @@ private static final long serialVersionUID = 0L;
    * the id of handler we want to trigger
    * </pre>
    *
-   * <code>.api.commons.public.IntegrationType integration_id = 3 [json_name = "integrationId"];</code>
+   * <code>.api.commons.integrations.IntegrationType integration_id = 3 [json_name = "integrationId"];</code>
    * @return The integrationId.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.public.IntegrationType getIntegrationId() {
-    com.tcn.cloud.api.api.commons.public.IntegrationType result = com.tcn.cloud.api.api.commons.public.IntegrationType.forNumber(integrationId_);
-    return result == null ? com.tcn.cloud.api.api.commons.public.IntegrationType.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.IntegrationType getIntegrationId() {
+    com.tcn.cloud.api.api.commons.integrations.IntegrationType result = com.tcn.cloud.api.api.commons.integrations.IntegrationType.forNumber(integrationId_);
+    return result == null ? com.tcn.cloud.api.api.commons.integrations.IntegrationType.UNRECOGNIZED : result;
   }
 
   public static final int METHOD_ID_FIELD_NUMBER = 4;
@@ -144,7 +144,7 @@ private static final long serialVersionUID = 0L;
    * which integration config is going to be triggered
    * </pre>
    *
-   * <code>.api.commons.public.RequestMethod method_id = 4 [json_name = "methodId"];</code>
+   * <code>.api.commons.integrations.RequestMethod method_id = 4 [json_name = "methodId"];</code>
    * @return The enum numeric value on the wire for methodId.
    */
   @java.lang.Override public int getMethodIdValue() {
@@ -155,12 +155,12 @@ private static final long serialVersionUID = 0L;
    * which integration config is going to be triggered
    * </pre>
    *
-   * <code>.api.commons.public.RequestMethod method_id = 4 [json_name = "methodId"];</code>
+   * <code>.api.commons.integrations.RequestMethod method_id = 4 [json_name = "methodId"];</code>
    * @return The methodId.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.public.RequestMethod getMethodId() {
-    com.tcn.cloud.api.api.commons.public.RequestMethod result = com.tcn.cloud.api.api.commons.public.RequestMethod.forNumber(methodId_);
-    return result == null ? com.tcn.cloud.api.api.commons.public.RequestMethod.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.RequestMethod getMethodId() {
+    com.tcn.cloud.api.api.commons.integrations.RequestMethod result = com.tcn.cloud.api.api.commons.integrations.RequestMethod.forNumber(methodId_);
+    return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestMethod.UNRECOGNIZED : result;
   }
 
   public static final int CONFIG_NAME_FIELD_NUMBER = 5;
@@ -421,10 +421,10 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (integrationId_ != com.tcn.cloud.api.api.commons.public.IntegrationType.INTEGRATION_TYPE_UNKNOWN.getNumber()) {
+    if (integrationId_ != com.tcn.cloud.api.api.commons.integrations.IntegrationType.INTEGRATION_TYPE_UNKNOWN.getNumber()) {
       output.writeEnum(3, integrationId_);
     }
-    if (methodId_ != com.tcn.cloud.api.api.commons.public.RequestMethod.REQUEST_METHOD_UNKNOWN.getNumber()) {
+    if (methodId_ != com.tcn.cloud.api.api.commons.integrations.RequestMethod.REQUEST_METHOD_UNKNOWN.getNumber()) {
       output.writeEnum(4, methodId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configName_)) {
@@ -454,11 +454,11 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     if (size != -1) return size;
 
     size = 0;
-    if (integrationId_ != com.tcn.cloud.api.api.commons.public.IntegrationType.INTEGRATION_TYPE_UNKNOWN.getNumber()) {
+    if (integrationId_ != com.tcn.cloud.api.api.commons.integrations.IntegrationType.INTEGRATION_TYPE_UNKNOWN.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, integrationId_);
     }
-    if (methodId_ != com.tcn.cloud.api.api.commons.public.RequestMethod.REQUEST_METHOD_UNKNOWN.getNumber()) {
+    if (methodId_ != com.tcn.cloud.api.api.commons.integrations.RequestMethod.REQUEST_METHOD_UNKNOWN.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(4, methodId_);
     }
@@ -1044,7 +1044,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * the id of handler we want to trigger
      * </pre>
      *
-     * <code>.api.commons.public.IntegrationType integration_id = 3 [json_name = "integrationId"];</code>
+     * <code>.api.commons.integrations.IntegrationType integration_id = 3 [json_name = "integrationId"];</code>
      * @return The enum numeric value on the wire for integrationId.
      */
     @java.lang.Override public int getIntegrationIdValue() {
@@ -1055,7 +1055,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * the id of handler we want to trigger
      * </pre>
      *
-     * <code>.api.commons.public.IntegrationType integration_id = 3 [json_name = "integrationId"];</code>
+     * <code>.api.commons.integrations.IntegrationType integration_id = 3 [json_name = "integrationId"];</code>
      * @param value The enum numeric value on the wire for integrationId to set.
      * @return This builder for chaining.
      */
@@ -1070,24 +1070,24 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * the id of handler we want to trigger
      * </pre>
      *
-     * <code>.api.commons.public.IntegrationType integration_id = 3 [json_name = "integrationId"];</code>
+     * <code>.api.commons.integrations.IntegrationType integration_id = 3 [json_name = "integrationId"];</code>
      * @return The integrationId.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.public.IntegrationType getIntegrationId() {
-      com.tcn.cloud.api.api.commons.public.IntegrationType result = com.tcn.cloud.api.api.commons.public.IntegrationType.forNumber(integrationId_);
-      return result == null ? com.tcn.cloud.api.api.commons.public.IntegrationType.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.api.commons.integrations.IntegrationType getIntegrationId() {
+      com.tcn.cloud.api.api.commons.integrations.IntegrationType result = com.tcn.cloud.api.api.commons.integrations.IntegrationType.forNumber(integrationId_);
+      return result == null ? com.tcn.cloud.api.api.commons.integrations.IntegrationType.UNRECOGNIZED : result;
     }
     /**
      * <pre>
      * the id of handler we want to trigger
      * </pre>
      *
-     * <code>.api.commons.public.IntegrationType integration_id = 3 [json_name = "integrationId"];</code>
+     * <code>.api.commons.integrations.IntegrationType integration_id = 3 [json_name = "integrationId"];</code>
      * @param value The integrationId to set.
      * @return This builder for chaining.
      */
-    public Builder setIntegrationId(com.tcn.cloud.api.api.commons.public.IntegrationType value) {
+    public Builder setIntegrationId(com.tcn.cloud.api.api.commons.integrations.IntegrationType value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1101,7 +1101,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * the id of handler we want to trigger
      * </pre>
      *
-     * <code>.api.commons.public.IntegrationType integration_id = 3 [json_name = "integrationId"];</code>
+     * <code>.api.commons.integrations.IntegrationType integration_id = 3 [json_name = "integrationId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearIntegrationId() {
@@ -1117,7 +1117,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * which integration config is going to be triggered
      * </pre>
      *
-     * <code>.api.commons.public.RequestMethod method_id = 4 [json_name = "methodId"];</code>
+     * <code>.api.commons.integrations.RequestMethod method_id = 4 [json_name = "methodId"];</code>
      * @return The enum numeric value on the wire for methodId.
      */
     @java.lang.Override public int getMethodIdValue() {
@@ -1128,7 +1128,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * which integration config is going to be triggered
      * </pre>
      *
-     * <code>.api.commons.public.RequestMethod method_id = 4 [json_name = "methodId"];</code>
+     * <code>.api.commons.integrations.RequestMethod method_id = 4 [json_name = "methodId"];</code>
      * @param value The enum numeric value on the wire for methodId to set.
      * @return This builder for chaining.
      */
@@ -1143,24 +1143,24 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * which integration config is going to be triggered
      * </pre>
      *
-     * <code>.api.commons.public.RequestMethod method_id = 4 [json_name = "methodId"];</code>
+     * <code>.api.commons.integrations.RequestMethod method_id = 4 [json_name = "methodId"];</code>
      * @return The methodId.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.public.RequestMethod getMethodId() {
-      com.tcn.cloud.api.api.commons.public.RequestMethod result = com.tcn.cloud.api.api.commons.public.RequestMethod.forNumber(methodId_);
-      return result == null ? com.tcn.cloud.api.api.commons.public.RequestMethod.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.api.commons.integrations.RequestMethod getMethodId() {
+      com.tcn.cloud.api.api.commons.integrations.RequestMethod result = com.tcn.cloud.api.api.commons.integrations.RequestMethod.forNumber(methodId_);
+      return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestMethod.UNRECOGNIZED : result;
     }
     /**
      * <pre>
      * which integration config is going to be triggered
      * </pre>
      *
-     * <code>.api.commons.public.RequestMethod method_id = 4 [json_name = "methodId"];</code>
+     * <code>.api.commons.integrations.RequestMethod method_id = 4 [json_name = "methodId"];</code>
      * @param value The methodId to set.
      * @return This builder for chaining.
      */
-    public Builder setMethodId(com.tcn.cloud.api.api.commons.public.RequestMethod value) {
+    public Builder setMethodId(com.tcn.cloud.api.api.commons.integrations.RequestMethod value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1174,7 +1174,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * which integration config is going to be triggered
      * </pre>
      *
-     * <code>.api.commons.public.RequestMethod method_id = 4 [json_name = "methodId"];</code>
+     * <code>.api.commons.integrations.RequestMethod method_id = 4 [json_name = "methodId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearMethodId() {

@@ -196,12 +196,12 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> potentialSources_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
-      java.lang.Integer, com.tcn.cloud.api.api.commons.public.FieldSource> potentialSources_converter_ =
+      java.lang.Integer, com.tcn.cloud.api.api.commons.integrations.FieldSource> potentialSources_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
-              java.lang.Integer, com.tcn.cloud.api.api.commons.public.FieldSource>() {
-            public com.tcn.cloud.api.api.commons.public.FieldSource convert(java.lang.Integer from) {
-              com.tcn.cloud.api.api.commons.public.FieldSource result = com.tcn.cloud.api.api.commons.public.FieldSource.forNumber(from);
-              return result == null ? com.tcn.cloud.api.api.commons.public.FieldSource.UNRECOGNIZED : result;
+              java.lang.Integer, com.tcn.cloud.api.api.commons.integrations.FieldSource>() {
+            public com.tcn.cloud.api.api.commons.integrations.FieldSource convert(java.lang.Integer from) {
+              com.tcn.cloud.api.api.commons.integrations.FieldSource result = com.tcn.cloud.api.api.commons.integrations.FieldSource.forNumber(from);
+              return result == null ? com.tcn.cloud.api.api.commons.integrations.FieldSource.UNRECOGNIZED : result;
             }
           };
   /**
@@ -211,13 +211,13 @@ private static final long serialVersionUID = 0L;
    * not in this list
    * </pre>
    *
-   * <code>repeated .api.commons.public.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
+   * <code>repeated .api.commons.integrations.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
    * @return A list containing the potentialSources.
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.commons.public.FieldSource> getPotentialSourcesList() {
+  public java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldSource> getPotentialSourcesList() {
     return new com.google.protobuf.Internal.ListAdapter<
-        java.lang.Integer, com.tcn.cloud.api.api.commons.public.FieldSource>(potentialSources_, potentialSources_converter_);
+        java.lang.Integer, com.tcn.cloud.api.api.commons.integrations.FieldSource>(potentialSources_, potentialSources_converter_);
   }
   /**
    * <pre>
@@ -226,7 +226,7 @@ private static final long serialVersionUID = 0L;
    * not in this list
    * </pre>
    *
-   * <code>repeated .api.commons.public.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
+   * <code>repeated .api.commons.integrations.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
    * @return The count of potentialSources.
    */
   @java.lang.Override
@@ -240,12 +240,12 @@ private static final long serialVersionUID = 0L;
    * not in this list
    * </pre>
    *
-   * <code>repeated .api.commons.public.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
+   * <code>repeated .api.commons.integrations.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
    * @param index The index of the element to return.
    * @return The potentialSources at the given index.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.public.FieldSource getPotentialSources(int index) {
+  public com.tcn.cloud.api.api.commons.integrations.FieldSource getPotentialSources(int index) {
     return potentialSources_converter_.convert(potentialSources_.get(index));
   }
   /**
@@ -255,7 +255,7 @@ private static final long serialVersionUID = 0L;
    * not in this list
    * </pre>
    *
-   * <code>repeated .api.commons.public.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
+   * <code>repeated .api.commons.integrations.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
    * @return A list containing the enum numeric values on the wire for potentialSources.
    */
   @java.lang.Override
@@ -270,7 +270,7 @@ private static final long serialVersionUID = 0L;
    * not in this list
    * </pre>
    *
-   * <code>repeated .api.commons.public.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
+   * <code>repeated .api.commons.integrations.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
    * @param index The index of the value to return.
    * @return The enum numeric value on the wire of potentialSources at the given index.
    */
@@ -1129,12 +1129,12 @@ private static final long serialVersionUID = 0L;
      * not in this list
      * </pre>
      *
-     * <code>repeated .api.commons.public.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
+     * <code>repeated .api.commons.integrations.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
      * @return A list containing the potentialSources.
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.public.FieldSource> getPotentialSourcesList() {
+    public java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldSource> getPotentialSourcesList() {
       return new com.google.protobuf.Internal.ListAdapter<
-          java.lang.Integer, com.tcn.cloud.api.api.commons.public.FieldSource>(potentialSources_, potentialSources_converter_);
+          java.lang.Integer, com.tcn.cloud.api.api.commons.integrations.FieldSource>(potentialSources_, potentialSources_converter_);
     }
     /**
      * <pre>
@@ -1143,7 +1143,7 @@ private static final long serialVersionUID = 0L;
      * not in this list
      * </pre>
      *
-     * <code>repeated .api.commons.public.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
+     * <code>repeated .api.commons.integrations.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
      * @return The count of potentialSources.
      */
     public int getPotentialSourcesCount() {
@@ -1156,11 +1156,11 @@ private static final long serialVersionUID = 0L;
      * not in this list
      * </pre>
      *
-     * <code>repeated .api.commons.public.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
+     * <code>repeated .api.commons.integrations.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
      * @param index The index of the element to return.
      * @return The potentialSources at the given index.
      */
-    public com.tcn.cloud.api.api.commons.public.FieldSource getPotentialSources(int index) {
+    public com.tcn.cloud.api.api.commons.integrations.FieldSource getPotentialSources(int index) {
       return potentialSources_converter_.convert(potentialSources_.get(index));
     }
     /**
@@ -1170,13 +1170,13 @@ private static final long serialVersionUID = 0L;
      * not in this list
      * </pre>
      *
-     * <code>repeated .api.commons.public.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
+     * <code>repeated .api.commons.integrations.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
      * @param index The index to set the value at.
      * @param value The potentialSources to set.
      * @return This builder for chaining.
      */
     public Builder setPotentialSources(
-        int index, com.tcn.cloud.api.api.commons.public.FieldSource value) {
+        int index, com.tcn.cloud.api.api.commons.integrations.FieldSource value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1192,11 +1192,11 @@ private static final long serialVersionUID = 0L;
      * not in this list
      * </pre>
      *
-     * <code>repeated .api.commons.public.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
+     * <code>repeated .api.commons.integrations.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
      * @param value The potentialSources to add.
      * @return This builder for chaining.
      */
-    public Builder addPotentialSources(com.tcn.cloud.api.api.commons.public.FieldSource value) {
+    public Builder addPotentialSources(com.tcn.cloud.api.api.commons.integrations.FieldSource value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1212,14 +1212,14 @@ private static final long serialVersionUID = 0L;
      * not in this list
      * </pre>
      *
-     * <code>repeated .api.commons.public.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
+     * <code>repeated .api.commons.integrations.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
      * @param values The potentialSources to add.
      * @return This builder for chaining.
      */
     public Builder addAllPotentialSources(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.public.FieldSource> values) {
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.integrations.FieldSource> values) {
       ensurePotentialSourcesIsMutable();
-      for (com.tcn.cloud.api.api.commons.public.FieldSource value : values) {
+      for (com.tcn.cloud.api.api.commons.integrations.FieldSource value : values) {
         potentialSources_.add(value.getNumber());
       }
       onChanged();
@@ -1232,7 +1232,7 @@ private static final long serialVersionUID = 0L;
      * not in this list
      * </pre>
      *
-     * <code>repeated .api.commons.public.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
+     * <code>repeated .api.commons.integrations.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
      * @return This builder for chaining.
      */
     public Builder clearPotentialSources() {
@@ -1248,7 +1248,7 @@ private static final long serialVersionUID = 0L;
      * not in this list
      * </pre>
      *
-     * <code>repeated .api.commons.public.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
+     * <code>repeated .api.commons.integrations.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
      * @return A list containing the enum numeric values on the wire for potentialSources.
      */
     public java.util.List<java.lang.Integer>
@@ -1262,7 +1262,7 @@ private static final long serialVersionUID = 0L;
      * not in this list
      * </pre>
      *
-     * <code>repeated .api.commons.public.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
+     * <code>repeated .api.commons.integrations.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
      * @param index The index of the value to return.
      * @return The enum numeric value on the wire of potentialSources at the given index.
      */
@@ -1276,7 +1276,7 @@ private static final long serialVersionUID = 0L;
      * not in this list
      * </pre>
      *
-     * <code>repeated .api.commons.public.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
+     * <code>repeated .api.commons.integrations.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
      * @param index The index to set the value at.
      * @param value The enum numeric value on the wire for potentialSources to set.
      * @return This builder for chaining.
@@ -1295,7 +1295,7 @@ private static final long serialVersionUID = 0L;
      * not in this list
      * </pre>
      *
-     * <code>repeated .api.commons.public.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
+     * <code>repeated .api.commons.integrations.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
      * @param value The enum numeric value on the wire for potentialSources to add.
      * @return This builder for chaining.
      */
@@ -1312,7 +1312,7 @@ private static final long serialVersionUID = 0L;
      * not in this list
      * </pre>
      *
-     * <code>repeated .api.commons.public.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
+     * <code>repeated .api.commons.integrations.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
      * @param values The enum numeric values on the wire for potentialSources to add.
      * @return This builder for chaining.
      */

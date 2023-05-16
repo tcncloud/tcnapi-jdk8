@@ -8,13 +8,13 @@ public interface RequestSourceOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api.commons.public.RequestSource request_source = 1 [json_name = "requestSource"];</code>
+   * <code>.api.commons.integrations.RequestSource request_source = 1 [json_name = "requestSource"];</code>
    * @return The enum numeric value on the wire for requestSource.
    */
   int getRequestSourceValue();
   /**
-   * <code>.api.commons.public.RequestSource request_source = 1 [json_name = "requestSource"];</code>
+   * <code>.api.commons.integrations.RequestSource request_source = 1 [json_name = "requestSource"];</code>
    * @return The requestSource.
    */
-  com.tcn.cloud.api.api.commons.public.RequestSource getRequestSource();
+  com.tcn.cloud.api.api.commons.integrations.RequestSource getRequestSource();
 }

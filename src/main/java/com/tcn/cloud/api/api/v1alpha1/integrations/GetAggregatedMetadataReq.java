@@ -98,19 +98,19 @@ private static final long serialVersionUID = 0L;
   public static final int METHOD_ID_FIELD_NUMBER = 5;
   private int methodId_ = 0;
   /**
-   * <code>.api.commons.public.RequestMethod method_id = 5 [json_name = "methodId"];</code>
+   * <code>.api.commons.integrations.RequestMethod method_id = 5 [json_name = "methodId"];</code>
    * @return The enum numeric value on the wire for methodId.
    */
   @java.lang.Override public int getMethodIdValue() {
     return methodId_;
   }
   /**
-   * <code>.api.commons.public.RequestMethod method_id = 5 [json_name = "methodId"];</code>
+   * <code>.api.commons.integrations.RequestMethod method_id = 5 [json_name = "methodId"];</code>
    * @return The methodId.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.public.RequestMethod getMethodId() {
-    com.tcn.cloud.api.api.commons.public.RequestMethod result = com.tcn.cloud.api.api.commons.public.RequestMethod.forNumber(methodId_);
-    return result == null ? com.tcn.cloud.api.api.commons.public.RequestMethod.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.RequestMethod getMethodId() {
+    com.tcn.cloud.api.api.commons.integrations.RequestMethod result = com.tcn.cloud.api.api.commons.integrations.RequestMethod.forNumber(methodId_);
+    return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestMethod.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -133,7 +133,7 @@ private static final long serialVersionUID = 0L;
     if (end_ != null) {
       output.writeMessage(4, getEnd());
     }
-    if (methodId_ != com.tcn.cloud.api.api.commons.public.RequestMethod.REQUEST_METHOD_UNKNOWN.getNumber()) {
+    if (methodId_ != com.tcn.cloud.api.api.commons.integrations.RequestMethod.REQUEST_METHOD_UNKNOWN.getNumber()) {
       output.writeEnum(5, methodId_);
     }
     getUnknownFields().writeTo(output);
@@ -153,7 +153,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getEnd());
     }
-    if (methodId_ != com.tcn.cloud.api.api.commons.public.RequestMethod.REQUEST_METHOD_UNKNOWN.getNumber()) {
+    if (methodId_ != com.tcn.cloud.api.api.commons.integrations.RequestMethod.REQUEST_METHOD_UNKNOWN.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(5, methodId_);
     }
@@ -721,14 +721,14 @@ private static final long serialVersionUID = 0L;
 
     private int methodId_ = 0;
     /**
-     * <code>.api.commons.public.RequestMethod method_id = 5 [json_name = "methodId"];</code>
+     * <code>.api.commons.integrations.RequestMethod method_id = 5 [json_name = "methodId"];</code>
      * @return The enum numeric value on the wire for methodId.
      */
     @java.lang.Override public int getMethodIdValue() {
       return methodId_;
     }
     /**
-     * <code>.api.commons.public.RequestMethod method_id = 5 [json_name = "methodId"];</code>
+     * <code>.api.commons.integrations.RequestMethod method_id = 5 [json_name = "methodId"];</code>
      * @param value The enum numeric value on the wire for methodId to set.
      * @return This builder for chaining.
      */
@@ -739,20 +739,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.public.RequestMethod method_id = 5 [json_name = "methodId"];</code>
+     * <code>.api.commons.integrations.RequestMethod method_id = 5 [json_name = "methodId"];</code>
      * @return The methodId.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.public.RequestMethod getMethodId() {
-      com.tcn.cloud.api.api.commons.public.RequestMethod result = com.tcn.cloud.api.api.commons.public.RequestMethod.forNumber(methodId_);
-      return result == null ? com.tcn.cloud.api.api.commons.public.RequestMethod.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.api.commons.integrations.RequestMethod getMethodId() {
+      com.tcn.cloud.api.api.commons.integrations.RequestMethod result = com.tcn.cloud.api.api.commons.integrations.RequestMethod.forNumber(methodId_);
+      return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestMethod.UNRECOGNIZED : result;
     }
     /**
-     * <code>.api.commons.public.RequestMethod method_id = 5 [json_name = "methodId"];</code>
+     * <code>.api.commons.integrations.RequestMethod method_id = 5 [json_name = "methodId"];</code>
      * @param value The methodId to set.
      * @return This builder for chaining.
      */
-    public Builder setMethodId(com.tcn.cloud.api.api.commons.public.RequestMethod value) {
+    public Builder setMethodId(com.tcn.cloud.api.api.commons.integrations.RequestMethod value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -762,7 +762,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.public.RequestMethod method_id = 5 [json_name = "methodId"];</code>
+     * <code>.api.commons.integrations.RequestMethod method_id = 5 [json_name = "methodId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearMethodId() {

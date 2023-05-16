@@ -42,19 +42,19 @@ private static final long serialVersionUID = 0L;
   public static final int RESULT_FIELD_NUMBER = 1;
   private int result_ = 0;
   /**
-   * <code>.api.commons.public.TransactionResult result = 1 [json_name = "result"];</code>
+   * <code>.api.commons.integrations.TransactionResult result = 1 [json_name = "result"];</code>
    * @return The enum numeric value on the wire for result.
    */
   @java.lang.Override public int getResultValue() {
     return result_;
   }
   /**
-   * <code>.api.commons.public.TransactionResult result = 1 [json_name = "result"];</code>
+   * <code>.api.commons.integrations.TransactionResult result = 1 [json_name = "result"];</code>
    * @return The result.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.public.TransactionResult getResult() {
-    com.tcn.cloud.api.api.commons.public.TransactionResult result = com.tcn.cloud.api.api.commons.public.TransactionResult.forNumber(result_);
-    return result == null ? com.tcn.cloud.api.api.commons.public.TransactionResult.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.TransactionResult getResult() {
+    com.tcn.cloud.api.api.commons.integrations.TransactionResult result = com.tcn.cloud.api.api.commons.integrations.TransactionResult.forNumber(result_);
+    return result == null ? com.tcn.cloud.api.api.commons.integrations.TransactionResult.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -71,7 +71,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (result_ != com.tcn.cloud.api.api.commons.public.TransactionResult.TRANSACTION_RESULT_SUCCESS.getNumber()) {
+    if (result_ != com.tcn.cloud.api.api.commons.integrations.TransactionResult.TRANSACTION_RESULT_SUCCESS.getNumber()) {
       output.writeEnum(1, result_);
     }
     getUnknownFields().writeTo(output);
@@ -83,7 +83,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (result_ != com.tcn.cloud.api.api.commons.public.TransactionResult.TRANSACTION_RESULT_SUCCESS.getNumber()) {
+    if (result_ != com.tcn.cloud.api.api.commons.integrations.TransactionResult.TRANSACTION_RESULT_SUCCESS.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(1, result_);
     }
@@ -351,14 +351,14 @@ private static final long serialVersionUID = 0L;
 
     private int result_ = 0;
     /**
-     * <code>.api.commons.public.TransactionResult result = 1 [json_name = "result"];</code>
+     * <code>.api.commons.integrations.TransactionResult result = 1 [json_name = "result"];</code>
      * @return The enum numeric value on the wire for result.
      */
     @java.lang.Override public int getResultValue() {
       return result_;
     }
     /**
-     * <code>.api.commons.public.TransactionResult result = 1 [json_name = "result"];</code>
+     * <code>.api.commons.integrations.TransactionResult result = 1 [json_name = "result"];</code>
      * @param value The enum numeric value on the wire for result to set.
      * @return This builder for chaining.
      */
@@ -369,20 +369,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.public.TransactionResult result = 1 [json_name = "result"];</code>
+     * <code>.api.commons.integrations.TransactionResult result = 1 [json_name = "result"];</code>
      * @return The result.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.public.TransactionResult getResult() {
-      com.tcn.cloud.api.api.commons.public.TransactionResult result = com.tcn.cloud.api.api.commons.public.TransactionResult.forNumber(result_);
-      return result == null ? com.tcn.cloud.api.api.commons.public.TransactionResult.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.api.commons.integrations.TransactionResult getResult() {
+      com.tcn.cloud.api.api.commons.integrations.TransactionResult result = com.tcn.cloud.api.api.commons.integrations.TransactionResult.forNumber(result_);
+      return result == null ? com.tcn.cloud.api.api.commons.integrations.TransactionResult.UNRECOGNIZED : result;
     }
     /**
-     * <code>.api.commons.public.TransactionResult result = 1 [json_name = "result"];</code>
+     * <code>.api.commons.integrations.TransactionResult result = 1 [json_name = "result"];</code>
      * @param value The result to set.
      * @return This builder for chaining.
      */
-    public Builder setResult(com.tcn.cloud.api.api.commons.public.TransactionResult value) {
+    public Builder setResult(com.tcn.cloud.api.api.commons.integrations.TransactionResult value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -392,7 +392,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.public.TransactionResult result = 1 [json_name = "result"];</code>
+     * <code>.api.commons.integrations.TransactionResult result = 1 [json_name = "result"];</code>
      * @return This builder for chaining.
      */
     public Builder clearResult() {

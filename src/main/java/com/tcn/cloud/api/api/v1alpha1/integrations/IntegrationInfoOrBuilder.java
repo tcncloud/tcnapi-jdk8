@@ -32,7 +32,7 @@ public interface IntegrationInfoOrBuilder extends
    * identifies which integration handler this is
    * </pre>
    *
-   * <code>.api.commons.public.IntegrationType integration_id = 2 [json_name = "integrationId"];</code>
+   * <code>.api.commons.integrations.IntegrationType integration_id = 2 [json_name = "integrationId"];</code>
    * @return The enum numeric value on the wire for integrationId.
    */
   int getIntegrationIdValue();
@@ -41,10 +41,10 @@ public interface IntegrationInfoOrBuilder extends
    * identifies which integration handler this is
    * </pre>
    *
-   * <code>.api.commons.public.IntegrationType integration_id = 2 [json_name = "integrationId"];</code>
+   * <code>.api.commons.integrations.IntegrationType integration_id = 2 [json_name = "integrationId"];</code>
    * @return The integrationId.
    */
-  com.tcn.cloud.api.api.commons.public.IntegrationType getIntegrationId();
+  com.tcn.cloud.api.api.commons.integrations.IntegrationType getIntegrationId();
 
   /**
    * <pre>
@@ -114,7 +114,7 @@ public interface IntegrationInfoOrBuilder extends
    * <pre>
    * the plugin fields for this integration.
    * These fields should be set on the plugin level and not the runtime.
-   * key is a value starting at api.commons.public.Visiblity.VISIBILITY_GROUP
+   * key is a value starting at api.commons.integrations.Visiblity.VISIBILITY_GROUP
    * and ending at 99 more than that value, or parameters marked VISIBILITY_ANYWHERE
    * </pre>
    *
@@ -125,7 +125,7 @@ public interface IntegrationInfoOrBuilder extends
    * <pre>
    * the plugin fields for this integration.
    * These fields should be set on the plugin level and not the runtime.
-   * key is a value starting at api.commons.public.Visiblity.VISIBILITY_GROUP
+   * key is a value starting at api.commons.integrations.Visiblity.VISIBILITY_GROUP
    * and ending at 99 more than that value, or parameters marked VISIBILITY_ANYWHERE
    * </pre>
    *
@@ -143,7 +143,7 @@ public interface IntegrationInfoOrBuilder extends
    * <pre>
    * the plugin fields for this integration.
    * These fields should be set on the plugin level and not the runtime.
-   * key is a value starting at api.commons.public.Visiblity.VISIBILITY_GROUP
+   * key is a value starting at api.commons.integrations.Visiblity.VISIBILITY_GROUP
    * and ending at 99 more than that value, or parameters marked VISIBILITY_ANYWHERE
    * </pre>
    *
@@ -155,7 +155,7 @@ public interface IntegrationInfoOrBuilder extends
    * <pre>
    * the plugin fields for this integration.
    * These fields should be set on the plugin level and not the runtime.
-   * key is a value starting at api.commons.public.Visiblity.VISIBILITY_GROUP
+   * key is a value starting at api.commons.integrations.Visiblity.VISIBILITY_GROUP
    * and ending at 99 more than that value, or parameters marked VISIBILITY_ANYWHERE
    * </pre>
    *
@@ -170,7 +170,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Parameter defaultValue);
    * <pre>
    * the plugin fields for this integration.
    * These fields should be set on the plugin level and not the runtime.
-   * key is a value starting at api.commons.public.Visiblity.VISIBILITY_GROUP
+   * key is a value starting at api.commons.integrations.Visiblity.VISIBILITY_GROUP
    * and ending at 99 more than that value, or parameters marked VISIBILITY_ANYWHERE
    * </pre>
    *

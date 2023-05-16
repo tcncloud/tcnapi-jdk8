@@ -8,17 +8,17 @@ public interface ListAvailablePaymentFieldsReqOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api.commons.public.PaymentFlow payment = 1 [json_name = "payment"];</code>
+   * <code>.api.commons.integrations.PaymentFlow payment = 1 [json_name = "payment"];</code>
    * @return Whether the payment field is set.
    */
   boolean hasPayment();
   /**
-   * <code>.api.commons.public.PaymentFlow payment = 1 [json_name = "payment"];</code>
+   * <code>.api.commons.integrations.PaymentFlow payment = 1 [json_name = "payment"];</code>
    * @return The payment.
    */
-  com.tcn.cloud.api.api.commons.public.PaymentFlow getPayment();
+  com.tcn.cloud.api.api.commons.integrations.PaymentFlow getPayment();
   /**
-   * <code>.api.commons.public.PaymentFlow payment = 1 [json_name = "payment"];</code>
+   * <code>.api.commons.integrations.PaymentFlow payment = 1 [json_name = "payment"];</code>
    */
-  com.tcn.cloud.api.api.commons.public.PaymentFlowOrBuilder getPaymentOrBuilder();
+  com.tcn.cloud.api.api.commons.integrations.PaymentFlowOrBuilder getPaymentOrBuilder();
 }

@@ -201,7 +201,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
    * the type of the source for this link. ex: Email, Sms, Chat
    * </pre>
    *
-   * <code>.api.commons.public.RequestSource src = 3 [json_name = "src"];</code>
+   * <code>.api.commons.integrations.RequestSource src = 3 [json_name = "src"];</code>
    * @return The enum numeric value on the wire for src.
    */
   @java.lang.Override public int getSrcValue() {
@@ -212,12 +212,12 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
    * the type of the source for this link. ex: Email, Sms, Chat
    * </pre>
    *
-   * <code>.api.commons.public.RequestSource src = 3 [json_name = "src"];</code>
+   * <code>.api.commons.integrations.RequestSource src = 3 [json_name = "src"];</code>
    * @return The src.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.public.RequestSource getSrc() {
-    com.tcn.cloud.api.api.commons.public.RequestSource result = com.tcn.cloud.api.api.commons.public.RequestSource.forNumber(src_);
-    return result == null ? com.tcn.cloud.api.api.commons.public.RequestSource.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.RequestSource getSrc() {
+    com.tcn.cloud.api.api.commons.integrations.RequestSource result = com.tcn.cloud.api.api.commons.integrations.RequestSource.forNumber(src_);
+    return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestSource.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -243,7 +243,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(taskId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, taskId_);
     }
-    if (src_ != com.tcn.cloud.api.api.commons.public.RequestSource.REQUEST_SOURCE_IVR.getNumber()) {
+    if (src_ != com.tcn.cloud.api.api.commons.integrations.RequestSource.REQUEST_SOURCE_IVR.getNumber()) {
       output.writeEnum(3, src_);
     }
     getUnknownFields().writeTo(output);
@@ -268,7 +268,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(taskId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, taskId_);
     }
-    if (src_ != com.tcn.cloud.api.api.commons.public.RequestSource.REQUEST_SOURCE_IVR.getNumber()) {
+    if (src_ != com.tcn.cloud.api.api.commons.integrations.RequestSource.REQUEST_SOURCE_IVR.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, src_);
     }
@@ -850,7 +850,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * the type of the source for this link. ex: Email, Sms, Chat
      * </pre>
      *
-     * <code>.api.commons.public.RequestSource src = 3 [json_name = "src"];</code>
+     * <code>.api.commons.integrations.RequestSource src = 3 [json_name = "src"];</code>
      * @return The enum numeric value on the wire for src.
      */
     @java.lang.Override public int getSrcValue() {
@@ -861,7 +861,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * the type of the source for this link. ex: Email, Sms, Chat
      * </pre>
      *
-     * <code>.api.commons.public.RequestSource src = 3 [json_name = "src"];</code>
+     * <code>.api.commons.integrations.RequestSource src = 3 [json_name = "src"];</code>
      * @param value The enum numeric value on the wire for src to set.
      * @return This builder for chaining.
      */
@@ -876,24 +876,24 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * the type of the source for this link. ex: Email, Sms, Chat
      * </pre>
      *
-     * <code>.api.commons.public.RequestSource src = 3 [json_name = "src"];</code>
+     * <code>.api.commons.integrations.RequestSource src = 3 [json_name = "src"];</code>
      * @return The src.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.public.RequestSource getSrc() {
-      com.tcn.cloud.api.api.commons.public.RequestSource result = com.tcn.cloud.api.api.commons.public.RequestSource.forNumber(src_);
-      return result == null ? com.tcn.cloud.api.api.commons.public.RequestSource.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.api.commons.integrations.RequestSource getSrc() {
+      com.tcn.cloud.api.api.commons.integrations.RequestSource result = com.tcn.cloud.api.api.commons.integrations.RequestSource.forNumber(src_);
+      return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestSource.UNRECOGNIZED : result;
     }
     /**
      * <pre>
      * the type of the source for this link. ex: Email, Sms, Chat
      * </pre>
      *
-     * <code>.api.commons.public.RequestSource src = 3 [json_name = "src"];</code>
+     * <code>.api.commons.integrations.RequestSource src = 3 [json_name = "src"];</code>
      * @param value The src to set.
      * @return This builder for chaining.
      */
-    public Builder setSrc(com.tcn.cloud.api.api.commons.public.RequestSource value) {
+    public Builder setSrc(com.tcn.cloud.api.api.commons.integrations.RequestSource value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -907,7 +907,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * the type of the source for this link. ex: Email, Sms, Chat
      * </pre>
      *
-     * <code>.api.commons.public.RequestSource src = 3 [json_name = "src"];</code>
+     * <code>.api.commons.integrations.RequestSource src = 3 [json_name = "src"];</code>
      * @return This builder for chaining.
      */
     public Builder clearSrc() {

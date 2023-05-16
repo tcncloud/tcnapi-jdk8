@@ -252,7 +252,7 @@ private static final long serialVersionUID = 0L;
    * which integration will be used in the links
    * </pre>
    *
-   * <code>.api.commons.public.IntegrationType integration_id = 6 [json_name = "integrationId", deprecated = true];</code>
+   * <code>.api.commons.integrations.IntegrationType integration_id = 6 [json_name = "integrationId", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.integration_id is deprecated.
    *     See api/v1alpha1/integrations/service.proto;l=499
    * @return The enum numeric value on the wire for integrationId.
@@ -265,14 +265,14 @@ private static final long serialVersionUID = 0L;
    * which integration will be used in the links
    * </pre>
    *
-   * <code>.api.commons.public.IntegrationType integration_id = 6 [json_name = "integrationId", deprecated = true];</code>
+   * <code>.api.commons.integrations.IntegrationType integration_id = 6 [json_name = "integrationId", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.integration_id is deprecated.
    *     See api/v1alpha1/integrations/service.proto;l=499
    * @return The integrationId.
    */
-  @java.lang.Override @java.lang.Deprecated public com.tcn.cloud.api.api.commons.public.IntegrationType getIntegrationId() {
-    com.tcn.cloud.api.api.commons.public.IntegrationType result = com.tcn.cloud.api.api.commons.public.IntegrationType.forNumber(integrationId_);
-    return result == null ? com.tcn.cloud.api.api.commons.public.IntegrationType.UNRECOGNIZED : result;
+  @java.lang.Override @java.lang.Deprecated public com.tcn.cloud.api.api.commons.integrations.IntegrationType getIntegrationId() {
+    com.tcn.cloud.api.api.commons.integrations.IntegrationType result = com.tcn.cloud.api.api.commons.integrations.IntegrationType.forNumber(integrationId_);
+    return result == null ? com.tcn.cloud.api.api.commons.integrations.IntegrationType.UNRECOGNIZED : result;
   }
 
   public static final int VERIFICATION_METHOD_ID_FIELD_NUMBER = 7;
@@ -282,7 +282,7 @@ private static final long serialVersionUID = 0L;
    * the verification method. This is used if there is no collection_id to enrich link data
    * </pre>
    *
-   * <code>.api.commons.public.RequestMethod verification_method_id = 7 [json_name = "verificationMethodId", deprecated = true];</code>
+   * <code>.api.commons.integrations.RequestMethod verification_method_id = 7 [json_name = "verificationMethodId", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.verification_method_id is deprecated.
    *     See api/v1alpha1/integrations/service.proto;l=501
    * @return The enum numeric value on the wire for verificationMethodId.
@@ -295,20 +295,20 @@ private static final long serialVersionUID = 0L;
    * the verification method. This is used if there is no collection_id to enrich link data
    * </pre>
    *
-   * <code>.api.commons.public.RequestMethod verification_method_id = 7 [json_name = "verificationMethodId", deprecated = true];</code>
+   * <code>.api.commons.integrations.RequestMethod verification_method_id = 7 [json_name = "verificationMethodId", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.verification_method_id is deprecated.
    *     See api/v1alpha1/integrations/service.proto;l=501
    * @return The verificationMethodId.
    */
-  @java.lang.Override @java.lang.Deprecated public com.tcn.cloud.api.api.commons.public.RequestMethod getVerificationMethodId() {
-    com.tcn.cloud.api.api.commons.public.RequestMethod result = com.tcn.cloud.api.api.commons.public.RequestMethod.forNumber(verificationMethodId_);
-    return result == null ? com.tcn.cloud.api.api.commons.public.RequestMethod.UNRECOGNIZED : result;
+  @java.lang.Override @java.lang.Deprecated public com.tcn.cloud.api.api.commons.integrations.RequestMethod getVerificationMethodId() {
+    com.tcn.cloud.api.api.commons.integrations.RequestMethod result = com.tcn.cloud.api.api.commons.integrations.RequestMethod.forNumber(verificationMethodId_);
+    return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestMethod.UNRECOGNIZED : result;
   }
 
   public static final int INVOICE_METHOD_ID_FIELD_NUMBER = 8;
   private int invoiceMethodId_ = 0;
   /**
-   * <code>.api.commons.public.RequestMethod invoice_method_id = 8 [json_name = "invoiceMethodId", deprecated = true];</code>
+   * <code>.api.commons.integrations.RequestMethod invoice_method_id = 8 [json_name = "invoiceMethodId", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.invoice_method_id is deprecated.
    *     See api/v1alpha1/integrations/service.proto;l=502
    * @return The enum numeric value on the wire for invoiceMethodId.
@@ -317,14 +317,14 @@ private static final long serialVersionUID = 0L;
     return invoiceMethodId_;
   }
   /**
-   * <code>.api.commons.public.RequestMethod invoice_method_id = 8 [json_name = "invoiceMethodId", deprecated = true];</code>
+   * <code>.api.commons.integrations.RequestMethod invoice_method_id = 8 [json_name = "invoiceMethodId", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.invoice_method_id is deprecated.
    *     See api/v1alpha1/integrations/service.proto;l=502
    * @return The invoiceMethodId.
    */
-  @java.lang.Override @java.lang.Deprecated public com.tcn.cloud.api.api.commons.public.RequestMethod getInvoiceMethodId() {
-    com.tcn.cloud.api.api.commons.public.RequestMethod result = com.tcn.cloud.api.api.commons.public.RequestMethod.forNumber(invoiceMethodId_);
-    return result == null ? com.tcn.cloud.api.api.commons.public.RequestMethod.UNRECOGNIZED : result;
+  @java.lang.Override @java.lang.Deprecated public com.tcn.cloud.api.api.commons.integrations.RequestMethod getInvoiceMethodId() {
+    com.tcn.cloud.api.api.commons.integrations.RequestMethod result = com.tcn.cloud.api.api.commons.integrations.RequestMethod.forNumber(invoiceMethodId_);
+    return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestMethod.UNRECOGNIZED : result;
   }
 
   public static final int PAYMENT_METHOD_ID_FIELD_NUMBER = 9;
@@ -334,7 +334,7 @@ private static final long serialVersionUID = 0L;
    * which method will be called when a payment portal link is process
    * </pre>
    *
-   * <code>.api.commons.public.RequestMethod payment_method_id = 9 [json_name = "paymentMethodId", deprecated = true];</code>
+   * <code>.api.commons.integrations.RequestMethod payment_method_id = 9 [json_name = "paymentMethodId", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.payment_method_id is deprecated.
    *     See api/v1alpha1/integrations/service.proto;l=504
    * @return The enum numeric value on the wire for paymentMethodId.
@@ -347,14 +347,14 @@ private static final long serialVersionUID = 0L;
    * which method will be called when a payment portal link is process
    * </pre>
    *
-   * <code>.api.commons.public.RequestMethod payment_method_id = 9 [json_name = "paymentMethodId", deprecated = true];</code>
+   * <code>.api.commons.integrations.RequestMethod payment_method_id = 9 [json_name = "paymentMethodId", deprecated = true];</code>
    * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.payment_method_id is deprecated.
    *     See api/v1alpha1/integrations/service.proto;l=504
    * @return The paymentMethodId.
    */
-  @java.lang.Override @java.lang.Deprecated public com.tcn.cloud.api.api.commons.public.RequestMethod getPaymentMethodId() {
-    com.tcn.cloud.api.api.commons.public.RequestMethod result = com.tcn.cloud.api.api.commons.public.RequestMethod.forNumber(paymentMethodId_);
-    return result == null ? com.tcn.cloud.api.api.commons.public.RequestMethod.UNRECOGNIZED : result;
+  @java.lang.Override @java.lang.Deprecated public com.tcn.cloud.api.api.commons.integrations.RequestMethod getPaymentMethodId() {
+    com.tcn.cloud.api.api.commons.integrations.RequestMethod result = com.tcn.cloud.api.api.commons.integrations.RequestMethod.forNumber(paymentMethodId_);
+    return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestMethod.UNRECOGNIZED : result;
   }
 
   public static final int NAME_MAPPING_FIELD_NUMBER = 10;
@@ -1006,16 +1006,16 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collectionId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, collectionId_);
     }
-    if (integrationId_ != com.tcn.cloud.api.api.commons.public.IntegrationType.INTEGRATION_TYPE_UNKNOWN.getNumber()) {
+    if (integrationId_ != com.tcn.cloud.api.api.commons.integrations.IntegrationType.INTEGRATION_TYPE_UNKNOWN.getNumber()) {
       output.writeEnum(6, integrationId_);
     }
-    if (verificationMethodId_ != com.tcn.cloud.api.api.commons.public.RequestMethod.REQUEST_METHOD_UNKNOWN.getNumber()) {
+    if (verificationMethodId_ != com.tcn.cloud.api.api.commons.integrations.RequestMethod.REQUEST_METHOD_UNKNOWN.getNumber()) {
       output.writeEnum(7, verificationMethodId_);
     }
-    if (invoiceMethodId_ != com.tcn.cloud.api.api.commons.public.RequestMethod.REQUEST_METHOD_UNKNOWN.getNumber()) {
+    if (invoiceMethodId_ != com.tcn.cloud.api.api.commons.integrations.RequestMethod.REQUEST_METHOD_UNKNOWN.getNumber()) {
       output.writeEnum(8, invoiceMethodId_);
     }
-    if (paymentMethodId_ != com.tcn.cloud.api.api.commons.public.RequestMethod.REQUEST_METHOD_UNKNOWN.getNumber()) {
+    if (paymentMethodId_ != com.tcn.cloud.api.api.commons.integrations.RequestMethod.REQUEST_METHOD_UNKNOWN.getNumber()) {
       output.writeEnum(9, paymentMethodId_);
     }
     com.google.protobuf.GeneratedMessageV3
@@ -1087,19 +1087,19 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(collectionId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, collectionId_);
     }
-    if (integrationId_ != com.tcn.cloud.api.api.commons.public.IntegrationType.INTEGRATION_TYPE_UNKNOWN.getNumber()) {
+    if (integrationId_ != com.tcn.cloud.api.api.commons.integrations.IntegrationType.INTEGRATION_TYPE_UNKNOWN.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(6, integrationId_);
     }
-    if (verificationMethodId_ != com.tcn.cloud.api.api.commons.public.RequestMethod.REQUEST_METHOD_UNKNOWN.getNumber()) {
+    if (verificationMethodId_ != com.tcn.cloud.api.api.commons.integrations.RequestMethod.REQUEST_METHOD_UNKNOWN.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(7, verificationMethodId_);
     }
-    if (invoiceMethodId_ != com.tcn.cloud.api.api.commons.public.RequestMethod.REQUEST_METHOD_UNKNOWN.getNumber()) {
+    if (invoiceMethodId_ != com.tcn.cloud.api.api.commons.integrations.RequestMethod.REQUEST_METHOD_UNKNOWN.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(8, invoiceMethodId_);
     }
-    if (paymentMethodId_ != com.tcn.cloud.api.api.commons.public.RequestMethod.REQUEST_METHOD_UNKNOWN.getNumber()) {
+    if (paymentMethodId_ != com.tcn.cloud.api.api.commons.integrations.RequestMethod.REQUEST_METHOD_UNKNOWN.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(9, paymentMethodId_);
     }
@@ -2287,7 +2287,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * which integration will be used in the links
      * </pre>
      *
-     * <code>.api.commons.public.IntegrationType integration_id = 6 [json_name = "integrationId", deprecated = true];</code>
+     * <code>.api.commons.integrations.IntegrationType integration_id = 6 [json_name = "integrationId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.integration_id is deprecated.
      *     See api/v1alpha1/integrations/service.proto;l=499
      * @return The enum numeric value on the wire for integrationId.
@@ -2300,7 +2300,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * which integration will be used in the links
      * </pre>
      *
-     * <code>.api.commons.public.IntegrationType integration_id = 6 [json_name = "integrationId", deprecated = true];</code>
+     * <code>.api.commons.integrations.IntegrationType integration_id = 6 [json_name = "integrationId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.integration_id is deprecated.
      *     See api/v1alpha1/integrations/service.proto;l=499
      * @param value The enum numeric value on the wire for integrationId to set.
@@ -2317,28 +2317,28 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * which integration will be used in the links
      * </pre>
      *
-     * <code>.api.commons.public.IntegrationType integration_id = 6 [json_name = "integrationId", deprecated = true];</code>
+     * <code>.api.commons.integrations.IntegrationType integration_id = 6 [json_name = "integrationId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.integration_id is deprecated.
      *     See api/v1alpha1/integrations/service.proto;l=499
      * @return The integrationId.
      */
     @java.lang.Override
-    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.public.IntegrationType getIntegrationId() {
-      com.tcn.cloud.api.api.commons.public.IntegrationType result = com.tcn.cloud.api.api.commons.public.IntegrationType.forNumber(integrationId_);
-      return result == null ? com.tcn.cloud.api.api.commons.public.IntegrationType.UNRECOGNIZED : result;
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.integrations.IntegrationType getIntegrationId() {
+      com.tcn.cloud.api.api.commons.integrations.IntegrationType result = com.tcn.cloud.api.api.commons.integrations.IntegrationType.forNumber(integrationId_);
+      return result == null ? com.tcn.cloud.api.api.commons.integrations.IntegrationType.UNRECOGNIZED : result;
     }
     /**
      * <pre>
      * which integration will be used in the links
      * </pre>
      *
-     * <code>.api.commons.public.IntegrationType integration_id = 6 [json_name = "integrationId", deprecated = true];</code>
+     * <code>.api.commons.integrations.IntegrationType integration_id = 6 [json_name = "integrationId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.integration_id is deprecated.
      *     See api/v1alpha1/integrations/service.proto;l=499
      * @param value The integrationId to set.
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder setIntegrationId(com.tcn.cloud.api.api.commons.public.IntegrationType value) {
+    @java.lang.Deprecated public Builder setIntegrationId(com.tcn.cloud.api.api.commons.integrations.IntegrationType value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -2352,7 +2352,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * which integration will be used in the links
      * </pre>
      *
-     * <code>.api.commons.public.IntegrationType integration_id = 6 [json_name = "integrationId", deprecated = true];</code>
+     * <code>.api.commons.integrations.IntegrationType integration_id = 6 [json_name = "integrationId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.integration_id is deprecated.
      *     See api/v1alpha1/integrations/service.proto;l=499
      * @return This builder for chaining.
@@ -2370,7 +2370,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * the verification method. This is used if there is no collection_id to enrich link data
      * </pre>
      *
-     * <code>.api.commons.public.RequestMethod verification_method_id = 7 [json_name = "verificationMethodId", deprecated = true];</code>
+     * <code>.api.commons.integrations.RequestMethod verification_method_id = 7 [json_name = "verificationMethodId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.verification_method_id is deprecated.
      *     See api/v1alpha1/integrations/service.proto;l=501
      * @return The enum numeric value on the wire for verificationMethodId.
@@ -2383,7 +2383,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * the verification method. This is used if there is no collection_id to enrich link data
      * </pre>
      *
-     * <code>.api.commons.public.RequestMethod verification_method_id = 7 [json_name = "verificationMethodId", deprecated = true];</code>
+     * <code>.api.commons.integrations.RequestMethod verification_method_id = 7 [json_name = "verificationMethodId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.verification_method_id is deprecated.
      *     See api/v1alpha1/integrations/service.proto;l=501
      * @param value The enum numeric value on the wire for verificationMethodId to set.
@@ -2400,28 +2400,28 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * the verification method. This is used if there is no collection_id to enrich link data
      * </pre>
      *
-     * <code>.api.commons.public.RequestMethod verification_method_id = 7 [json_name = "verificationMethodId", deprecated = true];</code>
+     * <code>.api.commons.integrations.RequestMethod verification_method_id = 7 [json_name = "verificationMethodId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.verification_method_id is deprecated.
      *     See api/v1alpha1/integrations/service.proto;l=501
      * @return The verificationMethodId.
      */
     @java.lang.Override
-    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.public.RequestMethod getVerificationMethodId() {
-      com.tcn.cloud.api.api.commons.public.RequestMethod result = com.tcn.cloud.api.api.commons.public.RequestMethod.forNumber(verificationMethodId_);
-      return result == null ? com.tcn.cloud.api.api.commons.public.RequestMethod.UNRECOGNIZED : result;
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.integrations.RequestMethod getVerificationMethodId() {
+      com.tcn.cloud.api.api.commons.integrations.RequestMethod result = com.tcn.cloud.api.api.commons.integrations.RequestMethod.forNumber(verificationMethodId_);
+      return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestMethod.UNRECOGNIZED : result;
     }
     /**
      * <pre>
      * the verification method. This is used if there is no collection_id to enrich link data
      * </pre>
      *
-     * <code>.api.commons.public.RequestMethod verification_method_id = 7 [json_name = "verificationMethodId", deprecated = true];</code>
+     * <code>.api.commons.integrations.RequestMethod verification_method_id = 7 [json_name = "verificationMethodId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.verification_method_id is deprecated.
      *     See api/v1alpha1/integrations/service.proto;l=501
      * @param value The verificationMethodId to set.
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder setVerificationMethodId(com.tcn.cloud.api.api.commons.public.RequestMethod value) {
+    @java.lang.Deprecated public Builder setVerificationMethodId(com.tcn.cloud.api.api.commons.integrations.RequestMethod value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -2435,7 +2435,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * the verification method. This is used if there is no collection_id to enrich link data
      * </pre>
      *
-     * <code>.api.commons.public.RequestMethod verification_method_id = 7 [json_name = "verificationMethodId", deprecated = true];</code>
+     * <code>.api.commons.integrations.RequestMethod verification_method_id = 7 [json_name = "verificationMethodId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.verification_method_id is deprecated.
      *     See api/v1alpha1/integrations/service.proto;l=501
      * @return This builder for chaining.
@@ -2449,7 +2449,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
 
     private int invoiceMethodId_ = 0;
     /**
-     * <code>.api.commons.public.RequestMethod invoice_method_id = 8 [json_name = "invoiceMethodId", deprecated = true];</code>
+     * <code>.api.commons.integrations.RequestMethod invoice_method_id = 8 [json_name = "invoiceMethodId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.invoice_method_id is deprecated.
      *     See api/v1alpha1/integrations/service.proto;l=502
      * @return The enum numeric value on the wire for invoiceMethodId.
@@ -2458,7 +2458,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       return invoiceMethodId_;
     }
     /**
-     * <code>.api.commons.public.RequestMethod invoice_method_id = 8 [json_name = "invoiceMethodId", deprecated = true];</code>
+     * <code>.api.commons.integrations.RequestMethod invoice_method_id = 8 [json_name = "invoiceMethodId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.invoice_method_id is deprecated.
      *     See api/v1alpha1/integrations/service.proto;l=502
      * @param value The enum numeric value on the wire for invoiceMethodId to set.
@@ -2471,24 +2471,24 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       return this;
     }
     /**
-     * <code>.api.commons.public.RequestMethod invoice_method_id = 8 [json_name = "invoiceMethodId", deprecated = true];</code>
+     * <code>.api.commons.integrations.RequestMethod invoice_method_id = 8 [json_name = "invoiceMethodId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.invoice_method_id is deprecated.
      *     See api/v1alpha1/integrations/service.proto;l=502
      * @return The invoiceMethodId.
      */
     @java.lang.Override
-    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.public.RequestMethod getInvoiceMethodId() {
-      com.tcn.cloud.api.api.commons.public.RequestMethod result = com.tcn.cloud.api.api.commons.public.RequestMethod.forNumber(invoiceMethodId_);
-      return result == null ? com.tcn.cloud.api.api.commons.public.RequestMethod.UNRECOGNIZED : result;
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.integrations.RequestMethod getInvoiceMethodId() {
+      com.tcn.cloud.api.api.commons.integrations.RequestMethod result = com.tcn.cloud.api.api.commons.integrations.RequestMethod.forNumber(invoiceMethodId_);
+      return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestMethod.UNRECOGNIZED : result;
     }
     /**
-     * <code>.api.commons.public.RequestMethod invoice_method_id = 8 [json_name = "invoiceMethodId", deprecated = true];</code>
+     * <code>.api.commons.integrations.RequestMethod invoice_method_id = 8 [json_name = "invoiceMethodId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.invoice_method_id is deprecated.
      *     See api/v1alpha1/integrations/service.proto;l=502
      * @param value The invoiceMethodId to set.
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder setInvoiceMethodId(com.tcn.cloud.api.api.commons.public.RequestMethod value) {
+    @java.lang.Deprecated public Builder setInvoiceMethodId(com.tcn.cloud.api.api.commons.integrations.RequestMethod value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -2498,7 +2498,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       return this;
     }
     /**
-     * <code>.api.commons.public.RequestMethod invoice_method_id = 8 [json_name = "invoiceMethodId", deprecated = true];</code>
+     * <code>.api.commons.integrations.RequestMethod invoice_method_id = 8 [json_name = "invoiceMethodId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.invoice_method_id is deprecated.
      *     See api/v1alpha1/integrations/service.proto;l=502
      * @return This builder for chaining.
@@ -2516,7 +2516,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * which method will be called when a payment portal link is process
      * </pre>
      *
-     * <code>.api.commons.public.RequestMethod payment_method_id = 9 [json_name = "paymentMethodId", deprecated = true];</code>
+     * <code>.api.commons.integrations.RequestMethod payment_method_id = 9 [json_name = "paymentMethodId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.payment_method_id is deprecated.
      *     See api/v1alpha1/integrations/service.proto;l=504
      * @return The enum numeric value on the wire for paymentMethodId.
@@ -2529,7 +2529,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * which method will be called when a payment portal link is process
      * </pre>
      *
-     * <code>.api.commons.public.RequestMethod payment_method_id = 9 [json_name = "paymentMethodId", deprecated = true];</code>
+     * <code>.api.commons.integrations.RequestMethod payment_method_id = 9 [json_name = "paymentMethodId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.payment_method_id is deprecated.
      *     See api/v1alpha1/integrations/service.proto;l=504
      * @param value The enum numeric value on the wire for paymentMethodId to set.
@@ -2546,28 +2546,28 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * which method will be called when a payment portal link is process
      * </pre>
      *
-     * <code>.api.commons.public.RequestMethod payment_method_id = 9 [json_name = "paymentMethodId", deprecated = true];</code>
+     * <code>.api.commons.integrations.RequestMethod payment_method_id = 9 [json_name = "paymentMethodId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.payment_method_id is deprecated.
      *     See api/v1alpha1/integrations/service.proto;l=504
      * @return The paymentMethodId.
      */
     @java.lang.Override
-    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.public.RequestMethod getPaymentMethodId() {
-      com.tcn.cloud.api.api.commons.public.RequestMethod result = com.tcn.cloud.api.api.commons.public.RequestMethod.forNumber(paymentMethodId_);
-      return result == null ? com.tcn.cloud.api.api.commons.public.RequestMethod.UNRECOGNIZED : result;
+    @java.lang.Deprecated public com.tcn.cloud.api.api.commons.integrations.RequestMethod getPaymentMethodId() {
+      com.tcn.cloud.api.api.commons.integrations.RequestMethod result = com.tcn.cloud.api.api.commons.integrations.RequestMethod.forNumber(paymentMethodId_);
+      return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestMethod.UNRECOGNIZED : result;
     }
     /**
      * <pre>
      * which method will be called when a payment portal link is process
      * </pre>
      *
-     * <code>.api.commons.public.RequestMethod payment_method_id = 9 [json_name = "paymentMethodId", deprecated = true];</code>
+     * <code>.api.commons.integrations.RequestMethod payment_method_id = 9 [json_name = "paymentMethodId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.payment_method_id is deprecated.
      *     See api/v1alpha1/integrations/service.proto;l=504
      * @param value The paymentMethodId to set.
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder setPaymentMethodId(com.tcn.cloud.api.api.commons.public.RequestMethod value) {
+    @java.lang.Deprecated public Builder setPaymentMethodId(com.tcn.cloud.api.api.commons.integrations.RequestMethod value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -2581,7 +2581,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * which method will be called when a payment portal link is process
      * </pre>
      *
-     * <code>.api.commons.public.RequestMethod payment_method_id = 9 [json_name = "paymentMethodId", deprecated = true];</code>
+     * <code>.api.commons.integrations.RequestMethod payment_method_id = 9 [json_name = "paymentMethodId", deprecated = true];</code>
      * @deprecated api.v1alpha1.integrations.PaymentLinkConfig.payment_method_id is deprecated.
      *     See api/v1alpha1/integrations/service.proto;l=504
      * @return This builder for chaining.

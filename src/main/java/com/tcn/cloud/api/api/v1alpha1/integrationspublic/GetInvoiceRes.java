@@ -197,13 +197,13 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
   }
 
   public static final int INVOICES_FIELD_NUMBER = 4;
-  private com.tcn.cloud.api.api.commons.public.Invoices invoices_;
+  private com.tcn.cloud.api.api.commons.integrations.Invoices invoices_;
   /**
    * <pre>
    * the parsed data
    * </pre>
    *
-   * <code>.api.commons.public.Invoices invoices = 4 [json_name = "invoices"];</code>
+   * <code>.api.commons.integrations.Invoices invoices = 4 [json_name = "invoices"];</code>
    * @return Whether the invoices field is set.
    */
   @java.lang.Override
@@ -215,23 +215,23 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
    * the parsed data
    * </pre>
    *
-   * <code>.api.commons.public.Invoices invoices = 4 [json_name = "invoices"];</code>
+   * <code>.api.commons.integrations.Invoices invoices = 4 [json_name = "invoices"];</code>
    * @return The invoices.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.public.Invoices getInvoices() {
-    return invoices_ == null ? com.tcn.cloud.api.api.commons.public.Invoices.getDefaultInstance() : invoices_;
+  public com.tcn.cloud.api.api.commons.integrations.Invoices getInvoices() {
+    return invoices_ == null ? com.tcn.cloud.api.api.commons.integrations.Invoices.getDefaultInstance() : invoices_;
   }
   /**
    * <pre>
    * the parsed data
    * </pre>
    *
-   * <code>.api.commons.public.Invoices invoices = 4 [json_name = "invoices"];</code>
+   * <code>.api.commons.integrations.Invoices invoices = 4 [json_name = "invoices"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.public.InvoicesOrBuilder getInvoicesOrBuilder() {
-    return invoices_ == null ? com.tcn.cloud.api.api.commons.public.Invoices.getDefaultInstance() : invoices_;
+  public com.tcn.cloud.api.api.commons.integrations.InvoicesOrBuilder getInvoicesOrBuilder() {
+    return invoices_ == null ? com.tcn.cloud.api.api.commons.integrations.Invoices.getDefaultInstance() : invoices_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -909,15 +909,15 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
       return this;
     }
 
-    private com.tcn.cloud.api.api.commons.public.Invoices invoices_;
+    private com.tcn.cloud.api.api.commons.integrations.Invoices invoices_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.public.Invoices, com.tcn.cloud.api.api.commons.public.Invoices.Builder, com.tcn.cloud.api.api.commons.public.InvoicesOrBuilder> invoicesBuilder_;
+        com.tcn.cloud.api.api.commons.integrations.Invoices, com.tcn.cloud.api.api.commons.integrations.Invoices.Builder, com.tcn.cloud.api.api.commons.integrations.InvoicesOrBuilder> invoicesBuilder_;
     /**
      * <pre>
      * the parsed data
      * </pre>
      *
-     * <code>.api.commons.public.Invoices invoices = 4 [json_name = "invoices"];</code>
+     * <code>.api.commons.integrations.Invoices invoices = 4 [json_name = "invoices"];</code>
      * @return Whether the invoices field is set.
      */
     public boolean hasInvoices() {
@@ -928,12 +928,12 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
      * the parsed data
      * </pre>
      *
-     * <code>.api.commons.public.Invoices invoices = 4 [json_name = "invoices"];</code>
+     * <code>.api.commons.integrations.Invoices invoices = 4 [json_name = "invoices"];</code>
      * @return The invoices.
      */
-    public com.tcn.cloud.api.api.commons.public.Invoices getInvoices() {
+    public com.tcn.cloud.api.api.commons.integrations.Invoices getInvoices() {
       if (invoicesBuilder_ == null) {
-        return invoices_ == null ? com.tcn.cloud.api.api.commons.public.Invoices.getDefaultInstance() : invoices_;
+        return invoices_ == null ? com.tcn.cloud.api.api.commons.integrations.Invoices.getDefaultInstance() : invoices_;
       } else {
         return invoicesBuilder_.getMessage();
       }
@@ -943,9 +943,9 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
      * the parsed data
      * </pre>
      *
-     * <code>.api.commons.public.Invoices invoices = 4 [json_name = "invoices"];</code>
+     * <code>.api.commons.integrations.Invoices invoices = 4 [json_name = "invoices"];</code>
      */
-    public Builder setInvoices(com.tcn.cloud.api.api.commons.public.Invoices value) {
+    public Builder setInvoices(com.tcn.cloud.api.api.commons.integrations.Invoices value) {
       if (invoicesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -963,10 +963,10 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
      * the parsed data
      * </pre>
      *
-     * <code>.api.commons.public.Invoices invoices = 4 [json_name = "invoices"];</code>
+     * <code>.api.commons.integrations.Invoices invoices = 4 [json_name = "invoices"];</code>
      */
     public Builder setInvoices(
-        com.tcn.cloud.api.api.commons.public.Invoices.Builder builderForValue) {
+        com.tcn.cloud.api.api.commons.integrations.Invoices.Builder builderForValue) {
       if (invoicesBuilder_ == null) {
         invoices_ = builderForValue.build();
       } else {
@@ -981,13 +981,13 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
      * the parsed data
      * </pre>
      *
-     * <code>.api.commons.public.Invoices invoices = 4 [json_name = "invoices"];</code>
+     * <code>.api.commons.integrations.Invoices invoices = 4 [json_name = "invoices"];</code>
      */
-    public Builder mergeInvoices(com.tcn.cloud.api.api.commons.public.Invoices value) {
+    public Builder mergeInvoices(com.tcn.cloud.api.api.commons.integrations.Invoices value) {
       if (invoicesBuilder_ == null) {
         if (((bitField0_ & 0x00000008) != 0) &&
           invoices_ != null &&
-          invoices_ != com.tcn.cloud.api.api.commons.public.Invoices.getDefaultInstance()) {
+          invoices_ != com.tcn.cloud.api.api.commons.integrations.Invoices.getDefaultInstance()) {
           getInvoicesBuilder().mergeFrom(value);
         } else {
           invoices_ = value;
@@ -1004,7 +1004,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
      * the parsed data
      * </pre>
      *
-     * <code>.api.commons.public.Invoices invoices = 4 [json_name = "invoices"];</code>
+     * <code>.api.commons.integrations.Invoices invoices = 4 [json_name = "invoices"];</code>
      */
     public Builder clearInvoices() {
       bitField0_ = (bitField0_ & ~0x00000008);
@@ -1021,9 +1021,9 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
      * the parsed data
      * </pre>
      *
-     * <code>.api.commons.public.Invoices invoices = 4 [json_name = "invoices"];</code>
+     * <code>.api.commons.integrations.Invoices invoices = 4 [json_name = "invoices"];</code>
      */
-    public com.tcn.cloud.api.api.commons.public.Invoices.Builder getInvoicesBuilder() {
+    public com.tcn.cloud.api.api.commons.integrations.Invoices.Builder getInvoicesBuilder() {
       bitField0_ |= 0x00000008;
       onChanged();
       return getInvoicesFieldBuilder().getBuilder();
@@ -1033,14 +1033,14 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
      * the parsed data
      * </pre>
      *
-     * <code>.api.commons.public.Invoices invoices = 4 [json_name = "invoices"];</code>
+     * <code>.api.commons.integrations.Invoices invoices = 4 [json_name = "invoices"];</code>
      */
-    public com.tcn.cloud.api.api.commons.public.InvoicesOrBuilder getInvoicesOrBuilder() {
+    public com.tcn.cloud.api.api.commons.integrations.InvoicesOrBuilder getInvoicesOrBuilder() {
       if (invoicesBuilder_ != null) {
         return invoicesBuilder_.getMessageOrBuilder();
       } else {
         return invoices_ == null ?
-            com.tcn.cloud.api.api.commons.public.Invoices.getDefaultInstance() : invoices_;
+            com.tcn.cloud.api.api.commons.integrations.Invoices.getDefaultInstance() : invoices_;
       }
     }
     /**
@@ -1048,14 +1048,14 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
      * the parsed data
      * </pre>
      *
-     * <code>.api.commons.public.Invoices invoices = 4 [json_name = "invoices"];</code>
+     * <code>.api.commons.integrations.Invoices invoices = 4 [json_name = "invoices"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.public.Invoices, com.tcn.cloud.api.api.commons.public.Invoices.Builder, com.tcn.cloud.api.api.commons.public.InvoicesOrBuilder> 
+        com.tcn.cloud.api.api.commons.integrations.Invoices, com.tcn.cloud.api.api.commons.integrations.Invoices.Builder, com.tcn.cloud.api.api.commons.integrations.InvoicesOrBuilder> 
         getInvoicesFieldBuilder() {
       if (invoicesBuilder_ == null) {
         invoicesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.public.Invoices, com.tcn.cloud.api.api.commons.public.Invoices.Builder, com.tcn.cloud.api.api.commons.public.InvoicesOrBuilder>(
+            com.tcn.cloud.api.api.commons.integrations.Invoices, com.tcn.cloud.api.api.commons.integrations.Invoices.Builder, com.tcn.cloud.api.api.commons.integrations.InvoicesOrBuilder>(
                 getInvoices(),
                 getParentForChildren(),
                 isClean());

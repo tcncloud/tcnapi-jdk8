@@ -40,7 +40,7 @@ public interface ProcessReqOrBuilder extends
    * the id of handler we want to trigger
    * </pre>
    *
-   * <code>.api.commons.public.IntegrationType integration_id = 3 [json_name = "integrationId"];</code>
+   * <code>.api.commons.integrations.IntegrationType integration_id = 3 [json_name = "integrationId"];</code>
    * @return The enum numeric value on the wire for integrationId.
    */
   int getIntegrationIdValue();
@@ -49,17 +49,17 @@ public interface ProcessReqOrBuilder extends
    * the id of handler we want to trigger
    * </pre>
    *
-   * <code>.api.commons.public.IntegrationType integration_id = 3 [json_name = "integrationId"];</code>
+   * <code>.api.commons.integrations.IntegrationType integration_id = 3 [json_name = "integrationId"];</code>
    * @return The integrationId.
    */
-  com.tcn.cloud.api.api.commons.public.IntegrationType getIntegrationId();
+  com.tcn.cloud.api.api.commons.integrations.IntegrationType getIntegrationId();
 
   /**
    * <pre>
    * which integration config is going to be triggered
    * </pre>
    *
-   * <code>.api.commons.public.RequestMethod method_id = 4 [json_name = "methodId"];</code>
+   * <code>.api.commons.integrations.RequestMethod method_id = 4 [json_name = "methodId"];</code>
    * @return The enum numeric value on the wire for methodId.
    */
   int getMethodIdValue();
@@ -68,10 +68,10 @@ public interface ProcessReqOrBuilder extends
    * which integration config is going to be triggered
    * </pre>
    *
-   * <code>.api.commons.public.RequestMethod method_id = 4 [json_name = "methodId"];</code>
+   * <code>.api.commons.integrations.RequestMethod method_id = 4 [json_name = "methodId"];</code>
    * @return The methodId.
    */
-  com.tcn.cloud.api.api.commons.public.RequestMethod getMethodId();
+  com.tcn.cloud.api.api.commons.integrations.RequestMethod getMethodId();
 
   /**
    * <code>string config_name = 5 [json_name = "configName"];</code>

@@ -36,7 +36,7 @@ public interface IntegrationTransactionOrBuilder extends
    * integration used
    * </pre>
    *
-   * <code>.api.commons.public.IntegrationType integration_id = 5 [json_name = "integrationId"];</code>
+   * <code>.api.commons.integrations.IntegrationType integration_id = 5 [json_name = "integrationId"];</code>
    * @return The enum numeric value on the wire for integrationId.
    */
   int getIntegrationIdValue();
@@ -45,17 +45,17 @@ public interface IntegrationTransactionOrBuilder extends
    * integration used
    * </pre>
    *
-   * <code>.api.commons.public.IntegrationType integration_id = 5 [json_name = "integrationId"];</code>
+   * <code>.api.commons.integrations.IntegrationType integration_id = 5 [json_name = "integrationId"];</code>
    * @return The integrationId.
    */
-  com.tcn.cloud.api.api.commons.public.IntegrationType getIntegrationId();
+  com.tcn.cloud.api.api.commons.integrations.IntegrationType getIntegrationId();
 
   /**
    * <pre>
    * external service method
    * </pre>
    *
-   * <code>.api.commons.public.RequestMethod method_id = 6 [json_name = "methodId"];</code>
+   * <code>.api.commons.integrations.RequestMethod method_id = 6 [json_name = "methodId"];</code>
    * @return The enum numeric value on the wire for methodId.
    */
   int getMethodIdValue();
@@ -64,17 +64,17 @@ public interface IntegrationTransactionOrBuilder extends
    * external service method
    * </pre>
    *
-   * <code>.api.commons.public.RequestMethod method_id = 6 [json_name = "methodId"];</code>
+   * <code>.api.commons.integrations.RequestMethod method_id = 6 [json_name = "methodId"];</code>
    * @return The methodId.
    */
-  com.tcn.cloud.api.api.commons.public.RequestMethod getMethodId();
+  com.tcn.cloud.api.api.commons.integrations.RequestMethod getMethodId();
 
   /**
    * <pre>
    * payment, data inquiry, etc.
    * </pre>
    *
-   * <code>.api.commons.public.TransactionType transaction_type = 7 [json_name = "transactionType"];</code>
+   * <code>.api.commons.integrations.TransactionType transaction_type = 7 [json_name = "transactionType"];</code>
    * @return The enum numeric value on the wire for transactionType.
    */
   int getTransactionTypeValue();
@@ -83,17 +83,17 @@ public interface IntegrationTransactionOrBuilder extends
    * payment, data inquiry, etc.
    * </pre>
    *
-   * <code>.api.commons.public.TransactionType transaction_type = 7 [json_name = "transactionType"];</code>
+   * <code>.api.commons.integrations.TransactionType transaction_type = 7 [json_name = "transactionType"];</code>
    * @return The transactionType.
    */
-  com.tcn.cloud.api.api.commons.public.TransactionType getTransactionType();
+  com.tcn.cloud.api.api.commons.integrations.TransactionType getTransactionType();
 
   /**
    * <pre>
    * email/web/sms/ivr/chat
    * </pre>
    *
-   * <code>.api.commons.public.RequestSource request_source = 8 [json_name = "requestSource"];</code>
+   * <code>.api.commons.integrations.RequestSource request_source = 8 [json_name = "requestSource"];</code>
    * @return The enum numeric value on the wire for requestSource.
    */
   int getRequestSourceValue();
@@ -102,17 +102,17 @@ public interface IntegrationTransactionOrBuilder extends
    * email/web/sms/ivr/chat
    * </pre>
    *
-   * <code>.api.commons.public.RequestSource request_source = 8 [json_name = "requestSource"];</code>
+   * <code>.api.commons.integrations.RequestSource request_source = 8 [json_name = "requestSource"];</code>
    * @return The requestSource.
    */
-  com.tcn.cloud.api.api.commons.public.RequestSource getRequestSource();
+  com.tcn.cloud.api.api.commons.integrations.RequestSource getRequestSource();
 
   /**
    * <pre>
    * success/failure
    * </pre>
    *
-   * <code>.api.commons.public.TransactionResult result = 9 [json_name = "result"];</code>
+   * <code>.api.commons.integrations.TransactionResult result = 9 [json_name = "result"];</code>
    * @return The enum numeric value on the wire for result.
    */
   int getResultValue();
@@ -121,10 +121,10 @@ public interface IntegrationTransactionOrBuilder extends
    * success/failure
    * </pre>
    *
-   * <code>.api.commons.public.TransactionResult result = 9 [json_name = "result"];</code>
+   * <code>.api.commons.integrations.TransactionResult result = 9 [json_name = "result"];</code>
    * @return The result.
    */
-  com.tcn.cloud.api.api.commons.public.TransactionResult getResult();
+  com.tcn.cloud.api.api.commons.integrations.TransactionResult getResult();
 
   /**
    * <code>double amount_collected = 10 [json_name = "amountCollected"];</code>

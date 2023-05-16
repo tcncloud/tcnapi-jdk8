@@ -32,7 +32,7 @@ public interface ConditionOrBuilder extends
    * what operation we are confirming
    * </pre>
    *
-   * <code>.api.commons.public.CompareOperation op = 2 [json_name = "op"];</code>
+   * <code>.api.commons.integrations.CompareOperation op = 2 [json_name = "op"];</code>
    * @return The enum numeric value on the wire for op.
    */
   int getOpValue();
@@ -41,10 +41,10 @@ public interface ConditionOrBuilder extends
    * what operation we are confirming
    * </pre>
    *
-   * <code>.api.commons.public.CompareOperation op = 2 [json_name = "op"];</code>
+   * <code>.api.commons.integrations.CompareOperation op = 2 [json_name = "op"];</code>
    * @return The op.
    */
-  com.tcn.cloud.api.api.commons.public.CompareOperation getOp();
+  com.tcn.cloud.api.api.commons.integrations.CompareOperation getOp();
 
   /**
    * <pre>

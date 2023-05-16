@@ -45,41 +45,41 @@ private static final long serialVersionUID = 0L;
 
   public static final int PAYMENT_FIELDS_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.commons.public.FieldDefinition> paymentFields_;
+  private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> paymentFields_;
   /**
-   * <code>repeated .api.commons.public.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
+   * <code>repeated .api.commons.integrations.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.commons.public.FieldDefinition> getPaymentFieldsList() {
+  public java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> getPaymentFieldsList() {
     return paymentFields_;
   }
   /**
-   * <code>repeated .api.commons.public.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
+   * <code>repeated .api.commons.integrations.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.commons.public.FieldDefinitionOrBuilder> 
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> 
       getPaymentFieldsOrBuilderList() {
     return paymentFields_;
   }
   /**
-   * <code>repeated .api.commons.public.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
+   * <code>repeated .api.commons.integrations.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
    */
   @java.lang.Override
   public int getPaymentFieldsCount() {
     return paymentFields_.size();
   }
   /**
-   * <code>repeated .api.commons.public.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
+   * <code>repeated .api.commons.integrations.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.public.FieldDefinition getPaymentFields(int index) {
+  public com.tcn.cloud.api.api.commons.integrations.FieldDefinition getPaymentFields(int index) {
     return paymentFields_.get(index);
   }
   /**
-   * <code>repeated .api.commons.public.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
+   * <code>repeated .api.commons.integrations.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.public.FieldDefinitionOrBuilder getPaymentFieldsOrBuilder(
+  public com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder getPaymentFieldsOrBuilder(
       int index) {
     return paymentFields_.get(index);
   }
@@ -401,9 +401,9 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 18: {
-              com.tcn.cloud.api.api.commons.public.FieldDefinition m =
+              com.tcn.cloud.api.api.commons.integrations.FieldDefinition m =
                   input.readMessage(
-                      com.tcn.cloud.api.api.commons.public.FieldDefinition.parser(),
+                      com.tcn.cloud.api.api.commons.integrations.FieldDefinition.parser(),
                       extensionRegistry);
               if (paymentFieldsBuilder_ == null) {
                 ensurePaymentFieldsIsMutable();
@@ -430,22 +430,22 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.util.List<com.tcn.cloud.api.api.commons.public.FieldDefinition> paymentFields_ =
+    private java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> paymentFields_ =
       java.util.Collections.emptyList();
     private void ensurePaymentFieldsIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        paymentFields_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.public.FieldDefinition>(paymentFields_);
+        paymentFields_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.integrations.FieldDefinition>(paymentFields_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.public.FieldDefinition, com.tcn.cloud.api.api.commons.public.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.public.FieldDefinitionOrBuilder> paymentFieldsBuilder_;
+        com.tcn.cloud.api.api.commons.integrations.FieldDefinition, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> paymentFieldsBuilder_;
 
     /**
-     * <code>repeated .api.commons.public.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.public.FieldDefinition> getPaymentFieldsList() {
+    public java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition> getPaymentFieldsList() {
       if (paymentFieldsBuilder_ == null) {
         return java.util.Collections.unmodifiableList(paymentFields_);
       } else {
@@ -453,7 +453,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.commons.public.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
      */
     public int getPaymentFieldsCount() {
       if (paymentFieldsBuilder_ == null) {
@@ -463,9 +463,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.commons.public.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
      */
-    public com.tcn.cloud.api.api.commons.public.FieldDefinition getPaymentFields(int index) {
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinition getPaymentFields(int index) {
       if (paymentFieldsBuilder_ == null) {
         return paymentFields_.get(index);
       } else {
@@ -473,10 +473,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.commons.public.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
      */
     public Builder setPaymentFields(
-        int index, com.tcn.cloud.api.api.commons.public.FieldDefinition value) {
+        int index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition value) {
       if (paymentFieldsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -490,10 +490,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.public.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
      */
     public Builder setPaymentFields(
-        int index, com.tcn.cloud.api.api.commons.public.FieldDefinition.Builder builderForValue) {
+        int index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder builderForValue) {
       if (paymentFieldsBuilder_ == null) {
         ensurePaymentFieldsIsMutable();
         paymentFields_.set(index, builderForValue.build());
@@ -504,9 +504,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.public.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
      */
-    public Builder addPaymentFields(com.tcn.cloud.api.api.commons.public.FieldDefinition value) {
+    public Builder addPaymentFields(com.tcn.cloud.api.api.commons.integrations.FieldDefinition value) {
       if (paymentFieldsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -520,10 +520,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.public.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
      */
     public Builder addPaymentFields(
-        int index, com.tcn.cloud.api.api.commons.public.FieldDefinition value) {
+        int index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition value) {
       if (paymentFieldsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -537,10 +537,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.public.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
      */
     public Builder addPaymentFields(
-        com.tcn.cloud.api.api.commons.public.FieldDefinition.Builder builderForValue) {
+        com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder builderForValue) {
       if (paymentFieldsBuilder_ == null) {
         ensurePaymentFieldsIsMutable();
         paymentFields_.add(builderForValue.build());
@@ -551,10 +551,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.public.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
      */
     public Builder addPaymentFields(
-        int index, com.tcn.cloud.api.api.commons.public.FieldDefinition.Builder builderForValue) {
+        int index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder builderForValue) {
       if (paymentFieldsBuilder_ == null) {
         ensurePaymentFieldsIsMutable();
         paymentFields_.add(index, builderForValue.build());
@@ -565,10 +565,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.public.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
      */
     public Builder addAllPaymentFields(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.public.FieldDefinition> values) {
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.integrations.FieldDefinition> values) {
       if (paymentFieldsBuilder_ == null) {
         ensurePaymentFieldsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -580,7 +580,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.public.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
      */
     public Builder clearPaymentFields() {
       if (paymentFieldsBuilder_ == null) {
@@ -593,7 +593,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.public.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
      */
     public Builder removePaymentFields(int index) {
       if (paymentFieldsBuilder_ == null) {
@@ -606,16 +606,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.commons.public.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
      */
-    public com.tcn.cloud.api.api.commons.public.FieldDefinition.Builder getPaymentFieldsBuilder(
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder getPaymentFieldsBuilder(
         int index) {
       return getPaymentFieldsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api.commons.public.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
      */
-    public com.tcn.cloud.api.api.commons.public.FieldDefinitionOrBuilder getPaymentFieldsOrBuilder(
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder getPaymentFieldsOrBuilder(
         int index) {
       if (paymentFieldsBuilder_ == null) {
         return paymentFields_.get(index);  } else {
@@ -623,9 +623,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.commons.public.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.commons.public.FieldDefinitionOrBuilder> 
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> 
          getPaymentFieldsOrBuilderList() {
       if (paymentFieldsBuilder_ != null) {
         return paymentFieldsBuilder_.getMessageOrBuilderList();
@@ -634,33 +634,33 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.commons.public.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
      */
-    public com.tcn.cloud.api.api.commons.public.FieldDefinition.Builder addPaymentFieldsBuilder() {
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder addPaymentFieldsBuilder() {
       return getPaymentFieldsFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.commons.public.FieldDefinition.getDefaultInstance());
+          com.tcn.cloud.api.api.commons.integrations.FieldDefinition.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.commons.public.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
      */
-    public com.tcn.cloud.api.api.commons.public.FieldDefinition.Builder addPaymentFieldsBuilder(
+    public com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder addPaymentFieldsBuilder(
         int index) {
       return getPaymentFieldsFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.commons.public.FieldDefinition.getDefaultInstance());
+          index, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.commons.public.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
+     * <code>repeated .api.commons.integrations.FieldDefinition payment_fields = 2 [json_name = "paymentFields"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.commons.public.FieldDefinition.Builder> 
+    public java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder> 
          getPaymentFieldsBuilderList() {
       return getPaymentFieldsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.public.FieldDefinition, com.tcn.cloud.api.api.commons.public.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.public.FieldDefinitionOrBuilder> 
+        com.tcn.cloud.api.api.commons.integrations.FieldDefinition, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder> 
         getPaymentFieldsFieldBuilder() {
       if (paymentFieldsBuilder_ == null) {
         paymentFieldsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.public.FieldDefinition, com.tcn.cloud.api.api.commons.public.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.public.FieldDefinitionOrBuilder>(
+            com.tcn.cloud.api.api.commons.integrations.FieldDefinition, com.tcn.cloud.api.api.commons.integrations.FieldDefinition.Builder, com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder>(
                 paymentFields_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),

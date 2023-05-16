@@ -8,57 +8,57 @@ public interface PaymentPortalOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api.commons.public.VerificationFlow verification = 8 [json_name = "verification"];</code>
+   * <code>.api.commons.integrations.VerificationFlow verification = 8 [json_name = "verification"];</code>
    * @return Whether the verification field is set.
    */
   boolean hasVerification();
   /**
-   * <code>.api.commons.public.VerificationFlow verification = 8 [json_name = "verification"];</code>
+   * <code>.api.commons.integrations.VerificationFlow verification = 8 [json_name = "verification"];</code>
    * @return The verification.
    */
-  com.tcn.cloud.api.api.commons.public.VerificationFlow getVerification();
+  com.tcn.cloud.api.api.commons.integrations.VerificationFlow getVerification();
   /**
-   * <code>.api.commons.public.VerificationFlow verification = 8 [json_name = "verification"];</code>
+   * <code>.api.commons.integrations.VerificationFlow verification = 8 [json_name = "verification"];</code>
    */
-  com.tcn.cloud.api.api.commons.public.VerificationFlowOrBuilder getVerificationOrBuilder();
+  com.tcn.cloud.api.api.commons.integrations.VerificationFlowOrBuilder getVerificationOrBuilder();
 
   /**
-   * <code>.api.commons.public.InvoiceFlow invoice = 9 [json_name = "invoice"];</code>
+   * <code>.api.commons.integrations.InvoiceFlow invoice = 9 [json_name = "invoice"];</code>
    * @return Whether the invoice field is set.
    */
   boolean hasInvoice();
   /**
-   * <code>.api.commons.public.InvoiceFlow invoice = 9 [json_name = "invoice"];</code>
+   * <code>.api.commons.integrations.InvoiceFlow invoice = 9 [json_name = "invoice"];</code>
    * @return The invoice.
    */
-  com.tcn.cloud.api.api.commons.public.InvoiceFlow getInvoice();
+  com.tcn.cloud.api.api.commons.integrations.InvoiceFlow getInvoice();
   /**
-   * <code>.api.commons.public.InvoiceFlow invoice = 9 [json_name = "invoice"];</code>
+   * <code>.api.commons.integrations.InvoiceFlow invoice = 9 [json_name = "invoice"];</code>
    */
-  com.tcn.cloud.api.api.commons.public.InvoiceFlowOrBuilder getInvoiceOrBuilder();
+  com.tcn.cloud.api.api.commons.integrations.InvoiceFlowOrBuilder getInvoiceOrBuilder();
 
   /**
-   * <code>repeated .api.commons.public.PaymentFlow payments = 10 [json_name = "payments"];</code>
+   * <code>repeated .api.commons.integrations.PaymentFlow payments = 10 [json_name = "payments"];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.commons.public.PaymentFlow> 
+  java.util.List<com.tcn.cloud.api.api.commons.integrations.PaymentFlow> 
       getPaymentsList();
   /**
-   * <code>repeated .api.commons.public.PaymentFlow payments = 10 [json_name = "payments"];</code>
+   * <code>repeated .api.commons.integrations.PaymentFlow payments = 10 [json_name = "payments"];</code>
    */
-  com.tcn.cloud.api.api.commons.public.PaymentFlow getPayments(int index);
+  com.tcn.cloud.api.api.commons.integrations.PaymentFlow getPayments(int index);
   /**
-   * <code>repeated .api.commons.public.PaymentFlow payments = 10 [json_name = "payments"];</code>
+   * <code>repeated .api.commons.integrations.PaymentFlow payments = 10 [json_name = "payments"];</code>
    */
   int getPaymentsCount();
   /**
-   * <code>repeated .api.commons.public.PaymentFlow payments = 10 [json_name = "payments"];</code>
+   * <code>repeated .api.commons.integrations.PaymentFlow payments = 10 [json_name = "payments"];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.commons.public.PaymentFlowOrBuilder> 
+  java.util.List<? extends com.tcn.cloud.api.api.commons.integrations.PaymentFlowOrBuilder> 
       getPaymentsOrBuilderList();
   /**
-   * <code>repeated .api.commons.public.PaymentFlow payments = 10 [json_name = "payments"];</code>
+   * <code>repeated .api.commons.integrations.PaymentFlow payments = 10 [json_name = "payments"];</code>
    */
-  com.tcn.cloud.api.api.commons.public.PaymentFlowOrBuilder getPaymentsOrBuilder(
+  com.tcn.cloud.api.api.commons.integrations.PaymentFlowOrBuilder getPaymentsOrBuilder(
       int index);
 
   /**

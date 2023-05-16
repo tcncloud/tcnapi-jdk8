@@ -86,7 +86,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue);
    * the type of the source for this link. ex: Email, Sms, Chat
    * </pre>
    *
-   * <code>.api.commons.public.RequestSource src = 3 [json_name = "src"];</code>
+   * <code>.api.commons.integrations.RequestSource src = 3 [json_name = "src"];</code>
    * @return The enum numeric value on the wire for src.
    */
   int getSrcValue();
@@ -95,8 +95,8 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue);
    * the type of the source for this link. ex: Email, Sms, Chat
    * </pre>
    *
-   * <code>.api.commons.public.RequestSource src = 3 [json_name = "src"];</code>
+   * <code>.api.commons.integrations.RequestSource src = 3 [json_name = "src"];</code>
    * @return The src.
    */
-  com.tcn.cloud.api.api.commons.public.RequestSource getSrc();
+  com.tcn.cloud.api.api.commons.integrations.RequestSource getSrc();
 }

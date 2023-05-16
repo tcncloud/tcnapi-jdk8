@@ -227,19 +227,19 @@ java.lang.String defaultValue) {
   public static final int INTEGRATION_ID_FIELD_NUMBER = 9;
   private int integrationId_ = 0;
   /**
-   * <code>.api.commons.public.IntegrationType integration_id = 9 [json_name = "integrationId"];</code>
+   * <code>.api.commons.integrations.IntegrationType integration_id = 9 [json_name = "integrationId"];</code>
    * @return The enum numeric value on the wire for integrationId.
    */
   @java.lang.Override public int getIntegrationIdValue() {
     return integrationId_;
   }
   /**
-   * <code>.api.commons.public.IntegrationType integration_id = 9 [json_name = "integrationId"];</code>
+   * <code>.api.commons.integrations.IntegrationType integration_id = 9 [json_name = "integrationId"];</code>
    * @return The integrationId.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.public.IntegrationType getIntegrationId() {
-    com.tcn.cloud.api.api.commons.public.IntegrationType result = com.tcn.cloud.api.api.commons.public.IntegrationType.forNumber(integrationId_);
-    return result == null ? com.tcn.cloud.api.api.commons.public.IntegrationType.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.IntegrationType getIntegrationId() {
+    com.tcn.cloud.api.api.commons.integrations.IntegrationType result = com.tcn.cloud.api.api.commons.integrations.IntegrationType.forNumber(integrationId_);
+    return result == null ? com.tcn.cloud.api.api.commons.integrations.IntegrationType.UNRECOGNIZED : result;
   }
 
   public static final int SEARCH_AFTER_SID_FIELD_NUMBER = 10;
@@ -285,7 +285,7 @@ java.lang.String defaultValue) {
     if (pageNum_ != 0) {
       output.writeInt32(8, pageNum_);
     }
-    if (integrationId_ != com.tcn.cloud.api.api.commons.public.IntegrationType.INTEGRATION_TYPE_UNKNOWN.getNumber()) {
+    if (integrationId_ != com.tcn.cloud.api.api.commons.integrations.IntegrationType.INTEGRATION_TYPE_UNKNOWN.getNumber()) {
       output.writeEnum(9, integrationId_);
     }
     if (searchAfterSid_ != 0L) {
@@ -326,7 +326,7 @@ java.lang.String defaultValue) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(8, pageNum_);
     }
-    if (integrationId_ != com.tcn.cloud.api.api.commons.public.IntegrationType.INTEGRATION_TYPE_UNKNOWN.getNumber()) {
+    if (integrationId_ != com.tcn.cloud.api.api.commons.integrations.IntegrationType.INTEGRATION_TYPE_UNKNOWN.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(9, integrationId_);
     }
@@ -1211,14 +1211,14 @@ java.lang.String defaultValue) {
 
     private int integrationId_ = 0;
     /**
-     * <code>.api.commons.public.IntegrationType integration_id = 9 [json_name = "integrationId"];</code>
+     * <code>.api.commons.integrations.IntegrationType integration_id = 9 [json_name = "integrationId"];</code>
      * @return The enum numeric value on the wire for integrationId.
      */
     @java.lang.Override public int getIntegrationIdValue() {
       return integrationId_;
     }
     /**
-     * <code>.api.commons.public.IntegrationType integration_id = 9 [json_name = "integrationId"];</code>
+     * <code>.api.commons.integrations.IntegrationType integration_id = 9 [json_name = "integrationId"];</code>
      * @param value The enum numeric value on the wire for integrationId to set.
      * @return This builder for chaining.
      */
@@ -1229,20 +1229,20 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <code>.api.commons.public.IntegrationType integration_id = 9 [json_name = "integrationId"];</code>
+     * <code>.api.commons.integrations.IntegrationType integration_id = 9 [json_name = "integrationId"];</code>
      * @return The integrationId.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.public.IntegrationType getIntegrationId() {
-      com.tcn.cloud.api.api.commons.public.IntegrationType result = com.tcn.cloud.api.api.commons.public.IntegrationType.forNumber(integrationId_);
-      return result == null ? com.tcn.cloud.api.api.commons.public.IntegrationType.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.api.commons.integrations.IntegrationType getIntegrationId() {
+      com.tcn.cloud.api.api.commons.integrations.IntegrationType result = com.tcn.cloud.api.api.commons.integrations.IntegrationType.forNumber(integrationId_);
+      return result == null ? com.tcn.cloud.api.api.commons.integrations.IntegrationType.UNRECOGNIZED : result;
     }
     /**
-     * <code>.api.commons.public.IntegrationType integration_id = 9 [json_name = "integrationId"];</code>
+     * <code>.api.commons.integrations.IntegrationType integration_id = 9 [json_name = "integrationId"];</code>
      * @param value The integrationId to set.
      * @return This builder for chaining.
      */
-    public Builder setIntegrationId(com.tcn.cloud.api.api.commons.public.IntegrationType value) {
+    public Builder setIntegrationId(com.tcn.cloud.api.api.commons.integrations.IntegrationType value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1252,7 +1252,7 @@ java.lang.String defaultValue) {
       return this;
     }
     /**
-     * <code>.api.commons.public.IntegrationType integration_id = 9 [json_name = "integrationId"];</code>
+     * <code>.api.commons.integrations.IntegrationType integration_id = 9 [json_name = "integrationId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearIntegrationId() {

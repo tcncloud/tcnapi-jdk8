@@ -104,15 +104,15 @@ java.lang.String defaultValue);
   int getPageNum();
 
   /**
-   * <code>.api.commons.public.IntegrationType integration_id = 9 [json_name = "integrationId"];</code>
+   * <code>.api.commons.integrations.IntegrationType integration_id = 9 [json_name = "integrationId"];</code>
    * @return The enum numeric value on the wire for integrationId.
    */
   int getIntegrationIdValue();
   /**
-   * <code>.api.commons.public.IntegrationType integration_id = 9 [json_name = "integrationId"];</code>
+   * <code>.api.commons.integrations.IntegrationType integration_id = 9 [json_name = "integrationId"];</code>
    * @return The integrationId.
    */
-  com.tcn.cloud.api.api.commons.public.IntegrationType getIntegrationId();
+  com.tcn.cloud.api.api.commons.integrations.IntegrationType getIntegrationId();
 
   /**
    * <code>int64 search_after_sid = 10 [json_name = "searchAfterSid"];</code>

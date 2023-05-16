@@ -78,10 +78,10 @@ public interface UnknownFieldOrBuilder extends
    * not in this list
    * </pre>
    *
-   * <code>repeated .api.commons.public.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
+   * <code>repeated .api.commons.integrations.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
    * @return A list containing the potentialSources.
    */
-  java.util.List<com.tcn.cloud.api.api.commons.public.FieldSource> getPotentialSourcesList();
+  java.util.List<com.tcn.cloud.api.api.commons.integrations.FieldSource> getPotentialSourcesList();
   /**
    * <pre>
    * all the sources that are possible this field could come from
@@ -89,7 +89,7 @@ public interface UnknownFieldOrBuilder extends
    * not in this list
    * </pre>
    *
-   * <code>repeated .api.commons.public.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
+   * <code>repeated .api.commons.integrations.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
    * @return The count of potentialSources.
    */
   int getPotentialSourcesCount();
@@ -100,11 +100,11 @@ public interface UnknownFieldOrBuilder extends
    * not in this list
    * </pre>
    *
-   * <code>repeated .api.commons.public.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
+   * <code>repeated .api.commons.integrations.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
    * @param index The index of the element to return.
    * @return The potentialSources at the given index.
    */
-  com.tcn.cloud.api.api.commons.public.FieldSource getPotentialSources(int index);
+  com.tcn.cloud.api.api.commons.integrations.FieldSource getPotentialSources(int index);
   /**
    * <pre>
    * all the sources that are possible this field could come from
@@ -112,7 +112,7 @@ public interface UnknownFieldOrBuilder extends
    * not in this list
    * </pre>
    *
-   * <code>repeated .api.commons.public.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
+   * <code>repeated .api.commons.integrations.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
    * @return A list containing the enum numeric values on the wire for potentialSources.
    */
   java.util.List<java.lang.Integer>
@@ -124,7 +124,7 @@ public interface UnknownFieldOrBuilder extends
    * not in this list
    * </pre>
    *
-   * <code>repeated .api.commons.public.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
+   * <code>repeated .api.commons.integrations.FieldSource potential_sources = 3 [json_name = "potentialSources"];</code>
    * @param index The index of the value to return.
    * @return The enum numeric value on the wire of potentialSources at the given index.
    */

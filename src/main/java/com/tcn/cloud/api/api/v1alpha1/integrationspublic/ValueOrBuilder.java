@@ -104,7 +104,7 @@ public interface ValueOrBuilder extends
    * a value that does not match its validation enum is just invalid.
    * </pre>
    *
-   * <code>.api.commons.public.Validation validation = 8 [json_name = "validation"];</code>
+   * <code>.api.commons.integrations.Validation validation = 8 [json_name = "validation"];</code>
    * @return The enum numeric value on the wire for validation.
    */
   int getValidationValue();
@@ -115,10 +115,10 @@ public interface ValueOrBuilder extends
    * a value that does not match its validation enum is just invalid.
    * </pre>
    *
-   * <code>.api.commons.public.Validation validation = 8 [json_name = "validation"];</code>
+   * <code>.api.commons.integrations.Validation validation = 8 [json_name = "validation"];</code>
    * @return The validation.
    */
-  com.tcn.cloud.api.api.commons.public.Validation getValidation();
+  com.tcn.cloud.api.api.commons.integrations.Validation getValidation();
 
   com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value.ValCase getValCase();
 }

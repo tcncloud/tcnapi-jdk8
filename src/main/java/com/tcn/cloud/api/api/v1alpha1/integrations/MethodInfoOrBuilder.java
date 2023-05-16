@@ -32,7 +32,7 @@ public interface MethodInfoOrBuilder extends
    * identifies which method this is
    * </pre>
    *
-   * <code>.api.commons.public.RequestMethod method_id = 2 [json_name = "methodId"];</code>
+   * <code>.api.commons.integrations.RequestMethod method_id = 2 [json_name = "methodId"];</code>
    * @return The enum numeric value on the wire for methodId.
    */
   int getMethodIdValue();
@@ -41,17 +41,17 @@ public interface MethodInfoOrBuilder extends
    * identifies which method this is
    * </pre>
    *
-   * <code>.api.commons.public.RequestMethod method_id = 2 [json_name = "methodId"];</code>
+   * <code>.api.commons.integrations.RequestMethod method_id = 2 [json_name = "methodId"];</code>
    * @return The methodId.
    */
-  com.tcn.cloud.api.api.commons.public.RequestMethod getMethodId();
+  com.tcn.cloud.api.api.commons.integrations.RequestMethod getMethodId();
 
   /**
    * <pre>
    * what type of method call this is: PAYMENT, INQUIRY, or VERIFY
    * </pre>
    *
-   * <code>.api.commons.public.TransactionType tx_type = 3 [json_name = "txType"];</code>
+   * <code>.api.commons.integrations.TransactionType tx_type = 3 [json_name = "txType"];</code>
    * @return The enum numeric value on the wire for txType.
    */
   int getTxTypeValue();
@@ -60,10 +60,10 @@ public interface MethodInfoOrBuilder extends
    * what type of method call this is: PAYMENT, INQUIRY, or VERIFY
    * </pre>
    *
-   * <code>.api.commons.public.TransactionType tx_type = 3 [json_name = "txType"];</code>
+   * <code>.api.commons.integrations.TransactionType tx_type = 3 [json_name = "txType"];</code>
    * @return The txType.
    */
-  com.tcn.cloud.api.api.commons.public.TransactionType getTxType();
+  com.tcn.cloud.api.api.commons.integrations.TransactionType getTxType();
 
   /**
    * <pre>

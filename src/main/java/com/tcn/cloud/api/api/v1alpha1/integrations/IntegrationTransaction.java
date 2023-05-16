@@ -131,7 +131,7 @@ private static final long serialVersionUID = 0L;
    * integration used
    * </pre>
    *
-   * <code>.api.commons.public.IntegrationType integration_id = 5 [json_name = "integrationId"];</code>
+   * <code>.api.commons.integrations.IntegrationType integration_id = 5 [json_name = "integrationId"];</code>
    * @return The enum numeric value on the wire for integrationId.
    */
   @java.lang.Override public int getIntegrationIdValue() {
@@ -142,12 +142,12 @@ private static final long serialVersionUID = 0L;
    * integration used
    * </pre>
    *
-   * <code>.api.commons.public.IntegrationType integration_id = 5 [json_name = "integrationId"];</code>
+   * <code>.api.commons.integrations.IntegrationType integration_id = 5 [json_name = "integrationId"];</code>
    * @return The integrationId.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.public.IntegrationType getIntegrationId() {
-    com.tcn.cloud.api.api.commons.public.IntegrationType result = com.tcn.cloud.api.api.commons.public.IntegrationType.forNumber(integrationId_);
-    return result == null ? com.tcn.cloud.api.api.commons.public.IntegrationType.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.IntegrationType getIntegrationId() {
+    com.tcn.cloud.api.api.commons.integrations.IntegrationType result = com.tcn.cloud.api.api.commons.integrations.IntegrationType.forNumber(integrationId_);
+    return result == null ? com.tcn.cloud.api.api.commons.integrations.IntegrationType.UNRECOGNIZED : result;
   }
 
   public static final int METHOD_ID_FIELD_NUMBER = 6;
@@ -157,7 +157,7 @@ private static final long serialVersionUID = 0L;
    * external service method
    * </pre>
    *
-   * <code>.api.commons.public.RequestMethod method_id = 6 [json_name = "methodId"];</code>
+   * <code>.api.commons.integrations.RequestMethod method_id = 6 [json_name = "methodId"];</code>
    * @return The enum numeric value on the wire for methodId.
    */
   @java.lang.Override public int getMethodIdValue() {
@@ -168,12 +168,12 @@ private static final long serialVersionUID = 0L;
    * external service method
    * </pre>
    *
-   * <code>.api.commons.public.RequestMethod method_id = 6 [json_name = "methodId"];</code>
+   * <code>.api.commons.integrations.RequestMethod method_id = 6 [json_name = "methodId"];</code>
    * @return The methodId.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.public.RequestMethod getMethodId() {
-    com.tcn.cloud.api.api.commons.public.RequestMethod result = com.tcn.cloud.api.api.commons.public.RequestMethod.forNumber(methodId_);
-    return result == null ? com.tcn.cloud.api.api.commons.public.RequestMethod.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.RequestMethod getMethodId() {
+    com.tcn.cloud.api.api.commons.integrations.RequestMethod result = com.tcn.cloud.api.api.commons.integrations.RequestMethod.forNumber(methodId_);
+    return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestMethod.UNRECOGNIZED : result;
   }
 
   public static final int TRANSACTION_TYPE_FIELD_NUMBER = 7;
@@ -183,7 +183,7 @@ private static final long serialVersionUID = 0L;
    * payment, data inquiry, etc.
    * </pre>
    *
-   * <code>.api.commons.public.TransactionType transaction_type = 7 [json_name = "transactionType"];</code>
+   * <code>.api.commons.integrations.TransactionType transaction_type = 7 [json_name = "transactionType"];</code>
    * @return The enum numeric value on the wire for transactionType.
    */
   @java.lang.Override public int getTransactionTypeValue() {
@@ -194,12 +194,12 @@ private static final long serialVersionUID = 0L;
    * payment, data inquiry, etc.
    * </pre>
    *
-   * <code>.api.commons.public.TransactionType transaction_type = 7 [json_name = "transactionType"];</code>
+   * <code>.api.commons.integrations.TransactionType transaction_type = 7 [json_name = "transactionType"];</code>
    * @return The transactionType.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.public.TransactionType getTransactionType() {
-    com.tcn.cloud.api.api.commons.public.TransactionType result = com.tcn.cloud.api.api.commons.public.TransactionType.forNumber(transactionType_);
-    return result == null ? com.tcn.cloud.api.api.commons.public.TransactionType.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.TransactionType getTransactionType() {
+    com.tcn.cloud.api.api.commons.integrations.TransactionType result = com.tcn.cloud.api.api.commons.integrations.TransactionType.forNumber(transactionType_);
+    return result == null ? com.tcn.cloud.api.api.commons.integrations.TransactionType.UNRECOGNIZED : result;
   }
 
   public static final int REQUEST_SOURCE_FIELD_NUMBER = 8;
@@ -209,7 +209,7 @@ private static final long serialVersionUID = 0L;
    * email/web/sms/ivr/chat
    * </pre>
    *
-   * <code>.api.commons.public.RequestSource request_source = 8 [json_name = "requestSource"];</code>
+   * <code>.api.commons.integrations.RequestSource request_source = 8 [json_name = "requestSource"];</code>
    * @return The enum numeric value on the wire for requestSource.
    */
   @java.lang.Override public int getRequestSourceValue() {
@@ -220,12 +220,12 @@ private static final long serialVersionUID = 0L;
    * email/web/sms/ivr/chat
    * </pre>
    *
-   * <code>.api.commons.public.RequestSource request_source = 8 [json_name = "requestSource"];</code>
+   * <code>.api.commons.integrations.RequestSource request_source = 8 [json_name = "requestSource"];</code>
    * @return The requestSource.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.public.RequestSource getRequestSource() {
-    com.tcn.cloud.api.api.commons.public.RequestSource result = com.tcn.cloud.api.api.commons.public.RequestSource.forNumber(requestSource_);
-    return result == null ? com.tcn.cloud.api.api.commons.public.RequestSource.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.RequestSource getRequestSource() {
+    com.tcn.cloud.api.api.commons.integrations.RequestSource result = com.tcn.cloud.api.api.commons.integrations.RequestSource.forNumber(requestSource_);
+    return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestSource.UNRECOGNIZED : result;
   }
 
   public static final int RESULT_FIELD_NUMBER = 9;
@@ -235,7 +235,7 @@ private static final long serialVersionUID = 0L;
    * success/failure
    * </pre>
    *
-   * <code>.api.commons.public.TransactionResult result = 9 [json_name = "result"];</code>
+   * <code>.api.commons.integrations.TransactionResult result = 9 [json_name = "result"];</code>
    * @return The enum numeric value on the wire for result.
    */
   @java.lang.Override public int getResultValue() {
@@ -246,12 +246,12 @@ private static final long serialVersionUID = 0L;
    * success/failure
    * </pre>
    *
-   * <code>.api.commons.public.TransactionResult result = 9 [json_name = "result"];</code>
+   * <code>.api.commons.integrations.TransactionResult result = 9 [json_name = "result"];</code>
    * @return The result.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.public.TransactionResult getResult() {
-    com.tcn.cloud.api.api.commons.public.TransactionResult result = com.tcn.cloud.api.api.commons.public.TransactionResult.forNumber(result_);
-    return result == null ? com.tcn.cloud.api.api.commons.public.TransactionResult.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.TransactionResult getResult() {
+    com.tcn.cloud.api.api.commons.integrations.TransactionResult result = com.tcn.cloud.api.api.commons.integrations.TransactionResult.forNumber(result_);
+    return result == null ? com.tcn.cloud.api.api.commons.integrations.TransactionResult.UNRECOGNIZED : result;
   }
 
   public static final int AMOUNT_COLLECTED_FIELD_NUMBER = 10;
@@ -440,19 +440,19 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(taskId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, taskId_);
     }
-    if (integrationId_ != com.tcn.cloud.api.api.commons.public.IntegrationType.INTEGRATION_TYPE_UNKNOWN.getNumber()) {
+    if (integrationId_ != com.tcn.cloud.api.api.commons.integrations.IntegrationType.INTEGRATION_TYPE_UNKNOWN.getNumber()) {
       output.writeEnum(5, integrationId_);
     }
-    if (methodId_ != com.tcn.cloud.api.api.commons.public.RequestMethod.REQUEST_METHOD_UNKNOWN.getNumber()) {
+    if (methodId_ != com.tcn.cloud.api.api.commons.integrations.RequestMethod.REQUEST_METHOD_UNKNOWN.getNumber()) {
       output.writeEnum(6, methodId_);
     }
-    if (transactionType_ != com.tcn.cloud.api.api.commons.public.TransactionType.TRANSACTION_TYPE_PAYMENT.getNumber()) {
+    if (transactionType_ != com.tcn.cloud.api.api.commons.integrations.TransactionType.TRANSACTION_TYPE_PAYMENT.getNumber()) {
       output.writeEnum(7, transactionType_);
     }
-    if (requestSource_ != com.tcn.cloud.api.api.commons.public.RequestSource.REQUEST_SOURCE_IVR.getNumber()) {
+    if (requestSource_ != com.tcn.cloud.api.api.commons.integrations.RequestSource.REQUEST_SOURCE_IVR.getNumber()) {
       output.writeEnum(8, requestSource_);
     }
-    if (result_ != com.tcn.cloud.api.api.commons.public.TransactionResult.TRANSACTION_RESULT_SUCCESS.getNumber()) {
+    if (result_ != com.tcn.cloud.api.api.commons.integrations.TransactionResult.TRANSACTION_RESULT_SUCCESS.getNumber()) {
       output.writeEnum(9, result_);
     }
     if (java.lang.Double.doubleToRawLongBits(amountCollected_) != 0) {
@@ -488,23 +488,23 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(taskId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, taskId_);
     }
-    if (integrationId_ != com.tcn.cloud.api.api.commons.public.IntegrationType.INTEGRATION_TYPE_UNKNOWN.getNumber()) {
+    if (integrationId_ != com.tcn.cloud.api.api.commons.integrations.IntegrationType.INTEGRATION_TYPE_UNKNOWN.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(5, integrationId_);
     }
-    if (methodId_ != com.tcn.cloud.api.api.commons.public.RequestMethod.REQUEST_METHOD_UNKNOWN.getNumber()) {
+    if (methodId_ != com.tcn.cloud.api.api.commons.integrations.RequestMethod.REQUEST_METHOD_UNKNOWN.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(6, methodId_);
     }
-    if (transactionType_ != com.tcn.cloud.api.api.commons.public.TransactionType.TRANSACTION_TYPE_PAYMENT.getNumber()) {
+    if (transactionType_ != com.tcn.cloud.api.api.commons.integrations.TransactionType.TRANSACTION_TYPE_PAYMENT.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(7, transactionType_);
     }
-    if (requestSource_ != com.tcn.cloud.api.api.commons.public.RequestSource.REQUEST_SOURCE_IVR.getNumber()) {
+    if (requestSource_ != com.tcn.cloud.api.api.commons.integrations.RequestSource.REQUEST_SOURCE_IVR.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(8, requestSource_);
     }
-    if (result_ != com.tcn.cloud.api.api.commons.public.TransactionResult.TRANSACTION_RESULT_SUCCESS.getNumber()) {
+    if (result_ != com.tcn.cloud.api.api.commons.integrations.TransactionResult.TRANSACTION_RESULT_SUCCESS.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(9, result_);
     }
@@ -1191,7 +1191,7 @@ private static final long serialVersionUID = 0L;
      * integration used
      * </pre>
      *
-     * <code>.api.commons.public.IntegrationType integration_id = 5 [json_name = "integrationId"];</code>
+     * <code>.api.commons.integrations.IntegrationType integration_id = 5 [json_name = "integrationId"];</code>
      * @return The enum numeric value on the wire for integrationId.
      */
     @java.lang.Override public int getIntegrationIdValue() {
@@ -1202,7 +1202,7 @@ private static final long serialVersionUID = 0L;
      * integration used
      * </pre>
      *
-     * <code>.api.commons.public.IntegrationType integration_id = 5 [json_name = "integrationId"];</code>
+     * <code>.api.commons.integrations.IntegrationType integration_id = 5 [json_name = "integrationId"];</code>
      * @param value The enum numeric value on the wire for integrationId to set.
      * @return This builder for chaining.
      */
@@ -1217,24 +1217,24 @@ private static final long serialVersionUID = 0L;
      * integration used
      * </pre>
      *
-     * <code>.api.commons.public.IntegrationType integration_id = 5 [json_name = "integrationId"];</code>
+     * <code>.api.commons.integrations.IntegrationType integration_id = 5 [json_name = "integrationId"];</code>
      * @return The integrationId.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.public.IntegrationType getIntegrationId() {
-      com.tcn.cloud.api.api.commons.public.IntegrationType result = com.tcn.cloud.api.api.commons.public.IntegrationType.forNumber(integrationId_);
-      return result == null ? com.tcn.cloud.api.api.commons.public.IntegrationType.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.api.commons.integrations.IntegrationType getIntegrationId() {
+      com.tcn.cloud.api.api.commons.integrations.IntegrationType result = com.tcn.cloud.api.api.commons.integrations.IntegrationType.forNumber(integrationId_);
+      return result == null ? com.tcn.cloud.api.api.commons.integrations.IntegrationType.UNRECOGNIZED : result;
     }
     /**
      * <pre>
      * integration used
      * </pre>
      *
-     * <code>.api.commons.public.IntegrationType integration_id = 5 [json_name = "integrationId"];</code>
+     * <code>.api.commons.integrations.IntegrationType integration_id = 5 [json_name = "integrationId"];</code>
      * @param value The integrationId to set.
      * @return This builder for chaining.
      */
-    public Builder setIntegrationId(com.tcn.cloud.api.api.commons.public.IntegrationType value) {
+    public Builder setIntegrationId(com.tcn.cloud.api.api.commons.integrations.IntegrationType value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1248,7 +1248,7 @@ private static final long serialVersionUID = 0L;
      * integration used
      * </pre>
      *
-     * <code>.api.commons.public.IntegrationType integration_id = 5 [json_name = "integrationId"];</code>
+     * <code>.api.commons.integrations.IntegrationType integration_id = 5 [json_name = "integrationId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearIntegrationId() {
@@ -1264,7 +1264,7 @@ private static final long serialVersionUID = 0L;
      * external service method
      * </pre>
      *
-     * <code>.api.commons.public.RequestMethod method_id = 6 [json_name = "methodId"];</code>
+     * <code>.api.commons.integrations.RequestMethod method_id = 6 [json_name = "methodId"];</code>
      * @return The enum numeric value on the wire for methodId.
      */
     @java.lang.Override public int getMethodIdValue() {
@@ -1275,7 +1275,7 @@ private static final long serialVersionUID = 0L;
      * external service method
      * </pre>
      *
-     * <code>.api.commons.public.RequestMethod method_id = 6 [json_name = "methodId"];</code>
+     * <code>.api.commons.integrations.RequestMethod method_id = 6 [json_name = "methodId"];</code>
      * @param value The enum numeric value on the wire for methodId to set.
      * @return This builder for chaining.
      */
@@ -1290,24 +1290,24 @@ private static final long serialVersionUID = 0L;
      * external service method
      * </pre>
      *
-     * <code>.api.commons.public.RequestMethod method_id = 6 [json_name = "methodId"];</code>
+     * <code>.api.commons.integrations.RequestMethod method_id = 6 [json_name = "methodId"];</code>
      * @return The methodId.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.public.RequestMethod getMethodId() {
-      com.tcn.cloud.api.api.commons.public.RequestMethod result = com.tcn.cloud.api.api.commons.public.RequestMethod.forNumber(methodId_);
-      return result == null ? com.tcn.cloud.api.api.commons.public.RequestMethod.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.api.commons.integrations.RequestMethod getMethodId() {
+      com.tcn.cloud.api.api.commons.integrations.RequestMethod result = com.tcn.cloud.api.api.commons.integrations.RequestMethod.forNumber(methodId_);
+      return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestMethod.UNRECOGNIZED : result;
     }
     /**
      * <pre>
      * external service method
      * </pre>
      *
-     * <code>.api.commons.public.RequestMethod method_id = 6 [json_name = "methodId"];</code>
+     * <code>.api.commons.integrations.RequestMethod method_id = 6 [json_name = "methodId"];</code>
      * @param value The methodId to set.
      * @return This builder for chaining.
      */
-    public Builder setMethodId(com.tcn.cloud.api.api.commons.public.RequestMethod value) {
+    public Builder setMethodId(com.tcn.cloud.api.api.commons.integrations.RequestMethod value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1321,7 +1321,7 @@ private static final long serialVersionUID = 0L;
      * external service method
      * </pre>
      *
-     * <code>.api.commons.public.RequestMethod method_id = 6 [json_name = "methodId"];</code>
+     * <code>.api.commons.integrations.RequestMethod method_id = 6 [json_name = "methodId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearMethodId() {
@@ -1337,7 +1337,7 @@ private static final long serialVersionUID = 0L;
      * payment, data inquiry, etc.
      * </pre>
      *
-     * <code>.api.commons.public.TransactionType transaction_type = 7 [json_name = "transactionType"];</code>
+     * <code>.api.commons.integrations.TransactionType transaction_type = 7 [json_name = "transactionType"];</code>
      * @return The enum numeric value on the wire for transactionType.
      */
     @java.lang.Override public int getTransactionTypeValue() {
@@ -1348,7 +1348,7 @@ private static final long serialVersionUID = 0L;
      * payment, data inquiry, etc.
      * </pre>
      *
-     * <code>.api.commons.public.TransactionType transaction_type = 7 [json_name = "transactionType"];</code>
+     * <code>.api.commons.integrations.TransactionType transaction_type = 7 [json_name = "transactionType"];</code>
      * @param value The enum numeric value on the wire for transactionType to set.
      * @return This builder for chaining.
      */
@@ -1363,24 +1363,24 @@ private static final long serialVersionUID = 0L;
      * payment, data inquiry, etc.
      * </pre>
      *
-     * <code>.api.commons.public.TransactionType transaction_type = 7 [json_name = "transactionType"];</code>
+     * <code>.api.commons.integrations.TransactionType transaction_type = 7 [json_name = "transactionType"];</code>
      * @return The transactionType.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.public.TransactionType getTransactionType() {
-      com.tcn.cloud.api.api.commons.public.TransactionType result = com.tcn.cloud.api.api.commons.public.TransactionType.forNumber(transactionType_);
-      return result == null ? com.tcn.cloud.api.api.commons.public.TransactionType.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.api.commons.integrations.TransactionType getTransactionType() {
+      com.tcn.cloud.api.api.commons.integrations.TransactionType result = com.tcn.cloud.api.api.commons.integrations.TransactionType.forNumber(transactionType_);
+      return result == null ? com.tcn.cloud.api.api.commons.integrations.TransactionType.UNRECOGNIZED : result;
     }
     /**
      * <pre>
      * payment, data inquiry, etc.
      * </pre>
      *
-     * <code>.api.commons.public.TransactionType transaction_type = 7 [json_name = "transactionType"];</code>
+     * <code>.api.commons.integrations.TransactionType transaction_type = 7 [json_name = "transactionType"];</code>
      * @param value The transactionType to set.
      * @return This builder for chaining.
      */
-    public Builder setTransactionType(com.tcn.cloud.api.api.commons.public.TransactionType value) {
+    public Builder setTransactionType(com.tcn.cloud.api.api.commons.integrations.TransactionType value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1394,7 +1394,7 @@ private static final long serialVersionUID = 0L;
      * payment, data inquiry, etc.
      * </pre>
      *
-     * <code>.api.commons.public.TransactionType transaction_type = 7 [json_name = "transactionType"];</code>
+     * <code>.api.commons.integrations.TransactionType transaction_type = 7 [json_name = "transactionType"];</code>
      * @return This builder for chaining.
      */
     public Builder clearTransactionType() {
@@ -1410,7 +1410,7 @@ private static final long serialVersionUID = 0L;
      * email/web/sms/ivr/chat
      * </pre>
      *
-     * <code>.api.commons.public.RequestSource request_source = 8 [json_name = "requestSource"];</code>
+     * <code>.api.commons.integrations.RequestSource request_source = 8 [json_name = "requestSource"];</code>
      * @return The enum numeric value on the wire for requestSource.
      */
     @java.lang.Override public int getRequestSourceValue() {
@@ -1421,7 +1421,7 @@ private static final long serialVersionUID = 0L;
      * email/web/sms/ivr/chat
      * </pre>
      *
-     * <code>.api.commons.public.RequestSource request_source = 8 [json_name = "requestSource"];</code>
+     * <code>.api.commons.integrations.RequestSource request_source = 8 [json_name = "requestSource"];</code>
      * @param value The enum numeric value on the wire for requestSource to set.
      * @return This builder for chaining.
      */
@@ -1436,24 +1436,24 @@ private static final long serialVersionUID = 0L;
      * email/web/sms/ivr/chat
      * </pre>
      *
-     * <code>.api.commons.public.RequestSource request_source = 8 [json_name = "requestSource"];</code>
+     * <code>.api.commons.integrations.RequestSource request_source = 8 [json_name = "requestSource"];</code>
      * @return The requestSource.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.public.RequestSource getRequestSource() {
-      com.tcn.cloud.api.api.commons.public.RequestSource result = com.tcn.cloud.api.api.commons.public.RequestSource.forNumber(requestSource_);
-      return result == null ? com.tcn.cloud.api.api.commons.public.RequestSource.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.api.commons.integrations.RequestSource getRequestSource() {
+      com.tcn.cloud.api.api.commons.integrations.RequestSource result = com.tcn.cloud.api.api.commons.integrations.RequestSource.forNumber(requestSource_);
+      return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestSource.UNRECOGNIZED : result;
     }
     /**
      * <pre>
      * email/web/sms/ivr/chat
      * </pre>
      *
-     * <code>.api.commons.public.RequestSource request_source = 8 [json_name = "requestSource"];</code>
+     * <code>.api.commons.integrations.RequestSource request_source = 8 [json_name = "requestSource"];</code>
      * @param value The requestSource to set.
      * @return This builder for chaining.
      */
-    public Builder setRequestSource(com.tcn.cloud.api.api.commons.public.RequestSource value) {
+    public Builder setRequestSource(com.tcn.cloud.api.api.commons.integrations.RequestSource value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1467,7 +1467,7 @@ private static final long serialVersionUID = 0L;
      * email/web/sms/ivr/chat
      * </pre>
      *
-     * <code>.api.commons.public.RequestSource request_source = 8 [json_name = "requestSource"];</code>
+     * <code>.api.commons.integrations.RequestSource request_source = 8 [json_name = "requestSource"];</code>
      * @return This builder for chaining.
      */
     public Builder clearRequestSource() {
@@ -1483,7 +1483,7 @@ private static final long serialVersionUID = 0L;
      * success/failure
      * </pre>
      *
-     * <code>.api.commons.public.TransactionResult result = 9 [json_name = "result"];</code>
+     * <code>.api.commons.integrations.TransactionResult result = 9 [json_name = "result"];</code>
      * @return The enum numeric value on the wire for result.
      */
     @java.lang.Override public int getResultValue() {
@@ -1494,7 +1494,7 @@ private static final long serialVersionUID = 0L;
      * success/failure
      * </pre>
      *
-     * <code>.api.commons.public.TransactionResult result = 9 [json_name = "result"];</code>
+     * <code>.api.commons.integrations.TransactionResult result = 9 [json_name = "result"];</code>
      * @param value The enum numeric value on the wire for result to set.
      * @return This builder for chaining.
      */
@@ -1509,24 +1509,24 @@ private static final long serialVersionUID = 0L;
      * success/failure
      * </pre>
      *
-     * <code>.api.commons.public.TransactionResult result = 9 [json_name = "result"];</code>
+     * <code>.api.commons.integrations.TransactionResult result = 9 [json_name = "result"];</code>
      * @return The result.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.public.TransactionResult getResult() {
-      com.tcn.cloud.api.api.commons.public.TransactionResult result = com.tcn.cloud.api.api.commons.public.TransactionResult.forNumber(result_);
-      return result == null ? com.tcn.cloud.api.api.commons.public.TransactionResult.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.api.commons.integrations.TransactionResult getResult() {
+      com.tcn.cloud.api.api.commons.integrations.TransactionResult result = com.tcn.cloud.api.api.commons.integrations.TransactionResult.forNumber(result_);
+      return result == null ? com.tcn.cloud.api.api.commons.integrations.TransactionResult.UNRECOGNIZED : result;
     }
     /**
      * <pre>
      * success/failure
      * </pre>
      *
-     * <code>.api.commons.public.TransactionResult result = 9 [json_name = "result"];</code>
+     * <code>.api.commons.integrations.TransactionResult result = 9 [json_name = "result"];</code>
      * @param value The result to set.
      * @return This builder for chaining.
      */
-    public Builder setResult(com.tcn.cloud.api.api.commons.public.TransactionResult value) {
+    public Builder setResult(com.tcn.cloud.api.api.commons.integrations.TransactionResult value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1540,7 +1540,7 @@ private static final long serialVersionUID = 0L;
      * success/failure
      * </pre>
      *
-     * <code>.api.commons.public.TransactionResult result = 9 [json_name = "result"];</code>
+     * <code>.api.commons.integrations.TransactionResult result = 9 [json_name = "result"];</code>
      * @return This builder for chaining.
      */
     public Builder clearResult() {

@@ -33,7 +33,7 @@ public interface ParameterOrBuilder extends
    * right now this will be STRING, NUMBER, BOOL
    * </pre>
    *
-   * <code>.api.commons.public.ValueType param_type = 2 [json_name = "paramType"];</code>
+   * <code>.api.commons.integrations.ValueType param_type = 2 [json_name = "paramType"];</code>
    * @return The enum numeric value on the wire for paramType.
    */
   int getParamTypeValue();
@@ -43,10 +43,10 @@ public interface ParameterOrBuilder extends
    * right now this will be STRING, NUMBER, BOOL
    * </pre>
    *
-   * <code>.api.commons.public.ValueType param_type = 2 [json_name = "paramType"];</code>
+   * <code>.api.commons.integrations.ValueType param_type = 2 [json_name = "paramType"];</code>
    * @return The paramType.
    */
-  com.tcn.cloud.api.api.commons.public.ValueType getParamType();
+  com.tcn.cloud.api.api.commons.integrations.ValueType getParamType();
 
   /**
    * <pre>
@@ -167,7 +167,7 @@ public interface ParameterOrBuilder extends
    * what type of data value we accept
    * </pre>
    *
-   * <code>.api.commons.public.Validation validation = 10 [json_name = "validation"];</code>
+   * <code>.api.commons.integrations.Validation validation = 10 [json_name = "validation"];</code>
    * @return The enum numeric value on the wire for validation.
    */
   int getValidationValue();
@@ -176,8 +176,8 @@ public interface ParameterOrBuilder extends
    * what type of data value we accept
    * </pre>
    *
-   * <code>.api.commons.public.Validation validation = 10 [json_name = "validation"];</code>
+   * <code>.api.commons.integrations.Validation validation = 10 [json_name = "validation"];</code>
    * @return The validation.
    */
-  com.tcn.cloud.api.api.commons.public.Validation getValidation();
+  com.tcn.cloud.api.api.commons.integrations.Validation getValidation();
 }

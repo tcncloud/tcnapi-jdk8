@@ -294,7 +294,7 @@ private static final long serialVersionUID = 0L;
    * a value that does not match its validation enum is just invalid.
    * </pre>
    *
-   * <code>.api.commons.public.Validation validation = 8 [json_name = "validation"];</code>
+   * <code>.api.commons.integrations.Validation validation = 8 [json_name = "validation"];</code>
    * @return The enum numeric value on the wire for validation.
    */
   @java.lang.Override public int getValidationValue() {
@@ -307,12 +307,12 @@ private static final long serialVersionUID = 0L;
    * a value that does not match its validation enum is just invalid.
    * </pre>
    *
-   * <code>.api.commons.public.Validation validation = 8 [json_name = "validation"];</code>
+   * <code>.api.commons.integrations.Validation validation = 8 [json_name = "validation"];</code>
    * @return The validation.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.public.Validation getValidation() {
-    com.tcn.cloud.api.api.commons.public.Validation result = com.tcn.cloud.api.api.commons.public.Validation.forNumber(validation_);
-    return result == null ? com.tcn.cloud.api.api.commons.public.Validation.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.Validation getValidation() {
+    com.tcn.cloud.api.api.commons.integrations.Validation result = com.tcn.cloud.api.api.commons.integrations.Validation.forNumber(validation_);
+    return result == null ? com.tcn.cloud.api.api.commons.integrations.Validation.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -353,7 +353,7 @@ private static final long serialVersionUID = 0L;
       output.writeInt64(
           7, (long)((java.lang.Long) val_));
     }
-    if (validation_ != com.tcn.cloud.api.api.commons.public.Validation.VALIDATION_NONE.getNumber()) {
+    if (validation_ != com.tcn.cloud.api.api.commons.integrations.Validation.VALIDATION_NONE.getNumber()) {
       output.writeEnum(8, validation_);
     }
     getUnknownFields().writeTo(output);
@@ -395,7 +395,7 @@ private static final long serialVersionUID = 0L;
         .computeInt64Size(
             7, (long)((java.lang.Long) val_));
     }
-    if (validation_ != com.tcn.cloud.api.api.commons.public.Validation.VALIDATION_NONE.getNumber()) {
+    if (validation_ != com.tcn.cloud.api.api.commons.integrations.Validation.VALIDATION_NONE.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(8, validation_);
     }
@@ -1401,7 +1401,7 @@ private static final long serialVersionUID = 0L;
      * a value that does not match its validation enum is just invalid.
      * </pre>
      *
-     * <code>.api.commons.public.Validation validation = 8 [json_name = "validation"];</code>
+     * <code>.api.commons.integrations.Validation validation = 8 [json_name = "validation"];</code>
      * @return The enum numeric value on the wire for validation.
      */
     @java.lang.Override public int getValidationValue() {
@@ -1414,7 +1414,7 @@ private static final long serialVersionUID = 0L;
      * a value that does not match its validation enum is just invalid.
      * </pre>
      *
-     * <code>.api.commons.public.Validation validation = 8 [json_name = "validation"];</code>
+     * <code>.api.commons.integrations.Validation validation = 8 [json_name = "validation"];</code>
      * @param value The enum numeric value on the wire for validation to set.
      * @return This builder for chaining.
      */
@@ -1431,13 +1431,13 @@ private static final long serialVersionUID = 0L;
      * a value that does not match its validation enum is just invalid.
      * </pre>
      *
-     * <code>.api.commons.public.Validation validation = 8 [json_name = "validation"];</code>
+     * <code>.api.commons.integrations.Validation validation = 8 [json_name = "validation"];</code>
      * @return The validation.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.public.Validation getValidation() {
-      com.tcn.cloud.api.api.commons.public.Validation result = com.tcn.cloud.api.api.commons.public.Validation.forNumber(validation_);
-      return result == null ? com.tcn.cloud.api.api.commons.public.Validation.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.api.commons.integrations.Validation getValidation() {
+      com.tcn.cloud.api.api.commons.integrations.Validation result = com.tcn.cloud.api.api.commons.integrations.Validation.forNumber(validation_);
+      return result == null ? com.tcn.cloud.api.api.commons.integrations.Validation.UNRECOGNIZED : result;
     }
     /**
      * <pre>
@@ -1446,11 +1446,11 @@ private static final long serialVersionUID = 0L;
      * a value that does not match its validation enum is just invalid.
      * </pre>
      *
-     * <code>.api.commons.public.Validation validation = 8 [json_name = "validation"];</code>
+     * <code>.api.commons.integrations.Validation validation = 8 [json_name = "validation"];</code>
      * @param value The validation to set.
      * @return This builder for chaining.
      */
-    public Builder setValidation(com.tcn.cloud.api.api.commons.public.Validation value) {
+    public Builder setValidation(com.tcn.cloud.api.api.commons.integrations.Validation value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1466,7 +1466,7 @@ private static final long serialVersionUID = 0L;
      * a value that does not match its validation enum is just invalid.
      * </pre>
      *
-     * <code>.api.commons.public.Validation validation = 8 [json_name = "validation"];</code>
+     * <code>.api.commons.integrations.Validation validation = 8 [json_name = "validation"];</code>
      * @return This builder for chaining.
      */
     public Builder clearValidation() {

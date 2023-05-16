@@ -94,7 +94,7 @@ private static final long serialVersionUID = 0L;
    * what operation we are confirming
    * </pre>
    *
-   * <code>.api.commons.public.CompareOperation op = 2 [json_name = "op"];</code>
+   * <code>.api.commons.integrations.CompareOperation op = 2 [json_name = "op"];</code>
    * @return The enum numeric value on the wire for op.
    */
   @java.lang.Override public int getOpValue() {
@@ -105,12 +105,12 @@ private static final long serialVersionUID = 0L;
    * what operation we are confirming
    * </pre>
    *
-   * <code>.api.commons.public.CompareOperation op = 2 [json_name = "op"];</code>
+   * <code>.api.commons.integrations.CompareOperation op = 2 [json_name = "op"];</code>
    * @return The op.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.public.CompareOperation getOp() {
-    com.tcn.cloud.api.api.commons.public.CompareOperation result = com.tcn.cloud.api.api.commons.public.CompareOperation.forNumber(op_);
-    return result == null ? com.tcn.cloud.api.api.commons.public.CompareOperation.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.CompareOperation getOp() {
+    com.tcn.cloud.api.api.commons.integrations.CompareOperation result = com.tcn.cloud.api.api.commons.integrations.CompareOperation.forNumber(op_);
+    return result == null ? com.tcn.cloud.api.api.commons.integrations.CompareOperation.UNRECOGNIZED : result;
   }
 
   public static final int VALUE_FIELD_NUMBER = 3;
@@ -168,7 +168,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
     }
-    if (op_ != com.tcn.cloud.api.api.commons.public.CompareOperation.COMPARE_OPERATION_EQ.getNumber()) {
+    if (op_ != com.tcn.cloud.api.api.commons.integrations.CompareOperation.COMPARE_OPERATION_EQ.getNumber()) {
       output.writeEnum(2, op_);
     }
     if (value_ != null) {
@@ -186,7 +186,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
     }
-    if (op_ != com.tcn.cloud.api.api.commons.public.CompareOperation.COMPARE_OPERATION_EQ.getNumber()) {
+    if (op_ != com.tcn.cloud.api.api.commons.integrations.CompareOperation.COMPARE_OPERATION_EQ.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(2, op_);
     }
@@ -601,7 +601,7 @@ private static final long serialVersionUID = 0L;
      * what operation we are confirming
      * </pre>
      *
-     * <code>.api.commons.public.CompareOperation op = 2 [json_name = "op"];</code>
+     * <code>.api.commons.integrations.CompareOperation op = 2 [json_name = "op"];</code>
      * @return The enum numeric value on the wire for op.
      */
     @java.lang.Override public int getOpValue() {
@@ -612,7 +612,7 @@ private static final long serialVersionUID = 0L;
      * what operation we are confirming
      * </pre>
      *
-     * <code>.api.commons.public.CompareOperation op = 2 [json_name = "op"];</code>
+     * <code>.api.commons.integrations.CompareOperation op = 2 [json_name = "op"];</code>
      * @param value The enum numeric value on the wire for op to set.
      * @return This builder for chaining.
      */
@@ -627,24 +627,24 @@ private static final long serialVersionUID = 0L;
      * what operation we are confirming
      * </pre>
      *
-     * <code>.api.commons.public.CompareOperation op = 2 [json_name = "op"];</code>
+     * <code>.api.commons.integrations.CompareOperation op = 2 [json_name = "op"];</code>
      * @return The op.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.public.CompareOperation getOp() {
-      com.tcn.cloud.api.api.commons.public.CompareOperation result = com.tcn.cloud.api.api.commons.public.CompareOperation.forNumber(op_);
-      return result == null ? com.tcn.cloud.api.api.commons.public.CompareOperation.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.api.commons.integrations.CompareOperation getOp() {
+      com.tcn.cloud.api.api.commons.integrations.CompareOperation result = com.tcn.cloud.api.api.commons.integrations.CompareOperation.forNumber(op_);
+      return result == null ? com.tcn.cloud.api.api.commons.integrations.CompareOperation.UNRECOGNIZED : result;
     }
     /**
      * <pre>
      * what operation we are confirming
      * </pre>
      *
-     * <code>.api.commons.public.CompareOperation op = 2 [json_name = "op"];</code>
+     * <code>.api.commons.integrations.CompareOperation op = 2 [json_name = "op"];</code>
      * @param value The op to set.
      * @return This builder for chaining.
      */
-    public Builder setOp(com.tcn.cloud.api.api.commons.public.CompareOperation value) {
+    public Builder setOp(com.tcn.cloud.api.api.commons.integrations.CompareOperation value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -658,7 +658,7 @@ private static final long serialVersionUID = 0L;
      * what operation we are confirming
      * </pre>
      *
-     * <code>.api.commons.public.CompareOperation op = 2 [json_name = "op"];</code>
+     * <code>.api.commons.integrations.CompareOperation op = 2 [json_name = "op"];</code>
      * @return This builder for chaining.
      */
     public Builder clearOp() {

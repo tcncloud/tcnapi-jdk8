@@ -8,13 +8,13 @@ public interface TransactionTypeOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api.commons.public.TransactionType transaction_type = 1 [json_name = "transactionType"];</code>
+   * <code>.api.commons.integrations.TransactionType transaction_type = 1 [json_name = "transactionType"];</code>
    * @return The enum numeric value on the wire for transactionType.
    */
   int getTransactionTypeValue();
   /**
-   * <code>.api.commons.public.TransactionType transaction_type = 1 [json_name = "transactionType"];</code>
+   * <code>.api.commons.integrations.TransactionType transaction_type = 1 [json_name = "transactionType"];</code>
    * @return The transactionType.
    */
-  com.tcn.cloud.api.api.commons.public.TransactionType getTransactionType();
+  com.tcn.cloud.api.api.commons.integrations.TransactionType getTransactionType();
 }

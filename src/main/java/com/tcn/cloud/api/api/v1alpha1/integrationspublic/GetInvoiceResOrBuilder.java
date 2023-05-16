@@ -84,7 +84,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue);
    * the parsed data
    * </pre>
    *
-   * <code>.api.commons.public.Invoices invoices = 4 [json_name = "invoices"];</code>
+   * <code>.api.commons.integrations.Invoices invoices = 4 [json_name = "invoices"];</code>
    * @return Whether the invoices field is set.
    */
   boolean hasInvoices();
@@ -93,16 +93,16 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue);
    * the parsed data
    * </pre>
    *
-   * <code>.api.commons.public.Invoices invoices = 4 [json_name = "invoices"];</code>
+   * <code>.api.commons.integrations.Invoices invoices = 4 [json_name = "invoices"];</code>
    * @return The invoices.
    */
-  com.tcn.cloud.api.api.commons.public.Invoices getInvoices();
+  com.tcn.cloud.api.api.commons.integrations.Invoices getInvoices();
   /**
    * <pre>
    * the parsed data
    * </pre>
    *
-   * <code>.api.commons.public.Invoices invoices = 4 [json_name = "invoices"];</code>
+   * <code>.api.commons.integrations.Invoices invoices = 4 [json_name = "invoices"];</code>
    */
-  com.tcn.cloud.api.api.commons.public.InvoicesOrBuilder getInvoicesOrBuilder();
+  com.tcn.cloud.api.api.commons.integrations.InvoicesOrBuilder getInvoicesOrBuilder();
 }

@@ -346,13 +346,13 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
   }
 
   public static final int PAYMENT_FLOW_FIELD_NUMBER = 6;
-  private com.tcn.cloud.api.api.commons.public.PaymentFlow paymentFlow_;
+  private com.tcn.cloud.api.api.commons.integrations.PaymentFlow paymentFlow_;
   /**
    * <pre>
    * flow name, type and options used
    * </pre>
    *
-   * <code>.api.commons.public.PaymentFlow payment_flow = 6 [json_name = "paymentFlow"];</code>
+   * <code>.api.commons.integrations.PaymentFlow payment_flow = 6 [json_name = "paymentFlow"];</code>
    * @return Whether the paymentFlow field is set.
    */
   @java.lang.Override
@@ -364,23 +364,23 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
    * flow name, type and options used
    * </pre>
    *
-   * <code>.api.commons.public.PaymentFlow payment_flow = 6 [json_name = "paymentFlow"];</code>
+   * <code>.api.commons.integrations.PaymentFlow payment_flow = 6 [json_name = "paymentFlow"];</code>
    * @return The paymentFlow.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.public.PaymentFlow getPaymentFlow() {
-    return paymentFlow_ == null ? com.tcn.cloud.api.api.commons.public.PaymentFlow.getDefaultInstance() : paymentFlow_;
+  public com.tcn.cloud.api.api.commons.integrations.PaymentFlow getPaymentFlow() {
+    return paymentFlow_ == null ? com.tcn.cloud.api.api.commons.integrations.PaymentFlow.getDefaultInstance() : paymentFlow_;
   }
   /**
    * <pre>
    * flow name, type and options used
    * </pre>
    *
-   * <code>.api.commons.public.PaymentFlow payment_flow = 6 [json_name = "paymentFlow"];</code>
+   * <code>.api.commons.integrations.PaymentFlow payment_flow = 6 [json_name = "paymentFlow"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.public.PaymentFlowOrBuilder getPaymentFlowOrBuilder() {
-    return paymentFlow_ == null ? com.tcn.cloud.api.api.commons.public.PaymentFlow.getDefaultInstance() : paymentFlow_;
+  public com.tcn.cloud.api.api.commons.integrations.PaymentFlowOrBuilder getPaymentFlowOrBuilder() {
+    return paymentFlow_ == null ? com.tcn.cloud.api.api.commons.integrations.PaymentFlow.getDefaultInstance() : paymentFlow_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -1384,15 +1384,15 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
       return this;
     }
 
-    private com.tcn.cloud.api.api.commons.public.PaymentFlow paymentFlow_;
+    private com.tcn.cloud.api.api.commons.integrations.PaymentFlow paymentFlow_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.public.PaymentFlow, com.tcn.cloud.api.api.commons.public.PaymentFlow.Builder, com.tcn.cloud.api.api.commons.public.PaymentFlowOrBuilder> paymentFlowBuilder_;
+        com.tcn.cloud.api.api.commons.integrations.PaymentFlow, com.tcn.cloud.api.api.commons.integrations.PaymentFlow.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentFlowOrBuilder> paymentFlowBuilder_;
     /**
      * <pre>
      * flow name, type and options used
      * </pre>
      *
-     * <code>.api.commons.public.PaymentFlow payment_flow = 6 [json_name = "paymentFlow"];</code>
+     * <code>.api.commons.integrations.PaymentFlow payment_flow = 6 [json_name = "paymentFlow"];</code>
      * @return Whether the paymentFlow field is set.
      */
     public boolean hasPaymentFlow() {
@@ -1403,12 +1403,12 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
      * flow name, type and options used
      * </pre>
      *
-     * <code>.api.commons.public.PaymentFlow payment_flow = 6 [json_name = "paymentFlow"];</code>
+     * <code>.api.commons.integrations.PaymentFlow payment_flow = 6 [json_name = "paymentFlow"];</code>
      * @return The paymentFlow.
      */
-    public com.tcn.cloud.api.api.commons.public.PaymentFlow getPaymentFlow() {
+    public com.tcn.cloud.api.api.commons.integrations.PaymentFlow getPaymentFlow() {
       if (paymentFlowBuilder_ == null) {
-        return paymentFlow_ == null ? com.tcn.cloud.api.api.commons.public.PaymentFlow.getDefaultInstance() : paymentFlow_;
+        return paymentFlow_ == null ? com.tcn.cloud.api.api.commons.integrations.PaymentFlow.getDefaultInstance() : paymentFlow_;
       } else {
         return paymentFlowBuilder_.getMessage();
       }
@@ -1418,9 +1418,9 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
      * flow name, type and options used
      * </pre>
      *
-     * <code>.api.commons.public.PaymentFlow payment_flow = 6 [json_name = "paymentFlow"];</code>
+     * <code>.api.commons.integrations.PaymentFlow payment_flow = 6 [json_name = "paymentFlow"];</code>
      */
-    public Builder setPaymentFlow(com.tcn.cloud.api.api.commons.public.PaymentFlow value) {
+    public Builder setPaymentFlow(com.tcn.cloud.api.api.commons.integrations.PaymentFlow value) {
       if (paymentFlowBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -1438,10 +1438,10 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
      * flow name, type and options used
      * </pre>
      *
-     * <code>.api.commons.public.PaymentFlow payment_flow = 6 [json_name = "paymentFlow"];</code>
+     * <code>.api.commons.integrations.PaymentFlow payment_flow = 6 [json_name = "paymentFlow"];</code>
      */
     public Builder setPaymentFlow(
-        com.tcn.cloud.api.api.commons.public.PaymentFlow.Builder builderForValue) {
+        com.tcn.cloud.api.api.commons.integrations.PaymentFlow.Builder builderForValue) {
       if (paymentFlowBuilder_ == null) {
         paymentFlow_ = builderForValue.build();
       } else {
@@ -1456,13 +1456,13 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
      * flow name, type and options used
      * </pre>
      *
-     * <code>.api.commons.public.PaymentFlow payment_flow = 6 [json_name = "paymentFlow"];</code>
+     * <code>.api.commons.integrations.PaymentFlow payment_flow = 6 [json_name = "paymentFlow"];</code>
      */
-    public Builder mergePaymentFlow(com.tcn.cloud.api.api.commons.public.PaymentFlow value) {
+    public Builder mergePaymentFlow(com.tcn.cloud.api.api.commons.integrations.PaymentFlow value) {
       if (paymentFlowBuilder_ == null) {
         if (((bitField0_ & 0x00000020) != 0) &&
           paymentFlow_ != null &&
-          paymentFlow_ != com.tcn.cloud.api.api.commons.public.PaymentFlow.getDefaultInstance()) {
+          paymentFlow_ != com.tcn.cloud.api.api.commons.integrations.PaymentFlow.getDefaultInstance()) {
           getPaymentFlowBuilder().mergeFrom(value);
         } else {
           paymentFlow_ = value;
@@ -1479,7 +1479,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
      * flow name, type and options used
      * </pre>
      *
-     * <code>.api.commons.public.PaymentFlow payment_flow = 6 [json_name = "paymentFlow"];</code>
+     * <code>.api.commons.integrations.PaymentFlow payment_flow = 6 [json_name = "paymentFlow"];</code>
      */
     public Builder clearPaymentFlow() {
       bitField0_ = (bitField0_ & ~0x00000020);
@@ -1496,9 +1496,9 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
      * flow name, type and options used
      * </pre>
      *
-     * <code>.api.commons.public.PaymentFlow payment_flow = 6 [json_name = "paymentFlow"];</code>
+     * <code>.api.commons.integrations.PaymentFlow payment_flow = 6 [json_name = "paymentFlow"];</code>
      */
-    public com.tcn.cloud.api.api.commons.public.PaymentFlow.Builder getPaymentFlowBuilder() {
+    public com.tcn.cloud.api.api.commons.integrations.PaymentFlow.Builder getPaymentFlowBuilder() {
       bitField0_ |= 0x00000020;
       onChanged();
       return getPaymentFlowFieldBuilder().getBuilder();
@@ -1508,14 +1508,14 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
      * flow name, type and options used
      * </pre>
      *
-     * <code>.api.commons.public.PaymentFlow payment_flow = 6 [json_name = "paymentFlow"];</code>
+     * <code>.api.commons.integrations.PaymentFlow payment_flow = 6 [json_name = "paymentFlow"];</code>
      */
-    public com.tcn.cloud.api.api.commons.public.PaymentFlowOrBuilder getPaymentFlowOrBuilder() {
+    public com.tcn.cloud.api.api.commons.integrations.PaymentFlowOrBuilder getPaymentFlowOrBuilder() {
       if (paymentFlowBuilder_ != null) {
         return paymentFlowBuilder_.getMessageOrBuilder();
       } else {
         return paymentFlow_ == null ?
-            com.tcn.cloud.api.api.commons.public.PaymentFlow.getDefaultInstance() : paymentFlow_;
+            com.tcn.cloud.api.api.commons.integrations.PaymentFlow.getDefaultInstance() : paymentFlow_;
       }
     }
     /**
@@ -1523,14 +1523,14 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
      * flow name, type and options used
      * </pre>
      *
-     * <code>.api.commons.public.PaymentFlow payment_flow = 6 [json_name = "paymentFlow"];</code>
+     * <code>.api.commons.integrations.PaymentFlow payment_flow = 6 [json_name = "paymentFlow"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.public.PaymentFlow, com.tcn.cloud.api.api.commons.public.PaymentFlow.Builder, com.tcn.cloud.api.api.commons.public.PaymentFlowOrBuilder> 
+        com.tcn.cloud.api.api.commons.integrations.PaymentFlow, com.tcn.cloud.api.api.commons.integrations.PaymentFlow.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentFlowOrBuilder> 
         getPaymentFlowFieldBuilder() {
       if (paymentFlowBuilder_ == null) {
         paymentFlowBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.public.PaymentFlow, com.tcn.cloud.api.api.commons.public.PaymentFlow.Builder, com.tcn.cloud.api.api.commons.public.PaymentFlowOrBuilder>(
+            com.tcn.cloud.api.api.commons.integrations.PaymentFlow, com.tcn.cloud.api.api.commons.integrations.PaymentFlow.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentFlowOrBuilder>(
                 getPaymentFlow(),
                 getParentForChildren(),
                 isClean());

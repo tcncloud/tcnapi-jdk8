@@ -206,7 +206,7 @@ private static final long serialVersionUID = 0L;
    *  - provided by the verification/invoice/payment api call
    * </pre>
    *
-   * <code>.api.commons.public.FieldSource provided_by = 3 [json_name = "providedBy"];</code>
+   * <code>.api.commons.integrations.FieldSource provided_by = 3 [json_name = "providedBy"];</code>
    * @return The enum numeric value on the wire for providedBy.
    */
   @java.lang.Override public int getProvidedByValue() {
@@ -220,12 +220,12 @@ private static final long serialVersionUID = 0L;
    *  - provided by the verification/invoice/payment api call
    * </pre>
    *
-   * <code>.api.commons.public.FieldSource provided_by = 3 [json_name = "providedBy"];</code>
+   * <code>.api.commons.integrations.FieldSource provided_by = 3 [json_name = "providedBy"];</code>
    * @return The providedBy.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.public.FieldSource getProvidedBy() {
-    com.tcn.cloud.api.api.commons.public.FieldSource result = com.tcn.cloud.api.api.commons.public.FieldSource.forNumber(providedBy_);
-    return result == null ? com.tcn.cloud.api.api.commons.public.FieldSource.UNRECOGNIZED : result;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.FieldSource getProvidedBy() {
+    com.tcn.cloud.api.api.commons.integrations.FieldSource result = com.tcn.cloud.api.api.commons.integrations.FieldSource.forNumber(providedBy_);
+    return result == null ? com.tcn.cloud.api.api.commons.integrations.FieldSource.UNRECOGNIZED : result;
   }
 
   public static final int PROVIDED_BY_DETAILS_NUM_FIELD_NUMBER = 4;
@@ -310,7 +310,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(altName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, altName_);
     }
-    if (providedBy_ != com.tcn.cloud.api.api.commons.public.FieldSource.FIELD_SOURCE_NONE.getNumber()) {
+    if (providedBy_ != com.tcn.cloud.api.api.commons.integrations.FieldSource.FIELD_SOURCE_NONE.getNumber()) {
       output.writeEnum(3, providedBy_);
     }
     if (providedByDetailsNum_ != 0) {
@@ -337,7 +337,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(altName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, altName_);
     }
-    if (providedBy_ != com.tcn.cloud.api.api.commons.public.FieldSource.FIELD_SOURCE_NONE.getNumber()) {
+    if (providedBy_ != com.tcn.cloud.api.api.commons.integrations.FieldSource.FIELD_SOURCE_NONE.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, providedBy_);
     }
@@ -1010,7 +1010,7 @@ private static final long serialVersionUID = 0L;
      *  - provided by the verification/invoice/payment api call
      * </pre>
      *
-     * <code>.api.commons.public.FieldSource provided_by = 3 [json_name = "providedBy"];</code>
+     * <code>.api.commons.integrations.FieldSource provided_by = 3 [json_name = "providedBy"];</code>
      * @return The enum numeric value on the wire for providedBy.
      */
     @java.lang.Override public int getProvidedByValue() {
@@ -1024,7 +1024,7 @@ private static final long serialVersionUID = 0L;
      *  - provided by the verification/invoice/payment api call
      * </pre>
      *
-     * <code>.api.commons.public.FieldSource provided_by = 3 [json_name = "providedBy"];</code>
+     * <code>.api.commons.integrations.FieldSource provided_by = 3 [json_name = "providedBy"];</code>
      * @param value The enum numeric value on the wire for providedBy to set.
      * @return This builder for chaining.
      */
@@ -1042,13 +1042,13 @@ private static final long serialVersionUID = 0L;
      *  - provided by the verification/invoice/payment api call
      * </pre>
      *
-     * <code>.api.commons.public.FieldSource provided_by = 3 [json_name = "providedBy"];</code>
+     * <code>.api.commons.integrations.FieldSource provided_by = 3 [json_name = "providedBy"];</code>
      * @return The providedBy.
      */
     @java.lang.Override
-    public com.tcn.cloud.api.api.commons.public.FieldSource getProvidedBy() {
-      com.tcn.cloud.api.api.commons.public.FieldSource result = com.tcn.cloud.api.api.commons.public.FieldSource.forNumber(providedBy_);
-      return result == null ? com.tcn.cloud.api.api.commons.public.FieldSource.UNRECOGNIZED : result;
+    public com.tcn.cloud.api.api.commons.integrations.FieldSource getProvidedBy() {
+      com.tcn.cloud.api.api.commons.integrations.FieldSource result = com.tcn.cloud.api.api.commons.integrations.FieldSource.forNumber(providedBy_);
+      return result == null ? com.tcn.cloud.api.api.commons.integrations.FieldSource.UNRECOGNIZED : result;
     }
     /**
      * <pre>
@@ -1058,11 +1058,11 @@ private static final long serialVersionUID = 0L;
      *  - provided by the verification/invoice/payment api call
      * </pre>
      *
-     * <code>.api.commons.public.FieldSource provided_by = 3 [json_name = "providedBy"];</code>
+     * <code>.api.commons.integrations.FieldSource provided_by = 3 [json_name = "providedBy"];</code>
      * @param value The providedBy to set.
      * @return This builder for chaining.
      */
-    public Builder setProvidedBy(com.tcn.cloud.api.api.commons.public.FieldSource value) {
+    public Builder setProvidedBy(com.tcn.cloud.api.api.commons.integrations.FieldSource value) {
       if (value == null) {
         throw new NullPointerException();
       }
@@ -1079,7 +1079,7 @@ private static final long serialVersionUID = 0L;
      *  - provided by the verification/invoice/payment api call
      * </pre>
      *
-     * <code>.api.commons.public.FieldSource provided_by = 3 [json_name = "providedBy"];</code>
+     * <code>.api.commons.integrations.FieldSource provided_by = 3 [json_name = "providedBy"];</code>
      * @return This builder for chaining.
      */
     public Builder clearProvidedBy() {

@@ -43,9 +43,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PAYMENT_FIELD_NUMBER = 1;
-  private com.tcn.cloud.api.api.commons.public.PaymentFlow payment_;
+  private com.tcn.cloud.api.api.commons.integrations.PaymentFlow payment_;
   /**
-   * <code>.api.commons.public.PaymentFlow payment = 1 [json_name = "payment"];</code>
+   * <code>.api.commons.integrations.PaymentFlow payment = 1 [json_name = "payment"];</code>
    * @return Whether the payment field is set.
    */
   @java.lang.Override
@@ -53,19 +53,19 @@ private static final long serialVersionUID = 0L;
     return payment_ != null;
   }
   /**
-   * <code>.api.commons.public.PaymentFlow payment = 1 [json_name = "payment"];</code>
+   * <code>.api.commons.integrations.PaymentFlow payment = 1 [json_name = "payment"];</code>
    * @return The payment.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.public.PaymentFlow getPayment() {
-    return payment_ == null ? com.tcn.cloud.api.api.commons.public.PaymentFlow.getDefaultInstance() : payment_;
+  public com.tcn.cloud.api.api.commons.integrations.PaymentFlow getPayment() {
+    return payment_ == null ? com.tcn.cloud.api.api.commons.integrations.PaymentFlow.getDefaultInstance() : payment_;
   }
   /**
-   * <code>.api.commons.public.PaymentFlow payment = 1 [json_name = "payment"];</code>
+   * <code>.api.commons.integrations.PaymentFlow payment = 1 [json_name = "payment"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.commons.public.PaymentFlowOrBuilder getPaymentOrBuilder() {
-    return payment_ == null ? com.tcn.cloud.api.api.commons.public.PaymentFlow.getDefaultInstance() : payment_;
+  public com.tcn.cloud.api.api.commons.integrations.PaymentFlowOrBuilder getPaymentOrBuilder() {
+    return payment_ == null ? com.tcn.cloud.api.api.commons.integrations.PaymentFlow.getDefaultInstance() : payment_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -378,31 +378,31 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.tcn.cloud.api.api.commons.public.PaymentFlow payment_;
+    private com.tcn.cloud.api.api.commons.integrations.PaymentFlow payment_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.public.PaymentFlow, com.tcn.cloud.api.api.commons.public.PaymentFlow.Builder, com.tcn.cloud.api.api.commons.public.PaymentFlowOrBuilder> paymentBuilder_;
+        com.tcn.cloud.api.api.commons.integrations.PaymentFlow, com.tcn.cloud.api.api.commons.integrations.PaymentFlow.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentFlowOrBuilder> paymentBuilder_;
     /**
-     * <code>.api.commons.public.PaymentFlow payment = 1 [json_name = "payment"];</code>
+     * <code>.api.commons.integrations.PaymentFlow payment = 1 [json_name = "payment"];</code>
      * @return Whether the payment field is set.
      */
     public boolean hasPayment() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.api.commons.public.PaymentFlow payment = 1 [json_name = "payment"];</code>
+     * <code>.api.commons.integrations.PaymentFlow payment = 1 [json_name = "payment"];</code>
      * @return The payment.
      */
-    public com.tcn.cloud.api.api.commons.public.PaymentFlow getPayment() {
+    public com.tcn.cloud.api.api.commons.integrations.PaymentFlow getPayment() {
       if (paymentBuilder_ == null) {
-        return payment_ == null ? com.tcn.cloud.api.api.commons.public.PaymentFlow.getDefaultInstance() : payment_;
+        return payment_ == null ? com.tcn.cloud.api.api.commons.integrations.PaymentFlow.getDefaultInstance() : payment_;
       } else {
         return paymentBuilder_.getMessage();
       }
     }
     /**
-     * <code>.api.commons.public.PaymentFlow payment = 1 [json_name = "payment"];</code>
+     * <code>.api.commons.integrations.PaymentFlow payment = 1 [json_name = "payment"];</code>
      */
-    public Builder setPayment(com.tcn.cloud.api.api.commons.public.PaymentFlow value) {
+    public Builder setPayment(com.tcn.cloud.api.api.commons.integrations.PaymentFlow value) {
       if (paymentBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -416,10 +416,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.public.PaymentFlow payment = 1 [json_name = "payment"];</code>
+     * <code>.api.commons.integrations.PaymentFlow payment = 1 [json_name = "payment"];</code>
      */
     public Builder setPayment(
-        com.tcn.cloud.api.api.commons.public.PaymentFlow.Builder builderForValue) {
+        com.tcn.cloud.api.api.commons.integrations.PaymentFlow.Builder builderForValue) {
       if (paymentBuilder_ == null) {
         payment_ = builderForValue.build();
       } else {
@@ -430,13 +430,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.public.PaymentFlow payment = 1 [json_name = "payment"];</code>
+     * <code>.api.commons.integrations.PaymentFlow payment = 1 [json_name = "payment"];</code>
      */
-    public Builder mergePayment(com.tcn.cloud.api.api.commons.public.PaymentFlow value) {
+    public Builder mergePayment(com.tcn.cloud.api.api.commons.integrations.PaymentFlow value) {
       if (paymentBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
           payment_ != null &&
-          payment_ != com.tcn.cloud.api.api.commons.public.PaymentFlow.getDefaultInstance()) {
+          payment_ != com.tcn.cloud.api.api.commons.integrations.PaymentFlow.getDefaultInstance()) {
           getPaymentBuilder().mergeFrom(value);
         } else {
           payment_ = value;
@@ -449,7 +449,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.public.PaymentFlow payment = 1 [json_name = "payment"];</code>
+     * <code>.api.commons.integrations.PaymentFlow payment = 1 [json_name = "payment"];</code>
      */
     public Builder clearPayment() {
       bitField0_ = (bitField0_ & ~0x00000001);
@@ -462,33 +462,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.commons.public.PaymentFlow payment = 1 [json_name = "payment"];</code>
+     * <code>.api.commons.integrations.PaymentFlow payment = 1 [json_name = "payment"];</code>
      */
-    public com.tcn.cloud.api.api.commons.public.PaymentFlow.Builder getPaymentBuilder() {
+    public com.tcn.cloud.api.api.commons.integrations.PaymentFlow.Builder getPaymentBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
       return getPaymentFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.commons.public.PaymentFlow payment = 1 [json_name = "payment"];</code>
+     * <code>.api.commons.integrations.PaymentFlow payment = 1 [json_name = "payment"];</code>
      */
-    public com.tcn.cloud.api.api.commons.public.PaymentFlowOrBuilder getPaymentOrBuilder() {
+    public com.tcn.cloud.api.api.commons.integrations.PaymentFlowOrBuilder getPaymentOrBuilder() {
       if (paymentBuilder_ != null) {
         return paymentBuilder_.getMessageOrBuilder();
       } else {
         return payment_ == null ?
-            com.tcn.cloud.api.api.commons.public.PaymentFlow.getDefaultInstance() : payment_;
+            com.tcn.cloud.api.api.commons.integrations.PaymentFlow.getDefaultInstance() : payment_;
       }
     }
     /**
-     * <code>.api.commons.public.PaymentFlow payment = 1 [json_name = "payment"];</code>
+     * <code>.api.commons.integrations.PaymentFlow payment = 1 [json_name = "payment"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.public.PaymentFlow, com.tcn.cloud.api.api.commons.public.PaymentFlow.Builder, com.tcn.cloud.api.api.commons.public.PaymentFlowOrBuilder> 
+        com.tcn.cloud.api.api.commons.integrations.PaymentFlow, com.tcn.cloud.api.api.commons.integrations.PaymentFlow.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentFlowOrBuilder> 
         getPaymentFieldBuilder() {
       if (paymentBuilder_ == null) {
         paymentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.public.PaymentFlow, com.tcn.cloud.api.api.commons.public.PaymentFlow.Builder, com.tcn.cloud.api.api.commons.public.PaymentFlowOrBuilder>(
+            com.tcn.cloud.api.api.commons.integrations.PaymentFlow, com.tcn.cloud.api.api.commons.integrations.PaymentFlow.Builder, com.tcn.cloud.api.api.commons.integrations.PaymentFlowOrBuilder>(
                 getPayment(),
                 getParentForChildren(),
                 isClean());

@@ -8,17 +8,17 @@ public interface ListAvailableVerificationFieldsReqOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api.commons.public.VerificationFlow verification = 1 [json_name = "verification"];</code>
+   * <code>.api.commons.integrations.VerificationFlow verification = 1 [json_name = "verification"];</code>
    * @return Whether the verification field is set.
    */
   boolean hasVerification();
   /**
-   * <code>.api.commons.public.VerificationFlow verification = 1 [json_name = "verification"];</code>
+   * <code>.api.commons.integrations.VerificationFlow verification = 1 [json_name = "verification"];</code>
    * @return The verification.
    */
-  com.tcn.cloud.api.api.commons.public.VerificationFlow getVerification();
+  com.tcn.cloud.api.api.commons.integrations.VerificationFlow getVerification();
   /**
-   * <code>.api.commons.public.VerificationFlow verification = 1 [json_name = "verification"];</code>
+   * <code>.api.commons.integrations.VerificationFlow verification = 1 [json_name = "verification"];</code>
    */
-  com.tcn.cloud.api.api.commons.public.VerificationFlowOrBuilder getVerificationOrBuilder();
+  com.tcn.cloud.api.api.commons.integrations.VerificationFlowOrBuilder getVerificationOrBuilder();
 }
