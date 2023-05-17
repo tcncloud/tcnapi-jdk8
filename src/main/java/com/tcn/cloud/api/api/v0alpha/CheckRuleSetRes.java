@@ -43,41 +43,41 @@ private static final long serialVersionUID = 0L;
 
   public static final int RULES_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.v0alpha.Rule> rules_;
+  private java.util.List<com.tcn.cloud.api.api.commons.Rule> rules_;
   /**
-   * <code>repeated .api.v0alpha.Rule rules = 1 [json_name = "rules"];</code>
+   * <code>repeated .api.commons.Rule rules = 1 [json_name = "rules"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.v0alpha.Rule> getRulesList() {
+  public java.util.List<com.tcn.cloud.api.api.commons.Rule> getRulesList() {
     return rules_;
   }
   /**
-   * <code>repeated .api.v0alpha.Rule rules = 1 [json_name = "rules"];</code>
+   * <code>repeated .api.commons.Rule rules = 1 [json_name = "rules"];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.v0alpha.RuleOrBuilder> 
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.RuleOrBuilder> 
       getRulesOrBuilderList() {
     return rules_;
   }
   /**
-   * <code>repeated .api.v0alpha.Rule rules = 1 [json_name = "rules"];</code>
+   * <code>repeated .api.commons.Rule rules = 1 [json_name = "rules"];</code>
    */
   @java.lang.Override
   public int getRulesCount() {
     return rules_.size();
   }
   /**
-   * <code>repeated .api.v0alpha.Rule rules = 1 [json_name = "rules"];</code>
+   * <code>repeated .api.commons.Rule rules = 1 [json_name = "rules"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.Rule getRules(int index) {
+  public com.tcn.cloud.api.api.commons.Rule getRules(int index) {
     return rules_.get(index);
   }
   /**
-   * <code>repeated .api.v0alpha.Rule rules = 1 [json_name = "rules"];</code>
+   * <code>repeated .api.commons.Rule rules = 1 [json_name = "rules"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.RuleOrBuilder getRulesOrBuilder(
+  public com.tcn.cloud.api.api.commons.RuleOrBuilder getRulesOrBuilder(
       int index) {
     return rules_.get(index);
   }
@@ -465,9 +465,9 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              com.tcn.cloud.api.api.v0alpha.Rule m =
+              com.tcn.cloud.api.api.commons.Rule m =
                   input.readMessage(
-                      com.tcn.cloud.api.api.v0alpha.Rule.parser(),
+                      com.tcn.cloud.api.api.commons.Rule.parser(),
                       extensionRegistry);
               if (rulesBuilder_ == null) {
                 ensureRulesIsMutable();
@@ -500,22 +500,22 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.util.List<com.tcn.cloud.api.api.v0alpha.Rule> rules_ =
+    private java.util.List<com.tcn.cloud.api.api.commons.Rule> rules_ =
       java.util.Collections.emptyList();
     private void ensureRulesIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        rules_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.Rule>(rules_);
+        rules_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.Rule>(rules_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v0alpha.Rule, com.tcn.cloud.api.api.v0alpha.Rule.Builder, com.tcn.cloud.api.api.v0alpha.RuleOrBuilder> rulesBuilder_;
+        com.tcn.cloud.api.api.commons.Rule, com.tcn.cloud.api.api.commons.Rule.Builder, com.tcn.cloud.api.api.commons.RuleOrBuilder> rulesBuilder_;
 
     /**
-     * <code>repeated .api.v0alpha.Rule rules = 1 [json_name = "rules"];</code>
+     * <code>repeated .api.commons.Rule rules = 1 [json_name = "rules"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v0alpha.Rule> getRulesList() {
+    public java.util.List<com.tcn.cloud.api.api.commons.Rule> getRulesList() {
       if (rulesBuilder_ == null) {
         return java.util.Collections.unmodifiableList(rules_);
       } else {
@@ -523,7 +523,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.v0alpha.Rule rules = 1 [json_name = "rules"];</code>
+     * <code>repeated .api.commons.Rule rules = 1 [json_name = "rules"];</code>
      */
     public int getRulesCount() {
       if (rulesBuilder_ == null) {
@@ -533,9 +533,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.v0alpha.Rule rules = 1 [json_name = "rules"];</code>
+     * <code>repeated .api.commons.Rule rules = 1 [json_name = "rules"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.Rule getRules(int index) {
+    public com.tcn.cloud.api.api.commons.Rule getRules(int index) {
       if (rulesBuilder_ == null) {
         return rules_.get(index);
       } else {
@@ -543,10 +543,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.v0alpha.Rule rules = 1 [json_name = "rules"];</code>
+     * <code>repeated .api.commons.Rule rules = 1 [json_name = "rules"];</code>
      */
     public Builder setRules(
-        int index, com.tcn.cloud.api.api.v0alpha.Rule value) {
+        int index, com.tcn.cloud.api.api.commons.Rule value) {
       if (rulesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -560,10 +560,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.Rule rules = 1 [json_name = "rules"];</code>
+     * <code>repeated .api.commons.Rule rules = 1 [json_name = "rules"];</code>
      */
     public Builder setRules(
-        int index, com.tcn.cloud.api.api.v0alpha.Rule.Builder builderForValue) {
+        int index, com.tcn.cloud.api.api.commons.Rule.Builder builderForValue) {
       if (rulesBuilder_ == null) {
         ensureRulesIsMutable();
         rules_.set(index, builderForValue.build());
@@ -574,9 +574,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.Rule rules = 1 [json_name = "rules"];</code>
+     * <code>repeated .api.commons.Rule rules = 1 [json_name = "rules"];</code>
      */
-    public Builder addRules(com.tcn.cloud.api.api.v0alpha.Rule value) {
+    public Builder addRules(com.tcn.cloud.api.api.commons.Rule value) {
       if (rulesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -590,10 +590,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.Rule rules = 1 [json_name = "rules"];</code>
+     * <code>repeated .api.commons.Rule rules = 1 [json_name = "rules"];</code>
      */
     public Builder addRules(
-        int index, com.tcn.cloud.api.api.v0alpha.Rule value) {
+        int index, com.tcn.cloud.api.api.commons.Rule value) {
       if (rulesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -607,10 +607,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.Rule rules = 1 [json_name = "rules"];</code>
+     * <code>repeated .api.commons.Rule rules = 1 [json_name = "rules"];</code>
      */
     public Builder addRules(
-        com.tcn.cloud.api.api.v0alpha.Rule.Builder builderForValue) {
+        com.tcn.cloud.api.api.commons.Rule.Builder builderForValue) {
       if (rulesBuilder_ == null) {
         ensureRulesIsMutable();
         rules_.add(builderForValue.build());
@@ -621,10 +621,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.Rule rules = 1 [json_name = "rules"];</code>
+     * <code>repeated .api.commons.Rule rules = 1 [json_name = "rules"];</code>
      */
     public Builder addRules(
-        int index, com.tcn.cloud.api.api.v0alpha.Rule.Builder builderForValue) {
+        int index, com.tcn.cloud.api.api.commons.Rule.Builder builderForValue) {
       if (rulesBuilder_ == null) {
         ensureRulesIsMutable();
         rules_.add(index, builderForValue.build());
@@ -635,10 +635,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.Rule rules = 1 [json_name = "rules"];</code>
+     * <code>repeated .api.commons.Rule rules = 1 [json_name = "rules"];</code>
      */
     public Builder addAllRules(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.v0alpha.Rule> values) {
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.Rule> values) {
       if (rulesBuilder_ == null) {
         ensureRulesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -650,7 +650,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.Rule rules = 1 [json_name = "rules"];</code>
+     * <code>repeated .api.commons.Rule rules = 1 [json_name = "rules"];</code>
      */
     public Builder clearRules() {
       if (rulesBuilder_ == null) {
@@ -663,7 +663,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.Rule rules = 1 [json_name = "rules"];</code>
+     * <code>repeated .api.commons.Rule rules = 1 [json_name = "rules"];</code>
      */
     public Builder removeRules(int index) {
       if (rulesBuilder_ == null) {
@@ -676,16 +676,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.Rule rules = 1 [json_name = "rules"];</code>
+     * <code>repeated .api.commons.Rule rules = 1 [json_name = "rules"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.Rule.Builder getRulesBuilder(
+    public com.tcn.cloud.api.api.commons.Rule.Builder getRulesBuilder(
         int index) {
       return getRulesFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api.v0alpha.Rule rules = 1 [json_name = "rules"];</code>
+     * <code>repeated .api.commons.Rule rules = 1 [json_name = "rules"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.RuleOrBuilder getRulesOrBuilder(
+    public com.tcn.cloud.api.api.commons.RuleOrBuilder getRulesOrBuilder(
         int index) {
       if (rulesBuilder_ == null) {
         return rules_.get(index);  } else {
@@ -693,9 +693,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.v0alpha.Rule rules = 1 [json_name = "rules"];</code>
+     * <code>repeated .api.commons.Rule rules = 1 [json_name = "rules"];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.v0alpha.RuleOrBuilder> 
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.RuleOrBuilder> 
          getRulesOrBuilderList() {
       if (rulesBuilder_ != null) {
         return rulesBuilder_.getMessageOrBuilderList();
@@ -704,33 +704,33 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.v0alpha.Rule rules = 1 [json_name = "rules"];</code>
+     * <code>repeated .api.commons.Rule rules = 1 [json_name = "rules"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.Rule.Builder addRulesBuilder() {
+    public com.tcn.cloud.api.api.commons.Rule.Builder addRulesBuilder() {
       return getRulesFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.v0alpha.Rule.getDefaultInstance());
+          com.tcn.cloud.api.api.commons.Rule.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.v0alpha.Rule rules = 1 [json_name = "rules"];</code>
+     * <code>repeated .api.commons.Rule rules = 1 [json_name = "rules"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.Rule.Builder addRulesBuilder(
+    public com.tcn.cloud.api.api.commons.Rule.Builder addRulesBuilder(
         int index) {
       return getRulesFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.v0alpha.Rule.getDefaultInstance());
+          index, com.tcn.cloud.api.api.commons.Rule.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.v0alpha.Rule rules = 1 [json_name = "rules"];</code>
+     * <code>repeated .api.commons.Rule rules = 1 [json_name = "rules"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v0alpha.Rule.Builder> 
+    public java.util.List<com.tcn.cloud.api.api.commons.Rule.Builder> 
          getRulesBuilderList() {
       return getRulesFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v0alpha.Rule, com.tcn.cloud.api.api.v0alpha.Rule.Builder, com.tcn.cloud.api.api.v0alpha.RuleOrBuilder> 
+        com.tcn.cloud.api.api.commons.Rule, com.tcn.cloud.api.api.commons.Rule.Builder, com.tcn.cloud.api.api.commons.RuleOrBuilder> 
         getRulesFieldBuilder() {
       if (rulesBuilder_ == null) {
         rulesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.v0alpha.Rule, com.tcn.cloud.api.api.v0alpha.Rule.Builder, com.tcn.cloud.api.api.v0alpha.RuleOrBuilder>(
+            com.tcn.cloud.api.api.commons.Rule, com.tcn.cloud.api.api.commons.Rule.Builder, com.tcn.cloud.api.api.commons.RuleOrBuilder>(
                 rules_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
