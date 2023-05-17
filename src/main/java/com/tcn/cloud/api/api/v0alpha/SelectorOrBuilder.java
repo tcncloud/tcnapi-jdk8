@@ -8,169 +8,169 @@ public interface SelectorOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api.v0alpha.TimeExp time = 1 [json_name = "time"];</code>
+   * <code>.api.commons.TimeExp time = 1 [json_name = "time"];</code>
    * @return Whether the time field is set.
    */
   boolean hasTime();
   /**
-   * <code>.api.v0alpha.TimeExp time = 1 [json_name = "time"];</code>
+   * <code>.api.commons.TimeExp time = 1 [json_name = "time"];</code>
    * @return The time.
    */
-  com.tcn.cloud.api.api.v0alpha.TimeExp getTime();
+  com.tcn.cloud.api.api.commons.TimeExp getTime();
   /**
-   * <code>.api.v0alpha.TimeExp time = 1 [json_name = "time"];</code>
+   * <code>.api.commons.TimeExp time = 1 [json_name = "time"];</code>
    */
-  com.tcn.cloud.api.api.v0alpha.TimeExpOrBuilder getTimeOrBuilder();
+  com.tcn.cloud.api.api.commons.TimeExpOrBuilder getTimeOrBuilder();
 
   /**
-   * <code>.api.v0alpha.WeekdayExp week = 2 [json_name = "week"];</code>
+   * <code>.api.commons.WeekdayExp week = 2 [json_name = "week"];</code>
    * @return Whether the week field is set.
    */
   boolean hasWeek();
   /**
-   * <code>.api.v0alpha.WeekdayExp week = 2 [json_name = "week"];</code>
+   * <code>.api.commons.WeekdayExp week = 2 [json_name = "week"];</code>
    * @return The week.
    */
-  com.tcn.cloud.api.api.v0alpha.WeekdayExp getWeek();
+  com.tcn.cloud.api.api.commons.WeekdayExp getWeek();
   /**
-   * <code>.api.v0alpha.WeekdayExp week = 2 [json_name = "week"];</code>
+   * <code>.api.commons.WeekdayExp week = 2 [json_name = "week"];</code>
    */
-  com.tcn.cloud.api.api.v0alpha.WeekdayExpOrBuilder getWeekOrBuilder();
+  com.tcn.cloud.api.api.commons.WeekdayExpOrBuilder getWeekOrBuilder();
 
   /**
-   * <code>.api.v0alpha.DnclExp dncl = 3 [json_name = "dncl"];</code>
+   * <code>.api.commons.DnclExp dncl = 3 [json_name = "dncl"];</code>
    * @return Whether the dncl field is set.
    */
   boolean hasDncl();
   /**
-   * <code>.api.v0alpha.DnclExp dncl = 3 [json_name = "dncl"];</code>
+   * <code>.api.commons.DnclExp dncl = 3 [json_name = "dncl"];</code>
    * @return The dncl.
    */
-  com.tcn.cloud.api.api.v0alpha.DnclExp getDncl();
+  com.tcn.cloud.api.api.commons.DnclExp getDncl();
   /**
-   * <code>.api.v0alpha.DnclExp dncl = 3 [json_name = "dncl"];</code>
+   * <code>.api.commons.DnclExp dncl = 3 [json_name = "dncl"];</code>
    */
-  com.tcn.cloud.api.api.v0alpha.DnclExpOrBuilder getDnclOrBuilder();
+  com.tcn.cloud.api.api.commons.DnclExpOrBuilder getDnclOrBuilder();
 
   /**
-   * <code>.api.v0alpha.FrequencyExp frequency = 4 [json_name = "frequency"];</code>
+   * <code>.api.commons.FrequencyExp frequency = 4 [json_name = "frequency"];</code>
    * @return Whether the frequency field is set.
    */
   boolean hasFrequency();
   /**
-   * <code>.api.v0alpha.FrequencyExp frequency = 4 [json_name = "frequency"];</code>
+   * <code>.api.commons.FrequencyExp frequency = 4 [json_name = "frequency"];</code>
    * @return The frequency.
    */
-  com.tcn.cloud.api.api.v0alpha.FrequencyExp getFrequency();
+  com.tcn.cloud.api.api.commons.FrequencyExp getFrequency();
   /**
-   * <code>.api.v0alpha.FrequencyExp frequency = 4 [json_name = "frequency"];</code>
+   * <code>.api.commons.FrequencyExp frequency = 4 [json_name = "frequency"];</code>
    */
-  com.tcn.cloud.api.api.v0alpha.FrequencyExpOrBuilder getFrequencyOrBuilder();
+  com.tcn.cloud.api.api.commons.FrequencyExpOrBuilder getFrequencyOrBuilder();
 
   /**
-   * <code>.api.v0alpha.LocationExp location = 5 [json_name = "location"];</code>
+   * <code>.api.commons.LocationExp location = 5 [json_name = "location"];</code>
    * @return Whether the location field is set.
    */
   boolean hasLocation();
   /**
-   * <code>.api.v0alpha.LocationExp location = 5 [json_name = "location"];</code>
+   * <code>.api.commons.LocationExp location = 5 [json_name = "location"];</code>
    * @return The location.
    */
-  com.tcn.cloud.api.api.v0alpha.LocationExp getLocation();
+  com.tcn.cloud.api.api.commons.LocationExp getLocation();
   /**
-   * <code>.api.v0alpha.LocationExp location = 5 [json_name = "location"];</code>
+   * <code>.api.commons.LocationExp location = 5 [json_name = "location"];</code>
    */
-  com.tcn.cloud.api.api.v0alpha.LocationExpOrBuilder getLocationOrBuilder();
+  com.tcn.cloud.api.api.commons.LocationExpOrBuilder getLocationOrBuilder();
 
   /**
-   * <code>.api.v0alpha.PhoneTypeExp phone_type = 6 [json_name = "phoneType"];</code>
+   * <code>.api.commons.PhoneTypeExp phone_type = 6 [json_name = "phoneType"];</code>
    * @return Whether the phoneType field is set.
    */
   boolean hasPhoneType();
   /**
-   * <code>.api.v0alpha.PhoneTypeExp phone_type = 6 [json_name = "phoneType"];</code>
+   * <code>.api.commons.PhoneTypeExp phone_type = 6 [json_name = "phoneType"];</code>
    * @return The phoneType.
    */
-  com.tcn.cloud.api.api.v0alpha.PhoneTypeExp getPhoneType();
+  com.tcn.cloud.api.api.commons.PhoneTypeExp getPhoneType();
   /**
-   * <code>.api.v0alpha.PhoneTypeExp phone_type = 6 [json_name = "phoneType"];</code>
+   * <code>.api.commons.PhoneTypeExp phone_type = 6 [json_name = "phoneType"];</code>
    */
-  com.tcn.cloud.api.api.v0alpha.PhoneTypeExpOrBuilder getPhoneTypeOrBuilder();
+  com.tcn.cloud.api.api.commons.PhoneTypeExpOrBuilder getPhoneTypeOrBuilder();
 
   /**
-   * <code>.api.v0alpha.MonthExp month = 7 [json_name = "month"];</code>
+   * <code>.api.commons.MonthExp month = 7 [json_name = "month"];</code>
    * @return Whether the month field is set.
    */
   boolean hasMonth();
   /**
-   * <code>.api.v0alpha.MonthExp month = 7 [json_name = "month"];</code>
+   * <code>.api.commons.MonthExp month = 7 [json_name = "month"];</code>
    * @return The month.
    */
-  com.tcn.cloud.api.api.v0alpha.MonthExp getMonth();
+  com.tcn.cloud.api.api.commons.MonthExp getMonth();
   /**
-   * <code>.api.v0alpha.MonthExp month = 7 [json_name = "month"];</code>
+   * <code>.api.commons.MonthExp month = 7 [json_name = "month"];</code>
    */
-  com.tcn.cloud.api.api.v0alpha.MonthExpOrBuilder getMonthOrBuilder();
+  com.tcn.cloud.api.api.commons.MonthExpOrBuilder getMonthOrBuilder();
 
   /**
-   * <code>.api.v0alpha.HolidayExp holiday = 8 [json_name = "holiday"];</code>
+   * <code>.api.commons.HolidayExp holiday = 8 [json_name = "holiday"];</code>
    * @return Whether the holiday field is set.
    */
   boolean hasHoliday();
   /**
-   * <code>.api.v0alpha.HolidayExp holiday = 8 [json_name = "holiday"];</code>
+   * <code>.api.commons.HolidayExp holiday = 8 [json_name = "holiday"];</code>
    * @return The holiday.
    */
-  com.tcn.cloud.api.api.v0alpha.HolidayExp getHoliday();
+  com.tcn.cloud.api.api.commons.HolidayExp getHoliday();
   /**
-   * <code>.api.v0alpha.HolidayExp holiday = 8 [json_name = "holiday"];</code>
+   * <code>.api.commons.HolidayExp holiday = 8 [json_name = "holiday"];</code>
    */
-  com.tcn.cloud.api.api.v0alpha.HolidayExpOrBuilder getHolidayOrBuilder();
+  com.tcn.cloud.api.api.commons.HolidayExpOrBuilder getHolidayOrBuilder();
 
   /**
-   * <code>.api.v0alpha.DateExp date = 9 [json_name = "date"];</code>
+   * <code>.api.commons.DateExp date = 9 [json_name = "date"];</code>
    * @return Whether the date field is set.
    */
   boolean hasDate();
   /**
-   * <code>.api.v0alpha.DateExp date = 9 [json_name = "date"];</code>
+   * <code>.api.commons.DateExp date = 9 [json_name = "date"];</code>
    * @return The date.
    */
-  com.tcn.cloud.api.api.v0alpha.DateExp getDate();
+  com.tcn.cloud.api.api.commons.DateExp getDate();
   /**
-   * <code>.api.v0alpha.DateExp date = 9 [json_name = "date"];</code>
+   * <code>.api.commons.DateExp date = 9 [json_name = "date"];</code>
    */
-  com.tcn.cloud.api.api.v0alpha.DateExpOrBuilder getDateOrBuilder();
+  com.tcn.cloud.api.api.commons.DateExpOrBuilder getDateOrBuilder();
 
   /**
-   * <code>.api.v0alpha.MetaFieldExp meta = 10 [json_name = "meta"];</code>
+   * <code>.api.commons.MetaFieldExp meta = 10 [json_name = "meta"];</code>
    * @return Whether the meta field is set.
    */
   boolean hasMeta();
   /**
-   * <code>.api.v0alpha.MetaFieldExp meta = 10 [json_name = "meta"];</code>
+   * <code>.api.commons.MetaFieldExp meta = 10 [json_name = "meta"];</code>
    * @return The meta.
    */
-  com.tcn.cloud.api.api.v0alpha.MetaFieldExp getMeta();
+  com.tcn.cloud.api.api.commons.MetaFieldExp getMeta();
   /**
-   * <code>.api.v0alpha.MetaFieldExp meta = 10 [json_name = "meta"];</code>
+   * <code>.api.commons.MetaFieldExp meta = 10 [json_name = "meta"];</code>
    */
-  com.tcn.cloud.api.api.v0alpha.MetaFieldExpOrBuilder getMetaOrBuilder();
+  com.tcn.cloud.api.api.commons.MetaFieldExpOrBuilder getMetaOrBuilder();
 
   /**
-   * <code>.api.v0alpha.PluginExp plugin = 11 [json_name = "plugin"];</code>
+   * <code>.api.commons.PluginExp plugin = 11 [json_name = "plugin"];</code>
    * @return Whether the plugin field is set.
    */
   boolean hasPlugin();
   /**
-   * <code>.api.v0alpha.PluginExp plugin = 11 [json_name = "plugin"];</code>
+   * <code>.api.commons.PluginExp plugin = 11 [json_name = "plugin"];</code>
    * @return The plugin.
    */
-  com.tcn.cloud.api.api.v0alpha.PluginExp getPlugin();
+  com.tcn.cloud.api.api.commons.PluginExp getPlugin();
   /**
-   * <code>.api.v0alpha.PluginExp plugin = 11 [json_name = "plugin"];</code>
+   * <code>.api.commons.PluginExp plugin = 11 [json_name = "plugin"];</code>
    */
-  com.tcn.cloud.api.api.v0alpha.PluginExpOrBuilder getPluginOrBuilder();
+  com.tcn.cloud.api.api.commons.PluginExpOrBuilder getPluginOrBuilder();
 
   com.tcn.cloud.api.api.v0alpha.Selector.SelectionRuleCase getSelectionRuleCase();
 }
