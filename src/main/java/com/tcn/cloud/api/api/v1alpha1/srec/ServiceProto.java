@@ -59,48 +59,50 @@ public final class ServiceProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\037api/v1alpha1/srec/service.proto\022\021api.v" +
-      "1alpha1.srec\032\034google/api/annotations.pro" +
-      "to\032\037google/protobuf/timestamp.proto\"Y\n\033L" +
-      "istScreenRecordingsRequest\022\033\n\tpage_size\030" +
-      "\002 \001(\rR\010pageSize\022\035\n\npage_token\030\003 \001(\tR\tpag" +
-      "eToken\"\212\001\n\034ListScreenRecordingsResponse\022" +
-      "&\n\017next_page_token\030\001 \001(\tR\rnextPageToken\022" +
-      "B\n\nrecordings\030\002 \003(\0132\".api.v1alpha1.srec." +
-      "ScreenRecordingR\nrecordings\"\375\001\n\017ScreenRe" +
-      "cording\022\035\n\nsession_id\030\002 \001(\003R\tsessionId\022(" +
-      "\n\020agent_first_name\030\003 \001(\tR\016agentFirstName" +
-      "\022&\n\017agent_last_name\030\004 \001(\tR\ragentLastName" +
-      "\0229\n\nstart_time\030\005 \001(\0132\032.google.protobuf.T" +
-      "imestampR\tstartTime\022\035\n\naudio_time\030\006 \001(\rR" +
-      "\taudioTime\022\037\n\013audio_bytes\030\007 \001(\003R\naudioBy" +
-      "tes\"=\n\034GetScreenRecordingURLRequest\022\035\n\ns" +
-      "ession_id\030\002 \001(\003R\tsessionId\"1\n\035GetScreenR" +
-      "ecordingURLResponse\022\020\n\003url\030\001 \001(\tR\003url\"=\n" +
-      "\034DeleteScreenRecordingRequest\022\035\n\nsession" +
-      "_id\030\001 \001(\003R\tsessionId\"\037\n\035DeleteScreenReco" +
-      "rdingResponse2\247\004\n\004Srec\022\260\001\n\024ListScreenRec" +
-      "ordings\022..api.v1alpha1.srec.ListScreenRe" +
-      "cordingsRequest\032/.api.v1alpha1.srec.List" +
-      "ScreenRecordingsResponse\"7\202\323\344\223\0021\",/api/v" +
-      "1alpha1/srec/srec/listscreenrecordings:\001" +
-      "*\022\264\001\n\025GetScreenRecordingURL\022/.api.v1alph" +
-      "a1.srec.GetScreenRecordingURLRequest\0320.a" +
-      "pi.v1alpha1.srec.GetScreenRecordingURLRe" +
-      "sponse\"8\202\323\344\223\0022\"-/api/v1alpha1/srec/srec/" +
-      "getscreenrecordingurl:\001*\022\264\001\n\025DeleteScree" +
-      "nRecording\022/.api.v1alpha1.srec.DeleteScr" +
-      "eenRecordingRequest\0320.api.v1alpha1.srec." +
-      "DeleteScreenRecordingResponse\"8\202\323\344\223\0022\"-/" +
-      "api/v1alpha1/srec/srec/deletescreenrecor" +
-      "ding:\001*B\231\001\n#com.tcn.cloud.api.api.v1alph" +
-      "a1.srecB\014ServiceProtoP\001\242\002\003AVS\252\002\021Api.V1al" +
-      "pha1.Srec\312\002\021Api\\V1alpha1\\Srec\342\002\035Api\\V1al" +
-      "pha1\\Srec\\GPBMetadata\352\002\023Api::V1alpha1::S" +
-      "recb\006proto3"
+      "1alpha1.srec\032\027annotations/authz.proto\032\034g" +
+      "oogle/api/annotations.proto\032\037google/prot" +
+      "obuf/timestamp.proto\"Y\n\033ListScreenRecord" +
+      "ingsRequest\022\033\n\tpage_size\030\002 \001(\rR\010pageSize" +
+      "\022\035\n\npage_token\030\003 \001(\tR\tpageToken\"\212\001\n\034List" +
+      "ScreenRecordingsResponse\022&\n\017next_page_to" +
+      "ken\030\001 \001(\tR\rnextPageToken\022B\n\nrecordings\030\002" +
+      " \003(\0132\".api.v1alpha1.srec.ScreenRecording" +
+      "R\nrecordings\"\375\001\n\017ScreenRecording\022\035\n\nsess" +
+      "ion_id\030\002 \001(\003R\tsessionId\022(\n\020agent_first_n" +
+      "ame\030\003 \001(\tR\016agentFirstName\022&\n\017agent_last_" +
+      "name\030\004 \001(\tR\ragentLastName\0229\n\nstart_time\030" +
+      "\005 \001(\0132\032.google.protobuf.TimestampR\tstart" +
+      "Time\022\035\n\naudio_time\030\006 \001(\rR\taudioTime\022\037\n\013a" +
+      "udio_bytes\030\007 \001(\003R\naudioBytes\"=\n\034GetScree" +
+      "nRecordingURLRequest\022\035\n\nsession_id\030\002 \001(\003" +
+      "R\tsessionId\"1\n\035GetScreenRecordingURLResp" +
+      "onse\022\020\n\003url\030\001 \001(\tR\003url\"=\n\034DeleteScreenRe" +
+      "cordingRequest\022\035\n\nsession_id\030\001 \001(\003R\tsess" +
+      "ionId\"\037\n\035DeleteScreenRecordingResponse2\305" +
+      "\004\n\004Srec\022\272\001\n\024ListScreenRecordings\022..api.v" +
+      "1alpha1.srec.ListScreenRecordingsRequest" +
+      "\032/.api.v1alpha1.srec.ListScreenRecording" +
+      "sResponse\"A\272\270\221\002\005\n\003\010\371\003\202\323\344\223\0021\",/api/v1alph" +
+      "a1/srec/srec/listscreenrecordings:\001*\022\276\001\n" +
+      "\025GetScreenRecordingURL\022/.api.v1alpha1.sr" +
+      "ec.GetScreenRecordingURLRequest\0320.api.v1" +
+      "alpha1.srec.GetScreenRecordingURLRespons" +
+      "e\"B\272\270\221\002\005\n\003\010\371\003\202\323\344\223\0022\"-/api/v1alpha1/srec/" +
+      "srec/getscreenrecordingurl:\001*\022\276\001\n\025Delete" +
+      "ScreenRecording\022/.api.v1alpha1.srec.Dele" +
+      "teScreenRecordingRequest\0320.api.v1alpha1." +
+      "srec.DeleteScreenRecordingResponse\"B\272\270\221\002" +
+      "\005\n\003\010\373\003\202\323\344\223\0022\"-/api/v1alpha1/srec/srec/de" +
+      "letescreenrecording:\001*B\231\001\n#com.tcn.cloud" +
+      ".api.api.v1alpha1.srecB\014ServiceProtoP\001\242\002" +
+      "\003AVS\252\002\021Api.V1alpha1.Srec\312\002\021Api\\V1alpha1\\" +
+      "Srec\342\002\035Api\\V1alpha1\\Srec\\GPBMetadata\352\002\023A" +
+      "pi::V1alpha1::Srecb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.tcn.cloud.api.annotations.AuthzProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
@@ -148,9 +150,11 @@ public final class ServiceProto {
         new java.lang.String[] { });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.tcn.cloud.api.annotations.AuthzProto.authz);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.tcn.cloud.api.annotations.AuthzProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
   }
