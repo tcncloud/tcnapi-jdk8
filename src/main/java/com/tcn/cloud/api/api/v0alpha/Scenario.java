@@ -51,9 +51,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SHOULD_ALLOW_FIELD_NUMBER = 3;
-  private com.tcn.cloud.api.api.v0alpha.ScenarioData shouldAllow_;
+  private com.tcn.cloud.api.api.commons.ScenarioData shouldAllow_;
   /**
-   * <code>.api.v0alpha.ScenarioData should_allow = 3 [json_name = "shouldAllow"];</code>
+   * <code>.api.commons.ScenarioData should_allow = 3 [json_name = "shouldAllow"];</code>
    * @return Whether the shouldAllow field is set.
    */
   @java.lang.Override
@@ -61,25 +61,25 @@ private static final long serialVersionUID = 0L;
     return shouldAllow_ != null;
   }
   /**
-   * <code>.api.v0alpha.ScenarioData should_allow = 3 [json_name = "shouldAllow"];</code>
+   * <code>.api.commons.ScenarioData should_allow = 3 [json_name = "shouldAllow"];</code>
    * @return The shouldAllow.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.ScenarioData getShouldAllow() {
-    return shouldAllow_ == null ? com.tcn.cloud.api.api.v0alpha.ScenarioData.getDefaultInstance() : shouldAllow_;
+  public com.tcn.cloud.api.api.commons.ScenarioData getShouldAllow() {
+    return shouldAllow_ == null ? com.tcn.cloud.api.api.commons.ScenarioData.getDefaultInstance() : shouldAllow_;
   }
   /**
-   * <code>.api.v0alpha.ScenarioData should_allow = 3 [json_name = "shouldAllow"];</code>
+   * <code>.api.commons.ScenarioData should_allow = 3 [json_name = "shouldAllow"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.ScenarioDataOrBuilder getShouldAllowOrBuilder() {
-    return shouldAllow_ == null ? com.tcn.cloud.api.api.v0alpha.ScenarioData.getDefaultInstance() : shouldAllow_;
+  public com.tcn.cloud.api.api.commons.ScenarioDataOrBuilder getShouldAllowOrBuilder() {
+    return shouldAllow_ == null ? com.tcn.cloud.api.api.commons.ScenarioData.getDefaultInstance() : shouldAllow_;
   }
 
   public static final int SHOULD_DENY_FIELD_NUMBER = 4;
-  private com.tcn.cloud.api.api.v0alpha.ScenarioData shouldDeny_;
+  private com.tcn.cloud.api.api.commons.ScenarioData shouldDeny_;
   /**
-   * <code>.api.v0alpha.ScenarioData should_deny = 4 [json_name = "shouldDeny"];</code>
+   * <code>.api.commons.ScenarioData should_deny = 4 [json_name = "shouldDeny"];</code>
    * @return Whether the shouldDeny field is set.
    */
   @java.lang.Override
@@ -87,25 +87,25 @@ private static final long serialVersionUID = 0L;
     return shouldDeny_ != null;
   }
   /**
-   * <code>.api.v0alpha.ScenarioData should_deny = 4 [json_name = "shouldDeny"];</code>
+   * <code>.api.commons.ScenarioData should_deny = 4 [json_name = "shouldDeny"];</code>
    * @return The shouldDeny.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.ScenarioData getShouldDeny() {
-    return shouldDeny_ == null ? com.tcn.cloud.api.api.v0alpha.ScenarioData.getDefaultInstance() : shouldDeny_;
+  public com.tcn.cloud.api.api.commons.ScenarioData getShouldDeny() {
+    return shouldDeny_ == null ? com.tcn.cloud.api.api.commons.ScenarioData.getDefaultInstance() : shouldDeny_;
   }
   /**
-   * <code>.api.v0alpha.ScenarioData should_deny = 4 [json_name = "shouldDeny"];</code>
+   * <code>.api.commons.ScenarioData should_deny = 4 [json_name = "shouldDeny"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.ScenarioDataOrBuilder getShouldDenyOrBuilder() {
-    return shouldDeny_ == null ? com.tcn.cloud.api.api.v0alpha.ScenarioData.getDefaultInstance() : shouldDeny_;
+  public com.tcn.cloud.api.api.commons.ScenarioDataOrBuilder getShouldDenyOrBuilder() {
+    return shouldDeny_ == null ? com.tcn.cloud.api.api.commons.ScenarioData.getDefaultInstance() : shouldDeny_;
   }
 
   public static final int LAST_EXECUTION_RESULT_FIELD_NUMBER = 5;
-  private com.tcn.cloud.api.api.v0alpha.ScenarioResult lastExecutionResult_;
+  private com.tcn.cloud.api.api.commons.ScenarioResult lastExecutionResult_;
   /**
-   * <code>.api.v0alpha.ScenarioResult last_execution_result = 5 [json_name = "lastExecutionResult"];</code>
+   * <code>.api.commons.ScenarioResult last_execution_result = 5 [json_name = "lastExecutionResult"];</code>
    * @return Whether the lastExecutionResult field is set.
    */
   @java.lang.Override
@@ -113,19 +113,19 @@ private static final long serialVersionUID = 0L;
     return lastExecutionResult_ != null;
   }
   /**
-   * <code>.api.v0alpha.ScenarioResult last_execution_result = 5 [json_name = "lastExecutionResult"];</code>
+   * <code>.api.commons.ScenarioResult last_execution_result = 5 [json_name = "lastExecutionResult"];</code>
    * @return The lastExecutionResult.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.ScenarioResult getLastExecutionResult() {
-    return lastExecutionResult_ == null ? com.tcn.cloud.api.api.v0alpha.ScenarioResult.getDefaultInstance() : lastExecutionResult_;
+  public com.tcn.cloud.api.api.commons.ScenarioResult getLastExecutionResult() {
+    return lastExecutionResult_ == null ? com.tcn.cloud.api.api.commons.ScenarioResult.getDefaultInstance() : lastExecutionResult_;
   }
   /**
-   * <code>.api.v0alpha.ScenarioResult last_execution_result = 5 [json_name = "lastExecutionResult"];</code>
+   * <code>.api.commons.ScenarioResult last_execution_result = 5 [json_name = "lastExecutionResult"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.ScenarioResultOrBuilder getLastExecutionResultOrBuilder() {
-    return lastExecutionResult_ == null ? com.tcn.cloud.api.api.v0alpha.ScenarioResult.getDefaultInstance() : lastExecutionResult_;
+  public com.tcn.cloud.api.api.commons.ScenarioResultOrBuilder getLastExecutionResultOrBuilder() {
+    return lastExecutionResult_ == null ? com.tcn.cloud.api.api.commons.ScenarioResult.getDefaultInstance() : lastExecutionResult_;
   }
 
   public static final int NAME_FIELD_NUMBER = 6;
@@ -625,31 +625,31 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.tcn.cloud.api.api.v0alpha.ScenarioData shouldAllow_;
+    private com.tcn.cloud.api.api.commons.ScenarioData shouldAllow_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v0alpha.ScenarioData, com.tcn.cloud.api.api.v0alpha.ScenarioData.Builder, com.tcn.cloud.api.api.v0alpha.ScenarioDataOrBuilder> shouldAllowBuilder_;
+        com.tcn.cloud.api.api.commons.ScenarioData, com.tcn.cloud.api.api.commons.ScenarioData.Builder, com.tcn.cloud.api.api.commons.ScenarioDataOrBuilder> shouldAllowBuilder_;
     /**
-     * <code>.api.v0alpha.ScenarioData should_allow = 3 [json_name = "shouldAllow"];</code>
+     * <code>.api.commons.ScenarioData should_allow = 3 [json_name = "shouldAllow"];</code>
      * @return Whether the shouldAllow field is set.
      */
     public boolean hasShouldAllow() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>.api.v0alpha.ScenarioData should_allow = 3 [json_name = "shouldAllow"];</code>
+     * <code>.api.commons.ScenarioData should_allow = 3 [json_name = "shouldAllow"];</code>
      * @return The shouldAllow.
      */
-    public com.tcn.cloud.api.api.v0alpha.ScenarioData getShouldAllow() {
+    public com.tcn.cloud.api.api.commons.ScenarioData getShouldAllow() {
       if (shouldAllowBuilder_ == null) {
-        return shouldAllow_ == null ? com.tcn.cloud.api.api.v0alpha.ScenarioData.getDefaultInstance() : shouldAllow_;
+        return shouldAllow_ == null ? com.tcn.cloud.api.api.commons.ScenarioData.getDefaultInstance() : shouldAllow_;
       } else {
         return shouldAllowBuilder_.getMessage();
       }
     }
     /**
-     * <code>.api.v0alpha.ScenarioData should_allow = 3 [json_name = "shouldAllow"];</code>
+     * <code>.api.commons.ScenarioData should_allow = 3 [json_name = "shouldAllow"];</code>
      */
-    public Builder setShouldAllow(com.tcn.cloud.api.api.v0alpha.ScenarioData value) {
+    public Builder setShouldAllow(com.tcn.cloud.api.api.commons.ScenarioData value) {
       if (shouldAllowBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -663,10 +663,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.v0alpha.ScenarioData should_allow = 3 [json_name = "shouldAllow"];</code>
+     * <code>.api.commons.ScenarioData should_allow = 3 [json_name = "shouldAllow"];</code>
      */
     public Builder setShouldAllow(
-        com.tcn.cloud.api.api.v0alpha.ScenarioData.Builder builderForValue) {
+        com.tcn.cloud.api.api.commons.ScenarioData.Builder builderForValue) {
       if (shouldAllowBuilder_ == null) {
         shouldAllow_ = builderForValue.build();
       } else {
@@ -677,13 +677,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.v0alpha.ScenarioData should_allow = 3 [json_name = "shouldAllow"];</code>
+     * <code>.api.commons.ScenarioData should_allow = 3 [json_name = "shouldAllow"];</code>
      */
-    public Builder mergeShouldAllow(com.tcn.cloud.api.api.v0alpha.ScenarioData value) {
+    public Builder mergeShouldAllow(com.tcn.cloud.api.api.commons.ScenarioData value) {
       if (shouldAllowBuilder_ == null) {
         if (((bitField0_ & 0x00000002) != 0) &&
           shouldAllow_ != null &&
-          shouldAllow_ != com.tcn.cloud.api.api.v0alpha.ScenarioData.getDefaultInstance()) {
+          shouldAllow_ != com.tcn.cloud.api.api.commons.ScenarioData.getDefaultInstance()) {
           getShouldAllowBuilder().mergeFrom(value);
         } else {
           shouldAllow_ = value;
@@ -696,7 +696,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.v0alpha.ScenarioData should_allow = 3 [json_name = "shouldAllow"];</code>
+     * <code>.api.commons.ScenarioData should_allow = 3 [json_name = "shouldAllow"];</code>
      */
     public Builder clearShouldAllow() {
       bitField0_ = (bitField0_ & ~0x00000002);
@@ -709,33 +709,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.v0alpha.ScenarioData should_allow = 3 [json_name = "shouldAllow"];</code>
+     * <code>.api.commons.ScenarioData should_allow = 3 [json_name = "shouldAllow"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.ScenarioData.Builder getShouldAllowBuilder() {
+    public com.tcn.cloud.api.api.commons.ScenarioData.Builder getShouldAllowBuilder() {
       bitField0_ |= 0x00000002;
       onChanged();
       return getShouldAllowFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.v0alpha.ScenarioData should_allow = 3 [json_name = "shouldAllow"];</code>
+     * <code>.api.commons.ScenarioData should_allow = 3 [json_name = "shouldAllow"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.ScenarioDataOrBuilder getShouldAllowOrBuilder() {
+    public com.tcn.cloud.api.api.commons.ScenarioDataOrBuilder getShouldAllowOrBuilder() {
       if (shouldAllowBuilder_ != null) {
         return shouldAllowBuilder_.getMessageOrBuilder();
       } else {
         return shouldAllow_ == null ?
-            com.tcn.cloud.api.api.v0alpha.ScenarioData.getDefaultInstance() : shouldAllow_;
+            com.tcn.cloud.api.api.commons.ScenarioData.getDefaultInstance() : shouldAllow_;
       }
     }
     /**
-     * <code>.api.v0alpha.ScenarioData should_allow = 3 [json_name = "shouldAllow"];</code>
+     * <code>.api.commons.ScenarioData should_allow = 3 [json_name = "shouldAllow"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v0alpha.ScenarioData, com.tcn.cloud.api.api.v0alpha.ScenarioData.Builder, com.tcn.cloud.api.api.v0alpha.ScenarioDataOrBuilder> 
+        com.tcn.cloud.api.api.commons.ScenarioData, com.tcn.cloud.api.api.commons.ScenarioData.Builder, com.tcn.cloud.api.api.commons.ScenarioDataOrBuilder> 
         getShouldAllowFieldBuilder() {
       if (shouldAllowBuilder_ == null) {
         shouldAllowBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.v0alpha.ScenarioData, com.tcn.cloud.api.api.v0alpha.ScenarioData.Builder, com.tcn.cloud.api.api.v0alpha.ScenarioDataOrBuilder>(
+            com.tcn.cloud.api.api.commons.ScenarioData, com.tcn.cloud.api.api.commons.ScenarioData.Builder, com.tcn.cloud.api.api.commons.ScenarioDataOrBuilder>(
                 getShouldAllow(),
                 getParentForChildren(),
                 isClean());
@@ -744,31 +744,31 @@ private static final long serialVersionUID = 0L;
       return shouldAllowBuilder_;
     }
 
-    private com.tcn.cloud.api.api.v0alpha.ScenarioData shouldDeny_;
+    private com.tcn.cloud.api.api.commons.ScenarioData shouldDeny_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v0alpha.ScenarioData, com.tcn.cloud.api.api.v0alpha.ScenarioData.Builder, com.tcn.cloud.api.api.v0alpha.ScenarioDataOrBuilder> shouldDenyBuilder_;
+        com.tcn.cloud.api.api.commons.ScenarioData, com.tcn.cloud.api.api.commons.ScenarioData.Builder, com.tcn.cloud.api.api.commons.ScenarioDataOrBuilder> shouldDenyBuilder_;
     /**
-     * <code>.api.v0alpha.ScenarioData should_deny = 4 [json_name = "shouldDeny"];</code>
+     * <code>.api.commons.ScenarioData should_deny = 4 [json_name = "shouldDeny"];</code>
      * @return Whether the shouldDeny field is set.
      */
     public boolean hasShouldDeny() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>.api.v0alpha.ScenarioData should_deny = 4 [json_name = "shouldDeny"];</code>
+     * <code>.api.commons.ScenarioData should_deny = 4 [json_name = "shouldDeny"];</code>
      * @return The shouldDeny.
      */
-    public com.tcn.cloud.api.api.v0alpha.ScenarioData getShouldDeny() {
+    public com.tcn.cloud.api.api.commons.ScenarioData getShouldDeny() {
       if (shouldDenyBuilder_ == null) {
-        return shouldDeny_ == null ? com.tcn.cloud.api.api.v0alpha.ScenarioData.getDefaultInstance() : shouldDeny_;
+        return shouldDeny_ == null ? com.tcn.cloud.api.api.commons.ScenarioData.getDefaultInstance() : shouldDeny_;
       } else {
         return shouldDenyBuilder_.getMessage();
       }
     }
     /**
-     * <code>.api.v0alpha.ScenarioData should_deny = 4 [json_name = "shouldDeny"];</code>
+     * <code>.api.commons.ScenarioData should_deny = 4 [json_name = "shouldDeny"];</code>
      */
-    public Builder setShouldDeny(com.tcn.cloud.api.api.v0alpha.ScenarioData value) {
+    public Builder setShouldDeny(com.tcn.cloud.api.api.commons.ScenarioData value) {
       if (shouldDenyBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -782,10 +782,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.v0alpha.ScenarioData should_deny = 4 [json_name = "shouldDeny"];</code>
+     * <code>.api.commons.ScenarioData should_deny = 4 [json_name = "shouldDeny"];</code>
      */
     public Builder setShouldDeny(
-        com.tcn.cloud.api.api.v0alpha.ScenarioData.Builder builderForValue) {
+        com.tcn.cloud.api.api.commons.ScenarioData.Builder builderForValue) {
       if (shouldDenyBuilder_ == null) {
         shouldDeny_ = builderForValue.build();
       } else {
@@ -796,13 +796,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.v0alpha.ScenarioData should_deny = 4 [json_name = "shouldDeny"];</code>
+     * <code>.api.commons.ScenarioData should_deny = 4 [json_name = "shouldDeny"];</code>
      */
-    public Builder mergeShouldDeny(com.tcn.cloud.api.api.v0alpha.ScenarioData value) {
+    public Builder mergeShouldDeny(com.tcn.cloud.api.api.commons.ScenarioData value) {
       if (shouldDenyBuilder_ == null) {
         if (((bitField0_ & 0x00000004) != 0) &&
           shouldDeny_ != null &&
-          shouldDeny_ != com.tcn.cloud.api.api.v0alpha.ScenarioData.getDefaultInstance()) {
+          shouldDeny_ != com.tcn.cloud.api.api.commons.ScenarioData.getDefaultInstance()) {
           getShouldDenyBuilder().mergeFrom(value);
         } else {
           shouldDeny_ = value;
@@ -815,7 +815,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.v0alpha.ScenarioData should_deny = 4 [json_name = "shouldDeny"];</code>
+     * <code>.api.commons.ScenarioData should_deny = 4 [json_name = "shouldDeny"];</code>
      */
     public Builder clearShouldDeny() {
       bitField0_ = (bitField0_ & ~0x00000004);
@@ -828,33 +828,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.v0alpha.ScenarioData should_deny = 4 [json_name = "shouldDeny"];</code>
+     * <code>.api.commons.ScenarioData should_deny = 4 [json_name = "shouldDeny"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.ScenarioData.Builder getShouldDenyBuilder() {
+    public com.tcn.cloud.api.api.commons.ScenarioData.Builder getShouldDenyBuilder() {
       bitField0_ |= 0x00000004;
       onChanged();
       return getShouldDenyFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.v0alpha.ScenarioData should_deny = 4 [json_name = "shouldDeny"];</code>
+     * <code>.api.commons.ScenarioData should_deny = 4 [json_name = "shouldDeny"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.ScenarioDataOrBuilder getShouldDenyOrBuilder() {
+    public com.tcn.cloud.api.api.commons.ScenarioDataOrBuilder getShouldDenyOrBuilder() {
       if (shouldDenyBuilder_ != null) {
         return shouldDenyBuilder_.getMessageOrBuilder();
       } else {
         return shouldDeny_ == null ?
-            com.tcn.cloud.api.api.v0alpha.ScenarioData.getDefaultInstance() : shouldDeny_;
+            com.tcn.cloud.api.api.commons.ScenarioData.getDefaultInstance() : shouldDeny_;
       }
     }
     /**
-     * <code>.api.v0alpha.ScenarioData should_deny = 4 [json_name = "shouldDeny"];</code>
+     * <code>.api.commons.ScenarioData should_deny = 4 [json_name = "shouldDeny"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v0alpha.ScenarioData, com.tcn.cloud.api.api.v0alpha.ScenarioData.Builder, com.tcn.cloud.api.api.v0alpha.ScenarioDataOrBuilder> 
+        com.tcn.cloud.api.api.commons.ScenarioData, com.tcn.cloud.api.api.commons.ScenarioData.Builder, com.tcn.cloud.api.api.commons.ScenarioDataOrBuilder> 
         getShouldDenyFieldBuilder() {
       if (shouldDenyBuilder_ == null) {
         shouldDenyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.v0alpha.ScenarioData, com.tcn.cloud.api.api.v0alpha.ScenarioData.Builder, com.tcn.cloud.api.api.v0alpha.ScenarioDataOrBuilder>(
+            com.tcn.cloud.api.api.commons.ScenarioData, com.tcn.cloud.api.api.commons.ScenarioData.Builder, com.tcn.cloud.api.api.commons.ScenarioDataOrBuilder>(
                 getShouldDeny(),
                 getParentForChildren(),
                 isClean());
@@ -863,31 +863,31 @@ private static final long serialVersionUID = 0L;
       return shouldDenyBuilder_;
     }
 
-    private com.tcn.cloud.api.api.v0alpha.ScenarioResult lastExecutionResult_;
+    private com.tcn.cloud.api.api.commons.ScenarioResult lastExecutionResult_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v0alpha.ScenarioResult, com.tcn.cloud.api.api.v0alpha.ScenarioResult.Builder, com.tcn.cloud.api.api.v0alpha.ScenarioResultOrBuilder> lastExecutionResultBuilder_;
+        com.tcn.cloud.api.api.commons.ScenarioResult, com.tcn.cloud.api.api.commons.ScenarioResult.Builder, com.tcn.cloud.api.api.commons.ScenarioResultOrBuilder> lastExecutionResultBuilder_;
     /**
-     * <code>.api.v0alpha.ScenarioResult last_execution_result = 5 [json_name = "lastExecutionResult"];</code>
+     * <code>.api.commons.ScenarioResult last_execution_result = 5 [json_name = "lastExecutionResult"];</code>
      * @return Whether the lastExecutionResult field is set.
      */
     public boolean hasLastExecutionResult() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <code>.api.v0alpha.ScenarioResult last_execution_result = 5 [json_name = "lastExecutionResult"];</code>
+     * <code>.api.commons.ScenarioResult last_execution_result = 5 [json_name = "lastExecutionResult"];</code>
      * @return The lastExecutionResult.
      */
-    public com.tcn.cloud.api.api.v0alpha.ScenarioResult getLastExecutionResult() {
+    public com.tcn.cloud.api.api.commons.ScenarioResult getLastExecutionResult() {
       if (lastExecutionResultBuilder_ == null) {
-        return lastExecutionResult_ == null ? com.tcn.cloud.api.api.v0alpha.ScenarioResult.getDefaultInstance() : lastExecutionResult_;
+        return lastExecutionResult_ == null ? com.tcn.cloud.api.api.commons.ScenarioResult.getDefaultInstance() : lastExecutionResult_;
       } else {
         return lastExecutionResultBuilder_.getMessage();
       }
     }
     /**
-     * <code>.api.v0alpha.ScenarioResult last_execution_result = 5 [json_name = "lastExecutionResult"];</code>
+     * <code>.api.commons.ScenarioResult last_execution_result = 5 [json_name = "lastExecutionResult"];</code>
      */
-    public Builder setLastExecutionResult(com.tcn.cloud.api.api.v0alpha.ScenarioResult value) {
+    public Builder setLastExecutionResult(com.tcn.cloud.api.api.commons.ScenarioResult value) {
       if (lastExecutionResultBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -901,10 +901,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.v0alpha.ScenarioResult last_execution_result = 5 [json_name = "lastExecutionResult"];</code>
+     * <code>.api.commons.ScenarioResult last_execution_result = 5 [json_name = "lastExecutionResult"];</code>
      */
     public Builder setLastExecutionResult(
-        com.tcn.cloud.api.api.v0alpha.ScenarioResult.Builder builderForValue) {
+        com.tcn.cloud.api.api.commons.ScenarioResult.Builder builderForValue) {
       if (lastExecutionResultBuilder_ == null) {
         lastExecutionResult_ = builderForValue.build();
       } else {
@@ -915,13 +915,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.v0alpha.ScenarioResult last_execution_result = 5 [json_name = "lastExecutionResult"];</code>
+     * <code>.api.commons.ScenarioResult last_execution_result = 5 [json_name = "lastExecutionResult"];</code>
      */
-    public Builder mergeLastExecutionResult(com.tcn.cloud.api.api.v0alpha.ScenarioResult value) {
+    public Builder mergeLastExecutionResult(com.tcn.cloud.api.api.commons.ScenarioResult value) {
       if (lastExecutionResultBuilder_ == null) {
         if (((bitField0_ & 0x00000008) != 0) &&
           lastExecutionResult_ != null &&
-          lastExecutionResult_ != com.tcn.cloud.api.api.v0alpha.ScenarioResult.getDefaultInstance()) {
+          lastExecutionResult_ != com.tcn.cloud.api.api.commons.ScenarioResult.getDefaultInstance()) {
           getLastExecutionResultBuilder().mergeFrom(value);
         } else {
           lastExecutionResult_ = value;
@@ -934,7 +934,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.v0alpha.ScenarioResult last_execution_result = 5 [json_name = "lastExecutionResult"];</code>
+     * <code>.api.commons.ScenarioResult last_execution_result = 5 [json_name = "lastExecutionResult"];</code>
      */
     public Builder clearLastExecutionResult() {
       bitField0_ = (bitField0_ & ~0x00000008);
@@ -947,33 +947,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.v0alpha.ScenarioResult last_execution_result = 5 [json_name = "lastExecutionResult"];</code>
+     * <code>.api.commons.ScenarioResult last_execution_result = 5 [json_name = "lastExecutionResult"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.ScenarioResult.Builder getLastExecutionResultBuilder() {
+    public com.tcn.cloud.api.api.commons.ScenarioResult.Builder getLastExecutionResultBuilder() {
       bitField0_ |= 0x00000008;
       onChanged();
       return getLastExecutionResultFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.v0alpha.ScenarioResult last_execution_result = 5 [json_name = "lastExecutionResult"];</code>
+     * <code>.api.commons.ScenarioResult last_execution_result = 5 [json_name = "lastExecutionResult"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.ScenarioResultOrBuilder getLastExecutionResultOrBuilder() {
+    public com.tcn.cloud.api.api.commons.ScenarioResultOrBuilder getLastExecutionResultOrBuilder() {
       if (lastExecutionResultBuilder_ != null) {
         return lastExecutionResultBuilder_.getMessageOrBuilder();
       } else {
         return lastExecutionResult_ == null ?
-            com.tcn.cloud.api.api.v0alpha.ScenarioResult.getDefaultInstance() : lastExecutionResult_;
+            com.tcn.cloud.api.api.commons.ScenarioResult.getDefaultInstance() : lastExecutionResult_;
       }
     }
     /**
-     * <code>.api.v0alpha.ScenarioResult last_execution_result = 5 [json_name = "lastExecutionResult"];</code>
+     * <code>.api.commons.ScenarioResult last_execution_result = 5 [json_name = "lastExecutionResult"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v0alpha.ScenarioResult, com.tcn.cloud.api.api.v0alpha.ScenarioResult.Builder, com.tcn.cloud.api.api.v0alpha.ScenarioResultOrBuilder> 
+        com.tcn.cloud.api.api.commons.ScenarioResult, com.tcn.cloud.api.api.commons.ScenarioResult.Builder, com.tcn.cloud.api.api.commons.ScenarioResultOrBuilder> 
         getLastExecutionResultFieldBuilder() {
       if (lastExecutionResultBuilder_ == null) {
         lastExecutionResultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.v0alpha.ScenarioResult, com.tcn.cloud.api.api.v0alpha.ScenarioResult.Builder, com.tcn.cloud.api.api.v0alpha.ScenarioResultOrBuilder>(
+            com.tcn.cloud.api.api.commons.ScenarioResult, com.tcn.cloud.api.api.commons.ScenarioResult.Builder, com.tcn.cloud.api.api.commons.ScenarioResultOrBuilder>(
                 getLastExecutionResult(),
                 getParentForChildren(),
                 isClean());

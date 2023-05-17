@@ -42,41 +42,41 @@ private static final long serialVersionUID = 0L;
 
   public static final int RESULTS_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.v0alpha.ScenarioResult> results_;
+  private java.util.List<com.tcn.cloud.api.api.commons.ScenarioResult> results_;
   /**
-   * <code>repeated .api.v0alpha.ScenarioResult results = 2 [json_name = "results"];</code>
+   * <code>repeated .api.commons.ScenarioResult results = 2 [json_name = "results"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.v0alpha.ScenarioResult> getResultsList() {
+  public java.util.List<com.tcn.cloud.api.api.commons.ScenarioResult> getResultsList() {
     return results_;
   }
   /**
-   * <code>repeated .api.v0alpha.ScenarioResult results = 2 [json_name = "results"];</code>
+   * <code>repeated .api.commons.ScenarioResult results = 2 [json_name = "results"];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.v0alpha.ScenarioResultOrBuilder> 
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.ScenarioResultOrBuilder> 
       getResultsOrBuilderList() {
     return results_;
   }
   /**
-   * <code>repeated .api.v0alpha.ScenarioResult results = 2 [json_name = "results"];</code>
+   * <code>repeated .api.commons.ScenarioResult results = 2 [json_name = "results"];</code>
    */
   @java.lang.Override
   public int getResultsCount() {
     return results_.size();
   }
   /**
-   * <code>repeated .api.v0alpha.ScenarioResult results = 2 [json_name = "results"];</code>
+   * <code>repeated .api.commons.ScenarioResult results = 2 [json_name = "results"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.ScenarioResult getResults(int index) {
+  public com.tcn.cloud.api.api.commons.ScenarioResult getResults(int index) {
     return results_.get(index);
   }
   /**
-   * <code>repeated .api.v0alpha.ScenarioResult results = 2 [json_name = "results"];</code>
+   * <code>repeated .api.commons.ScenarioResult results = 2 [json_name = "results"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.ScenarioResultOrBuilder getResultsOrBuilder(
+  public com.tcn.cloud.api.api.commons.ScenarioResultOrBuilder getResultsOrBuilder(
       int index) {
     return results_.get(index);
   }
@@ -482,9 +482,9 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 18: {
-              com.tcn.cloud.api.api.v0alpha.ScenarioResult m =
+              com.tcn.cloud.api.api.commons.ScenarioResult m =
                   input.readMessage(
-                      com.tcn.cloud.api.api.v0alpha.ScenarioResult.parser(),
+                      com.tcn.cloud.api.api.commons.ScenarioResult.parser(),
                       extensionRegistry);
               if (resultsBuilder_ == null) {
                 ensureResultsIsMutable();
@@ -521,22 +521,22 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.util.List<com.tcn.cloud.api.api.v0alpha.ScenarioResult> results_ =
+    private java.util.List<com.tcn.cloud.api.api.commons.ScenarioResult> results_ =
       java.util.Collections.emptyList();
     private void ensureResultsIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        results_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.ScenarioResult>(results_);
+        results_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.ScenarioResult>(results_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v0alpha.ScenarioResult, com.tcn.cloud.api.api.v0alpha.ScenarioResult.Builder, com.tcn.cloud.api.api.v0alpha.ScenarioResultOrBuilder> resultsBuilder_;
+        com.tcn.cloud.api.api.commons.ScenarioResult, com.tcn.cloud.api.api.commons.ScenarioResult.Builder, com.tcn.cloud.api.api.commons.ScenarioResultOrBuilder> resultsBuilder_;
 
     /**
-     * <code>repeated .api.v0alpha.ScenarioResult results = 2 [json_name = "results"];</code>
+     * <code>repeated .api.commons.ScenarioResult results = 2 [json_name = "results"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v0alpha.ScenarioResult> getResultsList() {
+    public java.util.List<com.tcn.cloud.api.api.commons.ScenarioResult> getResultsList() {
       if (resultsBuilder_ == null) {
         return java.util.Collections.unmodifiableList(results_);
       } else {
@@ -544,7 +544,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.v0alpha.ScenarioResult results = 2 [json_name = "results"];</code>
+     * <code>repeated .api.commons.ScenarioResult results = 2 [json_name = "results"];</code>
      */
     public int getResultsCount() {
       if (resultsBuilder_ == null) {
@@ -554,9 +554,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.v0alpha.ScenarioResult results = 2 [json_name = "results"];</code>
+     * <code>repeated .api.commons.ScenarioResult results = 2 [json_name = "results"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.ScenarioResult getResults(int index) {
+    public com.tcn.cloud.api.api.commons.ScenarioResult getResults(int index) {
       if (resultsBuilder_ == null) {
         return results_.get(index);
       } else {
@@ -564,10 +564,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.v0alpha.ScenarioResult results = 2 [json_name = "results"];</code>
+     * <code>repeated .api.commons.ScenarioResult results = 2 [json_name = "results"];</code>
      */
     public Builder setResults(
-        int index, com.tcn.cloud.api.api.v0alpha.ScenarioResult value) {
+        int index, com.tcn.cloud.api.api.commons.ScenarioResult value) {
       if (resultsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -581,10 +581,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.ScenarioResult results = 2 [json_name = "results"];</code>
+     * <code>repeated .api.commons.ScenarioResult results = 2 [json_name = "results"];</code>
      */
     public Builder setResults(
-        int index, com.tcn.cloud.api.api.v0alpha.ScenarioResult.Builder builderForValue) {
+        int index, com.tcn.cloud.api.api.commons.ScenarioResult.Builder builderForValue) {
       if (resultsBuilder_ == null) {
         ensureResultsIsMutable();
         results_.set(index, builderForValue.build());
@@ -595,9 +595,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.ScenarioResult results = 2 [json_name = "results"];</code>
+     * <code>repeated .api.commons.ScenarioResult results = 2 [json_name = "results"];</code>
      */
-    public Builder addResults(com.tcn.cloud.api.api.v0alpha.ScenarioResult value) {
+    public Builder addResults(com.tcn.cloud.api.api.commons.ScenarioResult value) {
       if (resultsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -611,10 +611,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.ScenarioResult results = 2 [json_name = "results"];</code>
+     * <code>repeated .api.commons.ScenarioResult results = 2 [json_name = "results"];</code>
      */
     public Builder addResults(
-        int index, com.tcn.cloud.api.api.v0alpha.ScenarioResult value) {
+        int index, com.tcn.cloud.api.api.commons.ScenarioResult value) {
       if (resultsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -628,10 +628,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.ScenarioResult results = 2 [json_name = "results"];</code>
+     * <code>repeated .api.commons.ScenarioResult results = 2 [json_name = "results"];</code>
      */
     public Builder addResults(
-        com.tcn.cloud.api.api.v0alpha.ScenarioResult.Builder builderForValue) {
+        com.tcn.cloud.api.api.commons.ScenarioResult.Builder builderForValue) {
       if (resultsBuilder_ == null) {
         ensureResultsIsMutable();
         results_.add(builderForValue.build());
@@ -642,10 +642,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.ScenarioResult results = 2 [json_name = "results"];</code>
+     * <code>repeated .api.commons.ScenarioResult results = 2 [json_name = "results"];</code>
      */
     public Builder addResults(
-        int index, com.tcn.cloud.api.api.v0alpha.ScenarioResult.Builder builderForValue) {
+        int index, com.tcn.cloud.api.api.commons.ScenarioResult.Builder builderForValue) {
       if (resultsBuilder_ == null) {
         ensureResultsIsMutable();
         results_.add(index, builderForValue.build());
@@ -656,10 +656,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.ScenarioResult results = 2 [json_name = "results"];</code>
+     * <code>repeated .api.commons.ScenarioResult results = 2 [json_name = "results"];</code>
      */
     public Builder addAllResults(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.v0alpha.ScenarioResult> values) {
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.ScenarioResult> values) {
       if (resultsBuilder_ == null) {
         ensureResultsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -671,7 +671,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.ScenarioResult results = 2 [json_name = "results"];</code>
+     * <code>repeated .api.commons.ScenarioResult results = 2 [json_name = "results"];</code>
      */
     public Builder clearResults() {
       if (resultsBuilder_ == null) {
@@ -684,7 +684,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.ScenarioResult results = 2 [json_name = "results"];</code>
+     * <code>repeated .api.commons.ScenarioResult results = 2 [json_name = "results"];</code>
      */
     public Builder removeResults(int index) {
       if (resultsBuilder_ == null) {
@@ -697,16 +697,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .api.v0alpha.ScenarioResult results = 2 [json_name = "results"];</code>
+     * <code>repeated .api.commons.ScenarioResult results = 2 [json_name = "results"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.ScenarioResult.Builder getResultsBuilder(
+    public com.tcn.cloud.api.api.commons.ScenarioResult.Builder getResultsBuilder(
         int index) {
       return getResultsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .api.v0alpha.ScenarioResult results = 2 [json_name = "results"];</code>
+     * <code>repeated .api.commons.ScenarioResult results = 2 [json_name = "results"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.ScenarioResultOrBuilder getResultsOrBuilder(
+    public com.tcn.cloud.api.api.commons.ScenarioResultOrBuilder getResultsOrBuilder(
         int index) {
       if (resultsBuilder_ == null) {
         return results_.get(index);  } else {
@@ -714,9 +714,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.v0alpha.ScenarioResult results = 2 [json_name = "results"];</code>
+     * <code>repeated .api.commons.ScenarioResult results = 2 [json_name = "results"];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.v0alpha.ScenarioResultOrBuilder> 
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.ScenarioResultOrBuilder> 
          getResultsOrBuilderList() {
       if (resultsBuilder_ != null) {
         return resultsBuilder_.getMessageOrBuilderList();
@@ -725,33 +725,33 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .api.v0alpha.ScenarioResult results = 2 [json_name = "results"];</code>
+     * <code>repeated .api.commons.ScenarioResult results = 2 [json_name = "results"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.ScenarioResult.Builder addResultsBuilder() {
+    public com.tcn.cloud.api.api.commons.ScenarioResult.Builder addResultsBuilder() {
       return getResultsFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.v0alpha.ScenarioResult.getDefaultInstance());
+          com.tcn.cloud.api.api.commons.ScenarioResult.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.v0alpha.ScenarioResult results = 2 [json_name = "results"];</code>
+     * <code>repeated .api.commons.ScenarioResult results = 2 [json_name = "results"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.ScenarioResult.Builder addResultsBuilder(
+    public com.tcn.cloud.api.api.commons.ScenarioResult.Builder addResultsBuilder(
         int index) {
       return getResultsFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.v0alpha.ScenarioResult.getDefaultInstance());
+          index, com.tcn.cloud.api.api.commons.ScenarioResult.getDefaultInstance());
     }
     /**
-     * <code>repeated .api.v0alpha.ScenarioResult results = 2 [json_name = "results"];</code>
+     * <code>repeated .api.commons.ScenarioResult results = 2 [json_name = "results"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v0alpha.ScenarioResult.Builder> 
+    public java.util.List<com.tcn.cloud.api.api.commons.ScenarioResult.Builder> 
          getResultsBuilderList() {
       return getResultsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v0alpha.ScenarioResult, com.tcn.cloud.api.api.v0alpha.ScenarioResult.Builder, com.tcn.cloud.api.api.v0alpha.ScenarioResultOrBuilder> 
+        com.tcn.cloud.api.api.commons.ScenarioResult, com.tcn.cloud.api.api.commons.ScenarioResult.Builder, com.tcn.cloud.api.api.commons.ScenarioResultOrBuilder> 
         getResultsFieldBuilder() {
       if (resultsBuilder_ == null) {
         resultsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.v0alpha.ScenarioResult, com.tcn.cloud.api.api.v0alpha.ScenarioResult.Builder, com.tcn.cloud.api.api.v0alpha.ScenarioResultOrBuilder>(
+            com.tcn.cloud.api.api.commons.ScenarioResult, com.tcn.cloud.api.api.commons.ScenarioResult.Builder, com.tcn.cloud.api.api.commons.ScenarioResultOrBuilder>(
                 results_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
