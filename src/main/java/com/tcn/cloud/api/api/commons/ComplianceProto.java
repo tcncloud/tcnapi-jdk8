@@ -114,6 +114,11 @@ public final class ComplianceProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_Field_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_ConsentCondition_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_ConsentCondition_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -124,105 +129,116 @@ public final class ComplianceProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\034api/commons/compliance.proto\022\013api.comm" +
-      "ons\032\027api/commons/enums.proto\"\343\001\n\004Rule\022%\n" +
-      "\004verb\030\001 \001(\0162\021.api.commons.VerbR\004verb\022+\n\006" +
-      "entity\030\002 \001(\0162\023.api.commons.EntityR\006entit" +
-      "y\0225\n\nsub_entity\030\003 \001(\0162\026.api.commons.SubE" +
-      "ntityR\tsubEntity\0223\n\tselectors\030\004 \003(\0132\025.ap" +
-      "i.commons.SelectorR\tselectors\022\033\n\trule_te" +
-      "xt\030\006 \001(\tR\010ruleText\"\305\004\n\010Selector\022*\n\004time\030" +
-      "\001 \001(\0132\024.api.commons.TimeExpH\000R\004time\022-\n\004w" +
-      "eek\030\002 \001(\0132\027.api.commons.WeekdayExpH\000R\004we" +
-      "ek\022*\n\004dncl\030\003 \001(\0132\024.api.commons.DnclExpH\000" +
-      "R\004dncl\0229\n\tfrequency\030\004 \001(\0132\031.api.commons." +
-      "FrequencyExpH\000R\tfrequency\0226\n\010location\030\005 " +
-      "\001(\0132\030.api.commons.LocationExpH\000R\010locatio" +
-      "n\022:\n\nphone_type\030\006 \001(\0132\031.api.commons.Phon" +
-      "eTypeExpH\000R\tphoneType\022-\n\005month\030\007 \001(\0132\025.a" +
-      "pi.commons.MonthExpH\000R\005month\022*\n\004date\030\010 \001" +
-      "(\0132\024.api.commons.DateExpH\000R\004date\0223\n\007holi" +
-      "day\030\t \001(\0132\027.api.commons.HolidayExpH\000R\007ho" +
-      "liday\022/\n\004meta\030\n \001(\0132\031.api.commons.MetaFi" +
-      "eldExpH\000R\004meta\0220\n\006plugin\030\013 \001(\0132\026.api.com" +
-      "mons.PluginExpH\000R\006pluginB\020\n\016selection_ru" +
-      "le\"C\n\007TimeExp\022\035\n\nstart_hour\030\001 \001(\tR\tstart" +
-      "Hour\022\031\n\010end_hour\030\002 \001(\tR\007endHour\"H\n\nWeekd" +
-      "ayExp\022&\n\003day\030\001 \001(\0132\024.api.commons.Weekday" +
-      "R\003day\022\022\n\004text\030\002 \001(\tR\004text\"c\n\007DnclExp\022\033\n\t" +
-      "list_name\030\001 \001(\tR\010listName\022;\n\013field_names" +
-      "\030\002 \001(\0132\032.api.commons.FieldNamesModR\nfiel" +
-      "dNames\"\266\002\n\014FrequencyExp\022\024\n\005count\030\001 \001(\003R\005" +
-      "count\022\032\n\010duration\030\002 \001(\003R\010duration\0221\n\007res" +
-      "ults\030\003 \001(\0132\027.api.commons.ResultsModR\007res" +
-      "ults\022?\n\014dispositions\030\004 \001(\0132\033.api.commons" +
-      ".DispositionModR\014dispositions\022;\n\013field_n" +
-      "ames\030\005 \001(\0132\032.api.commons.FieldNamesModR\n" +
-      "fieldNames\022C\n\021checking_entities\030\006 \003(\0132\026." +
-      "api.commons.EntityExpR\020checkingEntities\"" +
-      "\307\001\n\013LocationExp\022\030\n\007country\030\001 \001(\tR\007countr" +
-      "y\022\024\n\005state\030\002 \001(\tR\005state\022\026\n\006county\030\003 \001(\tR" +
-      "\006county\022\022\n\004city\030\004 \001(\tR\004city\022\032\n\010province\030" +
-      "\005 \001(\tR\010province\022!\n\014postal_codes\030\006 \003(\tR\013p" +
-      "ostalCodes\022\035\n\narea_codes\030\007 \003(\tR\tareaCode" +
-      "s\"E\n\014PhoneTypeExp\0225\n\nphone_type\030\001 \001(\0162\026." +
-      "api.commons.PhoneTypeR\tphoneType\"H\n\010Mont" +
-      "hExp\022(\n\005month\030\001 \001(\0162\022.api.commons.MonthR" +
-      "\005month\022\022\n\004text\030\002 \001(\tR\004text\"Y\n\007DateExp\022(\n" +
-      "\005month\030\001 \001(\0162\022.api.commons.MonthR\005month\022" +
-      "\020\n\003day\030\002 \001(\003R\003day\022\022\n\004year\030\003 \001(\003R\004year\"N\n" +
-      "\nHolidayExp\022\022\n\004name\030\001 \001(\tR\004name\022\030\n\007count" +
-      "ry\030\002 \001(\tR\007country\022\022\n\004type\030\003 \001(\tR\004type\"$\n" +
-      "\014MetaFieldExp\022\024\n\005field\030\001 \001(\tR\005field\"\271\003\n\t" +
-      "PluginExp\022+\n\004type\030\001 \001(\0162\027.api.commons.Pl" +
-      "uginTypeR\004type\022\035\n\ntcn_strict\030\004 \001(\010R\ttcnS" +
-      "trict\022\035\n\nlicense_id\030\002 \001(\tR\tlicenseId\022#\n\r" +
-      "reference_key\030\003 \001(\tR\014referenceKey\022\037\n\013fro" +
-      "m_number\030\005 \001(\tR\nfromNumber\022*\n\003env\030\006 \001(\0162" +
-      "\030.api.commons.EnvironmentR\003env\022!\n\014profil" +
-      "e_name\030\007 \001(\tR\013profileName\022#\n\rcontent_fie" +
-      "ld\030\010 \001(\tR\014contentField\022\024\n\005topic\030\t \001(\tR\005t" +
-      "opic\022E\n\rabsent_action\030\013 \001(\0162 .api.common" +
-      "s.ConsentAbsentActionR\014absentAction\022*\n\021d" +
-      "ate_last_contact\030\n \001(\tR\017dateLastContact\"" +
-      "o\n\tEntityExp\0225\n\nsub_entity\030\001 \001(\0162\026.api.c" +
-      "ommons.SubEntityR\tsubEntity\022+\n\006entity\030\002 " +
-      "\001(\0162\023.api.commons.EntityR\006entity\"D\n\rFiel" +
-      "dNamesMod\0223\n\013field_names\030\001 \003(\0132\022.api.com" +
-      "mons.FieldR\nfieldNames\"&\n\nResultsMod\022\030\n\007" +
-      "results\030\001 \003(\tR\007results\"S\n\016DispositionMod" +
-      "\022A\n\014dispositions\030\001 \003(\0132\035.api.commons.Dis" +
-      "positionFieldR\014dispositions\"n\n\020Dispositi" +
-      "onField\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\t" +
-      "R\005value\0222\n\005pairs\030\003 \003(\0132\034.api.commons.Dis" +
-      "positionPairR\005pairs\"9\n\017DispositionPair\022\020" +
-      "\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value\"7" +
-      "\n\005Field\022\024\n\005Field\030\001 \001(\tR\005Field\022\030\n\007Content" +
-      "\030\002 \001(\tR\007Content*K\n\004Verb\022\r\n\tV_UNKNOWN\020\000\022\013" +
-      "\n\007V_ALLOW\020\001\022\n\n\006V_DENY\020\002\022\013\n\007V_SCRUB\020\003\022\016\n\n" +
-      "V_OVERRIDE\020\004*;\n\006Entity\022\r\n\tE_UNKNOWN\020\000\022\n\n" +
-      "\006E_CALL\020\001\022\013\n\007E_EMAIL\020\002\022\t\n\005E_SMS\020\003*u\n\tSub" +
-      "Entity\022\n\n\006SE_ALL\020\000\022\016\n\nSE_INBOUND\020\001\022\017\n\013SE" +
-      "_OUTBOUND\020\002\022\r\n\tSE_MANUAL\020\003\022\016\n\nSE_PREVIEW" +
-      "\020\004\022\n\n\006SE_MAC\020\005\022\020\n\014SE_BROADCAST\020\006*.\n\tPhon" +
-      "eType\022\010\n\004CELL\020\000\022\010\n\004LAND\020\001\022\r\n\tTOLL_FREE\020\002" +
-      "*a\n\013ContentType\022\023\n\017CT_PHONE_NUMBER\020\000\022\014\n\010" +
-      "CT_EMAIL\020\001\022\n\n\006CT_SMS\020\002\022\014\n\010CT_OTHER\020\003\022\025\n\021" +
-      "CT_ACCOUNT_NUMBER\020\004*?\n\007Channel\022\020\n\014CHANNE" +
-      "L_CALL\020\000\022\021\n\rCHANNEL_EMAIL\020\001\022\017\n\013CHANNEL_S" +
-      "MS\020\002*G\n\nPluginType\022\022\n\016UNKNOWN_PLUGIN\020\000\022\013" +
-      "\n\007GRYPHON\020\001\022\017\n\013TCN_CONSENT\020\002\022\007\n\003RND\020\003*8\n" +
-      "\013Environment\022\017\n\013INVALID_ENV\020\000\022\010\n\004TEST\020\001\022" +
-      "\016\n\nPRODUCTION\020\002*V\n\023ConsentAbsentAction\022\037" +
-      "\n\033CONSENT_ABSENT_ACTION_ALLOW\020\000\022\036\n\032CONSE" +
-      "NT_ABSENT_ACTION_DENY\020\001B}\n\035com.tcn.cloud" +
-      ".api.api.commonsB\017ComplianceProtoP\001\242\002\003AC" +
-      "X\252\002\013Api.Commons\312\002\013Api\\Commons\342\002\027Api\\Comm" +
-      "ons\\GPBMetadata\352\002\014Api::Commonsb\006proto3"
+      "ons\032\027api/commons/enums.proto\032\037google/pro" +
+      "tobuf/timestamp.proto\"\343\001\n\004Rule\022%\n\004verb\030\001" +
+      " \001(\0162\021.api.commons.VerbR\004verb\022+\n\006entity\030" +
+      "\002 \001(\0162\023.api.commons.EntityR\006entity\0225\n\nsu" +
+      "b_entity\030\003 \001(\0162\026.api.commons.SubEntityR\t" +
+      "subEntity\0223\n\tselectors\030\004 \003(\0132\025.api.commo" +
+      "ns.SelectorR\tselectors\022\033\n\trule_text\030\006 \001(" +
+      "\tR\010ruleText\"\305\004\n\010Selector\022*\n\004time\030\001 \001(\0132\024" +
+      ".api.commons.TimeExpH\000R\004time\022-\n\004week\030\002 \001" +
+      "(\0132\027.api.commons.WeekdayExpH\000R\004week\022*\n\004d" +
+      "ncl\030\003 \001(\0132\024.api.commons.DnclExpH\000R\004dncl\022" +
+      "9\n\tfrequency\030\004 \001(\0132\031.api.commons.Frequen" +
+      "cyExpH\000R\tfrequency\0226\n\010location\030\005 \001(\0132\030.a" +
+      "pi.commons.LocationExpH\000R\010location\022:\n\nph" +
+      "one_type\030\006 \001(\0132\031.api.commons.PhoneTypeEx" +
+      "pH\000R\tphoneType\022-\n\005month\030\007 \001(\0132\025.api.comm" +
+      "ons.MonthExpH\000R\005month\022*\n\004date\030\010 \001(\0132\024.ap" +
+      "i.commons.DateExpH\000R\004date\0223\n\007holiday\030\t \001" +
+      "(\0132\027.api.commons.HolidayExpH\000R\007holiday\022/" +
+      "\n\004meta\030\n \001(\0132\031.api.commons.MetaFieldExpH" +
+      "\000R\004meta\0220\n\006plugin\030\013 \001(\0132\026.api.commons.Pl" +
+      "uginExpH\000R\006pluginB\020\n\016selection_rule\"C\n\007T" +
+      "imeExp\022\035\n\nstart_hour\030\001 \001(\tR\tstartHour\022\031\n" +
+      "\010end_hour\030\002 \001(\tR\007endHour\"M\n\nWeekdayExp\022+" +
+      "\n\003day\030\001 \001(\0162\031.api.commons.Weekday.EnumR\003" +
+      "day\022\022\n\004text\030\002 \001(\tR\004text\"c\n\007DnclExp\022\033\n\tli" +
+      "st_name\030\001 \001(\tR\010listName\022;\n\013field_names\030\002" +
+      " \001(\0132\032.api.commons.FieldNamesModR\nfieldN" +
+      "ames\"\266\002\n\014FrequencyExp\022\024\n\005count\030\001 \001(\003R\005co" +
+      "unt\022\032\n\010duration\030\002 \001(\003R\010duration\0221\n\007resul" +
+      "ts\030\003 \001(\0132\027.api.commons.ResultsModR\007resul" +
+      "ts\022?\n\014dispositions\030\004 \001(\0132\033.api.commons.D" +
+      "ispositionModR\014dispositions\022;\n\013field_nam" +
+      "es\030\005 \001(\0132\032.api.commons.FieldNamesModR\nfi" +
+      "eldNames\022C\n\021checking_entities\030\006 \003(\0132\026.ap" +
+      "i.commons.EntityExpR\020checkingEntities\"\307\001" +
+      "\n\013LocationExp\022\030\n\007country\030\001 \001(\tR\007country\022" +
+      "\024\n\005state\030\002 \001(\tR\005state\022\026\n\006county\030\003 \001(\tR\006c" +
+      "ounty\022\022\n\004city\030\004 \001(\tR\004city\022\032\n\010province\030\005 " +
+      "\001(\tR\010province\022!\n\014postal_codes\030\006 \003(\tR\013pos" +
+      "talCodes\022\035\n\narea_codes\030\007 \003(\tR\tareaCodes\"" +
+      "E\n\014PhoneTypeExp\0225\n\nphone_type\030\001 \001(\0162\026.ap" +
+      "i.commons.PhoneTypeR\tphoneType\"H\n\010MonthE" +
+      "xp\022(\n\005month\030\001 \001(\0162\022.api.commons.MonthR\005m" +
+      "onth\022\022\n\004text\030\002 \001(\tR\004text\"Y\n\007DateExp\022(\n\005m" +
+      "onth\030\001 \001(\0162\022.api.commons.MonthR\005month\022\020\n" +
+      "\003day\030\002 \001(\003R\003day\022\022\n\004year\030\003 \001(\003R\004year\"N\n\nH" +
+      "olidayExp\022\022\n\004name\030\001 \001(\tR\004name\022\030\n\007country" +
+      "\030\002 \001(\tR\007country\022\022\n\004type\030\003 \001(\tR\004type\"$\n\014M" +
+      "etaFieldExp\022\024\n\005field\030\001 \001(\tR\005field\"\271\003\n\tPl" +
+      "uginExp\022+\n\004type\030\001 \001(\0162\027.api.commons.Plug" +
+      "inTypeR\004type\022\035\n\ntcn_strict\030\004 \001(\010R\ttcnStr" +
+      "ict\022\035\n\nlicense_id\030\002 \001(\tR\tlicenseId\022#\n\rre" +
+      "ference_key\030\003 \001(\tR\014referenceKey\022\037\n\013from_" +
+      "number\030\005 \001(\tR\nfromNumber\022*\n\003env\030\006 \001(\0162\030." +
+      "api.commons.EnvironmentR\003env\022!\n\014profile_" +
+      "name\030\007 \001(\tR\013profileName\022#\n\rcontent_field" +
+      "\030\010 \001(\tR\014contentField\022\024\n\005topic\030\t \001(\tR\005top" +
+      "ic\022E\n\rabsent_action\030\013 \001(\0162 .api.commons." +
+      "ConsentAbsentActionR\014absentAction\022*\n\021dat" +
+      "e_last_contact\030\n \001(\tR\017dateLastContact\"o\n" +
+      "\tEntityExp\0225\n\nsub_entity\030\001 \001(\0162\026.api.com" +
+      "mons.SubEntityR\tsubEntity\022+\n\006entity\030\002 \001(" +
+      "\0162\023.api.commons.EntityR\006entity\"D\n\rFieldN" +
+      "amesMod\0223\n\013field_names\030\001 \003(\0132\022.api.commo" +
+      "ns.FieldR\nfieldNames\"&\n\nResultsMod\022\030\n\007re" +
+      "sults\030\001 \003(\tR\007results\"S\n\016DispositionMod\022A" +
+      "\n\014dispositions\030\001 \003(\0132\035.api.commons.Dispo" +
+      "sitionFieldR\014dispositions\"n\n\020Disposition" +
+      "Field\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005" +
+      "value\0222\n\005pairs\030\003 \003(\0132\034.api.commons.Dispo" +
+      "sitionPairR\005pairs\"9\n\017DispositionPair\022\020\n\003" +
+      "key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value\"7\n\005" +
+      "Field\022\024\n\005Field\030\001 \001(\tR\005Field\022\030\n\007Content\030\002" +
+      " \001(\tR\007Content\"\343\002\n\020ConsentCondition\0220\n\024co" +
+      "nsent_condition_id\030\001 \001(\003R\022consentConditi" +
+      "onId\022\035\n\nconsent_id\030\002 \001(\003R\tconsentId\022B\n\020d" +
+      "ays_of_the_week\030\n \003(\0162\031.api.commons.Week" +
+      "day.EnumR\rdaysOfTheWeek\022\'\n\020time_of_day_f" +
+      "rom\030\013 \001(\tR\rtimeOfDayFrom\022#\n\016time_of_day_" +
+      "to\030\014 \001(\tR\013timeOfDayTo\0227\n\tfrom_date\030\r \001(\013" +
+      "2\032.google.protobuf.TimestampR\010fromDate\0223" +
+      "\n\007to_date\030\016 \001(\0132\032.google.protobuf.Timest" +
+      "ampR\006toDate*K\n\004Verb\022\r\n\tV_UNKNOWN\020\000\022\013\n\007V_" +
+      "ALLOW\020\001\022\n\n\006V_DENY\020\002\022\013\n\007V_SCRUB\020\003\022\016\n\nV_OV" +
+      "ERRIDE\020\004*;\n\006Entity\022\r\n\tE_UNKNOWN\020\000\022\n\n\006E_C" +
+      "ALL\020\001\022\013\n\007E_EMAIL\020\002\022\t\n\005E_SMS\020\003*u\n\tSubEnti" +
+      "ty\022\n\n\006SE_ALL\020\000\022\016\n\nSE_INBOUND\020\001\022\017\n\013SE_OUT" +
+      "BOUND\020\002\022\r\n\tSE_MANUAL\020\003\022\016\n\nSE_PREVIEW\020\004\022\n" +
+      "\n\006SE_MAC\020\005\022\020\n\014SE_BROADCAST\020\006*.\n\tPhoneTyp" +
+      "e\022\010\n\004CELL\020\000\022\010\n\004LAND\020\001\022\r\n\tTOLL_FREE\020\002*a\n\013" +
+      "ContentType\022\023\n\017CT_PHONE_NUMBER\020\000\022\014\n\010CT_E" +
+      "MAIL\020\001\022\n\n\006CT_SMS\020\002\022\014\n\010CT_OTHER\020\003\022\025\n\021CT_A" +
+      "CCOUNT_NUMBER\020\004*?\n\007Channel\022\020\n\014CHANNEL_CA" +
+      "LL\020\000\022\021\n\rCHANNEL_EMAIL\020\001\022\017\n\013CHANNEL_SMS\020\002" +
+      "*G\n\nPluginType\022\022\n\016UNKNOWN_PLUGIN\020\000\022\013\n\007GR" +
+      "YPHON\020\001\022\017\n\013TCN_CONSENT\020\002\022\007\n\003RND\020\003*8\n\013Env" +
+      "ironment\022\017\n\013INVALID_ENV\020\000\022\010\n\004TEST\020\001\022\016\n\nP" +
+      "RODUCTION\020\002*V\n\023ConsentAbsentAction\022\037\n\033CO" +
+      "NSENT_ABSENT_ACTION_ALLOW\020\000\022\036\n\032CONSENT_A" +
+      "BSENT_ACTION_DENY\020\001B}\n\035com.tcn.cloud.api" +
+      ".api.commonsB\017ComplianceProtoP\001\242\002\003ACX\252\002\013" +
+      "Api.Commons\312\002\013Api\\Commons\342\002\027Api\\Commons\\" +
+      "GPBMetadata\352\002\014Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.tcn.cloud.api.api.commons.EnumsProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_api_commons_Rule_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -344,7 +360,14 @@ public final class ComplianceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_Field_descriptor,
         new java.lang.String[] { "Field", "Content", });
+    internal_static_api_commons_ConsentCondition_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_api_commons_ConsentCondition_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_ConsentCondition_descriptor,
+        new java.lang.String[] { "ConsentConditionId", "ConsentId", "DaysOfTheWeek", "TimeOfDayFrom", "TimeOfDayTo", "FromDate", "ToDate", });
     com.tcn.cloud.api.api.commons.EnumsProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

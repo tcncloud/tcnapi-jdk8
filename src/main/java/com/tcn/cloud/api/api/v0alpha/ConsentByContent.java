@@ -297,7 +297,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.CommType channel = 13 [json_name = "channel", deprecated = true];</code>
    * @deprecated api.v0alpha.ConsentByContent.channel is deprecated.
-   *     See api/v0alpha/compliance.proto;l=1604
+   *     See api/v0alpha/compliance.proto;l=1584
    * @return Whether the channel field is set.
    */
   @java.lang.Override
@@ -311,7 +311,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>.api.commons.CommType channel = 13 [json_name = "channel", deprecated = true];</code>
    * @deprecated api.v0alpha.ConsentByContent.channel is deprecated.
-   *     See api/v0alpha/compliance.proto;l=1604
+   *     See api/v0alpha/compliance.proto;l=1584
    * @return The channel.
    */
   @java.lang.Override
@@ -652,16 +652,16 @@ private static final long serialVersionUID = 0L;
 
   public static final int CONDITIONS_FIELD_NUMBER = 22;
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.v0alpha.ConsentCondition> conditions_;
+  private java.util.List<com.tcn.cloud.api.api.commons.ConsentCondition> conditions_;
   /**
    * <pre>
    * Consent Conditions
    * </pre>
    *
-   * <code>repeated .api.v0alpha.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
+   * <code>repeated .api.commons.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.v0alpha.ConsentCondition> getConditionsList() {
+  public java.util.List<com.tcn.cloud.api.api.commons.ConsentCondition> getConditionsList() {
     return conditions_;
   }
   /**
@@ -669,10 +669,10 @@ private static final long serialVersionUID = 0L;
    * Consent Conditions
    * </pre>
    *
-   * <code>repeated .api.v0alpha.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
+   * <code>repeated .api.commons.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.v0alpha.ConsentConditionOrBuilder> 
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.ConsentConditionOrBuilder> 
       getConditionsOrBuilderList() {
     return conditions_;
   }
@@ -681,7 +681,7 @@ private static final long serialVersionUID = 0L;
    * Consent Conditions
    * </pre>
    *
-   * <code>repeated .api.v0alpha.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
+   * <code>repeated .api.commons.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
    */
   @java.lang.Override
   public int getConditionsCount() {
@@ -692,10 +692,10 @@ private static final long serialVersionUID = 0L;
    * Consent Conditions
    * </pre>
    *
-   * <code>repeated .api.v0alpha.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
+   * <code>repeated .api.commons.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.ConsentCondition getConditions(int index) {
+  public com.tcn.cloud.api.api.commons.ConsentCondition getConditions(int index) {
     return conditions_.get(index);
   }
   /**
@@ -703,10 +703,10 @@ private static final long serialVersionUID = 0L;
    * Consent Conditions
    * </pre>
    *
-   * <code>repeated .api.v0alpha.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
+   * <code>repeated .api.commons.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.ConsentConditionOrBuilder getConditionsOrBuilder(
+  public com.tcn.cloud.api.api.commons.ConsentConditionOrBuilder getConditionsOrBuilder(
       int index) {
     return conditions_.get(index);
   }
@@ -1560,9 +1560,9 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 168
             case 178: {
-              com.tcn.cloud.api.api.v0alpha.ConsentCondition m =
+              com.tcn.cloud.api.api.commons.ConsentCondition m =
                   input.readMessage(
-                      com.tcn.cloud.api.api.v0alpha.ConsentCondition.parser(),
+                      com.tcn.cloud.api.api.commons.ConsentCondition.parser(),
                       extensionRegistry);
               if (conditionsBuilder_ == null) {
                 ensureConditionsIsMutable();
@@ -2214,7 +2214,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.CommType channel = 13 [json_name = "channel", deprecated = true];</code>
      * @deprecated api.v0alpha.ConsentByContent.channel is deprecated.
-     *     See api/v0alpha/compliance.proto;l=1604
+     *     See api/v0alpha/compliance.proto;l=1584
      * @return Whether the channel field is set.
      */
     @java.lang.Deprecated public boolean hasChannel() {
@@ -2227,7 +2227,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>.api.commons.CommType channel = 13 [json_name = "channel", deprecated = true];</code>
      * @deprecated api.v0alpha.ConsentByContent.channel is deprecated.
-     *     See api/v0alpha/compliance.proto;l=1604
+     *     See api/v0alpha/compliance.proto;l=1584
      * @return The channel.
      */
     @java.lang.Deprecated public com.tcn.cloud.api.api.commons.CommType getChannel() {
@@ -3170,26 +3170,26 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.util.List<com.tcn.cloud.api.api.v0alpha.ConsentCondition> conditions_ =
+    private java.util.List<com.tcn.cloud.api.api.commons.ConsentCondition> conditions_ =
       java.util.Collections.emptyList();
     private void ensureConditionsIsMutable() {
       if (!((bitField0_ & 0x00020000) != 0)) {
-        conditions_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.ConsentCondition>(conditions_);
+        conditions_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.ConsentCondition>(conditions_);
         bitField0_ |= 0x00020000;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v0alpha.ConsentCondition, com.tcn.cloud.api.api.v0alpha.ConsentCondition.Builder, com.tcn.cloud.api.api.v0alpha.ConsentConditionOrBuilder> conditionsBuilder_;
+        com.tcn.cloud.api.api.commons.ConsentCondition, com.tcn.cloud.api.api.commons.ConsentCondition.Builder, com.tcn.cloud.api.api.commons.ConsentConditionOrBuilder> conditionsBuilder_;
 
     /**
      * <pre>
      * Consent Conditions
      * </pre>
      *
-     * <code>repeated .api.v0alpha.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
+     * <code>repeated .api.commons.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v0alpha.ConsentCondition> getConditionsList() {
+    public java.util.List<com.tcn.cloud.api.api.commons.ConsentCondition> getConditionsList() {
       if (conditionsBuilder_ == null) {
         return java.util.Collections.unmodifiableList(conditions_);
       } else {
@@ -3201,7 +3201,7 @@ private static final long serialVersionUID = 0L;
      * Consent Conditions
      * </pre>
      *
-     * <code>repeated .api.v0alpha.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
+     * <code>repeated .api.commons.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
      */
     public int getConditionsCount() {
       if (conditionsBuilder_ == null) {
@@ -3215,9 +3215,9 @@ private static final long serialVersionUID = 0L;
      * Consent Conditions
      * </pre>
      *
-     * <code>repeated .api.v0alpha.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
+     * <code>repeated .api.commons.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.ConsentCondition getConditions(int index) {
+    public com.tcn.cloud.api.api.commons.ConsentCondition getConditions(int index) {
       if (conditionsBuilder_ == null) {
         return conditions_.get(index);
       } else {
@@ -3229,10 +3229,10 @@ private static final long serialVersionUID = 0L;
      * Consent Conditions
      * </pre>
      *
-     * <code>repeated .api.v0alpha.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
+     * <code>repeated .api.commons.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
      */
     public Builder setConditions(
-        int index, com.tcn.cloud.api.api.v0alpha.ConsentCondition value) {
+        int index, com.tcn.cloud.api.api.commons.ConsentCondition value) {
       if (conditionsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -3250,10 +3250,10 @@ private static final long serialVersionUID = 0L;
      * Consent Conditions
      * </pre>
      *
-     * <code>repeated .api.v0alpha.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
+     * <code>repeated .api.commons.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
      */
     public Builder setConditions(
-        int index, com.tcn.cloud.api.api.v0alpha.ConsentCondition.Builder builderForValue) {
+        int index, com.tcn.cloud.api.api.commons.ConsentCondition.Builder builderForValue) {
       if (conditionsBuilder_ == null) {
         ensureConditionsIsMutable();
         conditions_.set(index, builderForValue.build());
@@ -3268,9 +3268,9 @@ private static final long serialVersionUID = 0L;
      * Consent Conditions
      * </pre>
      *
-     * <code>repeated .api.v0alpha.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
+     * <code>repeated .api.commons.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
      */
-    public Builder addConditions(com.tcn.cloud.api.api.v0alpha.ConsentCondition value) {
+    public Builder addConditions(com.tcn.cloud.api.api.commons.ConsentCondition value) {
       if (conditionsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -3288,10 +3288,10 @@ private static final long serialVersionUID = 0L;
      * Consent Conditions
      * </pre>
      *
-     * <code>repeated .api.v0alpha.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
+     * <code>repeated .api.commons.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
      */
     public Builder addConditions(
-        int index, com.tcn.cloud.api.api.v0alpha.ConsentCondition value) {
+        int index, com.tcn.cloud.api.api.commons.ConsentCondition value) {
       if (conditionsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -3309,10 +3309,10 @@ private static final long serialVersionUID = 0L;
      * Consent Conditions
      * </pre>
      *
-     * <code>repeated .api.v0alpha.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
+     * <code>repeated .api.commons.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
      */
     public Builder addConditions(
-        com.tcn.cloud.api.api.v0alpha.ConsentCondition.Builder builderForValue) {
+        com.tcn.cloud.api.api.commons.ConsentCondition.Builder builderForValue) {
       if (conditionsBuilder_ == null) {
         ensureConditionsIsMutable();
         conditions_.add(builderForValue.build());
@@ -3327,10 +3327,10 @@ private static final long serialVersionUID = 0L;
      * Consent Conditions
      * </pre>
      *
-     * <code>repeated .api.v0alpha.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
+     * <code>repeated .api.commons.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
      */
     public Builder addConditions(
-        int index, com.tcn.cloud.api.api.v0alpha.ConsentCondition.Builder builderForValue) {
+        int index, com.tcn.cloud.api.api.commons.ConsentCondition.Builder builderForValue) {
       if (conditionsBuilder_ == null) {
         ensureConditionsIsMutable();
         conditions_.add(index, builderForValue.build());
@@ -3345,10 +3345,10 @@ private static final long serialVersionUID = 0L;
      * Consent Conditions
      * </pre>
      *
-     * <code>repeated .api.v0alpha.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
+     * <code>repeated .api.commons.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
      */
     public Builder addAllConditions(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.v0alpha.ConsentCondition> values) {
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.ConsentCondition> values) {
       if (conditionsBuilder_ == null) {
         ensureConditionsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -3364,7 +3364,7 @@ private static final long serialVersionUID = 0L;
      * Consent Conditions
      * </pre>
      *
-     * <code>repeated .api.v0alpha.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
+     * <code>repeated .api.commons.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
      */
     public Builder clearConditions() {
       if (conditionsBuilder_ == null) {
@@ -3381,7 +3381,7 @@ private static final long serialVersionUID = 0L;
      * Consent Conditions
      * </pre>
      *
-     * <code>repeated .api.v0alpha.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
+     * <code>repeated .api.commons.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
      */
     public Builder removeConditions(int index) {
       if (conditionsBuilder_ == null) {
@@ -3398,9 +3398,9 @@ private static final long serialVersionUID = 0L;
      * Consent Conditions
      * </pre>
      *
-     * <code>repeated .api.v0alpha.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
+     * <code>repeated .api.commons.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.ConsentCondition.Builder getConditionsBuilder(
+    public com.tcn.cloud.api.api.commons.ConsentCondition.Builder getConditionsBuilder(
         int index) {
       return getConditionsFieldBuilder().getBuilder(index);
     }
@@ -3409,9 +3409,9 @@ private static final long serialVersionUID = 0L;
      * Consent Conditions
      * </pre>
      *
-     * <code>repeated .api.v0alpha.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
+     * <code>repeated .api.commons.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.ConsentConditionOrBuilder getConditionsOrBuilder(
+    public com.tcn.cloud.api.api.commons.ConsentConditionOrBuilder getConditionsOrBuilder(
         int index) {
       if (conditionsBuilder_ == null) {
         return conditions_.get(index);  } else {
@@ -3423,9 +3423,9 @@ private static final long serialVersionUID = 0L;
      * Consent Conditions
      * </pre>
      *
-     * <code>repeated .api.v0alpha.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
+     * <code>repeated .api.commons.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.v0alpha.ConsentConditionOrBuilder> 
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.ConsentConditionOrBuilder> 
          getConditionsOrBuilderList() {
       if (conditionsBuilder_ != null) {
         return conditionsBuilder_.getMessageOrBuilderList();
@@ -3438,41 +3438,41 @@ private static final long serialVersionUID = 0L;
      * Consent Conditions
      * </pre>
      *
-     * <code>repeated .api.v0alpha.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
+     * <code>repeated .api.commons.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.ConsentCondition.Builder addConditionsBuilder() {
+    public com.tcn.cloud.api.api.commons.ConsentCondition.Builder addConditionsBuilder() {
       return getConditionsFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.v0alpha.ConsentCondition.getDefaultInstance());
+          com.tcn.cloud.api.api.commons.ConsentCondition.getDefaultInstance());
     }
     /**
      * <pre>
      * Consent Conditions
      * </pre>
      *
-     * <code>repeated .api.v0alpha.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
+     * <code>repeated .api.commons.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.ConsentCondition.Builder addConditionsBuilder(
+    public com.tcn.cloud.api.api.commons.ConsentCondition.Builder addConditionsBuilder(
         int index) {
       return getConditionsFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.v0alpha.ConsentCondition.getDefaultInstance());
+          index, com.tcn.cloud.api.api.commons.ConsentCondition.getDefaultInstance());
     }
     /**
      * <pre>
      * Consent Conditions
      * </pre>
      *
-     * <code>repeated .api.v0alpha.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
+     * <code>repeated .api.commons.ConsentCondition conditions = 22 [json_name = "conditions"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v0alpha.ConsentCondition.Builder> 
+    public java.util.List<com.tcn.cloud.api.api.commons.ConsentCondition.Builder> 
          getConditionsBuilderList() {
       return getConditionsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v0alpha.ConsentCondition, com.tcn.cloud.api.api.v0alpha.ConsentCondition.Builder, com.tcn.cloud.api.api.v0alpha.ConsentConditionOrBuilder> 
+        com.tcn.cloud.api.api.commons.ConsentCondition, com.tcn.cloud.api.api.commons.ConsentCondition.Builder, com.tcn.cloud.api.api.commons.ConsentConditionOrBuilder> 
         getConditionsFieldBuilder() {
       if (conditionsBuilder_ == null) {
         conditionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.v0alpha.ConsentCondition, com.tcn.cloud.api.api.v0alpha.ConsentCondition.Builder, com.tcn.cloud.api.api.v0alpha.ConsentConditionOrBuilder>(
+            com.tcn.cloud.api.api.commons.ConsentCondition, com.tcn.cloud.api.api.commons.ConsentCondition.Builder, com.tcn.cloud.api.api.commons.ConsentConditionOrBuilder>(
                 conditions_,
                 ((bitField0_ & 0x00020000) != 0),
                 getParentForChildren(),

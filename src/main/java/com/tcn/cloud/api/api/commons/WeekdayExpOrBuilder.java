@@ -8,19 +8,15 @@ public interface WeekdayExpOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api.commons.Weekday day = 1 [json_name = "day"];</code>
-   * @return Whether the day field is set.
+   * <code>.api.commons.Weekday.Enum day = 1 [json_name = "day"];</code>
+   * @return The enum numeric value on the wire for day.
    */
-  boolean hasDay();
+  int getDayValue();
   /**
-   * <code>.api.commons.Weekday day = 1 [json_name = "day"];</code>
+   * <code>.api.commons.Weekday.Enum day = 1 [json_name = "day"];</code>
    * @return The day.
    */
-  com.tcn.cloud.api.api.commons.Weekday getDay();
-  /**
-   * <code>.api.commons.Weekday day = 1 [json_name = "day"];</code>
-   */
-  com.tcn.cloud.api.api.commons.WeekdayOrBuilder getDayOrBuilder();
+  com.tcn.cloud.api.api.commons.Weekday.Enum getDay();
 
   /**
    * <code>string text = 2 [json_name = "text"];</code>

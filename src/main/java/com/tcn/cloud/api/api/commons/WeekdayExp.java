@@ -16,6 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private WeekdayExp() {
+    day_ = 0;
     text_ = "";
   }
 
@@ -40,29 +41,21 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DAY_FIELD_NUMBER = 1;
-  private com.tcn.cloud.api.api.commons.Weekday day_;
+  private int day_ = 0;
   /**
-   * <code>.api.commons.Weekday day = 1 [json_name = "day"];</code>
-   * @return Whether the day field is set.
+   * <code>.api.commons.Weekday.Enum day = 1 [json_name = "day"];</code>
+   * @return The enum numeric value on the wire for day.
    */
-  @java.lang.Override
-  public boolean hasDay() {
-    return day_ != null;
+  @java.lang.Override public int getDayValue() {
+    return day_;
   }
   /**
-   * <code>.api.commons.Weekday day = 1 [json_name = "day"];</code>
+   * <code>.api.commons.Weekday.Enum day = 1 [json_name = "day"];</code>
    * @return The day.
    */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.Weekday getDay() {
-    return day_ == null ? com.tcn.cloud.api.api.commons.Weekday.getDefaultInstance() : day_;
-  }
-  /**
-   * <code>.api.commons.Weekday day = 1 [json_name = "day"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.WeekdayOrBuilder getDayOrBuilder() {
-    return day_ == null ? com.tcn.cloud.api.api.commons.Weekday.getDefaultInstance() : day_;
+  @java.lang.Override public com.tcn.cloud.api.api.commons.Weekday.Enum getDay() {
+    com.tcn.cloud.api.api.commons.Weekday.Enum result = com.tcn.cloud.api.api.commons.Weekday.Enum.forNumber(day_);
+    return result == null ? com.tcn.cloud.api.api.commons.Weekday.Enum.UNRECOGNIZED : result;
   }
 
   public static final int TEXT_FIELD_NUMBER = 2;
@@ -118,8 +111,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (day_ != null) {
-      output.writeMessage(1, getDay());
+    if (day_ != com.tcn.cloud.api.api.commons.Weekday.Enum.SUNDAY.getNumber()) {
+      output.writeEnum(1, day_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, text_);
@@ -133,9 +126,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (day_ != null) {
+    if (day_ != com.tcn.cloud.api.api.commons.Weekday.Enum.SUNDAY.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getDay());
+        .computeEnumSize(1, day_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, text_);
@@ -155,11 +148,7 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.commons.WeekdayExp other = (com.tcn.cloud.api.api.commons.WeekdayExp) obj;
 
-    if (hasDay() != other.hasDay()) return false;
-    if (hasDay()) {
-      if (!getDay()
-          .equals(other.getDay())) return false;
-    }
+    if (day_ != other.day_) return false;
     if (!getText()
         .equals(other.getText())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -173,10 +162,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasDay()) {
-      hash = (37 * hash) + DAY_FIELD_NUMBER;
-      hash = (53 * hash) + getDay().hashCode();
-    }
+    hash = (37 * hash) + DAY_FIELD_NUMBER;
+    hash = (53 * hash) + day_;
     hash = (37 * hash) + TEXT_FIELD_NUMBER;
     hash = (53 * hash) + getText().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -310,11 +297,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      day_ = null;
-      if (dayBuilder_ != null) {
-        dayBuilder_.dispose();
-        dayBuilder_ = null;
-      }
+      day_ = 0;
       text_ = "";
       return this;
     }
@@ -350,9 +333,7 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.commons.WeekdayExp result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.day_ = dayBuilder_ == null
-            ? day_
-            : dayBuilder_.build();
+        result.day_ = day_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.text_ = text_;
@@ -371,8 +352,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.commons.WeekdayExp other) {
       if (other == com.tcn.cloud.api.api.commons.WeekdayExp.getDefaultInstance()) return this;
-      if (other.hasDay()) {
-        mergeDay(other.getDay());
+      if (other.day_ != 0) {
+        setDayValue(other.getDayValue());
       }
       if (!other.getText().isEmpty()) {
         text_ = other.text_;
@@ -405,13 +386,11 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
-              input.readMessage(
-                  getDayFieldBuilder().getBuilder(),
-                  extensionRegistry);
+            case 8: {
+              day_ = input.readEnum();
               bitField0_ |= 0x00000001;
               break;
-            } // case 10
+            } // case 8
             case 18: {
               text_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
@@ -434,123 +413,57 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.tcn.cloud.api.api.commons.Weekday day_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.Weekday, com.tcn.cloud.api.api.commons.Weekday.Builder, com.tcn.cloud.api.api.commons.WeekdayOrBuilder> dayBuilder_;
+    private int day_ = 0;
     /**
-     * <code>.api.commons.Weekday day = 1 [json_name = "day"];</code>
-     * @return Whether the day field is set.
+     * <code>.api.commons.Weekday.Enum day = 1 [json_name = "day"];</code>
+     * @return The enum numeric value on the wire for day.
      */
-    public boolean hasDay() {
-      return ((bitField0_ & 0x00000001) != 0);
+    @java.lang.Override public int getDayValue() {
+      return day_;
     }
     /**
-     * <code>.api.commons.Weekday day = 1 [json_name = "day"];</code>
+     * <code>.api.commons.Weekday.Enum day = 1 [json_name = "day"];</code>
+     * @param value The enum numeric value on the wire for day to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDayValue(int value) {
+      day_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.api.commons.Weekday.Enum day = 1 [json_name = "day"];</code>
      * @return The day.
      */
-    public com.tcn.cloud.api.api.commons.Weekday getDay() {
-      if (dayBuilder_ == null) {
-        return day_ == null ? com.tcn.cloud.api.api.commons.Weekday.getDefaultInstance() : day_;
-      } else {
-        return dayBuilder_.getMessage();
-      }
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.Weekday.Enum getDay() {
+      com.tcn.cloud.api.api.commons.Weekday.Enum result = com.tcn.cloud.api.api.commons.Weekday.Enum.forNumber(day_);
+      return result == null ? com.tcn.cloud.api.api.commons.Weekday.Enum.UNRECOGNIZED : result;
     }
     /**
-     * <code>.api.commons.Weekday day = 1 [json_name = "day"];</code>
+     * <code>.api.commons.Weekday.Enum day = 1 [json_name = "day"];</code>
+     * @param value The day to set.
+     * @return This builder for chaining.
      */
-    public Builder setDay(com.tcn.cloud.api.api.commons.Weekday value) {
-      if (dayBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        day_ = value;
-      } else {
-        dayBuilder_.setMessage(value);
+    public Builder setDay(com.tcn.cloud.api.api.commons.Weekday.Enum value) {
+      if (value == null) {
+        throw new NullPointerException();
       }
       bitField0_ |= 0x00000001;
+      day_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
-     * <code>.api.commons.Weekday day = 1 [json_name = "day"];</code>
-     */
-    public Builder setDay(
-        com.tcn.cloud.api.api.commons.Weekday.Builder builderForValue) {
-      if (dayBuilder_ == null) {
-        day_ = builderForValue.build();
-      } else {
-        dayBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.Weekday day = 1 [json_name = "day"];</code>
-     */
-    public Builder mergeDay(com.tcn.cloud.api.api.commons.Weekday value) {
-      if (dayBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          day_ != null &&
-          day_ != com.tcn.cloud.api.api.commons.Weekday.getDefaultInstance()) {
-          getDayBuilder().mergeFrom(value);
-        } else {
-          day_ = value;
-        }
-      } else {
-        dayBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.api.commons.Weekday day = 1 [json_name = "day"];</code>
+     * <code>.api.commons.Weekday.Enum day = 1 [json_name = "day"];</code>
+     * @return This builder for chaining.
      */
     public Builder clearDay() {
       bitField0_ = (bitField0_ & ~0x00000001);
-      day_ = null;
-      if (dayBuilder_ != null) {
-        dayBuilder_.dispose();
-        dayBuilder_ = null;
-      }
+      day_ = 0;
       onChanged();
       return this;
-    }
-    /**
-     * <code>.api.commons.Weekday day = 1 [json_name = "day"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.Weekday.Builder getDayBuilder() {
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return getDayFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.api.commons.Weekday day = 1 [json_name = "day"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.WeekdayOrBuilder getDayOrBuilder() {
-      if (dayBuilder_ != null) {
-        return dayBuilder_.getMessageOrBuilder();
-      } else {
-        return day_ == null ?
-            com.tcn.cloud.api.api.commons.Weekday.getDefaultInstance() : day_;
-      }
-    }
-    /**
-     * <code>.api.commons.Weekday day = 1 [json_name = "day"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.Weekday, com.tcn.cloud.api.api.commons.Weekday.Builder, com.tcn.cloud.api.api.commons.WeekdayOrBuilder> 
-        getDayFieldBuilder() {
-      if (dayBuilder_ == null) {
-        dayBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.Weekday, com.tcn.cloud.api.api.commons.Weekday.Builder, com.tcn.cloud.api.api.commons.WeekdayOrBuilder>(
-                getDay(),
-                getParentForChildren(),
-                isClean());
-        day_ = null;
-      }
-      return dayBuilder_;
     }
 
     private java.lang.Object text_ = "";

@@ -109,7 +109,7 @@ public interface UpdateConsentReqOrBuilder extends
    *
    * <code>.api.commons.CommType channel = 15 [json_name = "channel", deprecated = true];</code>
    * @deprecated api.v0alpha.UpdateConsentReq.channel is deprecated.
-   *     See api/v0alpha/compliance.proto;l=1461
+   *     See api/v0alpha/compliance.proto;l=1441
    * @return Whether the channel field is set.
    */
   @java.lang.Deprecated boolean hasChannel();
@@ -120,7 +120,7 @@ public interface UpdateConsentReqOrBuilder extends
    *
    * <code>.api.commons.CommType channel = 15 [json_name = "channel", deprecated = true];</code>
    * @deprecated api.v0alpha.UpdateConsentReq.channel is deprecated.
-   *     See api/v0alpha/compliance.proto;l=1461
+   *     See api/v0alpha/compliance.proto;l=1441
    * @return The channel.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.CommType getChannel();
@@ -333,24 +333,24 @@ public interface UpdateConsentReqOrBuilder extends
    * Consent Conditions
    * </pre>
    *
-   * <code>repeated .api.v0alpha.ConsentCondition conditions = 26 [json_name = "conditions"];</code>
+   * <code>repeated .api.commons.ConsentCondition conditions = 26 [json_name = "conditions"];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.v0alpha.ConsentCondition> 
+  java.util.List<com.tcn.cloud.api.api.commons.ConsentCondition> 
       getConditionsList();
   /**
    * <pre>
    * Consent Conditions
    * </pre>
    *
-   * <code>repeated .api.v0alpha.ConsentCondition conditions = 26 [json_name = "conditions"];</code>
+   * <code>repeated .api.commons.ConsentCondition conditions = 26 [json_name = "conditions"];</code>
    */
-  com.tcn.cloud.api.api.v0alpha.ConsentCondition getConditions(int index);
+  com.tcn.cloud.api.api.commons.ConsentCondition getConditions(int index);
   /**
    * <pre>
    * Consent Conditions
    * </pre>
    *
-   * <code>repeated .api.v0alpha.ConsentCondition conditions = 26 [json_name = "conditions"];</code>
+   * <code>repeated .api.commons.ConsentCondition conditions = 26 [json_name = "conditions"];</code>
    */
   int getConditionsCount();
   /**
@@ -358,18 +358,18 @@ public interface UpdateConsentReqOrBuilder extends
    * Consent Conditions
    * </pre>
    *
-   * <code>repeated .api.v0alpha.ConsentCondition conditions = 26 [json_name = "conditions"];</code>
+   * <code>repeated .api.commons.ConsentCondition conditions = 26 [json_name = "conditions"];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.v0alpha.ConsentConditionOrBuilder> 
+  java.util.List<? extends com.tcn.cloud.api.api.commons.ConsentConditionOrBuilder> 
       getConditionsOrBuilderList();
   /**
    * <pre>
    * Consent Conditions
    * </pre>
    *
-   * <code>repeated .api.v0alpha.ConsentCondition conditions = 26 [json_name = "conditions"];</code>
+   * <code>repeated .api.commons.ConsentCondition conditions = 26 [json_name = "conditions"];</code>
    */
-  com.tcn.cloud.api.api.v0alpha.ConsentConditionOrBuilder getConditionsOrBuilder(
+  com.tcn.cloud.api.api.commons.ConsentConditionOrBuilder getConditionsOrBuilder(
       int index);
 
   /**
