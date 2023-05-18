@@ -88,7 +88,7 @@ public interface CreateConsentReqOrBuilder extends
    *
    * <code>.api.commons.CommType channel = 15 [json_name = "channel", deprecated = true];</code>
    * @deprecated api.v0alpha.CreateConsentReq.channel is deprecated.
-   *     See api/v0alpha/compliance.proto;l=1308
+   *     See api/v0alpha/compliance.proto;l=1300
    * @return Whether the channel field is set.
    */
   @java.lang.Deprecated boolean hasChannel();
@@ -99,7 +99,7 @@ public interface CreateConsentReqOrBuilder extends
    *
    * <code>.api.commons.CommType channel = 15 [json_name = "channel", deprecated = true];</code>
    * @deprecated api.v0alpha.CreateConsentReq.channel is deprecated.
-   *     See api/v0alpha/compliance.proto;l=1308
+   *     See api/v0alpha/compliance.proto;l=1300
    * @return The channel.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.CommType getChannel();
