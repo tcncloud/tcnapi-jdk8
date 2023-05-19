@@ -55,6 +55,7 @@ private static final long serialVersionUID = 0L;
     SEND_STATUS_ASM_EVENT(8),
     PAUSE_EVENT(9),
     RESUME_EVENT(10),
+    CONVERSATION_PULLED_EVENT(11),
     EVENT_NOT_SET(0);
     private final int value;
     private EventCase(int value) {
@@ -78,6 +79,7 @@ private static final long serialVersionUID = 0L;
         case 8: return SEND_STATUS_ASM_EVENT;
         case 9: return PAUSE_EVENT;
         case 10: return RESUME_EVENT;
+        case 11: return CONVERSATION_PULLED_EVENT;
         case 0: return EVENT_NOT_SET;
         default: return null;
       }
@@ -320,6 +322,37 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.ResumeEvent.getDefaultInstance();
   }
 
+  public static final int CONVERSATION_PULLED_EVENT_FIELD_NUMBER = 11;
+  /**
+   * <code>.api.commons.ConversationPulledEvent conversation_pulled_event = 11 [json_name = "conversationPulledEvent"];</code>
+   * @return Whether the conversationPulledEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasConversationPulledEvent() {
+    return eventCase_ == 11;
+  }
+  /**
+   * <code>.api.commons.ConversationPulledEvent conversation_pulled_event = 11 [json_name = "conversationPulledEvent"];</code>
+   * @return The conversationPulledEvent.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.ConversationPulledEvent getConversationPulledEvent() {
+    if (eventCase_ == 11) {
+       return (com.tcn.cloud.api.api.commons.ConversationPulledEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.ConversationPulledEvent.getDefaultInstance();
+  }
+  /**
+   * <code>.api.commons.ConversationPulledEvent conversation_pulled_event = 11 [json_name = "conversationPulledEvent"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.ConversationPulledEventOrBuilder getConversationPulledEventOrBuilder() {
+    if (eventCase_ == 11) {
+       return (com.tcn.cloud.api.api.commons.ConversationPulledEvent) event_;
+    }
+    return com.tcn.cloud.api.api.commons.ConversationPulledEvent.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -357,6 +390,9 @@ private static final long serialVersionUID = 0L;
     }
     if (eventCase_ == 10) {
       output.writeMessage(10, (com.tcn.cloud.api.api.commons.ResumeEvent) event_);
+    }
+    if (eventCase_ == 11) {
+      output.writeMessage(11, (com.tcn.cloud.api.api.commons.ConversationPulledEvent) event_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -398,6 +434,10 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 10) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, (com.tcn.cloud.api.api.commons.ResumeEvent) event_);
+    }
+    if (eventCase_ == 11) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(11, (com.tcn.cloud.api.api.commons.ConversationPulledEvent) event_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -443,6 +483,10 @@ private static final long serialVersionUID = 0L;
         if (!getResumeEvent()
             .equals(other.getResumeEvent())) return false;
         break;
+      case 11:
+        if (!getConversationPulledEvent()
+            .equals(other.getConversationPulledEvent())) return false;
+        break;
       case 0:
       default:
     }
@@ -486,6 +530,10 @@ private static final long serialVersionUID = 0L;
       case 10:
         hash = (37 * hash) + RESUME_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getResumeEvent().hashCode();
+        break;
+      case 11:
+        hash = (37 * hash) + CONVERSATION_PULLED_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getConversationPulledEvent().hashCode();
         break;
       case 0:
       default:
@@ -645,6 +693,9 @@ private static final long serialVersionUID = 0L;
       if (resumeEventBuilder_ != null) {
         resumeEventBuilder_.clear();
       }
+      if (conversationPulledEventBuilder_ != null) {
+        conversationPulledEventBuilder_.clear();
+      }
       eventCase_ = 0;
       event_ = null;
       return this;
@@ -716,6 +767,10 @@ private static final long serialVersionUID = 0L;
           resumeEventBuilder_ != null) {
         result.event_ = resumeEventBuilder_.build();
       }
+      if (eventCase_ == 11 &&
+          conversationPulledEventBuilder_ != null) {
+        result.event_ = conversationPulledEventBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -759,6 +814,10 @@ private static final long serialVersionUID = 0L;
         }
         case RESUME_EVENT: {
           mergeResumeEvent(other.getResumeEvent());
+          break;
+        }
+        case CONVERSATION_PULLED_EVENT: {
+          mergeConversationPulledEvent(other.getConversationPulledEvent());
           break;
         }
         case EVENT_NOT_SET: {
@@ -843,6 +902,13 @@ private static final long serialVersionUID = 0L;
               eventCase_ = 10;
               break;
             } // case 82
+            case 90: {
+              input.readMessage(
+                  getConversationPulledEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 11;
+              break;
+            } // case 90
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1846,6 +1912,148 @@ private static final long serialVersionUID = 0L;
       eventCase_ = 10;
       onChanged();
       return resumeEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.ConversationPulledEvent, com.tcn.cloud.api.api.commons.ConversationPulledEvent.Builder, com.tcn.cloud.api.api.commons.ConversationPulledEventOrBuilder> conversationPulledEventBuilder_;
+    /**
+     * <code>.api.commons.ConversationPulledEvent conversation_pulled_event = 11 [json_name = "conversationPulledEvent"];</code>
+     * @return Whether the conversationPulledEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasConversationPulledEvent() {
+      return eventCase_ == 11;
+    }
+    /**
+     * <code>.api.commons.ConversationPulledEvent conversation_pulled_event = 11 [json_name = "conversationPulledEvent"];</code>
+     * @return The conversationPulledEvent.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.ConversationPulledEvent getConversationPulledEvent() {
+      if (conversationPulledEventBuilder_ == null) {
+        if (eventCase_ == 11) {
+          return (com.tcn.cloud.api.api.commons.ConversationPulledEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.ConversationPulledEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 11) {
+          return conversationPulledEventBuilder_.getMessage();
+        }
+        return com.tcn.cloud.api.api.commons.ConversationPulledEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.ConversationPulledEvent conversation_pulled_event = 11 [json_name = "conversationPulledEvent"];</code>
+     */
+    public Builder setConversationPulledEvent(com.tcn.cloud.api.api.commons.ConversationPulledEvent value) {
+      if (conversationPulledEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        conversationPulledEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 11;
+      return this;
+    }
+    /**
+     * <code>.api.commons.ConversationPulledEvent conversation_pulled_event = 11 [json_name = "conversationPulledEvent"];</code>
+     */
+    public Builder setConversationPulledEvent(
+        com.tcn.cloud.api.api.commons.ConversationPulledEvent.Builder builderForValue) {
+      if (conversationPulledEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        conversationPulledEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 11;
+      return this;
+    }
+    /**
+     * <code>.api.commons.ConversationPulledEvent conversation_pulled_event = 11 [json_name = "conversationPulledEvent"];</code>
+     */
+    public Builder mergeConversationPulledEvent(com.tcn.cloud.api.api.commons.ConversationPulledEvent value) {
+      if (conversationPulledEventBuilder_ == null) {
+        if (eventCase_ == 11 &&
+            event_ != com.tcn.cloud.api.api.commons.ConversationPulledEvent.getDefaultInstance()) {
+          event_ = com.tcn.cloud.api.api.commons.ConversationPulledEvent.newBuilder((com.tcn.cloud.api.api.commons.ConversationPulledEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 11) {
+          conversationPulledEventBuilder_.mergeFrom(value);
+        } else {
+          conversationPulledEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 11;
+      return this;
+    }
+    /**
+     * <code>.api.commons.ConversationPulledEvent conversation_pulled_event = 11 [json_name = "conversationPulledEvent"];</code>
+     */
+    public Builder clearConversationPulledEvent() {
+      if (conversationPulledEventBuilder_ == null) {
+        if (eventCase_ == 11) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 11) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        conversationPulledEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.api.commons.ConversationPulledEvent conversation_pulled_event = 11 [json_name = "conversationPulledEvent"];</code>
+     */
+    public com.tcn.cloud.api.api.commons.ConversationPulledEvent.Builder getConversationPulledEventBuilder() {
+      return getConversationPulledEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.api.commons.ConversationPulledEvent conversation_pulled_event = 11 [json_name = "conversationPulledEvent"];</code>
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.ConversationPulledEventOrBuilder getConversationPulledEventOrBuilder() {
+      if ((eventCase_ == 11) && (conversationPulledEventBuilder_ != null)) {
+        return conversationPulledEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 11) {
+          return (com.tcn.cloud.api.api.commons.ConversationPulledEvent) event_;
+        }
+        return com.tcn.cloud.api.api.commons.ConversationPulledEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.api.commons.ConversationPulledEvent conversation_pulled_event = 11 [json_name = "conversationPulledEvent"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.tcn.cloud.api.api.commons.ConversationPulledEvent, com.tcn.cloud.api.api.commons.ConversationPulledEvent.Builder, com.tcn.cloud.api.api.commons.ConversationPulledEventOrBuilder> 
+        getConversationPulledEventFieldBuilder() {
+      if (conversationPulledEventBuilder_ == null) {
+        if (!(eventCase_ == 11)) {
+          event_ = com.tcn.cloud.api.api.commons.ConversationPulledEvent.getDefaultInstance();
+        }
+        conversationPulledEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.tcn.cloud.api.api.commons.ConversationPulledEvent, com.tcn.cloud.api.api.commons.ConversationPulledEvent.Builder, com.tcn.cloud.api.api.commons.ConversationPulledEventOrBuilder>(
+                (com.tcn.cloud.api.api.commons.ConversationPulledEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 11;
+      onChanged();
+      return conversationPulledEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
