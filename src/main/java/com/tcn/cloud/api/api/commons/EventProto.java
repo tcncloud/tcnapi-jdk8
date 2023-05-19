@@ -74,6 +74,11 @@ public final class EventProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_ResumeEvent_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_ConversationPulledEvent_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_ConversationPulledEvent_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -111,7 +116,7 @@ public final class EventProto {
       "nitialAgentMessage\022A\n\014conversation\030\003 \001(\013" +
       "2\035.api.commons.OmniConversationR\014convers" +
       "ation\"C\n\017SendStatusEvent\0220\n\006status\030\001 \001(\016" +
-      "2\030.api.commons.StatusStateR\006status\"\200\005\n\010A" +
+      "2\030.api.commons.StatusStateR\006status\"\344\005\n\010A" +
       "smEvent\022.\n\005state\030\001 \001(\0162\030.api.commons.Sta" +
       "tusStateR\005state\022\035\n\nevent_time\030\002 \001(\003R\teve" +
       "ntTime\022u\n activated_conversation_asm_eve" +
@@ -127,22 +132,27 @@ public final class EventProto {
       "entH\000R\022sendStatusAsmEvent\022:\n\013pause_event" +
       "\030\t \001(\0132\027.api.commons.PauseEventH\000R\npause" +
       "Event\022=\n\014resume_event\030\n \001(\0132\030.api.common" +
-      "s.ResumeEventH\000R\013resumeEventB\007\n\005event\"b\n" +
-      "\035ActivatedConversationAsmEvent\022A\n\014conver" +
-      "sation\030\001 \001(\0132\035.api.commons.OmniConversat" +
-      "ionR\014conversation\"d\n\037DeactivatedConversa" +
-      "tionAsmEvent\022A\n\014conversation\030\001 \001(\0132\035.api" +
-      ".commons.OmniConversationR\014conversation\"" +
-      "\305\001\n\023SentMessageAsmEvent\0222\n\025response_time" +
-      "_seconds\030\001 \001(\003R\023responseTimeSeconds\0227\n\030i" +
-      "s_initial_agent_message\030\002 \001(\010R\025isInitial" +
-      "AgentMessage\022A\n\014conversation\030\003 \001(\0132\035.api" +
-      ".commons.OmniConversationR\014conversation\"" +
-      "\024\n\022SendStatusAsmEvent\"\014\n\nPauseEvent\"\r\n\013R" +
-      "esumeEventBx\n\035com.tcn.cloud.api.api.comm" +
-      "onsB\nEventProtoP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013" +
-      "Api\\Commons\342\002\027Api\\Commons\\GPBMetadata\352\002\014" +
-      "Api::Commonsb\006proto3"
+      "s.ResumeEventH\000R\013resumeEvent\022b\n\031conversa" +
+      "tion_pulled_event\030\013 \001(\0132$.api.commons.Co" +
+      "nversationPulledEventH\000R\027conversationPul" +
+      "ledEventB\007\n\005event\"b\n\035ActivatedConversati" +
+      "onAsmEvent\022A\n\014conversation\030\001 \001(\0132\035.api.c" +
+      "ommons.OmniConversationR\014conversation\"d\n" +
+      "\037DeactivatedConversationAsmEvent\022A\n\014conv" +
+      "ersation\030\001 \001(\0132\035.api.commons.OmniConvers" +
+      "ationR\014conversation\"\305\001\n\023SentMessageAsmEv" +
+      "ent\0222\n\025response_time_seconds\030\001 \001(\003R\023resp" +
+      "onseTimeSeconds\0227\n\030is_initial_agent_mess" +
+      "age\030\002 \001(\010R\025isInitialAgentMessage\022A\n\014conv" +
+      "ersation\030\003 \001(\0132\035.api.commons.OmniConvers" +
+      "ationR\014conversation\"\024\n\022SendStatusAsmEven" +
+      "t\"\014\n\nPauseEvent\"\r\n\013ResumeEvent\"\\\n\027Conver" +
+      "sationPulledEvent\022A\n\014conversation\030\001 \001(\0132" +
+      "\035.api.commons.OmniConversationR\014conversa" +
+      "tionBx\n\035com.tcn.cloud.api.api.commonsB\nE" +
+      "ventProtoP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Co" +
+      "mmons\342\002\027Api\\Commons\\GPBMetadata\352\002\014Api::C" +
+      "ommonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -185,7 +195,7 @@ public final class EventProto {
     internal_static_api_commons_AsmEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_AsmEvent_descriptor,
-        new java.lang.String[] { "State", "EventTime", "ActivatedConversationAsmEvent", "DeactivatedConversationAsmEvent", "SentMessageAsmEvent", "SendStatusAsmEvent", "PauseEvent", "ResumeEvent", "Event", });
+        new java.lang.String[] { "State", "EventTime", "ActivatedConversationAsmEvent", "DeactivatedConversationAsmEvent", "SentMessageAsmEvent", "SendStatusAsmEvent", "PauseEvent", "ResumeEvent", "ConversationPulledEvent", "Event", });
     internal_static_api_commons_ActivatedConversationAsmEvent_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_api_commons_ActivatedConversationAsmEvent_fieldAccessorTable = new
@@ -222,6 +232,12 @@ public final class EventProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_ResumeEvent_descriptor,
         new java.lang.String[] { });
+    internal_static_api_commons_ConversationPulledEvent_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_api_commons_ConversationPulledEvent_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_ConversationPulledEvent_descriptor,
+        new java.lang.String[] { "Conversation", });
     com.tcn.cloud.api.api.commons.AsmProto.getDescriptor();
     com.tcn.cloud.api.api.commons.OmnichannelProto.getDescriptor();
   }

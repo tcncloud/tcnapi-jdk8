@@ -1638,6 +1638,33 @@ public interface AuditEventOrBuilder extends
 
   /**
    * <pre>
+   * asm conversation pulled event
+   * </pre>
+   *
+   * <code>.api.commons.audit.AsmConversationPulledEvent asm_conversation_pulled_event = 409 [json_name = "asmConversationPulledEvent"];</code>
+   * @return Whether the asmConversationPulledEvent field is set.
+   */
+  boolean hasAsmConversationPulledEvent();
+  /**
+   * <pre>
+   * asm conversation pulled event
+   * </pre>
+   *
+   * <code>.api.commons.audit.AsmConversationPulledEvent asm_conversation_pulled_event = 409 [json_name = "asmConversationPulledEvent"];</code>
+   * @return The asmConversationPulledEvent.
+   */
+  com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEvent getAsmConversationPulledEvent();
+  /**
+   * <pre>
+   * asm conversation pulled event
+   * </pre>
+   *
+   * <code>.api.commons.audit.AsmConversationPulledEvent asm_conversation_pulled_event = 409 [json_name = "asmConversationPulledEvent"];</code>
+   */
+  com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEventOrBuilder getAsmConversationPulledEventOrBuilder();
+
+  /**
+   * <pre>
    * Scorecards events class 500
    * question library question created
    * </pre>
