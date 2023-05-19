@@ -59,11 +59,6 @@ public final class AsmEventsProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_audit_AsmResumeEvent_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_commons_audit_AsmConversationPulledEvent_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_commons_audit_AsmConversationPulledEvent_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -103,14 +98,12 @@ public final class AsmEventsProto {
       "seEvent\022\027\n\007user_id\030\001 \001(\tR\006userId\022&\n\017asm_" +
       "session_sid\030\002 \001(\003R\rasmSessionSid\"Q\n\016AsmR" +
       "esumeEvent\022\027\n\007user_id\030\001 \001(\tR\006userId\022&\n\017a" +
-      "sm_session_sid\030\002 \001(\003R\rasmSessionSid\"_\n\032A" +
-      "smConversationPulledEvent\022A\n\014conversatio" +
-      "n\030\001 \001(\0132\035.api.commons.OmniConversationR\014" +
-      "conversationB\233\001\n#com.tcn.cloud.api.api.c" +
-      "ommons.auditB\016AsmEventsProtoP\001\242\002\003ACA\252\002\021A" +
-      "pi.Commons.Audit\312\002\021Api\\Commons\\Audit\342\002\035A" +
-      "pi\\Commons\\Audit\\GPBMetadata\352\002\023Api::Comm" +
-      "ons::Auditb\006proto3"
+      "sm_session_sid\030\002 \001(\003R\rasmSessionSidB\233\001\n#" +
+      "com.tcn.cloud.api.api.commons.auditB\016Asm" +
+      "EventsProtoP\001\242\002\003ACA\252\002\021Api.Commons.Audit\312" +
+      "\002\021Api\\Commons\\Audit\342\002\035Api\\Commons\\Audit\\" +
+      "GPBMetadata\352\002\023Api::Commons::Auditb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -172,12 +165,6 @@ public final class AsmEventsProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_audit_AsmResumeEvent_descriptor,
         new java.lang.String[] { "UserId", "AsmSessionSid", });
-    internal_static_api_commons_audit_AsmConversationPulledEvent_descriptor =
-      getDescriptor().getMessageTypes().get(9);
-    internal_static_api_commons_audit_AsmConversationPulledEvent_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_commons_audit_AsmConversationPulledEvent_descriptor,
-        new java.lang.String[] { "Conversation", });
     com.tcn.cloud.api.api.commons.AsmProto.getDescriptor();
     com.tcn.cloud.api.api.commons.OmnichannelProto.getDescriptor();
   }

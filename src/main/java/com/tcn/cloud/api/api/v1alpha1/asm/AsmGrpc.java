@@ -47,28 +47,28 @@ public final class AsmGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.asm.ManagerStreamAgentStateReq,
-      com.tcn.cloud.api.api.commons.ManagerStreamAgentStateRes> getManagerStreamAgentStateMethod;
+      com.tcn.cloud.api.api.commons.AgentState> getManagerStreamAgentStateMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "ManagerStreamAgentState",
       requestType = com.tcn.cloud.api.api.v1alpha1.asm.ManagerStreamAgentStateReq.class,
-      responseType = com.tcn.cloud.api.api.commons.ManagerStreamAgentStateRes.class,
+      responseType = com.tcn.cloud.api.api.commons.AgentState.class,
       methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
   public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.asm.ManagerStreamAgentStateReq,
-      com.tcn.cloud.api.api.commons.ManagerStreamAgentStateRes> getManagerStreamAgentStateMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.asm.ManagerStreamAgentStateReq, com.tcn.cloud.api.api.commons.ManagerStreamAgentStateRes> getManagerStreamAgentStateMethod;
+      com.tcn.cloud.api.api.commons.AgentState> getManagerStreamAgentStateMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.asm.ManagerStreamAgentStateReq, com.tcn.cloud.api.api.commons.AgentState> getManagerStreamAgentStateMethod;
     if ((getManagerStreamAgentStateMethod = AsmGrpc.getManagerStreamAgentStateMethod) == null) {
       synchronized (AsmGrpc.class) {
         if ((getManagerStreamAgentStateMethod = AsmGrpc.getManagerStreamAgentStateMethod) == null) {
           AsmGrpc.getManagerStreamAgentStateMethod = getManagerStreamAgentStateMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.asm.ManagerStreamAgentStateReq, com.tcn.cloud.api.api.commons.ManagerStreamAgentStateRes>newBuilder()
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.asm.ManagerStreamAgentStateReq, com.tcn.cloud.api.api.commons.AgentState>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ManagerStreamAgentState"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.asm.ManagerStreamAgentStateReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.commons.ManagerStreamAgentStateRes.getDefaultInstance()))
+                  com.tcn.cloud.api.api.commons.AgentState.getDefaultInstance()))
               .setSchemaDescriptor(new AsmMethodDescriptorSupplier("ManagerStreamAgentState"))
               .build();
         }
@@ -483,7 +483,7 @@ public final class AsmGrpc {
      * </pre>
      */
     default void managerStreamAgentState(com.tcn.cloud.api.api.v1alpha1.asm.ManagerStreamAgentStateReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.ManagerStreamAgentStateRes> responseObserver) {
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.AgentState> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getManagerStreamAgentStateMethod(), responseObserver);
     }
 
@@ -637,7 +637,7 @@ public final class AsmGrpc {
      * </pre>
      */
     public void managerStreamAgentState(com.tcn.cloud.api.api.v1alpha1.asm.ManagerStreamAgentStateReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.ManagerStreamAgentStateRes> responseObserver) {
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.AgentState> responseObserver) {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getManagerStreamAgentStateMethod(), getCallOptions()), request, responseObserver);
     }
@@ -791,7 +791,7 @@ public final class AsmGrpc {
      * Streams back statuses for the desired filter
      * </pre>
      */
-    public java.util.Iterator<com.tcn.cloud.api.api.commons.ManagerStreamAgentStateRes> managerStreamAgentState(
+    public java.util.Iterator<com.tcn.cloud.api.api.commons.AgentState> managerStreamAgentState(
         com.tcn.cloud.api.api.v1alpha1.asm.ManagerStreamAgentStateReq request) {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getManagerStreamAgentStateMethod(), getCallOptions(), request);
@@ -1071,7 +1071,7 @@ public final class AsmGrpc {
           break;
         case METHODID_MANAGER_STREAM_AGENT_STATE:
           serviceImpl.managerStreamAgentState((com.tcn.cloud.api.api.v1alpha1.asm.ManagerStreamAgentStateReq) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.ManagerStreamAgentStateRes>) responseObserver);
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.AgentState>) responseObserver);
           break;
         case METHODID_PUSH_EVENTS:
           serviceImpl.pushEvents((com.tcn.cloud.api.api.v1alpha1.asm.PushEventsReq) request,
@@ -1147,7 +1147,7 @@ public final class AsmGrpc {
           io.grpc.stub.ServerCalls.asyncServerStreamingCall(
             new MethodHandlers<
               com.tcn.cloud.api.api.v1alpha1.asm.ManagerStreamAgentStateReq,
-              com.tcn.cloud.api.api.commons.ManagerStreamAgentStateRes>(
+              com.tcn.cloud.api.api.commons.AgentState>(
                 service, METHODID_MANAGER_STREAM_AGENT_STATE)))
         .addMethod(
           getPushEventsMethod(),

@@ -35,11 +35,6 @@ public final class AsmProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_StreamAgentStateRes_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_commons_ManagerStreamAgentStateRes_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_commons_ManagerStreamAgentStateRes_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_commons_KeepAlive_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -111,11 +106,7 @@ public final class AsmProto {
       "\031.api.commons.QueueCallAddH\000R\014callQueueA" +
       "dd\022J\n\021call_queue_remove\030\004 \001(\0132\034.api.comm" +
       "ons.QueueCallRemoveH\000R\017callQueueRemoveB\r" +
-      "\n\013agent_state\"\235\001\n\032ManagerStreamAgentStat" +
-      "eRes\022/\n\005state\030\001 \001(\0132\027.api.commons.AgentS" +
-      "tateH\000R\005state\0227\n\nheart_beat\030\002 \001(\0132\026.api." +
-      "commons.KeepAliveH\000R\theartBeatB\025\n\023manage" +
-      "r_agent_state\"\013\n\tKeepAlive\"\227\003\n\014QueueCall" +
+      "\n\013agent_state\"\013\n\tKeepAlive\"\227\003\n\014QueueCall" +
       "Add\022!\n\014phone_number\030\001 \001(\tR\013phoneNumber\022\033" +
       "\n\tcaller_id\030\002 \001(\tR\010callerId\0229\n\nstart_dat" +
       "e\030\003 \001(\0132\032.google.protobuf.TimestampR\tsta" +
@@ -167,26 +158,20 @@ public final class AsmProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_StreamAgentStateRes_descriptor,
         new java.lang.String[] { "State", "HeartBeat", "CallQueueAdd", "CallQueueRemove", "AgentState", });
-    internal_static_api_commons_ManagerStreamAgentStateRes_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_api_commons_ManagerStreamAgentStateRes_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_commons_ManagerStreamAgentStateRes_descriptor,
-        new java.lang.String[] { "State", "HeartBeat", "ManagerAgentState", });
     internal_static_api_commons_KeepAlive_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_api_commons_KeepAlive_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_KeepAlive_descriptor,
         new java.lang.String[] { });
     internal_static_api_commons_QueueCallAdd_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_api_commons_QueueCallAdd_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_QueueCallAdd_descriptor,
         new java.lang.String[] { "PhoneNumber", "CallerId", "StartDate", "HoldDate", "Skills", "AgentSpecific", "QueuedNotificationType", "CallerSid", });
     internal_static_api_commons_QueueCallRemove_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_api_commons_QueueCallRemove_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_QueueCallRemove_descriptor,

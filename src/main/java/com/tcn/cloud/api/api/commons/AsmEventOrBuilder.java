@@ -126,20 +126,5 @@ public interface AsmEventOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.ResumeEventOrBuilder getResumeEventOrBuilder();
 
-  /**
-   * <code>.api.commons.ConversationPulledEvent conversation_pulled_event = 11 [json_name = "conversationPulledEvent"];</code>
-   * @return Whether the conversationPulledEvent field is set.
-   */
-  boolean hasConversationPulledEvent();
-  /**
-   * <code>.api.commons.ConversationPulledEvent conversation_pulled_event = 11 [json_name = "conversationPulledEvent"];</code>
-   * @return The conversationPulledEvent.
-   */
-  com.tcn.cloud.api.api.commons.ConversationPulledEvent getConversationPulledEvent();
-  /**
-   * <code>.api.commons.ConversationPulledEvent conversation_pulled_event = 11 [json_name = "conversationPulledEvent"];</code>
-   */
-  com.tcn.cloud.api.api.commons.ConversationPulledEventOrBuilder getConversationPulledEventOrBuilder();
-
   com.tcn.cloud.api.api.commons.AsmEvent.EventCase getEventCase();
 }

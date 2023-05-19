@@ -481,14 +481,6 @@ public enum EventType
   ASM_RESUME_EVENT(408),
   /**
    * <pre>
-   * asm conversation pulled event
-   * </pre>
-   *
-   * <code>ASM_CONVERSATION_PULLED_EVENT = 409;</code>
-   */
-  ASM_CONVERSATION_PULLED_EVENT(409),
-  /**
-   * <pre>
    * Scorecards
    * create question event
    * </pre>
@@ -1176,14 +1168,6 @@ public enum EventType
   public static final int ASM_RESUME_EVENT_VALUE = 408;
   /**
    * <pre>
-   * asm conversation pulled event
-   * </pre>
-   *
-   * <code>ASM_CONVERSATION_PULLED_EVENT = 409;</code>
-   */
-  public static final int ASM_CONVERSATION_PULLED_EVENT_VALUE = 409;
-  /**
-   * <pre>
    * Scorecards
    * create question event
    * </pre>
@@ -1497,7 +1481,6 @@ public enum EventType
       case 406: return ASM_AGENT_LOGOUT;
       case 407: return ASM_PAUSE_EVENT;
       case 408: return ASM_RESUME_EVENT;
-      case 409: return ASM_CONVERSATION_PULLED_EVENT;
       case 500: return SCORECARDS_CREATE_QUESTION_EVENT;
       case 501: return SCORECARDS_UPDATE_QUESTION_EVENT;
       case 502: return SCORECARDS_DELETE_QUESTION_EVENT;

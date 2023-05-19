@@ -111,7 +111,6 @@ private static final long serialVersionUID = 0L;
     ASM_AGENT_LOGOUT_EVENT(406),
     ASM_PAUSE_EVENT(407),
     ASM_RESUME_EVENT(408),
-    ASM_CONVERSATION_PULLED_EVENT(409),
     SCORECARDS_CREATE_QUESTION_EVENT(500),
     SCORECARDS_UPDATE_QUESTION_EVENT(501),
     SCORECARDS_DELETE_QUESTION_EVENT(502),
@@ -213,7 +212,6 @@ private static final long serialVersionUID = 0L;
         case 406: return ASM_AGENT_LOGOUT_EVENT;
         case 407: return ASM_PAUSE_EVENT;
         case 408: return ASM_RESUME_EVENT;
-        case 409: return ASM_CONVERSATION_PULLED_EVENT;
         case 500: return SCORECARDS_CREATE_QUESTION_EVENT;
         case 501: return SCORECARDS_UPDATE_QUESTION_EVENT;
         case 502: return SCORECARDS_DELETE_QUESTION_EVENT;
@@ -2938,49 +2936,6 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.commons.audit.AsmResumeEvent.getDefaultInstance();
   }
 
-  public static final int ASM_CONVERSATION_PULLED_EVENT_FIELD_NUMBER = 409;
-  /**
-   * <pre>
-   * asm conversation pulled event
-   * </pre>
-   *
-   * <code>.api.commons.audit.AsmConversationPulledEvent asm_conversation_pulled_event = 409 [json_name = "asmConversationPulledEvent"];</code>
-   * @return Whether the asmConversationPulledEvent field is set.
-   */
-  @java.lang.Override
-  public boolean hasAsmConversationPulledEvent() {
-    return eventCase_ == 409;
-  }
-  /**
-   * <pre>
-   * asm conversation pulled event
-   * </pre>
-   *
-   * <code>.api.commons.audit.AsmConversationPulledEvent asm_conversation_pulled_event = 409 [json_name = "asmConversationPulledEvent"];</code>
-   * @return The asmConversationPulledEvent.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEvent getAsmConversationPulledEvent() {
-    if (eventCase_ == 409) {
-       return (com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEvent) event_;
-    }
-    return com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEvent.getDefaultInstance();
-  }
-  /**
-   * <pre>
-   * asm conversation pulled event
-   * </pre>
-   *
-   * <code>.api.commons.audit.AsmConversationPulledEvent asm_conversation_pulled_event = 409 [json_name = "asmConversationPulledEvent"];</code>
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEventOrBuilder getAsmConversationPulledEventOrBuilder() {
-    if (eventCase_ == 409) {
-       return (com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEvent) event_;
-    }
-    return com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEvent.getDefaultInstance();
-  }
-
   public static final int SCORECARDS_CREATE_QUESTION_EVENT_FIELD_NUMBER = 500;
   /**
    * <pre>
@@ -4314,9 +4269,6 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 408) {
       output.writeMessage(408, (com.tcn.cloud.api.api.commons.audit.AsmResumeEvent) event_);
     }
-    if (eventCase_ == 409) {
-      output.writeMessage(409, (com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEvent) event_);
-    }
     if (eventCase_ == 500) {
       output.writeMessage(500, (com.tcn.cloud.api.api.commons.audit.ScorecardsCreateQuestionEvent) event_);
     }
@@ -4655,10 +4607,6 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 408) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(408, (com.tcn.cloud.api.api.commons.audit.AsmResumeEvent) event_);
-    }
-    if (eventCase_ == 409) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(409, (com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEvent) event_);
     }
     if (eventCase_ == 500) {
       size += com.google.protobuf.CodedOutputStream
@@ -5027,10 +4975,6 @@ private static final long serialVersionUID = 0L;
         if (!getAsmResumeEvent()
             .equals(other.getAsmResumeEvent())) return false;
         break;
-      case 409:
-        if (!getAsmConversationPulledEvent()
-            .equals(other.getAsmConversationPulledEvent())) return false;
-        break;
       case 500:
         if (!getScorecardsCreateQuestionEvent()
             .equals(other.getScorecardsCreateQuestionEvent())) return false;
@@ -5395,10 +5339,6 @@ private static final long serialVersionUID = 0L;
       case 408:
         hash = (37 * hash) + ASM_RESUME_EVENT_FIELD_NUMBER;
         hash = (53 * hash) + getAsmResumeEvent().hashCode();
-        break;
-      case 409:
-        hash = (37 * hash) + ASM_CONVERSATION_PULLED_EVENT_FIELD_NUMBER;
-        hash = (53 * hash) + getAsmConversationPulledEvent().hashCode();
         break;
       case 500:
         hash = (37 * hash) + SCORECARDS_CREATE_QUESTION_EVENT_FIELD_NUMBER;
@@ -5828,9 +5768,6 @@ private static final long serialVersionUID = 0L;
       if (asmResumeEventBuilder_ != null) {
         asmResumeEventBuilder_.clear();
       }
-      if (asmConversationPulledEventBuilder_ != null) {
-        asmConversationPulledEventBuilder_.clear();
-      }
       if (scorecardsCreateQuestionEventBuilder_ != null) {
         scorecardsCreateQuestionEventBuilder_.clear();
       }
@@ -6212,10 +6149,6 @@ private static final long serialVersionUID = 0L;
           asmResumeEventBuilder_ != null) {
         result.event_ = asmResumeEventBuilder_.build();
       }
-      if (eventCase_ == 409 &&
-          asmConversationPulledEventBuilder_ != null) {
-        result.event_ = asmConversationPulledEventBuilder_.build();
-      }
       if (eventCase_ == 500 &&
           scorecardsCreateQuestionEventBuilder_ != null) {
         result.event_ = scorecardsCreateQuestionEventBuilder_.build();
@@ -6591,10 +6524,6 @@ private static final long serialVersionUID = 0L;
         }
         case ASM_RESUME_EVENT: {
           mergeAsmResumeEvent(other.getAsmResumeEvent());
-          break;
-        }
-        case ASM_CONVERSATION_PULLED_EVENT: {
-          mergeAsmConversationPulledEvent(other.getAsmConversationPulledEvent());
           break;
         }
         case SCORECARDS_CREATE_QUESTION_EVENT: {
@@ -7169,13 +7098,6 @@ private static final long serialVersionUID = 0L;
               eventCase_ = 408;
               break;
             } // case 3266
-            case 3274: {
-              input.readMessage(
-                  getAsmConversationPulledEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 409;
-              break;
-            } // case 3274
             case 4002: {
               input.readMessage(
                   getScorecardsCreateQuestionEventFieldBuilder().getBuilder(),
@@ -18118,184 +18040,6 @@ private static final long serialVersionUID = 0L;
       eventCase_ = 408;
       onChanged();
       return asmResumeEventBuilder_;
-    }
-
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEvent, com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEvent.Builder, com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEventOrBuilder> asmConversationPulledEventBuilder_;
-    /**
-     * <pre>
-     * asm conversation pulled event
-     * </pre>
-     *
-     * <code>.api.commons.audit.AsmConversationPulledEvent asm_conversation_pulled_event = 409 [json_name = "asmConversationPulledEvent"];</code>
-     * @return Whether the asmConversationPulledEvent field is set.
-     */
-    @java.lang.Override
-    public boolean hasAsmConversationPulledEvent() {
-      return eventCase_ == 409;
-    }
-    /**
-     * <pre>
-     * asm conversation pulled event
-     * </pre>
-     *
-     * <code>.api.commons.audit.AsmConversationPulledEvent asm_conversation_pulled_event = 409 [json_name = "asmConversationPulledEvent"];</code>
-     * @return The asmConversationPulledEvent.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEvent getAsmConversationPulledEvent() {
-      if (asmConversationPulledEventBuilder_ == null) {
-        if (eventCase_ == 409) {
-          return (com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEvent) event_;
-        }
-        return com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEvent.getDefaultInstance();
-      } else {
-        if (eventCase_ == 409) {
-          return asmConversationPulledEventBuilder_.getMessage();
-        }
-        return com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEvent.getDefaultInstance();
-      }
-    }
-    /**
-     * <pre>
-     * asm conversation pulled event
-     * </pre>
-     *
-     * <code>.api.commons.audit.AsmConversationPulledEvent asm_conversation_pulled_event = 409 [json_name = "asmConversationPulledEvent"];</code>
-     */
-    public Builder setAsmConversationPulledEvent(com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEvent value) {
-      if (asmConversationPulledEventBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        event_ = value;
-        onChanged();
-      } else {
-        asmConversationPulledEventBuilder_.setMessage(value);
-      }
-      eventCase_ = 409;
-      return this;
-    }
-    /**
-     * <pre>
-     * asm conversation pulled event
-     * </pre>
-     *
-     * <code>.api.commons.audit.AsmConversationPulledEvent asm_conversation_pulled_event = 409 [json_name = "asmConversationPulledEvent"];</code>
-     */
-    public Builder setAsmConversationPulledEvent(
-        com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEvent.Builder builderForValue) {
-      if (asmConversationPulledEventBuilder_ == null) {
-        event_ = builderForValue.build();
-        onChanged();
-      } else {
-        asmConversationPulledEventBuilder_.setMessage(builderForValue.build());
-      }
-      eventCase_ = 409;
-      return this;
-    }
-    /**
-     * <pre>
-     * asm conversation pulled event
-     * </pre>
-     *
-     * <code>.api.commons.audit.AsmConversationPulledEvent asm_conversation_pulled_event = 409 [json_name = "asmConversationPulledEvent"];</code>
-     */
-    public Builder mergeAsmConversationPulledEvent(com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEvent value) {
-      if (asmConversationPulledEventBuilder_ == null) {
-        if (eventCase_ == 409 &&
-            event_ != com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEvent.getDefaultInstance()) {
-          event_ = com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEvent.newBuilder((com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEvent) event_)
-              .mergeFrom(value).buildPartial();
-        } else {
-          event_ = value;
-        }
-        onChanged();
-      } else {
-        if (eventCase_ == 409) {
-          asmConversationPulledEventBuilder_.mergeFrom(value);
-        } else {
-          asmConversationPulledEventBuilder_.setMessage(value);
-        }
-      }
-      eventCase_ = 409;
-      return this;
-    }
-    /**
-     * <pre>
-     * asm conversation pulled event
-     * </pre>
-     *
-     * <code>.api.commons.audit.AsmConversationPulledEvent asm_conversation_pulled_event = 409 [json_name = "asmConversationPulledEvent"];</code>
-     */
-    public Builder clearAsmConversationPulledEvent() {
-      if (asmConversationPulledEventBuilder_ == null) {
-        if (eventCase_ == 409) {
-          eventCase_ = 0;
-          event_ = null;
-          onChanged();
-        }
-      } else {
-        if (eventCase_ == 409) {
-          eventCase_ = 0;
-          event_ = null;
-        }
-        asmConversationPulledEventBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <pre>
-     * asm conversation pulled event
-     * </pre>
-     *
-     * <code>.api.commons.audit.AsmConversationPulledEvent asm_conversation_pulled_event = 409 [json_name = "asmConversationPulledEvent"];</code>
-     */
-    public com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEvent.Builder getAsmConversationPulledEventBuilder() {
-      return getAsmConversationPulledEventFieldBuilder().getBuilder();
-    }
-    /**
-     * <pre>
-     * asm conversation pulled event
-     * </pre>
-     *
-     * <code>.api.commons.audit.AsmConversationPulledEvent asm_conversation_pulled_event = 409 [json_name = "asmConversationPulledEvent"];</code>
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEventOrBuilder getAsmConversationPulledEventOrBuilder() {
-      if ((eventCase_ == 409) && (asmConversationPulledEventBuilder_ != null)) {
-        return asmConversationPulledEventBuilder_.getMessageOrBuilder();
-      } else {
-        if (eventCase_ == 409) {
-          return (com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEvent) event_;
-        }
-        return com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEvent.getDefaultInstance();
-      }
-    }
-    /**
-     * <pre>
-     * asm conversation pulled event
-     * </pre>
-     *
-     * <code>.api.commons.audit.AsmConversationPulledEvent asm_conversation_pulled_event = 409 [json_name = "asmConversationPulledEvent"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEvent, com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEvent.Builder, com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEventOrBuilder> 
-        getAsmConversationPulledEventFieldBuilder() {
-      if (asmConversationPulledEventBuilder_ == null) {
-        if (!(eventCase_ == 409)) {
-          event_ = com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEvent.getDefaultInstance();
-        }
-        asmConversationPulledEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEvent, com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEvent.Builder, com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEventOrBuilder>(
-                (com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEvent) event_,
-                getParentForChildren(),
-                isClean());
-        event_ = null;
-      }
-      eventCase_ = 409;
-      onChanged();
-      return asmConversationPulledEventBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
