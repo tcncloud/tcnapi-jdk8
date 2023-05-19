@@ -126,7 +126,7 @@ public enum EvaluationState
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.ScorecardsProto.getDescriptor().getEnumTypes().get(4);
+    return com.tcn.cloud.api.api.commons.ScorecardsProto.getDescriptor().getEnumTypes().get(5);
   }
 
   private static final EvaluationState[] VALUES = values();

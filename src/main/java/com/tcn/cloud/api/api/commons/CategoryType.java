@@ -4,67 +4,37 @@
 package com.tcn.cloud.api.api.commons;
 
 /**
- * <pre>
- * FailType is how affect the scoring of the scorecard.
- * Some answer options have points, which add to the score.
- * Other options have fail types which are applied, when chosen.
- * </pre>
- *
- * Protobuf enum {@code api.commons.FailType}
+ * Protobuf enum {@code api.commons.CategoryType}
  */
-public enum FailType
+public enum CategoryType
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
-   * <pre>
-   * default. fail the question
-   * </pre>
-   *
-   * <code>FAIL_QUESTION = 0;</code>
+   * <code>INVALID = 0;</code>
    */
-  FAIL_QUESTION(0),
+  INVALID(0),
   /**
-   * <pre>
-   * fail the scorecard's section
-   * </pre>
-   *
-   * <code>FAIL_SECTION = 1;</code>
+   * <code>SKILL_CALLS = 1;</code>
    */
-  FAIL_SECTION(1),
+  SKILL_CALLS(1),
   /**
-   * <pre>
-   * fail the entire scorecard
-   * </pre>
-   *
-   * <code>FAIL_SCORECARD = 2;</code>
+   * <code>MANUAL_DIAL = 2;</code>
    */
-  FAIL_SCORECARD(2),
+  MANUAL_DIAL(2),
   UNRECOGNIZED(-1),
   ;
 
   /**
-   * <pre>
-   * default. fail the question
-   * </pre>
-   *
-   * <code>FAIL_QUESTION = 0;</code>
+   * <code>INVALID = 0;</code>
    */
-  public static final int FAIL_QUESTION_VALUE = 0;
+  public static final int INVALID_VALUE = 0;
   /**
-   * <pre>
-   * fail the scorecard's section
-   * </pre>
-   *
-   * <code>FAIL_SECTION = 1;</code>
+   * <code>SKILL_CALLS = 1;</code>
    */
-  public static final int FAIL_SECTION_VALUE = 1;
+  public static final int SKILL_CALLS_VALUE = 1;
   /**
-   * <pre>
-   * fail the entire scorecard
-   * </pre>
-   *
-   * <code>FAIL_SCORECARD = 2;</code>
+   * <code>MANUAL_DIAL = 2;</code>
    */
-  public static final int FAIL_SCORECARD_VALUE = 2;
+  public static final int MANUAL_DIAL_VALUE = 2;
 
 
   public final int getNumber() {
@@ -81,7 +51,7 @@ public enum FailType
    * @deprecated Use {@link #forNumber(int)} instead.
    */
   @java.lang.Deprecated
-  public static FailType valueOf(int value) {
+  public static CategoryType valueOf(int value) {
     return forNumber(value);
   }
 
@@ -89,24 +59,24 @@ public enum FailType
    * @param value The numeric wire value of the corresponding enum entry.
    * @return The enum associated with the given numeric wire value.
    */
-  public static FailType forNumber(int value) {
+  public static CategoryType forNumber(int value) {
     switch (value) {
-      case 0: return FAIL_QUESTION;
-      case 1: return FAIL_SECTION;
-      case 2: return FAIL_SCORECARD;
+      case 0: return INVALID;
+      case 1: return SKILL_CALLS;
+      case 2: return MANUAL_DIAL;
       default: return null;
     }
   }
 
-  public static com.google.protobuf.Internal.EnumLiteMap<FailType>
+  public static com.google.protobuf.Internal.EnumLiteMap<CategoryType>
       internalGetValueMap() {
     return internalValueMap;
   }
   private static final com.google.protobuf.Internal.EnumLiteMap<
-      FailType> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<FailType>() {
-          public FailType findValueByNumber(int number) {
-            return FailType.forNumber(number);
+      CategoryType> internalValueMap =
+        new com.google.protobuf.Internal.EnumLiteMap<CategoryType>() {
+          public CategoryType findValueByNumber(int number) {
+            return CategoryType.forNumber(number);
           }
         };
 
@@ -124,12 +94,12 @@ public enum FailType
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.ScorecardsProto.getDescriptor().getEnumTypes().get(3);
+    return com.tcn.cloud.api.api.commons.ScorecardsProto.getDescriptor().getEnumTypes().get(0);
   }
 
-  private static final FailType[] VALUES = values();
+  private static final CategoryType[] VALUES = values();
 
-  public static FailType valueOf(
+  public static CategoryType valueOf(
       com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
     if (desc.getType() != getDescriptor()) {
       throw new java.lang.IllegalArgumentException(
@@ -143,10 +113,10 @@ public enum FailType
 
   private final int value;
 
-  private FailType(int value) {
+  private CategoryType(int value) {
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:api.commons.FailType)
+  // @@protoc_insertion_point(enum_scope:api.commons.CategoryType)
 }
 

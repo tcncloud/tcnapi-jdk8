@@ -123,7 +123,7 @@ public enum ScoreType
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.commons.ScorecardsProto.getDescriptor().getEnumTypes().get(1);
+    return com.tcn.cloud.api.api.commons.ScorecardsProto.getDescriptor().getEnumTypes().get(2);
   }
 
   private static final ScoreType[] VALUES = values();
