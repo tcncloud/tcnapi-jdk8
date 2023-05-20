@@ -1061,6 +1061,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * set default time filter for given ana account
+     * org.Permission_EDIT_CLIENT_PREFERENCES
      * </pre>
      */
     default void setDefaultTimeFilter(com.tcn.cloud.api.api.v0alpha.SetDefaultTimeFilterReq request,
@@ -1071,6 +1072,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * sets the dashboard that is shown by default for neo
+     * org.Permission_EDIT_CLIENT_PREFERENCES
      * </pre>
      */
     default void setDefaultDashboard(com.tcn.cloud.api.api.v0alpha.SetDefaultDashboardReq request,
@@ -1081,6 +1083,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * gets account details for the client
+     * org.Permission_VIEW_REPORTS
      * </pre>
      */
     default void getAccount(com.tcn.cloud.api.api.v0alpha.GetAccountReq request,
@@ -1111,6 +1114,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * creates and returns a url to download billing for the month provided or the previous month if none is provided
+     * org.Permission_VIEW_BILLING
      * </pre>
      */
     default void generateMonthlyBilling(com.tcn.cloud.api.api.v0alpha.GenerateMonthlyBillingReq request,
@@ -1121,6 +1125,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * gets the ana_account timezone for the client
+     * org.Permission_VIEW_REPORTS
      * </pre>
      */
     default void getTimeZone(com.tcn.cloud.api.api.v0alpha.GetTimeZoneReq request,
@@ -1131,6 +1136,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * updates the timezone for the account
+     * org.Permission_VIEW_REPORTS
      * </pre>
      */
     default void setTimeZone(com.tcn.cloud.api.api.v0alpha.SetTimeZoneReq request,
@@ -1173,6 +1179,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * enable custom report usage for the client
+     * org.Permission_EDIT_CLIENT_PREFERENCES
      * </pre>
      */
     default void enableCustomReports(com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledReq request,
@@ -1183,6 +1190,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * disable custom report usage for the client
+     * org.Permission_EDIT_CLIENT_PREFERENCES
      * </pre>
      */
     default void disableCustomReports(com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledReq request,
@@ -1193,6 +1201,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * allow the client to be adopted by another account
+     * org.Permission_EDIT_CLIENT_PREFERENCES
      * </pre>
      */
     default void makeAdoptable(com.tcn.cloud.api.api.v0alpha.MakeAdoptableReq request,
@@ -1203,6 +1212,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * disallow other accounts from adopting the client
+     * org.Permission_EDIT_CLIENT_PREFERENCES
      * </pre>
      */
     default void makeUnadoptable(com.tcn.cloud.api.api.v0alpha.MakeAdoptableReq request,
@@ -1422,6 +1432,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * set default time filter for given ana account
+     * org.Permission_EDIT_CLIENT_PREFERENCES
      * </pre>
      */
     public void setDefaultTimeFilter(com.tcn.cloud.api.api.v0alpha.SetDefaultTimeFilterReq request,
@@ -1433,6 +1444,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * sets the dashboard that is shown by default for neo
+     * org.Permission_EDIT_CLIENT_PREFERENCES
      * </pre>
      */
     public void setDefaultDashboard(com.tcn.cloud.api.api.v0alpha.SetDefaultDashboardReq request,
@@ -1444,6 +1456,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * gets account details for the client
+     * org.Permission_VIEW_REPORTS
      * </pre>
      */
     public void getAccount(com.tcn.cloud.api.api.v0alpha.GetAccountReq request,
@@ -1477,6 +1490,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * creates and returns a url to download billing for the month provided or the previous month if none is provided
+     * org.Permission_VIEW_BILLING
      * </pre>
      */
     public void generateMonthlyBilling(com.tcn.cloud.api.api.v0alpha.GenerateMonthlyBillingReq request,
@@ -1488,6 +1502,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * gets the ana_account timezone for the client
+     * org.Permission_VIEW_REPORTS
      * </pre>
      */
     public void getTimeZone(com.tcn.cloud.api.api.v0alpha.GetTimeZoneReq request,
@@ -1499,6 +1514,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * updates the timezone for the account
+     * org.Permission_VIEW_REPORTS
      * </pre>
      */
     public void setTimeZone(com.tcn.cloud.api.api.v0alpha.SetTimeZoneReq request,
@@ -1545,6 +1561,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * enable custom report usage for the client
+     * org.Permission_EDIT_CLIENT_PREFERENCES
      * </pre>
      */
     public void enableCustomReports(com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledReq request,
@@ -1556,6 +1573,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * disable custom report usage for the client
+     * org.Permission_EDIT_CLIENT_PREFERENCES
      * </pre>
      */
     public void disableCustomReports(com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledReq request,
@@ -1567,6 +1585,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * allow the client to be adopted by another account
+     * org.Permission_EDIT_CLIENT_PREFERENCES
      * </pre>
      */
     public void makeAdoptable(com.tcn.cloud.api.api.v0alpha.MakeAdoptableReq request,
@@ -1578,6 +1597,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * disallow other accounts from adopting the client
+     * org.Permission_EDIT_CLIENT_PREFERENCES
      * </pre>
      */
     public void makeUnadoptable(com.tcn.cloud.api.api.v0alpha.MakeAdoptableReq request,
@@ -1797,6 +1817,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * set default time filter for given ana account
+     * org.Permission_EDIT_CLIENT_PREFERENCES
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.SetDefaultTimeFilterRes setDefaultTimeFilter(com.tcn.cloud.api.api.v0alpha.SetDefaultTimeFilterReq request) {
@@ -1807,6 +1828,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * sets the dashboard that is shown by default for neo
+     * org.Permission_EDIT_CLIENT_PREFERENCES
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.SetDefaultDashboardRes setDefaultDashboard(com.tcn.cloud.api.api.v0alpha.SetDefaultDashboardReq request) {
@@ -1817,6 +1839,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * gets account details for the client
+     * org.Permission_VIEW_REPORTS
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.AnaAccount getAccount(com.tcn.cloud.api.api.v0alpha.GetAccountReq request) {
@@ -1847,6 +1870,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * creates and returns a url to download billing for the month provided or the previous month if none is provided
+     * org.Permission_VIEW_BILLING
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GenerateMonthlyBillingRes generateMonthlyBilling(com.tcn.cloud.api.api.v0alpha.GenerateMonthlyBillingReq request) {
@@ -1857,6 +1881,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * gets the ana_account timezone for the client
+     * org.Permission_VIEW_REPORTS
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.TimeZone getTimeZone(com.tcn.cloud.api.api.v0alpha.GetTimeZoneReq request) {
@@ -1867,6 +1892,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * updates the timezone for the account
+     * org.Permission_VIEW_REPORTS
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.SetTimeZoneRes setTimeZone(com.tcn.cloud.api.api.v0alpha.SetTimeZoneReq request) {
@@ -1909,6 +1935,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * enable custom report usage for the client
+     * org.Permission_EDIT_CLIENT_PREFERENCES
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledRes enableCustomReports(com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledReq request) {
@@ -1919,6 +1946,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * disable custom report usage for the client
+     * org.Permission_EDIT_CLIENT_PREFERENCES
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledRes disableCustomReports(com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledReq request) {
@@ -1929,6 +1957,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * allow the client to be adopted by another account
+     * org.Permission_EDIT_CLIENT_PREFERENCES
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.MakeAdoptableRes makeAdoptable(com.tcn.cloud.api.api.v0alpha.MakeAdoptableReq request) {
@@ -1939,6 +1968,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * disallow other accounts from adopting the client
+     * org.Permission_EDIT_CLIENT_PREFERENCES
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.MakeAdoptableRes makeUnadoptable(com.tcn.cloud.api.api.v0alpha.MakeAdoptableReq request) {
@@ -2147,6 +2177,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * set default time filter for given ana account
+     * org.Permission_EDIT_CLIENT_PREFERENCES
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SetDefaultTimeFilterRes> setDefaultTimeFilter(
@@ -2158,6 +2189,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * sets the dashboard that is shown by default for neo
+     * org.Permission_EDIT_CLIENT_PREFERENCES
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SetDefaultDashboardRes> setDefaultDashboard(
@@ -2169,6 +2201,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * gets account details for the client
+     * org.Permission_VIEW_REPORTS
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.AnaAccount> getAccount(
@@ -2202,6 +2235,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * creates and returns a url to download billing for the month provided or the previous month if none is provided
+     * org.Permission_VIEW_BILLING
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GenerateMonthlyBillingRes> generateMonthlyBilling(
@@ -2213,6 +2247,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * gets the ana_account timezone for the client
+     * org.Permission_VIEW_REPORTS
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.TimeZone> getTimeZone(
@@ -2224,6 +2259,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * updates the timezone for the account
+     * org.Permission_VIEW_REPORTS
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SetTimeZoneRes> setTimeZone(
@@ -2270,6 +2306,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * enable custom report usage for the client
+     * org.Permission_EDIT_CLIENT_PREFERENCES
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledRes> enableCustomReports(
@@ -2281,6 +2318,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * disable custom report usage for the client
+     * org.Permission_EDIT_CLIENT_PREFERENCES
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SetCustomReportsEnabledRes> disableCustomReports(
@@ -2292,6 +2330,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * allow the client to be adopted by another account
+     * org.Permission_EDIT_CLIENT_PREFERENCES
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.MakeAdoptableRes> makeAdoptable(
@@ -2303,6 +2342,7 @@ public final class AnaGrpc {
     /**
      * <pre>
      * disallow other accounts from adopting the client
+     * org.Permission_EDIT_CLIENT_PREFERENCES
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.MakeAdoptableRes> makeUnadoptable(

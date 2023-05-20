@@ -1148,805 +1148,815 @@ public final class AnaProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\025api/v0alpha/ana.proto\022\013api.v0alpha\032\025ap" +
-      "i/commons/ana.proto\032\034api/commons/ana_cha" +
-      "rts.proto\032\034google/api/annotations.proto\032" +
-      "\033google/protobuf/empty.proto\032\037google/pro" +
-      "tobuf/timestamp.proto\"@\n\013SetWeeksReq\022\024\n\005" +
-      "weeks\030\002 \001(\003R\005weeks\022\025\n\006org_id\030\004 \001(\tR\005orgI" +
-      "dJ\004\010\001\020\002\"\r\n\013SetWeeksRes\"<\n\023SetHomeDashboa" +
-      "rdReq\022%\n\016home_dashboard\030\003 \001(\tR\rhomeDashb" +
-      "oard\"\025\n\023SetHomeDashboardRes\"I\n\027SetDefaul" +
-      "tTimeFilterReq\022.\n\023default_time_filter\030\003 " +
-      "\001(\tR\021defaultTimeFilter\"\031\n\027SetDefaultTime" +
-      "FilterRes\";\n\026SetDefaultDashboardReq\022!\n\014d" +
-      "ashboard_id\030\003 \001(\tR\013dashboardId\"\030\n\026SetDef" +
-      "aultDashboardRes\"\017\n\rGetAccountReq\"5\n\026Get" +
-      "SpecifiedAccountReq\022\025\n\006org_id\030\003 \001(\tR\005org" +
-      "IdJ\004\010\001\020\002\"E\n\031GenerateMonthlyBillingReq\022\024\n" +
-      "\005month\030\001 \001(\003R\005month\022\022\n\004year\030\002 \001(\003R\004year\"" +
-      "W\n\031GenerateMonthlyBillingRes\022\024\n\005month\030\001 " +
-      "\001(\003R\005month\022\022\n\004year\030\002 \001(\003R\004year\022\020\n\003url\030\003 " +
-      "\001(\tR\003url\"\365\003\n\nAnaAccount\022\022\n\004uuid\030\001 \001(\tR\004u" +
-      "uid\022\"\n\rp3_client_sid\030\002 \001(\003R\013p3ClientSid\022" +
-      "G\n\021registration_date\030\003 \001(\0132\032.google.prot" +
-      "obuf.TimestampR\020registrationDate\022\"\n\rpric" +
-      "e_per_doc\030\004 \001(\001R\013pricePerDoc\022<\n\rana_time" +
-      "_zone\030\005 \001(\0162\030.api.commons.AnaTimeZoneR\013a" +
-      "naTimeZone\022%\n\016home_dashboard\030\006 \001(\tR\rhome" +
-      "Dashboard\022\034\n\tadoptable\030\007 \001(\010R\tadoptable\022" +
-      ".\n\023default_time_filter\030\010 \001(\tR\021defaultTim" +
-      "eFilter\022,\n\022neo_home_dashboard\030\t \001(\tR\020neo" +
-      "HomeDashboard\022<\n\033current_month_max_doc_c" +
-      "ount\030\024 \001(\003R\027currentMonthMaxDocCount\022#\n\rc" +
-      "urrent_weeks\030\025 \001(\003R\014currentWeeks\"\034\n\032SetC" +
-      "ustomReportsEnabledReq\"\034\n\032SetCustomRepor" +
-      "tsEnabledRes\"+\n\022RegisterAccountReq\022\025\n\006or" +
-      "g_id\030\001 \001(\tR\005orgId\";\n\004View\022\035\n\nclient_sid\030" +
-      "\001 \001(\003R\tclientSid\022\024\n\005weeks\030\002 \001(\003R\005weeks\"X" +
-      "\n\025AccountDataVisibility\022\026\n\006viewer\030\001 \001(\003R" +
-      "\006viewer\022\'\n\005views\030\002 \003(\0132\021.api.v0alpha.Vie" +
-      "wR\005views\"X\n\016DataVisibility\022F\n\014visibiliti" +
-      "es\030\001 \003(\0132\".api.v0alpha.AccountDataVisibi" +
-      "lityR\014visibilities\"r\n\017IndexVisibility\022\035\n" +
-      "\nclient_sid\030\001 \001(\003R\tclientSid\022\022\n\004year\030\002 \001" +
-      "(\003R\004year\022\022\n\004week\030\003 \001(\003R\004week\022\030\n\007viewers\030" +
-      "\004 \003(\003R\007viewers\"U\n\021IndicesVisibility\022@\n\014v" +
-      "isibilities\030\001 \003(\0132\034.api.v0alpha.IndexVis" +
-      "ibilityR\014visibilities\"\026\n\024GetVisualizatio" +
-      "nsReq\"\300\001\n\026GenerateVizDataByIdReq\022)\n\020visu" +
-      "alization_id\030\002 \001(\tR\017visualizationId\022\033\n\tt" +
-      "ime_from\030\003 \001(\tR\010timeFrom\022\027\n\007time_to\030\004 \001(" +
-      "\tR\006timeTo\022\033\n\ttime_zone\030\005 \001(\tR\010timeZone\022(" +
-      "\n\020included_org_ids\030\007 \003(\tR\016includedOrgIds" +
-      "\"9\n\026GenerateVizDataByIdRes\022\037\n\013json_strin" +
-      "g\030\001 \001(\tR\njsonString\"\022\n\020GetDashboardsReq\"" +
-      "6\n\035GetSpecifiedVisualizationsReq\022\025\n\006org_" +
-      "id\030\001 \001(\tR\005orgId\"T\n\016Visualizations\022B\n\016vis" +
-      "ualizations\030\001 \003(\0132\032.api.v0alpha.Visualiz" +
-      "ationR\016visualizations\"5\n\rVisualization\022\016" +
-      "\n\002id\030\001 \001(\tR\002id\022\024\n\005title\030\002 \001(\tR\005title\"\234\001\n" +
-      "\nTimeFilter\0221\n\010relative\030\001 \001(\0132\025.api.v0al" +
-      "pha.RelativeR\010relative\0221\n\010absolute\030\002 \001(\013" +
-      "2\025.api.v0alpha.AbsoluteR\010absolute\022(\n\005qui" +
-      "ck\030\003 \001(\0132\022.api.v0alpha.QuickR\005quick\"\035\n\005Q" +
-      "uick\022\024\n\005label\030\001 \001(\tR\005label\"\222\002\n\010Relative\022" +
-      "(\n\020to_quantity_time\030\001 \001(\003R\016toQuantityTim" +
-      "e\0227\n\014to_filter_by\030\002 \001(\0162\025.api.commons.Fi" +
-      "lterByR\ntoFilterBy\022\031\n\010to_round\030\003 \001(\010R\007to" +
-      "Round\022,\n\022from_quantity_time\030\004 \001(\003R\020fromQ" +
-      "uantityTime\022;\n\016from_filter_by\030\005 \001(\0162\025.ap" +
-      "i.commons.FilterByR\014fromFilterBy\022\035\n\nfrom" +
-      "_round\030\006 \001(\010R\tfromRound\"f\n\010Absolute\022*\n\002t" +
-      "o\030\001 \001(\0132\032.google.protobuf.TimestampR\002to\022" +
-      ".\n\004from\030\002 \001(\0132\032.google.protobuf.Timestam" +
-      "pR\004from\"7\n\022DeleteDashboardReq\022!\n\014dashboa" +
-      "rd_id\030\001 \001(\tR\013dashboardId\"\024\n\022DeleteDashbo" +
-      "ardRes\"\322\001\n\025DashboardHistoryEntry\022!\n\014dash" +
-      "board_id\030\001 \001(\tR\013dashboardId\022\024\n\005title\030\002 \001" +
-      "(\tR\005title\022&\n\017editing_user_id\030\003 \001(\tR\redit" +
-      "ingUserId\022\033\n\tuser_name\030\004 \001(\tR\010userName\022;" +
-      "\n\013create_time\030\005 \001(\0132\032.google.protobuf.Ti" +
-      "mestampR\ncreateTime\";\n\026GetDashboardHisto" +
-      "ryReq\022!\n\014dashboard_id\030\001 \001(\tR\013dashboardId" +
-      "\"x\n\026GetDashboardHistoryRes\022^\n\031dashboard_" +
-      "history_entries\030\001 \003(\0132\".api.v0alpha.Dash" +
-      "boardHistoryEntryR\027dashboardHistoryEntri" +
-      "es\"\022\n\020GetVisibilityReq\"\020\n\016GetTimeZoneReq" +
-      "\"N\n\016SetTimeZoneReq\022<\n\rana_time_zone\030\002 \001(" +
-      "\0162\030.api.commons.AnaTimeZoneR\013anaTimeZone" +
-      "\"\020\n\016SetTimeZoneRes\"H\n\010TimeZone\022<\n\rana_ti" +
-      "me_zone\030\001 \001(\0162\030.api.commons.AnaTimeZoneR" +
-      "\013anaTimeZone\"h\n\032CopyChartsAndDashboardsR" +
-      "es\022J\n\tconflicts\030\001 \003(\0132,.api.v0alpha.Copy" +
-      "ChartsAndDashboardsConflictR\tconflicts\"K" +
-      "\n\037CopyChartsAndDashboardsConflict\022\022\n\004typ" +
-      "e\030\001 \001(\tR\004type\022\024\n\005title\030\002 \001(\tR\005title\"\177\n\016C" +
-      "opyDashVizReq\022#\n\rdashboard_ids\030\002 \003(\tR\014da" +
-      "shboardIds\022+\n\021visualization_ids\030\003 \003(\tR\020v" +
-      "isualizationIds\022\025\n\006org_id\030\004 \001(\tR\005orgIdJ\004" +
-      "\010\001\020\002\"?\n\023CopyDashVizConflict\022\022\n\004type\030\001 \001(" +
-      "\tR\004type\022\024\n\005title\030\002 \001(\tR\005title\"P\n\016CopyDas" +
-      "hVizRes\022>\n\tconflicts\030\001 \003(\0132 .api.v0alpha" +
-      ".CopyDashVizConflictR\tconflicts\"h\n\035GetSp" +
-      "ecifiedBillingSummaryReq\022*\n\002ts\030\002 \001(\0132\032.g" +
-      "oogle.protobuf.TimestampR\002ts\022\025\n\006org_id\030\003" +
-      " \001(\tR\005orgIdJ\004\010\001\020\002\"B\n\024GetBillingSummaryRe" +
-      "q\022*\n\002ts\030\002 \001(\0132\032.google.protobuf.Timestam" +
-      "pR\002ts\"\265\003\n\016BillingSummary\022\035\n\nclient_sid\030\001" +
-      " \001(\003R\tclientSid\022\037\n\013client_name\030\002 \001(\tR\ncl" +
-      "ientName\022\035\n\npro_status\030\003 \001(\010R\tproStatus\022" +
-      "/\n\005weeks\030\004 \001(\0132\031.api.v0alpha.WeeksSummar" +
-      "yR\005weeks\022H\n\016custom_reports\030\005 \001(\0132!.api.v" +
-      "0alpha.CustomReportsSummaryR\rcustomRepor" +
-      "ts\022E\n\013report_jobs\030\006 \001(\0132$.api.v0alpha.Ac" +
-      "tiveReportJobsSummaryR\nreportJobs\022>\n\010wat" +
-      "chers\030\007 \001(\0132\".api.v0alpha.ActiveWatchers" +
-      "SummaryR\010watchers\022B\n\014multi_client\030\010 \001(\0132" +
-      "\037.api.v0alpha.MultiClientSummaryR\013multiC" +
-      "lient\"\224\001\n\014WeeksSummary\022#\n\rweeks_current\030" +
-      "\001 \001(\003R\014weeksCurrent\022\035\n\nweeks_peak\030\002 \001(\003R" +
-      "\tweeksPeak\022!\n\014weeks_editor\030\003 \001(\tR\013weeksE" +
-      "ditor\022\035\n\npro_status\030\004 \001(\010R\tproStatus\"\221\002\n" +
-      "\024CustomReportsSummary\022B\n\007enabled\030\001 \001(\0132(" +
-      ".api.v0alpha.CustomReportsEnabledSummary" +
-      "R\007enabled\022P\n\016visualizations\030\002 \001(\0132(.api." +
-      "v0alpha.CustomVisualizationsSummaryR\016vis" +
-      "ualizations\022D\n\ndashboards\030\003 \001(\0132$.api.v0" +
-      "alpha.CustomDashboardsSummaryR\ndashboard" +
-      "s\022\035\n\npro_status\030\004 \001(\010R\tproStatus\"\307\001\n\033Cus" +
-      "tomVisualizationsSummary\0225\n\026visualizatio" +
-      "ns_current\030\001 \001(\003R\025visualizationsCurrent\022" +
-      "/\n\023visualizations_peak\030\002 \001(\003R\022visualizat" +
-      "ionsPeak\022@\n\034custom_visualizations_editor" +
-      "\030\003 \001(\tR\032customVisualizationsEditor\"\253\001\n\027C" +
-      "ustomDashboardsSummary\022-\n\022dashboards_cur" +
-      "rent\030\001 \001(\003R\021dashboardsCurrent\022\'\n\017dashboa" +
-      "rds_peak\030\002 \001(\003R\016dashboardsPeak\0228\n\030custom" +
-      "_dashboards_editor\030\003 \001(\tR\026customDashboar" +
-      "dsEditor\"\203\002\n\033CustomReportsEnabledSummary" +
-      "\022C\n\036custom_reports_enabled_current\030\001 \001(\010" +
-      "R\033customReportsEnabledCurrent\022=\n\033custom_" +
-      "reports_enabled_peak\030\002 \001(\010R\030customReport" +
-      "sEnabledPeak\022A\n\035custom_reports_enabled_e" +
-      "ditor\030\003 \001(\tR\032customReportsEnabledEditor\022" +
-      "\035\n\npro_status\030\004 \001(\010R\tproStatus\"\267\001\n\022Multi" +
-      "ClientSummary\022\034\n\tadoptable\030\001 \001(\010R\tadopta" +
-      "ble\0220\n\007parents\030\002 \001(\0132\026.api.v0alpha.Relat" +
-      "ionsR\007parents\0222\n\010children\030\003 \001(\0132\026.api.v0" +
-      "alpha.RelationsR\010children\022\035\n\npro_status\030" +
-      "\004 \001(\010R\tproStatus\"@\n\tRelations\0223\n\trelatio" +
-      "ns\030\001 \003(\0132\025.api.v0alpha.RelationR\trelatio" +
-      "ns\"\374\002\n\010Relation\022\035\n\nclient_sid\030\001 \001(\003R\tcli" +
-      "entSid\022\037\n\013client_name\030\002 \001(\tR\nclientName\022" +
-      "K\n\023relation_initiation\030\003 \001(\0132\032.google.pr" +
-      "otobuf.TimestampR\022relationInitiation\022-\n\022" +
-      "relation_initiator\030\004 \001(\tR\021relationInitia" +
-      "tor\022M\n\024relation_termination\030\005 \001(\0132\032.goog" +
-      "le.protobuf.TimestampR\023relationTerminati" +
-      "on\022/\n\023relation_terminator\030\006 \001(\tR\022relatio" +
-      "nTerminator\022\035\n\nis_current\030\007 \001(\010R\tisCurre" +
-      "nt\022\025\n\006org_id\030\010 \001(\tR\005orgId\"\256\001\n\006Family\022\035\n\n" +
-      "client_sid\030\001 \001(\003R\tclientSid\022\037\n\013client_na" +
-      "me\030\002 \001(\tR\nclientName\0220\n\007parents\030\003 \001(\0132\026." +
-      "api.v0alpha.RelationsR\007parents\0222\n\010childr" +
-      "en\030\004 \001(\0132\026.api.v0alpha.RelationsR\010childr" +
-      "en\"\031\n\027GetAccessibleClientsReq\"+\n\014GetFami" +
-      "lyReq\022\025\n\006org_id\030\002 \001(\tR\005orgIdJ\004\010\001\020\002\"\022\n\020Ma" +
-      "keAdoptableReq\"\022\n\020MakeAdoptableRes\"\033\n\031Sp" +
-      "ecifiedMakeAdoptableRes\"l\n\030SetAnaAccount" +
-      "RelationReq\022\"\n\rparent_org_id\030\004 \001(\tR\013pare" +
-      "ntOrgId\022 \n\014child_org_id\030\005 \001(\tR\nchildOrgI" +
-      "dJ\004\010\001\020\002J\004\010\002\020\003\"\032\n\030SetAnaAccountRelationRe" +
-      "s\"\335\001\n\027ActiveReportJobsSummary\022;\n\032active_" +
-      "report_jobs_current\030\001 \001(\003R\027activeReportJ" +
-      "obsCurrent\0222\n\025processed_report_jobs\030\002 \001(" +
-      "\003R\023processedReportJobs\0222\n\025report_jobs_ac" +
-      "tivator\030\003 \001(\tR\023reportJobsActivator\022\035\n\npr" +
-      "o_status\030\004 \001(\010R\tproStatus\"\314\001\n\025ActiveWatc" +
-      "hersSummary\0226\n\027active_watchers_current\030\001" +
-      " \001(\003R\025activeWatchersCurrent\022-\n\022processed" +
-      "_watchers\030\002 \001(\003R\021processedWatchers\022-\n\022wa" +
-      "tchers_activator\030\003 \001(\tR\021watchersActivato" +
-      "r\022\035\n\npro_status\030\004 \001(\010R\tproStatus\"Y\n\017Simp" +
-      "leRelations\022F\n\020simple_relations\030\001 \003(\0132\033." +
-      "api.v0alpha.SimpleRelationR\017simpleRelati" +
-      "ons\"N\n\016SimpleRelation\022\037\n\013client_name\030\002 \001" +
-      "(\tR\nclientName\022\025\n\006org_id\030\003 \001(\tR\005orgIdJ\004\010" +
-      "\001\020\002\"\031\n\027GetOrganizationNamesReq\"\232\001\n\027GetOr" +
-      "ganizationNamesRes\022E\n\005names\030\001 \003(\0132/.api." +
-      "v0alpha.GetOrganizationNamesRes.NamesEnt" +
-      "ryR\005names\0328\n\nNamesEntry\022\020\n\003key\030\001 \001(\003R\003ke" +
-      "y\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"G\n\tDatapoint" +
-      "\022\016\n\002id\030\001 \001(\tR\002id\022\026\n\006labels\030\002 \003(\tR\006labels" +
-      "\022\022\n\004type\030\003 \001(\tR\004type\"S\n\020GetDatapointsReq" +
-      "\022$\n\004type\030\001 \001(\0162\020.api.commons.TagR\004type\022\031" +
-      "\n\010group_id\030\002 \001(\tR\007groupId\"P\n\020GetDatapoin" +
-      "tsRes\0226\n\ndatapoints\030\002 \003(\0132\026.api.v0alpha." +
-      "DatapointR\ndatapointsJ\004\010\001\020\002\"\312\007\n\014NewDatap" +
-      "oint\022\022\n\004uuid\030\001 \001(\tR\004uuid\022\024\n\005label\030\003 \001(\tR" +
-      "\005label\022\033\n\tfilter_id\030\005 \001(\tR\010filterId\0227\n\005f" +
-      "loat\030\006 \001(\0132\037.api.v0alpha.NewDatapoint.Fl" +
-      "oatH\000R\005float\022:\n\006string\030\007 \001(\0132 .api.v0alp" +
-      "ha.NewDatapoint.StringH\000R\006string\0224\n\004bool" +
-      "\030\010 \001(\0132\036.api.v0alpha.NewDatapoint.BoolH\000" +
-      "R\004bool\0224\n\004date\030\t \001(\0132\036.api.v0alpha.NewDa" +
-      "tapoint.DateH\000R\004date\022!\n\014datapoint_id\030\n \001" +
-      "(\tR\013datapointId\022$\n\004tags\030\013 \003(\0162\020.api.comm" +
-      "ons.TagR\004tags\032\351\001\n\005Float\022A\n\013aggregation\030\001" +
-      " \001(\0162\037.api.commons.NumericAggregationR\013a" +
-      "ggregation\022\036\n\tdatapoint\030\002 \001(\tH\000R\tdatapoi" +
-      "nt\022\034\n\010constant\030\005 \001(\002H\000R\010constant\0224\n\toper" +
-      "ation\030\003 \001(\0162\026.api.commons.OperationR\tope" +
-      "ration\022\036\n\npercentile\030\004 \001(\002R\npercentileB\t" +
-      "\n\007operand\032\200\001\n\006String\022D\n\013aggregation\030\001 \001(" +
-      "\0162\".api.commons.NonNumericAggregationR\013a" +
-      "ggregation\022\030\n\007prepend\030\002 \001(\tR\007prepend\022\026\n\006" +
-      "append\030\003 \001(\tR\006append\032L\n\004Bool\022D\n\013aggregat" +
-      "ion\030\001 \001(\0162\".api.commons.NonNumericAggreg" +
-      "ationR\013aggregation\032\201\001\n\004Date\022A\n\013aggregati" +
-      "on\030\001 \001(\0162\037.api.commons.NumericAggregatio" +
-      "nR\013aggregation\022\026\n\006format\030\002 \001(\tR\006format\022\036" +
-      "\n\npercentile\030\003 \001(\002R\npercentileB\010\n\006action" +
-      "\"%\n\017GetDatapointReq\022\022\n\004uuid\030\001 \001(\tR\004uuid\"" +
-      "K\n\020GetDatapointResp\0227\n\tdatapoint\030\001 \001(\0132\031" +
-      ".api.v0alpha.NewDatapointR\tdatapoint\"M\n\022" +
-      "CreateDatapointReq\0227\n\tdatapoint\030\001 \001(\0132\031." +
-      "api.v0alpha.NewDatapointR\tdatapoint\"\025\n\023C" +
-      "reateDatapointResp\"(\n\022DeleteDatapointReq" +
-      "\022\022\n\004uuid\030\001 \001(\tR\004uuid\"\025\n\023DeleteDatapointR" +
-      "esp\"@\n\014CategoryData\022\032\n\010category\030\001 \001(\tR\010c" +
-      "ategory\022\024\n\005value\030\002 \001(\002R\005value\"\351\001\n\006Filter" +
-      "\0227\n\ttime_from\030\001 \001(\0132\032.google.protobuf.Ti" +
-      "mestampR\010timeFrom\0223\n\007time_to\030\002 \001(\0132\032.goo" +
-      "gle.protobuf.TimestampR\006timeTo\0225\n\ttime_z" +
-      "one\030\003 \001(\0162\030.api.commons.AnaTimeZoneR\010tim" +
-      "eZone\022\033\n\tfilter_id\030\005 \001(\tR\010filterId\022\027\n\007or" +
-      "g_ids\030\006 \003(\tR\006orgIdsJ\004\010\004\020\005\"3\n\rGetFiltersR" +
-      "eq\022\"\n\003tag\030\001 \001(\0162\020.api.commons.TagR\003tag\"5" +
-      "\n\tNewFilter\022\022\n\004uuid\030\001 \001(\tR\004uuid\022\024\n\005label" +
-      "\030\002 \001(\tR\005label\"B\n\016GetFiltersResp\0220\n\007filte" +
-      "rs\030\001 \003(\0132\026.api.v0alpha.NewFilterR\007filter" +
-      "s\"\330\003\n\017CreateFilterReq\022C\n\010compound\030\001 \001(\0132" +
-      "%.api.v0alpha.CreateFilterReq.CompoundH\000" +
-      "R\010compound\022=\n\006simple\030\002 \001(\0132#.api.v0alpha" +
-      ".CreateFilterReq.SimpleH\000R\006simple\022\024\n\005lab" +
-      "el\030\003 \001(\tR\005label\022$\n\004tags\030\004 \003(\0162\020.api.comm" +
-      "ons.TagR\004tags\032\215\001\n\010Compound\0223\n\004join\030\001 \001(\016" +
-      "2\037.api.commons.CompoundFilterJoinR\004join\022" +
-      "$\n\016left_filter_id\030\002 \001(\tR\014leftFilterId\022&\n" +
-      "\017right_filter_id\030\003 \001(\tR\rrightFilterId\032d\n" +
-      "\006Simple\022!\n\014datapoint_id\030\001 \001(\tR\013datapoint" +
-      "Id\0227\n\ncomparison\030\002 \001(\0132\027.api.v0alpha.Com" +
-      "parisonR\ncomparisonB\017\n\rcreation_type\"\206\005\n" +
-      "\nComparison\0228\n\006string\030\002 \001(\0132\036.api.v0alph" +
-      "a.Comparison.StringH\000R\006string\0225\n\005float\030\003" +
-      " \001(\0132\035.api.v0alpha.Comparison.FloatH\000R\005f" +
-      "loat\0222\n\004bool\030\004 \001(\0132\034.api.v0alpha.Compari" +
-      "son.BoolH\000R\004bool\0222\n\004date\030\005 \001(\0132\034.api.v0a" +
-      "lpha.Comparison.DateH\000R\004date\032]\n\006String\022\024" +
-      "\n\005value\030\001 \001(\tR\005value\022=\n\ncomparison\030\002 \001(\016" +
-      "2\035.api.commons.StringComparisonR\ncompari" +
-      "son\032[\n\005Float\022\024\n\005value\030\001 \001(\002R\005value\022<\n\nco" +
-      "mparison\030\002 \001(\0162\034.api.commons.FloatCompar" +
-      "isonR\ncomparison\032Y\n\004Bool\022\024\n\005value\030\001 \001(\010R" +
-      "\005value\022;\n\ncomparison\030\002 \001(\0162\033.api.commons" +
-      ".BoolComparisonR\ncomparison\032u\n\004Date\0220\n\005v" +
-      "alue\030\001 \001(\0132\032.google.protobuf.TimestampR\005" +
-      "value\022;\n\ncomparison\030\002 \001(\0162\033.api.commons." +
-      "DateComparisonR\ncomparisonB\021\n\017comparison" +
-      "_type\"\022\n\020CreateFilterResp\"L\n\026MultiValueC" +
-      "ategoryData\022\032\n\010category\030\001 \001(\tR\010category\022" +
-      "\026\n\006values\030\002 \003(\002R\006values\"\225\002\n\nGetDataReq\0223" +
-      "\n\tgroupings\030\002 \003(\0132\025.api.v0alpha.Grouping" +
-      "R\tgroupings\022.\n\023field_datapoint_ids\030\003 \003(\t" +
-      "R\021fieldDatapointIds\022+\n\006filter\030\004 \001(\0132\023.ap" +
-      "i.v0alpha.FilterR\006filter\0223\n\026results_on_e" +
-      "very_level\030\005 \001(\010R\023resultsOnEveryLevel\022*\n" +
-      "\006orders\030\006 \003(\0132\022.api.v0alpha.OrderR\006order" +
-      "s\022\024\n\005limit\030\007 \001(\003R\005limit\">\n\005Order\022!\n\014data" +
-      "point_id\030\001 \001(\tR\013datapointId\022\022\n\004desc\030\002 \001(" +
-      "\010R\004desc\"r\n\010Grouping\022#\n\014datapoint_id\030\001 \001(" +
-      "\tH\000R\013datapointId\0227\n\ntime_scope\030\002 \001(\0162\026.a" +
-      "pi.commons.TimeScopeH\000R\ttimeScopeB\010\n\006for" +
-      "mat\"}\n\013GetDataResp\022<\n\004data\030\001 \003(\0132(.api.v" +
-      "0alpha.MultiCategoryMultiValueDataR\004data" +
-      "\0220\n\010warnings\030\002 \003(\0132\024.api.v0alpha.Warning" +
-      "R\010warnings\"\254\001\n\007Warning\022C\n\016missing_fields" +
-      "\030\001 \001(\0132\032.api.v0alpha.MissingFieldsH\000R\rmi" +
-      "ssingFields\022L\n\021missing_locations\030\002 \001(\0132\035" +
-      ".api.v0alpha.MissingLocationsH\000R\020missing" +
-      "LocationsB\016\n\014warning_type\"\'\n\rMissingFiel" +
-      "ds\022\026\n\006fields\030\001 \003(\tR\006fields\"H\n\020MissingLoc" +
-      "ations\0224\n\006fields\030\001 \003(\0132\034.api.v0alpha.Mis" +
-      "singLocationR\006fields\"d\n\017MissingLocation\022" +
-      "!\n\014datapoint_id\030\001 \001(\tR\013datapointId\022\030\n\007me" +
-      "ssage\030\002 \001(\tR\007message\022\024\n\005label\030\003 \001(\tR\005lab" +
-      "el\"\200\001\n\033MultiCategoryMultiValueData\0225\n\nca" +
-      "tegories\030\001 \003(\0132\025.api.v0alpha.CategoryR\nc" +
-      "ategories\022*\n\006values\030\002 \003(\0132\022.api.v0alpha." +
-      "ValueR\006values\"\203\001\n\010Category\022#\n\014string_val" +
-      "ue\030\001 \001(\tH\000R\013stringValue\022E\n\017timestamp_val" +
-      "ue\030\002 \001(\0132\032.google.protobuf.TimestampH\000R\016" +
-      "timestampValueB\013\n\tdata_type\"\364\001\n\005Value\022#\n" +
-      "\014string_value\030\001 \001(\tH\000R\013stringValue\022!\n\013fl" +
-      "oat_value\030\002 \001(\001H\000R\nfloatValue\022E\n\017timesta" +
-      "mp_value\030\003 \001(\0132\032.google.protobuf.Timesta" +
-      "mpH\000R\016timestampValue\022.\n\005empty\030\004 \001(\0132\026.go" +
-      "ogle.protobuf.EmptyH\000R\005empty\022\037\n\nbool_val" +
-      "ue\030\005 \001(\010H\000R\tboolValueB\013\n\tdata_type\"_\n\030Ge" +
-      "tDataTimeIncrementResp\022C\n\017time_increment" +
-      "s\030\001 \003(\0132\032.api.v0alpha.TimeIncrementR\016tim" +
-      "eIncrements\"i\n\rTimeIncrement\022.\n\004time\030\001 \001" +
-      "(\0132\032.google.protobuf.TimestampR\004time\022(\n\005" +
-      "value\030\002 \001(\0132\022.api.v0alpha.ValueR\005value\"4" +
-      "\n\006Charts\022*\n\006charts\030\001 \003(\0132\022.api.v0alpha.C" +
-      "hartR\006charts\"\331\001\n\005Chart\022\031\n\010chart_id\030\001 \001(\t" +
-      "R\007chartId\022\024\n\005title\030\003 \001(\tR\005title\022>\n\rchart" +
-      "_details\030\004 \001(\0132\031.api.v0alpha.ChartDetail" +
-      "sR\014chartDetails\022\027\n\007root_id\030\005 \001(\tR\006rootId" +
-      "\022F\n\016display_labels\030\006 \001(\0162\037.api.commons.C" +
-      "hartDisplayLabelsR\rdisplayLabels\"\377\013\n\014Cha" +
-      "rtDetails\022M\n\022single_value_chart\030\001 \001(\0132\035." +
-      "api.v0alpha.SingleValueChartH\000R\020singleVa" +
-      "lueChart\0224\n\tpie_chart\030\002 \001(\0132\025.api.v0alph" +
-      "a.PieChartH\000R\010pieChart\022J\n\021radar_fixed_ch" +
-      "art\030\003 \001(\0132\034.api.v0alpha.RadarFixedChartH" +
-      "\000R\017radarFixedChart\0224\n\tbar_chart\030\004 \001(\0132\025." +
-      "api.v0alpha.BarChartH\000R\010barChart\022=\n\014bull" +
-      "et_chart\030\005 \001(\0132\030.api.v0alpha.BulletChart" +
-      "H\000R\013bulletChart\022J\n\021multi_value_chart\030\006 \001" +
-      "(\0132\034.api.v0alpha.MultiValueChartH\000R\017mult" +
-      "iValueChart\022A\n\016tree_map_chart\030\007 \001(\0132\031.ap" +
-      "i.v0alpha.TreeMapChartH\000R\014treeMapChart\022S" +
-      "\n\024activity_gauge_chart\030\010 \001(\0132\037.api.v0alp" +
-      "ha.ActivityGaugeChartH\000R\022activityGaugeCh" +
-      "art\0224\n\tarc_chart\030\t \001(\0132\025.api.v0alpha.Arc" +
-      "ChartH\000R\010arcChart\022@\n\rscatter_chart\030\n \001(\013" +
-      "2\031.api.v0alpha.ScatterChartH\000R\014scatterCh" +
-      "art\022S\n\024time_histogram_chart\030\013 \001(\0132\037.api." +
-      "v0alpha.TimeHistogramChartH\000R\022timeHistog" +
-      "ramChart\022G\n\020tree_table_chart\030\014 \001(\0132\033.api" +
-      ".v0alpha.TreeTableChartH\000R\016treeTableChar" +
-      "t\022G\n\020info_panel_chart\030\r \001(\0132\033.api.v0alph" +
-      "a.InfoPanelChartH\000R\016infoPanelChart\022J\n\021ra" +
-      "nked_list_chart\030\016 \001(\0132\034.api.v0alpha.Rank" +
-      "edListChartH\000R\017rankedListChart\022L\n\021speedo" +
-      "meter_chart\030\017 \001(\0132\035.api.v0alpha.Speedome" +
-      "terChartH\000R\020speedometerChart\0227\n\nline_cha" +
-      "rt\030\020 \001(\0132\026.api.v0alpha.LineChartH\000R\tline" +
-      "Chart\022=\n\014spline_chart\030\021 \001(\0132\030.api.v0alph" +
-      "a.SplineChartH\000R\013splineChart\0227\n\narea_cha" +
-      "rt\030\022 \001(\0132\026.api.v0alpha.AreaChartH\000R\tarea" +
-      "Chart\022:\n\013table_chart\030\023 \001(\0132\027.api.v0alpha" +
-      ".TableChartH\000R\ntableChart\022=\n\014bubble_char" +
-      "t\030\024 \001(\0132\030.api.v0alpha.BubbleChartH\000R\013bub" +
-      "bleChart\022P\n\023packed_bubble_chart\030\025 \001(\0132\036." +
-      "api.v0alpha.PackedBubbleChartH\000R\021packedB" +
-      "ubbleChart\022C\n\016sunburst_chart\030\026 \001(\0132\032.api" +
-      ".v0alpha.SunburstChartH\000R\rsunburstChartB" +
-      "\t\n\007details\"\237\001\n\020SingleValueChart\022\"\n\rdata_" +
-      "point_id\030\001 \001(\tR\013dataPointId\022\024\n\005label\030\002 \001" +
-      "(\tR\005label\0222\n\006suffix\030\003 \001(\0162\032.api.commons." +
-      "SuffixChoicesR\006suffix\022\035\n\nshow_label\030\004 \001(" +
-      "\010R\tshowLabel\"\217\001\n\010PieChart\022-\n\023field_data_" +
-      "point_id\030\001 \001(\tR\020fieldDataPointId\0223\n\026grou" +
-      "ping_data_point_id\030\002 \001(\tR\023groupingDataPo" +
-      "intId\022\037\n\013hole_radius\030\003 \001(\003R\nholeRadius\"\303" +
-      "\001\n\017RadarFixedChart\0223\n\026grouping_data_poin" +
-      "t_id\030\001 \001(\tR\023groupingDataPointId\022Z\n\030radar" +
-      "_fixed_inner_charts\030\002 \003(\0132!.api.v0alpha." +
-      "RadarFixedInnerChartR\025radarFixedInnerCha" +
-      "rts\022\037\n\013data_labels\030\003 \001(\tR\ndataLabels\"\222\003\n" +
-      "\024RadarFixedInnerChart\022\"\n\rdata_point_id\030\001" +
-      " \001(\tR\013dataPointId\022#\n\rcategory_name\030\002 \001(\t" +
-      "R\014categoryName\022<\n\004area\030\003 \001(\0132&.api.v0alp" +
-      "ha.RadarFixedInnerChart.AreaH\000R\004area\0229\n\003" +
-      "bar\030\004 \001(\0132%.api.v0alpha.RadarFixedInnerC" +
-      "hart.BarH\000R\003bar\022<\n\004line\030\005 \001(\0132&.api.v0al" +
-      "pha.RadarFixedInnerChart.LineH\000R\004line\022B\n" +
-      "\006spline\030\006 \001(\0132(.api.v0alpha.RadarFixedIn" +
-      "nerChart.SplineH\000R\006spline\032\006\n\004Area\032\005\n\003Bar" +
-      "\032\006\n\004Line\032\010\n\006SplineB\025\n\023inner_chart_detail" +
-      "s\"\262\002\n\010BarChart\022-\n\023field_data_point_id\030\001 " +
-      "\001(\tR\020fieldDataPointId\0223\n\026grouping_data_p" +
-      "oint_id\030\002 \001(\tR\023groupingDataPointId\022B\n\013or" +
-      "ientation\030\003 \001(\0162 .api.commons.BarChartOr" +
-      "ientationR\013orientation\0224\n\tthreshold\030\004 \001(" +
-      "\0132\026.api.v0alpha.ThresholdR\tthreshold\022\027\n\007" +
-      "x_label\030\005 \001(\tR\006xLabel\022\027\n\007y_label\030\006 \001(\tR\006" +
-      "yLabel\022\026\n\006legend\030\007 \001(\tR\006legend\"\313\001\n\013Bulle" +
-      "tChart\022-\n\023field_data_point_id\030\001 \001(\tR\020fie" +
-      "ldDataPointId\022?\n\013orientation\030\002 \001(\0162\035.api" +
-      ".commons.ChartOrientationR\013orientation\0224" +
-      "\n\tthreshold\030\003 \001(\0132\026.api.v0alpha.Threshol" +
-      "dR\tthreshold\022\026\n\006legend\030\004 \001(\tR\006legend\"d\n\017" +
-      "MultiValueChart\0227\n\013data_values\030\001 \003(\0132\026.a" +
-      "pi.v0alpha.DataValueR\ndataValues\022\030\n\007colu" +
-      "mns\030\002 \001(\003R\007columns\"E\n\tDataValue\022\"\n\rdata_" +
-      "point_id\030\001 \001(\tR\013dataPointId\022\024\n\005label\030\002 \001" +
-      "(\tR\005label\"\254\001\n\014TreeMapChart\022-\n\023field_data" +
-      "_point_id\030\001 \001(\tR\020fieldDataPointId\0223\n\026gro" +
-      "uping_data_point_id\030\002 \001(\tR\023groupingDataP",
-      "ointId\022\033\n\tmin_color\030\003 \001(\tR\010minColor\022\033\n\tm" +
-      "ax_color\030\004 \001(\tR\010maxColor\"f\n\022ActivityGaug" +
-      "eChart\022P\n\024activity_gauge_rings\030\001 \003(\0132\036.a" +
-      "pi.v0alpha.ActivityGaugeRingR\022activityGa" +
-      "ugeRings\"\203\001\n\021ActivityGaugeRing\022\"\n\rdata_p" +
-      "oint_id\030\001 \001(\tR\013dataPointId\0224\n\tthreshold\030" +
-      "\002 \001(\0132\026.api.v0alpha.ThresholdR\tthreshold" +
-      "\022\024\n\005label\030\003 \001(\tR\005label\"z\n\010ArcChart\022\"\n\rda" +
-      "ta_point_id\030\001 \001(\tR\013dataPointId\022\024\n\005label\030" +
-      "\002 \001(\tR\005label\0224\n\tthreshold\030\003 \001(\0132\026.api.v0" +
-      "alpha.ThresholdR\tthreshold\"~\n\tThreshold\022" +
-      "+\n\020static_threshold\030\003 \001(\003H\000R\017staticThres" +
-      "hold\0222\n\024data_point_threshold\030\004 \001(\tH\000R\022da" +
-      "taPointThresholdB\020\n\016threshold_type\"\333\001\n\014S" +
-      "catterChart\0223\n\026grouping_data_point_id\030\001 " +
-      "\001(\tR\023groupingDataPointId\022%\n\017x_data_point" +
-      "_id\030\002 \001(\tR\014xDataPointId\022%\n\017y_data_point_" +
-      "id\030\003 \001(\tR\014yDataPointId\022\027\n\007x_label\030\004 \001(\tR" +
-      "\006xLabel\022\027\n\007y_label\030\005 \001(\tR\006yLabel\022\026\n\006lege" +
-      "nd\030\006 \001(\tR\006legend\"\245\001\n\022TimeHistogramChart\022" +
-      "\"\n\rdata_point_id\030\001 \001(\tR\013dataPointId\0225\n\nt" +
-      "ime_scope\030\002 \001(\0162\026.api.commons.TimeScopeR" +
-      "\ttimeScope\0224\n\tthreshold\030\003 \001(\0132\026.api.v0al" +
-      "pha.ThresholdR\tthreshold\"R\n\016InfoPanelCha" +
-      "rt\022@\n\013data_values\030\001 \003(\0132\037.api.v0alpha.In" +
-      "foPanelDataValueR\ndataValues\"N\n\022InfoPane" +
-      "lDataValue\022\"\n\rdata_point_id\030\001 \001(\tR\013dataP" +
-      "ointId\022\024\n\005label\030\002 \001(\tR\005label\"\240\001\n\016TreeTab" +
-      "leChart\022@\n\013data_values\030\001 \003(\0132\037.api.v0alp" +
-      "ha.TreeTableDataValueR\ndataValues\022L\n\017gro" +
-      "uping_values\030\002 \003(\0132#.api.v0alpha.TreeTab" +
-      "leGroupingValueR\016groupingValues\"N\n\022TreeT" +
-      "ableDataValue\022\"\n\rdata_point_id\030\001 \001(\tR\013da" +
-      "taPointId\022\024\n\005label\030\002 \001(\tR\005label\"M\n\026TreeT" +
-      "ableGroupingValue\0223\n\026grouping_data_point" +
-      "_id\030\001 \001(\tR\023groupingDataPointId\"\253\001\n\017Ranke" +
-      "dListChart\022-\n\023field_data_point_id\030\001 \001(\tR" +
+      "\n\025api/v0alpha/ana.proto\022\013api.v0alpha\032\027an" +
+      "notations/authz.proto\032\025api/commons/ana.p" +
+      "roto\032\034api/commons/ana_charts.proto\032\034goog" +
+      "le/api/annotations.proto\032\033google/protobu" +
+      "f/empty.proto\032\037google/protobuf/timestamp" +
+      ".proto\"@\n\013SetWeeksReq\022\024\n\005weeks\030\002 \001(\003R\005we" +
+      "eks\022\025\n\006org_id\030\004 \001(\tR\005orgIdJ\004\010\001\020\002\"\r\n\013SetW" +
+      "eeksRes\"<\n\023SetHomeDashboardReq\022%\n\016home_d" +
+      "ashboard\030\003 \001(\tR\rhomeDashboard\"\025\n\023SetHome" +
+      "DashboardRes\"I\n\027SetDefaultTimeFilterReq\022" +
+      ".\n\023default_time_filter\030\003 \001(\tR\021defaultTim" +
+      "eFilter\"\031\n\027SetDefaultTimeFilterRes\";\n\026Se" +
+      "tDefaultDashboardReq\022!\n\014dashboard_id\030\003 \001" +
+      "(\tR\013dashboardId\"\030\n\026SetDefaultDashboardRe" +
+      "s\"\017\n\rGetAccountReq\"5\n\026GetSpecifiedAccoun" +
+      "tReq\022\025\n\006org_id\030\003 \001(\tR\005orgIdJ\004\010\001\020\002\"E\n\031Gen" +
+      "erateMonthlyBillingReq\022\024\n\005month\030\001 \001(\003R\005m" +
+      "onth\022\022\n\004year\030\002 \001(\003R\004year\"W\n\031GenerateMont" +
+      "hlyBillingRes\022\024\n\005month\030\001 \001(\003R\005month\022\022\n\004y" +
+      "ear\030\002 \001(\003R\004year\022\020\n\003url\030\003 \001(\tR\003url\"\365\003\n\nAn" +
+      "aAccount\022\022\n\004uuid\030\001 \001(\tR\004uuid\022\"\n\rp3_clien" +
+      "t_sid\030\002 \001(\003R\013p3ClientSid\022G\n\021registration" +
+      "_date\030\003 \001(\0132\032.google.protobuf.TimestampR" +
+      "\020registrationDate\022\"\n\rprice_per_doc\030\004 \001(\001" +
+      "R\013pricePerDoc\022<\n\rana_time_zone\030\005 \001(\0162\030.a" +
+      "pi.commons.AnaTimeZoneR\013anaTimeZone\022%\n\016h" +
+      "ome_dashboard\030\006 \001(\tR\rhomeDashboard\022\034\n\tad" +
+      "optable\030\007 \001(\010R\tadoptable\022.\n\023default_time" +
+      "_filter\030\010 \001(\tR\021defaultTimeFilter\022,\n\022neo_" +
+      "home_dashboard\030\t \001(\tR\020neoHomeDashboard\022<" +
+      "\n\033current_month_max_doc_count\030\024 \001(\003R\027cur" +
+      "rentMonthMaxDocCount\022#\n\rcurrent_weeks\030\025 " +
+      "\001(\003R\014currentWeeks\"\034\n\032SetCustomReportsEna" +
+      "bledReq\"\034\n\032SetCustomReportsEnabledRes\"+\n" +
+      "\022RegisterAccountReq\022\025\n\006org_id\030\001 \001(\tR\005org" +
+      "Id\";\n\004View\022\035\n\nclient_sid\030\001 \001(\003R\tclientSi" +
+      "d\022\024\n\005weeks\030\002 \001(\003R\005weeks\"X\n\025AccountDataVi" +
+      "sibility\022\026\n\006viewer\030\001 \001(\003R\006viewer\022\'\n\005view" +
+      "s\030\002 \003(\0132\021.api.v0alpha.ViewR\005views\"X\n\016Dat" +
+      "aVisibility\022F\n\014visibilities\030\001 \003(\0132\".api." +
+      "v0alpha.AccountDataVisibilityR\014visibilit" +
+      "ies\"r\n\017IndexVisibility\022\035\n\nclient_sid\030\001 \001" +
+      "(\003R\tclientSid\022\022\n\004year\030\002 \001(\003R\004year\022\022\n\004wee" +
+      "k\030\003 \001(\003R\004week\022\030\n\007viewers\030\004 \003(\003R\007viewers\"" +
+      "U\n\021IndicesVisibility\022@\n\014visibilities\030\001 \003" +
+      "(\0132\034.api.v0alpha.IndexVisibilityR\014visibi" +
+      "lities\"\026\n\024GetVisualizationsReq\"\300\001\n\026Gener" +
+      "ateVizDataByIdReq\022)\n\020visualization_id\030\002 " +
+      "\001(\tR\017visualizationId\022\033\n\ttime_from\030\003 \001(\tR" +
+      "\010timeFrom\022\027\n\007time_to\030\004 \001(\tR\006timeTo\022\033\n\tti" +
+      "me_zone\030\005 \001(\tR\010timeZone\022(\n\020included_org_" +
+      "ids\030\007 \003(\tR\016includedOrgIds\"9\n\026GenerateViz" +
+      "DataByIdRes\022\037\n\013json_string\030\001 \001(\tR\njsonSt" +
+      "ring\"\022\n\020GetDashboardsReq\"6\n\035GetSpecified" +
+      "VisualizationsReq\022\025\n\006org_id\030\001 \001(\tR\005orgId" +
+      "\"T\n\016Visualizations\022B\n\016visualizations\030\001 \003" +
+      "(\0132\032.api.v0alpha.VisualizationR\016visualiz" +
+      "ations\"5\n\rVisualization\022\016\n\002id\030\001 \001(\tR\002id\022" +
+      "\024\n\005title\030\002 \001(\tR\005title\"\234\001\n\nTimeFilter\0221\n\010" +
+      "relative\030\001 \001(\0132\025.api.v0alpha.RelativeR\010r" +
+      "elative\0221\n\010absolute\030\002 \001(\0132\025.api.v0alpha." +
+      "AbsoluteR\010absolute\022(\n\005quick\030\003 \001(\0132\022.api." +
+      "v0alpha.QuickR\005quick\"\035\n\005Quick\022\024\n\005label\030\001" +
+      " \001(\tR\005label\"\222\002\n\010Relative\022(\n\020to_quantity_" +
+      "time\030\001 \001(\003R\016toQuantityTime\0227\n\014to_filter_" +
+      "by\030\002 \001(\0162\025.api.commons.FilterByR\ntoFilte" +
+      "rBy\022\031\n\010to_round\030\003 \001(\010R\007toRound\022,\n\022from_q" +
+      "uantity_time\030\004 \001(\003R\020fromQuantityTime\022;\n\016" +
+      "from_filter_by\030\005 \001(\0162\025.api.commons.Filte" +
+      "rByR\014fromFilterBy\022\035\n\nfrom_round\030\006 \001(\010R\tf" +
+      "romRound\"f\n\010Absolute\022*\n\002to\030\001 \001(\0132\032.googl" +
+      "e.protobuf.TimestampR\002to\022.\n\004from\030\002 \001(\0132\032" +
+      ".google.protobuf.TimestampR\004from\"7\n\022Dele" +
+      "teDashboardReq\022!\n\014dashboard_id\030\001 \001(\tR\013da" +
+      "shboardId\"\024\n\022DeleteDashboardRes\"\322\001\n\025Dash" +
+      "boardHistoryEntry\022!\n\014dashboard_id\030\001 \001(\tR" +
+      "\013dashboardId\022\024\n\005title\030\002 \001(\tR\005title\022&\n\017ed" +
+      "iting_user_id\030\003 \001(\tR\reditingUserId\022\033\n\tus" +
+      "er_name\030\004 \001(\tR\010userName\022;\n\013create_time\030\005" +
+      " \001(\0132\032.google.protobuf.TimestampR\ncreate" +
+      "Time\";\n\026GetDashboardHistoryReq\022!\n\014dashbo" +
+      "ard_id\030\001 \001(\tR\013dashboardId\"x\n\026GetDashboar" +
+      "dHistoryRes\022^\n\031dashboard_history_entries" +
+      "\030\001 \003(\0132\".api.v0alpha.DashboardHistoryEnt" +
+      "ryR\027dashboardHistoryEntries\"\022\n\020GetVisibi" +
+      "lityReq\"\020\n\016GetTimeZoneReq\"N\n\016SetTimeZone" +
+      "Req\022<\n\rana_time_zone\030\002 \001(\0162\030.api.commons" +
+      ".AnaTimeZoneR\013anaTimeZone\"\020\n\016SetTimeZone" +
+      "Res\"H\n\010TimeZone\022<\n\rana_time_zone\030\001 \001(\0162\030" +
+      ".api.commons.AnaTimeZoneR\013anaTimeZone\"h\n" +
+      "\032CopyChartsAndDashboardsRes\022J\n\tconflicts" +
+      "\030\001 \003(\0132,.api.v0alpha.CopyChartsAndDashbo" +
+      "ardsConflictR\tconflicts\"K\n\037CopyChartsAnd" +
+      "DashboardsConflict\022\022\n\004type\030\001 \001(\tR\004type\022\024" +
+      "\n\005title\030\002 \001(\tR\005title\"\177\n\016CopyDashVizReq\022#" +
+      "\n\rdashboard_ids\030\002 \003(\tR\014dashboardIds\022+\n\021v" +
+      "isualization_ids\030\003 \003(\tR\020visualizationIds" +
+      "\022\025\n\006org_id\030\004 \001(\tR\005orgIdJ\004\010\001\020\002\"?\n\023CopyDas" +
+      "hVizConflict\022\022\n\004type\030\001 \001(\tR\004type\022\024\n\005titl" +
+      "e\030\002 \001(\tR\005title\"P\n\016CopyDashVizRes\022>\n\tconf" +
+      "licts\030\001 \003(\0132 .api.v0alpha.CopyDashVizCon" +
+      "flictR\tconflicts\"h\n\035GetSpecifiedBillingS" +
+      "ummaryReq\022*\n\002ts\030\002 \001(\0132\032.google.protobuf." +
+      "TimestampR\002ts\022\025\n\006org_id\030\003 \001(\tR\005orgIdJ\004\010\001" +
+      "\020\002\"B\n\024GetBillingSummaryReq\022*\n\002ts\030\002 \001(\0132\032" +
+      ".google.protobuf.TimestampR\002ts\"\265\003\n\016Billi" +
+      "ngSummary\022\035\n\nclient_sid\030\001 \001(\003R\tclientSid" +
+      "\022\037\n\013client_name\030\002 \001(\tR\nclientName\022\035\n\npro" +
+      "_status\030\003 \001(\010R\tproStatus\022/\n\005weeks\030\004 \001(\0132" +
+      "\031.api.v0alpha.WeeksSummaryR\005weeks\022H\n\016cus" +
+      "tom_reports\030\005 \001(\0132!.api.v0alpha.CustomRe" +
+      "portsSummaryR\rcustomReports\022E\n\013report_jo" +
+      "bs\030\006 \001(\0132$.api.v0alpha.ActiveReportJobsS" +
+      "ummaryR\nreportJobs\022>\n\010watchers\030\007 \001(\0132\".a" +
+      "pi.v0alpha.ActiveWatchersSummaryR\010watche" +
+      "rs\022B\n\014multi_client\030\010 \001(\0132\037.api.v0alpha.M" +
+      "ultiClientSummaryR\013multiClient\"\224\001\n\014Weeks" +
+      "Summary\022#\n\rweeks_current\030\001 \001(\003R\014weeksCur" +
+      "rent\022\035\n\nweeks_peak\030\002 \001(\003R\tweeksPeak\022!\n\014w" +
+      "eeks_editor\030\003 \001(\tR\013weeksEditor\022\035\n\npro_st" +
+      "atus\030\004 \001(\010R\tproStatus\"\221\002\n\024CustomReportsS" +
+      "ummary\022B\n\007enabled\030\001 \001(\0132(.api.v0alpha.Cu" +
+      "stomReportsEnabledSummaryR\007enabled\022P\n\016vi" +
+      "sualizations\030\002 \001(\0132(.api.v0alpha.CustomV" +
+      "isualizationsSummaryR\016visualizations\022D\n\n" +
+      "dashboards\030\003 \001(\0132$.api.v0alpha.CustomDas" +
+      "hboardsSummaryR\ndashboards\022\035\n\npro_status" +
+      "\030\004 \001(\010R\tproStatus\"\307\001\n\033CustomVisualizatio" +
+      "nsSummary\0225\n\026visualizations_current\030\001 \001(" +
+      "\003R\025visualizationsCurrent\022/\n\023visualizatio" +
+      "ns_peak\030\002 \001(\003R\022visualizationsPeak\022@\n\034cus" +
+      "tom_visualizations_editor\030\003 \001(\tR\032customV" +
+      "isualizationsEditor\"\253\001\n\027CustomDashboards" +
+      "Summary\022-\n\022dashboards_current\030\001 \001(\003R\021das" +
+      "hboardsCurrent\022\'\n\017dashboards_peak\030\002 \001(\003R" +
+      "\016dashboardsPeak\0228\n\030custom_dashboards_edi" +
+      "tor\030\003 \001(\tR\026customDashboardsEditor\"\203\002\n\033Cu" +
+      "stomReportsEnabledSummary\022C\n\036custom_repo" +
+      "rts_enabled_current\030\001 \001(\010R\033customReports" +
+      "EnabledCurrent\022=\n\033custom_reports_enabled" +
+      "_peak\030\002 \001(\010R\030customReportsEnabledPeak\022A\n" +
+      "\035custom_reports_enabled_editor\030\003 \001(\tR\032cu" +
+      "stomReportsEnabledEditor\022\035\n\npro_status\030\004" +
+      " \001(\010R\tproStatus\"\267\001\n\022MultiClientSummary\022\034" +
+      "\n\tadoptable\030\001 \001(\010R\tadoptable\0220\n\007parents\030" +
+      "\002 \001(\0132\026.api.v0alpha.RelationsR\007parents\0222" +
+      "\n\010children\030\003 \001(\0132\026.api.v0alpha.Relations" +
+      "R\010children\022\035\n\npro_status\030\004 \001(\010R\tproStatu" +
+      "s\"@\n\tRelations\0223\n\trelations\030\001 \003(\0132\025.api." +
+      "v0alpha.RelationR\trelations\"\374\002\n\010Relation" +
+      "\022\035\n\nclient_sid\030\001 \001(\003R\tclientSid\022\037\n\013clien" +
+      "t_name\030\002 \001(\tR\nclientName\022K\n\023relation_ini" +
+      "tiation\030\003 \001(\0132\032.google.protobuf.Timestam" +
+      "pR\022relationInitiation\022-\n\022relation_initia" +
+      "tor\030\004 \001(\tR\021relationInitiator\022M\n\024relation" +
+      "_termination\030\005 \001(\0132\032.google.protobuf.Tim" +
+      "estampR\023relationTermination\022/\n\023relation_" +
+      "terminator\030\006 \001(\tR\022relationTerminator\022\035\n\n" +
+      "is_current\030\007 \001(\010R\tisCurrent\022\025\n\006org_id\030\010 " +
+      "\001(\tR\005orgId\"\256\001\n\006Family\022\035\n\nclient_sid\030\001 \001(" +
+      "\003R\tclientSid\022\037\n\013client_name\030\002 \001(\tR\nclien" +
+      "tName\0220\n\007parents\030\003 \001(\0132\026.api.v0alpha.Rel" +
+      "ationsR\007parents\0222\n\010children\030\004 \001(\0132\026.api." +
+      "v0alpha.RelationsR\010children\"\031\n\027GetAccess" +
+      "ibleClientsReq\"+\n\014GetFamilyReq\022\025\n\006org_id" +
+      "\030\002 \001(\tR\005orgIdJ\004\010\001\020\002\"\022\n\020MakeAdoptableReq\"" +
+      "\022\n\020MakeAdoptableRes\"\033\n\031SpecifiedMakeAdop" +
+      "tableRes\"l\n\030SetAnaAccountRelationReq\022\"\n\r" +
+      "parent_org_id\030\004 \001(\tR\013parentOrgId\022 \n\014chil" +
+      "d_org_id\030\005 \001(\tR\nchildOrgIdJ\004\010\001\020\002J\004\010\002\020\003\"\032" +
+      "\n\030SetAnaAccountRelationRes\"\335\001\n\027ActiveRep" +
+      "ortJobsSummary\022;\n\032active_report_jobs_cur" +
+      "rent\030\001 \001(\003R\027activeReportJobsCurrent\0222\n\025p" +
+      "rocessed_report_jobs\030\002 \001(\003R\023processedRep" +
+      "ortJobs\0222\n\025report_jobs_activator\030\003 \001(\tR\023" +
+      "reportJobsActivator\022\035\n\npro_status\030\004 \001(\010R" +
+      "\tproStatus\"\314\001\n\025ActiveWatchersSummary\0226\n\027" +
+      "active_watchers_current\030\001 \001(\003R\025activeWat" +
+      "chersCurrent\022-\n\022processed_watchers\030\002 \001(\003" +
+      "R\021processedWatchers\022-\n\022watchers_activato" +
+      "r\030\003 \001(\tR\021watchersActivator\022\035\n\npro_status" +
+      "\030\004 \001(\010R\tproStatus\"Y\n\017SimpleRelations\022F\n\020" +
+      "simple_relations\030\001 \003(\0132\033.api.v0alpha.Sim" +
+      "pleRelationR\017simpleRelations\"N\n\016SimpleRe" +
+      "lation\022\037\n\013client_name\030\002 \001(\tR\nclientName\022" +
+      "\025\n\006org_id\030\003 \001(\tR\005orgIdJ\004\010\001\020\002\"\031\n\027GetOrgan" +
+      "izationNamesReq\"\232\001\n\027GetOrganizationNames" +
+      "Res\022E\n\005names\030\001 \003(\0132/.api.v0alpha.GetOrga" +
+      "nizationNamesRes.NamesEntryR\005names\0328\n\nNa" +
+      "mesEntry\022\020\n\003key\030\001 \001(\003R\003key\022\024\n\005value\030\002 \001(" +
+      "\tR\005value:\0028\001\"G\n\tDatapoint\022\016\n\002id\030\001 \001(\tR\002i" +
+      "d\022\026\n\006labels\030\002 \003(\tR\006labels\022\022\n\004type\030\003 \001(\tR" +
+      "\004type\"S\n\020GetDatapointsReq\022$\n\004type\030\001 \001(\0162" +
+      "\020.api.commons.TagR\004type\022\031\n\010group_id\030\002 \001(" +
+      "\tR\007groupId\"P\n\020GetDatapointsRes\0226\n\ndatapo" +
+      "ints\030\002 \003(\0132\026.api.v0alpha.DatapointR\ndata" +
+      "pointsJ\004\010\001\020\002\"\312\007\n\014NewDatapoint\022\022\n\004uuid\030\001 " +
+      "\001(\tR\004uuid\022\024\n\005label\030\003 \001(\tR\005label\022\033\n\tfilte" +
+      "r_id\030\005 \001(\tR\010filterId\0227\n\005float\030\006 \001(\0132\037.ap" +
+      "i.v0alpha.NewDatapoint.FloatH\000R\005float\022:\n" +
+      "\006string\030\007 \001(\0132 .api.v0alpha.NewDatapoint" +
+      ".StringH\000R\006string\0224\n\004bool\030\010 \001(\0132\036.api.v0" +
+      "alpha.NewDatapoint.BoolH\000R\004bool\0224\n\004date\030" +
+      "\t \001(\0132\036.api.v0alpha.NewDatapoint.DateH\000R" +
+      "\004date\022!\n\014datapoint_id\030\n \001(\tR\013datapointId" +
+      "\022$\n\004tags\030\013 \003(\0162\020.api.commons.TagR\004tags\032\351" +
+      "\001\n\005Float\022A\n\013aggregation\030\001 \001(\0162\037.api.comm" +
+      "ons.NumericAggregationR\013aggregation\022\036\n\td" +
+      "atapoint\030\002 \001(\tH\000R\tdatapoint\022\034\n\010constant\030" +
+      "\005 \001(\002H\000R\010constant\0224\n\toperation\030\003 \001(\0162\026.a" +
+      "pi.commons.OperationR\toperation\022\036\n\nperce" +
+      "ntile\030\004 \001(\002R\npercentileB\t\n\007operand\032\200\001\n\006S" +
+      "tring\022D\n\013aggregation\030\001 \001(\0162\".api.commons" +
+      ".NonNumericAggregationR\013aggregation\022\030\n\007p" +
+      "repend\030\002 \001(\tR\007prepend\022\026\n\006append\030\003 \001(\tR\006a" +
+      "ppend\032L\n\004Bool\022D\n\013aggregation\030\001 \001(\0162\".api" +
+      ".commons.NonNumericAggregationR\013aggregat" +
+      "ion\032\201\001\n\004Date\022A\n\013aggregation\030\001 \001(\0162\037.api." +
+      "commons.NumericAggregationR\013aggregation\022" +
+      "\026\n\006format\030\002 \001(\tR\006format\022\036\n\npercentile\030\003 " +
+      "\001(\002R\npercentileB\010\n\006action\"%\n\017GetDatapoin" +
+      "tReq\022\022\n\004uuid\030\001 \001(\tR\004uuid\"K\n\020GetDatapoint" +
+      "Resp\0227\n\tdatapoint\030\001 \001(\0132\031.api.v0alpha.Ne" +
+      "wDatapointR\tdatapoint\"M\n\022CreateDatapoint" +
+      "Req\0227\n\tdatapoint\030\001 \001(\0132\031.api.v0alpha.New" +
+      "DatapointR\tdatapoint\"\025\n\023CreateDatapointR" +
+      "esp\"(\n\022DeleteDatapointReq\022\022\n\004uuid\030\001 \001(\tR" +
+      "\004uuid\"\025\n\023DeleteDatapointResp\"@\n\014Category" +
+      "Data\022\032\n\010category\030\001 \001(\tR\010category\022\024\n\005valu" +
+      "e\030\002 \001(\002R\005value\"\351\001\n\006Filter\0227\n\ttime_from\030\001" +
+      " \001(\0132\032.google.protobuf.TimestampR\010timeFr" +
+      "om\0223\n\007time_to\030\002 \001(\0132\032.google.protobuf.Ti" +
+      "mestampR\006timeTo\0225\n\ttime_zone\030\003 \001(\0162\030.api" +
+      ".commons.AnaTimeZoneR\010timeZone\022\033\n\tfilter" +
+      "_id\030\005 \001(\tR\010filterId\022\027\n\007org_ids\030\006 \003(\tR\006or" +
+      "gIdsJ\004\010\004\020\005\"3\n\rGetFiltersReq\022\"\n\003tag\030\001 \001(\016" +
+      "2\020.api.commons.TagR\003tag\"5\n\tNewFilter\022\022\n\004" +
+      "uuid\030\001 \001(\tR\004uuid\022\024\n\005label\030\002 \001(\tR\005label\"B" +
+      "\n\016GetFiltersResp\0220\n\007filters\030\001 \003(\0132\026.api." +
+      "v0alpha.NewFilterR\007filters\"\330\003\n\017CreateFil" +
+      "terReq\022C\n\010compound\030\001 \001(\0132%.api.v0alpha.C" +
+      "reateFilterReq.CompoundH\000R\010compound\022=\n\006s" +
+      "imple\030\002 \001(\0132#.api.v0alpha.CreateFilterRe" +
+      "q.SimpleH\000R\006simple\022\024\n\005label\030\003 \001(\tR\005label" +
+      "\022$\n\004tags\030\004 \003(\0162\020.api.commons.TagR\004tags\032\215" +
+      "\001\n\010Compound\0223\n\004join\030\001 \001(\0162\037.api.commons." +
+      "CompoundFilterJoinR\004join\022$\n\016left_filter_" +
+      "id\030\002 \001(\tR\014leftFilterId\022&\n\017right_filter_i" +
+      "d\030\003 \001(\tR\rrightFilterId\032d\n\006Simple\022!\n\014data" +
+      "point_id\030\001 \001(\tR\013datapointId\0227\n\ncompariso" +
+      "n\030\002 \001(\0132\027.api.v0alpha.ComparisonR\ncompar" +
+      "isonB\017\n\rcreation_type\"\206\005\n\nComparison\0228\n\006" +
+      "string\030\002 \001(\0132\036.api.v0alpha.Comparison.St" +
+      "ringH\000R\006string\0225\n\005float\030\003 \001(\0132\035.api.v0al" +
+      "pha.Comparison.FloatH\000R\005float\0222\n\004bool\030\004 " +
+      "\001(\0132\034.api.v0alpha.Comparison.BoolH\000R\004boo" +
+      "l\0222\n\004date\030\005 \001(\0132\034.api.v0alpha.Comparison" +
+      ".DateH\000R\004date\032]\n\006String\022\024\n\005value\030\001 \001(\tR\005" +
+      "value\022=\n\ncomparison\030\002 \001(\0162\035.api.commons." +
+      "StringComparisonR\ncomparison\032[\n\005Float\022\024\n" +
+      "\005value\030\001 \001(\002R\005value\022<\n\ncomparison\030\002 \001(\0162" +
+      "\034.api.commons.FloatComparisonR\ncompariso" +
+      "n\032Y\n\004Bool\022\024\n\005value\030\001 \001(\010R\005value\022;\n\ncompa" +
+      "rison\030\002 \001(\0162\033.api.commons.BoolComparison" +
+      "R\ncomparison\032u\n\004Date\0220\n\005value\030\001 \001(\0132\032.go" +
+      "ogle.protobuf.TimestampR\005value\022;\n\ncompar" +
+      "ison\030\002 \001(\0162\033.api.commons.DateComparisonR" +
+      "\ncomparisonB\021\n\017comparison_type\"\022\n\020Create" +
+      "FilterResp\"L\n\026MultiValueCategoryData\022\032\n\010" +
+      "category\030\001 \001(\tR\010category\022\026\n\006values\030\002 \003(\002" +
+      "R\006values\"\225\002\n\nGetDataReq\0223\n\tgroupings\030\002 \003" +
+      "(\0132\025.api.v0alpha.GroupingR\tgroupings\022.\n\023" +
+      "field_datapoint_ids\030\003 \003(\tR\021fieldDatapoin" +
+      "tIds\022+\n\006filter\030\004 \001(\0132\023.api.v0alpha.Filte" +
+      "rR\006filter\0223\n\026results_on_every_level\030\005 \001(" +
+      "\010R\023resultsOnEveryLevel\022*\n\006orders\030\006 \003(\0132\022" +
+      ".api.v0alpha.OrderR\006orders\022\024\n\005limit\030\007 \001(" +
+      "\003R\005limit\">\n\005Order\022!\n\014datapoint_id\030\001 \001(\tR" +
+      "\013datapointId\022\022\n\004desc\030\002 \001(\010R\004desc\"r\n\010Grou" +
+      "ping\022#\n\014datapoint_id\030\001 \001(\tH\000R\013datapointI" +
+      "d\0227\n\ntime_scope\030\002 \001(\0162\026.api.commons.Time" +
+      "ScopeH\000R\ttimeScopeB\010\n\006format\"}\n\013GetDataR" +
+      "esp\022<\n\004data\030\001 \003(\0132(.api.v0alpha.MultiCat" +
+      "egoryMultiValueDataR\004data\0220\n\010warnings\030\002 " +
+      "\003(\0132\024.api.v0alpha.WarningR\010warnings\"\254\001\n\007" +
+      "Warning\022C\n\016missing_fields\030\001 \001(\0132\032.api.v0" +
+      "alpha.MissingFieldsH\000R\rmissingFields\022L\n\021" +
+      "missing_locations\030\002 \001(\0132\035.api.v0alpha.Mi" +
+      "ssingLocationsH\000R\020missingLocationsB\016\n\014wa" +
+      "rning_type\"\'\n\rMissingFields\022\026\n\006fields\030\001 " +
+      "\003(\tR\006fields\"H\n\020MissingLocations\0224\n\006field" +
+      "s\030\001 \003(\0132\034.api.v0alpha.MissingLocationR\006f" +
+      "ields\"d\n\017MissingLocation\022!\n\014datapoint_id" +
+      "\030\001 \001(\tR\013datapointId\022\030\n\007message\030\002 \001(\tR\007me" +
+      "ssage\022\024\n\005label\030\003 \001(\tR\005label\"\200\001\n\033MultiCat" +
+      "egoryMultiValueData\0225\n\ncategories\030\001 \003(\0132" +
+      "\025.api.v0alpha.CategoryR\ncategories\022*\n\006va" +
+      "lues\030\002 \003(\0132\022.api.v0alpha.ValueR\006values\"\203" +
+      "\001\n\010Category\022#\n\014string_value\030\001 \001(\tH\000R\013str" +
+      "ingValue\022E\n\017timestamp_value\030\002 \001(\0132\032.goog" +
+      "le.protobuf.TimestampH\000R\016timestampValueB" +
+      "\013\n\tdata_type\"\364\001\n\005Value\022#\n\014string_value\030\001" +
+      " \001(\tH\000R\013stringValue\022!\n\013float_value\030\002 \001(\001" +
+      "H\000R\nfloatValue\022E\n\017timestamp_value\030\003 \001(\0132" +
+      "\032.google.protobuf.TimestampH\000R\016timestamp" +
+      "Value\022.\n\005empty\030\004 \001(\0132\026.google.protobuf.E" +
+      "mptyH\000R\005empty\022\037\n\nbool_value\030\005 \001(\010H\000R\tboo" +
+      "lValueB\013\n\tdata_type\"_\n\030GetDataTimeIncrem" +
+      "entResp\022C\n\017time_increments\030\001 \003(\0132\032.api.v" +
+      "0alpha.TimeIncrementR\016timeIncrements\"i\n\r" +
+      "TimeIncrement\022.\n\004time\030\001 \001(\0132\032.google.pro" +
+      "tobuf.TimestampR\004time\022(\n\005value\030\002 \001(\0132\022.a" +
+      "pi.v0alpha.ValueR\005value\"4\n\006Charts\022*\n\006cha" +
+      "rts\030\001 \003(\0132\022.api.v0alpha.ChartR\006charts\"\331\001" +
+      "\n\005Chart\022\031\n\010chart_id\030\001 \001(\tR\007chartId\022\024\n\005ti" +
+      "tle\030\003 \001(\tR\005title\022>\n\rchart_details\030\004 \001(\0132" +
+      "\031.api.v0alpha.ChartDetailsR\014chartDetails" +
+      "\022\027\n\007root_id\030\005 \001(\tR\006rootId\022F\n\016display_lab" +
+      "els\030\006 \001(\0162\037.api.commons.ChartDisplayLabe" +
+      "lsR\rdisplayLabels\"\377\013\n\014ChartDetails\022M\n\022si" +
+      "ngle_value_chart\030\001 \001(\0132\035.api.v0alpha.Sin" +
+      "gleValueChartH\000R\020singleValueChart\0224\n\tpie" +
+      "_chart\030\002 \001(\0132\025.api.v0alpha.PieChartH\000R\010p" +
+      "ieChart\022J\n\021radar_fixed_chart\030\003 \001(\0132\034.api" +
+      ".v0alpha.RadarFixedChartH\000R\017radarFixedCh" +
+      "art\0224\n\tbar_chart\030\004 \001(\0132\025.api.v0alpha.Bar" +
+      "ChartH\000R\010barChart\022=\n\014bullet_chart\030\005 \001(\0132" +
+      "\030.api.v0alpha.BulletChartH\000R\013bulletChart" +
+      "\022J\n\021multi_value_chart\030\006 \001(\0132\034.api.v0alph" +
+      "a.MultiValueChartH\000R\017multiValueChart\022A\n\016" +
+      "tree_map_chart\030\007 \001(\0132\031.api.v0alpha.TreeM" +
+      "apChartH\000R\014treeMapChart\022S\n\024activity_gaug" +
+      "e_chart\030\010 \001(\0132\037.api.v0alpha.ActivityGaug" +
+      "eChartH\000R\022activityGaugeChart\0224\n\tarc_char" +
+      "t\030\t \001(\0132\025.api.v0alpha.ArcChartH\000R\010arcCha" +
+      "rt\022@\n\rscatter_chart\030\n \001(\0132\031.api.v0alpha." +
+      "ScatterChartH\000R\014scatterChart\022S\n\024time_his" +
+      "togram_chart\030\013 \001(\0132\037.api.v0alpha.TimeHis" +
+      "togramChartH\000R\022timeHistogramChart\022G\n\020tre" +
+      "e_table_chart\030\014 \001(\0132\033.api.v0alpha.TreeTa" +
+      "bleChartH\000R\016treeTableChart\022G\n\020info_panel" +
+      "_chart\030\r \001(\0132\033.api.v0alpha.InfoPanelChar" +
+      "tH\000R\016infoPanelChart\022J\n\021ranked_list_chart" +
+      "\030\016 \001(\0132\034.api.v0alpha.RankedListChartH\000R\017" +
+      "rankedListChart\022L\n\021speedometer_chart\030\017 \001" +
+      "(\0132\035.api.v0alpha.SpeedometerChartH\000R\020spe" +
+      "edometerChart\0227\n\nline_chart\030\020 \001(\0132\026.api." +
+      "v0alpha.LineChartH\000R\tlineChart\022=\n\014spline" +
+      "_chart\030\021 \001(\0132\030.api.v0alpha.SplineChartH\000" +
+      "R\013splineChart\0227\n\narea_chart\030\022 \001(\0132\026.api." +
+      "v0alpha.AreaChartH\000R\tareaChart\022:\n\013table_" +
+      "chart\030\023 \001(\0132\027.api.v0alpha.TableChartH\000R\n" +
+      "tableChart\022=\n\014bubble_chart\030\024 \001(\0132\030.api.v" +
+      "0alpha.BubbleChartH\000R\013bubbleChart\022P\n\023pac" +
+      "ked_bubble_chart\030\025 \001(\0132\036.api.v0alpha.Pac" +
+      "kedBubbleChartH\000R\021packedBubbleChart\022C\n\016s" +
+      "unburst_chart\030\026 \001(\0132\032.api.v0alpha.Sunbur" +
+      "stChartH\000R\rsunburstChartB\t\n\007details\"\237\001\n\020" +
+      "SingleValueChart\022\"\n\rdata_point_id\030\001 \001(\tR" +
+      "\013dataPointId\022\024\n\005label\030\002 \001(\tR\005label\0222\n\006su" +
+      "ffix\030\003 \001(\0162\032.api.commons.SuffixChoicesR\006" +
+      "suffix\022\035\n\nshow_label\030\004 \001(\010R\tshowLabel\"\217\001" +
+      "\n\010PieChart\022-\n\023field_data_point_id\030\001 \001(\tR" +
       "\020fieldDataPointId\0223\n\026grouping_data_point" +
-      "_id\030\002 \001(\tR\023groupingDataPointId\0224\n\tthresh" +
-      "old\030\003 \001(\0132\026.api.v0alpha.ThresholdR\tthres" +
-      "hold\"\264\002\n\020SpeedometerChart\022\"\n\rdata_point_" +
-      "id\030\001 \001(\tR\013dataPointId\022\024\n\005label\030\002 \001(\tR\005la" +
-      "bel\022C\n\021warning_threshold\030\003 \001(\0132\026.api.v0a" +
-      "lpha.ThresholdR\020warningThreshold\022A\n\020dang" +
-      "er_threshold\030\004 \001(\0132\026.api.v0alpha.Thresho" +
-      "ldR\017dangerThreshold\022;\n\rmax_threshold\030\005 \001" +
-      "(\0132\026.api.v0alpha.ThresholdR\014maxThreshold" +
-      "\022!\n\014suffix_label\030\006 \001(\tR\013suffixLabel\"\226\002\n\t" +
-      "LineChart\022-\n\023field_data_point_id\030\001 \001(\tR\020" +
-      "fieldDataPointId\0223\n\026grouping_data_point_" +
-      "id\030\002 \001(\tR\023groupingDataPointId\022?\n\013orienta" +
-      "tion\030\003 \001(\0162\035.api.commons.ChartOrientatio" +
-      "nR\013orientation\0224\n\tthreshold\030\004 \001(\0132\026.api." +
-      "v0alpha.ThresholdR\tthreshold\022.\n\004step\030\005 \001" +
-      "(\0162\032.api.commons.LineChartStepR\004step\"\350\001\n" +
-      "\013SplineChart\022-\n\023field_data_point_id\030\001 \001(" +
-      "\tR\020fieldDataPointId\0223\n\026grouping_data_poi" +
-      "nt_id\030\002 \001(\tR\023groupingDataPointId\022?\n\013orie" +
-      "ntation\030\003 \001(\0162\035.api.commons.ChartOrienta" +
-      "tionR\013orientation\0224\n\tthreshold\030\004 \001(\0132\026.a" +
-      "pi.v0alpha.ThresholdR\tthreshold\"\241\002\n\tArea" +
-      "Chart\022-\n\023field_data_point_id\030\001 \001(\tR\020fiel" +
-      "dDataPointId\0223\n\026grouping_data_point_id\030\002" +
-      " \001(\tR\023groupingDataPointId\022?\n\013orientation" +
-      "\030\003 \001(\0162\035.api.commons.ChartOrientationR\013o" +
-      "rientation\0224\n\tthreshold\030\004 \001(\0132\026.api.v0al" +
-      "pha.ThresholdR\tthreshold\0229\n\tarea_type\030\005 " +
-      "\001(\0162\034.api.commons.AreaChartChoiceR\010areaT" +
-      "ype\"\334\001\n\nTableChart\022<\n\013data_values\030\001 \003(\0132" +
-      "\033.api.v0alpha.TableDataValueR\ndataValues" +
-      "\022H\n\017grouping_values\030\002 \003(\0132\037.api.v0alpha." +
-      "TableGroupingValueR\016groupingValues\022F\n\017or" +
-      "der_by_values\030\003 \003(\0132\036.api.v0alpha.TableO" +
-      "rderByValueR\rorderByValues\"J\n\016TableDataV" +
-      "alue\022\"\n\rdata_point_id\030\001 \001(\tR\013dataPointId" +
-      "\022\024\n\005label\030\002 \001(\tR\005label\"I\n\022TableGroupingV" +
-      "alue\0223\n\026grouping_data_point_id\030\001 \001(\tR\023gr" +
-      "oupingDataPointId\".\n\021TableOrderByValue\022\031" +
-      "\n\010order_by\030\001 \001(\tR\007orderBy\"\251\002\n\013BubbleChar" +
-      "t\0223\n\026grouping_data_point_id\030\001 \001(\tR\023group" +
-      "ingDataPointId\022%\n\016grouping_label\030\002 \001(\tR\r" +
-      "groupingLabel\022%\n\017x_data_point_id\030\003 \001(\tR\014" +
-      "xDataPointId\022\027\n\007x_label\030\004 \001(\tR\006xLabel\022%\n" +
-      "\017y_data_point_id\030\005 \001(\tR\014yDataPointId\022\027\n\007" +
-      "y_label\030\006 \001(\tR\006yLabel\022%\n\017z_data_point_id" +
-      "\030\007 \001(\tR\014zDataPointId\022\027\n\007z_label\030\010 \001(\tR\006z" +
-      "Label\"\372\001\n\021PackedBubbleChart\022-\n\023field_dat" +
-      "a_point_id\030\001 \001(\tR\020fieldDataPointId\022\037\n\013fi" +
-      "eld_label\030\002 \001(\tR\nfieldLabel\022O\n\017grouping_" +
-      "values\030\003 \003(\0132&.api.v0alpha.PackedBubbleG" +
-      "roupingValueR\016groupingValues\022D\n\rpacked_c" +
-      "hoice\030\004 \001(\0162\037.api.commons.PackedBubbleCh" +
-      "oiceR\014packedChoice\"P\n\031PackedBubbleGroupi" +
+      "_id\030\002 \001(\tR\023groupingDataPointId\022\037\n\013hole_r" +
+      "adius\030\003 \001(\003R\nholeRadius\"\303\001\n\017RadarFixedCh" +
+      "art\0223\n\026grouping_data_point_id\030\001 \001(\tR\023gro" +
+      "upingDataPointId\022Z\n\030radar_fixed_inner_ch" +
+      "arts\030\002 \003(\0132!.api.v0alpha.RadarFixedInner" +
+      "ChartR\025radarFixedInnerCharts\022\037\n\013data_lab" +
+      "els\030\003 \001(\tR\ndataLabels\"\222\003\n\024RadarFixedInne" +
+      "rChart\022\"\n\rdata_point_id\030\001 \001(\tR\013dataPoint" +
+      "Id\022#\n\rcategory_name\030\002 \001(\tR\014categoryName\022" +
+      "<\n\004area\030\003 \001(\0132&.api.v0alpha.RadarFixedIn" +
+      "nerChart.AreaH\000R\004area\0229\n\003bar\030\004 \001(\0132%.api" +
+      ".v0alpha.RadarFixedInnerChart.BarH\000R\003bar" +
+      "\022<\n\004line\030\005 \001(\0132&.api.v0alpha.RadarFixedI" +
+      "nnerChart.LineH\000R\004line\022B\n\006spline\030\006 \001(\0132(" +
+      ".api.v0alpha.RadarFixedInnerChart.Spline" +
+      "H\000R\006spline\032\006\n\004Area\032\005\n\003Bar\032\006\n\004Line\032\010\n\006Spl" +
+      "ineB\025\n\023inner_chart_details\"\262\002\n\010BarChart\022" +
+      "-\n\023field_data_point_id\030\001 \001(\tR\020fieldDataP" +
+      "ointId\0223\n\026grouping_data_point_id\030\002 \001(\tR\023" +
+      "groupingDataPointId\022B\n\013orientation\030\003 \001(\016" +
+      "2 .api.commons.BarChartOrientationR\013orie" +
+      "ntation\0224\n\tthreshold\030\004 \001(\0132\026.api.v0alpha" +
+      ".ThresholdR\tthreshold\022\027\n\007x_label\030\005 \001(\tR\006" +
+      "xLabel\022\027\n\007y_label\030\006 \001(\tR\006yLabel\022\026\n\006legen" +
+      "d\030\007 \001(\tR\006legend\"\313\001\n\013BulletChart\022-\n\023field" +
+      "_data_point_id\030\001 \001(\tR\020fieldDataPointId\022?" +
+      "\n\013orientation\030\002 \001(\0162\035.api.commons.ChartO" +
+      "rientationR\013orientation\0224\n\tthreshold\030\003 \001" +
+      "(\0132\026.api.v0alpha.ThresholdR\tthreshold\022\026\n" +
+      "\006legend\030\004 \001(\tR\006legend\"d\n\017MultiValueChart" +
+      "\0227\n\013data_values\030\001 \003(\0132\026.api.v0alpha.Data" +
+      "ValueR\ndataValues\022\030\n\007columns\030\002 \001(\003R\007colu" +
+      "mns\"E\n\tDataValue\022\"\n\rdata_point_id\030\001 \001(\tR" +
+      "\013dataPointId\022\024\n\005label\030\002 \001(\tR\005label\"\254\001\n\014T" +
+      "reeMapChart\022-\n\023field_data_point_id\030\001 \001(\t" +
+      "R\020fieldDataPointId\0223\n\026grouping_data_poin",
+      "t_id\030\002 \001(\tR\023groupingDataPointId\022\033\n\tmin_c" +
+      "olor\030\003 \001(\tR\010minColor\022\033\n\tmax_color\030\004 \001(\tR" +
+      "\010maxColor\"f\n\022ActivityGaugeChart\022P\n\024activ" +
+      "ity_gauge_rings\030\001 \003(\0132\036.api.v0alpha.Acti" +
+      "vityGaugeRingR\022activityGaugeRings\"\203\001\n\021Ac" +
+      "tivityGaugeRing\022\"\n\rdata_point_id\030\001 \001(\tR\013" +
+      "dataPointId\0224\n\tthreshold\030\002 \001(\0132\026.api.v0a" +
+      "lpha.ThresholdR\tthreshold\022\024\n\005label\030\003 \001(\t" +
+      "R\005label\"z\n\010ArcChart\022\"\n\rdata_point_id\030\001 \001" +
+      "(\tR\013dataPointId\022\024\n\005label\030\002 \001(\tR\005label\0224\n" +
+      "\tthreshold\030\003 \001(\0132\026.api.v0alpha.Threshold" +
+      "R\tthreshold\"~\n\tThreshold\022+\n\020static_thres" +
+      "hold\030\003 \001(\003H\000R\017staticThreshold\0222\n\024data_po" +
+      "int_threshold\030\004 \001(\tH\000R\022dataPointThreshol" +
+      "dB\020\n\016threshold_type\"\333\001\n\014ScatterChart\0223\n\026" +
+      "grouping_data_point_id\030\001 \001(\tR\023groupingDa" +
+      "taPointId\022%\n\017x_data_point_id\030\002 \001(\tR\014xDat" +
+      "aPointId\022%\n\017y_data_point_id\030\003 \001(\tR\014yData" +
+      "PointId\022\027\n\007x_label\030\004 \001(\tR\006xLabel\022\027\n\007y_la" +
+      "bel\030\005 \001(\tR\006yLabel\022\026\n\006legend\030\006 \001(\tR\006legen" +
+      "d\"\245\001\n\022TimeHistogramChart\022\"\n\rdata_point_i" +
+      "d\030\001 \001(\tR\013dataPointId\0225\n\ntime_scope\030\002 \001(\016" +
+      "2\026.api.commons.TimeScopeR\ttimeScope\0224\n\tt" +
+      "hreshold\030\003 \001(\0132\026.api.v0alpha.ThresholdR\t" +
+      "threshold\"R\n\016InfoPanelChart\022@\n\013data_valu" +
+      "es\030\001 \003(\0132\037.api.v0alpha.InfoPanelDataValu" +
+      "eR\ndataValues\"N\n\022InfoPanelDataValue\022\"\n\rd" +
+      "ata_point_id\030\001 \001(\tR\013dataPointId\022\024\n\005label" +
+      "\030\002 \001(\tR\005label\"\240\001\n\016TreeTableChart\022@\n\013data" +
+      "_values\030\001 \003(\0132\037.api.v0alpha.TreeTableDat" +
+      "aValueR\ndataValues\022L\n\017grouping_values\030\002 " +
+      "\003(\0132#.api.v0alpha.TreeTableGroupingValue" +
+      "R\016groupingValues\"N\n\022TreeTableDataValue\022\"" +
+      "\n\rdata_point_id\030\001 \001(\tR\013dataPointId\022\024\n\005la" +
+      "bel\030\002 \001(\tR\005label\"M\n\026TreeTableGroupingVal" +
+      "ue\0223\n\026grouping_data_point_id\030\001 \001(\tR\023grou" +
+      "pingDataPointId\"\253\001\n\017RankedListChart\022-\n\023f" +
+      "ield_data_point_id\030\001 \001(\tR\020fieldDataPoint" +
+      "Id\0223\n\026grouping_data_point_id\030\002 \001(\tR\023grou" +
+      "pingDataPointId\0224\n\tthreshold\030\003 \001(\0132\026.api" +
+      ".v0alpha.ThresholdR\tthreshold\"\264\002\n\020Speedo" +
+      "meterChart\022\"\n\rdata_point_id\030\001 \001(\tR\013dataP" +
+      "ointId\022\024\n\005label\030\002 \001(\tR\005label\022C\n\021warning_" +
+      "threshold\030\003 \001(\0132\026.api.v0alpha.ThresholdR" +
+      "\020warningThreshold\022A\n\020danger_threshold\030\004 " +
+      "\001(\0132\026.api.v0alpha.ThresholdR\017dangerThres" +
+      "hold\022;\n\rmax_threshold\030\005 \001(\0132\026.api.v0alph" +
+      "a.ThresholdR\014maxThreshold\022!\n\014suffix_labe" +
+      "l\030\006 \001(\tR\013suffixLabel\"\226\002\n\tLineChart\022-\n\023fi" +
+      "eld_data_point_id\030\001 \001(\tR\020fieldDataPointI" +
+      "d\0223\n\026grouping_data_point_id\030\002 \001(\tR\023group" +
+      "ingDataPointId\022?\n\013orientation\030\003 \001(\0162\035.ap" +
+      "i.commons.ChartOrientationR\013orientation\022" +
+      "4\n\tthreshold\030\004 \001(\0132\026.api.v0alpha.Thresho" +
+      "ldR\tthreshold\022.\n\004step\030\005 \001(\0162\032.api.common" +
+      "s.LineChartStepR\004step\"\350\001\n\013SplineChart\022-\n" +
+      "\023field_data_point_id\030\001 \001(\tR\020fieldDataPoi" +
+      "ntId\0223\n\026grouping_data_point_id\030\002 \001(\tR\023gr" +
+      "oupingDataPointId\022?\n\013orientation\030\003 \001(\0162\035" +
+      ".api.commons.ChartOrientationR\013orientati" +
+      "on\0224\n\tthreshold\030\004 \001(\0132\026.api.v0alpha.Thre" +
+      "sholdR\tthreshold\"\241\002\n\tAreaChart\022-\n\023field_" +
+      "data_point_id\030\001 \001(\tR\020fieldDataPointId\0223\n" +
+      "\026grouping_data_point_id\030\002 \001(\tR\023groupingD" +
+      "ataPointId\022?\n\013orientation\030\003 \001(\0162\035.api.co" +
+      "mmons.ChartOrientationR\013orientation\0224\n\tt" +
+      "hreshold\030\004 \001(\0132\026.api.v0alpha.ThresholdR\t" +
+      "threshold\0229\n\tarea_type\030\005 \001(\0162\034.api.commo" +
+      "ns.AreaChartChoiceR\010areaType\"\334\001\n\nTableCh" +
+      "art\022<\n\013data_values\030\001 \003(\0132\033.api.v0alpha.T" +
+      "ableDataValueR\ndataValues\022H\n\017grouping_va" +
+      "lues\030\002 \003(\0132\037.api.v0alpha.TableGroupingVa" +
+      "lueR\016groupingValues\022F\n\017order_by_values\030\003" +
+      " \003(\0132\036.api.v0alpha.TableOrderByValueR\ror" +
+      "derByValues\"J\n\016TableDataValue\022\"\n\rdata_po" +
+      "int_id\030\001 \001(\tR\013dataPointId\022\024\n\005label\030\002 \001(\t" +
+      "R\005label\"I\n\022TableGroupingValue\0223\n\026groupin" +
+      "g_data_point_id\030\001 \001(\tR\023groupingDataPoint" +
+      "Id\".\n\021TableOrderByValue\022\031\n\010order_by\030\001 \001(" +
+      "\tR\007orderBy\"\251\002\n\013BubbleChart\0223\n\026grouping_d" +
+      "ata_point_id\030\001 \001(\tR\023groupingDataPointId\022" +
+      "%\n\016grouping_label\030\002 \001(\tR\rgroupingLabel\022%" +
+      "\n\017x_data_point_id\030\003 \001(\tR\014xDataPointId\022\027\n" +
+      "\007x_label\030\004 \001(\tR\006xLabel\022%\n\017y_data_point_i" +
+      "d\030\005 \001(\tR\014yDataPointId\022\027\n\007y_label\030\006 \001(\tR\006" +
+      "yLabel\022%\n\017z_data_point_id\030\007 \001(\tR\014zDataPo" +
+      "intId\022\027\n\007z_label\030\010 \001(\tR\006zLabel\"\372\001\n\021Packe" +
+      "dBubbleChart\022-\n\023field_data_point_id\030\001 \001(" +
+      "\tR\020fieldDataPointId\022\037\n\013field_label\030\002 \001(\t" +
+      "R\nfieldLabel\022O\n\017grouping_values\030\003 \003(\0132&." +
+      "api.v0alpha.PackedBubbleGroupingValueR\016g" +
+      "roupingValues\022D\n\rpacked_choice\030\004 \001(\0162\037.a" +
+      "pi.commons.PackedBubbleChoiceR\014packedCho" +
+      "ice\"P\n\031PackedBubbleGroupingValue\0223\n\026grou" +
+      "ping_data_point_id\030\001 \001(\tR\023groupingDataPo" +
+      "intId\"\256\001\n\rSunburstChart\022-\n\023field_data_po" +
+      "int_id\030\001 \001(\tR\020fieldDataPointId\022K\n\017groupi" +
+      "ng_values\030\002 \003(\0132\".api.v0alpha.SunburstGr" +
+      "oupingValueR\016groupingValues\022!\n\014center_la" +
+      "bel\030\003 \001(\tR\013centerLabel\"L\n\025SunburstGroupi" +
       "ngValue\0223\n\026grouping_data_point_id\030\001 \001(\tR" +
-      "\023groupingDataPointId\"\256\001\n\rSunburstChart\022-" +
-      "\n\023field_data_point_id\030\001 \001(\tR\020fieldDataPo" +
-      "intId\022K\n\017grouping_values\030\002 \003(\0132\".api.v0a" +
-      "lpha.SunburstGroupingValueR\016groupingValu" +
-      "es\022!\n\014center_label\030\003 \001(\tR\013centerLabel\"L\n" +
-      "\025SunburstGroupingValue\0223\n\026grouping_data_" +
-      "point_id\030\001 \001(\tR\023groupingDataPointId\"\256\001\n\016" +
-      "CreateChartReq\022\024\n\005title\030\001 \001(\tR\005title\022>\n\r" +
-      "chart_details\030\002 \001(\0132\031.api.v0alpha.ChartD" +
-      "etailsR\014chartDetails\022F\n\016display_labels\030\003" +
-      " \001(\0162\037.api.commons.ChartDisplayLabelsR\rd" +
-      "isplayLabels\"+\n\016CreateChartRes\022\031\n\010chart_" +
-      "id\030\001 \001(\tR\007chartId\"(\n\013GetChartReq\022\031\n\010char" +
-      "t_id\030\001 \001(\tR\007chartId\"+\n\016DeleteChartReq\022\031\n" +
-      "\010chart_id\030\001 \001(\tR\007chartId\"\020\n\016DeleteChartR" +
-      "es\"\357\001\n\010DashPage\022>\n\tdashboard\030\001 \001(\0132\036.api" +
-      ".v0alpha.DashPageDashboardH\000R\tdashboard\022" +
-      "]\n\024visualization_legacy\030\002 \001(\0132(.api.v0al" +
-      "pha.DashPageVisualizationLegacyH\000R\023visua" +
-      "lizationLegacy\0222\n\005chart\030\003 \001(\0132\032.api.v0al" +
-      "pha.DashPageChartH\000R\005chartB\020\n\016dash_page_" +
-      "type\"\210\001\n\021DashPageDashboard\022!\n\014dashboard_" +
-      "id\030\001 \001(\tR\013dashboardId\022\024\n\005title\030\002 \001(\tR\005ti" +
-      "tle\022\027\n\007root_id\030\003 \001(\tR\006rootId\022!\n\014tcn_stan" +
-      "dard\030\004 \001(\010R\013tcnStandard\"w\n\033DashPageVisua" +
-      "lizationLegacy\022)\n\020visualization_id\030\001 \001(\t" +
-      "R\017visualizationId\022\024\n\005title\030\002 \001(\tR\005title\022" +
-      "\027\n\007root_id\030\003 \001(\tR\006rootId\"|\n\rDashPageChar" +
-      "t\022\031\n\010chart_id\030\001 \001(\tR\007chartId\022\024\n\005title\030\002 " +
-      "\001(\tR\005title\022\027\n\007root_id\030\003 \001(\tR\006rootId\022!\n\014t" +
-      "cn_standard\030\004 \001(\010R\013tcnStandard\"\033\n\031GetAcc" +
-      "essibleDashPagesReq\"Q\n\031GetAccessibleDash" +
-      "PagesRes\0224\n\ndash_pages\030\001 \003(\0132\025.api.v0alp" +
-      "ha.DashPageR\tdashPages\"\203\002\n\023RecommendedDa" +
-      "shPage\022A\n\tdashboard\030\001 \001(\0132!.api.v0alpha." +
-      "RecommendedDashboardH\000R\tdashboard\022`\n\024vis" +
-      "ualization_legacy\030\002 \001(\0132+.api.v0alpha.Re" +
-      "commendedVisualizationLegacyH\000R\023visualiz" +
-      "ationLegacy\0225\n\005chart\030\003 \001(\0132\035.api.v0alpha" +
-      ".RecommendedChartH\000R\005chartB\020\n\016dash_page_" +
-      "type\"\213\001\n\024RecommendedDashboard\022!\n\014dashboa" +
-      "rd_id\030\001 \001(\tR\013dashboardId\022\024\n\005title\030\002 \001(\tR" +
-      "\005title\022\027\n\007root_id\030\003 \001(\tR\006rootId\022!\n\014tcn_s" +
-      "tandard\030\004 \001(\010R\013tcnStandard\"z\n\036Recommende" +
-      "dVisualizationLegacy\022)\n\020visualization_id" +
-      "\030\001 \001(\tR\017visualizationId\022\024\n\005title\030\002 \001(\tR\005" +
-      "title\022\027\n\007root_id\030\003 \001(\tR\006rootId\"\177\n\020Recomm" +
-      "endedChart\022\031\n\010chart_id\030\001 \001(\tR\007chartId\022\024\n" +
-      "\005title\030\002 \001(\tR\005title\022\027\n\007root_id\030\003 \001(\tR\006ro" +
-      "otId\022!\n\014tcn_standard\030\004 \001(\010R\013tcnStandard\"" +
-      "\217\002\n\026RecommendedDashPageReq\022D\n\tdashboard\030" +
-      "\001 \001(\0132$.api.v0alpha.RecommendedDashboard" +
-      "ReqH\000R\tdashboard\022c\n\024visualization_legacy" +
-      "\030\002 \001(\0132..api.v0alpha.RecommendedVisualiz" +
-      "ationLegacyReqH\000R\023visualizationLegacy\0228\n" +
-      "\005chart\030\003 \001(\0132 .api.v0alpha.RecommendedCh" +
-      "artReqH\000R\005chartB\020\n\016dash_page_type\"<\n\027Rec" +
-      "ommendedDashboardReq\022!\n\014dashboard_id\030\001 \001" +
-      "(\tR\013dashboardId\"N\n!RecommendedVisualizat" +
-      "ionLegacyReq\022)\n\020visualization_id\030\001 \001(\tR\017" +
-      "visualizationId\"0\n\023RecommendedChartReq\022\031" +
-      "\n\010chart_id\030\001 \001(\tR\007chartId\" \n\036GetRecommen" +
-      "dedDashPagesHomeReq\"k\n\032GetRecommendedDas" +
-      "hPagesReq\022M\n\020source_dash_page\030\001 \001(\0132#.ap" +
-      "i.v0alpha.RecommendedDashPageReqR\016source" +
-      "DashPage\"t\n\032GetRecommendedDashPagesRes\022V" +
-      "\n\026recommended_dash_pages\030\001 \003(\0132 .api.v0a" +
-      "lpha.RecommendedDashPageR\024recommendedDas" +
-      "hPages\"\331\001\n\026DashPageSelectEventReq\022S\n\023sel" +
-      "ection_dash_page\030\001 \001(\0132#.api.v0alpha.Rec" +
-      "ommendedDashPageReqR\021selectionDashPage\022M" +
-      "\n\020source_dash_page\030\002 \001(\0132#.api.v0alpha.R" +
-      "ecommendedDashPageReqR\016sourceDashPage\022\033\n" +
-      "\tfrom_home\030\003 \001(\010R\010fromHome\"\030\n\026DashPageSe" +
-      "lectEventRes\"\027\n\025VisualizationEventRes\"\262\001" +
-      "\n\034GetRecommendedTimeFiltersReq\022 \n\014dash_p" +
-      "age_id\030\001 \001(\tR\ndashPageId\022I\n\016dash_page_ty" +
-      "pe\030\002 \001(\0132#.api.v0alpha.RecommendedDashPa" +
-      "geReqR\014dashPageType\022%\n\016current_filter\030\003 " +
-      "\001(\tR\rcurrentFilter\"8\n\034GetRecommendedTime" +
-      "FiltersRes\022\030\n\007filters\030\001 \003(\tR\007filters\"\320\001\n" +
-      "\022TimeFilterEventReq\022E\n\020time_filter_type\030" +
-      "\001 \001(\0162\033.api.commons.TimeFilterTypeR\016time" +
-      "FilterType\022(\n\020time_filter_name\030\002 \001(\tR\016ti" +
-      "meFilterName\022I\n\016dash_page_type\030\003 \001(\0132#.a" +
-      "pi.v0alpha.RecommendedDashPageReqR\014dashP" +
-      "ageType\"\024\n\022TimeFilterEventRes\"\224\002\n\tExport" +
-      "Job\022\"\n\rexport_job_id\030\001 \001(\tR\013exportJobId\022" +
-      "\024\n\005title\030\003 \001(\tR\005title\022D\n\017export_delivery" +
-      "\030\004 \001(\0132\033.api.v0alpha.ExportDeliveryR\016exp" +
-      "ortDelivery\022A\n\016export_options\030\005 \001(\0132\032.ap" +
-      "i.v0alpha.ExportOptionsR\rexportOptions\022D" +
-      "\n\017export_schedule\030\006 \001(\0132\033.api.v0alpha.Ex" +
-      "portScheduleR\016exportSchedule\"\320\001\n\016ExportS" +
-      "chedule\022\030\n\007enabled\030\001 \001(\010R\007enabled\022T\n\021cam" +
-      "paign_complete\030d \001(\0132%.api.v0alpha.Campa" +
-      "ignCompleteScheduleH\000R\020campaignComplete\022" +
-      "=\n\nend_of_day\030e \001(\0132\035.api.v0alpha.EndOfD" +
-      "ayScheduleH\000R\010endOfDayB\017\n\rschedule_type\"" +
-      "\032\n\030CampaignCompleteSchedule\"\022\n\020EndOfDayS" +
-      "chedule\"l\n\rExportOptions\022\020\n\003zip\030\001 \001(\010R\003z" +
-      "ip\022:\n\013csv_options\030\002 \001(\0132\027.api.v0alpha.Cs" +
-      "vOptionsH\000R\ncsvOptionsB\r\n\013export_type\"\227\001" +
-      "\n\nCsvOptions\022\037\n\013fixed_width\030\001 \001(\010R\nfixed" +
-      "Width\022?\n\016csv_quote_type\030\002 \001(\0162\031.api.comm" +
-      "ons.CsvQuoteTypeR\014csvQuoteType\022\'\n\017includ" +
-      "e_headers\030\003 \001(\010R\016includeHeaders\"\360\001\n\016Expo" +
-      "rtDelivery\0222\n\005email\030\001 \001(\0132\032.api.v0alpha." +
-      "EmailDeliveryH\000R\005email\022/\n\004sftp\030\002 \001(\0132\031.a" +
-      "pi.v0alpha.SftpDeliveryH\000R\004sftp\0222\n\005https" +
-      "\030\003 \001(\0132\032.api.v0alpha.HttpsDeliveryH\000R\005ht" +
-      "tps\0224\n\026failure_email_addreses\030\n \003(\tR\024fai" +
-      "lureEmailAddresesB\017\n\rdelivery_type\"H\n\rHt" +
-      "tpsDelivery\022\020\n\003url\030\001 \001(\tR\003url\022%\n\016post_pa" +
-      "rameter\030\002 \001(\tR\rpostParameter\"\237\001\n\014SftpDel" +
-      "ivery\022\034\n\010password\030\001 \001(\tH\000R\010password\022!\n\013p" +
-      "rivate_key\030\002 \001(\tH\000R\nprivateKey\022\033\n\tuser_n" +
-      "ame\030\n \001(\tR\010userName\022\020\n\003url\030\013 \001(\tR\003url\022\022\n" +
-      "\004path\030\014 \001(\tR\004pathB\013\n\tauth_type\"-\n\rEmailD" +
-      "elivery\022\034\n\taddresses\030\001 \003(\tR\taddresses\"\352\001" +
-      "\n\rDataSelection\022\033\n\010chart_id\030\001 \001(\tH\000R\007cha" +
-      "rtId\022:\n\006custom\030\002 \001(\0162 .api.commons.Custo" +
-      "mDataSelecitonH\000R\006custom\022J\n\021table_data_p" +
-      "oints\030\003 \001(\0132\034.api.v0alpha.TableDataPoint" +
-      "sH\000R\017tableDataPoints\022\035\n\nfilter_ids\030\n \003(\t" +
-      "R\tfilterIdsB\025\n\023data_selection_type\"\277\001\n\017T" +
-      "ableDataPoints\022\024\n\005title\030\001 \001(\tR\005title\022D\n\013" +
-      "data_values\030\002 \003(\0132#.api.v0alpha.Exporter" +
-      "TableDataValueR\ndataValues\0225\n\027grouping_d" +
-      "ata_point_ids\030\003 \003(\tR\024groupingDataPointId" +
-      "s\022\031\n\010order_by\030\004 \003(\tR\007orderBy\"R\n\026Exporter" +
-      "TableDataValue\022\"\n\rdata_point_id\030\001 \001(\tR\013d" +
-      "ataPointId\022\024\n\005label\030\002 \001(\tR\005label\"\274\002\n\022Cre" +
-      "ateExportJobReq\022\024\n\005title\030\003 \001(\tR\005title\022A\n" +
-      "\016data_selection\030\004 \001(\0132\032.api.v0alpha.Data" +
-      "SelectionR\rdataSelection\022D\n\017export_deliv" +
-      "ery\030\005 \001(\0132\033.api.v0alpha.ExportDeliveryR\016" +
-      "exportDelivery\022A\n\016export_options\030\006 \001(\0132\032" +
-      ".api.v0alpha.ExportOptionsR\rexportOption" +
-      "s\022D\n\017export_schedule\030\007 \001(\0132\033.api.v0alpha" +
-      ".ExportScheduleR\016exportSchedule\"8\n\022Creat" +
-      "eExportJobRes\022\"\n\rexport_job_id\030\001 \001(\tR\013ex" +
-      "portJobId\"\022\n\020GetExportJobsReq\"K\n\020GetExpo" +
-      "rtJobsRes\0227\n\013export_jobs\030\001 \003(\0132\026.api.v0a" +
-      "lpha.ExportJobR\nexportJobs\"3\n\rSendExport" +
-      "Req\022\"\n\rexport_job_id\030\001 \001(\tR\013exportJobId\"" +
-      "\017\n\rSendExportRes\"8\n\022DeleteExportJobReq\022\"" +
-      "\n\rexport_job_id\030\001 \001(\tR\013exportJobId\"\024\n\022De" +
-      "leteExportJobRes\"Z\n\025SetExportJobActiveRe" +
-      "q\022\"\n\rexport_job_id\030\002 \001(\tR\013exportJobId\022\035\n" +
-      "\nset_active\030\003 \001(\010R\tsetActive\"\027\n\025SetExpor" +
-      "tJobActiveRes\"\241\001\n\032GetExportHistoryDetail" +
-      "sReq\022\025\n\006org_id\030\001 \001(\tR\005orgId\0227\n\ttime_from" +
-      "\030\002 \001(\0132\032.google.protobuf.TimestampR\010time" +
-      "From\0223\n\007time_to\030\003 \001(\0132\032.google.protobuf." +
-      "TimestampR\006timeTo\"n\n\032GetExportHistoryDet" +
-      "ailsRes\022!\n\014result_count\030\001 \001(\003R\013resultCou" +
-      "nt\022-\n\007exports\030\002 \003(\0132\023.api.v0alpha.Export" +
-      "R\007exports\"\254\001\n\006Export\022\"\n\rexport_job_id\030\001 " +
-      "\001(\tR\013exportJobId\022\024\n\005title\030\002 \001(\tR\005title\0225" +
-      "\n\010run_time\030\003 \001(\0132\032.google.protobuf.Times" +
-      "tampR\007runTime\0221\n\006status\030\004 \001(\0162\031.api.comm" +
-      "ons.ExportStatusR\006status\"0\n\021DownloadExpo" +
-      "rtReq\022\033\n\texport_id\030\002 \001(\tR\010exportId\"\023\n\021Do" +
-      "wnloadExportRes\"\017\n\rGetBillingReq\"\017\n\rGetB" +
-      "illingRes\"\037\n\035GetAuthorizedAnalyticsLinkR" +
-      "eq\"3\n\035GetAuthorizedAnalyticsLinkRes\022\022\n\004l" +
-      "ink\030\001 \001(\tR\004link\"\224\001\n\013ClientGroup\022#\n\rcampa" +
-      "ign_type\030\001 \001(\tR\014campaignType\0220\n\024processe" +
-      "d_call_count\030\002 \001(\003R\022processedCallCount\022." +
-      "\n\023baseline_call_count\030\003 \001(\003R\021baselineCal" +
-      "lCount\"l\n\022GetClientStatusReq\0229\n\nstart_ti" +
-      "me\030\002 \001(\0132\032.google.protobuf.TimestampR\tst" +
-      "artTime\022\025\n\006org_id\030\003 \001(\tR\005orgIdJ\004\010\001\020\002\"T\n\023" +
-      "GetClientStatusResp\022=\n\rclient_groups\030\001 \003" +
-      "(\0132\030.api.v0alpha.ClientGroupR\014clientGrou" +
-      "ps\"2\n\023ReloadClientDataReq\022\025\n\006org_id\030\002 \001(" +
-      "\tR\005orgIdJ\004\010\001\020\002\"\026\n\024ReloadClientDataResp\"\035" +
-      "\n\033ListVisualizationsLegacyReq\"^\n\033ListVis" +
-      "ualizationsLegacyRes\022?\n\014descriptions\030\001 \003" +
-      "(\0132\033.api.v0alpha.VizDescriptionR\014descrip" +
-      "tions\"\271\001\n\016VizDescription\022\016\n\002id\030\001 \001(\tR\002id" +
-      "\022\024\n\005title\030\002 \001(\tR\005title\022\031\n\010show_the\030\003 \001(\t" +
-      "R\007showThe\022\030\n\007watcher\030\004 \001(\010R\007watcher\022*\n\021t" +
-      "cn_modified_date\030\005 \001(\003R\017tcnModifiedDate\022" +
-      " \n\013description\030\006 \001(\tR\013description2\374\"\n\003An" +
-      "a\022\243\001\n\032GetSpecifiedVisualizations\022*.api.v" +
-      "0alpha.GetSpecifiedVisualizationsReq\032\033.a" +
-      "pi.v0alpha.Visualizations\"<\202\323\344\223\0026\"1/api/" +
-      "v0alpha/ana/admin/GetSpecifiedVisualizat" +
-      "ions:\001*\022~\n\017RegisterAccount\022\037.api.v0alpha" +
-      ".RegisterAccountReq\032\027.api.v0alpha.AnaAcc" +
-      "ount\"1\202\323\344\223\002+\"&/api/v0alpha/ana/admin/Reg" +
-      "isterAccount:\001*\022j\n\010SetWeeks\022\030.api.v0alph" +
-      "a.SetWeeksReq\032\030.api.v0alpha.SetWeeksRes\"" +
-      "*\202\323\344\223\002$\"\037/api/v0alpha/ana/admin/SetWeeks" +
-      ":\001*\022\232\001\n\024SetDefaultTimeFilter\022$.api.v0alp" +
-      "ha.SetDefaultTimeFilterReq\032$.api.v0alpha" +
-      ".SetDefaultTimeFilterRes\"6\202\323\344\223\0020\"+/api/v" +
-      "0alpha/ana/admin/SetDefaultTimeFilter:\001*" +
-      "\022\226\001\n\023SetDefaultDashboard\022#.api.v0alpha.S" +
-      "etDefaultDashboardReq\032#.api.v0alpha.SetD" +
-      "efaultDashboardRes\"5\202\323\344\223\002/\"*/api/v0alpha" +
-      "/ana/admin/SetDefaultDashboard:\001*\022o\n\nGet" +
-      "Account\022\032.api.v0alpha.GetAccountReq\032\027.ap" +
-      "i.v0alpha.AnaAccount\",\202\323\344\223\002&\"!/api/v0alp" +
-      "ha/ana/admin/GetAccount:\001*\022\212\001\n\023GetSpecif" +
-      "iedAccount\022#.api.v0alpha.GetSpecifiedAcc" +
-      "ountReq\032\027.api.v0alpha.AnaAccount\"5\202\323\344\223\002/" +
-      "\"*/api/v0alpha/ana/admin/GetSpecifiedAcc" +
-      "ount:\001*\022\262\001\n\032GetAuthorizedAnalyticsLink\022*" +
-      ".api.v0alpha.GetAuthorizedAnalyticsLinkR" +
-      "eq\032*.api.v0alpha.GetAuthorizedAnalyticsL" +
-      "inkRes\"<\202\323\344\223\0026\"1/api/v0alpha/ana/admin/G" +
-      "etAuthorizedAnalyticsLink:\001*\022\244\001\n\026Generat" +
-      "eMonthlyBilling\022&.api.v0alpha.GenerateMo" +
-      "nthlyBillingReq\032&.api.v0alpha.GenerateMo" +
-      "nthlyBillingRes\":\202\323\344\223\0024\"//api/v0alpha/an" +
-      "a/billing/GenerateMonthlyBilling:\001*\022p\n\013G" +
-      "etTimeZone\022\033.api.v0alpha.GetTimeZoneReq\032" +
-      "\025.api.v0alpha.TimeZone\"-\202\323\344\223\002\'\"\"/api/v0a" +
-      "lpha/ana/admin/GetTimeZone:\001*\022v\n\013SetTime" +
-      "Zone\022\033.api.v0alpha.SetTimeZoneReq\032\033.api." +
-      "v0alpha.SetTimeZoneRes\"-\202\323\344\223\002\'\"\"/api/v0a" +
-      "lpha/ana/admin/SetTimeZone:\001*\022v\n\013CopyDas" +
-      "hViz\022\033.api.v0alpha.CopyDashVizReq\032\033.api." +
-      "v0alpha.CopyDashVizRes\"-\202\323\344\223\002\'\"\"/api/v0a" +
-      "lpha/ana/admin/CopyDashViz:\001*\022\245\001\n\032GetSpe" +
-      "cifiedBillingSummary\022*.api.v0alpha.GetSp" +
-      "ecifiedBillingSummaryReq\032\033.api.v0alpha.B" +
-      "illingSummary\">\202\323\344\223\0028\"3/api/v0alpha/ana/" +
-      "billing/GetSpecifiedBillingSummary:\001*\022\212\001" +
-      "\n\021GetBillingSummary\022!.api.v0alpha.GetBil" +
-      "lingSummaryReq\032\033.api.v0alpha.BillingSumm" +
-      "ary\"5\202\323\344\223\002/\"*/api/v0alpha/ana/billing/Ge" +
-      "tBillingSummary:\001*\022\236\001\n\023EnableCustomRepor" +
-      "ts\022\'.api.v0alpha.SetCustomReportsEnabled" +
-      "Req\032\'.api.v0alpha.SetCustomReportsEnable" +
-      "dRes\"5\202\323\344\223\002/\"*/api/v0alpha/ana/admin/Ena" +
-      "bleCustomReports:\001*\022\240\001\n\024DisableCustomRep" +
-      "orts\022\'.api.v0alpha.SetCustomReportsEnabl" +
-      "edReq\032\'.api.v0alpha.SetCustomReportsEnab" +
-      "ledRes\"6\202\323\344\223\0020\"+/api/v0alpha/ana/admin/D" +
-      "isableCustomReports:\001*\022~\n\rMakeAdoptable\022" +
+      "\023groupingDataPointId\"\256\001\n\016CreateChartReq\022" +
+      "\024\n\005title\030\001 \001(\tR\005title\022>\n\rchart_details\030\002" +
+      " \001(\0132\031.api.v0alpha.ChartDetailsR\014chartDe" +
+      "tails\022F\n\016display_labels\030\003 \001(\0162\037.api.comm" +
+      "ons.ChartDisplayLabelsR\rdisplayLabels\"+\n" +
+      "\016CreateChartRes\022\031\n\010chart_id\030\001 \001(\tR\007chart" +
+      "Id\"(\n\013GetChartReq\022\031\n\010chart_id\030\001 \001(\tR\007cha" +
+      "rtId\"+\n\016DeleteChartReq\022\031\n\010chart_id\030\001 \001(\t" +
+      "R\007chartId\"\020\n\016DeleteChartRes\"\357\001\n\010DashPage" +
+      "\022>\n\tdashboard\030\001 \001(\0132\036.api.v0alpha.DashPa" +
+      "geDashboardH\000R\tdashboard\022]\n\024visualizatio" +
+      "n_legacy\030\002 \001(\0132(.api.v0alpha.DashPageVis" +
+      "ualizationLegacyH\000R\023visualizationLegacy\022" +
+      "2\n\005chart\030\003 \001(\0132\032.api.v0alpha.DashPageCha" +
+      "rtH\000R\005chartB\020\n\016dash_page_type\"\210\001\n\021DashPa" +
+      "geDashboard\022!\n\014dashboard_id\030\001 \001(\tR\013dashb" +
+      "oardId\022\024\n\005title\030\002 \001(\tR\005title\022\027\n\007root_id\030" +
+      "\003 \001(\tR\006rootId\022!\n\014tcn_standard\030\004 \001(\010R\013tcn" +
+      "Standard\"w\n\033DashPageVisualizationLegacy\022" +
+      ")\n\020visualization_id\030\001 \001(\tR\017visualization" +
+      "Id\022\024\n\005title\030\002 \001(\tR\005title\022\027\n\007root_id\030\003 \001(" +
+      "\tR\006rootId\"|\n\rDashPageChart\022\031\n\010chart_id\030\001" +
+      " \001(\tR\007chartId\022\024\n\005title\030\002 \001(\tR\005title\022\027\n\007r" +
+      "oot_id\030\003 \001(\tR\006rootId\022!\n\014tcn_standard\030\004 \001" +
+      "(\010R\013tcnStandard\"\033\n\031GetAccessibleDashPage" +
+      "sReq\"Q\n\031GetAccessibleDashPagesRes\0224\n\ndas" +
+      "h_pages\030\001 \003(\0132\025.api.v0alpha.DashPageR\tda" +
+      "shPages\"\203\002\n\023RecommendedDashPage\022A\n\tdashb" +
+      "oard\030\001 \001(\0132!.api.v0alpha.RecommendedDash" +
+      "boardH\000R\tdashboard\022`\n\024visualization_lega" +
+      "cy\030\002 \001(\0132+.api.v0alpha.RecommendedVisual" +
+      "izationLegacyH\000R\023visualizationLegacy\0225\n\005" +
+      "chart\030\003 \001(\0132\035.api.v0alpha.RecommendedCha" +
+      "rtH\000R\005chartB\020\n\016dash_page_type\"\213\001\n\024Recomm" +
+      "endedDashboard\022!\n\014dashboard_id\030\001 \001(\tR\013da" +
+      "shboardId\022\024\n\005title\030\002 \001(\tR\005title\022\027\n\007root_" +
+      "id\030\003 \001(\tR\006rootId\022!\n\014tcn_standard\030\004 \001(\010R\013" +
+      "tcnStandard\"z\n\036RecommendedVisualizationL" +
+      "egacy\022)\n\020visualization_id\030\001 \001(\tR\017visuali" +
+      "zationId\022\024\n\005title\030\002 \001(\tR\005title\022\027\n\007root_i" +
+      "d\030\003 \001(\tR\006rootId\"\177\n\020RecommendedChart\022\031\n\010c" +
+      "hart_id\030\001 \001(\tR\007chartId\022\024\n\005title\030\002 \001(\tR\005t" +
+      "itle\022\027\n\007root_id\030\003 \001(\tR\006rootId\022!\n\014tcn_sta" +
+      "ndard\030\004 \001(\010R\013tcnStandard\"\217\002\n\026Recommended" +
+      "DashPageReq\022D\n\tdashboard\030\001 \001(\0132$.api.v0a" +
+      "lpha.RecommendedDashboardReqH\000R\tdashboar" +
+      "d\022c\n\024visualization_legacy\030\002 \001(\0132..api.v0" +
+      "alpha.RecommendedVisualizationLegacyReqH" +
+      "\000R\023visualizationLegacy\0228\n\005chart\030\003 \001(\0132 ." +
+      "api.v0alpha.RecommendedChartReqH\000R\005chart" +
+      "B\020\n\016dash_page_type\"<\n\027RecommendedDashboa" +
+      "rdReq\022!\n\014dashboard_id\030\001 \001(\tR\013dashboardId" +
+      "\"N\n!RecommendedVisualizationLegacyReq\022)\n" +
+      "\020visualization_id\030\001 \001(\tR\017visualizationId" +
+      "\"0\n\023RecommendedChartReq\022\031\n\010chart_id\030\001 \001(" +
+      "\tR\007chartId\" \n\036GetRecommendedDashPagesHom" +
+      "eReq\"k\n\032GetRecommendedDashPagesReq\022M\n\020so" +
+      "urce_dash_page\030\001 \001(\0132#.api.v0alpha.Recom" +
+      "mendedDashPageReqR\016sourceDashPage\"t\n\032Get" +
+      "RecommendedDashPagesRes\022V\n\026recommended_d" +
+      "ash_pages\030\001 \003(\0132 .api.v0alpha.Recommende" +
+      "dDashPageR\024recommendedDashPages\"\331\001\n\026Dash" +
+      "PageSelectEventReq\022S\n\023selection_dash_pag" +
+      "e\030\001 \001(\0132#.api.v0alpha.RecommendedDashPag" +
+      "eReqR\021selectionDashPage\022M\n\020source_dash_p" +
+      "age\030\002 \001(\0132#.api.v0alpha.RecommendedDashP" +
+      "ageReqR\016sourceDashPage\022\033\n\tfrom_home\030\003 \001(" +
+      "\010R\010fromHome\"\030\n\026DashPageSelectEventRes\"\027\n" +
+      "\025VisualizationEventRes\"\262\001\n\034GetRecommende" +
+      "dTimeFiltersReq\022 \n\014dash_page_id\030\001 \001(\tR\nd" +
+      "ashPageId\022I\n\016dash_page_type\030\002 \001(\0132#.api." +
+      "v0alpha.RecommendedDashPageReqR\014dashPage" +
+      "Type\022%\n\016current_filter\030\003 \001(\tR\rcurrentFil" +
+      "ter\"8\n\034GetRecommendedTimeFiltersRes\022\030\n\007f" +
+      "ilters\030\001 \003(\tR\007filters\"\320\001\n\022TimeFilterEven" +
+      "tReq\022E\n\020time_filter_type\030\001 \001(\0162\033.api.com" +
+      "mons.TimeFilterTypeR\016timeFilterType\022(\n\020t" +
+      "ime_filter_name\030\002 \001(\tR\016timeFilterName\022I\n" +
+      "\016dash_page_type\030\003 \001(\0132#.api.v0alpha.Reco" +
+      "mmendedDashPageReqR\014dashPageType\"\024\n\022Time" +
+      "FilterEventRes\"\224\002\n\tExportJob\022\"\n\rexport_j" +
+      "ob_id\030\001 \001(\tR\013exportJobId\022\024\n\005title\030\003 \001(\tR" +
+      "\005title\022D\n\017export_delivery\030\004 \001(\0132\033.api.v0" +
+      "alpha.ExportDeliveryR\016exportDelivery\022A\n\016" +
+      "export_options\030\005 \001(\0132\032.api.v0alpha.Expor" +
+      "tOptionsR\rexportOptions\022D\n\017export_schedu" +
+      "le\030\006 \001(\0132\033.api.v0alpha.ExportScheduleR\016e" +
+      "xportSchedule\"\320\001\n\016ExportSchedule\022\030\n\007enab" +
+      "led\030\001 \001(\010R\007enabled\022T\n\021campaign_complete\030" +
+      "d \001(\0132%.api.v0alpha.CampaignCompleteSche" +
+      "duleH\000R\020campaignComplete\022=\n\nend_of_day\030e" +
+      " \001(\0132\035.api.v0alpha.EndOfDayScheduleH\000R\010e" +
+      "ndOfDayB\017\n\rschedule_type\"\032\n\030CampaignComp" +
+      "leteSchedule\"\022\n\020EndOfDaySchedule\"l\n\rExpo" +
+      "rtOptions\022\020\n\003zip\030\001 \001(\010R\003zip\022:\n\013csv_optio" +
+      "ns\030\002 \001(\0132\027.api.v0alpha.CsvOptionsH\000R\ncsv" +
+      "OptionsB\r\n\013export_type\"\227\001\n\nCsvOptions\022\037\n" +
+      "\013fixed_width\030\001 \001(\010R\nfixedWidth\022?\n\016csv_qu" +
+      "ote_type\030\002 \001(\0162\031.api.commons.CsvQuoteTyp" +
+      "eR\014csvQuoteType\022\'\n\017include_headers\030\003 \001(\010" +
+      "R\016includeHeaders\"\360\001\n\016ExportDelivery\0222\n\005e" +
+      "mail\030\001 \001(\0132\032.api.v0alpha.EmailDeliveryH\000" +
+      "R\005email\022/\n\004sftp\030\002 \001(\0132\031.api.v0alpha.Sftp" +
+      "DeliveryH\000R\004sftp\0222\n\005https\030\003 \001(\0132\032.api.v0" +
+      "alpha.HttpsDeliveryH\000R\005https\0224\n\026failure_" +
+      "email_addreses\030\n \003(\tR\024failureEmailAddres" +
+      "esB\017\n\rdelivery_type\"H\n\rHttpsDelivery\022\020\n\003" +
+      "url\030\001 \001(\tR\003url\022%\n\016post_parameter\030\002 \001(\tR\r" +
+      "postParameter\"\237\001\n\014SftpDelivery\022\034\n\010passwo" +
+      "rd\030\001 \001(\tH\000R\010password\022!\n\013private_key\030\002 \001(" +
+      "\tH\000R\nprivateKey\022\033\n\tuser_name\030\n \001(\tR\010user" +
+      "Name\022\020\n\003url\030\013 \001(\tR\003url\022\022\n\004path\030\014 \001(\tR\004pa" +
+      "thB\013\n\tauth_type\"-\n\rEmailDelivery\022\034\n\taddr" +
+      "esses\030\001 \003(\tR\taddresses\"\352\001\n\rDataSelection" +
+      "\022\033\n\010chart_id\030\001 \001(\tH\000R\007chartId\022:\n\006custom\030" +
+      "\002 \001(\0162 .api.commons.CustomDataSelecitonH" +
+      "\000R\006custom\022J\n\021table_data_points\030\003 \001(\0132\034.a" +
+      "pi.v0alpha.TableDataPointsH\000R\017tableDataP" +
+      "oints\022\035\n\nfilter_ids\030\n \003(\tR\tfilterIdsB\025\n\023" +
+      "data_selection_type\"\277\001\n\017TableDataPoints\022" +
+      "\024\n\005title\030\001 \001(\tR\005title\022D\n\013data_values\030\002 \003" +
+      "(\0132#.api.v0alpha.ExporterTableDataValueR" +
+      "\ndataValues\0225\n\027grouping_data_point_ids\030\003" +
+      " \003(\tR\024groupingDataPointIds\022\031\n\010order_by\030\004" +
+      " \003(\tR\007orderBy\"R\n\026ExporterTableDataValue\022" +
+      "\"\n\rdata_point_id\030\001 \001(\tR\013dataPointId\022\024\n\005l" +
+      "abel\030\002 \001(\tR\005label\"\274\002\n\022CreateExportJobReq" +
+      "\022\024\n\005title\030\003 \001(\tR\005title\022A\n\016data_selection" +
+      "\030\004 \001(\0132\032.api.v0alpha.DataSelectionR\rdata" +
+      "Selection\022D\n\017export_delivery\030\005 \001(\0132\033.api" +
+      ".v0alpha.ExportDeliveryR\016exportDelivery\022" +
+      "A\n\016export_options\030\006 \001(\0132\032.api.v0alpha.Ex" +
+      "portOptionsR\rexportOptions\022D\n\017export_sch" +
+      "edule\030\007 \001(\0132\033.api.v0alpha.ExportSchedule" +
+      "R\016exportSchedule\"8\n\022CreateExportJobRes\022\"" +
+      "\n\rexport_job_id\030\001 \001(\tR\013exportJobId\"\022\n\020Ge" +
+      "tExportJobsReq\"K\n\020GetExportJobsRes\0227\n\013ex" +
+      "port_jobs\030\001 \003(\0132\026.api.v0alpha.ExportJobR" +
+      "\nexportJobs\"3\n\rSendExportReq\022\"\n\rexport_j" +
+      "ob_id\030\001 \001(\tR\013exportJobId\"\017\n\rSendExportRe" +
+      "s\"8\n\022DeleteExportJobReq\022\"\n\rexport_job_id" +
+      "\030\001 \001(\tR\013exportJobId\"\024\n\022DeleteExportJobRe" +
+      "s\"Z\n\025SetExportJobActiveReq\022\"\n\rexport_job" +
+      "_id\030\002 \001(\tR\013exportJobId\022\035\n\nset_active\030\003 \001" +
+      "(\010R\tsetActive\"\027\n\025SetExportJobActiveRes\"\241" +
+      "\001\n\032GetExportHistoryDetailsReq\022\025\n\006org_id\030" +
+      "\001 \001(\tR\005orgId\0227\n\ttime_from\030\002 \001(\0132\032.google" +
+      ".protobuf.TimestampR\010timeFrom\0223\n\007time_to" +
+      "\030\003 \001(\0132\032.google.protobuf.TimestampR\006time" +
+      "To\"n\n\032GetExportHistoryDetailsRes\022!\n\014resu" +
+      "lt_count\030\001 \001(\003R\013resultCount\022-\n\007exports\030\002" +
+      " \003(\0132\023.api.v0alpha.ExportR\007exports\"\254\001\n\006E" +
+      "xport\022\"\n\rexport_job_id\030\001 \001(\tR\013exportJobI" +
+      "d\022\024\n\005title\030\002 \001(\tR\005title\0225\n\010run_time\030\003 \001(" +
+      "\0132\032.google.protobuf.TimestampR\007runTime\0221" +
+      "\n\006status\030\004 \001(\0162\031.api.commons.ExportStatu" +
+      "sR\006status\"0\n\021DownloadExportReq\022\033\n\texport" +
+      "_id\030\002 \001(\tR\010exportId\"\023\n\021DownloadExportRes" +
+      "\"\017\n\rGetBillingReq\"\017\n\rGetBillingRes\"\037\n\035Ge" +
+      "tAuthorizedAnalyticsLinkReq\"3\n\035GetAuthor" +
+      "izedAnalyticsLinkRes\022\022\n\004link\030\001 \001(\tR\004link" +
+      "\"\224\001\n\013ClientGroup\022#\n\rcampaign_type\030\001 \001(\tR" +
+      "\014campaignType\0220\n\024processed_call_count\030\002 " +
+      "\001(\003R\022processedCallCount\022.\n\023baseline_call" +
+      "_count\030\003 \001(\003R\021baselineCallCount\"l\n\022GetCl" +
+      "ientStatusReq\0229\n\nstart_time\030\002 \001(\0132\032.goog" +
+      "le.protobuf.TimestampR\tstartTime\022\025\n\006org_" +
+      "id\030\003 \001(\tR\005orgIdJ\004\010\001\020\002\"T\n\023GetClientStatus" +
+      "Resp\022=\n\rclient_groups\030\001 \003(\0132\030.api.v0alph" +
+      "a.ClientGroupR\014clientGroups\"2\n\023ReloadCli" +
+      "entDataReq\022\025\n\006org_id\030\002 \001(\tR\005orgIdJ\004\010\001\020\002\"" +
+      "\026\n\024ReloadClientDataResp\"\035\n\033ListVisualiza" +
+      "tionsLegacyReq\"^\n\033ListVisualizationsLega" +
+      "cyRes\022?\n\014descriptions\030\001 \003(\0132\033.api.v0alph" +
+      "a.VizDescriptionR\014descriptions\"\271\001\n\016VizDe" +
+      "scription\022\016\n\002id\030\001 \001(\tR\002id\022\024\n\005title\030\002 \001(\t" +
+      "R\005title\022\031\n\010show_the\030\003 \001(\tR\007showThe\022\030\n\007wa" +
+      "tcher\030\004 \001(\010R\007watcher\022*\n\021tcn_modified_dat" +
+      "e\030\005 \001(\003R\017tcnModifiedDate\022 \n\013description\030" +
+      "\006 \001(\tR\013description2\253%\n\003Ana\022\255\001\n\032GetSpecif" +
+      "iedVisualizations\022*.api.v0alpha.GetSpeci" +
+      "fiedVisualizationsReq\032\033.api.v0alpha.Visu" +
+      "alizations\"F\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0026\"1/api/v0alp" +
+      "ha/ana/admin/GetSpecifiedVisualizations:" +
+      "\001*\022\210\001\n\017RegisterAccount\022\037.api.v0alpha.Reg" +
+      "isterAccountReq\032\027.api.v0alpha.AnaAccount" +
+      "\";\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002+\"&/api/v0alpha/ana/adm" +
+      "in/RegisterAccount:\001*\022t\n\010SetWeeks\022\030.api." +
+      "v0alpha.SetWeeksReq\032\030.api.v0alpha.SetWee" +
+      "ksRes\"4\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002$\"\037/api/v0alpha/an" +
+      "a/admin/SetWeeks:\001*\022\243\001\n\024SetDefaultTimeFi" +
+      "lter\022$.api.v0alpha.SetDefaultTimeFilterR" +
+      "eq\032$.api.v0alpha.SetDefaultTimeFilterRes" +
+      "\"?\272\270\221\002\004\020\001\030\001\202\323\344\223\0020\"+/api/v0alpha/ana/admi" +
+      "n/SetDefaultTimeFilter:\001*\022\237\001\n\023SetDefault" +
+      "Dashboard\022#.api.v0alpha.SetDefaultDashbo" +
+      "ardReq\032#.api.v0alpha.SetDefaultDashboard" +
+      "Res\">\272\270\221\002\004\020\001\030\001\202\323\344\223\002/\"*/api/v0alpha/ana/a" +
+      "dmin/SetDefaultDashboard:\001*\022x\n\nGetAccoun" +
+      "t\022\032.api.v0alpha.GetAccountReq\032\027.api.v0al" +
+      "pha.AnaAccount\"5\272\270\221\002\004\n\002\010e\202\323\344\223\002&\"!/api/v0" +
+      "alpha/ana/admin/GetAccount:\001*\022\224\001\n\023GetSpe" +
+      "cifiedAccount\022#.api.v0alpha.GetSpecified" +
+      "AccountReq\032\027.api.v0alpha.AnaAccount\"?\272\270\221" +
+      "\002\005\n\003\010\310\001\202\323\344\223\002/\"*/api/v0alpha/ana/admin/Ge" +
+      "tSpecifiedAccount:\001*\022\274\001\n\032GetAuthorizedAn" +
+      "alyticsLink\022*.api.v0alpha.GetAuthorizedA" +
+      "nalyticsLinkReq\032*.api.v0alpha.GetAuthori" +
+      "zedAnalyticsLinkRes\"F\272\270\221\002\005\n\003\010\330\004\202\323\344\223\0026\"1/" +
+      "api/v0alpha/ana/admin/GetAuthorizedAnaly" +
+      "ticsLink:\001*\022\256\001\n\026GenerateMonthlyBilling\022&" +
+      ".api.v0alpha.GenerateMonthlyBillingReq\032&" +
+      ".api.v0alpha.GenerateMonthlyBillingRes\"D" +
+      "\272\270\221\002\005\n\003\010\360\001\202\323\344\223\0024\"//api/v0alpha/ana/billi" +
+      "ng/GenerateMonthlyBilling:\001*\022y\n\013GetTimeZ" +
+      "one\022\033.api.v0alpha.GetTimeZoneReq\032\025.api.v" +
+      "0alpha.TimeZone\"6\272\270\221\002\004\n\002\010e\202\323\344\223\002\'\"\"/api/v" +
+      "0alpha/ana/admin/GetTimeZone:\001*\022\177\n\013SetTi" +
+      "meZone\022\033.api.v0alpha.SetTimeZoneReq\032\033.ap" +
+      "i.v0alpha.SetTimeZoneRes\"6\272\270\221\002\004\n\002\010d\202\323\344\223\002" +
+      "\'\"\"/api/v0alpha/ana/admin/SetTimeZone:\001*" +
+      "\022\200\001\n\013CopyDashViz\022\033.api.v0alpha.CopyDashV" +
+      "izReq\032\033.api.v0alpha.CopyDashVizRes\"7\272\270\221\002" +
+      "\005\n\003\010\310\001\202\323\344\223\002\'\"\"/api/v0alpha/ana/admin/Cop" +
+      "yDashViz:\001*\022\257\001\n\032GetSpecifiedBillingSumma" +
+      "ry\022*.api.v0alpha.GetSpecifiedBillingSumm" +
+      "aryReq\032\033.api.v0alpha.BillingSummary\"H\272\270\221" +
+      "\002\005\n\003\010\310\001\202\323\344\223\0028\"3/api/v0alpha/ana/billing/" +
+      "GetSpecifiedBillingSummary:\001*\022\223\001\n\021GetBil" +
+      "lingSummary\022!.api.v0alpha.GetBillingSumm" +
+      "aryReq\032\033.api.v0alpha.BillingSummary\">\272\270\221" +
+      "\002\004\n\002\010e\202\323\344\223\002/\"*/api/v0alpha/ana/billing/G" +
+      "etBillingSummary:\001*\022\247\001\n\023EnableCustomRepo" +
+      "rts\022\'.api.v0alpha.SetCustomReportsEnable" +
+      "dReq\032\'.api.v0alpha.SetCustomReportsEnabl" +
+      "edRes\">\272\270\221\002\004\n\002\010d\202\323\344\223\002/\"*/api/v0alpha/ana" +
+      "/admin/EnableCustomReports:\001*\022\251\001\n\024Disabl" +
+      "eCustomReports\022\'.api.v0alpha.SetCustomRe" +
+      "portsEnabledReq\032\'.api.v0alpha.SetCustomR" +
+      "eportsEnabledRes\"?\272\270\221\002\004\n\002\010d\202\323\344\223\0020\"+/api/" +
+      "v0alpha/ana/admin/DisableCustomReports:\001" +
+      "*\022\207\001\n\rMakeAdoptable\022\035.api.v0alpha.MakeAd" +
+      "optableReq\032\035.api.v0alpha.MakeAdoptableRe" +
+      "s\"8\272\270\221\002\004\n\002\010d\202\323\344\223\002)\"$/api/v0alpha/ana/adm" +
+      "in/MakeAdoptable:\001*\022\213\001\n\017MakeUnadoptable\022" +
       "\035.api.v0alpha.MakeAdoptableReq\032\035.api.v0a" +
-      "lpha.MakeAdoptableRes\"/\202\323\344\223\002)\"$/api/v0al" +
-      "pha/ana/admin/MakeAdoptable:\001*\022\202\001\n\017MakeU" +
-      "nadoptable\022\035.api.v0alpha.MakeAdoptableRe" +
-      "q\032\035.api.v0alpha.MakeAdoptableRes\"1\202\323\344\223\002+" +
-      "\"&/api/v0alpha/ana/admin/MakeUnadoptable" +
-      ":\001*\022\222\001\n\017AdoptAnaAccount\022%.api.v0alpha.Se" +
-      "tAnaAccountRelationReq\032%.api.v0alpha.Set" +
-      "AnaAccountRelationRes\"1\202\323\344\223\002+\"&/api/v0al" +
-      "pha/ana/admin/AdoptAnaAccount:\001*\022\224\001\n\020Dis" +
-      "ownAnaAccount\022%.api.v0alpha.SetAnaAccoun" +
-      "tRelationReq\032%.api.v0alpha.SetAnaAccount" +
-      "RelationRes\"2\202\323\344\223\002,\"\'/api/v0alpha/ana/ad" +
-      "min/DisownAnaAccount:\001*\022\222\001\n\024GetAccessibl" +
-      "eClients\022$.api.v0alpha.GetAccessibleClie" +
-      "ntsReq\032\034.api.v0alpha.SimpleRelations\"6\202\323" +
-      "\344\223\0020\"+/api/v0alpha/ana/admin/GetAccessib" +
-      "leClients:\001*\022h\n\tGetFamily\022\031.api.v0alpha." +
-      "GetFamilyReq\032\023.api.v0alpha.Family\"+\202\323\344\223\002" +
-      "%\" /api/v0alpha/ana/admin/GetFamily:\001*\022\222" +
-      "\001\n\030GetAllowedDataVisibility\022\035.api.v0alph" +
-      "a.GetVisibilityReq\032\033.api.v0alpha.DataVis" +
-      "ibility\":\202\323\344\223\0024\"//api/v0alpha/ana/admin/" +
-      "GetAllowedDataVisibility:\001*\022\222\001\n\030GetCurre" +
-      "ntDataVisibility\022\035.api.v0alpha.GetVisibi" +
-      "lityReq\032\033.api.v0alpha.DataVisibility\":\202\323" +
-      "\344\223\0024\"//api/v0alpha/ana/admin/GetCurrentD" +
-      "ataVisibility:\001*\022\215\001\n\024GetIndicesVisibilit" +
-      "y\022\035.api.v0alpha.GetVisibilityReq\032\036.api.v" +
-      "0alpha.IndicesVisibility\"6\202\323\344\223\0020\"+/api/v" +
-      "0alpha/ana/admin/GetIndicesVisibility:\001*" +
-      "\022\226\001\n\032GetAuditableDataVisibility\022\035.api.v0" +
-      "alpha.GetVisibilityReq\032\033.api.v0alpha.Dat" +
-      "aVisibility\"<\202\323\344\223\0026\"1/api/v0alpha/ana/ad" +
-      "min/GetAuditableDataVisibility:\001*\022\232\001\n\024Ge" +
-      "tOrganizationNames\022$.api.v0alpha.GetOrga" +
-      "nizationNamesReq\032$.api.v0alpha.GetOrgani" +
-      "zationNamesRes\"6\202\323\344\223\0020\"+/api/v0alpha/ana" +
-      "/admin/GetOrganizationNames:\001*\022\226\001\n\023Gener" +
-      "ateVizDataById\022#.api.v0alpha.GenerateViz" +
-      "DataByIdReq\032#.api.v0alpha.GenerateVizDat" +
-      "aByIdRes\"5\202\323\344\223\002/\"*/api/v0alpha/ana/admin" +
-      "/GenerateVizDataById:\001*\022\210\001\n\017GetClientSta" +
-      "tus\022\037.api.v0alpha.GetClientStatusReq\032 .a" +
-      "pi.v0alpha.GetClientStatusResp\"2\202\323\344\223\002,\"\'" +
-      "/api/v0alpha/ana/census/GetClientStatus:" +
-      "\001*\022\214\001\n\020ReloadClientData\022 .api.v0alpha.Re" +
-      "loadClientDataReq\032!.api.v0alpha.ReloadCl" +
-      "ientDataResp\"3\202\323\344\223\002-\"(/api/v0alpha/ana/c" +
-      "ensus/ReloadClientData:\001*\022\244\001\n\030ListVisual" +
-      "izationsLegacy\022(.api.v0alpha.ListVisuali" +
-      "zationsLegacyReq\032(.api.v0alpha.ListVisua" +
-      "lizationsLegacyRes\"4\202\323\344\223\002.\")/api/v0alpha" +
-      "/ana/visualization/ListLegacy:\001*Bv\n\035com." +
-      "tcn.cloud.api.api.v0alphaB\010AnaProtoP\001\242\002\003" +
-      "AVX\252\002\013Api.V0alpha\312\002\013Api\\V0alpha\342\002\027Api\\V0" +
-      "alpha\\GPBMetadata\352\002\014Api::V0alphab\006proto3"
+      "lpha.MakeAdoptableRes\":\272\270\221\002\004\n\002\010d\202\323\344\223\002+\"&" +
+      "/api/v0alpha/ana/admin/MakeUnadoptable:\001" +
+      "*\022\234\001\n\017AdoptAnaAccount\022%.api.v0alpha.SetA" +
+      "naAccountRelationReq\032%.api.v0alpha.SetAn" +
+      "aAccountRelationRes\";\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002+\"&/" +
+      "api/v0alpha/ana/admin/AdoptAnaAccount:\001*" +
+      "\022\236\001\n\020DisownAnaAccount\022%.api.v0alpha.SetA" +
+      "naAccountRelationReq\032%.api.v0alpha.SetAn" +
+      "aAccountRelationRes\"<\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002,\"\'/" +
+      "api/v0alpha/ana/admin/DisownAnaAccount:\001" +
+      "*\022\234\001\n\024GetAccessibleClients\022$.api.v0alpha" +
+      ".GetAccessibleClientsReq\032\034.api.v0alpha.S" +
+      "impleRelations\"@\272\270\221\002\005\n\003\010\330\004\202\323\344\223\0020\"+/api/v" +
+      "0alpha/ana/admin/GetAccessibleClients:\001*" +
+      "\022r\n\tGetFamily\022\031.api.v0alpha.GetFamilyReq" +
+      "\032\023.api.v0alpha.Family\"5\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002%\"" +
+      " /api/v0alpha/ana/admin/GetFamily:\001*\022\234\001\n" +
+      "\030GetAllowedDataVisibility\022\035.api.v0alpha." +
+      "GetVisibilityReq\032\033.api.v0alpha.DataVisib" +
+      "ility\"D\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0024\"//api/v0alpha/an" +
+      "a/admin/GetAllowedDataVisibility:\001*\022\234\001\n\030" +
+      "GetCurrentDataVisibility\022\035.api.v0alpha.G" +
+      "etVisibilityReq\032\033.api.v0alpha.DataVisibi" +
+      "lity\"D\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0024\"//api/v0alpha/ana" +
+      "/admin/GetCurrentDataVisibility:\001*\022\227\001\n\024G" +
+      "etIndicesVisibility\022\035.api.v0alpha.GetVis" +
+      "ibilityReq\032\036.api.v0alpha.IndicesVisibili" +
+      "ty\"@\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0020\"+/api/v0alpha/ana/a" +
+      "dmin/GetIndicesVisibility:\001*\022\240\001\n\032GetAudi" +
+      "tableDataVisibility\022\035.api.v0alpha.GetVis" +
+      "ibilityReq\032\033.api.v0alpha.DataVisibility\"" +
+      "F\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0026\"1/api/v0alpha/ana/admi" +
+      "n/GetAuditableDataVisibility:\001*\022\244\001\n\024GetO" +
+      "rganizationNames\022$.api.v0alpha.GetOrgani" +
+      "zationNamesReq\032$.api.v0alpha.GetOrganiza" +
+      "tionNamesRes\"@\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0020\"+/api/v0a" +
+      "lpha/ana/admin/GetOrganizationNames:\001*\022\240" +
+      "\001\n\023GenerateVizDataById\022#.api.v0alpha.Gen" +
+      "erateVizDataByIdReq\032#.api.v0alpha.Genera" +
+      "teVizDataByIdRes\"?\272\270\221\002\005\n\003\010\330\004\202\323\344\223\002/\"*/api" +
+      "/v0alpha/ana/admin/GenerateVizDataById:\001" +
+      "*\022\222\001\n\017GetClientStatus\022\037.api.v0alpha.GetC" +
+      "lientStatusReq\032 .api.v0alpha.GetClientSt" +
+      "atusResp\"<\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002,\"\'/api/v0alpha" +
+      "/ana/census/GetClientStatus:\001*\022\226\001\n\020Reloa" +
+      "dClientData\022 .api.v0alpha.ReloadClientDa" +
+      "taReq\032!.api.v0alpha.ReloadClientDataResp" +
+      "\"=\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002-\"(/api/v0alpha/ana/cen" +
+      "sus/ReloadClientData:\001*\022\256\001\n\030ListVisualiz" +
+      "ationsLegacy\022(.api.v0alpha.ListVisualiza" +
+      "tionsLegacyReq\032(.api.v0alpha.ListVisuali" +
+      "zationsLegacyRes\">\272\270\221\002\005\n\003\010\330\004\202\323\344\223\002.\")/api" +
+      "/v0alpha/ana/visualization/ListLegacy:\001*",
+      "Bv\n\035com.tcn.cloud.api.api.v0alphaB\010AnaPr" +
+      "otoP\001\242\002\003AVX\252\002\013Api.V0alpha\312\002\013Api\\V0alpha\342" +
+      "\002\027Api\\V0alpha\\GPBMetadata\352\002\014Api::V0alpha" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.tcn.cloud.api.annotations.AuthzProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.AnaProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.AnaChartsProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -3305,9 +3315,11 @@ public final class AnaProto {
         new java.lang.String[] { "Id", "Title", "ShowThe", "Watcher", "TcnModifiedDate", "Description", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.tcn.cloud.api.annotations.AuthzProto.authz);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.tcn.cloud.api.annotations.AuthzProto.getDescriptor();
     com.tcn.cloud.api.api.commons.AnaProto.getDescriptor();
     com.tcn.cloud.api.api.commons.AnaChartsProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
