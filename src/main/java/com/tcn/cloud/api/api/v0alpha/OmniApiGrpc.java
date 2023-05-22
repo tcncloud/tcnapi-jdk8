@@ -113,37 +113,6 @@ public final class OmniApiGrpc {
     return getGetCampaignByIdMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListCampaignsReq,
-      com.tcn.cloud.api.api.v0alpha.ListCampaignsRes> getListCampaignsMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ListCampaigns",
-      requestType = com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.class,
-      responseType = com.tcn.cloud.api.api.v0alpha.ListCampaignsRes.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListCampaignsReq,
-      com.tcn.cloud.api.api.v0alpha.ListCampaignsRes> getListCampaignsMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListCampaignsReq, com.tcn.cloud.api.api.v0alpha.ListCampaignsRes> getListCampaignsMethod;
-    if ((getListCampaignsMethod = OmniApiGrpc.getListCampaignsMethod) == null) {
-      synchronized (OmniApiGrpc.class) {
-        if ((getListCampaignsMethod = OmniApiGrpc.getListCampaignsMethod) == null) {
-          OmniApiGrpc.getListCampaignsMethod = getListCampaignsMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListCampaignsReq, com.tcn.cloud.api.api.v0alpha.ListCampaignsRes>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListCampaigns"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.ListCampaignsRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ListCampaigns"))
-              .build();
-        }
-      }
-    }
-    return getListCampaignsMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.PauseCampaignReq,
       com.tcn.cloud.api.api.v0alpha.PauseCampaignRes> getPauseCampaignMethod;
 
@@ -268,99 +237,6 @@ public final class OmniApiGrpc {
     return getUpdateCampaignPacingSpeedMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetOffLoadedTextMessageReq,
-      com.tcn.cloud.api.api.v0alpha.GetOffLoadedTextMessageRes> getGetOffLoadedTextMessageMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetOffLoadedTextMessage",
-      requestType = com.tcn.cloud.api.api.v0alpha.GetOffLoadedTextMessageReq.class,
-      responseType = com.tcn.cloud.api.api.v0alpha.GetOffLoadedTextMessageRes.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetOffLoadedTextMessageReq,
-      com.tcn.cloud.api.api.v0alpha.GetOffLoadedTextMessageRes> getGetOffLoadedTextMessageMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetOffLoadedTextMessageReq, com.tcn.cloud.api.api.v0alpha.GetOffLoadedTextMessageRes> getGetOffLoadedTextMessageMethod;
-    if ((getGetOffLoadedTextMessageMethod = OmniApiGrpc.getGetOffLoadedTextMessageMethod) == null) {
-      synchronized (OmniApiGrpc.class) {
-        if ((getGetOffLoadedTextMessageMethod = OmniApiGrpc.getGetOffLoadedTextMessageMethod) == null) {
-          OmniApiGrpc.getGetOffLoadedTextMessageMethod = getGetOffLoadedTextMessageMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetOffLoadedTextMessageReq, com.tcn.cloud.api.api.v0alpha.GetOffLoadedTextMessageRes>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetOffLoadedTextMessage"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.GetOffLoadedTextMessageReq.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.GetOffLoadedTextMessageRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("GetOffLoadedTextMessage"))
-              .build();
-        }
-      }
-    }
-    return getGetOffLoadedTextMessageMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ManagerListMessagesReq,
-      com.tcn.cloud.api.api.commons.OmniMessage> getManagerListMessagesMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ManagerListMessages",
-      requestType = com.tcn.cloud.api.api.v0alpha.ManagerListMessagesReq.class,
-      responseType = com.tcn.cloud.api.api.commons.OmniMessage.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ManagerListMessagesReq,
-      com.tcn.cloud.api.api.commons.OmniMessage> getManagerListMessagesMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ManagerListMessagesReq, com.tcn.cloud.api.api.commons.OmniMessage> getManagerListMessagesMethod;
-    if ((getManagerListMessagesMethod = OmniApiGrpc.getManagerListMessagesMethod) == null) {
-      synchronized (OmniApiGrpc.class) {
-        if ((getManagerListMessagesMethod = OmniApiGrpc.getManagerListMessagesMethod) == null) {
-          OmniApiGrpc.getManagerListMessagesMethod = getManagerListMessagesMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ManagerListMessagesReq, com.tcn.cloud.api.api.commons.OmniMessage>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ManagerListMessages"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.ManagerListMessagesReq.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.commons.OmniMessage.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ManagerListMessages"))
-              .build();
-        }
-      }
-    }
-    return getManagerListMessagesMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListMessagesReq,
-      com.tcn.cloud.api.api.commons.OmniMessage> getListMessagesMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ListMessages",
-      requestType = com.tcn.cloud.api.api.v0alpha.ListMessagesReq.class,
-      responseType = com.tcn.cloud.api.api.commons.OmniMessage.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListMessagesReq,
-      com.tcn.cloud.api.api.commons.OmniMessage> getListMessagesMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListMessagesReq, com.tcn.cloud.api.api.commons.OmniMessage> getListMessagesMethod;
-    if ((getListMessagesMethod = OmniApiGrpc.getListMessagesMethod) == null) {
-      synchronized (OmniApiGrpc.class) {
-        if ((getListMessagesMethod = OmniApiGrpc.getListMessagesMethod) == null) {
-          OmniApiGrpc.getListMessagesMethod = getListMessagesMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListMessagesReq, com.tcn.cloud.api.api.commons.OmniMessage>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListMessages"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.ListMessagesReq.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.commons.OmniMessage.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ListMessages"))
-              .build();
-        }
-      }
-    }
-    return getListMessagesMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SendOmniMessageReq,
       com.tcn.cloud.api.api.commons.Empty> getSendOmniMessageMethod;
 
@@ -421,68 +297,6 @@ public final class OmniApiGrpc {
       }
     }
     return getManagerSendOmniMessageMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListConversationsReq,
-      com.tcn.cloud.api.api.v0alpha.ListConversationsRes> getManagerListConversationsMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ManagerListConversations",
-      requestType = com.tcn.cloud.api.api.v0alpha.ListConversationsReq.class,
-      responseType = com.tcn.cloud.api.api.v0alpha.ListConversationsRes.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListConversationsReq,
-      com.tcn.cloud.api.api.v0alpha.ListConversationsRes> getManagerListConversationsMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListConversationsReq, com.tcn.cloud.api.api.v0alpha.ListConversationsRes> getManagerListConversationsMethod;
-    if ((getManagerListConversationsMethod = OmniApiGrpc.getManagerListConversationsMethod) == null) {
-      synchronized (OmniApiGrpc.class) {
-        if ((getManagerListConversationsMethod = OmniApiGrpc.getManagerListConversationsMethod) == null) {
-          OmniApiGrpc.getManagerListConversationsMethod = getManagerListConversationsMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListConversationsReq, com.tcn.cloud.api.api.v0alpha.ListConversationsRes>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ManagerListConversations"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.ListConversationsReq.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.ListConversationsRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ManagerListConversations"))
-              .build();
-        }
-      }
-    }
-    return getManagerListConversationsMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SuggestResponseReq,
-      com.tcn.cloud.api.api.v0alpha.SuggestResponseRes> getSuggestResponseMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "SuggestResponse",
-      requestType = com.tcn.cloud.api.api.v0alpha.SuggestResponseReq.class,
-      responseType = com.tcn.cloud.api.api.v0alpha.SuggestResponseRes.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SuggestResponseReq,
-      com.tcn.cloud.api.api.v0alpha.SuggestResponseRes> getSuggestResponseMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SuggestResponseReq, com.tcn.cloud.api.api.v0alpha.SuggestResponseRes> getSuggestResponseMethod;
-    if ((getSuggestResponseMethod = OmniApiGrpc.getSuggestResponseMethod) == null) {
-      synchronized (OmniApiGrpc.class) {
-        if ((getSuggestResponseMethod = OmniApiGrpc.getSuggestResponseMethod) == null) {
-          OmniApiGrpc.getSuggestResponseMethod = getSuggestResponseMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SuggestResponseReq, com.tcn.cloud.api.api.v0alpha.SuggestResponseRes>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SuggestResponse"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.SuggestResponseReq.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.SuggestResponseRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("SuggestResponse"))
-              .build();
-        }
-      }
-    }
-    return getSuggestResponseMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateDispositionReq,
@@ -731,6 +545,130 @@ public final class OmniApiGrpc {
       }
     }
     return getDeleteCustomUnsubscribeLinkMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListCampaignsReq,
+      com.tcn.cloud.api.api.v0alpha.ListCampaignsRes> getListCampaignsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListCampaigns",
+      requestType = com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.ListCampaignsRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListCampaignsReq,
+      com.tcn.cloud.api.api.v0alpha.ListCampaignsRes> getListCampaignsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListCampaignsReq, com.tcn.cloud.api.api.v0alpha.ListCampaignsRes> getListCampaignsMethod;
+    if ((getListCampaignsMethod = OmniApiGrpc.getListCampaignsMethod) == null) {
+      synchronized (OmniApiGrpc.class) {
+        if ((getListCampaignsMethod = OmniApiGrpc.getListCampaignsMethod) == null) {
+          OmniApiGrpc.getListCampaignsMethod = getListCampaignsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListCampaignsReq, com.tcn.cloud.api.api.v0alpha.ListCampaignsRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListCampaigns"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ListCampaignsRes.getDefaultInstance()))
+              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ListCampaigns"))
+              .build();
+        }
+      }
+    }
+    return getListCampaignsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ManagerListMessagesReq,
+      com.tcn.cloud.api.api.commons.OmniMessage> getManagerListMessagesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ManagerListMessages",
+      requestType = com.tcn.cloud.api.api.v0alpha.ManagerListMessagesReq.class,
+      responseType = com.tcn.cloud.api.api.commons.OmniMessage.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ManagerListMessagesReq,
+      com.tcn.cloud.api.api.commons.OmniMessage> getManagerListMessagesMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ManagerListMessagesReq, com.tcn.cloud.api.api.commons.OmniMessage> getManagerListMessagesMethod;
+    if ((getManagerListMessagesMethod = OmniApiGrpc.getManagerListMessagesMethod) == null) {
+      synchronized (OmniApiGrpc.class) {
+        if ((getManagerListMessagesMethod = OmniApiGrpc.getManagerListMessagesMethod) == null) {
+          OmniApiGrpc.getManagerListMessagesMethod = getManagerListMessagesMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ManagerListMessagesReq, com.tcn.cloud.api.api.commons.OmniMessage>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ManagerListMessages"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ManagerListMessagesReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.commons.OmniMessage.getDefaultInstance()))
+              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ManagerListMessages"))
+              .build();
+        }
+      }
+    }
+    return getManagerListMessagesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListMessagesReq,
+      com.tcn.cloud.api.api.commons.OmniMessage> getListMessagesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListMessages",
+      requestType = com.tcn.cloud.api.api.v0alpha.ListMessagesReq.class,
+      responseType = com.tcn.cloud.api.api.commons.OmniMessage.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListMessagesReq,
+      com.tcn.cloud.api.api.commons.OmniMessage> getListMessagesMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListMessagesReq, com.tcn.cloud.api.api.commons.OmniMessage> getListMessagesMethod;
+    if ((getListMessagesMethod = OmniApiGrpc.getListMessagesMethod) == null) {
+      synchronized (OmniApiGrpc.class) {
+        if ((getListMessagesMethod = OmniApiGrpc.getListMessagesMethod) == null) {
+          OmniApiGrpc.getListMessagesMethod = getListMessagesMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListMessagesReq, com.tcn.cloud.api.api.commons.OmniMessage>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListMessages"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ListMessagesReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.commons.OmniMessage.getDefaultInstance()))
+              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ListMessages"))
+              .build();
+        }
+      }
+    }
+    return getListMessagesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListConversationsReq,
+      com.tcn.cloud.api.api.v0alpha.ListConversationsRes> getManagerListConversationsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ManagerListConversations",
+      requestType = com.tcn.cloud.api.api.v0alpha.ListConversationsReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.ListConversationsRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListConversationsReq,
+      com.tcn.cloud.api.api.v0alpha.ListConversationsRes> getManagerListConversationsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListConversationsReq, com.tcn.cloud.api.api.v0alpha.ListConversationsRes> getManagerListConversationsMethod;
+    if ((getManagerListConversationsMethod = OmniApiGrpc.getManagerListConversationsMethod) == null) {
+      synchronized (OmniApiGrpc.class) {
+        if ((getManagerListConversationsMethod = OmniApiGrpc.getManagerListConversationsMethod) == null) {
+          OmniApiGrpc.getManagerListConversationsMethod = getManagerListConversationsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListConversationsReq, com.tcn.cloud.api.api.v0alpha.ListConversationsRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ManagerListConversations"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ListConversationsReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ListConversationsRes.getDefaultInstance()))
+              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ManagerListConversations"))
+              .build();
+        }
+      }
+    }
+    return getManagerListConversationsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListContactListsReq,
@@ -1105,37 +1043,6 @@ public final class OmniApiGrpc {
     return getCreateVerifiedEmailMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SendEmailNotificationReq,
-      com.tcn.cloud.api.api.v0alpha.SendEmailNotificationRes> getSendEmailNotificationMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "SendEmailNotification",
-      requestType = com.tcn.cloud.api.api.v0alpha.SendEmailNotificationReq.class,
-      responseType = com.tcn.cloud.api.api.v0alpha.SendEmailNotificationRes.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SendEmailNotificationReq,
-      com.tcn.cloud.api.api.v0alpha.SendEmailNotificationRes> getSendEmailNotificationMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SendEmailNotificationReq, com.tcn.cloud.api.api.v0alpha.SendEmailNotificationRes> getSendEmailNotificationMethod;
-    if ((getSendEmailNotificationMethod = OmniApiGrpc.getSendEmailNotificationMethod) == null) {
-      synchronized (OmniApiGrpc.class) {
-        if ((getSendEmailNotificationMethod = OmniApiGrpc.getSendEmailNotificationMethod) == null) {
-          OmniApiGrpc.getSendEmailNotificationMethod = getSendEmailNotificationMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SendEmailNotificationReq, com.tcn.cloud.api.api.v0alpha.SendEmailNotificationRes>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SendEmailNotification"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.SendEmailNotificationReq.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.SendEmailNotificationRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("SendEmailNotification"))
-              .build();
-        }
-      }
-    }
-    return getSendEmailNotificationMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteVerifiedEmailReq,
       com.tcn.cloud.api.api.commons.Empty> getDeleteVerifiedEmailMethod;
 
@@ -1320,6 +1227,37 @@ public final class OmniApiGrpc {
       }
     }
     return getGetPendingGoogleXOAuth2DataMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SendEmailNotificationReq,
+      com.tcn.cloud.api.api.v0alpha.SendEmailNotificationRes> getSendEmailNotificationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SendEmailNotification",
+      requestType = com.tcn.cloud.api.api.v0alpha.SendEmailNotificationReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.SendEmailNotificationRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SendEmailNotificationReq,
+      com.tcn.cloud.api.api.v0alpha.SendEmailNotificationRes> getSendEmailNotificationMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SendEmailNotificationReq, com.tcn.cloud.api.api.v0alpha.SendEmailNotificationRes> getSendEmailNotificationMethod;
+    if ((getSendEmailNotificationMethod = OmniApiGrpc.getSendEmailNotificationMethod) == null) {
+      synchronized (OmniApiGrpc.class) {
+        if ((getSendEmailNotificationMethod = OmniApiGrpc.getSendEmailNotificationMethod) == null) {
+          OmniApiGrpc.getSendEmailNotificationMethod = getSendEmailNotificationMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SendEmailNotificationReq, com.tcn.cloud.api.api.v0alpha.SendEmailNotificationRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SendEmailNotification"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.SendEmailNotificationReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.SendEmailNotificationRes.getDefaultInstance()))
+              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("SendEmailNotification"))
+              .build();
+        }
+      }
+    }
+    return getSendEmailNotificationMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SendFeedbackEmailReq,
@@ -1537,6 +1475,37 @@ public final class OmniApiGrpc {
       }
     }
     return getUpdateSignatureMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SuggestResponseReq,
+      com.tcn.cloud.api.api.v0alpha.SuggestResponseRes> getSuggestResponseMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SuggestResponse",
+      requestType = com.tcn.cloud.api.api.v0alpha.SuggestResponseReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.SuggestResponseRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SuggestResponseReq,
+      com.tcn.cloud.api.api.v0alpha.SuggestResponseRes> getSuggestResponseMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SuggestResponseReq, com.tcn.cloud.api.api.v0alpha.SuggestResponseRes> getSuggestResponseMethod;
+    if ((getSuggestResponseMethod = OmniApiGrpc.getSuggestResponseMethod) == null) {
+      synchronized (OmniApiGrpc.class) {
+        if ((getSuggestResponseMethod = OmniApiGrpc.getSuggestResponseMethod) == null) {
+          OmniApiGrpc.getSuggestResponseMethod = getSuggestResponseMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SuggestResponseReq, com.tcn.cloud.api.api.v0alpha.SuggestResponseRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SuggestResponse"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.SuggestResponseReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.SuggestResponseRes.getDefaultInstance()))
+              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("SuggestResponse"))
+              .build();
+        }
+      }
+    }
+    return getSuggestResponseMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateProjectReq,
@@ -2124,18 +2093,6 @@ public final class OmniApiGrpc {
 
     /**
      * <pre>
-     * List campaigns defined by ListCampaignsReq.
-     * The method will return a ListCampaignsReq entity that will contain
-     * all the campaigns within the specified filter.
-     * </pre>
-     */
-    default void listCampaigns(com.tcn.cloud.api.api.v0alpha.ListCampaignsReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCampaignsRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCampaignsMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
      * pause a campaign
      * </pre>
      */
@@ -2178,39 +2135,6 @@ public final class OmniApiGrpc {
 
     /**
      * <pre>
-     * Get the text message for an off-loaded text message payload. Used
-     * only for managers/agents/users. It is not for customers.
-     * </pre>
-     */
-    default void getOffLoadedTextMessage(com.tcn.cloud.api.api.v0alpha.GetOffLoadedTextMessageReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetOffLoadedTextMessageRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetOffLoadedTextMessageMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Get a stream of new conversation message for a given conversation. Used
-     * only for managers. It is not for customers.
-     * </pre>
-     */
-    default void managerListMessages(com.tcn.cloud.api.api.v0alpha.ManagerListMessagesReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.OmniMessage> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getManagerListMessagesMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Get a stream of conversation message for a given conversation. Used
-     * only for agents/users. It is not for customers.
-     * </pre>
-     */
-    default void listMessages(com.tcn.cloud.api.api.v0alpha.ListMessagesReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.OmniMessage> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMessagesMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
      * Send a chat message
      * </pre>
      */
@@ -2227,28 +2151,6 @@ public final class OmniApiGrpc {
     default void managerSendOmniMessage(com.tcn.cloud.api.api.v0alpha.SendOmniMessageReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getManagerSendOmniMessageMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * lists all conversation and assigned users for a given date range.
-     * Required permissions:
-     *    OMNI_BOSS
-     * </pre>
-     */
-    default void managerListConversations(com.tcn.cloud.api.api.v0alpha.ListConversationsReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListConversationsRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getManagerListConversationsMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Experimental API
-     * </pre>
-     */
-    default void suggestResponse(com.tcn.cloud.api.api.v0alpha.SuggestResponseReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SuggestResponseRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSuggestResponseMethod(), responseObserver);
     }
 
     /**
@@ -2329,6 +2231,52 @@ public final class OmniApiGrpc {
     default void deleteCustomUnsubscribeLink(com.tcn.cloud.api.api.v0alpha.DeleteCustomUnsubscribeLinkReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteCustomUnsubscribeLinkMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * List campaigns defined by ListCampaignsReq.
+     * The method will return a ListCampaignsReq entity that will contain
+     * all the campaigns within the specified filter.
+     * </pre>
+     */
+    default void listCampaigns(com.tcn.cloud.api.api.v0alpha.ListCampaignsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCampaignsRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCampaignsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Get a stream of new conversation message for a given conversation. Used
+     * only for managers. It is not for customers.
+     * </pre>
+     */
+    default void managerListMessages(com.tcn.cloud.api.api.v0alpha.ManagerListMessagesReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.OmniMessage> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getManagerListMessagesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Get a stream of conversation message for a given conversation. Used
+     * only for agents/users. It is not for customers.
+     * </pre>
+     */
+    default void listMessages(com.tcn.cloud.api.api.v0alpha.ListMessagesReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.OmniMessage> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMessagesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * lists all conversation and assigned users for a given date range.
+     * Required permissions:
+     *    OMNI_BOSS
+     * </pre>
+     */
+    default void managerListConversations(com.tcn.cloud.api.api.v0alpha.ListConversationsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListConversationsRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getManagerListConversationsMethod(), responseObserver);
     }
 
     /**
@@ -2478,21 +2426,6 @@ public final class OmniApiGrpc {
 
     /**
      * <pre>
-     * Send email notification defined by SendEmailNotificationReq message for the specified
-     * subject, message and array of to email addresses.
-     * The method will return a stream of SendEmailNotificationRes messages
-     * containing result true/false after notified by email for the client_sid.
-     * Required permissions:
-     *      OMNI_BOSS
-     * </pre>
-     */
-    default void sendEmailNotification(com.tcn.cloud.api.api.v0alpha.SendEmailNotificationReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SendEmailNotificationRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendEmailNotificationMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
      * Delete verify email record based on verified email id defined by
      * DeleteVerifiedEmailReq for the specified client.
      * This method will return a DeleteVerifiedEmailRes message/entity.
@@ -2568,6 +2501,21 @@ public final class OmniApiGrpc {
     default void getPendingGoogleXOAuth2Data(com.tcn.cloud.api.api.v0alpha.GetPendingGoogleXOAuth2DataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetPendingGoogleXOAuth2DataRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPendingGoogleXOAuth2DataMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Send email notification defined by SendEmailNotificationReq message for the specified
+     * subject, message and array of to email addresses.
+     * The method will return a stream of SendEmailNotificationRes messages
+     * containing result true/false after notified by email for the client_sid.
+     * Required permissions:
+     *      OMNI_BOSS
+     * </pre>
+     */
+    default void sendEmailNotification(com.tcn.cloud.api.api.v0alpha.SendEmailNotificationReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SendEmailNotificationRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendEmailNotificationMethod(), responseObserver);
     }
 
     /**
@@ -2648,6 +2596,16 @@ public final class OmniApiGrpc {
     default void updateSignature(com.tcn.cloud.api.api.v0alpha.UpdateSignatureReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateSignatureRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateSignatureMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * SuggestResponse
+     * </pre>
+     */
+    default void suggestResponse(com.tcn.cloud.api.api.v0alpha.SuggestResponseReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SuggestResponseRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSuggestResponseMethod(), responseObserver);
     }
 
     /**
@@ -2949,19 +2907,6 @@ public final class OmniApiGrpc {
 
     /**
      * <pre>
-     * List campaigns defined by ListCampaignsReq.
-     * The method will return a ListCampaignsReq entity that will contain
-     * all the campaigns within the specified filter.
-     * </pre>
-     */
-    public void listCampaigns(com.tcn.cloud.api.api.v0alpha.ListCampaignsReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCampaignsRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getListCampaignsMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
      * pause a campaign
      * </pre>
      */
@@ -3008,42 +2953,6 @@ public final class OmniApiGrpc {
 
     /**
      * <pre>
-     * Get the text message for an off-loaded text message payload. Used
-     * only for managers/agents/users. It is not for customers.
-     * </pre>
-     */
-    public void getOffLoadedTextMessage(com.tcn.cloud.api.api.v0alpha.GetOffLoadedTextMessageReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetOffLoadedTextMessageRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getGetOffLoadedTextMessageMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Get a stream of new conversation message for a given conversation. Used
-     * only for managers. It is not for customers.
-     * </pre>
-     */
-    public void managerListMessages(com.tcn.cloud.api.api.v0alpha.ManagerListMessagesReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.OmniMessage> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
-          getChannel().newCall(getManagerListMessagesMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Get a stream of conversation message for a given conversation. Used
-     * only for agents/users. It is not for customers.
-     * </pre>
-     */
-    public void listMessages(com.tcn.cloud.api.api.v0alpha.ListMessagesReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.OmniMessage> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
-          getChannel().newCall(getListMessagesMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
      * Send a chat message
      * </pre>
      */
@@ -3062,30 +2971,6 @@ public final class OmniApiGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Empty> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getManagerSendOmniMessageMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * lists all conversation and assigned users for a given date range.
-     * Required permissions:
-     *    OMNI_BOSS
-     * </pre>
-     */
-    public void managerListConversations(com.tcn.cloud.api.api.v0alpha.ListConversationsReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListConversationsRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getManagerListConversationsMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Experimental API
-     * </pre>
-     */
-    public void suggestResponse(com.tcn.cloud.api.api.v0alpha.SuggestResponseReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SuggestResponseRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getSuggestResponseMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -3174,6 +3059,56 @@ public final class OmniApiGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Empty> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteCustomUnsubscribeLinkMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * List campaigns defined by ListCampaignsReq.
+     * The method will return a ListCampaignsReq entity that will contain
+     * all the campaigns within the specified filter.
+     * </pre>
+     */
+    public void listCampaigns(com.tcn.cloud.api.api.v0alpha.ListCampaignsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCampaignsRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListCampaignsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Get a stream of new conversation message for a given conversation. Used
+     * only for managers. It is not for customers.
+     * </pre>
+     */
+    public void managerListMessages(com.tcn.cloud.api.api.v0alpha.ManagerListMessagesReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.OmniMessage> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+          getChannel().newCall(getManagerListMessagesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Get a stream of conversation message for a given conversation. Used
+     * only for agents/users. It is not for customers.
+     * </pre>
+     */
+    public void listMessages(com.tcn.cloud.api.api.v0alpha.ListMessagesReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.OmniMessage> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+          getChannel().newCall(getListMessagesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * lists all conversation and assigned users for a given date range.
+     * Required permissions:
+     *    OMNI_BOSS
+     * </pre>
+     */
+    public void managerListConversations(com.tcn.cloud.api.api.v0alpha.ListConversationsReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListConversationsRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getManagerListConversationsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -3335,22 +3270,6 @@ public final class OmniApiGrpc {
 
     /**
      * <pre>
-     * Send email notification defined by SendEmailNotificationReq message for the specified
-     * subject, message and array of to email addresses.
-     * The method will return a stream of SendEmailNotificationRes messages
-     * containing result true/false after notified by email for the client_sid.
-     * Required permissions:
-     *      OMNI_BOSS
-     * </pre>
-     */
-    public void sendEmailNotification(com.tcn.cloud.api.api.v0alpha.SendEmailNotificationReq request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SendEmailNotificationRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getSendEmailNotificationMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
      * Delete verify email record based on verified email id defined by
      * DeleteVerifiedEmailReq for the specified client.
      * This method will return a DeleteVerifiedEmailRes message/entity.
@@ -3432,6 +3351,22 @@ public final class OmniApiGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetPendingGoogleXOAuth2DataRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetPendingGoogleXOAuth2DataMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Send email notification defined by SendEmailNotificationReq message for the specified
+     * subject, message and array of to email addresses.
+     * The method will return a stream of SendEmailNotificationRes messages
+     * containing result true/false after notified by email for the client_sid.
+     * Required permissions:
+     *      OMNI_BOSS
+     * </pre>
+     */
+    public void sendEmailNotification(com.tcn.cloud.api.api.v0alpha.SendEmailNotificationReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SendEmailNotificationRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSendEmailNotificationMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -3519,6 +3454,17 @@ public final class OmniApiGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateSignatureRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateSignatureMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * SuggestResponse
+     * </pre>
+     */
+    public void suggestResponse(com.tcn.cloud.api.api.v0alpha.SuggestResponseReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SuggestResponseRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSuggestResponseMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -3817,18 +3763,6 @@ public final class OmniApiGrpc {
 
     /**
      * <pre>
-     * List campaigns defined by ListCampaignsReq.
-     * The method will return a ListCampaignsReq entity that will contain
-     * all the campaigns within the specified filter.
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v0alpha.ListCampaignsRes listCampaigns(com.tcn.cloud.api.api.v0alpha.ListCampaignsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getListCampaignsMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
      * pause a campaign
      * </pre>
      */
@@ -3871,41 +3805,6 @@ public final class OmniApiGrpc {
 
     /**
      * <pre>
-     * Get the text message for an off-loaded text message payload. Used
-     * only for managers/agents/users. It is not for customers.
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v0alpha.GetOffLoadedTextMessageRes getOffLoadedTextMessage(com.tcn.cloud.api.api.v0alpha.GetOffLoadedTextMessageReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetOffLoadedTextMessageMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * Get a stream of new conversation message for a given conversation. Used
-     * only for managers. It is not for customers.
-     * </pre>
-     */
-    public java.util.Iterator<com.tcn.cloud.api.api.commons.OmniMessage> managerListMessages(
-        com.tcn.cloud.api.api.v0alpha.ManagerListMessagesReq request) {
-      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
-          getChannel(), getManagerListMessagesMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * Get a stream of conversation message for a given conversation. Used
-     * only for agents/users. It is not for customers.
-     * </pre>
-     */
-    public java.util.Iterator<com.tcn.cloud.api.api.commons.OmniMessage> listMessages(
-        com.tcn.cloud.api.api.v0alpha.ListMessagesReq request) {
-      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
-          getChannel(), getListMessagesMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
      * Send a chat message
      * </pre>
      */
@@ -3922,28 +3821,6 @@ public final class OmniApiGrpc {
     public com.tcn.cloud.api.api.commons.Empty managerSendOmniMessage(com.tcn.cloud.api.api.v0alpha.SendOmniMessageReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getManagerSendOmniMessageMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * lists all conversation and assigned users for a given date range.
-     * Required permissions:
-     *    OMNI_BOSS
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v0alpha.ListConversationsRes managerListConversations(com.tcn.cloud.api.api.v0alpha.ListConversationsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getManagerListConversationsMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * Experimental API
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v0alpha.SuggestResponseRes suggestResponse(com.tcn.cloud.api.api.v0alpha.SuggestResponseReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getSuggestResponseMethod(), getCallOptions(), request);
     }
 
     /**
@@ -4024,6 +3901,54 @@ public final class OmniApiGrpc {
     public com.tcn.cloud.api.api.commons.Empty deleteCustomUnsubscribeLink(com.tcn.cloud.api.api.v0alpha.DeleteCustomUnsubscribeLinkReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteCustomUnsubscribeLinkMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * List campaigns defined by ListCampaignsReq.
+     * The method will return a ListCampaignsReq entity that will contain
+     * all the campaigns within the specified filter.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.ListCampaignsRes listCampaigns(com.tcn.cloud.api.api.v0alpha.ListCampaignsReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListCampaignsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get a stream of new conversation message for a given conversation. Used
+     * only for managers. It is not for customers.
+     * </pre>
+     */
+    public java.util.Iterator<com.tcn.cloud.api.api.commons.OmniMessage> managerListMessages(
+        com.tcn.cloud.api.api.v0alpha.ManagerListMessagesReq request) {
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+          getChannel(), getManagerListMessagesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get a stream of conversation message for a given conversation. Used
+     * only for agents/users. It is not for customers.
+     * </pre>
+     */
+    public java.util.Iterator<com.tcn.cloud.api.api.commons.OmniMessage> listMessages(
+        com.tcn.cloud.api.api.v0alpha.ListMessagesReq request) {
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+          getChannel(), getListMessagesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * lists all conversation and assigned users for a given date range.
+     * Required permissions:
+     *    OMNI_BOSS
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.ListConversationsRes managerListConversations(com.tcn.cloud.api.api.v0alpha.ListConversationsReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getManagerListConversationsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -4173,21 +4098,6 @@ public final class OmniApiGrpc {
 
     /**
      * <pre>
-     * Send email notification defined by SendEmailNotificationReq message for the specified
-     * subject, message and array of to email addresses.
-     * The method will return a stream of SendEmailNotificationRes messages
-     * containing result true/false after notified by email for the client_sid.
-     * Required permissions:
-     *      OMNI_BOSS
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v0alpha.SendEmailNotificationRes sendEmailNotification(com.tcn.cloud.api.api.v0alpha.SendEmailNotificationReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getSendEmailNotificationMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
      * Delete verify email record based on verified email id defined by
      * DeleteVerifiedEmailReq for the specified client.
      * This method will return a DeleteVerifiedEmailRes message/entity.
@@ -4263,6 +4173,21 @@ public final class OmniApiGrpc {
     public com.tcn.cloud.api.api.v0alpha.GetPendingGoogleXOAuth2DataRes getPendingGoogleXOAuth2Data(com.tcn.cloud.api.api.v0alpha.GetPendingGoogleXOAuth2DataReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetPendingGoogleXOAuth2DataMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Send email notification defined by SendEmailNotificationReq message for the specified
+     * subject, message and array of to email addresses.
+     * The method will return a stream of SendEmailNotificationRes messages
+     * containing result true/false after notified by email for the client_sid.
+     * Required permissions:
+     *      OMNI_BOSS
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.SendEmailNotificationRes sendEmailNotification(com.tcn.cloud.api.api.v0alpha.SendEmailNotificationReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSendEmailNotificationMethod(), getCallOptions(), request);
     }
 
     /**
@@ -4343,6 +4268,16 @@ public final class OmniApiGrpc {
     public com.tcn.cloud.api.api.v0alpha.UpdateSignatureRes updateSignature(com.tcn.cloud.api.api.v0alpha.UpdateSignatureReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateSignatureMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * SuggestResponse
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.SuggestResponseRes suggestResponse(com.tcn.cloud.api.api.v0alpha.SuggestResponseReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSuggestResponseMethod(), getCallOptions(), request);
     }
 
     /**
@@ -4628,19 +4563,6 @@ public final class OmniApiGrpc {
 
     /**
      * <pre>
-     * List campaigns defined by ListCampaignsReq.
-     * The method will return a ListCampaignsReq entity that will contain
-     * all the campaigns within the specified filter.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListCampaignsRes> listCampaigns(
-        com.tcn.cloud.api.api.v0alpha.ListCampaignsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getListCampaignsMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
      * pause a campaign
      * </pre>
      */
@@ -4687,18 +4609,6 @@ public final class OmniApiGrpc {
 
     /**
      * <pre>
-     * Get the text message for an off-loaded text message payload. Used
-     * only for managers/agents/users. It is not for customers.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetOffLoadedTextMessageRes> getOffLoadedTextMessage(
-        com.tcn.cloud.api.api.v0alpha.GetOffLoadedTextMessageReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getGetOffLoadedTextMessageMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
      * Send a chat message
      * </pre>
      */
@@ -4717,30 +4627,6 @@ public final class OmniApiGrpc {
         com.tcn.cloud.api.api.v0alpha.SendOmniMessageReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getManagerSendOmniMessageMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * lists all conversation and assigned users for a given date range.
-     * Required permissions:
-     *    OMNI_BOSS
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListConversationsRes> managerListConversations(
-        com.tcn.cloud.api.api.v0alpha.ListConversationsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getManagerListConversationsMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * Experimental API
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SuggestResponseRes> suggestResponse(
-        com.tcn.cloud.api.api.v0alpha.SuggestResponseReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getSuggestResponseMethod(), getCallOptions()), request);
     }
 
     /**
@@ -4829,6 +4715,32 @@ public final class OmniApiGrpc {
         com.tcn.cloud.api.api.v0alpha.DeleteCustomUnsubscribeLinkReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteCustomUnsubscribeLinkMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * List campaigns defined by ListCampaignsReq.
+     * The method will return a ListCampaignsReq entity that will contain
+     * all the campaigns within the specified filter.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListCampaignsRes> listCampaigns(
+        com.tcn.cloud.api.api.v0alpha.ListCampaignsReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListCampaignsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * lists all conversation and assigned users for a given date range.
+     * Required permissions:
+     *    OMNI_BOSS
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListConversationsRes> managerListConversations(
+        com.tcn.cloud.api.api.v0alpha.ListConversationsReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getManagerListConversationsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -4990,22 +4902,6 @@ public final class OmniApiGrpc {
 
     /**
      * <pre>
-     * Send email notification defined by SendEmailNotificationReq message for the specified
-     * subject, message and array of to email addresses.
-     * The method will return a stream of SendEmailNotificationRes messages
-     * containing result true/false after notified by email for the client_sid.
-     * Required permissions:
-     *      OMNI_BOSS
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SendEmailNotificationRes> sendEmailNotification(
-        com.tcn.cloud.api.api.v0alpha.SendEmailNotificationReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getSendEmailNotificationMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
      * Delete verify email record based on verified email id defined by
      * DeleteVerifiedEmailReq for the specified client.
      * This method will return a DeleteVerifiedEmailRes message/entity.
@@ -5087,6 +4983,22 @@ public final class OmniApiGrpc {
         com.tcn.cloud.api.api.v0alpha.GetPendingGoogleXOAuth2DataReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetPendingGoogleXOAuth2DataMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Send email notification defined by SendEmailNotificationReq message for the specified
+     * subject, message and array of to email addresses.
+     * The method will return a stream of SendEmailNotificationRes messages
+     * containing result true/false after notified by email for the client_sid.
+     * Required permissions:
+     *      OMNI_BOSS
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SendEmailNotificationRes> sendEmailNotification(
+        com.tcn.cloud.api.api.v0alpha.SendEmailNotificationReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSendEmailNotificationMethod(), getCallOptions()), request);
     }
 
     /**
@@ -5174,6 +5086,17 @@ public final class OmniApiGrpc {
         com.tcn.cloud.api.api.v0alpha.UpdateSignatureReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateSignatureMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * SuggestResponse
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SuggestResponseRes> suggestResponse(
+        com.tcn.cloud.api.api.v0alpha.SuggestResponseReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSuggestResponseMethod(), getCallOptions()), request);
     }
 
     /**
@@ -5418,68 +5341,67 @@ public final class OmniApiGrpc {
   private static final int METHODID_ARCHIVE_CAMPAIGN = 0;
   private static final int METHODID_CREATE_CAMPAIGN = 1;
   private static final int METHODID_GET_CAMPAIGN_BY_ID = 2;
-  private static final int METHODID_LIST_CAMPAIGNS = 3;
-  private static final int METHODID_PAUSE_CAMPAIGN = 4;
-  private static final int METHODID_RESUME_CAMPAIGN = 5;
-  private static final int METHODID_UPDATE_CAMPAIGN = 6;
-  private static final int METHODID_UPDATE_CAMPAIGN_PACING_SPEED = 7;
-  private static final int METHODID_GET_OFF_LOADED_TEXT_MESSAGE = 8;
-  private static final int METHODID_MANAGER_LIST_MESSAGES = 9;
-  private static final int METHODID_LIST_MESSAGES = 10;
-  private static final int METHODID_SEND_OMNI_MESSAGE = 11;
-  private static final int METHODID_MANAGER_SEND_OMNI_MESSAGE = 12;
-  private static final int METHODID_MANAGER_LIST_CONVERSATIONS = 13;
-  private static final int METHODID_SUGGEST_RESPONSE = 14;
-  private static final int METHODID_CREATE_DISPOSITION = 15;
-  private static final int METHODID_DELETE_DISPOSITION = 16;
-  private static final int METHODID_LIST_DISPOSITIONS = 17;
-  private static final int METHODID_UPDATE_DISPOSITION = 18;
-  private static final int METHODID_LIST_CUSTOM_UNSUBSCRIBE_LINKS = 19;
-  private static final int METHODID_CREATE_CUSTOM_UNSUBSCRIBE_LINK = 20;
-  private static final int METHODID_UPDATE_CUSTOM_UNSUBSCRIBE_LINK = 21;
-  private static final int METHODID_DELETE_CUSTOM_UNSUBSCRIBE_LINK = 22;
-  private static final int METHODID_LIST_CONTACT_LISTS = 23;
-  private static final int METHODID_GET_AVAILABLE_HEADERS = 24;
-  private static final int METHODID_GET_TASK = 25;
-  private static final int METHODID_LIST_TASKS = 26;
-  private static final int METHODID_CREATE_CONNECTED_INBOX = 27;
-  private static final int METHODID_DELETE_CONNECTED_INBOX_BY_SID = 28;
-  private static final int METHODID_GET_CONNECTED_INBOX_BY_SID = 29;
-  private static final int METHODID_PERFORM_SENDGRID_ACCOUNT_CHECKS = 30;
-  private static final int METHODID_LIST_CONNECTED_INBOXES = 31;
-  private static final int METHODID_TEST_CONNECTED_INBOX = 32;
-  private static final int METHODID_UPDATE_CONNECTED_INBOX = 33;
-  private static final int METHODID_CREATE_VERIFIED_EMAIL = 34;
-  private static final int METHODID_SEND_EMAIL_NOTIFICATION = 35;
-  private static final int METHODID_DELETE_VERIFIED_EMAIL = 36;
-  private static final int METHODID_GET_VERIFIED_EMAIL_BY_SID = 37;
-  private static final int METHODID_LIST_VERIFIED_EMAILS = 38;
-  private static final int METHODID_RESEND_VERIFIED_EMAIL = 39;
-  private static final int METHODID_UPDATE_VERIFIED_EMAIL = 40;
-  private static final int METHODID_GET_PENDING_GOOGLE_XOAUTH2DATA = 41;
-  private static final int METHODID_SEND_FEEDBACK_EMAIL = 42;
-  private static final int METHODID_GET_OMNI_ATTACHMENT = 43;
-  private static final int METHODID_CREATE_TASKS = 44;
-  private static final int METHODID_CREATE_SIGNATURE = 45;
-  private static final int METHODID_DELETE_SIGNATURE = 46;
-  private static final int METHODID_LIST_SIGNATURES = 47;
-  private static final int METHODID_UPDATE_SIGNATURE = 48;
-  private static final int METHODID_CREATE_PROJECT = 49;
-  private static final int METHODID_LIST_PROJECTS = 50;
-  private static final int METHODID_EDIT_PROJECT_BY_ID = 51;
-  private static final int METHODID_CLOSE_PROJECT_BY_ID = 52;
-  private static final int METHODID_GET_PROJECT_BY_ID = 53;
-  private static final int METHODID_CREATE_CANNED_MESSAGE = 54;
-  private static final int METHODID_LIST_CANNED_MESSAGES = 55;
-  private static final int METHODID_UPDATE_CANNED_MESSAGE = 56;
-  private static final int METHODID_GET_CANNED_MESSAGE_BY_ID = 57;
-  private static final int METHODID_DELETE_CANNED_MESSAGE_BY_ID = 58;
-  private static final int METHODID_CREATE_CANNED_MESSAGE_GROUP = 59;
-  private static final int METHODID_LIST_CANNED_MESSAGE_GROUPS = 60;
-  private static final int METHODID_UPDATE_CANNED_MESSAGE_GROUP = 61;
-  private static final int METHODID_DELETE_CANNED_MESSAGE_GROUP = 62;
-  private static final int METHODID_LIST_CANNED_MESSAGES_BY_GROUP_ID = 63;
-  private static final int METHODID_GET_CANNED_MESSAGE_GROUP_BY_ID = 64;
+  private static final int METHODID_PAUSE_CAMPAIGN = 3;
+  private static final int METHODID_RESUME_CAMPAIGN = 4;
+  private static final int METHODID_UPDATE_CAMPAIGN = 5;
+  private static final int METHODID_UPDATE_CAMPAIGN_PACING_SPEED = 6;
+  private static final int METHODID_SEND_OMNI_MESSAGE = 7;
+  private static final int METHODID_MANAGER_SEND_OMNI_MESSAGE = 8;
+  private static final int METHODID_CREATE_DISPOSITION = 9;
+  private static final int METHODID_DELETE_DISPOSITION = 10;
+  private static final int METHODID_LIST_DISPOSITIONS = 11;
+  private static final int METHODID_UPDATE_DISPOSITION = 12;
+  private static final int METHODID_LIST_CUSTOM_UNSUBSCRIBE_LINKS = 13;
+  private static final int METHODID_CREATE_CUSTOM_UNSUBSCRIBE_LINK = 14;
+  private static final int METHODID_UPDATE_CUSTOM_UNSUBSCRIBE_LINK = 15;
+  private static final int METHODID_DELETE_CUSTOM_UNSUBSCRIBE_LINK = 16;
+  private static final int METHODID_LIST_CAMPAIGNS = 17;
+  private static final int METHODID_MANAGER_LIST_MESSAGES = 18;
+  private static final int METHODID_LIST_MESSAGES = 19;
+  private static final int METHODID_MANAGER_LIST_CONVERSATIONS = 20;
+  private static final int METHODID_LIST_CONTACT_LISTS = 21;
+  private static final int METHODID_GET_AVAILABLE_HEADERS = 22;
+  private static final int METHODID_GET_TASK = 23;
+  private static final int METHODID_LIST_TASKS = 24;
+  private static final int METHODID_CREATE_CONNECTED_INBOX = 25;
+  private static final int METHODID_DELETE_CONNECTED_INBOX_BY_SID = 26;
+  private static final int METHODID_GET_CONNECTED_INBOX_BY_SID = 27;
+  private static final int METHODID_PERFORM_SENDGRID_ACCOUNT_CHECKS = 28;
+  private static final int METHODID_LIST_CONNECTED_INBOXES = 29;
+  private static final int METHODID_TEST_CONNECTED_INBOX = 30;
+  private static final int METHODID_UPDATE_CONNECTED_INBOX = 31;
+  private static final int METHODID_CREATE_VERIFIED_EMAIL = 32;
+  private static final int METHODID_DELETE_VERIFIED_EMAIL = 33;
+  private static final int METHODID_GET_VERIFIED_EMAIL_BY_SID = 34;
+  private static final int METHODID_LIST_VERIFIED_EMAILS = 35;
+  private static final int METHODID_RESEND_VERIFIED_EMAIL = 36;
+  private static final int METHODID_UPDATE_VERIFIED_EMAIL = 37;
+  private static final int METHODID_GET_PENDING_GOOGLE_XOAUTH2DATA = 38;
+  private static final int METHODID_SEND_EMAIL_NOTIFICATION = 39;
+  private static final int METHODID_SEND_FEEDBACK_EMAIL = 40;
+  private static final int METHODID_GET_OMNI_ATTACHMENT = 41;
+  private static final int METHODID_CREATE_TASKS = 42;
+  private static final int METHODID_CREATE_SIGNATURE = 43;
+  private static final int METHODID_DELETE_SIGNATURE = 44;
+  private static final int METHODID_LIST_SIGNATURES = 45;
+  private static final int METHODID_UPDATE_SIGNATURE = 46;
+  private static final int METHODID_SUGGEST_RESPONSE = 47;
+  private static final int METHODID_CREATE_PROJECT = 48;
+  private static final int METHODID_LIST_PROJECTS = 49;
+  private static final int METHODID_EDIT_PROJECT_BY_ID = 50;
+  private static final int METHODID_CLOSE_PROJECT_BY_ID = 51;
+  private static final int METHODID_GET_PROJECT_BY_ID = 52;
+  private static final int METHODID_CREATE_CANNED_MESSAGE = 53;
+  private static final int METHODID_LIST_CANNED_MESSAGES = 54;
+  private static final int METHODID_UPDATE_CANNED_MESSAGE = 55;
+  private static final int METHODID_GET_CANNED_MESSAGE_BY_ID = 56;
+  private static final int METHODID_DELETE_CANNED_MESSAGE_BY_ID = 57;
+  private static final int METHODID_CREATE_CANNED_MESSAGE_GROUP = 58;
+  private static final int METHODID_LIST_CANNED_MESSAGE_GROUPS = 59;
+  private static final int METHODID_UPDATE_CANNED_MESSAGE_GROUP = 60;
+  private static final int METHODID_DELETE_CANNED_MESSAGE_GROUP = 61;
+  private static final int METHODID_LIST_CANNED_MESSAGES_BY_GROUP_ID = 62;
+  private static final int METHODID_GET_CANNED_MESSAGE_GROUP_BY_ID = 63;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -5510,10 +5432,6 @@ public final class OmniApiGrpc {
           serviceImpl.getCampaignById((com.tcn.cloud.api.api.v0alpha.GetCampaignByIdReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.OmniCampaign>) responseObserver);
           break;
-        case METHODID_LIST_CAMPAIGNS:
-          serviceImpl.listCampaigns((com.tcn.cloud.api.api.v0alpha.ListCampaignsReq) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCampaignsRes>) responseObserver);
-          break;
         case METHODID_PAUSE_CAMPAIGN:
           serviceImpl.pauseCampaign((com.tcn.cloud.api.api.v0alpha.PauseCampaignReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.PauseCampaignRes>) responseObserver);
@@ -5530,18 +5448,6 @@ public final class OmniApiGrpc {
           serviceImpl.updateCampaignPacingSpeed((com.tcn.cloud.api.api.v0alpha.UpdateCampaignPacingSpeedReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateCampaignPacingSpeedRes>) responseObserver);
           break;
-        case METHODID_GET_OFF_LOADED_TEXT_MESSAGE:
-          serviceImpl.getOffLoadedTextMessage((com.tcn.cloud.api.api.v0alpha.GetOffLoadedTextMessageReq) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetOffLoadedTextMessageRes>) responseObserver);
-          break;
-        case METHODID_MANAGER_LIST_MESSAGES:
-          serviceImpl.managerListMessages((com.tcn.cloud.api.api.v0alpha.ManagerListMessagesReq) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.OmniMessage>) responseObserver);
-          break;
-        case METHODID_LIST_MESSAGES:
-          serviceImpl.listMessages((com.tcn.cloud.api.api.v0alpha.ListMessagesReq) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.OmniMessage>) responseObserver);
-          break;
         case METHODID_SEND_OMNI_MESSAGE:
           serviceImpl.sendOmniMessage((com.tcn.cloud.api.api.v0alpha.SendOmniMessageReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Empty>) responseObserver);
@@ -5549,14 +5455,6 @@ public final class OmniApiGrpc {
         case METHODID_MANAGER_SEND_OMNI_MESSAGE:
           serviceImpl.managerSendOmniMessage((com.tcn.cloud.api.api.v0alpha.SendOmniMessageReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Empty>) responseObserver);
-          break;
-        case METHODID_MANAGER_LIST_CONVERSATIONS:
-          serviceImpl.managerListConversations((com.tcn.cloud.api.api.v0alpha.ListConversationsReq) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListConversationsRes>) responseObserver);
-          break;
-        case METHODID_SUGGEST_RESPONSE:
-          serviceImpl.suggestResponse((com.tcn.cloud.api.api.v0alpha.SuggestResponseReq) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SuggestResponseRes>) responseObserver);
           break;
         case METHODID_CREATE_DISPOSITION:
           serviceImpl.createDisposition((com.tcn.cloud.api.api.v0alpha.CreateDispositionReq) request,
@@ -5589,6 +5487,22 @@ public final class OmniApiGrpc {
         case METHODID_DELETE_CUSTOM_UNSUBSCRIBE_LINK:
           serviceImpl.deleteCustomUnsubscribeLink((com.tcn.cloud.api.api.v0alpha.DeleteCustomUnsubscribeLinkReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Empty>) responseObserver);
+          break;
+        case METHODID_LIST_CAMPAIGNS:
+          serviceImpl.listCampaigns((com.tcn.cloud.api.api.v0alpha.ListCampaignsReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCampaignsRes>) responseObserver);
+          break;
+        case METHODID_MANAGER_LIST_MESSAGES:
+          serviceImpl.managerListMessages((com.tcn.cloud.api.api.v0alpha.ManagerListMessagesReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.OmniMessage>) responseObserver);
+          break;
+        case METHODID_LIST_MESSAGES:
+          serviceImpl.listMessages((com.tcn.cloud.api.api.v0alpha.ListMessagesReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.OmniMessage>) responseObserver);
+          break;
+        case METHODID_MANAGER_LIST_CONVERSATIONS:
+          serviceImpl.managerListConversations((com.tcn.cloud.api.api.v0alpha.ListConversationsReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListConversationsRes>) responseObserver);
           break;
         case METHODID_LIST_CONTACT_LISTS:
           serviceImpl.listContactLists((com.tcn.cloud.api.api.v0alpha.ListContactListsReq) request,
@@ -5638,10 +5552,6 @@ public final class OmniApiGrpc {
           serviceImpl.createVerifiedEmail((com.tcn.cloud.api.api.commons.VerifiedEmail) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateVerifiedEmailRes>) responseObserver);
           break;
-        case METHODID_SEND_EMAIL_NOTIFICATION:
-          serviceImpl.sendEmailNotification((com.tcn.cloud.api.api.v0alpha.SendEmailNotificationReq) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SendEmailNotificationRes>) responseObserver);
-          break;
         case METHODID_DELETE_VERIFIED_EMAIL:
           serviceImpl.deleteVerifiedEmail((com.tcn.cloud.api.api.v0alpha.DeleteVerifiedEmailReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Empty>) responseObserver);
@@ -5665,6 +5575,10 @@ public final class OmniApiGrpc {
         case METHODID_GET_PENDING_GOOGLE_XOAUTH2DATA:
           serviceImpl.getPendingGoogleXOAuth2Data((com.tcn.cloud.api.api.v0alpha.GetPendingGoogleXOAuth2DataReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetPendingGoogleXOAuth2DataRes>) responseObserver);
+          break;
+        case METHODID_SEND_EMAIL_NOTIFICATION:
+          serviceImpl.sendEmailNotification((com.tcn.cloud.api.api.v0alpha.SendEmailNotificationReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SendEmailNotificationRes>) responseObserver);
           break;
         case METHODID_SEND_FEEDBACK_EMAIL:
           serviceImpl.sendFeedbackEmail((com.tcn.cloud.api.api.v0alpha.SendFeedbackEmailReq) request,
@@ -5693,6 +5607,10 @@ public final class OmniApiGrpc {
         case METHODID_UPDATE_SIGNATURE:
           serviceImpl.updateSignature((com.tcn.cloud.api.api.v0alpha.UpdateSignatureReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateSignatureRes>) responseObserver);
+          break;
+        case METHODID_SUGGEST_RESPONSE:
+          serviceImpl.suggestResponse((com.tcn.cloud.api.api.v0alpha.SuggestResponseReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SuggestResponseRes>) responseObserver);
           break;
         case METHODID_CREATE_PROJECT:
           serviceImpl.createProject((com.tcn.cloud.api.api.v0alpha.CreateProjectReq) request,
@@ -5798,13 +5716,6 @@ public final class OmniApiGrpc {
               com.tcn.cloud.api.api.commons.OmniCampaign>(
                 service, METHODID_GET_CAMPAIGN_BY_ID)))
         .addMethod(
-          getListCampaignsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.ListCampaignsReq,
-              com.tcn.cloud.api.api.v0alpha.ListCampaignsRes>(
-                service, METHODID_LIST_CAMPAIGNS)))
-        .addMethod(
           getPauseCampaignMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -5833,27 +5744,6 @@ public final class OmniApiGrpc {
               com.tcn.cloud.api.api.v0alpha.UpdateCampaignPacingSpeedRes>(
                 service, METHODID_UPDATE_CAMPAIGN_PACING_SPEED)))
         .addMethod(
-          getGetOffLoadedTextMessageMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.GetOffLoadedTextMessageReq,
-              com.tcn.cloud.api.api.v0alpha.GetOffLoadedTextMessageRes>(
-                service, METHODID_GET_OFF_LOADED_TEXT_MESSAGE)))
-        .addMethod(
-          getManagerListMessagesMethod(),
-          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.ManagerListMessagesReq,
-              com.tcn.cloud.api.api.commons.OmniMessage>(
-                service, METHODID_MANAGER_LIST_MESSAGES)))
-        .addMethod(
-          getListMessagesMethod(),
-          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.ListMessagesReq,
-              com.tcn.cloud.api.api.commons.OmniMessage>(
-                service, METHODID_LIST_MESSAGES)))
-        .addMethod(
           getSendOmniMessageMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -5867,20 +5757,6 @@ public final class OmniApiGrpc {
               com.tcn.cloud.api.api.v0alpha.SendOmniMessageReq,
               com.tcn.cloud.api.api.commons.Empty>(
                 service, METHODID_MANAGER_SEND_OMNI_MESSAGE)))
-        .addMethod(
-          getManagerListConversationsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.ListConversationsReq,
-              com.tcn.cloud.api.api.v0alpha.ListConversationsRes>(
-                service, METHODID_MANAGER_LIST_CONVERSATIONS)))
-        .addMethod(
-          getSuggestResponseMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.SuggestResponseReq,
-              com.tcn.cloud.api.api.v0alpha.SuggestResponseRes>(
-                service, METHODID_SUGGEST_RESPONSE)))
         .addMethod(
           getCreateDispositionMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -5937,6 +5813,34 @@ public final class OmniApiGrpc {
               com.tcn.cloud.api.api.v0alpha.DeleteCustomUnsubscribeLinkReq,
               com.tcn.cloud.api.api.commons.Empty>(
                 service, METHODID_DELETE_CUSTOM_UNSUBSCRIBE_LINK)))
+        .addMethod(
+          getListCampaignsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListCampaignsReq,
+              com.tcn.cloud.api.api.v0alpha.ListCampaignsRes>(
+                service, METHODID_LIST_CAMPAIGNS)))
+        .addMethod(
+          getManagerListMessagesMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ManagerListMessagesReq,
+              com.tcn.cloud.api.api.commons.OmniMessage>(
+                service, METHODID_MANAGER_LIST_MESSAGES)))
+        .addMethod(
+          getListMessagesMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListMessagesReq,
+              com.tcn.cloud.api.api.commons.OmniMessage>(
+                service, METHODID_LIST_MESSAGES)))
+        .addMethod(
+          getManagerListConversationsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListConversationsReq,
+              com.tcn.cloud.api.api.v0alpha.ListConversationsRes>(
+                service, METHODID_MANAGER_LIST_CONVERSATIONS)))
         .addMethod(
           getListContactListsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -6022,13 +5926,6 @@ public final class OmniApiGrpc {
               com.tcn.cloud.api.api.v0alpha.CreateVerifiedEmailRes>(
                 service, METHODID_CREATE_VERIFIED_EMAIL)))
         .addMethod(
-          getSendEmailNotificationMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.SendEmailNotificationReq,
-              com.tcn.cloud.api.api.v0alpha.SendEmailNotificationRes>(
-                service, METHODID_SEND_EMAIL_NOTIFICATION)))
-        .addMethod(
           getDeleteVerifiedEmailMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -6070,6 +5967,13 @@ public final class OmniApiGrpc {
               com.tcn.cloud.api.api.v0alpha.GetPendingGoogleXOAuth2DataReq,
               com.tcn.cloud.api.api.v0alpha.GetPendingGoogleXOAuth2DataRes>(
                 service, METHODID_GET_PENDING_GOOGLE_XOAUTH2DATA)))
+        .addMethod(
+          getSendEmailNotificationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.SendEmailNotificationReq,
+              com.tcn.cloud.api.api.v0alpha.SendEmailNotificationRes>(
+                service, METHODID_SEND_EMAIL_NOTIFICATION)))
         .addMethod(
           getSendFeedbackEmailMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -6119,6 +6023,13 @@ public final class OmniApiGrpc {
               com.tcn.cloud.api.api.v0alpha.UpdateSignatureReq,
               com.tcn.cloud.api.api.v0alpha.UpdateSignatureRes>(
                 service, METHODID_UPDATE_SIGNATURE)))
+        .addMethod(
+          getSuggestResponseMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.SuggestResponseReq,
+              com.tcn.cloud.api.api.v0alpha.SuggestResponseRes>(
+                service, METHODID_SUGGEST_RESPONSE)))
         .addMethod(
           getCreateProjectMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -6282,18 +6193,12 @@ public final class OmniApiGrpc {
               .addMethod(getArchiveCampaignMethod())
               .addMethod(getCreateCampaignMethod())
               .addMethod(getGetCampaignByIdMethod())
-              .addMethod(getListCampaignsMethod())
               .addMethod(getPauseCampaignMethod())
               .addMethod(getResumeCampaignMethod())
               .addMethod(getUpdateCampaignMethod())
               .addMethod(getUpdateCampaignPacingSpeedMethod())
-              .addMethod(getGetOffLoadedTextMessageMethod())
-              .addMethod(getManagerListMessagesMethod())
-              .addMethod(getListMessagesMethod())
               .addMethod(getSendOmniMessageMethod())
               .addMethod(getManagerSendOmniMessageMethod())
-              .addMethod(getManagerListConversationsMethod())
-              .addMethod(getSuggestResponseMethod())
               .addMethod(getCreateDispositionMethod())
               .addMethod(getDeleteDispositionMethod())
               .addMethod(getListDispositionsMethod())
@@ -6302,6 +6207,10 @@ public final class OmniApiGrpc {
               .addMethod(getCreateCustomUnsubscribeLinkMethod())
               .addMethod(getUpdateCustomUnsubscribeLinkMethod())
               .addMethod(getDeleteCustomUnsubscribeLinkMethod())
+              .addMethod(getListCampaignsMethod())
+              .addMethod(getManagerListMessagesMethod())
+              .addMethod(getListMessagesMethod())
+              .addMethod(getManagerListConversationsMethod())
               .addMethod(getListContactListsMethod())
               .addMethod(getGetAvailableHeadersMethod())
               .addMethod(getGetTaskMethod())
@@ -6314,13 +6223,13 @@ public final class OmniApiGrpc {
               .addMethod(getTestConnectedInboxMethod())
               .addMethod(getUpdateConnectedInboxMethod())
               .addMethod(getCreateVerifiedEmailMethod())
-              .addMethod(getSendEmailNotificationMethod())
               .addMethod(getDeleteVerifiedEmailMethod())
               .addMethod(getGetVerifiedEmailBySidMethod())
               .addMethod(getListVerifiedEmailsMethod())
               .addMethod(getResendVerifiedEmailMethod())
               .addMethod(getUpdateVerifiedEmailMethod())
               .addMethod(getGetPendingGoogleXOAuth2DataMethod())
+              .addMethod(getSendEmailNotificationMethod())
               .addMethod(getSendFeedbackEmailMethod())
               .addMethod(getGetOmniAttachmentMethod())
               .addMethod(getCreateTasksMethod())
@@ -6328,6 +6237,7 @@ public final class OmniApiGrpc {
               .addMethod(getDeleteSignatureMethod())
               .addMethod(getListSignaturesMethod())
               .addMethod(getUpdateSignatureMethod())
+              .addMethod(getSuggestResponseMethod())
               .addMethod(getCreateProjectMethod())
               .addMethod(getListProjectsMethod())
               .addMethod(getEditProjectByIdMethod())
