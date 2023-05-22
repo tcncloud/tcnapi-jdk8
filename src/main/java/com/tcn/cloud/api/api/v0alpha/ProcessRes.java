@@ -60,16 +60,16 @@ private static final long serialVersionUID = 0L;
 
   public static final int RULE_RESPONSES_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.v0alpha.RuleResponse> ruleResponses_;
+  private java.util.List<com.tcn.cloud.api.api.commons.RuleResponse> ruleResponses_;
   /**
    * <pre>
    * the list of rules checked against
    * </pre>
    *
-   * <code>repeated .api.v0alpha.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
+   * <code>repeated .api.commons.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.v0alpha.RuleResponse> getRuleResponsesList() {
+  public java.util.List<com.tcn.cloud.api.api.commons.RuleResponse> getRuleResponsesList() {
     return ruleResponses_;
   }
   /**
@@ -77,10 +77,10 @@ private static final long serialVersionUID = 0L;
    * the list of rules checked against
    * </pre>
    *
-   * <code>repeated .api.v0alpha.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
+   * <code>repeated .api.commons.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.v0alpha.RuleResponseOrBuilder> 
+  public java.util.List<? extends com.tcn.cloud.api.api.commons.RuleResponseOrBuilder> 
       getRuleResponsesOrBuilderList() {
     return ruleResponses_;
   }
@@ -89,7 +89,7 @@ private static final long serialVersionUID = 0L;
    * the list of rules checked against
    * </pre>
    *
-   * <code>repeated .api.v0alpha.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
+   * <code>repeated .api.commons.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
    */
   @java.lang.Override
   public int getRuleResponsesCount() {
@@ -100,10 +100,10 @@ private static final long serialVersionUID = 0L;
    * the list of rules checked against
    * </pre>
    *
-   * <code>repeated .api.v0alpha.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
+   * <code>repeated .api.commons.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.RuleResponse getRuleResponses(int index) {
+  public com.tcn.cloud.api.api.commons.RuleResponse getRuleResponses(int index) {
     return ruleResponses_.get(index);
   }
   /**
@@ -111,10 +111,10 @@ private static final long serialVersionUID = 0L;
    * the list of rules checked against
    * </pre>
    *
-   * <code>repeated .api.v0alpha.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
+   * <code>repeated .api.commons.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.RuleResponseOrBuilder getRuleResponsesOrBuilder(
+  public com.tcn.cloud.api.api.commons.RuleResponseOrBuilder getRuleResponsesOrBuilder(
       int index) {
     return ruleResponses_.get(index);
   }
@@ -460,9 +460,9 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 8
             case 18: {
-              com.tcn.cloud.api.api.v0alpha.RuleResponse m =
+              com.tcn.cloud.api.api.commons.RuleResponse m =
                   input.readMessage(
-                      com.tcn.cloud.api.api.v0alpha.RuleResponse.parser(),
+                      com.tcn.cloud.api.api.commons.RuleResponse.parser(),
                       extensionRegistry);
               if (ruleResponsesBuilder_ == null) {
                 ensureRuleResponsesIsMutable();
@@ -533,26 +533,26 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.util.List<com.tcn.cloud.api.api.v0alpha.RuleResponse> ruleResponses_ =
+    private java.util.List<com.tcn.cloud.api.api.commons.RuleResponse> ruleResponses_ =
       java.util.Collections.emptyList();
     private void ensureRuleResponsesIsMutable() {
       if (!((bitField0_ & 0x00000002) != 0)) {
-        ruleResponses_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.RuleResponse>(ruleResponses_);
+        ruleResponses_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.RuleResponse>(ruleResponses_);
         bitField0_ |= 0x00000002;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v0alpha.RuleResponse, com.tcn.cloud.api.api.v0alpha.RuleResponse.Builder, com.tcn.cloud.api.api.v0alpha.RuleResponseOrBuilder> ruleResponsesBuilder_;
+        com.tcn.cloud.api.api.commons.RuleResponse, com.tcn.cloud.api.api.commons.RuleResponse.Builder, com.tcn.cloud.api.api.commons.RuleResponseOrBuilder> ruleResponsesBuilder_;
 
     /**
      * <pre>
      * the list of rules checked against
      * </pre>
      *
-     * <code>repeated .api.v0alpha.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
+     * <code>repeated .api.commons.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v0alpha.RuleResponse> getRuleResponsesList() {
+    public java.util.List<com.tcn.cloud.api.api.commons.RuleResponse> getRuleResponsesList() {
       if (ruleResponsesBuilder_ == null) {
         return java.util.Collections.unmodifiableList(ruleResponses_);
       } else {
@@ -564,7 +564,7 @@ private static final long serialVersionUID = 0L;
      * the list of rules checked against
      * </pre>
      *
-     * <code>repeated .api.v0alpha.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
+     * <code>repeated .api.commons.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
      */
     public int getRuleResponsesCount() {
       if (ruleResponsesBuilder_ == null) {
@@ -578,9 +578,9 @@ private static final long serialVersionUID = 0L;
      * the list of rules checked against
      * </pre>
      *
-     * <code>repeated .api.v0alpha.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
+     * <code>repeated .api.commons.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.RuleResponse getRuleResponses(int index) {
+    public com.tcn.cloud.api.api.commons.RuleResponse getRuleResponses(int index) {
       if (ruleResponsesBuilder_ == null) {
         return ruleResponses_.get(index);
       } else {
@@ -592,10 +592,10 @@ private static final long serialVersionUID = 0L;
      * the list of rules checked against
      * </pre>
      *
-     * <code>repeated .api.v0alpha.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
+     * <code>repeated .api.commons.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
      */
     public Builder setRuleResponses(
-        int index, com.tcn.cloud.api.api.v0alpha.RuleResponse value) {
+        int index, com.tcn.cloud.api.api.commons.RuleResponse value) {
       if (ruleResponsesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -613,10 +613,10 @@ private static final long serialVersionUID = 0L;
      * the list of rules checked against
      * </pre>
      *
-     * <code>repeated .api.v0alpha.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
+     * <code>repeated .api.commons.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
      */
     public Builder setRuleResponses(
-        int index, com.tcn.cloud.api.api.v0alpha.RuleResponse.Builder builderForValue) {
+        int index, com.tcn.cloud.api.api.commons.RuleResponse.Builder builderForValue) {
       if (ruleResponsesBuilder_ == null) {
         ensureRuleResponsesIsMutable();
         ruleResponses_.set(index, builderForValue.build());
@@ -631,9 +631,9 @@ private static final long serialVersionUID = 0L;
      * the list of rules checked against
      * </pre>
      *
-     * <code>repeated .api.v0alpha.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
+     * <code>repeated .api.commons.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
      */
-    public Builder addRuleResponses(com.tcn.cloud.api.api.v0alpha.RuleResponse value) {
+    public Builder addRuleResponses(com.tcn.cloud.api.api.commons.RuleResponse value) {
       if (ruleResponsesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -651,10 +651,10 @@ private static final long serialVersionUID = 0L;
      * the list of rules checked against
      * </pre>
      *
-     * <code>repeated .api.v0alpha.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
+     * <code>repeated .api.commons.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
      */
     public Builder addRuleResponses(
-        int index, com.tcn.cloud.api.api.v0alpha.RuleResponse value) {
+        int index, com.tcn.cloud.api.api.commons.RuleResponse value) {
       if (ruleResponsesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -672,10 +672,10 @@ private static final long serialVersionUID = 0L;
      * the list of rules checked against
      * </pre>
      *
-     * <code>repeated .api.v0alpha.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
+     * <code>repeated .api.commons.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
      */
     public Builder addRuleResponses(
-        com.tcn.cloud.api.api.v0alpha.RuleResponse.Builder builderForValue) {
+        com.tcn.cloud.api.api.commons.RuleResponse.Builder builderForValue) {
       if (ruleResponsesBuilder_ == null) {
         ensureRuleResponsesIsMutable();
         ruleResponses_.add(builderForValue.build());
@@ -690,10 +690,10 @@ private static final long serialVersionUID = 0L;
      * the list of rules checked against
      * </pre>
      *
-     * <code>repeated .api.v0alpha.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
+     * <code>repeated .api.commons.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
      */
     public Builder addRuleResponses(
-        int index, com.tcn.cloud.api.api.v0alpha.RuleResponse.Builder builderForValue) {
+        int index, com.tcn.cloud.api.api.commons.RuleResponse.Builder builderForValue) {
       if (ruleResponsesBuilder_ == null) {
         ensureRuleResponsesIsMutable();
         ruleResponses_.add(index, builderForValue.build());
@@ -708,10 +708,10 @@ private static final long serialVersionUID = 0L;
      * the list of rules checked against
      * </pre>
      *
-     * <code>repeated .api.v0alpha.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
+     * <code>repeated .api.commons.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
      */
     public Builder addAllRuleResponses(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.v0alpha.RuleResponse> values) {
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.RuleResponse> values) {
       if (ruleResponsesBuilder_ == null) {
         ensureRuleResponsesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -727,7 +727,7 @@ private static final long serialVersionUID = 0L;
      * the list of rules checked against
      * </pre>
      *
-     * <code>repeated .api.v0alpha.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
+     * <code>repeated .api.commons.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
      */
     public Builder clearRuleResponses() {
       if (ruleResponsesBuilder_ == null) {
@@ -744,7 +744,7 @@ private static final long serialVersionUID = 0L;
      * the list of rules checked against
      * </pre>
      *
-     * <code>repeated .api.v0alpha.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
+     * <code>repeated .api.commons.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
      */
     public Builder removeRuleResponses(int index) {
       if (ruleResponsesBuilder_ == null) {
@@ -761,9 +761,9 @@ private static final long serialVersionUID = 0L;
      * the list of rules checked against
      * </pre>
      *
-     * <code>repeated .api.v0alpha.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
+     * <code>repeated .api.commons.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.RuleResponse.Builder getRuleResponsesBuilder(
+    public com.tcn.cloud.api.api.commons.RuleResponse.Builder getRuleResponsesBuilder(
         int index) {
       return getRuleResponsesFieldBuilder().getBuilder(index);
     }
@@ -772,9 +772,9 @@ private static final long serialVersionUID = 0L;
      * the list of rules checked against
      * </pre>
      *
-     * <code>repeated .api.v0alpha.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
+     * <code>repeated .api.commons.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.RuleResponseOrBuilder getRuleResponsesOrBuilder(
+    public com.tcn.cloud.api.api.commons.RuleResponseOrBuilder getRuleResponsesOrBuilder(
         int index) {
       if (ruleResponsesBuilder_ == null) {
         return ruleResponses_.get(index);  } else {
@@ -786,9 +786,9 @@ private static final long serialVersionUID = 0L;
      * the list of rules checked against
      * </pre>
      *
-     * <code>repeated .api.v0alpha.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
+     * <code>repeated .api.commons.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.v0alpha.RuleResponseOrBuilder> 
+    public java.util.List<? extends com.tcn.cloud.api.api.commons.RuleResponseOrBuilder> 
          getRuleResponsesOrBuilderList() {
       if (ruleResponsesBuilder_ != null) {
         return ruleResponsesBuilder_.getMessageOrBuilderList();
@@ -801,41 +801,41 @@ private static final long serialVersionUID = 0L;
      * the list of rules checked against
      * </pre>
      *
-     * <code>repeated .api.v0alpha.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
+     * <code>repeated .api.commons.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.RuleResponse.Builder addRuleResponsesBuilder() {
+    public com.tcn.cloud.api.api.commons.RuleResponse.Builder addRuleResponsesBuilder() {
       return getRuleResponsesFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.v0alpha.RuleResponse.getDefaultInstance());
+          com.tcn.cloud.api.api.commons.RuleResponse.getDefaultInstance());
     }
     /**
      * <pre>
      * the list of rules checked against
      * </pre>
      *
-     * <code>repeated .api.v0alpha.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
+     * <code>repeated .api.commons.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.RuleResponse.Builder addRuleResponsesBuilder(
+    public com.tcn.cloud.api.api.commons.RuleResponse.Builder addRuleResponsesBuilder(
         int index) {
       return getRuleResponsesFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.v0alpha.RuleResponse.getDefaultInstance());
+          index, com.tcn.cloud.api.api.commons.RuleResponse.getDefaultInstance());
     }
     /**
      * <pre>
      * the list of rules checked against
      * </pre>
      *
-     * <code>repeated .api.v0alpha.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
+     * <code>repeated .api.commons.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v0alpha.RuleResponse.Builder> 
+    public java.util.List<com.tcn.cloud.api.api.commons.RuleResponse.Builder> 
          getRuleResponsesBuilderList() {
       return getRuleResponsesFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v0alpha.RuleResponse, com.tcn.cloud.api.api.v0alpha.RuleResponse.Builder, com.tcn.cloud.api.api.v0alpha.RuleResponseOrBuilder> 
+        com.tcn.cloud.api.api.commons.RuleResponse, com.tcn.cloud.api.api.commons.RuleResponse.Builder, com.tcn.cloud.api.api.commons.RuleResponseOrBuilder> 
         getRuleResponsesFieldBuilder() {
       if (ruleResponsesBuilder_ == null) {
         ruleResponsesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.v0alpha.RuleResponse, com.tcn.cloud.api.api.v0alpha.RuleResponse.Builder, com.tcn.cloud.api.api.v0alpha.RuleResponseOrBuilder>(
+            com.tcn.cloud.api.api.commons.RuleResponse, com.tcn.cloud.api.api.commons.RuleResponse.Builder, com.tcn.cloud.api.api.commons.RuleResponseOrBuilder>(
                 ruleResponses_,
                 ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),

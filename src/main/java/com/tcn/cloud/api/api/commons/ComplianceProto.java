@@ -149,6 +149,11 @@ public final class ComplianceProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_commons_ScrubEntryDetails_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_commons_RuleResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_commons_RuleResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -278,27 +283,30 @@ public final class ComplianceProto {
       "\010\002\020\003\"r\n\021ScrubEntryDetails\022\030\n\007content\030\001 \001" +
       "(\tR\007content\022C\n\017expiration_date\030\002 \001(\0132\032.g" +
       "oogle.protobuf.TimestampR\016expirationDate" +
-      "*K\n\004Verb\022\r\n\tV_UNKNOWN\020\000\022\013\n\007V_ALLOW\020\001\022\n\n\006" +
-      "V_DENY\020\002\022\013\n\007V_SCRUB\020\003\022\016\n\nV_OVERRIDE\020\004*;\n" +
-      "\006Entity\022\r\n\tE_UNKNOWN\020\000\022\n\n\006E_CALL\020\001\022\013\n\007E_" +
-      "EMAIL\020\002\022\t\n\005E_SMS\020\003*u\n\tSubEntity\022\n\n\006SE_AL" +
-      "L\020\000\022\016\n\nSE_INBOUND\020\001\022\017\n\013SE_OUTBOUND\020\002\022\r\n\t" +
-      "SE_MANUAL\020\003\022\016\n\nSE_PREVIEW\020\004\022\n\n\006SE_MAC\020\005\022" +
-      "\020\n\014SE_BROADCAST\020\006*.\n\tPhoneType\022\010\n\004CELL\020\000" +
-      "\022\010\n\004LAND\020\001\022\r\n\tTOLL_FREE\020\002*a\n\013ContentType" +
-      "\022\023\n\017CT_PHONE_NUMBER\020\000\022\014\n\010CT_EMAIL\020\001\022\n\n\006C" +
-      "T_SMS\020\002\022\014\n\010CT_OTHER\020\003\022\025\n\021CT_ACCOUNT_NUMB" +
-      "ER\020\004*?\n\007Channel\022\020\n\014CHANNEL_CALL\020\000\022\021\n\rCHA" +
-      "NNEL_EMAIL\020\001\022\017\n\013CHANNEL_SMS\020\002*G\n\nPluginT" +
-      "ype\022\022\n\016UNKNOWN_PLUGIN\020\000\022\013\n\007GRYPHON\020\001\022\017\n\013" +
-      "TCN_CONSENT\020\002\022\007\n\003RND\020\003*8\n\013Environment\022\017\n" +
-      "\013INVALID_ENV\020\000\022\010\n\004TEST\020\001\022\016\n\nPRODUCTION\020\002" +
-      "*V\n\023ConsentAbsentAction\022\037\n\033CONSENT_ABSEN" +
-      "T_ACTION_ALLOW\020\000\022\036\n\032CONSENT_ABSENT_ACTIO" +
-      "N_DENY\020\001B}\n\035com.tcn.cloud.api.api.common" +
-      "sB\017ComplianceProtoP\001\242\002\003ACX\252\002\013Api.Commons" +
-      "\312\002\013Api\\Commons\342\002\027Api\\Commons\\GPBMetadata" +
-      "\352\002\014Api::Commonsb\006proto3"
+      "\"l\n\014RuleResponse\022\033\n\trule_text\030\001 \001(\tR\010rul" +
+      "eText\022\026\n\006permit\030\002 \001(\010R\006permit\022\'\n\017plugin_" +
+      "response\030\003 \001(\tR\016pluginResponse*K\n\004Verb\022\r" +
+      "\n\tV_UNKNOWN\020\000\022\013\n\007V_ALLOW\020\001\022\n\n\006V_DENY\020\002\022\013" +
+      "\n\007V_SCRUB\020\003\022\016\n\nV_OVERRIDE\020\004*;\n\006Entity\022\r\n" +
+      "\tE_UNKNOWN\020\000\022\n\n\006E_CALL\020\001\022\013\n\007E_EMAIL\020\002\022\t\n" +
+      "\005E_SMS\020\003*u\n\tSubEntity\022\n\n\006SE_ALL\020\000\022\016\n\nSE_" +
+      "INBOUND\020\001\022\017\n\013SE_OUTBOUND\020\002\022\r\n\tSE_MANUAL\020" +
+      "\003\022\016\n\nSE_PREVIEW\020\004\022\n\n\006SE_MAC\020\005\022\020\n\014SE_BROA" +
+      "DCAST\020\006*.\n\tPhoneType\022\010\n\004CELL\020\000\022\010\n\004LAND\020\001" +
+      "\022\r\n\tTOLL_FREE\020\002*a\n\013ContentType\022\023\n\017CT_PHO" +
+      "NE_NUMBER\020\000\022\014\n\010CT_EMAIL\020\001\022\n\n\006CT_SMS\020\002\022\014\n" +
+      "\010CT_OTHER\020\003\022\025\n\021CT_ACCOUNT_NUMBER\020\004*?\n\007Ch" +
+      "annel\022\020\n\014CHANNEL_CALL\020\000\022\021\n\rCHANNEL_EMAIL" +
+      "\020\001\022\017\n\013CHANNEL_SMS\020\002*G\n\nPluginType\022\022\n\016UNK" +
+      "NOWN_PLUGIN\020\000\022\013\n\007GRYPHON\020\001\022\017\n\013TCN_CONSEN" +
+      "T\020\002\022\007\n\003RND\020\003*8\n\013Environment\022\017\n\013INVALID_E" +
+      "NV\020\000\022\010\n\004TEST\020\001\022\016\n\nPRODUCTION\020\002*V\n\023Consen" +
+      "tAbsentAction\022\037\n\033CONSENT_ABSENT_ACTION_A" +
+      "LLOW\020\000\022\036\n\032CONSENT_ABSENT_ACTION_DENY\020\001B}" +
+      "\n\035com.tcn.cloud.api.api.commonsB\017Complia" +
+      "nceProtoP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Com" +
+      "mons\342\002\027Api\\Commons\\GPBMetadata\352\002\014Api::Co" +
+      "mmonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -469,6 +477,12 @@ public final class ComplianceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_ScrubEntryDetails_descriptor,
         new java.lang.String[] { "Content", "ExpirationDate", });
+    internal_static_api_commons_RuleResponse_descriptor =
+      getDescriptor().getMessageTypes().get(26);
+    internal_static_api_commons_RuleResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_commons_RuleResponse_descriptor,
+        new java.lang.String[] { "RuleText", "Permit", "PluginResponse", });
     com.tcn.cloud.api.api.commons.CommunicationProto.getDescriptor();
     com.tcn.cloud.api.api.commons.EnumsProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();

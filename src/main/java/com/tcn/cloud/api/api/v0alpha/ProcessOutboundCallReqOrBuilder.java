@@ -136,19 +136,20 @@ java.lang.String defaultValue);
    * The call type of the caller associated with this process request
    * </pre>
    *
-   * <code>.api.commons.CallType.Enum source_field = 6 [json_name = "sourceField"];</code>
-   * @return The enum numeric value on the wire for sourceField.
+   * <code>string source_field = 6 [json_name = "sourceField"];</code>
+   * @return The sourceField.
    */
-  int getSourceFieldValue();
+  java.lang.String getSourceField();
   /**
    * <pre>
    * The call type of the caller associated with this process request
    * </pre>
    *
-   * <code>.api.commons.CallType.Enum source_field = 6 [json_name = "sourceField"];</code>
-   * @return The sourceField.
+   * <code>string source_field = 6 [json_name = "sourceField"];</code>
+   * @return The bytes for sourceField.
    */
-  com.tcn.cloud.api.api.commons.CallType.Enum getSourceField();
+  com.google.protobuf.ByteString
+      getSourceFieldBytes();
 
   /**
    * <pre>
