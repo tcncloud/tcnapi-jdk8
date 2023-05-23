@@ -244,7 +244,7 @@ public final class ScorecardsProto {
       "ns\022\030\n\007version\030\010 \001(\005R\007version\022\035\n\nsort_ord" +
       "er\030\t \001(\005R\tsortOrder\022@\n\016auto_questions\030\013 " +
       "\003(\0132\031.api.commons.AutoQuestionR\rautoQues" +
-      "tions\"\254\005\n\tScorecard\022!\n\014scorecard_id\030\002 \001(" +
+      "tions\"\256\005\n\tScorecard\022!\n\014scorecard_id\030\002 \001(" +
       "\003R\013scorecardId\022\033\n\tauthor_id\030\003 \001(\tR\010autho" +
       "rId\022\024\n\005title\030\004 \001(\tR\005title\022 \n\013description" +
       "\030\005 \001(\tR\013description\022\035\n\npass_score\030\006 \001(\001R" +
@@ -259,46 +259,46 @@ public final class ScorecardsProto {
       "ns\022\030\n\007version\030\016 \001(\005R\007version\0221\n\005state\030\017 " +
       "\001(\0162\033.api.commons.ScorecardStateR\005state\022" +
       "\036\n\tis_ad_hoc\030\020 \001(\010B\002\030\001R\007isAdHoc\022*\n\021custo" +
-      "m_field_keys\030\023 \003(\tR\017customFieldKeys\0227\n\tc" +
-      "all_type\030\024 \001(\0162\032.api.commons.CallType.En" +
-      "umR\010callType\"\255\005\n\014AutoQuestion\022(\n\020auto_qu" +
-      "estion_id\030\002 \001(\003R\016autoQuestionId\022\031\n\010flag_" +
-      "sid\030\003 \001(\003R\007flagSid\022!\n\014scorecard_id\030\005 \001(\003" +
-      "R\013scorecardId\022&\n\017auto_section_id\030\006 \001(\003R\r" +
-      "autoSectionId\022\035\n\nsort_order\030\007 \001(\005R\tsortO" +
-      "rder\022K\n\017flag_expression\030\n \001(\0132\".api.comm" +
-      "ons.AutoQuestion.FlagExprR\016flagExpressio" +
-      "n\022\032\n\010question\030\013 \001(\tR\010question\022 \n\013descrip" +
-      "tion\030\014 \001(\tR\013description\022\037\n\013question_id\030\r" +
-      " \001(\003R\nquestionId\0225\n\nrisk_level\030\016 \001(\0162\026.a" +
-      "pi.commons.RiskLevelR\triskLevel\032\212\002\n\010Flag" +
-      "Expr\0224\n\003and\030\001 \003(\0132\".api.commons.AutoQues" +
-      "tion.FlagExprR\003and\0222\n\002or\030\002 \003(\0132\".api.com" +
-      "mons.AutoQuestion.FlagExprR\002or\022;\n\004flag\030\003" +
-      " \001(\0132\'.api.commons.AutoQuestion.FlagExpr" +
-      ".FlagR\004flag\0224\n\003not\030\004 \001(\0132\".api.commons.A" +
-      "utoQuestion.FlagExprR\003not\032!\n\004Flag\022\031\n\010fla" +
-      "g_sid\030\001 \001(\003R\007flagSid*=\n\014CategoryType\022\013\n\007" +
-      "INVALID\020\000\022\017\n\013SKILL_CALLS\020\001\022\017\n\013MANUAL_DIA" +
-      "L\020\002*8\n\016EvaluationType\022\023\n\017EVALUATE_MANUAL" +
-      "\020\000\022\021\n\rEVALUATE_AUTO\020\001*V\n\tScoreType\022\024\n\020SC" +
-      "ORE_SIMPLE_SUM\020\000\022\026\n\022SCORE_WEIGHTED_SUM\020\001" +
-      "\022\033\n\027SCORE_EVEN_WEIGHTED_SUM\020\002*C\n\010FailTyp" +
-      "e\022\021\n\rFAIL_QUESTION\020\000\022\020\n\014FAIL_SECTION\020\001\022\022" +
-      "\n\016FAIL_SCORECARD\020\002*\267\001\n\016ScorecardState\022\026\n" +
-      "\022SCORECARD_IS_DRAFT\020\000\022\026\n\022SCORECARD_IS_RE" +
-      "ADY\020\001\022\027\n\023SCORECARD_IS_IN_USE\020\002\022\031\n\025SCOREC" +
-      "ARD_IS_TEMPLATE\020\003\022\037\n\033SCORECARD_IS_READY_" +
-      "DISABLED\020\004\022 \n\034SCORECARD_IS_IN_USE_DISABL" +
-      "ED\020\005*[\n\017EvaluationState\022\032\n\026EVALUATION_IN" +
-      "_PROGRESS\020\000\022\025\n\021EVALUATION_PASSED\020\001\022\025\n\021EV" +
-      "ALUATION_FAILED\020\002*`\n\tRiskLevel\022\023\n\017RISK_L" +
-      "EVEL_NONE\020\000\022\022\n\016RISK_LEVEL_LOW\020\001\022\025\n\021RISK_" +
-      "LEVEL_MEDIUM\020\002\022\023\n\017RISK_LEVEL_HIGH\020\003B}\n\035c" +
-      "om.tcn.cloud.api.api.commonsB\017Scorecards" +
-      "ProtoP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Common" +
-      "s\342\002\027Api\\Commons\\GPBMetadata\352\002\014Api::Commo" +
-      "nsb\006proto3"
+      "m_field_keys\030\023 \003(\tR\017customFieldKeys\0229\n\nc" +
+      "all_types\030\024 \003(\0162\032.api.commons.CallType.E" +
+      "numR\tcallTypes\"\255\005\n\014AutoQuestion\022(\n\020auto_" +
+      "question_id\030\002 \001(\003R\016autoQuestionId\022\031\n\010fla" +
+      "g_sid\030\003 \001(\003R\007flagSid\022!\n\014scorecard_id\030\005 \001" +
+      "(\003R\013scorecardId\022&\n\017auto_section_id\030\006 \001(\003" +
+      "R\rautoSectionId\022\035\n\nsort_order\030\007 \001(\005R\tsor" +
+      "tOrder\022K\n\017flag_expression\030\n \001(\0132\".api.co" +
+      "mmons.AutoQuestion.FlagExprR\016flagExpress" +
+      "ion\022\032\n\010question\030\013 \001(\tR\010question\022 \n\013descr" +
+      "iption\030\014 \001(\tR\013description\022\037\n\013question_id" +
+      "\030\r \001(\003R\nquestionId\0225\n\nrisk_level\030\016 \001(\0162\026" +
+      ".api.commons.RiskLevelR\triskLevel\032\212\002\n\010Fl" +
+      "agExpr\0224\n\003and\030\001 \003(\0132\".api.commons.AutoQu" +
+      "estion.FlagExprR\003and\0222\n\002or\030\002 \003(\0132\".api.c" +
+      "ommons.AutoQuestion.FlagExprR\002or\022;\n\004flag" +
+      "\030\003 \001(\0132\'.api.commons.AutoQuestion.FlagEx" +
+      "pr.FlagR\004flag\0224\n\003not\030\004 \001(\0132\".api.commons" +
+      ".AutoQuestion.FlagExprR\003not\032!\n\004Flag\022\031\n\010f" +
+      "lag_sid\030\001 \001(\003R\007flagSid*=\n\014CategoryType\022\013" +
+      "\n\007INVALID\020\000\022\017\n\013SKILL_CALLS\020\001\022\017\n\013MANUAL_D" +
+      "IAL\020\002*8\n\016EvaluationType\022\023\n\017EVALUATE_MANU" +
+      "AL\020\000\022\021\n\rEVALUATE_AUTO\020\001*V\n\tScoreType\022\024\n\020" +
+      "SCORE_SIMPLE_SUM\020\000\022\026\n\022SCORE_WEIGHTED_SUM" +
+      "\020\001\022\033\n\027SCORE_EVEN_WEIGHTED_SUM\020\002*C\n\010FailT" +
+      "ype\022\021\n\rFAIL_QUESTION\020\000\022\020\n\014FAIL_SECTION\020\001" +
+      "\022\022\n\016FAIL_SCORECARD\020\002*\267\001\n\016ScorecardState\022" +
+      "\026\n\022SCORECARD_IS_DRAFT\020\000\022\026\n\022SCORECARD_IS_" +
+      "READY\020\001\022\027\n\023SCORECARD_IS_IN_USE\020\002\022\031\n\025SCOR" +
+      "ECARD_IS_TEMPLATE\020\003\022\037\n\033SCORECARD_IS_READ" +
+      "Y_DISABLED\020\004\022 \n\034SCORECARD_IS_IN_USE_DISA" +
+      "BLED\020\005*[\n\017EvaluationState\022\032\n\026EVALUATION_" +
+      "IN_PROGRESS\020\000\022\025\n\021EVALUATION_PASSED\020\001\022\025\n\021" +
+      "EVALUATION_FAILED\020\002*`\n\tRiskLevel\022\023\n\017RISK" +
+      "_LEVEL_NONE\020\000\022\022\n\016RISK_LEVEL_LOW\020\001\022\025\n\021RIS" +
+      "K_LEVEL_MEDIUM\020\002\022\023\n\017RISK_LEVEL_HIGH\020\003B}\n" +
+      "\035com.tcn.cloud.api.api.commonsB\017Scorecar" +
+      "dsProtoP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Comm" +
+      "ons\342\002\027Api\\Commons\\GPBMetadata\352\002\014Api::Com" +
+      "monsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -401,7 +401,7 @@ public final class ScorecardsProto {
     internal_static_api_commons_Scorecard_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_commons_Scorecard_descriptor,
-        new java.lang.String[] { "ScorecardId", "AuthorId", "Title", "Description", "PassScore", "ScoreType", "EvaluationType", "AllowFeedback", "DistributeWeights", "Category", "Sections", "Version", "State", "IsAdHoc", "CustomFieldKeys", "CallType", });
+        new java.lang.String[] { "ScorecardId", "AuthorId", "Title", "Description", "PassScore", "ScoreType", "EvaluationType", "AllowFeedback", "DistributeWeights", "Category", "Sections", "Version", "State", "IsAdHoc", "CustomFieldKeys", "CallTypes", });
     internal_static_api_commons_AutoQuestion_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_api_commons_AutoQuestion_fieldAccessorTable = new
