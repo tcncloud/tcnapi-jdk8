@@ -659,727 +659,739 @@ public final class SmsapiProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\030api/v0alpha/smsapi.proto\022\013api.v0alpha\032" +
-      "\025api/commons/sms.proto\032\034google/api/annot" +
-      "ations.proto\032\037google/protobuf/timestamp." +
-      "proto\032\036google/protobuf/wrappers.proto\"\025\n" +
-      "\023ListSmsTemplatesReq\"u\n\023ListSmsTemplates" +
-      "Res\022^\n\031sms_template_with_intents\030\001 \003(\0132#" +
-      ".api.v0alpha.SmsTemplateWithIntentsR\026sms" +
-      "TemplateWithIntents\"\247\001\n\026SmsTemplateWithI" +
-      "ntents\022;\n\014sms_template\030\001 \001(\0132\030.api.v0alp" +
-      "ha.SmsTemplateR\013smsTemplate\022P\n\024sms_inten" +
-      "t_templates\030\002 \003(\0132\036.api.v0alpha.SmsInten" +
-      "tTemplateR\022smsIntentTemplates\"\220\001\n\013SmsTem" +
-      "plate\022(\n\020sms_template_sid\030\001 \001(\003R\016smsTemp" +
-      "lateSid\022\030\n\007message\030\004 \001(\tR\007message\022=\n\014las" +
-      "t_updated\030\005 \001(\0132\032.google.protobuf.Timest" +
-      "ampR\013lastUpdated\"g\n\024CreateSmsTemplateReq" +
-      "\022\030\n\007message\030\001 \001(\tR\007message\0225\n\027sms_intent" +
-      "_template_sid\030\002 \003(\003R\024smsIntentTemplateSi" +
-      "d\"@\n\024CreateSmsTemplateRes\022(\n\020sms_templat" +
-      "e_sid\030\001 \001(\003R\016smsTemplateSid\"\221\001\n\024UpdateSm" +
-      "sTemplateReq\022(\n\020sms_template_sid\030\001 \001(\003R\016" +
-      "smsTemplateSid\022\030\n\007message\030\002 \001(\tR\007message" +
-      "\0225\n\027sms_intent_template_sid\030\003 \003(\003R\024smsIn" +
-      "tentTemplateSid\".\n\024UpdateSmsTemplateRes\022" +
-      "\026\n\006result\030\001 \001(\010R\006result\"@\n\024DeleteSmsTemp" +
-      "lateReq\022(\n\020sms_template_sid\030\001 \001(\003R\016smsTe" +
-      "mplateSid\".\n\024DeleteSmsTemplateRes\022\026\n\006res" +
-      "ult\030\001 \001(\010R\006result\"B\n\026GetSmsTemplateBySid" +
-      "Req\022(\n\020sms_template_sid\030\001 \001(\003R\016smsTempla" +
-      "teSid\"\247\001\n\026GetSmsTemplateBySidRes\022;\n\014sms_" +
-      "template\030\001 \001(\0132\030.api.v0alpha.SmsTemplate" +
-      "R\013smsTemplate\022P\n\024sms_intent_templates\030\002 " +
-      "\003(\0132\036.api.v0alpha.SmsIntentTemplateR\022sms" +
-      "IntentTemplates\"\306\002\n\021SmsIntentTemplate\0225\n" +
-      "\027sms_intent_template_sid\030\001 \001(\003R\024smsInten" +
-      "tTemplateSid\022\022\n\004name\030\002 \001(\tR\004name\022 \n\013desc" +
-      "ription\030\003 \001(\tR\013description\022\035\n\naction_key" +
-      "\030\004 \001(\tR\tactionKey\022#\n\raction_detail\030\005 \001(\t" +
-      "R\014actionDetail\022%\n\016action_trigger\030\006 \001(\tR\r" +
-      "actionTrigger\022\032\n\010priority\030\007 \001(\003R\010priorit" +
-      "y\022=\n\014last_updated\030\010 \001(\0132\032.google.protobu" +
-      "f.TimestampR\013lastUpdated\"\033\n\031ListSmsInten" +
-      "tTemplatesReq\"k\n\031ListSmsIntentTemplatesR" +
-      "es\022N\n\023sms_intent_template\030\001 \003(\0132\036.api.v0" +
-      "alpha.SmsIntentTemplateR\021smsIntentTempla" +
-      "te\"4\n\032UpdateSmsIntentTemplateRes\022\026\n\006resu" +
-      "lt\030\001 \001(\010R\006result\"S\n\032DeleteSmsIntentTempl" +
-      "ateReq\0225\n\027sms_intent_template_sid\030\002 \001(\003R" +
-      "\024smsIntentTemplateSid\"4\n\032DeleteSmsIntent" +
-      "TemplateRes\022\026\n\006result\030\001 \001(\010R\006result\"S\n\032C" +
-      "reateSmsIntentTemplateRes\0225\n\027sms_intent_" +
-      "template_sid\030\001 \001(\003R\024smsIntentTemplateSid" +
-      "\"U\n\034GetSmsIntentTemplateBySidReq\0225\n\027sms_" +
-      "intent_template_sid\030\002 \001(\003R\024smsIntentTemp" +
-      "lateSid\"\221\003\n\nSmsNumbers\022$\n\016sms_number_sid" +
-      "\030\001 \001(\003R\014smsNumberSid\022\037\n\013country_sid\030\002 \001(" +
-      "\003R\ncountrySid\022\026\n\006number\030\003 \001(\tR\006number\022#\n" +
-      "\rprovider_name\030\004 \001(\tR\014providerName\022\024\n\005no" +
-      "tes\030\005 \001(\tR\005notes\022A\n\rivr_reference\030\006 \001(\0132" +
-      "\034.google.protobuf.StringValueR\014ivrRefere" +
-      "nce\022\037\n\013client_name\030\007 \001(\tR\nclientName\022\036\n\n" +
-      "isTollFree\030\010 \001(\010R\nisTollFree\022&\n\017src_numb" +
-      "er_type\030\t \001(\tR\rsrcNumberType\022=\n\014last_upd" +
-      "ated\030\n \001(\0132\032.google.protobuf.TimestampR\013" +
-      "lastUpdated\"\031\n\027ListSmsSourceNumbersReq\"S" +
-      "\n\027ListSmsSourceNumbersRes\0228\n\013sms_numbers" +
-      "\030\001 \003(\0132\027.api.v0alpha.SmsNumbersR\nsmsNumb" +
-      "ers\"\201\002\n\030UpdateSmsSourceNumberReq\022$\n\016sms_" +
-      "number_sid\030\001 \001(\003R\014smsNumberSid\022\037\n\013countr" +
-      "y_sid\030\002 \001(\003R\ncountrySid\022\026\n\006number\030\003 \001(\tR" +
-      "\006number\022#\n\rprovider_name\030\004 \001(\tR\014provider" +
-      "Name\022\024\n\005notes\030\005 \001(\tR\005notes\022#\n\rivr_refere" +
-      "nce\030\006 \001(\tR\014ivrReference\022&\n\017src_number_ty" +
-      "pe\030\007 \001(\tR\rsrcNumberType\"2\n\030UpdateSmsSour" +
-      "ceNumberRes\022\026\n\006result\030\001 \001(\010R\006result\"@\n\030D" +
-      "eleteSmsSourceNumberReq\022$\n\016sms_number_si" +
-      "d\030\002 \001(\003R\014smsNumberSid\"2\n\030DeleteSmsSource" +
-      "NumberRes\022\026\n\006result\030\001 \001(\010R\006result\"\333\001\n\030Cr" +
-      "eateSmsSourceNumberReq\022\037\n\013country_sid\030\001 " +
-      "\001(\003R\ncountrySid\022\026\n\006number\030\002 \001(\tR\006number\022" +
-      "#\n\rprovider_name\030\003 \001(\tR\014providerName\022\024\n\005" +
-      "notes\030\004 \001(\tR\005notes\022#\n\rivr_reference\030\005 \001(" +
-      "\tR\014ivrReference\022&\n\017src_number_type\030\006 \001(\t" +
-      "R\rsrcNumberType\"@\n\030CreateSmsSourceNumber" +
-      "Res\022$\n\016sms_number_sid\030\001 \001(\003R\014smsNumberSi" +
-      "d\"B\n\032GetSmsSourceNumberBySidReq\022$\n\016sms_n" +
-      "umber_sid\030\002 \001(\003R\014smsNumberSid\"[\n\026SendSms" +
-      "NotificationReq\022\030\n\007message\030\002 \001(\tR\007messag" +
-      "e\022\'\n\020to_phone_num_arr\030\003 \003(\tR\rtoPhoneNumA" +
-      "rr\"4\n\026SendSmsNotificationRes\022\032\n\010response" +
-      "\030\001 \001(\tR\010response\"\274\001\n\030ListSmsGroupByFilte" +
-      "rsReq\022;\n\013search_from\030\002 \001(\0132\032.google.prot" +
-      "obuf.TimestampR\nsearchFrom\0227\n\tsearch_to\030" +
-      "\003 \001(\0132\032.google.protobuf.TimestampR\010searc" +
-      "hTo\022\026\n\006status\030\004 \001(\tR\006status\022\022\n\004name\030\005 \001(" +
-      "\tR\004name\"\355\001\n\023SmsGroupWithIntents\022F\n\022sms_g" +
-      "roup_info_res\030\001 \001(\0132\031.api.v0alpha.SmsGro" +
-      "upInfoR\017smsGroupInfoRes\022G\n\021sms_intent_gr" +
-      "oups\030\002 \003(\0132\033.api.v0alpha.SmsIntentGroupR" +
-      "\017smsIntentGroups\022E\n\020sms_mam_settings\030\003 \001" +
-      "(\0132\033.api.v0alpha.SmsMamSettingsR\016smsMamS" +
-      "ettings\"q\n\030ListSmsGroupByFiltersRes\022U\n\026s" +
-      "ms_group_with_intents\030\001 \003(\0132 .api.v0alph" +
-      "a.SmsGroupWithIntentsR\023smsGroupWithInten" +
-      "ts\"J\n\033ListSmsGroupsByGroupSidsReq\022+\n\022sms" +
-      "_group_sids_arr\030\002 \003(\003R\017smsGroupSidsArr\"t" +
-      "\n\033ListSmsGroupsByGroupSidsRes\022U\n\026sms_gro" +
-      "up_with_intents\030\001 \003(\0132 .api.v0alpha.SmsG" +
-      "roupWithIntentsR\023smsGroupWithIntents\"\231\007\n" +
-      "\014SmsGroupInfo\022\"\n\rsms_group_sid\030\001 \001(\003R\013sm" +
-      "sGroupSid\022\037\n\013country_sid\030\002 \001(\003R\ncountryS" +
-      "id\022&\n\017sms_message_sid\030\003 \001(\003R\rsmsMessageS" +
-      "id\022\022\n\004name\030\004 \001(\tR\004name\0229\n\nstart_time\030\005 \001" +
-      "(\0132\032.google.protobuf.TimestampR\tstartTim" +
-      "e\0227\n\tstop_time\030\006 \001(\0132\032.google.protobuf.T" +
-      "imestampR\010stopTime\022(\n\020sends_per_minute\030\007" +
-      " \001(\003R\016sendsPerMinute\022\026\n\006status\030\010 \001(\003R\006st" +
-      "atus\022\035\n\ntotal_cost\030\t \001(\001R\ttotalCost\022\035\n\nc" +
-      "aller_ids\030\n \003(\tR\tcallerIds\022\037\n\013client_nam" +
-      "e\030\013 \001(\tR\nclientName\022\'\n\017total_scheduled\030\014" +
-      " \001(\003R\016totalScheduled\022\'\n\017total_completed\030" +
-      "\r \001(\003R\016totalCompleted\022O\n\025contact_group_s" +
-      "id_str\030\016 \001(\0132\034.google.protobuf.StringVal" +
-      "ueR\022contactGroupSidStr\022*\n\021contact_group_" +
-      "sid\030\017 \001(\003R\017contactGroupSid\022@\n\rphone_num_" +
-      "col\030\020 \001(\0132\034.google.protobuf.StringValueR" +
-      "\013phoneNumCol\022L\n\023use_tz_restrictions\030\021 \001(" +
-      "\0132\034.google.protobuf.StringValueR\021useTzRe" +
-      "strictions\022#\n\rmessage_count\030\022 \001(\005R\014messa" +
-      "geCount\0220\n\024todays_message_count\030\023 \001(\005R\022t" +
-      "odaysMessageCount\022=\n\014date_created\030\024 \001(\0132" +
-      "\032.google.protobuf.TimestampR\013dateCreated" +
-      "\"I\n\032ListSmsTasksByGroupSidsReq\022+\n\022sms_gr" +
-      "oup_sids_arr\030\002 \003(\003R\017smsGroupSidsArr\"w\n\032L" +
-      "istSmsTasksByGroupSidsRes\022Y\n\030sms_task_in" +
-      "fo_with_reply\030\001 \003(\0132!.api.v0alpha.SmsTas" +
-      "kInfoWithReplyR\024smsTaskInfoWithReply\"G\n!" +
-      "ListSmsTasksWithDetailedStatusReq\022\"\n\rsms" +
-      "_group_sid\030\002 \001(\003R\013smsGroupSid\"~\n!ListSms" +
-      "TasksWithDetailedStatusRes\022Y\n\030sms_task_i" +
-      "nfo_with_reply\030\001 \003(\0132!.api.v0alpha.SmsTa" +
-      "skInfoWithReplyR\024smsTaskInfoWithReply\"\261\001" +
-      "\n\024SmsTaskInfoWithReply\022F\n\021sms_task_info_" +
-      "res\030\001 \001(\0132\033.api.v0alpha.SmsTaskInfoResR\016" +
-      "smsTaskInfoRes\022Q\n\024sms_received_replies\030\002" +
-      " \003(\0132\037.api.v0alpha.SmsReceivedRepliesR\022s" +
-      "msReceivedReplies\"\321\004\n\016SmsTaskInfoRes\022 \n\014" +
-      "sms_task_sid\030\001 \001(\003R\nsmsTaskSid\022\"\n\rsms_gr" +
-      "oup_sid\030\002 \001(\003R\013smsGroupSid\022\'\n\017delivery_s" +
-      "tatus\030\003 \001(\003R\016deliveryStatus\0226\n\027delivery_" +
-      "status_message\030\004 \001(\tR\025deliveryStatusMess" +
-      "age\022\022\n\004data\030\005 \001(\tR\004data\022\022\n\004cost\030\006 \001(\001R\004c" +
-      "ost\0227\n\010msg_uuid\030\007 \001(\0132\034.google.protobuf." +
-      "StringValueR\007msgUuid\0225\n\010msg_time\030\010 \001(\0132\032" +
-      ".google.protobuf.TimestampR\007msgTime\022\026\n\006s" +
-      "tatus\030\t \001(\003R\006status\022@\n\rphone_num_col\030\n \001" +
-      "(\0132\034.google.protobuf.StringValueR\013phoneN" +
-      "umCol\022\024\n\005units\030\013 \001(\003R\005units\022C\n\017sms_task_" +
-      "parent\030\014 \001(\0132\033.google.protobuf.Int64Valu" +
-      "eR\rsmsTaskParent\022K\n\022mam_agent_response\030\r" +
-      " \001(\0132\035.api.v0alpha.MamAgentResponseR\020mam" +
-      "AgentResponse\"\352\003\n\022SmsReceivedReplies\0227\n\030" +
-      "sms_received_replies_sid\030\001 \001(\003R\025smsRecei" +
-      "vedRepliesSid\022 \n\014sms_task_sid\030\002 \001(\003R\nsms" +
-      "TaskSid\022\035\n\nsrc_number\030\003 \001(\tR\tsrcNumber\022\035" +
-      "\n\ndst_number\030\004 \001(\tR\tdstNumber\022\031\n\010msg_uui" +
-      "d\030\005 \001(\tR\007msgUuid\022%\n\016received_reply\030\006 \001(\t" +
-      "R\rreceivedReply\022?\n\rreceived_time\030\007 \001(\0132\032" +
-      ".google.protobuf.TimestampR\014receivedTime" +
-      "\022\'\n\017analysis_report\030\010 \001(\tR\016analysisRepor" +
-      "t\022/\n\024inbound_sms_group_id\030\t \001(\tR\021inbound" +
-      "SmsGroupId\022\022\n\004cost\030\n \001(\001R\004cost\0224\n\006status" +
-      "\030\013 \001(\0162\034.api.commons.SMSIBTaskStatusR\006st" +
-      "atus\022\024\n\005units\030\014 \001(\003R\005units\"+\n\021UpdateSmsG" +
-      "roupRes\022\026\n\006result\030\001 \001(\010R\006result\"\374\003\n\016Sche" +
-      "duleSmsReq\022(\n\020sms_template_sid\030\001 \001(\003R\016sm" +
-      "sTemplateSid\022!\n\014initial_pace\030\002 \001(\003R\013init" +
-      "ialPace\022,\n\022selected_phone_col\030\003 \001(\tR\020sel" +
-      "ectedPhoneCol\022#\n\rsource_number\030\004 \001(\tR\014so" +
-      "urceNumber\022\037\n\013country_sid\030\005 \001(\003R\ncountry" +
-      "Sid\0223\n\025timezone_restrictions\030\006 \001(\010R\024time" +
-      "zoneRestrictions\022\035\n\ngroup_name\030\007 \001(\tR\tgr" +
-      "oupName\022*\n\021contact_group_sid\030\010 \001(\003R\017cont" +
-      "actGroupSid\0229\n\nstart_time\030\t \001(\0132\032.google" +
-      ".protobuf.TimestampR\tstartTime\0227\n\tstop_t" +
-      "ime\030\n \001(\0132\032.google.protobuf.TimestampR\010s" +
-      "topTime\0225\n\027selected_mam_hunt_group\030\013 \001(\t" +
-      "R\024selectedMamHuntGroup\"4\n\016ScheduleSmsRes" +
-      "\022\"\n\rsms_group_sid\030\001 \001(\003R\013smsGroupSid\"\261\001\n" +
-      "\027ResendUnconnectedSmsReq\022\"\n\rsms_group_si" +
-      "d\030\001 \001(\003R\013smsGroupSid\0229\n\nstart_time\030\002 \001(\013" +
-      "2\032.google.protobuf.TimestampR\tstartTime\022" +
-      "7\n\tstop_time\030\003 \001(\0132\032.google.protobuf.Tim" +
-      "estampR\010stopTime\"1\n\027ResendUnconnectedSms" +
-      "Res\022\026\n\006result\030\001 \001(\010R\006result\"\204\002\n\024SmsActiv" +
-      "itySearchReq\022\033\n\tto_number\030\001 \001(\tR\010toNumbe" +
-      "r\022\035\n\nsrc_number\030\002 \001(\tR\tsrcNumber\0227\n\tfrom" +
-      "_date\030\003 \001(\0132\032.google.protobuf.TimestampR" +
-      "\010fromDate\0223\n\007to_date\030\004 \001(\0132\032.google.prot" +
-      "obuf.TimestampR\006toDate\022%\n\016entire_history" +
-      "\030\005 \001(\010R\rentireHistory\022\033\n\tsent_only\030\006 \001(\010" +
-      "R\010sentOnly\"\265\001\n\024SmsActivitySearchRes\022U\n\026s" +
-      "ms_group_with_intents\030\001 \003(\0132 .api.v0alph" +
-      "a.SmsGroupWithIntentsR\023smsGroupWithInten" +
-      "ts\022F\n\021sms_task_info_res\030\002 \003(\0132\033.api.v0al" +
-      "pha.SmsTaskInfoResR\016smsTaskInfoRes\"\212\002\n\022I" +
-      "nboundSmsTemplate\0225\n\027inbound_sms_templat" +
-      "e_id\030\001 \001(\tR\024inboundSmsTemplateId\022$\n\016sms_" +
-      "number_sid\030\002 \001(\003R\014smsNumberSid\022\022\n\004name\030\003" +
-      " \001(\tR\004name\022D\n\017report_settings\030\004 \001(\0132\033.ap" +
-      "i.v0alpha.ReportSettingsR\016reportSettings" +
-      "\022=\n\014last_updated\030\005 \001(\0132\032.google.protobuf" +
-      ".TimestampR\013lastUpdated\"\034\n\032ListInboundSm" +
-      "sTemplatesReq\"\222\001\n\032ListInboundSmsTemplate" +
-      "sRes\022t\n!inbound_sms_template_with_intent" +
-      "s\030\001 \003(\0132*.api.v0alpha.InboundSmsTemplate" +
-      "WithIntentsR\035inboundSmsTemplateWithInten" +
-      "ts\"\304\001\n\035InboundSmsTemplateWithIntents\022Q\n\024" +
-      "inbound_sms_template\030\001 \001(\0132\037.api.v0alpha" +
-      ".InboundSmsTemplateR\022inboundSmsTemplate\022" +
-      "P\n\024sms_intent_templates\030\002 \003(\0132\036.api.v0al" +
-      "pha.SmsIntentTemplateR\022smsIntentTemplate" +
-      "s\"\213\002\n\033UpdateInboundSmsTemplateReq\0225\n\027inb" +
-      "ound_sms_template_id\030\001 \001(\tR\024inboundSmsTe" +
-      "mplateId\022$\n\016sms_number_sid\030\002 \001(\003R\014smsNum" +
-      "berSid\022\022\n\004name\030\003 \001(\tR\004name\0225\n\027sms_intent" +
-      "_template_sid\030\006 \003(\003R\024smsIntentTemplateSi" +
-      "d\022D\n\017report_settings\030\007 \001(\0132\033.api.v0alpha" +
-      ".ReportSettingsR\016reportSettings\"5\n\033Updat" +
-      "eInboundSmsTemplateRes\022\026\n\006result\030\001 \001(\010R\006" +
-      "result\"T\n\033DeleteInboundSmsTemplateReq\0225\n" +
-      "\027inbound_sms_template_id\030\001 \001(\tR\024inboundS" +
-      "msTemplateId\"5\n\033DeleteInboundSmsTemplate" +
-      "Res\022\026\n\006result\030\001 \001(\010R\006result\"\324\001\n\033CreateIn" +
-      "boundSmsTemplateReq\022$\n\016sms_number_sid\030\001 " +
-      "\001(\003R\014smsNumberSid\022\022\n\004name\030\002 \001(\tR\004name\0225\n" +
-      "\027sms_intent_template_sid\030\005 \003(\003R\024smsInten" +
-      "tTemplateSid\022D\n\017report_settings\030\006 \001(\0132\033." +
-      "api.v0alpha.ReportSettingsR\016reportSettin" +
-      "gs\"T\n\033CreateInboundSmsTemplateRes\0225\n\027inb" +
-      "ound_sms_template_id\030\001 \001(\tR\024inboundSmsTe" +
-      "mplateId\"U\n\034GetInboundSmsTemplateByIdReq" +
-      "\0225\n\027inbound_sms_template_id\030\003 \001(\tR\024inbou" +
-      "ndSmsTemplateId\"\303\001\n\034GetInboundSmsTemplat" +
-      "eByIdRes\022Q\n\024inbound_sms_template\030\001 \001(\0132\037" +
-      ".api.v0alpha.InboundSmsTemplateR\022inbound" +
-      "SmsTemplate\022P\n\024sms_intent_templates\030\002 \003(" +
-      "\0132\036.api.v0alpha.SmsIntentTemplateR\022smsIn" +
-      "tentTemplates\"\270\001\n\032InboundSmsGroupWithInt" +
-      "ents\022H\n\021inbound_sms_group\030\001 \001(\0132\034.api.v0" +
-      "alpha.InboundSmsGroupR\017inboundSmsGroup\022P" +
+      "\027annotations/authz.proto\032\025api/commons/sm" +
+      "s.proto\032\034google/api/annotations.proto\032\037g" +
+      "oogle/protobuf/timestamp.proto\032\036google/p" +
+      "rotobuf/wrappers.proto\"\025\n\023ListSmsTemplat" +
+      "esReq\"u\n\023ListSmsTemplatesRes\022^\n\031sms_temp" +
+      "late_with_intents\030\001 \003(\0132#.api.v0alpha.Sm" +
+      "sTemplateWithIntentsR\026smsTemplateWithInt" +
+      "ents\"\247\001\n\026SmsTemplateWithIntents\022;\n\014sms_t" +
+      "emplate\030\001 \001(\0132\030.api.v0alpha.SmsTemplateR" +
+      "\013smsTemplate\022P\n\024sms_intent_templates\030\002 \003" +
+      "(\0132\036.api.v0alpha.SmsIntentTemplateR\022smsI" +
+      "ntentTemplates\"\220\001\n\013SmsTemplate\022(\n\020sms_te" +
+      "mplate_sid\030\001 \001(\003R\016smsTemplateSid\022\030\n\007mess" +
+      "age\030\004 \001(\tR\007message\022=\n\014last_updated\030\005 \001(\013" +
+      "2\032.google.protobuf.TimestampR\013lastUpdate" +
+      "d\"g\n\024CreateSmsTemplateReq\022\030\n\007message\030\001 \001" +
+      "(\tR\007message\0225\n\027sms_intent_template_sid\030\002" +
+      " \003(\003R\024smsIntentTemplateSid\"@\n\024CreateSmsT" +
+      "emplateRes\022(\n\020sms_template_sid\030\001 \001(\003R\016sm" +
+      "sTemplateSid\"\221\001\n\024UpdateSmsTemplateReq\022(\n" +
+      "\020sms_template_sid\030\001 \001(\003R\016smsTemplateSid\022" +
+      "\030\n\007message\030\002 \001(\tR\007message\0225\n\027sms_intent_" +
+      "template_sid\030\003 \003(\003R\024smsIntentTemplateSid" +
+      "\".\n\024UpdateSmsTemplateRes\022\026\n\006result\030\001 \001(\010" +
+      "R\006result\"@\n\024DeleteSmsTemplateReq\022(\n\020sms_" +
+      "template_sid\030\001 \001(\003R\016smsTemplateSid\".\n\024De" +
+      "leteSmsTemplateRes\022\026\n\006result\030\001 \001(\010R\006resu" +
+      "lt\"B\n\026GetSmsTemplateBySidReq\022(\n\020sms_temp" +
+      "late_sid\030\001 \001(\003R\016smsTemplateSid\"\247\001\n\026GetSm" +
+      "sTemplateBySidRes\022;\n\014sms_template\030\001 \001(\0132" +
+      "\030.api.v0alpha.SmsTemplateR\013smsTemplate\022P" +
       "\n\024sms_intent_templates\030\002 \003(\0132\036.api.v0alp" +
       "ha.SmsIntentTemplateR\022smsIntentTemplates" +
-      "\"\331\004\n\017InboundSmsGroup\022/\n\024inbound_sms_grou" +
-      "p_id\030\001 \001(\tR\021inboundSmsGroupId\022$\n\016sms_num" +
-      "ber_sid\030\002 \001(\003R\014smsNumberSid\022\022\n\004name\030\003 \001(" +
-      "\tR\004name\0225\n\006status\030\004 \001(\0162\035.api.commons.SM" +
-      "SIBGroupStatusR\006status\0229\n\nstart_time\030\005 \001" +
-      "(\0132\032.google.protobuf.TimestampR\tstartTim" +
-      "e\0227\n\tstop_time\030\006 \001(\0132\032.google.protobuf.T" +
-      "imestampR\010stopTime\022\035\n\ntotal_cost\030\007 \001(\001R\t" +
-      "totalCost\0225\n\027inbound_sms_template_id\030\010 \001" +
-      "(\tR\024inboundSmsTemplateId\022#\n\rmessage_coun" +
-      "t\030\t \001(\005R\014messageCount\0220\n\024todays_message_" +
-      "count\030\n \001(\005R\022todaysMessageCount\022D\n\017repor" +
-      "t_settings\030\013 \001(\0132\033.api.v0alpha.ReportSet" +
-      "tingsR\016reportSettings\022=\n\014date_created\030\014 " +
-      "\001(\0132\032.google.protobuf.TimestampR\013dateCre" +
-      "ated\"\031\n\027ListInboundSmsGroupsReq\"\206\001\n\027List" +
-      "InboundSmsGroupsRes\022k\n\036inbound_sms_group" +
-      "_with_intents\030\001 \003(\0132\'.api.v0alpha.Inboun" +
-      "dSmsGroupWithIntentsR\032inboundSmsGroupWit" +
-      "hIntents\"\314\003\n\030UpdateInboundSmsGroupReq\022/\n" +
-      "\024inbound_sms_group_id\030\001 \001(\tR\021inboundSmsG" +
-      "roupId\022$\n\016sms_number_sid\030\002 \001(\003R\014smsNumbe" +
-      "rSid\022\022\n\004name\030\003 \001(\tR\004name\0225\n\006status\030\006 \001(\016" +
-      "2\035.api.commons.SMSIBGroupStatusR\006status\022" +
-      "9\n\nstart_time\030\007 \001(\0132\032.google.protobuf.Ti" +
-      "mestampR\tstartTime\0227\n\tstop_time\030\010 \001(\0132\032." +
-      "google.protobuf.TimestampR\010stopTime\022\035\n\nt" +
-      "otal_cost\030\t \001(\001R\ttotalCost\0225\n\027inbound_sm" +
-      "s_template_id\030\n \001(\tR\024inboundSmsTemplateI" +
-      "d\022D\n\017report_settings\030\013 \001(\0132\033.api.v0alpha" +
-      ".ReportSettingsR\016reportSettings\"2\n\030Updat" +
-      "eInboundSmsGroupRes\022\026\n\006result\030\001 \001(\010R\006res" +
-      "ult\"K\n\030DeleteInboundSmsGroupReq\022/\n\024inbou" +
-      "nd_sms_group_id\030\001 \001(\tR\021inboundSmsGroupId" +
-      "\"2\n\030DeleteInboundSmsGroupRes\022\026\n\006result\030\001" +
-      " \001(\010R\006result\"\233\003\n\030CreateInboundSmsGroupRe" +
-      "q\022$\n\016sms_number_sid\030\001 \001(\003R\014smsNumberSid\022" +
-      "\022\n\004name\030\002 \001(\tR\004name\0225\n\006status\030\005 \001(\0162\035.ap" +
-      "i.commons.SMSIBGroupStatusR\006status\0229\n\nst" +
-      "art_time\030\006 \001(\0132\032.google.protobuf.Timesta" +
-      "mpR\tstartTime\0227\n\tstop_time\030\007 \001(\0132\032.googl" +
-      "e.protobuf.TimestampR\010stopTime\022\035\n\ntotal_" +
-      "cost\030\010 \001(\001R\ttotalCost\0225\n\027inbound_sms_tem" +
-      "plate_id\030\t \001(\tR\024inboundSmsTemplateId\022D\n\017" +
-      "report_settings\030\n \001(\0132\033.api.v0alpha.Repo" +
-      "rtSettingsR\016reportSettings\"K\n\030CreateInbo" +
-      "undSmsGroupRes\022/\n\024inbound_sms_group_id\030\001" +
-      " \001(\tR\021inboundSmsGroupId\"L\n\031GetInboundSms" +
-      "GroupByIdReq\022/\n\024inbound_sms_group_id\030\003 \001" +
-      "(\tR\021inboundSmsGroupId\"\210\001\n\031GetInboundSmsG" +
-      "roupByIdRes\022k\n\036inbound_sms_group_with_in" +
-      "tents\030\001 \001(\0132\'.api.v0alpha.InboundSmsGrou" +
-      "pWithIntentsR\032inboundSmsGroupWithIntents" +
-      "\"\037\n\035ListActiveInboundSmsGroupsReq\"\214\001\n\035Li" +
-      "stActiveInboundSmsGroupsRes\022k\n\036inbound_s" +
-      "ms_group_with_intents\030\001 \003(\0132\'.api.v0alph" +
-      "a.InboundSmsGroupWithIntentsR\032inboundSms" +
-      "GroupWithIntents\"\303\001\n\037ListInboundSmsGroup" +
-      "ByFiltersReq\022;\n\013search_from\030\003 \001(\0132\032.goog" +
-      "le.protobuf.TimestampR\nsearchFrom\0227\n\tsea" +
-      "rch_to\030\004 \001(\0132\032.google.protobuf.Timestamp" +
-      "R\010searchTo\022\026\n\006status\030\005 \001(\tR\006status\022\022\n\004na" +
-      "me\030\006 \001(\tR\004name\"\216\001\n\037ListInboundSmsGroupBy" +
-      "FiltersRes\022k\n\036inbound_sms_group_with_int" +
-      "ents\030\001 \003(\0132\'.api.v0alpha.InboundSmsGroup" +
-      "WithIntentsR\032inboundSmsGroupWithIntents\"" +
-      "]\n!ListInboundSmsGroupsByGroupIdsReq\0228\n\031" +
-      "inbound_sms_group_ids_arr\030\001 \003(\tR\025inbound" +
-      "SmsGroupIdsArr\"\220\001\n!ListInboundSmsGroupsB" +
-      "yGroupIdsRes\022k\n\036inbound_sms_group_with_i" +
+      "\"\306\002\n\021SmsIntentTemplate\0225\n\027sms_intent_tem" +
+      "plate_sid\030\001 \001(\003R\024smsIntentTemplateSid\022\022\n" +
+      "\004name\030\002 \001(\tR\004name\022 \n\013description\030\003 \001(\tR\013" +
+      "description\022\035\n\naction_key\030\004 \001(\tR\tactionK" +
+      "ey\022#\n\raction_detail\030\005 \001(\tR\014actionDetail\022" +
+      "%\n\016action_trigger\030\006 \001(\tR\ractionTrigger\022\032" +
+      "\n\010priority\030\007 \001(\003R\010priority\022=\n\014last_updat" +
+      "ed\030\010 \001(\0132\032.google.protobuf.TimestampR\013la" +
+      "stUpdated\"\033\n\031ListSmsIntentTemplatesReq\"k" +
+      "\n\031ListSmsIntentTemplatesRes\022N\n\023sms_inten" +
+      "t_template\030\001 \003(\0132\036.api.v0alpha.SmsIntent" +
+      "TemplateR\021smsIntentTemplate\"4\n\032UpdateSms" +
+      "IntentTemplateRes\022\026\n\006result\030\001 \001(\010R\006resul" +
+      "t\"S\n\032DeleteSmsIntentTemplateReq\0225\n\027sms_i" +
+      "ntent_template_sid\030\002 \001(\003R\024smsIntentTempl" +
+      "ateSid\"4\n\032DeleteSmsIntentTemplateRes\022\026\n\006" +
+      "result\030\001 \001(\010R\006result\"S\n\032CreateSmsIntentT" +
+      "emplateRes\0225\n\027sms_intent_template_sid\030\001 " +
+      "\001(\003R\024smsIntentTemplateSid\"U\n\034GetSmsInten" +
+      "tTemplateBySidReq\0225\n\027sms_intent_template" +
+      "_sid\030\002 \001(\003R\024smsIntentTemplateSid\"\221\003\n\nSms" +
+      "Numbers\022$\n\016sms_number_sid\030\001 \001(\003R\014smsNumb" +
+      "erSid\022\037\n\013country_sid\030\002 \001(\003R\ncountrySid\022\026" +
+      "\n\006number\030\003 \001(\tR\006number\022#\n\rprovider_name\030" +
+      "\004 \001(\tR\014providerName\022\024\n\005notes\030\005 \001(\tR\005note" +
+      "s\022A\n\rivr_reference\030\006 \001(\0132\034.google.protob" +
+      "uf.StringValueR\014ivrReference\022\037\n\013client_n" +
+      "ame\030\007 \001(\tR\nclientName\022\036\n\nisTollFree\030\010 \001(" +
+      "\010R\nisTollFree\022&\n\017src_number_type\030\t \001(\tR\r" +
+      "srcNumberType\022=\n\014last_updated\030\n \001(\0132\032.go" +
+      "ogle.protobuf.TimestampR\013lastUpdated\"\031\n\027" +
+      "ListSmsSourceNumbersReq\"S\n\027ListSmsSource" +
+      "NumbersRes\0228\n\013sms_numbers\030\001 \003(\0132\027.api.v0" +
+      "alpha.SmsNumbersR\nsmsNumbers\"\201\002\n\030UpdateS" +
+      "msSourceNumberReq\022$\n\016sms_number_sid\030\001 \001(" +
+      "\003R\014smsNumberSid\022\037\n\013country_sid\030\002 \001(\003R\nco" +
+      "untrySid\022\026\n\006number\030\003 \001(\tR\006number\022#\n\rprov" +
+      "ider_name\030\004 \001(\tR\014providerName\022\024\n\005notes\030\005" +
+      " \001(\tR\005notes\022#\n\rivr_reference\030\006 \001(\tR\014ivrR" +
+      "eference\022&\n\017src_number_type\030\007 \001(\tR\rsrcNu" +
+      "mberType\"2\n\030UpdateSmsSourceNumberRes\022\026\n\006" +
+      "result\030\001 \001(\010R\006result\"@\n\030DeleteSmsSourceN" +
+      "umberReq\022$\n\016sms_number_sid\030\002 \001(\003R\014smsNum" +
+      "berSid\"2\n\030DeleteSmsSourceNumberRes\022\026\n\006re" +
+      "sult\030\001 \001(\010R\006result\"\333\001\n\030CreateSmsSourceNu" +
+      "mberReq\022\037\n\013country_sid\030\001 \001(\003R\ncountrySid" +
+      "\022\026\n\006number\030\002 \001(\tR\006number\022#\n\rprovider_nam" +
+      "e\030\003 \001(\tR\014providerName\022\024\n\005notes\030\004 \001(\tR\005no" +
+      "tes\022#\n\rivr_reference\030\005 \001(\tR\014ivrReference" +
+      "\022&\n\017src_number_type\030\006 \001(\tR\rsrcNumberType" +
+      "\"@\n\030CreateSmsSourceNumberRes\022$\n\016sms_numb" +
+      "er_sid\030\001 \001(\003R\014smsNumberSid\"B\n\032GetSmsSour" +
+      "ceNumberBySidReq\022$\n\016sms_number_sid\030\002 \001(\003" +
+      "R\014smsNumberSid\"[\n\026SendSmsNotificationReq" +
+      "\022\030\n\007message\030\002 \001(\tR\007message\022\'\n\020to_phone_n" +
+      "um_arr\030\003 \003(\tR\rtoPhoneNumArr\"4\n\026SendSmsNo" +
+      "tificationRes\022\032\n\010response\030\001 \001(\tR\010respons" +
+      "e\"\274\001\n\030ListSmsGroupByFiltersReq\022;\n\013search" +
+      "_from\030\002 \001(\0132\032.google.protobuf.TimestampR" +
+      "\nsearchFrom\0227\n\tsearch_to\030\003 \001(\0132\032.google." +
+      "protobuf.TimestampR\010searchTo\022\026\n\006status\030\004" +
+      " \001(\tR\006status\022\022\n\004name\030\005 \001(\tR\004name\"\355\001\n\023Sms" +
+      "GroupWithIntents\022F\n\022sms_group_info_res\030\001" +
+      " \001(\0132\031.api.v0alpha.SmsGroupInfoR\017smsGrou" +
+      "pInfoRes\022G\n\021sms_intent_groups\030\002 \003(\0132\033.ap" +
+      "i.v0alpha.SmsIntentGroupR\017smsIntentGroup" +
+      "s\022E\n\020sms_mam_settings\030\003 \001(\0132\033.api.v0alph" +
+      "a.SmsMamSettingsR\016smsMamSettings\"q\n\030List" +
+      "SmsGroupByFiltersRes\022U\n\026sms_group_with_i" +
+      "ntents\030\001 \003(\0132 .api.v0alpha.SmsGroupWithI" +
+      "ntentsR\023smsGroupWithIntents\"J\n\033ListSmsGr" +
+      "oupsByGroupSidsReq\022+\n\022sms_group_sids_arr" +
+      "\030\002 \003(\003R\017smsGroupSidsArr\"t\n\033ListSmsGroups" +
+      "ByGroupSidsRes\022U\n\026sms_group_with_intents" +
+      "\030\001 \003(\0132 .api.v0alpha.SmsGroupWithIntents" +
+      "R\023smsGroupWithIntents\"\231\007\n\014SmsGroupInfo\022\"" +
+      "\n\rsms_group_sid\030\001 \001(\003R\013smsGroupSid\022\037\n\013co" +
+      "untry_sid\030\002 \001(\003R\ncountrySid\022&\n\017sms_messa" +
+      "ge_sid\030\003 \001(\003R\rsmsMessageSid\022\022\n\004name\030\004 \001(" +
+      "\tR\004name\0229\n\nstart_time\030\005 \001(\0132\032.google.pro" +
+      "tobuf.TimestampR\tstartTime\0227\n\tstop_time\030" +
+      "\006 \001(\0132\032.google.protobuf.TimestampR\010stopT" +
+      "ime\022(\n\020sends_per_minute\030\007 \001(\003R\016sendsPerM" +
+      "inute\022\026\n\006status\030\010 \001(\003R\006status\022\035\n\ntotal_c" +
+      "ost\030\t \001(\001R\ttotalCost\022\035\n\ncaller_ids\030\n \003(\t" +
+      "R\tcallerIds\022\037\n\013client_name\030\013 \001(\tR\nclient" +
+      "Name\022\'\n\017total_scheduled\030\014 \001(\003R\016totalSche" +
+      "duled\022\'\n\017total_completed\030\r \001(\003R\016totalCom" +
+      "pleted\022O\n\025contact_group_sid_str\030\016 \001(\0132\034." +
+      "google.protobuf.StringValueR\022contactGrou" +
+      "pSidStr\022*\n\021contact_group_sid\030\017 \001(\003R\017cont" +
+      "actGroupSid\022@\n\rphone_num_col\030\020 \001(\0132\034.goo" +
+      "gle.protobuf.StringValueR\013phoneNumCol\022L\n" +
+      "\023use_tz_restrictions\030\021 \001(\0132\034.google.prot" +
+      "obuf.StringValueR\021useTzRestrictions\022#\n\rm" +
+      "essage_count\030\022 \001(\005R\014messageCount\0220\n\024toda" +
+      "ys_message_count\030\023 \001(\005R\022todaysMessageCou" +
+      "nt\022=\n\014date_created\030\024 \001(\0132\032.google.protob" +
+      "uf.TimestampR\013dateCreated\"I\n\032ListSmsTask" +
+      "sByGroupSidsReq\022+\n\022sms_group_sids_arr\030\002 " +
+      "\003(\003R\017smsGroupSidsArr\"w\n\032ListSmsTasksByGr" +
+      "oupSidsRes\022Y\n\030sms_task_info_with_reply\030\001" +
+      " \003(\0132!.api.v0alpha.SmsTaskInfoWithReplyR" +
+      "\024smsTaskInfoWithReply\"G\n!ListSmsTasksWit" +
+      "hDetailedStatusReq\022\"\n\rsms_group_sid\030\002 \001(" +
+      "\003R\013smsGroupSid\"~\n!ListSmsTasksWithDetail" +
+      "edStatusRes\022Y\n\030sms_task_info_with_reply\030" +
+      "\001 \003(\0132!.api.v0alpha.SmsTaskInfoWithReply" +
+      "R\024smsTaskInfoWithReply\"\261\001\n\024SmsTaskInfoWi" +
+      "thReply\022F\n\021sms_task_info_res\030\001 \001(\0132\033.api" +
+      ".v0alpha.SmsTaskInfoResR\016smsTaskInfoRes\022" +
+      "Q\n\024sms_received_replies\030\002 \003(\0132\037.api.v0al" +
+      "pha.SmsReceivedRepliesR\022smsReceivedRepli" +
+      "es\"\321\004\n\016SmsTaskInfoRes\022 \n\014sms_task_sid\030\001 " +
+      "\001(\003R\nsmsTaskSid\022\"\n\rsms_group_sid\030\002 \001(\003R\013" +
+      "smsGroupSid\022\'\n\017delivery_status\030\003 \001(\003R\016de" +
+      "liveryStatus\0226\n\027delivery_status_message\030" +
+      "\004 \001(\tR\025deliveryStatusMessage\022\022\n\004data\030\005 \001" +
+      "(\tR\004data\022\022\n\004cost\030\006 \001(\001R\004cost\0227\n\010msg_uuid" +
+      "\030\007 \001(\0132\034.google.protobuf.StringValueR\007ms" +
+      "gUuid\0225\n\010msg_time\030\010 \001(\0132\032.google.protobu" +
+      "f.TimestampR\007msgTime\022\026\n\006status\030\t \001(\003R\006st" +
+      "atus\022@\n\rphone_num_col\030\n \001(\0132\034.google.pro" +
+      "tobuf.StringValueR\013phoneNumCol\022\024\n\005units\030" +
+      "\013 \001(\003R\005units\022C\n\017sms_task_parent\030\014 \001(\0132\033." +
+      "google.protobuf.Int64ValueR\rsmsTaskParen" +
+      "t\022K\n\022mam_agent_response\030\r \001(\0132\035.api.v0al" +
+      "pha.MamAgentResponseR\020mamAgentResponse\"\352" +
+      "\003\n\022SmsReceivedReplies\0227\n\030sms_received_re" +
+      "plies_sid\030\001 \001(\003R\025smsReceivedRepliesSid\022 " +
+      "\n\014sms_task_sid\030\002 \001(\003R\nsmsTaskSid\022\035\n\nsrc_" +
+      "number\030\003 \001(\tR\tsrcNumber\022\035\n\ndst_number\030\004 " +
+      "\001(\tR\tdstNumber\022\031\n\010msg_uuid\030\005 \001(\tR\007msgUui" +
+      "d\022%\n\016received_reply\030\006 \001(\tR\rreceivedReply" +
+      "\022?\n\rreceived_time\030\007 \001(\0132\032.google.protobu" +
+      "f.TimestampR\014receivedTime\022\'\n\017analysis_re" +
+      "port\030\010 \001(\tR\016analysisReport\022/\n\024inbound_sm" +
+      "s_group_id\030\t \001(\tR\021inboundSmsGroupId\022\022\n\004c" +
+      "ost\030\n \001(\001R\004cost\0224\n\006status\030\013 \001(\0162\034.api.co" +
+      "mmons.SMSIBTaskStatusR\006status\022\024\n\005units\030\014" +
+      " \001(\003R\005units\"+\n\021UpdateSmsGroupRes\022\026\n\006resu" +
+      "lt\030\001 \001(\010R\006result\"\374\003\n\016ScheduleSmsReq\022(\n\020s" +
+      "ms_template_sid\030\001 \001(\003R\016smsTemplateSid\022!\n" +
+      "\014initial_pace\030\002 \001(\003R\013initialPace\022,\n\022sele" +
+      "cted_phone_col\030\003 \001(\tR\020selectedPhoneCol\022#" +
+      "\n\rsource_number\030\004 \001(\tR\014sourceNumber\022\037\n\013c" +
+      "ountry_sid\030\005 \001(\003R\ncountrySid\0223\n\025timezone" +
+      "_restrictions\030\006 \001(\010R\024timezoneRestriction" +
+      "s\022\035\n\ngroup_name\030\007 \001(\tR\tgroupName\022*\n\021cont" +
+      "act_group_sid\030\010 \001(\003R\017contactGroupSid\0229\n\n" +
+      "start_time\030\t \001(\0132\032.google.protobuf.Times" +
+      "tampR\tstartTime\0227\n\tstop_time\030\n \001(\0132\032.goo" +
+      "gle.protobuf.TimestampR\010stopTime\0225\n\027sele" +
+      "cted_mam_hunt_group\030\013 \001(\tR\024selectedMamHu" +
+      "ntGroup\"4\n\016ScheduleSmsRes\022\"\n\rsms_group_s" +
+      "id\030\001 \001(\003R\013smsGroupSid\"\261\001\n\027ResendUnconnec" +
+      "tedSmsReq\022\"\n\rsms_group_sid\030\001 \001(\003R\013smsGro" +
+      "upSid\0229\n\nstart_time\030\002 \001(\0132\032.google.proto" +
+      "buf.TimestampR\tstartTime\0227\n\tstop_time\030\003 " +
+      "\001(\0132\032.google.protobuf.TimestampR\010stopTim" +
+      "e\"1\n\027ResendUnconnectedSmsRes\022\026\n\006result\030\001" +
+      " \001(\010R\006result\"\204\002\n\024SmsActivitySearchReq\022\033\n" +
+      "\tto_number\030\001 \001(\tR\010toNumber\022\035\n\nsrc_number" +
+      "\030\002 \001(\tR\tsrcNumber\0227\n\tfrom_date\030\003 \001(\0132\032.g" +
+      "oogle.protobuf.TimestampR\010fromDate\0223\n\007to" +
+      "_date\030\004 \001(\0132\032.google.protobuf.TimestampR" +
+      "\006toDate\022%\n\016entire_history\030\005 \001(\010R\rentireH" +
+      "istory\022\033\n\tsent_only\030\006 \001(\010R\010sentOnly\"\265\001\n\024" +
+      "SmsActivitySearchRes\022U\n\026sms_group_with_i" +
+      "ntents\030\001 \003(\0132 .api.v0alpha.SmsGroupWithI" +
+      "ntentsR\023smsGroupWithIntents\022F\n\021sms_task_" +
+      "info_res\030\002 \003(\0132\033.api.v0alpha.SmsTaskInfo" +
+      "ResR\016smsTaskInfoRes\"\212\002\n\022InboundSmsTempla" +
+      "te\0225\n\027inbound_sms_template_id\030\001 \001(\tR\024inb" +
+      "oundSmsTemplateId\022$\n\016sms_number_sid\030\002 \001(" +
+      "\003R\014smsNumberSid\022\022\n\004name\030\003 \001(\tR\004name\022D\n\017r" +
+      "eport_settings\030\004 \001(\0132\033.api.v0alpha.Repor" +
+      "tSettingsR\016reportSettings\022=\n\014last_update" +
+      "d\030\005 \001(\0132\032.google.protobuf.TimestampR\013las" +
+      "tUpdated\"\034\n\032ListInboundSmsTemplatesReq\"\222" +
+      "\001\n\032ListInboundSmsTemplatesRes\022t\n!inbound" +
+      "_sms_template_with_intents\030\001 \003(\0132*.api.v" +
+      "0alpha.InboundSmsTemplateWithIntentsR\035in" +
+      "boundSmsTemplateWithIntents\"\304\001\n\035InboundS" +
+      "msTemplateWithIntents\022Q\n\024inbound_sms_tem" +
+      "plate\030\001 \001(\0132\037.api.v0alpha.InboundSmsTemp" +
+      "lateR\022inboundSmsTemplate\022P\n\024sms_intent_t" +
+      "emplates\030\002 \003(\0132\036.api.v0alpha.SmsIntentTe" +
+      "mplateR\022smsIntentTemplates\"\213\002\n\033UpdateInb" +
+      "oundSmsTemplateReq\0225\n\027inbound_sms_templa" +
+      "te_id\030\001 \001(\tR\024inboundSmsTemplateId\022$\n\016sms" +
+      "_number_sid\030\002 \001(\003R\014smsNumberSid\022\022\n\004name\030" +
+      "\003 \001(\tR\004name\0225\n\027sms_intent_template_sid\030\006" +
+      " \003(\003R\024smsIntentTemplateSid\022D\n\017report_set" +
+      "tings\030\007 \001(\0132\033.api.v0alpha.ReportSettings" +
+      "R\016reportSettings\"5\n\033UpdateInboundSmsTemp" +
+      "lateRes\022\026\n\006result\030\001 \001(\010R\006result\"T\n\033Delet" +
+      "eInboundSmsTemplateReq\0225\n\027inbound_sms_te" +
+      "mplate_id\030\001 \001(\tR\024inboundSmsTemplateId\"5\n" +
+      "\033DeleteInboundSmsTemplateRes\022\026\n\006result\030\001" +
+      " \001(\010R\006result\"\324\001\n\033CreateInboundSmsTemplat" +
+      "eReq\022$\n\016sms_number_sid\030\001 \001(\003R\014smsNumberS" +
+      "id\022\022\n\004name\030\002 \001(\tR\004name\0225\n\027sms_intent_tem" +
+      "plate_sid\030\005 \003(\003R\024smsIntentTemplateSid\022D\n" +
+      "\017report_settings\030\006 \001(\0132\033.api.v0alpha.Rep" +
+      "ortSettingsR\016reportSettings\"T\n\033CreateInb" +
+      "oundSmsTemplateRes\0225\n\027inbound_sms_templa" +
+      "te_id\030\001 \001(\tR\024inboundSmsTemplateId\"U\n\034Get" +
+      "InboundSmsTemplateByIdReq\0225\n\027inbound_sms" +
+      "_template_id\030\003 \001(\tR\024inboundSmsTemplateId" +
+      "\"\303\001\n\034GetInboundSmsTemplateByIdRes\022Q\n\024inb" +
+      "ound_sms_template\030\001 \001(\0132\037.api.v0alpha.In" +
+      "boundSmsTemplateR\022inboundSmsTemplate\022P\n\024" +
+      "sms_intent_templates\030\002 \003(\0132\036.api.v0alpha" +
+      ".SmsIntentTemplateR\022smsIntentTemplates\"\270" +
+      "\001\n\032InboundSmsGroupWithIntents\022H\n\021inbound" +
+      "_sms_group\030\001 \001(\0132\034.api.v0alpha.InboundSm" +
+      "sGroupR\017inboundSmsGroup\022P\n\024sms_intent_te" +
+      "mplates\030\002 \003(\0132\036.api.v0alpha.SmsIntentTem" +
+      "plateR\022smsIntentTemplates\"\331\004\n\017InboundSms" +
+      "Group\022/\n\024inbound_sms_group_id\030\001 \001(\tR\021inb" +
+      "oundSmsGroupId\022$\n\016sms_number_sid\030\002 \001(\003R\014" +
+      "smsNumberSid\022\022\n\004name\030\003 \001(\tR\004name\0225\n\006stat" +
+      "us\030\004 \001(\0162\035.api.commons.SMSIBGroupStatusR" +
+      "\006status\0229\n\nstart_time\030\005 \001(\0132\032.google.pro" +
+      "tobuf.TimestampR\tstartTime\0227\n\tstop_time\030" +
+      "\006 \001(\0132\032.google.protobuf.TimestampR\010stopT" +
+      "ime\022\035\n\ntotal_cost\030\007 \001(\001R\ttotalCost\0225\n\027in" +
+      "bound_sms_template_id\030\010 \001(\tR\024inboundSmsT" +
+      "emplateId\022#\n\rmessage_count\030\t \001(\005R\014messag" +
+      "eCount\0220\n\024todays_message_count\030\n \001(\005R\022to" +
+      "daysMessageCount\022D\n\017report_settings\030\013 \001(" +
+      "\0132\033.api.v0alpha.ReportSettingsR\016reportSe" +
+      "ttings\022=\n\014date_created\030\014 \001(\0132\032.google.pr" +
+      "otobuf.TimestampR\013dateCreated\"\031\n\027ListInb" +
+      "oundSmsGroupsReq\"\206\001\n\027ListInboundSmsGroup" +
+      "sRes\022k\n\036inbound_sms_group_with_intents\030\001" +
+      " \003(\0132\'.api.v0alpha.InboundSmsGroupWithIn" +
+      "tentsR\032inboundSmsGroupWithIntents\"\314\003\n\030Up" +
+      "dateInboundSmsGroupReq\022/\n\024inbound_sms_gr" +
+      "oup_id\030\001 \001(\tR\021inboundSmsGroupId\022$\n\016sms_n" +
+      "umber_sid\030\002 \001(\003R\014smsNumberSid\022\022\n\004name\030\003 " +
+      "\001(\tR\004name\0225\n\006status\030\006 \001(\0162\035.api.commons." +
+      "SMSIBGroupStatusR\006status\0229\n\nstart_time\030\007" +
+      " \001(\0132\032.google.protobuf.TimestampR\tstartT" +
+      "ime\0227\n\tstop_time\030\010 \001(\0132\032.google.protobuf" +
+      ".TimestampR\010stopTime\022\035\n\ntotal_cost\030\t \001(\001" +
+      "R\ttotalCost\0225\n\027inbound_sms_template_id\030\n" +
+      " \001(\tR\024inboundSmsTemplateId\022D\n\017report_set" +
+      "tings\030\013 \001(\0132\033.api.v0alpha.ReportSettings" +
+      "R\016reportSettings\"2\n\030UpdateInboundSmsGrou" +
+      "pRes\022\026\n\006result\030\001 \001(\010R\006result\"K\n\030DeleteIn" +
+      "boundSmsGroupReq\022/\n\024inbound_sms_group_id" +
+      "\030\001 \001(\tR\021inboundSmsGroupId\"2\n\030DeleteInbou" +
+      "ndSmsGroupRes\022\026\n\006result\030\001 \001(\010R\006result\"\233\003" +
+      "\n\030CreateInboundSmsGroupReq\022$\n\016sms_number" +
+      "_sid\030\001 \001(\003R\014smsNumberSid\022\022\n\004name\030\002 \001(\tR\004" +
+      "name\0225\n\006status\030\005 \001(\0162\035.api.commons.SMSIB" +
+      "GroupStatusR\006status\0229\n\nstart_time\030\006 \001(\0132" +
+      "\032.google.protobuf.TimestampR\tstartTime\0227" +
+      "\n\tstop_time\030\007 \001(\0132\032.google.protobuf.Time" +
+      "stampR\010stopTime\022\035\n\ntotal_cost\030\010 \001(\001R\ttot" +
+      "alCost\0225\n\027inbound_sms_template_id\030\t \001(\tR" +
+      "\024inboundSmsTemplateId\022D\n\017report_settings" +
+      "\030\n \001(\0132\033.api.v0alpha.ReportSettingsR\016rep" +
+      "ortSettings\"K\n\030CreateInboundSmsGroupRes\022" +
+      "/\n\024inbound_sms_group_id\030\001 \001(\tR\021inboundSm" +
+      "sGroupId\"L\n\031GetInboundSmsGroupByIdReq\022/\n" +
+      "\024inbound_sms_group_id\030\003 \001(\tR\021inboundSmsG" +
+      "roupId\"\210\001\n\031GetInboundSmsGroupByIdRes\022k\n\036" +
+      "inbound_sms_group_with_intents\030\001 \001(\0132\'.a" +
+      "pi.v0alpha.InboundSmsGroupWithIntentsR\032i" +
+      "nboundSmsGroupWithIntents\"\037\n\035ListActiveI" +
+      "nboundSmsGroupsReq\"\214\001\n\035ListActiveInbound" +
+      "SmsGroupsRes\022k\n\036inbound_sms_group_with_i" +
       "ntents\030\001 \003(\0132\'.api.v0alpha.InboundSmsGro" +
       "upWithIntentsR\032inboundSmsGroupWithIntent" +
-      "s\"\223\001\n\025ScheduleInboundSmsReq\0225\n\027inbound_s" +
-      "ms_template_id\030\001 \001(\tR\024inboundSmsTemplate" +
-      "Id\022$\n\016sms_number_sid\030\002 \001(\003R\014smsNumberSid" +
-      "\022\035\n\ngroup_name\030\003 \001(\tR\tgroupName\"H\n\025Sched" +
-      "uleInboundSmsRes\022/\n\024inbound_sms_group_id" +
-      "\030\001 \001(\tR\021inboundSmsGroupId\"I\n\026StopInbound" +
-      "SmsGroupReq\022/\n\024inbound_sms_group_id\030\001 \001(" +
-      "\tR\021inboundSmsGroupId\"0\n\026StopInboundSmsGr" +
-      "oupRes\022\026\n\006result\030\001 \001(\010R\006result\"\362\001\n\017SmsCo" +
-      "nversation\022.\n\023sms_conversation_id\030\001 \001(\tR" +
-      "\021smsConversationId\022/\n\024inbound_sms_group_" +
-      "id\030\002 \001(\tR\021inboundSmsGroupId\022C\n\017sms_task_" +
-      "parent\030\003 \001(\0132\033.google.protobuf.Int64Valu" +
-      "eR\rsmsTaskParent\0229\n\ncreated_on\030\004 \001(\0132\032.g" +
-      "oogle.protobuf.TimestampR\tcreatedOn\"\031\n\027L" +
-      "istSmsConversationsReq\"d\n\027ListSmsConvers" +
-      "ationsRes\022I\n\021sms_conversations\030\001 \003(\0132\034.a" +
-      "pi.v0alpha.SmsConversationR\020smsConversat" +
-      "ions\"\300\001\n\030UpdateSmsConversationReq\022.\n\023sms" +
-      "_conversation_id\030\001 \001(\tR\021smsConversationI" +
-      "d\022/\n\024inbound_sms_group_id\030\002 \001(\tR\021inbound" +
-      "SmsGroupId\022C\n\017sms_task_parent\030\003 \001(\0132\033.go" +
-      "ogle.protobuf.Int64ValueR\rsmsTaskParent\"" +
-      "2\n\030UpdateSmsConversationRes\022\026\n\006result\030\001 " +
-      "\001(\010R\006result\"J\n\030DeleteSmsConversationReq\022" +
+      "s\"\303\001\n\037ListInboundSmsGroupByFiltersReq\022;\n" +
+      "\013search_from\030\003 \001(\0132\032.google.protobuf.Tim" +
+      "estampR\nsearchFrom\0227\n\tsearch_to\030\004 \001(\0132\032." +
+      "google.protobuf.TimestampR\010searchTo\022\026\n\006s" +
+      "tatus\030\005 \001(\tR\006status\022\022\n\004name\030\006 \001(\tR\004name\"" +
+      "\216\001\n\037ListInboundSmsGroupByFiltersRes\022k\n\036i" +
+      "nbound_sms_group_with_intents\030\001 \003(\0132\'.ap" +
+      "i.v0alpha.InboundSmsGroupWithIntentsR\032in" +
+      "boundSmsGroupWithIntents\"]\n!ListInboundS" +
+      "msGroupsByGroupIdsReq\0228\n\031inbound_sms_gro" +
+      "up_ids_arr\030\001 \003(\tR\025inboundSmsGroupIdsArr\"" +
+      "\220\001\n!ListInboundSmsGroupsByGroupIdsRes\022k\n" +
+      "\036inbound_sms_group_with_intents\030\001 \003(\0132\'." +
+      "api.v0alpha.InboundSmsGroupWithIntentsR\032" +
+      "inboundSmsGroupWithIntents\"\223\001\n\025ScheduleI" +
+      "nboundSmsReq\0225\n\027inbound_sms_template_id\030" +
+      "\001 \001(\tR\024inboundSmsTemplateId\022$\n\016sms_numbe" +
+      "r_sid\030\002 \001(\003R\014smsNumberSid\022\035\n\ngroup_name\030" +
+      "\003 \001(\tR\tgroupName\"H\n\025ScheduleInboundSmsRe" +
+      "s\022/\n\024inbound_sms_group_id\030\001 \001(\tR\021inbound" +
+      "SmsGroupId\"I\n\026StopInboundSmsGroupReq\022/\n\024" +
+      "inbound_sms_group_id\030\001 \001(\tR\021inboundSmsGr" +
+      "oupId\"0\n\026StopInboundSmsGroupRes\022\026\n\006resul" +
+      "t\030\001 \001(\010R\006result\"\362\001\n\017SmsConversation\022.\n\023s" +
+      "ms_conversation_id\030\001 \001(\tR\021smsConversatio" +
+      "nId\022/\n\024inbound_sms_group_id\030\002 \001(\tR\021inbou" +
+      "ndSmsGroupId\022C\n\017sms_task_parent\030\003 \001(\0132\033." +
+      "google.protobuf.Int64ValueR\rsmsTaskParen" +
+      "t\0229\n\ncreated_on\030\004 \001(\0132\032.google.protobuf." +
+      "TimestampR\tcreatedOn\"\031\n\027ListSmsConversat" +
+      "ionsReq\"d\n\027ListSmsConversationsRes\022I\n\021sm" +
+      "s_conversations\030\001 \003(\0132\034.api.v0alpha.SmsC" +
+      "onversationR\020smsConversations\"\300\001\n\030Update" +
+      "SmsConversationReq\022.\n\023sms_conversation_i" +
+      "d\030\001 \001(\tR\021smsConversationId\022/\n\024inbound_sm" +
+      "s_group_id\030\002 \001(\tR\021inboundSmsGroupId\022C\n\017s" +
+      "ms_task_parent\030\003 \001(\0132\033.google.protobuf.I" +
+      "nt64ValueR\rsmsTaskParent\"2\n\030UpdateSmsCon" +
+      "versationRes\022\026\n\006result\030\001 \001(\010R\006result\"J\n\030" +
+      "DeleteSmsConversationReq\022.\n\023sms_conversa" +
+      "tion_id\030\001 \001(\tR\021smsConversationId\"2\n\030Dele" +
+      "teSmsConversationRes\022\026\n\006result\030\001 \001(\010R\006re" +
+      "sult\"\220\001\n\030CreateSmsConversationReq\022/\n\024inb" +
+      "ound_sms_group_id\030\001 \001(\tR\021inboundSmsGroup" +
+      "Id\022C\n\017sms_task_parent\030\002 \001(\0132\033.google.pro" +
+      "tobuf.Int64ValueR\rsmsTaskParent\"J\n\030Creat" +
+      "eSmsConversationRes\022.\n\023sms_conversation_" +
+      "id\030\001 \001(\tR\021smsConversationId\"K\n\031GetSmsCon" +
+      "versationByIdReq\022.\n\023sms_conversation_id\030" +
+      "\001 \001(\tR\021smsConversationId\"d\n\031GetSmsConver" +
+      "sationByIdRes\022G\n\020sms_conversation\030\001 \001(\0132" +
+      "\034.api.v0alpha.SmsConversationR\017smsConver" +
+      "sation\"N\n\034ListSmsConversationAuditsReq\022." +
+      "\n\023sms_conversation_id\030\001 \001(\tR\021smsConversa" +
+      "tionId\"y\n\034ListSmsConversationAuditsRes\022Y" +
+      "\n\027sms_conversation_audits\030\001 \003(\0132!.api.v0" +
+      "alpha.SmsConversationAuditR\025smsConversat" +
+      "ionAudits\"Z\n\035CreateSmsConversationAuditR" +
+      "es\0229\n\031sms_conversation_audit_id\030\001 \001(\tR\026s" +
+      "msConversationAuditId\"[\n\036GetSmsConversat" +
+      "ionAuditByIdReq\0229\n\031sms_conversation_audi" +
+      "t_id\030\001 \001(\tR\026smsConversationAuditId\"y\n\036Ge" +
+      "tSmsConversationAuditByIdRes\022W\n\026sms_conv" +
+      "ersation_audit\030\001 \001(\0132!.api.v0alpha.SmsCo" +
+      "nversationAuditR\024smsConversationAudit\"V\n" +
+      "$ListSmsConversationAssignedAgentsReq\022.\n" +
+      "\023sms_conversation_id\030\001 \001(\tR\021smsConversat" +
+      "ionId\"\232\001\n$ListSmsConversationAssignedAge" +
+      "ntsRes\022r\n sms_conversation_assigned_agen" +
+      "ts\030\001 \003(\0132).api.v0alpha.SmsConversationAs" +
+      "signedAgentR\035smsConversationAssignedAgen" +
+      "ts\"?\n%CreateSmsConversationAssignedAgent" +
+      "Res\022\026\n\006result\030\001 \001(\010R\006result\"\204\001\n&GetSmsCo" +
+      "nversationAssignedAgentByIdReq\022.\n\023sms_co" +
+      "nversation_id\030\001 \001(\tR\021smsConversationId\022*" +
+      "\n\021assigned_agent_id\030\002 \001(\003R\017assignedAgent" +
+      "Id\"\232\001\n&GetSmsConversationAssignedAgentBy" +
+      "IdRes\022p\n\037sms_conversation_assigned_agent" +
+      "\030\001 \001(\0132).api.v0alpha.SmsConversationAssi" +
+      "gnedAgentR\034smsConversationAssignedAgent\"" +
+      "\354\002\n\024SmsConversationAudit\0229\n\031sms_conversa" +
+      "tion_audit_id\030\001 \001(\tR\026smsConversationAudi" +
+      "tId\022.\n\023sms_conversation_id\030\002 \001(\tR\021smsCon" +
+      "versationId\022 \n\014sms_task_sid\030\003 \001(\003R\nsmsTa" +
+      "skSid\0227\n\030sms_received_replies_sid\030\004 \001(\003R" +
+      "\025smsReceivedRepliesSid\022\026\n\006action\030\005 \001(\003R\006" +
+      "action\022 \n\013description\030\006 \001(\tR\013description" +
+      "\022\031\n\010agent_id\030\007 \001(\003R\007agentId\0229\n\ncreated_o" +
+      "n\030\010 \001(\0132\032.google.protobuf.TimestampR\tcre",
+      "atedOn\"\362\001\n\034SmsConversationAssignedAgent\022" +
       ".\n\023sms_conversation_id\030\001 \001(\tR\021smsConvers" +
-      "ationId\"2\n\030DeleteSmsConversationRes\022\026\n\006r" +
-      "esult\030\001 \001(\010R\006result\"\220\001\n\030CreateSmsConvers" +
-      "ationReq\022/\n\024inbound_sms_group_id\030\001 \001(\tR\021" +
-      "inboundSmsGroupId\022C\n\017sms_task_parent\030\002 \001" +
-      "(\0132\033.google.protobuf.Int64ValueR\rsmsTask" +
-      "Parent\"J\n\030CreateSmsConversationRes\022.\n\023sm" +
-      "s_conversation_id\030\001 \001(\tR\021smsConversation" +
-      "Id\"K\n\031GetSmsConversationByIdReq\022.\n\023sms_c" +
-      "onversation_id\030\001 \001(\tR\021smsConversationId\"" +
-      "d\n\031GetSmsConversationByIdRes\022G\n\020sms_conv" +
-      "ersation\030\001 \001(\0132\034.api.v0alpha.SmsConversa" +
-      "tionR\017smsConversation\"N\n\034ListSmsConversa" +
-      "tionAuditsReq\022.\n\023sms_conversation_id\030\001 \001" +
-      "(\tR\021smsConversationId\"y\n\034ListSmsConversa" +
-      "tionAuditsRes\022Y\n\027sms_conversation_audits" +
-      "\030\001 \003(\0132!.api.v0alpha.SmsConversationAudi" +
-      "tR\025smsConversationAudits\"Z\n\035CreateSmsCon" +
-      "versationAuditRes\0229\n\031sms_conversation_au" +
-      "dit_id\030\001 \001(\tR\026smsConversationAuditId\"[\n\036" +
-      "GetSmsConversationAuditByIdReq\0229\n\031sms_co" +
-      "nversation_audit_id\030\001 \001(\tR\026smsConversati" +
-      "onAuditId\"y\n\036GetSmsConversationAuditById" +
-      "Res\022W\n\026sms_conversation_audit\030\001 \001(\0132!.ap" +
-      "i.v0alpha.SmsConversationAuditR\024smsConve" +
-      "rsationAudit\"V\n$ListSmsConversationAssig" +
-      "nedAgentsReq\022.\n\023sms_conversation_id\030\001 \001(" +
-      "\tR\021smsConversationId\"\232\001\n$ListSmsConversa" +
-      "tionAssignedAgentsRes\022r\n sms_conversatio" +
-      "n_assigned_agents\030\001 \003(\0132).api.v0alpha.Sm" +
-      "sConversationAssignedAgentR\035smsConversat" +
-      "ionAssignedAgents\"?\n%CreateSmsConversati" +
-      "onAssignedAgentRes\022\026\n\006result\030\001 \001(\010R\006resu" +
-      "lt\"\204\001\n&GetSmsConversationAssignedAgentBy" +
-      "IdReq\022.\n\023sms_conversation_id\030\001 \001(\tR\021smsC" +
-      "onversationId\022*\n\021assigned_agent_id\030\002 \001(\003" +
-      "R\017assignedAgentId\"\232\001\n&GetSmsConversation" +
-      "AssignedAgentByIdRes\022p\n\037sms_conversation" +
-      "_assigned_agent\030\001 \001(\0132).api.v0alpha.SmsC" +
-      "onversationAssignedAgentR\034smsConversatio" +
-      "nAssignedAgent\"\354\002\n\024SmsConversationAudit\022" +
-      "9\n\031sms_conversation_audit_id\030\001 \001(\tR\026smsC" +
-      "onversationAuditId\022.\n\023sms_conversation_i" +
-      "d\030\002 \001(\tR\021smsConversationId\022 \n\014sms_task_s" +
-      "id\030\003 \001(\003R\nsmsTaskSid\0227\n\030sms_received_rep" +
-      "lies_sid\030\004 \001(\003R\025smsReceivedRepliesSid\022\026\n" +
-      "\006action\030\005 \001(\003R\006action\022 \n\013description\030\006 \001" +
-      "(\tR\013description\022\031\n\010agent_id\030\007 \001(\003R\007agent" +
-      "Id\0229\n\ncreated_on\030\010 \001(\0132\032.google.protobuf" +
-      ".TimestampR\tcreatedOn\"\362\001\n\034SmsConversatio",
-      "nAssignedAgent\022.\n\023sms_conversation_id\030\001 " +
-      "\001(\tR\021smsConversationId\022*\n\021assigned_agent" +
-      "_id\030\002 \001(\003R\017assignedAgentId\022#\n\rprimary_ag" +
-      "ent\030\003 \001(\010R\014primaryAgent\022\026\n\006notify\030\004 \001(\010R" +
-      "\006notify\0229\n\ncreated_on\030\005 \001(\0132\032.google.pro" +
-      "tobuf.TimestampR\tcreatedOn\":\n\020GetSmsMess" +
-      "ageReq\022&\n\017sms_message_sid\030\001 \001(\003R\rsmsMess" +
-      "ageSid\"L\n\020GetSmsMessageRes\0228\n\013sms_messag" +
-      "e\030\001 \001(\0132\027.api.v0alpha.SmsMessageR\nsmsMes" +
-      "sage\"N\n\nSmsMessage\022&\n\017sms_message_sid\030\001 " +
-      "\001(\003R\rsmsMessageSid\022\030\n\007message\030\002 \001(\tR\007mes" +
-      "sage\"\242\002\n\016SmsIntentGroup\022/\n\024sms_intent_gr" +
-      "oup_sid\030\001 \001(\003R\021smsIntentGroupSid\022\"\n\rsms_" +
-      "group_sid\030\002 \001(\003R\013smsGroupSid\022\022\n\004name\030\003 \001" +
-      "(\tR\004name\022 \n\013description\030\004 \001(\tR\013descripti" +
-      "on\022\035\n\naction_key\030\005 \001(\tR\tactionKey\022#\n\ract" +
-      "ion_detail\030\006 \001(\tR\014actionDetail\022%\n\016action" +
-      "_trigger\030\007 \001(\tR\ractionTrigger\022\032\n\010priorit" +
-      "y\030\010 \001(\003R\010priority\"\276\003\n\016InboundSmsTask\0225\n\027" +
-      "sms_received_replies_id\030\001 \001(\003R\024smsReceiv" +
-      "edRepliesId\022\035\n\nsrc_number\030\002 \001(\tR\tsrcNumb" +
-      "er\022\035\n\ndst_number\030\003 \001(\tR\tdstNumber\022\025\n\006msg" +
-      "_id\030\004 \001(\tR\005msgId\022%\n\016received_reply\030\005 \001(\t" +
-      "R\rreceivedReply\022?\n\rreceived_time\030\006 \001(\0132\032" +
-      ".google.protobuf.TimestampR\014receivedTime" +
-      "\022/\n\024inbound_sms_group_id\030\007 \001(\tR\021inboundS" +
-      "msGroupId\022\022\n\004cost\030\010 \001(\001R\004cost\0224\n\006status\030" +
-      "\t \001(\0162\034.api.commons.SMSIBTaskStatusR\006sta" +
-      "tus\022\'\n\017analysis_report\030\n \001(\tR\016analysisRe" +
-      "port\022\024\n\005units\030\013 \001(\003R\005units\"\\\n ListInboun" +
-      "dSmsTasksByGroupIdsReq\0228\n\031inbound_sms_gr" +
-      "oup_ids_arr\030\003 \003(\tR\025inboundSmsGroupIdsArr" +
-      "\"k\n ListInboundSmsTasksByGroupIdsRes\022G\n\021" +
-      "inbound_sms_tasks\030\001 \003(\0132\033.api.v0alpha.In" +
-      "boundSmsTaskR\017inboundSmsTasks\"\200\003\n\016Report" +
-      "Settings\022\030\n\007enabled\030\001 \001(\010R\007enabled\022\'\n\017de" +
-      "livery_method\030\002 \001(\tR\016deliveryMethod\022.\n\023r" +
-      "eport_template_sid\030\003 \001(\003R\021reportTemplate" +
-      "Sid\022;\n\014sms_settings\030\004 \001(\0132\030.api.v0alpha." +
-      "SmsSettingsR\013smsSettings\022A\n\016email_settin" +
-      "gs\030\005 \001(\0132\032.api.v0alpha.EmailSettingsR\rem" +
-      "ailSettings\022;\n\014ftp_settings\030\006 \001(\0132\030.api." +
-      "v0alpha.FtpSettingsR\013ftpSettings\022>\n\rsftp" +
-      "_settings\030\007 \001(\0132\031.api.v0alpha.SftpSettin" +
-      "gsR\014sftpSettings\"Q\n\013SmsSettings\022#\n\rphone" +
-      "_numbers\030\001 \003(\tR\014phoneNumbers\022\035\n\nsrc_numb" +
-      "er\030\002 \001(\tR\tsrcNumber\"\254\001\n\rEmailSettings\022\037\n" +
-      "\013report_type\030\001 \001(\tR\nreportType\022\'\n\017email_" +
-      "addresses\030\002 \003(\tR\016emailAddresses\022#\n\rrepor" +
-      "t_format\030\003 \001(\tR\014reportFormat\022,\n\022from_ema" +
-      "il_address\030\004 \001(\tR\020fromEmailAddress\"\214\001\n\013F" +
-      "tpSettings\022\026\n\006passwd\030\001 \001(\tR\006passwd\022\032\n\010us" +
-      "ername\030\002 \001(\tR\010username\022#\n\rreport_format\030" +
-      "\003 \001(\tR\014reportFormat\022\022\n\004path\030\004 \001(\tR\004path\022" +
-      "\020\n\003url\030\005 \001(\tR\003url\"\337\001\n\014SftpSettings\022\026\n\006pa" +
-      "sswd\030\001 \001(\tR\006passwd\022\032\n\010username\030\002 \001(\tR\010us" +
-      "ername\022#\n\rreport_format\030\003 \001(\tR\014reportFor" +
-      "mat\022\022\n\004path\030\004 \001(\tR\004path\022/\n\023authenticatio" +
-      "n_type\030\005 \001(\tR\022authenticationType\022\020\n\003url\030" +
-      "\006 \001(\tR\003url\022\037\n\013private_key\030\007 \001(\tR\nprivate" +
-      "Key\"N\n\016SmsMamSettings\022\034\n\nmam_hg_sid\030\001 \001(" +
-      "\tR\010mamHgSid\022\036\n\013mam_hg_name\030\002 \001(\tR\tmamHgN" +
-      "ame\"\266\001\n\020MamAgentResponse\0221\n\006status\030\002 \001(\016" +
-      "2\031.api.commons.SMSMamStatusR\006status\022J\n\023a" +
-      "gent_response_time\030\003 \001(\0132\032.google.protob" +
-      "uf.TimestampR\021agentResponseTime\022\035\n\nagent" +
-      "_name\030\004 \001(\tR\tagentNameJ\004\010\001\020\002\"J\n\033StopAllO" +
-      "utboundSmsGroupsReq\022+\n\022sms_group_sids_ar" +
-      "r\030\002 \003(\003R\017smsGroupSidsArr\"5\n\033StopAllOutbo" +
-      "undSmsGroupsRes\022\026\n\006result\030\001 \001(\010R\006result\"" +
-      "V\n\032StopAllInboundSmsGroupsReq\0228\n\031inbound" +
-      "_sms_group_ids_arr\030\003 \003(\tR\025inboundSmsGrou" +
-      "pIdsArr\"4\n\032StopAllInboundSmsGroupsRes\022\026\n" +
-      "\006result\030\001 \001(\010R\006result2\223K\n\006SmsApi\022\207\001\n\020Lis" +
-      "tSmsTemplates\022 .api.v0alpha.ListSmsTempl" +
-      "atesReq\032 .api.v0alpha.ListSmsTemplatesRe" +
-      "s\"/\202\323\344\223\002)\"$/api/v0alpha/smsapi/listsmste" +
-      "mplates:\001*\022\213\001\n\021CreateSmsTemplate\022!.api.v" +
-      "0alpha.CreateSmsTemplateReq\032!.api.v0alph" +
-      "a.CreateSmsTemplateRes\"0\202\323\344\223\002*\"%/api/v0a" +
-      "lpha/smsapi/createsmstemplate:\001*\022\213\001\n\021Upd" +
-      "ateSmsTemplate\022!.api.v0alpha.UpdateSmsTe" +
-      "mplateReq\032!.api.v0alpha.UpdateSmsTemplat" +
-      "eRes\"0\202\323\344\223\002*\"%/api/v0alpha/smsapi/update" +
-      "smstemplate:\001*\022\213\001\n\021DeleteSmsTemplate\022!.a" +
-      "pi.v0alpha.DeleteSmsTemplateReq\032!.api.v0" +
-      "alpha.DeleteSmsTemplateRes\"0\202\323\344\223\002*\"%/api" +
-      "/v0alpha/smsapi/deletesmstemplate:\001*\022\223\001\n" +
-      "\023GetSmsTemplateBySid\022#.api.v0alpha.GetSm" +
-      "sTemplateBySidReq\032#.api.v0alpha.GetSmsTe" +
-      "mplateBySidRes\"2\202\323\344\223\002,\"\'/api/v0alpha/sms" +
-      "api/getsmstemplatebysid:\001*\022\237\001\n\026ListSmsIn" +
-      "tentTemplates\022&.api.v0alpha.ListSmsInten" +
-      "tTemplatesReq\032&.api.v0alpha.ListSmsInten" +
-      "tTemplatesRes\"5\202\323\344\223\002/\"*/api/v0alpha/smsa" +
-      "pi/listsmsintenttemplates:\001*\022\232\001\n\027CreateS" +
-      "msIntentTemplate\022\036.api.v0alpha.SmsIntent" +
-      "Template\032\'.api.v0alpha.CreateSmsIntentTe" +
-      "mplateRes\"6\202\323\344\223\0020\"+/api/v0alpha/smsapi/c" +
-      "reatesmsintenttemplate:\001*\022\232\001\n\027UpdateSmsI" +
-      "ntentTemplate\022\036.api.v0alpha.SmsIntentTem" +
-      "plate\032\'.api.v0alpha.UpdateSmsIntentTempl" +
-      "ateRes\"6\202\323\344\223\0020\"+/api/v0alpha/smsapi/upda" +
-      "tesmsintenttemplate:\001*\022\243\001\n\027DeleteSmsInte" +
-      "ntTemplate\022\'.api.v0alpha.DeleteSmsIntent" +
-      "TemplateReq\032\'.api.v0alpha.DeleteSmsInten" +
-      "tTemplateRes\"6\202\323\344\223\0020\"+/api/v0alpha/smsap" +
-      "i/deletesmsintenttemplate:\001*\022\240\001\n\031GetSmsI" +
-      "ntentTemplateBySid\022).api.v0alpha.GetSmsI" +
-      "ntentTemplateBySidReq\032\036.api.v0alpha.SmsI" +
-      "ntentTemplate\"8\202\323\344\223\0022\"-/api/v0alpha/smsa" +
-      "pi/getsmsintenttemplatebysid:\001*\022\227\001\n\024List" +
-      "SmsSourceNumbers\022$.api.v0alpha.ListSmsSo" +
-      "urceNumbersReq\032$.api.v0alpha.ListSmsSour" +
-      "ceNumbersRes\"3\202\323\344\223\002-\"(/api/v0alpha/smsap" +
-      "i/listsmssourcenumbers:\001*\022\233\001\n\025CreateSmsS" +
-      "ourceNumber\022%.api.v0alpha.CreateSmsSourc" +
-      "eNumberReq\032%.api.v0alpha.CreateSmsSource" +
-      "NumberRes\"4\202\323\344\223\002.\")/api/v0alpha/smsapi/c" +
-      "reatesmssourcenumber:\001*\022\233\001\n\025UpdateSmsSou" +
-      "rceNumber\022%.api.v0alpha.UpdateSmsSourceN" +
-      "umberReq\032%.api.v0alpha.UpdateSmsSourceNu" +
-      "mberRes\"4\202\323\344\223\002.\")/api/v0alpha/smsapi/upd" +
-      "atesmssourcenumber:\001*\022\233\001\n\025DeleteSmsSourc" +
-      "eNumber\022%.api.v0alpha.DeleteSmsSourceNum" +
-      "berReq\032%.api.v0alpha.DeleteSmsSourceNumb" +
-      "erRes\"4\202\323\344\223\002.\")/api/v0alpha/smsapi/delet" +
-      "esmssourcenumber:\001*\022\223\001\n\027GetSmsSourceNumb" +
-      "erBySid\022\'.api.v0alpha.GetSmsSourceNumber" +
-      "BySidReq\032\027.api.v0alpha.SmsNumbers\"6\202\323\344\223\002" +
-      "0\"+/api/v0alpha/smsapi/getsmssourcenumbe" +
-      "rbysid:\001*\022\223\001\n\023SendSmsNotification\022#.api." +
-      "v0alpha.SendSmsNotificationReq\032#.api.v0a" +
-      "lpha.SendSmsNotificationRes\"2\202\323\344\223\002,\"\'/ap" +
-      "i/v0alpha/smsapi/sendsmsnotification:\001*\022" +
-      "\233\001\n\025ListSmsGroupByFilters\022%.api.v0alpha." +
-      "ListSmsGroupByFiltersReq\032%.api.v0alpha.L" +
-      "istSmsGroupByFiltersRes\"4\202\323\344\223\002.\")/api/v0" +
-      "alpha/smsapi/listsmsgroupbyfilters:\001*\022\247\001" +
-      "\n\030ListSmsGroupsByGroupSids\022(.api.v0alpha" +
-      ".ListSmsGroupsByGroupSidsReq\032(.api.v0alp" +
-      "ha.ListSmsGroupsByGroupSidsRes\"7\202\323\344\223\0021\"," +
-      "/api/v0alpha/smsapi/listsmsgroupsbygroup" +
-      "sids:\001*\022\243\001\n\027ListSmsTasksByGroupSids\022\'.ap" +
-      "i.v0alpha.ListSmsTasksByGroupSidsReq\032\'.a" +
-      "pi.v0alpha.ListSmsTasksByGroupSidsRes\"6\202" +
-      "\323\344\223\0020\"+/api/v0alpha/smsapi/listsmstasksb" +
-      "ygroupsids:\001*\022\253\001\n\035ListSmsGroupByFiltersF" +
-      "orAudit\022%.api.v0alpha.ListSmsGroupByFilt" +
-      "ersReq\032%.api.v0alpha.ListSmsGroupByFilte" +
-      "rsRes\"<\202\323\344\223\0026\"1/api/v0alpha/smsapi/lists" +
-      "msgroupbyfiltersforaudit:\001*\022\267\001\n ListSmsG" +
-      "roupsByGroupSidsForAudit\022(.api.v0alpha.L" +
-      "istSmsGroupsByGroupSidsReq\032(.api.v0alpha" +
-      ".ListSmsGroupsByGroupSidsRes\"?\202\323\344\223\0029\"4/a" +
-      "pi/v0alpha/smsapi/listsmsgroupsbygroupsi" +
-      "dsforaudit:\001*\022\263\001\n\037ListSmsTasksByGroupSid" +
-      "sForAudit\022\'.api.v0alpha.ListSmsTasksByGr" +
-      "oupSidsReq\032\'.api.v0alpha.ListSmsTasksByG" +
-      "roupSidsRes\">\202\323\344\223\0028\"3/api/v0alpha/smsapi" +
-      "/listsmstasksbygroupsidsforaudit:\001*\022\277\001\n\036" +
-      "ListSmsTasksWithDetailedStatus\022..api.v0a" +
-      "lpha.ListSmsTasksWithDetailedStatusReq\032." +
-      ".api.v0alpha.ListSmsTasksWithDetailedSta" +
-      "tusRes\"=\202\323\344\223\0027\"2/api/v0alpha/smsapi/list" +
-      "smstaskswithdetailedstatus:\001*\022\206\001\n\024Update" +
-      "SmsGroupStatus\022\031.api.v0alpha.SmsGroupInf" +
-      "o\032\036.api.v0alpha.UpdateSmsGroupRes\"3\202\323\344\223\002" +
-      "-\"(/api/v0alpha/smsapi/updatesmsgroupsta" +
-      "tus:\001*\022\226\001\n\034UpdateSmsGroupSendsPerMinute\022" +
-      "\031.api.v0alpha.SmsGroupInfo\032\036.api.v0alpha" +
-      ".UpdateSmsGroupRes\";\202\323\344\223\0025\"0/api/v0alpha" +
+      "ationId\022*\n\021assigned_agent_id\030\002 \001(\003R\017assi" +
+      "gnedAgentId\022#\n\rprimary_agent\030\003 \001(\010R\014prim" +
+      "aryAgent\022\026\n\006notify\030\004 \001(\010R\006notify\0229\n\ncrea" +
+      "ted_on\030\005 \001(\0132\032.google.protobuf.Timestamp" +
+      "R\tcreatedOn\":\n\020GetSmsMessageReq\022&\n\017sms_m" +
+      "essage_sid\030\001 \001(\003R\rsmsMessageSid\"L\n\020GetSm" +
+      "sMessageRes\0228\n\013sms_message\030\001 \001(\0132\027.api.v" +
+      "0alpha.SmsMessageR\nsmsMessage\"N\n\nSmsMess" +
+      "age\022&\n\017sms_message_sid\030\001 \001(\003R\rsmsMessage" +
+      "Sid\022\030\n\007message\030\002 \001(\tR\007message\"\242\002\n\016SmsInt" +
+      "entGroup\022/\n\024sms_intent_group_sid\030\001 \001(\003R\021" +
+      "smsIntentGroupSid\022\"\n\rsms_group_sid\030\002 \001(\003" +
+      "R\013smsGroupSid\022\022\n\004name\030\003 \001(\tR\004name\022 \n\013des" +
+      "cription\030\004 \001(\tR\013description\022\035\n\naction_ke" +
+      "y\030\005 \001(\tR\tactionKey\022#\n\raction_detail\030\006 \001(" +
+      "\tR\014actionDetail\022%\n\016action_trigger\030\007 \001(\tR" +
+      "\ractionTrigger\022\032\n\010priority\030\010 \001(\003R\010priori" +
+      "ty\"\276\003\n\016InboundSmsTask\0225\n\027sms_received_re" +
+      "plies_id\030\001 \001(\003R\024smsReceivedRepliesId\022\035\n\n" +
+      "src_number\030\002 \001(\tR\tsrcNumber\022\035\n\ndst_numbe" +
+      "r\030\003 \001(\tR\tdstNumber\022\025\n\006msg_id\030\004 \001(\tR\005msgI" +
+      "d\022%\n\016received_reply\030\005 \001(\tR\rreceivedReply" +
+      "\022?\n\rreceived_time\030\006 \001(\0132\032.google.protobu" +
+      "f.TimestampR\014receivedTime\022/\n\024inbound_sms" +
+      "_group_id\030\007 \001(\tR\021inboundSmsGroupId\022\022\n\004co" +
+      "st\030\010 \001(\001R\004cost\0224\n\006status\030\t \001(\0162\034.api.com" +
+      "mons.SMSIBTaskStatusR\006status\022\'\n\017analysis" +
+      "_report\030\n \001(\tR\016analysisReport\022\024\n\005units\030\013" +
+      " \001(\003R\005units\"\\\n ListInboundSmsTasksByGrou" +
+      "pIdsReq\0228\n\031inbound_sms_group_ids_arr\030\003 \003" +
+      "(\tR\025inboundSmsGroupIdsArr\"k\n ListInbound" +
+      "SmsTasksByGroupIdsRes\022G\n\021inbound_sms_tas" +
+      "ks\030\001 \003(\0132\033.api.v0alpha.InboundSmsTaskR\017i" +
+      "nboundSmsTasks\"\200\003\n\016ReportSettings\022\030\n\007ena" +
+      "bled\030\001 \001(\010R\007enabled\022\'\n\017delivery_method\030\002" +
+      " \001(\tR\016deliveryMethod\022.\n\023report_template_" +
+      "sid\030\003 \001(\003R\021reportTemplateSid\022;\n\014sms_sett" +
+      "ings\030\004 \001(\0132\030.api.v0alpha.SmsSettingsR\013sm" +
+      "sSettings\022A\n\016email_settings\030\005 \001(\0132\032.api." +
+      "v0alpha.EmailSettingsR\remailSettings\022;\n\014" +
+      "ftp_settings\030\006 \001(\0132\030.api.v0alpha.FtpSett" +
+      "ingsR\013ftpSettings\022>\n\rsftp_settings\030\007 \001(\013" +
+      "2\031.api.v0alpha.SftpSettingsR\014sftpSetting" +
+      "s\"Q\n\013SmsSettings\022#\n\rphone_numbers\030\001 \003(\tR" +
+      "\014phoneNumbers\022\035\n\nsrc_number\030\002 \001(\tR\tsrcNu" +
+      "mber\"\254\001\n\rEmailSettings\022\037\n\013report_type\030\001 " +
+      "\001(\tR\nreportType\022\'\n\017email_addresses\030\002 \003(\t" +
+      "R\016emailAddresses\022#\n\rreport_format\030\003 \001(\tR" +
+      "\014reportFormat\022,\n\022from_email_address\030\004 \001(" +
+      "\tR\020fromEmailAddress\"\214\001\n\013FtpSettings\022\026\n\006p" +
+      "asswd\030\001 \001(\tR\006passwd\022\032\n\010username\030\002 \001(\tR\010u" +
+      "sername\022#\n\rreport_format\030\003 \001(\tR\014reportFo" +
+      "rmat\022\022\n\004path\030\004 \001(\tR\004path\022\020\n\003url\030\005 \001(\tR\003u" +
+      "rl\"\337\001\n\014SftpSettings\022\026\n\006passwd\030\001 \001(\tR\006pas" +
+      "swd\022\032\n\010username\030\002 \001(\tR\010username\022#\n\rrepor" +
+      "t_format\030\003 \001(\tR\014reportFormat\022\022\n\004path\030\004 \001" +
+      "(\tR\004path\022/\n\023authentication_type\030\005 \001(\tR\022a" +
+      "uthenticationType\022\020\n\003url\030\006 \001(\tR\003url\022\037\n\013p" +
+      "rivate_key\030\007 \001(\tR\nprivateKey\"N\n\016SmsMamSe" +
+      "ttings\022\034\n\nmam_hg_sid\030\001 \001(\tR\010mamHgSid\022\036\n\013" +
+      "mam_hg_name\030\002 \001(\tR\tmamHgName\"\266\001\n\020MamAgen" +
+      "tResponse\0221\n\006status\030\002 \001(\0162\031.api.commons." +
+      "SMSMamStatusR\006status\022J\n\023agent_response_t" +
+      "ime\030\003 \001(\0132\032.google.protobuf.TimestampR\021a" +
+      "gentResponseTime\022\035\n\nagent_name\030\004 \001(\tR\tag" +
+      "entNameJ\004\010\001\020\002\"J\n\033StopAllOutboundSmsGroup" +
+      "sReq\022+\n\022sms_group_sids_arr\030\002 \003(\003R\017smsGro" +
+      "upSidsArr\"5\n\033StopAllOutboundSmsGroupsRes" +
+      "\022\026\n\006result\030\001 \001(\010R\006result\"V\n\032StopAllInbou" +
+      "ndSmsGroupsReq\0228\n\031inbound_sms_group_ids_" +
+      "arr\030\003 \003(\tR\025inboundSmsGroupIdsArr\"4\n\032Stop" +
+      "AllInboundSmsGroupsRes\022\026\n\006result\030\001 \001(\010R\006" +
+      "result2\261N\n\006SmsApi\022\216\001\n\020ListSmsTemplates\022 " +
+      ".api.v0alpha.ListSmsTemplatesReq\032 .api.v" +
+      "0alpha.ListSmsTemplatesRes\"6\272\270\221\002\002\030\001\202\323\344\223\002" +
+      ")\"$/api/v0alpha/smsapi/listsmstemplates:" +
+      "\001*\022\222\001\n\021CreateSmsTemplate\022!.api.v0alpha.C" +
+      "reateSmsTemplateReq\032!.api.v0alpha.Create" +
+      "SmsTemplateRes\"7\272\270\221\002\002\030\001\202\323\344\223\002*\"%/api/v0al" +
+      "pha/smsapi/createsmstemplate:\001*\022\222\001\n\021Upda" +
+      "teSmsTemplate\022!.api.v0alpha.UpdateSmsTem" +
+      "plateReq\032!.api.v0alpha.UpdateSmsTemplate" +
+      "Res\"7\272\270\221\002\002\030\001\202\323\344\223\002*\"%/api/v0alpha/smsapi/" +
+      "updatesmstemplate:\001*\022\222\001\n\021DeleteSmsTempla" +
+      "te\022!.api.v0alpha.DeleteSmsTemplateReq\032!." +
+      "api.v0alpha.DeleteSmsTemplateRes\"7\272\270\221\002\002\030" +
+      "\001\202\323\344\223\002*\"%/api/v0alpha/smsapi/deletesmste" +
+      "mplate:\001*\022\232\001\n\023GetSmsTemplateBySid\022#.api." +
+      "v0alpha.GetSmsTemplateBySidReq\032#.api.v0a" +
+      "lpha.GetSmsTemplateBySidRes\"9\272\270\221\002\002\030\001\202\323\344\223" +
+      "\002,\"\'/api/v0alpha/smsapi/getsmstemplateby" +
+      "sid:\001*\022\246\001\n\026ListSmsIntentTemplates\022&.api." +
+      "v0alpha.ListSmsIntentTemplatesReq\032&.api." +
+      "v0alpha.ListSmsIntentTemplatesRes\"<\272\270\221\002\002" +
+      "\030\001\202\323\344\223\002/\"*/api/v0alpha/smsapi/listsmsint" +
+      "enttemplates:\001*\022\241\001\n\027CreateSmsIntentTempl" +
+      "ate\022\036.api.v0alpha.SmsIntentTemplate\032\'.ap" +
+      "i.v0alpha.CreateSmsIntentTemplateRes\"=\272\270" +
+      "\221\002\002\030\001\202\323\344\223\0020\"+/api/v0alpha/smsapi/creates" +
+      "msintenttemplate:\001*\022\241\001\n\027UpdateSmsIntentT" +
+      "emplate\022\036.api.v0alpha.SmsIntentTemplate\032" +
+      "\'.api.v0alpha.UpdateSmsIntentTemplateRes" +
+      "\"=\272\270\221\002\002\030\001\202\323\344\223\0020\"+/api/v0alpha/smsapi/upd" +
+      "atesmsintenttemplate:\001*\022\252\001\n\027DeleteSmsInt" +
+      "entTemplate\022\'.api.v0alpha.DeleteSmsInten" +
+      "tTemplateReq\032\'.api.v0alpha.DeleteSmsInte" +
+      "ntTemplateRes\"=\272\270\221\002\002\030\001\202\323\344\223\0020\"+/api/v0alp" +
+      "ha/smsapi/deletesmsintenttemplate:\001*\022\247\001\n" +
+      "\031GetSmsIntentTemplateBySid\022).api.v0alpha" +
+      ".GetSmsIntentTemplateBySidReq\032\036.api.v0al" +
+      "pha.SmsIntentTemplate\"?\272\270\221\002\002\030\001\202\323\344\223\0022\"-/a" +
+      "pi/v0alpha/smsapi/getsmsintenttemplateby" +
+      "sid:\001*\022\236\001\n\024ListSmsSourceNumbers\022$.api.v0" +
+      "alpha.ListSmsSourceNumbersReq\032$.api.v0al" +
+      "pha.ListSmsSourceNumbersRes\":\272\270\221\002\002\030\001\202\323\344\223" +
+      "\002-\"(/api/v0alpha/smsapi/listsmssourcenum" +
+      "bers:\001*\022\242\001\n\025CreateSmsSourceNumber\022%.api." +
+      "v0alpha.CreateSmsSourceNumberReq\032%.api.v" +
+      "0alpha.CreateSmsSourceNumberRes\";\272\270\221\002\002\030\001" +
+      "\202\323\344\223\002.\")/api/v0alpha/smsapi/createsmssou" +
+      "rcenumber:\001*\022\242\001\n\025UpdateSmsSourceNumber\022%" +
+      ".api.v0alpha.UpdateSmsSourceNumberReq\032%." +
+      "api.v0alpha.UpdateSmsSourceNumberRes\";\272\270" +
+      "\221\002\002\030\001\202\323\344\223\002.\")/api/v0alpha/smsapi/updates" +
+      "mssourcenumber:\001*\022\242\001\n\025DeleteSmsSourceNum" +
+      "ber\022%.api.v0alpha.DeleteSmsSourceNumberR" +
+      "eq\032%.api.v0alpha.DeleteSmsSourceNumberRe" +
+      "s\";\272\270\221\002\002\030\001\202\323\344\223\002.\")/api/v0alpha/smsapi/de" +
+      "letesmssourcenumber:\001*\022\232\001\n\027GetSmsSourceN" +
+      "umberBySid\022\'.api.v0alpha.GetSmsSourceNum" +
+      "berBySidReq\032\027.api.v0alpha.SmsNumbers\"=\272\270" +
+      "\221\002\002\030\001\202\323\344\223\0020\"+/api/v0alpha/smsapi/getsmss" +
+      "ourcenumberbysid:\001*\022\232\001\n\023SendSmsNotificat" +
+      "ion\022#.api.v0alpha.SendSmsNotificationReq" +
+      "\032#.api.v0alpha.SendSmsNotificationRes\"9\272" +
+      "\270\221\002\002\030\001\202\323\344\223\002,\"\'/api/v0alpha/smsapi/sendsm" +
+      "snotification:\001*\022\242\001\n\025ListSmsGroupByFilte" +
+      "rs\022%.api.v0alpha.ListSmsGroupByFiltersRe" +
+      "q\032%.api.v0alpha.ListSmsGroupByFiltersRes" +
+      "\";\272\270\221\002\002\030\001\202\323\344\223\002.\")/api/v0alpha/smsapi/lis" +
+      "tsmsgroupbyfilters:\001*\022\256\001\n\030ListSmsGroupsB" +
+      "yGroupSids\022(.api.v0alpha.ListSmsGroupsBy" +
+      "GroupSidsReq\032(.api.v0alpha.ListSmsGroups" +
+      "ByGroupSidsRes\">\272\270\221\002\002\030\001\202\323\344\223\0021\",/api/v0al" +
+      "pha/smsapi/listsmsgroupsbygroupsids:\001*\022\252" +
+      "\001\n\027ListSmsTasksByGroupSids\022\'.api.v0alpha" +
+      ".ListSmsTasksByGroupSidsReq\032\'.api.v0alph" +
+      "a.ListSmsTasksByGroupSidsRes\"=\272\270\221\002\002\030\001\202\323\344" +
+      "\223\0020\"+/api/v0alpha/smsapi/listsmstasksbyg" +
+      "roupsids:\001*\022\262\001\n\035ListSmsGroupByFiltersFor" +
+      "Audit\022%.api.v0alpha.ListSmsGroupByFilter" +
+      "sReq\032%.api.v0alpha.ListSmsGroupByFilters" +
+      "Res\"C\272\270\221\002\002\030\001\202\323\344\223\0026\"1/api/v0alpha/smsapi/" +
+      "listsmsgroupbyfiltersforaudit:\001*\022\276\001\n Lis" +
+      "tSmsGroupsByGroupSidsForAudit\022(.api.v0al" +
+      "pha.ListSmsGroupsByGroupSidsReq\032(.api.v0" +
+      "alpha.ListSmsGroupsByGroupSidsRes\"F\272\270\221\002\002" +
+      "\030\001\202\323\344\223\0029\"4/api/v0alpha/smsapi/listsmsgro" +
+      "upsbygroupsidsforaudit:\001*\022\272\001\n\037ListSmsTas" +
+      "ksByGroupSidsForAudit\022\'.api.v0alpha.List" +
+      "SmsTasksByGroupSidsReq\032\'.api.v0alpha.Lis" +
+      "tSmsTasksByGroupSidsRes\"E\272\270\221\002\002\030\001\202\323\344\223\0028\"3" +
+      "/api/v0alpha/smsapi/listsmstasksbygroups" +
+      "idsforaudit:\001*\022\306\001\n\036ListSmsTasksWithDetai" +
+      "ledStatus\022..api.v0alpha.ListSmsTasksWith" +
+      "DetailedStatusReq\032..api.v0alpha.ListSmsT" +
+      "asksWithDetailedStatusRes\"D\272\270\221\002\002\030\001\202\323\344\223\0027" +
+      "\"2/api/v0alpha/smsapi/listsmstaskswithde" +
+      "tailedstatus:\001*\022\215\001\n\024UpdateSmsGroupStatus" +
+      "\022\031.api.v0alpha.SmsGroupInfo\032\036.api.v0alph" +
+      "a.UpdateSmsGroupRes\":\272\270\221\002\002\030\001\202\323\344\223\002-\"(/api" +
+      "/v0alpha/smsapi/updatesmsgroupstatus:\001*\022" +
+      "\235\001\n\034UpdateSmsGroupSendsPerMinute\022\031.api.v" +
+      "0alpha.SmsGroupInfo\032\036.api.v0alpha.Update" +
+      "SmsGroupRes\"B\272\270\221\002\002\030\001\202\323\344\223\0025\"0/api/v0alpha" +
       "/smsapi/updatesmsgroupsendsperminute:\001*\022" +
-      "\224\001\n\033UpdateSmsGroupScheduleTimes\022\031.api.v0" +
+      "\233\001\n\033UpdateSmsGroupScheduleTimes\022\031.api.v0" +
       "alpha.SmsGroupInfo\032\036.api.v0alpha.UpdateS" +
-      "msGroupRes\":\202\323\344\223\0024\"//api/v0alpha/smsapi/" +
-      "updatesmsgroupscheduletimes:\001*\022s\n\013Schedu" +
-      "leSms\022\033.api.v0alpha.ScheduleSmsReq\032\033.api" +
-      ".v0alpha.ScheduleSmsRes\"*\202\323\344\223\002$\"\037/api/v0" +
-      "alpha/smsapi/schedulesms:\001*\022\227\001\n\024ResendUn" +
-      "connectedSms\022$.api.v0alpha.ResendUnconne" +
-      "ctedSmsReq\032$.api.v0alpha.ResendUnconnect" +
-      "edSmsRes\"3\202\323\344\223\002-\"(/api/v0alpha/smsapi/re" +
-      "sendunconnectedsms:\001*\022\213\001\n\021SmsActivitySea" +
-      "rch\022!.api.v0alpha.SmsActivitySearchReq\032!" +
-      ".api.v0alpha.SmsActivitySearchRes\"0\202\323\344\223\002" +
-      "*\"%/api/v0alpha/smsapi/smsactivitysearch" +
-      ":\001*\022\247\001\n\030CreateInboundSmsTemplate\022(.api.v" +
-      "0alpha.CreateInboundSmsTemplateReq\032(.api" +
-      ".v0alpha.CreateInboundSmsTemplateRes\"7\202\323" +
-      "\344\223\0021\",/api/v0alpha/smsapi/createinbounds" +
-      "mstemplate:\001*\022\247\001\n\030UpdateInboundSmsTempla" +
-      "te\022(.api.v0alpha.UpdateInboundSmsTemplat" +
-      "eReq\032(.api.v0alpha.UpdateInboundSmsTempl" +
-      "ateRes\"7\202\323\344\223\0021\",/api/v0alpha/smsapi/upda" +
-      "teinboundsmstemplate:\001*\022\247\001\n\030DeleteInboun" +
-      "dSmsTemplate\022(.api.v0alpha.DeleteInbound" +
-      "SmsTemplateReq\032(.api.v0alpha.DeleteInbou" +
-      "ndSmsTemplateRes\"7\202\323\344\223\0021\",/api/v0alpha/s" +
-      "msapi/deleteinboundsmstemplate:\001*\022\243\001\n\027Li" +
-      "stInboundSmsTemplates\022\'.api.v0alpha.List" +
-      "InboundSmsTemplatesReq\032\'.api.v0alpha.Lis" +
-      "tInboundSmsTemplatesRes\"6\202\323\344\223\0020\"+/api/v0" +
-      "alpha/smsapi/listinboundsmstemplates:\001*\022" +
-      "\253\001\n\031GetInboundSmsTemplateById\022).api.v0al" +
-      "pha.GetInboundSmsTemplateByIdReq\032).api.v" +
-      "0alpha.GetInboundSmsTemplateByIdRes\"8\202\323\344" +
-      "\223\0022\"-/api/v0alpha/smsapi/getinboundsmste" +
-      "mplatebyid:\001*\022\233\001\n\025CreateInboundSmsGroup\022" +
-      "%.api.v0alpha.CreateInboundSmsGroupReq\032%" +
-      ".api.v0alpha.CreateInboundSmsGroupRes\"4\202" +
-      "\323\344\223\002.\")/api/v0alpha/smsapi/createinbound" +
-      "smsgroup:\001*\022\233\001\n\025UpdateInboundSmsGroup\022%." +
-      "api.v0alpha.UpdateInboundSmsGroupReq\032%.a" +
-      "pi.v0alpha.UpdateInboundSmsGroupRes\"4\202\323\344" +
-      "\223\002.\")/api/v0alpha/smsapi/updateinboundsm" +
-      "sgroup:\001*\022\233\001\n\025DeleteInboundSmsGroup\022%.ap" +
-      "i.v0alpha.DeleteInboundSmsGroupReq\032%.api" +
-      ".v0alpha.DeleteInboundSmsGroupRes\"4\202\323\344\223\002" +
-      ".\")/api/v0alpha/smsapi/deleteinboundsmsg" +
-      "roup:\001*\022\227\001\n\024ListInboundSmsGroups\022$.api.v" +
-      "0alpha.ListInboundSmsGroupsReq\032$.api.v0a" +
-      "lpha.ListInboundSmsGroupsRes\"3\202\323\344\223\002-\"(/a" +
-      "pi/v0alpha/smsapi/listinboundsmsgroups:\001" +
-      "*\022\257\001\n\032ListActiveInboundSmsGroups\022*.api.v" +
-      "0alpha.ListActiveInboundSmsGroupsReq\032*.a" +
-      "pi.v0alpha.ListActiveInboundSmsGroupsRes" +
-      "\"9\202\323\344\223\0023\"./api/v0alpha/smsapi/listactive" +
-      "inboundsmsgroups:\001*\022\267\001\n\034ListInboundSmsGr" +
-      "oupByFilters\022,.api.v0alpha.ListInboundSm" +
-      "sGroupByFiltersReq\032,.api.v0alpha.ListInb" +
-      "oundSmsGroupByFiltersRes\";\202\323\344\223\0025\"0/api/v" +
-      "0alpha/smsapi/listinboundsmsgroupbyfilte" +
-      "rs:\001*\022\237\001\n\026GetInboundSmsGroupById\022&.api.v" +
-      "0alpha.GetInboundSmsGroupByIdReq\032&.api.v" +
-      "0alpha.GetInboundSmsGroupByIdRes\"5\202\323\344\223\002/" +
-      "\"*/api/v0alpha/smsapi/getinboundsmsgroup" +
-      "byid:\001*\022\276\001\n\036ListInboundSmsGroupsByGroupI" +
-      "ds\022..api.v0alpha.ListInboundSmsGroupsByG" +
-      "roupIdsReq\032..api.v0alpha.ListInboundSmsG" +
-      "roupsByGroupIdsRes\"<\202\323\344\223\0026\"1/api/v0alpha" +
-      "/smsapi/listinboundsmsgroupbygroupids:\001*" +
-      "\022\223\001\n\023StopInboundSmsGroup\022#.api.v0alpha.S" +
-      "topInboundSmsGroupReq\032#.api.v0alpha.Stop" +
-      "InboundSmsGroupRes\"2\202\323\344\223\002,\"\'/api/v0alpha" +
-      "/smsapi/stopinboundsmsgroup:\001*\022\217\001\n\022Sched" +
-      "uleInboundSms\022\".api.v0alpha.ScheduleInbo" +
-      "undSmsReq\032\".api.v0alpha.ScheduleInboundS" +
-      "msRes\"1\202\323\344\223\002+\"&/api/v0alpha/smsapi/sched" +
-      "uleinboundsms:\001*\022\233\001\n\025CreateSmsConversati" +
-      "on\022%.api.v0alpha.CreateSmsConversationRe" +
-      "q\032%.api.v0alpha.CreateSmsConversationRes" +
-      "\"4\202\323\344\223\002.\")/api/v0alpha/smsapi/createsmsc" +
-      "onversation:\001*\022\233\001\n\025UpdateSmsConversation" +
-      "\022%.api.v0alpha.UpdateSmsConversationReq\032" +
-      "%.api.v0alpha.UpdateSmsConversationRes\"4" +
-      "\202\323\344\223\002.\")/api/v0alpha/smsapi/updatesmscon" +
-      "versation:\001*\022\233\001\n\025DeleteSmsConversation\022%" +
-      ".api.v0alpha.DeleteSmsConversationReq\032%." +
-      "api.v0alpha.DeleteSmsConversationRes\"4\202\323" +
-      "\344\223\002.\")/api/v0alpha/smsapi/deletesmsconve" +
-      "rsation:\001*\022\227\001\n\024ListSmsConversations\022$.ap" +
-      "i.v0alpha.ListSmsConversationsReq\032$.api." +
-      "v0alpha.ListSmsConversationsRes\"3\202\323\344\223\002-\"" +
-      "(/api/v0alpha/smsapi/listsmsconversation" +
-      "s:\001*\022\237\001\n\026GetSmsConversationById\022&.api.v0" +
-      "alpha.GetSmsConversationByIdReq\032&.api.v0" +
-      "alpha.GetSmsConversationByIdRes\"5\202\323\344\223\002/\"" +
-      "*/api/v0alpha/smsapi/getsmsconversationb" +
-      "yid:\001*\022{\n\rGetSmsMessage\022\035.api.v0alpha.Ge" +
-      "tSmsMessageReq\032\035.api.v0alpha.GetSmsMessa" +
-      "geRes\",\202\323\344\223\002&\"!/api/v0alpha/smsapi/getsm" +
-      "smessage:\001*\022\246\001\n\032CreateSmsConversationAud" +
-      "it\022!.api.v0alpha.SmsConversationAudit\032*." +
-      "api.v0alpha.CreateSmsConversationAuditRe" +
-      "s\"9\202\323\344\223\0023\"./api/v0alpha/smsapi/createsms" +
-      "conversationaudit:\001*\022\253\001\n\031ListSmsConversa" +
-      "tionAudits\022).api.v0alpha.ListSmsConversa" +
-      "tionAuditsReq\032).api.v0alpha.ListSmsConve" +
-      "rsationAuditsRes\"8\202\323\344\223\0022\"-/api/v0alpha/s" +
-      "msapi/listsmsconversationsaudit:\001*\022\263\001\n\033G" +
-      "etSmsConversationAuditById\022+.api.v0alpha" +
-      ".GetSmsConversationAuditByIdReq\032+.api.v0" +
-      "alpha.GetSmsConversationAuditByIdRes\":\202\323" +
-      "\344\223\0024\"//api/v0alpha/smsapi/getsmsconversa" +
-      "tionauditbyid:\001*\022\306\001\n\"CreateSmsConversati" +
-      "onAssignedAgent\022).api.v0alpha.SmsConvers" +
-      "ationAssignedAgent\0322.api.v0alpha.CreateS" +
-      "msConversationAssignedAgentRes\"A\202\323\344\223\002;\"6" +
-      "/api/v0alpha/smsapi/createsmsconversatio" +
-      "nassignedagent:\001*\022\313\001\n!ListSmsConversatio" +
-      "nAssignedAgents\0221.api.v0alpha.ListSmsCon" +
-      "versationAssignedAgentsReq\0321.api.v0alpha" +
-      ".ListSmsConversationAssignedAgentsRes\"@\202" +
-      "\323\344\223\002:\"5/api/v0alpha/smsapi/listsmsconver" +
-      "sationassignedagents:\001*\022\323\001\n#GetSmsConver" +
-      "sationAssignedAgentById\0223.api.v0alpha.Ge" +
-      "tSmsConversationAssignedAgentByIdReq\0323.a" +
-      "pi.v0alpha.GetSmsConversationAssignedAge" +
-      "ntByIdRes\"B\202\323\344\223\002<\"7/api/v0alpha/smsapi/g" +
-      "etsmsconversationassignedagentbyid:\001*\022\273\001" +
-      "\n\035ListInboundSmsTasksByGroupIds\022-.api.v0" +
-      "alpha.ListInboundSmsTasksByGroupIdsReq\032-" +
-      ".api.v0alpha.ListInboundSmsTasksByGroupI" +
-      "dsRes\"<\202\323\344\223\0026\"1/api/v0alpha/smsapi/listi" +
-      "nboundsmstasksbygroupids:\001*\022\247\001\n\030StopAllO" +
-      "utboundSmsGroups\022(.api.v0alpha.StopAllOu" +
-      "tboundSmsGroupsReq\032(.api.v0alpha.StopAll" +
-      "OutboundSmsGroupsRes\"7\202\323\344\223\0021\",/api/v0alp" +
-      "ha/smsapi/stopalloutboundsmsgroups:\001*\022\243\001" +
-      "\n\027StopAllInboundSmsGroups\022\'.api.v0alpha." +
-      "StopAllInboundSmsGroupsReq\032\'.api.v0alpha" +
-      ".StopAllInboundSmsGroupsRes\"6\202\323\344\223\0020\"+/ap" +
-      "i/v0alpha/smsapi/stopallinboundsmsgroups" +
-      ":\001*By\n\035com.tcn.cloud.api.api.v0alphaB\013Sm" +
-      "sapiProtoP\001\242\002\003AVX\252\002\013Api.V0alpha\312\002\013Api\\V0" +
-      "alpha\342\002\027Api\\V0alpha\\GPBMetadata\352\002\014Api::V" +
-      "0alphab\006proto3"
+      "msGroupRes\"A\272\270\221\002\002\030\001\202\323\344\223\0024\"//api/v0alpha/" +
+      "smsapi/updatesmsgroupscheduletimes:\001*\022z\n" +
+      "\013ScheduleSms\022\033.api.v0alpha.ScheduleSmsRe" +
+      "q\032\033.api.v0alpha.ScheduleSmsRes\"1\272\270\221\002\002\030\001\202" +
+      "\323\344\223\002$\"\037/api/v0alpha/smsapi/schedulesms:\001" +
+      "*\022\236\001\n\024ResendUnconnectedSms\022$.api.v0alpha" +
+      ".ResendUnconnectedSmsReq\032$.api.v0alpha.R" +
+      "esendUnconnectedSmsRes\":\272\270\221\002\002\030\001\202\323\344\223\002-\"(/" +
+      "api/v0alpha/smsapi/resendunconnectedsms:" +
+      "\001*\022\222\001\n\021SmsActivitySearch\022!.api.v0alpha.S" +
+      "msActivitySearchReq\032!.api.v0alpha.SmsAct" +
+      "ivitySearchRes\"7\272\270\221\002\002\030\001\202\323\344\223\002*\"%/api/v0al" +
+      "pha/smsapi/smsactivitysearch:\001*\022\256\001\n\030Crea" +
+      "teInboundSmsTemplate\022(.api.v0alpha.Creat" +
+      "eInboundSmsTemplateReq\032(.api.v0alpha.Cre" +
+      "ateInboundSmsTemplateRes\">\272\270\221\002\002\030\001\202\323\344\223\0021\"" +
+      ",/api/v0alpha/smsapi/createinboundsmstem" +
+      "plate:\001*\022\256\001\n\030UpdateInboundSmsTemplate\022(." +
+      "api.v0alpha.UpdateInboundSmsTemplateReq\032" +
+      "(.api.v0alpha.UpdateInboundSmsTemplateRe" +
+      "s\">\272\270\221\002\002\030\001\202\323\344\223\0021\",/api/v0alpha/smsapi/up" +
+      "dateinboundsmstemplate:\001*\022\256\001\n\030DeleteInbo" +
+      "undSmsTemplate\022(.api.v0alpha.DeleteInbou" +
+      "ndSmsTemplateReq\032(.api.v0alpha.DeleteInb" +
+      "oundSmsTemplateRes\">\272\270\221\002\002\030\001\202\323\344\223\0021\",/api/" +
+      "v0alpha/smsapi/deleteinboundsmstemplate:" +
+      "\001*\022\252\001\n\027ListInboundSmsTemplates\022\'.api.v0a" +
+      "lpha.ListInboundSmsTemplatesReq\032\'.api.v0" +
+      "alpha.ListInboundSmsTemplatesRes\"=\272\270\221\002\002\030" +
+      "\001\202\323\344\223\0020\"+/api/v0alpha/smsapi/listinbound" +
+      "smstemplates:\001*\022\262\001\n\031GetInboundSmsTemplat" +
+      "eById\022).api.v0alpha.GetInboundSmsTemplat" +
+      "eByIdReq\032).api.v0alpha.GetInboundSmsTemp" +
+      "lateByIdRes\"?\272\270\221\002\002\030\001\202\323\344\223\0022\"-/api/v0alpha" +
+      "/smsapi/getinboundsmstemplatebyid:\001*\022\242\001\n" +
+      "\025CreateInboundSmsGroup\022%.api.v0alpha.Cre" +
+      "ateInboundSmsGroupReq\032%.api.v0alpha.Crea" +
+      "teInboundSmsGroupRes\";\272\270\221\002\002\030\001\202\323\344\223\002.\")/ap" +
+      "i/v0alpha/smsapi/createinboundsmsgroup:\001" +
+      "*\022\242\001\n\025UpdateInboundSmsGroup\022%.api.v0alph" +
+      "a.UpdateInboundSmsGroupReq\032%.api.v0alpha" +
+      ".UpdateInboundSmsGroupRes\";\272\270\221\002\002\030\001\202\323\344\223\002." +
+      "\")/api/v0alpha/smsapi/updateinboundsmsgr" +
+      "oup:\001*\022\242\001\n\025DeleteInboundSmsGroup\022%.api.v" +
+      "0alpha.DeleteInboundSmsGroupReq\032%.api.v0" +
+      "alpha.DeleteInboundSmsGroupRes\";\272\270\221\002\002\030\001\202" +
+      "\323\344\223\002.\")/api/v0alpha/smsapi/deleteinbound" +
+      "smsgroup:\001*\022\236\001\n\024ListInboundSmsGroups\022$.a" +
+      "pi.v0alpha.ListInboundSmsGroupsReq\032$.api" +
+      ".v0alpha.ListInboundSmsGroupsRes\":\272\270\221\002\002\030" +
+      "\001\202\323\344\223\002-\"(/api/v0alpha/smsapi/listinbound" +
+      "smsgroups:\001*\022\266\001\n\032ListActiveInboundSmsGro" +
+      "ups\022*.api.v0alpha.ListActiveInboundSmsGr" +
+      "oupsReq\032*.api.v0alpha.ListActiveInboundS" +
+      "msGroupsRes\"@\272\270\221\002\002\030\001\202\323\344\223\0023\"./api/v0alpha" +
+      "/smsapi/listactiveinboundsmsgroups:\001*\022\276\001" +
+      "\n\034ListInboundSmsGroupByFilters\022,.api.v0a" +
+      "lpha.ListInboundSmsGroupByFiltersReq\032,.a" +
+      "pi.v0alpha.ListInboundSmsGroupByFiltersR" +
+      "es\"B\272\270\221\002\002\030\001\202\323\344\223\0025\"0/api/v0alpha/smsapi/l" +
+      "istinboundsmsgroupbyfilters:\001*\022\246\001\n\026GetIn" +
+      "boundSmsGroupById\022&.api.v0alpha.GetInbou" +
+      "ndSmsGroupByIdReq\032&.api.v0alpha.GetInbou" +
+      "ndSmsGroupByIdRes\"<\272\270\221\002\002\030\001\202\323\344\223\002/\"*/api/v" +
+      "0alpha/smsapi/getinboundsmsgroupbyid:\001*\022" +
+      "\305\001\n\036ListInboundSmsGroupsByGroupIds\022..api" +
+      ".v0alpha.ListInboundSmsGroupsByGroupIdsR" +
+      "eq\032..api.v0alpha.ListInboundSmsGroupsByG" +
+      "roupIdsRes\"C\272\270\221\002\002\030\001\202\323\344\223\0026\"1/api/v0alpha/" +
+      "smsapi/listinboundsmsgroupbygroupids:\001*\022" +
+      "\232\001\n\023StopInboundSmsGroup\022#.api.v0alpha.St" +
+      "opInboundSmsGroupReq\032#.api.v0alpha.StopI" +
+      "nboundSmsGroupRes\"9\272\270\221\002\002\030\001\202\323\344\223\002,\"\'/api/v" +
+      "0alpha/smsapi/stopinboundsmsgroup:\001*\022\226\001\n" +
+      "\022ScheduleInboundSms\022\".api.v0alpha.Schedu" +
+      "leInboundSmsReq\032\".api.v0alpha.ScheduleIn" +
+      "boundSmsRes\"8\272\270\221\002\002\030\001\202\323\344\223\002+\"&/api/v0alpha" +
+      "/smsapi/scheduleinboundsms:\001*\022\242\001\n\025Create" +
+      "SmsConversation\022%.api.v0alpha.CreateSmsC" +
+      "onversationReq\032%.api.v0alpha.CreateSmsCo" +
+      "nversationRes\";\272\270\221\002\002\030\001\202\323\344\223\002.\")/api/v0alp" +
+      "ha/smsapi/createsmsconversation:\001*\022\242\001\n\025U" +
+      "pdateSmsConversation\022%.api.v0alpha.Updat" +
+      "eSmsConversationReq\032%.api.v0alpha.Update" +
+      "SmsConversationRes\";\272\270\221\002\002\030\001\202\323\344\223\002.\")/api/" +
+      "v0alpha/smsapi/updatesmsconversation:\001*\022" +
+      "\242\001\n\025DeleteSmsConversation\022%.api.v0alpha." +
+      "DeleteSmsConversationReq\032%.api.v0alpha.D" +
+      "eleteSmsConversationRes\";\272\270\221\002\002\030\001\202\323\344\223\002.\")" +
+      "/api/v0alpha/smsapi/deletesmsconversatio" +
+      "n:\001*\022\236\001\n\024ListSmsConversations\022$.api.v0al" +
+      "pha.ListSmsConversationsReq\032$.api.v0alph" +
+      "a.ListSmsConversationsRes\":\272\270\221\002\002\030\001\202\323\344\223\002-" +
+      "\"(/api/v0alpha/smsapi/listsmsconversatio" +
+      "ns:\001*\022\246\001\n\026GetSmsConversationById\022&.api.v" +
+      "0alpha.GetSmsConversationByIdReq\032&.api.v" +
+      "0alpha.GetSmsConversationByIdRes\"<\272\270\221\002\002\030" +
+      "\001\202\323\344\223\002/\"*/api/v0alpha/smsapi/getsmsconve" +
+      "rsationbyid:\001*\022\202\001\n\rGetSmsMessage\022\035.api.v" +
+      "0alpha.GetSmsMessageReq\032\035.api.v0alpha.Ge" +
+      "tSmsMessageRes\"3\272\270\221\002\002\030\001\202\323\344\223\002&\"!/api/v0al" +
+      "pha/smsapi/getsmsmessage:\001*\022\255\001\n\032CreateSm" +
+      "sConversationAudit\022!.api.v0alpha.SmsConv" +
+      "ersationAudit\032*.api.v0alpha.CreateSmsCon" +
+      "versationAuditRes\"@\272\270\221\002\002\030\001\202\323\344\223\0023\"./api/v" +
+      "0alpha/smsapi/createsmsconversationaudit" +
+      ":\001*\022\262\001\n\031ListSmsConversationAudits\022).api." +
+      "v0alpha.ListSmsConversationAuditsReq\032).a" +
+      "pi.v0alpha.ListSmsConversationAuditsRes\"" +
+      "?\272\270\221\002\002\030\001\202\323\344\223\0022\"-/api/v0alpha/smsapi/list" +
+      "smsconversationsaudit:\001*\022\272\001\n\033GetSmsConve" +
+      "rsationAuditById\022+.api.v0alpha.GetSmsCon" +
+      "versationAuditByIdReq\032+.api.v0alpha.GetS" +
+      "msConversationAuditByIdRes\"A\272\270\221\002\002\030\001\202\323\344\223\002" +
+      "4\"//api/v0alpha/smsapi/getsmsconversatio" +
+      "nauditbyid:\001*\022\315\001\n\"CreateSmsConversationA" +
+      "ssignedAgent\022).api.v0alpha.SmsConversati" +
+      "onAssignedAgent\0322.api.v0alpha.CreateSmsC" +
+      "onversationAssignedAgentRes\"H\272\270\221\002\002\030\001\202\323\344\223" +
+      "\002;\"6/api/v0alpha/smsapi/createsmsconvers" +
+      "ationassignedagent:\001*\022\322\001\n!ListSmsConvers" +
+      "ationAssignedAgents\0221.api.v0alpha.ListSm" +
+      "sConversationAssignedAgentsReq\0321.api.v0a" +
+      "lpha.ListSmsConversationAssignedAgentsRe" +
+      "s\"G\272\270\221\002\002\030\001\202\323\344\223\002:\"5/api/v0alpha/smsapi/li" +
+      "stsmsconversationassignedagents:\001*\022\332\001\n#G" +
+      "etSmsConversationAssignedAgentById\0223.api" +
+      ".v0alpha.GetSmsConversationAssignedAgent" +
+      "ByIdReq\0323.api.v0alpha.GetSmsConversation" +
+      "AssignedAgentByIdRes\"I\272\270\221\002\002\030\001\202\323\344\223\002<\"7/ap" +
+      "i/v0alpha/smsapi/getsmsconversationassig" +
+      "nedagentbyid:\001*\022\302\001\n\035ListInboundSmsTasksB" +
+      "yGroupIds\022-.api.v0alpha.ListInboundSmsTa" +
+      "sksByGroupIdsReq\032-.api.v0alpha.ListInbou" +
+      "ndSmsTasksByGroupIdsRes\"C\272\270\221\002\002\030\001\202\323\344\223\0026\"1" +
+      "/api/v0alpha/smsapi/listinboundsmstasksb" +
+      "ygroupids:\001*\022\256\001\n\030StopAllOutboundSmsGroup" +
+      "s\022(.api.v0alpha.StopAllOutboundSmsGroups" +
+      "Req\032(.api.v0alpha.StopAllOutboundSmsGrou" +
+      "psRes\">\272\270\221\002\002\030\001\202\323\344\223\0021\",/api/v0alpha/smsap" +
+      "i/stopalloutboundsmsgroups:\001*\022\252\001\n\027StopAl" +
+      "lInboundSmsGroups\022\'.api.v0alpha.StopAllI" +
+      "nboundSmsGroupsReq\032\'.api.v0alpha.StopAll" +
+      "InboundSmsGroupsRes\"=\272\270\221\002\002\030\001\202\323\344\223\0020\"+/api" +
+      "/v0alpha/smsapi/stopallinboundsmsgroups:" +
+      "\001*By\n\035com.tcn.cloud.api.api.v0alphaB\013Sms" +
+      "apiProtoP\001\242\002\003AVX\252\002\013Api.V0alpha\312\002\013Api\\V0a" +
+      "lpha\342\002\027Api\\V0alpha\\GPBMetadata\352\002\014Api::V0" +
+      "alphab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.tcn.cloud.api.annotations.AuthzProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.SmsProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
@@ -2149,9 +2161,11 @@ public final class SmsapiProto {
         new java.lang.String[] { "Result", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.tcn.cloud.api.annotations.AuthzProto.authz);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.tcn.cloud.api.annotations.AuthzProto.getDescriptor();
     com.tcn.cloud.api.api.commons.SmsProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
