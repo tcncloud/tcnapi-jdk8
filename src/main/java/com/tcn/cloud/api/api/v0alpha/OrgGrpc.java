@@ -5874,6 +5874,37 @@ public final class OrgGrpc {
     return getAddUserSubscriptionMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionRequest,
+      com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionResponse> getAddMyUserSubscriptionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AddMyUserSubscription",
+      requestType = com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionRequest.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionRequest,
+      com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionResponse> getAddMyUserSubscriptionMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionRequest, com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionResponse> getAddMyUserSubscriptionMethod;
+    if ((getAddMyUserSubscriptionMethod = OrgGrpc.getAddMyUserSubscriptionMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getAddMyUserSubscriptionMethod = OrgGrpc.getAddMyUserSubscriptionMethod) == null) {
+          OrgGrpc.getAddMyUserSubscriptionMethod = getAddMyUserSubscriptionMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionRequest, com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddMyUserSubscription"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AddMyUserSubscription"))
+              .build();
+        }
+      }
+    }
+    return getAddMyUserSubscriptionMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.RemoveUserSubscriptionRequest,
       com.tcn.cloud.api.api.v0alpha.RemoveUserSubscriptionResponse> getRemoveUserSubscriptionMethod;
 
@@ -8370,6 +8401,16 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * Adds a user subscription to user's list of subscriptions
+     * </pre>
+     */
+    default void addMyUserSubscription(com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddMyUserSubscriptionMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Removes a user subscription from a specified user's list of subscriptions
      * </pre>
      */
@@ -10849,6 +10890,17 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * Adds a user subscription to user's list of subscriptions
+     * </pre>
+     */
+    public void addMyUserSubscription(com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAddMyUserSubscriptionMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Removes a user subscription from a specified user's list of subscriptions
      * </pre>
      */
@@ -13136,6 +13188,16 @@ public final class OrgGrpc {
     public com.tcn.cloud.api.api.v0alpha.AddUserSubscriptionResponse addUserSubscription(com.tcn.cloud.api.api.v0alpha.AddUserSubscriptionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAddUserSubscriptionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Adds a user subscription to user's list of subscriptions
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionResponse addMyUserSubscription(com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAddMyUserSubscriptionMethod(), getCallOptions(), request);
     }
 
     /**
@@ -15592,6 +15654,17 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * Adds a user subscription to user's list of subscriptions
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionResponse> addMyUserSubscription(
+        com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAddMyUserSubscriptionMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Removes a user subscription from a specified user's list of subscriptions
      * </pre>
      */
@@ -15916,16 +15989,17 @@ public final class OrgGrpc {
   private static final int METHODID_DELETE_AUTH_CONNECTION = 186;
   private static final int METHODID_GET_USER_SUBSCRIPTION = 187;
   private static final int METHODID_ADD_USER_SUBSCRIPTION = 188;
-  private static final int METHODID_REMOVE_USER_SUBSCRIPTION = 189;
-  private static final int METHODID_REMOVE_MY_USER_SUBSCRIPTION = 190;
-  private static final int METHODID_UPDATE_USER_SUBSCRIPTION = 191;
-  private static final int METHODID_LIST_USER_SUBSCRIPTIONS = 192;
-  private static final int METHODID_LIST_ORG_SUBSCRIPTIONS = 193;
-  private static final int METHODID_GET_SYSTEM_ENVIRONMENT_DETAILS = 194;
-  private static final int METHODID_LIST_AGENT_STATISTICS_TEMPLATES = 195;
-  private static final int METHODID_CREATE_AGENT_STATISTICS_TEMPLATE = 196;
-  private static final int METHODID_UPDATE_AGENT_STATISTICS_TEMPLATE = 197;
-  private static final int METHODID_DELETE_AGENT_STATISTICS_TEMPLATE = 198;
+  private static final int METHODID_ADD_MY_USER_SUBSCRIPTION = 189;
+  private static final int METHODID_REMOVE_USER_SUBSCRIPTION = 190;
+  private static final int METHODID_REMOVE_MY_USER_SUBSCRIPTION = 191;
+  private static final int METHODID_UPDATE_USER_SUBSCRIPTION = 192;
+  private static final int METHODID_LIST_USER_SUBSCRIPTIONS = 193;
+  private static final int METHODID_LIST_ORG_SUBSCRIPTIONS = 194;
+  private static final int METHODID_GET_SYSTEM_ENVIRONMENT_DETAILS = 195;
+  private static final int METHODID_LIST_AGENT_STATISTICS_TEMPLATES = 196;
+  private static final int METHODID_CREATE_AGENT_STATISTICS_TEMPLATE = 197;
+  private static final int METHODID_UPDATE_AGENT_STATISTICS_TEMPLATE = 198;
+  private static final int METHODID_DELETE_AGENT_STATISTICS_TEMPLATE = 199;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -16699,6 +16773,10 @@ public final class OrgGrpc {
         case METHODID_ADD_USER_SUBSCRIPTION:
           serviceImpl.addUserSubscription((com.tcn.cloud.api.api.v0alpha.AddUserSubscriptionRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AddUserSubscriptionResponse>) responseObserver);
+          break;
+        case METHODID_ADD_MY_USER_SUBSCRIPTION:
+          serviceImpl.addMyUserSubscription((com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionResponse>) responseObserver);
           break;
         case METHODID_REMOVE_USER_SUBSCRIPTION:
           serviceImpl.removeUserSubscription((com.tcn.cloud.api.api.v0alpha.RemoveUserSubscriptionRequest) request,
@@ -18082,6 +18160,13 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v0alpha.AddUserSubscriptionResponse>(
                 service, METHODID_ADD_USER_SUBSCRIPTION)))
         .addMethod(
+          getAddMyUserSubscriptionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionRequest,
+              com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionResponse>(
+                service, METHODID_ADD_MY_USER_SUBSCRIPTION)))
+        .addMethod(
           getRemoveUserSubscriptionMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -18388,6 +18473,7 @@ public final class OrgGrpc {
               .addMethod(getDeleteAuthConnectionMethod())
               .addMethod(getGetUserSubscriptionMethod())
               .addMethod(getAddUserSubscriptionMethod())
+              .addMethod(getAddMyUserSubscriptionMethod())
               .addMethod(getRemoveUserSubscriptionMethod())
               .addMethod(getRemoveMyUserSubscriptionMethod())
               .addMethod(getUpdateUserSubscriptionMethod())
