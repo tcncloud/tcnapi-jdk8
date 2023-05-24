@@ -29,17 +29,17 @@ public interface AssignedScenarioOrBuilder extends
   boolean getEnabled();
 
   /**
-   * <code>.api.v0alpha.ScenarioResult last_execution_result = 3 [json_name = "lastExecutionResult"];</code>
+   * <code>.api.commons.ScenarioResult last_execution_result = 3 [json_name = "lastExecutionResult"];</code>
    * @return Whether the lastExecutionResult field is set.
    */
   boolean hasLastExecutionResult();
   /**
-   * <code>.api.v0alpha.ScenarioResult last_execution_result = 3 [json_name = "lastExecutionResult"];</code>
+   * <code>.api.commons.ScenarioResult last_execution_result = 3 [json_name = "lastExecutionResult"];</code>
    * @return The lastExecutionResult.
    */
-  com.tcn.cloud.api.api.v0alpha.ScenarioResult getLastExecutionResult();
+  com.tcn.cloud.api.api.commons.ScenarioResult getLastExecutionResult();
   /**
-   * <code>.api.v0alpha.ScenarioResult last_execution_result = 3 [json_name = "lastExecutionResult"];</code>
+   * <code>.api.commons.ScenarioResult last_execution_result = 3 [json_name = "lastExecutionResult"];</code>
    */
-  com.tcn.cloud.api.api.v0alpha.ScenarioResultOrBuilder getLastExecutionResultOrBuilder();
+  com.tcn.cloud.api.api.commons.ScenarioResultOrBuilder getLastExecutionResultOrBuilder();
 }

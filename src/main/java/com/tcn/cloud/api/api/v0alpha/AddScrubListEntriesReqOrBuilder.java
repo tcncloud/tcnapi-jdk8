@@ -118,24 +118,24 @@ public interface AddScrubListEntriesReqOrBuilder extends
    * the list of scrub entries that are sent in order to be added
    * </pre>
    *
-   * <code>repeated .api.v0alpha.ScrubEntryDetails scrub_entry_details = 13 [json_name = "scrubEntryDetails"];</code>
+   * <code>repeated .api.commons.ScrubEntryDetails scrub_entry_details = 13 [json_name = "scrubEntryDetails"];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.v0alpha.ScrubEntryDetails> 
+  java.util.List<com.tcn.cloud.api.api.commons.ScrubEntryDetails> 
       getScrubEntryDetailsList();
   /**
    * <pre>
    * the list of scrub entries that are sent in order to be added
    * </pre>
    *
-   * <code>repeated .api.v0alpha.ScrubEntryDetails scrub_entry_details = 13 [json_name = "scrubEntryDetails"];</code>
+   * <code>repeated .api.commons.ScrubEntryDetails scrub_entry_details = 13 [json_name = "scrubEntryDetails"];</code>
    */
-  com.tcn.cloud.api.api.v0alpha.ScrubEntryDetails getScrubEntryDetails(int index);
+  com.tcn.cloud.api.api.commons.ScrubEntryDetails getScrubEntryDetails(int index);
   /**
    * <pre>
    * the list of scrub entries that are sent in order to be added
    * </pre>
    *
-   * <code>repeated .api.v0alpha.ScrubEntryDetails scrub_entry_details = 13 [json_name = "scrubEntryDetails"];</code>
+   * <code>repeated .api.commons.ScrubEntryDetails scrub_entry_details = 13 [json_name = "scrubEntryDetails"];</code>
    */
   int getScrubEntryDetailsCount();
   /**
@@ -143,17 +143,17 @@ public interface AddScrubListEntriesReqOrBuilder extends
    * the list of scrub entries that are sent in order to be added
    * </pre>
    *
-   * <code>repeated .api.v0alpha.ScrubEntryDetails scrub_entry_details = 13 [json_name = "scrubEntryDetails"];</code>
+   * <code>repeated .api.commons.ScrubEntryDetails scrub_entry_details = 13 [json_name = "scrubEntryDetails"];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.v0alpha.ScrubEntryDetailsOrBuilder> 
+  java.util.List<? extends com.tcn.cloud.api.api.commons.ScrubEntryDetailsOrBuilder> 
       getScrubEntryDetailsOrBuilderList();
   /**
    * <pre>
    * the list of scrub entries that are sent in order to be added
    * </pre>
    *
-   * <code>repeated .api.v0alpha.ScrubEntryDetails scrub_entry_details = 13 [json_name = "scrubEntryDetails"];</code>
+   * <code>repeated .api.commons.ScrubEntryDetails scrub_entry_details = 13 [json_name = "scrubEntryDetails"];</code>
    */
-  com.tcn.cloud.api.api.v0alpha.ScrubEntryDetailsOrBuilder getScrubEntryDetailsOrBuilder(
+  com.tcn.cloud.api.api.commons.ScrubEntryDetailsOrBuilder getScrubEntryDetailsOrBuilder(
       int index);
 }

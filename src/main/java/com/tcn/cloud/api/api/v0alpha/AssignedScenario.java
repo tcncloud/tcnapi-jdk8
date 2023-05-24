@@ -76,9 +76,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LAST_EXECUTION_RESULT_FIELD_NUMBER = 3;
-  private com.tcn.cloud.api.api.v0alpha.ScenarioResult lastExecutionResult_;
+  private com.tcn.cloud.api.api.commons.ScenarioResult lastExecutionResult_;
   /**
-   * <code>.api.v0alpha.ScenarioResult last_execution_result = 3 [json_name = "lastExecutionResult"];</code>
+   * <code>.api.commons.ScenarioResult last_execution_result = 3 [json_name = "lastExecutionResult"];</code>
    * @return Whether the lastExecutionResult field is set.
    */
   @java.lang.Override
@@ -86,19 +86,19 @@ private static final long serialVersionUID = 0L;
     return lastExecutionResult_ != null;
   }
   /**
-   * <code>.api.v0alpha.ScenarioResult last_execution_result = 3 [json_name = "lastExecutionResult"];</code>
+   * <code>.api.commons.ScenarioResult last_execution_result = 3 [json_name = "lastExecutionResult"];</code>
    * @return The lastExecutionResult.
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.ScenarioResult getLastExecutionResult() {
-    return lastExecutionResult_ == null ? com.tcn.cloud.api.api.v0alpha.ScenarioResult.getDefaultInstance() : lastExecutionResult_;
+  public com.tcn.cloud.api.api.commons.ScenarioResult getLastExecutionResult() {
+    return lastExecutionResult_ == null ? com.tcn.cloud.api.api.commons.ScenarioResult.getDefaultInstance() : lastExecutionResult_;
   }
   /**
-   * <code>.api.v0alpha.ScenarioResult last_execution_result = 3 [json_name = "lastExecutionResult"];</code>
+   * <code>.api.commons.ScenarioResult last_execution_result = 3 [json_name = "lastExecutionResult"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.ScenarioResultOrBuilder getLastExecutionResultOrBuilder() {
-    return lastExecutionResult_ == null ? com.tcn.cloud.api.api.v0alpha.ScenarioResult.getDefaultInstance() : lastExecutionResult_;
+  public com.tcn.cloud.api.api.commons.ScenarioResultOrBuilder getLastExecutionResultOrBuilder() {
+    return lastExecutionResult_ == null ? com.tcn.cloud.api.api.commons.ScenarioResult.getDefaultInstance() : lastExecutionResult_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -618,31 +618,31 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.tcn.cloud.api.api.v0alpha.ScenarioResult lastExecutionResult_;
+    private com.tcn.cloud.api.api.commons.ScenarioResult lastExecutionResult_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v0alpha.ScenarioResult, com.tcn.cloud.api.api.v0alpha.ScenarioResult.Builder, com.tcn.cloud.api.api.v0alpha.ScenarioResultOrBuilder> lastExecutionResultBuilder_;
+        com.tcn.cloud.api.api.commons.ScenarioResult, com.tcn.cloud.api.api.commons.ScenarioResult.Builder, com.tcn.cloud.api.api.commons.ScenarioResultOrBuilder> lastExecutionResultBuilder_;
     /**
-     * <code>.api.v0alpha.ScenarioResult last_execution_result = 3 [json_name = "lastExecutionResult"];</code>
+     * <code>.api.commons.ScenarioResult last_execution_result = 3 [json_name = "lastExecutionResult"];</code>
      * @return Whether the lastExecutionResult field is set.
      */
     public boolean hasLastExecutionResult() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>.api.v0alpha.ScenarioResult last_execution_result = 3 [json_name = "lastExecutionResult"];</code>
+     * <code>.api.commons.ScenarioResult last_execution_result = 3 [json_name = "lastExecutionResult"];</code>
      * @return The lastExecutionResult.
      */
-    public com.tcn.cloud.api.api.v0alpha.ScenarioResult getLastExecutionResult() {
+    public com.tcn.cloud.api.api.commons.ScenarioResult getLastExecutionResult() {
       if (lastExecutionResultBuilder_ == null) {
-        return lastExecutionResult_ == null ? com.tcn.cloud.api.api.v0alpha.ScenarioResult.getDefaultInstance() : lastExecutionResult_;
+        return lastExecutionResult_ == null ? com.tcn.cloud.api.api.commons.ScenarioResult.getDefaultInstance() : lastExecutionResult_;
       } else {
         return lastExecutionResultBuilder_.getMessage();
       }
     }
     /**
-     * <code>.api.v0alpha.ScenarioResult last_execution_result = 3 [json_name = "lastExecutionResult"];</code>
+     * <code>.api.commons.ScenarioResult last_execution_result = 3 [json_name = "lastExecutionResult"];</code>
      */
-    public Builder setLastExecutionResult(com.tcn.cloud.api.api.v0alpha.ScenarioResult value) {
+    public Builder setLastExecutionResult(com.tcn.cloud.api.api.commons.ScenarioResult value) {
       if (lastExecutionResultBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -656,10 +656,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.v0alpha.ScenarioResult last_execution_result = 3 [json_name = "lastExecutionResult"];</code>
+     * <code>.api.commons.ScenarioResult last_execution_result = 3 [json_name = "lastExecutionResult"];</code>
      */
     public Builder setLastExecutionResult(
-        com.tcn.cloud.api.api.v0alpha.ScenarioResult.Builder builderForValue) {
+        com.tcn.cloud.api.api.commons.ScenarioResult.Builder builderForValue) {
       if (lastExecutionResultBuilder_ == null) {
         lastExecutionResult_ = builderForValue.build();
       } else {
@@ -670,13 +670,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.v0alpha.ScenarioResult last_execution_result = 3 [json_name = "lastExecutionResult"];</code>
+     * <code>.api.commons.ScenarioResult last_execution_result = 3 [json_name = "lastExecutionResult"];</code>
      */
-    public Builder mergeLastExecutionResult(com.tcn.cloud.api.api.v0alpha.ScenarioResult value) {
+    public Builder mergeLastExecutionResult(com.tcn.cloud.api.api.commons.ScenarioResult value) {
       if (lastExecutionResultBuilder_ == null) {
         if (((bitField0_ & 0x00000004) != 0) &&
           lastExecutionResult_ != null &&
-          lastExecutionResult_ != com.tcn.cloud.api.api.v0alpha.ScenarioResult.getDefaultInstance()) {
+          lastExecutionResult_ != com.tcn.cloud.api.api.commons.ScenarioResult.getDefaultInstance()) {
           getLastExecutionResultBuilder().mergeFrom(value);
         } else {
           lastExecutionResult_ = value;
@@ -689,7 +689,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.v0alpha.ScenarioResult last_execution_result = 3 [json_name = "lastExecutionResult"];</code>
+     * <code>.api.commons.ScenarioResult last_execution_result = 3 [json_name = "lastExecutionResult"];</code>
      */
     public Builder clearLastExecutionResult() {
       bitField0_ = (bitField0_ & ~0x00000004);
@@ -702,33 +702,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.api.v0alpha.ScenarioResult last_execution_result = 3 [json_name = "lastExecutionResult"];</code>
+     * <code>.api.commons.ScenarioResult last_execution_result = 3 [json_name = "lastExecutionResult"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.ScenarioResult.Builder getLastExecutionResultBuilder() {
+    public com.tcn.cloud.api.api.commons.ScenarioResult.Builder getLastExecutionResultBuilder() {
       bitField0_ |= 0x00000004;
       onChanged();
       return getLastExecutionResultFieldBuilder().getBuilder();
     }
     /**
-     * <code>.api.v0alpha.ScenarioResult last_execution_result = 3 [json_name = "lastExecutionResult"];</code>
+     * <code>.api.commons.ScenarioResult last_execution_result = 3 [json_name = "lastExecutionResult"];</code>
      */
-    public com.tcn.cloud.api.api.v0alpha.ScenarioResultOrBuilder getLastExecutionResultOrBuilder() {
+    public com.tcn.cloud.api.api.commons.ScenarioResultOrBuilder getLastExecutionResultOrBuilder() {
       if (lastExecutionResultBuilder_ != null) {
         return lastExecutionResultBuilder_.getMessageOrBuilder();
       } else {
         return lastExecutionResult_ == null ?
-            com.tcn.cloud.api.api.v0alpha.ScenarioResult.getDefaultInstance() : lastExecutionResult_;
+            com.tcn.cloud.api.api.commons.ScenarioResult.getDefaultInstance() : lastExecutionResult_;
       }
     }
     /**
-     * <code>.api.v0alpha.ScenarioResult last_execution_result = 3 [json_name = "lastExecutionResult"];</code>
+     * <code>.api.commons.ScenarioResult last_execution_result = 3 [json_name = "lastExecutionResult"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v0alpha.ScenarioResult, com.tcn.cloud.api.api.v0alpha.ScenarioResult.Builder, com.tcn.cloud.api.api.v0alpha.ScenarioResultOrBuilder> 
+        com.tcn.cloud.api.api.commons.ScenarioResult, com.tcn.cloud.api.api.commons.ScenarioResult.Builder, com.tcn.cloud.api.api.commons.ScenarioResultOrBuilder> 
         getLastExecutionResultFieldBuilder() {
       if (lastExecutionResultBuilder_ == null) {
         lastExecutionResultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.tcn.cloud.api.api.v0alpha.ScenarioResult, com.tcn.cloud.api.api.v0alpha.ScenarioResult.Builder, com.tcn.cloud.api.api.v0alpha.ScenarioResultOrBuilder>(
+            com.tcn.cloud.api.api.commons.ScenarioResult, com.tcn.cloud.api.api.commons.ScenarioResult.Builder, com.tcn.cloud.api.api.commons.ScenarioResultOrBuilder>(
                 getLastExecutionResult(),
                 getParentForChildren(),
                 isClean());

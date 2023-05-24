@@ -23,7 +23,7 @@ private static final long serialVersionUID = 0L;
     ruleSetName_ = "";
     countryCode_ = "";
     phoneNumber_ = "";
-    sourceField_ = 0;
+    sourceField_ = "";
     callerId_ = "";
   }
 
@@ -311,29 +311,50 @@ java.lang.String defaultValue) {
   }
 
   public static final int SOURCE_FIELD_FIELD_NUMBER = 6;
-  private int sourceField_ = 0;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object sourceField_ = "";
   /**
    * <pre>
    * The call type of the caller associated with this process request
    * </pre>
    *
-   * <code>.api.commons.CallType.Enum source_field = 6 [json_name = "sourceField"];</code>
-   * @return The enum numeric value on the wire for sourceField.
+   * <code>string source_field = 6 [json_name = "sourceField"];</code>
+   * @return The sourceField.
    */
-  @java.lang.Override public int getSourceFieldValue() {
-    return sourceField_;
+  @java.lang.Override
+  public java.lang.String getSourceField() {
+    java.lang.Object ref = sourceField_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      sourceField_ = s;
+      return s;
+    }
   }
   /**
    * <pre>
    * The call type of the caller associated with this process request
    * </pre>
    *
-   * <code>.api.commons.CallType.Enum source_field = 6 [json_name = "sourceField"];</code>
-   * @return The sourceField.
+   * <code>string source_field = 6 [json_name = "sourceField"];</code>
+   * @return The bytes for sourceField.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.CallType.Enum getSourceField() {
-    com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.forNumber(sourceField_);
-    return result == null ? com.tcn.cloud.api.api.commons.CallType.Enum.UNRECOGNIZED : result;
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getSourceFieldBytes() {
+    java.lang.Object ref = sourceField_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      sourceField_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   public static final int CALLER_ID_FIELD_NUMBER = 7;
@@ -415,8 +436,8 @@ java.lang.String defaultValue) {
     if (sourceId_ != 0L) {
       output.writeInt64(5, sourceId_);
     }
-    if (sourceField_ != com.tcn.cloud.api.api.commons.CallType.Enum.INBOUND.getNumber()) {
-      output.writeEnum(6, sourceField_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceField_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, sourceField_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callerId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, callerId_);
@@ -453,9 +474,8 @@ java.lang.String defaultValue) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(5, sourceId_);
     }
-    if (sourceField_ != com.tcn.cloud.api.api.commons.CallType.Enum.INBOUND.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(6, sourceField_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceField_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, sourceField_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callerId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, callerId_);
@@ -485,7 +505,8 @@ java.lang.String defaultValue) {
         other.internalGetCallMetadata())) return false;
     if (getSourceId()
         != other.getSourceId()) return false;
-    if (sourceField_ != other.sourceField_) return false;
+    if (!getSourceField()
+        .equals(other.getSourceField())) return false;
     if (!getCallerId()
         .equals(other.getCallerId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -513,7 +534,7 @@ java.lang.String defaultValue) {
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getSourceId());
     hash = (37 * hash) + SOURCE_FIELD_FIELD_NUMBER;
-    hash = (53 * hash) + sourceField_;
+    hash = (53 * hash) + getSourceField().hashCode();
     hash = (37 * hash) + CALLER_ID_FIELD_NUMBER;
     hash = (53 * hash) + getCallerId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -678,7 +699,7 @@ java.lang.String defaultValue) {
       phoneNumber_ = "";
       internalGetMutableCallMetadata().clear();
       sourceId_ = 0L;
-      sourceField_ = 0;
+      sourceField_ = "";
       callerId_ = "";
       return this;
     }
@@ -770,8 +791,10 @@ java.lang.String defaultValue) {
       if (other.getSourceId() != 0L) {
         setSourceId(other.getSourceId());
       }
-      if (other.sourceField_ != 0) {
-        setSourceFieldValue(other.getSourceFieldValue());
+      if (!other.getSourceField().isEmpty()) {
+        sourceField_ = other.sourceField_;
+        bitField0_ |= 0x00000020;
+        onChanged();
       }
       if (!other.getCallerId().isEmpty()) {
         callerId_ = other.callerId_;
@@ -833,11 +856,11 @@ java.lang.String defaultValue) {
               bitField0_ |= 0x00000010;
               break;
             } // case 40
-            case 48: {
-              sourceField_ = input.readEnum();
+            case 50: {
+              sourceField_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000020;
               break;
-            } // case 48
+            } // case 50
             case 58: {
               callerId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000040;
@@ -1335,28 +1358,60 @@ java.lang.String defaultValue) {
       return this;
     }
 
-    private int sourceField_ = 0;
+    private java.lang.Object sourceField_ = "";
     /**
      * <pre>
      * The call type of the caller associated with this process request
      * </pre>
      *
-     * <code>.api.commons.CallType.Enum source_field = 6 [json_name = "sourceField"];</code>
-     * @return The enum numeric value on the wire for sourceField.
+     * <code>string source_field = 6 [json_name = "sourceField"];</code>
+     * @return The sourceField.
      */
-    @java.lang.Override public int getSourceFieldValue() {
-      return sourceField_;
+    public java.lang.String getSourceField() {
+      java.lang.Object ref = sourceField_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sourceField_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
     }
     /**
      * <pre>
      * The call type of the caller associated with this process request
      * </pre>
      *
-     * <code>.api.commons.CallType.Enum source_field = 6 [json_name = "sourceField"];</code>
-     * @param value The enum numeric value on the wire for sourceField to set.
+     * <code>string source_field = 6 [json_name = "sourceField"];</code>
+     * @return The bytes for sourceField.
+     */
+    public com.google.protobuf.ByteString
+        getSourceFieldBytes() {
+      java.lang.Object ref = sourceField_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sourceField_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The call type of the caller associated with this process request
+     * </pre>
+     *
+     * <code>string source_field = 6 [json_name = "sourceField"];</code>
+     * @param value The sourceField to set.
      * @return This builder for chaining.
      */
-    public Builder setSourceFieldValue(int value) {
+    public Builder setSourceField(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
       sourceField_ = value;
       bitField0_ |= 0x00000020;
       onChanged();
@@ -1367,29 +1422,12 @@ java.lang.String defaultValue) {
      * The call type of the caller associated with this process request
      * </pre>
      *
-     * <code>.api.commons.CallType.Enum source_field = 6 [json_name = "sourceField"];</code>
-     * @return The sourceField.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.CallType.Enum getSourceField() {
-      com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.forNumber(sourceField_);
-      return result == null ? com.tcn.cloud.api.api.commons.CallType.Enum.UNRECOGNIZED : result;
-    }
-    /**
-     * <pre>
-     * The call type of the caller associated with this process request
-     * </pre>
-     *
-     * <code>.api.commons.CallType.Enum source_field = 6 [json_name = "sourceField"];</code>
-     * @param value The sourceField to set.
+     * <code>string source_field = 6 [json_name = "sourceField"];</code>
      * @return This builder for chaining.
      */
-    public Builder setSourceField(com.tcn.cloud.api.api.commons.CallType.Enum value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      bitField0_ |= 0x00000020;
-      sourceField_ = value.getNumber();
+    public Builder clearSourceField() {
+      sourceField_ = getDefaultInstance().getSourceField();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1398,12 +1436,16 @@ java.lang.String defaultValue) {
      * The call type of the caller associated with this process request
      * </pre>
      *
-     * <code>.api.commons.CallType.Enum source_field = 6 [json_name = "sourceField"];</code>
+     * <code>string source_field = 6 [json_name = "sourceField"];</code>
+     * @param value The bytes for sourceField to set.
      * @return This builder for chaining.
      */
-    public Builder clearSourceField() {
-      bitField0_ = (bitField0_ & ~0x00000020);
-      sourceField_ = 0;
+    public Builder setSourceFieldBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      sourceField_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }

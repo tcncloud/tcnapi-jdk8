@@ -8,27 +8,27 @@ public interface RunAssignedScenariosResOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .api.v0alpha.ScenarioResult results = 2 [json_name = "results"];</code>
+   * <code>repeated .api.commons.ScenarioResult results = 2 [json_name = "results"];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.v0alpha.ScenarioResult> 
+  java.util.List<com.tcn.cloud.api.api.commons.ScenarioResult> 
       getResultsList();
   /**
-   * <code>repeated .api.v0alpha.ScenarioResult results = 2 [json_name = "results"];</code>
+   * <code>repeated .api.commons.ScenarioResult results = 2 [json_name = "results"];</code>
    */
-  com.tcn.cloud.api.api.v0alpha.ScenarioResult getResults(int index);
+  com.tcn.cloud.api.api.commons.ScenarioResult getResults(int index);
   /**
-   * <code>repeated .api.v0alpha.ScenarioResult results = 2 [json_name = "results"];</code>
+   * <code>repeated .api.commons.ScenarioResult results = 2 [json_name = "results"];</code>
    */
   int getResultsCount();
   /**
-   * <code>repeated .api.v0alpha.ScenarioResult results = 2 [json_name = "results"];</code>
+   * <code>repeated .api.commons.ScenarioResult results = 2 [json_name = "results"];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.v0alpha.ScenarioResultOrBuilder> 
+  java.util.List<? extends com.tcn.cloud.api.api.commons.ScenarioResultOrBuilder> 
       getResultsOrBuilderList();
   /**
-   * <code>repeated .api.v0alpha.ScenarioResult results = 2 [json_name = "results"];</code>
+   * <code>repeated .api.commons.ScenarioResult results = 2 [json_name = "results"];</code>
    */
-  com.tcn.cloud.api.api.v0alpha.ScenarioResultOrBuilder getResultsOrBuilder(
+  com.tcn.cloud.api.api.commons.ScenarioResultOrBuilder getResultsOrBuilder(
       int index);
 
   /**

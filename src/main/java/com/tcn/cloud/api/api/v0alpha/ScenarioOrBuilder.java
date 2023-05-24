@@ -14,49 +14,49 @@ public interface ScenarioOrBuilder extends
   long getCplScenarioId();
 
   /**
-   * <code>.api.v0alpha.ScenarioData should_allow = 3 [json_name = "shouldAllow"];</code>
+   * <code>.api.commons.ScenarioData should_allow = 3 [json_name = "shouldAllow"];</code>
    * @return Whether the shouldAllow field is set.
    */
   boolean hasShouldAllow();
   /**
-   * <code>.api.v0alpha.ScenarioData should_allow = 3 [json_name = "shouldAllow"];</code>
+   * <code>.api.commons.ScenarioData should_allow = 3 [json_name = "shouldAllow"];</code>
    * @return The shouldAllow.
    */
-  com.tcn.cloud.api.api.v0alpha.ScenarioData getShouldAllow();
+  com.tcn.cloud.api.api.commons.ScenarioData getShouldAllow();
   /**
-   * <code>.api.v0alpha.ScenarioData should_allow = 3 [json_name = "shouldAllow"];</code>
+   * <code>.api.commons.ScenarioData should_allow = 3 [json_name = "shouldAllow"];</code>
    */
-  com.tcn.cloud.api.api.v0alpha.ScenarioDataOrBuilder getShouldAllowOrBuilder();
+  com.tcn.cloud.api.api.commons.ScenarioDataOrBuilder getShouldAllowOrBuilder();
 
   /**
-   * <code>.api.v0alpha.ScenarioData should_deny = 4 [json_name = "shouldDeny"];</code>
+   * <code>.api.commons.ScenarioData should_deny = 4 [json_name = "shouldDeny"];</code>
    * @return Whether the shouldDeny field is set.
    */
   boolean hasShouldDeny();
   /**
-   * <code>.api.v0alpha.ScenarioData should_deny = 4 [json_name = "shouldDeny"];</code>
+   * <code>.api.commons.ScenarioData should_deny = 4 [json_name = "shouldDeny"];</code>
    * @return The shouldDeny.
    */
-  com.tcn.cloud.api.api.v0alpha.ScenarioData getShouldDeny();
+  com.tcn.cloud.api.api.commons.ScenarioData getShouldDeny();
   /**
-   * <code>.api.v0alpha.ScenarioData should_deny = 4 [json_name = "shouldDeny"];</code>
+   * <code>.api.commons.ScenarioData should_deny = 4 [json_name = "shouldDeny"];</code>
    */
-  com.tcn.cloud.api.api.v0alpha.ScenarioDataOrBuilder getShouldDenyOrBuilder();
+  com.tcn.cloud.api.api.commons.ScenarioDataOrBuilder getShouldDenyOrBuilder();
 
   /**
-   * <code>.api.v0alpha.ScenarioResult last_execution_result = 5 [json_name = "lastExecutionResult"];</code>
+   * <code>.api.commons.ScenarioResult last_execution_result = 5 [json_name = "lastExecutionResult"];</code>
    * @return Whether the lastExecutionResult field is set.
    */
   boolean hasLastExecutionResult();
   /**
-   * <code>.api.v0alpha.ScenarioResult last_execution_result = 5 [json_name = "lastExecutionResult"];</code>
+   * <code>.api.commons.ScenarioResult last_execution_result = 5 [json_name = "lastExecutionResult"];</code>
    * @return The lastExecutionResult.
    */
-  com.tcn.cloud.api.api.v0alpha.ScenarioResult getLastExecutionResult();
+  com.tcn.cloud.api.api.commons.ScenarioResult getLastExecutionResult();
   /**
-   * <code>.api.v0alpha.ScenarioResult last_execution_result = 5 [json_name = "lastExecutionResult"];</code>
+   * <code>.api.commons.ScenarioResult last_execution_result = 5 [json_name = "lastExecutionResult"];</code>
    */
-  com.tcn.cloud.api.api.v0alpha.ScenarioResultOrBuilder getLastExecutionResultOrBuilder();
+  com.tcn.cloud.api.api.commons.ScenarioResultOrBuilder getLastExecutionResultOrBuilder();
 
   /**
    * <code>string name = 6 [json_name = "name"];</code>

@@ -8,34 +8,34 @@ public interface CreateScenarioReqOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.api.v0alpha.ScenarioData should_allow = 2 [json_name = "shouldAllow"];</code>
+   * <code>.api.commons.ScenarioData should_allow = 2 [json_name = "shouldAllow"];</code>
    * @return Whether the shouldAllow field is set.
    */
   boolean hasShouldAllow();
   /**
-   * <code>.api.v0alpha.ScenarioData should_allow = 2 [json_name = "shouldAllow"];</code>
+   * <code>.api.commons.ScenarioData should_allow = 2 [json_name = "shouldAllow"];</code>
    * @return The shouldAllow.
    */
-  com.tcn.cloud.api.api.v0alpha.ScenarioData getShouldAllow();
+  com.tcn.cloud.api.api.commons.ScenarioData getShouldAllow();
   /**
-   * <code>.api.v0alpha.ScenarioData should_allow = 2 [json_name = "shouldAllow"];</code>
+   * <code>.api.commons.ScenarioData should_allow = 2 [json_name = "shouldAllow"];</code>
    */
-  com.tcn.cloud.api.api.v0alpha.ScenarioDataOrBuilder getShouldAllowOrBuilder();
+  com.tcn.cloud.api.api.commons.ScenarioDataOrBuilder getShouldAllowOrBuilder();
 
   /**
-   * <code>.api.v0alpha.ScenarioData should_deny = 3 [json_name = "shouldDeny"];</code>
+   * <code>.api.commons.ScenarioData should_deny = 3 [json_name = "shouldDeny"];</code>
    * @return Whether the shouldDeny field is set.
    */
   boolean hasShouldDeny();
   /**
-   * <code>.api.v0alpha.ScenarioData should_deny = 3 [json_name = "shouldDeny"];</code>
+   * <code>.api.commons.ScenarioData should_deny = 3 [json_name = "shouldDeny"];</code>
    * @return The shouldDeny.
    */
-  com.tcn.cloud.api.api.v0alpha.ScenarioData getShouldDeny();
+  com.tcn.cloud.api.api.commons.ScenarioData getShouldDeny();
   /**
-   * <code>.api.v0alpha.ScenarioData should_deny = 3 [json_name = "shouldDeny"];</code>
+   * <code>.api.commons.ScenarioData should_deny = 3 [json_name = "shouldDeny"];</code>
    */
-  com.tcn.cloud.api.api.v0alpha.ScenarioDataOrBuilder getShouldDenyOrBuilder();
+  com.tcn.cloud.api.api.commons.ScenarioDataOrBuilder getShouldDenyOrBuilder();
 
   /**
    * <code>string name = 4 [json_name = "name"];</code>

@@ -8,27 +8,27 @@ public interface CheckRuleSetResOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .api.v0alpha.Rule rules = 1 [json_name = "rules"];</code>
+   * <code>repeated .api.commons.Rule rules = 1 [json_name = "rules"];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.v0alpha.Rule> 
+  java.util.List<com.tcn.cloud.api.api.commons.Rule> 
       getRulesList();
   /**
-   * <code>repeated .api.v0alpha.Rule rules = 1 [json_name = "rules"];</code>
+   * <code>repeated .api.commons.Rule rules = 1 [json_name = "rules"];</code>
    */
-  com.tcn.cloud.api.api.v0alpha.Rule getRules(int index);
+  com.tcn.cloud.api.api.commons.Rule getRules(int index);
   /**
-   * <code>repeated .api.v0alpha.Rule rules = 1 [json_name = "rules"];</code>
+   * <code>repeated .api.commons.Rule rules = 1 [json_name = "rules"];</code>
    */
   int getRulesCount();
   /**
-   * <code>repeated .api.v0alpha.Rule rules = 1 [json_name = "rules"];</code>
+   * <code>repeated .api.commons.Rule rules = 1 [json_name = "rules"];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.v0alpha.RuleOrBuilder> 
+  java.util.List<? extends com.tcn.cloud.api.api.commons.RuleOrBuilder> 
       getRulesOrBuilderList();
   /**
-   * <code>repeated .api.v0alpha.Rule rules = 1 [json_name = "rules"];</code>
+   * <code>repeated .api.commons.Rule rules = 1 [json_name = "rules"];</code>
    */
-  com.tcn.cloud.api.api.v0alpha.RuleOrBuilder getRulesOrBuilder(
+  com.tcn.cloud.api.api.commons.RuleOrBuilder getRulesOrBuilder(
       int index);
 
   /**

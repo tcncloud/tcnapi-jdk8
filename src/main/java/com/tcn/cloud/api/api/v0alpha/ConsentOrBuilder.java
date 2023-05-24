@@ -166,7 +166,7 @@ public interface ConsentOrBuilder extends
    *
    * <code>.api.commons.CommType channel = 15 [json_name = "channel", deprecated = true];</code>
    * @deprecated api.v0alpha.Consent.channel is deprecated.
-   *     See api/v0alpha/compliance.proto;l=1500
+   *     See api/v0alpha/compliance.proto;l=1349
    * @return Whether the channel field is set.
    */
   @java.lang.Deprecated boolean hasChannel();
@@ -177,7 +177,7 @@ public interface ConsentOrBuilder extends
    *
    * <code>.api.commons.CommType channel = 15 [json_name = "channel", deprecated = true];</code>
    * @deprecated api.v0alpha.Consent.channel is deprecated.
-   *     See api/v0alpha/compliance.proto;l=1500
+   *     See api/v0alpha/compliance.proto;l=1349
    * @return The channel.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.CommType getChannel();
@@ -277,7 +277,7 @@ public interface ConsentOrBuilder extends
    *
    * <code>repeated .api.commons.Weekday.Enum condition_days_of_the_week = 20 [json_name = "conditionDaysOfTheWeek", deprecated = true];</code>
    * @deprecated api.v0alpha.Consent.condition_days_of_the_week is deprecated.
-   *     See api/v0alpha/compliance.proto;l=1510
+   *     See api/v0alpha/compliance.proto;l=1359
    * @return A list containing the conditionDaysOfTheWeek.
    */
   @java.lang.Deprecated java.util.List<com.tcn.cloud.api.api.commons.Weekday.Enum> getConditionDaysOfTheWeekList();
@@ -288,7 +288,7 @@ public interface ConsentOrBuilder extends
    *
    * <code>repeated .api.commons.Weekday.Enum condition_days_of_the_week = 20 [json_name = "conditionDaysOfTheWeek", deprecated = true];</code>
    * @deprecated api.v0alpha.Consent.condition_days_of_the_week is deprecated.
-   *     See api/v0alpha/compliance.proto;l=1510
+   *     See api/v0alpha/compliance.proto;l=1359
    * @return The count of conditionDaysOfTheWeek.
    */
   @java.lang.Deprecated int getConditionDaysOfTheWeekCount();
@@ -299,7 +299,7 @@ public interface ConsentOrBuilder extends
    *
    * <code>repeated .api.commons.Weekday.Enum condition_days_of_the_week = 20 [json_name = "conditionDaysOfTheWeek", deprecated = true];</code>
    * @deprecated api.v0alpha.Consent.condition_days_of_the_week is deprecated.
-   *     See api/v0alpha/compliance.proto;l=1510
+   *     See api/v0alpha/compliance.proto;l=1359
    * @param index The index of the element to return.
    * @return The conditionDaysOfTheWeek at the given index.
    */
@@ -311,7 +311,7 @@ public interface ConsentOrBuilder extends
    *
    * <code>repeated .api.commons.Weekday.Enum condition_days_of_the_week = 20 [json_name = "conditionDaysOfTheWeek", deprecated = true];</code>
    * @deprecated api.v0alpha.Consent.condition_days_of_the_week is deprecated.
-   *     See api/v0alpha/compliance.proto;l=1510
+   *     See api/v0alpha/compliance.proto;l=1359
    * @return A list containing the enum numeric values on the wire for conditionDaysOfTheWeek.
    */
   @java.lang.Deprecated java.util.List<java.lang.Integer>
@@ -323,7 +323,7 @@ public interface ConsentOrBuilder extends
    *
    * <code>repeated .api.commons.Weekday.Enum condition_days_of_the_week = 20 [json_name = "conditionDaysOfTheWeek", deprecated = true];</code>
    * @deprecated api.v0alpha.Consent.condition_days_of_the_week is deprecated.
-   *     See api/v0alpha/compliance.proto;l=1510
+   *     See api/v0alpha/compliance.proto;l=1359
    * @param index The index of the value to return.
    * @return The enum numeric value on the wire of conditionDaysOfTheWeek at the given index.
    */
@@ -332,14 +332,14 @@ public interface ConsentOrBuilder extends
   /**
    * <code>string condition_time_of_day_from = 21 [json_name = "conditionTimeOfDayFrom", deprecated = true];</code>
    * @deprecated api.v0alpha.Consent.condition_time_of_day_from is deprecated.
-   *     See api/v0alpha/compliance.proto;l=1511
+   *     See api/v0alpha/compliance.proto;l=1360
    * @return The conditionTimeOfDayFrom.
    */
   @java.lang.Deprecated java.lang.String getConditionTimeOfDayFrom();
   /**
    * <code>string condition_time_of_day_from = 21 [json_name = "conditionTimeOfDayFrom", deprecated = true];</code>
    * @deprecated api.v0alpha.Consent.condition_time_of_day_from is deprecated.
-   *     See api/v0alpha/compliance.proto;l=1511
+   *     See api/v0alpha/compliance.proto;l=1360
    * @return The bytes for conditionTimeOfDayFrom.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -348,14 +348,14 @@ public interface ConsentOrBuilder extends
   /**
    * <code>string condition_time_of_day_to = 22 [json_name = "conditionTimeOfDayTo", deprecated = true];</code>
    * @deprecated api.v0alpha.Consent.condition_time_of_day_to is deprecated.
-   *     See api/v0alpha/compliance.proto;l=1512
+   *     See api/v0alpha/compliance.proto;l=1361
    * @return The conditionTimeOfDayTo.
    */
   @java.lang.Deprecated java.lang.String getConditionTimeOfDayTo();
   /**
    * <code>string condition_time_of_day_to = 22 [json_name = "conditionTimeOfDayTo", deprecated = true];</code>
    * @deprecated api.v0alpha.Consent.condition_time_of_day_to is deprecated.
-   *     See api/v0alpha/compliance.proto;l=1512
+   *     See api/v0alpha/compliance.proto;l=1361
    * @return The bytes for conditionTimeOfDayTo.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -364,14 +364,14 @@ public interface ConsentOrBuilder extends
   /**
    * <code>.google.protobuf.Timestamp condition_from = 23 [json_name = "conditionFrom", deprecated = true];</code>
    * @deprecated api.v0alpha.Consent.condition_from is deprecated.
-   *     See api/v0alpha/compliance.proto;l=1513
+   *     See api/v0alpha/compliance.proto;l=1362
    * @return Whether the conditionFrom field is set.
    */
   @java.lang.Deprecated boolean hasConditionFrom();
   /**
    * <code>.google.protobuf.Timestamp condition_from = 23 [json_name = "conditionFrom", deprecated = true];</code>
    * @deprecated api.v0alpha.Consent.condition_from is deprecated.
-   *     See api/v0alpha/compliance.proto;l=1513
+   *     See api/v0alpha/compliance.proto;l=1362
    * @return The conditionFrom.
    */
   @java.lang.Deprecated com.google.protobuf.Timestamp getConditionFrom();
@@ -383,14 +383,14 @@ public interface ConsentOrBuilder extends
   /**
    * <code>.google.protobuf.Timestamp condition_to = 24 [json_name = "conditionTo", deprecated = true];</code>
    * @deprecated api.v0alpha.Consent.condition_to is deprecated.
-   *     See api/v0alpha/compliance.proto;l=1514
+   *     See api/v0alpha/compliance.proto;l=1363
    * @return Whether the conditionTo field is set.
    */
   @java.lang.Deprecated boolean hasConditionTo();
   /**
    * <code>.google.protobuf.Timestamp condition_to = 24 [json_name = "conditionTo", deprecated = true];</code>
    * @deprecated api.v0alpha.Consent.condition_to is deprecated.
-   *     See api/v0alpha/compliance.proto;l=1514
+   *     See api/v0alpha/compliance.proto;l=1363
    * @return The conditionTo.
    */
   @java.lang.Deprecated com.google.protobuf.Timestamp getConditionTo();
@@ -416,24 +416,24 @@ public interface ConsentOrBuilder extends
    * Consent Conditions
    * </pre>
    *
-   * <code>repeated .api.v0alpha.ConsentCondition conditions = 26 [json_name = "conditions"];</code>
+   * <code>repeated .api.commons.ConsentCondition conditions = 26 [json_name = "conditions"];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.v0alpha.ConsentCondition> 
+  java.util.List<com.tcn.cloud.api.api.commons.ConsentCondition> 
       getConditionsList();
   /**
    * <pre>
    * Consent Conditions
    * </pre>
    *
-   * <code>repeated .api.v0alpha.ConsentCondition conditions = 26 [json_name = "conditions"];</code>
+   * <code>repeated .api.commons.ConsentCondition conditions = 26 [json_name = "conditions"];</code>
    */
-  com.tcn.cloud.api.api.v0alpha.ConsentCondition getConditions(int index);
+  com.tcn.cloud.api.api.commons.ConsentCondition getConditions(int index);
   /**
    * <pre>
    * Consent Conditions
    * </pre>
    *
-   * <code>repeated .api.v0alpha.ConsentCondition conditions = 26 [json_name = "conditions"];</code>
+   * <code>repeated .api.commons.ConsentCondition conditions = 26 [json_name = "conditions"];</code>
    */
   int getConditionsCount();
   /**
@@ -441,18 +441,18 @@ public interface ConsentOrBuilder extends
    * Consent Conditions
    * </pre>
    *
-   * <code>repeated .api.v0alpha.ConsentCondition conditions = 26 [json_name = "conditions"];</code>
+   * <code>repeated .api.commons.ConsentCondition conditions = 26 [json_name = "conditions"];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.v0alpha.ConsentConditionOrBuilder> 
+  java.util.List<? extends com.tcn.cloud.api.api.commons.ConsentConditionOrBuilder> 
       getConditionsOrBuilderList();
   /**
    * <pre>
    * Consent Conditions
    * </pre>
    *
-   * <code>repeated .api.v0alpha.ConsentCondition conditions = 26 [json_name = "conditions"];</code>
+   * <code>repeated .api.commons.ConsentCondition conditions = 26 [json_name = "conditions"];</code>
    */
-  com.tcn.cloud.api.api.v0alpha.ConsentConditionOrBuilder getConditionsOrBuilder(
+  com.tcn.cloud.api.api.commons.ConsentConditionOrBuilder getConditionsOrBuilder(
       int index);
 
   /**

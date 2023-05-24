@@ -53,4 +53,15 @@ public interface GetConsentByProfileAndContentReqOrBuilder extends
    * @return The contentType.
    */
   com.tcn.cloud.api.api.commons.ContentType getContentType();
+
+  /**
+   * <code>.api.commons.Channel channel_type = 6 [json_name = "channelType"];</code>
+   * @return The enum numeric value on the wire for channelType.
+   */
+  int getChannelTypeValue();
+  /**
+   * <code>.api.commons.Channel channel_type = 6 [json_name = "channelType"];</code>
+   * @return The channelType.
+   */
+  com.tcn.cloud.api.api.commons.Channel getChannelType();
 }

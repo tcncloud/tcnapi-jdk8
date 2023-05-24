@@ -22,24 +22,24 @@ public interface ProcessResOrBuilder extends
    * the list of rules checked against
    * </pre>
    *
-   * <code>repeated .api.v0alpha.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
+   * <code>repeated .api.commons.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.v0alpha.RuleResponse> 
+  java.util.List<com.tcn.cloud.api.api.commons.RuleResponse> 
       getRuleResponsesList();
   /**
    * <pre>
    * the list of rules checked against
    * </pre>
    *
-   * <code>repeated .api.v0alpha.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
+   * <code>repeated .api.commons.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
    */
-  com.tcn.cloud.api.api.v0alpha.RuleResponse getRuleResponses(int index);
+  com.tcn.cloud.api.api.commons.RuleResponse getRuleResponses(int index);
   /**
    * <pre>
    * the list of rules checked against
    * </pre>
    *
-   * <code>repeated .api.v0alpha.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
+   * <code>repeated .api.commons.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
    */
   int getRuleResponsesCount();
   /**
@@ -47,17 +47,17 @@ public interface ProcessResOrBuilder extends
    * the list of rules checked against
    * </pre>
    *
-   * <code>repeated .api.v0alpha.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
+   * <code>repeated .api.commons.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.v0alpha.RuleResponseOrBuilder> 
+  java.util.List<? extends com.tcn.cloud.api.api.commons.RuleResponseOrBuilder> 
       getRuleResponsesOrBuilderList();
   /**
    * <pre>
    * the list of rules checked against
    * </pre>
    *
-   * <code>repeated .api.v0alpha.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
+   * <code>repeated .api.commons.RuleResponse rule_responses = 2 [json_name = "ruleResponses"];</code>
    */
-  com.tcn.cloud.api.api.v0alpha.RuleResponseOrBuilder getRuleResponsesOrBuilder(
+  com.tcn.cloud.api.api.commons.RuleResponseOrBuilder getRuleResponsesOrBuilder(
       int index);
 }
