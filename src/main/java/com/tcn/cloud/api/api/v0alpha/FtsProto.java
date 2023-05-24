@@ -33,21 +33,23 @@ public final class FtsProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\025api/v0alpha/fts.proto\022\013api.v0alpha\032\034go" +
-      "ogle/api/annotations.proto\"-\n\023GetUploadF" +
-      "ileUrlReq\022\026\n\006prefix\030\005 \001(\tR\006prefix\"7\n\023Get" +
-      "UploadFileUrlRes\022\020\n\003url\030\001 \001(\tR\003url\022\016\n\002id" +
-      "\030\003 \001(\tR\002id2\205\001\n\003FTS\022~\n\020GetUploadFileUrl\022 " +
-      ".api.v0alpha.GetUploadFileUrlReq\032 .api.v" +
-      "0alpha.GetUploadFileUrlRes\"&\202\323\344\223\002 \"\033/api" +
-      "/v0alpha/fts/upload_url:\001*Bv\n\035com.tcn.cl" +
-      "oud.api.api.v0alphaB\010FtsProtoP\001\242\002\003AVX\252\002\013" +
-      "Api.V0alpha\312\002\013Api\\V0alpha\342\002\027Api\\V0alpha\\" +
-      "GPBMetadata\352\002\014Api::V0alphab\006proto3"
+      "\n\025api/v0alpha/fts.proto\022\013api.v0alpha\032\027an" +
+      "notations/authz.proto\032\034google/api/annota" +
+      "tions.proto\"-\n\023GetUploadFileUrlReq\022\026\n\006pr" +
+      "efix\030\005 \001(\tR\006prefix\"7\n\023GetUploadFileUrlRe" +
+      "s\022\020\n\003url\030\001 \001(\tR\003url\022\016\n\002id\030\003 \001(\tR\002id2\215\001\n\003" +
+      "FTS\022\205\001\n\020GetUploadFileUrl\022 .api.v0alpha.G" +
+      "etUploadFileUrlReq\032 .api.v0alpha.GetUplo" +
+      "adFileUrlRes\"-\272\270\221\002\002\030\001\202\323\344\223\002 \"\033/api/v0alph" +
+      "a/fts/upload_url:\001*Bv\n\035com.tcn.cloud.api" +
+      ".api.v0alphaB\010FtsProtoP\001\242\002\003AVX\252\002\013Api.V0a" +
+      "lpha\312\002\013Api\\V0alpha\342\002\027Api\\V0alpha\\GPBMeta" +
+      "data\352\002\014Api::V0alphab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.tcn.cloud.api.annotations.AuthzProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_api_v0alpha_GetUploadFileUrlReq_descriptor =
@@ -64,9 +66,11 @@ public final class FtsProto {
         new java.lang.String[] { "Url", "Id", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.tcn.cloud.api.annotations.AuthzProto.authz);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.tcn.cloud.api.annotations.AuthzProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }
 

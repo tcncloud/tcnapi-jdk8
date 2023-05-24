@@ -27,6 +27,7 @@ private static final long serialVersionUID = 0L;
     description_ = "";
     skillProfiles_ = emptyLongList();
     callTypes_ = java.util.Collections.emptyList();
+    categoryType_ = 0;
   }
 
   @java.lang.Override
@@ -354,6 +355,32 @@ private static final long serialVersionUID = 0L;
     return isSystem_;
   }
 
+  public static final int CATEGORY_TYPE_FIELD_NUMBER = 12;
+  private int categoryType_ = 0;
+  /**
+   * <pre>
+   * Type of category, (skill calls or manual calls)
+   * </pre>
+   *
+   * <code>.api.commons.CategoryType category_type = 12 [json_name = "categoryType"];</code>
+   * @return The enum numeric value on the wire for categoryType.
+   */
+  @java.lang.Override public int getCategoryTypeValue() {
+    return categoryType_;
+  }
+  /**
+   * <pre>
+   * Type of category, (skill calls or manual calls)
+   * </pre>
+   *
+   * <code>.api.commons.CategoryType category_type = 12 [json_name = "categoryType"];</code>
+   * @return The categoryType.
+   */
+  @java.lang.Override public com.tcn.cloud.api.api.commons.CategoryType getCategoryType() {
+    com.tcn.cloud.api.api.commons.CategoryType result = com.tcn.cloud.api.api.commons.CategoryType.forNumber(categoryType_);
+    return result == null ? com.tcn.cloud.api.api.commons.CategoryType.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -400,6 +427,9 @@ private static final long serialVersionUID = 0L;
     }
     if (isSystem_ != false) {
       output.writeBool(11, isSystem_);
+    }
+    if (categoryType_ != com.tcn.cloud.api.api.commons.CategoryType.INVALID.getNumber()) {
+      output.writeEnum(12, categoryType_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -457,6 +487,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(11, isSystem_);
     }
+    if (categoryType_ != com.tcn.cloud.api.api.commons.CategoryType.INVALID.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(12, categoryType_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -487,6 +521,7 @@ private static final long serialVersionUID = 0L;
     if (!callTypes_.equals(other.callTypes_)) return false;
     if (getIsSystem()
         != other.getIsSystem()) return false;
+    if (categoryType_ != other.categoryType_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -520,6 +555,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + IS_SYSTEM_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getIsSystem());
+    hash = (37 * hash) + CATEGORY_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + categoryType_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -666,6 +703,7 @@ private static final long serialVersionUID = 0L;
       callTypes_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000040);
       isSystem_ = false;
+      categoryType_ = 0;
       return this;
     }
 
@@ -731,6 +769,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.isSystem_ = isSystem_;
       }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.categoryType_ = categoryType_;
+      }
     }
 
     @java.lang.Override
@@ -788,6 +829,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getIsSystem() != false) {
         setIsSystem(other.getIsSystem());
+      }
+      if (other.categoryType_ != 0) {
+        setCategoryTypeValue(other.getCategoryTypeValue());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -878,6 +922,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000080;
               break;
             } // case 88
+            case 96: {
+              categoryType_ = input.readEnum();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 96
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1596,6 +1645,79 @@ private static final long serialVersionUID = 0L;
     public Builder clearIsSystem() {
       bitField0_ = (bitField0_ & ~0x00000080);
       isSystem_ = false;
+      onChanged();
+      return this;
+    }
+
+    private int categoryType_ = 0;
+    /**
+     * <pre>
+     * Type of category, (skill calls or manual calls)
+     * </pre>
+     *
+     * <code>.api.commons.CategoryType category_type = 12 [json_name = "categoryType"];</code>
+     * @return The enum numeric value on the wire for categoryType.
+     */
+    @java.lang.Override public int getCategoryTypeValue() {
+      return categoryType_;
+    }
+    /**
+     * <pre>
+     * Type of category, (skill calls or manual calls)
+     * </pre>
+     *
+     * <code>.api.commons.CategoryType category_type = 12 [json_name = "categoryType"];</code>
+     * @param value The enum numeric value on the wire for categoryType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCategoryTypeValue(int value) {
+      categoryType_ = value;
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Type of category, (skill calls or manual calls)
+     * </pre>
+     *
+     * <code>.api.commons.CategoryType category_type = 12 [json_name = "categoryType"];</code>
+     * @return The categoryType.
+     */
+    @java.lang.Override
+    public com.tcn.cloud.api.api.commons.CategoryType getCategoryType() {
+      com.tcn.cloud.api.api.commons.CategoryType result = com.tcn.cloud.api.api.commons.CategoryType.forNumber(categoryType_);
+      return result == null ? com.tcn.cloud.api.api.commons.CategoryType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Type of category, (skill calls or manual calls)
+     * </pre>
+     *
+     * <code>.api.commons.CategoryType category_type = 12 [json_name = "categoryType"];</code>
+     * @param value The categoryType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCategoryType(com.tcn.cloud.api.api.commons.CategoryType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000100;
+      categoryType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Type of category, (skill calls or manual calls)
+     * </pre>
+     *
+     * <code>.api.commons.CategoryType category_type = 12 [json_name = "categoryType"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCategoryType() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      categoryType_ = 0;
       onChanged();
       return this;
     }

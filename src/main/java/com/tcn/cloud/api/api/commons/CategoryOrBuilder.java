@@ -174,4 +174,23 @@ public interface CategoryOrBuilder extends
    * @return The isSystem.
    */
   boolean getIsSystem();
+
+  /**
+   * <pre>
+   * Type of category, (skill calls or manual calls)
+   * </pre>
+   *
+   * <code>.api.commons.CategoryType category_type = 12 [json_name = "categoryType"];</code>
+   * @return The enum numeric value on the wire for categoryType.
+   */
+  int getCategoryTypeValue();
+  /**
+   * <pre>
+   * Type of category, (skill calls or manual calls)
+   * </pre>
+   *
+   * <code>.api.commons.CategoryType category_type = 12 [json_name = "categoryType"];</code>
+   * @return The categoryType.
+   */
+  com.tcn.cloud.api.api.commons.CategoryType getCategoryType();
 }

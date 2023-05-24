@@ -252,7 +252,7 @@ public interface ScorecardOrBuilder extends
    *
    * <code>bool is_ad_hoc = 16 [json_name = "isAdHoc", deprecated = true];</code>
    * @deprecated api.commons.Scorecard.is_ad_hoc is deprecated.
-   *     See api/commons/scorecards.proto;l=282
+   *     See api/commons/scorecards.proto;l=289
    * @return The isAdHoc.
    */
   @java.lang.Deprecated boolean getIsAdHoc();
@@ -303,17 +303,47 @@ public interface ScorecardOrBuilder extends
    * call types supported by scorecard
    * </pre>
    *
-   * <code>.api.commons.CallType.Enum call_type = 20 [json_name = "callType"];</code>
-   * @return The enum numeric value on the wire for callType.
+   * <code>repeated .api.commons.CallType.Enum call_types = 20 [json_name = "callTypes"];</code>
+   * @return A list containing the callTypes.
    */
-  int getCallTypeValue();
+  java.util.List<com.tcn.cloud.api.api.commons.CallType.Enum> getCallTypesList();
   /**
    * <pre>
    * call types supported by scorecard
    * </pre>
    *
-   * <code>.api.commons.CallType.Enum call_type = 20 [json_name = "callType"];</code>
-   * @return The callType.
+   * <code>repeated .api.commons.CallType.Enum call_types = 20 [json_name = "callTypes"];</code>
+   * @return The count of callTypes.
    */
-  com.tcn.cloud.api.api.commons.CallType.Enum getCallType();
+  int getCallTypesCount();
+  /**
+   * <pre>
+   * call types supported by scorecard
+   * </pre>
+   *
+   * <code>repeated .api.commons.CallType.Enum call_types = 20 [json_name = "callTypes"];</code>
+   * @param index The index of the element to return.
+   * @return The callTypes at the given index.
+   */
+  com.tcn.cloud.api.api.commons.CallType.Enum getCallTypes(int index);
+  /**
+   * <pre>
+   * call types supported by scorecard
+   * </pre>
+   *
+   * <code>repeated .api.commons.CallType.Enum call_types = 20 [json_name = "callTypes"];</code>
+   * @return A list containing the enum numeric values on the wire for callTypes.
+   */
+  java.util.List<java.lang.Integer>
+  getCallTypesValueList();
+  /**
+   * <pre>
+   * call types supported by scorecard
+   * </pre>
+   *
+   * <code>repeated .api.commons.CallType.Enum call_types = 20 [json_name = "callTypes"];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of callTypes at the given index.
+   */
+  int getCallTypesValue(int index);
 }

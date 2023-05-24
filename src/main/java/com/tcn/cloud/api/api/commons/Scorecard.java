@@ -30,7 +30,7 @@ private static final long serialVersionUID = 0L;
     state_ = 0;
     customFieldKeys_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
-    callType_ = 0;
+    callTypes_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -455,7 +455,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>bool is_ad_hoc = 16 [json_name = "isAdHoc", deprecated = true];</code>
    * @deprecated api.commons.Scorecard.is_ad_hoc is deprecated.
-   *     See api/commons/scorecards.proto;l=282
+   *     See api/commons/scorecards.proto;l=289
    * @return The isAdHoc.
    */
   @java.lang.Override
@@ -516,31 +516,83 @@ private static final long serialVersionUID = 0L;
     return customFieldKeys_.getByteString(index);
   }
 
-  public static final int CALL_TYPE_FIELD_NUMBER = 20;
-  private int callType_ = 0;
+  public static final int CALL_TYPES_FIELD_NUMBER = 20;
+  @SuppressWarnings("serial")
+  private java.util.List<java.lang.Integer> callTypes_;
+  private static final com.google.protobuf.Internal.ListAdapter.Converter<
+      java.lang.Integer, com.tcn.cloud.api.api.commons.CallType.Enum> callTypes_converter_ =
+          new com.google.protobuf.Internal.ListAdapter.Converter<
+              java.lang.Integer, com.tcn.cloud.api.api.commons.CallType.Enum>() {
+            public com.tcn.cloud.api.api.commons.CallType.Enum convert(java.lang.Integer from) {
+              com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.forNumber(from);
+              return result == null ? com.tcn.cloud.api.api.commons.CallType.Enum.UNRECOGNIZED : result;
+            }
+          };
   /**
    * <pre>
    * call types supported by scorecard
    * </pre>
    *
-   * <code>.api.commons.CallType.Enum call_type = 20 [json_name = "callType"];</code>
-   * @return The enum numeric value on the wire for callType.
+   * <code>repeated .api.commons.CallType.Enum call_types = 20 [json_name = "callTypes"];</code>
+   * @return A list containing the callTypes.
    */
-  @java.lang.Override public int getCallTypeValue() {
-    return callType_;
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.CallType.Enum> getCallTypesList() {
+    return new com.google.protobuf.Internal.ListAdapter<
+        java.lang.Integer, com.tcn.cloud.api.api.commons.CallType.Enum>(callTypes_, callTypes_converter_);
   }
   /**
    * <pre>
    * call types supported by scorecard
    * </pre>
    *
-   * <code>.api.commons.CallType.Enum call_type = 20 [json_name = "callType"];</code>
-   * @return The callType.
+   * <code>repeated .api.commons.CallType.Enum call_types = 20 [json_name = "callTypes"];</code>
+   * @return The count of callTypes.
    */
-  @java.lang.Override public com.tcn.cloud.api.api.commons.CallType.Enum getCallType() {
-    com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.forNumber(callType_);
-    return result == null ? com.tcn.cloud.api.api.commons.CallType.Enum.UNRECOGNIZED : result;
+  @java.lang.Override
+  public int getCallTypesCount() {
+    return callTypes_.size();
   }
+  /**
+   * <pre>
+   * call types supported by scorecard
+   * </pre>
+   *
+   * <code>repeated .api.commons.CallType.Enum call_types = 20 [json_name = "callTypes"];</code>
+   * @param index The index of the element to return.
+   * @return The callTypes at the given index.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.CallType.Enum getCallTypes(int index) {
+    return callTypes_converter_.convert(callTypes_.get(index));
+  }
+  /**
+   * <pre>
+   * call types supported by scorecard
+   * </pre>
+   *
+   * <code>repeated .api.commons.CallType.Enum call_types = 20 [json_name = "callTypes"];</code>
+   * @return A list containing the enum numeric values on the wire for callTypes.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.Integer>
+  getCallTypesValueList() {
+    return callTypes_;
+  }
+  /**
+   * <pre>
+   * call types supported by scorecard
+   * </pre>
+   *
+   * <code>repeated .api.commons.CallType.Enum call_types = 20 [json_name = "callTypes"];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of callTypes at the given index.
+   */
+  @java.lang.Override
+  public int getCallTypesValue(int index) {
+    return callTypes_.get(index);
+  }
+  private int callTypesMemoizedSerializedSize;
 
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
@@ -556,6 +608,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    getSerializedSize();
     if (scorecardId_ != 0L) {
       output.writeInt64(2, scorecardId_);
     }
@@ -601,8 +654,12 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < customFieldKeys_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 19, customFieldKeys_.getRaw(i));
     }
-    if (callType_ != com.tcn.cloud.api.api.commons.CallType.Enum.INBOUND.getNumber()) {
-      output.writeEnum(20, callType_);
+    if (getCallTypesList().size() > 0) {
+      output.writeUInt32NoTag(162);
+      output.writeUInt32NoTag(callTypesMemoizedSerializedSize);
+    }
+    for (int i = 0; i < callTypes_.size(); i++) {
+      output.writeEnumNoTag(callTypes_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -674,9 +731,17 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 2 * getCustomFieldKeysList().size();
     }
-    if (callType_ != com.tcn.cloud.api.api.commons.CallType.Enum.INBOUND.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(20, callType_);
+    {
+      int dataSize = 0;
+      for (int i = 0; i < callTypes_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeEnumSizeNoTag(callTypes_.get(i));
+      }
+      size += dataSize;
+      if (!getCallTypesList().isEmpty()) {  size += 2;
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32SizeNoTag(dataSize);
+      }callTypesMemoizedSerializedSize = dataSize;
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -724,7 +789,7 @@ private static final long serialVersionUID = 0L;
         != other.getIsAdHoc()) return false;
     if (!getCustomFieldKeysList()
         .equals(other.getCustomFieldKeysList())) return false;
-    if (callType_ != other.callType_) return false;
+    if (!callTypes_.equals(other.callTypes_)) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -777,8 +842,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CUSTOM_FIELD_KEYS_FIELD_NUMBER;
       hash = (53 * hash) + getCustomFieldKeysList().hashCode();
     }
-    hash = (37 * hash) + CALL_TYPE_FIELD_NUMBER;
-    hash = (53 * hash) + callType_;
+    if (getCallTypesCount() > 0) {
+      hash = (37 * hash) + CALL_TYPES_FIELD_NUMBER;
+      hash = (53 * hash) + callTypes_.hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -941,7 +1008,8 @@ private static final long serialVersionUID = 0L;
       isAdHoc_ = false;
       customFieldKeys_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
-      callType_ = 0;
+      callTypes_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00008000);
       return this;
     }
 
@@ -984,6 +1052,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.sections_ = sectionsBuilder_.build();
       }
+      if (((bitField0_ & 0x00008000) != 0)) {
+        callTypes_ = java.util.Collections.unmodifiableList(callTypes_);
+        bitField0_ = (bitField0_ & ~0x00008000);
+      }
+      result.callTypes_ = callTypes_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.commons.Scorecard result) {
@@ -1032,9 +1105,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00004000) != 0)) {
         customFieldKeys_.makeImmutable();
         result.customFieldKeys_ = customFieldKeys_;
-      }
-      if (((from_bitField0_ & 0x00008000) != 0)) {
-        result.callType_ = callType_;
       }
     }
 
@@ -1131,8 +1201,15 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
-      if (other.callType_ != 0) {
-        setCallTypeValue(other.getCallTypeValue());
+      if (!other.callTypes_.isEmpty()) {
+        if (callTypes_.isEmpty()) {
+          callTypes_ = other.callTypes_;
+          bitField0_ = (bitField0_ & ~0x00008000);
+        } else {
+          ensureCallTypesIsMutable();
+          callTypes_.addAll(other.callTypes_);
+        }
+        onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1247,10 +1324,22 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 154
             case 160: {
-              callType_ = input.readEnum();
-              bitField0_ |= 0x00008000;
+              int tmpRaw = input.readEnum();
+              ensureCallTypesIsMutable();
+              callTypes_.add(tmpRaw);
               break;
             } // case 160
+            case 162: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int tmpRaw = input.readEnum();
+                ensureCallTypesIsMutable();
+                callTypes_.add(tmpRaw);
+              }
+              input.popLimit(oldLimit);
+              break;
+            } // case 162
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2458,7 +2547,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool is_ad_hoc = 16 [json_name = "isAdHoc", deprecated = true];</code>
      * @deprecated api.commons.Scorecard.is_ad_hoc is deprecated.
-     *     See api/commons/scorecards.proto;l=282
+     *     See api/commons/scorecards.proto;l=289
      * @return The isAdHoc.
      */
     @java.lang.Override
@@ -2472,7 +2561,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool is_ad_hoc = 16 [json_name = "isAdHoc", deprecated = true];</code>
      * @deprecated api.commons.Scorecard.is_ad_hoc is deprecated.
-     *     See api/commons/scorecards.proto;l=282
+     *     See api/commons/scorecards.proto;l=289
      * @param value The isAdHoc to set.
      * @return This builder for chaining.
      */
@@ -2490,7 +2579,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bool is_ad_hoc = 16 [json_name = "isAdHoc", deprecated = true];</code>
      * @deprecated api.commons.Scorecard.is_ad_hoc is deprecated.
-     *     See api/commons/scorecards.proto;l=282
+     *     See api/commons/scorecards.proto;l=289
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearIsAdHoc() {
@@ -2647,61 +2736,66 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int callType_ = 0;
-    /**
-     * <pre>
-     * call types supported by scorecard
-     * </pre>
-     *
-     * <code>.api.commons.CallType.Enum call_type = 20 [json_name = "callType"];</code>
-     * @return The enum numeric value on the wire for callType.
-     */
-    @java.lang.Override public int getCallTypeValue() {
-      return callType_;
+    private java.util.List<java.lang.Integer> callTypes_ =
+      java.util.Collections.emptyList();
+    private void ensureCallTypesIsMutable() {
+      if (!((bitField0_ & 0x00008000) != 0)) {
+        callTypes_ = new java.util.ArrayList<java.lang.Integer>(callTypes_);
+        bitField0_ |= 0x00008000;
+      }
     }
     /**
      * <pre>
      * call types supported by scorecard
      * </pre>
      *
-     * <code>.api.commons.CallType.Enum call_type = 20 [json_name = "callType"];</code>
-     * @param value The enum numeric value on the wire for callType to set.
+     * <code>repeated .api.commons.CallType.Enum call_types = 20 [json_name = "callTypes"];</code>
+     * @return A list containing the callTypes.
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.CallType.Enum> getCallTypesList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.tcn.cloud.api.api.commons.CallType.Enum>(callTypes_, callTypes_converter_);
+    }
+    /**
+     * <pre>
+     * call types supported by scorecard
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallType.Enum call_types = 20 [json_name = "callTypes"];</code>
+     * @return The count of callTypes.
+     */
+    public int getCallTypesCount() {
+      return callTypes_.size();
+    }
+    /**
+     * <pre>
+     * call types supported by scorecard
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallType.Enum call_types = 20 [json_name = "callTypes"];</code>
+     * @param index The index of the element to return.
+     * @return The callTypes at the given index.
+     */
+    public com.tcn.cloud.api.api.commons.CallType.Enum getCallTypes(int index) {
+      return callTypes_converter_.convert(callTypes_.get(index));
+    }
+    /**
+     * <pre>
+     * call types supported by scorecard
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallType.Enum call_types = 20 [json_name = "callTypes"];</code>
+     * @param index The index to set the value at.
+     * @param value The callTypes to set.
      * @return This builder for chaining.
      */
-    public Builder setCallTypeValue(int value) {
-      callType_ = value;
-      bitField0_ |= 0x00008000;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * call types supported by scorecard
-     * </pre>
-     *
-     * <code>.api.commons.CallType.Enum call_type = 20 [json_name = "callType"];</code>
-     * @return The callType.
-     */
-    @java.lang.Override
-    public com.tcn.cloud.api.api.commons.CallType.Enum getCallType() {
-      com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.forNumber(callType_);
-      return result == null ? com.tcn.cloud.api.api.commons.CallType.Enum.UNRECOGNIZED : result;
-    }
-    /**
-     * <pre>
-     * call types supported by scorecard
-     * </pre>
-     *
-     * <code>.api.commons.CallType.Enum call_type = 20 [json_name = "callType"];</code>
-     * @param value The callType to set.
-     * @return This builder for chaining.
-     */
-    public Builder setCallType(com.tcn.cloud.api.api.commons.CallType.Enum value) {
+    public Builder setCallTypes(
+        int index, com.tcn.cloud.api.api.commons.CallType.Enum value) {
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00008000;
-      callType_ = value.getNumber();
+      ensureCallTypesIsMutable();
+      callTypes_.set(index, value.getNumber());
       onChanged();
       return this;
     }
@@ -2710,12 +2804,122 @@ private static final long serialVersionUID = 0L;
      * call types supported by scorecard
      * </pre>
      *
-     * <code>.api.commons.CallType.Enum call_type = 20 [json_name = "callType"];</code>
+     * <code>repeated .api.commons.CallType.Enum call_types = 20 [json_name = "callTypes"];</code>
+     * @param value The callTypes to add.
      * @return This builder for chaining.
      */
-    public Builder clearCallType() {
+    public Builder addCallTypes(com.tcn.cloud.api.api.commons.CallType.Enum value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureCallTypesIsMutable();
+      callTypes_.add(value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * call types supported by scorecard
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallType.Enum call_types = 20 [json_name = "callTypes"];</code>
+     * @param values The callTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllCallTypes(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.CallType.Enum> values) {
+      ensureCallTypesIsMutable();
+      for (com.tcn.cloud.api.api.commons.CallType.Enum value : values) {
+        callTypes_.add(value.getNumber());
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * call types supported by scorecard
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallType.Enum call_types = 20 [json_name = "callTypes"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCallTypes() {
+      callTypes_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00008000);
-      callType_ = 0;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * call types supported by scorecard
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallType.Enum call_types = 20 [json_name = "callTypes"];</code>
+     * @return A list containing the enum numeric values on the wire for callTypes.
+     */
+    public java.util.List<java.lang.Integer>
+    getCallTypesValueList() {
+      return java.util.Collections.unmodifiableList(callTypes_);
+    }
+    /**
+     * <pre>
+     * call types supported by scorecard
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallType.Enum call_types = 20 [json_name = "callTypes"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of callTypes at the given index.
+     */
+    public int getCallTypesValue(int index) {
+      return callTypes_.get(index);
+    }
+    /**
+     * <pre>
+     * call types supported by scorecard
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallType.Enum call_types = 20 [json_name = "callTypes"];</code>
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for callTypes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCallTypesValue(
+        int index, int value) {
+      ensureCallTypesIsMutable();
+      callTypes_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * call types supported by scorecard
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallType.Enum call_types = 20 [json_name = "callTypes"];</code>
+     * @param value The enum numeric value on the wire for callTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addCallTypesValue(int value) {
+      ensureCallTypesIsMutable();
+      callTypes_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * call types supported by scorecard
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallType.Enum call_types = 20 [json_name = "callTypes"];</code>
+     * @param values The enum numeric values on the wire for callTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllCallTypesValue(
+        java.lang.Iterable<java.lang.Integer> values) {
+      ensureCallTypesIsMutable();
+      for (int value : values) {
+        callTypes_.add(value);
+      }
       onChanged();
       return this;
     }
