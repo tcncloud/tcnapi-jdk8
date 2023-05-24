@@ -1100,35 +1100,35 @@ public final class OrgGrpc {
     return getUpdateUserPasswordMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByUserIdRequest,
-      com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByUserIdResponse> getUpdateUserPasswordByUserIdMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest,
+      com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse> getUpdateMyUserPasswordMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "UpdateUserPasswordByUserId",
-      requestType = com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByUserIdRequest.class,
-      responseType = com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByUserIdResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "UpdateMyUserPassword",
+      requestType = com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByUserIdRequest,
-      com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByUserIdResponse> getUpdateUserPasswordByUserIdMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByUserIdRequest, com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByUserIdResponse> getUpdateUserPasswordByUserIdMethod;
-    if ((getUpdateUserPasswordByUserIdMethod = OrgGrpc.getUpdateUserPasswordByUserIdMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest,
+      com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse> getUpdateMyUserPasswordMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest, com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse> getUpdateMyUserPasswordMethod;
+    if ((getUpdateMyUserPasswordMethod = OrgGrpc.getUpdateMyUserPasswordMethod) == null) {
       synchronized (OrgGrpc.class) {
-        if ((getUpdateUserPasswordByUserIdMethod = OrgGrpc.getUpdateUserPasswordByUserIdMethod) == null) {
-          OrgGrpc.getUpdateUserPasswordByUserIdMethod = getUpdateUserPasswordByUserIdMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByUserIdRequest, com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByUserIdResponse>newBuilder()
+        if ((getUpdateMyUserPasswordMethod = OrgGrpc.getUpdateMyUserPasswordMethod) == null) {
+          OrgGrpc.getUpdateMyUserPasswordMethod = getUpdateMyUserPasswordMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest, com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateUserPasswordByUserId"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateMyUserPassword"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByUserIdRequest.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByUserIdResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateUserPasswordByUserId"))
+                  com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateMyUserPassword"))
               .build();
         }
       }
     }
-    return getUpdateUserPasswordByUserIdMethod;
+    return getUpdateMyUserPasswordMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByOrgIdRequest,
@@ -1193,37 +1193,6 @@ public final class OrgGrpc {
     return getResetUserRequirePasswordResetMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkRequest,
-      com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkResponse> getGetMyUserPasswordResetLinkMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetMyUserPasswordResetLink",
-      requestType = com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkRequest.class,
-      responseType = com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkRequest,
-      com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkResponse> getGetMyUserPasswordResetLinkMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkRequest, com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkResponse> getGetMyUserPasswordResetLinkMethod;
-    if ((getGetMyUserPasswordResetLinkMethod = OrgGrpc.getGetMyUserPasswordResetLinkMethod) == null) {
-      synchronized (OrgGrpc.class) {
-        if ((getGetMyUserPasswordResetLinkMethod = OrgGrpc.getGetMyUserPasswordResetLinkMethod) == null) {
-          OrgGrpc.getGetMyUserPasswordResetLinkMethod = getGetMyUserPasswordResetLinkMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkRequest, com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetMyUserPasswordResetLink"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetMyUserPasswordResetLink"))
-              .build();
-        }
-      }
-    }
-    return getGetMyUserPasswordResetLinkMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest,
       com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkResponse> getGetUserPasswordResetLinkMethod;
 
@@ -1253,6 +1222,37 @@ public final class OrgGrpc {
       }
     }
     return getGetUserPasswordResetLinkMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkRequest,
+      com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkResponse> getGetMyUserPasswordResetLinkMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetMyUserPasswordResetLink",
+      requestType = com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkRequest.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkRequest,
+      com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkResponse> getGetMyUserPasswordResetLinkMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkRequest, com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkResponse> getGetMyUserPasswordResetLinkMethod;
+    if ((getGetMyUserPasswordResetLinkMethod = OrgGrpc.getGetMyUserPasswordResetLinkMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getGetMyUserPasswordResetLinkMethod = OrgGrpc.getGetMyUserPasswordResetLinkMethod) == null) {
+          OrgGrpc.getGetMyUserPasswordResetLinkMethod = getGetMyUserPasswordResetLinkMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkRequest, com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetMyUserPasswordResetLink"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetMyUserPasswordResetLink"))
+              .build();
+        }
+      }
+    }
+    return getGetMyUserPasswordResetLinkMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByOrgIdRequest,
@@ -6568,9 +6568,9 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * UpdateUserPassword updates the current user's password to the
-     * password given on the request message.
-     * Required Permissions: USER_EDIT_PASSWORD (Update your own password)
+     * UpdateUserPassword updates a user's password (in the same org as the current user)
+     * to the password given on the request message.
+     * Required Permissions: USER_EDIT (Update another user's password in the same org)
      * </pre>
      */
     default void updateUserPassword(com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordRequest request,
@@ -6580,14 +6580,14 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * UpdateUserPassword updates a user's password (in the same org as the current user)
-     * to the password given on the request message.
-     * Required Permissions: USER_EDIT (Update another user's password in the same org)
+     * UpdateMyUserPassword updates the current user's password to the
+     * password given on the request message.
+     * Required Permissions: USER_EDIT_PASSWORD (Update your own password)
      * </pre>
      */
-    default void updateUserPasswordByUserId(com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByUserIdRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByUserIdResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateUserPasswordByUserIdMethod(), responseObserver);
+    default void updateMyUserPassword(com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMyUserPasswordMethod(), responseObserver);
     }
 
     /**
@@ -6615,17 +6615,6 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * GetMyUserPasswordResetLink generate a password reset link for the current user.
-     * Required Permissions: USER_EDIT_PASSWORD
-     * </pre>
-     */
-    default void getMyUserPasswordResetLink(com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMyUserPasswordResetLinkMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
      * GetUserPasswordResetLink generates a password reset link for a user
      * in the same org as the current user.
      * Required Permissions: USER_EDIT
@@ -6635,6 +6624,17 @@ public final class OrgGrpc {
     default void getUserPasswordResetLink(com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetUserPasswordResetLinkMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetMyUserPasswordResetLink generate a password reset link for the current user.
+     * Required Permissions: USER_EDIT_PASSWORD
+     * </pre>
+     */
+    default void getMyUserPasswordResetLink(com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMyUserPasswordResetLinkMethod(), responseObserver);
     }
 
     /**
@@ -8892,9 +8892,9 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * UpdateUserPassword updates the current user's password to the
-     * password given on the request message.
-     * Required Permissions: USER_EDIT_PASSWORD (Update your own password)
+     * UpdateUserPassword updates a user's password (in the same org as the current user)
+     * to the password given on the request message.
+     * Required Permissions: USER_EDIT (Update another user's password in the same org)
      * </pre>
      */
     public void updateUserPassword(com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordRequest request,
@@ -8905,15 +8905,15 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * UpdateUserPassword updates a user's password (in the same org as the current user)
-     * to the password given on the request message.
-     * Required Permissions: USER_EDIT (Update another user's password in the same org)
+     * UpdateMyUserPassword updates the current user's password to the
+     * password given on the request message.
+     * Required Permissions: USER_EDIT_PASSWORD (Update your own password)
      * </pre>
      */
-    public void updateUserPasswordByUserId(com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByUserIdRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByUserIdResponse> responseObserver) {
+    public void updateMyUserPassword(com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getUpdateUserPasswordByUserIdMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getUpdateMyUserPasswordMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -8943,18 +8943,6 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * GetMyUserPasswordResetLink generate a password reset link for the current user.
-     * Required Permissions: USER_EDIT_PASSWORD
-     * </pre>
-     */
-    public void getMyUserPasswordResetLink(com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getGetMyUserPasswordResetLinkMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
      * GetUserPasswordResetLink generates a password reset link for a user
      * in the same org as the current user.
      * Required Permissions: USER_EDIT
@@ -8965,6 +8953,18 @@ public final class OrgGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetUserPasswordResetLinkMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetMyUserPasswordResetLink generate a password reset link for the current user.
+     * Required Permissions: USER_EDIT_PASSWORD
+     * </pre>
+     */
+    public void getMyUserPasswordResetLink(com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetMyUserPasswordResetLinkMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -11338,9 +11338,9 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * UpdateUserPassword updates the current user's password to the
-     * password given on the request message.
-     * Required Permissions: USER_EDIT_PASSWORD (Update your own password)
+     * UpdateUserPassword updates a user's password (in the same org as the current user)
+     * to the password given on the request message.
+     * Required Permissions: USER_EDIT (Update another user's password in the same org)
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordResponse updateUserPassword(com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordRequest request) {
@@ -11350,14 +11350,14 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * UpdateUserPassword updates a user's password (in the same org as the current user)
-     * to the password given on the request message.
-     * Required Permissions: USER_EDIT (Update another user's password in the same org)
+     * UpdateMyUserPassword updates the current user's password to the
+     * password given on the request message.
+     * Required Permissions: USER_EDIT_PASSWORD (Update your own password)
      * </pre>
      */
-    public com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByUserIdResponse updateUserPasswordByUserId(com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByUserIdRequest request) {
+    public com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse updateMyUserPassword(com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getUpdateUserPasswordByUserIdMethod(), getCallOptions(), request);
+          getChannel(), getUpdateMyUserPasswordMethod(), getCallOptions(), request);
     }
 
     /**
@@ -11385,17 +11385,6 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * GetMyUserPasswordResetLink generate a password reset link for the current user.
-     * Required Permissions: USER_EDIT_PASSWORD
-     * </pre>
-     */
-    public com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkResponse getMyUserPasswordResetLink(com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetMyUserPasswordResetLinkMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
      * GetUserPasswordResetLink generates a password reset link for a user
      * in the same org as the current user.
      * Required Permissions: USER_EDIT
@@ -11405,6 +11394,17 @@ public final class OrgGrpc {
     public com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkResponse getUserPasswordResetLink(com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetUserPasswordResetLinkMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetMyUserPasswordResetLink generate a password reset link for the current user.
+     * Required Permissions: USER_EDIT_PASSWORD
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkResponse getMyUserPasswordResetLink(com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetMyUserPasswordResetLinkMethod(), getCallOptions(), request);
     }
 
     /**
@@ -13635,9 +13635,9 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * UpdateUserPassword updates the current user's password to the
-     * password given on the request message.
-     * Required Permissions: USER_EDIT_PASSWORD (Update your own password)
+     * UpdateUserPassword updates a user's password (in the same org as the current user)
+     * to the password given on the request message.
+     * Required Permissions: USER_EDIT (Update another user's password in the same org)
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordResponse> updateUserPassword(
@@ -13648,15 +13648,15 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * UpdateUserPassword updates a user's password (in the same org as the current user)
-     * to the password given on the request message.
-     * Required Permissions: USER_EDIT (Update another user's password in the same org)
+     * UpdateMyUserPassword updates the current user's password to the
+     * password given on the request message.
+     * Required Permissions: USER_EDIT_PASSWORD (Update your own password)
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByUserIdResponse> updateUserPasswordByUserId(
-        com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByUserIdRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse> updateMyUserPassword(
+        com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getUpdateUserPasswordByUserIdMethod(), getCallOptions()), request);
+          getChannel().newCall(getUpdateMyUserPasswordMethod(), getCallOptions()), request);
     }
 
     /**
@@ -13686,18 +13686,6 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * GetMyUserPasswordResetLink generate a password reset link for the current user.
-     * Required Permissions: USER_EDIT_PASSWORD
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkResponse> getMyUserPasswordResetLink(
-        com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getGetMyUserPasswordResetLinkMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
      * GetUserPasswordResetLink generates a password reset link for a user
      * in the same org as the current user.
      * Required Permissions: USER_EDIT
@@ -13708,6 +13696,18 @@ public final class OrgGrpc {
         com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetUserPasswordResetLinkMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetMyUserPasswordResetLink generate a password reset link for the current user.
+     * Required Permissions: USER_EDIT_PASSWORD
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkResponse> getMyUserPasswordResetLink(
+        com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetMyUserPasswordResetLinkMethod(), getCallOptions()), request);
     }
 
     /**
@@ -15762,11 +15762,11 @@ public final class OrgGrpc {
   private static final int METHODID_CREATE_USER_BY_ORG_ID = 32;
   private static final int METHODID_CREATE_DELEGATED_USER = 33;
   private static final int METHODID_UPDATE_USER_PASSWORD = 34;
-  private static final int METHODID_UPDATE_USER_PASSWORD_BY_USER_ID = 35;
+  private static final int METHODID_UPDATE_MY_USER_PASSWORD = 35;
   private static final int METHODID_UPDATE_USER_PASSWORD_BY_ORG_ID = 36;
   private static final int METHODID_RESET_USER_REQUIRE_PASSWORD_RESET = 37;
-  private static final int METHODID_GET_MY_USER_PASSWORD_RESET_LINK = 38;
-  private static final int METHODID_GET_USER_PASSWORD_RESET_LINK = 39;
+  private static final int METHODID_GET_USER_PASSWORD_RESET_LINK = 38;
+  private static final int METHODID_GET_MY_USER_PASSWORD_RESET_LINK = 39;
   private static final int METHODID_GET_USER_PASSWORD_RESET_LINK_BY_ORG_ID = 40;
   private static final int METHODID_GET_USER_EMAIL_VERIFIED = 41;
   private static final int METHODID_GET_USER_EMAIL_VERIFIED_BY_ORG_ID = 42;
@@ -16084,9 +16084,9 @@ public final class OrgGrpc {
           serviceImpl.updateUserPassword((com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordResponse>) responseObserver);
           break;
-        case METHODID_UPDATE_USER_PASSWORD_BY_USER_ID:
-          serviceImpl.updateUserPasswordByUserId((com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByUserIdRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByUserIdResponse>) responseObserver);
+        case METHODID_UPDATE_MY_USER_PASSWORD:
+          serviceImpl.updateMyUserPassword((com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse>) responseObserver);
           break;
         case METHODID_UPDATE_USER_PASSWORD_BY_ORG_ID:
           serviceImpl.updateUserPasswordByOrgId((com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByOrgIdRequest) request,
@@ -16096,13 +16096,13 @@ public final class OrgGrpc {
           serviceImpl.resetUserRequirePasswordReset((com.tcn.cloud.api.api.v0alpha.ResetUserRequirePasswordResetRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ResetUserRequirePasswordResetResponse>) responseObserver);
           break;
-        case METHODID_GET_MY_USER_PASSWORD_RESET_LINK:
-          serviceImpl.getMyUserPasswordResetLink((com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkResponse>) responseObserver);
-          break;
         case METHODID_GET_USER_PASSWORD_RESET_LINK:
           serviceImpl.getUserPasswordResetLink((com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkResponse>) responseObserver);
+          break;
+        case METHODID_GET_MY_USER_PASSWORD_RESET_LINK:
+          serviceImpl.getMyUserPasswordResetLink((com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkResponse>) responseObserver);
           break;
         case METHODID_GET_USER_PASSWORD_RESET_LINK_BY_ORG_ID:
           serviceImpl.getUserPasswordResetLinkByOrgId((com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByOrgIdRequest) request,
@@ -17004,12 +17004,12 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordResponse>(
                 service, METHODID_UPDATE_USER_PASSWORD)))
         .addMethod(
-          getUpdateUserPasswordByUserIdMethod(),
+          getUpdateMyUserPasswordMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByUserIdRequest,
-              com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByUserIdResponse>(
-                service, METHODID_UPDATE_USER_PASSWORD_BY_USER_ID)))
+              com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest,
+              com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse>(
+                service, METHODID_UPDATE_MY_USER_PASSWORD)))
         .addMethod(
           getUpdateUserPasswordByOrgIdMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -17025,19 +17025,19 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v0alpha.ResetUserRequirePasswordResetResponse>(
                 service, METHODID_RESET_USER_REQUIRE_PASSWORD_RESET)))
         .addMethod(
-          getGetMyUserPasswordResetLinkMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkRequest,
-              com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkResponse>(
-                service, METHODID_GET_MY_USER_PASSWORD_RESET_LINK)))
-        .addMethod(
           getGetUserPasswordResetLinkMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest,
               com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkResponse>(
                 service, METHODID_GET_USER_PASSWORD_RESET_LINK)))
+        .addMethod(
+          getGetMyUserPasswordResetLinkMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkRequest,
+              com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkResponse>(
+                service, METHODID_GET_MY_USER_PASSWORD_RESET_LINK)))
         .addMethod(
           getGetUserPasswordResetLinkByOrgIdMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -18234,11 +18234,11 @@ public final class OrgGrpc {
               .addMethod(getCreateUserByOrgIdMethod())
               .addMethod(getCreateDelegatedUserMethod())
               .addMethod(getUpdateUserPasswordMethod())
-              .addMethod(getUpdateUserPasswordByUserIdMethod())
+              .addMethod(getUpdateMyUserPasswordMethod())
               .addMethod(getUpdateUserPasswordByOrgIdMethod())
               .addMethod(getResetUserRequirePasswordResetMethod())
-              .addMethod(getGetMyUserPasswordResetLinkMethod())
               .addMethod(getGetUserPasswordResetLinkMethod())
+              .addMethod(getGetMyUserPasswordResetLinkMethod())
               .addMethod(getGetUserPasswordResetLinkByOrgIdMethod())
               .addMethod(getGetUserEmailVerifiedMethod())
               .addMethod(getGetUserEmailVerifiedByOrgIdMethod())

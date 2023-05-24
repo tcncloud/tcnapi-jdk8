@@ -1925,15 +1925,15 @@ public final class OrgProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v0alpha_UpdateUserPasswordResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v0alpha_UpdateUserPasswordByUserIdRequest_descriptor;
+    internal_static_api_v0alpha_UpdateMyUserPasswordRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v0alpha_UpdateUserPasswordByUserIdRequest_fieldAccessorTable;
+      internal_static_api_v0alpha_UpdateMyUserPasswordRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v0alpha_UpdateUserPasswordByUserIdResponse_descriptor;
+    internal_static_api_v0alpha_UpdateMyUserPasswordResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v0alpha_UpdateUserPasswordByUserIdResponse_fieldAccessorTable;
+      internal_static_api_v0alpha_UpdateMyUserPasswordResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v0alpha_UpdateUserPasswordByOrgIdRequest_descriptor;
   static final 
@@ -1945,16 +1945,6 @@ public final class OrgProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v0alpha_UpdateUserPasswordByOrgIdResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v0alpha_GetMyUserPasswordResetLinkRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v0alpha_GetMyUserPasswordResetLinkRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_api_v0alpha_GetMyUserPasswordResetLinkResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_api_v0alpha_GetMyUserPasswordResetLinkResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v0alpha_GetUserPasswordResetLinkRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -1964,6 +1954,16 @@ public final class OrgProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_api_v0alpha_GetUserPasswordResetLinkResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v0alpha_GetMyUserPasswordResetLinkRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v0alpha_GetMyUserPasswordResetLinkRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_api_v0alpha_GetMyUserPasswordResetLinkResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_api_v0alpha_GetMyUserPasswordResetLinkResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_api_v0alpha_GetUserPasswordResetLinkByOrgIdRequest_descriptor;
   static final 
@@ -4274,1522 +4274,1521 @@ public final class OrgProto {
       "i.commons.TimeZoneWrapperR\020timeZoneOverr" +
       "ideJ\004\010\010\020\tJ\004\010\n\020\013J\004\010\013\020\014J\004\010\016\020\017J\004\010\017\020\020\"4\n\031Cre" +
       "ateUserByOrgIdResponse\022\027\n\007user_id\030\001 \001(\tR" +
-      "\006userId\"b\n\031UpdateUserPasswordRequest\022\032\n\010" +
-      "password\030\002 \001(\tR\010password\022)\n\020current_pass" +
-      "word\030\003 \001(\tR\017currentPassword\"\034\n\032UpdateUse" +
-      "rPasswordResponse\"\203\001\n!UpdateUserPassword" +
-      "ByUserIdRequest\022\027\n\007user_id\030\001 \001(\tR\006userId" +
-      "\022\032\n\010password\030\002 \001(\tR\010password\022)\n\020current_" +
-      "password\030\003 \001(\tR\017currentPassword\"$\n\"Updat" +
-      "eUserPasswordByUserIdResponse\"\231\001\n Update" +
-      "UserPasswordByOrgIdRequest\022\027\n\007user_id\030\001 " +
-      "\001(\tR\006userId\022\032\n\010password\030\002 \001(\tR\010password\022" +
-      ")\n\020current_password\030\003 \001(\tR\017currentPasswo" +
-      "rd\022\025\n\006org_id\030\004 \001(\tR\005orgId\"#\n!UpdateUserP" +
-      "asswordByOrgIdResponse\"5\n!GetMyUserPassw" +
-      "ordResetLinkRequest\022\020\n\003ttl\030\001 \001(\003R\003ttl\"6\n" +
-      "\"GetMyUserPasswordResetLinkResponse\022\020\n\003u" +
-      "rl\030\001 \001(\tR\003url\"L\n\037GetUserPasswordResetLin" +
-      "kRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\022\020\n\003ttl" +
-      "\030\014 \001(\003R\003ttl\"4\n GetUserPasswordResetLinkR" +
-      "esponse\022\020\n\003url\030\001 \001(\tR\003url\"j\n&GetUserPass" +
-      "wordResetLinkByOrgIdRequest\022\027\n\007user_id\030\001" +
-      " \001(\tR\006userId\022\025\n\006org_id\030\002 \001(\tR\005orgId\022\020\n\003t" +
-      "tl\030\014 \001(\003R\003ttl\";\n\'GetUserPasswordResetLin" +
-      "kByOrgIdResponse\022\020\n\003url\030\001 \001(\tR\003url\"?\n$Re" +
-      "setUserRequirePasswordResetRequest\022\027\n\007us" +
-      "er_id\030\001 \001(\tR\006userId\"\'\n%ResetUserRequireP" +
-      "asswordResetResponse\"L\n\030UpdateP3OwningOr" +
-      "gRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\031\n\010owner" +
-      "_id\030\002 \001(\tR\007ownerId\"\033\n\031UpdateP3OwningOrgR" +
-      "esponse\".\n\025GetP3OwningOrgRequest\022\025\n\006org_" +
-      "id\030\001 \001(\tR\005orgId\"(\n\026GetP3OwningOrgRespons" +
-      "e\022\016\n\002id\030\001 \001(\tR\002id\"F\n+RevokeAccountOwnerP" +
-      "ermissionFromUserRequest\022\027\n\007user_id\030\001 \001(" +
-      "\tR\006userId\".\n,RevokeAccountOwnerPermissio" +
-      "nFromUserResponse\"2\n\031ConvertOrgToManualR" +
-      "equest\022\025\n\006org_id\030\001 \001(\tR\005orgId\"\034\n\032Convert" +
-      "OrgToManualResponse\",\n\023ListQueueConfigsR" +
-      "eq\022\025\n\006org_id\030\001 \001(\tR\005orgId\"I\n\023ListQueueCo" +
-      "nfigsRes\0222\n\007configs\030\001 \003(\0132\030.api.v0alpha." +
-      "QueueConfigR\007configs\"7\n\024DeleteQueueConfi" +
-      "gReq\022\037\n\013config_name\030\001 \001(\tR\nconfigName\"\026\n" +
-      "\024DeleteQueueConfigRes\"=\n\021GetQueueConfigR" +
-      "eq\022\022\n\004name\030\001 \001(\tR\004name\022\024\n\005merge\030\002 \001(\010R\005m" +
-      "erge\"E\n\021GetQueueConfigRes\0220\n\006config\030\001 \001(" +
-      "\0132\030.api.v0alpha.QueueConfigR\006config\"H\n\024U" +
-      "pdateQueueConfigReq\0220\n\006config\030\001 \001(\0132\030.ap" +
-      "i.v0alpha.QueueConfigR\006config\"\026\n\024UpdateQ" +
-      "ueueConfigRes\"H\n\024CreateQueueConfigReq\0220\n" +
-      "\006config\030\001 \001(\0132\030.api.v0alpha.QueueConfigR" +
-      "\006config\"\026\n\024CreateQueueConfigRes\"\206\001\n\022Copy" +
-      "QueueConfigReq\022\036\n\013from_org_id\030\001 \001(\tR\tfro" +
-      "mOrgId\022\032\n\tto_org_id\030\002 \001(\tR\007toOrgId\022\033\n\tfr" +
-      "om_name\030\003 \001(\tR\010fromName\022\027\n\007to_name\030\004 \001(\t" +
-      "R\006toName\"\024\n\022CopyQueueConfigRes\"\250G\n\013Queue" +
-      "Config\022\022\n\004name\030\001 \001(\tR\004name\022C\n\017config_mod" +
-      "ified\030\002 \001(\0132\032.google.protobuf.TimestampR" +
-      "\016configModified\022C\n\017sounds_modified\030\003 \001(\013" +
-      "2\032.google.protobuf.TimestampR\016soundsModi" +
-      "fied\022\'\n\017sounds_language\030\017 \001(\tR\016soundsLan" +
-      "guage\022#\n\rsounds_gender\030\020 \001(\tR\014soundsGend" +
-      "er\022\\\n\023announcement_mixing\030\004 \001(\0132+.api.v0" +
-      "alpha.QueueConfig.AnnouncementMixingR\022an" +
-      "nouncementMixing\022e\n\026position_announcemen" +
-      "ts\030\005 \001(\0132..api.v0alpha.QueueConfig.Posit" +
-      "ionAnnouncementsR\025positionAnnouncements\022" +
-      "f\n\027wait_time_announcements\030\006 \001(\0132..api.v" +
-      "0alpha.QueueConfig.WaitTimeAnnouncements" +
-      "R\025waitTimeAnnouncements\022P\n\017attention_ton" +
-      "es\030\007 \001(\0132\'.api.v0alpha.QueueConfig.Atten" +
-      "tionTonesR\016attentionTones\022Z\n\023in_queue_co" +
-      "nditions\030\010 \001(\0132*.api.v0alpha.QueueConfig" +
-      ".InQueueConditionsR\021inQueueConditions\022Q\n" +
-      "\020key_press_events\030\t \001(\0132\'.api.v0alpha.Qu" +
-      "eueConfig.KeyPressEventsR\016keyPressEvents" +
-      "\022T\n\021pbx_ring_strategy\030\n \001(\0132(.api.v0alph" +
-      "a.QueueConfig.PbxRingStrategyR\017pbxRingSt" +
-      "rategy\022\206\001\n#queue_monitoring_silence_wait" +
-      "_times\030\013 \001(\01328.api.v0alpha.QueueConfig.Q" +
-      "ueueMonitoringSilenceWaitTimesR\037queueMon" +
-      "itoringSilenceWaitTimes\0228\n\030callback_time" +
-      "out_minutes\030\014 \001(\003R\026callbackTimeoutMinute" +
-      "s\022#\n\rnumber_update\030\r \001(\010R\014numberUpdate\022M" +
-      "\n\020inbound_override\030\016 \001(\0162\".api.commons.I" +
-      "nboundOverrideOptionR\017inboundOverride\022P\n" +
-      "\023intercom_connection\030\021 \001(\0162\037.api.commons" +
-      ".IntercomConnectionR\022intercomConnection\032" +
-      "\333\003\n\022AnnouncementMixing\022L\n\007inbound\030\001 \001(\0132" +
-      "2.api.v0alpha.QueueConfig.AnnouncementMi" +
-      "xing.ConfigR\007inbound\022N\n\010outbound\030\002 \001(\01322" +
-      ".api.v0alpha.QueueConfig.AnnouncementMix" +
-      "ing.ConfigR\010outbound\022J\n\006manual\030\003 \001(\01322.a" +
-      "pi.v0alpha.QueueConfig.AnnouncementMixin" +
-      "g.ConfigR\006manual\022L\n\007preview\030\004 \001(\01322.api." +
-      "v0alpha.QueueConfig.AnnouncementMixing.C" +
-      "onfigR\007preview\022D\n\003any\030\005 \001(\01322.api.v0alph" +
-      "a.QueueConfig.AnnouncementMixing.ConfigR" +
-      "\003any\032G\n\006Config\022=\n\006option\030\001 \001(\0162%.api.com" +
-      "mons.AnnouncementMixingOptionR\006option\032\340\005" +
-      "\n\025PositionAnnouncements\022T\n\007inbound\030\001 \001(\013" +
+      "\006userId\"{\n\031UpdateUserPasswordRequest\022\027\n\007" +
+      "user_id\030\001 \001(\tR\006userId\022\032\n\010password\030\002 \001(\tR" +
+      "\010password\022)\n\020current_password\030\003 \001(\tR\017cur" +
+      "rentPassword\"\034\n\032UpdateUserPasswordRespon" +
+      "se\"d\n\033UpdateMyUserPasswordRequest\022\032\n\010pas" +
+      "sword\030\002 \001(\tR\010password\022)\n\020current_passwor" +
+      "d\030\003 \001(\tR\017currentPassword\"\036\n\034UpdateMyUser" +
+      "PasswordResponse\"\231\001\n UpdateUserPasswordB" +
+      "yOrgIdRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\022\032" +
+      "\n\010password\030\002 \001(\tR\010password\022)\n\020current_pa" +
+      "ssword\030\003 \001(\tR\017currentPassword\022\025\n\006org_id\030" +
+      "\004 \001(\tR\005orgId\"#\n!UpdateUserPasswordByOrgI" +
+      "dResponse\"L\n\037GetUserPasswordResetLinkReq" +
+      "uest\022\027\n\007user_id\030\001 \001(\tR\006userId\022\020\n\003ttl\030\014 \001" +
+      "(\003R\003ttl\"4\n GetUserPasswordResetLinkRespo" +
+      "nse\022\020\n\003url\030\001 \001(\tR\003url\"5\n!GetMyUserPasswo" +
+      "rdResetLinkRequest\022\020\n\003ttl\030\001 \001(\003R\003ttl\"6\n\"" +
+      "GetMyUserPasswordResetLinkResponse\022\020\n\003ur" +
+      "l\030\001 \001(\tR\003url\"j\n&GetUserPasswordResetLink" +
+      "ByOrgIdRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\022" +
+      "\025\n\006org_id\030\002 \001(\tR\005orgId\022\020\n\003ttl\030\014 \001(\003R\003ttl" +
+      "\";\n\'GetUserPasswordResetLinkByOrgIdRespo" +
+      "nse\022\020\n\003url\030\001 \001(\tR\003url\"?\n$ResetUserRequir" +
+      "ePasswordResetRequest\022\027\n\007user_id\030\001 \001(\tR\006" +
+      "userId\"\'\n%ResetUserRequirePasswordResetR" +
+      "esponse\"L\n\030UpdateP3OwningOrgRequest\022\025\n\006o" +
+      "rg_id\030\001 \001(\tR\005orgId\022\031\n\010owner_id\030\002 \001(\tR\007ow" +
+      "nerId\"\033\n\031UpdateP3OwningOrgResponse\".\n\025Ge" +
+      "tP3OwningOrgRequest\022\025\n\006org_id\030\001 \001(\tR\005org" +
+      "Id\"(\n\026GetP3OwningOrgResponse\022\016\n\002id\030\001 \001(\t" +
+      "R\002id\"F\n+RevokeAccountOwnerPermissionFrom" +
+      "UserRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\".\n," +
+      "RevokeAccountOwnerPermissionFromUserResp" +
+      "onse\"2\n\031ConvertOrgToManualRequest\022\025\n\006org" +
+      "_id\030\001 \001(\tR\005orgId\"\034\n\032ConvertOrgToManualRe" +
+      "sponse\",\n\023ListQueueConfigsReq\022\025\n\006org_id\030" +
+      "\001 \001(\tR\005orgId\"I\n\023ListQueueConfigsRes\0222\n\007c" +
+      "onfigs\030\001 \003(\0132\030.api.v0alpha.QueueConfigR\007" +
+      "configs\"7\n\024DeleteQueueConfigReq\022\037\n\013confi" +
+      "g_name\030\001 \001(\tR\nconfigName\"\026\n\024DeleteQueueC" +
+      "onfigRes\"=\n\021GetQueueConfigReq\022\022\n\004name\030\001 " +
+      "\001(\tR\004name\022\024\n\005merge\030\002 \001(\010R\005merge\"E\n\021GetQu" +
+      "eueConfigRes\0220\n\006config\030\001 \001(\0132\030.api.v0alp" +
+      "ha.QueueConfigR\006config\"H\n\024UpdateQueueCon" +
+      "figReq\0220\n\006config\030\001 \001(\0132\030.api.v0alpha.Que" +
+      "ueConfigR\006config\"\026\n\024UpdateQueueConfigRes" +
+      "\"H\n\024CreateQueueConfigReq\0220\n\006config\030\001 \001(\013" +
+      "2\030.api.v0alpha.QueueConfigR\006config\"\026\n\024Cr" +
+      "eateQueueConfigRes\"\206\001\n\022CopyQueueConfigRe" +
+      "q\022\036\n\013from_org_id\030\001 \001(\tR\tfromOrgId\022\032\n\tto_" +
+      "org_id\030\002 \001(\tR\007toOrgId\022\033\n\tfrom_name\030\003 \001(\t" +
+      "R\010fromName\022\027\n\007to_name\030\004 \001(\tR\006toName\"\024\n\022C" +
+      "opyQueueConfigRes\"\250G\n\013QueueConfig\022\022\n\004nam" +
+      "e\030\001 \001(\tR\004name\022C\n\017config_modified\030\002 \001(\0132\032" +
+      ".google.protobuf.TimestampR\016configModifi" +
+      "ed\022C\n\017sounds_modified\030\003 \001(\0132\032.google.pro" +
+      "tobuf.TimestampR\016soundsModified\022\'\n\017sound" +
+      "s_language\030\017 \001(\tR\016soundsLanguage\022#\n\rsoun" +
+      "ds_gender\030\020 \001(\tR\014soundsGender\022\\\n\023announc" +
+      "ement_mixing\030\004 \001(\0132+.api.v0alpha.QueueCo" +
+      "nfig.AnnouncementMixingR\022announcementMix" +
+      "ing\022e\n\026position_announcements\030\005 \001(\0132..ap" +
+      "i.v0alpha.QueueConfig.PositionAnnounceme" +
+      "ntsR\025positionAnnouncements\022f\n\027wait_time_" +
+      "announcements\030\006 \001(\0132..api.v0alpha.QueueC" +
+      "onfig.WaitTimeAnnouncementsR\025waitTimeAnn" +
+      "ouncements\022P\n\017attention_tones\030\007 \001(\0132\'.ap" +
+      "i.v0alpha.QueueConfig.AttentionTonesR\016at" +
+      "tentionTones\022Z\n\023in_queue_conditions\030\010 \001(" +
+      "\0132*.api.v0alpha.QueueConfig.InQueueCondi" +
+      "tionsR\021inQueueConditions\022Q\n\020key_press_ev" +
+      "ents\030\t \001(\0132\'.api.v0alpha.QueueConfig.Key" +
+      "PressEventsR\016keyPressEvents\022T\n\021pbx_ring_" +
+      "strategy\030\n \001(\0132(.api.v0alpha.QueueConfig" +
+      ".PbxRingStrategyR\017pbxRingStrategy\022\206\001\n#qu" +
+      "eue_monitoring_silence_wait_times\030\013 \001(\0132" +
+      "8.api.v0alpha.QueueConfig.QueueMonitorin" +
+      "gSilenceWaitTimesR\037queueMonitoringSilenc" +
+      "eWaitTimes\0228\n\030callback_timeout_minutes\030\014" +
+      " \001(\003R\026callbackTimeoutMinutes\022#\n\rnumber_u" +
+      "pdate\030\r \001(\010R\014numberUpdate\022M\n\020inbound_ove" +
+      "rride\030\016 \001(\0162\".api.commons.InboundOverrid" +
+      "eOptionR\017inboundOverride\022P\n\023intercom_con" +
+      "nection\030\021 \001(\0162\037.api.commons.IntercomConn" +
+      "ectionR\022intercomConnection\032\333\003\n\022Announcem" +
+      "entMixing\022L\n\007inbound\030\001 \001(\01322.api.v0alpha" +
+      ".QueueConfig.AnnouncementMixing.ConfigR\007" +
+      "inbound\022N\n\010outbound\030\002 \001(\01322.api.v0alpha." +
+      "QueueConfig.AnnouncementMixing.ConfigR\010o" +
+      "utbound\022J\n\006manual\030\003 \001(\01322.api.v0alpha.Qu" +
+      "eueConfig.AnnouncementMixing.ConfigR\006man" +
+      "ual\022L\n\007preview\030\004 \001(\01322.api.v0alpha.Queue" +
+      "Config.AnnouncementMixing.ConfigR\007previe" +
+      "w\022D\n\003any\030\005 \001(\01322.api.v0alpha.QueueConfig" +
+      ".AnnouncementMixing.ConfigR\003any\032G\n\006Confi" +
+      "g\022=\n\006option\030\001 \001(\0162%.api.commons.Announce" +
+      "mentMixingOptionR\006option\032\340\005\n\025PositionAnn" +
+      "ouncements\022T\n\007inbound\030\001 \001(\0132:.api.v0alph" +
+      "a.QueueConfig.PositionAnnouncements.Disa" +
+      "bleableR\007inbound\022V\n\010outbound\030\002 \001(\0132:.api" +
+      ".v0alpha.QueueConfig.PositionAnnouncemen" +
+      "ts.DisableableR\010outbound\022R\n\006manual\030\003 \001(\013" +
       "2:.api.v0alpha.QueueConfig.PositionAnnou" +
-      "ncements.DisableableR\007inbound\022V\n\010outboun" +
-      "d\030\002 \001(\0132:.api.v0alpha.QueueConfig.Positi" +
-      "onAnnouncements.DisableableR\010outbound\022R\n" +
-      "\006manual\030\003 \001(\0132:.api.v0alpha.QueueConfig." +
-      "PositionAnnouncements.DisableableR\006manua" +
-      "l\022T\n\007preview\030\004 \001(\0132:.api.v0alpha.QueueCo" +
-      "nfig.PositionAnnouncements.DisableableR\007" +
-      "preview\022L\n\003any\030\005 \001(\0132:.api.v0alpha.Queue" +
-      "Config.PositionAnnouncements.Disableable" +
-      "R\003any\032\246\001\n\013Disableable\022O\n\006config\030\001 \001(\01325." +
-      "api.v0alpha.QueueConfig.PositionAnnounce" +
-      "ments.ConfigH\000R\006config\022<\n\007disable\030\002 \001(\0132" +
-      " .api.v0alpha.QueueConfig.DisableH\000R\007dis" +
-      "ableB\010\n\006option\032x\n\006Config\022#\n\rfirst_second" +
-      "s\030\001 \001(\003R\014firstSeconds\022+\n\021repeating_secon" +
-      "ds\030\002 \001(\003R\020repeatingSeconds\022\034\n\tthreshold\030" +
-      "\003 \001(\003R\tthreshold\032\340\005\n\025WaitTimeAnnouncemen" +
-      "ts\022T\n\007inbound\030\001 \001(\0132:.api.v0alpha.QueueC" +
+      "ncements.DisableableR\006manual\022T\n\007preview\030" +
+      "\004 \001(\0132:.api.v0alpha.QueueConfig.Position" +
+      "Announcements.DisableableR\007preview\022L\n\003an" +
+      "y\030\005 \001(\0132:.api.v0alpha.QueueConfig.Positi" +
+      "onAnnouncements.DisableableR\003any\032\246\001\n\013Dis" +
+      "ableable\022O\n\006config\030\001 \001(\01325.api.v0alpha.Q" +
+      "ueueConfig.PositionAnnouncements.ConfigH" +
+      "\000R\006config\022<\n\007disable\030\002 \001(\0132 .api.v0alpha" +
+      ".QueueConfig.DisableH\000R\007disableB\010\n\006optio" +
+      "n\032x\n\006Config\022#\n\rfirst_seconds\030\001 \001(\003R\014firs" +
+      "tSeconds\022+\n\021repeating_seconds\030\002 \001(\003R\020rep" +
+      "eatingSeconds\022\034\n\tthreshold\030\003 \001(\003R\tthresh" +
+      "old\032\340\005\n\025WaitTimeAnnouncements\022T\n\007inbound" +
+      "\030\001 \001(\0132:.api.v0alpha.QueueConfig.WaitTim" +
+      "eAnnouncements.DisableableR\007inbound\022V\n\010o" +
+      "utbound\030\002 \001(\0132:.api.v0alpha.QueueConfig.",
+      "WaitTimeAnnouncements.DisableableR\010outbo" +
+      "und\022R\n\006manual\030\003 \001(\0132:.api.v0alpha.QueueC" +
       "onfig.WaitTimeAnnouncements.DisableableR" +
-      "\007inbound\022V\n\010outbound\030\002 \001(\0132:.api.v0alpha",
+      "\006manual\022T\n\007preview\030\004 \001(\0132:.api.v0alpha.Q" +
+      "ueueConfig.WaitTimeAnnouncements.Disable" +
+      "ableR\007preview\022L\n\003any\030\005 \001(\0132:.api.v0alpha" +
       ".QueueConfig.WaitTimeAnnouncements.Disab" +
-      "leableR\010outbound\022R\n\006manual\030\003 \001(\0132:.api.v" +
-      "0alpha.QueueConfig.WaitTimeAnnouncements" +
-      ".DisableableR\006manual\022T\n\007preview\030\004 \001(\0132:." +
-      "api.v0alpha.QueueConfig.WaitTimeAnnounce" +
-      "ments.DisableableR\007preview\022L\n\003any\030\005 \001(\0132" +
-      ":.api.v0alpha.QueueConfig.WaitTimeAnnoun" +
-      "cements.DisableableR\003any\032\246\001\n\013Disableable" +
-      "\022O\n\006config\030\001 \001(\01325.api.v0alpha.QueueConf" +
-      "ig.WaitTimeAnnouncements.ConfigH\000R\006confi" +
-      "g\022<\n\007disable\030\002 \001(\0132 .api.v0alpha.QueueCo" +
-      "nfig.DisableH\000R\007disableB\010\n\006option\032x\n\006Con" +
-      "fig\022#\n\rfirst_seconds\030\001 \001(\003R\014firstSeconds" +
-      "\022+\n\021repeating_seconds\030\002 \001(\003R\020repeatingSe" +
-      "conds\022\034\n\tthreshold\030\003 \001(\003R\tthreshold\032\342\006\n\016" +
-      "AttentionTones\022M\n\007inbound\030\001 \001(\01323.api.v0" +
-      "alpha.QueueConfig.AttentionTones.Disable" +
-      "ableR\007inbound\022O\n\010outbound\030\002 \001(\01323.api.v0" +
-      "alpha.QueueConfig.AttentionTones.Disable" +
-      "ableR\010outbound\022K\n\006manual\030\003 \001(\01323.api.v0a" +
-      "lpha.QueueConfig.AttentionTones.Disablea" +
-      "bleR\006manual\022M\n\007preview\030\004 \001(\01323.api.v0alp" +
-      "ha.QueueConfig.AttentionTones.Disableabl" +
-      "eR\007preview\022E\n\003any\030\005 \001(\01323.api.v0alpha.Qu" +
-      "eueConfig.AttentionTones.DisableableR\003an" +
-      "y\032\237\001\n\013Disableable\022H\n\006config\030\001 \001(\0132..api." +
-      "v0alpha.QueueConfig.AttentionTones.Confi" +
-      "gH\000R\006config\022<\n\007disable\030\002 \001(\0132 .api.v0alp" +
-      "ha.QueueConfig.DisableH\000R\007disableB\010\n\006opt" +
-      "ion\032\256\001\n\006Config\022.\n\023agent_status_paused\030\001 " +
-      "\001(\010R\021agentStatusPaused\022/\n\024agent_status_w" +
-      "rap_up\030\002 \001(\010R\021agentStatusWrapUp\022C\n\005tones" +
-      "\030\003 \003(\0132-.api.v0alpha.QueueConfig.Attenti" +
-      "onTones.TonesR\005tones\032z\n\005Tones\0221\n\004tone\030\001 " +
-      "\001(\0132\033.google.protobuf.Int64ValueH\000R\004tone" +
-      "\0224\n\005pause\030\002 \001(\0132\034.google.protobuf.Double" +
-      "ValueH\000R\005pauseB\010\n\006option\032\245\024\n\021InQueueCond" +
-      "itions\022j\n\023no_agents_logged_in\030\001 \001(\0132;.ap" +
-      "i.v0alpha.QueueConfig.InQueueConditions." +
-      "LimitedConditionR\020noAgentsLoggedIn\022\212\001\n(n" +
-      "o_agents_with_required_skills_logged_in\030" +
-      "\002 \001(\01324.api.v0alpha.QueueConfig.InQueueC" +
-      "onditions.ConditionR\"noAgentsWithRequire" +
-      "dSkillsLoggedIn\022k\n\023no_agents_available\030\003" +
-      " \001(\0132;.api.v0alpha.QueueConfig.InQueueCo" +
-      "nditions.LimitedConditionR\021noAgentsAvail" +
-      "able\022\213\001\n(no_agents_with_required_skills_" +
-      "available\030\004 \001(\01324.api.v0alpha.QueueConfi" +
-      "g.InQueueConditions.ConditionR#noAgentsW" +
-      "ithRequiredSkillsAvailable\022U\n\013pbx_ringin" +
-      "g\030\005 \001(\01324.api.v0alpha.QueueConfig.InQueu" +
-      "eConditions.ConditionR\npbxRinging\022S\n\nage" +
-      "nt_lost\030\006 \001(\01324.api.v0alpha.QueueConfig." +
-      "InQueueConditions.ConditionR\tagentLost\022U" +
-      "\n\007default\030\007 \001(\0132;.api.v0alpha.QueueConfi" +
-      "g.InQueueConditions.LimitedConditionR\007de" +
-      "fault\032\204\003\n\tCondition\022K\n\007inbound\030\001 \001(\01321.a" +
-      "pi.v0alpha.QueueConfig.InQueueConditions" +
-      ".ConfigR\007inbound\022M\n\010outbound\030\002 \001(\01321.api" +
+      "leableR\003any\032\246\001\n\013Disableable\022O\n\006config\030\001 " +
+      "\001(\01325.api.v0alpha.QueueConfig.WaitTimeAn" +
+      "nouncements.ConfigH\000R\006config\022<\n\007disable\030" +
+      "\002 \001(\0132 .api.v0alpha.QueueConfig.DisableH" +
+      "\000R\007disableB\010\n\006option\032x\n\006Config\022#\n\rfirst_" +
+      "seconds\030\001 \001(\003R\014firstSeconds\022+\n\021repeating" +
+      "_seconds\030\002 \001(\003R\020repeatingSeconds\022\034\n\tthre" +
+      "shold\030\003 \001(\003R\tthreshold\032\342\006\n\016AttentionTone" +
+      "s\022M\n\007inbound\030\001 \001(\01323.api.v0alpha.QueueCo" +
+      "nfig.AttentionTones.DisableableR\007inbound" +
+      "\022O\n\010outbound\030\002 \001(\01323.api.v0alpha.QueueCo" +
+      "nfig.AttentionTones.DisableableR\010outboun" +
+      "d\022K\n\006manual\030\003 \001(\01323.api.v0alpha.QueueCon" +
+      "fig.AttentionTones.DisableableR\006manual\022M" +
+      "\n\007preview\030\004 \001(\01323.api.v0alpha.QueueConfi" +
+      "g.AttentionTones.DisableableR\007preview\022E\n" +
+      "\003any\030\005 \001(\01323.api.v0alpha.QueueConfig.Att" +
+      "entionTones.DisableableR\003any\032\237\001\n\013Disable" +
+      "able\022H\n\006config\030\001 \001(\0132..api.v0alpha.Queue" +
+      "Config.AttentionTones.ConfigH\000R\006config\022<" +
+      "\n\007disable\030\002 \001(\0132 .api.v0alpha.QueueConfi" +
+      "g.DisableH\000R\007disableB\010\n\006option\032\256\001\n\006Confi" +
+      "g\022.\n\023agent_status_paused\030\001 \001(\010R\021agentSta" +
+      "tusPaused\022/\n\024agent_status_wrap_up\030\002 \001(\010R" +
+      "\021agentStatusWrapUp\022C\n\005tones\030\003 \003(\0132-.api." +
+      "v0alpha.QueueConfig.AttentionTones.Tones" +
+      "R\005tones\032z\n\005Tones\0221\n\004tone\030\001 \001(\0132\033.google." +
+      "protobuf.Int64ValueH\000R\004tone\0224\n\005pause\030\002 \001" +
+      "(\0132\034.google.protobuf.DoubleValueH\000R\005paus" +
+      "eB\010\n\006option\032\245\024\n\021InQueueConditions\022j\n\023no_" +
+      "agents_logged_in\030\001 \001(\0132;.api.v0alpha.Que" +
+      "ueConfig.InQueueConditions.LimitedCondit" +
+      "ionR\020noAgentsLoggedIn\022\212\001\n(no_agents_with" +
+      "_required_skills_logged_in\030\002 \001(\01324.api.v" +
+      "0alpha.QueueConfig.InQueueConditions.Con" +
+      "ditionR\"noAgentsWithRequiredSkillsLogged" +
+      "In\022k\n\023no_agents_available\030\003 \001(\0132;.api.v0" +
+      "alpha.QueueConfig.InQueueConditions.Limi" +
+      "tedConditionR\021noAgentsAvailable\022\213\001\n(no_a" +
+      "gents_with_required_skills_available\030\004 \001" +
+      "(\01324.api.v0alpha.QueueConfig.InQueueCond" +
+      "itions.ConditionR#noAgentsWithRequiredSk" +
+      "illsAvailable\022U\n\013pbx_ringing\030\005 \001(\01324.api" +
       ".v0alpha.QueueConfig.InQueueConditions.C" +
-      "onfigR\010outbound\022I\n\006manual\030\003 \001(\01321.api.v0" +
-      "alpha.QueueConfig.InQueueConditions.Conf" +
-      "igR\006manual\022K\n\007preview\030\004 \001(\01321.api.v0alph" +
-      "a.QueueConfig.InQueueConditions.ConfigR\007" +
-      "preview\022C\n\003any\030\005 \001(\01321.api.v0alpha.Queue" +
-      "Config.InQueueConditions.ConfigR\003any\032\256\003\n" +
-      "\020LimitedCondition\022R\n\007inbound\030\001 \001(\01328.api" +
-      ".v0alpha.QueueConfig.InQueueConditions.L" +
-      "imitedConfigR\007inbound\022T\n\010outbound\030\002 \001(\0132" +
-      "8.api.v0alpha.QueueConfig.InQueueConditi" +
-      "ons.LimitedConfigR\010outbound\022P\n\006manual\030\003 " +
-      "\001(\01328.api.v0alpha.QueueConfig.InQueueCon" +
-      "ditions.LimitedConfigR\006manual\022R\n\007preview" +
-      "\030\004 \001(\01328.api.v0alpha.QueueConfig.InQueue" +
-      "Conditions.LimitedConfigR\007preview\022J\n\003any" +
-      "\030\005 \001(\01328.api.v0alpha.QueueConfig.InQueue" +
-      "Conditions.LimitedConfigR\003any\032U\n\006Config\022" +
-      "K\n\007actions\030\001 \003(\01321.api.v0alpha.QueueConf" +
-      "ig.InQueueConditions.ActionR\007actions\032c\n\r" +
-      "LimitedConfig\022R\n\007actions\030\001 \003(\01328.api.v0a" +
+      "onditionR\npbxRinging\022S\n\nagent_lost\030\006 \001(\013" +
+      "24.api.v0alpha.QueueConfig.InQueueCondit" +
+      "ions.ConditionR\tagentLost\022U\n\007default\030\007 \001" +
+      "(\0132;.api.v0alpha.QueueConfig.InQueueCond" +
+      "itions.LimitedConditionR\007default\032\204\003\n\tCon" +
+      "dition\022K\n\007inbound\030\001 \001(\01321.api.v0alpha.Qu" +
+      "eueConfig.InQueueConditions.ConfigR\007inbo" +
+      "und\022M\n\010outbound\030\002 \001(\01321.api.v0alpha.Queu" +
+      "eConfig.InQueueConditions.ConfigR\010outbou" +
+      "nd\022I\n\006manual\030\003 \001(\01321.api.v0alpha.QueueCo" +
+      "nfig.InQueueConditions.ConfigR\006manual\022K\n" +
+      "\007preview\030\004 \001(\01321.api.v0alpha.QueueConfig" +
+      ".InQueueConditions.ConfigR\007preview\022C\n\003an" +
+      "y\030\005 \001(\01321.api.v0alpha.QueueConfig.InQueu" +
+      "eConditions.ConfigR\003any\032\256\003\n\020LimitedCondi" +
+      "tion\022R\n\007inbound\030\001 \001(\01328.api.v0alpha.Queu" +
+      "eConfig.InQueueConditions.LimitedConfigR" +
+      "\007inbound\022T\n\010outbound\030\002 \001(\01328.api.v0alpha" +
+      ".QueueConfig.InQueueConditions.LimitedCo" +
+      "nfigR\010outbound\022P\n\006manual\030\003 \001(\01328.api.v0a" +
       "lpha.QueueConfig.InQueueConditions.Limit" +
-      "edActionR\007actions\032\320\003\n\006Action\022#\n\rafter_se" +
-      "conds\030\001 \001(\003R\014afterSeconds\022>\n\007hang_up\030\002 \001" +
-      "(\0132#.api.v0alpha.QueueConfig.OptionlessH" +
-      "\000R\006hangUp\022C\n\tvoicemail\030\003 \001(\0132#.api.v0alp" +
-      "ha.QueueConfig.OptionlessH\000R\tvoicemail\022N" +
-      "\n\017queued_callback\030\004 \001(\0132#.api.v0alpha.Qu" +
-      "eueConfig.OptionlessH\000R\016queuedCallback\022<" +
-      "\n\013trigger_ivr\030\005 \001(\0132\031.api.commons.DigitW" +
-      "rapperH\000R\ntriggerIvr\022@\n\nadd_skills\030\006 \001(\013" +
-      "2\037.api.v0alpha.QueueConfig.SkillsH\000R\tadd" +
-      "Skills\022B\n\013drop_skills\030\007 \001(\0132\037.api.v0alph" +
-      "a.QueueConfig.SkillsH\000R\ndropSkillsB\010\n\006ac" +
-      "tion\032\321\002\n\rLimitedAction\022#\n\rafter_seconds\030" +
-      "\001 \001(\003R\014afterSeconds\022>\n\007hang_up\030\002 \001(\0132#.a" +
-      "pi.v0alpha.QueueConfig.OptionlessH\000R\006han" +
-      "gUp\022C\n\tvoicemail\030\003 \001(\0132#.api.v0alpha.Que" +
-      "ueConfig.OptionlessH\000R\tvoicemail\022N\n\017queu" +
-      "ed_callback\030\004 \001(\0132#.api.v0alpha.QueueCon" +
-      "fig.OptionlessH\000R\016queuedCallback\022<\n\013trig" +
-      "ger_ivr\030\005 \001(\0132\031.api.commons.DigitWrapper" +
-      "H\000R\ntriggerIvrB\010\n\006action\032\201\r\n\016KeyPressEve" +
-      "nts\022B\n\004zero\030\001 \001(\0132..api.v0alpha.QueueCon" +
-      "fig.KeyPressEvents.ActionR\004zero\022@\n\003one\030\002" +
+      "edConfigR\006manual\022R\n\007preview\030\004 \001(\01328.api." +
+      "v0alpha.QueueConfig.InQueueConditions.Li" +
+      "mitedConfigR\007preview\022J\n\003any\030\005 \001(\01328.api." +
+      "v0alpha.QueueConfig.InQueueConditions.Li" +
+      "mitedConfigR\003any\032U\n\006Config\022K\n\007actions\030\001 " +
+      "\003(\01321.api.v0alpha.QueueConfig.InQueueCon" +
+      "ditions.ActionR\007actions\032c\n\rLimitedConfig" +
+      "\022R\n\007actions\030\001 \003(\01328.api.v0alpha.QueueCon" +
+      "fig.InQueueConditions.LimitedActionR\007act" +
+      "ions\032\320\003\n\006Action\022#\n\rafter_seconds\030\001 \001(\003R\014" +
+      "afterSeconds\022>\n\007hang_up\030\002 \001(\0132#.api.v0al" +
+      "pha.QueueConfig.OptionlessH\000R\006hangUp\022C\n\t" +
+      "voicemail\030\003 \001(\0132#.api.v0alpha.QueueConfi" +
+      "g.OptionlessH\000R\tvoicemail\022N\n\017queued_call" +
+      "back\030\004 \001(\0132#.api.v0alpha.QueueConfig.Opt" +
+      "ionlessH\000R\016queuedCallback\022<\n\013trigger_ivr" +
+      "\030\005 \001(\0132\031.api.commons.DigitWrapperH\000R\ntri" +
+      "ggerIvr\022@\n\nadd_skills\030\006 \001(\0132\037.api.v0alph" +
+      "a.QueueConfig.SkillsH\000R\taddSkills\022B\n\013dro" +
+      "p_skills\030\007 \001(\0132\037.api.v0alpha.QueueConfig" +
+      ".SkillsH\000R\ndropSkillsB\010\n\006action\032\321\002\n\rLimi" +
+      "tedAction\022#\n\rafter_seconds\030\001 \001(\003R\014afterS" +
+      "econds\022>\n\007hang_up\030\002 \001(\0132#.api.v0alpha.Qu" +
+      "eueConfig.OptionlessH\000R\006hangUp\022C\n\tvoicem" +
+      "ail\030\003 \001(\0132#.api.v0alpha.QueueConfig.Opti" +
+      "onlessH\000R\tvoicemail\022N\n\017queued_callback\030\004" +
+      " \001(\0132#.api.v0alpha.QueueConfig.Optionles" +
+      "sH\000R\016queuedCallback\022<\n\013trigger_ivr\030\005 \001(\013" +
+      "2\031.api.commons.DigitWrapperH\000R\ntriggerIv" +
+      "rB\010\n\006action\032\201\r\n\016KeyPressEvents\022B\n\004zero\030\001" +
       " \001(\0132..api.v0alpha.QueueConfig.KeyPressE" +
-      "vents.ActionR\003one\022@\n\003two\030\003 \001(\0132..api.v0a" +
-      "lpha.QueueConfig.KeyPressEvents.ActionR\003" +
-      "two\022D\n\005three\030\004 \001(\0132..api.v0alpha.QueueCo" +
-      "nfig.KeyPressEvents.ActionR\005three\022B\n\004fou" +
-      "r\030\005 \001(\0132..api.v0alpha.QueueConfig.KeyPre" +
-      "ssEvents.ActionR\004four\022B\n\004five\030\006 \001(\0132..ap" +
-      "i.v0alpha.QueueConfig.KeyPressEvents.Act" +
-      "ionR\004five\022@\n\003six\030\007 \001(\0132..api.v0alpha.Que" +
-      "ueConfig.KeyPressEvents.ActionR\003six\022D\n\005s" +
-      "even\030\010 \001(\0132..api.v0alpha.QueueConfig.Key" +
-      "PressEvents.ActionR\005seven\022D\n\005eight\030\t \001(\013" +
-      "2..api.v0alpha.QueueConfig.KeyPressEvent" +
-      "s.ActionR\005eight\022B\n\004nine\030\n \001(\0132..api.v0al" +
-      "pha.QueueConfig.KeyPressEvents.ActionR\004n" +
-      "ine\022J\n\010asterisk\030\013 \001(\0132..api.v0alpha.Queu" +
-      "eConfig.KeyPressEvents.ActionR\010asterisk\022" +
-      "H\n\007hashtag\030\014 \001(\0132..api.v0alpha.QueueConf" +
-      "ig.KeyPressEvents.ActionR\007hashtag\032\362\002\n\006Ac" +
-      "tion\022H\n\007inbound\030\001 \001(\0132..api.v0alpha.Queu" +
-      "eConfig.KeyPressEvents.ConfigR\007inbound\022J" +
-      "\n\010outbound\030\002 \001(\0132..api.v0alpha.QueueConf" +
-      "ig.KeyPressEvents.ConfigR\010outbound\022F\n\006ma" +
-      "nual\030\003 \001(\0132..api.v0alpha.QueueConfig.Key" +
-      "PressEvents.ConfigR\006manual\022H\n\007preview\030\004 " +
+      "vents.ActionR\004zero\022@\n\003one\030\002 \001(\0132..api.v0" +
+      "alpha.QueueConfig.KeyPressEvents.ActionR" +
+      "\003one\022@\n\003two\030\003 \001(\0132..api.v0alpha.QueueCon" +
+      "fig.KeyPressEvents.ActionR\003two\022D\n\005three\030" +
+      "\004 \001(\0132..api.v0alpha.QueueConfig.KeyPress" +
+      "Events.ActionR\005three\022B\n\004four\030\005 \001(\0132..api" +
+      ".v0alpha.QueueConfig.KeyPressEvents.Acti" +
+      "onR\004four\022B\n\004five\030\006 \001(\0132..api.v0alpha.Que" +
+      "ueConfig.KeyPressEvents.ActionR\004five\022@\n\003" +
+      "six\030\007 \001(\0132..api.v0alpha.QueueConfig.KeyP" +
+      "ressEvents.ActionR\003six\022D\n\005seven\030\010 \001(\0132.." +
+      "api.v0alpha.QueueConfig.KeyPressEvents.A" +
+      "ctionR\005seven\022D\n\005eight\030\t \001(\0132..api.v0alph" +
+      "a.QueueConfig.KeyPressEvents.ActionR\005eig" +
+      "ht\022B\n\004nine\030\n \001(\0132..api.v0alpha.QueueConf" +
+      "ig.KeyPressEvents.ActionR\004nine\022J\n\010asteri" +
+      "sk\030\013 \001(\0132..api.v0alpha.QueueConfig.KeyPr" +
+      "essEvents.ActionR\010asterisk\022H\n\007hashtag\030\014 " +
       "\001(\0132..api.v0alpha.QueueConfig.KeyPressEv" +
-      "ents.ConfigR\007preview\022@\n\003any\030\005 \001(\0132..api." +
-      "v0alpha.QueueConfig.KeyPressEvents.Confi" +
-      "gR\003any\032\273\003\n\006Config\022>\n\007hang_up\030\001 \001(\0132#.api" +
-      ".v0alpha.QueueConfig.OptionlessH\000R\006hangU" +
-      "p\022F\n\013trigger_ivr\030\007 \001(\0132#.api.v0alpha.Que" +
-      "ueConfig.OptionlessH\000R\ntriggerIvr\022C\n\tvoi" +
-      "cemail\030\003 \001(\0132#.api.v0alpha.QueueConfig.O" +
-      "ptionlessH\000R\tvoicemail\022N\n\017queued_callbac" +
-      "k\030\004 \001(\0132#.api.v0alpha.QueueConfig.Option" +
-      "lessH\000R\016queuedCallback\022@\n\nadd_skills\030\005 \001" +
-      "(\0132\037.api.v0alpha.QueueConfig.SkillsH\000R\ta" +
-      "ddSkills\022B\n\013drop_skills\030\006 \001(\0132\037.api.v0al" +
-      "pha.QueueConfig.SkillsH\000R\ndropSkillsB\010\n\006" +
-      "optionJ\004\010\002\020\003\032\254\004\n\017PbxRingStrategy\022I\n\007inbo" +
-      "und\030\001 \001(\0132/.api.v0alpha.QueueConfig.PbxR" +
-      "ingStrategy.ConfigR\007inbound\022K\n\010outbound\030" +
-      "\002 \001(\0132/.api.v0alpha.QueueConfig.PbxRingS" +
-      "trategy.ConfigR\010outbound\022A\n\003any\030\003 \001(\0132/." +
-      "api.v0alpha.QueueConfig.PbxRingStrategy." +
-      "ConfigR\003any\032\275\002\n\006Config\022@\n\010ring_all\030\001 \001(\013" +
-      "2#.api.v0alpha.QueueConfig.OptionlessH\000R" +
-      "\007ringAll\022S\n\022highest_score_only\030\002 \001(\0132#.a" +
-      "pi.v0alpha.QueueConfig.OptionlessH\000R\020hig" +
-      "hestScoreOnly\022=\n\006random\030\003 \001(\0132#.api.v0al" +
-      "pha.QueueConfig.OptionlessH\000R\006random\022!\n\013" +
-      "agent_score\030\004 \001(\003H\000R\nagentScore\022.\n\022agent" +
-      "_score_memory\030\005 \001(\003H\000R\020agentScoreMemoryB" +
-      "\n\n\010strategy\032\201\001\n\037QueueMonitoringSilenceWa" +
-      "itTimes\022-\n\022first_milliseconds\030\001 \001(\003R\021fir" +
-      "stMilliseconds\022/\n\023second_milliseconds\030\002 " +
-      "\001(\003R\022secondMilliseconds\032\t\n\007Disable\032\014\n\nOp" +
-      "tionless\032\037\n\006Skills\022\025\n\006p3_ids\030\001 \003(\tR\005p3Id" +
-      "s\"=\n\032GetAllQueueConfigSoundsReq\022\037\n\013confi" +
-      "g_name\030\001 \001(\tR\nconfigName\".\n\032GetAllQueueC" +
-      "onfigSoundsRes\022\020\n\003url\030\002 \001(\tR\003url\".\n\025List" +
-      "OwnedUsersRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId" +
-      "\"c\n\026ListOwnedUsersResponse\022I\n\021user_descr" +
-      "iptions\030\001 \003(\0132\034.api.v0alpha.UserDescript" +
-      "ionR\020userDescriptions\"4\n\033ListOwnedOrgsBy" +
-      "OrgIdRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\"\201\001\n\034" +
-      "ListOwnedOrgsByOrgIdResponse\022a\n\031organiza" +
-      "tion_descriptions\030\001 \003(\0132$.api.v0alpha.Or" +
-      "ganizationDescriptionR\030organizationDescr" +
-      "iptions\"\026\n\024ListOwnedOrgsRequest\"z\n\025ListO" +
-      "wnedOrgsResponse\022a\n\031organization_descrip" +
-      "tions\030\001 \003(\0132$.api.v0alpha.OrganizationDe" +
-      "scriptionR\030organizationDescriptions\"0\n\025G" +
-      "etUserBlockedRequest\022\027\n\007user_id\030\001 \001(\tR\006u" +
-      "serId\"\223\003\n\026GetUserBlockedResponse\022\030\n\007bloc" +
-      "ked\030\001 \001(\010R\007blocked\022\027\n\007last_ip\030\002 \001(\tR\006las" +
-      "tIp\0229\n\nlast_login\030\003 \001(\0132\032.google.protobu" +
-      "f.TimestampR\tlastLogin\022J\n\023last_password_" +
-      "reset\030\004 \001(\0132\032.google.protobuf.TimestampR" +
-      "\021lastPasswordReset\022!\n\014logins_count\030\005 \001(\003" +
-      "R\013loginsCount\0229\n\ncreated_at\030\006 \001(\0132\032.goog" +
-      "le.protobuf.TimestampR\tcreatedAt\0229\n\nupda" +
-      "ted_at\030\007 \001(\0132\032.google.protobuf.Timestamp" +
-      "R\tupdatedAt\022&\n\017has_blocked_ips\030\010 \001(\010R\rha" +
-      "sBlockedIps\"-\n\022UnblockUserRequest\022\027\n\007use" +
-      "r_id\030\001 \001(\tR\006userId\"\025\n\023UnblockUserRespons" +
-      "e\"\202\002\n\016UnMigratedUser\022\033\n\tagent_sid\030\001 \001(\003R" +
-      "\010agentSid\022\033\n\tlogin_sid\030\002 \001(\003R\010loginSid\022\035" +
-      "\n\nclient_sid\030\003 \001(\003R\tclientSid\022\033\n\tuser_na" +
-      "me\030\004 \001(\tR\010userName\022\027\n\007user_id\030\005 \001(\tR\006use" +
-      "rId\022%\n\016login_disabled\030\006 \001(\010R\rloginDisabl" +
-      "ed\022\035\n\nfirst_name\030\007 \001(\tR\tfirstName\022\033\n\tlas" +
-      "t_name\030\010 \001(\tR\010lastName\"5\n\034ListP3UnMigrat" +
-      "edUsersRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\"R\n" +
-      "\035ListP3UnMigratedUsersResponse\0221\n\005users\030" +
-      "\001 \003(\0132\033.api.v0alpha.UnMigratedUserR\005user" +
-      "s\"\213\001\n\024MigrateP3UserRequest\022\033\n\tagent_sid\030" +
-      "\001 \001(\003R\010agentSid\022\033\n\tlogin_sid\030\002 \001(\003R\010logi" +
-      "nSid\022\035\n\nclient_sid\030\003 \001(\003R\tclientSid\022\032\n\010p" +
-      "assword\030\004 \001(\tR\010password\"\027\n\025MigrateP3User" +
-      "Response\"\217\001\n\027UpdateP3UserNameRequest\022\033\n\t" +
-      "agent_sid\030\001 \001(\003R\010agentSid\022\033\n\tlogin_sid\030\002" +
-      " \001(\003R\010loginSid\022\033\n\tuser_name\030\003 \001(\tR\010userN" +
-      "ame\022\035\n\nclient_sid\030\004 \001(\003R\tclientSid\"\032\n\030Up" +
-      "dateP3UserNameResponse\"`\n\026GetQueueConfig" +
-      "SoundReq\022\026\n\006config\030\001 \001(\tR\006config\022.\n\005soun" +
-      "d\030\002 \001(\0162\030.api.commons.ConfigSoundR\005sound" +
-      "\"*\n\026GetQueueConfigSoundRes\022\020\n\003url\030\001 \001(\tR" +
-      "\003url\"}\n\026SetQueueConfigSoundReq\022\026\n\006config" +
-      "\030\001 \001(\tR\006config\022.\n\005sound\030\002 \001(\0162\030.api.comm" +
-      "ons.ConfigSoundR\005sound\022\033\n\tfile_name\030\003 \001(" +
-      "\tR\010fileName\"\030\n\026SetQueueConfigSoundRes\"\354\002" +
-      "\n$SetAllQueueConfigSoundsFromSourceReq\022\033" +
-      "\n\tto_config\030\001 \001(\tR\010toConfig\0226\n\006config\030\002 " +
-      "\001(\0132\034.google.protobuf.StringValueH\000R\006con" +
-      "fig\022k\n\017default_profile\030\003 \001(\0132@.api.v0alp" +
-      "ha.SetAllQueueConfigSoundsFromSourceReq." +
-      "DefaultProfileH\000R\016defaultProfile\032z\n\016Defa" +
-      "ultProfile\0226\n\010language\030\001 \001(\0162\032.api.commo" +
-      "ns.SoundLanguageR\010language\0220\n\006gender\030\002 \001" +
-      "(\0162\030.api.commons.SoundGenderR\006genderB\006\n\004" +
-      "from\"&\n$SetAllQueueConfigSoundsFromSourc" +
-      "eRes\"A\n\031RemoveLoginStrikesRequest\022$\n\016log" +
-      "in_log_sids\030\001 \003(\003R\014loginLogSids\"\034\n\032Remov" +
-      "eLoginStrikesResponse\"8\n\035RemoveUserLogin" +
-      "StrikesRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\"" +
-      " \n\036RemoveUserLoginStrikesResponse\"\253\001\n\027Li" +
-      "stLoginHistoryRequest\022\031\n\007user_id\030\001 \001(\tH\000" +
-      "R\006userId\022\'\n\016origination_ip\030\002 \001(\tH\000R\rorig" +
-      "inationIp\022\032\n\010duration\030\003 \001(\003R\010duration\022!\n" +
-      "\014strikes_only\030\004 \001(\010R\013strikesOnlyB\r\n\013filt" +
-      "er_type\"V\n\030ListLoginHistoryResponse\022:\n\014l" +
-      "ogin_events\030\001 \003(\0132\027.api.v0alpha.LoginEve" +
-      "ntR\013loginEvents\"\212\002\n\nLoginEvent\022\"\n\rlogin_" +
-      "log_sid\030\001 \001(\003R\013loginLogSid\022\033\n\tuser_name\030" +
-      "\002 \001(\tR\010userName\022%\n\016origination_ip\030\003 \001(\tR" +
-      "\roriginationIp\022#\n\rlogin_success\030\004 \001(\010R\014l" +
-      "oginSuccess\022\026\n\006strike\030\005 \001(\010R\006strike\022\024\n\005n" +
-      "otes\030\006 \001(\tR\005notes\022A\n\016date_attempted\030\007 \001(" +
-      "\0132\032.google.protobuf.TimestampR\rdateAttem" +
-      "pted\"\334\004\n\022OrgBillingSettings\022\025\n\006org_id\030\001 " +
-      "\001(\tR\005orgId\022B\n\036voice_analytics_price_per_" +
-      "hour\030\002 \001(\002R\032voiceAnalyticsPricePerHour\0225" +
-      "\n\027analytics_price_per_doc\030\003 \001(\002R\024analyti" +
-      "csPricePerDoc\0228\n\007default\030\004 \001(\0132\036.api.v0a" +
-      "lpha.PhoneBillingRatesR\007default\022u\n\030count" +
-      "ry_region_overrides\030\010 \003(\0132;.api.v0alpha." +
-      "OrgBillingSettings.CountryRegionOverride" +
-      "sEntryR\026countryRegionOverrides\022?\n\013agent_" +
-      "rates\030\006 \001(\0132\036.api.v0alpha.AgentBillingRa" +
-      "tesR\nagentRates\022R\n\027email_price_per_messa" +
-      "ge\030\007 \001(\0132\033.google.protobuf.FloatValueR\024e" +
-      "mailPricePerMessage\032h\n\033CountryRegionOver" +
-      "ridesEntry\022\020\n\003key\030\001 \001(\005R\003key\0223\n\005value\030\002 " +
-      "\001(\0132\035.api.v0alpha.BillingRegionMapR\005valu" +
-      "e:\0028\001J\004\010\005\020\006\"\305\001\n\020BillingRegionMap\022Q\n\014regi" +
-      "on_rates\030\001 \003(\0132..api.v0alpha.BillingRegi" +
-      "onMap.RegionRatesEntryR\013regionRates\032^\n\020R" +
-      "egionRatesEntry\022\020\n\003key\030\001 \001(\tR\003key\0224\n\005val" +
-      "ue\030\002 \001(\0132\036.api.v0alpha.PhoneBillingRates" +
-      "R\005value:\0028\001\"\240\001\n\021AgentBillingRates\022-\n\023age" +
-      "nt_toll_free_ppi\030\004 \001(\001R\020agentTollFreePpi" +
-      "\022.\n\023agent_softphone_ppi\030\005 \001(\001R\021agentSoft" +
-      "phonePpi\022&\n\017agent_local_ppi\030\006 \001(\001R\ragent" +
-      "LocalPpiJ\004\010\001\020\004\"\332\n\n\021PhoneBillingRates\022:\n\031" +
-      "billing_increment_seconds\030\001 \001(\003R\027billing" +
-      "IncrementSeconds\022\037\n\013inbound_ppi\030\016 \001(\001R\ni" +
-      "nboundPpi\0221\n\025sms_price_per_attempt\030\017 \001(\001" +
-      "R\022smsPricePerAttempt\022B\n\036vocal_direct_pri" +
-      "ce_per_message\030\020 \001(\001R\032vocalDirectPricePe" +
-      "rMessage\022B\n\007seconds\030\006 \001(\0132&.api.v0alpha." +
-      "PhoneBillingRates.SecondsH\000R\007seconds\022E\n\010" +
-      "attempts\030\007 \001(\0132\'.api.v0alpha.PhoneBillin" +
-      "gRates.AttemptsH\000R\010attempts\022X\n\017connected" +
-      "_calls\030\010 \001(\0132-.api.v0alpha.PhoneBillingR" +
-      "ates.ConnectedCallsH\000R\016connectedCalls\032\206\005" +
-      "\n\007Seconds\022\020\n\003ppi\030\n \001(\001R\003ppi\022!\n\014linkback_" +
-      "ppi\030\013 \001(\001R\013linkbackPpi\022,\n\022agent_linkcall" +
-      "_ppi\030\014 \001(\001R\020agentLinkcallPpi\022:\n\031minimum_" +
-      "billed_increments\030\004 \001(\003R\027minimumBilledIn" +
-      "crements\022W\n\031maximum_billed_increments\030\005 " +
-      "\001(\0132\033.google.protobuf.Int64ValueR\027maximu" +
-      "mBilledIncrements\022K\n\"minimum_linkback_bi" +
-      "lled_increments\030\006 \001(\003R\037minimumLinkbackBi" +
-      "lledIncrements\022h\n\"maximum_linkback_bille" +
-      "d_increments\030\007 \001(\0132\033.google.protobuf.Int" +
-      "64ValueR\037maximumLinkbackBilledIncrements" +
-      "\022d\n machine_hangup_increments_billed\030\010 \001" +
-      "(\0132\033.google.protobuf.Int64ValueR\035machine" +
-      "HangupIncrementsBilled\022`\n\036human_hangup_i" +
-      "ncrements_billed\030\t \001(\0132\033.google.protobuf" +
-      ".Int64ValueR\033humanHangupIncrementsBilled" +
-      "J\004\010\001\020\004\032s\n\010Attempts\022\020\n\003ppa\030\004 \001(\001R\003ppa\022!\n\014" +
-      "linkback_ppa\030\005 \001(\001R\013linkbackPpa\022,\n\022agent" +
-      "_linkcall_ppa\030\006 \001(\001R\020agentLinkcallPpaJ\004\010" +
-      "\001\020\004\032y\n\016ConnectedCalls\022\020\n\003ppc\030\004 \001(\001R\003ppc\022" +
-      "!\n\014linkback_ppc\030\005 \001(\001R\013linkbackPpc\022,\n\022ag" +
-      "ent_linkcall_ppc\030\006 \001(\001R\020agentLinkcallPpc" +
-      "J\004\010\001\020\004B\007\n\005unitsJ\004\010\002\020\006J\004\010\t\020\016\"<\n#GetOrgBil" +
-      "lingSettingsByOrgIdRequest\022\025\n\006org_id\030\001 \001" +
-      "(\tR\005orgId\"\331\002\n$GetOrgBillingSettingsByOrg" +
-      "IdResponse\022;\n\010settings\030\001 \001(\0132\037.api.v0alp" +
-      "ha.OrgBillingSettingsR\010settings\022\204\001\n\027coun" +
-      "try_default_regions\030\003 \003(\0132L.api.v0alpha." +
-      "GetOrgBillingSettingsByOrgIdResponse.Cou" +
-      "ntryDefaultRegionsEntryR\025countryDefaultR" +
-      "egions\032g\n\032CountryDefaultRegionsEntry\022\020\n\003" +
-      "key\030\001 \001(\005R\003key\0223\n\005value\030\002 \001(\0132\035.api.v0al" +
-      "pha.BillingRegionMapR\005value:\0028\001J\004\010\002\020\003\"\036\n" +
-      "\034GetOrgBillingSettingsRequest\"\312\002\n\035GetOrg" +
-      "BillingSettingsResponse\022;\n\010settings\030\001 \001(" +
-      "\0132\037.api.v0alpha.OrgBillingSettingsR\010sett" +
-      "ings\022}\n\027country_default_regions\030\003 \003(\0132E." +
-      "api.v0alpha.GetOrgBillingSettingsRespons" +
-      "e.CountryDefaultRegionsEntryR\025countryDef" +
-      "aultRegions\032g\n\032CountryDefaultRegionsEntr" +
-      "y\022\020\n\003key\030\001 \001(\005R\003key\0223\n\005value\030\002 \001(\0132\035.api" +
-      ".v0alpha.BillingRegionMapR\005value:\0028\001J\004\010\002" +
-      "\020\003\"\226\001\n\034SetOrgBillingSettingsRequest\022;\n\010s" +
-      "ettings\030\001 \001(\0132\037.api.v0alpha.OrgBillingSe" +
-      "ttingsR\010settings\0229\n\nfield_mask\030\002 \001(\0132\032.g" +
-      "oogle.protobuf.FieldMaskR\tfieldMask\"\037\n\035S" +
-      "etOrgBillingSettingsResponse\"\263\001\n\034AddOrgB" +
-      "illingOverrideRequest\022\025\n\006org_id\030\001 \001(\tR\005o" +
-      "rgId\022\026\n\006region\030\002 \001(\tR\006region\0224\n\005rates\030\003 " +
-      "\001(\0132\036.api.v0alpha.PhoneBillingRatesR\005rat" +
-      "es\022.\n\007country\030\004 \001(\0162\024.api.commons.Countr" +
-      "yR\007country\"\037\n\035AddOrgBillingOverrideRespo" +
-      "nse\"\200\001\n\037RemoveOrgBillingOverrideRequest\022" +
-      "\025\n\006org_id\030\001 \001(\tR\005orgId\022\026\n\006region\030\002 \001(\tR\006" +
-      "region\022.\n\007country\030\003 \001(\0162\024.api.commons.Co" +
-      "untryR\007country\"\"\n RemoveOrgBillingOverri" +
-      "deResponse\"%\n#GetSystemDefaultBillingRat" +
-      "esRequest\"\337\001\n$GetSystemDefaultBillingRat" +
-      "esResponse\0225\n\027email_price_per_message\030\001 " +
-      "\001(\002R\024emailPricePerMessage\022?\n\013phone_rates" +
-      "\030\002 \001(\0132\036.api.v0alpha.PhoneBillingRatesR\n" +
-      "phoneRates\022?\n\013agent_rates\030\003 \001(\0132\036.api.v0" +
-      "alpha.AgentBillingRatesR\nagentRates\"\247\001\n\027" +
-      "UpdateP3UserSidsRequest\022\027\n\007user_id\030\001 \001(\t" +
-      "R\006userId\022\033\n\tagent_sid\030\002 \001(\003R\010agentSid\022\033\n" +
-      "\tlogin_sid\030\003 \001(\003R\010loginSid\0229\n\nfield_mask" +
-      "\030\n \001(\0132\032.google.protobuf.FieldMaskR\tfiel" +
-      "dMask\"\032\n\030UpdateP3UserSidsResponse\"\364\003\n\026Au" +
-      "thConnectionSettings\0229\n\010provider\030\002 \001(\0162\035" +
-      ".api.commons.IdentityProviderR\010provider\022" +
-      "\035\n\nissuer_url\030\003 \001(\tR\tissuerUrl\022\035\n\ntenant" +
-      "_url\030\004 \001(\tR\ttenantUrl\022\033\n\tclient_id\030\005 \001(\t" +
-      "R\010clientId\022#\n\rconnection_id\030\006 \001(\tR\014conne" +
-      "ctionId\022a\n\021secret_expiration\030\n \001(\01324.api" +
-      ".v0alpha.AuthConnectionSettings.SecretEx" +
-      "pirationR\020secretExpiration\022;\n\rdefault_gr" +
-      "oup\030\014 \001(\0132\026.api.v0alpha.GroupItemR\014defau" +
-      "ltGroup\022;\n\rcustom_groups\030\r \003(\0132\026.api.v0a" +
-      "lpha.GroupItemR\014customGroups\032B\n\020SecretEx" +
-      "piration\022.\n\004date\030\001 \001(\0132\032.google.protobuf" +
-      ".TimestampR\004date\"\354\001\n\tGroupItem\022\035\n\ngroup_" +
-      "name\030\001 \001(\tR\tgroupName\022$\n\016hunt_group_sid\030" +
-      "\002 \001(\003R\014huntGroupSid\0223\n\026agent_profile_gro" +
-      "up_id\030\003 \001(\tR\023agentProfileGroupId\0223\n\026p3_p" +
-      "ermission_group_id\030\004 \001(\tR\023p3PermissionGr" +
-      "oupId\0220\n\024permission_group_ids\030\005 \003(\tR\022per" +
-      "missionGroupIds\"\203\001\n\033CreateAuthConnection" +
-      "Request\022?\n\010settings\030\001 \001(\0132#.api.v0alpha." +
-      "AuthConnectionSettingsR\010settings\022#\n\rclie" +
-      "nt_secret\030\002 \001(\tR\014clientSecret\"\036\n\034CreateA" +
-      "uthConnectionResponse\"\"\n GetAuthConnecti" +
-      "onSettingsRequest\"d\n!GetAuthConnectionSe" +
-      "ttingsResponse\022?\n\010settings\030\001 \001(\0132#.api.v" +
-      "0alpha.AuthConnectionSettingsR\010settings\"" +
-      "\306\001\n#UpdateAuthConnectionSettingsRequest\022" +
-      "?\n\010settings\030\001 \001(\0132#.api.v0alpha.AuthConn" +
-      "ectionSettingsR\010settings\022#\n\rclient_secre" +
-      "t\030\002 \001(\tR\014clientSecret\0229\n\nfield_mask\030\003 \001(" +
-      "\0132\032.google.protobuf.FieldMaskR\tfieldMask" +
-      "\"&\n$UpdateAuthConnectionSettingsResponse" +
-      "\"\035\n\033DeleteAuthConnectionRequest\"\036\n\034Delet" +
-      "eAuthConnectionResponse\"\341\002\n\020UserSubscrip" +
-      "tion\022\'\n\017subscription_id\030\001 \001(\tR\016subscript" +
-      "ionId\022;\n\nevent_type\030\002 \001(\0162\034.api.commons." +
-      "audit.EventTypeR\teventType\022\027\n\007user_id\030\003 " +
-      "\001(\tR\006userId\022A\n\007room303\030d \001(\0132%.api.v0alp" +
-      "ha.UserSubscription.Room303H\000R\007room303\022\030" +
-      "\n\007version\030\005 \001(\003R\007version\0227\n\007filters\030\004 \003(" +
-      "\0132\035.api.commons.FieldValueFilterR\007filter" +
-      "s\032&\n\007Room303\022\033\n\troom_name\030\001 \001(\tR\010roomNam" +
-      "eB\020\n\016deliver_method\"_\n\032AddUserSubscripti" +
-      "onRequest\022A\n\014subscription\030\001 \001(\0132\035.api.v0" +
-      "alpha.UserSubscriptionR\014subscription\"`\n\033" +
-      "AddUserSubscriptionResponse\022A\n\014subscript" +
-      "ion\030\001 \001(\0132\035.api.v0alpha.UserSubscription" +
-      "R\014subscription\"^\n\032GetUserSubscriptionReq" +
-      "uest\022\027\n\007user_id\030\001 \001(\tR\006userId\022\'\n\017subscri" +
-      "ption_id\030\002 \001(\tR\016subscriptionId\"`\n\033GetUse" +
-      "rSubscriptionResponse\022A\n\014subscription\030\001 " +
-      "\001(\0132\035.api.v0alpha.UserSubscriptionR\014subs",
-      "cription\"\235\001\n\035UpdateUserSubscriptionReque" +
-      "st\022A\n\014subscription\030\001 \001(\0132\035.api.v0alpha.U" +
-      "serSubscriptionR\014subscription\0229\n\nfield_m" +
-      "ask\030\002 \001(\0132\032.google.protobuf.FieldMaskR\tf" +
-      "ieldMask\"c\n\036UpdateUserSubscriptionRespon" +
-      "se\022A\n\014subscription\030\001 \001(\0132\035.api.v0alpha.U" +
-      "serSubscriptionR\014subscription\"a\n\035RemoveU" +
-      "serSubscriptionRequest\022\027\n\007user_id\030\001 \001(\tR" +
-      "\006userId\022\'\n\017subscription_id\030\002 \001(\tR\016subscr" +
-      "iptionId\" \n\036RemoveUserSubscriptionRespon" +
-      "se\"J\n\037RemoveMyUserSubscriptionRequest\022\'\n" +
-      "\017subscription_id\030\001 \001(\tR\016subscriptionId\"\"" +
-      "\n RemoveMyUserSubscriptionResponse\"7\n\034Li" +
-      "stUserSubscriptionsRequest\022\027\n\007user_id\030\001 " +
-      "\001(\tR\006userId\"d\n\035ListUserSubscriptionsResp" +
-      "onse\022C\n\rsubscriptions\030\001 \003(\0132\035.api.v0alph" +
-      "a.UserSubscriptionR\rsubscriptions\"q\n\033Lis" +
-      "tOrgSubscriptionsRequest\022\025\n\006org_id\030\001 \001(\t" +
-      "R\005orgId\022;\n\nevent_type\030\002 \001(\0162\034.api.common" +
-      "s.audit.EventTypeR\teventType\"c\n\034ListOrgS" +
-      "ubscriptionsResponse\022C\n\rsubscriptions\030\001 " +
-      "\003(\0132\035.api.v0alpha.UserSubscriptionR\rsubs" +
-      "criptions\"$\n\"GetSystemEnvironmentDetails" +
-      "Request\"a\n#GetSystemEnvironmentDetailsRe" +
-      "sponse\022\033\n\tregion_id\030\001 \001(\tR\010regionId\022\035\n\nc" +
-      "luster_id\030\002 \001(\tR\tclusterId\"\370\001\n\032CreateDel" +
-      "egatedUserRequest\022\027\n\007user_id\030\001 \001(\tR\006user" +
-      "Id\022\025\n\006org_id\030\002 \001(\tR\005orgId\022\024\n\005email\030\003 \001(\t" +
-      "R\005email\022\033\n\tuser_name\030\004 \001(\tR\010userName\022\035\n\n" +
-      "first_name\030\005 \001(\tR\tfirstName\022\033\n\tlast_name" +
-      "\030\006 \001(\tR\010lastName\022\026\n\006groups\030\007 \003(\tR\006groups" +
-      "\022#\n\rconnection_id\030\010 \001(\tR\014connectionId\"<\n" +
-      "\033CreateDelegatedUserResponse\022\027\n\007user_id\030" +
-      "\001 \001(\tR\006userIdJ\004\010\002\020\005\"6\n\033GetUserEmailVerif" +
-      "iedRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\":\n\034G" +
-      "etUserEmailVerifiedResponse\022\032\n\010verified\030" +
-      "\001 \001(\010R\010verified\"T\n\"GetUserEmailVerifiedB" +
-      "yOrgIdRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\022\025" +
-      "\n\006org_id\030\002 \001(\tR\005orgId\"A\n#GetUserEmailVer" +
-      "ifiedByOrgIdResponse\022\032\n\010verified\030\001 \001(\010R\010" +
-      "verified\"Y\n\'SendUserVerificationEmailByO" +
-      "rgIdRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\022\025\n\006" +
-      "org_id\030\002 \001(\tR\005orgId\"*\n(SendUserVerificat" +
-      "ionEmailByOrgIdResponse\";\n SendUserVerif" +
-      "icationEmailRequest\022\027\n\007user_id\030\001 \001(\tR\006us" +
-      "erId\"#\n!SendUserVerificationEmailRespons" +
-      "e\"[\n)ManualUserEmailVerificationByOrgIdR" +
-      "equest\022\027\n\007user_id\030\001 \001(\tR\006userId\022\025\n\006org_i" +
-      "d\030\002 \001(\tR\005orgId\",\n*ManualUserEmailVerific" +
-      "ationByOrgIdResponse\"=\n\"ManualUserEmailV" +
-      "erificationRequest\022\027\n\007user_id\030\001 \001(\tR\006use" +
-      "rId\"%\n#ManualUserEmailVerificationRespon" +
-      "se\"%\n#ListAgentStatisticsTemplatesReques" +
-      "t\"r\n$ListAgentStatisticsTemplatesRespons" +
-      "e\022J\n\ttemplates\030\001 \003(\0132,.api.v0alpha.Agent" +
-      "LoginGuiStatisticsTemplateR\ttemplates\"p\n" +
-      "$CreateAgentStatisticsTemplateRequest\022H\n" +
-      "\010template\030\001 \001(\0132,.api.v0alpha.AgentLogin" +
-      "GuiStatisticsTemplateR\010template\"\'\n%Creat" +
-      "eAgentStatisticsTemplateResponse\"p\n$Upda" +
-      "teAgentStatisticsTemplateRequest\022H\n\010temp" +
-      "late\030\001 \001(\0132,.api.v0alpha.AgentLoginGuiSt" +
-      "atisticsTemplateR\010template\"\'\n%UpdateAgen" +
-      "tStatisticsTemplateResponse\"]\n$DeleteAge" +
-      "ntStatisticsTemplateRequest\0225\n\027xml_clien" +
-      "t_property_sid\030\001 \001(\003R\024xmlClientPropertyS" +
-      "id\"\'\n%DeleteAgentStatisticsTemplateRespo" +
-      "nse\"\317\002\n\037AgentLoginGuiStatisticsTemplate\022" +
-      " \n\013description\030\001 \001(\tR\013description\022j\n\035gen" +
-      "eric_statistic_format_rule\030\002 \003(\0132\'.api.v" +
-      "0alpha.GenericStatisticFormatRuleR\032gener" +
-      "icStatisticFormatRule\0225\n\027xml_client_prop" +
-      "erty_sid\030\003 \001(\003R\024xmlClientPropertySid\022%\n\016" +
-      "inclusion_type\030\004 \001(\tR\rinclusionType\022,\n\022s" +
-      "tatistic_table_id\030\005 \001(\tR\020statisticTableI" +
-      "d\022\022\n\004name\030\006 \001(\tR\004name\"\346\002\n\032GenericStatist" +
-      "icFormatRule\022!\n\014statistic_id\030\001 \001(\tR\013stat" +
-      "isticId\022.\n\023database_field_name\030\002 \001(\tR\021da" +
-      "tabaseFieldName\022\037\n\013header_text\030\003 \001(\tR\nhe" +
-      "aderText\022.\n\023header_tooltip_text\030\004 \001(\tR\021h" +
-      "eaderTooltipText\0229\n\031simple_date_format_s" +
-      "tring\030\005 \001(\tR\026simpleDateFormatString\022,\n\022t" +
-      "imezone_id_string\030\006 \001(\tR\020timezoneIdStrin" +
-      "g\022;\n\016time_zone_enum\030\007 \001(\0162\025.api.commons." +
-      "TimeZoneR\014timeZoneEnum2\361\233\002\n\003Org\022\250\001\n\024Regi" +
-      "sterOrganization\022(.api.v0alpha.RegisterO" +
-      "rganizationRequest\032).api.v0alpha.Registe" +
-      "rOrganizationResponse\";\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002+\"" +
-      "&/api/v0alpha/org/organization/register:" +
-      "\001*\022\251\001\n\022ConvertOrgToManual\022&.api.v0alpha." +
-      "ConvertOrgToManualRequest\032\'.api.v0alpha." +
-      "ConvertOrgToManualResponse\"B\272\270\221\002\005\n\003\010\310\001\202\323" +
-      "\344\223\0022\"-/api/v0alpha/org/organization/conv" +
-      "erttomanual:\001*\022\240\001\n\022UpdateOrganization\022&." +
-      "api.v0alpha.UpdateOrganizationRequest\032\'." +
-      "api.v0alpha.UpdateOrganizationResponse\"9" +
-      "\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002)\"$/api/v0alpha/org/organ" +
-      "ization/update:\001*\022\244\001\n\023ArchiveOrganizatio" +
-      "n\022\'.api.v0alpha.ArchiveOrganizationReque" +
-      "st\032(.api.v0alpha.ArchiveOrganizationResp" +
-      "onse\":\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002*\"%/api/v0alpha/org" +
-      "/organization/archive:\001*\022\254\001\n\025UnArchiveOr" +
-      "ganization\022).api.v0alpha.UnArchiveOrgani" +
-      "zationRequest\032*.api.v0alpha.UnArchiveOrg" +
-      "anizationResponse\"<\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002,\"\'/ap" +
-      "i/v0alpha/org/organization/unarchive:\001*\022" +
-      "\274\001\n\031ListArchivedOrganizations\022-.api.v0al" +
-      "pha.ListArchivedOrganizationsRequest\032..a" +
-      "pi.v0alpha.ListArchivedOrganizationsResp" +
-      "onse\"@\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0020\"+/api/v0alpha/org" +
-      "/organization/archived/list:\001*\022\260\001\n\026GetOr" +
-      "ganizationProfile\022*.api.v0alpha.GetOrgan" +
-      "izationProfileRequest\032+.api.v0alpha.GetO" +
-      "rganizationProfileResponse\"=\272\270\221\002\004\n\002\010e\202\323\344" +
-      "\223\002.\")/api/v0alpha/org/organization/profi" +
-      "le/get:\001*\022\276\001\n\032GetOrganizationProfileById" +
-      "\022..api.v0alpha.GetOrganizationProfileByI" +
-      "dRequest\032+.api.v0alpha.GetOrganizationPr" +
-      "ofileResponse\"C\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0023\"./api/v0" +
-      "alpha/org/organization/profile/byid/get:" +
-      "\001*\022\310\001\n\034ListOrganizationDescriptions\0220.ap" +
-      "i.v0alpha.ListOrganizationDescriptionsRe" +
-      "quest\0321.api.v0alpha.ListOrganizationDesc" +
-      "riptionsResponse\"C\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0023\"./api" +
-      "/v0alpha/org/organization/description/li" +
-      "st:\001*\022\310\001\n\031ListRegionalOrganizations\022-.ap" +
-      "i.v0alpha.ListRegionalOrganizationsReque" +
-      "st\032..api.v0alpha.ListRegionalOrganizatio" +
-      "nsResponse\"L\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002<\"7/api/v0alp" +
-      "ha/org/organization/description/regional" +
-      "/list:\001*\022\233\001\n\021UpdateP3OwningOrg\022%.api.v0a" +
-      "lpha.UpdateP3OwningOrgRequest\032&.api.v0al" +
-      "pha.UpdateP3OwningOrgResponse\"7\272\270\221\002\005\n\003\010\310" +
-      "\001\202\323\344\223\002\'\"\"/api/v0alpha/org/updatep3owning" +
-      "org:\001*\022\217\001\n\016GetP3OwningOrg\022\".api.v0alpha." +
-      "GetP3OwningOrgRequest\032#.api.v0alpha.GetP" +
-      "3OwningOrgResponse\"4\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002$\"\037/a" +
-      "pi/v0alpha/org/getp3owningorg:\001*\022\314\001\n Lis" +
-      "tOrganizationUserDescriptions\0224.api.v0al" +
-      "pha.ListOrganizationUserDescriptionsRequ" +
-      "est\0325.api.v0alpha.ListOrganizationUserDe" +
-      "scriptionsResponse\";\272\270\221\002\004\n\002\010e\202\323\344\223\002,\"\'/ap" +
-      "i/v0alpha/org/user/descriptions/list:\001*\022" +
-      "\303\001\n\031AdminListUserDescriptions\022-.api.v0al" +
-      "pha.AdminListUserDescriptionsRequest\032..a" +
-      "pi.v0alpha.AdminListUserDescriptionsResp" +
-      "onse\"E\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0025\"0/api/v0alpha/org" +
-      "/all/user/descriptions/adminlist:\001*0\001\022\256\001" +
-      "\n\024ListUserDescriptions\022(.api.v0alpha.Lis" +
-      "tUserDescriptionsRequest\032).api.v0alpha.L" +
-      "istUserDescriptionsResponse\"?\272\270\221\002\004\n\002\010e\202\323" +
-      "\344\223\0020\"+/api/v0alpha/org/all/user/descript" +
-      "ions/list:\001*0\001\022\226\001\n\020GetUserDirectory\022$.ap" +
-      "i.v0alpha.GetUserDirectoryRequest\032%.api." +
-      "v0alpha.GetUserDirectoryResponse\"5\272\270\221\002\002\030" +
-      "\001\202\323\344\223\002(\"#/api/v0alpha/org/user/directory" +
-      "/get:\001*\022}\n\nGetRegions\022\036.api.v0alpha.GetR" +
-      "egionsRequest\032\037.api.v0alpha.GetRegionsRe" +
-      "sponse\".\272\270\221\002\002\030\001\202\323\344\223\002!\"\034/api/v0alpha/org/" +
-      "region/list:\001*\022\207\001\n\020GetMyUserDetails\022$.ap" +
-      "i.v0alpha.GetMyUserDetailsRequest\032\030.api." +
-      "v0alpha.UserDetails\"3\272\270\221\002\004\n\002\010y\202\323\344\223\002$\"\037/a" +
-      "pi/v0alpha/org/user/mydetails:\001*\022\201\001\n\016Get" +
-      "UserDetails\022\".api.v0alpha.GetUserDetails" +
-      "Request\032\030.api.v0alpha.UserDetails\"1\272\270\221\002\004" +
-      "\n\002\010e\202\323\344\223\002\"\"\035/api/v0alpha/org/user/detail" +
-      "s:\001*\022\222\001\n\023AdminGetUserDetails\022\'.api.v0alp" +
-      "ha.AdminGetUserDetailsRequest\032\030.api.v0al" +
-      "pha.UserDetails\"8\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002(\"#/api/" +
-      "v0alpha/org/admin/user/details:\001*\022\215\001\n\rGe" +
-      "tAgentUsers\022!.api.v0alpha.GetAgentUsersR" +
-      "equest\032\".api.v0alpha.GetAgentUsersRespon" +
-      "se\"5\272\270\221\002\005\n\003\010\220\003\202\323\344\223\002%\" /api/v0alpha/org/u" +
-      "ser/agents/get:\001*\022\230\001\n\020GetAgentSettings\022$" +
-      ".api.v0alpha.GetAgentSettingsRequest\032%.a" +
-      "pi.v0alpha.GetAgentSettingsResponse\"7\272\270\221" +
-      "\002\005\n\003\010\254\002\202\323\344\223\002\'\"\"/api/v0alpha/org/agentset" +
-      "tings/get:\001*\022\247\001\n\024GetAgentProfileGroup\022(." +
-      "api.v0alpha.GetAgentProfileGroupRequest\032" +
-      ").api.v0alpha.GetAgentProfileGroupRespon" +
-      "se\":\272\270\221\002\004\n\002\010e\202\323\344\223\002+\"&/api/v0alpha/org/ag" +
-      "entprofilegroup/get:\001*\022\263\001\n\027UpdateAgentPr" +
-      "ofileGroup\022+.api.v0alpha.UpdateAgentProf" +
-      "ileGroupRequest\032,.api.v0alpha.UpdateAgen" +
-      "tProfileGroupResponse\"=\272\270\221\002\004\n\002\010d\202\323\344\223\002.\")" +
-      "/api/v0alpha/org/agentprofilegroup/updat" +
-      "e:\001*\022\263\001\n\027CreateAgentProfileGroup\022+.api.v" +
-      "0alpha.CreateAgentProfileGroupRequest\032,." +
-      "api.v0alpha.CreateAgentProfileGroupRespo" +
-      "nse\"=\272\270\221\002\004\n\002\010d\202\323\344\223\002.\")/api/v0alpha/org/a" +
-      "gentprofilegroup/create:\001*\022\256\001\n\026ListAgent" +
-      "ProfileGroups\022*.api.v0alpha.ListAgentPro" +
-      "fileGroupsRequest\032+.api.v0alpha.ListAgen" +
-      "tProfileGroupsResponse\";\272\270\221\002\004\n\002\010e\202\323\344\223\002,\"" +
-      "\'/api/v0alpha/org/agentprofilegroup/list" +
-      ":\001*\022\263\001\n\027DeleteAgentProfileGroup\022+.api.v0" +
-      "alpha.DeleteAgentProfileGroupRequest\032,.a" +
-      "pi.v0alpha.DeleteAgentProfileGroupRespon" +
-      "se\"=\272\270\221\002\004\n\002\010d\202\323\344\223\002.\")/api/v0alpha/org/ag" +
-      "entprofilegroup/delete:\001*\022\266\001\n\030AssignAgen" +
-      "tProfileGroups\022,.api.v0alpha.AssignAgent" +
-      "ProfileGroupsRequest\032-.api.v0alpha.Assig" +
-      "nAgentProfileGroupsResponse\"=\272\270\221\002\004\n\002\010d\202\323" +
-      "\344\223\002.\")/api/v0alpha/org/agentprofilegroup" +
-      "/assign:\001*\022\205\001\n\nUpdateUser\022\036.api.v0alpha." +
-      "UpdateUserRequest\032\037.api.v0alpha.UpdateUs" +
-      "erResponse\"6\272\270\221\002\004\n\002\010w\202\323\344\223\002\'\"\"/api/v0alph" +
-      "a/org/user/admin/update:\001*\022\205\001\n\014UpdateMyU" +
-      "ser\022 .api.v0alpha.UpdateMyUserRequest\032!." +
-      "api.v0alpha.UpdateMyUserResponse\"0\272\270\221\002\004\n" +
-      "\002\010y\202\323\344\223\002!\"\034/api/v0alpha/org/user/update:" +
-      "\001*\022\250\001\n\024UpdateUserByCallerId\022(.api.v0alph" +
-      "a.UpdateUserByCallerIdRequest\032).api.v0al" +
-      "pha.UpdateUserByCallerIdResponse\";\272\270\221\002\004\n" +
-      "\002\010z\202\323\344\223\002,\"\'/api/v0alpha/org/user/update/" +
-      "bycallerid:\001*\022\177\n\nCreateUser\022\036.api.v0alph" +
-      "a.CreateUserRequest\032\037.api.v0alpha.Create" +
-      "UserResponse\"0\272\270\221\002\004\n\002\010v\202\323\344\223\002!\"\034/api/v0al" +
-      "pha/org/user/create:\001*\022\233\001\n\021CreateUserByO" +
-      "rgId\022%.api.v0alpha.CreateUserByOrgIdRequ" +
-      "est\032&.api.v0alpha.CreateUserByOrgIdRespo" +
-      "nse\"7\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002\'\"\"/api/v0alpha/org/" +
-      "user/admin/create:\001*\022\241\001\n\023CreateDelegated" +
-      "User\022\'.api.v0alpha.CreateDelegatedUserRe" +
-      "quest\032(.api.v0alpha.CreateDelegatedUserR" +
-      "esponse\"7\272\270\221\002\002\030\001\202\323\344\223\002*\"%/api/v0alpha/org" +
-      "/delegateduser/create:\001*\022\240\001\n\022UpdateUserP" +
-      "assword\022&.api.v0alpha.UpdateUserPassword" +
-      "Request\032\'.api.v0alpha.UpdateUserPassword" +
-      "Response\"9\272\270\221\002\004\n\002\010x\202\323\344\223\002*\"%/api/v0alpha/" +
-      "org/user/update/password:\001*\022\301\001\n\032UpdateUs" +
-      "erPasswordByUserId\022..api.v0alpha.UpdateU" +
-      "serPasswordByUserIdRequest\032/.api.v0alpha" +
-      ".UpdateUserPasswordByUserIdResponse\"B\272\270\221" +
+      "ents.ActionR\007hashtag\032\362\002\n\006Action\022H\n\007inbou" +
+      "nd\030\001 \001(\0132..api.v0alpha.QueueConfig.KeyPr" +
+      "essEvents.ConfigR\007inbound\022J\n\010outbound\030\002 " +
+      "\001(\0132..api.v0alpha.QueueConfig.KeyPressEv" +
+      "ents.ConfigR\010outbound\022F\n\006manual\030\003 \001(\0132.." +
+      "api.v0alpha.QueueConfig.KeyPressEvents.C" +
+      "onfigR\006manual\022H\n\007preview\030\004 \001(\0132..api.v0a" +
+      "lpha.QueueConfig.KeyPressEvents.ConfigR\007" +
+      "preview\022@\n\003any\030\005 \001(\0132..api.v0alpha.Queue" +
+      "Config.KeyPressEvents.ConfigR\003any\032\273\003\n\006Co" +
+      "nfig\022>\n\007hang_up\030\001 \001(\0132#.api.v0alpha.Queu" +
+      "eConfig.OptionlessH\000R\006hangUp\022F\n\013trigger_" +
+      "ivr\030\007 \001(\0132#.api.v0alpha.QueueConfig.Opti" +
+      "onlessH\000R\ntriggerIvr\022C\n\tvoicemail\030\003 \001(\0132" +
+      "#.api.v0alpha.QueueConfig.OptionlessH\000R\t" +
+      "voicemail\022N\n\017queued_callback\030\004 \001(\0132#.api" +
+      ".v0alpha.QueueConfig.OptionlessH\000R\016queue" +
+      "dCallback\022@\n\nadd_skills\030\005 \001(\0132\037.api.v0al" +
+      "pha.QueueConfig.SkillsH\000R\taddSkills\022B\n\013d" +
+      "rop_skills\030\006 \001(\0132\037.api.v0alpha.QueueConf" +
+      "ig.SkillsH\000R\ndropSkillsB\010\n\006optionJ\004\010\002\020\003\032" +
+      "\254\004\n\017PbxRingStrategy\022I\n\007inbound\030\001 \001(\0132/.a" +
+      "pi.v0alpha.QueueConfig.PbxRingStrategy.C" +
+      "onfigR\007inbound\022K\n\010outbound\030\002 \001(\0132/.api.v" +
+      "0alpha.QueueConfig.PbxRingStrategy.Confi" +
+      "gR\010outbound\022A\n\003any\030\003 \001(\0132/.api.v0alpha.Q" +
+      "ueueConfig.PbxRingStrategy.ConfigR\003any\032\275" +
+      "\002\n\006Config\022@\n\010ring_all\030\001 \001(\0132#.api.v0alph" +
+      "a.QueueConfig.OptionlessH\000R\007ringAll\022S\n\022h" +
+      "ighest_score_only\030\002 \001(\0132#.api.v0alpha.Qu" +
+      "eueConfig.OptionlessH\000R\020highestScoreOnly" +
+      "\022=\n\006random\030\003 \001(\0132#.api.v0alpha.QueueConf" +
+      "ig.OptionlessH\000R\006random\022!\n\013agent_score\030\004" +
+      " \001(\003H\000R\nagentScore\022.\n\022agent_score_memory" +
+      "\030\005 \001(\003H\000R\020agentScoreMemoryB\n\n\010strategy\032\201" +
+      "\001\n\037QueueMonitoringSilenceWaitTimes\022-\n\022fi" +
+      "rst_milliseconds\030\001 \001(\003R\021firstMillisecond" +
+      "s\022/\n\023second_milliseconds\030\002 \001(\003R\022secondMi" +
+      "lliseconds\032\t\n\007Disable\032\014\n\nOptionless\032\037\n\006S" +
+      "kills\022\025\n\006p3_ids\030\001 \003(\tR\005p3Ids\"=\n\032GetAllQu" +
+      "eueConfigSoundsReq\022\037\n\013config_name\030\001 \001(\tR" +
+      "\nconfigName\".\n\032GetAllQueueConfigSoundsRe" +
+      "s\022\020\n\003url\030\002 \001(\tR\003url\".\n\025ListOwnedUsersReq" +
+      "uest\022\025\n\006org_id\030\001 \001(\tR\005orgId\"c\n\026ListOwned" +
+      "UsersResponse\022I\n\021user_descriptions\030\001 \003(\013" +
+      "2\034.api.v0alpha.UserDescriptionR\020userDesc" +
+      "riptions\"4\n\033ListOwnedOrgsByOrgIdRequest\022" +
+      "\025\n\006org_id\030\001 \001(\tR\005orgId\"\201\001\n\034ListOwnedOrgs" +
+      "ByOrgIdResponse\022a\n\031organization_descript" +
+      "ions\030\001 \003(\0132$.api.v0alpha.OrganizationDes" +
+      "criptionR\030organizationDescriptions\"\026\n\024Li" +
+      "stOwnedOrgsRequest\"z\n\025ListOwnedOrgsRespo" +
+      "nse\022a\n\031organization_descriptions\030\001 \003(\0132$" +
+      ".api.v0alpha.OrganizationDescriptionR\030or" +
+      "ganizationDescriptions\"0\n\025GetUserBlocked" +
+      "Request\022\027\n\007user_id\030\001 \001(\tR\006userId\"\223\003\n\026Get" +
+      "UserBlockedResponse\022\030\n\007blocked\030\001 \001(\010R\007bl" +
+      "ocked\022\027\n\007last_ip\030\002 \001(\tR\006lastIp\0229\n\nlast_l" +
+      "ogin\030\003 \001(\0132\032.google.protobuf.TimestampR\t" +
+      "lastLogin\022J\n\023last_password_reset\030\004 \001(\0132\032" +
+      ".google.protobuf.TimestampR\021lastPassword" +
+      "Reset\022!\n\014logins_count\030\005 \001(\003R\013loginsCount" +
+      "\0229\n\ncreated_at\030\006 \001(\0132\032.google.protobuf.T" +
+      "imestampR\tcreatedAt\0229\n\nupdated_at\030\007 \001(\0132" +
+      "\032.google.protobuf.TimestampR\tupdatedAt\022&" +
+      "\n\017has_blocked_ips\030\010 \001(\010R\rhasBlockedIps\"-" +
+      "\n\022UnblockUserRequest\022\027\n\007user_id\030\001 \001(\tR\006u" +
+      "serId\"\025\n\023UnblockUserResponse\"\202\002\n\016UnMigra" +
+      "tedUser\022\033\n\tagent_sid\030\001 \001(\003R\010agentSid\022\033\n\t" +
+      "login_sid\030\002 \001(\003R\010loginSid\022\035\n\nclient_sid\030" +
+      "\003 \001(\003R\tclientSid\022\033\n\tuser_name\030\004 \001(\tR\010use" +
+      "rName\022\027\n\007user_id\030\005 \001(\tR\006userId\022%\n\016login_" +
+      "disabled\030\006 \001(\010R\rloginDisabled\022\035\n\nfirst_n" +
+      "ame\030\007 \001(\tR\tfirstName\022\033\n\tlast_name\030\010 \001(\tR" +
+      "\010lastName\"5\n\034ListP3UnMigratedUsersReques" +
+      "t\022\025\n\006org_id\030\001 \001(\tR\005orgId\"R\n\035ListP3UnMigr" +
+      "atedUsersResponse\0221\n\005users\030\001 \003(\0132\033.api.v" +
+      "0alpha.UnMigratedUserR\005users\"\213\001\n\024Migrate" +
+      "P3UserRequest\022\033\n\tagent_sid\030\001 \001(\003R\010agentS" +
+      "id\022\033\n\tlogin_sid\030\002 \001(\003R\010loginSid\022\035\n\nclien" +
+      "t_sid\030\003 \001(\003R\tclientSid\022\032\n\010password\030\004 \001(\t" +
+      "R\010password\"\027\n\025MigrateP3UserResponse\"\217\001\n\027" +
+      "UpdateP3UserNameRequest\022\033\n\tagent_sid\030\001 \001" +
+      "(\003R\010agentSid\022\033\n\tlogin_sid\030\002 \001(\003R\010loginSi" +
+      "d\022\033\n\tuser_name\030\003 \001(\tR\010userName\022\035\n\nclient" +
+      "_sid\030\004 \001(\003R\tclientSid\"\032\n\030UpdateP3UserNam" +
+      "eResponse\"`\n\026GetQueueConfigSoundReq\022\026\n\006c" +
+      "onfig\030\001 \001(\tR\006config\022.\n\005sound\030\002 \001(\0162\030.api" +
+      ".commons.ConfigSoundR\005sound\"*\n\026GetQueueC" +
+      "onfigSoundRes\022\020\n\003url\030\001 \001(\tR\003url\"}\n\026SetQu" +
+      "eueConfigSoundReq\022\026\n\006config\030\001 \001(\tR\006confi" +
+      "g\022.\n\005sound\030\002 \001(\0162\030.api.commons.ConfigSou" +
+      "ndR\005sound\022\033\n\tfile_name\030\003 \001(\tR\010fileName\"\030" +
+      "\n\026SetQueueConfigSoundRes\"\354\002\n$SetAllQueue" +
+      "ConfigSoundsFromSourceReq\022\033\n\tto_config\030\001" +
+      " \001(\tR\010toConfig\0226\n\006config\030\002 \001(\0132\034.google." +
+      "protobuf.StringValueH\000R\006config\022k\n\017defaul" +
+      "t_profile\030\003 \001(\0132@.api.v0alpha.SetAllQueu" +
+      "eConfigSoundsFromSourceReq.DefaultProfil" +
+      "eH\000R\016defaultProfile\032z\n\016DefaultProfile\0226\n" +
+      "\010language\030\001 \001(\0162\032.api.commons.SoundLangu" +
+      "ageR\010language\0220\n\006gender\030\002 \001(\0162\030.api.comm" +
+      "ons.SoundGenderR\006genderB\006\n\004from\"&\n$SetAl" +
+      "lQueueConfigSoundsFromSourceRes\"A\n\031Remov" +
+      "eLoginStrikesRequest\022$\n\016login_log_sids\030\001" +
+      " \003(\003R\014loginLogSids\"\034\n\032RemoveLoginStrikes" +
+      "Response\"8\n\035RemoveUserLoginStrikesReques" +
+      "t\022\027\n\007user_id\030\001 \001(\tR\006userId\" \n\036RemoveUser" +
+      "LoginStrikesResponse\"\253\001\n\027ListLoginHistor" +
+      "yRequest\022\031\n\007user_id\030\001 \001(\tH\000R\006userId\022\'\n\016o" +
+      "rigination_ip\030\002 \001(\tH\000R\roriginationIp\022\032\n\010" +
+      "duration\030\003 \001(\003R\010duration\022!\n\014strikes_only" +
+      "\030\004 \001(\010R\013strikesOnlyB\r\n\013filter_type\"V\n\030Li" +
+      "stLoginHistoryResponse\022:\n\014login_events\030\001" +
+      " \003(\0132\027.api.v0alpha.LoginEventR\013loginEven" +
+      "ts\"\212\002\n\nLoginEvent\022\"\n\rlogin_log_sid\030\001 \001(\003" +
+      "R\013loginLogSid\022\033\n\tuser_name\030\002 \001(\tR\010userNa" +
+      "me\022%\n\016origination_ip\030\003 \001(\tR\roriginationI" +
+      "p\022#\n\rlogin_success\030\004 \001(\010R\014loginSuccess\022\026" +
+      "\n\006strike\030\005 \001(\010R\006strike\022\024\n\005notes\030\006 \001(\tR\005n" +
+      "otes\022A\n\016date_attempted\030\007 \001(\0132\032.google.pr" +
+      "otobuf.TimestampR\rdateAttempted\"\334\004\n\022OrgB" +
+      "illingSettings\022\025\n\006org_id\030\001 \001(\tR\005orgId\022B\n" +
+      "\036voice_analytics_price_per_hour\030\002 \001(\002R\032v" +
+      "oiceAnalyticsPricePerHour\0225\n\027analytics_p" +
+      "rice_per_doc\030\003 \001(\002R\024analyticsPricePerDoc" +
+      "\0228\n\007default\030\004 \001(\0132\036.api.v0alpha.PhoneBil" +
+      "lingRatesR\007default\022u\n\030country_region_ove" +
+      "rrides\030\010 \003(\0132;.api.v0alpha.OrgBillingSet" +
+      "tings.CountryRegionOverridesEntryR\026count" +
+      "ryRegionOverrides\022?\n\013agent_rates\030\006 \001(\0132\036" +
+      ".api.v0alpha.AgentBillingRatesR\nagentRat" +
+      "es\022R\n\027email_price_per_message\030\007 \001(\0132\033.go" +
+      "ogle.protobuf.FloatValueR\024emailPricePerM" +
+      "essage\032h\n\033CountryRegionOverridesEntry\022\020\n" +
+      "\003key\030\001 \001(\005R\003key\0223\n\005value\030\002 \001(\0132\035.api.v0a" +
+      "lpha.BillingRegionMapR\005value:\0028\001J\004\010\005\020\006\"\305" +
+      "\001\n\020BillingRegionMap\022Q\n\014region_rates\030\001 \003(" +
+      "\0132..api.v0alpha.BillingRegionMap.RegionR" +
+      "atesEntryR\013regionRates\032^\n\020RegionRatesEnt" +
+      "ry\022\020\n\003key\030\001 \001(\tR\003key\0224\n\005value\030\002 \001(\0132\036.ap" +
+      "i.v0alpha.PhoneBillingRatesR\005value:\0028\001\"\240" +
+      "\001\n\021AgentBillingRates\022-\n\023agent_toll_free_" +
+      "ppi\030\004 \001(\001R\020agentTollFreePpi\022.\n\023agent_sof" +
+      "tphone_ppi\030\005 \001(\001R\021agentSoftphonePpi\022&\n\017a" +
+      "gent_local_ppi\030\006 \001(\001R\ragentLocalPpiJ\004\010\001\020" +
+      "\004\"\332\n\n\021PhoneBillingRates\022:\n\031billing_incre" +
+      "ment_seconds\030\001 \001(\003R\027billingIncrementSeco" +
+      "nds\022\037\n\013inbound_ppi\030\016 \001(\001R\ninboundPpi\0221\n\025" +
+      "sms_price_per_attempt\030\017 \001(\001R\022smsPricePer" +
+      "Attempt\022B\n\036vocal_direct_price_per_messag" +
+      "e\030\020 \001(\001R\032vocalDirectPricePerMessage\022B\n\007s" +
+      "econds\030\006 \001(\0132&.api.v0alpha.PhoneBillingR" +
+      "ates.SecondsH\000R\007seconds\022E\n\010attempts\030\007 \001(" +
+      "\0132\'.api.v0alpha.PhoneBillingRates.Attemp" +
+      "tsH\000R\010attempts\022X\n\017connected_calls\030\010 \001(\0132" +
+      "-.api.v0alpha.PhoneBillingRates.Connecte" +
+      "dCallsH\000R\016connectedCalls\032\206\005\n\007Seconds\022\020\n\003" +
+      "ppi\030\n \001(\001R\003ppi\022!\n\014linkback_ppi\030\013 \001(\001R\013li" +
+      "nkbackPpi\022,\n\022agent_linkcall_ppi\030\014 \001(\001R\020a" +
+      "gentLinkcallPpi\022:\n\031minimum_billed_increm" +
+      "ents\030\004 \001(\003R\027minimumBilledIncrements\022W\n\031m" +
+      "aximum_billed_increments\030\005 \001(\0132\033.google." +
+      "protobuf.Int64ValueR\027maximumBilledIncrem" +
+      "ents\022K\n\"minimum_linkback_billed_incremen" +
+      "ts\030\006 \001(\003R\037minimumLinkbackBilledIncrement" +
+      "s\022h\n\"maximum_linkback_billed_increments\030" +
+      "\007 \001(\0132\033.google.protobuf.Int64ValueR\037maxi" +
+      "mumLinkbackBilledIncrements\022d\n machine_h" +
+      "angup_increments_billed\030\010 \001(\0132\033.google.p" +
+      "rotobuf.Int64ValueR\035machineHangupIncreme" +
+      "ntsBilled\022`\n\036human_hangup_increments_bil" +
+      "led\030\t \001(\0132\033.google.protobuf.Int64ValueR\033" +
+      "humanHangupIncrementsBilledJ\004\010\001\020\004\032s\n\010Att" +
+      "empts\022\020\n\003ppa\030\004 \001(\001R\003ppa\022!\n\014linkback_ppa\030" +
+      "\005 \001(\001R\013linkbackPpa\022,\n\022agent_linkcall_ppa" +
+      "\030\006 \001(\001R\020agentLinkcallPpaJ\004\010\001\020\004\032y\n\016Connec" +
+      "tedCalls\022\020\n\003ppc\030\004 \001(\001R\003ppc\022!\n\014linkback_p" +
+      "pc\030\005 \001(\001R\013linkbackPpc\022,\n\022agent_linkcall_" +
+      "ppc\030\006 \001(\001R\020agentLinkcallPpcJ\004\010\001\020\004B\007\n\005uni" +
+      "tsJ\004\010\002\020\006J\004\010\t\020\016\"<\n#GetOrgBillingSettingsB" +
+      "yOrgIdRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\"\331\002\n" +
+      "$GetOrgBillingSettingsByOrgIdResponse\022;\n" +
+      "\010settings\030\001 \001(\0132\037.api.v0alpha.OrgBilling" +
+      "SettingsR\010settings\022\204\001\n\027country_default_r" +
+      "egions\030\003 \003(\0132L.api.v0alpha.GetOrgBilling" +
+      "SettingsByOrgIdResponse.CountryDefaultRe" +
+      "gionsEntryR\025countryDefaultRegions\032g\n\032Cou" +
+      "ntryDefaultRegionsEntry\022\020\n\003key\030\001 \001(\005R\003ke" +
+      "y\0223\n\005value\030\002 \001(\0132\035.api.v0alpha.BillingRe" +
+      "gionMapR\005value:\0028\001J\004\010\002\020\003\"\036\n\034GetOrgBillin" +
+      "gSettingsRequest\"\312\002\n\035GetOrgBillingSettin" +
+      "gsResponse\022;\n\010settings\030\001 \001(\0132\037.api.v0alp" +
+      "ha.OrgBillingSettingsR\010settings\022}\n\027count" +
+      "ry_default_regions\030\003 \003(\0132E.api.v0alpha.G" +
+      "etOrgBillingSettingsResponse.CountryDefa" +
+      "ultRegionsEntryR\025countryDefaultRegions\032g" +
+      "\n\032CountryDefaultRegionsEntry\022\020\n\003key\030\001 \001(" +
+      "\005R\003key\0223\n\005value\030\002 \001(\0132\035.api.v0alpha.Bill" +
+      "ingRegionMapR\005value:\0028\001J\004\010\002\020\003\"\226\001\n\034SetOrg" +
+      "BillingSettingsRequest\022;\n\010settings\030\001 \001(\013" +
+      "2\037.api.v0alpha.OrgBillingSettingsR\010setti" +
+      "ngs\0229\n\nfield_mask\030\002 \001(\0132\032.google.protobu" +
+      "f.FieldMaskR\tfieldMask\"\037\n\035SetOrgBillingS" +
+      "ettingsResponse\"\263\001\n\034AddOrgBillingOverrid" +
+      "eRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\022\026\n\006regio" +
+      "n\030\002 \001(\tR\006region\0224\n\005rates\030\003 \001(\0132\036.api.v0a" +
+      "lpha.PhoneBillingRatesR\005rates\022.\n\007country" +
+      "\030\004 \001(\0162\024.api.commons.CountryR\007country\"\037\n" +
+      "\035AddOrgBillingOverrideResponse\"\200\001\n\037Remov" +
+      "eOrgBillingOverrideRequest\022\025\n\006org_id\030\001 \001" +
+      "(\tR\005orgId\022\026\n\006region\030\002 \001(\tR\006region\022.\n\007cou" +
+      "ntry\030\003 \001(\0162\024.api.commons.CountryR\007countr" +
+      "y\"\"\n RemoveOrgBillingOverrideResponse\"%\n" +
+      "#GetSystemDefaultBillingRatesRequest\"\337\001\n" +
+      "$GetSystemDefaultBillingRatesResponse\0225\n" +
+      "\027email_price_per_message\030\001 \001(\002R\024emailPri" +
+      "cePerMessage\022?\n\013phone_rates\030\002 \001(\0132\036.api." +
+      "v0alpha.PhoneBillingRatesR\nphoneRates\022?\n" +
+      "\013agent_rates\030\003 \001(\0132\036.api.v0alpha.AgentBi" +
+      "llingRatesR\nagentRates\"\247\001\n\027UpdateP3UserS" +
+      "idsRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\022\033\n\ta" +
+      "gent_sid\030\002 \001(\003R\010agentSid\022\033\n\tlogin_sid\030\003 " +
+      "\001(\003R\010loginSid\0229\n\nfield_mask\030\n \001(\0132\032.goog" +
+      "le.protobuf.FieldMaskR\tfieldMask\"\032\n\030Upda" +
+      "teP3UserSidsResponse\"\364\003\n\026AuthConnectionS" +
+      "ettings\0229\n\010provider\030\002 \001(\0162\035.api.commons." +
+      "IdentityProviderR\010provider\022\035\n\nissuer_url" +
+      "\030\003 \001(\tR\tissuerUrl\022\035\n\ntenant_url\030\004 \001(\tR\tt" +
+      "enantUrl\022\033\n\tclient_id\030\005 \001(\tR\010clientId\022#\n" +
+      "\rconnection_id\030\006 \001(\tR\014connectionId\022a\n\021se" +
+      "cret_expiration\030\n \001(\01324.api.v0alpha.Auth" +
+      "ConnectionSettings.SecretExpirationR\020sec" +
+      "retExpiration\022;\n\rdefault_group\030\014 \001(\0132\026.a" +
+      "pi.v0alpha.GroupItemR\014defaultGroup\022;\n\rcu" +
+      "stom_groups\030\r \003(\0132\026.api.v0alpha.GroupIte" +
+      "mR\014customGroups\032B\n\020SecretExpiration\022.\n\004d" +
+      "ate\030\001 \001(\0132\032.google.protobuf.TimestampR\004d" +
+      "ate\"\354\001\n\tGroupItem\022\035\n\ngroup_name\030\001 \001(\tR\tg" +
+      "roupName\022$\n\016hunt_group_sid\030\002 \001(\003R\014huntGr" +
+      "oupSid\0223\n\026agent_profile_group_id\030\003 \001(\tR\023" +
+      "agentProfileGroupId\0223\n\026p3_permission_gro" +
+      "up_id\030\004 \001(\tR\023p3PermissionGroupId\0220\n\024perm" +
+      "ission_group_ids\030\005 \003(\tR\022permissionGroupI" +
+      "ds\"\203\001\n\033CreateAuthConnectionRequest\022?\n\010se" +
+      "ttings\030\001 \001(\0132#.api.v0alpha.AuthConnectio" +
+      "nSettingsR\010settings\022#\n\rclient_secret\030\002 \001" +
+      "(\tR\014clientSecret\"\036\n\034CreateAuthConnection" +
+      "Response\"\"\n GetAuthConnectionSettingsReq" +
+      "uest\"d\n!GetAuthConnectionSettingsRespons" +
+      "e\022?\n\010settings\030\001 \001(\0132#.api.v0alpha.AuthCo" +
+      "nnectionSettingsR\010settings\"\306\001\n#UpdateAut" +
+      "hConnectionSettingsRequest\022?\n\010settings\030\001" +
+      " \001(\0132#.api.v0alpha.AuthConnectionSetting" +
+      "sR\010settings\022#\n\rclient_secret\030\002 \001(\tR\014clie" +
+      "ntSecret\0229\n\nfield_mask\030\003 \001(\0132\032.google.pr" +
+      "otobuf.FieldMaskR\tfieldMask\"&\n$UpdateAut" +
+      "hConnectionSettingsResponse\"\035\n\033DeleteAut" +
+      "hConnectionRequest\"\036\n\034DeleteAuthConnecti" +
+      "onResponse\"\341\002\n\020UserSubscription\022\'\n\017subsc" +
+      "ription_id\030\001 \001(\tR\016subscriptionId\022;\n\neven" +
+      "t_type\030\002 \001(\0162\034.api.commons.audit.EventTy" +
+      "peR\teventType\022\027\n\007user_id\030\003 \001(\tR\006userId\022A" +
+      "\n\007room303\030d \001(\0132%.api.v0alpha.UserSubscr" +
+      "iption.Room303H\000R\007room303\022\030\n\007version\030\005 \001" +
+      "(\003R\007version\0227\n\007filters\030\004 \003(\0132\035.api.commo" +
+      "ns.FieldValueFilterR\007filters\032&\n\007Room303\022" +
+      "\033\n\troom_name\030\001 \001(\tR\010roomNameB\020\n\016deliver_" +
+      "method\"_\n\032AddUserSubscriptionRequest\022A\n\014" +
+      "subscription\030\001 \001(\0132\035.api.v0alpha.UserSub" +
+      "scriptionR\014subscription\"`\n\033AddUserSubscr" +
+      "iptionResponse\022A\n\014subscription\030\001 \001(\0132\035.a" +
+      "pi.v0alpha.UserSubscriptionR\014subscriptio" +
+      "n\"^\n\032GetUserSubscriptionRequest\022\027\n\007user_" +
+      "id\030\001 \001(\tR\006userId\022\'\n\017subscription_id\030\002 \001(" +
+      "\tR\016subscriptionId\"`\n\033GetUserSubscription" +
+      "Response\022A\n\014subscription\030\001 \001(\0132\035.api.v0a" +
+      "lpha.UserSubscriptionR\014subscription\"\235\001\n\035",
+      "UpdateUserSubscriptionRequest\022A\n\014subscri" +
+      "ption\030\001 \001(\0132\035.api.v0alpha.UserSubscripti" +
+      "onR\014subscription\0229\n\nfield_mask\030\002 \001(\0132\032.g" +
+      "oogle.protobuf.FieldMaskR\tfieldMask\"c\n\036U" +
+      "pdateUserSubscriptionResponse\022A\n\014subscri" +
+      "ption\030\001 \001(\0132\035.api.v0alpha.UserSubscripti" +
+      "onR\014subscription\"a\n\035RemoveUserSubscripti" +
+      "onRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\022\'\n\017su" +
+      "bscription_id\030\002 \001(\tR\016subscriptionId\" \n\036R" +
+      "emoveUserSubscriptionResponse\"J\n\037RemoveM" +
+      "yUserSubscriptionRequest\022\'\n\017subscription" +
+      "_id\030\001 \001(\tR\016subscriptionId\"\"\n RemoveMyUse" +
+      "rSubscriptionResponse\"7\n\034ListUserSubscri" +
+      "ptionsRequest\022\027\n\007user_id\030\001 \001(\tR\006userId\"d" +
+      "\n\035ListUserSubscriptionsResponse\022C\n\rsubsc" +
+      "riptions\030\001 \003(\0132\035.api.v0alpha.UserSubscri" +
+      "ptionR\rsubscriptions\"q\n\033ListOrgSubscript" +
+      "ionsRequest\022\025\n\006org_id\030\001 \001(\tR\005orgId\022;\n\nev" +
+      "ent_type\030\002 \001(\0162\034.api.commons.audit.Event" +
+      "TypeR\teventType\"c\n\034ListOrgSubscriptionsR" +
+      "esponse\022C\n\rsubscriptions\030\001 \003(\0132\035.api.v0a" +
+      "lpha.UserSubscriptionR\rsubscriptions\"$\n\"" +
+      "GetSystemEnvironmentDetailsRequest\"a\n#Ge" +
+      "tSystemEnvironmentDetailsResponse\022\033\n\treg" +
+      "ion_id\030\001 \001(\tR\010regionId\022\035\n\ncluster_id\030\002 \001" +
+      "(\tR\tclusterId\"\370\001\n\032CreateDelegatedUserReq" +
+      "uest\022\027\n\007user_id\030\001 \001(\tR\006userId\022\025\n\006org_id\030" +
+      "\002 \001(\tR\005orgId\022\024\n\005email\030\003 \001(\tR\005email\022\033\n\tus" +
+      "er_name\030\004 \001(\tR\010userName\022\035\n\nfirst_name\030\005 " +
+      "\001(\tR\tfirstName\022\033\n\tlast_name\030\006 \001(\tR\010lastN" +
+      "ame\022\026\n\006groups\030\007 \003(\tR\006groups\022#\n\rconnectio" +
+      "n_id\030\010 \001(\tR\014connectionId\"<\n\033CreateDelega" +
+      "tedUserResponse\022\027\n\007user_id\030\001 \001(\tR\006userId" +
+      "J\004\010\002\020\005\"6\n\033GetUserEmailVerifiedRequest\022\027\n" +
+      "\007user_id\030\001 \001(\tR\006userId\":\n\034GetUserEmailVe" +
+      "rifiedResponse\022\032\n\010verified\030\001 \001(\010R\010verifi" +
+      "ed\"T\n\"GetUserEmailVerifiedByOrgIdRequest" +
+      "\022\027\n\007user_id\030\001 \001(\tR\006userId\022\025\n\006org_id\030\002 \001(" +
+      "\tR\005orgId\"A\n#GetUserEmailVerifiedByOrgIdR" +
+      "esponse\022\032\n\010verified\030\001 \001(\010R\010verified\"Y\n\'S" +
+      "endUserVerificationEmailByOrgIdRequest\022\027" +
+      "\n\007user_id\030\001 \001(\tR\006userId\022\025\n\006org_id\030\002 \001(\tR" +
+      "\005orgId\"*\n(SendUserVerificationEmailByOrg" +
+      "IdResponse\";\n SendUserVerificationEmailR" +
+      "equest\022\027\n\007user_id\030\001 \001(\tR\006userId\"#\n!SendU" +
+      "serVerificationEmailResponse\"[\n)ManualUs" +
+      "erEmailVerificationByOrgIdRequest\022\027\n\007use" +
+      "r_id\030\001 \001(\tR\006userId\022\025\n\006org_id\030\002 \001(\tR\005orgI" +
+      "d\",\n*ManualUserEmailVerificationByOrgIdR" +
+      "esponse\"=\n\"ManualUserEmailVerificationRe" +
+      "quest\022\027\n\007user_id\030\001 \001(\tR\006userId\"%\n#Manual" +
+      "UserEmailVerificationResponse\"%\n#ListAge" +
+      "ntStatisticsTemplatesRequest\"r\n$ListAgen" +
+      "tStatisticsTemplatesResponse\022J\n\ttemplate" +
+      "s\030\001 \003(\0132,.api.v0alpha.AgentLoginGuiStati" +
+      "sticsTemplateR\ttemplates\"p\n$CreateAgentS" +
+      "tatisticsTemplateRequest\022H\n\010template\030\001 \001" +
+      "(\0132,.api.v0alpha.AgentLoginGuiStatistics" +
+      "TemplateR\010template\"\'\n%CreateAgentStatist" +
+      "icsTemplateResponse\"p\n$UpdateAgentStatis" +
+      "ticsTemplateRequest\022H\n\010template\030\001 \001(\0132,." +
+      "api.v0alpha.AgentLoginGuiStatisticsTempl" +
+      "ateR\010template\"\'\n%UpdateAgentStatisticsTe" +
+      "mplateResponse\"]\n$DeleteAgentStatisticsT" +
+      "emplateRequest\0225\n\027xml_client_property_si" +
+      "d\030\001 \001(\003R\024xmlClientPropertySid\"\'\n%DeleteA" +
+      "gentStatisticsTemplateResponse\"\317\002\n\037Agent" +
+      "LoginGuiStatisticsTemplate\022 \n\013descriptio" +
+      "n\030\001 \001(\tR\013description\022j\n\035generic_statisti" +
+      "c_format_rule\030\002 \003(\0132\'.api.v0alpha.Generi" +
+      "cStatisticFormatRuleR\032genericStatisticFo" +
+      "rmatRule\0225\n\027xml_client_property_sid\030\003 \001(" +
+      "\003R\024xmlClientPropertySid\022%\n\016inclusion_typ" +
+      "e\030\004 \001(\tR\rinclusionType\022,\n\022statistic_tabl" +
+      "e_id\030\005 \001(\tR\020statisticTableId\022\022\n\004name\030\006 \001" +
+      "(\tR\004name\"\346\002\n\032GenericStatisticFormatRule\022" +
+      "!\n\014statistic_id\030\001 \001(\tR\013statisticId\022.\n\023da" +
+      "tabase_field_name\030\002 \001(\tR\021databaseFieldNa" +
+      "me\022\037\n\013header_text\030\003 \001(\tR\nheaderText\022.\n\023h" +
+      "eader_tooltip_text\030\004 \001(\tR\021headerTooltipT" +
+      "ext\0229\n\031simple_date_format_string\030\005 \001(\tR\026" +
+      "simpleDateFormatString\022,\n\022timezone_id_st" +
+      "ring\030\006 \001(\tR\020timezoneIdString\022;\n\016time_zon" +
+      "e_enum\030\007 \001(\0162\025.api.commons.TimeZoneR\014tim" +
+      "eZoneEnum2\343\233\002\n\003Org\022\250\001\n\024RegisterOrganizat" +
+      "ion\022(.api.v0alpha.RegisterOrganizationRe" +
+      "quest\032).api.v0alpha.RegisterOrganization" +
+      "Response\";\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002+\"&/api/v0alpha" +
+      "/org/organization/register:\001*\022\251\001\n\022Conver" +
+      "tOrgToManual\022&.api.v0alpha.ConvertOrgToM" +
+      "anualRequest\032\'.api.v0alpha.ConvertOrgToM" +
+      "anualResponse\"B\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0022\"-/api/v0" +
+      "alpha/org/organization/converttomanual:\001" +
+      "*\022\240\001\n\022UpdateOrganization\022&.api.v0alpha.U" +
+      "pdateOrganizationRequest\032\'.api.v0alpha.U" +
+      "pdateOrganizationResponse\"9\272\270\221\002\005\n\003\010\310\001\202\323\344" +
+      "\223\002)\"$/api/v0alpha/org/organization/updat" +
+      "e:\001*\022\244\001\n\023ArchiveOrganization\022\'.api.v0alp" +
+      "ha.ArchiveOrganizationRequest\032(.api.v0al" +
+      "pha.ArchiveOrganizationResponse\":\272\270\221\002\005\n\003" +
+      "\010\310\001\202\323\344\223\002*\"%/api/v0alpha/org/organization" +
+      "/archive:\001*\022\254\001\n\025UnArchiveOrganization\022)." +
+      "api.v0alpha.UnArchiveOrganizationRequest" +
+      "\032*.api.v0alpha.UnArchiveOrganizationResp" +
+      "onse\"<\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002,\"\'/api/v0alpha/org" +
+      "/organization/unarchive:\001*\022\274\001\n\031ListArchi" +
+      "vedOrganizations\022-.api.v0alpha.ListArchi" +
+      "vedOrganizationsRequest\032..api.v0alpha.Li" +
+      "stArchivedOrganizationsResponse\"@\272\270\221\002\005\n\003" +
+      "\010\310\001\202\323\344\223\0020\"+/api/v0alpha/org/organization" +
+      "/archived/list:\001*\022\260\001\n\026GetOrganizationPro" +
+      "file\022*.api.v0alpha.GetOrganizationProfil" +
+      "eRequest\032+.api.v0alpha.GetOrganizationPr" +
+      "ofileResponse\"=\272\270\221\002\004\n\002\010e\202\323\344\223\002.\")/api/v0a" +
+      "lpha/org/organization/profile/get:\001*\022\276\001\n" +
+      "\032GetOrganizationProfileById\022..api.v0alph" +
+      "a.GetOrganizationProfileByIdRequest\032+.ap" +
+      "i.v0alpha.GetOrganizationProfileResponse" +
+      "\"C\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0023\"./api/v0alpha/org/org" +
+      "anization/profile/byid/get:\001*\022\310\001\n\034ListOr" +
+      "ganizationDescriptions\0220.api.v0alpha.Lis" +
+      "tOrganizationDescriptionsRequest\0321.api.v" +
+      "0alpha.ListOrganizationDescriptionsRespo" +
+      "nse\"C\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0023\"./api/v0alpha/org/" +
+      "organization/description/list:\001*\022\310\001\n\031Lis" +
+      "tRegionalOrganizations\022-.api.v0alpha.Lis" +
+      "tRegionalOrganizationsRequest\032..api.v0al" +
+      "pha.ListRegionalOrganizationsResponse\"L\272" +
+      "\270\221\002\005\n\003\010\310\001\202\323\344\223\002<\"7/api/v0alpha/org/organi" +
+      "zation/description/regional/list:\001*\022\233\001\n\021" +
+      "UpdateP3OwningOrg\022%.api.v0alpha.UpdateP3" +
+      "OwningOrgRequest\032&.api.v0alpha.UpdateP3O" +
+      "wningOrgResponse\"7\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002\'\"\"/api" +
+      "/v0alpha/org/updatep3owningorg:\001*\022\217\001\n\016Ge" +
+      "tP3OwningOrg\022\".api.v0alpha.GetP3OwningOr" +
+      "gRequest\032#.api.v0alpha.GetP3OwningOrgRes" +
+      "ponse\"4\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002$\"\037/api/v0alpha/or" +
+      "g/getp3owningorg:\001*\022\314\001\n ListOrganization" +
+      "UserDescriptions\0224.api.v0alpha.ListOrgan" +
+      "izationUserDescriptionsRequest\0325.api.v0a" +
+      "lpha.ListOrganizationUserDescriptionsRes" +
+      "ponse\";\272\270\221\002\004\n\002\010e\202\323\344\223\002,\"\'/api/v0alpha/org" +
+      "/user/descriptions/list:\001*\022\303\001\n\031AdminList" +
+      "UserDescriptions\022-.api.v0alpha.AdminList" +
+      "UserDescriptionsRequest\032..api.v0alpha.Ad" +
+      "minListUserDescriptionsResponse\"E\272\270\221\002\005\n\003" +
+      "\010\310\001\202\323\344\223\0025\"0/api/v0alpha/org/all/user/des" +
+      "criptions/adminlist:\001*0\001\022\256\001\n\024ListUserDes" +
+      "criptions\022(.api.v0alpha.ListUserDescript" +
+      "ionsRequest\032).api.v0alpha.ListUserDescri" +
+      "ptionsResponse\"?\272\270\221\002\004\n\002\010e\202\323\344\223\0020\"+/api/v0" +
+      "alpha/org/all/user/descriptions/list:\001*0" +
+      "\001\022\226\001\n\020GetUserDirectory\022$.api.v0alpha.Get" +
+      "UserDirectoryRequest\032%.api.v0alpha.GetUs" +
+      "erDirectoryResponse\"5\272\270\221\002\002\030\001\202\323\344\223\002(\"#/api" +
+      "/v0alpha/org/user/directory/get:\001*\022}\n\nGe" +
+      "tRegions\022\036.api.v0alpha.GetRegionsRequest" +
+      "\032\037.api.v0alpha.GetRegionsResponse\".\272\270\221\002\002" +
+      "\030\001\202\323\344\223\002!\"\034/api/v0alpha/org/region/list:\001" +
+      "*\022\207\001\n\020GetMyUserDetails\022$.api.v0alpha.Get" +
+      "MyUserDetailsRequest\032\030.api.v0alpha.UserD" +
+      "etails\"3\272\270\221\002\004\n\002\010y\202\323\344\223\002$\"\037/api/v0alpha/or" +
+      "g/user/mydetails:\001*\022\201\001\n\016GetUserDetails\022\"" +
+      ".api.v0alpha.GetUserDetailsRequest\032\030.api" +
+      ".v0alpha.UserDetails\"1\272\270\221\002\004\n\002\010e\202\323\344\223\002\"\"\035/" +
+      "api/v0alpha/org/user/details:\001*\022\222\001\n\023Admi" +
+      "nGetUserDetails\022\'.api.v0alpha.AdminGetUs" +
+      "erDetailsRequest\032\030.api.v0alpha.UserDetai" +
+      "ls\"8\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002(\"#/api/v0alpha/org/a" +
+      "dmin/user/details:\001*\022\215\001\n\rGetAgentUsers\022!" +
+      ".api.v0alpha.GetAgentUsersRequest\032\".api." +
+      "v0alpha.GetAgentUsersResponse\"5\272\270\221\002\005\n\003\010\220" +
+      "\003\202\323\344\223\002%\" /api/v0alpha/org/user/agents/ge" +
+      "t:\001*\022\230\001\n\020GetAgentSettings\022$.api.v0alpha." +
+      "GetAgentSettingsRequest\032%.api.v0alpha.Ge" +
+      "tAgentSettingsResponse\"7\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002\'" +
+      "\"\"/api/v0alpha/org/agentsettings/get:\001*\022" +
+      "\247\001\n\024GetAgentProfileGroup\022(.api.v0alpha.G" +
+      "etAgentProfileGroupRequest\032).api.v0alpha" +
+      ".GetAgentProfileGroupResponse\":\272\270\221\002\004\n\002\010e" +
+      "\202\323\344\223\002+\"&/api/v0alpha/org/agentprofilegro" +
+      "up/get:\001*\022\263\001\n\027UpdateAgentProfileGroup\022+." +
+      "api.v0alpha.UpdateAgentProfileGroupReque" +
+      "st\032,.api.v0alpha.UpdateAgentProfileGroup" +
+      "Response\"=\272\270\221\002\004\n\002\010d\202\323\344\223\002.\")/api/v0alpha/" +
+      "org/agentprofilegroup/update:\001*\022\263\001\n\027Crea" +
+      "teAgentProfileGroup\022+.api.v0alpha.Create" +
+      "AgentProfileGroupRequest\032,.api.v0alpha.C" +
+      "reateAgentProfileGroupResponse\"=\272\270\221\002\004\n\002\010" +
+      "d\202\323\344\223\002.\")/api/v0alpha/org/agentprofilegr" +
+      "oup/create:\001*\022\256\001\n\026ListAgentProfileGroups" +
+      "\022*.api.v0alpha.ListAgentProfileGroupsReq" +
+      "uest\032+.api.v0alpha.ListAgentProfileGroup" +
+      "sResponse\";\272\270\221\002\004\n\002\010e\202\323\344\223\002,\"\'/api/v0alpha" +
+      "/org/agentprofilegroup/list:\001*\022\263\001\n\027Delet" +
+      "eAgentProfileGroup\022+.api.v0alpha.DeleteA" +
+      "gentProfileGroupRequest\032,.api.v0alpha.De" +
+      "leteAgentProfileGroupResponse\"=\272\270\221\002\004\n\002\010d" +
+      "\202\323\344\223\002.\")/api/v0alpha/org/agentprofilegro" +
+      "up/delete:\001*\022\266\001\n\030AssignAgentProfileGroup" +
+      "s\022,.api.v0alpha.AssignAgentProfileGroups" +
+      "Request\032-.api.v0alpha.AssignAgentProfile" +
+      "GroupsResponse\"=\272\270\221\002\004\n\002\010d\202\323\344\223\002.\")/api/v0" +
+      "alpha/org/agentprofilegroup/assign:\001*\022\205\001" +
+      "\n\nUpdateUser\022\036.api.v0alpha.UpdateUserReq" +
+      "uest\032\037.api.v0alpha.UpdateUserResponse\"6\272" +
+      "\270\221\002\004\n\002\010w\202\323\344\223\002\'\"\"/api/v0alpha/org/user/ad" +
+      "min/update:\001*\022\205\001\n\014UpdateMyUser\022 .api.v0a" +
+      "lpha.UpdateMyUserRequest\032!.api.v0alpha.U" +
+      "pdateMyUserResponse\"0\272\270\221\002\004\n\002\010y\202\323\344\223\002!\"\034/a" +
+      "pi/v0alpha/org/user/update:\001*\022\250\001\n\024Update" +
+      "UserByCallerId\022(.api.v0alpha.UpdateUserB" +
+      "yCallerIdRequest\032).api.v0alpha.UpdateUse" +
+      "rByCallerIdResponse\";\272\270\221\002\004\n\002\010z\202\323\344\223\002,\"\'/a" +
+      "pi/v0alpha/org/user/update/bycallerid:\001*" +
+      "\022\177\n\nCreateUser\022\036.api.v0alpha.CreateUserR" +
+      "equest\032\037.api.v0alpha.CreateUserResponse\"" +
+      "0\272\270\221\002\004\n\002\010v\202\323\344\223\002!\"\034/api/v0alpha/org/user/" +
+      "create:\001*\022\233\001\n\021CreateUserByOrgId\022%.api.v0" +
+      "alpha.CreateUserByOrgIdRequest\032&.api.v0a" +
+      "lpha.CreateUserByOrgIdResponse\"7\272\270\221\002\005\n\003\010" +
+      "\310\001\202\323\344\223\002\'\"\"/api/v0alpha/org/user/admin/cr" +
+      "eate:\001*\022\241\001\n\023CreateDelegatedUser\022\'.api.v0" +
+      "alpha.CreateDelegatedUserRequest\032(.api.v" +
+      "0alpha.CreateDelegatedUserResponse\"7\272\270\221\002" +
+      "\002\030\001\202\323\344\223\002*\"%/api/v0alpha/org/delegateduse" +
+      "r/create:\001*\022\251\001\n\022UpdateUserPassword\022&.api" +
+      ".v0alpha.UpdateUserPasswordRequest\032\'.api" +
+      ".v0alpha.UpdateUserPasswordResponse\"B\272\270\221" +
       "\002\004\n\002\010w\202\323\344\223\0023\"./api/v0alpha/org/user/upda" +
-      "te/password/byuserid:\001*\022\276\001\n\031UpdateUserPa" +
-      "sswordByOrgId\022-.api.v0alpha.UpdateUserPa" +
-      "sswordByOrgIdRequest\032..api.v0alpha.Updat" +
-      "eUserPasswordByOrgIdResponse\"B\272\270\221\002\005\n\003\010\310\001" +
-      "\202\323\344\223\0022\"-/api/v0alpha/org/user/update/pas" +
-      "sword/byorgid:\001*\022\305\001\n\035ResetUserRequirePas" +
-      "swordReset\0221.api.v0alpha.ResetUserRequir" +
-      "ePasswordResetRequest\0322.api.v0alpha.Rese" +
-      "tUserRequirePasswordResetResponse\"=\272\270\221\002\002" +
-      "\030\001\202\323\344\223\0020\"+/api/v0alpha/org/user/resetpas" +
-      "swordrequired:\001*\022\273\001\n\032GetMyUserPasswordRe" +
-      "setLink\022..api.v0alpha.GetMyUserPasswordR" +
-      "esetLinkRequest\032/.api.v0alpha.GetMyUserP" +
-      "asswordResetLinkResponse\"<\272\270\221\002\004\n\002\010x\202\323\344\223\002" +
-      "-\"(/api/v0alpha/org/user/password/resetl" +
-      "ink:\001*\022\265\001\n\030GetUserPasswordResetLink\022,.ap" +
-      "i.v0alpha.GetUserPasswordResetLinkReques" +
-      "t\032-.api.v0alpha.GetUserPasswordResetLink" +
-      "Response\"<\272\270\221\002\004\n\002\010w\202\323\344\223\002-\"(/api/v0alpha/" +
-      "org/user/password/resetlink:\001*\022\323\001\n\037GetUs" +
-      "erPasswordResetLinkByOrgId\0223.api.v0alpha" +
-      ".GetUserPasswordResetLinkByOrgIdRequest\032" +
-      "4.api.v0alpha.GetUserPasswordResetLinkBy" +
-      "OrgIdResponse\"E\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0025\"0/api/v0" +
-      "alpha/org/user/password/resetlink/byorgi" +
-      "d:\001*\022\244\001\n\024GetUserEmailVerified\022(.api.v0al" +
-      "pha.GetUserEmailVerifiedRequest\032).api.v0" +
-      "alpha.GetUserEmailVerifiedResponse\"7\272\270\221\002" +
-      "\004\n\002\010w\202\323\344\223\002(\"#/api/v0alpha/org/user/email" +
-      "verified:\001*\022\302\001\n\033GetUserEmailVerifiedByOr" +
-      "gId\022/.api.v0alpha.GetUserEmailVerifiedBy" +
-      "OrgIdRequest\0320.api.v0alpha.GetUserEmailV" +
-      "erifiedByOrgIdResponse\"@\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0020" +
-      "\"+/api/v0alpha/org/user/emailverified/by" +
-      "orgid:\001*\022\330\001\n SendUserVerificationEmailBy" +
-      "OrgId\0224.api.v0alpha.SendUserVerification" +
-      "EmailByOrgIdRequest\0325.api.v0alpha.SendUs" +
-      "erVerificationEmailByOrgIdResponse\"G\272\270\221\002" +
-      "\005\n\003\010\310\001\202\323\344\223\0027\"2/api/v0alpha/org/user/send" +
-      "verificationemailbyorgid:\001*\022\273\001\n\031SendUser" +
-      "VerificationEmail\022-.api.v0alpha.SendUser" +
-      "VerificationEmailRequest\032..api.v0alpha.S" +
-      "endUserVerificationEmailResponse\"?\272\270\221\002\004\n" +
-      "\002\010w\202\323\344\223\0020\"+/api/v0alpha/org/user/sendver" +
-      "ificationemail:\001*\022\344\001\n\"ManualUserEmailVer" +
-      "ificationByOrgId\0226.api.v0alpha.ManualUse" +
-      "rEmailVerificationByOrgIdRequest\0327.api.v" +
-      "0alpha.ManualUserEmailVerificationByOrgI" +
-      "dResponse\"M\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002=\"8/api/v0alph" +
-      "a/org/user/manualuseremailverificationby" +
-      "orgid:\001*\022\307\001\n\033ManualUserEmailVerification" +
-      "\022/.api.v0alpha.ManualUserEmailVerificati" +
-      "onRequest\0320.api.v0alpha.ManualUserEmailV" +
-      "erificationResponse\"E\272\270\221\002\004\n\002\010w\202\323\344\223\0026\"1/a" +
-      "pi/v0alpha/org/user/manualuseremailverif" +
-      "ication:\001*\022~\n\020GetTempUserToken\022 .api.v0a" +
-      "lpha.GetTempUserTokenReq\032 .api.v0alpha.G" +
-      "etTempUserTokenRes\"&\202\323\344\223\002 \"\033/api/v0alpha" +
-      "/org/user/token:\001*\022\251\001\n\030GetTempUserTokenB" +
-      "yUserId\022(.api.v0alpha.GetTempUserTokenBy" +
-      "UserIdReq\032(.api.v0alpha.GetTempUserToken" +
-      "ByUserIdRes\"9\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002)\"$/api/v0al" +
-      "pha/org/user/token/byuserid:\001*\022\226\001\n\020GetCo" +
-      "untriesList\022$.api.v0alpha.GetCountriesLi" +
-      "stRequest\032%.api.v0alpha.GetCountriesList" +
-      "Response\"5\272\270\221\002\002\030\001\202\323\344\223\002(\"#/api/v0alpha/or" +
-      "g/countries/list/get:\001*\022\276\001\n\031GetAdminClie" +
-      "ntPreferences\022-.api.v0alpha.GetAdminClie" +
-      "ntPreferencesRequest\032..api.v0alpha.GetAd" +
-      "minClientPreferencesResponse\"B\272\270\221\002\005\n\003\010\310\001" +
-      "\202\323\344\223\0022\"-/api/v0alpha/org/admin/client/pr" +
-      "eferences/get:\001*\022\312\001\n\034UpdateAdminClientPr" +
-      "eferences\0220.api.v0alpha.UpdateAdminClien" +
-      "tPreferencesRequest\0321.api.v0alpha.Update" +
-      "AdminClientPreferencesResponse\"E\272\270\221\002\005\n\003\010" +
-      "\310\001\202\323\344\223\0025\"0/api/v0alpha/org/admin/client/" +
-      "preferences/update:\001*\022\222\001\n\016GetPermissions" +
-      "\022\".api.v0alpha.GetPermissionsRequest\032#.a" +
-      "pi.v0alpha.GetPermissionsResponse\"7\272\270\221\002\002" +
-      "\030\001\202\323\344\223\002*\"%/api/v0alpha/org/user/permissi" +
-      "ons/get:\001*\022\332\001\n$RevokeAccountOwnerPermiss" +
-      "ionFromUser\0228.api.v0alpha.RevokeAccountO" +
-      "wnerPermissionFromUserRequest\0329.api.v0al" +
-      "pha.RevokeAccountOwnerPermissionFromUser" +
-      "Response\"=\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002-\"(/api/v0alpha" +
-      "/org/user/permissions/revoke:\001*\022\244\001\n\022Upda" +
-      "teUserDisabled\022&.api.v0alpha.UpdateUserD" +
-      "isabledRequest\032\'.api.v0alpha.UpdateUserD" +
-      "isabledResponse\"=\272\270\221\002\004\n\002\010w\202\323\344\223\002.\")/api/v" +
-      "0alpha/org/user/update/userdisabled:\001*\022\300" +
-      "\001\n\031UpdateUserDisabledByOrgId\022-.api.v0alp" +
-      "ha.UpdateUserDisabledByOrgIdRequest\032..ap" +
-      "i.v0alpha.UpdateUserDisabledByOrgIdRespo" +
-      "nse\"D\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0024\"//api/v0alpha/org/" +
-      "user/admin/update/userdisabled:\001*\022\303\001\n\027Up" +
-      "dateBulkUsersDisabled\022+.api.v0alpha.Upda" +
-      "teBulkUsersDisabledRequest\032,.api.v0alpha" +
-      ".UpdateBulkUsersDisabledResponse\"M\272\270\221\002\004\n" +
-      "\002\010w\202\323\344\223\002>\"9/api/v0alpha/org/user/permiss" +
-      "ions/userdisabled/updatebulk:\001*\022\317\001\n\034GetO" +
-      "rgBillingSettingsByOrgId\0220.api.v0alpha.G" +
-      "etOrgBillingSettingsByOrgIdRequest\0321.api" +
-      ".v0alpha.GetOrgBillingSettingsByOrgIdRes" +
-      "ponse\"J\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002:\"5/api/v0alpha/or" +
-      "g/billing/getorgbillingsettingsbyorgid:\001" +
-      "*\022\262\001\n\025GetOrgBillingSettings\022).api.v0alph" +
-      "a.GetOrgBillingSettingsRequest\032*.api.v0a" +
-      "lpha.GetOrgBillingSettingsResponse\"B\272\270\221\002" +
-      "\004\n\002\010e\202\323\344\223\0023\"./api/v0alpha/org/billing/ge" +
-      "torgbillingsettings:\001*\022\263\001\n\025SetOrgBilling" +
-      "Settings\022).api.v0alpha.SetOrgBillingSett" +
-      "ingsRequest\032*.api.v0alpha.SetOrgBillingS" +
-      "ettingsResponse\"C\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0023\"./api/" +
-      "v0alpha/org/billing/setorgbillingsetting" +
-      "s:\001*\022\263\001\n\025AddOrgBillingOverride\022).api.v0a" +
-      "lpha.AddOrgBillingOverrideRequest\032*.api." +
-      "v0alpha.AddOrgBillingOverrideResponse\"C\272" +
-      "\270\221\002\005\n\003\010\310\001\202\323\344\223\0023\"./api/v0alpha/org/billin" +
-      "g/addorgbillingoverride:\001*\022\277\001\n\030RemoveOrg" +
-      "BillingOverride\022,.api.v0alpha.RemoveOrgB" +
-      "illingOverrideRequest\032-.api.v0alpha.Remo" +
-      "veOrgBillingOverrideResponse\"F\272\270\221\002\005\n\003\010\310\001" +
-      "\202\323\344\223\0026\"1/api/v0alpha/org/billing/removeo" +
-      "rgbillingoverride:\001*\022\317\001\n\034GetSystemDefaul" +
-      "tBillingRates\0220.api.v0alpha.GetSystemDef" +
-      "aultBillingRatesRequest\0321.api.v0alpha.Ge" +
-      "tSystemDefaultBillingRatesResponse\"J\272\270\221\002" +
-      "\005\n\003\010\310\001\202\323\344\223\002:\"5/api/v0alpha/org/billing/g" +
-      "etsystemdefaultbillingrates:\001*\022\303\001\n\033ListP" +
-      "ermissionGroupsByOrgId\022/.api.v0alpha.Lis" +
-      "tPermissionGroupsByOrgIdRequest\0320.api.v0" +
-      "alpha.ListPermissionGroupsByOrgIdRespons" +
-      "e\"A\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0021\",/api/v0alpha/org/pe" +
-      "rmissiongroup/listbyorgid:\001*\022\246\001\n\024ListPer" +
-      "missionGroups\022(.api.v0alpha.ListPermissi" +
-      "onGroupsRequest\032).api.v0alpha.ListPermis" +
-      "sionGroupsResponse\"9\272\270\221\002\004\n\002\010e\202\323\344\223\002*\"%/ap" +
-      "i/v0alpha/org/permissiongroup/list:\001*\022\253\001" +
-      "\n\025CreatePermissionGroup\022).api.v0alpha.Cr" +
-      "eatePermissionGroupRequest\032*.api.v0alpha" +
-      ".CreatePermissionGroupResponse\";\272\270\221\002\004\n\002\010" +
-      "n\202\323\344\223\002,\"\'/api/v0alpha/org/permissiongrou" +
-      "p/create:\001*\022\253\001\n\025UpdatePermissionGroup\022)." +
-      "api.v0alpha.UpdatePermissionGroupRequest" +
-      "\032*.api.v0alpha.UpdatePermissionGroupResp" +
-      "onse\";\272\270\221\002\004\n\002\010n\202\323\344\223\002,\"\'/api/v0alpha/org/" +
-      "permissiongroup/update:\001*\022\253\001\n\025DeletePerm" +
-      "issionGroup\022).api.v0alpha.DeletePermissi" +
-      "onGroupRequest\032*.api.v0alpha.DeletePermi" +
-      "ssionGroupResponse\";\272\270\221\002\004\n\002\010n\202\323\344\223\002,\"\'/ap" +
-      "i/v0alpha/org/permissiongroup/delete:\001*\022" +
-      "\364\001\n\'AssignUserToAccountOwnerPermissionGr" +
-      "oup\022;.api.v0alpha.AssignUserToAccountOwn" +
-      "erPermissionGroupRequest\032<.api.v0alpha.A" +
-      "ssignUserToAccountOwnerPermissionGroupRe" +
-      "sponse\"N\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002>\"9/api/v0alpha/o" +
-      "rg/permissiongroup/admin/assignaccountow" +
-      "ner:\001*\022\267\001\n\031AssignUserPermissionGroup\022-.a" +
-      "pi.v0alpha.AssignUserPermissionGroupRequ" +
-      "est\032..api.v0alpha.AssignUserPermissionGr" +
-      "oupResponse\";\272\270\221\002\004\n\002\010o\202\323\344\223\002,\"\'/api/v0alp" +
-      "ha/org/permissiongroup/assign:\001*\022\277\001\n\032Ass" +
-      "ignUsersPermissionGroup\022..api.v0alpha.As" +
-      "signUsersPermissionGroupRequest\032/.api.v0" +
-      "alpha.AssignUsersPermissionGroupResponse",
-      "\"@\272\270\221\002\004\n\002\010o\202\323\344\223\0021\",/api/v0alpha/org/perm" +
-      "issiongroup/assignusers:\001*\022\310\001\n\035UpdateUse" +
-      "rNeoPermissionGroups\0221.api.v0alpha.Updat" +
-      "eUserNeoPermissionGroupsRequest\0322.api.v0" +
-      "alpha.UpdateUserNeoPermissionGroupsRespo" +
-      "nse\"@\272\270\221\002\004\n\002\010o\202\323\344\223\0021\",/api/v0alpha/org/p" +
-      "ermissiongroup/user/update:\001*\022\267\001\n\031Revoke" +
-      "UserPermissionGroup\022-.api.v0alpha.Revoke" +
-      "UserPermissionGroupRequest\032..api.v0alpha" +
-      ".RevokeUserPermissionGroupResponse\";\272\270\221\002" +
-      "\004\n\002\010o\202\323\344\223\002,\"\'/api/v0alpha/org/permission" +
-      "group/revoke:\001*\022\277\001\n\032RevokeUsersPermissio" +
-      "nGroup\022..api.v0alpha.RevokeUsersPermissi" +
-      "onGroupRequest\032/.api.v0alpha.RevokeUsers" +
-      "PermissionGroupResponse\"@\272\270\221\002\004\n\002\010o\202\323\344\223\0021" +
-      "\",/api/v0alpha/org/permissiongroup/revok" +
-      "eusers:\001*\022\302\001\n\033InitDefaultPermissionGroup" +
-      "s\022/.api.v0alpha.InitDefaultPermissionGro" +
-      "upsRequest\0320.api.v0alpha.InitDefaultPerm" +
-      "issionGroupsResponse\"@\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0020\"+" +
-      "/api/v0alpha/org/permissiongroup/initial" +
-      "ize:\001*\022\271\001\n*AddPermissionToAccountOwnerPe" +
-      "rmissionGroup\022>.api.v0alpha.AddPermissio" +
-      "nToAccountOwnerPermissionGroupRequest\032?." +
-      "api.v0alpha.AddPermissionToAccountOwnerP" +
-      "ermissionGroupResponse\"\n\272\270\221\002\005\n\003\010\310\001\022\302\001\n-R" +
-      "evokePermissionToAccountOwnerPermissionG" +
-      "roup\022A.api.v0alpha.RevokePermissionToAcc" +
-      "ountOwnerPermissionGroupRequest\032B.api.v0" +
-      "alpha.RevokePermissionToAccountOwnerPerm" +
-      "issionGroupResponse\"\n\272\270\221\002\005\n\003\010\310\001\022\225\001\n\036AddP" +
-      "ermissionToOrgDefaultGroup\0222.api.v0alpha" +
-      ".AddPermissionToOrgDefaultGroupRequest\0323" +
-      ".api.v0alpha.AddPermissionToOrgDefaultGr" +
-      "oupResponse\"\n\272\270\221\002\005\n\003\010\346\001\022\244\001\n#RemovePermis" +
-      "sionFromOrgDefaultGroup\0227.api.v0alpha.Re" +
-      "movePermissionFromOrgDefaultGroupRequest" +
-      "\0328.api.v0alpha.RemovePermissionFromOrgDe" +
-      "faultGroupResponse\"\n\272\270\221\002\005\n\003\010\346\001\022\214\001\n\033GetOr" +
-      "gDefaultSuperUserGroup\022/.api.v0alpha.Get" +
-      "OrgDefaultSuperUserGroupRequest\0320.api.v0" +
-      "alpha.GetOrgDefaultSuperUserGroupRespons" +
-      "e\"\n\272\270\221\002\005\n\003\010\346\001\022\317\001\n\035ListP3PermissionGroups" +
-      "ByOrgId\0221.api.v0alpha.ListP3PermissionGr" +
-      "oupsByOrgIdRequest\0322.api.v0alpha.ListP3P" +
-      "ermissionGroupsByOrgIdResponse\"G\272\270\221\002\005\n\003\010" +
-      "\310\001\202\323\344\223\0027\"2/api/v0alpha/org/permissions/p" +
-      "3/groups/listbyorgid:\001*\022\262\001\n\026ListP3Permis" +
-      "sionGroups\022*.api.v0alpha.ListP3Permissio" +
-      "nGroupsRequest\032+.api.v0alpha.ListP3Permi" +
-      "ssionGroupsResponse\"?\272\270\221\002\004\n\002\010e\202\323\344\223\0020\"+/a" +
-      "pi/v0alpha/org/permissions/p3/groups/lis" +
-      "t:\001*\022\223\001\n\rAddUserRegion\022!.api.v0alpha.Add" +
-      "UserRegionRequest\032\".api.v0alpha.AddUserR" +
-      "egionResponse\";\272\270\221\002\005\n\003\010\346\001\202\323\344\223\002+\"&/api/v0" +
-      "alpha/org/user/addregion/update:\001*\022\237\001\n\020R" +
-      "emoveUserRegion\022$.api.v0alpha.RemoveUser" +
-      "RegionRequest\032%.api.v0alpha.RemoveUserRe" +
-      "gionResponse\">\272\270\221\002\005\n\003\010\346\001\202\323\344\223\002.\")/api/v0a" +
-      "lpha/org/user/removeregion/update:\001*\022\260\001\n" +
-      "\027CreateP3PermissionGroup\022+.api.v0alpha.C" +
-      "reateP3PermissionGroupRequest\032,.api.v0al" +
-      "pha.CreateP3PermissionGroupResponse\":\272\270\221" +
-      "\002\004\n\002\010n\202\323\344\223\002+\"&/api/v0alpha/org/permissio" +
-      "ns/p3/create:\001*\022\315\001\n\036UpdateP3PermissionGr" +
-      "oupByOrgId\0222.api.v0alpha.UpdateP3Permiss" +
-      "ionGroupByOrgIdRequest\0323.api.v0alpha.Upd" +
-      "ateP3PermissionGroupByOrgIdResponse\"B\272\270\221" +
-      "\002\005\n\003\010\310\001\202\323\344\223\0022\"-/api/v0alpha/org/permissi" +
-      "ons/p3/updatebyorgid:\001*\022\260\001\n\027UpdateP3Perm" +
-      "issionGroup\022+.api.v0alpha.UpdateP3Permis" +
-      "sionGroupRequest\032,.api.v0alpha.UpdateP3P" +
-      "ermissionGroupResponse\":\272\270\221\002\004\n\002\010n\202\323\344\223\002+\"" +
-      "&/api/v0alpha/org/permissions/p3/update:" +
-      "\001*\022\260\001\n\027DeleteP3PermissionGroup\022+.api.v0a" +
-      "lpha.DeleteP3PermissionGroupRequest\032,.ap" +
-      "i.v0alpha.DeleteP3PermissionGroupRespons" +
-      "e\":\272\270\221\002\004\n\002\010n\202\323\344\223\002+\"&/api/v0alpha/org/per" +
-      "missions/p3/delete:\001*\022\305\001\n\034AssignUsersP3P" +
-      "ermissionGroup\0220.api.v0alpha.AssignUsers" +
-      "P3PermissionGroupRequest\0321.api.v0alpha.A" +
-      "ssignUsersP3PermissionGroupResponse\"@\272\270\221" +
-      "\002\004\n\002\010o\202\323\344\223\0021\",/api/v0alpha/org/permissio" +
-      "ns/p3/group/assign:\001*\022\234\001\n\016AddLoginToUser" +
-      "\022\".api.v0alpha.AddLoginToUserRequest\032#.a" +
-      "pi.v0alpha.AddLoginToUserResponse\"A\272\270\221\002\005" +
-      "\n\003\010\310\001\202\323\344\223\0021\",/api/v0alpha/org/permission" +
-      "s/p3/create/login:\001*\022\305\001\n\034RevokeUsersP3Pe" +
-      "rmissionGroup\0220.api.v0alpha.RevokeUsersP" +
-      "3PermissionGroupRequest\0321.api.v0alpha.Re" +
-      "vokeUsersP3PermissionGroupResponse\"@\272\270\221\002" +
-      "\004\n\002\010o\202\323\344\223\0021\",/api/v0alpha/org/permission" +
-      "s/p3/group/revoke:\001*\022\264\001\n\025GetContactPrefe" +
-      "rences\022).api.v0alpha.GetContactPreferenc" +
-      "esRequest\032*.api.v0alpha.GetContactPrefer" +
-      "encesResponse\"D\272\270\221\002\004\n\002\010e\202\323\344\223\0025\"0/api/v0a" +
-      "lpha/org/preferences/reports/contact/get" +
-      ":\001*\022\300\001\n\030UpdateContactPreferences\022,.api.v" +
-      "0alpha.UpdateContactPreferencesRequest\032-" +
-      ".api.v0alpha.UpdateContactPreferencesRes" +
-      "ponse\"G\272\270\221\002\004\n\002\010d\202\323\344\223\0028\"3/api/v0alpha/org" +
-      "/preferences/reports/contact/update:\001*\022\300" +
-      "\001\n\030GetCompliancePreferences\022,.api.v0alph" +
-      "a.GetCompliancePreferencesRequest\032-.api." +
-      "v0alpha.GetCompliancePreferencesResponse" +
-      "\"G\272\270\221\002\004\n\002\010e\202\323\344\223\0028\"3/api/v0alpha/org/pref" +
-      "erences/reports/compliance/get:\001*\022\314\001\n\033Up" +
-      "dateCompliancePreferences\022/.api.v0alpha." +
-      "UpdateCompliancePreferencesRequest\0320.api" +
-      ".v0alpha.UpdateCompliancePreferencesResp" +
-      "onse\"J\272\270\221\002\004\n\002\010d\202\323\344\223\002;\"6/api/v0alpha/org/" +
-      "preferences/reports/compliance/update:\001*" +
-      "\022\254\001\n\023GetAgentPreferences\022\'.api.v0alpha.G" +
-      "etAgentPreferencesRequest\032(.api.v0alpha." +
-      "GetAgentPreferencesResponse\"B\272\270\221\002\004\n\002\010e\202\323" +
-      "\344\223\0023\"./api/v0alpha/org/preferences/repor" +
-      "ts/agent/get:\001*\022\270\001\n\026UpdateAgentPreferenc" +
-      "es\022*.api.v0alpha.UpdateAgentPreferencesR" +
-      "equest\032+.api.v0alpha.UpdateAgentPreferen" +
-      "cesResponse\"E\272\270\221\002\004\n\002\010d\202\323\344\223\0026\"1/api/v0alp" +
-      "ha/org/preferences/reports/agent/update:" +
-      "\001*\022\310\001\n\032GetOrganizationPreferences\022..api." +
-      "v0alpha.GetOrganizationPreferencesReques" +
-      "t\032/.api.v0alpha.GetOrganizationPreferenc" +
-      "esResponse\"I\272\270\221\002\004\n\002\010e\202\323\344\223\002:\"5/api/v0alph" +
-      "a/org/preferences/reports/organization/g" +
-      "et:\001*\022\324\001\n\035UpdateOrganizationPreferences\022" +
-      "1.api.v0alpha.UpdateOrganizationPreferen" +
-      "cesRequest\0322.api.v0alpha.UpdateOrganizat" +
-      "ionPreferencesResponse\"L\272\270\221\002\004\n\002\010d\202\323\344\223\002=\"" +
-      "8/api/v0alpha/org/preferences/reports/or" +
-      "ganization/update:\001*\022\270\001\n\026GetSchedulePref" +
-      "erences\022*.api.v0alpha.GetSchedulePrefere" +
-      "ncesRequest\032+.api.v0alpha.GetSchedulePre" +
-      "ferencesResponse\"E\272\270\221\002\004\n\002\010e\202\323\344\223\0026\"1/api/" +
-      "v0alpha/org/preferences/reports/schedule" +
-      "/get:\001*\022\304\001\n\031UpdateSchedulePreferences\022-." +
-      "api.v0alpha.UpdateSchedulePreferencesReq" +
-      "uest\032..api.v0alpha.UpdateSchedulePrefere" +
-      "ncesResponse\"H\272\270\221\002\004\n\002\010d\202\323\344\223\0029\"4/api/v0al" +
-      "pha/org/preferences/reports/schedule/upd" +
-      "ate:\001*\022\262\001\n\026GetBusinessPreferences\022*.api." +
-      "v0alpha.GetBusinessPreferencesRequest\032+." +
-      "api.v0alpha.GetBusinessPreferencesRespon" +
-      "se\"?\272\270\221\002\004\n\002\010e\202\323\344\223\0020\"+/api/v0alpha/org/pr" +
-      "eferences/reports/bi/get:\001*\022\276\001\n\031UpdateBu" +
-      "sinessPreferences\022-.api.v0alpha.UpdateBu" +
-      "sinessPreferencesRequest\032..api.v0alpha.U" +
-      "pdateBusinessPreferencesResponse\"B\272\270\221\002\004\n" +
-      "\002\010d\202\323\344\223\0023\"./api/v0alpha/org/preferences/" +
-      "reports/bi/update:\001*\022\263\001\n\026GetEndOfDayPref" +
-      "erences\022*.api.v0alpha.GetEndOfDayPrefere" +
-      "ncesRequest\032+.api.v0alpha.GetEndOfDayPre" +
-      "ferencesResponse\"@\272\270\221\002\004\n\002\010e\202\323\344\223\0021\",/api/" +
-      "v0alpha/org/preferences/reports/eod/get:" +
-      "\001*\022\277\001\n\031UpdateEndOfDayPreferences\022-.api.v" +
-      "0alpha.UpdateEndOfDayPreferencesRequest\032" +
-      "..api.v0alpha.UpdateEndOfDayPreferencesR" +
-      "esponse\"C\272\270\221\002\004\n\002\010d\202\323\344\223\0024\"//api/v0alpha/o" +
-      "rg/preferences/reports/eod/update:\001*\022\267\001\n" +
-      "\032GetReportFilterPreferences\022(.api.v0alph" +
-      "a.GetFilterPreferencesRequest\032).api.v0al" +
-      "pha.GetFilterPreferencesResponse\"D\272\270\221\002\004\n" +
-      "\002\010e\202\323\344\223\0025\"0/api/v0alpha/org/preferences/" +
-      "reports/filters/get:\001*\022\303\001\n\035UpdateReportF" +
-      "ilterPreferences\022+.api.v0alpha.UpdateFil" +
-      "terPreferencesRequest\032,.api.v0alpha.Upda" +
-      "teFilterPreferencesResponse\"G\272\270\221\002\004\n\002\010d\202\323" +
-      "\344\223\0028\"3/api/v0alpha/org/preferences/repor" +
-      "ts/filters/update:\001*\022\254\001\n\023GetPhonePrefere" +
-      "nces\022\'.api.v0alpha.GetPhonePreferencesRe" +
-      "quest\032(.api.v0alpha.GetPhonePreferencesR" +
+      "te/password/byuserid:\001*\022\250\001\n\024UpdateMyUser" +
+      "Password\022(.api.v0alpha.UpdateMyUserPassw" +
+      "ordRequest\032).api.v0alpha.UpdateMyUserPas" +
+      "swordResponse\";\272\270\221\002\004\n\002\010x\202\323\344\223\002,\"\'/api/v0a" +
+      "lpha/org/user/update/mypassword:\001*\022\276\001\n\031U" +
+      "pdateUserPasswordByOrgId\022-.api.v0alpha.U" +
+      "pdateUserPasswordByOrgIdRequest\032..api.v0" +
+      "alpha.UpdateUserPasswordByOrgIdResponse\"" +
+      "B\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0022\"-/api/v0alpha/org/user" +
+      "/update/password/byorgid:\001*\022\305\001\n\035ResetUse" +
+      "rRequirePasswordReset\0221.api.v0alpha.Rese" +
+      "tUserRequirePasswordResetRequest\0322.api.v" +
+      "0alpha.ResetUserRequirePasswordResetResp" +
+      "onse\"=\272\270\221\002\002\030\001\202\323\344\223\0020\"+/api/v0alpha/org/us" +
+      "er/resetpasswordrequired:\001*\022\265\001\n\030GetUserP" +
+      "asswordResetLink\022,.api.v0alpha.GetUserPa" +
+      "sswordResetLinkRequest\032-.api.v0alpha.Get" +
+      "UserPasswordResetLinkResponse\"<\272\270\221\002\004\n\002\010w" +
+      "\202\323\344\223\002-\"(/api/v0alpha/org/user/password/r" +
+      "esetlink:\001*\022\275\001\n\032GetMyUserPasswordResetLi" +
+      "nk\022..api.v0alpha.GetMyUserPasswordResetL" +
+      "inkRequest\032/.api.v0alpha.GetMyUserPasswo" +
+      "rdResetLinkResponse\">\272\270\221\002\004\n\002\010x\202\323\344\223\002/\"*/a" +
+      "pi/v0alpha/org/user/mypassword/resetlink" +
+      ":\001*\022\323\001\n\037GetUserPasswordResetLinkByOrgId\022" +
+      "3.api.v0alpha.GetUserPasswordResetLinkBy" +
+      "OrgIdRequest\0324.api.v0alpha.GetUserPasswo" +
+      "rdResetLinkByOrgIdResponse\"E\272\270\221\002\005\n\003\010\310\001\202\323" +
+      "\344\223\0025\"0/api/v0alpha/org/user/password/res" +
+      "etlink/byorgid:\001*\022\244\001\n\024GetUserEmailVerifi" +
+      "ed\022(.api.v0alpha.GetUserEmailVerifiedReq" +
+      "uest\032).api.v0alpha.GetUserEmailVerifiedR" +
+      "esponse\"7\272\270\221\002\004\n\002\010w\202\323\344\223\002(\"#/api/v0alpha/o" +
+      "rg/user/emailverified:\001*\022\302\001\n\033GetUserEmai" +
+      "lVerifiedByOrgId\022/.api.v0alpha.GetUserEm" +
+      "ailVerifiedByOrgIdRequest\0320.api.v0alpha." +
+      "GetUserEmailVerifiedByOrgIdResponse\"@\272\270\221" +
+      "\002\005\n\003\010\310\001\202\323\344\223\0020\"+/api/v0alpha/org/user/ema" +
+      "ilverified/byorgid:\001*\022\330\001\n SendUserVerifi" +
+      "cationEmailByOrgId\0224.api.v0alpha.SendUse" +
+      "rVerificationEmailByOrgIdRequest\0325.api.v" +
+      "0alpha.SendUserVerificationEmailByOrgIdR" +
+      "esponse\"G\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0027\"2/api/v0alpha/" +
+      "org/user/sendverificationemailbyorgid:\001*" +
+      "\022\273\001\n\031SendUserVerificationEmail\022-.api.v0a" +
+      "lpha.SendUserVerificationEmailRequest\032.." +
+      "api.v0alpha.SendUserVerificationEmailRes" +
+      "ponse\"?\272\270\221\002\004\n\002\010w\202\323\344\223\0020\"+/api/v0alpha/org" +
+      "/user/sendverificationemail:\001*\022\344\001\n\"Manua" +
+      "lUserEmailVerificationByOrgId\0226.api.v0al" +
+      "pha.ManualUserEmailVerificationByOrgIdRe" +
+      "quest\0327.api.v0alpha.ManualUserEmailVerif" +
+      "icationByOrgIdResponse\"M\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002=" +
+      "\"8/api/v0alpha/org/user/manualuseremailv" +
+      "erificationbyorgid:\001*\022\307\001\n\033ManualUserEmai" +
+      "lVerification\022/.api.v0alpha.ManualUserEm" +
+      "ailVerificationRequest\0320.api.v0alpha.Man" +
+      "ualUserEmailVerificationResponse\"E\272\270\221\002\004\n" +
+      "\002\010w\202\323\344\223\0026\"1/api/v0alpha/org/user/manualu" +
+      "seremailverification:\001*\022~\n\020GetTempUserTo" +
+      "ken\022 .api.v0alpha.GetTempUserTokenReq\032 ." +
+      "api.v0alpha.GetTempUserTokenRes\"&\202\323\344\223\002 \"" +
+      "\033/api/v0alpha/org/user/token:\001*\022\251\001\n\030GetT" +
+      "empUserTokenByUserId\022(.api.v0alpha.GetTe" +
+      "mpUserTokenByUserIdReq\032(.api.v0alpha.Get" +
+      "TempUserTokenByUserIdRes\"9\272\270\221\002\005\n\003\010\310\001\202\323\344\223" +
+      "\002)\"$/api/v0alpha/org/user/token/byuserid" +
+      ":\001*\022\226\001\n\020GetCountriesList\022$.api.v0alpha.G" +
+      "etCountriesListRequest\032%.api.v0alpha.Get" +
+      "CountriesListResponse\"5\272\270\221\002\002\030\001\202\323\344\223\002(\"#/a" +
+      "pi/v0alpha/org/countries/list/get:\001*\022\276\001\n" +
+      "\031GetAdminClientPreferences\022-.api.v0alpha" +
+      ".GetAdminClientPreferencesRequest\032..api." +
+      "v0alpha.GetAdminClientPreferencesRespons" +
+      "e\"B\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0022\"-/api/v0alpha/org/ad" +
+      "min/client/preferences/get:\001*\022\312\001\n\034Update" +
+      "AdminClientPreferences\0220.api.v0alpha.Upd" +
+      "ateAdminClientPreferencesRequest\0321.api.v" +
+      "0alpha.UpdateAdminClientPreferencesRespo" +
+      "nse\"E\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0025\"0/api/v0alpha/org/" +
+      "admin/client/preferences/update:\001*\022\222\001\n\016G" +
+      "etPermissions\022\".api.v0alpha.GetPermissio" +
+      "nsRequest\032#.api.v0alpha.GetPermissionsRe" +
+      "sponse\"7\272\270\221\002\002\030\001\202\323\344\223\002*\"%/api/v0alpha/org/" +
+      "user/permissions/get:\001*\022\332\001\n$RevokeAccoun" +
+      "tOwnerPermissionFromUser\0228.api.v0alpha.R" +
+      "evokeAccountOwnerPermissionFromUserReque" +
+      "st\0329.api.v0alpha.RevokeAccountOwnerPermi" +
+      "ssionFromUserResponse\"=\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002-\"" +
+      "(/api/v0alpha/org/user/permissions/revok" +
+      "e:\001*\022\244\001\n\022UpdateUserDisabled\022&.api.v0alph" +
+      "a.UpdateUserDisabledRequest\032\'.api.v0alph" +
+      "a.UpdateUserDisabledResponse\"=\272\270\221\002\004\n\002\010w\202" +
+      "\323\344\223\002.\")/api/v0alpha/org/user/update/user" +
+      "disabled:\001*\022\300\001\n\031UpdateUserDisabledByOrgI" +
+      "d\022-.api.v0alpha.UpdateUserDisabledByOrgI" +
+      "dRequest\032..api.v0alpha.UpdateUserDisable" +
+      "dByOrgIdResponse\"D\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0024\"//api" +
+      "/v0alpha/org/user/admin/update/userdisab" +
+      "led:\001*\022\303\001\n\027UpdateBulkUsersDisabled\022+.api" +
+      ".v0alpha.UpdateBulkUsersDisabledRequest\032" +
+      ",.api.v0alpha.UpdateBulkUsersDisabledRes" +
+      "ponse\"M\272\270\221\002\004\n\002\010w\202\323\344\223\002>\"9/api/v0alpha/org" +
+      "/user/permissions/userdisabled/updatebul" +
+      "k:\001*\022\317\001\n\034GetOrgBillingSettingsByOrgId\0220." +
+      "api.v0alpha.GetOrgBillingSettingsByOrgId" +
+      "Request\0321.api.v0alpha.GetOrgBillingSetti" +
+      "ngsByOrgIdResponse\"J\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002:\"5/a" +
+      "pi/v0alpha/org/billing/getorgbillingsett" +
+      "ingsbyorgid:\001*\022\262\001\n\025GetOrgBillingSettings" +
+      "\022).api.v0alpha.GetOrgBillingSettingsRequ" +
+      "est\032*.api.v0alpha.GetOrgBillingSettingsR" +
       "esponse\"B\272\270\221\002\004\n\002\010e\202\323\344\223\0023\"./api/v0alpha/o" +
-      "rg/preferences/reports/phone/get:\001*\022\270\001\n\026" +
-      "UpdatePhonePreferences\022*.api.v0alpha.Upd" +
-      "atePhonePreferencesRequest\032+.api.v0alpha" +
-      ".UpdatePhonePreferencesResponse\"E\272\270\221\002\004\n\002" +
-      "\010d\202\323\344\223\0026\"1/api/v0alpha/org/preferences/r" +
-      "eports/phone/update:\001*\022\321\001\n\036GetDashboardG" +
-      "eneralPreferences\0222.api.v0alpha.GetDashb" +
-      "oardGeneralPreferencesRequest\0323.api.v0al" +
-      "pha.GetDashboardGeneralPreferencesRespon" +
-      "se\"F\272\270\221\002\004\n\002\010e\202\323\344\223\0027\"2/api/v0alpha/org/pr" +
-      "eferences/reports/dashboard/get:\001*\022\335\001\n!U" +
-      "pdateDashboardGeneralPreferences\0225.api.v" +
-      "0alpha.UpdateDashboardGeneralPreferences" +
-      "Request\0326.api.v0alpha.UpdateDashboardGen" +
-      "eralPreferencesResponse\"I\272\270\221\002\004\n\002\010d\202\323\344\223\002:" +
-      "\"5/api/v0alpha/org/preferences/reports/d" +
-      "ashboard/update:\001*\022\264\001\n\025GetWebhookPrefere" +
-      "nces\022).api.v0alpha.GetWebhookPreferences" +
-      "Request\032*.api.v0alpha.GetWebhookPreferen" +
-      "cesResponse\"D\272\270\221\002\004\n\002\010e\202\323\344\223\0025\"0/api/v0alp" +
-      "ha/org/preferences/reports/webhook/get:\001" +
-      "*\022\300\001\n\030UpdateWebhookPreferences\022,.api.v0a" +
-      "lpha.UpdateWebhookPreferencesRequest\032-.a" +
-      "pi.v0alpha.UpdateWebhookPreferencesRespo" +
-      "nse\"G\272\270\221\002\004\n\002\010d\202\323\344\223\0028\"3/api/v0alpha/org/p" +
-      "references/reports/webhook/update:\001*\022\274\001\n" +
-      "\027GetBroadcastPreferences\022+.api.v0alpha.G" +
-      "etBroadcastPreferencesRequest\032,.api.v0al" +
-      "pha.GetBroadcastPreferencesResponse\"F\272\270\221" +
-      "\002\004\n\002\010e\202\323\344\223\0027\"2/api/v0alpha/org/preferenc" +
-      "es/reports/broadcast/get:\001*\022\310\001\n\032UpdateBr" +
-      "oadcastPreferences\022..api.v0alpha.UpdateB" +
-      "roadcastPreferencesRequest\032/.api.v0alpha" +
-      ".UpdateBroadcastPreferencesResponse\"I\272\270\221" +
-      "\002\004\n\002\010d\202\323\344\223\002:\"5/api/v0alpha/org/preferenc" +
-      "es/reports/broadcast/update:\001*\022\320\001\n\034GetAu" +
-      "thenticationPreferences\0220.api.v0alpha.Ge" +
-      "tAuthenticationPreferencesRequest\0321.api." +
-      "v0alpha.GetAuthenticationPreferencesResp" +
-      "onse\"K\272\270\221\002\004\n\002\010e\202\323\344\223\002<\"7/api/v0alpha/org/" +
-      "preferences/reports/authentication/get:\001" +
-      "*\022\334\001\n\037UpdateAuthenticationPreferences\0223." +
-      "api.v0alpha.UpdateAuthenticationPreferen" +
-      "cesRequest\0324.api.v0alpha.UpdateAuthentic" +
-      "ationPreferencesResponse\"N\272\270\221\002\004\n\002\010d\202\323\344\223\002" +
-      "?\":/api/v0alpha/org/preferences/reports/" +
-      "authentication/update:\001*\022\274\001\n\027GetRecordin" +
-      "gPreferences\022+.api.v0alpha.GetRecordingP" +
-      "referencesRequest\032,.api.v0alpha.GetRecor" +
-      "dingPreferencesResponse\"F\272\270\221\002\004\n\002\010e\202\323\344\223\0027" +
-      "\"2/api/v0alpha/org/preferences/reports/r" +
-      "ecording/get:\001*\022\310\001\n\032UpdateRecordingPrefe" +
-      "rences\022..api.v0alpha.UpdateRecordingPref" +
-      "erencesRequest\032/.api.v0alpha.UpdateRecor" +
-      "dingPreferencesResponse\"I\272\270\221\002\004\n\002\010d\202\323\344\223\002:" +
-      "\"5/api/v0alpha/org/preferences/reports/r" +
-      "ecording/update:\001*\022\320\001\n\034GetDashboardQueue" +
-      "Preferences\0220.api.v0alpha.GetDashboardQu" +
-      "euePreferencesRequest\0321.api.v0alpha.GetD" +
-      "ashboardQueuePreferencesResponse\"K\272\270\221\002\004\n" +
-      "\002\010e\202\323\344\223\002<\"7/api/v0alpha/org/preferences/" +
-      "manager/dashboardqueue/get:\001*\022\334\001\n\037Update" +
-      "DashboardQueuePreferences\0223.api.v0alpha." +
-      "UpdateDashboardQueuePreferencesRequest\0324" +
-      ".api.v0alpha.UpdateDashboardQueuePrefere" +
-      "ncesResponse\"N\272\270\221\002\004\n\002\010d\202\323\344\223\002?\":/api/v0al" +
-      "pha/org/preferences/manager/dashboardque" +
-      "ue/update:\001*\022\320\001\n\034GetAgentQuickViewPrefer" +
-      "ences\0220.api.v0alpha.GetAgentQuickViewPre" +
-      "ferencesRequest\0321.api.v0alpha.GetAgentQu" +
-      "ickViewPreferencesResponse\"K\272\270\221\002\004\n\002\010e\202\323\344" +
-      "\223\002<\"7/api/v0alpha/org/preferences/report" +
-      "s/agentquickview/get:\001*\022\304\001\n\034GetVoiceAnal" +
-      "yticsPreferences\0220.api.v0alpha.GetVoiceA" +
-      "nalyticsPreferencesRequest\0321.api.v0alpha" +
-      ".GetVoiceAnalyticsPreferencesResponse\"?\272" +
-      "\270\221\002\004\n\002\010e\202\323\344\223\0020\"+/api/v0alpha/org/prefere" +
-      "nces/vanalytics/get:\001*\022\320\001\n\037UpdateVoiceAn" +
-      "alyticsPreferences\0223.api.v0alpha.UpdateV" +
-      "oiceAnalyticsPreferencesRequest\0324.api.v0" +
-      "alpha.UpdateVoiceAnalyticsPreferencesRes" +
+      "rg/billing/getorgbillingsettings:\001*\022\263\001\n\025" +
+      "SetOrgBillingSettings\022).api.v0alpha.SetO" +
+      "rgBillingSettingsRequest\032*.api.v0alpha.S" +
+      "etOrgBillingSettingsResponse\"C\272\270\221\002\005\n\003\010\310\001" +
+      "\202\323\344\223\0023\"./api/v0alpha/org/billing/setorgb" +
+      "illingsettings:\001*\022\263\001\n\025AddOrgBillingOverr" +
+      "ide\022).api.v0alpha.AddOrgBillingOverrideR" +
+      "equest\032*.api.v0alpha.AddOrgBillingOverri" +
+      "deResponse\"C\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0023\"./api/v0alp" +
+      "ha/org/billing/addorgbillingoverride:\001*\022" +
+      "\277\001\n\030RemoveOrgBillingOverride\022,.api.v0alp" +
+      "ha.RemoveOrgBillingOverrideRequest\032-.api" +
+      ".v0alpha.RemoveOrgBillingOverrideRespons" +
+      "e\"F\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0026\"1/api/v0alpha/org/bi" +
+      "lling/removeorgbillingoverride:\001*\022\317\001\n\034Ge" +
+      "tSystemDefaultBillingRates\0220.api.v0alpha" +
+      ".GetSystemDefaultBillingRatesRequest\0321.a" +
+      "pi.v0alpha.GetSystemDefaultBillingRatesR" +
+      "esponse\"J\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002:\"5/api/v0alpha/" +
+      "org/billing/getsystemdefaultbillingrates" +
+      ":\001*\022\303\001\n\033ListPermissionGroupsByOrgId\022/.ap" +
+      "i.v0alpha.ListPermissionGroupsByOrgIdReq" +
+      "uest\0320.api.v0alpha.ListPermissionGroupsB" +
+      "yOrgIdResponse\"A\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0021\",/api/v" +
+      "0alpha/org/permissiongroup/listbyorgid:\001" +
+      "*\022\246\001\n\024ListPermissionGroups\022(.api.v0alpha" +
+      ".ListPermissionGroupsRequest\032).api.v0alp" +
+      "ha.ListPermissionGroupsResponse\"9\272\270\221\002\004\n\002" +
+      "\010e\202\323\344\223\002*\"%/api/v0alpha/org/permissiongro" +
+      "up/list:\001*\022\253\001\n\025CreatePermissionGroup\022).a" +
+      "pi.v0alpha.CreatePermissionGroupRequest\032" +
+      "*.api.v0alpha.CreatePermissionGroupRespo" +
+      "nse\";\272\270\221\002\004\n\002\010n\202\323\344\223\002,\"\'/api/v0alpha/org/p" +
+      "ermissiongroup/create:\001*\022\253\001\n\025UpdatePermi" +
+      "ssionGroup\022).api.v0alpha.UpdatePermissio" +
+      "nGroupRequest\032*.api.v0alpha.UpdatePermis" +
+      "sionGroupResponse\";\272\270\221\002\004\n\002\010n\202\323\344\223\002,\"\'/api" +
+      "/v0alpha/org/permissiongroup/update:\001*\022\253" +
+      "\001\n\025DeletePermissionGroup\022).api.v0alpha.D" +
+      "eletePermissionGroupRequest\032*.api.v0alph" +
+      "a.DeletePermissionGroupResponse\";\272\270\221\002\004\n\002" +
+      "\010n\202\323\344\223\002,\"\'/api/v0alpha/org/permissiongro" +
+      "up/delete:\001*\022\364\001\n\'AssignUserToAccountOwne" +
+      "rPermissionGroup\022;.api.v0alpha.AssignUse" +
+      "rToAccountOwnerPermissionGroupRequest\032<." +
+      "api.v0alpha.AssignUserToAccountOwnerPerm" +
+      "issionGroupResponse\"N\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002>\"9/" +
+      "api/v0alpha/org/permissiongroup/admin/as" +
+      "signaccountowner:\001*\022\267\001\n\031AssignUserPermis" +
+      "sionGroup\022-.api.v0alpha.AssignUserPermis" +
+      "sionGroupRequest\032..api.v0alpha.AssignUse" +
+      "rPermissionGroupResponse\";\272\270\221\002\004\n\002\010o\202\323\344\223\002" +
+      ",\"\'/api/v0alpha/org/permissiongroup/assi" +
+      "gn:\001*\022\277\001\n\032AssignUsersPermissionGroup\022..a" +
+      "pi.v0alpha.AssignUsersPermissionGroupReq" +
+      "uest\032/.api.v0alpha.AssignUsersPermission" +
+      "GroupResponse\"@\272\270\221\002\004\n\002\010o\202\323\344\223\0021\",/api/v0a",
+      "lpha/org/permissiongroup/assignusers:\001*\022" +
+      "\310\001\n\035UpdateUserNeoPermissionGroups\0221.api." +
+      "v0alpha.UpdateUserNeoPermissionGroupsReq" +
+      "uest\0322.api.v0alpha.UpdateUserNeoPermissi" +
+      "onGroupsResponse\"@\272\270\221\002\004\n\002\010o\202\323\344\223\0021\",/api/" +
+      "v0alpha/org/permissiongroup/user/update:" +
+      "\001*\022\267\001\n\031RevokeUserPermissionGroup\022-.api.v" +
+      "0alpha.RevokeUserPermissionGroupRequest\032" +
+      "..api.v0alpha.RevokeUserPermissionGroupR" +
+      "esponse\";\272\270\221\002\004\n\002\010o\202\323\344\223\002,\"\'/api/v0alpha/o" +
+      "rg/permissiongroup/revoke:\001*\022\277\001\n\032RevokeU" +
+      "sersPermissionGroup\022..api.v0alpha.Revoke" +
+      "UsersPermissionGroupRequest\032/.api.v0alph" +
+      "a.RevokeUsersPermissionGroupResponse\"@\272\270" +
+      "\221\002\004\n\002\010o\202\323\344\223\0021\",/api/v0alpha/org/permissi" +
+      "ongroup/revokeusers:\001*\022\302\001\n\033InitDefaultPe" +
+      "rmissionGroups\022/.api.v0alpha.InitDefault" +
+      "PermissionGroupsRequest\0320.api.v0alpha.In" +
+      "itDefaultPermissionGroupsResponse\"@\272\270\221\002\005" +
+      "\n\003\010\310\001\202\323\344\223\0020\"+/api/v0alpha/org/permission" +
+      "group/initialize:\001*\022\271\001\n*AddPermissionToA" +
+      "ccountOwnerPermissionGroup\022>.api.v0alpha" +
+      ".AddPermissionToAccountOwnerPermissionGr" +
+      "oupRequest\032?.api.v0alpha.AddPermissionTo" +
+      "AccountOwnerPermissionGroupResponse\"\n\272\270\221" +
+      "\002\005\n\003\010\310\001\022\302\001\n-RevokePermissionToAccountOwn" +
+      "erPermissionGroup\022A.api.v0alpha.RevokePe" +
+      "rmissionToAccountOwnerPermissionGroupReq" +
+      "uest\032B.api.v0alpha.RevokePermissionToAcc" +
+      "ountOwnerPermissionGroupResponse\"\n\272\270\221\002\005\n" +
+      "\003\010\310\001\022\225\001\n\036AddPermissionToOrgDefaultGroup\022" +
+      "2.api.v0alpha.AddPermissionToOrgDefaultG" +
+      "roupRequest\0323.api.v0alpha.AddPermissionT" +
+      "oOrgDefaultGroupResponse\"\n\272\270\221\002\005\n\003\010\346\001\022\244\001\n" +
+      "#RemovePermissionFromOrgDefaultGroup\0227.a" +
+      "pi.v0alpha.RemovePermissionFromOrgDefaul" +
+      "tGroupRequest\0328.api.v0alpha.RemovePermis" +
+      "sionFromOrgDefaultGroupResponse\"\n\272\270\221\002\005\n\003" +
+      "\010\346\001\022\214\001\n\033GetOrgDefaultSuperUserGroup\022/.ap" +
+      "i.v0alpha.GetOrgDefaultSuperUserGroupReq" +
+      "uest\0320.api.v0alpha.GetOrgDefaultSuperUse" +
+      "rGroupResponse\"\n\272\270\221\002\005\n\003\010\346\001\022\317\001\n\035ListP3Per" +
+      "missionGroupsByOrgId\0221.api.v0alpha.ListP" +
+      "3PermissionGroupsByOrgIdRequest\0322.api.v0" +
+      "alpha.ListP3PermissionGroupsByOrgIdRespo" +
+      "nse\"G\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0027\"2/api/v0alpha/org/" +
+      "permissions/p3/groups/listbyorgid:\001*\022\262\001\n" +
+      "\026ListP3PermissionGroups\022*.api.v0alpha.Li" +
+      "stP3PermissionGroupsRequest\032+.api.v0alph" +
+      "a.ListP3PermissionGroupsResponse\"?\272\270\221\002\004\n" +
+      "\002\010e\202\323\344\223\0020\"+/api/v0alpha/org/permissions/" +
+      "p3/groups/list:\001*\022\223\001\n\rAddUserRegion\022!.ap" +
+      "i.v0alpha.AddUserRegionRequest\032\".api.v0a" +
+      "lpha.AddUserRegionResponse\";\272\270\221\002\005\n\003\010\346\001\202\323" +
+      "\344\223\002+\"&/api/v0alpha/org/user/addregion/up" +
+      "date:\001*\022\237\001\n\020RemoveUserRegion\022$.api.v0alp" +
+      "ha.RemoveUserRegionRequest\032%.api.v0alpha" +
+      ".RemoveUserRegionResponse\">\272\270\221\002\005\n\003\010\346\001\202\323\344" +
+      "\223\002.\")/api/v0alpha/org/user/removeregion/" +
+      "update:\001*\022\260\001\n\027CreateP3PermissionGroup\022+." +
+      "api.v0alpha.CreateP3PermissionGroupReque" +
+      "st\032,.api.v0alpha.CreateP3PermissionGroup" +
+      "Response\":\272\270\221\002\004\n\002\010n\202\323\344\223\002+\"&/api/v0alpha/" +
+      "org/permissions/p3/create:\001*\022\315\001\n\036UpdateP" +
+      "3PermissionGroupByOrgId\0222.api.v0alpha.Up" +
+      "dateP3PermissionGroupByOrgIdRequest\0323.ap" +
+      "i.v0alpha.UpdateP3PermissionGroupByOrgId" +
+      "Response\"B\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0022\"-/api/v0alpha" +
+      "/org/permissions/p3/updatebyorgid:\001*\022\260\001\n" +
+      "\027UpdateP3PermissionGroup\022+.api.v0alpha.U" +
+      "pdateP3PermissionGroupRequest\032,.api.v0al" +
+      "pha.UpdateP3PermissionGroupResponse\":\272\270\221" +
+      "\002\004\n\002\010n\202\323\344\223\002+\"&/api/v0alpha/org/permissio" +
+      "ns/p3/update:\001*\022\260\001\n\027DeleteP3PermissionGr" +
+      "oup\022+.api.v0alpha.DeleteP3PermissionGrou" +
+      "pRequest\032,.api.v0alpha.DeleteP3Permissio" +
+      "nGroupResponse\":\272\270\221\002\004\n\002\010n\202\323\344\223\002+\"&/api/v0" +
+      "alpha/org/permissions/p3/delete:\001*\022\305\001\n\034A" +
+      "ssignUsersP3PermissionGroup\0220.api.v0alph" +
+      "a.AssignUsersP3PermissionGroupRequest\0321." +
+      "api.v0alpha.AssignUsersP3PermissionGroup" +
+      "Response\"@\272\270\221\002\004\n\002\010o\202\323\344\223\0021\",/api/v0alpha/" +
+      "org/permissions/p3/group/assign:\001*\022\234\001\n\016A" +
+      "ddLoginToUser\022\".api.v0alpha.AddLoginToUs" +
+      "erRequest\032#.api.v0alpha.AddLoginToUserRe" +
+      "sponse\"A\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0021\",/api/v0alpha/o" +
+      "rg/permissions/p3/create/login:\001*\022\305\001\n\034Re" +
+      "vokeUsersP3PermissionGroup\0220.api.v0alpha" +
+      ".RevokeUsersP3PermissionGroupRequest\0321.a" +
+      "pi.v0alpha.RevokeUsersP3PermissionGroupR" +
+      "esponse\"@\272\270\221\002\004\n\002\010o\202\323\344\223\0021\",/api/v0alpha/o" +
+      "rg/permissions/p3/group/revoke:\001*\022\264\001\n\025Ge" +
+      "tContactPreferences\022).api.v0alpha.GetCon" +
+      "tactPreferencesRequest\032*.api.v0alpha.Get" +
+      "ContactPreferencesResponse\"D\272\270\221\002\004\n\002\010e\202\323\344" +
+      "\223\0025\"0/api/v0alpha/org/preferences/report" +
+      "s/contact/get:\001*\022\300\001\n\030UpdateContactPrefer" +
+      "ences\022,.api.v0alpha.UpdateContactPrefere" +
+      "ncesRequest\032-.api.v0alpha.UpdateContactP" +
+      "referencesResponse\"G\272\270\221\002\004\n\002\010d\202\323\344\223\0028\"3/ap" +
+      "i/v0alpha/org/preferences/reports/contac" +
+      "t/update:\001*\022\300\001\n\030GetCompliancePreferences" +
+      "\022,.api.v0alpha.GetCompliancePreferencesR" +
+      "equest\032-.api.v0alpha.GetCompliancePrefer" +
+      "encesResponse\"G\272\270\221\002\004\n\002\010e\202\323\344\223\0028\"3/api/v0a" +
+      "lpha/org/preferences/reports/compliance/" +
+      "get:\001*\022\314\001\n\033UpdateCompliancePreferences\022/" +
+      ".api.v0alpha.UpdateCompliancePreferences" +
+      "Request\0320.api.v0alpha.UpdateCompliancePr" +
+      "eferencesResponse\"J\272\270\221\002\004\n\002\010d\202\323\344\223\002;\"6/api" +
+      "/v0alpha/org/preferences/reports/complia" +
+      "nce/update:\001*\022\254\001\n\023GetAgentPreferences\022\'." +
+      "api.v0alpha.GetAgentPreferencesRequest\032(" +
+      ".api.v0alpha.GetAgentPreferencesResponse" +
+      "\"B\272\270\221\002\004\n\002\010e\202\323\344\223\0023\"./api/v0alpha/org/pref" +
+      "erences/reports/agent/get:\001*\022\270\001\n\026UpdateA" +
+      "gentPreferences\022*.api.v0alpha.UpdateAgen" +
+      "tPreferencesRequest\032+.api.v0alpha.Update" +
+      "AgentPreferencesResponse\"E\272\270\221\002\004\n\002\010d\202\323\344\223\002" +
+      "6\"1/api/v0alpha/org/preferences/reports/" +
+      "agent/update:\001*\022\310\001\n\032GetOrganizationPrefe" +
+      "rences\022..api.v0alpha.GetOrganizationPref" +
+      "erencesRequest\032/.api.v0alpha.GetOrganiza" +
+      "tionPreferencesResponse\"I\272\270\221\002\004\n\002\010e\202\323\344\223\002:" +
+      "\"5/api/v0alpha/org/preferences/reports/o" +
+      "rganization/get:\001*\022\324\001\n\035UpdateOrganizatio" +
+      "nPreferences\0221.api.v0alpha.UpdateOrganiz" +
+      "ationPreferencesRequest\0322.api.v0alpha.Up" +
+      "dateOrganizationPreferencesResponse\"L\272\270\221" +
+      "\002\004\n\002\010d\202\323\344\223\002=\"8/api/v0alpha/org/preferenc" +
+      "es/reports/organization/update:\001*\022\270\001\n\026Ge" +
+      "tSchedulePreferences\022*.api.v0alpha.GetSc" +
+      "hedulePreferencesRequest\032+.api.v0alpha.G" +
+      "etSchedulePreferencesResponse\"E\272\270\221\002\004\n\002\010e" +
+      "\202\323\344\223\0026\"1/api/v0alpha/org/preferences/rep" +
+      "orts/schedule/get:\001*\022\304\001\n\031UpdateScheduleP" +
+      "references\022-.api.v0alpha.UpdateScheduleP" +
+      "referencesRequest\032..api.v0alpha.UpdateSc" +
+      "hedulePreferencesResponse\"H\272\270\221\002\004\n\002\010d\202\323\344\223" +
+      "\0029\"4/api/v0alpha/org/preferences/reports" +
+      "/schedule/update:\001*\022\262\001\n\026GetBusinessPrefe" +
+      "rences\022*.api.v0alpha.GetBusinessPreferen" +
+      "cesRequest\032+.api.v0alpha.GetBusinessPref" +
+      "erencesResponse\"?\272\270\221\002\004\n\002\010e\202\323\344\223\0020\"+/api/v" +
+      "0alpha/org/preferences/reports/bi/get:\001*" +
+      "\022\276\001\n\031UpdateBusinessPreferences\022-.api.v0a" +
+      "lpha.UpdateBusinessPreferencesRequest\032.." +
+      "api.v0alpha.UpdateBusinessPreferencesRes" +
       "ponse\"B\272\270\221\002\004\n\002\010d\202\323\344\223\0023\"./api/v0alpha/org" +
-      "/preferences/vanalytics/update:\001*\022\355\001\n&Up" +
-      "dateVoiceAnalyticsPreferencesEnabled\022:.a" +
-      "pi.v0alpha.UpdateVoiceAnalyticsPreferenc" +
-      "esEnabledRequest\032;.api.v0alpha.UpdateVoi" +
-      "ceAnalyticsPreferencesEnabledResponse\"J\272" +
-      "\270\221\002\005\n\003\010\364\003\202\323\344\223\002:\"5/api/v0alpha/org/prefer" +
-      "ences/vanalytics/updateenabled:\001*\022\270\001\n\030Ge" +
-      "tScorecardsPreferences\022,.api.v0alpha.Get" +
-      "ScorecardsPreferencesRequest\032-.api.v0alp" +
-      "ha.GetScorecardsPreferencesResponse\"?\272\270\221" +
-      "\002\004\n\002\010e\202\323\344\223\0020\"+/api/v0alpha/org/preferenc" +
-      "es/scorecards/get:\001*\022\304\001\n\033UpdateScorecard" +
-      "sPreferences\022/.api.v0alpha.UpdateScoreca" +
-      "rdsPreferencesRequest\0320.api.v0alpha.Upda" +
-      "teScorecardsPreferencesResponse\"B\272\270\221\002\004\n\002" +
-      "\010d\202\323\344\223\0023\"./api/v0alpha/org/preferences/s" +
-      "corecards/update:\001*\022\255\001\n\026GetEmailSmsPrefe" +
-      "rences\022*.api.v0alpha.GetEmailSmsPreferen" +
-      "cesRequest\032+.api.v0alpha.GetEmailSmsPref" +
-      "erencesResponse\":\272\270\221\002\004\n\002\010e\202\323\344\223\002+\"&/api/v" +
-      "0alpha/org/preferences/email/get:\001*\022\271\001\n\031" +
-      "UpdateEmailSmsPreferences\022-.api.v0alpha." +
-      "UpdateEmailSmsPreferencesRequest\032..api.v" +
-      "0alpha.UpdateEmailSmsPreferencesResponse" +
-      "\"=\272\270\221\002\004\n\002\010d\202\323\344\223\002.\")/api/v0alpha/org/pref" +
-      "erences/email/update:\001*\022\324\001\n\035EditAgentQui" +
-      "ckViewPreferences\0221.api.v0alpha.EditAgen" +
-      "tQuickViewPreferencesRequest\0322.api.v0alp" +
-      "ha.EditAgentQuickViewPreferencesResponse" +
-      "\"L\272\270\221\002\004\n\002\010d\202\323\344\223\002=\"8/api/v0alpha/org/pref" +
-      "erences/reports/agentquickview/edit:\001*\022\325" +
-      "\001\n\035EditBackofficeThemePreference\0221.api.v" +
-      "0alpha.EditBackofficeThemePreferenceRequ" +
-      "est\0322.api.v0alpha.EditBackofficeThemePre" +
-      "ferenceResponse\"M\272\270\221\002\004\n\002\010d\202\323\344\223\002>\"9/api/v" +
-      "0alpha/org/preferences/reports/backoffic" +
-      "etheme/edit:\001*\022\321\001\n\034GetBackofficeThemePre" +
-      "ference\0220.api.v0alpha.GetBackofficeTheme" +
-      "PreferenceRequest\0321.api.v0alpha.GetBacko" +
-      "fficeThemePreferenceResponse\"L\272\270\221\002\004\n\002\010e\202" +
-      "\323\344\223\002=\"8/api/v0alpha/org/preferences/repo" +
-      "rts/backofficetheme/get:\001*\022\276\001\n\034AcceptLin" +
-      "kbackRecordingTerms\0220.api.v0alpha.Accept" +
-      "LinkbackRecordingTermsRequest\0321.api.v0al" +
-      "pha.AcceptLinkbackRecordingTermsResponse" +
-      "\"9\272\270\221\002\004\n\002\010d\202\323\344\223\002*\"%/api/v0alpha/org/link" +
-      "back/acceptterms:\001*\022\316\001\n LinkbackUpdateBr" +
-      "oadcastTemplates\0224.api.v0alpha.LinkbackU" +
-      "pdateBroadcastTemplatesRequest\0325.api.v0a" +
-      "lpha.LinkbackUpdateBroadcastTemplatesRes" +
-      "ponse\"=\272\270\221\002\004\n\002\010d\202\323\344\223\002.\")/api/v0alpha/org" +
-      "/linkback/updatetemplates:\001*\022\343\001\n%RecordE" +
-      "mailUnsubscribeAcknowledgement\0229.api.v0a" +
-      "lpha.RecordEmailUnsubscribeAcknowledgeme" +
-      "ntRequest\032:.api.v0alpha.RecordEmailUnsub" +
-      "scribeAcknowledgementResponse\"C\272\270\221\002\004\n\002\010d" +
-      "\202\323\344\223\0024\"//api/v0alpha/org/emailsmsacknowl" +
-      "edgement/record:\001*\022\337\001\n$ClearEmailUnsubsc" +
-      "ribeAcknowledgement\0228.api.v0alpha.ClearE" +
-      "mailUnsubscribeAcknowledgementRequest\0329." +
-      "api.v0alpha.ClearEmailUnsubscribeAcknowl" +
-      "edgementResponse\"B\272\270\221\002\004\n\002\010d\202\323\344\223\0023\"./api/" +
-      "v0alpha/org/emailsmsacknowledgement/clea" +
-      "r:\001*\022\253\001\n\025CreateWebLinkTemplate\022).api.v0a" +
-      "lpha.CreateWebLinkTemplateRequest\032*.api." +
-      "v0alpha.CreateWebLinkTemplateResponse\";\272" +
-      "\270\221\002\004\n\002\010d\202\323\344\223\002,\"\'/api/v0alpha/org/weblink" +
-      "template/create:\001*\022\246\001\n\024ListWebLinkTempla" +
-      "tes\022(.api.v0alpha.ListWebLinkTemplatesRe" +
-      "quest\032).api.v0alpha.ListWebLinkTemplates" +
-      "Response\"9\272\270\221\002\004\n\002\010e\202\323\344\223\002*\"%/api/v0alpha/" +
-      "org/weblinktemplate/list:\001*\022\237\001\n\022GetWebLi" +
-      "nkTemplate\022&.api.v0alpha.GetWebLinkTempl" +
-      "ateRequest\032\'.api.v0alpha.GetWebLinkTempl" +
-      "ateResponse\"8\272\270\221\002\004\n\002\010e\202\323\344\223\002)\"$/api/v0alp" +
-      "ha/org/weblinktemplate/get:\001*\022\253\001\n\025Update" +
-      "WebLinkTemplate\022).api.v0alpha.UpdateWebL" +
-      "inkTemplateRequest\032*.api.v0alpha.UpdateW" +
-      "ebLinkTemplateResponse\";\272\270\221\002\004\n\002\010d\202\323\344\223\002,\"" +
-      "\'/api/v0alpha/org/weblinktemplate/update" +
-      ":\001*\022\253\001\n\025DeleteWebLinkTemplate\022).api.v0al" +
-      "pha.DeleteWebLinkTemplateRequest\032*.api.v" +
-      "0alpha.DeleteWebLinkTemplateResponse\";\272\270" +
-      "\221\002\004\n\002\010d\202\323\344\223\002,\"\'/api/v0alpha/org/weblinkt" +
-      "emplate/delete:\001*\022\277\001\n\032CreateAgentTrigger" +
-      "Template\022..api.v0alpha.CreateAgentTrigge" +
-      "rTemplateRequest\032/.api.v0alpha.CreateAge" +
-      "ntTriggerTemplateResponse\"@\272\270\221\002\004\n\002\010d\202\323\344\223" +
-      "\0021\",/api/v0alpha/org/agenttriggertemplat" +
-      "e/create:\001*\022\272\001\n\031ListAgentTriggerTemplate" +
-      "s\022-.api.v0alpha.ListAgentTriggerTemplate" +
-      "sRequest\032..api.v0alpha.ListAgentTriggerT" +
-      "emplatesResponse\">\272\270\221\002\004\n\002\010e\202\323\344\223\002/\"*/api/" +
-      "v0alpha/org/agenttriggertemplate/list:\001*" +
-      "\022\263\001\n\027GetAgentTriggerTemplate\022+.api.v0alp" +
-      "ha.GetAgentTriggerTemplateRequest\032,.api." +
-      "v0alpha.GetAgentTriggerTemplateResponse\"" +
-      "=\272\270\221\002\004\n\002\010e\202\323\344\223\002.\")/api/v0alpha/org/agent" +
-      "triggertemplate/get:\001*\022\277\001\n\032UpdateAgentTr" +
-      "iggerTemplate\022..api.v0alpha.UpdateAgentT" +
-      "riggerTemplateRequest\032/.api.v0alpha.Upda" +
-      "teAgentTriggerTemplateResponse\"@\272\270\221\002\004\n\002\010" +
-      "e\202\323\344\223\0021\",/api/v0alpha/org/agenttriggerte" +
-      "mplate/update:\001*\022\277\001\n\032DeleteAgentTriggerT" +
-      "emplate\022..api.v0alpha.DeleteAgentTrigger" +
-      "TemplateRequest\032/.api.v0alpha.DeleteAgen" +
-      "tTriggerTemplateResponse\"@\272\270\221\002\004\n\002\010d\202\323\344\223\002" +
-      "1\",/api/v0alpha/org/agenttriggertemplate" +
-      "/delete:\001*\022\323\001\n\037CreateClientInfoDisplayTe" +
-      "mplate\0223.api.v0alpha.CreateClientInfoDis" +
-      "playTemplateRequest\0324.api.v0alpha.Create" +
-      "ClientInfoDisplayTemplateResponse\"E\272\270\221\002\004" +
-      "\n\002\010d\202\323\344\223\0026\"1/api/v0alpha/org/clientinfod" +
-      "isplaytemplate/create:\001*\022\316\001\n\036ListClientI" +
-      "nfoDisplayTemplates\0222.api.v0alpha.ListCl" +
-      "ientInfoDisplayTemplatesRequest\0323.api.v0" +
-      "alpha.ListClientInfoDisplayTemplatesResp" +
-      "onse\"C\272\270\221\002\004\n\002\010d\202\323\344\223\0024\"//api/v0alpha/org/" +
-      "clientinfodisplaytemplate/list:\001*\022\323\001\n\037Up" +
-      "dateClientInfoDisplayTemplate\0223.api.v0al" +
-      "pha.UpdateClientInfoDisplayTemplateReque" +
-      "st\0324.api.v0alpha.UpdateClientInfoDisplay" +
-      "TemplateResponse\"E\272\270\221\002\004\n\002\010e\202\323\344\223\0026\"1/api/" +
-      "v0alpha/org/clientinfodisplaytemplate/up" +
-      "date:\001*\022\323\001\n\037DeleteClientInfoDisplayTempl" +
-      "ate\0223.api.v0alpha.DeleteClientInfoDispla" +
-      "yTemplateRequest\0324.api.v0alpha.DeleteCli" +
-      "entInfoDisplayTemplateResponse\"E\272\270\221\002\004\n\002\010" +
-      "d\202\323\344\223\0026\"1/api/v0alpha/org/clientinfodisp" +
-      "laytemplate/delete:\001*\022\307\001\n\034GetClientInfoD" +
-      "isplayTemplate\0220.api.v0alpha.GetClientIn" +
-      "foDisplayTemplateRequest\0321.api.v0alpha.G" +
-      "etClientInfoDisplayTemplateResponse\"B\272\270\221" +
-      "\002\004\n\002\010e\202\323\344\223\0023\"./api/v0alpha/org/clientinf" +
-      "odisplaytemplate/get:\001*\022\244\001\n\023ListAgentPau" +
-      "seCodes\022\'.api.v0alpha.ListAgentPauseCode" +
-      "sRequest\032(.api.v0alpha.ListAgentPauseCod" +
-      "esResponse\":\272\270\221\002\004\n\002\010e\202\323\344\223\002+\"&/api/v0alph" +
-      "a/p3api/listagentpausecodes:\001*\022\250\001\n\024Creat" +
-      "eAgentPauseCode\022(.api.v0alpha.CreateAgen" +
-      "tPauseCodeRequest\032).api.v0alpha.CreateAg" +
-      "entPauseCodeResponse\";\272\270\221\002\004\n\002\010d\202\323\344\223\002,\"\'/" +
-      "api/v0alpha/p3api/createagentpausecode:\001" +
-      "*\022\250\001\n\024UpdateAgentPauseCode\022(.api.v0alpha" +
-      ".UpdateAgentPauseCodeRequest\032).api.v0alp",
-      "ha.UpdateAgentPauseCodeResponse\";\272\270\221\002\004\n\002" +
-      "\010d\202\323\344\223\002,\"\'/api/v0alpha/p3api/updateagent" +
-      "pausecode:\001*\022\250\001\n\024DeleteAgentPauseCode\022(." +
-      "api.v0alpha.DeleteAgentPauseCodeRequest\032" +
-      ").api.v0alpha.DeleteAgentPauseCodeRespon" +
-      "se\";\272\270\221\002\004\n\002\010d\202\323\344\223\002,\"\'/api/v0alpha/p3api/" +
-      "deleteagentpausecode:\001*\022\262\001\n\027ListCustomRe" +
-      "portFilters\022+.api.v0alpha.ListCustomRepo" +
-      "rtFiltersRequest\032,.api.v0alpha.ListCusto" +
-      "mReportFiltersResponse\"<\272\270\221\002\004\n\002\010e\202\323\344\223\002-\"" +
-      "(/api/v0alpha/org/customreportfilter/lis" +
-      "t:\001*\022\267\001\n\030CreateCustomReportFilter\022,.api." +
-      "v0alpha.CreateCustomReportFilterRequest\032" +
-      "-.api.v0alpha.CreateCustomReportFilterRe" +
-      "sponse\">\272\270\221\002\004\n\002\010d\202\323\344\223\002/\"*/api/v0alpha/or" +
-      "g/customreportfilter/create:\001*\022\267\001\n\030Updat" +
-      "eCustomReportFilter\022,.api.v0alpha.Update" +
-      "CustomReportFilterRequest\032-.api.v0alpha." +
-      "UpdateCustomReportFilterResponse\">\272\270\221\002\004\n" +
-      "\002\010d\202\323\344\223\002/\"*/api/v0alpha/org/customreport" +
-      "filter/update:\001*\022\267\001\n\030DeleteCustomReportF" +
-      "ilter\022,.api.v0alpha.DeleteCustomReportFi" +
-      "lterRequest\032-.api.v0alpha.DeleteCustomRe" +
-      "portFilterResponse\">\272\270\221\002\004\n\002\010d\202\323\344\223\002/\"*/ap" +
-      "i/v0alpha/org/customreportfilter/delete:" +
-      "\001*\022\274\001\n\027ListAgentResponseGroups\022+.api.v0a" +
-      "lpha.ListAgentResponseGroupsRequest\032,.ap" +
-      "i.v0alpha.ListAgentResponseGroupsRespons" +
-      "e\"F\272\270\221\002\004\n\002\010e\202\323\344\223\0027\"2/api/v0alpha/org/cus" +
-      "tomreportfilter/agentresponses:\001*\022\301\001\n\030Li" +
-      "stLastTemplateElements\022,.api.v0alpha.Lis" +
-      "tLastTemplateElementsRequest\032-.api.v0alp" +
-      "ha.ListLastTemplateElementsResponse\"H\272\270\221" +
-      "\002\004\n\002\010e\202\323\344\223\0029\"4/api/v0alpha/org/customrep" +
-      "ortfilter/templateelements:\001*\022\205\001\n\020ListQu" +
-      "eueConfigs\022 .api.v0alpha.ListQueueConfig" +
-      "sReq\032 .api.v0alpha.ListQueueConfigsRes\"-" +
-      "\202\323\344\223\002\'\"\"/api/v0alpha/org/queueconfigs/li" +
-      "st:\001*\022\223\001\n\021DeleteQueueConfig\022!.api.v0alph" +
-      "a.DeleteQueueConfigReq\032!.api.v0alpha.Del" +
-      "eteQueueConfigRes\"8\272\270\221\002\004\n\002\010d\202\323\344\223\002)\"$/api" +
-      "/v0alpha/org/queueconfigs/delete:\001*\022\207\001\n\016" +
-      "GetQueueConfig\022\036.api.v0alpha.GetQueueCon" +
-      "figReq\032\036.api.v0alpha.GetQueueConfigRes\"5" +
-      "\272\270\221\002\004\n\002\010e\202\323\344\223\002&\"!/api/v0alpha/org/queuec" +
-      "onfigs/get:\001*\022\223\001\n\021CreateQueueConfig\022!.ap" +
-      "i.v0alpha.CreateQueueConfigReq\032!.api.v0a" +
-      "lpha.CreateQueueConfigRes\"8\272\270\221\002\004\n\002\010d\202\323\344\223" +
-      "\002)\"$/api/v0alpha/org/queueconfigs/create" +
-      ":\001*\022\223\001\n\021UpdateQueueConfig\022!.api.v0alpha." +
-      "UpdateQueueConfigReq\032!.api.v0alpha.Updat" +
-      "eQueueConfigRes\"8\272\270\221\002\004\n\002\010d\202\323\344\223\002)\"$/api/v" +
-      "0alpha/org/queueconfigs/update:\001*\022\214\001\n\017Co" +
-      "pyQueueConfig\022\037.api.v0alpha.CopyQueueCon" +
-      "figReq\032\037.api.v0alpha.CopyQueueConfigRes\"" +
-      "7\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002\'\"\"/api/v0alpha/org/queu" +
-      "econfigs/copy:\001*\022\254\001\n\027GetAllQueueConfigSo" +
-      "unds\022\'.api.v0alpha.GetAllQueueConfigSoun" +
-      "dsReq\032\'.api.v0alpha.GetAllQueueConfigSou" +
-      "ndsRes\"?\272\270\221\002\004\n\002\010e\202\323\344\223\0020\"+/api/v0alpha/or" +
-      "g/queueconfigs/sounds/getall:\001*\022\235\001\n\023GetQ" +
-      "ueueConfigSound\022#.api.v0alpha.GetQueueCo" +
-      "nfigSoundReq\032#.api.v0alpha.GetQueueConfi" +
-      "gSoundRes\"<\272\270\221\002\004\n\002\010e\202\323\344\223\002-\"(/api/v0alpha" +
-      "/org/queueconfigs/sounds/get:\001*\022\235\001\n\023SetQ" +
-      "ueueConfigSound\022#.api.v0alpha.SetQueueCo" +
-      "nfigSoundReq\032#.api.v0alpha.SetQueueConfi" +
-      "gSoundRes\"<\272\270\221\002\004\n\002\010d\202\323\344\223\002-\"(/api/v0alpha" +
-      "/org/queueconfigs/sounds/set:\001*\022\324\001\n!SetA" +
-      "llQueueConfigSoundsFromSource\0221.api.v0al" +
-      "pha.SetAllQueueConfigSoundsFromSourceReq" +
-      "\0321.api.v0alpha.SetAllQueueConfigSoundsFr" +
-      "omSourceRes\"I\272\270\221\002\004\n\002\010d\202\323\344\223\002:\"5/api/v0alp" +
-      "ha/org/queueconfigs/sounds/setallfromsou" +
-      "rce:\001*\022\215\001\n\016GetUserBlocked\022\".api.v0alpha." +
-      "GetUserBlockedRequest\032#.api.v0alpha.GetU" +
-      "serBlockedResponse\"2\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002\"\"\035/a" +
-      "pi/v0alpha/org/user/blocked:\001*\022\204\001\n\013Unblo" +
-      "ckUser\022\037.api.v0alpha.UnblockUserRequest\032" +
-      " .api.v0alpha.UnblockUserResponse\"2\272\270\221\002\005" +
-      "\n\003\010\310\001\202\323\344\223\002\"\"\035/api/v0alpha/org/user/unblo" +
-      "ck:\001*\022\242\001\n\025ListP3UnMigratedUsers\022).api.v0" +
-      "alpha.ListP3UnMigratedUsersRequest\032*.api" +
-      ".v0alpha.ListP3UnMigratedUsersResponse\"2" +
-      "\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002\"\"\035/api/v0alpha/org/p3/us" +
-      "er/List:\001*\022\215\001\n\rMigrateP3User\022!.api.v0alp" +
-      "ha.MigrateP3UserRequest\032\".api.v0alpha.Mi" +
-      "grateP3UserResponse\"5\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002%\" /" +
-      "api/v0alpha/org/p3/user/migrate:\001*\022\231\001\n\020U" +
-      "pdateP3UserName\022$.api.v0alpha.UpdateP3Us" +
-      "erNameRequest\032%.api.v0alpha.UpdateP3User" +
-      "NameResponse\"8\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002(\"#/api/v0a" +
-      "lpha/org/p3/username/update:\001*\022\220\001\n\016ListO" +
-      "wnedUsers\022\".api.v0alpha.ListOwnedUsersRe" +
-      "quest\032#.api.v0alpha.ListOwnedUsersRespon" +
-      "se\"5\272\270\221\002\005\n\003\010\202\001\202\323\344\223\002%\" /api/v0alpha/org/o" +
-      "wnedusers/list:\001*\022\250\001\n\024ListOwnedOrgsByOrg" +
-      "Id\022(.api.v0alpha.ListOwnedOrgsByOrgIdReq" +
-      "uest\032).api.v0alpha.ListOwnedOrgsByOrgIdR" +
-      "esponse\";\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002+\"&/api/v0alpha/" +
-      "org/OwnedOrgs/listbyorgid:\001*\022\213\001\n\rListOwn" +
-      "edOrgs\022!.api.v0alpha.ListOwnedOrgsReques" +
-      "t\032\".api.v0alpha.ListOwnedOrgsResponse\"3\272" +
-      "\270\221\002\004\n\002\010e\202\323\344\223\002$\"\037/api/v0alpha/org/OwnedOr" +
-      "gs/list:\001*\022\237\001\n\022RemoveLoginStrikes\022&.api." +
-      "v0alpha.RemoveLoginStrikesRequest\032\'.api." +
-      "v0alpha.RemoveLoginStrikesResponse\"8\272\270\221\002" +
-      "\005\n\003\010\310\001\202\323\344\223\002(\"#/api/v0alpha/org/Loginstri" +
-      "ks/remove:\001*\022\261\001\n\026RemoveUserLoginStrikes\022" +
-      "*.api.v0alpha.RemoveUserLoginStrikesRequ" +
-      "est\032+.api.v0alpha.RemoveUserLoginStrikes" +
-      "Response\">\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002.\")/api/v0alpha" +
-      "/org/user/Loginstrikes/remove:\001*\022\230\001\n\020Lis" +
-      "tLoginHistory\022$.api.v0alpha.ListLoginHis" +
-      "toryRequest\032%.api.v0alpha.ListLoginHisto" +
-      "ryResponse\"7\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002\'\"\"/api/v0alp" +
-      "ha/org/loginhistory/list:\001*\022\227\001\n\020UpdateP3" +
-      "UserSids\022$.api.v0alpha.UpdateP3UserSidsR" +
-      "equest\032%.api.v0alpha.UpdateP3UserSidsRes" +
-      "ponse\"6\272\270\221\002\005\n\003\010\346\001\202\323\344\223\002&\"!/api/v0alpha/or" +
-      "g/updatep3usersids:\001*\022\244\001\n\024CreateAuthConn" +
-      "ection\022(.api.v0alpha.CreateAuthConnectio" +
-      "nRequest\032).api.v0alpha.CreateAuthConnect" +
-      "ionResponse\"7\272\270\221\002\005\n\003\010\204\002\202\323\344\223\002\'\"\"/api/v0al" +
-      "pha/org/connection/create:\001*\022\260\001\n\031GetAuth" +
-      "ConnectionSettings\022-.api.v0alpha.GetAuth" +
-      "ConnectionSettingsRequest\032..api.v0alpha." +
-      "GetAuthConnectionSettingsResponse\"4\272\270\221\002\005" +
-      "\n\003\010\204\002\202\323\344\223\002$\"\037/api/v0alpha/org/connection" +
-      "/get:\001*\022\274\001\n\034UpdateAuthConnectionSettings" +
-      "\0220.api.v0alpha.UpdateAuthConnectionSetti" +
-      "ngsRequest\0321.api.v0alpha.UpdateAuthConne" +
-      "ctionSettingsResponse\"7\272\270\221\002\005\n\003\010\204\002\202\323\344\223\002\'\"" +
-      "\"/api/v0alpha/org/connection/update:\001*\022\244" +
-      "\001\n\024DeleteAuthConnection\022(.api.v0alpha.De" +
-      "leteAuthConnectionRequest\032).api.v0alpha." +
-      "DeleteAuthConnectionResponse\"7\272\270\221\002\005\n\003\010\204\002" +
-      "\202\323\344\223\002\'\"\"/api/v0alpha/org/connection/dele" +
-      "te:\001*\022\231\001\n\023GetUserSubscription\022\'.api.v0al" +
-      "pha.GetUserSubscriptionRequest\032(.api.v0a" +
-      "lpha.GetUserSubscriptionResponse\"/\202\323\344\223\002)" +
-      "\"$/api/v0alpha/org/getusersubscription:\001" +
-      "*\022\242\001\n\023AddUserSubscription\022\'.api.v0alpha." +
-      "AddUserSubscriptionRequest\032(.api.v0alpha" +
-      ".AddUserSubscriptionResponse\"8\272\270\221\002\004\n\002\010y\202" +
-      "\323\344\223\002)\"$/api/v0alpha/org/addusersubscript" +
-      "ion:\001*\022\256\001\n\026RemoveUserSubscription\022*.api." +
-      "v0alpha.RemoveUserSubscriptionRequest\032+." +
-      "api.v0alpha.RemoveUserSubscriptionRespon" +
-      "se\";\272\270\221\002\004\n\002\010w\202\323\344\223\002,\"\'/api/v0alpha/org/re" +
-      "moveusersubscription:\001*\022\266\001\n\030RemoveMyUser" +
-      "Subscription\022,.api.v0alpha.RemoveMyUserS" +
-      "ubscriptionRequest\032-.api.v0alpha.RemoveM" +
-      "yUserSubscriptionResponse\"=\272\270\221\002\004\n\002\010y\202\323\344\223" +
-      "\002.\")/api/v0alpha/org/removemyusersubscri" +
-      "ption:\001*\022\245\001\n\026UpdateUserSubscription\022*.ap" +
-      "i.v0alpha.UpdateUserSubscriptionRequest\032" +
-      "+.api.v0alpha.UpdateUserSubscriptionResp" +
-      "onse\"2\202\323\344\223\002,\"\'/api/v0alpha/org/updateuse" +
-      "rsubscription:\001*\022\241\001\n\025ListUserSubscriptio" +
-      "ns\022).api.v0alpha.ListUserSubscriptionsRe" +
-      "quest\032*.api.v0alpha.ListUserSubscription" +
-      "sResponse\"1\202\323\344\223\002+\"&/api/v0alpha/org/list" +
-      "usersubscriptions:\001*\022\246\001\n\024ListOrgSubscrip" +
-      "tions\022(.api.v0alpha.ListOrgSubscriptions" +
-      "Request\032).api.v0alpha.ListOrgSubscriptio" +
-      "nsResponse\"9\272\270\221\002\004\n\002\010e\202\323\344\223\002*\"%/api/v0alph" +
-      "a/org/listorgsubscriptions:\001*\022\300\001\n\033GetSys" +
-      "temEnvironmentDetails\022/.api.v0alpha.GetS" +
-      "ystemEnvironmentDetailsRequest\0320.api.v0a" +
-      "lpha.GetSystemEnvironmentDetailsResponse" +
-      "\">\272\270\221\002\002\030\001\202\323\344\223\0021\",/api/v0alpha/org/getsys" +
-      "temenvironmentdetails:\001*\022\306\001\n\034ListAgentSt" +
-      "atisticsTemplates\0220.api.v0alpha.ListAgen" +
-      "tStatisticsTemplatesRequest\0321.api.v0alph" +
-      "a.ListAgentStatisticsTemplatesResponse\"A" +
-      "\272\270\221\002\004\n\002\010e\202\323\344\223\0022\"-/api/v0alpha/org/agents" +
-      "tatisticstemplate/list:\001*\022\313\001\n\035CreateAgen" +
-      "tStatisticsTemplate\0221.api.v0alpha.Create" +
-      "AgentStatisticsTemplateRequest\0322.api.v0a" +
-      "lpha.CreateAgentStatisticsTemplateRespon" +
-      "se\"C\272\270\221\002\004\n\002\010d\202\323\344\223\0024\"//api/v0alpha/org/ag" +
-      "entstatisticstemplate/create:\001*\022\313\001\n\035Upda" +
-      "teAgentStatisticsTemplate\0221.api.v0alpha." +
-      "UpdateAgentStatisticsTemplateRequest\0322.a" +
-      "pi.v0alpha.UpdateAgentStatisticsTemplate" +
-      "Response\"C\272\270\221\002\004\n\002\010d\202\323\344\223\0024\"//api/v0alpha/" +
-      "org/agentstatisticstemplate/update:\001*\022\313\001" +
-      "\n\035DeleteAgentStatisticsTemplate\0221.api.v0" +
-      "alpha.DeleteAgentStatisticsTemplateReque" +
-      "st\0322.api.v0alpha.DeleteAgentStatisticsTe" +
-      "mplateResponse\"C\272\270\221\002\004\n\002\010d\202\323\344\223\0024\"//api/v0" +
-      "alpha/org/agentstatisticstemplate/delete" +
-      ":\001*Bv\n\035com.tcn.cloud.api.api.v0alphaB\010Or" +
-      "gProtoP\001\242\002\003AVX\252\002\013Api.V0alpha\312\002\013Api\\V0alp" +
-      "ha\342\002\027Api\\V0alpha\\GPBMetadata\352\002\014Api::V0al" +
-      "phab\006proto3"
+      "/preferences/reports/bi/update:\001*\022\263\001\n\026Ge" +
+      "tEndOfDayPreferences\022*.api.v0alpha.GetEn" +
+      "dOfDayPreferencesRequest\032+.api.v0alpha.G" +
+      "etEndOfDayPreferencesResponse\"@\272\270\221\002\004\n\002\010e" +
+      "\202\323\344\223\0021\",/api/v0alpha/org/preferences/rep" +
+      "orts/eod/get:\001*\022\277\001\n\031UpdateEndOfDayPrefer" +
+      "ences\022-.api.v0alpha.UpdateEndOfDayPrefer" +
+      "encesRequest\032..api.v0alpha.UpdateEndOfDa" +
+      "yPreferencesResponse\"C\272\270\221\002\004\n\002\010d\202\323\344\223\0024\"//" +
+      "api/v0alpha/org/preferences/reports/eod/" +
+      "update:\001*\022\267\001\n\032GetReportFilterPreferences" +
+      "\022(.api.v0alpha.GetFilterPreferencesReque" +
+      "st\032).api.v0alpha.GetFilterPreferencesRes" +
+      "ponse\"D\272\270\221\002\004\n\002\010e\202\323\344\223\0025\"0/api/v0alpha/org" +
+      "/preferences/reports/filters/get:\001*\022\303\001\n\035" +
+      "UpdateReportFilterPreferences\022+.api.v0al" +
+      "pha.UpdateFilterPreferencesRequest\032,.api" +
+      ".v0alpha.UpdateFilterPreferencesResponse" +
+      "\"G\272\270\221\002\004\n\002\010d\202\323\344\223\0028\"3/api/v0alpha/org/pref" +
+      "erences/reports/filters/update:\001*\022\254\001\n\023Ge" +
+      "tPhonePreferences\022\'.api.v0alpha.GetPhone" +
+      "PreferencesRequest\032(.api.v0alpha.GetPhon" +
+      "ePreferencesResponse\"B\272\270\221\002\004\n\002\010e\202\323\344\223\0023\"./" +
+      "api/v0alpha/org/preferences/reports/phon" +
+      "e/get:\001*\022\270\001\n\026UpdatePhonePreferences\022*.ap" +
+      "i.v0alpha.UpdatePhonePreferencesRequest\032" +
+      "+.api.v0alpha.UpdatePhonePreferencesResp" +
+      "onse\"E\272\270\221\002\004\n\002\010d\202\323\344\223\0026\"1/api/v0alpha/org/" +
+      "preferences/reports/phone/update:\001*\022\321\001\n\036" +
+      "GetDashboardGeneralPreferences\0222.api.v0a" +
+      "lpha.GetDashboardGeneralPreferencesReque" +
+      "st\0323.api.v0alpha.GetDashboardGeneralPref" +
+      "erencesResponse\"F\272\270\221\002\004\n\002\010e\202\323\344\223\0027\"2/api/v" +
+      "0alpha/org/preferences/reports/dashboard" +
+      "/get:\001*\022\335\001\n!UpdateDashboardGeneralPrefer" +
+      "ences\0225.api.v0alpha.UpdateDashboardGener" +
+      "alPreferencesRequest\0326.api.v0alpha.Updat" +
+      "eDashboardGeneralPreferencesResponse\"I\272\270" +
+      "\221\002\004\n\002\010d\202\323\344\223\002:\"5/api/v0alpha/org/preferen" +
+      "ces/reports/dashboard/update:\001*\022\264\001\n\025GetW" +
+      "ebhookPreferences\022).api.v0alpha.GetWebho" +
+      "okPreferencesRequest\032*.api.v0alpha.GetWe" +
+      "bhookPreferencesResponse\"D\272\270\221\002\004\n\002\010e\202\323\344\223\002" +
+      "5\"0/api/v0alpha/org/preferences/reports/" +
+      "webhook/get:\001*\022\300\001\n\030UpdateWebhookPreferen" +
+      "ces\022,.api.v0alpha.UpdateWebhookPreferenc" +
+      "esRequest\032-.api.v0alpha.UpdateWebhookPre" +
+      "ferencesResponse\"G\272\270\221\002\004\n\002\010d\202\323\344\223\0028\"3/api/" +
+      "v0alpha/org/preferences/reports/webhook/" +
+      "update:\001*\022\274\001\n\027GetBroadcastPreferences\022+." +
+      "api.v0alpha.GetBroadcastPreferencesReque" +
+      "st\032,.api.v0alpha.GetBroadcastPreferences" +
+      "Response\"F\272\270\221\002\004\n\002\010e\202\323\344\223\0027\"2/api/v0alpha/" +
+      "org/preferences/reports/broadcast/get:\001*" +
+      "\022\310\001\n\032UpdateBroadcastPreferences\022..api.v0" +
+      "alpha.UpdateBroadcastPreferencesRequest\032" +
+      "/.api.v0alpha.UpdateBroadcastPreferences" +
+      "Response\"I\272\270\221\002\004\n\002\010d\202\323\344\223\002:\"5/api/v0alpha/" +
+      "org/preferences/reports/broadcast/update" +
+      ":\001*\022\320\001\n\034GetAuthenticationPreferences\0220.a" +
+      "pi.v0alpha.GetAuthenticationPreferencesR" +
+      "equest\0321.api.v0alpha.GetAuthenticationPr" +
+      "eferencesResponse\"K\272\270\221\002\004\n\002\010e\202\323\344\223\002<\"7/api" +
+      "/v0alpha/org/preferences/reports/authent" +
+      "ication/get:\001*\022\334\001\n\037UpdateAuthenticationP" +
+      "references\0223.api.v0alpha.UpdateAuthentic" +
+      "ationPreferencesRequest\0324.api.v0alpha.Up" +
+      "dateAuthenticationPreferencesResponse\"N\272" +
+      "\270\221\002\004\n\002\010d\202\323\344\223\002?\":/api/v0alpha/org/prefere" +
+      "nces/reports/authentication/update:\001*\022\274\001" +
+      "\n\027GetRecordingPreferences\022+.api.v0alpha." +
+      "GetRecordingPreferencesRequest\032,.api.v0a" +
+      "lpha.GetRecordingPreferencesResponse\"F\272\270" +
+      "\221\002\004\n\002\010e\202\323\344\223\0027\"2/api/v0alpha/org/preferen" +
+      "ces/reports/recording/get:\001*\022\310\001\n\032UpdateR" +
+      "ecordingPreferences\022..api.v0alpha.Update" +
+      "RecordingPreferencesRequest\032/.api.v0alph" +
+      "a.UpdateRecordingPreferencesResponse\"I\272\270" +
+      "\221\002\004\n\002\010d\202\323\344\223\002:\"5/api/v0alpha/org/preferen" +
+      "ces/reports/recording/update:\001*\022\320\001\n\034GetD" +
+      "ashboardQueuePreferences\0220.api.v0alpha.G" +
+      "etDashboardQueuePreferencesRequest\0321.api" +
+      ".v0alpha.GetDashboardQueuePreferencesRes" +
+      "ponse\"K\272\270\221\002\004\n\002\010e\202\323\344\223\002<\"7/api/v0alpha/org" +
+      "/preferences/manager/dashboardqueue/get:" +
+      "\001*\022\334\001\n\037UpdateDashboardQueuePreferences\0223" +
+      ".api.v0alpha.UpdateDashboardQueuePrefere" +
+      "ncesRequest\0324.api.v0alpha.UpdateDashboar" +
+      "dQueuePreferencesResponse\"N\272\270\221\002\004\n\002\010d\202\323\344\223" +
+      "\002?\":/api/v0alpha/org/preferences/manager" +
+      "/dashboardqueue/update:\001*\022\320\001\n\034GetAgentQu" +
+      "ickViewPreferences\0220.api.v0alpha.GetAgen" +
+      "tQuickViewPreferencesRequest\0321.api.v0alp" +
+      "ha.GetAgentQuickViewPreferencesResponse\"" +
+      "K\272\270\221\002\004\n\002\010e\202\323\344\223\002<\"7/api/v0alpha/org/prefe" +
+      "rences/reports/agentquickview/get:\001*\022\304\001\n" +
+      "\034GetVoiceAnalyticsPreferences\0220.api.v0al" +
+      "pha.GetVoiceAnalyticsPreferencesRequest\032" +
+      "1.api.v0alpha.GetVoiceAnalyticsPreferenc" +
+      "esResponse\"?\272\270\221\002\004\n\002\010e\202\323\344\223\0020\"+/api/v0alph" +
+      "a/org/preferences/vanalytics/get:\001*\022\320\001\n\037" +
+      "UpdateVoiceAnalyticsPreferences\0223.api.v0" +
+      "alpha.UpdateVoiceAnalyticsPreferencesReq" +
+      "uest\0324.api.v0alpha.UpdateVoiceAnalyticsP" +
+      "referencesResponse\"B\272\270\221\002\004\n\002\010d\202\323\344\223\0023\"./ap" +
+      "i/v0alpha/org/preferences/vanalytics/upd" +
+      "ate:\001*\022\355\001\n&UpdateVoiceAnalyticsPreferenc" +
+      "esEnabled\022:.api.v0alpha.UpdateVoiceAnaly" +
+      "ticsPreferencesEnabledRequest\032;.api.v0al" +
+      "pha.UpdateVoiceAnalyticsPreferencesEnabl" +
+      "edResponse\"J\272\270\221\002\005\n\003\010\364\003\202\323\344\223\002:\"5/api/v0alp" +
+      "ha/org/preferences/vanalytics/updateenab" +
+      "led:\001*\022\270\001\n\030GetScorecardsPreferences\022,.ap" +
+      "i.v0alpha.GetScorecardsPreferencesReques" +
+      "t\032-.api.v0alpha.GetScorecardsPreferences" +
+      "Response\"?\272\270\221\002\004\n\002\010e\202\323\344\223\0020\"+/api/v0alpha/" +
+      "org/preferences/scorecards/get:\001*\022\304\001\n\033Up" +
+      "dateScorecardsPreferences\022/.api.v0alpha." +
+      "UpdateScorecardsPreferencesRequest\0320.api" +
+      ".v0alpha.UpdateScorecardsPreferencesResp" +
+      "onse\"B\272\270\221\002\004\n\002\010d\202\323\344\223\0023\"./api/v0alpha/org/" +
+      "preferences/scorecards/update:\001*\022\255\001\n\026Get" +
+      "EmailSmsPreferences\022*.api.v0alpha.GetEma" +
+      "ilSmsPreferencesRequest\032+.api.v0alpha.Ge" +
+      "tEmailSmsPreferencesResponse\":\272\270\221\002\004\n\002\010e\202" +
+      "\323\344\223\002+\"&/api/v0alpha/org/preferences/emai" +
+      "l/get:\001*\022\271\001\n\031UpdateEmailSmsPreferences\022-" +
+      ".api.v0alpha.UpdateEmailSmsPreferencesRe" +
+      "quest\032..api.v0alpha.UpdateEmailSmsPrefer" +
+      "encesResponse\"=\272\270\221\002\004\n\002\010d\202\323\344\223\002.\")/api/v0a" +
+      "lpha/org/preferences/email/update:\001*\022\324\001\n" +
+      "\035EditAgentQuickViewPreferences\0221.api.v0a" +
+      "lpha.EditAgentQuickViewPreferencesReques" +
+      "t\0322.api.v0alpha.EditAgentQuickViewPrefer" +
+      "encesResponse\"L\272\270\221\002\004\n\002\010d\202\323\344\223\002=\"8/api/v0a" +
+      "lpha/org/preferences/reports/agentquickv" +
+      "iew/edit:\001*\022\325\001\n\035EditBackofficeThemePrefe" +
+      "rence\0221.api.v0alpha.EditBackofficeThemeP" +
+      "referenceRequest\0322.api.v0alpha.EditBacko" +
+      "fficeThemePreferenceResponse\"M\272\270\221\002\004\n\002\010d\202" +
+      "\323\344\223\002>\"9/api/v0alpha/org/preferences/repo" +
+      "rts/backofficetheme/edit:\001*\022\321\001\n\034GetBacko" +
+      "fficeThemePreference\0220.api.v0alpha.GetBa" +
+      "ckofficeThemePreferenceRequest\0321.api.v0a" +
+      "lpha.GetBackofficeThemePreferenceRespons" +
+      "e\"L\272\270\221\002\004\n\002\010e\202\323\344\223\002=\"8/api/v0alpha/org/pre" +
+      "ferences/reports/backofficetheme/get:\001*\022" +
+      "\276\001\n\034AcceptLinkbackRecordingTerms\0220.api.v" +
+      "0alpha.AcceptLinkbackRecordingTermsReque" +
+      "st\0321.api.v0alpha.AcceptLinkbackRecording" +
+      "TermsResponse\"9\272\270\221\002\004\n\002\010d\202\323\344\223\002*\"%/api/v0a" +
+      "lpha/org/linkback/acceptterms:\001*\022\316\001\n Lin" +
+      "kbackUpdateBroadcastTemplates\0224.api.v0al" +
+      "pha.LinkbackUpdateBroadcastTemplatesRequ" +
+      "est\0325.api.v0alpha.LinkbackUpdateBroadcas" +
+      "tTemplatesResponse\"=\272\270\221\002\004\n\002\010d\202\323\344\223\002.\")/ap" +
+      "i/v0alpha/org/linkback/updatetemplates:\001" +
+      "*\022\343\001\n%RecordEmailUnsubscribeAcknowledgem" +
+      "ent\0229.api.v0alpha.RecordEmailUnsubscribe" +
+      "AcknowledgementRequest\032:.api.v0alpha.Rec" +
+      "ordEmailUnsubscribeAcknowledgementRespon" +
+      "se\"C\272\270\221\002\004\n\002\010d\202\323\344\223\0024\"//api/v0alpha/org/em" +
+      "ailsmsacknowledgement/record:\001*\022\337\001\n$Clea" +
+      "rEmailUnsubscribeAcknowledgement\0228.api.v" +
+      "0alpha.ClearEmailUnsubscribeAcknowledgem" +
+      "entRequest\0329.api.v0alpha.ClearEmailUnsub" +
+      "scribeAcknowledgementResponse\"B\272\270\221\002\004\n\002\010d" +
+      "\202\323\344\223\0023\"./api/v0alpha/org/emailsmsacknowl" +
+      "edgement/clear:\001*\022\253\001\n\025CreateWebLinkTempl" +
+      "ate\022).api.v0alpha.CreateWebLinkTemplateR" +
+      "equest\032*.api.v0alpha.CreateWebLinkTempla" +
+      "teResponse\";\272\270\221\002\004\n\002\010d\202\323\344\223\002,\"\'/api/v0alph" +
+      "a/org/weblinktemplate/create:\001*\022\246\001\n\024List" +
+      "WebLinkTemplates\022(.api.v0alpha.ListWebLi" +
+      "nkTemplatesRequest\032).api.v0alpha.ListWeb" +
+      "LinkTemplatesResponse\"9\272\270\221\002\004\n\002\010e\202\323\344\223\002*\"%" +
+      "/api/v0alpha/org/weblinktemplate/list:\001*" +
+      "\022\237\001\n\022GetWebLinkTemplate\022&.api.v0alpha.Ge" +
+      "tWebLinkTemplateRequest\032\'.api.v0alpha.Ge" +
+      "tWebLinkTemplateResponse\"8\272\270\221\002\004\n\002\010e\202\323\344\223\002" +
+      ")\"$/api/v0alpha/org/weblinktemplate/get:" +
+      "\001*\022\253\001\n\025UpdateWebLinkTemplate\022).api.v0alp" +
+      "ha.UpdateWebLinkTemplateRequest\032*.api.v0" +
+      "alpha.UpdateWebLinkTemplateResponse\";\272\270\221" +
+      "\002\004\n\002\010d\202\323\344\223\002,\"\'/api/v0alpha/org/weblinkte" +
+      "mplate/update:\001*\022\253\001\n\025DeleteWebLinkTempla" +
+      "te\022).api.v0alpha.DeleteWebLinkTemplateRe" +
+      "quest\032*.api.v0alpha.DeleteWebLinkTemplat" +
+      "eResponse\";\272\270\221\002\004\n\002\010d\202\323\344\223\002,\"\'/api/v0alpha" +
+      "/org/weblinktemplate/delete:\001*\022\277\001\n\032Creat" +
+      "eAgentTriggerTemplate\022..api.v0alpha.Crea" +
+      "teAgentTriggerTemplateRequest\032/.api.v0al" +
+      "pha.CreateAgentTriggerTemplateResponse\"@" +
+      "\272\270\221\002\004\n\002\010d\202\323\344\223\0021\",/api/v0alpha/org/agentt" +
+      "riggertemplate/create:\001*\022\272\001\n\031ListAgentTr" +
+      "iggerTemplates\022-.api.v0alpha.ListAgentTr" +
+      "iggerTemplatesRequest\032..api.v0alpha.List" +
+      "AgentTriggerTemplatesResponse\">\272\270\221\002\004\n\002\010e" +
+      "\202\323\344\223\002/\"*/api/v0alpha/org/agenttriggertem" +
+      "plate/list:\001*\022\263\001\n\027GetAgentTriggerTemplat" +
+      "e\022+.api.v0alpha.GetAgentTriggerTemplateR" +
+      "equest\032,.api.v0alpha.GetAgentTriggerTemp" +
+      "lateResponse\"=\272\270\221\002\004\n\002\010e\202\323\344\223\002.\")/api/v0al" +
+      "pha/org/agenttriggertemplate/get:\001*\022\277\001\n\032" +
+      "UpdateAgentTriggerTemplate\022..api.v0alpha" +
+      ".UpdateAgentTriggerTemplateRequest\032/.api" +
+      ".v0alpha.UpdateAgentTriggerTemplateRespo" +
+      "nse\"@\272\270\221\002\004\n\002\010e\202\323\344\223\0021\",/api/v0alpha/org/a" +
+      "genttriggertemplate/update:\001*\022\277\001\n\032Delete" +
+      "AgentTriggerTemplate\022..api.v0alpha.Delet" +
+      "eAgentTriggerTemplateRequest\032/.api.v0alp" +
+      "ha.DeleteAgentTriggerTemplateResponse\"@\272" +
+      "\270\221\002\004\n\002\010d\202\323\344\223\0021\",/api/v0alpha/org/agenttr" +
+      "iggertemplate/delete:\001*\022\323\001\n\037CreateClient" +
+      "InfoDisplayTemplate\0223.api.v0alpha.Create" +
+      "ClientInfoDisplayTemplateRequest\0324.api.v" +
+      "0alpha.CreateClientInfoDisplayTemplateRe" +
+      "sponse\"E\272\270\221\002\004\n\002\010d\202\323\344\223\0026\"1/api/v0alpha/or" +
+      "g/clientinfodisplaytemplate/create:\001*\022\316\001" +
+      "\n\036ListClientInfoDisplayTemplates\0222.api.v" +
+      "0alpha.ListClientInfoDisplayTemplatesReq" +
+      "uest\0323.api.v0alpha.ListClientInfoDisplay" +
+      "TemplatesResponse\"C\272\270\221\002\004\n\002\010d\202\323\344\223\0024\"//api" +
+      "/v0alpha/org/clientinfodisplaytemplate/l" +
+      "ist:\001*\022\323\001\n\037UpdateClientInfoDisplayTempla" +
+      "te\0223.api.v0alpha.UpdateClientInfoDisplay" +
+      "TemplateRequest\0324.api.v0alpha.UpdateClie" +
+      "ntInfoDisplayTemplateResponse\"E\272\270\221\002\004\n\002\010e" +
+      "\202\323\344\223\0026\"1/api/v0alpha/org/clientinfodispl" +
+      "aytemplate/update:\001*\022\323\001\n\037DeleteClientInf" +
+      "oDisplayTemplate\0223.api.v0alpha.DeleteCli" +
+      "entInfoDisplayTemplateRequest\0324.api.v0al" +
+      "pha.DeleteClientInfoDisplayTemplateRespo" +
+      "nse\"E\272\270\221\002\004\n\002\010d\202\323\344\223\0026\"1/api/v0alpha/org/c" +
+      "lientinfodisplaytemplate/delete:\001*\022\307\001\n\034G" +
+      "etClientInfoDisplayTemplate\0220.api.v0alph" +
+      "a.GetClientInfoDisplayTemplateRequest\0321." +
+      "api.v0alpha.GetClientInfoDisplayTemplate" +
+      "Response\"B\272\270\221\002\004\n\002\010e\202\323\344\223\0023\"./api/v0alpha/" +
+      "org/clientinfodisplaytemplate/get:\001*\022\244\001\n" +
+      "\023ListAgentPauseCodes\022\'.api.v0alpha.ListA" +
+      "gentPauseCodesRequest\032(.api.v0alpha.List" +
+      "AgentPauseCodesResponse\":\272\270\221\002\004\n\002\010e\202\323\344\223\002+" +
+      "\"&/api/v0alpha/p3api/listagentpausecodes" +
+      ":\001*\022\250\001\n\024CreateAgentPauseCode\022(.api.v0alp" +
+      "ha.CreateAgentPauseCodeRequest\032).api.v0a" +
+      "lpha.CreateAgentPauseCodeResponse\";\272\270\221\002\004" +
+      "\n\002\010d\202\323\344\223\002,\"\'/api/v0alpha/p3api/createage" +
+      "ntpausecode:\001*\022\250\001\n\024UpdateAgentPauseCode\022" +
+      "(.api.v0alpha.UpdateAgentPauseCodeReques" +
+      "t\032).api.v0alpha.UpdateAgentPauseCodeResp",
+      "onse\";\272\270\221\002\004\n\002\010d\202\323\344\223\002,\"\'/api/v0alpha/p3ap" +
+      "i/updateagentpausecode:\001*\022\250\001\n\024DeleteAgen" +
+      "tPauseCode\022(.api.v0alpha.DeleteAgentPaus" +
+      "eCodeRequest\032).api.v0alpha.DeleteAgentPa" +
+      "useCodeResponse\";\272\270\221\002\004\n\002\010d\202\323\344\223\002,\"\'/api/v" +
+      "0alpha/p3api/deleteagentpausecode:\001*\022\262\001\n" +
+      "\027ListCustomReportFilters\022+.api.v0alpha.L" +
+      "istCustomReportFiltersRequest\032,.api.v0al" +
+      "pha.ListCustomReportFiltersResponse\"<\272\270\221" +
+      "\002\004\n\002\010e\202\323\344\223\002-\"(/api/v0alpha/org/customrep" +
+      "ortfilter/list:\001*\022\267\001\n\030CreateCustomReport" +
+      "Filter\022,.api.v0alpha.CreateCustomReportF" +
+      "ilterRequest\032-.api.v0alpha.CreateCustomR" +
+      "eportFilterResponse\">\272\270\221\002\004\n\002\010d\202\323\344\223\002/\"*/a" +
+      "pi/v0alpha/org/customreportfilter/create" +
+      ":\001*\022\267\001\n\030UpdateCustomReportFilter\022,.api.v" +
+      "0alpha.UpdateCustomReportFilterRequest\032-" +
+      ".api.v0alpha.UpdateCustomReportFilterRes" +
+      "ponse\">\272\270\221\002\004\n\002\010d\202\323\344\223\002/\"*/api/v0alpha/org" +
+      "/customreportfilter/update:\001*\022\267\001\n\030Delete" +
+      "CustomReportFilter\022,.api.v0alpha.DeleteC" +
+      "ustomReportFilterRequest\032-.api.v0alpha.D" +
+      "eleteCustomReportFilterResponse\">\272\270\221\002\004\n\002" +
+      "\010d\202\323\344\223\002/\"*/api/v0alpha/org/customreportf" +
+      "ilter/delete:\001*\022\274\001\n\027ListAgentResponseGro" +
+      "ups\022+.api.v0alpha.ListAgentResponseGroup" +
+      "sRequest\032,.api.v0alpha.ListAgentResponse" +
+      "GroupsResponse\"F\272\270\221\002\004\n\002\010e\202\323\344\223\0027\"2/api/v0" +
+      "alpha/org/customreportfilter/agentrespon" +
+      "ses:\001*\022\301\001\n\030ListLastTemplateElements\022,.ap" +
+      "i.v0alpha.ListLastTemplateElementsReques" +
+      "t\032-.api.v0alpha.ListLastTemplateElements" +
+      "Response\"H\272\270\221\002\004\n\002\010e\202\323\344\223\0029\"4/api/v0alpha/" +
+      "org/customreportfilter/templateelements:" +
+      "\001*\022\205\001\n\020ListQueueConfigs\022 .api.v0alpha.Li" +
+      "stQueueConfigsReq\032 .api.v0alpha.ListQueu" +
+      "eConfigsRes\"-\202\323\344\223\002\'\"\"/api/v0alpha/org/qu" +
+      "eueconfigs/list:\001*\022\223\001\n\021DeleteQueueConfig" +
+      "\022!.api.v0alpha.DeleteQueueConfigReq\032!.ap" +
+      "i.v0alpha.DeleteQueueConfigRes\"8\272\270\221\002\004\n\002\010" +
+      "d\202\323\344\223\002)\"$/api/v0alpha/org/queueconfigs/d" +
+      "elete:\001*\022\207\001\n\016GetQueueConfig\022\036.api.v0alph" +
+      "a.GetQueueConfigReq\032\036.api.v0alpha.GetQue" +
+      "ueConfigRes\"5\272\270\221\002\004\n\002\010e\202\323\344\223\002&\"!/api/v0alp" +
+      "ha/org/queueconfigs/get:\001*\022\223\001\n\021CreateQue" +
+      "ueConfig\022!.api.v0alpha.CreateQueueConfig" +
+      "Req\032!.api.v0alpha.CreateQueueConfigRes\"8" +
+      "\272\270\221\002\004\n\002\010d\202\323\344\223\002)\"$/api/v0alpha/org/queuec" +
+      "onfigs/create:\001*\022\223\001\n\021UpdateQueueConfig\022!" +
+      ".api.v0alpha.UpdateQueueConfigReq\032!.api." +
+      "v0alpha.UpdateQueueConfigRes\"8\272\270\221\002\004\n\002\010d\202" +
+      "\323\344\223\002)\"$/api/v0alpha/org/queueconfigs/upd" +
+      "ate:\001*\022\214\001\n\017CopyQueueConfig\022\037.api.v0alpha" +
+      ".CopyQueueConfigReq\032\037.api.v0alpha.CopyQu" +
+      "eueConfigRes\"7\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002\'\"\"/api/v0a" +
+      "lpha/org/queueconfigs/copy:\001*\022\254\001\n\027GetAll" +
+      "QueueConfigSounds\022\'.api.v0alpha.GetAllQu" +
+      "eueConfigSoundsReq\032\'.api.v0alpha.GetAllQ" +
+      "ueueConfigSoundsRes\"?\272\270\221\002\004\n\002\010e\202\323\344\223\0020\"+/a" +
+      "pi/v0alpha/org/queueconfigs/sounds/getal" +
+      "l:\001*\022\235\001\n\023GetQueueConfigSound\022#.api.v0alp" +
+      "ha.GetQueueConfigSoundReq\032#.api.v0alpha." +
+      "GetQueueConfigSoundRes\"<\272\270\221\002\004\n\002\010e\202\323\344\223\002-\"" +
+      "(/api/v0alpha/org/queueconfigs/sounds/ge" +
+      "t:\001*\022\235\001\n\023SetQueueConfigSound\022#.api.v0alp" +
+      "ha.SetQueueConfigSoundReq\032#.api.v0alpha." +
+      "SetQueueConfigSoundRes\"<\272\270\221\002\004\n\002\010d\202\323\344\223\002-\"" +
+      "(/api/v0alpha/org/queueconfigs/sounds/se" +
+      "t:\001*\022\324\001\n!SetAllQueueConfigSoundsFromSour" +
+      "ce\0221.api.v0alpha.SetAllQueueConfigSounds" +
+      "FromSourceReq\0321.api.v0alpha.SetAllQueueC" +
+      "onfigSoundsFromSourceRes\"I\272\270\221\002\004\n\002\010d\202\323\344\223\002" +
+      ":\"5/api/v0alpha/org/queueconfigs/sounds/" +
+      "setallfromsource:\001*\022\215\001\n\016GetUserBlocked\022\"" +
+      ".api.v0alpha.GetUserBlockedRequest\032#.api" +
+      ".v0alpha.GetUserBlockedResponse\"2\272\270\221\002\005\n\003" +
+      "\010\310\001\202\323\344\223\002\"\"\035/api/v0alpha/org/user/blocked" +
+      ":\001*\022\204\001\n\013UnblockUser\022\037.api.v0alpha.Unbloc" +
+      "kUserRequest\032 .api.v0alpha.UnblockUserRe" +
+      "sponse\"2\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002\"\"\035/api/v0alpha/o" +
+      "rg/user/unblock:\001*\022\242\001\n\025ListP3UnMigratedU" +
+      "sers\022).api.v0alpha.ListP3UnMigratedUsers" +
+      "Request\032*.api.v0alpha.ListP3UnMigratedUs" +
+      "ersResponse\"2\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002\"\"\035/api/v0al" +
+      "pha/org/p3/user/List:\001*\022\215\001\n\rMigrateP3Use" +
+      "r\022!.api.v0alpha.MigrateP3UserRequest\032\".a" +
+      "pi.v0alpha.MigrateP3UserResponse\"5\272\270\221\002\005\n" +
+      "\003\010\310\001\202\323\344\223\002%\" /api/v0alpha/org/p3/user/mig" +
+      "rate:\001*\022\231\001\n\020UpdateP3UserName\022$.api.v0alp" +
+      "ha.UpdateP3UserNameRequest\032%.api.v0alpha" +
+      ".UpdateP3UserNameResponse\"8\272\270\221\002\005\n\003\010\310\001\202\323\344" +
+      "\223\002(\"#/api/v0alpha/org/p3/username/update" +
+      ":\001*\022\220\001\n\016ListOwnedUsers\022\".api.v0alpha.Lis" +
+      "tOwnedUsersRequest\032#.api.v0alpha.ListOwn" +
+      "edUsersResponse\"5\272\270\221\002\005\n\003\010\202\001\202\323\344\223\002%\" /api/" +
+      "v0alpha/org/ownedusers/list:\001*\022\250\001\n\024ListO" +
+      "wnedOrgsByOrgId\022(.api.v0alpha.ListOwnedO" +
+      "rgsByOrgIdRequest\032).api.v0alpha.ListOwne" +
+      "dOrgsByOrgIdResponse\";\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002+\"&" +
+      "/api/v0alpha/org/OwnedOrgs/listbyorgid:\001" +
+      "*\022\213\001\n\rListOwnedOrgs\022!.api.v0alpha.ListOw" +
+      "nedOrgsRequest\032\".api.v0alpha.ListOwnedOr" +
+      "gsResponse\"3\272\270\221\002\004\n\002\010e\202\323\344\223\002$\"\037/api/v0alph" +
+      "a/org/OwnedOrgs/list:\001*\022\237\001\n\022RemoveLoginS" +
+      "trikes\022&.api.v0alpha.RemoveLoginStrikesR" +
+      "equest\032\'.api.v0alpha.RemoveLoginStrikesR" +
+      "esponse\"8\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002(\"#/api/v0alpha/" +
+      "org/Loginstriks/remove:\001*\022\261\001\n\026RemoveUser" +
+      "LoginStrikes\022*.api.v0alpha.RemoveUserLog" +
+      "inStrikesRequest\032+.api.v0alpha.RemoveUse" +
+      "rLoginStrikesResponse\">\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002.\"" +
+      ")/api/v0alpha/org/user/Loginstrikes/remo" +
+      "ve:\001*\022\230\001\n\020ListLoginHistory\022$.api.v0alpha" +
+      ".ListLoginHistoryRequest\032%.api.v0alpha.L" +
+      "istLoginHistoryResponse\"7\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002" +
+      "\'\"\"/api/v0alpha/org/loginhistory/list:\001*" +
+      "\022\227\001\n\020UpdateP3UserSids\022$.api.v0alpha.Upda" +
+      "teP3UserSidsRequest\032%.api.v0alpha.Update" +
+      "P3UserSidsResponse\"6\272\270\221\002\005\n\003\010\346\001\202\323\344\223\002&\"!/a" +
+      "pi/v0alpha/org/updatep3usersids:\001*\022\244\001\n\024C" +
+      "reateAuthConnection\022(.api.v0alpha.Create" +
+      "AuthConnectionRequest\032).api.v0alpha.Crea" +
+      "teAuthConnectionResponse\"7\272\270\221\002\005\n\003\010\204\002\202\323\344\223" +
+      "\002\'\"\"/api/v0alpha/org/connection/create:\001" +
+      "*\022\260\001\n\031GetAuthConnectionSettings\022-.api.v0" +
+      "alpha.GetAuthConnectionSettingsRequest\032." +
+      ".api.v0alpha.GetAuthConnectionSettingsRe" +
+      "sponse\"4\272\270\221\002\005\n\003\010\204\002\202\323\344\223\002$\"\037/api/v0alpha/o" +
+      "rg/connection/get:\001*\022\274\001\n\034UpdateAuthConne" +
+      "ctionSettings\0220.api.v0alpha.UpdateAuthCo" +
+      "nnectionSettingsRequest\0321.api.v0alpha.Up" +
+      "dateAuthConnectionSettingsResponse\"7\272\270\221\002" +
+      "\005\n\003\010\204\002\202\323\344\223\002\'\"\"/api/v0alpha/org/connectio" +
+      "n/update:\001*\022\244\001\n\024DeleteAuthConnection\022(.a" +
+      "pi.v0alpha.DeleteAuthConnectionRequest\032)" +
+      ".api.v0alpha.DeleteAuthConnectionRespons" +
+      "e\"7\272\270\221\002\005\n\003\010\204\002\202\323\344\223\002\'\"\"/api/v0alpha/org/co" +
+      "nnection/delete:\001*\022\231\001\n\023GetUserSubscripti" +
+      "on\022\'.api.v0alpha.GetUserSubscriptionRequ" +
+      "est\032(.api.v0alpha.GetUserSubscriptionRes" +
+      "ponse\"/\202\323\344\223\002)\"$/api/v0alpha/org/getusers" +
+      "ubscription:\001*\022\242\001\n\023AddUserSubscription\022\'" +
+      ".api.v0alpha.AddUserSubscriptionRequest\032" +
+      "(.api.v0alpha.AddUserSubscriptionRespons" +
+      "e\"8\272\270\221\002\004\n\002\010y\202\323\344\223\002)\"$/api/v0alpha/org/add" +
+      "usersubscription:\001*\022\256\001\n\026RemoveUserSubscr" +
+      "iption\022*.api.v0alpha.RemoveUserSubscript" +
+      "ionRequest\032+.api.v0alpha.RemoveUserSubsc" +
+      "riptionResponse\";\272\270\221\002\004\n\002\010w\202\323\344\223\002,\"\'/api/v" +
+      "0alpha/org/removeusersubscription:\001*\022\266\001\n" +
+      "\030RemoveMyUserSubscription\022,.api.v0alpha." +
+      "RemoveMyUserSubscriptionRequest\032-.api.v0" +
+      "alpha.RemoveMyUserSubscriptionResponse\"=" +
+      "\272\270\221\002\004\n\002\010y\202\323\344\223\002.\")/api/v0alpha/org/remove" +
+      "myusersubscription:\001*\022\245\001\n\026UpdateUserSubs" +
+      "cription\022*.api.v0alpha.UpdateUserSubscri" +
+      "ptionRequest\032+.api.v0alpha.UpdateUserSub" +
+      "scriptionResponse\"2\202\323\344\223\002,\"\'/api/v0alpha/" +
+      "org/updateusersubscription:\001*\022\241\001\n\025ListUs" +
+      "erSubscriptions\022).api.v0alpha.ListUserSu" +
+      "bscriptionsRequest\032*.api.v0alpha.ListUse" +
+      "rSubscriptionsResponse\"1\202\323\344\223\002+\"&/api/v0a" +
+      "lpha/org/listusersubscriptions:\001*\022\246\001\n\024Li" +
+      "stOrgSubscriptions\022(.api.v0alpha.ListOrg" +
+      "SubscriptionsRequest\032).api.v0alpha.ListO" +
+      "rgSubscriptionsResponse\"9\272\270\221\002\004\n\002\010e\202\323\344\223\002*" +
+      "\"%/api/v0alpha/org/listorgsubscriptions:" +
+      "\001*\022\300\001\n\033GetSystemEnvironmentDetails\022/.api" +
+      ".v0alpha.GetSystemEnvironmentDetailsRequ" +
+      "est\0320.api.v0alpha.GetSystemEnvironmentDe" +
+      "tailsResponse\">\272\270\221\002\002\030\001\202\323\344\223\0021\",/api/v0alp" +
+      "ha/org/getsystemenvironmentdetails:\001*\022\306\001" +
+      "\n\034ListAgentStatisticsTemplates\0220.api.v0a" +
+      "lpha.ListAgentStatisticsTemplatesRequest" +
+      "\0321.api.v0alpha.ListAgentStatisticsTempla" +
+      "tesResponse\"A\272\270\221\002\004\n\002\010e\202\323\344\223\0022\"-/api/v0alp" +
+      "ha/org/agentstatisticstemplate/list:\001*\022\313" +
+      "\001\n\035CreateAgentStatisticsTemplate\0221.api.v" +
+      "0alpha.CreateAgentStatisticsTemplateRequ" +
+      "est\0322.api.v0alpha.CreateAgentStatisticsT" +
+      "emplateResponse\"C\272\270\221\002\004\n\002\010d\202\323\344\223\0024\"//api/v" +
+      "0alpha/org/agentstatisticstemplate/creat" +
+      "e:\001*\022\313\001\n\035UpdateAgentStatisticsTemplate\0221" +
+      ".api.v0alpha.UpdateAgentStatisticsTempla" +
+      "teRequest\0322.api.v0alpha.UpdateAgentStati" +
+      "sticsTemplateResponse\"C\272\270\221\002\004\n\002\010d\202\323\344\223\0024\"/" +
+      "/api/v0alpha/org/agentstatisticstemplate" +
+      "/update:\001*\022\313\001\n\035DeleteAgentStatisticsTemp" +
+      "late\0221.api.v0alpha.DeleteAgentStatistics" +
+      "TemplateRequest\0322.api.v0alpha.DeleteAgen" +
+      "tStatisticsTemplateResponse\"C\272\270\221\002\004\n\002\010d\202\323" +
+      "\344\223\0024\"//api/v0alpha/org/agentstatisticste" +
+      "mplate/delete:\001*Bv\n\035com.tcn.cloud.api.ap" +
+      "i.v0alphaB\010OrgProtoP\001\242\002\003AVX\252\002\013Api.V0alph" +
+      "a\312\002\013Api\\V0alpha\342\002\027Api\\V0alpha\\GPBMetadat" +
+      "a\352\002\014Api::V0alphab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8098,24 +8097,24 @@ public final class OrgProto {
     internal_static_api_v0alpha_UpdateUserPasswordRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_UpdateUserPasswordRequest_descriptor,
-        new java.lang.String[] { "Password", "CurrentPassword", });
+        new java.lang.String[] { "UserId", "Password", "CurrentPassword", });
     internal_static_api_v0alpha_UpdateUserPasswordResponse_descriptor =
       getDescriptor().getMessageTypes().get(349);
     internal_static_api_v0alpha_UpdateUserPasswordResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_UpdateUserPasswordResponse_descriptor,
         new java.lang.String[] { });
-    internal_static_api_v0alpha_UpdateUserPasswordByUserIdRequest_descriptor =
+    internal_static_api_v0alpha_UpdateMyUserPasswordRequest_descriptor =
       getDescriptor().getMessageTypes().get(350);
-    internal_static_api_v0alpha_UpdateUserPasswordByUserIdRequest_fieldAccessorTable = new
+    internal_static_api_v0alpha_UpdateMyUserPasswordRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v0alpha_UpdateUserPasswordByUserIdRequest_descriptor,
-        new java.lang.String[] { "UserId", "Password", "CurrentPassword", });
-    internal_static_api_v0alpha_UpdateUserPasswordByUserIdResponse_descriptor =
+        internal_static_api_v0alpha_UpdateMyUserPasswordRequest_descriptor,
+        new java.lang.String[] { "Password", "CurrentPassword", });
+    internal_static_api_v0alpha_UpdateMyUserPasswordResponse_descriptor =
       getDescriptor().getMessageTypes().get(351);
-    internal_static_api_v0alpha_UpdateUserPasswordByUserIdResponse_fieldAccessorTable = new
+    internal_static_api_v0alpha_UpdateMyUserPasswordResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v0alpha_UpdateUserPasswordByUserIdResponse_descriptor,
+        internal_static_api_v0alpha_UpdateMyUserPasswordResponse_descriptor,
         new java.lang.String[] { });
     internal_static_api_v0alpha_UpdateUserPasswordByOrgIdRequest_descriptor =
       getDescriptor().getMessageTypes().get(352);
@@ -8129,29 +8128,29 @@ public final class OrgProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_UpdateUserPasswordByOrgIdResponse_descriptor,
         new java.lang.String[] { });
-    internal_static_api_v0alpha_GetMyUserPasswordResetLinkRequest_descriptor =
-      getDescriptor().getMessageTypes().get(354);
-    internal_static_api_v0alpha_GetMyUserPasswordResetLinkRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v0alpha_GetMyUserPasswordResetLinkRequest_descriptor,
-        new java.lang.String[] { "Ttl", });
-    internal_static_api_v0alpha_GetMyUserPasswordResetLinkResponse_descriptor =
-      getDescriptor().getMessageTypes().get(355);
-    internal_static_api_v0alpha_GetMyUserPasswordResetLinkResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_api_v0alpha_GetMyUserPasswordResetLinkResponse_descriptor,
-        new java.lang.String[] { "Url", });
     internal_static_api_v0alpha_GetUserPasswordResetLinkRequest_descriptor =
-      getDescriptor().getMessageTypes().get(356);
+      getDescriptor().getMessageTypes().get(354);
     internal_static_api_v0alpha_GetUserPasswordResetLinkRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_GetUserPasswordResetLinkRequest_descriptor,
         new java.lang.String[] { "UserId", "Ttl", });
     internal_static_api_v0alpha_GetUserPasswordResetLinkResponse_descriptor =
-      getDescriptor().getMessageTypes().get(357);
+      getDescriptor().getMessageTypes().get(355);
     internal_static_api_v0alpha_GetUserPasswordResetLinkResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v0alpha_GetUserPasswordResetLinkResponse_descriptor,
+        new java.lang.String[] { "Url", });
+    internal_static_api_v0alpha_GetMyUserPasswordResetLinkRequest_descriptor =
+      getDescriptor().getMessageTypes().get(356);
+    internal_static_api_v0alpha_GetMyUserPasswordResetLinkRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v0alpha_GetMyUserPasswordResetLinkRequest_descriptor,
+        new java.lang.String[] { "Ttl", });
+    internal_static_api_v0alpha_GetMyUserPasswordResetLinkResponse_descriptor =
+      getDescriptor().getMessageTypes().get(357);
+    internal_static_api_v0alpha_GetMyUserPasswordResetLinkResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_api_v0alpha_GetMyUserPasswordResetLinkResponse_descriptor,
         new java.lang.String[] { "Url", });
     internal_static_api_v0alpha_GetUserPasswordResetLinkByOrgIdRequest_descriptor =
       getDescriptor().getMessageTypes().get(358);

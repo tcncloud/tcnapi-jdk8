@@ -3,40 +3,26 @@
 
 package com.tcn.cloud.api.api.v0alpha;
 
-public interface UpdateUserPasswordByUserIdRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v0alpha.UpdateUserPasswordByUserIdRequest)
+public interface UpdateMyUserPasswordRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v0alpha.UpdateMyUserPasswordRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**
    * <pre>
-   * the USER_EDIT permission is require
-   * to update another user's password
-   * in the same org as the current user.
+   * the USER_EDIT_PASSWORD permission is require
+   * to update the current user's own password.
    * </pre>
    *
-   * <code>string user_id = 1 [json_name = "userId"];</code>
-   * @return The userId.
-   */
-  java.lang.String getUserId();
-  /**
-   * <pre>
-   * the USER_EDIT permission is require
-   * to update another user's password
-   * in the same org as the current user.
-   * </pre>
-   *
-   * <code>string user_id = 1 [json_name = "userId"];</code>
-   * @return The bytes for userId.
-   */
-  com.google.protobuf.ByteString
-      getUserIdBytes();
-
-  /**
    * <code>string password = 2 [json_name = "password"];</code>
    * @return The password.
    */
   java.lang.String getPassword();
   /**
+   * <pre>
+   * the USER_EDIT_PASSWORD permission is require
+   * to update the current user's own password.
+   * </pre>
+   *
    * <code>string password = 2 [json_name = "password"];</code>
    * @return The bytes for password.
    */

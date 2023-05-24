@@ -16,6 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private UpdateUserPasswordRequest() {
+    userId_ = "";
     password_ = "";
     currentPassword_ = "";
   }
@@ -40,15 +41,61 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordRequest.class, com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordRequest.Builder.class);
   }
 
+  public static final int USER_ID_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object userId_ = "";
+  /**
+   * <pre>
+   * the USER_EDIT permission is require
+   * to update another user's password
+   * in the same org as the current user.
+   * </pre>
+   *
+   * <code>string user_id = 1 [json_name = "userId"];</code>
+   * @return The userId.
+   */
+  @java.lang.Override
+  public java.lang.String getUserId() {
+    java.lang.Object ref = userId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      userId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * the USER_EDIT permission is require
+   * to update another user's password
+   * in the same org as the current user.
+   * </pre>
+   *
+   * <code>string user_id = 1 [json_name = "userId"];</code>
+   * @return The bytes for userId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getUserIdBytes() {
+    java.lang.Object ref = userId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      userId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   public static final int PASSWORD_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private volatile java.lang.Object password_ = "";
   /**
-   * <pre>
-   * the USER_EDIT_PASSWORD permission is require
-   * to update the current user's own password.
-   * </pre>
-   *
    * <code>string password = 2 [json_name = "password"];</code>
    * @return The password.
    */
@@ -66,11 +113,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * the USER_EDIT_PASSWORD permission is require
-   * to update the current user's own password.
-   * </pre>
-   *
    * <code>string password = 2 [json_name = "password"];</code>
    * @return The bytes for password.
    */
@@ -142,6 +184,9 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, userId_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, password_);
     }
@@ -157,6 +202,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, userId_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, password_);
     }
@@ -178,6 +226,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordRequest other = (com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordRequest) obj;
 
+    if (!getUserId()
+        .equals(other.getUserId())) return false;
     if (!getPassword()
         .equals(other.getPassword())) return false;
     if (!getCurrentPassword()
@@ -193,6 +243,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + USER_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getUserId().hashCode();
     hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
     hash = (53 * hash) + getPassword().hashCode();
     hash = (37 * hash) + CURRENT_PASSWORD_FIELD_NUMBER;
@@ -328,6 +380,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      userId_ = "";
       password_ = "";
       currentPassword_ = "";
       return this;
@@ -364,9 +417,12 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.password_ = password_;
+        result.userId_ = userId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.password_ = password_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.currentPassword_ = currentPassword_;
       }
     }
@@ -383,14 +439,19 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordRequest other) {
       if (other == com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordRequest.getDefaultInstance()) return this;
+      if (!other.getUserId().isEmpty()) {
+        userId_ = other.userId_;
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       if (!other.getPassword().isEmpty()) {
         password_ = other.password_;
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getCurrentPassword().isEmpty()) {
         currentPassword_ = other.currentPassword_;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -419,14 +480,19 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 10: {
+              userId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
             case 18: {
               password_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
               currentPassword_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             default: {
@@ -446,13 +512,110 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object password_ = "";
+    private java.lang.Object userId_ = "";
     /**
      * <pre>
-     * the USER_EDIT_PASSWORD permission is require
-     * to update the current user's own password.
+     * the USER_EDIT permission is require
+     * to update another user's password
+     * in the same org as the current user.
      * </pre>
      *
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @return The userId.
+     */
+    public java.lang.String getUserId() {
+      java.lang.Object ref = userId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        userId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * the USER_EDIT permission is require
+     * to update another user's password
+     * in the same org as the current user.
+     * </pre>
+     *
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @return The bytes for userId.
+     */
+    public com.google.protobuf.ByteString
+        getUserIdBytes() {
+      java.lang.Object ref = userId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * the USER_EDIT permission is require
+     * to update another user's password
+     * in the same org as the current user.
+     * </pre>
+     *
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @param value The userId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUserId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      userId_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the USER_EDIT permission is require
+     * to update another user's password
+     * in the same org as the current user.
+     * </pre>
+     *
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearUserId() {
+      userId_ = getDefaultInstance().getUserId();
+      bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * the USER_EDIT permission is require
+     * to update another user's password
+     * in the same org as the current user.
+     * </pre>
+     *
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @param value The bytes for userId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUserIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      userId_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object password_ = "";
+    /**
      * <code>string password = 2 [json_name = "password"];</code>
      * @return The password.
      */
@@ -469,11 +632,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * the USER_EDIT_PASSWORD permission is require
-     * to update the current user's own password.
-     * </pre>
-     *
      * <code>string password = 2 [json_name = "password"];</code>
      * @return The bytes for password.
      */
@@ -491,11 +649,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * the USER_EDIT_PASSWORD permission is require
-     * to update the current user's own password.
-     * </pre>
-     *
      * <code>string password = 2 [json_name = "password"];</code>
      * @param value The password to set.
      * @return This builder for chaining.
@@ -504,31 +657,21 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       password_ = value;
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * the USER_EDIT_PASSWORD permission is require
-     * to update the current user's own password.
-     * </pre>
-     *
      * <code>string password = 2 [json_name = "password"];</code>
      * @return This builder for chaining.
      */
     public Builder clearPassword() {
       password_ = getDefaultInstance().getPassword();
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * the USER_EDIT_PASSWORD permission is require
-     * to update the current user's own password.
-     * </pre>
-     *
      * <code>string password = 2 [json_name = "password"];</code>
      * @param value The bytes for password to set.
      * @return This builder for chaining.
@@ -538,7 +681,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       password_ = value;
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -586,7 +729,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       currentPassword_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -596,7 +739,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearCurrentPassword() {
       currentPassword_ = getDefaultInstance().getCurrentPassword();
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -610,7 +753,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       currentPassword_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
