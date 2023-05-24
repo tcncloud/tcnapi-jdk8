@@ -174,153 +174,148 @@ public final class CallqueueProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\033api/v0alpha/callqueue.proto\022\013api.v0alp" +
-      "ha\032\027annotations/authz.proto\032\026api/commons" +
-      "/call.proto\032\025api/commons/sms.proto\032\027api/" +
-      "v0alpha/p3api.proto\032\034google/api/annotati" +
-      "ons.proto\"t\n\035DequeuePreviewRecordOrCallR" +
-      "eq\022\'\n\017timeout_minutes\030\001 \001(\005R\016timeoutMinu" +
-      "tes\022*\n\021agent_session_sid\030\002 \001(\003R\017agentSes" +
-      "sionSid\"\246\001\n\035DequeuePreviewRecordOrCallRe" +
-      "s\022\035\n\nqueue_name\030\001 \001(\tR\tqueueName\022/\n\004call" +
-      "\030\002 \001(\0132\033.api.commons.SimpleCallDataR\004cal" +
-      "l\0225\n\006record\030\003 \001(\0132\035.api.commons.SimpleRe" +
-      "cordDataR\006record\"o\n\027EnqueuePreviewRecord" +
-      "Req\0225\n\006record\030\001 \001(\0132\035.api.commons.Simple" +
-      "RecordDataR\006record\022\035\n\nqueue_name\030\002 \001(\tR\t" +
-      "queueName\"\031\n\027EnqueuePreviewRecordRes\"\332\001\n" +
-      "&DequeueScrubbedCallForPreviewRecordReq\022" +
-      "$\n\016hunt_group_sid\030\001 \001(\003R\014huntGroupSid\022!\n" +
-      "\014phone_number\030\002 \001(\tR\013phoneNumber\022&\n\017phon" +
-      "e_num_index\030\003 \001(\005R\rphoneNumIndex\022$\n\016task" +
-      "_group_sid\030\004 \001(\003R\014taskGroupSid\022\031\n\010task_s" +
-      "id\030\005 \001(\003R\007taskSid\"Y\n&DequeueScrubbedCall" +
-      "ForPreviewRecordRes\022/\n\004call\030\001 \001(\0132\033.api." +
-      "commons.SimpleCallDataR\004call\"\"\n ClearPre" +
-      "viewRecordReturnQueueReq\"\"\n ClearPreview" +
-      "RecordReturnQueueRes\"k\n\031EnqueuePreviewDi" +
-      "alCallReq\022/\n\004call\030\001 \001(\0132\033.api.commons.Si" +
-      "mpleCallDataR\004call\022\035\n\nqueue_name\030\002 \001(\tR\t" +
-      "queueName\"\033\n\031EnqueuePreviewDialCallRes\"\031" +
-      "\n\027ClearManualDialQueueReq\"\031\n\027ClearManual" +
-      "DialQueueRes\"K\n\030ProcessManualDialCallReq" +
-      "\022/\n\004call\030\001 \001(\0132\033.api.commons.SimpleCallD" +
-      "ataR\004call\"\\\n\030ProcessManualDialCallRes\022@\n" +
-      "\rscrubbed_call\030\001 \001(\0132\033.api.commons.Simpl" +
-      "eCallDataR\014scrubbedCall\"\234\001\n\037DequeueCallF" +
-      "orManualApprovalReq\022$\n\016hunt_group_sid\030\001 " +
-      "\001(\003R\014huntGroupSid\022*\n\021agent_session_sid\030\002" +
-      " \001(\003R\017agentSessionSid\022\'\n\017timeout_minutes" +
-      "\030\003 \001(\005R\016timeoutMinutes\"\214\002\n\037DequeueCallFo" +
-      "rManualApprovalRes\022/\n\004call\030\001 \001(\0132\033.api.c" +
-      "ommons.SimpleCallDataR\004call\022\024\n\005queue\030\002 \001" +
-      "(\tR\005queue\022B\n\013client_info\030\003 \001(\0132!.api.v0a" +
-      "lpha.GetClientInfoDataResR\nclientInfo\022^\n" +
-      "\024client_info_template\030\004 \001(\0132,.api.v0alph" +
-      "a.GetClientInfoDisplayTemplateResR\022clien" +
-      "tInfoTemplate\"Q\n\036EnqueueManuallyApproved" +
-      "CallReq\022/\n\004call\030\001 \001(\0132\033.api.commons.Simp" +
-      "leCallDataR\004call\" \n\036EnqueueManuallyAppro" +
-      "vedCallRes\"Q\n\036EnqueueManuallyRejectedCal" +
-      "lReq\022/\n\004call\030\001 \001(\0132\033.api.commons.SimpleC" +
-      "allDataR\004call\" \n\036EnqueueManuallyRejected" +
-      "CallRes\"p\n\036RequeueManuallyApprovedCallRe" +
-      "q\022/\n\004call\030\001 \001(\0132\033.api.commons.SimpleCall" +
-      "DataR\004call\022\035\n\nqueue_name\030\002 \001(\tR\tqueueNam" +
-      "e\" \n\036RequeueManuallyApprovedCallRes\"P\n\035E" +
-      "nqueueManuallyApprovedSmsReq\022/\n\003sms\030\001 \001(" +
-      "\0132\035.api.commons.SimpleSmsMamDataR\003sms\"\037\n" +
-      "\035EnqueueManuallyApprovedSmsRes\"P\n\035Enqueu" +
-      "eManuallyRejectedSmsReq\022/\n\003sms\030\001 \001(\0132\035.a" +
-      "pi.commons.SimpleSmsMamDataR\003sms\"\037\n\035Enqu" +
-      "eueManuallyRejectedSmsRes\"o\n\035RequeueManu" +
-      "allyApprovedSmsReq\022/\n\003sms\030\001 \001(\0132\035.api.co" +
-      "mmons.SimpleSmsMamDataR\003sms\022\035\n\nqueue_nam" +
-      "e\030\002 \001(\tR\tqueueName\"\037\n\035RequeueManuallyApp" +
-      "rovedSmsRes\"I\n!DequeueSmsMamForManualApp" +
-      "rovalReq\022$\n\016hunt_group_sid\030\002 \001(\003R\014huntGr" +
-      "oupSid\"j\n!DequeueSmsMamForManualApproval" +
-      "Res\022/\n\003sms\030\001 \001(\0132\035.api.commons.SimpleSms" +
-      "MamDataR\003sms\022\024\n\005queue\030\002 \001(\tR\005queue2\217\026\n\tC" +
-      "allQueue\022\271\001\n\032DequeuePreviewRecordOrCall\022" +
-      "*.api.v0alpha.DequeuePreviewRecordOrCall" +
-      "Req\032*.api.v0alpha.DequeuePreviewRecordOr" +
-      "CallRes\"C\272\270\221\002\002\030\001\202\323\344\223\0026\"1/api/v0alpha/cal" +
-      "lqueue/dequeuepreviewrecordorcall:\001*\022\241\001\n" +
-      "\024EnqueuePreviewRecord\022$.api.v0alpha.Enqu" +
-      "euePreviewRecordReq\032$.api.v0alpha.Enqueu" +
-      "ePreviewRecordRes\"=\272\270\221\002\002\030\001\202\323\344\223\0020\"+/api/v" +
-      "0alpha/callqueue/enqueuepreviewrecord:\001*" +
-      "\022\335\001\n#DequeueScrubbedCallForPreviewRecord" +
-      "\0223.api.v0alpha.DequeueScrubbedCallForPre" +
-      "viewRecordReq\0323.api.v0alpha.DequeueScrub" +
-      "bedCallForPreviewRecordRes\"L\272\270\221\002\002\030\001\202\323\344\223\002" +
-      "?\":/api/v0alpha/callqueue/dequeuescrubbe" +
-      "dcallforpreviewrecord:\001*\022\305\001\n\035ClearPrevie" +
-      "wRecordReturnQueue\022-.api.v0alpha.ClearPr" +
-      "eviewRecordReturnQueueReq\032-.api.v0alpha." +
-      "ClearPreviewRecordReturnQueueRes\"F\272\270\221\002\002\030" +
-      "\001\202\323\344\223\0029\"4/api/v0alpha/callqueue/clearpre" +
-      "viewrecordreturnqueue:\001*\022\251\001\n\026EnqueuePrev" +
-      "iewDialCall\022&.api.v0alpha.EnqueuePreview" +
-      "DialCallReq\032&.api.v0alpha.EnqueuePreview" +
-      "DialCallRes\"?\272\270\221\002\002\030\001\202\323\344\223\0022\"-/api/v0alpha" +
-      "/callqueue/enqueuepreviewdialcall:\001*\022\241\001\n" +
-      "\024ClearManualDialQueue\022$.api.v0alpha.Clea" +
-      "rManualDialQueueReq\032$.api.v0alpha.ClearM" +
-      "anualDialQueueRes\"=\272\270\221\002\002\030\001\202\323\344\223\0020\"+/api/v" +
-      "0alpha/callqueue/clearmanualdialqueue:\001*" +
-      "\022\245\001\n\025ProcessManualDialCall\022%.api.v0alpha" +
-      ".ProcessManualDialCallReq\032%.api.v0alpha." +
-      "ProcessManualDialCallRes\">\272\270\221\002\002\030\001\202\323\344\223\0021\"" +
-      ",/api/v0alpha/callqueue/processmanualdia" +
-      "lcall:\001*\022\301\001\n\034DequeueCallForManualApprova" +
-      "l\022,.api.v0alpha.DequeueCallForManualAppr" +
-      "ovalReq\032,.api.v0alpha.DequeueCallForManu" +
-      "alApprovalRes\"E\272\270\221\002\002\030\001\202\323\344\223\0028\"3/api/v0alp" +
-      "ha/callqueue/dequeuecallformanualapprova" +
-      "l:\001*\022\275\001\n\033EnqueueManuallyApprovedCall\022+.a" +
-      "pi.v0alpha.EnqueueManuallyApprovedCallRe" +
-      "q\032+.api.v0alpha.EnqueueManuallyApprovedC" +
-      "allRes\"D\272\270\221\002\002\030\001\202\323\344\223\0027\"2/api/v0alpha/call" +
-      "queue/enqueuemanuallyapprovedcall:\001*\022\275\001\n" +
-      "\033EnqueueManuallyRejectedCall\022+.api.v0alp" +
-      "ha.EnqueueManuallyRejectedCallReq\032+.api." +
-      "v0alpha.EnqueueManuallyRejectedCallRes\"D" +
-      "\272\270\221\002\002\030\001\202\323\344\223\0027\"2/api/v0alpha/callqueue/en" +
-      "queuemanuallyrejectedcall:\001*\022\275\001\n\033Requeue" +
-      "ManuallyApprovedCall\022+.api.v0alpha.Reque" +
-      "ueManuallyApprovedCallReq\032+.api.v0alpha." +
-      "RequeueManuallyApprovedCallRes\"D\272\270\221\002\002\030\001\202" +
-      "\323\344\223\0027\"2/api/v0alpha/callqueue/requeueman" +
-      "uallyapprovedcall:\001*\022\271\001\n\032EnqueueManually" +
-      "ApprovedSms\022*.api.v0alpha.EnqueueManuall" +
-      "yApprovedSmsReq\032*.api.v0alpha.EnqueueMan" +
-      "uallyApprovedSmsRes\"C\272\270\221\002\002\030\001\202\323\344\223\0026\"1/api" +
-      "/v0alpha/callqueue/enqueuemanuallyapprov" +
-      "edsms:\001*\022\271\001\n\032EnqueueManuallyRejectedSms\022" +
-      "*.api.v0alpha.EnqueueManuallyRejectedSms" +
-      "Req\032*.api.v0alpha.EnqueueManuallyRejecte" +
-      "dSmsRes\"C\272\270\221\002\002\030\001\202\323\344\223\0026\"1/api/v0alpha/cal" +
-      "lqueue/enqueuemanuallyrejectedsms:\001*\022\271\001\n" +
-      "\032RequeueManuallyApprovedSms\022*.api.v0alph" +
-      "a.RequeueManuallyApprovedSmsReq\032*.api.v0" +
-      "alpha.RequeueManuallyApprovedSmsRes\"C\272\270\221" +
-      "\002\002\030\001\202\323\344\223\0026\"1/api/v0alpha/callqueue/reque" +
-      "uemanuallyapprovedsms:\001*\022\311\001\n\036DequeueSmsM" +
-      "amForManualApproval\022..api.v0alpha.Dequeu" +
-      "eSmsMamForManualApprovalReq\032..api.v0alph" +
-      "a.DequeueSmsMamForManualApprovalRes\"G\272\270\221" +
-      "\002\002\030\001\202\323\344\223\002:\"5/api/v0alpha/callqueue/deque" +
-      "uesmsmamformanualapproval:\001*B|\n\035com.tcn." +
-      "cloud.api.api.v0alphaB\016CallqueueProtoP\001\242" +
-      "\002\003AVX\252\002\013Api.V0alpha\312\002\013Api\\V0alpha\342\002\027Api\\" +
-      "V0alpha\\GPBMetadata\352\002\014Api::V0alphab\006prot" +
-      "o3"
+      "ha\032\026api/commons/call.proto\032\025api/commons/" +
+      "sms.proto\032\027api/v0alpha/p3api.proto\032\034goog" +
+      "le/api/annotations.proto\"t\n\035DequeuePrevi" +
+      "ewRecordOrCallReq\022\'\n\017timeout_minutes\030\001 \001" +
+      "(\005R\016timeoutMinutes\022*\n\021agent_session_sid\030" +
+      "\002 \001(\003R\017agentSessionSid\"\246\001\n\035DequeuePrevie" +
+      "wRecordOrCallRes\022\035\n\nqueue_name\030\001 \001(\tR\tqu" +
+      "eueName\022/\n\004call\030\002 \001(\0132\033.api.commons.Simp" +
+      "leCallDataR\004call\0225\n\006record\030\003 \001(\0132\035.api.c" +
+      "ommons.SimpleRecordDataR\006record\"o\n\027Enque" +
+      "uePreviewRecordReq\0225\n\006record\030\001 \001(\0132\035.api" +
+      ".commons.SimpleRecordDataR\006record\022\035\n\nque" +
+      "ue_name\030\002 \001(\tR\tqueueName\"\031\n\027EnqueuePrevi" +
+      "ewRecordRes\"\332\001\n&DequeueScrubbedCallForPr" +
+      "eviewRecordReq\022$\n\016hunt_group_sid\030\001 \001(\003R\014" +
+      "huntGroupSid\022!\n\014phone_number\030\002 \001(\tR\013phon" +
+      "eNumber\022&\n\017phone_num_index\030\003 \001(\005R\rphoneN" +
+      "umIndex\022$\n\016task_group_sid\030\004 \001(\003R\014taskGro" +
+      "upSid\022\031\n\010task_sid\030\005 \001(\003R\007taskSid\"Y\n&Dequ" +
+      "eueScrubbedCallForPreviewRecordRes\022/\n\004ca" +
+      "ll\030\001 \001(\0132\033.api.commons.SimpleCallDataR\004c" +
+      "all\"\"\n ClearPreviewRecordReturnQueueReq\"" +
+      "\"\n ClearPreviewRecordReturnQueueRes\"k\n\031E" +
+      "nqueuePreviewDialCallReq\022/\n\004call\030\001 \001(\0132\033" +
+      ".api.commons.SimpleCallDataR\004call\022\035\n\nque" +
+      "ue_name\030\002 \001(\tR\tqueueName\"\033\n\031EnqueuePrevi" +
+      "ewDialCallRes\"\031\n\027ClearManualDialQueueReq" +
+      "\"\031\n\027ClearManualDialQueueRes\"K\n\030ProcessMa" +
+      "nualDialCallReq\022/\n\004call\030\001 \001(\0132\033.api.comm" +
+      "ons.SimpleCallDataR\004call\"\\\n\030ProcessManua" +
+      "lDialCallRes\022@\n\rscrubbed_call\030\001 \001(\0132\033.ap" +
+      "i.commons.SimpleCallDataR\014scrubbedCall\"\234" +
+      "\001\n\037DequeueCallForManualApprovalReq\022$\n\016hu" +
+      "nt_group_sid\030\001 \001(\003R\014huntGroupSid\022*\n\021agen" +
+      "t_session_sid\030\002 \001(\003R\017agentSessionSid\022\'\n\017" +
+      "timeout_minutes\030\003 \001(\005R\016timeoutMinutes\"\214\002" +
+      "\n\037DequeueCallForManualApprovalRes\022/\n\004cal" +
+      "l\030\001 \001(\0132\033.api.commons.SimpleCallDataR\004ca" +
+      "ll\022\024\n\005queue\030\002 \001(\tR\005queue\022B\n\013client_info\030" +
+      "\003 \001(\0132!.api.v0alpha.GetClientInfoDataRes" +
+      "R\nclientInfo\022^\n\024client_info_template\030\004 \001" +
+      "(\0132,.api.v0alpha.GetClientInfoDisplayTem" +
+      "plateResR\022clientInfoTemplate\"Q\n\036EnqueueM" +
+      "anuallyApprovedCallReq\022/\n\004call\030\001 \001(\0132\033.a" +
+      "pi.commons.SimpleCallDataR\004call\" \n\036Enque" +
+      "ueManuallyApprovedCallRes\"Q\n\036EnqueueManu" +
+      "allyRejectedCallReq\022/\n\004call\030\001 \001(\0132\033.api." +
+      "commons.SimpleCallDataR\004call\" \n\036EnqueueM" +
+      "anuallyRejectedCallRes\"p\n\036RequeueManuall" +
+      "yApprovedCallReq\022/\n\004call\030\001 \001(\0132\033.api.com" +
+      "mons.SimpleCallDataR\004call\022\035\n\nqueue_name\030" +
+      "\002 \001(\tR\tqueueName\" \n\036RequeueManuallyAppro" +
+      "vedCallRes\"P\n\035EnqueueManuallyApprovedSms" +
+      "Req\022/\n\003sms\030\001 \001(\0132\035.api.commons.SimpleSms" +
+      "MamDataR\003sms\"\037\n\035EnqueueManuallyApprovedS" +
+      "msRes\"P\n\035EnqueueManuallyRejectedSmsReq\022/" +
+      "\n\003sms\030\001 \001(\0132\035.api.commons.SimpleSmsMamDa" +
+      "taR\003sms\"\037\n\035EnqueueManuallyRejectedSmsRes" +
+      "\"o\n\035RequeueManuallyApprovedSmsReq\022/\n\003sms" +
+      "\030\001 \001(\0132\035.api.commons.SimpleSmsMamDataR\003s" +
+      "ms\022\035\n\nqueue_name\030\002 \001(\tR\tqueueName\"\037\n\035Req" +
+      "ueueManuallyApprovedSmsRes\"I\n!DequeueSms" +
+      "MamForManualApprovalReq\022$\n\016hunt_group_si" +
+      "d\030\002 \001(\003R\014huntGroupSid\"j\n!DequeueSmsMamFo" +
+      "rManualApprovalRes\022/\n\003sms\030\001 \001(\0132\035.api.co" +
+      "mmons.SimpleSmsMamDataR\003sms\022\024\n\005queue\030\002 \001" +
+      "(\tR\005queue2\246\025\n\tCallQueue\022\262\001\n\032DequeuePrevi" +
+      "ewRecordOrCall\022*.api.v0alpha.DequeuePrev" +
+      "iewRecordOrCallReq\032*.api.v0alpha.Dequeue" +
+      "PreviewRecordOrCallRes\"<\202\323\344\223\0026\"1/api/v0a" +
+      "lpha/callqueue/dequeuepreviewrecordorcal" +
+      "l:\001*\022\232\001\n\024EnqueuePreviewRecord\022$.api.v0al" +
+      "pha.EnqueuePreviewRecordReq\032$.api.v0alph" +
+      "a.EnqueuePreviewRecordRes\"6\202\323\344\223\0020\"+/api/" +
+      "v0alpha/callqueue/enqueuepreviewrecord:\001" +
+      "*\022\326\001\n#DequeueScrubbedCallForPreviewRecor" +
+      "d\0223.api.v0alpha.DequeueScrubbedCallForPr" +
+      "eviewRecordReq\0323.api.v0alpha.DequeueScru" +
+      "bbedCallForPreviewRecordRes\"E\202\323\344\223\002?\":/ap" +
+      "i/v0alpha/callqueue/dequeuescrubbedcallf" +
+      "orpreviewrecord:\001*\022\276\001\n\035ClearPreviewRecor" +
+      "dReturnQueue\022-.api.v0alpha.ClearPreviewR" +
+      "ecordReturnQueueReq\032-.api.v0alpha.ClearP" +
+      "reviewRecordReturnQueueRes\"?\202\323\344\223\0029\"4/api" +
+      "/v0alpha/callqueue/clearpreviewrecordret" +
+      "urnqueue:\001*\022\242\001\n\026EnqueuePreviewDialCall\022&" +
+      ".api.v0alpha.EnqueuePreviewDialCallReq\032&" +
+      ".api.v0alpha.EnqueuePreviewDialCallRes\"8" +
+      "\202\323\344\223\0022\"-/api/v0alpha/callqueue/enqueuepr" +
+      "eviewdialcall:\001*\022\232\001\n\024ClearManualDialQueu" +
+      "e\022$.api.v0alpha.ClearManualDialQueueReq\032" +
+      "$.api.v0alpha.ClearManualDialQueueRes\"6\202" +
+      "\323\344\223\0020\"+/api/v0alpha/callqueue/clearmanua" +
+      "ldialqueue:\001*\022\236\001\n\025ProcessManualDialCall\022" +
+      "%.api.v0alpha.ProcessManualDialCallReq\032%" +
+      ".api.v0alpha.ProcessManualDialCallRes\"7\202" +
+      "\323\344\223\0021\",/api/v0alpha/callqueue/processman" +
+      "ualdialcall:\001*\022\272\001\n\034DequeueCallForManualA" +
+      "pproval\022,.api.v0alpha.DequeueCallForManu" +
+      "alApprovalReq\032,.api.v0alpha.DequeueCallF" +
+      "orManualApprovalRes\">\202\323\344\223\0028\"3/api/v0alph" +
+      "a/callqueue/dequeuecallformanualapproval" +
+      ":\001*\022\266\001\n\033EnqueueManuallyApprovedCall\022+.ap" +
+      "i.v0alpha.EnqueueManuallyApprovedCallReq" +
+      "\032+.api.v0alpha.EnqueueManuallyApprovedCa" +
+      "llRes\"=\202\323\344\223\0027\"2/api/v0alpha/callqueue/en" +
+      "queuemanuallyapprovedcall:\001*\022\266\001\n\033Enqueue" +
+      "ManuallyRejectedCall\022+.api.v0alpha.Enque" +
+      "ueManuallyRejectedCallReq\032+.api.v0alpha." +
+      "EnqueueManuallyRejectedCallRes\"=\202\323\344\223\0027\"2" +
+      "/api/v0alpha/callqueue/enqueuemanuallyre" +
+      "jectedcall:\001*\022\266\001\n\033RequeueManuallyApprove" +
+      "dCall\022+.api.v0alpha.RequeueManuallyAppro" +
+      "vedCallReq\032+.api.v0alpha.RequeueManually" +
+      "ApprovedCallRes\"=\202\323\344\223\0027\"2/api/v0alpha/ca" +
+      "llqueue/requeuemanuallyapprovedcall:\001*\022\262" +
+      "\001\n\032EnqueueManuallyApprovedSms\022*.api.v0al" +
+      "pha.EnqueueManuallyApprovedSmsReq\032*.api." +
+      "v0alpha.EnqueueManuallyApprovedSmsRes\"<\202" +
+      "\323\344\223\0026\"1/api/v0alpha/callqueue/enqueueman" +
+      "uallyapprovedsms:\001*\022\262\001\n\032EnqueueManuallyR" +
+      "ejectedSms\022*.api.v0alpha.EnqueueManually" +
+      "RejectedSmsReq\032*.api.v0alpha.EnqueueManu" +
+      "allyRejectedSmsRes\"<\202\323\344\223\0026\"1/api/v0alpha" +
+      "/callqueue/enqueuemanuallyrejectedsms:\001*" +
+      "\022\262\001\n\032RequeueManuallyApprovedSms\022*.api.v0" +
+      "alpha.RequeueManuallyApprovedSmsReq\032*.ap" +
+      "i.v0alpha.RequeueManuallyApprovedSmsRes\"" +
+      "<\202\323\344\223\0026\"1/api/v0alpha/callqueue/requeuem" +
+      "anuallyapprovedsms:\001*\022\302\001\n\036DequeueSmsMamF" +
+      "orManualApproval\022..api.v0alpha.DequeueSm" +
+      "sMamForManualApprovalReq\032..api.v0alpha.D" +
+      "equeueSmsMamForManualApprovalRes\"@\202\323\344\223\002:" +
+      "\"5/api/v0alpha/callqueue/dequeuesmsmamfo" +
+      "rmanualapproval:\001*B|\n\035com.tcn.cloud.api." +
+      "api.v0alphaB\016CallqueueProtoP\001\242\002\003AVX\252\002\013Ap" +
+      "i.V0alpha\312\002\013Api\\V0alpha\342\002\027Api\\V0alpha\\GP" +
+      "BMetadata\352\002\014Api::V0alphab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.tcn.cloud.api.annotations.AuthzProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.CallProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.SmsProto.getDescriptor(),
           com.tcn.cloud.api.api.v0alpha.P3apiProto.getDescriptor(),
@@ -508,11 +503,9 @@ public final class CallqueueProto {
         new java.lang.String[] { "Sms", "Queue", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.tcn.cloud.api.annotations.AuthzProto.authz);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.tcn.cloud.api.annotations.AuthzProto.getDescriptor();
     com.tcn.cloud.api.api.commons.CallProto.getDescriptor();
     com.tcn.cloud.api.api.commons.SmsProto.getDescriptor();
     com.tcn.cloud.api.api.v0alpha.P3apiProto.getDescriptor();

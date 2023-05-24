@@ -133,176 +133,172 @@ public final class CbsProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\025api/v0alpha/cbs.proto\022\013api.v0alpha\032\027an" +
-      "notations/authz.proto\032\025api/commons/acd.p" +
-      "roto\032\025api/commons/cbs.proto\032\034google/api/" +
-      "annotations.proto\032\037google/protobuf/times" +
-      "tamp.proto\032\036google/protobuf/wrappers.pro" +
-      "to\"\024\n\022CreateServiceIdReq\"3\n\022CreateServic" +
-      "eIdRes\022\035\n\nservice_id\030\001 \001(\tR\tserviceId\"\303\004" +
-      "\n\021ScheduledCallback\0222\n\025scheduled_callbac" +
-      "k_id\030\001 \001(\tR\023scheduledCallbackId\022\035\n\nservi" +
-      "ce_id\030d \001(\tR\tserviceId\022<\n\006status\030e \001(\0162$" +
-      ".api.commons.ScheduledCallbackStatusR\006st" +
-      "atus\0229\n\nstart_time\030f \001(\0132\032.google.protob" +
-      "uf.TimestampR\tstartTime\0225\n\010end_time\030g \001(" +
-      "\0132\032.google.protobuf.TimestampR\007endTime\022!" +
-      "\n\014phone_number\030h \001(\tR\013phoneNumber\022\033\n\tcal" +
-      "ler_id\030i \001(\tR\010callerId\022\024\n\005notes\030k \001(\tR\005n" +
-      "otes\022;\n\013create_date\030l \001(\0132\032.google.proto" +
-      "buf.TimestampR\ncreateDate\022;\n\013last_update" +
-      "\030m \001(\0132\032.google.protobuf.TimestampR\nlast" +
-      "Update\022&\n\017last_updated_by\030o \001(\tR\rlastUpd" +
-      "atedBy\022\'\n\017callback_skills\030p \003(\tR\016callbac" +
-      "kSkillsJ\004\010n\020oJ\004\010j\020k\"\266\001\n\027ScheduledCallbac" +
-      "kDetail\022?\n\034scheduled_callback_detail_id\030" +
-      "\001 \001(\tR\031scheduledCallbackDetailId\0222\n\025sche" +
-      "duled_callback_id\030\002 \001(\tR\023scheduledCallba" +
-      "ckId\022\020\n\003key\030d \001(\tR\003key\022\024\n\005value\030e \001(\tR\005v" +
-      "alue\"\234\001\n!UpdateScheduledCallbackToReadyR" +
-      "eq\0222\n\025scheduled_callback_id\030\002 \001(\tR\023sched" +
-      "uledCallbackId\022$\n\016is_auto_return\030\003 \001(\010R\014" +
-      "isAutoReturn\022\035\n\nservice_id\030\004 \001(\tR\tservic" +
-      "eId\"#\n!UpdateScheduledCallbackToReadyRes" +
-      "\"y\n$UpdateScheduledCallbackToCanceledReq" +
-      "\0222\n\025scheduled_callback_id\030\002 \001(\tR\023schedul" +
-      "edCallbackId\022\035\n\nservice_id\030\003 \001(\tR\tservic" +
-      "eId\"&\n$UpdateScheduledCallbackToCanceled" +
-      "Res\"\250\001\n\"UpdateScheduledCallbackToClosedR" +
-      "eq\0222\n\025scheduled_callback_id\030\002 \001(\tR\023sched" +
-      "uledCallbackId\022/\n\024manual_dial_call_sid\030\003" +
-      " \001(\003R\021manualDialCallSid\022\035\n\nservice_id\030\004 " +
-      "\001(\tR\tserviceId\"$\n\"UpdateScheduledCallbac" +
-      "kToClosedRes\"\220\003\n\034CreateCallbackWithDetai" +
-      "lsReq\022:\n\010callback\030\002 \001(\0132\036.api.v0alpha.Sc" +
-      "heduledCallbackR\010callback\022O\n\020callback_de" +
-      "tails\030\003 \003(\0132$.api.v0alpha.ScheduledCallb" +
-      "ackDetailR\017callbackDetails\022\022\n\004name\030\004 \001(\t" +
-      "R\004name\022D\n\020former_call_type\030\005 \001(\0162\032.api.c" +
-      "ommons.CallType.EnumR\016formerCallType\022&\n\017" +
-      "former_call_sid\030\006 \001(\003R\rformerCallSid\022<\n\013" +
-      "country_sid\030\010 \001(\0132\033.google.protobuf.Int6" +
-      "4ValueR\ncountrySid\022#\n\rmanager_login\030\t \001(" +
-      "\010R\014managerLogin\"R\n\034CreateCallbackWithDet" +
-      "ailsRes\0222\n\025scheduled_callback_id\030\001 \001(\tR\023" +
-      "scheduledCallbackId\"\210\004\n\032UpdateScheduledC" +
-      "allbackReq\0222\n\025scheduled_callback_id\030\002 \001(" +
-      "\tR\023scheduledCallbackId\022C\n\nnew_status\030\003 \001" +
-      "(\0162$.api.commons.ScheduledCallbackStatus" +
-      "R\tnewStatus\0229\n\nstart_time\030\004 \001(\0132\032.google" +
-      ".protobuf.TimestampR\tstartTime\0225\n\010end_ti" +
-      "me\030\005 \001(\0132\032.google.protobuf.TimestampR\007en" +
-      "dTime\022!\n\014phone_number\030\006 \001(\tR\013phoneNumber" +
-      "\022\033\n\tcaller_id\030\007 \001(\tR\010callerId\022\026\n\006skills\030" +
-      "\010 \003(\tR\006skills\022&\n\017last_updated_by\030\t \001(\tR\r" +
-      "lastUpdatedBy\022\024\n\005notes\030\n \001(\tR\005notes\022O\n\020c" +
-      "allback_details\030\013 \003(\0132$.api.v0alpha.Sche" +
-      "duledCallbackDetailR\017callbackDetails\022\022\n\004" +
-      "name\030\014 \001(\tR\004nameJ\004\010\001\020\002\"\034\n\032UpdateSchedule" +
-      "dCallbackRes\"\341\006\n\034ScheduledCallbackWithDe" +
-      "tails\0222\n\025scheduled_callback_id\030\001 \001(\tR\023sc" +
-      "heduledCallbackId\022\035\n\nservice_id\030\002 \001(\tR\ts" +
-      "erviceId\022<\n\006status\030\003 \001(\0162$.api.commons.S" +
-      "cheduledCallbackStatusR\006status\0229\n\nstart_" +
-      "time\030\004 \001(\0132\032.google.protobuf.TimestampR\t" +
-      "startTime\0225\n\010end_time\030\005 \001(\0132\032.google.pro" +
-      "tobuf.TimestampR\007endTime\022!\n\014phone_number" +
-      "\030\006 \001(\tR\013phoneNumber\022\033\n\tcaller_id\030\007 \001(\tR\010" +
-      "callerId\022\026\n\006skills\030\010 \003(\tR\006skills\022\024\n\005note" +
-      "s\030\t \001(\tR\005notes\022;\n\013create_date\030\n \001(\0132\032.go" +
-      "ogle.protobuf.TimestampR\ncreateDate\022;\n\013l" +
-      "ast_update\030\013 \001(\0132\032.google.protobuf.Times" +
-      "tampR\nlastUpdate\022\035\n\ncreated_by\030\014 \001(\tR\tcr" +
-      "eatedBy\022&\n\017last_updated_by\030\r \001(\tR\rlastUp" +
-      "datedBy\022\022\n\004name\030\016 \001(\tR\004name\022&\n\017former_ca" +
-      "ll_sid\030\017 \001(\003R\rformerCallSid\022D\n\020former_ca" +
-      "ll_type\030\020 \001(\0162\032.api.commons.CallType.Enu" +
-      "mR\016formerCallType\022O\n\020callback_details\030\021 " +
-      "\003(\0132$.api.v0alpha.ScheduledCallbackDetai" +
-      "lR\017callbackDetails\022<\n\013country_sid\030\022 \001(\0132" +
-      "\033.google.protobuf.Int64ValueR\ncountrySid" +
-      "\"w\n\"GetScheduledCallbackWithDetailsReq\022\035" +
-      "\n\nservice_id\030\001 \001(\tR\tserviceId\0222\n\025schedul" +
-      "ed_callback_id\030\002 \001(\tR\023scheduledCallbackI" +
-      "d\"k\n\"GetScheduledCallbackWithDetailsRes\022" +
-      "E\n\010callback\030\001 \001(\0132).api.v0alpha.Schedule" +
-      "dCallbackWithDetailsR\010callback\"o\n$ListSc" +
-      "heduledCallbacksWithDetailsRes\022G\n\tcallba" +
-      "cks\030\001 \003(\0132).api.v0alpha.ScheduledCallbac" +
-      "kWithDetailsR\tcallbacks\"j\n&GetNextSchedu" +
-      "ledCallbackWithDetailsReq\022\035\n\nservice_id\030" +
-      "\001 \001(\tR\tserviceId\022!\n\014agent_skills\030\003 \003(\tR\013" +
-      "agentSkills\"\202\001\n&GetNextScheduledCallback" +
-      "WithDetailsRes\022X\n\022scheduled_callback\030\001 \001" +
-      "(\0132).api.v0alpha.ScheduledCallbackWithDe" +
-      "tailsR\021scheduledCallback\"\202\002\n$ListSchedul" +
-      "edCallbacksWithDetailsReq\022!\n\014phone_numbe" +
-      "r\030\002 \001(\tR\013phoneNumber\022\033\n\tcaller_id\030\003 \001(\tR" +
-      "\010callerId\022B\n\017from_start_time\030\004 \001(\0132\032.goo" +
-      "gle.protobuf.TimestampR\rfromStartTime\022>\n" +
-      "\rto_start_time\030\005 \001(\0132\032.google.protobuf.T" +
-      "imestampR\013toStartTime\022\026\n\006skills\030\006 \003(\tR\006s" +
-      "kills\"e\n,ListScheduledCallbacksWithDetai" +
-      "lsBySkillsReq\022\035\n\nservice_id\030\001 \001(\tR\tservi" +
-      "ceId\022\026\n\006skills\030\003 \003(\tR\006skills2\273\017\n\003CBS\022\207\001\n" +
-      "\017CreateServiceId\022\037.api.v0alpha.CreateSer" +
-      "viceIdReq\032\037.api.v0alpha.CreateServiceIdR" +
-      "es\"2\272\270\221\002\002\030\001\202\323\344\223\002%\" /api/v0alpha/cbs/crea" +
-      "teserviceid:\001*\022\257\001\n\031CreateCallbackWithDet" +
-      "ails\022).api.v0alpha.CreateCallbackWithDet" +
-      "ailsReq\032).api.v0alpha.CreateCallbackWith" +
-      "DetailsRes\"<\272\270\221\002\002\030\001\202\323\344\223\002/\"*/api/v0alpha/" +
-      "cbs/createcallbackwithdetails:\001*\022\303\001\n\036Upd" +
-      "ateScheduledCallbackToReady\022..api.v0alph" +
-      "a.UpdateScheduledCallbackToReadyReq\032..ap" +
-      "i.v0alpha.UpdateScheduledCallbackToReady" +
-      "Res\"A\272\270\221\002\002\030\001\202\323\344\223\0024\"//api/v0alpha/cbs/upd" +
-      "atescheduledcallbacktoready:\001*\022\317\001\n!Updat" +
-      "eScheduledCallbackToCanceled\0221.api.v0alp" +
-      "ha.UpdateScheduledCallbackToCanceledReq\032" +
-      "1.api.v0alpha.UpdateScheduledCallbackToC" +
-      "anceledRes\"D\272\270\221\002\002\030\001\202\323\344\223\0027\"2/api/v0alpha/" +
-      "cbs/updatescheduledcallbacktocanceled:\001*" +
-      "\022\327\001\n#GetNextScheduledCallbackWithDetails" +
-      "\0223.api.v0alpha.GetNextScheduledCallbackW" +
-      "ithDetailsReq\0323.api.v0alpha.GetNextSched" +
-      "uledCallbackWithDetailsRes\"F\272\270\221\002\002\030\001\202\323\344\223\002" +
-      "9\"4/api/v0alpha/cbs/getnextscheduledcall" +
-      "backwithdetails:\001*\022\307\001\n\037UpdateScheduledCa" +
-      "llbackToClosed\022/.api.v0alpha.UpdateSched" +
-      "uledCallbackToClosedReq\032/.api.v0alpha.Up" +
-      "dateScheduledCallbackToClosedRes\"B\272\270\221\002\002\030" +
-      "\001\202\323\344\223\0025\"0/api/v0alpha/cbs/updateschedule" +
-      "dcallbacktoclosed:\001*\022\252\001\n\027UpdateScheduled" +
-      "Callback\022\'.api.v0alpha.UpdateScheduledCa" +
-      "llbackReq\032\'.api.v0alpha.UpdateScheduledC" +
-      "allbackRes\"=\272\270\221\002\005\n\003\010\220\003\202\323\344\223\002-\"(/api/v0alp" +
-      "ha/cbs/updatescheduledcallback:\001*\022\307\001\n\037Ge" +
-      "tScheduledCallbackWithDetails\022/.api.v0al" +
-      "pha.GetScheduledCallbackWithDetailsReq\032/" +
-      ".api.v0alpha.GetScheduledCallbackWithDet" +
-      "ailsRes\"B\272\270\221\002\002\030\001\202\323\344\223\0025\"0/api/v0alpha/cbs" +
-      "/getscheduledcallbackwithdetails:\001*\022\324\001\n!" +
-      "ListScheduledCallbacksWithDetails\0221.api." +
-      "v0alpha.ListScheduledCallbacksWithDetail" +
-      "sReq\0321.api.v0alpha.ListScheduledCallback" +
-      "sWithDetailsRes\"G\272\270\221\002\005\n\003\010\220\003\202\323\344\223\0027\"2/api/" +
-      "v0alpha/cbs/listscheduledcallbackswithde" +
-      "tails:\001*0\001\022\355\001\n)ListScheduledCallbacksWit" +
-      "hDetailsBySkills\0229.api.v0alpha.ListSched" +
-      "uledCallbacksWithDetailsBySkillsReq\0321.ap" +
-      "i.v0alpha.ListScheduledCallbacksWithDeta" +
-      "ilsRes\"R\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002B\"=/api/v0alpha/c" +
-      "bs/listscheduledcallbackswithdetailsbysk" +
-      "illsreq:\001*Bv\n\035com.tcn.cloud.api.api.v0al" +
-      "phaB\010CbsProtoP\001\242\002\003AVX\252\002\013Api.V0alpha\312\002\013Ap" +
-      "i\\V0alpha\342\002\027Api\\V0alpha\\GPBMetadata\352\002\014Ap" +
-      "i::V0alphab\006proto3"
+      "\n\025api/v0alpha/cbs.proto\022\013api.v0alpha\032\025ap" +
+      "i/commons/acd.proto\032\025api/commons/cbs.pro" +
+      "to\032\034google/api/annotations.proto\032\037google" +
+      "/protobuf/timestamp.proto\032\036google/protob" +
+      "uf/wrappers.proto\"\024\n\022CreateServiceIdReq\"" +
+      "3\n\022CreateServiceIdRes\022\035\n\nservice_id\030\001 \001(" +
+      "\tR\tserviceId\"\303\004\n\021ScheduledCallback\0222\n\025sc" +
+      "heduled_callback_id\030\001 \001(\tR\023scheduledCall" +
+      "backId\022\035\n\nservice_id\030d \001(\tR\tserviceId\022<\n" +
+      "\006status\030e \001(\0162$.api.commons.ScheduledCal" +
+      "lbackStatusR\006status\0229\n\nstart_time\030f \001(\0132" +
+      "\032.google.protobuf.TimestampR\tstartTime\0225" +
+      "\n\010end_time\030g \001(\0132\032.google.protobuf.Times" +
+      "tampR\007endTime\022!\n\014phone_number\030h \001(\tR\013pho" +
+      "neNumber\022\033\n\tcaller_id\030i \001(\tR\010callerId\022\024\n" +
+      "\005notes\030k \001(\tR\005notes\022;\n\013create_date\030l \001(\013" +
+      "2\032.google.protobuf.TimestampR\ncreateDate" +
+      "\022;\n\013last_update\030m \001(\0132\032.google.protobuf." +
+      "TimestampR\nlastUpdate\022&\n\017last_updated_by" +
+      "\030o \001(\tR\rlastUpdatedBy\022\'\n\017callback_skills" +
+      "\030p \003(\tR\016callbackSkillsJ\004\010n\020oJ\004\010j\020k\"\266\001\n\027S" +
+      "cheduledCallbackDetail\022?\n\034scheduled_call" +
+      "back_detail_id\030\001 \001(\tR\031scheduledCallbackD" +
+      "etailId\0222\n\025scheduled_callback_id\030\002 \001(\tR\023" +
+      "scheduledCallbackId\022\020\n\003key\030d \001(\tR\003key\022\024\n" +
+      "\005value\030e \001(\tR\005value\"\234\001\n!UpdateScheduledC" +
+      "allbackToReadyReq\0222\n\025scheduled_callback_" +
+      "id\030\002 \001(\tR\023scheduledCallbackId\022$\n\016is_auto" +
+      "_return\030\003 \001(\010R\014isAutoReturn\022\035\n\nservice_i" +
+      "d\030\004 \001(\tR\tserviceId\"#\n!UpdateScheduledCal" +
+      "lbackToReadyRes\"y\n$UpdateScheduledCallba" +
+      "ckToCanceledReq\0222\n\025scheduled_callback_id" +
+      "\030\002 \001(\tR\023scheduledCallbackId\022\035\n\nservice_i" +
+      "d\030\003 \001(\tR\tserviceId\"&\n$UpdateScheduledCal" +
+      "lbackToCanceledRes\"\250\001\n\"UpdateScheduledCa" +
+      "llbackToClosedReq\0222\n\025scheduled_callback_" +
+      "id\030\002 \001(\tR\023scheduledCallbackId\022/\n\024manual_" +
+      "dial_call_sid\030\003 \001(\003R\021manualDialCallSid\022\035" +
+      "\n\nservice_id\030\004 \001(\tR\tserviceId\"$\n\"UpdateS" +
+      "cheduledCallbackToClosedRes\"\220\003\n\034CreateCa" +
+      "llbackWithDetailsReq\022:\n\010callback\030\002 \001(\0132\036" +
+      ".api.v0alpha.ScheduledCallbackR\010callback" +
+      "\022O\n\020callback_details\030\003 \003(\0132$.api.v0alpha" +
+      ".ScheduledCallbackDetailR\017callbackDetail" +
+      "s\022\022\n\004name\030\004 \001(\tR\004name\022D\n\020former_call_typ" +
+      "e\030\005 \001(\0162\032.api.commons.CallType.EnumR\016for" +
+      "merCallType\022&\n\017former_call_sid\030\006 \001(\003R\rfo" +
+      "rmerCallSid\022<\n\013country_sid\030\010 \001(\0132\033.googl" +
+      "e.protobuf.Int64ValueR\ncountrySid\022#\n\rman" +
+      "ager_login\030\t \001(\010R\014managerLogin\"R\n\034Create" +
+      "CallbackWithDetailsRes\0222\n\025scheduled_call" +
+      "back_id\030\001 \001(\tR\023scheduledCallbackId\"\210\004\n\032U" +
+      "pdateScheduledCallbackReq\0222\n\025scheduled_c" +
+      "allback_id\030\002 \001(\tR\023scheduledCallbackId\022C\n" +
+      "\nnew_status\030\003 \001(\0162$.api.commons.Schedule" +
+      "dCallbackStatusR\tnewStatus\0229\n\nstart_time" +
+      "\030\004 \001(\0132\032.google.protobuf.TimestampR\tstar" +
+      "tTime\0225\n\010end_time\030\005 \001(\0132\032.google.protobu" +
+      "f.TimestampR\007endTime\022!\n\014phone_number\030\006 \001" +
+      "(\tR\013phoneNumber\022\033\n\tcaller_id\030\007 \001(\tR\010call" +
+      "erId\022\026\n\006skills\030\010 \003(\tR\006skills\022&\n\017last_upd" +
+      "ated_by\030\t \001(\tR\rlastUpdatedBy\022\024\n\005notes\030\n " +
+      "\001(\tR\005notes\022O\n\020callback_details\030\013 \003(\0132$.a" +
+      "pi.v0alpha.ScheduledCallbackDetailR\017call" +
+      "backDetails\022\022\n\004name\030\014 \001(\tR\004nameJ\004\010\001\020\002\"\034\n" +
+      "\032UpdateScheduledCallbackRes\"\341\006\n\034Schedule" +
+      "dCallbackWithDetails\0222\n\025scheduled_callba" +
+      "ck_id\030\001 \001(\tR\023scheduledCallbackId\022\035\n\nserv" +
+      "ice_id\030\002 \001(\tR\tserviceId\022<\n\006status\030\003 \001(\0162" +
+      "$.api.commons.ScheduledCallbackStatusR\006s" +
+      "tatus\0229\n\nstart_time\030\004 \001(\0132\032.google.proto" +
+      "buf.TimestampR\tstartTime\0225\n\010end_time\030\005 \001" +
+      "(\0132\032.google.protobuf.TimestampR\007endTime\022" +
+      "!\n\014phone_number\030\006 \001(\tR\013phoneNumber\022\033\n\tca" +
+      "ller_id\030\007 \001(\tR\010callerId\022\026\n\006skills\030\010 \003(\tR" +
+      "\006skills\022\024\n\005notes\030\t \001(\tR\005notes\022;\n\013create_" +
+      "date\030\n \001(\0132\032.google.protobuf.TimestampR\n" +
+      "createDate\022;\n\013last_update\030\013 \001(\0132\032.google" +
+      ".protobuf.TimestampR\nlastUpdate\022\035\n\ncreat" +
+      "ed_by\030\014 \001(\tR\tcreatedBy\022&\n\017last_updated_b" +
+      "y\030\r \001(\tR\rlastUpdatedBy\022\022\n\004name\030\016 \001(\tR\004na" +
+      "me\022&\n\017former_call_sid\030\017 \001(\003R\rformerCallS" +
+      "id\022D\n\020former_call_type\030\020 \001(\0162\032.api.commo" +
+      "ns.CallType.EnumR\016formerCallType\022O\n\020call" +
+      "back_details\030\021 \003(\0132$.api.v0alpha.Schedul" +
+      "edCallbackDetailR\017callbackDetails\022<\n\013cou" +
+      "ntry_sid\030\022 \001(\0132\033.google.protobuf.Int64Va" +
+      "lueR\ncountrySid\"w\n\"GetScheduledCallbackW" +
+      "ithDetailsReq\022\035\n\nservice_id\030\001 \001(\tR\tservi" +
+      "ceId\0222\n\025scheduled_callback_id\030\002 \001(\tR\023sch" +
+      "eduledCallbackId\"k\n\"GetScheduledCallback" +
+      "WithDetailsRes\022E\n\010callback\030\001 \001(\0132).api.v" +
+      "0alpha.ScheduledCallbackWithDetailsR\010cal" +
+      "lback\"o\n$ListScheduledCallbacksWithDetai" +
+      "lsRes\022G\n\tcallbacks\030\001 \003(\0132).api.v0alpha.S" +
+      "cheduledCallbackWithDetailsR\tcallbacks\"j" +
+      "\n&GetNextScheduledCallbackWithDetailsReq" +
+      "\022\035\n\nservice_id\030\001 \001(\tR\tserviceId\022!\n\014agent" +
+      "_skills\030\003 \003(\tR\013agentSkills\"\202\001\n&GetNextSc" +
+      "heduledCallbackWithDetailsRes\022X\n\022schedul" +
+      "ed_callback\030\001 \001(\0132).api.v0alpha.Schedule" +
+      "dCallbackWithDetailsR\021scheduledCallback\"" +
+      "\202\002\n$ListScheduledCallbacksWithDetailsReq" +
+      "\022!\n\014phone_number\030\002 \001(\tR\013phoneNumber\022\033\n\tc" +
+      "aller_id\030\003 \001(\tR\010callerId\022B\n\017from_start_t" +
+      "ime\030\004 \001(\0132\032.google.protobuf.TimestampR\rf" +
+      "romStartTime\022>\n\rto_start_time\030\005 \001(\0132\032.go" +
+      "ogle.protobuf.TimestampR\013toStartTime\022\026\n\006" +
+      "skills\030\006 \003(\tR\006skills\"e\n,ListScheduledCal" +
+      "lbacksWithDetailsBySkillsReq\022\035\n\nservice_" +
+      "id\030\001 \001(\tR\tserviceId\022\026\n\006skills\030\003 \003(\tR\006ski" +
+      "lls2\354\016\n\003CBS\022\200\001\n\017CreateServiceId\022\037.api.v0" +
+      "alpha.CreateServiceIdReq\032\037.api.v0alpha.C" +
+      "reateServiceIdRes\"+\202\323\344\223\002%\" /api/v0alpha/" +
+      "cbs/createserviceid:\001*\022\250\001\n\031CreateCallbac" +
+      "kWithDetails\022).api.v0alpha.CreateCallbac" +
+      "kWithDetailsReq\032).api.v0alpha.CreateCall" +
+      "backWithDetailsRes\"5\202\323\344\223\002/\"*/api/v0alpha" +
+      "/cbs/createcallbackwithdetails:\001*\022\274\001\n\036Up" +
+      "dateScheduledCallbackToReady\022..api.v0alp" +
+      "ha.UpdateScheduledCallbackToReadyReq\032..a" +
+      "pi.v0alpha.UpdateScheduledCallbackToRead" +
+      "yRes\":\202\323\344\223\0024\"//api/v0alpha/cbs/updatesch" +
+      "eduledcallbacktoready:\001*\022\310\001\n!UpdateSched" +
+      "uledCallbackToCanceled\0221.api.v0alpha.Upd" +
+      "ateScheduledCallbackToCanceledReq\0321.api." +
+      "v0alpha.UpdateScheduledCallbackToCancele" +
+      "dRes\"=\202\323\344\223\0027\"2/api/v0alpha/cbs/updatesch" +
+      "eduledcallbacktocanceled:\001*\022\320\001\n#GetNextS" +
+      "cheduledCallbackWithDetails\0223.api.v0alph" +
+      "a.GetNextScheduledCallbackWithDetailsReq" +
+      "\0323.api.v0alpha.GetNextScheduledCallbackW" +
+      "ithDetailsRes\"?\202\323\344\223\0029\"4/api/v0alpha/cbs/" +
+      "getnextscheduledcallbackwithdetails:\001*\022\300" +
+      "\001\n\037UpdateScheduledCallbackToClosed\022/.api" +
+      ".v0alpha.UpdateScheduledCallbackToClosed" +
+      "Req\032/.api.v0alpha.UpdateScheduledCallbac" +
+      "kToClosedRes\";\202\323\344\223\0025\"0/api/v0alpha/cbs/u" +
+      "pdatescheduledcallbacktoclosed:\001*\022\240\001\n\027Up" +
+      "dateScheduledCallback\022\'.api.v0alpha.Upda" +
+      "teScheduledCallbackReq\032\'.api.v0alpha.Upd" +
+      "ateScheduledCallbackRes\"3\202\323\344\223\002-\"(/api/v0" +
+      "alpha/cbs/updatescheduledcallback:\001*\022\300\001\n" +
+      "\037GetScheduledCallbackWithDetails\022/.api.v" +
+      "0alpha.GetScheduledCallbackWithDetailsRe" +
+      "q\032/.api.v0alpha.GetScheduledCallbackWith" +
+      "DetailsRes\";\202\323\344\223\0025\"0/api/v0alpha/cbs/get" +
+      "scheduledcallbackwithdetails:\001*\022\312\001\n!List" +
+      "ScheduledCallbacksWithDetails\0221.api.v0al" +
+      "pha.ListScheduledCallbacksWithDetailsReq" +
+      "\0321.api.v0alpha.ListScheduledCallbacksWit" +
+      "hDetailsRes\"=\202\323\344\223\0027\"2/api/v0alpha/cbs/li" +
+      "stscheduledcallbackswithdetails:\001*0\001\022\343\001\n" +
+      ")ListScheduledCallbacksWithDetailsBySkil" +
+      "ls\0229.api.v0alpha.ListScheduledCallbacksW" +
+      "ithDetailsBySkillsReq\0321.api.v0alpha.List" +
+      "ScheduledCallbacksWithDetailsRes\"H\202\323\344\223\002B" +
+      "\"=/api/v0alpha/cbs/listscheduledcallback" +
+      "swithdetailsbyskillsreq:\001*Bv\n\035com.tcn.cl" +
+      "oud.api.api.v0alphaB\010CbsProtoP\001\242\002\003AVX\252\002\013" +
+      "Api.V0alpha\312\002\013Api\\V0alpha\342\002\027Api\\V0alpha\\" +
+      "GPBMetadata\352\002\014Api::V0alphab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.tcn.cloud.api.annotations.AuthzProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.AcdProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.CbsProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -443,11 +439,9 @@ public final class CbsProto {
         new java.lang.String[] { "ServiceId", "Skills", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.tcn.cloud.api.annotations.AuthzProto.authz);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.tcn.cloud.api.annotations.AuthzProto.getDescriptor();
     com.tcn.cloud.api.api.commons.AcdProto.getDescriptor();
     com.tcn.cloud.api.api.commons.CbsProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
