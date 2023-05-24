@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v0alpha;
 
-public interface GetMyTempUserTokenResOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v0alpha.GetMyTempUserTokenRes)
+public interface GetTempUserTokenResOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v0alpha.GetTempUserTokenRes)
     com.google.protobuf.MessageOrBuilder {
 
   /**

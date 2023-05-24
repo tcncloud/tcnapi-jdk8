@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v0alpha;
 
-public interface GetUserPasswordResetLinkByUserIdRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v0alpha.GetUserPasswordResetLinkByUserIdRequest)
+public interface GetUserPasswordResetLinkRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v0alpha.GetUserPasswordResetLinkRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**

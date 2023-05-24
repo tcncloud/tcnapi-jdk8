@@ -25,7 +25,6 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.LazyStringArrayList.emptyList();
     userName_ = "";
     defaultApp_ = 0;
-    userCallerId_ = "";
     agentProfileGroupId_ = "";
     labelEntities_ = java.util.Collections.emptyList();
     email_ = "";
@@ -345,45 +344,6 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.tcn.cloud.api.api.commons.OperatorApplications.UNRECOGNIZED : result;
   }
 
-  public static final int USER_CALLER_ID_FIELD_NUMBER = 10;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object userCallerId_ = "";
-  /**
-   * <code>string user_caller_id = 10 [json_name = "userCallerId"];</code>
-   * @return The userCallerId.
-   */
-  @java.lang.Override
-  public java.lang.String getUserCallerId() {
-    java.lang.Object ref = userCallerId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      userCallerId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string user_caller_id = 10 [json_name = "userCallerId"];</code>
-   * @return The bytes for userCallerId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getUserCallerIdBytes() {
-    java.lang.Object ref = userCallerId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      userCallerId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
   public static final int PASSWORD_RESET_REQUIRED_FIELD_NUMBER = 13;
   private boolean passwordResetRequired_ = false;
   /**
@@ -609,9 +569,6 @@ private static final long serialVersionUID = 0L;
     if (defaultApp_ != com.tcn.cloud.api.api.commons.OperatorApplications.AGENT_APP.getNumber()) {
       output.writeEnum(9, defaultApp_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userCallerId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 10, userCallerId_);
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(firstName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 11, firstName_);
     }
@@ -670,9 +627,6 @@ private static final long serialVersionUID = 0L;
     if (defaultApp_ != com.tcn.cloud.api.api.commons.OperatorApplications.AGENT_APP.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(9, defaultApp_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userCallerId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, userCallerId_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(firstName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, firstName_);
@@ -735,8 +689,6 @@ private static final long serialVersionUID = 0L;
     if (!getUserName()
         .equals(other.getUserName())) return false;
     if (defaultApp_ != other.defaultApp_) return false;
-    if (!getUserCallerId()
-        .equals(other.getUserCallerId())) return false;
     if (getPasswordResetRequired()
         != other.getPasswordResetRequired()) return false;
     if (!getAgentProfileGroupId()
@@ -783,8 +735,6 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getUserName().hashCode();
     hash = (37 * hash) + DEFAULT_APP_FIELD_NUMBER;
     hash = (53 * hash) + defaultApp_;
-    hash = (37 * hash) + USER_CALLER_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getUserCallerId().hashCode();
     hash = (37 * hash) + PASSWORD_RESET_REQUIRED_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getPasswordResetRequired());
@@ -945,7 +895,6 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.LazyStringArrayList.emptyList();
       userName_ = "";
       defaultApp_ = 0;
-      userCallerId_ = "";
       passwordResetRequired_ = false;
       agentProfileGroupId_ = "";
       if (labelEntitiesBuilder_ == null) {
@@ -954,7 +903,7 @@ private static final long serialVersionUID = 0L;
         labelEntities_ = null;
         labelEntitiesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000800);
+      bitField0_ = (bitField0_ & ~0x00000400);
       email_ = "";
       fieldMask_ = null;
       if (fieldMaskBuilder_ != null) {
@@ -995,9 +944,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.UpdateMyUserRequest result) {
       if (labelEntitiesBuilder_ == null) {
-        if (((bitField0_ & 0x00000800) != 0)) {
+        if (((bitField0_ & 0x00000400) != 0)) {
           labelEntities_ = java.util.Collections.unmodifiableList(labelEntities_);
-          bitField0_ = (bitField0_ & ~0x00000800);
+          bitField0_ = (bitField0_ & ~0x00000400);
         }
         result.labelEntities_ = labelEntities_;
       } else {
@@ -1036,18 +985,15 @@ private static final long serialVersionUID = 0L;
         result.defaultApp_ = defaultApp_;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
-        result.userCallerId_ = userCallerId_;
-      }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
         result.passwordResetRequired_ = passwordResetRequired_;
       }
-      if (((from_bitField0_ & 0x00000400) != 0)) {
+      if (((from_bitField0_ & 0x00000200) != 0)) {
         result.agentProfileGroupId_ = agentProfileGroupId_;
       }
-      if (((from_bitField0_ & 0x00001000) != 0)) {
+      if (((from_bitField0_ & 0x00000800) != 0)) {
         result.email_ = email_;
       }
-      if (((from_bitField0_ & 0x00002000) != 0)) {
+      if (((from_bitField0_ & 0x00001000) != 0)) {
         result.fieldMask_ = fieldMaskBuilder_ == null
             ? fieldMask_
             : fieldMaskBuilder_.build();
@@ -1112,24 +1058,19 @@ private static final long serialVersionUID = 0L;
       if (other.defaultApp_ != 0) {
         setDefaultAppValue(other.getDefaultAppValue());
       }
-      if (!other.getUserCallerId().isEmpty()) {
-        userCallerId_ = other.userCallerId_;
-        bitField0_ |= 0x00000100;
-        onChanged();
-      }
       if (other.getPasswordResetRequired() != false) {
         setPasswordResetRequired(other.getPasswordResetRequired());
       }
       if (!other.getAgentProfileGroupId().isEmpty()) {
         agentProfileGroupId_ = other.agentProfileGroupId_;
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000200;
         onChanged();
       }
       if (labelEntitiesBuilder_ == null) {
         if (!other.labelEntities_.isEmpty()) {
           if (labelEntities_.isEmpty()) {
             labelEntities_ = other.labelEntities_;
-            bitField0_ = (bitField0_ & ~0x00000800);
+            bitField0_ = (bitField0_ & ~0x00000400);
           } else {
             ensureLabelEntitiesIsMutable();
             labelEntities_.addAll(other.labelEntities_);
@@ -1142,7 +1083,7 @@ private static final long serialVersionUID = 0L;
             labelEntitiesBuilder_.dispose();
             labelEntitiesBuilder_ = null;
             labelEntities_ = other.labelEntities_;
-            bitField0_ = (bitField0_ & ~0x00000800);
+            bitField0_ = (bitField0_ & ~0x00000400);
             labelEntitiesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getLabelEntitiesFieldBuilder() : null;
@@ -1153,7 +1094,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getEmail().isEmpty()) {
         email_ = other.email_;
-        bitField0_ |= 0x00001000;
+        bitField0_ |= 0x00000800;
         onChanged();
       }
       if (other.hasFieldMask()) {
@@ -1212,11 +1153,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000080;
               break;
             } // case 72
-            case 82: {
-              userCallerId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000100;
-              break;
-            } // case 82
             case 90: {
               firstName_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
@@ -1229,12 +1165,12 @@ private static final long serialVersionUID = 0L;
             } // case 98
             case 104: {
               passwordResetRequired_ = input.readBool();
-              bitField0_ |= 0x00000200;
+              bitField0_ |= 0x00000100;
               break;
             } // case 104
             case 114: {
               agentProfileGroupId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000400;
+              bitField0_ |= 0x00000200;
               break;
             } // case 114
             case 130: {
@@ -1246,7 +1182,7 @@ private static final long serialVersionUID = 0L;
             } // case 130
             case 138: {
               email_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00001000;
+              bitField0_ |= 0x00000800;
               break;
             } // case 138
             case 146: {
@@ -1266,7 +1202,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getFieldMaskFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00002000;
+              bitField0_ |= 0x00001000;
               break;
             } // case 802
             default: {
@@ -2024,78 +1960,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object userCallerId_ = "";
-    /**
-     * <code>string user_caller_id = 10 [json_name = "userCallerId"];</code>
-     * @return The userCallerId.
-     */
-    public java.lang.String getUserCallerId() {
-      java.lang.Object ref = userCallerId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        userCallerId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string user_caller_id = 10 [json_name = "userCallerId"];</code>
-     * @return The bytes for userCallerId.
-     */
-    public com.google.protobuf.ByteString
-        getUserCallerIdBytes() {
-      java.lang.Object ref = userCallerId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        userCallerId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string user_caller_id = 10 [json_name = "userCallerId"];</code>
-     * @param value The userCallerId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setUserCallerId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      userCallerId_ = value;
-      bitField0_ |= 0x00000100;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string user_caller_id = 10 [json_name = "userCallerId"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearUserCallerId() {
-      userCallerId_ = getDefaultInstance().getUserCallerId();
-      bitField0_ = (bitField0_ & ~0x00000100);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string user_caller_id = 10 [json_name = "userCallerId"];</code>
-     * @param value The bytes for userCallerId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setUserCallerIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      userCallerId_ = value;
-      bitField0_ |= 0x00000100;
-      onChanged();
-      return this;
-    }
-
     private boolean passwordResetRequired_ ;
     /**
      * <code>bool password_reset_required = 13 [json_name = "passwordResetRequired"];</code>
@@ -2113,7 +1977,7 @@ private static final long serialVersionUID = 0L;
     public Builder setPasswordResetRequired(boolean value) {
 
       passwordResetRequired_ = value;
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2122,7 +1986,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPasswordResetRequired() {
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000100);
       passwordResetRequired_ = false;
       onChanged();
       return this;
@@ -2171,7 +2035,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       agentProfileGroupId_ = value;
-      bitField0_ |= 0x00000400;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2181,7 +2045,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearAgentProfileGroupId() {
       agentProfileGroupId_ = getDefaultInstance().getAgentProfileGroupId();
-      bitField0_ = (bitField0_ & ~0x00000400);
+      bitField0_ = (bitField0_ & ~0x00000200);
       onChanged();
       return this;
     }
@@ -2195,7 +2059,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       agentProfileGroupId_ = value;
-      bitField0_ |= 0x00000400;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2203,9 +2067,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v0alpha.Label> labelEntities_ =
       java.util.Collections.emptyList();
     private void ensureLabelEntitiesIsMutable() {
-      if (!((bitField0_ & 0x00000800) != 0)) {
+      if (!((bitField0_ & 0x00000400) != 0)) {
         labelEntities_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.Label>(labelEntities_);
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00000400;
        }
     }
 
@@ -2399,7 +2263,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearLabelEntities() {
       if (labelEntitiesBuilder_ == null) {
         labelEntities_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00000400);
         onChanged();
       } else {
         labelEntitiesBuilder_.clear();
@@ -2504,7 +2368,7 @@ private static final long serialVersionUID = 0L;
         labelEntitiesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v0alpha.Label, com.tcn.cloud.api.api.v0alpha.Label.Builder, com.tcn.cloud.api.api.v0alpha.LabelOrBuilder>(
                 labelEntities_,
-                ((bitField0_ & 0x00000800) != 0),
+                ((bitField0_ & 0x00000400) != 0),
                 getParentForChildren(),
                 isClean());
         labelEntities_ = null;
@@ -2567,7 +2431,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       email_ = value;
-      bitField0_ |= 0x00001000;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -2581,7 +2445,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearEmail() {
       email_ = getDefaultInstance().getEmail();
-      bitField0_ = (bitField0_ & ~0x00001000);
+      bitField0_ = (bitField0_ & ~0x00000800);
       onChanged();
       return this;
     }
@@ -2599,7 +2463,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       email_ = value;
-      bitField0_ |= 0x00001000;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -2616,7 +2480,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the fieldMask field is set.
      */
     public boolean hasFieldMask() {
-      return ((bitField0_ & 0x00002000) != 0);
+      return ((bitField0_ & 0x00001000) != 0);
     }
     /**
      * <pre>
@@ -2649,7 +2513,7 @@ private static final long serialVersionUID = 0L;
       } else {
         fieldMaskBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00002000;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -2667,7 +2531,7 @@ private static final long serialVersionUID = 0L;
       } else {
         fieldMaskBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00002000;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -2680,7 +2544,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeFieldMask(com.google.protobuf.FieldMask value) {
       if (fieldMaskBuilder_ == null) {
-        if (((bitField0_ & 0x00002000) != 0) &&
+        if (((bitField0_ & 0x00001000) != 0) &&
           fieldMask_ != null &&
           fieldMask_ != com.google.protobuf.FieldMask.getDefaultInstance()) {
           getFieldMaskBuilder().mergeFrom(value);
@@ -2690,7 +2554,7 @@ private static final long serialVersionUID = 0L;
       } else {
         fieldMaskBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00002000;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -2702,7 +2566,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.FieldMask field_mask = 100 [json_name = "fieldMask"];</code>
      */
     public Builder clearFieldMask() {
-      bitField0_ = (bitField0_ & ~0x00002000);
+      bitField0_ = (bitField0_ & ~0x00001000);
       fieldMask_ = null;
       if (fieldMaskBuilder_ != null) {
         fieldMaskBuilder_.dispose();
@@ -2719,7 +2583,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.FieldMask field_mask = 100 [json_name = "fieldMask"];</code>
      */
     public com.google.protobuf.FieldMask.Builder getFieldMaskBuilder() {
-      bitField0_ |= 0x00002000;
+      bitField0_ |= 0x00001000;
       onChanged();
       return getFieldMaskFieldBuilder().getBuilder();
     }

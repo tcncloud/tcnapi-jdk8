@@ -4,38 +4,38 @@
 package com.tcn.cloud.api.api.v0alpha;
 
 /**
- * Protobuf type {@code api.v0alpha.UpdateMyUserPasswordResponse}
+ * Protobuf type {@code api.v0alpha.UpdateUserResponse}
  */
-public final class UpdateMyUserPasswordResponse extends
+public final class UpdateUserResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v0alpha.UpdateMyUserPasswordResponse)
-    UpdateMyUserPasswordResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v0alpha.UpdateUserResponse)
+    UpdateUserResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use UpdateMyUserPasswordResponse.newBuilder() to construct.
-  private UpdateMyUserPasswordResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use UpdateUserResponse.newBuilder() to construct.
+  private UpdateUserResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private UpdateMyUserPasswordResponse() {
+  private UpdateUserResponse() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new UpdateMyUserPasswordResponse();
+    return new UpdateUserResponse();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_UpdateMyUserPasswordResponse_descriptor;
+    return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_UpdateUserResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_UpdateMyUserPasswordResponse_fieldAccessorTable
+    return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_UpdateUserResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse.class, com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse.Builder.class);
+            com.tcn.cloud.api.api.v0alpha.UpdateUserResponse.class, com.tcn.cloud.api.api.v0alpha.UpdateUserResponse.Builder.class);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -71,10 +71,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.UpdateUserResponse)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse other = (com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse) obj;
+    com.tcn.cloud.api.api.v0alpha.UpdateUserResponse other = (com.tcn.cloud.api.api.v0alpha.UpdateUserResponse) obj;
 
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -92,44 +92,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -137,26 +137,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -169,7 +169,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.UpdateUserResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -185,26 +185,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code api.v0alpha.UpdateMyUserPasswordResponse}
+   * Protobuf type {@code api.v0alpha.UpdateUserResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v0alpha.UpdateMyUserPasswordResponse)
-      com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v0alpha.UpdateUserResponse)
+      com.tcn.cloud.api.api.v0alpha.UpdateUserResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_UpdateMyUserPasswordResponse_descriptor;
+      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_UpdateUserResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_UpdateMyUserPasswordResponse_fieldAccessorTable
+      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_UpdateUserResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse.class, com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse.Builder.class);
+              com.tcn.cloud.api.api.v0alpha.UpdateUserResponse.class, com.tcn.cloud.api.api.v0alpha.UpdateUserResponse.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v0alpha.UpdateUserResponse.newBuilder()
     private Builder() {
 
     }
@@ -223,17 +223,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_UpdateMyUserPasswordResponse_descriptor;
+      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_UpdateUserResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse.getDefaultInstance();
+    public com.tcn.cloud.api.api.v0alpha.UpdateUserResponse getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v0alpha.UpdateUserResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse build() {
-      com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse result = buildPartial();
+    public com.tcn.cloud.api.api.v0alpha.UpdateUserResponse build() {
+      com.tcn.cloud.api.api.v0alpha.UpdateUserResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -241,24 +241,24 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse buildPartial() {
-      com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse result = new com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse(this);
+    public com.tcn.cloud.api.api.v0alpha.UpdateUserResponse buildPartial() {
+      com.tcn.cloud.api.api.v0alpha.UpdateUserResponse result = new com.tcn.cloud.api.api.v0alpha.UpdateUserResponse(this);
       onBuilt();
       return result;
     }
 
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse) {
-        return mergeFrom((com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse)other);
+      if (other instanceof com.tcn.cloud.api.api.v0alpha.UpdateUserResponse) {
+        return mergeFrom((com.tcn.cloud.api.api.v0alpha.UpdateUserResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse other) {
-      if (other == com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.UpdateUserResponse other) {
+      if (other == com.tcn.cloud.api.api.v0alpha.UpdateUserResponse.getDefaultInstance()) return this;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -313,23 +313,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v0alpha.UpdateMyUserPasswordResponse)
+    // @@protoc_insertion_point(builder_scope:api.v0alpha.UpdateUserResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v0alpha.UpdateMyUserPasswordResponse)
-  private static final com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v0alpha.UpdateUserResponse)
+  private static final com.tcn.cloud.api.api.v0alpha.UpdateUserResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.UpdateUserResponse();
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<UpdateMyUserPasswordResponse>
-      PARSER = new com.google.protobuf.AbstractParser<UpdateMyUserPasswordResponse>() {
+  private static final com.google.protobuf.Parser<UpdateUserResponse>
+      PARSER = new com.google.protobuf.AbstractParser<UpdateUserResponse>() {
     @java.lang.Override
-    public UpdateMyUserPasswordResponse parsePartialFrom(
+    public UpdateUserResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -348,17 +348,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<UpdateMyUserPasswordResponse> parser() {
+  public static com.google.protobuf.Parser<UpdateUserResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<UpdateMyUserPasswordResponse> getParserForType() {
+  public com.google.protobuf.Parser<UpdateUserResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v0alpha.UpdateUserResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

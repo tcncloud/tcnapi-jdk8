@@ -152,18 +152,6 @@ public interface UpdateMyUserRequestOrBuilder extends
   com.tcn.cloud.api.api.commons.OperatorApplications getDefaultApp();
 
   /**
-   * <code>string user_caller_id = 10 [json_name = "userCallerId"];</code>
-   * @return The userCallerId.
-   */
-  java.lang.String getUserCallerId();
-  /**
-   * <code>string user_caller_id = 10 [json_name = "userCallerId"];</code>
-   * @return The bytes for userCallerId.
-   */
-  com.google.protobuf.ByteString
-      getUserCallerIdBytes();
-
-  /**
    * <code>bool password_reset_required = 13 [json_name = "passwordResetRequired"];</code>
    * @return The passwordResetRequired.
    */

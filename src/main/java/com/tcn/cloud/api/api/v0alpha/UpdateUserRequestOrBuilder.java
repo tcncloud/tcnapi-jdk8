@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v0alpha;
 
-public interface UpdateUserByUserIdRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v0alpha.UpdateUserByUserIdRequest)
+public interface UpdateUserRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v0alpha.UpdateUserRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**

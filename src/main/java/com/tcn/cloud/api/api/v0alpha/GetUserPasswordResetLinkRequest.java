@@ -5,89 +5,104 @@ package com.tcn.cloud.api.api.v0alpha;
 
 /**
  * <pre>
- * Response message for the GetUserPasswordResetLinkByUserIdRequest rpc.
+ * Request message for the GetUserPasswordResetLinkRequest rpc.
  * </pre>
  *
- * Protobuf type {@code api.v0alpha.GetUserPasswordResetLinkByUserIdResponse}
+ * Protobuf type {@code api.v0alpha.GetUserPasswordResetLinkRequest}
  */
-public final class GetUserPasswordResetLinkByUserIdResponse extends
+public final class GetUserPasswordResetLinkRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v0alpha.GetUserPasswordResetLinkByUserIdResponse)
-    GetUserPasswordResetLinkByUserIdResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v0alpha.GetUserPasswordResetLinkRequest)
+    GetUserPasswordResetLinkRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use GetUserPasswordResetLinkByUserIdResponse.newBuilder() to construct.
-  private GetUserPasswordResetLinkByUserIdResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use GetUserPasswordResetLinkRequest.newBuilder() to construct.
+  private GetUserPasswordResetLinkRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private GetUserPasswordResetLinkByUserIdResponse() {
-    url_ = "";
+  private GetUserPasswordResetLinkRequest() {
+    userId_ = "";
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new GetUserPasswordResetLinkByUserIdResponse();
+    return new GetUserPasswordResetLinkRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_GetUserPasswordResetLinkByUserIdResponse_descriptor;
+    return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_GetUserPasswordResetLinkRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_GetUserPasswordResetLinkByUserIdResponse_fieldAccessorTable
+    return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_GetUserPasswordResetLinkRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse.class, com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse.Builder.class);
+            com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest.class, com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest.Builder.class);
   }
 
-  public static final int URL_FIELD_NUMBER = 1;
+  public static final int USER_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object url_ = "";
+  private volatile java.lang.Object userId_ = "";
   /**
    * <pre>
-   * the generated link url.
+   * The ID of the user in the same org as the current user.
    * </pre>
    *
-   * <code>string url = 1 [json_name = "url"];</code>
-   * @return The url.
+   * <code>string user_id = 1 [json_name = "userId"];</code>
+   * @return The userId.
    */
   @java.lang.Override
-  public java.lang.String getUrl() {
-    java.lang.Object ref = url_;
+  public java.lang.String getUserId() {
+    java.lang.Object ref = userId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      url_ = s;
+      userId_ = s;
       return s;
     }
   }
   /**
    * <pre>
-   * the generated link url.
+   * The ID of the user in the same org as the current user.
    * </pre>
    *
-   * <code>string url = 1 [json_name = "url"];</code>
-   * @return The bytes for url.
+   * <code>string user_id = 1 [json_name = "userId"];</code>
+   * @return The bytes for userId.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getUrlBytes() {
-    java.lang.Object ref = url_;
+      getUserIdBytes() {
+    java.lang.Object ref = userId_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      url_ = b;
+      userId_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
+  }
+
+  public static final int TTL_FIELD_NUMBER = 12;
+  private long ttl_ = 0L;
+  /**
+   * <pre>
+   * The time to live (in seconds) of the generated link. This will default to 180 if set to 0.
+   * </pre>
+   *
+   * <code>int64 ttl = 12 [json_name = "ttl"];</code>
+   * @return The ttl.
+   */
+  @java.lang.Override
+  public long getTtl() {
+    return ttl_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -104,8 +119,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, url_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, userId_);
+    }
+    if (ttl_ != 0L) {
+      output.writeInt64(12, ttl_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -116,8 +134,12 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, url_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, userId_);
+    }
+    if (ttl_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(12, ttl_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -129,13 +151,15 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse other = (com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse) obj;
+    com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest other = (com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest) obj;
 
-    if (!getUrl()
-        .equals(other.getUrl())) return false;
+    if (!getUserId()
+        .equals(other.getUserId())) return false;
+    if (getTtl()
+        != other.getTtl()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -147,51 +171,54 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + URL_FIELD_NUMBER;
-    hash = (53 * hash) + getUrl().hashCode();
+    hash = (37 * hash) + USER_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getUserId().hashCode();
+    hash = (37 * hash) + TTL_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getTtl());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -199,26 +226,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -231,7 +258,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -248,29 +275,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Response message for the GetUserPasswordResetLinkByUserIdRequest rpc.
+   * Request message for the GetUserPasswordResetLinkRequest rpc.
    * </pre>
    *
-   * Protobuf type {@code api.v0alpha.GetUserPasswordResetLinkByUserIdResponse}
+   * Protobuf type {@code api.v0alpha.GetUserPasswordResetLinkRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v0alpha.GetUserPasswordResetLinkByUserIdResponse)
-      com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v0alpha.GetUserPasswordResetLinkRequest)
+      com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_GetUserPasswordResetLinkByUserIdResponse_descriptor;
+      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_GetUserPasswordResetLinkRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_GetUserPasswordResetLinkByUserIdResponse_fieldAccessorTable
+      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_GetUserPasswordResetLinkRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse.class, com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse.Builder.class);
+              com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest.class, com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest.newBuilder()
     private Builder() {
 
     }
@@ -284,24 +311,25 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      url_ = "";
+      userId_ = "";
+      ttl_ = 0L;
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_GetUserPasswordResetLinkByUserIdResponse_descriptor;
+      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_GetUserPasswordResetLinkRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse.getDefaultInstance();
+    public com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse build() {
-      com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse result = buildPartial();
+    public com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest build() {
+      com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -309,36 +337,42 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse buildPartial() {
-      com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse result = new com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse(this);
+    public com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest buildPartial() {
+      com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest result = new com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.url_ = url_;
+        result.userId_ = userId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.ttl_ = ttl_;
       }
     }
 
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse) {
-        return mergeFrom((com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse)other);
+      if (other instanceof com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest) {
+        return mergeFrom((com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse other) {
-      if (other == com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse.getDefaultInstance()) return this;
-      if (!other.getUrl().isEmpty()) {
-        url_ = other.url_;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest other) {
+      if (other == com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest.getDefaultInstance()) return this;
+      if (!other.getUserId().isEmpty()) {
+        userId_ = other.userId_;
         bitField0_ |= 0x00000001;
         onChanged();
+      }
+      if (other.getTtl() != 0L) {
+        setTtl(other.getTtl());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -367,10 +401,15 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              url_ = input.readStringRequireUtf8();
+              userId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 96: {
+              ttl_ = input.readInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 96
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -388,22 +427,22 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object url_ = "";
+    private java.lang.Object userId_ = "";
     /**
      * <pre>
-     * the generated link url.
+     * The ID of the user in the same org as the current user.
      * </pre>
      *
-     * <code>string url = 1 [json_name = "url"];</code>
-     * @return The url.
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @return The userId.
      */
-    public java.lang.String getUrl() {
-      java.lang.Object ref = url_;
+    public java.lang.String getUserId() {
+      java.lang.Object ref = userId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        url_ = s;
+        userId_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -411,20 +450,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the generated link url.
+     * The ID of the user in the same org as the current user.
      * </pre>
      *
-     * <code>string url = 1 [json_name = "url"];</code>
-     * @return The bytes for url.
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @return The bytes for userId.
      */
     public com.google.protobuf.ByteString
-        getUrlBytes() {
-      java.lang.Object ref = url_;
+        getUserIdBytes() {
+      java.lang.Object ref = userId_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        url_ = b;
+        userId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -432,50 +471,94 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * the generated link url.
+     * The ID of the user in the same org as the current user.
      * </pre>
      *
-     * <code>string url = 1 [json_name = "url"];</code>
-     * @param value The url to set.
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @param value The userId to set.
      * @return This builder for chaining.
      */
-    public Builder setUrl(
+    public Builder setUserId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      url_ = value;
+      userId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * the generated link url.
+     * The ID of the user in the same org as the current user.
      * </pre>
      *
-     * <code>string url = 1 [json_name = "url"];</code>
+     * <code>string user_id = 1 [json_name = "userId"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearUrl() {
-      url_ = getDefaultInstance().getUrl();
+    public Builder clearUserId() {
+      userId_ = getDefaultInstance().getUserId();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * the generated link url.
+     * The ID of the user in the same org as the current user.
      * </pre>
      *
-     * <code>string url = 1 [json_name = "url"];</code>
-     * @param value The bytes for url to set.
+     * <code>string user_id = 1 [json_name = "userId"];</code>
+     * @param value The bytes for userId to set.
      * @return This builder for chaining.
      */
-    public Builder setUrlBytes(
+    public Builder setUserIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      url_ = value;
+      userId_ = value;
       bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private long ttl_ ;
+    /**
+     * <pre>
+     * The time to live (in seconds) of the generated link. This will default to 180 if set to 0.
+     * </pre>
+     *
+     * <code>int64 ttl = 12 [json_name = "ttl"];</code>
+     * @return The ttl.
+     */
+    @java.lang.Override
+    public long getTtl() {
+      return ttl_;
+    }
+    /**
+     * <pre>
+     * The time to live (in seconds) of the generated link. This will default to 180 if set to 0.
+     * </pre>
+     *
+     * <code>int64 ttl = 12 [json_name = "ttl"];</code>
+     * @param value The ttl to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTtl(long value) {
+
+      ttl_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The time to live (in seconds) of the generated link. This will default to 180 if set to 0.
+     * </pre>
+     *
+     * <code>int64 ttl = 12 [json_name = "ttl"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTtl() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      ttl_ = 0L;
       onChanged();
       return this;
     }
@@ -492,23 +575,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v0alpha.GetUserPasswordResetLinkByUserIdResponse)
+    // @@protoc_insertion_point(builder_scope:api.v0alpha.GetUserPasswordResetLinkRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v0alpha.GetUserPasswordResetLinkByUserIdResponse)
-  private static final com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v0alpha.GetUserPasswordResetLinkRequest)
+  private static final com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest();
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<GetUserPasswordResetLinkByUserIdResponse>
-      PARSER = new com.google.protobuf.AbstractParser<GetUserPasswordResetLinkByUserIdResponse>() {
+  private static final com.google.protobuf.Parser<GetUserPasswordResetLinkRequest>
+      PARSER = new com.google.protobuf.AbstractParser<GetUserPasswordResetLinkRequest>() {
     @java.lang.Override
-    public GetUserPasswordResetLinkByUserIdResponse parsePartialFrom(
+    public GetUserPasswordResetLinkRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -527,17 +610,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<GetUserPasswordResetLinkByUserIdResponse> parser() {
+  public static com.google.protobuf.Parser<GetUserPasswordResetLinkRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<GetUserPasswordResetLinkByUserIdResponse> getParserForType() {
+  public com.google.protobuf.Parser<GetUserPasswordResetLinkRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByUserIdResponse getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

@@ -3,8 +3,8 @@
 
 package com.tcn.cloud.api.api.v0alpha;
 
-public interface UpdateMyUserPasswordRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:api.v0alpha.UpdateMyUserPasswordRequest)
+public interface UpdateUserPasswordRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:api.v0alpha.UpdateUserPasswordRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**

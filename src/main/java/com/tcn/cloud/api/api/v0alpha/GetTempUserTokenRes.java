@@ -4,124 +4,122 @@
 package com.tcn.cloud.api.api.v0alpha;
 
 /**
- * Protobuf type {@code api.v0alpha.UpdateMyUserPasswordRequest}
+ * Protobuf type {@code api.v0alpha.GetTempUserTokenRes}
  */
-public final class UpdateMyUserPasswordRequest extends
+public final class GetTempUserTokenRes extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v0alpha.UpdateMyUserPasswordRequest)
-    UpdateMyUserPasswordRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v0alpha.GetTempUserTokenRes)
+    GetTempUserTokenResOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use UpdateMyUserPasswordRequest.newBuilder() to construct.
-  private UpdateMyUserPasswordRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use GetTempUserTokenRes.newBuilder() to construct.
+  private GetTempUserTokenRes(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private UpdateMyUserPasswordRequest() {
-    password_ = "";
-    currentPassword_ = "";
+  private GetTempUserTokenRes() {
+    regionId_ = "";
+    token_ = "";
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new UpdateMyUserPasswordRequest();
+    return new GetTempUserTokenRes();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_UpdateMyUserPasswordRequest_descriptor;
+    return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_GetTempUserTokenRes_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_UpdateMyUserPasswordRequest_fieldAccessorTable
+    return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_GetTempUserTokenRes_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest.class, com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest.Builder.class);
+            com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes.class, com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes.Builder.class);
   }
 
-  public static final int PASSWORD_FIELD_NUMBER = 2;
+  public static final int REGION_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object password_ = "";
+  private volatile java.lang.Object regionId_ = "";
   /**
-   * <pre>
-   * the USER_EDIT_PASSWORD permission is require
-   * to update the current user's own password.
-   * </pre>
-   *
-   * <code>string password = 2 [json_name = "password"];</code>
-   * @return The password.
+   * <code>string region_id = 1 [json_name = "regionId"];</code>
+   * @return The regionId.
    */
   @java.lang.Override
-  public java.lang.String getPassword() {
-    java.lang.Object ref = password_;
+  public java.lang.String getRegionId() {
+    java.lang.Object ref = regionId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      password_ = s;
+      regionId_ = s;
       return s;
     }
   }
   /**
-   * <pre>
-   * the USER_EDIT_PASSWORD permission is require
-   * to update the current user's own password.
-   * </pre>
-   *
-   * <code>string password = 2 [json_name = "password"];</code>
-   * @return The bytes for password.
+   * <code>string region_id = 1 [json_name = "regionId"];</code>
+   * @return The bytes for regionId.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getPasswordBytes() {
-    java.lang.Object ref = password_;
+      getRegionIdBytes() {
+    java.lang.Object ref = regionId_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      password_ = b;
+      regionId_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
   }
 
-  public static final int CURRENT_PASSWORD_FIELD_NUMBER = 3;
+  public static final int TOKEN_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object currentPassword_ = "";
+  private volatile java.lang.Object token_ = "";
   /**
-   * <code>string current_password = 3 [json_name = "currentPassword"];</code>
-   * @return The currentPassword.
+   * <pre>
+   * Temporary token generated for user
+   * </pre>
+   *
+   * <code>string token = 2 [json_name = "token"];</code>
+   * @return The token.
    */
   @java.lang.Override
-  public java.lang.String getCurrentPassword() {
-    java.lang.Object ref = currentPassword_;
+  public java.lang.String getToken() {
+    java.lang.Object ref = token_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      currentPassword_ = s;
+      token_ = s;
       return s;
     }
   }
   /**
-   * <code>string current_password = 3 [json_name = "currentPassword"];</code>
-   * @return The bytes for currentPassword.
+   * <pre>
+   * Temporary token generated for user
+   * </pre>
+   *
+   * <code>string token = 2 [json_name = "token"];</code>
+   * @return The bytes for token.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getCurrentPasswordBytes() {
-    java.lang.Object ref = currentPassword_;
+      getTokenBytes() {
+    java.lang.Object ref = token_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      currentPassword_ = b;
+      token_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -142,11 +140,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, password_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regionId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, regionId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currentPassword_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, currentPassword_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, token_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -157,11 +155,11 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, password_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regionId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, regionId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currentPassword_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, currentPassword_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, token_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -173,15 +171,15 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest other = (com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest) obj;
+    com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes other = (com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes) obj;
 
-    if (!getPassword()
-        .equals(other.getPassword())) return false;
-    if (!getCurrentPassword()
-        .equals(other.getCurrentPassword())) return false;
+    if (!getRegionId()
+        .equals(other.getRegionId())) return false;
+    if (!getToken()
+        .equals(other.getToken())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -193,53 +191,53 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
-    hash = (53 * hash) + getPassword().hashCode();
-    hash = (37 * hash) + CURRENT_PASSWORD_FIELD_NUMBER;
-    hash = (53 * hash) + getCurrentPassword().hashCode();
+    hash = (37 * hash) + REGION_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getRegionId().hashCode();
+    hash = (37 * hash) + TOKEN_FIELD_NUMBER;
+    hash = (53 * hash) + getToken().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -247,26 +245,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -279,7 +277,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -295,26 +293,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code api.v0alpha.UpdateMyUserPasswordRequest}
+   * Protobuf type {@code api.v0alpha.GetTempUserTokenRes}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v0alpha.UpdateMyUserPasswordRequest)
-      com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v0alpha.GetTempUserTokenRes)
+      com.tcn.cloud.api.api.v0alpha.GetTempUserTokenResOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_UpdateMyUserPasswordRequest_descriptor;
+      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_GetTempUserTokenRes_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_UpdateMyUserPasswordRequest_fieldAccessorTable
+      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_GetTempUserTokenRes_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest.class, com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest.Builder.class);
+              com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes.class, com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes.newBuilder()
     private Builder() {
 
     }
@@ -328,25 +326,25 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      password_ = "";
-      currentPassword_ = "";
+      regionId_ = "";
+      token_ = "";
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_UpdateMyUserPasswordRequest_descriptor;
+      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_GetTempUserTokenRes_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest.getDefaultInstance();
+    public com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest build() {
-      com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest result = buildPartial();
+    public com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes build() {
+      com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -354,42 +352,42 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest buildPartial() {
-      com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest result = new com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest(this);
+    public com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes buildPartial() {
+      com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes result = new com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.password_ = password_;
+        result.regionId_ = regionId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.currentPassword_ = currentPassword_;
+        result.token_ = token_;
       }
     }
 
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest) {
-        return mergeFrom((com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest)other);
+      if (other instanceof com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes) {
+        return mergeFrom((com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest other) {
-      if (other == com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest.getDefaultInstance()) return this;
-      if (!other.getPassword().isEmpty()) {
-        password_ = other.password_;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes other) {
+      if (other == com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes.getDefaultInstance()) return this;
+      if (!other.getRegionId().isEmpty()) {
+        regionId_ = other.regionId_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (!other.getCurrentPassword().isEmpty()) {
-        currentPassword_ = other.currentPassword_;
+      if (!other.getToken().isEmpty()) {
+        token_ = other.token_;
         bitField0_ |= 0x00000002;
         onChanged();
       }
@@ -419,16 +417,16 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 18: {
-              password_ = input.readStringRequireUtf8();
+            case 10: {
+              regionId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
-            } // case 18
-            case 26: {
-              currentPassword_ = input.readStringRequireUtf8();
+            } // case 10
+            case 18: {
+              token_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
-            } // case 26
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -446,170 +444,165 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object password_ = "";
+    private java.lang.Object regionId_ = "";
     /**
-     * <pre>
-     * the USER_EDIT_PASSWORD permission is require
-     * to update the current user's own password.
-     * </pre>
-     *
-     * <code>string password = 2 [json_name = "password"];</code>
-     * @return The password.
+     * <code>string region_id = 1 [json_name = "regionId"];</code>
+     * @return The regionId.
      */
-    public java.lang.String getPassword() {
-      java.lang.Object ref = password_;
+    public java.lang.String getRegionId() {
+      java.lang.Object ref = regionId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        password_ = s;
+        regionId_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <pre>
-     * the USER_EDIT_PASSWORD permission is require
-     * to update the current user's own password.
-     * </pre>
-     *
-     * <code>string password = 2 [json_name = "password"];</code>
-     * @return The bytes for password.
+     * <code>string region_id = 1 [json_name = "regionId"];</code>
+     * @return The bytes for regionId.
      */
     public com.google.protobuf.ByteString
-        getPasswordBytes() {
-      java.lang.Object ref = password_;
+        getRegionIdBytes() {
+      java.lang.Object ref = regionId_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        password_ = b;
+        regionId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <pre>
-     * the USER_EDIT_PASSWORD permission is require
-     * to update the current user's own password.
-     * </pre>
-     *
-     * <code>string password = 2 [json_name = "password"];</code>
-     * @param value The password to set.
+     * <code>string region_id = 1 [json_name = "regionId"];</code>
+     * @param value The regionId to set.
      * @return This builder for chaining.
      */
-    public Builder setPassword(
+    public Builder setRegionId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      password_ = value;
+      regionId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * the USER_EDIT_PASSWORD permission is require
-     * to update the current user's own password.
-     * </pre>
-     *
-     * <code>string password = 2 [json_name = "password"];</code>
+     * <code>string region_id = 1 [json_name = "regionId"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearPassword() {
-      password_ = getDefaultInstance().getPassword();
+    public Builder clearRegionId() {
+      regionId_ = getDefaultInstance().getRegionId();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
-     * <pre>
-     * the USER_EDIT_PASSWORD permission is require
-     * to update the current user's own password.
-     * </pre>
-     *
-     * <code>string password = 2 [json_name = "password"];</code>
-     * @param value The bytes for password to set.
+     * <code>string region_id = 1 [json_name = "regionId"];</code>
+     * @param value The bytes for regionId to set.
      * @return This builder for chaining.
      */
-    public Builder setPasswordBytes(
+    public Builder setRegionIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      password_ = value;
+      regionId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
 
-    private java.lang.Object currentPassword_ = "";
+    private java.lang.Object token_ = "";
     /**
-     * <code>string current_password = 3 [json_name = "currentPassword"];</code>
-     * @return The currentPassword.
+     * <pre>
+     * Temporary token generated for user
+     * </pre>
+     *
+     * <code>string token = 2 [json_name = "token"];</code>
+     * @return The token.
      */
-    public java.lang.String getCurrentPassword() {
-      java.lang.Object ref = currentPassword_;
+    public java.lang.String getToken() {
+      java.lang.Object ref = token_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        currentPassword_ = s;
+        token_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string current_password = 3 [json_name = "currentPassword"];</code>
-     * @return The bytes for currentPassword.
+     * <pre>
+     * Temporary token generated for user
+     * </pre>
+     *
+     * <code>string token = 2 [json_name = "token"];</code>
+     * @return The bytes for token.
      */
     public com.google.protobuf.ByteString
-        getCurrentPasswordBytes() {
-      java.lang.Object ref = currentPassword_;
+        getTokenBytes() {
+      java.lang.Object ref = token_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        currentPassword_ = b;
+        token_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string current_password = 3 [json_name = "currentPassword"];</code>
-     * @param value The currentPassword to set.
+     * <pre>
+     * Temporary token generated for user
+     * </pre>
+     *
+     * <code>string token = 2 [json_name = "token"];</code>
+     * @param value The token to set.
      * @return This builder for chaining.
      */
-    public Builder setCurrentPassword(
+    public Builder setToken(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      currentPassword_ = value;
+      token_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>string current_password = 3 [json_name = "currentPassword"];</code>
+     * <pre>
+     * Temporary token generated for user
+     * </pre>
+     *
+     * <code>string token = 2 [json_name = "token"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearCurrentPassword() {
-      currentPassword_ = getDefaultInstance().getCurrentPassword();
+    public Builder clearToken() {
+      token_ = getDefaultInstance().getToken();
       bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
-     * <code>string current_password = 3 [json_name = "currentPassword"];</code>
-     * @param value The bytes for currentPassword to set.
+     * <pre>
+     * Temporary token generated for user
+     * </pre>
+     *
+     * <code>string token = 2 [json_name = "token"];</code>
+     * @param value The bytes for token to set.
      * @return This builder for chaining.
      */
-    public Builder setCurrentPasswordBytes(
+    public Builder setTokenBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      currentPassword_ = value;
+      token_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
@@ -627,23 +620,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v0alpha.UpdateMyUserPasswordRequest)
+    // @@protoc_insertion_point(builder_scope:api.v0alpha.GetTempUserTokenRes)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v0alpha.UpdateMyUserPasswordRequest)
-  private static final com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v0alpha.GetTempUserTokenRes)
+  private static final com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes();
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<UpdateMyUserPasswordRequest>
-      PARSER = new com.google.protobuf.AbstractParser<UpdateMyUserPasswordRequest>() {
+  private static final com.google.protobuf.Parser<GetTempUserTokenRes>
+      PARSER = new com.google.protobuf.AbstractParser<GetTempUserTokenRes>() {
     @java.lang.Override
-    public UpdateMyUserPasswordRequest parsePartialFrom(
+    public GetTempUserTokenRes parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -662,17 +655,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<UpdateMyUserPasswordRequest> parser() {
+  public static com.google.protobuf.Parser<GetTempUserTokenRes> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<UpdateMyUserPasswordRequest> getParserForType() {
+  public com.google.protobuf.Parser<GetTempUserTokenRes> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
