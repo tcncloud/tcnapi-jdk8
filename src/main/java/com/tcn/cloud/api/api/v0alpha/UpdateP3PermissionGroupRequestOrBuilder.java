@@ -8,26 +8,6 @@ public interface UpdateP3PermissionGroupRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   * optional org_id. If not is passsed in peel off token.
-   * </pre>
-   *
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
-   * @return The orgId.
-   */
-  java.lang.String getOrgId();
-  /**
-   * <pre>
-   * optional org_id. If not is passsed in peel off token.
-   * </pre>
-   *
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
-   * @return The bytes for orgId.
-   */
-  com.google.protobuf.ByteString
-      getOrgIdBytes();
-
-  /**
    * <code>string permission_group_id = 2 [json_name = "permissionGroupId"];</code>
    * @return The permissionGroupId.
    */

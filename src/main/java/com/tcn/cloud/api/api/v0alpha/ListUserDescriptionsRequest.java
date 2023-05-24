@@ -16,8 +16,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ListUserDescriptionsRequest() {
-    regionId_ = "";
-    orgIdFilter_ = "";
   }
 
   @java.lang.Override
@@ -40,100 +38,6 @@ private static final long serialVersionUID = 0L;
             com.tcn.cloud.api.api.v0alpha.ListUserDescriptionsRequest.class, com.tcn.cloud.api.api.v0alpha.ListUserDescriptionsRequest.Builder.class);
   }
 
-  public static final int REGION_ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object regionId_ = "";
-  /**
-   * <pre>
-   * Optional. RegionId to filter by.
-   * </pre>
-   *
-   * <code>string region_id = 1 [json_name = "regionId"];</code>
-   * @return The regionId.
-   */
-  @java.lang.Override
-  public java.lang.String getRegionId() {
-    java.lang.Object ref = regionId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      regionId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * Optional. RegionId to filter by.
-   * </pre>
-   *
-   * <code>string region_id = 1 [json_name = "regionId"];</code>
-   * @return The bytes for regionId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getRegionIdBytes() {
-    java.lang.Object ref = regionId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      regionId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int ORG_ID_FILTER_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object orgIdFilter_ = "";
-  /**
-   * <pre>
-   * Optional. OrgId to filter by.
-   * </pre>
-   *
-   * <code>string org_id_filter = 2 [json_name = "orgIdFilter"];</code>
-   * @return The orgIdFilter.
-   */
-  @java.lang.Override
-  public java.lang.String getOrgIdFilter() {
-    java.lang.Object ref = orgIdFilter_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      orgIdFilter_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * Optional. OrgId to filter by.
-   * </pre>
-   *
-   * <code>string org_id_filter = 2 [json_name = "orgIdFilter"];</code>
-   * @return The bytes for orgIdFilter.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getOrgIdFilterBytes() {
-    java.lang.Object ref = orgIdFilter_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      orgIdFilter_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -148,12 +52,6 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regionId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, regionId_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgIdFilter_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, orgIdFilter_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -163,12 +61,6 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regionId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, regionId_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgIdFilter_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, orgIdFilter_);
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -184,10 +76,6 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v0alpha.ListUserDescriptionsRequest other = (com.tcn.cloud.api.api.v0alpha.ListUserDescriptionsRequest) obj;
 
-    if (!getRegionId()
-        .equals(other.getRegionId())) return false;
-    if (!getOrgIdFilter()
-        .equals(other.getOrgIdFilter())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -199,10 +87,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + REGION_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getRegionId().hashCode();
-    hash = (37 * hash) + ORG_ID_FILTER_FIELD_NUMBER;
-    hash = (53 * hash) + getOrgIdFilter().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -333,9 +217,6 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      regionId_ = "";
-      orgIdFilter_ = "";
       return this;
     }
 
@@ -362,19 +243,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.ListUserDescriptionsRequest buildPartial() {
       com.tcn.cloud.api.api.v0alpha.ListUserDescriptionsRequest result = new com.tcn.cloud.api.api.v0alpha.ListUserDescriptionsRequest(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ListUserDescriptionsRequest result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.regionId_ = regionId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.orgIdFilter_ = orgIdFilter_;
-      }
     }
 
     @java.lang.Override
@@ -389,16 +259,6 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.ListUserDescriptionsRequest other) {
       if (other == com.tcn.cloud.api.api.v0alpha.ListUserDescriptionsRequest.getDefaultInstance()) return this;
-      if (!other.getRegionId().isEmpty()) {
-        regionId_ = other.regionId_;
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
-      if (!other.getOrgIdFilter().isEmpty()) {
-        orgIdFilter_ = other.orgIdFilter_;
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -425,16 +285,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
-              regionId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              orgIdFilter_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -448,191 +298,6 @@ private static final long serialVersionUID = 0L;
       } finally {
         onChanged();
       } // finally
-      return this;
-    }
-    private int bitField0_;
-
-    private java.lang.Object regionId_ = "";
-    /**
-     * <pre>
-     * Optional. RegionId to filter by.
-     * </pre>
-     *
-     * <code>string region_id = 1 [json_name = "regionId"];</code>
-     * @return The regionId.
-     */
-    public java.lang.String getRegionId() {
-      java.lang.Object ref = regionId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        regionId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * Optional. RegionId to filter by.
-     * </pre>
-     *
-     * <code>string region_id = 1 [json_name = "regionId"];</code>
-     * @return The bytes for regionId.
-     */
-    public com.google.protobuf.ByteString
-        getRegionIdBytes() {
-      java.lang.Object ref = regionId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        regionId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * Optional. RegionId to filter by.
-     * </pre>
-     *
-     * <code>string region_id = 1 [json_name = "regionId"];</code>
-     * @param value The regionId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setRegionId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      regionId_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Optional. RegionId to filter by.
-     * </pre>
-     *
-     * <code>string region_id = 1 [json_name = "regionId"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearRegionId() {
-      regionId_ = getDefaultInstance().getRegionId();
-      bitField0_ = (bitField0_ & ~0x00000001);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Optional. RegionId to filter by.
-     * </pre>
-     *
-     * <code>string region_id = 1 [json_name = "regionId"];</code>
-     * @param value The bytes for regionId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setRegionIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      regionId_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-
-    private java.lang.Object orgIdFilter_ = "";
-    /**
-     * <pre>
-     * Optional. OrgId to filter by.
-     * </pre>
-     *
-     * <code>string org_id_filter = 2 [json_name = "orgIdFilter"];</code>
-     * @return The orgIdFilter.
-     */
-    public java.lang.String getOrgIdFilter() {
-      java.lang.Object ref = orgIdFilter_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        orgIdFilter_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * Optional. OrgId to filter by.
-     * </pre>
-     *
-     * <code>string org_id_filter = 2 [json_name = "orgIdFilter"];</code>
-     * @return The bytes for orgIdFilter.
-     */
-    public com.google.protobuf.ByteString
-        getOrgIdFilterBytes() {
-      java.lang.Object ref = orgIdFilter_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        orgIdFilter_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * Optional. OrgId to filter by.
-     * </pre>
-     *
-     * <code>string org_id_filter = 2 [json_name = "orgIdFilter"];</code>
-     * @param value The orgIdFilter to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOrgIdFilter(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      orgIdFilter_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Optional. OrgId to filter by.
-     * </pre>
-     *
-     * <code>string org_id_filter = 2 [json_name = "orgIdFilter"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearOrgIdFilter() {
-      orgIdFilter_ = getDefaultInstance().getOrgIdFilter();
-      bitField0_ = (bitField0_ & ~0x00000002);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Optional. OrgId to filter by.
-     * </pre>
-     *
-     * <code>string org_id_filter = 2 [json_name = "orgIdFilter"];</code>
-     * @param value The bytes for orgIdFilter to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOrgIdFilterBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      orgIdFilter_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
       return this;
     }
     @java.lang.Override

@@ -26,26 +26,4 @@ public interface SendUserVerificationEmailRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getUserIdBytes();
-
-  /**
-   * <pre>
-   * Optional. The ID of the org the user belongs to.
-   * If this is set the rpc will require the support permission.
-   * </pre>
-   *
-   * <code>string org_id = 2 [json_name = "orgId"];</code>
-   * @return The orgId.
-   */
-  java.lang.String getOrgId();
-  /**
-   * <pre>
-   * Optional. The ID of the org the user belongs to.
-   * If this is set the rpc will require the support permission.
-   * </pre>
-   *
-   * <code>string org_id = 2 [json_name = "orgId"];</code>
-   * @return The bytes for orgId.
-   */
-  com.google.protobuf.ByteString
-      getOrgIdBytes();
 }

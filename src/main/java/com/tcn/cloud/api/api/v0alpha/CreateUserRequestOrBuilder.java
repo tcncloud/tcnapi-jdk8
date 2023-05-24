@@ -8,110 +8,84 @@ public interface CreateUserRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   * if org_id is set the user will be created for
-   * the given org_id. This requires the CUSTOMER_SUPPORT permission.
-   * if this field is not set it will get the org_id
-   * from the token. This only requires the USER_CREATE permission.
-   * </pre>
-   *
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
-   * @return The orgId.
-   */
-  java.lang.String getOrgId();
-  /**
-   * <pre>
-   * if org_id is set the user will be created for
-   * the given org_id. This requires the CUSTOMER_SUPPORT permission.
-   * if this field is not set it will get the org_id
-   * from the token. This only requires the USER_CREATE permission.
-   * </pre>
-   *
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
-   * @return The bytes for orgId.
-   */
-  com.google.protobuf.ByteString
-      getOrgIdBytes();
-
-  /**
-   * <code>string first_name = 2 [json_name = "firstName"];</code>
+   * <code>string first_name = 1 [json_name = "firstName"];</code>
    * @return The firstName.
    */
   java.lang.String getFirstName();
   /**
-   * <code>string first_name = 2 [json_name = "firstName"];</code>
+   * <code>string first_name = 1 [json_name = "firstName"];</code>
    * @return The bytes for firstName.
    */
   com.google.protobuf.ByteString
       getFirstNameBytes();
 
   /**
-   * <code>string last_name = 3 [json_name = "lastName"];</code>
+   * <code>string last_name = 2 [json_name = "lastName"];</code>
    * @return The lastName.
    */
   java.lang.String getLastName();
   /**
-   * <code>string last_name = 3 [json_name = "lastName"];</code>
+   * <code>string last_name = 2 [json_name = "lastName"];</code>
    * @return The bytes for lastName.
    */
   com.google.protobuf.ByteString
       getLastNameBytes();
 
   /**
-   * <code>string email = 4 [json_name = "email"];</code>
+   * <code>string email = 3 [json_name = "email"];</code>
    * @return The email.
    */
   java.lang.String getEmail();
   /**
-   * <code>string email = 4 [json_name = "email"];</code>
+   * <code>string email = 3 [json_name = "email"];</code>
    * @return The bytes for email.
    */
   com.google.protobuf.ByteString
       getEmailBytes();
 
   /**
-   * <code>string user_name = 5 [json_name = "userName"];</code>
+   * <code>string user_name = 4 [json_name = "userName"];</code>
    * @return The userName.
    */
   java.lang.String getUserName();
   /**
-   * <code>string user_name = 5 [json_name = "userName"];</code>
+   * <code>string user_name = 4 [json_name = "userName"];</code>
    * @return The bytes for userName.
    */
   com.google.protobuf.ByteString
       getUserNameBytes();
 
   /**
-   * <code>string password = 6 [json_name = "password"];</code>
+   * <code>string password = 5 [json_name = "password"];</code>
    * @return The password.
    */
   java.lang.String getPassword();
   /**
-   * <code>string password = 6 [json_name = "password"];</code>
+   * <code>string password = 5 [json_name = "password"];</code>
    * @return The bytes for password.
    */
   com.google.protobuf.ByteString
       getPasswordBytes();
 
   /**
-   * <code>repeated string permission_group_ids = 7 [json_name = "permissionGroupIds"];</code>
+   * <code>repeated string permission_group_ids = 6 [json_name = "permissionGroupIds"];</code>
    * @return A list containing the permissionGroupIds.
    */
   java.util.List<java.lang.String>
       getPermissionGroupIdsList();
   /**
-   * <code>repeated string permission_group_ids = 7 [json_name = "permissionGroupIds"];</code>
+   * <code>repeated string permission_group_ids = 6 [json_name = "permissionGroupIds"];</code>
    * @return The count of permissionGroupIds.
    */
   int getPermissionGroupIdsCount();
   /**
-   * <code>repeated string permission_group_ids = 7 [json_name = "permissionGroupIds"];</code>
+   * <code>repeated string permission_group_ids = 6 [json_name = "permissionGroupIds"];</code>
    * @param index The index of the element to return.
    * @return The permissionGroupIds at the given index.
    */
   java.lang.String getPermissionGroupIds(int index);
   /**
-   * <code>repeated string permission_group_ids = 7 [json_name = "permissionGroupIds"];</code>
+   * <code>repeated string permission_group_ids = 6 [json_name = "permissionGroupIds"];</code>
    * @param index The index of the value to return.
    * @return The bytes of the permissionGroupIds at the given index.
    */
