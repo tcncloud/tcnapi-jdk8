@@ -100,11 +100,13 @@ private static final long serialVersionUID = 0L;
    * if org_id needs to be provided, use ManualUserEmailVerificationByOrgId rpc
    * </pre>
    *
-   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v0alpha.ManualUserEmailVerificationRequest.org_id is deprecated.
+   *     See api/v0alpha/org.proto;l=6504
    * @return The orgId.
    */
   @java.lang.Override
-  public java.lang.String getOrgId() {
+  @java.lang.Deprecated public java.lang.String getOrgId() {
     java.lang.Object ref = orgId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -122,11 +124,13 @@ private static final long serialVersionUID = 0L;
    * if org_id needs to be provided, use ManualUserEmailVerificationByOrgId rpc
    * </pre>
    *
-   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v0alpha.ManualUserEmailVerificationRequest.org_id is deprecated.
+   *     See api/v0alpha/org.proto;l=6504
    * @return The bytes for orgId.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getOrgIdBytes() {
     java.lang.Object ref = orgId_;
     if (ref instanceof java.lang.String) {
@@ -561,10 +565,12 @@ private static final long serialVersionUID = 0L;
      * if org_id needs to be provided, use ManualUserEmailVerificationByOrgId rpc
      * </pre>
      *
-     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+     * @deprecated api.v0alpha.ManualUserEmailVerificationRequest.org_id is deprecated.
+     *     See api/v0alpha/org.proto;l=6504
      * @return The orgId.
      */
-    public java.lang.String getOrgId() {
+    @java.lang.Deprecated public java.lang.String getOrgId() {
       java.lang.Object ref = orgId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -582,10 +588,12 @@ private static final long serialVersionUID = 0L;
      * if org_id needs to be provided, use ManualUserEmailVerificationByOrgId rpc
      * </pre>
      *
-     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+     * @deprecated api.v0alpha.ManualUserEmailVerificationRequest.org_id is deprecated.
+     *     See api/v0alpha/org.proto;l=6504
      * @return The bytes for orgId.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getOrgIdBytes() {
       java.lang.Object ref = orgId_;
       if (ref instanceof String) {
@@ -604,11 +612,13 @@ private static final long serialVersionUID = 0L;
      * if org_id needs to be provided, use ManualUserEmailVerificationByOrgId rpc
      * </pre>
      *
-     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+     * @deprecated api.v0alpha.ManualUserEmailVerificationRequest.org_id is deprecated.
+     *     See api/v0alpha/org.proto;l=6504
      * @param value The orgId to set.
      * @return This builder for chaining.
      */
-    public Builder setOrgId(
+    @java.lang.Deprecated public Builder setOrgId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       orgId_ = value;
@@ -622,10 +632,12 @@ private static final long serialVersionUID = 0L;
      * if org_id needs to be provided, use ManualUserEmailVerificationByOrgId rpc
      * </pre>
      *
-     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+     * @deprecated api.v0alpha.ManualUserEmailVerificationRequest.org_id is deprecated.
+     *     See api/v0alpha/org.proto;l=6504
      * @return This builder for chaining.
      */
-    public Builder clearOrgId() {
+    @java.lang.Deprecated public Builder clearOrgId() {
       orgId_ = getDefaultInstance().getOrgId();
       bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
@@ -637,11 +649,13 @@ private static final long serialVersionUID = 0L;
      * if org_id needs to be provided, use ManualUserEmailVerificationByOrgId rpc
      * </pre>
      *
-     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+     * @deprecated api.v0alpha.ManualUserEmailVerificationRequest.org_id is deprecated.
+     *     See api/v0alpha/org.proto;l=6504
      * @param value The bytes for orgId to set.
      * @return This builder for chaining.
      */
-    public Builder setOrgIdBytes(
+    @java.lang.Deprecated public Builder setOrgIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);

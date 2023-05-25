@@ -45,19 +45,23 @@ public interface UpdateUserDisabledRequestOrBuilder extends
    * if org_id needs to be provided, use UpdateUserDisabledByOrgId rpc
    * </pre>
    *
-   * <code>string org_id = 3 [json_name = "orgId"];</code>
+   * <code>string org_id = 3 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v0alpha.UpdateUserDisabledRequest.org_id is deprecated.
+   *     See api/v0alpha/org.proto;l=3427
    * @return The orgId.
    */
-  java.lang.String getOrgId();
+  @java.lang.Deprecated java.lang.String getOrgId();
   /**
    * <pre>
    * DEPRECATED: org id was previously optional,
    * if org_id needs to be provided, use UpdateUserDisabledByOrgId rpc
    * </pre>
    *
-   * <code>string org_id = 3 [json_name = "orgId"];</code>
+   * <code>string org_id = 3 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v0alpha.UpdateUserDisabledRequest.org_id is deprecated.
+   *     See api/v0alpha/org.proto;l=3427
    * @return The bytes for orgId.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getOrgIdBytes();
 }

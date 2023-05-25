@@ -16,6 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private UpdateP3PermissionGroupRequest() {
+    orgId_ = "";
     permissionGroupId_ = "";
     name_ = "";
     description_ = "";
@@ -40,6 +41,57 @@ private static final long serialVersionUID = 0L;
     return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_UpdateP3PermissionGroupRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupRequest.class, com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupRequest.Builder.class);
+  }
+
+  public static final int ORG_ID_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object orgId_ = "";
+  /**
+   * <pre>
+   * DEPRECATED: org_id. If this was previously used use the UpdateP3PermissionGroupByOrgId rpc instead.
+   * </pre>
+   *
+   * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v0alpha.UpdateP3PermissionGroupRequest.org_id is deprecated.
+   *     See api/v0alpha/org.proto;l=3679
+   * @return The orgId.
+   */
+  @java.lang.Override
+  @java.lang.Deprecated public java.lang.String getOrgId() {
+    java.lang.Object ref = orgId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      orgId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * DEPRECATED: org_id. If this was previously used use the UpdateP3PermissionGroupByOrgId rpc instead.
+   * </pre>
+   *
+   * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v0alpha.UpdateP3PermissionGroupRequest.org_id is deprecated.
+   *     See api/v0alpha/org.proto;l=3679
+   * @return The bytes for orgId.
+   */
+  @java.lang.Override
+  @java.lang.Deprecated public com.google.protobuf.ByteString
+      getOrgIdBytes() {
+    java.lang.Object ref = orgId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      orgId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   public static final int PERMISSION_GROUP_ID_FIELD_NUMBER = 2;
@@ -232,6 +284,9 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     getSerializedSize();
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orgId_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(permissionGroupId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, permissionGroupId_);
     }
@@ -257,6 +312,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orgId_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(permissionGroupId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, permissionGroupId_);
     }
@@ -293,6 +351,8 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupRequest other = (com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupRequest) obj;
 
+    if (!getOrgId()
+        .equals(other.getOrgId())) return false;
     if (!getPermissionGroupId()
         .equals(other.getPermissionGroupId())) return false;
     if (!getName()
@@ -311,6 +371,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getOrgId().hashCode();
     hash = (37 * hash) + PERMISSION_GROUP_ID_FIELD_NUMBER;
     hash = (53 * hash) + getPermissionGroupId().hashCode();
     hash = (37 * hash) + NAME_FIELD_NUMBER;
@@ -452,11 +514,12 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      orgId_ = "";
       permissionGroupId_ = "";
       name_ = "";
       description_ = "";
       permissions_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000010);
       return this;
     }
 
@@ -490,9 +553,9 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupRequest result) {
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         permissions_ = java.util.Collections.unmodifiableList(permissions_);
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
       }
       result.permissions_ = permissions_;
     }
@@ -500,12 +563,15 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.permissionGroupId_ = permissionGroupId_;
+        result.orgId_ = orgId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.name_ = name_;
+        result.permissionGroupId_ = permissionGroupId_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.name_ = name_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.description_ = description_;
       }
     }
@@ -522,25 +588,30 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupRequest other) {
       if (other == com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupRequest.getDefaultInstance()) return this;
+      if (!other.getOrgId().isEmpty()) {
+        orgId_ = other.orgId_;
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       if (!other.getPermissionGroupId().isEmpty()) {
         permissionGroupId_ = other.permissionGroupId_;
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getDescription().isEmpty()) {
         description_ = other.description_;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.permissions_.isEmpty()) {
         if (permissions_.isEmpty()) {
           permissions_ = other.permissions_;
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000010);
         } else {
           ensurePermissionsIsMutable();
           permissions_.addAll(other.permissions_);
@@ -573,19 +644,24 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
+            case 10: {
+              orgId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
             case 18: {
               permissionGroupId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
               name_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 34: {
               description_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               break;
             } // case 34
             case 40: {
@@ -621,6 +697,108 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     private int bitField0_;
+
+    private java.lang.Object orgId_ = "";
+    /**
+     * <pre>
+     * DEPRECATED: org_id. If this was previously used use the UpdateP3PermissionGroupByOrgId rpc instead.
+     * </pre>
+     *
+     * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
+     * @deprecated api.v0alpha.UpdateP3PermissionGroupRequest.org_id is deprecated.
+     *     See api/v0alpha/org.proto;l=3679
+     * @return The orgId.
+     */
+    @java.lang.Deprecated public java.lang.String getOrgId() {
+      java.lang.Object ref = orgId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        orgId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * DEPRECATED: org_id. If this was previously used use the UpdateP3PermissionGroupByOrgId rpc instead.
+     * </pre>
+     *
+     * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
+     * @deprecated api.v0alpha.UpdateP3PermissionGroupRequest.org_id is deprecated.
+     *     See api/v0alpha/org.proto;l=3679
+     * @return The bytes for orgId.
+     */
+    @java.lang.Deprecated public com.google.protobuf.ByteString
+        getOrgIdBytes() {
+      java.lang.Object ref = orgId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        orgId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * DEPRECATED: org_id. If this was previously used use the UpdateP3PermissionGroupByOrgId rpc instead.
+     * </pre>
+     *
+     * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
+     * @deprecated api.v0alpha.UpdateP3PermissionGroupRequest.org_id is deprecated.
+     *     See api/v0alpha/org.proto;l=3679
+     * @param value The orgId to set.
+     * @return This builder for chaining.
+     */
+    @java.lang.Deprecated public Builder setOrgId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      orgId_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * DEPRECATED: org_id. If this was previously used use the UpdateP3PermissionGroupByOrgId rpc instead.
+     * </pre>
+     *
+     * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
+     * @deprecated api.v0alpha.UpdateP3PermissionGroupRequest.org_id is deprecated.
+     *     See api/v0alpha/org.proto;l=3679
+     * @return This builder for chaining.
+     */
+    @java.lang.Deprecated public Builder clearOrgId() {
+      orgId_ = getDefaultInstance().getOrgId();
+      bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * DEPRECATED: org_id. If this was previously used use the UpdateP3PermissionGroupByOrgId rpc instead.
+     * </pre>
+     *
+     * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
+     * @deprecated api.v0alpha.UpdateP3PermissionGroupRequest.org_id is deprecated.
+     *     See api/v0alpha/org.proto;l=3679
+     * @param value The bytes for orgId to set.
+     * @return This builder for chaining.
+     */
+    @java.lang.Deprecated public Builder setOrgIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      orgId_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
 
     private java.lang.Object permissionGroupId_ = "";
     /**
@@ -665,7 +843,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       permissionGroupId_ = value;
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -675,7 +853,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearPermissionGroupId() {
       permissionGroupId_ = getDefaultInstance().getPermissionGroupId();
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -689,7 +867,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       permissionGroupId_ = value;
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -737,7 +915,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       name_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -747,7 +925,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearName() {
       name_ = getDefaultInstance().getName();
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -761,7 +939,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       name_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -809,7 +987,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       description_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -819,7 +997,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearDescription() {
       description_ = getDefaultInstance().getDescription();
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -833,7 +1011,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       description_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -841,9 +1019,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> permissions_ =
       java.util.Collections.emptyList();
     private void ensurePermissionsIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
+      if (!((bitField0_ & 0x00000010) != 0)) {
         permissions_ = new java.util.ArrayList<java.lang.Integer>(permissions_);
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
       }
     }
     /**
@@ -919,7 +1097,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearPermissions() {
       permissions_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }

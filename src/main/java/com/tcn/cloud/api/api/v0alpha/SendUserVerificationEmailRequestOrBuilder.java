@@ -33,19 +33,23 @@ public interface SendUserVerificationEmailRequestOrBuilder extends
    * if org_id needs to be provided, use SendUserVerificationEmailByOrgId rpc
    * </pre>
    *
-   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v0alpha.SendUserVerificationEmailRequest.org_id is deprecated.
+   *     See api/v0alpha/org.proto;l=6481
    * @return The orgId.
    */
-  java.lang.String getOrgId();
+  @java.lang.Deprecated java.lang.String getOrgId();
   /**
    * <pre>
    * DEPRECATED. the org_id was previously optional,
    * if org_id needs to be provided, use SendUserVerificationEmailByOrgId rpc
    * </pre>
    *
-   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v0alpha.SendUserVerificationEmailRequest.org_id is deprecated.
+   *     See api/v0alpha/org.proto;l=6481
    * @return The bytes for orgId.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getOrgIdBytes();
 }

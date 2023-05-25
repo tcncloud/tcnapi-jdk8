@@ -169,20 +169,24 @@ public interface UpdateUserRequestOrBuilder extends
    * if user_caller_id needs to be provided, use UpdateUserCallerId rpc
    * </pre>
    *
-   * <code>string user_caller_id = 10 [json_name = "userCallerId"];</code>
+   * <code>string user_caller_id = 10 [json_name = "userCallerId", deprecated = true];</code>
+   * @deprecated api.v0alpha.UpdateUserRequest.user_caller_id is deprecated.
+   *     See api/v0alpha/org.proto;l=3296
    * @return The userCallerId.
    */
-  java.lang.String getUserCallerId();
+  @java.lang.Deprecated java.lang.String getUserCallerId();
   /**
    * <pre>
    * DEPRECATED: user_caller_id was previously optional,
    * if user_caller_id needs to be provided, use UpdateUserCallerId rpc
    * </pre>
    *
-   * <code>string user_caller_id = 10 [json_name = "userCallerId"];</code>
+   * <code>string user_caller_id = 10 [json_name = "userCallerId", deprecated = true];</code>
+   * @deprecated api.v0alpha.UpdateUserRequest.user_caller_id is deprecated.
+   *     See api/v0alpha/org.proto;l=3296
    * @return The bytes for userCallerId.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getUserCallerIdBytes();
 
   /**
