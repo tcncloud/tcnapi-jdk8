@@ -6,4 +6,26 @@ package com.tcn.cloud.api.api.v0alpha;
 public interface GetTempUserTokenReqOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v0alpha.GetTempUserTokenReq)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <pre>
+   * DEPRECATED: user_id was previously optional,
+   * of user_id needs to be provided, use GetTempUserTokenByUserId rpc
+   * </pre>
+   *
+   * <code>string user_id = 1 [json_name = "userId"];</code>
+   * @return The userId.
+   */
+  java.lang.String getUserId();
+  /**
+   * <pre>
+   * DEPRECATED: user_id was previously optional,
+   * of user_id needs to be provided, use GetTempUserTokenByUserId rpc
+   * </pre>
+   *
+   * <code>string user_id = 1 [json_name = "userId"];</code>
+   * @return The bytes for userId.
+   */
+  com.google.protobuf.ByteString
+      getUserIdBytes();
 }

@@ -4,38 +4,38 @@
 package com.tcn.cloud.api.api.v0alpha;
 
 /**
- * Protobuf type {@code api.v0alpha.UpdateUserByCallerIdResponse}
+ * Protobuf type {@code api.v0alpha.UpdateUserCallerIdResponse}
  */
-public final class UpdateUserByCallerIdResponse extends
+public final class UpdateUserCallerIdResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v0alpha.UpdateUserByCallerIdResponse)
-    UpdateUserByCallerIdResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v0alpha.UpdateUserCallerIdResponse)
+    UpdateUserCallerIdResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use UpdateUserByCallerIdResponse.newBuilder() to construct.
-  private UpdateUserByCallerIdResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use UpdateUserCallerIdResponse.newBuilder() to construct.
+  private UpdateUserCallerIdResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private UpdateUserByCallerIdResponse() {
+  private UpdateUserCallerIdResponse() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new UpdateUserByCallerIdResponse();
+    return new UpdateUserCallerIdResponse();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_UpdateUserByCallerIdResponse_descriptor;
+    return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_UpdateUserCallerIdResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_UpdateUserByCallerIdResponse_fieldAccessorTable
+    return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_UpdateUserCallerIdResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse.class, com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse.Builder.class);
+            com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse.class, com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse.Builder.class);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -71,10 +71,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse other = (com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse) obj;
+    com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse other = (com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse) obj;
 
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -92,44 +92,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -137,26 +137,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -169,7 +169,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -185,26 +185,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code api.v0alpha.UpdateUserByCallerIdResponse}
+   * Protobuf type {@code api.v0alpha.UpdateUserCallerIdResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v0alpha.UpdateUserByCallerIdResponse)
-      com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v0alpha.UpdateUserCallerIdResponse)
+      com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_UpdateUserByCallerIdResponse_descriptor;
+      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_UpdateUserCallerIdResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_UpdateUserByCallerIdResponse_fieldAccessorTable
+      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_UpdateUserCallerIdResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse.class, com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse.Builder.class);
+              com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse.class, com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse.newBuilder()
     private Builder() {
 
     }
@@ -223,17 +223,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_UpdateUserByCallerIdResponse_descriptor;
+      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_UpdateUserCallerIdResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse.getDefaultInstance();
+    public com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse build() {
-      com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse result = buildPartial();
+    public com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse build() {
+      com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -241,24 +241,24 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse buildPartial() {
-      com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse result = new com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse(this);
+    public com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse buildPartial() {
+      com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse result = new com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse(this);
       onBuilt();
       return result;
     }
 
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse) {
-        return mergeFrom((com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse)other);
+      if (other instanceof com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse) {
+        return mergeFrom((com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse other) {
-      if (other == com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse other) {
+      if (other == com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse.getDefaultInstance()) return this;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -313,23 +313,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v0alpha.UpdateUserByCallerIdResponse)
+    // @@protoc_insertion_point(builder_scope:api.v0alpha.UpdateUserCallerIdResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v0alpha.UpdateUserByCallerIdResponse)
-  private static final com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v0alpha.UpdateUserCallerIdResponse)
+  private static final com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse();
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<UpdateUserByCallerIdResponse>
-      PARSER = new com.google.protobuf.AbstractParser<UpdateUserByCallerIdResponse>() {
+  private static final com.google.protobuf.Parser<UpdateUserCallerIdResponse>
+      PARSER = new com.google.protobuf.AbstractParser<UpdateUserCallerIdResponse>() {
     @java.lang.Override
-    public UpdateUserByCallerIdResponse parsePartialFrom(
+    public UpdateUserCallerIdResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -348,17 +348,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<UpdateUserByCallerIdResponse> parser() {
+  public static com.google.protobuf.Parser<UpdateUserCallerIdResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<UpdateUserByCallerIdResponse> getParserForType() {
+  public com.google.protobuf.Parser<UpdateUserCallerIdResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

@@ -54,4 +54,26 @@ public interface UpdateUserPasswordRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getCurrentPasswordBytes();
+
+  /**
+   * <pre>
+   * DEPRECATED: org_id was previously optional,
+   * if org_id needs to be provided, use UpdateUserPasswordByOrgId rpc
+   * </pre>
+   *
+   * <code>string org_id = 4 [json_name = "orgId"];</code>
+   * @return The orgId.
+   */
+  java.lang.String getOrgId();
+  /**
+   * <pre>
+   * DEPRECATED: org_id was previously optional,
+   * if org_id needs to be provided, use UpdateUserPasswordByOrgId rpc
+   * </pre>
+   *
+   * <code>string org_id = 4 [json_name = "orgId"];</code>
+   * @return The bytes for orgId.
+   */
+  com.google.protobuf.ByteString
+      getOrgIdBytes();
 }

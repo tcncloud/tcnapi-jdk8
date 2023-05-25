@@ -6,4 +6,26 @@ package com.tcn.cloud.api.api.v0alpha;
 public interface ListOwnedOrgsRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:api.v0alpha.ListOwnedOrgsRequest)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <pre>
+   * DEPRECATED: org_id was previously optional,
+   * if org_id needs to be providedm use ListOwnedOrgsByOrgId rpc
+   * </pre>
+   *
+   * <code>string org_id = 1 [json_name = "orgId"];</code>
+   * @return The orgId.
+   */
+  java.lang.String getOrgId();
+  /**
+   * <pre>
+   * DEPRECATED: org_id was previously optional,
+   * if org_id needs to be providedm use ListOwnedOrgsByOrgId rpc
+   * </pre>
+   *
+   * <code>string org_id = 1 [json_name = "orgId"];</code>
+   * @return The bytes for orgId.
+   */
+  com.google.protobuf.ByteString
+      getOrgIdBytes();
 }

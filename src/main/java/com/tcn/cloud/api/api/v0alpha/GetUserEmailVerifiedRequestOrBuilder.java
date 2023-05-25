@@ -26,4 +26,26 @@ public interface GetUserEmailVerifiedRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getUserIdBytes();
+
+  /**
+   * <pre>
+   * DEPRECATED. the org_id was previously optional,
+   * if org_id needs to be provided, use GetUserEmailVerifiedByOrgId rpc
+   * </pre>
+   *
+   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * @return The orgId.
+   */
+  java.lang.String getOrgId();
+  /**
+   * <pre>
+   * DEPRECATED. the org_id was previously optional,
+   * if org_id needs to be provided, use GetUserEmailVerifiedByOrgId rpc
+   * </pre>
+   *
+   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * @return The bytes for orgId.
+   */
+  com.google.protobuf.ByteString
+      getOrgIdBytes();
 }

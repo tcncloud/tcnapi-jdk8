@@ -4,50 +4,46 @@
 package com.tcn.cloud.api.api.v0alpha;
 
 /**
- * Protobuf type {@code api.v0alpha.GetTempUserTokenReq}
+ * Protobuf type {@code api.v0alpha.UpdateUserCallerIdRequest}
  */
-public final class GetTempUserTokenReq extends
+public final class UpdateUserCallerIdRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v0alpha.GetTempUserTokenReq)
-    GetTempUserTokenReqOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v0alpha.UpdateUserCallerIdRequest)
+    UpdateUserCallerIdRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use GetTempUserTokenReq.newBuilder() to construct.
-  private GetTempUserTokenReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use UpdateUserCallerIdRequest.newBuilder() to construct.
+  private UpdateUserCallerIdRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private GetTempUserTokenReq() {
+  private UpdateUserCallerIdRequest() {
     userId_ = "";
+    userCallerId_ = "";
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new GetTempUserTokenReq();
+    return new UpdateUserCallerIdRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_GetTempUserTokenReq_descriptor;
+    return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_UpdateUserCallerIdRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_GetTempUserTokenReq_fieldAccessorTable
+    return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_UpdateUserCallerIdRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq.class, com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq.Builder.class);
+            com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest.class, com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest.Builder.class);
   }
 
   public static final int USER_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object userId_ = "";
   /**
-   * <pre>
-   * DEPRECATED: user_id was previously optional,
-   * of user_id needs to be provided, use GetTempUserTokenByUserId rpc
-   * </pre>
-   *
    * <code>string user_id = 1 [json_name = "userId"];</code>
    * @return The userId.
    */
@@ -65,11 +61,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * DEPRECATED: user_id was previously optional,
-   * of user_id needs to be provided, use GetTempUserTokenByUserId rpc
-   * </pre>
-   *
    * <code>string user_id = 1 [json_name = "userId"];</code>
    * @return The bytes for userId.
    */
@@ -82,6 +73,45 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
       userId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int USER_CALLER_ID_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object userCallerId_ = "";
+  /**
+   * <code>string user_caller_id = 2 [json_name = "userCallerId"];</code>
+   * @return The userCallerId.
+   */
+  @java.lang.Override
+  public java.lang.String getUserCallerId() {
+    java.lang.Object ref = userCallerId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      userCallerId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string user_caller_id = 2 [json_name = "userCallerId"];</code>
+   * @return The bytes for userCallerId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getUserCallerIdBytes() {
+    java.lang.Object ref = userCallerId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      userCallerId_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -105,6 +135,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, userId_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userCallerId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userCallerId_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -117,6 +150,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, userId_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userCallerId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, userCallerId_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -127,13 +163,15 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq other = (com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq) obj;
+    com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest other = (com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest) obj;
 
     if (!getUserId()
         .equals(other.getUserId())) return false;
+    if (!getUserCallerId()
+        .equals(other.getUserCallerId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -147,49 +185,51 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + USER_ID_FIELD_NUMBER;
     hash = (53 * hash) + getUserId().hashCode();
+    hash = (37 * hash) + USER_CALLER_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getUserCallerId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -197,26 +237,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -229,7 +269,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -245,26 +285,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code api.v0alpha.GetTempUserTokenReq}
+   * Protobuf type {@code api.v0alpha.UpdateUserCallerIdRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v0alpha.GetTempUserTokenReq)
-      com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReqOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v0alpha.UpdateUserCallerIdRequest)
+      com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_GetTempUserTokenReq_descriptor;
+      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_UpdateUserCallerIdRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_GetTempUserTokenReq_fieldAccessorTable
+      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_UpdateUserCallerIdRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq.class, com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq.Builder.class);
+              com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest.class, com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest.newBuilder()
     private Builder() {
 
     }
@@ -279,23 +319,24 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       userId_ = "";
+      userCallerId_ = "";
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_GetTempUserTokenReq_descriptor;
+      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_UpdateUserCallerIdRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq.getDefaultInstance();
+    public com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq build() {
-      com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq result = buildPartial();
+    public com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest build() {
+      com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -303,35 +344,43 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq buildPartial() {
-      com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq result = new com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq(this);
+    public com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest buildPartial() {
+      com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest result = new com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.userId_ = userId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.userCallerId_ = userCallerId_;
       }
     }
 
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq) {
-        return mergeFrom((com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq)other);
+      if (other instanceof com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest) {
+        return mergeFrom((com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq other) {
-      if (other == com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest other) {
+      if (other == com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest.getDefaultInstance()) return this;
       if (!other.getUserId().isEmpty()) {
         userId_ = other.userId_;
         bitField0_ |= 0x00000001;
+        onChanged();
+      }
+      if (!other.getUserCallerId().isEmpty()) {
+        userCallerId_ = other.userCallerId_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -365,6 +414,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 18: {
+              userCallerId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -384,11 +438,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object userId_ = "";
     /**
-     * <pre>
-     * DEPRECATED: user_id was previously optional,
-     * of user_id needs to be provided, use GetTempUserTokenByUserId rpc
-     * </pre>
-     *
      * <code>string user_id = 1 [json_name = "userId"];</code>
      * @return The userId.
      */
@@ -405,11 +454,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * DEPRECATED: user_id was previously optional,
-     * of user_id needs to be provided, use GetTempUserTokenByUserId rpc
-     * </pre>
-     *
      * <code>string user_id = 1 [json_name = "userId"];</code>
      * @return The bytes for userId.
      */
@@ -427,11 +471,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * DEPRECATED: user_id was previously optional,
-     * of user_id needs to be provided, use GetTempUserTokenByUserId rpc
-     * </pre>
-     *
      * <code>string user_id = 1 [json_name = "userId"];</code>
      * @param value The userId to set.
      * @return This builder for chaining.
@@ -445,11 +484,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * DEPRECATED: user_id was previously optional,
-     * of user_id needs to be provided, use GetTempUserTokenByUserId rpc
-     * </pre>
-     *
      * <code>string user_id = 1 [json_name = "userId"];</code>
      * @return This builder for chaining.
      */
@@ -460,11 +494,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * DEPRECATED: user_id was previously optional,
-     * of user_id needs to be provided, use GetTempUserTokenByUserId rpc
-     * </pre>
-     *
      * <code>string user_id = 1 [json_name = "userId"];</code>
      * @param value The bytes for userId to set.
      * @return This builder for chaining.
@@ -475,6 +504,78 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       userId_ = value;
       bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object userCallerId_ = "";
+    /**
+     * <code>string user_caller_id = 2 [json_name = "userCallerId"];</code>
+     * @return The userCallerId.
+     */
+    public java.lang.String getUserCallerId() {
+      java.lang.Object ref = userCallerId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        userCallerId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string user_caller_id = 2 [json_name = "userCallerId"];</code>
+     * @return The bytes for userCallerId.
+     */
+    public com.google.protobuf.ByteString
+        getUserCallerIdBytes() {
+      java.lang.Object ref = userCallerId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userCallerId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string user_caller_id = 2 [json_name = "userCallerId"];</code>
+     * @param value The userCallerId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUserCallerId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      userCallerId_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string user_caller_id = 2 [json_name = "userCallerId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearUserCallerId() {
+      userCallerId_ = getDefaultInstance().getUserCallerId();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string user_caller_id = 2 [json_name = "userCallerId"];</code>
+     * @param value The bytes for userCallerId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUserCallerIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      userCallerId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -491,23 +592,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v0alpha.GetTempUserTokenReq)
+    // @@protoc_insertion_point(builder_scope:api.v0alpha.UpdateUserCallerIdRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v0alpha.GetTempUserTokenReq)
-  private static final com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v0alpha.UpdateUserCallerIdRequest)
+  private static final com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest();
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<GetTempUserTokenReq>
-      PARSER = new com.google.protobuf.AbstractParser<GetTempUserTokenReq>() {
+  private static final com.google.protobuf.Parser<UpdateUserCallerIdRequest>
+      PARSER = new com.google.protobuf.AbstractParser<UpdateUserCallerIdRequest>() {
     @java.lang.Override
-    public GetTempUserTokenReq parsePartialFrom(
+    public UpdateUserCallerIdRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -526,17 +627,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<GetTempUserTokenReq> parser() {
+  public static com.google.protobuf.Parser<UpdateUserCallerIdRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<GetTempUserTokenReq> getParserForType() {
+  public com.google.protobuf.Parser<UpdateUserCallerIdRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

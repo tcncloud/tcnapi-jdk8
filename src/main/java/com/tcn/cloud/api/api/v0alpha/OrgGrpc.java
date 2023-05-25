@@ -945,35 +945,35 @@ public final class OrgGrpc {
     return getUpdateMyUserMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdRequest,
-      com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse> getUpdateUserByCallerIdMethod;
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest,
+      com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse> getUpdateUserCallerIdMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "UpdateUserByCallerId",
-      requestType = com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdRequest.class,
-      responseType = com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "UpdateUserCallerId",
+      requestType = com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdRequest,
-      com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse> getUpdateUserByCallerIdMethod() {
-    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdRequest, com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse> getUpdateUserByCallerIdMethod;
-    if ((getUpdateUserByCallerIdMethod = OrgGrpc.getUpdateUserByCallerIdMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest,
+      com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse> getUpdateUserCallerIdMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest, com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse> getUpdateUserCallerIdMethod;
+    if ((getUpdateUserCallerIdMethod = OrgGrpc.getUpdateUserCallerIdMethod) == null) {
       synchronized (OrgGrpc.class) {
-        if ((getUpdateUserByCallerIdMethod = OrgGrpc.getUpdateUserByCallerIdMethod) == null) {
-          OrgGrpc.getUpdateUserByCallerIdMethod = getUpdateUserByCallerIdMethod =
-              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdRequest, com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse>newBuilder()
+        if ((getUpdateUserCallerIdMethod = OrgGrpc.getUpdateUserCallerIdMethod) == null) {
+          OrgGrpc.getUpdateUserCallerIdMethod = getUpdateUserCallerIdMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest, com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateUserByCallerId"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateUserCallerId"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdRequest.getDefaultInstance()))
+                  com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateUserByCallerId"))
+                  com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateUserCallerId"))
               .build();
         }
       }
     }
-    return getUpdateUserByCallerIdMethod;
+    return getUpdateUserCallerIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateUserRequest,
@@ -6523,13 +6523,13 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * UpdateUserByCallerId updates a user's caller id as defined by the UpdateUserByCallerIdRequest.
+     * UpdateUserCallerId updates a user's caller id as defined by the UpdateUserCallerIdRequest.
      * Required Permissions: USER_EDIT_AGENT_CALLER_ID
      * </pre>
      */
-    default void updateUserByCallerId(com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateUserByCallerIdMethod(), responseObserver);
+    default void updateUserCallerId(com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateUserCallerIdMethod(), responseObserver);
     }
 
     /**
@@ -8843,14 +8843,14 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * UpdateUserByCallerId updates a user's caller id as defined by the UpdateUserByCallerIdRequest.
+     * UpdateUserCallerId updates a user's caller id as defined by the UpdateUserCallerIdRequest.
      * Required Permissions: USER_EDIT_AGENT_CALLER_ID
      * </pre>
      */
-    public void updateUserByCallerId(com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdRequest request,
-        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse> responseObserver) {
+    public void updateUserCallerId(com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getUpdateUserByCallerIdMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getUpdateUserCallerIdMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -11293,13 +11293,13 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * UpdateUserByCallerId updates a user's caller id as defined by the UpdateUserByCallerIdRequest.
+     * UpdateUserCallerId updates a user's caller id as defined by the UpdateUserCallerIdRequest.
      * Required Permissions: USER_EDIT_AGENT_CALLER_ID
      * </pre>
      */
-    public com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse updateUserByCallerId(com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdRequest request) {
+    public com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse updateUserCallerId(com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getUpdateUserByCallerIdMethod(), getCallOptions(), request);
+          getChannel(), getUpdateUserCallerIdMethod(), getCallOptions(), request);
     }
 
     /**
@@ -13586,14 +13586,14 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * UpdateUserByCallerId updates a user's caller id as defined by the UpdateUserByCallerIdRequest.
+     * UpdateUserCallerId updates a user's caller id as defined by the UpdateUserCallerIdRequest.
      * Required Permissions: USER_EDIT_AGENT_CALLER_ID
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse> updateUserByCallerId(
-        com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse> updateUserCallerId(
+        com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getUpdateUserByCallerIdMethod(), getCallOptions()), request);
+          getChannel().newCall(getUpdateUserCallerIdMethod(), getCallOptions()), request);
     }
 
     /**
@@ -15757,7 +15757,7 @@ public final class OrgGrpc {
   private static final int METHODID_ASSIGN_AGENT_PROFILE_GROUPS = 27;
   private static final int METHODID_UPDATE_USER = 28;
   private static final int METHODID_UPDATE_MY_USER = 29;
-  private static final int METHODID_UPDATE_USER_BY_CALLER_ID = 30;
+  private static final int METHODID_UPDATE_USER_CALLER_ID = 30;
   private static final int METHODID_CREATE_USER = 31;
   private static final int METHODID_CREATE_USER_BY_ORG_ID = 32;
   private static final int METHODID_CREATE_DELEGATED_USER = 33;
@@ -16064,9 +16064,9 @@ public final class OrgGrpc {
           serviceImpl.updateMyUser((com.tcn.cloud.api.api.v0alpha.UpdateMyUserRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateMyUserResponse>) responseObserver);
           break;
-        case METHODID_UPDATE_USER_BY_CALLER_ID:
-          serviceImpl.updateUserByCallerId((com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdRequest) request,
-              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse>) responseObserver);
+        case METHODID_UPDATE_USER_CALLER_ID:
+          serviceImpl.updateUserCallerId((com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse>) responseObserver);
           break;
         case METHODID_CREATE_USER:
           serviceImpl.createUser((com.tcn.cloud.api.api.v0alpha.CreateUserRequest) request,
@@ -16969,12 +16969,12 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v0alpha.UpdateMyUserResponse>(
                 service, METHODID_UPDATE_MY_USER)))
         .addMethod(
-          getUpdateUserByCallerIdMethod(),
+          getUpdateUserCallerIdMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdRequest,
-              com.tcn.cloud.api.api.v0alpha.UpdateUserByCallerIdResponse>(
-                service, METHODID_UPDATE_USER_BY_CALLER_ID)))
+              com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest,
+              com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse>(
+                service, METHODID_UPDATE_USER_CALLER_ID)))
         .addMethod(
           getCreateUserMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -18229,7 +18229,7 @@ public final class OrgGrpc {
               .addMethod(getAssignAgentProfileGroupsMethod())
               .addMethod(getUpdateUserMethod())
               .addMethod(getUpdateMyUserMethod())
-              .addMethod(getUpdateUserByCallerIdMethod())
+              .addMethod(getUpdateUserCallerIdMethod())
               .addMethod(getCreateUserMethod())
               .addMethod(getCreateUserByOrgIdMethod())
               .addMethod(getCreateDelegatedUserMethod())

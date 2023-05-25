@@ -29,10 +29,32 @@ public interface GetUserPasswordResetLinkRequestOrBuilder extends
 
   /**
    * <pre>
+   * DEPRECATED: org_id was previously optional,
+   * if org_id needs to be provided, use GetUserPasswordResetLinkByOrgId rpc
+   * </pre>
+   *
+   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * @return The orgId.
+   */
+  java.lang.String getOrgId();
+  /**
+   * <pre>
+   * DEPRECATED: org_id was previously optional,
+   * if org_id needs to be provided, use GetUserPasswordResetLinkByOrgId rpc
+   * </pre>
+   *
+   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * @return The bytes for orgId.
+   */
+  com.google.protobuf.ByteString
+      getOrgIdBytes();
+
+  /**
+   * <pre>
    * The time to live (in seconds) of the generated link. This will default to 180 if set to 0.
    * </pre>
    *
-   * <code>int64 ttl = 12 [json_name = "ttl"];</code>
+   * <code>int64 ttl = 3 [json_name = "ttl"];</code>
    * @return The ttl.
    */
   long getTtl();
