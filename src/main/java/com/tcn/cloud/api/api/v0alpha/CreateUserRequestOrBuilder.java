@@ -9,28 +9,28 @@ public interface CreateUserRequestOrBuilder extends
 
   /**
    * <pre>
-   * if org_id is set the user will be created for
-   * the given org_id. This requires the CUSTOMER_SUPPORT permission.
-   * if this field is not set it will get the org_id
-   * from the token. This only requires the USER_CREATE permission.
+   * DEPRECATED: org_id was previously optional,
+   * if org_id needs to be provided, use CreateUserByOrgId rpc
    * </pre>
    *
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
+   * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v0alpha.CreateUserRequest.org_id is deprecated.
+   *     See api/v0alpha/org.proto;l=5310
    * @return The orgId.
    */
-  java.lang.String getOrgId();
+  @java.lang.Deprecated java.lang.String getOrgId();
   /**
    * <pre>
-   * if org_id is set the user will be created for
-   * the given org_id. This requires the CUSTOMER_SUPPORT permission.
-   * if this field is not set it will get the org_id
-   * from the token. This only requires the USER_CREATE permission.
+   * DEPRECATED: org_id was previously optional,
+   * if org_id needs to be provided, use CreateUserByOrgId rpc
    * </pre>
    *
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
+   * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v0alpha.CreateUserRequest.org_id is deprecated.
+   *     See api/v0alpha/org.proto;l=5310
    * @return The bytes for orgId.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getOrgIdBytes();
 
   /**

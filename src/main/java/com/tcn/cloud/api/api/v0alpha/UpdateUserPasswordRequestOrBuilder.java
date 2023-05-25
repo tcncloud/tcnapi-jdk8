@@ -9,12 +9,9 @@ public interface UpdateUserPasswordRequestOrBuilder extends
 
   /**
    * <pre>
-   * If user_id is set, the password for the given user_id will
-   * be updated. This requires the USER_EDIT permission.
-   * This will update another user's password.
-   * Otherwise the user_id will be retrieved from the token.
-   * This requires the USER_EDIT_PASSWORD permission.
-   * This updates your password.
+   * the USER_EDIT permission is require
+   * to update another user's password
+   * in the same org as the current user.
    * </pre>
    *
    * <code>string user_id = 1 [json_name = "userId"];</code>
@@ -23,12 +20,9 @@ public interface UpdateUserPasswordRequestOrBuilder extends
   java.lang.String getUserId();
   /**
    * <pre>
-   * If user_id is set, the password for the given user_id will
-   * be updated. This requires the USER_EDIT permission.
-   * This will update another user's password.
-   * Otherwise the user_id will be retrieved from the token.
-   * This requires the USER_EDIT_PASSWORD permission.
-   * This updates your password.
+   * the USER_EDIT permission is require
+   * to update another user's password
+   * in the same org as the current user.
    * </pre>
    *
    * <code>string user_id = 1 [json_name = "userId"];</code>
@@ -63,25 +57,27 @@ public interface UpdateUserPasswordRequestOrBuilder extends
 
   /**
    * <pre>
-   * If org_id is set, UpdateUserPassword will require
-   * the CUSTOMER_SUPPORT permission. The user_id MUST
-   * be set if this field is not empty.
+   * DEPRECATED: org_id was previously optional,
+   * if org_id needs to be provided, use UpdateUserPasswordByOrgId rpc
    * </pre>
    *
-   * <code>string org_id = 4 [json_name = "orgId"];</code>
+   * <code>string org_id = 4 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v0alpha.UpdateUserPasswordRequest.org_id is deprecated.
+   *     See api/v0alpha/org.proto;l=5374
    * @return The orgId.
    */
-  java.lang.String getOrgId();
+  @java.lang.Deprecated java.lang.String getOrgId();
   /**
    * <pre>
-   * If org_id is set, UpdateUserPassword will require
-   * the CUSTOMER_SUPPORT permission. The user_id MUST
-   * be set if this field is not empty.
+   * DEPRECATED: org_id was previously optional,
+   * if org_id needs to be provided, use UpdateUserPasswordByOrgId rpc
    * </pre>
    *
-   * <code>string org_id = 4 [json_name = "orgId"];</code>
+   * <code>string org_id = 4 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v0alpha.UpdateUserPasswordRequest.org_id is deprecated.
+   *     See api/v0alpha/org.proto;l=5374
    * @return The bytes for orgId.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getOrgIdBytes();
 }

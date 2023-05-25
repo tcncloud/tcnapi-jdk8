@@ -45,14 +45,17 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object regionId_ = "";
   /**
    * <pre>
-   * Optional. RegionId to filter by.
+   * DEPRECATED. region_id was previously optional,
+   * if region_id needs to be provided, use AdminListUserDescriptions rpc
    * </pre>
    *
-   * <code>string region_id = 1 [json_name = "regionId"];</code>
+   * <code>string region_id = 1 [json_name = "regionId", deprecated = true];</code>
+   * @deprecated api.v0alpha.ListUserDescriptionsRequest.region_id is deprecated.
+   *     See api/v0alpha/org.proto;l=3083
    * @return The regionId.
    */
   @java.lang.Override
-  public java.lang.String getRegionId() {
+  @java.lang.Deprecated public java.lang.String getRegionId() {
     java.lang.Object ref = regionId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -66,14 +69,17 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. RegionId to filter by.
+   * DEPRECATED. region_id was previously optional,
+   * if region_id needs to be provided, use AdminListUserDescriptions rpc
    * </pre>
    *
-   * <code>string region_id = 1 [json_name = "regionId"];</code>
+   * <code>string region_id = 1 [json_name = "regionId", deprecated = true];</code>
+   * @deprecated api.v0alpha.ListUserDescriptionsRequest.region_id is deprecated.
+   *     See api/v0alpha/org.proto;l=3083
    * @return The bytes for regionId.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getRegionIdBytes() {
     java.lang.Object ref = regionId_;
     if (ref instanceof java.lang.String) {
@@ -92,14 +98,17 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object orgIdFilter_ = "";
   /**
    * <pre>
-   * Optional. OrgId to filter by.
+   * DEPRECATED. org_id_filter was previously optional,
+   * if org_id_filter needs to be provided, use AdminListUserDescriptions rpc
    * </pre>
    *
-   * <code>string org_id_filter = 2 [json_name = "orgIdFilter"];</code>
+   * <code>string org_id_filter = 2 [json_name = "orgIdFilter", deprecated = true];</code>
+   * @deprecated api.v0alpha.ListUserDescriptionsRequest.org_id_filter is deprecated.
+   *     See api/v0alpha/org.proto;l=3086
    * @return The orgIdFilter.
    */
   @java.lang.Override
-  public java.lang.String getOrgIdFilter() {
+  @java.lang.Deprecated public java.lang.String getOrgIdFilter() {
     java.lang.Object ref = orgIdFilter_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -113,14 +122,17 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. OrgId to filter by.
+   * DEPRECATED. org_id_filter was previously optional,
+   * if org_id_filter needs to be provided, use AdminListUserDescriptions rpc
    * </pre>
    *
-   * <code>string org_id_filter = 2 [json_name = "orgIdFilter"];</code>
+   * <code>string org_id_filter = 2 [json_name = "orgIdFilter", deprecated = true];</code>
+   * @deprecated api.v0alpha.ListUserDescriptionsRequest.org_id_filter is deprecated.
+   *     See api/v0alpha/org.proto;l=3086
    * @return The bytes for orgIdFilter.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getOrgIdFilterBytes() {
     java.lang.Object ref = orgIdFilter_;
     if (ref instanceof java.lang.String) {
@@ -455,13 +467,16 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object regionId_ = "";
     /**
      * <pre>
-     * Optional. RegionId to filter by.
+     * DEPRECATED. region_id was previously optional,
+     * if region_id needs to be provided, use AdminListUserDescriptions rpc
      * </pre>
      *
-     * <code>string region_id = 1 [json_name = "regionId"];</code>
+     * <code>string region_id = 1 [json_name = "regionId", deprecated = true];</code>
+     * @deprecated api.v0alpha.ListUserDescriptionsRequest.region_id is deprecated.
+     *     See api/v0alpha/org.proto;l=3083
      * @return The regionId.
      */
-    public java.lang.String getRegionId() {
+    @java.lang.Deprecated public java.lang.String getRegionId() {
       java.lang.Object ref = regionId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -475,13 +490,16 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. RegionId to filter by.
+     * DEPRECATED. region_id was previously optional,
+     * if region_id needs to be provided, use AdminListUserDescriptions rpc
      * </pre>
      *
-     * <code>string region_id = 1 [json_name = "regionId"];</code>
+     * <code>string region_id = 1 [json_name = "regionId", deprecated = true];</code>
+     * @deprecated api.v0alpha.ListUserDescriptionsRequest.region_id is deprecated.
+     *     See api/v0alpha/org.proto;l=3083
      * @return The bytes for regionId.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getRegionIdBytes() {
       java.lang.Object ref = regionId_;
       if (ref instanceof String) {
@@ -496,14 +514,17 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. RegionId to filter by.
+     * DEPRECATED. region_id was previously optional,
+     * if region_id needs to be provided, use AdminListUserDescriptions rpc
      * </pre>
      *
-     * <code>string region_id = 1 [json_name = "regionId"];</code>
+     * <code>string region_id = 1 [json_name = "regionId", deprecated = true];</code>
+     * @deprecated api.v0alpha.ListUserDescriptionsRequest.region_id is deprecated.
+     *     See api/v0alpha/org.proto;l=3083
      * @param value The regionId to set.
      * @return This builder for chaining.
      */
-    public Builder setRegionId(
+    @java.lang.Deprecated public Builder setRegionId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       regionId_ = value;
@@ -513,13 +534,16 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. RegionId to filter by.
+     * DEPRECATED. region_id was previously optional,
+     * if region_id needs to be provided, use AdminListUserDescriptions rpc
      * </pre>
      *
-     * <code>string region_id = 1 [json_name = "regionId"];</code>
+     * <code>string region_id = 1 [json_name = "regionId", deprecated = true];</code>
+     * @deprecated api.v0alpha.ListUserDescriptionsRequest.region_id is deprecated.
+     *     See api/v0alpha/org.proto;l=3083
      * @return This builder for chaining.
      */
-    public Builder clearRegionId() {
+    @java.lang.Deprecated public Builder clearRegionId() {
       regionId_ = getDefaultInstance().getRegionId();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
@@ -527,14 +551,17 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. RegionId to filter by.
+     * DEPRECATED. region_id was previously optional,
+     * if region_id needs to be provided, use AdminListUserDescriptions rpc
      * </pre>
      *
-     * <code>string region_id = 1 [json_name = "regionId"];</code>
+     * <code>string region_id = 1 [json_name = "regionId", deprecated = true];</code>
+     * @deprecated api.v0alpha.ListUserDescriptionsRequest.region_id is deprecated.
+     *     See api/v0alpha/org.proto;l=3083
      * @param value The bytes for regionId to set.
      * @return This builder for chaining.
      */
-    public Builder setRegionIdBytes(
+    @java.lang.Deprecated public Builder setRegionIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -547,13 +574,16 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object orgIdFilter_ = "";
     /**
      * <pre>
-     * Optional. OrgId to filter by.
+     * DEPRECATED. org_id_filter was previously optional,
+     * if org_id_filter needs to be provided, use AdminListUserDescriptions rpc
      * </pre>
      *
-     * <code>string org_id_filter = 2 [json_name = "orgIdFilter"];</code>
+     * <code>string org_id_filter = 2 [json_name = "orgIdFilter", deprecated = true];</code>
+     * @deprecated api.v0alpha.ListUserDescriptionsRequest.org_id_filter is deprecated.
+     *     See api/v0alpha/org.proto;l=3086
      * @return The orgIdFilter.
      */
-    public java.lang.String getOrgIdFilter() {
+    @java.lang.Deprecated public java.lang.String getOrgIdFilter() {
       java.lang.Object ref = orgIdFilter_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -567,13 +597,16 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. OrgId to filter by.
+     * DEPRECATED. org_id_filter was previously optional,
+     * if org_id_filter needs to be provided, use AdminListUserDescriptions rpc
      * </pre>
      *
-     * <code>string org_id_filter = 2 [json_name = "orgIdFilter"];</code>
+     * <code>string org_id_filter = 2 [json_name = "orgIdFilter", deprecated = true];</code>
+     * @deprecated api.v0alpha.ListUserDescriptionsRequest.org_id_filter is deprecated.
+     *     See api/v0alpha/org.proto;l=3086
      * @return The bytes for orgIdFilter.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getOrgIdFilterBytes() {
       java.lang.Object ref = orgIdFilter_;
       if (ref instanceof String) {
@@ -588,14 +621,17 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. OrgId to filter by.
+     * DEPRECATED. org_id_filter was previously optional,
+     * if org_id_filter needs to be provided, use AdminListUserDescriptions rpc
      * </pre>
      *
-     * <code>string org_id_filter = 2 [json_name = "orgIdFilter"];</code>
+     * <code>string org_id_filter = 2 [json_name = "orgIdFilter", deprecated = true];</code>
+     * @deprecated api.v0alpha.ListUserDescriptionsRequest.org_id_filter is deprecated.
+     *     See api/v0alpha/org.proto;l=3086
      * @param value The orgIdFilter to set.
      * @return This builder for chaining.
      */
-    public Builder setOrgIdFilter(
+    @java.lang.Deprecated public Builder setOrgIdFilter(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       orgIdFilter_ = value;
@@ -605,13 +641,16 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. OrgId to filter by.
+     * DEPRECATED. org_id_filter was previously optional,
+     * if org_id_filter needs to be provided, use AdminListUserDescriptions rpc
      * </pre>
      *
-     * <code>string org_id_filter = 2 [json_name = "orgIdFilter"];</code>
+     * <code>string org_id_filter = 2 [json_name = "orgIdFilter", deprecated = true];</code>
+     * @deprecated api.v0alpha.ListUserDescriptionsRequest.org_id_filter is deprecated.
+     *     See api/v0alpha/org.proto;l=3086
      * @return This builder for chaining.
      */
-    public Builder clearOrgIdFilter() {
+    @java.lang.Deprecated public Builder clearOrgIdFilter() {
       orgIdFilter_ = getDefaultInstance().getOrgIdFilter();
       bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
@@ -619,14 +658,17 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. OrgId to filter by.
+     * DEPRECATED. org_id_filter was previously optional,
+     * if org_id_filter needs to be provided, use AdminListUserDescriptions rpc
      * </pre>
      *
-     * <code>string org_id_filter = 2 [json_name = "orgIdFilter"];</code>
+     * <code>string org_id_filter = 2 [json_name = "orgIdFilter", deprecated = true];</code>
+     * @deprecated api.v0alpha.ListUserDescriptionsRequest.org_id_filter is deprecated.
+     *     See api/v0alpha/org.proto;l=3086
      * @param value The bytes for orgIdFilter to set.
      * @return This builder for chaining.
      */
-    public Builder setOrgIdFilterBytes(
+    @java.lang.Deprecated public Builder setOrgIdFilterBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);

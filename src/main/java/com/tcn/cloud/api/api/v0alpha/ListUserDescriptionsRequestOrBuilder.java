@@ -9,41 +9,53 @@ public interface ListUserDescriptionsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Optional. RegionId to filter by.
+   * DEPRECATED. region_id was previously optional,
+   * if region_id needs to be provided, use AdminListUserDescriptions rpc
    * </pre>
    *
-   * <code>string region_id = 1 [json_name = "regionId"];</code>
+   * <code>string region_id = 1 [json_name = "regionId", deprecated = true];</code>
+   * @deprecated api.v0alpha.ListUserDescriptionsRequest.region_id is deprecated.
+   *     See api/v0alpha/org.proto;l=3083
    * @return The regionId.
    */
-  java.lang.String getRegionId();
+  @java.lang.Deprecated java.lang.String getRegionId();
   /**
    * <pre>
-   * Optional. RegionId to filter by.
+   * DEPRECATED. region_id was previously optional,
+   * if region_id needs to be provided, use AdminListUserDescriptions rpc
    * </pre>
    *
-   * <code>string region_id = 1 [json_name = "regionId"];</code>
+   * <code>string region_id = 1 [json_name = "regionId", deprecated = true];</code>
+   * @deprecated api.v0alpha.ListUserDescriptionsRequest.region_id is deprecated.
+   *     See api/v0alpha/org.proto;l=3083
    * @return The bytes for regionId.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getRegionIdBytes();
 
   /**
    * <pre>
-   * Optional. OrgId to filter by.
+   * DEPRECATED. org_id_filter was previously optional,
+   * if org_id_filter needs to be provided, use AdminListUserDescriptions rpc
    * </pre>
    *
-   * <code>string org_id_filter = 2 [json_name = "orgIdFilter"];</code>
+   * <code>string org_id_filter = 2 [json_name = "orgIdFilter", deprecated = true];</code>
+   * @deprecated api.v0alpha.ListUserDescriptionsRequest.org_id_filter is deprecated.
+   *     See api/v0alpha/org.proto;l=3086
    * @return The orgIdFilter.
    */
-  java.lang.String getOrgIdFilter();
+  @java.lang.Deprecated java.lang.String getOrgIdFilter();
   /**
    * <pre>
-   * Optional. OrgId to filter by.
+   * DEPRECATED. org_id_filter was previously optional,
+   * if org_id_filter needs to be provided, use AdminListUserDescriptions rpc
    * </pre>
    *
-   * <code>string org_id_filter = 2 [json_name = "orgIdFilter"];</code>
+   * <code>string org_id_filter = 2 [json_name = "orgIdFilter", deprecated = true];</code>
+   * @deprecated api.v0alpha.ListUserDescriptionsRequest.org_id_filter is deprecated.
+   *     See api/v0alpha/org.proto;l=3086
    * @return The bytes for orgIdFilter.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getOrgIdFilterBytes();
 }

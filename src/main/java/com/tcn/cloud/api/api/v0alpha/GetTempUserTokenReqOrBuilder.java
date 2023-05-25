@@ -9,21 +9,27 @@ public interface GetTempUserTokenReqOrBuilder extends
 
   /**
    * <pre>
-   * UserId that token is being created for
+   * DEPRECATED: user_id was previously optional,
+   * if user_id needs to be provided, use GetTempUserTokenByUserId rpc
    * </pre>
    *
-   * <code>string user_id = 1 [json_name = "userId"];</code>
+   * <code>string user_id = 1 [json_name = "userId", deprecated = true];</code>
+   * @deprecated api.v0alpha.GetTempUserTokenReq.user_id is deprecated.
+   *     See api/v0alpha/org.proto;l=3049
    * @return The userId.
    */
-  java.lang.String getUserId();
+  @java.lang.Deprecated java.lang.String getUserId();
   /**
    * <pre>
-   * UserId that token is being created for
+   * DEPRECATED: user_id was previously optional,
+   * if user_id needs to be provided, use GetTempUserTokenByUserId rpc
    * </pre>
    *
-   * <code>string user_id = 1 [json_name = "userId"];</code>
+   * <code>string user_id = 1 [json_name = "userId", deprecated = true];</code>
+   * @deprecated api.v0alpha.GetTempUserTokenReq.user_id is deprecated.
+   *     See api/v0alpha/org.proto;l=3049
    * @return The bytes for userId.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getUserIdBytes();
 }

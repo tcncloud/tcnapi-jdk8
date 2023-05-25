@@ -8,14 +8,26 @@ public interface ListP3PermissionGroupsRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
+   * <pre>
+   * DEPRECATED: if provided use ListP3PermissionGroupsByOrgId rpc instead
+   * </pre>
+   *
+   * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v0alpha.ListP3PermissionGroupsRequest.org_id is deprecated.
+   *     See api/v0alpha/org.proto;l=3638
    * @return The orgId.
    */
-  java.lang.String getOrgId();
+  @java.lang.Deprecated java.lang.String getOrgId();
   /**
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
+   * <pre>
+   * DEPRECATED: if provided use ListP3PermissionGroupsByOrgId rpc instead
+   * </pre>
+   *
+   * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v0alpha.ListP3PermissionGroupsRequest.org_id is deprecated.
+   *     See api/v0alpha/org.proto;l=3638
    * @return The bytes for orgId.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getOrgIdBytes();
 }

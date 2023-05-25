@@ -29,23 +29,27 @@ public interface ManualUserEmailVerificationRequestOrBuilder extends
 
   /**
    * <pre>
-   * Optional. The ID of the org the user belongs to.
-   * If this is set the rpc will require the support permission.
+   * DEPRECATED. the org_id was previously optional,
+   * if org_id needs to be provided, use ManualUserEmailVerificationByOrgId rpc
    * </pre>
    *
-   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v0alpha.ManualUserEmailVerificationRequest.org_id is deprecated.
+   *     See api/v0alpha/org.proto;l=6504
    * @return The orgId.
    */
-  java.lang.String getOrgId();
+  @java.lang.Deprecated java.lang.String getOrgId();
   /**
    * <pre>
-   * Optional. The ID of the org the user belongs to.
-   * If this is set the rpc will require the support permission.
+   * DEPRECATED. the org_id was previously optional,
+   * if org_id needs to be provided, use ManualUserEmailVerificationByOrgId rpc
    * </pre>
    *
-   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v0alpha.ManualUserEmailVerificationRequest.org_id is deprecated.
+   *     See api/v0alpha/org.proto;l=6504
    * @return The bytes for orgId.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getOrgIdBytes();
 }

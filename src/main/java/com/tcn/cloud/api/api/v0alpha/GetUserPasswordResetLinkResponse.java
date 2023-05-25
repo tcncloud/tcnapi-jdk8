@@ -5,7 +5,7 @@ package com.tcn.cloud.api.api.v0alpha;
 
 /**
  * <pre>
- * Response message for the GetUserPasswordReset rpc.
+ * Response message for the GetUserPasswordResetLinkRequest rpc.
  * </pre>
  *
  * Protobuf type {@code api.v0alpha.GetUserPasswordResetLinkResponse}
@@ -248,7 +248,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Response message for the GetUserPasswordReset rpc.
+   * Response message for the GetUserPasswordResetLinkRequest rpc.
    * </pre>
    *
    * Protobuf type {@code api.v0alpha.GetUserPasswordResetLinkResponse}

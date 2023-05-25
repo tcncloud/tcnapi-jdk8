@@ -9,7 +9,7 @@ public interface GetUserPasswordResetLinkRequestOrBuilder extends
 
   /**
    * <pre>
-   * The ID of the user
+   * The ID of the user in the same org as the current user.
    * </pre>
    *
    * <code>string user_id = 1 [json_name = "userId"];</code>
@@ -18,7 +18,7 @@ public interface GetUserPasswordResetLinkRequestOrBuilder extends
   java.lang.String getUserId();
   /**
    * <pre>
-   * The ID of the user
+   * The ID of the user in the same org as the current user.
    * </pre>
    *
    * <code>string user_id = 1 [json_name = "userId"];</code>
@@ -29,22 +29,28 @@ public interface GetUserPasswordResetLinkRequestOrBuilder extends
 
   /**
    * <pre>
-   * The Org ID of the user
+   * DEPRECATED: org_id was previously optional,
+   * if org_id needs to be provided, use GetUserPasswordResetLinkByOrgId rpc
    * </pre>
    *
-   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v0alpha.GetUserPasswordResetLinkRequest.org_id is deprecated.
+   *     See api/v0alpha/org.proto;l=5406
    * @return The orgId.
    */
-  java.lang.String getOrgId();
+  @java.lang.Deprecated java.lang.String getOrgId();
   /**
    * <pre>
-   * The Org ID of the user
+   * DEPRECATED: org_id was previously optional,
+   * if org_id needs to be provided, use GetUserPasswordResetLinkByOrgId rpc
    * </pre>
    *
-   * <code>string org_id = 2 [json_name = "orgId"];</code>
+   * <code>string org_id = 2 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v0alpha.GetUserPasswordResetLinkRequest.org_id is deprecated.
+   *     See api/v0alpha/org.proto;l=5406
    * @return The bytes for orgId.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getOrgIdBytes();
 
   /**

@@ -389,11 +389,18 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object userCallerId_ = "";
   /**
-   * <code>string user_caller_id = 10 [json_name = "userCallerId"];</code>
+   * <pre>
+   * DEPRECATED: user_caller_id was previously optional,
+   * if user_caller_id needs to be provided, use UpdateUserCallerId rpc
+   * </pre>
+   *
+   * <code>string user_caller_id = 10 [json_name = "userCallerId", deprecated = true];</code>
+   * @deprecated api.v0alpha.UpdateUserRequest.user_caller_id is deprecated.
+   *     See api/v0alpha/org.proto;l=3296
    * @return The userCallerId.
    */
   @java.lang.Override
-  public java.lang.String getUserCallerId() {
+  @java.lang.Deprecated public java.lang.String getUserCallerId() {
     java.lang.Object ref = userCallerId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -406,11 +413,18 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string user_caller_id = 10 [json_name = "userCallerId"];</code>
+   * <pre>
+   * DEPRECATED: user_caller_id was previously optional,
+   * if user_caller_id needs to be provided, use UpdateUserCallerId rpc
+   * </pre>
+   *
+   * <code>string user_caller_id = 10 [json_name = "userCallerId", deprecated = true];</code>
+   * @deprecated api.v0alpha.UpdateUserRequest.user_caller_id is deprecated.
+   *     See api/v0alpha/org.proto;l=3296
    * @return The bytes for userCallerId.
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
+  @java.lang.Deprecated public com.google.protobuf.ByteString
       getUserCallerIdBytes() {
     java.lang.Object ref = userCallerId_;
     if (ref instanceof java.lang.String) {
@@ -2162,10 +2176,17 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object userCallerId_ = "";
     /**
-     * <code>string user_caller_id = 10 [json_name = "userCallerId"];</code>
+     * <pre>
+     * DEPRECATED: user_caller_id was previously optional,
+     * if user_caller_id needs to be provided, use UpdateUserCallerId rpc
+     * </pre>
+     *
+     * <code>string user_caller_id = 10 [json_name = "userCallerId", deprecated = true];</code>
+     * @deprecated api.v0alpha.UpdateUserRequest.user_caller_id is deprecated.
+     *     See api/v0alpha/org.proto;l=3296
      * @return The userCallerId.
      */
-    public java.lang.String getUserCallerId() {
+    @java.lang.Deprecated public java.lang.String getUserCallerId() {
       java.lang.Object ref = userCallerId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -2178,10 +2199,17 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string user_caller_id = 10 [json_name = "userCallerId"];</code>
+     * <pre>
+     * DEPRECATED: user_caller_id was previously optional,
+     * if user_caller_id needs to be provided, use UpdateUserCallerId rpc
+     * </pre>
+     *
+     * <code>string user_caller_id = 10 [json_name = "userCallerId", deprecated = true];</code>
+     * @deprecated api.v0alpha.UpdateUserRequest.user_caller_id is deprecated.
+     *     See api/v0alpha/org.proto;l=3296
      * @return The bytes for userCallerId.
      */
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getUserCallerIdBytes() {
       java.lang.Object ref = userCallerId_;
       if (ref instanceof String) {
@@ -2195,11 +2223,18 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string user_caller_id = 10 [json_name = "userCallerId"];</code>
+     * <pre>
+     * DEPRECATED: user_caller_id was previously optional,
+     * if user_caller_id needs to be provided, use UpdateUserCallerId rpc
+     * </pre>
+     *
+     * <code>string user_caller_id = 10 [json_name = "userCallerId", deprecated = true];</code>
+     * @deprecated api.v0alpha.UpdateUserRequest.user_caller_id is deprecated.
+     *     See api/v0alpha/org.proto;l=3296
      * @param value The userCallerId to set.
      * @return This builder for chaining.
      */
-    public Builder setUserCallerId(
+    @java.lang.Deprecated public Builder setUserCallerId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       userCallerId_ = value;
@@ -2208,21 +2243,35 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string user_caller_id = 10 [json_name = "userCallerId"];</code>
+     * <pre>
+     * DEPRECATED: user_caller_id was previously optional,
+     * if user_caller_id needs to be provided, use UpdateUserCallerId rpc
+     * </pre>
+     *
+     * <code>string user_caller_id = 10 [json_name = "userCallerId", deprecated = true];</code>
+     * @deprecated api.v0alpha.UpdateUserRequest.user_caller_id is deprecated.
+     *     See api/v0alpha/org.proto;l=3296
      * @return This builder for chaining.
      */
-    public Builder clearUserCallerId() {
+    @java.lang.Deprecated public Builder clearUserCallerId() {
       userCallerId_ = getDefaultInstance().getUserCallerId();
       bitField0_ = (bitField0_ & ~0x00000200);
       onChanged();
       return this;
     }
     /**
-     * <code>string user_caller_id = 10 [json_name = "userCallerId"];</code>
+     * <pre>
+     * DEPRECATED: user_caller_id was previously optional,
+     * if user_caller_id needs to be provided, use UpdateUserCallerId rpc
+     * </pre>
+     *
+     * <code>string user_caller_id = 10 [json_name = "userCallerId", deprecated = true];</code>
+     * @deprecated api.v0alpha.UpdateUserRequest.user_caller_id is deprecated.
+     *     See api/v0alpha/org.proto;l=3296
      * @param value The bytes for userCallerId to set.
      * @return This builder for chaining.
      */
-    public Builder setUserCallerIdBytes(
+    @java.lang.Deprecated public Builder setUserCallerIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);

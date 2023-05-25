@@ -9,21 +9,27 @@ public interface ListOwnedOrgsRequestOrBuilder extends
 
   /**
    * <pre>
-   * organization id passed in by customer support
+   * DEPRECATED: org_id was previously optional,
+   * if org_id needs to be providedm use ListOwnedOrgsByOrgId rpc
    * </pre>
    *
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
+   * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v0alpha.ListOwnedOrgsRequest.org_id is deprecated.
+   *     See api/v0alpha/org.proto;l=5854
    * @return The orgId.
    */
-  java.lang.String getOrgId();
+  @java.lang.Deprecated java.lang.String getOrgId();
   /**
    * <pre>
-   * organization id passed in by customer support
+   * DEPRECATED: org_id was previously optional,
+   * if org_id needs to be providedm use ListOwnedOrgsByOrgId rpc
    * </pre>
    *
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
+   * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v0alpha.ListOwnedOrgsRequest.org_id is deprecated.
+   *     See api/v0alpha/org.proto;l=5854
    * @return The bytes for orgId.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getOrgIdBytes();
 }

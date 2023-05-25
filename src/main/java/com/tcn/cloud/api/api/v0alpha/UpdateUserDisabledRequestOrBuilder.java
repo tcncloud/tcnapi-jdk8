@@ -8,11 +8,21 @@ public interface UpdateUserDisabledRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   * the USER_EDIT permission is required.
+   * the id of the user to update.
+   * </pre>
+   *
    * <code>string user_id = 1 [json_name = "userId"];</code>
    * @return The userId.
    */
   java.lang.String getUserId();
   /**
+   * <pre>
+   * the USER_EDIT permission is required.
+   * the id of the user to update.
+   * </pre>
+   *
    * <code>string user_id = 1 [json_name = "userId"];</code>
    * @return The bytes for userId.
    */
@@ -31,25 +41,27 @@ public interface UpdateUserDisabledRequestOrBuilder extends
 
   /**
    * <pre>
-   * If org_id is given, the CUSTOMER_SUPPORT permission is required.
-   * Otherwise the org_id is pulled off of the token and the
-   * USER_EDIT permission is required.
+   * DEPRECATED: org id was previously optional,
+   * if org_id needs to be provided, use UpdateUserDisabledByOrgId rpc
    * </pre>
    *
-   * <code>string org_id = 3 [json_name = "orgId"];</code>
+   * <code>string org_id = 3 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v0alpha.UpdateUserDisabledRequest.org_id is deprecated.
+   *     See api/v0alpha/org.proto;l=3427
    * @return The orgId.
    */
-  java.lang.String getOrgId();
+  @java.lang.Deprecated java.lang.String getOrgId();
   /**
    * <pre>
-   * If org_id is given, the CUSTOMER_SUPPORT permission is required.
-   * Otherwise the org_id is pulled off of the token and the
-   * USER_EDIT permission is required.
+   * DEPRECATED: org id was previously optional,
+   * if org_id needs to be provided, use UpdateUserDisabledByOrgId rpc
    * </pre>
    *
-   * <code>string org_id = 3 [json_name = "orgId"];</code>
+   * <code>string org_id = 3 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v0alpha.UpdateUserDisabledRequest.org_id is deprecated.
+   *     See api/v0alpha/org.proto;l=3427
    * @return The bytes for orgId.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getOrgIdBytes();
 }
