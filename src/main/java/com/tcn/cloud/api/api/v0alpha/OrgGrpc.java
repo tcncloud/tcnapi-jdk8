@@ -7534,7 +7534,7 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * UpdateVoiceAnalyticsPreferencesEnabled updates the enabled prefernece for voice analytics
+     * UpdateVoiceAnalyticsPreferencesEnabled updates the enabled preferences for voice analytics
      * </pre>
      */
     default void updateVoiceAnalyticsPreferencesEnabled(com.tcn.cloud.api.api.v0alpha.UpdateVoiceAnalyticsPreferencesEnabledRequest request,
@@ -9948,7 +9948,7 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * UpdateVoiceAnalyticsPreferencesEnabled updates the enabled prefernece for voice analytics
+     * UpdateVoiceAnalyticsPreferencesEnabled updates the enabled preferences for voice analytics
      * </pre>
      */
     public void updateVoiceAnalyticsPreferencesEnabled(com.tcn.cloud.api.api.v0alpha.UpdateVoiceAnalyticsPreferencesEnabledRequest request,
@@ -12304,7 +12304,7 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * UpdateVoiceAnalyticsPreferencesEnabled updates the enabled prefernece for voice analytics
+     * UpdateVoiceAnalyticsPreferencesEnabled updates the enabled preferences for voice analytics
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateVoiceAnalyticsPreferencesEnabledResponse updateVoiceAnalyticsPreferencesEnabled(com.tcn.cloud.api.api.v0alpha.UpdateVoiceAnalyticsPreferencesEnabledRequest request) {
@@ -14691,7 +14691,7 @@ public final class OrgGrpc {
 
     /**
      * <pre>
-     * UpdateVoiceAnalyticsPreferencesEnabled updates the enabled prefernece for voice analytics
+     * UpdateVoiceAnalyticsPreferencesEnabled updates the enabled preferences for voice analytics
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateVoiceAnalyticsPreferencesEnabledResponse> updateVoiceAnalyticsPreferencesEnabled(
