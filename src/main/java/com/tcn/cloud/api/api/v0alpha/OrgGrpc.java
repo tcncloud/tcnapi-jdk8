@@ -8137,9 +8137,6 @@ public final class OrgGrpc {
     /**
      * <pre>
      * Lists the names of the custom queue configs.
-     * Required Permissions:
-     *    ORG_VIEW (If &#64;org_id is empty)
-     *    CUSTOMER_SUPPORT (If &#64;org_id is NOT empty)
      * Errors:
      *   - grpc.Internal: An error occurred while getting the config names.
      *   - grpc.NotFound: The given &#64;org_id was not found (if &#64;org_id is NOT empty).
@@ -8153,9 +8150,6 @@ public final class OrgGrpc {
     /**
      * <pre>
      * Lists the names of the custom queue configs.
-     * Required Permissions:
-     *    ORG_VIEW (If &#64;org_id is empty)
-     *    CUSTOMER_SUPPORT (If &#64;org_id is NOT empty)
      * Errors:
      *   - grpc.Internal: An error occurred while getting the config names.
      *   - grpc.NotFound: The given &#64;org_id was not found (if &#64;org_id is NOT empty).
@@ -10635,9 +10629,6 @@ public final class OrgGrpc {
     /**
      * <pre>
      * Lists the names of the custom queue configs.
-     * Required Permissions:
-     *    ORG_VIEW (If &#64;org_id is empty)
-     *    CUSTOMER_SUPPORT (If &#64;org_id is NOT empty)
      * Errors:
      *   - grpc.Internal: An error occurred while getting the config names.
      *   - grpc.NotFound: The given &#64;org_id was not found (if &#64;org_id is NOT empty).
@@ -10652,9 +10643,6 @@ public final class OrgGrpc {
     /**
      * <pre>
      * Lists the names of the custom queue configs.
-     * Required Permissions:
-     *    ORG_VIEW (If &#64;org_id is empty)
-     *    CUSTOMER_SUPPORT (If &#64;org_id is NOT empty)
      * Errors:
      *   - grpc.Internal: An error occurred while getting the config names.
      *   - grpc.NotFound: The given &#64;org_id was not found (if &#64;org_id is NOT empty).
@@ -13006,9 +12994,6 @@ public final class OrgGrpc {
     /**
      * <pre>
      * Lists the names of the custom queue configs.
-     * Required Permissions:
-     *    ORG_VIEW (If &#64;org_id is empty)
-     *    CUSTOMER_SUPPORT (If &#64;org_id is NOT empty)
      * Errors:
      *   - grpc.Internal: An error occurred while getting the config names.
      *   - grpc.NotFound: The given &#64;org_id was not found (if &#64;org_id is NOT empty).
@@ -13022,9 +13007,6 @@ public final class OrgGrpc {
     /**
      * <pre>
      * Lists the names of the custom queue configs.
-     * Required Permissions:
-     *    ORG_VIEW (If &#64;org_id is empty)
-     *    CUSTOMER_SUPPORT (If &#64;org_id is NOT empty)
      * Errors:
      *   - grpc.Internal: An error occurred while getting the config names.
      *   - grpc.NotFound: The given &#64;org_id was not found (if &#64;org_id is NOT empty).
@@ -15477,9 +15459,6 @@ public final class OrgGrpc {
     /**
      * <pre>
      * Lists the names of the custom queue configs.
-     * Required Permissions:
-     *    ORG_VIEW (If &#64;org_id is empty)
-     *    CUSTOMER_SUPPORT (If &#64;org_id is NOT empty)
      * Errors:
      *   - grpc.Internal: An error occurred while getting the config names.
      *   - grpc.NotFound: The given &#64;org_id was not found (if &#64;org_id is NOT empty).
@@ -15494,9 +15473,6 @@ public final class OrgGrpc {
     /**
      * <pre>
      * Lists the names of the custom queue configs.
-     * Required Permissions:
-     *    ORG_VIEW (If &#64;org_id is empty)
-     *    CUSTOMER_SUPPORT (If &#64;org_id is NOT empty)
      * Errors:
      *   - grpc.Internal: An error occurred while getting the config names.
      *   - grpc.NotFound: The given &#64;org_id was not found (if &#64;org_id is NOT empty).
