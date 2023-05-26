@@ -5037,6 +5037,37 @@ public final class OrgGrpc {
     return getListQueueConfigsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq,
+      com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdRes> getListQueueConfigsByOrgIdMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListQueueConfigsByOrgId",
+      requestType = com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq,
+      com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdRes> getListQueueConfigsByOrgIdMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq, com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdRes> getListQueueConfigsByOrgIdMethod;
+    if ((getListQueueConfigsByOrgIdMethod = OrgGrpc.getListQueueConfigsByOrgIdMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getListQueueConfigsByOrgIdMethod = OrgGrpc.getListQueueConfigsByOrgIdMethod) == null) {
+          OrgGrpc.getListQueueConfigsByOrgIdMethod = getListQueueConfigsByOrgIdMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq, com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListQueueConfigsByOrgId"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdRes.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListQueueConfigsByOrgId"))
+              .build();
+        }
+      }
+    }
+    return getListQueueConfigsByOrgIdMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteQueueConfigReq,
       com.tcn.cloud.api.api.v0alpha.DeleteQueueConfigRes> getDeleteQueueConfigMethod;
 
@@ -5843,6 +5874,37 @@ public final class OrgGrpc {
     return getGetUserSubscriptionMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionRequest,
+      com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionResponse> getGetMyUserSubscriptionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetMyUserSubscription",
+      requestType = com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionRequest.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionRequest,
+      com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionResponse> getGetMyUserSubscriptionMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionRequest, com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionResponse> getGetMyUserSubscriptionMethod;
+    if ((getGetMyUserSubscriptionMethod = OrgGrpc.getGetMyUserSubscriptionMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getGetMyUserSubscriptionMethod = OrgGrpc.getGetMyUserSubscriptionMethod) == null) {
+          OrgGrpc.getGetMyUserSubscriptionMethod = getGetMyUserSubscriptionMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionRequest, com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetMyUserSubscription"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetMyUserSubscription"))
+              .build();
+        }
+      }
+    }
+    return getGetMyUserSubscriptionMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.AddUserSubscriptionRequest,
       com.tcn.cloud.api.api.v0alpha.AddUserSubscriptionResponse> getAddUserSubscriptionMethod;
 
@@ -5872,6 +5934,37 @@ public final class OrgGrpc {
       }
     }
     return getAddUserSubscriptionMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionRequest,
+      com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionResponse> getAddMyUserSubscriptionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AddMyUserSubscription",
+      requestType = com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionRequest.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionRequest,
+      com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionResponse> getAddMyUserSubscriptionMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionRequest, com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionResponse> getAddMyUserSubscriptionMethod;
+    if ((getAddMyUserSubscriptionMethod = OrgGrpc.getAddMyUserSubscriptionMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getAddMyUserSubscriptionMethod = OrgGrpc.getAddMyUserSubscriptionMethod) == null) {
+          OrgGrpc.getAddMyUserSubscriptionMethod = getAddMyUserSubscriptionMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionRequest, com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddMyUserSubscription"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AddMyUserSubscription"))
+              .build();
+        }
+      }
+    }
+    return getAddMyUserSubscriptionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.RemoveUserSubscriptionRequest,
@@ -5967,6 +6060,37 @@ public final class OrgGrpc {
     return getUpdateUserSubscriptionMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionRequest,
+      com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionResponse> getUpdateMyUserSubscriptionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateMyUserSubscription",
+      requestType = com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionRequest.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionRequest,
+      com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionResponse> getUpdateMyUserSubscriptionMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionRequest, com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionResponse> getUpdateMyUserSubscriptionMethod;
+    if ((getUpdateMyUserSubscriptionMethod = OrgGrpc.getUpdateMyUserSubscriptionMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getUpdateMyUserSubscriptionMethod = OrgGrpc.getUpdateMyUserSubscriptionMethod) == null) {
+          OrgGrpc.getUpdateMyUserSubscriptionMethod = getUpdateMyUserSubscriptionMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionRequest, com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateMyUserSubscription"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateMyUserSubscription"))
+              .build();
+        }
+      }
+    }
+    return getUpdateMyUserSubscriptionMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListUserSubscriptionsRequest,
       com.tcn.cloud.api.api.v0alpha.ListUserSubscriptionsResponse> getListUserSubscriptionsMethod;
 
@@ -5996,6 +6120,37 @@ public final class OrgGrpc {
       }
     }
     return getListUserSubscriptionsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsRequest,
+      com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsResponse> getListMyUserSubscriptionsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListMyUserSubscriptions",
+      requestType = com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsRequest.class,
+      responseType = com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsRequest,
+      com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsResponse> getListMyUserSubscriptionsMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsRequest, com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsResponse> getListMyUserSubscriptionsMethod;
+    if ((getListMyUserSubscriptionsMethod = OrgGrpc.getListMyUserSubscriptionsMethod) == null) {
+      synchronized (OrgGrpc.class) {
+        if ((getListMyUserSubscriptionsMethod = OrgGrpc.getListMyUserSubscriptionsMethod) == null) {
+          OrgGrpc.getListMyUserSubscriptionsMethod = getListMyUserSubscriptionsMethod =
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsRequest, com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListMyUserSubscriptions"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListMyUserSubscriptions"))
+              .build();
+        }
+      }
+    }
+    return getListMyUserSubscriptionsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListOrgSubscriptionsRequest,
@@ -7982,9 +8137,6 @@ public final class OrgGrpc {
     /**
      * <pre>
      * Lists the names of the custom queue configs.
-     * Required Permissions:
-     *    ORG_VIEW (If &#64;org_id is empty)
-     *    CUSTOMER_SUPPORT (If &#64;org_id is NOT empty)
      * Errors:
      *   - grpc.Internal: An error occurred while getting the config names.
      *   - grpc.NotFound: The given &#64;org_id was not found (if &#64;org_id is NOT empty).
@@ -7993,6 +8145,19 @@ public final class OrgGrpc {
     default void listQueueConfigs(com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListQueueConfigsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListQueueConfigsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists the names of the custom queue configs.
+     * Errors:
+     *   - grpc.Internal: An error occurred while getting the config names.
+     *   - grpc.NotFound: The given &#64;org_id was not found (if &#64;org_id is NOT empty).
+     * </pre>
+     */
+    default void listQueueConfigsByOrgId(com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdRes> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListQueueConfigsByOrgIdMethod(), responseObserver);
     }
 
     /**
@@ -8348,14 +8513,21 @@ public final class OrgGrpc {
     /**
      * <pre>
      * Gets a user subscription by id
-     * Required Permissions:
-     *    ORG_VIEW if user id IS provided
-     *    none if user id NOT provided
      * </pre>
      */
     default void getUserSubscription(com.tcn.cloud.api.api.v0alpha.GetUserSubscriptionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetUserSubscriptionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetUserSubscriptionMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets a user subscription by id
+     * </pre>
+     */
+    default void getMyUserSubscription(com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMyUserSubscriptionMethod(), responseObserver);
     }
 
     /**
@@ -8366,6 +8538,16 @@ public final class OrgGrpc {
     default void addUserSubscription(com.tcn.cloud.api.api.v0alpha.AddUserSubscriptionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AddUserSubscriptionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddUserSubscriptionMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Adds a user subscription to user's list of subscriptions
+     * </pre>
+     */
+    default void addMyUserSubscription(com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddMyUserSubscriptionMethod(), responseObserver);
     }
 
     /**
@@ -8391,9 +8573,6 @@ public final class OrgGrpc {
     /**
      * <pre>
      * Updates a user subscription
-     * Required Permissions:
-     *    USER_EDIT if user id IS provided
-     *    EDIT_USER_OPTIONS if user id NOT provided
      * </pre>
      */
     default void updateUserSubscription(com.tcn.cloud.api.api.v0alpha.UpdateUserSubscriptionRequest request,
@@ -8403,15 +8582,32 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * Updates a user subscription
+     * </pre>
+     */
+    default void updateMyUserSubscription(com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMyUserSubscriptionMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists all of a users subscriptions
-     * Required Permissions:
-     *    ORG_VIEW if user id IS provided
-     *    none if user id NOT provided
      * </pre>
      */
     default void listUserSubscriptions(com.tcn.cloud.api.api.v0alpha.ListUserSubscriptionsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListUserSubscriptionsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListUserSubscriptionsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists all of a users subscriptions
+     * </pre>
+     */
+    default void listMyUserSubscriptions(com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMyUserSubscriptionsMethod(), responseObserver);
     }
 
     /**
@@ -10433,9 +10629,6 @@ public final class OrgGrpc {
     /**
      * <pre>
      * Lists the names of the custom queue configs.
-     * Required Permissions:
-     *    ORG_VIEW (If &#64;org_id is empty)
-     *    CUSTOMER_SUPPORT (If &#64;org_id is NOT empty)
      * Errors:
      *   - grpc.Internal: An error occurred while getting the config names.
      *   - grpc.NotFound: The given &#64;org_id was not found (if &#64;org_id is NOT empty).
@@ -10445,6 +10638,20 @@ public final class OrgGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListQueueConfigsRes> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListQueueConfigsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists the names of the custom queue configs.
+     * Errors:
+     *   - grpc.Internal: An error occurred while getting the config names.
+     *   - grpc.NotFound: The given &#64;org_id was not found (if &#64;org_id is NOT empty).
+     * </pre>
+     */
+    public void listQueueConfigsByOrgId(com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdRes> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListQueueConfigsByOrgIdMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -10825,15 +11032,23 @@ public final class OrgGrpc {
     /**
      * <pre>
      * Gets a user subscription by id
-     * Required Permissions:
-     *    ORG_VIEW if user id IS provided
-     *    none if user id NOT provided
      * </pre>
      */
     public void getUserSubscription(com.tcn.cloud.api.api.v0alpha.GetUserSubscriptionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetUserSubscriptionResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetUserSubscriptionMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets a user subscription by id
+     * </pre>
+     */
+    public void getMyUserSubscription(com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetMyUserSubscriptionMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -10845,6 +11060,17 @@ public final class OrgGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AddUserSubscriptionResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAddUserSubscriptionMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Adds a user subscription to user's list of subscriptions
+     * </pre>
+     */
+    public void addMyUserSubscription(com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAddMyUserSubscriptionMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -10872,9 +11098,6 @@ public final class OrgGrpc {
     /**
      * <pre>
      * Updates a user subscription
-     * Required Permissions:
-     *    USER_EDIT if user id IS provided
-     *    EDIT_USER_OPTIONS if user id NOT provided
      * </pre>
      */
     public void updateUserSubscription(com.tcn.cloud.api.api.v0alpha.UpdateUserSubscriptionRequest request,
@@ -10885,16 +11108,35 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * Updates a user subscription
+     * </pre>
+     */
+    public void updateMyUserSubscription(com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateMyUserSubscriptionMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists all of a users subscriptions
-     * Required Permissions:
-     *    ORG_VIEW if user id IS provided
-     *    none if user id NOT provided
      * </pre>
      */
     public void listUserSubscriptions(com.tcn.cloud.api.api.v0alpha.ListUserSubscriptionsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListUserSubscriptionsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListUserSubscriptionsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists all of a users subscriptions
+     * </pre>
+     */
+    public void listMyUserSubscriptions(com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsRequest request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListMyUserSubscriptionsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -12752,9 +12994,6 @@ public final class OrgGrpc {
     /**
      * <pre>
      * Lists the names of the custom queue configs.
-     * Required Permissions:
-     *    ORG_VIEW (If &#64;org_id is empty)
-     *    CUSTOMER_SUPPORT (If &#64;org_id is NOT empty)
      * Errors:
      *   - grpc.Internal: An error occurred while getting the config names.
      *   - grpc.NotFound: The given &#64;org_id was not found (if &#64;org_id is NOT empty).
@@ -12763,6 +13002,19 @@ public final class OrgGrpc {
     public com.tcn.cloud.api.api.v0alpha.ListQueueConfigsRes listQueueConfigs(com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListQueueConfigsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Lists the names of the custom queue configs.
+     * Errors:
+     *   - grpc.Internal: An error occurred while getting the config names.
+     *   - grpc.NotFound: The given &#64;org_id was not found (if &#64;org_id is NOT empty).
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdRes listQueueConfigsByOrgId(com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListQueueConfigsByOrgIdMethod(), getCallOptions(), request);
     }
 
     /**
@@ -13118,14 +13370,21 @@ public final class OrgGrpc {
     /**
      * <pre>
      * Gets a user subscription by id
-     * Required Permissions:
-     *    ORG_VIEW if user id IS provided
-     *    none if user id NOT provided
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetUserSubscriptionResponse getUserSubscription(com.tcn.cloud.api.api.v0alpha.GetUserSubscriptionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetUserSubscriptionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets a user subscription by id
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionResponse getMyUserSubscription(com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetMyUserSubscriptionMethod(), getCallOptions(), request);
     }
 
     /**
@@ -13136,6 +13395,16 @@ public final class OrgGrpc {
     public com.tcn.cloud.api.api.v0alpha.AddUserSubscriptionResponse addUserSubscription(com.tcn.cloud.api.api.v0alpha.AddUserSubscriptionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAddUserSubscriptionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Adds a user subscription to user's list of subscriptions
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionResponse addMyUserSubscription(com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAddMyUserSubscriptionMethod(), getCallOptions(), request);
     }
 
     /**
@@ -13161,9 +13430,6 @@ public final class OrgGrpc {
     /**
      * <pre>
      * Updates a user subscription
-     * Required Permissions:
-     *    USER_EDIT if user id IS provided
-     *    EDIT_USER_OPTIONS if user id NOT provided
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateUserSubscriptionResponse updateUserSubscription(com.tcn.cloud.api.api.v0alpha.UpdateUserSubscriptionRequest request) {
@@ -13173,15 +13439,32 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * Updates a user subscription
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionResponse updateMyUserSubscription(com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateMyUserSubscriptionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Lists all of a users subscriptions
-     * Required Permissions:
-     *    ORG_VIEW if user id IS provided
-     *    none if user id NOT provided
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListUserSubscriptionsResponse listUserSubscriptions(com.tcn.cloud.api.api.v0alpha.ListUserSubscriptionsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListUserSubscriptionsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Lists all of a users subscriptions
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsResponse listMyUserSubscriptions(com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListMyUserSubscriptionsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -15176,9 +15459,6 @@ public final class OrgGrpc {
     /**
      * <pre>
      * Lists the names of the custom queue configs.
-     * Required Permissions:
-     *    ORG_VIEW (If &#64;org_id is empty)
-     *    CUSTOMER_SUPPORT (If &#64;org_id is NOT empty)
      * Errors:
      *   - grpc.Internal: An error occurred while getting the config names.
      *   - grpc.NotFound: The given &#64;org_id was not found (if &#64;org_id is NOT empty).
@@ -15188,6 +15468,20 @@ public final class OrgGrpc {
         com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListQueueConfigsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Lists the names of the custom queue configs.
+     * Errors:
+     *   - grpc.Internal: An error occurred while getting the config names.
+     *   - grpc.NotFound: The given &#64;org_id was not found (if &#64;org_id is NOT empty).
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdRes> listQueueConfigsByOrgId(
+        com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListQueueConfigsByOrgIdMethod(), getCallOptions()), request);
     }
 
     /**
@@ -15568,15 +15862,23 @@ public final class OrgGrpc {
     /**
      * <pre>
      * Gets a user subscription by id
-     * Required Permissions:
-     *    ORG_VIEW if user id IS provided
-     *    none if user id NOT provided
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetUserSubscriptionResponse> getUserSubscription(
         com.tcn.cloud.api.api.v0alpha.GetUserSubscriptionRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetUserSubscriptionMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Gets a user subscription by id
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionResponse> getMyUserSubscription(
+        com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetMyUserSubscriptionMethod(), getCallOptions()), request);
     }
 
     /**
@@ -15588,6 +15890,17 @@ public final class OrgGrpc {
         com.tcn.cloud.api.api.v0alpha.AddUserSubscriptionRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAddUserSubscriptionMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Adds a user subscription to user's list of subscriptions
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionResponse> addMyUserSubscription(
+        com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAddMyUserSubscriptionMethod(), getCallOptions()), request);
     }
 
     /**
@@ -15615,9 +15928,6 @@ public final class OrgGrpc {
     /**
      * <pre>
      * Updates a user subscription
-     * Required Permissions:
-     *    USER_EDIT if user id IS provided
-     *    EDIT_USER_OPTIONS if user id NOT provided
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateUserSubscriptionResponse> updateUserSubscription(
@@ -15628,16 +15938,35 @@ public final class OrgGrpc {
 
     /**
      * <pre>
+     * Updates a user subscription
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionResponse> updateMyUserSubscription(
+        com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateMyUserSubscriptionMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Lists all of a users subscriptions
-     * Required Permissions:
-     *    ORG_VIEW if user id IS provided
-     *    none if user id NOT provided
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListUserSubscriptionsResponse> listUserSubscriptions(
         com.tcn.cloud.api.api.v0alpha.ListUserSubscriptionsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListUserSubscriptionsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Lists all of a users subscriptions
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsResponse> listMyUserSubscriptions(
+        com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListMyUserSubscriptionsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -15889,43 +16218,48 @@ public final class OrgGrpc {
   private static final int METHODID_LIST_AGENT_RESPONSE_GROUPS = 159;
   private static final int METHODID_LIST_LAST_TEMPLATE_ELEMENTS = 160;
   private static final int METHODID_LIST_QUEUE_CONFIGS = 161;
-  private static final int METHODID_DELETE_QUEUE_CONFIG = 162;
-  private static final int METHODID_GET_QUEUE_CONFIG = 163;
-  private static final int METHODID_CREATE_QUEUE_CONFIG = 164;
-  private static final int METHODID_UPDATE_QUEUE_CONFIG = 165;
-  private static final int METHODID_COPY_QUEUE_CONFIG = 166;
-  private static final int METHODID_GET_ALL_QUEUE_CONFIG_SOUNDS = 167;
-  private static final int METHODID_GET_QUEUE_CONFIG_SOUND = 168;
-  private static final int METHODID_SET_QUEUE_CONFIG_SOUND = 169;
-  private static final int METHODID_SET_ALL_QUEUE_CONFIG_SOUNDS_FROM_SOURCE = 170;
-  private static final int METHODID_GET_USER_BLOCKED = 171;
-  private static final int METHODID_UNBLOCK_USER = 172;
-  private static final int METHODID_LIST_P3UN_MIGRATED_USERS = 173;
-  private static final int METHODID_MIGRATE_P3USER = 174;
-  private static final int METHODID_UPDATE_P3USER_NAME = 175;
-  private static final int METHODID_LIST_OWNED_USERS = 176;
-  private static final int METHODID_LIST_OWNED_ORGS_BY_ORG_ID = 177;
-  private static final int METHODID_LIST_OWNED_ORGS = 178;
-  private static final int METHODID_REMOVE_LOGIN_STRIKES = 179;
-  private static final int METHODID_REMOVE_USER_LOGIN_STRIKES = 180;
-  private static final int METHODID_LIST_LOGIN_HISTORY = 181;
-  private static final int METHODID_UPDATE_P3USER_SIDS = 182;
-  private static final int METHODID_CREATE_AUTH_CONNECTION = 183;
-  private static final int METHODID_GET_AUTH_CONNECTION_SETTINGS = 184;
-  private static final int METHODID_UPDATE_AUTH_CONNECTION_SETTINGS = 185;
-  private static final int METHODID_DELETE_AUTH_CONNECTION = 186;
-  private static final int METHODID_GET_USER_SUBSCRIPTION = 187;
-  private static final int METHODID_ADD_USER_SUBSCRIPTION = 188;
-  private static final int METHODID_REMOVE_USER_SUBSCRIPTION = 189;
-  private static final int METHODID_REMOVE_MY_USER_SUBSCRIPTION = 190;
-  private static final int METHODID_UPDATE_USER_SUBSCRIPTION = 191;
-  private static final int METHODID_LIST_USER_SUBSCRIPTIONS = 192;
-  private static final int METHODID_LIST_ORG_SUBSCRIPTIONS = 193;
-  private static final int METHODID_GET_SYSTEM_ENVIRONMENT_DETAILS = 194;
-  private static final int METHODID_LIST_AGENT_STATISTICS_TEMPLATES = 195;
-  private static final int METHODID_CREATE_AGENT_STATISTICS_TEMPLATE = 196;
-  private static final int METHODID_UPDATE_AGENT_STATISTICS_TEMPLATE = 197;
-  private static final int METHODID_DELETE_AGENT_STATISTICS_TEMPLATE = 198;
+  private static final int METHODID_LIST_QUEUE_CONFIGS_BY_ORG_ID = 162;
+  private static final int METHODID_DELETE_QUEUE_CONFIG = 163;
+  private static final int METHODID_GET_QUEUE_CONFIG = 164;
+  private static final int METHODID_CREATE_QUEUE_CONFIG = 165;
+  private static final int METHODID_UPDATE_QUEUE_CONFIG = 166;
+  private static final int METHODID_COPY_QUEUE_CONFIG = 167;
+  private static final int METHODID_GET_ALL_QUEUE_CONFIG_SOUNDS = 168;
+  private static final int METHODID_GET_QUEUE_CONFIG_SOUND = 169;
+  private static final int METHODID_SET_QUEUE_CONFIG_SOUND = 170;
+  private static final int METHODID_SET_ALL_QUEUE_CONFIG_SOUNDS_FROM_SOURCE = 171;
+  private static final int METHODID_GET_USER_BLOCKED = 172;
+  private static final int METHODID_UNBLOCK_USER = 173;
+  private static final int METHODID_LIST_P3UN_MIGRATED_USERS = 174;
+  private static final int METHODID_MIGRATE_P3USER = 175;
+  private static final int METHODID_UPDATE_P3USER_NAME = 176;
+  private static final int METHODID_LIST_OWNED_USERS = 177;
+  private static final int METHODID_LIST_OWNED_ORGS_BY_ORG_ID = 178;
+  private static final int METHODID_LIST_OWNED_ORGS = 179;
+  private static final int METHODID_REMOVE_LOGIN_STRIKES = 180;
+  private static final int METHODID_REMOVE_USER_LOGIN_STRIKES = 181;
+  private static final int METHODID_LIST_LOGIN_HISTORY = 182;
+  private static final int METHODID_UPDATE_P3USER_SIDS = 183;
+  private static final int METHODID_CREATE_AUTH_CONNECTION = 184;
+  private static final int METHODID_GET_AUTH_CONNECTION_SETTINGS = 185;
+  private static final int METHODID_UPDATE_AUTH_CONNECTION_SETTINGS = 186;
+  private static final int METHODID_DELETE_AUTH_CONNECTION = 187;
+  private static final int METHODID_GET_USER_SUBSCRIPTION = 188;
+  private static final int METHODID_GET_MY_USER_SUBSCRIPTION = 189;
+  private static final int METHODID_ADD_USER_SUBSCRIPTION = 190;
+  private static final int METHODID_ADD_MY_USER_SUBSCRIPTION = 191;
+  private static final int METHODID_REMOVE_USER_SUBSCRIPTION = 192;
+  private static final int METHODID_REMOVE_MY_USER_SUBSCRIPTION = 193;
+  private static final int METHODID_UPDATE_USER_SUBSCRIPTION = 194;
+  private static final int METHODID_UPDATE_MY_USER_SUBSCRIPTION = 195;
+  private static final int METHODID_LIST_USER_SUBSCRIPTIONS = 196;
+  private static final int METHODID_LIST_MY_USER_SUBSCRIPTIONS = 197;
+  private static final int METHODID_LIST_ORG_SUBSCRIPTIONS = 198;
+  private static final int METHODID_GET_SYSTEM_ENVIRONMENT_DETAILS = 199;
+  private static final int METHODID_LIST_AGENT_STATISTICS_TEMPLATES = 200;
+  private static final int METHODID_CREATE_AGENT_STATISTICS_TEMPLATE = 201;
+  private static final int METHODID_UPDATE_AGENT_STATISTICS_TEMPLATE = 202;
+  private static final int METHODID_DELETE_AGENT_STATISTICS_TEMPLATE = 203;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -16592,6 +16926,10 @@ public final class OrgGrpc {
           serviceImpl.listQueueConfigs((com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListQueueConfigsRes>) responseObserver);
           break;
+        case METHODID_LIST_QUEUE_CONFIGS_BY_ORG_ID:
+          serviceImpl.listQueueConfigsByOrgId((com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdRes>) responseObserver);
+          break;
         case METHODID_DELETE_QUEUE_CONFIG:
           serviceImpl.deleteQueueConfig((com.tcn.cloud.api.api.v0alpha.DeleteQueueConfigReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteQueueConfigRes>) responseObserver);
@@ -16696,9 +17034,17 @@ public final class OrgGrpc {
           serviceImpl.getUserSubscription((com.tcn.cloud.api.api.v0alpha.GetUserSubscriptionRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetUserSubscriptionResponse>) responseObserver);
           break;
+        case METHODID_GET_MY_USER_SUBSCRIPTION:
+          serviceImpl.getMyUserSubscription((com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionResponse>) responseObserver);
+          break;
         case METHODID_ADD_USER_SUBSCRIPTION:
           serviceImpl.addUserSubscription((com.tcn.cloud.api.api.v0alpha.AddUserSubscriptionRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AddUserSubscriptionResponse>) responseObserver);
+          break;
+        case METHODID_ADD_MY_USER_SUBSCRIPTION:
+          serviceImpl.addMyUserSubscription((com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionResponse>) responseObserver);
           break;
         case METHODID_REMOVE_USER_SUBSCRIPTION:
           serviceImpl.removeUserSubscription((com.tcn.cloud.api.api.v0alpha.RemoveUserSubscriptionRequest) request,
@@ -16712,9 +17058,17 @@ public final class OrgGrpc {
           serviceImpl.updateUserSubscription((com.tcn.cloud.api.api.v0alpha.UpdateUserSubscriptionRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateUserSubscriptionResponse>) responseObserver);
           break;
+        case METHODID_UPDATE_MY_USER_SUBSCRIPTION:
+          serviceImpl.updateMyUserSubscription((com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionResponse>) responseObserver);
+          break;
         case METHODID_LIST_USER_SUBSCRIPTIONS:
           serviceImpl.listUserSubscriptions((com.tcn.cloud.api.api.v0alpha.ListUserSubscriptionsRequest) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListUserSubscriptionsResponse>) responseObserver);
+          break;
+        case METHODID_LIST_MY_USER_SUBSCRIPTIONS:
+          serviceImpl.listMyUserSubscriptions((com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsRequest) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsResponse>) responseObserver);
           break;
         case METHODID_LIST_ORG_SUBSCRIPTIONS:
           serviceImpl.listOrgSubscriptions((com.tcn.cloud.api.api.v0alpha.ListOrgSubscriptionsRequest) request,
@@ -17893,6 +18247,13 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v0alpha.ListQueueConfigsRes>(
                 service, METHODID_LIST_QUEUE_CONFIGS)))
         .addMethod(
+          getListQueueConfigsByOrgIdMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq,
+              com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdRes>(
+                service, METHODID_LIST_QUEUE_CONFIGS_BY_ORG_ID)))
+        .addMethod(
           getDeleteQueueConfigMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -18075,12 +18436,26 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v0alpha.GetUserSubscriptionResponse>(
                 service, METHODID_GET_USER_SUBSCRIPTION)))
         .addMethod(
+          getGetMyUserSubscriptionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionRequest,
+              com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionResponse>(
+                service, METHODID_GET_MY_USER_SUBSCRIPTION)))
+        .addMethod(
           getAddUserSubscriptionMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               com.tcn.cloud.api.api.v0alpha.AddUserSubscriptionRequest,
               com.tcn.cloud.api.api.v0alpha.AddUserSubscriptionResponse>(
                 service, METHODID_ADD_USER_SUBSCRIPTION)))
+        .addMethod(
+          getAddMyUserSubscriptionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionRequest,
+              com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionResponse>(
+                service, METHODID_ADD_MY_USER_SUBSCRIPTION)))
         .addMethod(
           getRemoveUserSubscriptionMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -18103,12 +18478,26 @@ public final class OrgGrpc {
               com.tcn.cloud.api.api.v0alpha.UpdateUserSubscriptionResponse>(
                 service, METHODID_UPDATE_USER_SUBSCRIPTION)))
         .addMethod(
+          getUpdateMyUserSubscriptionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionRequest,
+              com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionResponse>(
+                service, METHODID_UPDATE_MY_USER_SUBSCRIPTION)))
+        .addMethod(
           getListUserSubscriptionsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               com.tcn.cloud.api.api.v0alpha.ListUserSubscriptionsRequest,
               com.tcn.cloud.api.api.v0alpha.ListUserSubscriptionsResponse>(
                 service, METHODID_LIST_USER_SUBSCRIPTIONS)))
+        .addMethod(
+          getListMyUserSubscriptionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsRequest,
+              com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsResponse>(
+                service, METHODID_LIST_MY_USER_SUBSCRIPTIONS)))
         .addMethod(
           getListOrgSubscriptionsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -18361,6 +18750,7 @@ public final class OrgGrpc {
               .addMethod(getListAgentResponseGroupsMethod())
               .addMethod(getListLastTemplateElementsMethod())
               .addMethod(getListQueueConfigsMethod())
+              .addMethod(getListQueueConfigsByOrgIdMethod())
               .addMethod(getDeleteQueueConfigMethod())
               .addMethod(getGetQueueConfigMethod())
               .addMethod(getCreateQueueConfigMethod())
@@ -18387,11 +18777,15 @@ public final class OrgGrpc {
               .addMethod(getUpdateAuthConnectionSettingsMethod())
               .addMethod(getDeleteAuthConnectionMethod())
               .addMethod(getGetUserSubscriptionMethod())
+              .addMethod(getGetMyUserSubscriptionMethod())
               .addMethod(getAddUserSubscriptionMethod())
+              .addMethod(getAddMyUserSubscriptionMethod())
               .addMethod(getRemoveUserSubscriptionMethod())
               .addMethod(getRemoveMyUserSubscriptionMethod())
               .addMethod(getUpdateUserSubscriptionMethod())
+              .addMethod(getUpdateMyUserSubscriptionMethod())
               .addMethod(getListUserSubscriptionsMethod())
+              .addMethod(getListMyUserSubscriptionsMethod())
               .addMethod(getListOrgSubscriptionsMethod())
               .addMethod(getGetSystemEnvironmentDetailsMethod())
               .addMethod(getListAgentStatisticsTemplatesMethod())
