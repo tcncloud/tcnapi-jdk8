@@ -9,23 +9,25 @@ public interface ListQueueConfigsReqOrBuilder extends
 
   /**
    * <pre>
-   * If org_id is left empty, the org_id will be
-   * retreived from the users token.
+   * DEPRECATED: if org_id was provided use ListQueueConfigsByOrgId rpc instead.
    * </pre>
    *
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
+   * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v0alpha.ListQueueConfigsReq.org_id is deprecated.
+   *     See api/v0alpha/org.proto;l=5562
    * @return The orgId.
    */
-  java.lang.String getOrgId();
+  @java.lang.Deprecated java.lang.String getOrgId();
   /**
    * <pre>
-   * If org_id is left empty, the org_id will be
-   * retreived from the users token.
+   * DEPRECATED: if org_id was provided use ListQueueConfigsByOrgId rpc instead.
    * </pre>
    *
-   * <code>string org_id = 1 [json_name = "orgId"];</code>
+   * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
+   * @deprecated api.v0alpha.ListQueueConfigsReq.org_id is deprecated.
+   *     See api/v0alpha/org.proto;l=5562
    * @return The bytes for orgId.
    */
-  com.google.protobuf.ByteString
+  @java.lang.Deprecated com.google.protobuf.ByteString
       getOrgIdBytes();
 }

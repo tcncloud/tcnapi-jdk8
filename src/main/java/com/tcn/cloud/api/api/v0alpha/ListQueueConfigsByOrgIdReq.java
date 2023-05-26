@@ -4,18 +4,18 @@
 package com.tcn.cloud.api.api.v0alpha;
 
 /**
- * Protobuf type {@code api.v0alpha.ListQueueConfigsReq}
+ * Protobuf type {@code api.v0alpha.ListQueueConfigsByOrgIdReq}
  */
-public final class ListQueueConfigsReq extends
+public final class ListQueueConfigsByOrgIdReq extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:api.v0alpha.ListQueueConfigsReq)
-    ListQueueConfigsReqOrBuilder {
+    // @@protoc_insertion_point(message_implements:api.v0alpha.ListQueueConfigsByOrgIdReq)
+    ListQueueConfigsByOrgIdReqOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use ListQueueConfigsReq.newBuilder() to construct.
-  private ListQueueConfigsReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use ListQueueConfigsByOrgIdReq.newBuilder() to construct.
+  private ListQueueConfigsByOrgIdReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private ListQueueConfigsReq() {
+  private ListQueueConfigsByOrgIdReq() {
     orgId_ = "";
   }
 
@@ -23,20 +23,20 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new ListQueueConfigsReq();
+    return new ListQueueConfigsByOrgIdReq();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_ListQueueConfigsReq_descriptor;
+    return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_ListQueueConfigsByOrgIdReq_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_ListQueueConfigsReq_fieldAccessorTable
+    return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_ListQueueConfigsByOrgIdReq_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq.class, com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq.Builder.class);
+            com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq.class, com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq.Builder.class);
   }
 
   public static final int ORG_ID_FIELD_NUMBER = 1;
@@ -44,16 +44,15 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object orgId_ = "";
   /**
    * <pre>
-   * DEPRECATED: if org_id was provided use ListQueueConfigsByOrgId rpc instead.
+   * If org_id is left empty, the org_id will be
+   * retreived from the users token.
    * </pre>
    *
-   * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
-   * @deprecated api.v0alpha.ListQueueConfigsReq.org_id is deprecated.
-   *     See api/v0alpha/org.proto;l=5562
+   * <code>string org_id = 1 [json_name = "orgId"];</code>
    * @return The orgId.
    */
   @java.lang.Override
-  @java.lang.Deprecated public java.lang.String getOrgId() {
+  public java.lang.String getOrgId() {
     java.lang.Object ref = orgId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
@@ -67,16 +66,15 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * DEPRECATED: if org_id was provided use ListQueueConfigsByOrgId rpc instead.
+   * If org_id is left empty, the org_id will be
+   * retreived from the users token.
    * </pre>
    *
-   * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
-   * @deprecated api.v0alpha.ListQueueConfigsReq.org_id is deprecated.
-   *     See api/v0alpha/org.proto;l=5562
+   * <code>string org_id = 1 [json_name = "orgId"];</code>
    * @return The bytes for orgId.
    */
   @java.lang.Override
-  @java.lang.Deprecated public com.google.protobuf.ByteString
+  public com.google.protobuf.ByteString
       getOrgIdBytes() {
     java.lang.Object ref = orgId_;
     if (ref instanceof java.lang.String) {
@@ -129,10 +127,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq)) {
+    if (!(obj instanceof com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq)) {
       return super.equals(obj);
     }
-    com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq other = (com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq) obj;
+    com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq other = (com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq) obj;
 
     if (!getOrgId()
         .equals(other.getOrgId())) return false;
@@ -154,44 +152,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq parseFrom(byte[] data)
+  public static com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq parseFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -199,26 +197,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq parseDelimitedFrom(java.io.InputStream input)
+  public static com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq parseDelimitedFrom(
+  public static com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq parseFrom(
+  public static com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -231,7 +229,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq prototype) {
+  public static Builder newBuilder(com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -247,26 +245,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code api.v0alpha.ListQueueConfigsReq}
+   * Protobuf type {@code api.v0alpha.ListQueueConfigsByOrgIdReq}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:api.v0alpha.ListQueueConfigsReq)
-      com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReqOrBuilder {
+      // @@protoc_insertion_point(builder_implements:api.v0alpha.ListQueueConfigsByOrgIdReq)
+      com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReqOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_ListQueueConfigsReq_descriptor;
+      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_ListQueueConfigsByOrgIdReq_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_ListQueueConfigsReq_fieldAccessorTable
+      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_ListQueueConfigsByOrgIdReq_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq.class, com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq.Builder.class);
+              com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq.class, com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq.Builder.class);
     }
 
-    // Construct using com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq.newBuilder()
+    // Construct using com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq.newBuilder()
     private Builder() {
 
     }
@@ -287,17 +285,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_ListQueueConfigsReq_descriptor;
+      return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_ListQueueConfigsByOrgIdReq_descriptor;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq getDefaultInstanceForType() {
-      return com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq.getDefaultInstance();
+    public com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq getDefaultInstanceForType() {
+      return com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq build() {
-      com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq result = buildPartial();
+    public com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq build() {
+      com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -305,14 +303,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq buildPartial() {
-      com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq result = new com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq(this);
+    public com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq buildPartial() {
+      com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq result = new com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq result) {
+    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.orgId_ = orgId_;
@@ -321,16 +319,16 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq) {
-        return mergeFrom((com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq)other);
+      if (other instanceof com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq) {
+        return mergeFrom((com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq other) {
-      if (other == com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq other) {
+      if (other == com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq.getDefaultInstance()) return this;
       if (!other.getOrgId().isEmpty()) {
         orgId_ = other.orgId_;
         bitField0_ |= 0x00000001;
@@ -387,15 +385,14 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object orgId_ = "";
     /**
      * <pre>
-     * DEPRECATED: if org_id was provided use ListQueueConfigsByOrgId rpc instead.
+     * If org_id is left empty, the org_id will be
+     * retreived from the users token.
      * </pre>
      *
-     * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
-     * @deprecated api.v0alpha.ListQueueConfigsReq.org_id is deprecated.
-     *     See api/v0alpha/org.proto;l=5562
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
      * @return The orgId.
      */
-    @java.lang.Deprecated public java.lang.String getOrgId() {
+    public java.lang.String getOrgId() {
       java.lang.Object ref = orgId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
@@ -409,15 +406,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * DEPRECATED: if org_id was provided use ListQueueConfigsByOrgId rpc instead.
+     * If org_id is left empty, the org_id will be
+     * retreived from the users token.
      * </pre>
      *
-     * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
-     * @deprecated api.v0alpha.ListQueueConfigsReq.org_id is deprecated.
-     *     See api/v0alpha/org.proto;l=5562
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
      * @return The bytes for orgId.
      */
-    @java.lang.Deprecated public com.google.protobuf.ByteString
+    public com.google.protobuf.ByteString
         getOrgIdBytes() {
       java.lang.Object ref = orgId_;
       if (ref instanceof String) {
@@ -432,16 +428,15 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * DEPRECATED: if org_id was provided use ListQueueConfigsByOrgId rpc instead.
+     * If org_id is left empty, the org_id will be
+     * retreived from the users token.
      * </pre>
      *
-     * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
-     * @deprecated api.v0alpha.ListQueueConfigsReq.org_id is deprecated.
-     *     See api/v0alpha/org.proto;l=5562
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
      * @param value The orgId to set.
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder setOrgId(
+    public Builder setOrgId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       orgId_ = value;
@@ -451,15 +446,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * DEPRECATED: if org_id was provided use ListQueueConfigsByOrgId rpc instead.
+     * If org_id is left empty, the org_id will be
+     * retreived from the users token.
      * </pre>
      *
-     * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
-     * @deprecated api.v0alpha.ListQueueConfigsReq.org_id is deprecated.
-     *     See api/v0alpha/org.proto;l=5562
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder clearOrgId() {
+    public Builder clearOrgId() {
       orgId_ = getDefaultInstance().getOrgId();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
@@ -467,16 +461,15 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * DEPRECATED: if org_id was provided use ListQueueConfigsByOrgId rpc instead.
+     * If org_id is left empty, the org_id will be
+     * retreived from the users token.
      * </pre>
      *
-     * <code>string org_id = 1 [json_name = "orgId", deprecated = true];</code>
-     * @deprecated api.v0alpha.ListQueueConfigsReq.org_id is deprecated.
-     *     See api/v0alpha/org.proto;l=5562
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
      * @param value The bytes for orgId to set.
      * @return This builder for chaining.
      */
-    @java.lang.Deprecated public Builder setOrgIdBytes(
+    public Builder setOrgIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
@@ -498,23 +491,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:api.v0alpha.ListQueueConfigsReq)
+    // @@protoc_insertion_point(builder_scope:api.v0alpha.ListQueueConfigsByOrgIdReq)
   }
 
-  // @@protoc_insertion_point(class_scope:api.v0alpha.ListQueueConfigsReq)
-  private static final com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:api.v0alpha.ListQueueConfigsByOrgIdReq)
+  private static final com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq();
+    DEFAULT_INSTANCE = new com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq();
   }
 
-  public static com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq getDefaultInstance() {
+  public static com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ListQueueConfigsReq>
-      PARSER = new com.google.protobuf.AbstractParser<ListQueueConfigsReq>() {
+  private static final com.google.protobuf.Parser<ListQueueConfigsByOrgIdReq>
+      PARSER = new com.google.protobuf.AbstractParser<ListQueueConfigsByOrgIdReq>() {
     @java.lang.Override
-    public ListQueueConfigsReq parsePartialFrom(
+    public ListQueueConfigsByOrgIdReq parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -533,17 +526,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<ListQueueConfigsReq> parser() {
+  public static com.google.protobuf.Parser<ListQueueConfigsByOrgIdReq> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<ListQueueConfigsReq> getParserForType() {
+  public com.google.protobuf.Parser<ListQueueConfigsByOrgIdReq> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq getDefaultInstanceForType() {
+  public com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
