@@ -24,6 +24,8 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.LazyStringArrayList.emptyList();
     categoryIds_ = emptyLongList();
     states_ = java.util.Collections.emptyList();
+    evaluationTypes_ = java.util.Collections.emptyList();
+    callTypes_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -218,6 +220,162 @@ private static final long serialVersionUID = 0L;
   }
   private int statesMemoizedSerializedSize;
 
+  public static final int EVALUATION_TYPES_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private java.util.List<java.lang.Integer> evaluationTypes_;
+  private static final com.google.protobuf.Internal.ListAdapter.Converter<
+      java.lang.Integer, com.tcn.cloud.api.api.commons.EvaluationType> evaluationTypes_converter_ =
+          new com.google.protobuf.Internal.ListAdapter.Converter<
+              java.lang.Integer, com.tcn.cloud.api.api.commons.EvaluationType>() {
+            public com.tcn.cloud.api.api.commons.EvaluationType convert(java.lang.Integer from) {
+              com.tcn.cloud.api.api.commons.EvaluationType result = com.tcn.cloud.api.api.commons.EvaluationType.forNumber(from);
+              return result == null ? com.tcn.cloud.api.api.commons.EvaluationType.UNRECOGNIZED : result;
+            }
+          };
+  /**
+   * <pre>
+   * Optional. Results include scorecard with any of the given types
+   * </pre>
+   *
+   * <code>repeated .api.commons.EvaluationType evaluation_types = 5 [json_name = "evaluationTypes"];</code>
+   * @return A list containing the evaluationTypes.
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.EvaluationType> getEvaluationTypesList() {
+    return new com.google.protobuf.Internal.ListAdapter<
+        java.lang.Integer, com.tcn.cloud.api.api.commons.EvaluationType>(evaluationTypes_, evaluationTypes_converter_);
+  }
+  /**
+   * <pre>
+   * Optional. Results include scorecard with any of the given types
+   * </pre>
+   *
+   * <code>repeated .api.commons.EvaluationType evaluation_types = 5 [json_name = "evaluationTypes"];</code>
+   * @return The count of evaluationTypes.
+   */
+  @java.lang.Override
+  public int getEvaluationTypesCount() {
+    return evaluationTypes_.size();
+  }
+  /**
+   * <pre>
+   * Optional. Results include scorecard with any of the given types
+   * </pre>
+   *
+   * <code>repeated .api.commons.EvaluationType evaluation_types = 5 [json_name = "evaluationTypes"];</code>
+   * @param index The index of the element to return.
+   * @return The evaluationTypes at the given index.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.EvaluationType getEvaluationTypes(int index) {
+    return evaluationTypes_converter_.convert(evaluationTypes_.get(index));
+  }
+  /**
+   * <pre>
+   * Optional. Results include scorecard with any of the given types
+   * </pre>
+   *
+   * <code>repeated .api.commons.EvaluationType evaluation_types = 5 [json_name = "evaluationTypes"];</code>
+   * @return A list containing the enum numeric values on the wire for evaluationTypes.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.Integer>
+  getEvaluationTypesValueList() {
+    return evaluationTypes_;
+  }
+  /**
+   * <pre>
+   * Optional. Results include scorecard with any of the given types
+   * </pre>
+   *
+   * <code>repeated .api.commons.EvaluationType evaluation_types = 5 [json_name = "evaluationTypes"];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of evaluationTypes at the given index.
+   */
+  @java.lang.Override
+  public int getEvaluationTypesValue(int index) {
+    return evaluationTypes_.get(index);
+  }
+  private int evaluationTypesMemoizedSerializedSize;
+
+  public static final int CALL_TYPES_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
+  private java.util.List<java.lang.Integer> callTypes_;
+  private static final com.google.protobuf.Internal.ListAdapter.Converter<
+      java.lang.Integer, com.tcn.cloud.api.api.commons.CallType.Enum> callTypes_converter_ =
+          new com.google.protobuf.Internal.ListAdapter.Converter<
+              java.lang.Integer, com.tcn.cloud.api.api.commons.CallType.Enum>() {
+            public com.tcn.cloud.api.api.commons.CallType.Enum convert(java.lang.Integer from) {
+              com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.forNumber(from);
+              return result == null ? com.tcn.cloud.api.api.commons.CallType.Enum.UNRECOGNIZED : result;
+            }
+          };
+  /**
+   * <pre>
+   * Optional. Results include scorecard with any of the given call types.
+   * </pre>
+   *
+   * <code>repeated .api.commons.CallType.Enum call_types = 6 [json_name = "callTypes"];</code>
+   * @return A list containing the callTypes.
+   */
+  @java.lang.Override
+  public java.util.List<com.tcn.cloud.api.api.commons.CallType.Enum> getCallTypesList() {
+    return new com.google.protobuf.Internal.ListAdapter<
+        java.lang.Integer, com.tcn.cloud.api.api.commons.CallType.Enum>(callTypes_, callTypes_converter_);
+  }
+  /**
+   * <pre>
+   * Optional. Results include scorecard with any of the given call types.
+   * </pre>
+   *
+   * <code>repeated .api.commons.CallType.Enum call_types = 6 [json_name = "callTypes"];</code>
+   * @return The count of callTypes.
+   */
+  @java.lang.Override
+  public int getCallTypesCount() {
+    return callTypes_.size();
+  }
+  /**
+   * <pre>
+   * Optional. Results include scorecard with any of the given call types.
+   * </pre>
+   *
+   * <code>repeated .api.commons.CallType.Enum call_types = 6 [json_name = "callTypes"];</code>
+   * @param index The index of the element to return.
+   * @return The callTypes at the given index.
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.commons.CallType.Enum getCallTypes(int index) {
+    return callTypes_converter_.convert(callTypes_.get(index));
+  }
+  /**
+   * <pre>
+   * Optional. Results include scorecard with any of the given call types.
+   * </pre>
+   *
+   * <code>repeated .api.commons.CallType.Enum call_types = 6 [json_name = "callTypes"];</code>
+   * @return A list containing the enum numeric values on the wire for callTypes.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.Integer>
+  getCallTypesValueList() {
+    return callTypes_;
+  }
+  /**
+   * <pre>
+   * Optional. Results include scorecard with any of the given call types.
+   * </pre>
+   *
+   * <code>repeated .api.commons.CallType.Enum call_types = 6 [json_name = "callTypes"];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of callTypes at the given index.
+   */
+  @java.lang.Override
+  public int getCallTypesValue(int index) {
+    return callTypes_.get(index);
+  }
+  private int callTypesMemoizedSerializedSize;
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -249,6 +407,20 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < states_.size(); i++) {
       output.writeEnumNoTag(states_.get(i));
+    }
+    if (getEvaluationTypesList().size() > 0) {
+      output.writeUInt32NoTag(42);
+      output.writeUInt32NoTag(evaluationTypesMemoizedSerializedSize);
+    }
+    for (int i = 0; i < evaluationTypes_.size(); i++) {
+      output.writeEnumNoTag(evaluationTypes_.get(i));
+    }
+    if (getCallTypesList().size() > 0) {
+      output.writeUInt32NoTag(50);
+      output.writeUInt32NoTag(callTypesMemoizedSerializedSize);
+    }
+    for (int i = 0; i < callTypes_.size(); i++) {
+      output.writeEnumNoTag(callTypes_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -293,6 +465,30 @@ private static final long serialVersionUID = 0L;
           .computeUInt32SizeNoTag(dataSize);
       }statesMemoizedSerializedSize = dataSize;
     }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < evaluationTypes_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeEnumSizeNoTag(evaluationTypes_.get(i));
+      }
+      size += dataSize;
+      if (!getEvaluationTypesList().isEmpty()) {  size += 1;
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32SizeNoTag(dataSize);
+      }evaluationTypesMemoizedSerializedSize = dataSize;
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < callTypes_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeEnumSizeNoTag(callTypes_.get(i));
+      }
+      size += dataSize;
+      if (!getCallTypesList().isEmpty()) {  size += 1;
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32SizeNoTag(dataSize);
+      }callTypesMemoizedSerializedSize = dataSize;
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -313,6 +509,8 @@ private static final long serialVersionUID = 0L;
     if (!getCategoryIdsList()
         .equals(other.getCategoryIdsList())) return false;
     if (!states_.equals(other.states_)) return false;
+    if (!evaluationTypes_.equals(other.evaluationTypes_)) return false;
+    if (!callTypes_.equals(other.callTypes_)) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -335,6 +533,14 @@ private static final long serialVersionUID = 0L;
     if (getStatesCount() > 0) {
       hash = (37 * hash) + STATES_FIELD_NUMBER;
       hash = (53 * hash) + states_.hashCode();
+    }
+    if (getEvaluationTypesCount() > 0) {
+      hash = (37 * hash) + EVALUATION_TYPES_FIELD_NUMBER;
+      hash = (53 * hash) + evaluationTypes_.hashCode();
+    }
+    if (getCallTypesCount() > 0) {
+      hash = (37 * hash) + CALL_TYPES_FIELD_NUMBER;
+      hash = (53 * hash) + callTypes_.hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -476,6 +682,10 @@ private static final long serialVersionUID = 0L;
       categoryIds_ = emptyLongList();
       states_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000004);
+      evaluationTypes_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      callTypes_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000010);
       return this;
     }
 
@@ -519,6 +729,16 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000004);
       }
       result.states_ = states_;
+      if (((bitField0_ & 0x00000008) != 0)) {
+        evaluationTypes_ = java.util.Collections.unmodifiableList(evaluationTypes_);
+        bitField0_ = (bitField0_ & ~0x00000008);
+      }
+      result.evaluationTypes_ = evaluationTypes_;
+      if (((bitField0_ & 0x00000010) != 0)) {
+        callTypes_ = java.util.Collections.unmodifiableList(callTypes_);
+        bitField0_ = (bitField0_ & ~0x00000010);
+      }
+      result.callTypes_ = callTypes_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsRequest result) {
@@ -568,6 +788,26 @@ private static final long serialVersionUID = 0L;
         } else {
           ensureStatesIsMutable();
           states_.addAll(other.states_);
+        }
+        onChanged();
+      }
+      if (!other.evaluationTypes_.isEmpty()) {
+        if (evaluationTypes_.isEmpty()) {
+          evaluationTypes_ = other.evaluationTypes_;
+          bitField0_ = (bitField0_ & ~0x00000008);
+        } else {
+          ensureEvaluationTypesIsMutable();
+          evaluationTypes_.addAll(other.evaluationTypes_);
+        }
+        onChanged();
+      }
+      if (!other.callTypes_.isEmpty()) {
+        if (callTypes_.isEmpty()) {
+          callTypes_ = other.callTypes_;
+          bitField0_ = (bitField0_ & ~0x00000010);
+        } else {
+          ensureCallTypesIsMutable();
+          callTypes_.addAll(other.callTypes_);
         }
         onChanged();
       }
@@ -636,6 +876,40 @@ private static final long serialVersionUID = 0L;
               input.popLimit(oldLimit);
               break;
             } // case 34
+            case 40: {
+              int tmpRaw = input.readEnum();
+              ensureEvaluationTypesIsMutable();
+              evaluationTypes_.add(tmpRaw);
+              break;
+            } // case 40
+            case 42: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int tmpRaw = input.readEnum();
+                ensureEvaluationTypesIsMutable();
+                evaluationTypes_.add(tmpRaw);
+              }
+              input.popLimit(oldLimit);
+              break;
+            } // case 42
+            case 48: {
+              int tmpRaw = input.readEnum();
+              ensureCallTypesIsMutable();
+              callTypes_.add(tmpRaw);
+              break;
+            } // case 48
+            case 50: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int tmpRaw = input.readEnum();
+                ensureCallTypesIsMutable();
+                callTypes_.add(tmpRaw);
+              }
+              input.popLimit(oldLimit);
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1092,6 +1366,382 @@ private static final long serialVersionUID = 0L;
       ensureStatesIsMutable();
       for (int value : values) {
         states_.add(value);
+      }
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<java.lang.Integer> evaluationTypes_ =
+      java.util.Collections.emptyList();
+    private void ensureEvaluationTypesIsMutable() {
+      if (!((bitField0_ & 0x00000008) != 0)) {
+        evaluationTypes_ = new java.util.ArrayList<java.lang.Integer>(evaluationTypes_);
+        bitField0_ |= 0x00000008;
+      }
+    }
+    /**
+     * <pre>
+     * Optional. Results include scorecard with any of the given types
+     * </pre>
+     *
+     * <code>repeated .api.commons.EvaluationType evaluation_types = 5 [json_name = "evaluationTypes"];</code>
+     * @return A list containing the evaluationTypes.
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.EvaluationType> getEvaluationTypesList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.tcn.cloud.api.api.commons.EvaluationType>(evaluationTypes_, evaluationTypes_converter_);
+    }
+    /**
+     * <pre>
+     * Optional. Results include scorecard with any of the given types
+     * </pre>
+     *
+     * <code>repeated .api.commons.EvaluationType evaluation_types = 5 [json_name = "evaluationTypes"];</code>
+     * @return The count of evaluationTypes.
+     */
+    public int getEvaluationTypesCount() {
+      return evaluationTypes_.size();
+    }
+    /**
+     * <pre>
+     * Optional. Results include scorecard with any of the given types
+     * </pre>
+     *
+     * <code>repeated .api.commons.EvaluationType evaluation_types = 5 [json_name = "evaluationTypes"];</code>
+     * @param index The index of the element to return.
+     * @return The evaluationTypes at the given index.
+     */
+    public com.tcn.cloud.api.api.commons.EvaluationType getEvaluationTypes(int index) {
+      return evaluationTypes_converter_.convert(evaluationTypes_.get(index));
+    }
+    /**
+     * <pre>
+     * Optional. Results include scorecard with any of the given types
+     * </pre>
+     *
+     * <code>repeated .api.commons.EvaluationType evaluation_types = 5 [json_name = "evaluationTypes"];</code>
+     * @param index The index to set the value at.
+     * @param value The evaluationTypes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEvaluationTypes(
+        int index, com.tcn.cloud.api.api.commons.EvaluationType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureEvaluationTypesIsMutable();
+      evaluationTypes_.set(index, value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Results include scorecard with any of the given types
+     * </pre>
+     *
+     * <code>repeated .api.commons.EvaluationType evaluation_types = 5 [json_name = "evaluationTypes"];</code>
+     * @param value The evaluationTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addEvaluationTypes(com.tcn.cloud.api.api.commons.EvaluationType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureEvaluationTypesIsMutable();
+      evaluationTypes_.add(value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Results include scorecard with any of the given types
+     * </pre>
+     *
+     * <code>repeated .api.commons.EvaluationType evaluation_types = 5 [json_name = "evaluationTypes"];</code>
+     * @param values The evaluationTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllEvaluationTypes(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.EvaluationType> values) {
+      ensureEvaluationTypesIsMutable();
+      for (com.tcn.cloud.api.api.commons.EvaluationType value : values) {
+        evaluationTypes_.add(value.getNumber());
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Results include scorecard with any of the given types
+     * </pre>
+     *
+     * <code>repeated .api.commons.EvaluationType evaluation_types = 5 [json_name = "evaluationTypes"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearEvaluationTypes() {
+      evaluationTypes_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Results include scorecard with any of the given types
+     * </pre>
+     *
+     * <code>repeated .api.commons.EvaluationType evaluation_types = 5 [json_name = "evaluationTypes"];</code>
+     * @return A list containing the enum numeric values on the wire for evaluationTypes.
+     */
+    public java.util.List<java.lang.Integer>
+    getEvaluationTypesValueList() {
+      return java.util.Collections.unmodifiableList(evaluationTypes_);
+    }
+    /**
+     * <pre>
+     * Optional. Results include scorecard with any of the given types
+     * </pre>
+     *
+     * <code>repeated .api.commons.EvaluationType evaluation_types = 5 [json_name = "evaluationTypes"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of evaluationTypes at the given index.
+     */
+    public int getEvaluationTypesValue(int index) {
+      return evaluationTypes_.get(index);
+    }
+    /**
+     * <pre>
+     * Optional. Results include scorecard with any of the given types
+     * </pre>
+     *
+     * <code>repeated .api.commons.EvaluationType evaluation_types = 5 [json_name = "evaluationTypes"];</code>
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for evaluationTypes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEvaluationTypesValue(
+        int index, int value) {
+      ensureEvaluationTypesIsMutable();
+      evaluationTypes_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Results include scorecard with any of the given types
+     * </pre>
+     *
+     * <code>repeated .api.commons.EvaluationType evaluation_types = 5 [json_name = "evaluationTypes"];</code>
+     * @param value The enum numeric value on the wire for evaluationTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addEvaluationTypesValue(int value) {
+      ensureEvaluationTypesIsMutable();
+      evaluationTypes_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Results include scorecard with any of the given types
+     * </pre>
+     *
+     * <code>repeated .api.commons.EvaluationType evaluation_types = 5 [json_name = "evaluationTypes"];</code>
+     * @param values The enum numeric values on the wire for evaluationTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllEvaluationTypesValue(
+        java.lang.Iterable<java.lang.Integer> values) {
+      ensureEvaluationTypesIsMutable();
+      for (int value : values) {
+        evaluationTypes_.add(value);
+      }
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<java.lang.Integer> callTypes_ =
+      java.util.Collections.emptyList();
+    private void ensureCallTypesIsMutable() {
+      if (!((bitField0_ & 0x00000010) != 0)) {
+        callTypes_ = new java.util.ArrayList<java.lang.Integer>(callTypes_);
+        bitField0_ |= 0x00000010;
+      }
+    }
+    /**
+     * <pre>
+     * Optional. Results include scorecard with any of the given call types.
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallType.Enum call_types = 6 [json_name = "callTypes"];</code>
+     * @return A list containing the callTypes.
+     */
+    public java.util.List<com.tcn.cloud.api.api.commons.CallType.Enum> getCallTypesList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.tcn.cloud.api.api.commons.CallType.Enum>(callTypes_, callTypes_converter_);
+    }
+    /**
+     * <pre>
+     * Optional. Results include scorecard with any of the given call types.
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallType.Enum call_types = 6 [json_name = "callTypes"];</code>
+     * @return The count of callTypes.
+     */
+    public int getCallTypesCount() {
+      return callTypes_.size();
+    }
+    /**
+     * <pre>
+     * Optional. Results include scorecard with any of the given call types.
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallType.Enum call_types = 6 [json_name = "callTypes"];</code>
+     * @param index The index of the element to return.
+     * @return The callTypes at the given index.
+     */
+    public com.tcn.cloud.api.api.commons.CallType.Enum getCallTypes(int index) {
+      return callTypes_converter_.convert(callTypes_.get(index));
+    }
+    /**
+     * <pre>
+     * Optional. Results include scorecard with any of the given call types.
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallType.Enum call_types = 6 [json_name = "callTypes"];</code>
+     * @param index The index to set the value at.
+     * @param value The callTypes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCallTypes(
+        int index, com.tcn.cloud.api.api.commons.CallType.Enum value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureCallTypesIsMutable();
+      callTypes_.set(index, value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Results include scorecard with any of the given call types.
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallType.Enum call_types = 6 [json_name = "callTypes"];</code>
+     * @param value The callTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addCallTypes(com.tcn.cloud.api.api.commons.CallType.Enum value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensureCallTypesIsMutable();
+      callTypes_.add(value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Results include scorecard with any of the given call types.
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallType.Enum call_types = 6 [json_name = "callTypes"];</code>
+     * @param values The callTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllCallTypes(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.CallType.Enum> values) {
+      ensureCallTypesIsMutable();
+      for (com.tcn.cloud.api.api.commons.CallType.Enum value : values) {
+        callTypes_.add(value.getNumber());
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Results include scorecard with any of the given call types.
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallType.Enum call_types = 6 [json_name = "callTypes"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCallTypes() {
+      callTypes_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Results include scorecard with any of the given call types.
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallType.Enum call_types = 6 [json_name = "callTypes"];</code>
+     * @return A list containing the enum numeric values on the wire for callTypes.
+     */
+    public java.util.List<java.lang.Integer>
+    getCallTypesValueList() {
+      return java.util.Collections.unmodifiableList(callTypes_);
+    }
+    /**
+     * <pre>
+     * Optional. Results include scorecard with any of the given call types.
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallType.Enum call_types = 6 [json_name = "callTypes"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of callTypes at the given index.
+     */
+    public int getCallTypesValue(int index) {
+      return callTypes_.get(index);
+    }
+    /**
+     * <pre>
+     * Optional. Results include scorecard with any of the given call types.
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallType.Enum call_types = 6 [json_name = "callTypes"];</code>
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for callTypes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCallTypesValue(
+        int index, int value) {
+      ensureCallTypesIsMutable();
+      callTypes_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Results include scorecard with any of the given call types.
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallType.Enum call_types = 6 [json_name = "callTypes"];</code>
+     * @param value The enum numeric value on the wire for callTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addCallTypesValue(int value) {
+      ensureCallTypesIsMutable();
+      callTypes_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Results include scorecard with any of the given call types.
+     * </pre>
+     *
+     * <code>repeated .api.commons.CallType.Enum call_types = 6 [json_name = "callTypes"];</code>
+     * @param values The enum numeric values on the wire for callTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllCallTypesValue(
+        java.lang.Iterable<java.lang.Integer> values) {
+      ensureCallTypesIsMutable();
+      for (int value : values) {
+        callTypes_.add(value);
       }
       onChanged();
       return this;
