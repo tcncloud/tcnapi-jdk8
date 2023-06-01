@@ -27,35 +27,33 @@ public final class ServiceProto {
       "\027api.v1alpha1.soundboard\032\027annotations/au" +
       "thz.proto\032&api/v1alpha1/soundboard/entit" +
       "ies.proto\032\034google/api/annotations.proto2" +
-      "\272\007\n\nSoundboard\022\277\001\n\021GetSoundboardFile\022-.a" +
+      "\344\006\n\nSoundboard\022\256\001\n\021GetSoundboardFile\022-.a" +
       "pi.v1alpha1.soundboard.GetSoundboardFile" +
       "Req\032-.api.v1alpha1.soundboard.GetSoundbo" +
-      "ardFileRes\"J\272\270\221\002\005\n\003\010\244\r\202\323\344\223\002:\"5/api/v1alp" +
-      "ha1/soundboard/soundboard/getsoundboardf" +
-      "ile:\001*0\001\022\271\001\n\020CreateSoundboard\022,.api.v1al" +
-      "pha1.soundboard.CreateSoundboardReq\032,.ap" +
-      "i.v1alpha1.soundboard.CreateSoundboardRe" +
-      "s\"I\272\270\221\002\005\n\003\010\245\r\202\323\344\223\0029\"4/api/v1alpha1/sound" +
-      "board/soundboard/createsoundboard:\001*\022\265\001\n" +
-      "\017ListSoundboards\022+.api.v1alpha1.soundboa" +
-      "rd.ListSoundboardsReq\032+.api.v1alpha1.sou" +
-      "ndboard.ListSoundboardsRes\"H\272\270\221\002\005\n\003\010\244\r\202\323" +
-      "\344\223\0028\"3/api/v1alpha1/soundboard/soundboar" +
-      "d/listsoundboards:\001*\022\271\001\n\020UpdateSoundboar" +
-      "d\022,.api.v1alpha1.soundboard.UpdateSoundb" +
-      "oardReq\032,.api.v1alpha1.soundboard.Update" +
-      "SoundboardRes\"I\272\270\221\002\005\n\003\010\245\r\202\323\344\223\0029\"4/api/v1" +
-      "alpha1/soundboard/soundboard/updatesound" +
-      "board:\001*\022\271\001\n\020DeleteSoundboard\022,.api.v1al" +
-      "pha1.soundboard.DeleteSoundboardReq\032,.ap" +
-      "i.v1alpha1.soundboard.DeleteSoundboardRe" +
-      "s\"I\272\270\221\002\005\n\003\010\245\r\202\323\344\223\0029\"4/api/v1alpha1/sound" +
-      "board/soundboard/deletesoundboard:\001*B\267\001\n" +
-      ")com.tcn.cloud.api.api.v1alpha1.soundboa" +
-      "rdB\014ServiceProtoP\001\242\002\003AVS\252\002\027Api.V1alpha1." +
-      "Soundboard\312\002\027Api\\V1alpha1\\Soundboard\342\002#A" +
-      "pi\\V1alpha1\\Soundboard\\GPBMetadata\352\002\031Api" +
-      "::V1alpha1::Soundboardb\006proto3"
+      "ardFileRes\"9\272\270\221\002\005\n\003\010\244\r\202\323\344\223\002)\"$/api/v1alp" +
+      "ha1/org/soundboard/getfile:\001*0\001\022\250\001\n\020Crea" +
+      "teSoundboard\022,.api.v1alpha1.soundboard.C" +
+      "reateSoundboardReq\032,.api.v1alpha1.soundb" +
+      "oard.CreateSoundboardRes\"8\272\270\221\002\005\n\003\010\245\r\202\323\344\223" +
+      "\002(\"#/api/v1alpha1/org/soundboard/create:" +
+      "\001*\022\243\001\n\017ListSoundboards\022+.api.v1alpha1.so" +
+      "undboard.ListSoundboardsReq\032+.api.v1alph" +
+      "a1.soundboard.ListSoundboardsRes\"6\272\270\221\002\005\n" +
+      "\003\010\244\r\202\323\344\223\002&\"!/api/v1alpha1/org/soundboard" +
+      "/list:\001*\022\250\001\n\020UpdateSoundboard\022,.api.v1al" +
+      "pha1.soundboard.UpdateSoundboardReq\032,.ap" +
+      "i.v1alpha1.soundboard.UpdateSoundboardRe" +
+      "s\"8\272\270\221\002\005\n\003\010\245\r\202\323\344\223\002(\"#/api/v1alpha1/org/s" +
+      "oundboard/update:\001*\022\250\001\n\020DeleteSoundboard" +
+      "\022,.api.v1alpha1.soundboard.DeleteSoundbo" +
+      "ardReq\032,.api.v1alpha1.soundboard.DeleteS" +
+      "oundboardRes\"8\272\270\221\002\005\n\003\010\245\r\202\323\344\223\002(\"#/api/v1a" +
+      "lpha1/org/soundboard/delete:\001*B\267\001\n)com.t" +
+      "cn.cloud.api.api.v1alpha1.soundboardB\014Se" +
+      "rviceProtoP\001\242\002\003AVS\252\002\027Api.V1alpha1.Soundb" +
+      "oard\312\002\027Api\\V1alpha1\\Soundboard\342\002#Api\\V1a" +
+      "lpha1\\Soundboard\\GPBMetadata\352\002\031Api::V1al" +
+      "pha1::Soundboardb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
