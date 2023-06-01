@@ -128,6 +128,32 @@ private static final long serialVersionUID = 0L;
     return expirationDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expirationDate_;
   }
 
+  public static final int NOTES_FIELD_NUMBER = 3;
+  private com.google.protobuf.StringValue notes_;
+  /**
+   * <code>.google.protobuf.StringValue notes = 3 [json_name = "notes"];</code>
+   * @return Whether the notes field is set.
+   */
+  @java.lang.Override
+  public boolean hasNotes() {
+    return notes_ != null;
+  }
+  /**
+   * <code>.google.protobuf.StringValue notes = 3 [json_name = "notes"];</code>
+   * @return The notes.
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValue getNotes() {
+    return notes_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : notes_;
+  }
+  /**
+   * <code>.google.protobuf.StringValue notes = 3 [json_name = "notes"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValueOrBuilder getNotesOrBuilder() {
+    return notes_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : notes_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -148,6 +174,9 @@ private static final long serialVersionUID = 0L;
     if (expirationDate_ != null) {
       output.writeMessage(2, getExpirationDate());
     }
+    if (notes_ != null) {
+      output.writeMessage(3, getNotes());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -163,6 +192,10 @@ private static final long serialVersionUID = 0L;
     if (expirationDate_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getExpirationDate());
+    }
+    if (notes_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, getNotes());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -186,6 +219,11 @@ private static final long serialVersionUID = 0L;
       if (!getExpirationDate()
           .equals(other.getExpirationDate())) return false;
     }
+    if (hasNotes() != other.hasNotes()) return false;
+    if (hasNotes()) {
+      if (!getNotes()
+          .equals(other.getNotes())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -202,6 +240,10 @@ private static final long serialVersionUID = 0L;
     if (hasExpirationDate()) {
       hash = (37 * hash) + EXPIRATION_DATE_FIELD_NUMBER;
       hash = (53 * hash) + getExpirationDate().hashCode();
+    }
+    if (hasNotes()) {
+      hash = (37 * hash) + NOTES_FIELD_NUMBER;
+      hash = (53 * hash) + getNotes().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -344,6 +386,11 @@ private static final long serialVersionUID = 0L;
         expirationDateBuilder_.dispose();
         expirationDateBuilder_ = null;
       }
+      notes_ = null;
+      if (notesBuilder_ != null) {
+        notesBuilder_.dispose();
+        notesBuilder_ = null;
+      }
       return this;
     }
 
@@ -385,6 +432,11 @@ private static final long serialVersionUID = 0L;
             ? expirationDate_
             : expirationDateBuilder_.build();
       }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.notes_ = notesBuilder_ == null
+            ? notes_
+            : notesBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -406,6 +458,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasExpirationDate()) {
         mergeExpirationDate(other.getExpirationDate());
+      }
+      if (other.hasNotes()) {
+        mergeNotes(other.getNotes());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -445,6 +500,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 26: {
+              input.readMessage(
+                  getNotesFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -707,6 +769,125 @@ private static final long serialVersionUID = 0L;
         expirationDate_ = null;
       }
       return expirationDateBuilder_;
+    }
+
+    private com.google.protobuf.StringValue notes_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> notesBuilder_;
+    /**
+     * <code>.google.protobuf.StringValue notes = 3 [json_name = "notes"];</code>
+     * @return Whether the notes field is set.
+     */
+    public boolean hasNotes() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>.google.protobuf.StringValue notes = 3 [json_name = "notes"];</code>
+     * @return The notes.
+     */
+    public com.google.protobuf.StringValue getNotes() {
+      if (notesBuilder_ == null) {
+        return notes_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : notes_;
+      } else {
+        return notesBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.google.protobuf.StringValue notes = 3 [json_name = "notes"];</code>
+     */
+    public Builder setNotes(com.google.protobuf.StringValue value) {
+      if (notesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        notes_ = value;
+      } else {
+        notesBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue notes = 3 [json_name = "notes"];</code>
+     */
+    public Builder setNotes(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (notesBuilder_ == null) {
+        notes_ = builderForValue.build();
+      } else {
+        notesBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue notes = 3 [json_name = "notes"];</code>
+     */
+    public Builder mergeNotes(com.google.protobuf.StringValue value) {
+      if (notesBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+          notes_ != null &&
+          notes_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+          getNotesBuilder().mergeFrom(value);
+        } else {
+          notes_ = value;
+        }
+      } else {
+        notesBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue notes = 3 [json_name = "notes"];</code>
+     */
+    public Builder clearNotes() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      notes_ = null;
+      if (notesBuilder_ != null) {
+        notesBuilder_.dispose();
+        notesBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue notes = 3 [json_name = "notes"];</code>
+     */
+    public com.google.protobuf.StringValue.Builder getNotesBuilder() {
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return getNotesFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.google.protobuf.StringValue notes = 3 [json_name = "notes"];</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getNotesOrBuilder() {
+      if (notesBuilder_ != null) {
+        return notesBuilder_.getMessageOrBuilder();
+      } else {
+        return notes_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : notes_;
+      }
+    }
+    /**
+     * <code>.google.protobuf.StringValue notes = 3 [json_name = "notes"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getNotesFieldBuilder() {
+      if (notesBuilder_ == null) {
+        notesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getNotes(),
+                getParentForChildren(),
+                isClean());
+        notes_ = null;
+      }
+      return notesBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

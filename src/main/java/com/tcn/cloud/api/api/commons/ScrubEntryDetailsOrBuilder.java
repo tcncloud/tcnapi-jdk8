@@ -53,4 +53,19 @@ public interface ScrubEntryDetailsOrBuilder extends
    * <code>.google.protobuf.Timestamp expiration_date = 2 [json_name = "expirationDate"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getExpirationDateOrBuilder();
+
+  /**
+   * <code>.google.protobuf.StringValue notes = 3 [json_name = "notes"];</code>
+   * @return Whether the notes field is set.
+   */
+  boolean hasNotes();
+  /**
+   * <code>.google.protobuf.StringValue notes = 3 [json_name = "notes"];</code>
+   * @return The notes.
+   */
+  com.google.protobuf.StringValue getNotes();
+  /**
+   * <code>.google.protobuf.StringValue notes = 3 [json_name = "notes"];</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getNotesOrBuilder();
 }
