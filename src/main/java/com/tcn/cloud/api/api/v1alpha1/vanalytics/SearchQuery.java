@@ -489,6 +489,38 @@ private static final long serialVersionUID = 0L;
       }
 
       @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.AgentCallLog) {
           return mergeFrom((com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.AgentCallLog)other);
@@ -1363,6 +1395,38 @@ private static final long serialVersionUID = 0L;
       }
 
       @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.CallEnded) {
           return mergeFrom((com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.CallEnded)other);
@@ -2195,6 +2259,38 @@ private static final long serialVersionUID = 0L;
         }
       }
 
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.CallSkillsInitial) {
@@ -3311,6 +3407,38 @@ private static final long serialVersionUID = 0L;
           }
         }
 
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
           if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.AgentResponse.Values) {
@@ -4619,6 +4747,38 @@ private static final long serialVersionUID = 0L;
           }
         }
 
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
           if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.AgentResponse.Numbers) {
@@ -6243,6 +6403,38 @@ private static final long serialVersionUID = 0L;
         }
 
         @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
           if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.AgentResponse.Key) {
             return mergeFrom((com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.AgentResponse.Key)other);
@@ -7141,6 +7333,38 @@ private static final long serialVersionUID = 0L;
         }
       }
 
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.AgentResponse) {
@@ -8134,6 +8358,38 @@ private static final long serialVersionUID = 0L;
         }
 
         @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
           if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Results.Channel) {
             return mergeFrom((com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Results.Channel)other);
@@ -8719,6 +8975,38 @@ private static final long serialVersionUID = 0L;
           }
         }
 
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
           if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Results.AgentUserName) {
@@ -9662,6 +9950,38 @@ private static final long serialVersionUID = 0L;
               }
 
               @java.lang.Override
+              public Builder clone() {
+                return super.clone();
+              }
+              @java.lang.Override
+              public Builder setField(
+                  com.google.protobuf.Descriptors.FieldDescriptor field,
+                  java.lang.Object value) {
+                return super.setField(field, value);
+              }
+              @java.lang.Override
+              public Builder clearField(
+                  com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return super.clearField(field);
+              }
+              @java.lang.Override
+              public Builder clearOneof(
+                  com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return super.clearOneof(oneof);
+              }
+              @java.lang.Override
+              public Builder setRepeatedField(
+                  com.google.protobuf.Descriptors.FieldDescriptor field,
+                  int index, java.lang.Object value) {
+                return super.setRepeatedField(field, index, value);
+              }
+              @java.lang.Override
+              public Builder addRepeatedField(
+                  com.google.protobuf.Descriptors.FieldDescriptor field,
+                  java.lang.Object value) {
+                return super.addRepeatedField(field, value);
+              }
+              @java.lang.Override
               public Builder mergeFrom(com.google.protobuf.Message other) {
                 if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Results.Segments.Text.Phrase.Word) {
                   return mergeFrom((com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Results.Segments.Text.Phrase.Word)other);
@@ -10285,6 +10605,38 @@ private static final long serialVersionUID = 0L;
               }
             }
 
+            @java.lang.Override
+            public Builder clone() {
+              return super.clone();
+            }
+            @java.lang.Override
+            public Builder setField(
+                com.google.protobuf.Descriptors.FieldDescriptor field,
+                java.lang.Object value) {
+              return super.setField(field, value);
+            }
+            @java.lang.Override
+            public Builder clearField(
+                com.google.protobuf.Descriptors.FieldDescriptor field) {
+              return super.clearField(field);
+            }
+            @java.lang.Override
+            public Builder clearOneof(
+                com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+              return super.clearOneof(oneof);
+            }
+            @java.lang.Override
+            public Builder setRepeatedField(
+                com.google.protobuf.Descriptors.FieldDescriptor field,
+                int index, java.lang.Object value) {
+              return super.setRepeatedField(field, index, value);
+            }
+            @java.lang.Override
+            public Builder addRepeatedField(
+                com.google.protobuf.Descriptors.FieldDescriptor field,
+                java.lang.Object value) {
+              return super.addRepeatedField(field, value);
+            }
             @java.lang.Override
             public Builder mergeFrom(com.google.protobuf.Message other) {
               if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Results.Segments.Text.Phrase) {
@@ -11030,6 +11382,38 @@ private static final long serialVersionUID = 0L;
           }
 
           @java.lang.Override
+          public Builder clone() {
+            return super.clone();
+          }
+          @java.lang.Override
+          public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.setField(field, value);
+          }
+          @java.lang.Override
+          public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+            return super.clearField(field);
+          }
+          @java.lang.Override
+          public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            return super.clearOneof(oneof);
+          }
+          @java.lang.Override
+          public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+            return super.setRepeatedField(field, index, value);
+          }
+          @java.lang.Override
+          public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.addRepeatedField(field, value);
+          }
+          @java.lang.Override
           public Builder mergeFrom(com.google.protobuf.Message other) {
             if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Results.Segments.Text) {
               return mergeFrom((com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Results.Segments.Text)other);
@@ -11543,6 +11927,38 @@ private static final long serialVersionUID = 0L;
           }
         }
 
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
           if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Results.Segments) {
@@ -12161,6 +12577,38 @@ private static final long serialVersionUID = 0L;
         }
       }
 
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.Results) {
@@ -13032,6 +13480,38 @@ private static final long serialVersionUID = 0L;
       }
 
       @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.DeleteTime) {
           return mergeFrom((com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.DeleteTime)other);
@@ -13794,6 +14274,38 @@ private static final long serialVersionUID = 0L;
         }
       }
 
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.TranscriptSid) {
@@ -14838,6 +15350,38 @@ private static final long serialVersionUID = 0L;
         }
       }
 
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.AudioTime) {
@@ -16212,6 +16756,38 @@ private static final long serialVersionUID = 0L;
           }
 
           @java.lang.Override
+          public Builder clone() {
+            return super.clone();
+          }
+          @java.lang.Override
+          public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.setField(field, value);
+          }
+          @java.lang.Override
+          public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+            return super.clearField(field);
+          }
+          @java.lang.Override
+          public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            return super.clearOneof(oneof);
+          }
+          @java.lang.Override
+          public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+            return super.setRepeatedField(field, index, value);
+          }
+          @java.lang.Override
+          public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.addRepeatedField(field, value);
+          }
+          @java.lang.Override
           public Builder mergeFrom(com.google.protobuf.Message other) {
             if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.FlagSummary.NeedReview.FlagSids) {
               return mergeFrom((com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.FlagSummary.NeedReview.FlagSids)other);
@@ -16750,6 +17326,38 @@ private static final long serialVersionUID = 0L;
           }
         }
 
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
           if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.FlagSummary.NeedReview) {
@@ -17468,6 +18076,38 @@ private static final long serialVersionUID = 0L;
           int from_bitField0_ = bitField0_;
         }
 
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
           if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.FlagSummary.ReviewStatus) {
@@ -18347,6 +18987,38 @@ private static final long serialVersionUID = 0L;
           }
 
           @java.lang.Override
+          public Builder clone() {
+            return super.clone();
+          }
+          @java.lang.Override
+          public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.setField(field, value);
+          }
+          @java.lang.Override
+          public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+            return super.clearField(field);
+          }
+          @java.lang.Override
+          public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            return super.clearOneof(oneof);
+          }
+          @java.lang.Override
+          public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+            return super.setRepeatedField(field, index, value);
+          }
+          @java.lang.Override
+          public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.addRepeatedField(field, value);
+          }
+          @java.lang.Override
           public Builder mergeFrom(com.google.protobuf.Message other) {
             if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.FlagSummary.Flags.FlagSid) {
               return mergeFrom((com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.FlagSummary.Flags.FlagSid)other);
@@ -19017,6 +19689,38 @@ private static final long serialVersionUID = 0L;
           }
         }
 
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
           if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.FlagSummary.Flags) {
@@ -20017,6 +20721,38 @@ private static final long serialVersionUID = 0L;
           }
         }
 
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
           if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.FlagSummary.Count) {
@@ -21435,6 +22171,38 @@ private static final long serialVersionUID = 0L;
         }
       }
 
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery.FlagSummary) {
@@ -23116,6 +23884,38 @@ private static final long serialVersionUID = 0L;
       }
     }
 
+    @java.lang.Override
+    public Builder clone() {
+      return super.clone();
+    }
+    @java.lang.Override
+    public Builder setField(
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
+      return super.setField(field, value);
+    }
+    @java.lang.Override
+    public Builder clearField(
+        com.google.protobuf.Descriptors.FieldDescriptor field) {
+      return super.clearField(field);
+    }
+    @java.lang.Override
+    public Builder clearOneof(
+        com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+      return super.clearOneof(oneof);
+    }
+    @java.lang.Override
+    public Builder setRepeatedField(
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        int index, java.lang.Object value) {
+      return super.setRepeatedField(field, index, value);
+    }
+    @java.lang.Override
+    public Builder addRepeatedField(
+        com.google.protobuf.Descriptors.FieldDescriptor field,
+        java.lang.Object value) {
+      return super.addRepeatedField(field, value);
+    }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
       if (other instanceof com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchQuery) {
