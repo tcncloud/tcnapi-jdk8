@@ -74,41 +74,46 @@ public final class ScorecardProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\'api/v1alpha1/scorecards/scorecard.prot" +
-      "o\022\027api.v1alpha1.scorecards\032\034api/commons/" +
-      "scorecards.proto\032 google/protobuf/field_" +
-      "mask.proto\"N\n\026CreateScorecardRequest\0224\n\t" +
-      "scorecard\030\001 \001(\0132\026.api.commons.ScorecardR" +
-      "\tscorecard\"O\n\027CreateScorecardResponse\0224\n" +
-      "\tscorecard\030\001 \001(\0132\026.api.commons.Scorecard" +
-      "R\tscorecard\"\216\001\n\025ListScorecardsRequest\022\035\n" +
-      "\nauthor_ids\030\002 \003(\tR\tauthorIds\022!\n\014category" +
-      "_ids\030\003 \003(\003R\013categoryIds\0223\n\006states\030\004 \003(\0162" +
-      "\033.api.commons.ScorecardStateR\006states\"P\n\026" +
-      "ListScorecardsResponse\0226\n\nscorecards\030\001 \003" +
-      "(\0132\026.api.commons.ScorecardR\nscorecards\"\213" +
-      "\001\n\026UpdateScorecardRequest\0224\n\tscorecard\030\001" +
-      " \001(\0132\026.api.commons.ScorecardR\tscorecard\022" +
-      ";\n\013update_mask\030\002 \001(\0132\032.google.protobuf.F" +
-      "ieldMaskR\nupdateMask\"O\n\027UpdateScorecardR" +
-      "esponse\0224\n\tscorecard\030\001 \001(\0132\026.api.commons" +
-      ".ScorecardR\tscorecard\";\n\026DeleteScorecard" +
-      "Request\022!\n\014scorecard_id\030\002 \001(\003R\013scorecard" +
-      "Id\"O\n\027DeleteScorecardResponse\0224\n\tscoreca" +
-      "rd\030\001 \001(\0132\026.api.commons.ScorecardR\tscorec" +
-      "ard\"Y\n\023GetScorecardRequest\022!\n\014scorecard_" +
-      "id\030\002 \001(\003R\013scorecardId\022\037\n\013use_default\030\003 \001" +
-      "(\010R\nuseDefault\"L\n\024GetScorecardResponse\0224" +
-      "\n\tscorecard\030\001 \001(\0132\026.api.commons.Scorecar" +
-      "dR\tscorecardB\271\001\n)com.tcn.cloud.api.api.v" +
-      "1alpha1.scorecardsB\016ScorecardProtoP\001\242\002\003A" +
-      "VS\252\002\027Api.V1alpha1.Scorecards\312\002\027Api\\V1alp" +
-      "ha1\\Scorecards\342\002#Api\\V1alpha1\\Scorecards" +
-      "\\GPBMetadata\352\002\031Api::V1alpha1::Scorecards" +
-      "b\006proto3"
+      "o\022\027api.v1alpha1.scorecards\032\025api/commons/" +
+      "acd.proto\032\034api/commons/scorecards.proto\032" +
+      " google/protobuf/field_mask.proto\"N\n\026Cre" +
+      "ateScorecardRequest\0224\n\tscorecard\030\001 \001(\0132\026" +
+      ".api.commons.ScorecardR\tscorecard\"O\n\027Cre" +
+      "ateScorecardResponse\0224\n\tscorecard\030\001 \001(\0132" +
+      "\026.api.commons.ScorecardR\tscorecard\"\221\002\n\025L" +
+      "istScorecardsRequest\022\035\n\nauthor_ids\030\002 \003(\t" +
+      "R\tauthorIds\022!\n\014category_ids\030\003 \003(\003R\013categ" +
+      "oryIds\0223\n\006states\030\004 \003(\0162\033.api.commons.Sco" +
+      "recardStateR\006states\022F\n\020evaluation_types\030" +
+      "\005 \003(\0162\033.api.commons.EvaluationTypeR\017eval" +
+      "uationTypes\0229\n\ncall_types\030\006 \003(\0162\032.api.co" +
+      "mmons.CallType.EnumR\tcallTypes\"P\n\026ListSc" +
+      "orecardsResponse\0226\n\nscorecards\030\001 \003(\0132\026.a" +
+      "pi.commons.ScorecardR\nscorecards\"\213\001\n\026Upd" +
+      "ateScorecardRequest\0224\n\tscorecard\030\001 \001(\0132\026" +
+      ".api.commons.ScorecardR\tscorecard\022;\n\013upd" +
+      "ate_mask\030\002 \001(\0132\032.google.protobuf.FieldMa" +
+      "skR\nupdateMask\"O\n\027UpdateScorecardRespons" +
+      "e\0224\n\tscorecard\030\001 \001(\0132\026.api.commons.Score" +
+      "cardR\tscorecard\";\n\026DeleteScorecardReques" +
+      "t\022!\n\014scorecard_id\030\002 \001(\003R\013scorecardId\"O\n\027" +
+      "DeleteScorecardResponse\0224\n\tscorecard\030\001 \001" +
+      "(\0132\026.api.commons.ScorecardR\tscorecard\"Y\n" +
+      "\023GetScorecardRequest\022!\n\014scorecard_id\030\002 \001" +
+      "(\003R\013scorecardId\022\037\n\013use_default\030\003 \001(\010R\nus" +
+      "eDefault\"L\n\024GetScorecardResponse\0224\n\tscor" +
+      "ecard\030\001 \001(\0132\026.api.commons.ScorecardR\tsco" +
+      "recardB\271\001\n)com.tcn.cloud.api.api.v1alpha" +
+      "1.scorecardsB\016ScorecardProtoP\001\242\002\003AVS\252\002\027A" +
+      "pi.V1alpha1.Scorecards\312\002\027Api\\V1alpha1\\Sc" +
+      "orecards\342\002#Api\\V1alpha1\\Scorecards\\GPBMe" +
+      "tadata\352\002\031Api::V1alpha1::Scorecardsb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.tcn.cloud.api.api.commons.AcdProto.getDescriptor(),
           com.tcn.cloud.api.api.commons.ScorecardsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
         });
@@ -129,7 +134,7 @@ public final class ScorecardProto {
     internal_static_api_v1alpha1_scorecards_ListScorecardsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_scorecards_ListScorecardsRequest_descriptor,
-        new java.lang.String[] { "AuthorIds", "CategoryIds", "States", });
+        new java.lang.String[] { "AuthorIds", "CategoryIds", "States", "EvaluationTypes", "CallTypes", });
     internal_static_api_v1alpha1_scorecards_ListScorecardsResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_api_v1alpha1_scorecards_ListScorecardsResponse_fieldAccessorTable = new
@@ -172,6 +177,7 @@ public final class ScorecardProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_api_v1alpha1_scorecards_GetScorecardResponse_descriptor,
         new java.lang.String[] { "Scorecard", });
+    com.tcn.cloud.api.api.commons.AcdProto.getDescriptor();
     com.tcn.cloud.api.api.commons.ScorecardsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
   }

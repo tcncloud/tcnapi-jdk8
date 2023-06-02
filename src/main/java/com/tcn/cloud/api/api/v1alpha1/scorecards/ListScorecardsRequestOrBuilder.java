@@ -125,4 +125,102 @@ public interface ListScorecardsRequestOrBuilder extends
    * @return The enum numeric value on the wire of states at the given index.
    */
   int getStatesValue(int index);
+
+  /**
+   * <pre>
+   * Optional. Results include scorecard with any of the given types
+   * </pre>
+   *
+   * <code>repeated .api.commons.EvaluationType evaluation_types = 5 [json_name = "evaluationTypes"];</code>
+   * @return A list containing the evaluationTypes.
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.EvaluationType> getEvaluationTypesList();
+  /**
+   * <pre>
+   * Optional. Results include scorecard with any of the given types
+   * </pre>
+   *
+   * <code>repeated .api.commons.EvaluationType evaluation_types = 5 [json_name = "evaluationTypes"];</code>
+   * @return The count of evaluationTypes.
+   */
+  int getEvaluationTypesCount();
+  /**
+   * <pre>
+   * Optional. Results include scorecard with any of the given types
+   * </pre>
+   *
+   * <code>repeated .api.commons.EvaluationType evaluation_types = 5 [json_name = "evaluationTypes"];</code>
+   * @param index The index of the element to return.
+   * @return The evaluationTypes at the given index.
+   */
+  com.tcn.cloud.api.api.commons.EvaluationType getEvaluationTypes(int index);
+  /**
+   * <pre>
+   * Optional. Results include scorecard with any of the given types
+   * </pre>
+   *
+   * <code>repeated .api.commons.EvaluationType evaluation_types = 5 [json_name = "evaluationTypes"];</code>
+   * @return A list containing the enum numeric values on the wire for evaluationTypes.
+   */
+  java.util.List<java.lang.Integer>
+  getEvaluationTypesValueList();
+  /**
+   * <pre>
+   * Optional. Results include scorecard with any of the given types
+   * </pre>
+   *
+   * <code>repeated .api.commons.EvaluationType evaluation_types = 5 [json_name = "evaluationTypes"];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of evaluationTypes at the given index.
+   */
+  int getEvaluationTypesValue(int index);
+
+  /**
+   * <pre>
+   * Optional. Results include scorecard with any of the given call types.
+   * </pre>
+   *
+   * <code>repeated .api.commons.CallType.Enum call_types = 6 [json_name = "callTypes"];</code>
+   * @return A list containing the callTypes.
+   */
+  java.util.List<com.tcn.cloud.api.api.commons.CallType.Enum> getCallTypesList();
+  /**
+   * <pre>
+   * Optional. Results include scorecard with any of the given call types.
+   * </pre>
+   *
+   * <code>repeated .api.commons.CallType.Enum call_types = 6 [json_name = "callTypes"];</code>
+   * @return The count of callTypes.
+   */
+  int getCallTypesCount();
+  /**
+   * <pre>
+   * Optional. Results include scorecard with any of the given call types.
+   * </pre>
+   *
+   * <code>repeated .api.commons.CallType.Enum call_types = 6 [json_name = "callTypes"];</code>
+   * @param index The index of the element to return.
+   * @return The callTypes at the given index.
+   */
+  com.tcn.cloud.api.api.commons.CallType.Enum getCallTypes(int index);
+  /**
+   * <pre>
+   * Optional. Results include scorecard with any of the given call types.
+   * </pre>
+   *
+   * <code>repeated .api.commons.CallType.Enum call_types = 6 [json_name = "callTypes"];</code>
+   * @return A list containing the enum numeric values on the wire for callTypes.
+   */
+  java.util.List<java.lang.Integer>
+  getCallTypesValueList();
+  /**
+   * <pre>
+   * Optional. Results include scorecard with any of the given call types.
+   * </pre>
+   *
+   * <code>repeated .api.commons.CallType.Enum call_types = 6 [json_name = "callTypes"];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of callTypes at the given index.
+   */
+  int getCallTypesValue(int index);
 }
