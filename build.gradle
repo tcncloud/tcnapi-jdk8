@@ -11,8 +11,8 @@ project.group = 'com.tcn.cloud'
 
 dependencies {
     api 'com.google.protobuf:protobuf-java:3.22.3'
-    api 'io.grpc:grpc-stub:1.54.1'
-    api 'io.grpc:grpc-protobuf:1.54.1'
+    api 'io.grpc:grpc-stub:1.45.0'
+    api 'io.grpc:grpc-protobuf:1.45.0'
 }
 
 java {
