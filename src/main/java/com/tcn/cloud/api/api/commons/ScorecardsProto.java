@@ -292,13 +292,13 @@ public final class ScorecardsProto {
       "Y_DISABLED\020\004\022 \n\034SCORECARD_IS_IN_USE_DISA" +
       "BLED\020\005*[\n\017EvaluationState\022\032\n\026EVALUATION_" +
       "IN_PROGRESS\020\000\022\025\n\021EVALUATION_PASSED\020\001\022\025\n\021" +
-      "EVALUATION_FAILED\020\002*`\n\tRiskLevel\022\023\n\017RISK" +
+      "EVALUATION_FAILED\020\002*z\n\tRiskLevel\022\023\n\017RISK" +
       "_LEVEL_NONE\020\000\022\022\n\016RISK_LEVEL_LOW\020\001\022\025\n\021RIS" +
-      "K_LEVEL_MEDIUM\020\002\022\023\n\017RISK_LEVEL_HIGH\020\003B}\n" +
-      "\035com.tcn.cloud.api.api.commonsB\017Scorecar" +
-      "dsProtoP\001\242\002\003ACX\252\002\013Api.Commons\312\002\013Api\\Comm" +
-      "ons\342\002\027Api\\Commons\\GPBMetadata\352\002\014Api::Com" +
-      "monsb\006proto3"
+      "K_LEVEL_MEDIUM\020\002\022\023\n\017RISK_LEVEL_HIGH\020\003\022\030\n" +
+      "\024RISK_LEVEL_RISK_FREE\020\004B}\n\035com.tcn.cloud" +
+      ".api.api.commonsB\017ScorecardsProtoP\001\242\002\003AC" +
+      "X\252\002\013Api.Commons\312\002\013Api\\Commons\342\002\027Api\\Comm" +
+      "ons\\GPBMetadata\352\002\014Api::Commonsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
