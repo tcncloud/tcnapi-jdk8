@@ -1,13 +1,25 @@
 package com.tcn.cloud.api.api.v0alpha;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.50.0)",
+    value = "by gRPC proto compiler (version 1.14.0)",
     comments = "Source: api/v0alpha/emailapi.proto")
-@io.grpc.stub.annotations.GrpcGenerated
 public final class EmailApiGrpc {
 
   private EmailApiGrpc() {}
@@ -29,21 +41,22 @@ public final class EmailApiGrpc {
     if ((getCreateEmailTemplateMethod = EmailApiGrpc.getCreateEmailTemplateMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getCreateEmailTemplateMethod = EmailApiGrpc.getCreateEmailTemplateMethod) == null) {
-          EmailApiGrpc.getCreateEmailTemplateMethod = getCreateEmailTemplateMethod =
+          EmailApiGrpc.getCreateEmailTemplateMethod = getCreateEmailTemplateMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateEmailTemplateReq, com.tcn.cloud.api.api.v0alpha.CreateEmailTemplateRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateEmailTemplate"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "CreateEmailTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateEmailTemplateReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateEmailTemplateRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("CreateEmailTemplate"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("CreateEmailTemplate"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateEmailTemplateMethod;
+     }
+     return getCreateEmailTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateEmailTemplateReq,
@@ -60,21 +73,22 @@ public final class EmailApiGrpc {
     if ((getUpdateEmailTemplateMethod = EmailApiGrpc.getUpdateEmailTemplateMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getUpdateEmailTemplateMethod = EmailApiGrpc.getUpdateEmailTemplateMethod) == null) {
-          EmailApiGrpc.getUpdateEmailTemplateMethod = getUpdateEmailTemplateMethod =
+          EmailApiGrpc.getUpdateEmailTemplateMethod = getUpdateEmailTemplateMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateEmailTemplateReq, com.tcn.cloud.api.api.v0alpha.UpdateEmailTemplateRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateEmailTemplate"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "UpdateEmailTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateEmailTemplateReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateEmailTemplateRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("UpdateEmailTemplate"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("UpdateEmailTemplate"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateEmailTemplateMethod;
+     }
+     return getUpdateEmailTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateEmailTemplateAttachmentReq,
@@ -91,21 +105,22 @@ public final class EmailApiGrpc {
     if ((getCreateEmailTemplateAttachmentMethod = EmailApiGrpc.getCreateEmailTemplateAttachmentMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getCreateEmailTemplateAttachmentMethod = EmailApiGrpc.getCreateEmailTemplateAttachmentMethod) == null) {
-          EmailApiGrpc.getCreateEmailTemplateAttachmentMethod = getCreateEmailTemplateAttachmentMethod =
+          EmailApiGrpc.getCreateEmailTemplateAttachmentMethod = getCreateEmailTemplateAttachmentMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateEmailTemplateAttachmentReq, com.tcn.cloud.api.api.v0alpha.CreateEmailTemplateAttachmentRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateEmailTemplateAttachment"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "CreateEmailTemplateAttachment"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateEmailTemplateAttachmentReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateEmailTemplateAttachmentRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("CreateEmailTemplateAttachment"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("CreateEmailTemplateAttachment"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateEmailTemplateAttachmentMethod;
+     }
+     return getCreateEmailTemplateAttachmentMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CopyEmailTemplateWithAttachmentsReq,
@@ -122,21 +137,22 @@ public final class EmailApiGrpc {
     if ((getCopyEmailTemplateWithAttachmentsMethod = EmailApiGrpc.getCopyEmailTemplateWithAttachmentsMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getCopyEmailTemplateWithAttachmentsMethod = EmailApiGrpc.getCopyEmailTemplateWithAttachmentsMethod) == null) {
-          EmailApiGrpc.getCopyEmailTemplateWithAttachmentsMethod = getCopyEmailTemplateWithAttachmentsMethod =
+          EmailApiGrpc.getCopyEmailTemplateWithAttachmentsMethod = getCopyEmailTemplateWithAttachmentsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CopyEmailTemplateWithAttachmentsReq, com.tcn.cloud.api.api.v0alpha.CopyEmailTemplateWithAttachmentsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CopyEmailTemplateWithAttachments"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "CopyEmailTemplateWithAttachments"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CopyEmailTemplateWithAttachmentsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CopyEmailTemplateWithAttachmentsRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("CopyEmailTemplateWithAttachments"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("CopyEmailTemplateWithAttachments"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCopyEmailTemplateWithAttachmentsMethod;
+     }
+     return getCopyEmailTemplateWithAttachmentsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateEmailTemplateAttachmentReq,
@@ -153,21 +169,22 @@ public final class EmailApiGrpc {
     if ((getUpdateEmailTemplateAttachmentMethod = EmailApiGrpc.getUpdateEmailTemplateAttachmentMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getUpdateEmailTemplateAttachmentMethod = EmailApiGrpc.getUpdateEmailTemplateAttachmentMethod) == null) {
-          EmailApiGrpc.getUpdateEmailTemplateAttachmentMethod = getUpdateEmailTemplateAttachmentMethod =
+          EmailApiGrpc.getUpdateEmailTemplateAttachmentMethod = getUpdateEmailTemplateAttachmentMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateEmailTemplateAttachmentReq, com.tcn.cloud.api.api.v0alpha.UpdateEmailTemplateAttachmentRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateEmailTemplateAttachment"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "UpdateEmailTemplateAttachment"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateEmailTemplateAttachmentReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateEmailTemplateAttachmentRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("UpdateEmailTemplateAttachment"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("UpdateEmailTemplateAttachment"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateEmailTemplateAttachmentMethod;
+     }
+     return getUpdateEmailTemplateAttachmentMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetEmailTemplateByTemplateSidReq,
@@ -184,21 +201,22 @@ public final class EmailApiGrpc {
     if ((getGetEmailTemplateByTemplateSidMethod = EmailApiGrpc.getGetEmailTemplateByTemplateSidMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getGetEmailTemplateByTemplateSidMethod = EmailApiGrpc.getGetEmailTemplateByTemplateSidMethod) == null) {
-          EmailApiGrpc.getGetEmailTemplateByTemplateSidMethod = getGetEmailTemplateByTemplateSidMethod =
+          EmailApiGrpc.getGetEmailTemplateByTemplateSidMethod = getGetEmailTemplateByTemplateSidMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetEmailTemplateByTemplateSidReq, com.tcn.cloud.api.api.v0alpha.EmailTemplateWithAttachments>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetEmailTemplateByTemplateSid"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "GetEmailTemplateByTemplateSid"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetEmailTemplateByTemplateSidReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.EmailTemplateWithAttachments.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("GetEmailTemplateByTemplateSid"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("GetEmailTemplateByTemplateSid"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetEmailTemplateByTemplateSidMethod;
+     }
+     return getGetEmailTemplateByTemplateSidMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetAllEmailTemplatesReq,
@@ -215,21 +233,22 @@ public final class EmailApiGrpc {
     if ((getGetAllEmailTemplatesMethod = EmailApiGrpc.getGetAllEmailTemplatesMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getGetAllEmailTemplatesMethod = EmailApiGrpc.getGetAllEmailTemplatesMethod) == null) {
-          EmailApiGrpc.getGetAllEmailTemplatesMethod = getGetAllEmailTemplatesMethod =
+          EmailApiGrpc.getGetAllEmailTemplatesMethod = getGetAllEmailTemplatesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetAllEmailTemplatesReq, com.tcn.cloud.api.api.v0alpha.GetAllEmailTemplatesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAllEmailTemplates"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "GetAllEmailTemplates"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetAllEmailTemplatesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetAllEmailTemplatesRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("GetAllEmailTemplates"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("GetAllEmailTemplates"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetAllEmailTemplatesMethod;
+     }
+     return getGetAllEmailTemplatesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteEmailTemplateReq,
@@ -246,21 +265,22 @@ public final class EmailApiGrpc {
     if ((getDeleteEmailTemplateMethod = EmailApiGrpc.getDeleteEmailTemplateMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getDeleteEmailTemplateMethod = EmailApiGrpc.getDeleteEmailTemplateMethod) == null) {
-          EmailApiGrpc.getDeleteEmailTemplateMethod = getDeleteEmailTemplateMethod =
+          EmailApiGrpc.getDeleteEmailTemplateMethod = getDeleteEmailTemplateMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteEmailTemplateReq, com.tcn.cloud.api.api.v0alpha.DeleteEmailTemplateRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteEmailTemplate"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "DeleteEmailTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteEmailTemplateReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteEmailTemplateRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("DeleteEmailTemplate"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("DeleteEmailTemplate"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDeleteEmailTemplateMethod;
+     }
+     return getDeleteEmailTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteEmailTemplateAttachmentByIdReq,
@@ -277,21 +297,22 @@ public final class EmailApiGrpc {
     if ((getDeleteEmailTemplateAttachmentByIdMethod = EmailApiGrpc.getDeleteEmailTemplateAttachmentByIdMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getDeleteEmailTemplateAttachmentByIdMethod = EmailApiGrpc.getDeleteEmailTemplateAttachmentByIdMethod) == null) {
-          EmailApiGrpc.getDeleteEmailTemplateAttachmentByIdMethod = getDeleteEmailTemplateAttachmentByIdMethod =
+          EmailApiGrpc.getDeleteEmailTemplateAttachmentByIdMethod = getDeleteEmailTemplateAttachmentByIdMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteEmailTemplateAttachmentByIdReq, com.tcn.cloud.api.api.v0alpha.DeleteEmailTemplateAttachmentByIdRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteEmailTemplateAttachmentById"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "DeleteEmailTemplateAttachmentById"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteEmailTemplateAttachmentByIdReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteEmailTemplateAttachmentByIdRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("DeleteEmailTemplateAttachmentById"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("DeleteEmailTemplateAttachmentById"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDeleteEmailTemplateAttachmentByIdMethod;
+     }
+     return getDeleteEmailTemplateAttachmentByIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DownloadInboundEmailAttachmentReq,
@@ -308,21 +329,22 @@ public final class EmailApiGrpc {
     if ((getDownloadInboundEmailAttachmentMethod = EmailApiGrpc.getDownloadInboundEmailAttachmentMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getDownloadInboundEmailAttachmentMethod = EmailApiGrpc.getDownloadInboundEmailAttachmentMethod) == null) {
-          EmailApiGrpc.getDownloadInboundEmailAttachmentMethod = getDownloadInboundEmailAttachmentMethod =
+          EmailApiGrpc.getDownloadInboundEmailAttachmentMethod = getDownloadInboundEmailAttachmentMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DownloadInboundEmailAttachmentReq, com.tcn.cloud.api.api.v0alpha.DownloadInboundEmailAttachmentRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DownloadInboundEmailAttachment"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "DownloadInboundEmailAttachment"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DownloadInboundEmailAttachmentReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DownloadInboundEmailAttachmentRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("DownloadInboundEmailAttachment"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("DownloadInboundEmailAttachment"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDownloadInboundEmailAttachmentMethod;
+     }
+     return getDownloadInboundEmailAttachmentMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.EmailGroupSearchReq,
@@ -339,21 +361,22 @@ public final class EmailApiGrpc {
     if ((getPureEmailGroupSearchMethod = EmailApiGrpc.getPureEmailGroupSearchMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getPureEmailGroupSearchMethod = EmailApiGrpc.getPureEmailGroupSearchMethod) == null) {
-          EmailApiGrpc.getPureEmailGroupSearchMethod = getPureEmailGroupSearchMethod =
+          EmailApiGrpc.getPureEmailGroupSearchMethod = getPureEmailGroupSearchMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.EmailGroupSearchReq, com.tcn.cloud.api.api.v0alpha.EmailGroupSearchRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "PureEmailGroupSearch"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "PureEmailGroupSearch"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.EmailGroupSearchReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.EmailGroupSearchRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("PureEmailGroupSearch"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("PureEmailGroupSearch"))
+                  .build();
+          }
         }
-      }
-    }
-    return getPureEmailGroupSearchMethod;
+     }
+     return getPureEmailGroupSearchMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListNewEmailMessageRepliesReq,
@@ -370,21 +393,22 @@ public final class EmailApiGrpc {
     if ((getManagerListNewEmailMessageRepliesMethod = EmailApiGrpc.getManagerListNewEmailMessageRepliesMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getManagerListNewEmailMessageRepliesMethod = EmailApiGrpc.getManagerListNewEmailMessageRepliesMethod) == null) {
-          EmailApiGrpc.getManagerListNewEmailMessageRepliesMethod = getManagerListNewEmailMessageRepliesMethod =
+          EmailApiGrpc.getManagerListNewEmailMessageRepliesMethod = getManagerListNewEmailMessageRepliesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListNewEmailMessageRepliesReq, com.tcn.cloud.api.api.v0alpha.ListNewEmailMessageRepliesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ManagerListNewEmailMessageReplies"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "ManagerListNewEmailMessageReplies"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListNewEmailMessageRepliesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListNewEmailMessageRepliesRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("ManagerListNewEmailMessageReplies"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("ManagerListNewEmailMessageReplies"))
+                  .build();
+          }
         }
-      }
-    }
-    return getManagerListNewEmailMessageRepliesMethod;
+     }
+     return getManagerListNewEmailMessageRepliesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListNewEmailMessageRepliesReq,
@@ -401,21 +425,22 @@ public final class EmailApiGrpc {
     if ((getListNewEmailMessageRepliesMethod = EmailApiGrpc.getListNewEmailMessageRepliesMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getListNewEmailMessageRepliesMethod = EmailApiGrpc.getListNewEmailMessageRepliesMethod) == null) {
-          EmailApiGrpc.getListNewEmailMessageRepliesMethod = getListNewEmailMessageRepliesMethod =
+          EmailApiGrpc.getListNewEmailMessageRepliesMethod = getListNewEmailMessageRepliesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListNewEmailMessageRepliesReq, com.tcn.cloud.api.api.v0alpha.ListNewEmailMessageRepliesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListNewEmailMessageReplies"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "ListNewEmailMessageReplies"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListNewEmailMessageRepliesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListNewEmailMessageRepliesRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("ListNewEmailMessageReplies"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("ListNewEmailMessageReplies"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListNewEmailMessageRepliesMethod;
+     }
+     return getListNewEmailMessageRepliesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetEmailTasksByGroupSidsReq,
@@ -432,21 +457,22 @@ public final class EmailApiGrpc {
     if ((getGetEmailTasksByGroupSidsMethod = EmailApiGrpc.getGetEmailTasksByGroupSidsMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getGetEmailTasksByGroupSidsMethod = EmailApiGrpc.getGetEmailTasksByGroupSidsMethod) == null) {
-          EmailApiGrpc.getGetEmailTasksByGroupSidsMethod = getGetEmailTasksByGroupSidsMethod =
+          EmailApiGrpc.getGetEmailTasksByGroupSidsMethod = getGetEmailTasksByGroupSidsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetEmailTasksByGroupSidsReq, com.tcn.cloud.api.api.v0alpha.GetEmailTasksByGroupSidsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetEmailTasksByGroupSids"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "GetEmailTasksByGroupSids"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetEmailTasksByGroupSidsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetEmailTasksByGroupSidsRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("GetEmailTasksByGroupSids"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("GetEmailTasksByGroupSids"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetEmailTasksByGroupSidsMethod;
+     }
+     return getGetEmailTasksByGroupSidsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.EmailGroupStatusReq,
@@ -463,21 +489,22 @@ public final class EmailApiGrpc {
     if ((getUpdateEmailGroupStatusMethod = EmailApiGrpc.getUpdateEmailGroupStatusMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getUpdateEmailGroupStatusMethod = EmailApiGrpc.getUpdateEmailGroupStatusMethod) == null) {
-          EmailApiGrpc.getUpdateEmailGroupStatusMethod = getUpdateEmailGroupStatusMethod =
+          EmailApiGrpc.getUpdateEmailGroupStatusMethod = getUpdateEmailGroupStatusMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.EmailGroupStatusReq, com.tcn.cloud.api.api.v0alpha.EmailGroupStatusRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateEmailGroupStatus"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "UpdateEmailGroupStatus"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.EmailGroupStatusReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.EmailGroupStatusRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("UpdateEmailGroupStatus"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("UpdateEmailGroupStatus"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateEmailGroupStatusMethod;
+     }
+     return getUpdateEmailGroupStatusMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetEmailMessageReq,
@@ -494,21 +521,22 @@ public final class EmailApiGrpc {
     if ((getGetEmailMessageDetailsMethod = EmailApiGrpc.getGetEmailMessageDetailsMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getGetEmailMessageDetailsMethod = EmailApiGrpc.getGetEmailMessageDetailsMethod) == null) {
-          EmailApiGrpc.getGetEmailMessageDetailsMethod = getGetEmailMessageDetailsMethod =
+          EmailApiGrpc.getGetEmailMessageDetailsMethod = getGetEmailMessageDetailsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetEmailMessageReq, com.tcn.cloud.api.api.v0alpha.GetEmailMessageRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetEmailMessageDetails"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "GetEmailMessageDetails"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetEmailMessageReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetEmailMessageRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("GetEmailMessageDetails"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("GetEmailMessageDetails"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetEmailMessageDetailsMethod;
+     }
+     return getGetEmailMessageDetailsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateInboundEmailTemplateReq,
@@ -525,21 +553,22 @@ public final class EmailApiGrpc {
     if ((getCreateInboundEmailTemplateMethod = EmailApiGrpc.getCreateInboundEmailTemplateMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getCreateInboundEmailTemplateMethod = EmailApiGrpc.getCreateInboundEmailTemplateMethod) == null) {
-          EmailApiGrpc.getCreateInboundEmailTemplateMethod = getCreateInboundEmailTemplateMethod =
+          EmailApiGrpc.getCreateInboundEmailTemplateMethod = getCreateInboundEmailTemplateMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateInboundEmailTemplateReq, com.tcn.cloud.api.api.v0alpha.CreateInboundEmailTemplateRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateInboundEmailTemplate"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "CreateInboundEmailTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateInboundEmailTemplateReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateInboundEmailTemplateRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("CreateInboundEmailTemplate"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("CreateInboundEmailTemplate"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateInboundEmailTemplateMethod;
+     }
+     return getCreateInboundEmailTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailTemplateReq,
@@ -556,21 +585,22 @@ public final class EmailApiGrpc {
     if ((getUpdateInboundEmailTemplateMethod = EmailApiGrpc.getUpdateInboundEmailTemplateMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getUpdateInboundEmailTemplateMethod = EmailApiGrpc.getUpdateInboundEmailTemplateMethod) == null) {
-          EmailApiGrpc.getUpdateInboundEmailTemplateMethod = getUpdateInboundEmailTemplateMethod =
+          EmailApiGrpc.getUpdateInboundEmailTemplateMethod = getUpdateInboundEmailTemplateMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailTemplateReq, com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailTemplateRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateInboundEmailTemplate"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "UpdateInboundEmailTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailTemplateReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailTemplateRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("UpdateInboundEmailTemplate"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("UpdateInboundEmailTemplate"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateInboundEmailTemplateMethod;
+     }
+     return getUpdateInboundEmailTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteInboundEmailTemplateByIdReq,
@@ -587,21 +617,22 @@ public final class EmailApiGrpc {
     if ((getDeleteInboundEmailTemplateByIdMethod = EmailApiGrpc.getDeleteInboundEmailTemplateByIdMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getDeleteInboundEmailTemplateByIdMethod = EmailApiGrpc.getDeleteInboundEmailTemplateByIdMethod) == null) {
-          EmailApiGrpc.getDeleteInboundEmailTemplateByIdMethod = getDeleteInboundEmailTemplateByIdMethod =
+          EmailApiGrpc.getDeleteInboundEmailTemplateByIdMethod = getDeleteInboundEmailTemplateByIdMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteInboundEmailTemplateByIdReq, com.tcn.cloud.api.api.v0alpha.DeleteInboundEmailTemplateByIdRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteInboundEmailTemplateById"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "DeleteInboundEmailTemplateById"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteInboundEmailTemplateByIdReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteInboundEmailTemplateByIdRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("DeleteInboundEmailTemplateById"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("DeleteInboundEmailTemplateById"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDeleteInboundEmailTemplateByIdMethod;
+     }
+     return getDeleteInboundEmailTemplateByIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListInboundEmailTemplatesReq,
@@ -618,21 +649,22 @@ public final class EmailApiGrpc {
     if ((getListInboundEmailTemplatesMethod = EmailApiGrpc.getListInboundEmailTemplatesMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getListInboundEmailTemplatesMethod = EmailApiGrpc.getListInboundEmailTemplatesMethod) == null) {
-          EmailApiGrpc.getListInboundEmailTemplatesMethod = getListInboundEmailTemplatesMethod =
+          EmailApiGrpc.getListInboundEmailTemplatesMethod = getListInboundEmailTemplatesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListInboundEmailTemplatesReq, com.tcn.cloud.api.api.v0alpha.ListInboundEmailTemplatesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListInboundEmailTemplates"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "ListInboundEmailTemplates"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListInboundEmailTemplatesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListInboundEmailTemplatesRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("ListInboundEmailTemplates"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("ListInboundEmailTemplates"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListInboundEmailTemplatesMethod;
+     }
+     return getListInboundEmailTemplatesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetInboundEmailTemplateByIdReq,
@@ -649,21 +681,22 @@ public final class EmailApiGrpc {
     if ((getGetInboundEmailTemplateByIdMethod = EmailApiGrpc.getGetInboundEmailTemplateByIdMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getGetInboundEmailTemplateByIdMethod = EmailApiGrpc.getGetInboundEmailTemplateByIdMethod) == null) {
-          EmailApiGrpc.getGetInboundEmailTemplateByIdMethod = getGetInboundEmailTemplateByIdMethod =
+          EmailApiGrpc.getGetInboundEmailTemplateByIdMethod = getGetInboundEmailTemplateByIdMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetInboundEmailTemplateByIdReq, com.tcn.cloud.api.api.v0alpha.InboundEmailTemplate>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetInboundEmailTemplateById"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "GetInboundEmailTemplateById"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetInboundEmailTemplateByIdReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.InboundEmailTemplate.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("GetInboundEmailTemplateById"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("GetInboundEmailTemplateById"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetInboundEmailTemplateByIdMethod;
+     }
+     return getGetInboundEmailTemplateByIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailGroupStatusReq,
@@ -680,21 +713,22 @@ public final class EmailApiGrpc {
     if ((getUpdateInboundEmailGroupStatusMethod = EmailApiGrpc.getUpdateInboundEmailGroupStatusMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getUpdateInboundEmailGroupStatusMethod = EmailApiGrpc.getUpdateInboundEmailGroupStatusMethod) == null) {
-          EmailApiGrpc.getUpdateInboundEmailGroupStatusMethod = getUpdateInboundEmailGroupStatusMethod =
+          EmailApiGrpc.getUpdateInboundEmailGroupStatusMethod = getUpdateInboundEmailGroupStatusMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailGroupStatusReq, com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailGroupStatusRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateInboundEmailGroupStatus"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "UpdateInboundEmailGroupStatus"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailGroupStatusReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailGroupStatusRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("UpdateInboundEmailGroupStatus"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("UpdateInboundEmailGroupStatus"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateInboundEmailGroupStatusMethod;
+     }
+     return getUpdateInboundEmailGroupStatusMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.StopInboundEmailGroupReq,
@@ -711,21 +745,22 @@ public final class EmailApiGrpc {
     if ((getStopInboundEmailGroupMethod = EmailApiGrpc.getStopInboundEmailGroupMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getStopInboundEmailGroupMethod = EmailApiGrpc.getStopInboundEmailGroupMethod) == null) {
-          EmailApiGrpc.getStopInboundEmailGroupMethod = getStopInboundEmailGroupMethod =
+          EmailApiGrpc.getStopInboundEmailGroupMethod = getStopInboundEmailGroupMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.StopInboundEmailGroupReq, com.tcn.cloud.api.api.v0alpha.StopInboundEmailGroupRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StopInboundEmailGroup"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "StopInboundEmailGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.StopInboundEmailGroupReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.StopInboundEmailGroupRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("StopInboundEmailGroup"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("StopInboundEmailGroup"))
+                  .build();
+          }
         }
-      }
-    }
-    return getStopInboundEmailGroupMethod;
+     }
+     return getStopInboundEmailGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.StopAllInboundEmailGroupsReq,
@@ -742,21 +777,22 @@ public final class EmailApiGrpc {
     if ((getStopAllInboundEmailGroupsMethod = EmailApiGrpc.getStopAllInboundEmailGroupsMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getStopAllInboundEmailGroupsMethod = EmailApiGrpc.getStopAllInboundEmailGroupsMethod) == null) {
-          EmailApiGrpc.getStopAllInboundEmailGroupsMethod = getStopAllInboundEmailGroupsMethod =
+          EmailApiGrpc.getStopAllInboundEmailGroupsMethod = getStopAllInboundEmailGroupsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.StopAllInboundEmailGroupsReq, com.tcn.cloud.api.api.v0alpha.StopInboundEmailGroupRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StopAllInboundEmailGroups"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "StopAllInboundEmailGroups"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.StopAllInboundEmailGroupsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.StopInboundEmailGroupRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("StopAllInboundEmailGroups"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("StopAllInboundEmailGroups"))
+                  .build();
+          }
         }
-      }
-    }
-    return getStopAllInboundEmailGroupsMethod;
+     }
+     return getStopAllInboundEmailGroupsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.PureInboundEmailGroupSearchReq,
@@ -773,21 +809,22 @@ public final class EmailApiGrpc {
     if ((getPureInboundEmailGroupSearchMethod = EmailApiGrpc.getPureInboundEmailGroupSearchMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getPureInboundEmailGroupSearchMethod = EmailApiGrpc.getPureInboundEmailGroupSearchMethod) == null) {
-          EmailApiGrpc.getPureInboundEmailGroupSearchMethod = getPureInboundEmailGroupSearchMethod =
+          EmailApiGrpc.getPureInboundEmailGroupSearchMethod = getPureInboundEmailGroupSearchMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.PureInboundEmailGroupSearchReq, com.tcn.cloud.api.api.v0alpha.PureInboundEmailGroupSearchRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "PureInboundEmailGroupSearch"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "PureInboundEmailGroupSearch"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.PureInboundEmailGroupSearchReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.PureInboundEmailGroupSearchRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("PureInboundEmailGroupSearch"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("PureInboundEmailGroupSearch"))
+                  .build();
+          }
         }
-      }
-    }
-    return getPureInboundEmailGroupSearchMethod;
+     }
+     return getPureInboundEmailGroupSearchMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.InboundEmailGroupSearchReq,
@@ -804,21 +841,22 @@ public final class EmailApiGrpc {
     if ((getInboundEmailGroupSearchMethod = EmailApiGrpc.getInboundEmailGroupSearchMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getInboundEmailGroupSearchMethod = EmailApiGrpc.getInboundEmailGroupSearchMethod) == null) {
-          EmailApiGrpc.getInboundEmailGroupSearchMethod = getInboundEmailGroupSearchMethod =
+          EmailApiGrpc.getInboundEmailGroupSearchMethod = getInboundEmailGroupSearchMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.InboundEmailGroupSearchReq, com.tcn.cloud.api.api.v0alpha.InboundEmailGroupSearchRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "InboundEmailGroupSearch"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "InboundEmailGroupSearch"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.InboundEmailGroupSearchReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.InboundEmailGroupSearchRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("InboundEmailGroupSearch"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("InboundEmailGroupSearch"))
+                  .build();
+          }
         }
-      }
-    }
-    return getInboundEmailGroupSearchMethod;
+     }
+     return getInboundEmailGroupSearchMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListInboundEmailGroupsByGroupIdsReq,
@@ -835,21 +873,22 @@ public final class EmailApiGrpc {
     if ((getListInboundEmailGroupsByGroupIdsMethod = EmailApiGrpc.getListInboundEmailGroupsByGroupIdsMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getListInboundEmailGroupsByGroupIdsMethod = EmailApiGrpc.getListInboundEmailGroupsByGroupIdsMethod) == null) {
-          EmailApiGrpc.getListInboundEmailGroupsByGroupIdsMethod = getListInboundEmailGroupsByGroupIdsMethod =
+          EmailApiGrpc.getListInboundEmailGroupsByGroupIdsMethod = getListInboundEmailGroupsByGroupIdsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListInboundEmailGroupsByGroupIdsReq, com.tcn.cloud.api.api.v0alpha.ListInboundEmailGroupsByGroupIdsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListInboundEmailGroupsByGroupIds"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "ListInboundEmailGroupsByGroupIds"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListInboundEmailGroupsByGroupIdsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListInboundEmailGroupsByGroupIdsRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("ListInboundEmailGroupsByGroupIds"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("ListInboundEmailGroupsByGroupIds"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListInboundEmailGroupsByGroupIdsMethod;
+     }
+     return getListInboundEmailGroupsByGroupIdsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListInboundEmailTasksByGroupIdsReq,
@@ -866,21 +905,22 @@ public final class EmailApiGrpc {
     if ((getListInboundEmailTasksByGroupIdsMethod = EmailApiGrpc.getListInboundEmailTasksByGroupIdsMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getListInboundEmailTasksByGroupIdsMethod = EmailApiGrpc.getListInboundEmailTasksByGroupIdsMethod) == null) {
-          EmailApiGrpc.getListInboundEmailTasksByGroupIdsMethod = getListInboundEmailTasksByGroupIdsMethod =
+          EmailApiGrpc.getListInboundEmailTasksByGroupIdsMethod = getListInboundEmailTasksByGroupIdsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListInboundEmailTasksByGroupIdsReq, com.tcn.cloud.api.api.v0alpha.ListInboundEmailTasksByGroupIdsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListInboundEmailTasksByGroupIds"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "ListInboundEmailTasksByGroupIds"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListInboundEmailTasksByGroupIdsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListInboundEmailTasksByGroupIdsRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("ListInboundEmailTasksByGroupIds"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("ListInboundEmailTasksByGroupIds"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListInboundEmailTasksByGroupIdsMethod;
+     }
+     return getListInboundEmailTasksByGroupIdsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListActiveInboundEmailGroupsReq,
@@ -897,21 +937,22 @@ public final class EmailApiGrpc {
     if ((getListActiveInboundEmailGroupsMethod = EmailApiGrpc.getListActiveInboundEmailGroupsMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getListActiveInboundEmailGroupsMethod = EmailApiGrpc.getListActiveInboundEmailGroupsMethod) == null) {
-          EmailApiGrpc.getListActiveInboundEmailGroupsMethod = getListActiveInboundEmailGroupsMethod =
+          EmailApiGrpc.getListActiveInboundEmailGroupsMethod = getListActiveInboundEmailGroupsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListActiveInboundEmailGroupsReq, com.tcn.cloud.api.api.v0alpha.ListActiveInboundEmailGroupsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListActiveInboundEmailGroups"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "ListActiveInboundEmailGroups"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListActiveInboundEmailGroupsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListActiveInboundEmailGroupsRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("ListActiveInboundEmailGroups"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("ListActiveInboundEmailGroups"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListActiveInboundEmailGroupsMethod;
+     }
+     return getListActiveInboundEmailGroupsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ScheduleReq,
@@ -928,21 +969,22 @@ public final class EmailApiGrpc {
     if ((getScheduleMethod = EmailApiGrpc.getScheduleMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getScheduleMethod = EmailApiGrpc.getScheduleMethod) == null) {
-          EmailApiGrpc.getScheduleMethod = getScheduleMethod =
+          EmailApiGrpc.getScheduleMethod = getScheduleMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ScheduleReq, com.tcn.cloud.api.api.v0alpha.ScheduleRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Schedule"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "Schedule"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ScheduleReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ScheduleRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("Schedule"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("Schedule"))
+                  .build();
+          }
         }
-      }
-    }
-    return getScheduleMethod;
+     }
+     return getScheduleMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ScheduleOutboundEmailGroupReq,
@@ -959,21 +1001,22 @@ public final class EmailApiGrpc {
     if ((getScheduleOutboundEmailGroupMethod = EmailApiGrpc.getScheduleOutboundEmailGroupMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getScheduleOutboundEmailGroupMethod = EmailApiGrpc.getScheduleOutboundEmailGroupMethod) == null) {
-          EmailApiGrpc.getScheduleOutboundEmailGroupMethod = getScheduleOutboundEmailGroupMethod =
+          EmailApiGrpc.getScheduleOutboundEmailGroupMethod = getScheduleOutboundEmailGroupMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ScheduleOutboundEmailGroupReq, com.tcn.cloud.api.api.v0alpha.ScheduleOutboundEmailGroupRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ScheduleOutboundEmailGroup"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "ScheduleOutboundEmailGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ScheduleOutboundEmailGroupReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ScheduleOutboundEmailGroupRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("ScheduleOutboundEmailGroup"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("ScheduleOutboundEmailGroup"))
+                  .build();
+          }
         }
-      }
-    }
-    return getScheduleOutboundEmailGroupMethod;
+     }
+     return getScheduleOutboundEmailGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SchedulePureInboundEmailReq,
@@ -990,21 +1033,22 @@ public final class EmailApiGrpc {
     if ((getSchedulePureInboundEmailMethod = EmailApiGrpc.getSchedulePureInboundEmailMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getSchedulePureInboundEmailMethod = EmailApiGrpc.getSchedulePureInboundEmailMethod) == null) {
-          EmailApiGrpc.getSchedulePureInboundEmailMethod = getSchedulePureInboundEmailMethod =
+          EmailApiGrpc.getSchedulePureInboundEmailMethod = getSchedulePureInboundEmailMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SchedulePureInboundEmailReq, com.tcn.cloud.api.api.v0alpha.SchedulePureInboundEmailRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SchedulePureInboundEmail"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "SchedulePureInboundEmail"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SchedulePureInboundEmailReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SchedulePureInboundEmailRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("SchedulePureInboundEmail"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("SchedulePureInboundEmail"))
+                  .build();
+          }
         }
-      }
-    }
-    return getSchedulePureInboundEmailMethod;
+     }
+     return getSchedulePureInboundEmailMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAgentReplyReq,
@@ -1021,21 +1065,22 @@ public final class EmailApiGrpc {
     if ((getCreateEmailMessageAgentReplyMethod = EmailApiGrpc.getCreateEmailMessageAgentReplyMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getCreateEmailMessageAgentReplyMethod = EmailApiGrpc.getCreateEmailMessageAgentReplyMethod) == null) {
-          EmailApiGrpc.getCreateEmailMessageAgentReplyMethod = getCreateEmailMessageAgentReplyMethod =
+          EmailApiGrpc.getCreateEmailMessageAgentReplyMethod = getCreateEmailMessageAgentReplyMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAgentReplyReq, com.tcn.cloud.api.api.v0alpha.EmailMessageReplyWithAttachments>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateEmailMessageAgentReply"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "CreateEmailMessageAgentReply"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAgentReplyReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.EmailMessageReplyWithAttachments.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("CreateEmailMessageAgentReply"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("CreateEmailMessageAgentReply"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateEmailMessageAgentReplyMethod;
+     }
+     return getCreateEmailMessageAgentReplyMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAgentReplyAttachmentReq,
@@ -1052,21 +1097,22 @@ public final class EmailApiGrpc {
     if ((getCreateEmailMessageAgentReplyAttachmentMethod = EmailApiGrpc.getCreateEmailMessageAgentReplyAttachmentMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getCreateEmailMessageAgentReplyAttachmentMethod = EmailApiGrpc.getCreateEmailMessageAgentReplyAttachmentMethod) == null) {
-          EmailApiGrpc.getCreateEmailMessageAgentReplyAttachmentMethod = getCreateEmailMessageAgentReplyAttachmentMethod =
+          EmailApiGrpc.getCreateEmailMessageAgentReplyAttachmentMethod = getCreateEmailMessageAgentReplyAttachmentMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAgentReplyAttachmentReq, com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAgentReplyAttachmentRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateEmailMessageAgentReplyAttachment"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "CreateEmailMessageAgentReplyAttachment"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAgentReplyAttachmentReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAgentReplyAttachmentRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("CreateEmailMessageAgentReplyAttachment"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("CreateEmailMessageAgentReplyAttachment"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateEmailMessageAgentReplyAttachmentMethod;
+     }
+     return getCreateEmailMessageAgentReplyAttachmentMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SendReplyReq,
@@ -1083,21 +1129,22 @@ public final class EmailApiGrpc {
     if ((getSendReplyMethod = EmailApiGrpc.getSendReplyMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getSendReplyMethod = EmailApiGrpc.getSendReplyMethod) == null) {
-          EmailApiGrpc.getSendReplyMethod = getSendReplyMethod =
+          EmailApiGrpc.getSendReplyMethod = getSendReplyMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SendReplyReq, com.tcn.cloud.api.api.v0alpha.EmailMessageReplyWithAttachments>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SendReply"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "SendReply"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SendReplyReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.EmailMessageReplyWithAttachments.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("SendReply"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("SendReply"))
+                  .build();
+          }
         }
-      }
-    }
-    return getSendReplyMethod;
+     }
+     return getSendReplyMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetEmailGroupsByGroupSidsReq,
@@ -1114,21 +1161,22 @@ public final class EmailApiGrpc {
     if ((getGetEmailGroupsByGroupSidsMethod = EmailApiGrpc.getGetEmailGroupsByGroupSidsMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getGetEmailGroupsByGroupSidsMethod = EmailApiGrpc.getGetEmailGroupsByGroupSidsMethod) == null) {
-          EmailApiGrpc.getGetEmailGroupsByGroupSidsMethod = getGetEmailGroupsByGroupSidsMethod =
+          EmailApiGrpc.getGetEmailGroupsByGroupSidsMethod = getGetEmailGroupsByGroupSidsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetEmailGroupsByGroupSidsReq, com.tcn.cloud.api.api.v0alpha.GetEmailGroupsByGroupSidsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetEmailGroupsByGroupSids"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "GetEmailGroupsByGroupSids"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetEmailGroupsByGroupSidsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetEmailGroupsByGroupSidsRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("GetEmailGroupsByGroupSids"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("GetEmailGroupsByGroupSids"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetEmailGroupsByGroupSidsMethod;
+     }
+     return getGetEmailGroupsByGroupSidsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetEmailGroupByGroupSidReq,
@@ -1145,21 +1193,22 @@ public final class EmailApiGrpc {
     if ((getGetEmailGroupByGroupSidMethod = EmailApiGrpc.getGetEmailGroupByGroupSidMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getGetEmailGroupByGroupSidMethod = EmailApiGrpc.getGetEmailGroupByGroupSidMethod) == null) {
-          EmailApiGrpc.getGetEmailGroupByGroupSidMethod = getGetEmailGroupByGroupSidMethod =
+          EmailApiGrpc.getGetEmailGroupByGroupSidMethod = getGetEmailGroupByGroupSidMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetEmailGroupByGroupSidReq, com.tcn.cloud.api.api.v0alpha.EmailGroupDetailsWithAttachments>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetEmailGroupByGroupSid"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "GetEmailGroupByGroupSid"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetEmailGroupByGroupSidReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.EmailGroupDetailsWithAttachments.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("GetEmailGroupByGroupSid"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("GetEmailGroupByGroupSid"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetEmailGroupByGroupSidMethod;
+     }
+     return getGetEmailGroupByGroupSidMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetEmailGroupByGroupIdReq,
@@ -1176,21 +1225,22 @@ public final class EmailApiGrpc {
     if ((getGetEmailGroupByGroupIdMethod = EmailApiGrpc.getGetEmailGroupByGroupIdMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getGetEmailGroupByGroupIdMethod = EmailApiGrpc.getGetEmailGroupByGroupIdMethod) == null) {
-          EmailApiGrpc.getGetEmailGroupByGroupIdMethod = getGetEmailGroupByGroupIdMethod =
+          EmailApiGrpc.getGetEmailGroupByGroupIdMethod = getGetEmailGroupByGroupIdMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetEmailGroupByGroupIdReq, com.tcn.cloud.api.api.v0alpha.EmailGroupDetailsWithAttachments>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetEmailGroupByGroupId"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "GetEmailGroupByGroupId"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetEmailGroupByGroupIdReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.EmailGroupDetailsWithAttachments.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("GetEmailGroupByGroupId"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("GetEmailGroupByGroupId"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetEmailGroupByGroupIdMethod;
+     }
+     return getGetEmailGroupByGroupIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SchedulePureOmniLinkInboundEmailReq,
@@ -1207,21 +1257,22 @@ public final class EmailApiGrpc {
     if ((getSchedulePureOmniLinkInboundEmailMethod = EmailApiGrpc.getSchedulePureOmniLinkInboundEmailMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getSchedulePureOmniLinkInboundEmailMethod = EmailApiGrpc.getSchedulePureOmniLinkInboundEmailMethod) == null) {
-          EmailApiGrpc.getSchedulePureOmniLinkInboundEmailMethod = getSchedulePureOmniLinkInboundEmailMethod =
+          EmailApiGrpc.getSchedulePureOmniLinkInboundEmailMethod = getSchedulePureOmniLinkInboundEmailMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SchedulePureOmniLinkInboundEmailReq, com.tcn.cloud.api.api.v0alpha.SchedulePureOmniLinkInboundEmailRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SchedulePureOmniLinkInboundEmail"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "SchedulePureOmniLinkInboundEmail"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SchedulePureOmniLinkInboundEmailReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SchedulePureOmniLinkInboundEmailRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("SchedulePureOmniLinkInboundEmail"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("SchedulePureOmniLinkInboundEmail"))
+                  .build();
+          }
         }
-      }
-    }
-    return getSchedulePureOmniLinkInboundEmailMethod;
+     }
+     return getSchedulePureOmniLinkInboundEmailMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailGroupReq,
@@ -1238,21 +1289,22 @@ public final class EmailApiGrpc {
     if ((getUpdateInboundEmailGroupMethod = EmailApiGrpc.getUpdateInboundEmailGroupMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getUpdateInboundEmailGroupMethod = EmailApiGrpc.getUpdateInboundEmailGroupMethod) == null) {
-          EmailApiGrpc.getUpdateInboundEmailGroupMethod = getUpdateInboundEmailGroupMethod =
+          EmailApiGrpc.getUpdateInboundEmailGroupMethod = getUpdateInboundEmailGroupMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailGroupReq, com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailGroupRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateInboundEmailGroup"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "UpdateInboundEmailGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailGroupReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailGroupRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("UpdateInboundEmailGroup"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("UpdateInboundEmailGroup"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateInboundEmailGroupMethod;
+     }
+     return getUpdateInboundEmailGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.EmailGroupSendsPerMinuteReq,
@@ -1269,21 +1321,22 @@ public final class EmailApiGrpc {
     if ((getUpdateEmailGroupMstrSendsPerMinuteMethod = EmailApiGrpc.getUpdateEmailGroupMstrSendsPerMinuteMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getUpdateEmailGroupMstrSendsPerMinuteMethod = EmailApiGrpc.getUpdateEmailGroupMstrSendsPerMinuteMethod) == null) {
-          EmailApiGrpc.getUpdateEmailGroupMstrSendsPerMinuteMethod = getUpdateEmailGroupMstrSendsPerMinuteMethod =
+          EmailApiGrpc.getUpdateEmailGroupMstrSendsPerMinuteMethod = getUpdateEmailGroupMstrSendsPerMinuteMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.EmailGroupSendsPerMinuteReq, com.tcn.cloud.api.api.v0alpha.EmailGroupSendsPerMinuteRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateEmailGroupMstrSendsPerMinute"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "UpdateEmailGroupMstrSendsPerMinute"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.EmailGroupSendsPerMinuteReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.EmailGroupSendsPerMinuteRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("UpdateEmailGroupMstrSendsPerMinute"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("UpdateEmailGroupMstrSendsPerMinute"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateEmailGroupMstrSendsPerMinuteMethod;
+     }
+     return getUpdateEmailGroupMstrSendsPerMinuteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateOutboundEmailGroupReq,
@@ -1300,21 +1353,22 @@ public final class EmailApiGrpc {
     if ((getUpdateOutboundEmailGroupMethod = EmailApiGrpc.getUpdateOutboundEmailGroupMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getUpdateOutboundEmailGroupMethod = EmailApiGrpc.getUpdateOutboundEmailGroupMethod) == null) {
-          EmailApiGrpc.getUpdateOutboundEmailGroupMethod = getUpdateOutboundEmailGroupMethod =
+          EmailApiGrpc.getUpdateOutboundEmailGroupMethod = getUpdateOutboundEmailGroupMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateOutboundEmailGroupReq, com.tcn.cloud.api.api.v0alpha.UpdateOutboundEmailGroupRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateOutboundEmailGroup"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "UpdateOutboundEmailGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateOutboundEmailGroupReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateOutboundEmailGroupRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("UpdateOutboundEmailGroup"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("UpdateOutboundEmailGroup"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateOutboundEmailGroupMethod;
+     }
+     return getUpdateOutboundEmailGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.InboundEmailGroupByIdReq,
@@ -1331,21 +1385,22 @@ public final class EmailApiGrpc {
     if ((getGetInboundEmailGroupByIdMethod = EmailApiGrpc.getGetInboundEmailGroupByIdMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getGetInboundEmailGroupByIdMethod = EmailApiGrpc.getGetInboundEmailGroupByIdMethod) == null) {
-          EmailApiGrpc.getGetInboundEmailGroupByIdMethod = getGetInboundEmailGroupByIdMethod =
+          EmailApiGrpc.getGetInboundEmailGroupByIdMethod = getGetInboundEmailGroupByIdMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.InboundEmailGroupByIdReq, com.tcn.cloud.api.api.v0alpha.InboundEmailGroup>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetInboundEmailGroupById"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "GetInboundEmailGroupById"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.InboundEmailGroupByIdReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.InboundEmailGroup.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("GetInboundEmailGroupById"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("GetInboundEmailGroupById"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetInboundEmailGroupByIdMethod;
+     }
+     return getGetInboundEmailGroupByIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAttachmentReq,
@@ -1362,21 +1417,22 @@ public final class EmailApiGrpc {
     if ((getCreateEmailMessageAttachmentMethod = EmailApiGrpc.getCreateEmailMessageAttachmentMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getCreateEmailMessageAttachmentMethod = EmailApiGrpc.getCreateEmailMessageAttachmentMethod) == null) {
-          EmailApiGrpc.getCreateEmailMessageAttachmentMethod = getCreateEmailMessageAttachmentMethod =
+          EmailApiGrpc.getCreateEmailMessageAttachmentMethod = getCreateEmailMessageAttachmentMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAttachmentReq, com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAttachmentRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateEmailMessageAttachment"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "CreateEmailMessageAttachment"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAttachmentReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAttachmentRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("CreateEmailMessageAttachment"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("CreateEmailMessageAttachment"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateEmailMessageAttachmentMethod;
+     }
+     return getCreateEmailMessageAttachmentMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListEmailMessageAttachmentsReq,
@@ -1393,21 +1449,22 @@ public final class EmailApiGrpc {
     if ((getListEmailMessageAttachmentsMethod = EmailApiGrpc.getListEmailMessageAttachmentsMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getListEmailMessageAttachmentsMethod = EmailApiGrpc.getListEmailMessageAttachmentsMethod) == null) {
-          EmailApiGrpc.getListEmailMessageAttachmentsMethod = getListEmailMessageAttachmentsMethod =
+          EmailApiGrpc.getListEmailMessageAttachmentsMethod = getListEmailMessageAttachmentsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListEmailMessageAttachmentsReq, com.tcn.cloud.api.api.v0alpha.ListEmailMessageAttachmentsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListEmailMessageAttachments"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "ListEmailMessageAttachments"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListEmailMessageAttachmentsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListEmailMessageAttachmentsRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("ListEmailMessageAttachments"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("ListEmailMessageAttachments"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListEmailMessageAttachmentsMethod;
+     }
+     return getListEmailMessageAttachmentsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UnassignCurrentUserFromEmailConversationReq,
@@ -1424,21 +1481,22 @@ public final class EmailApiGrpc {
     if ((getUnassignCurrentUserFromEmailConversationMethod = EmailApiGrpc.getUnassignCurrentUserFromEmailConversationMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getUnassignCurrentUserFromEmailConversationMethod = EmailApiGrpc.getUnassignCurrentUserFromEmailConversationMethod) == null) {
-          EmailApiGrpc.getUnassignCurrentUserFromEmailConversationMethod = getUnassignCurrentUserFromEmailConversationMethod =
+          EmailApiGrpc.getUnassignCurrentUserFromEmailConversationMethod = getUnassignCurrentUserFromEmailConversationMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UnassignCurrentUserFromEmailConversationReq, com.tcn.cloud.api.api.v0alpha.UnassignUserFromEmailConversationRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UnassignCurrentUserFromEmailConversation"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "UnassignCurrentUserFromEmailConversation"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UnassignCurrentUserFromEmailConversationReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UnassignUserFromEmailConversationRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("UnassignCurrentUserFromEmailConversation"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("UnassignCurrentUserFromEmailConversation"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUnassignCurrentUserFromEmailConversationMethod;
+     }
+     return getUnassignCurrentUserFromEmailConversationMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DashboardEmailConversationSearchReq,
@@ -1455,21 +1513,22 @@ public final class EmailApiGrpc {
     if ((getDashboardEmailConversationSearchMethod = EmailApiGrpc.getDashboardEmailConversationSearchMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getDashboardEmailConversationSearchMethod = EmailApiGrpc.getDashboardEmailConversationSearchMethod) == null) {
-          EmailApiGrpc.getDashboardEmailConversationSearchMethod = getDashboardEmailConversationSearchMethod =
+          EmailApiGrpc.getDashboardEmailConversationSearchMethod = getDashboardEmailConversationSearchMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DashboardEmailConversationSearchReq, com.tcn.cloud.api.api.v0alpha.DashboardEmailConversationSearchRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DashboardEmailConversationSearch"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "DashboardEmailConversationSearch"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DashboardEmailConversationSearchReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DashboardEmailConversationSearchRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("DashboardEmailConversationSearch"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("DashboardEmailConversationSearch"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDashboardEmailConversationSearchMethod;
+     }
+     return getDashboardEmailConversationSearchMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ReassignEmailConversationReq,
@@ -1486,21 +1545,22 @@ public final class EmailApiGrpc {
     if ((getReassignEmailConversationMethod = EmailApiGrpc.getReassignEmailConversationMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getReassignEmailConversationMethod = EmailApiGrpc.getReassignEmailConversationMethod) == null) {
-          EmailApiGrpc.getReassignEmailConversationMethod = getReassignEmailConversationMethod =
+          EmailApiGrpc.getReassignEmailConversationMethod = getReassignEmailConversationMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ReassignEmailConversationReq, com.tcn.cloud.api.api.v0alpha.ReassignEmailConversationRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ReassignEmailConversation"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "ReassignEmailConversation"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ReassignEmailConversationReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ReassignEmailConversationRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("ReassignEmailConversation"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("ReassignEmailConversation"))
+                  .build();
+          }
         }
-      }
-    }
-    return getReassignEmailConversationMethod;
+     }
+     return getReassignEmailConversationMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.AssignEmailConversationReq,
@@ -1517,21 +1577,22 @@ public final class EmailApiGrpc {
     if ((getAssignEmailConversationMethod = EmailApiGrpc.getAssignEmailConversationMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getAssignEmailConversationMethod = EmailApiGrpc.getAssignEmailConversationMethod) == null) {
-          EmailApiGrpc.getAssignEmailConversationMethod = getAssignEmailConversationMethod =
+          EmailApiGrpc.getAssignEmailConversationMethod = getAssignEmailConversationMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.AssignEmailConversationReq, com.tcn.cloud.api.api.v0alpha.AssignEmailConversationRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AssignEmailConversation"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "AssignEmailConversation"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AssignEmailConversationReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AssignEmailConversationRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("AssignEmailConversation"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("AssignEmailConversation"))
+                  .build();
+          }
         }
-      }
-    }
-    return getAssignEmailConversationMethod;
+     }
+     return getAssignEmailConversationMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SuspendEmailConversationReq,
@@ -1548,21 +1609,22 @@ public final class EmailApiGrpc {
     if ((getSuspendEmailConversationMethod = EmailApiGrpc.getSuspendEmailConversationMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getSuspendEmailConversationMethod = EmailApiGrpc.getSuspendEmailConversationMethod) == null) {
-          EmailApiGrpc.getSuspendEmailConversationMethod = getSuspendEmailConversationMethod =
+          EmailApiGrpc.getSuspendEmailConversationMethod = getSuspendEmailConversationMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SuspendEmailConversationReq, com.tcn.cloud.api.api.v0alpha.SuspendEmailConversationRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SuspendEmailConversation"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "SuspendEmailConversation"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SuspendEmailConversationReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SuspendEmailConversationRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("SuspendEmailConversation"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("SuspendEmailConversation"))
+                  .build();
+          }
         }
-      }
-    }
-    return getSuspendEmailConversationMethod;
+     }
+     return getSuspendEmailConversationMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListCampaignsByConnectedInboxIdReq,
@@ -1579,21 +1641,22 @@ public final class EmailApiGrpc {
     if ((getListCampaignsByConnectedInboxIdMethod = EmailApiGrpc.getListCampaignsByConnectedInboxIdMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getListCampaignsByConnectedInboxIdMethod = EmailApiGrpc.getListCampaignsByConnectedInboxIdMethod) == null) {
-          EmailApiGrpc.getListCampaignsByConnectedInboxIdMethod = getListCampaignsByConnectedInboxIdMethod =
+          EmailApiGrpc.getListCampaignsByConnectedInboxIdMethod = getListCampaignsByConnectedInboxIdMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListCampaignsByConnectedInboxIdReq, com.tcn.cloud.api.api.v0alpha.ListCampaignsByConnectedInboxIdRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListCampaignsByConnectedInboxId"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "ListCampaignsByConnectedInboxId"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListCampaignsByConnectedInboxIdReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListCampaignsByConnectedInboxIdRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("ListCampaignsByConnectedInboxId"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("ListCampaignsByConnectedInboxId"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListCampaignsByConnectedInboxIdMethod;
+     }
+     return getListCampaignsByConnectedInboxIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CloseEmailConversationReq,
@@ -1610,35 +1673,29 @@ public final class EmailApiGrpc {
     if ((getCloseEmailConversationMethod = EmailApiGrpc.getCloseEmailConversationMethod) == null) {
       synchronized (EmailApiGrpc.class) {
         if ((getCloseEmailConversationMethod = EmailApiGrpc.getCloseEmailConversationMethod) == null) {
-          EmailApiGrpc.getCloseEmailConversationMethod = getCloseEmailConversationMethod =
+          EmailApiGrpc.getCloseEmailConversationMethod = getCloseEmailConversationMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CloseEmailConversationReq, com.tcn.cloud.api.api.v0alpha.CloseEmailConversationRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CloseEmailConversation"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.EmailApi", "CloseEmailConversation"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CloseEmailConversationReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CloseEmailConversationRes.getDefaultInstance()))
-              .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("CloseEmailConversation"))
-              .build();
+                  .setSchemaDescriptor(new EmailApiMethodDescriptorSupplier("CloseEmailConversation"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCloseEmailConversationMethod;
+     }
+     return getCloseEmailConversationMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static EmailApiStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<EmailApiStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<EmailApiStub>() {
-        @java.lang.Override
-        public EmailApiStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new EmailApiStub(channel, callOptions);
-        }
-      };
-    return EmailApiStub.newStub(factory, channel);
+    return new EmailApiStub(channel);
   }
 
   /**
@@ -1646,14 +1703,7 @@ public final class EmailApiGrpc {
    */
   public static EmailApiBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<EmailApiBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<EmailApiBlockingStub>() {
-        @java.lang.Override
-        public EmailApiBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new EmailApiBlockingStub(channel, callOptions);
-        }
-      };
-    return EmailApiBlockingStub.newStub(factory, channel);
+    return new EmailApiBlockingStub(channel);
   }
 
   /**
@@ -1661,14 +1711,7 @@ public final class EmailApiGrpc {
    */
   public static EmailApiFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<EmailApiFutureStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<EmailApiFutureStub>() {
-        @java.lang.Override
-        public EmailApiFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new EmailApiFutureStub(channel, callOptions);
-        }
-      };
-    return EmailApiFutureStub.newStub(factory, channel);
+    return new EmailApiFutureStub(channel);
   }
 
   /**
@@ -1687,7 +1730,7 @@ public final class EmailApiGrpc {
      */
     public void createEmailTemplate(com.tcn.cloud.api.api.v0alpha.CreateEmailTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateEmailTemplateRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateEmailTemplateMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateEmailTemplateMethod(), responseObserver);
     }
 
     /**
@@ -1702,7 +1745,7 @@ public final class EmailApiGrpc {
      */
     public void updateEmailTemplate(com.tcn.cloud.api.api.v0alpha.UpdateEmailTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateEmailTemplateRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateEmailTemplateMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateEmailTemplateMethod(), responseObserver);
     }
 
     /**
@@ -1717,7 +1760,7 @@ public final class EmailApiGrpc {
      */
     public void createEmailTemplateAttachment(com.tcn.cloud.api.api.v0alpha.CreateEmailTemplateAttachmentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateEmailTemplateAttachmentRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateEmailTemplateAttachmentMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateEmailTemplateAttachmentMethod(), responseObserver);
     }
 
     /**
@@ -1732,7 +1775,7 @@ public final class EmailApiGrpc {
      */
     public void copyEmailTemplateWithAttachments(com.tcn.cloud.api.api.v0alpha.CopyEmailTemplateWithAttachmentsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CopyEmailTemplateWithAttachmentsRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCopyEmailTemplateWithAttachmentsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCopyEmailTemplateWithAttachmentsMethod(), responseObserver);
     }
 
     /**
@@ -1747,7 +1790,7 @@ public final class EmailApiGrpc {
      */
     public void updateEmailTemplateAttachment(com.tcn.cloud.api.api.v0alpha.UpdateEmailTemplateAttachmentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateEmailTemplateAttachmentRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateEmailTemplateAttachmentMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateEmailTemplateAttachmentMethod(), responseObserver);
     }
 
     /**
@@ -1762,7 +1805,7 @@ public final class EmailApiGrpc {
      */
     public void getEmailTemplateByTemplateSid(com.tcn.cloud.api.api.v0alpha.GetEmailTemplateByTemplateSidReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.EmailTemplateWithAttachments> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetEmailTemplateByTemplateSidMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetEmailTemplateByTemplateSidMethod(), responseObserver);
     }
 
     /**
@@ -1776,7 +1819,7 @@ public final class EmailApiGrpc {
      */
     public void getAllEmailTemplates(com.tcn.cloud.api.api.v0alpha.GetAllEmailTemplatesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetAllEmailTemplatesRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAllEmailTemplatesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetAllEmailTemplatesMethod(), responseObserver);
     }
 
     /**
@@ -1791,7 +1834,7 @@ public final class EmailApiGrpc {
      */
     public void deleteEmailTemplate(com.tcn.cloud.api.api.v0alpha.DeleteEmailTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteEmailTemplateRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteEmailTemplateMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteEmailTemplateMethod(), responseObserver);
     }
 
     /**
@@ -1806,7 +1849,7 @@ public final class EmailApiGrpc {
      */
     public void deleteEmailTemplateAttachmentById(com.tcn.cloud.api.api.v0alpha.DeleteEmailTemplateAttachmentByIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteEmailTemplateAttachmentByIdRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteEmailTemplateAttachmentByIdMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteEmailTemplateAttachmentByIdMethod(), responseObserver);
     }
 
     /**
@@ -1822,7 +1865,7 @@ public final class EmailApiGrpc {
      */
     public void downloadInboundEmailAttachment(com.tcn.cloud.api.api.v0alpha.DownloadInboundEmailAttachmentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DownloadInboundEmailAttachmentRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDownloadInboundEmailAttachmentMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDownloadInboundEmailAttachmentMethod(), responseObserver);
     }
 
     /**
@@ -1837,7 +1880,7 @@ public final class EmailApiGrpc {
      */
     public void pureEmailGroupSearch(com.tcn.cloud.api.api.v0alpha.EmailGroupSearchReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.EmailGroupSearchRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPureEmailGroupSearchMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getPureEmailGroupSearchMethod(), responseObserver);
     }
 
     /**
@@ -1850,7 +1893,7 @@ public final class EmailApiGrpc {
      */
     public void managerListNewEmailMessageReplies(com.tcn.cloud.api.api.v0alpha.ListNewEmailMessageRepliesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListNewEmailMessageRepliesRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getManagerListNewEmailMessageRepliesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getManagerListNewEmailMessageRepliesMethod(), responseObserver);
     }
 
     /**
@@ -1863,7 +1906,7 @@ public final class EmailApiGrpc {
      */
     public void listNewEmailMessageReplies(com.tcn.cloud.api.api.v0alpha.ListNewEmailMessageRepliesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListNewEmailMessageRepliesRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListNewEmailMessageRepliesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListNewEmailMessageRepliesMethod(), responseObserver);
     }
 
     /**
@@ -1878,7 +1921,7 @@ public final class EmailApiGrpc {
      */
     public void getEmailTasksByGroupSids(com.tcn.cloud.api.api.v0alpha.GetEmailTasksByGroupSidsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetEmailTasksByGroupSidsRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetEmailTasksByGroupSidsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetEmailTasksByGroupSidsMethod(), responseObserver);
     }
 
     /**
@@ -1893,7 +1936,7 @@ public final class EmailApiGrpc {
      */
     public void updateEmailGroupStatus(com.tcn.cloud.api.api.v0alpha.EmailGroupStatusReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.EmailGroupStatusRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateEmailGroupStatusMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateEmailGroupStatusMethod(), responseObserver);
     }
 
     /**
@@ -1908,7 +1951,7 @@ public final class EmailApiGrpc {
      */
     public void getEmailMessageDetails(com.tcn.cloud.api.api.v0alpha.GetEmailMessageReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetEmailMessageRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetEmailMessageDetailsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetEmailMessageDetailsMethod(), responseObserver);
     }
 
     /**
@@ -1923,7 +1966,7 @@ public final class EmailApiGrpc {
      */
     public void createInboundEmailTemplate(com.tcn.cloud.api.api.v0alpha.CreateInboundEmailTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateInboundEmailTemplateRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateInboundEmailTemplateMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateInboundEmailTemplateMethod(), responseObserver);
     }
 
     /**
@@ -1938,7 +1981,7 @@ public final class EmailApiGrpc {
      */
     public void updateInboundEmailTemplate(com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailTemplateRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateInboundEmailTemplateMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateInboundEmailTemplateMethod(), responseObserver);
     }
 
     /**
@@ -1953,7 +1996,7 @@ public final class EmailApiGrpc {
      */
     public void deleteInboundEmailTemplateById(com.tcn.cloud.api.api.v0alpha.DeleteInboundEmailTemplateByIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteInboundEmailTemplateByIdRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteInboundEmailTemplateByIdMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteInboundEmailTemplateByIdMethod(), responseObserver);
     }
 
     /**
@@ -1967,7 +2010,7 @@ public final class EmailApiGrpc {
      */
     public void listInboundEmailTemplates(com.tcn.cloud.api.api.v0alpha.ListInboundEmailTemplatesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListInboundEmailTemplatesRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListInboundEmailTemplatesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListInboundEmailTemplatesMethod(), responseObserver);
     }
 
     /**
@@ -1982,7 +2025,7 @@ public final class EmailApiGrpc {
      */
     public void getInboundEmailTemplateById(com.tcn.cloud.api.api.v0alpha.GetInboundEmailTemplateByIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.InboundEmailTemplate> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetInboundEmailTemplateByIdMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetInboundEmailTemplateByIdMethod(), responseObserver);
     }
 
     /**
@@ -1996,7 +2039,7 @@ public final class EmailApiGrpc {
      */
     public void updateInboundEmailGroupStatus(com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailGroupStatusReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailGroupStatusRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateInboundEmailGroupStatusMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateInboundEmailGroupStatusMethod(), responseObserver);
     }
 
     /**
@@ -2011,7 +2054,7 @@ public final class EmailApiGrpc {
      */
     public void stopInboundEmailGroup(com.tcn.cloud.api.api.v0alpha.StopInboundEmailGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StopInboundEmailGroupRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStopInboundEmailGroupMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getStopInboundEmailGroupMethod(), responseObserver);
     }
 
     /**
@@ -2024,7 +2067,7 @@ public final class EmailApiGrpc {
      */
     public void stopAllInboundEmailGroups(com.tcn.cloud.api.api.v0alpha.StopAllInboundEmailGroupsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StopInboundEmailGroupRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStopAllInboundEmailGroupsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getStopAllInboundEmailGroupsMethod(), responseObserver);
     }
 
     /**
@@ -2039,7 +2082,7 @@ public final class EmailApiGrpc {
      */
     public void pureInboundEmailGroupSearch(com.tcn.cloud.api.api.v0alpha.PureInboundEmailGroupSearchReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.PureInboundEmailGroupSearchRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPureInboundEmailGroupSearchMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getPureInboundEmailGroupSearchMethod(), responseObserver);
     }
 
     /**
@@ -2055,7 +2098,7 @@ public final class EmailApiGrpc {
      */
     public void inboundEmailGroupSearch(com.tcn.cloud.api.api.v0alpha.InboundEmailGroupSearchReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.InboundEmailGroupSearchRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getInboundEmailGroupSearchMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getInboundEmailGroupSearchMethod(), responseObserver);
     }
 
     /**
@@ -2070,7 +2113,7 @@ public final class EmailApiGrpc {
      */
     public void listInboundEmailGroupsByGroupIds(com.tcn.cloud.api.api.v0alpha.ListInboundEmailGroupsByGroupIdsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListInboundEmailGroupsByGroupIdsRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListInboundEmailGroupsByGroupIdsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListInboundEmailGroupsByGroupIdsMethod(), responseObserver);
     }
 
     /**
@@ -2085,7 +2128,7 @@ public final class EmailApiGrpc {
      */
     public void listInboundEmailTasksByGroupIds(com.tcn.cloud.api.api.v0alpha.ListInboundEmailTasksByGroupIdsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListInboundEmailTasksByGroupIdsRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListInboundEmailTasksByGroupIdsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListInboundEmailTasksByGroupIdsMethod(), responseObserver);
     }
 
     /**
@@ -2099,7 +2142,7 @@ public final class EmailApiGrpc {
      */
     public void listActiveInboundEmailGroups(com.tcn.cloud.api.api.v0alpha.ListActiveInboundEmailGroupsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListActiveInboundEmailGroupsRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListActiveInboundEmailGroupsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListActiveInboundEmailGroupsMethod(), responseObserver);
     }
 
     /**
@@ -2115,7 +2158,7 @@ public final class EmailApiGrpc {
      */
     public void schedule(com.tcn.cloud.api.api.v0alpha.ScheduleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ScheduleRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getScheduleMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getScheduleMethod(), responseObserver);
     }
 
     /**
@@ -2131,7 +2174,7 @@ public final class EmailApiGrpc {
      */
     public void scheduleOutboundEmailGroup(com.tcn.cloud.api.api.v0alpha.ScheduleOutboundEmailGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ScheduleOutboundEmailGroupRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getScheduleOutboundEmailGroupMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getScheduleOutboundEmailGroupMethod(), responseObserver);
     }
 
     /**
@@ -2146,7 +2189,7 @@ public final class EmailApiGrpc {
      */
     public void schedulePureInboundEmail(com.tcn.cloud.api.api.v0alpha.SchedulePureInboundEmailReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SchedulePureInboundEmailRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSchedulePureInboundEmailMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getSchedulePureInboundEmailMethod(), responseObserver);
     }
 
     /**
@@ -2161,7 +2204,7 @@ public final class EmailApiGrpc {
      */
     public void createEmailMessageAgentReply(com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAgentReplyReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.EmailMessageReplyWithAttachments> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateEmailMessageAgentReplyMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateEmailMessageAgentReplyMethod(), responseObserver);
     }
 
     /**
@@ -2176,7 +2219,7 @@ public final class EmailApiGrpc {
      */
     public void createEmailMessageAgentReplyAttachment(com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAgentReplyAttachmentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAgentReplyAttachmentRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateEmailMessageAgentReplyAttachmentMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateEmailMessageAgentReplyAttachmentMethod(), responseObserver);
     }
 
     /**
@@ -2192,7 +2235,7 @@ public final class EmailApiGrpc {
      */
     public void sendReply(com.tcn.cloud.api.api.v0alpha.SendReplyReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.EmailMessageReplyWithAttachments> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendReplyMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getSendReplyMethod(), responseObserver);
     }
 
     /**
@@ -2207,7 +2250,7 @@ public final class EmailApiGrpc {
      */
     public void getEmailGroupsByGroupSids(com.tcn.cloud.api.api.v0alpha.GetEmailGroupsByGroupSidsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetEmailGroupsByGroupSidsRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetEmailGroupsByGroupSidsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetEmailGroupsByGroupSidsMethod(), responseObserver);
     }
 
     /**
@@ -2222,7 +2265,7 @@ public final class EmailApiGrpc {
      */
     public void getEmailGroupByGroupSid(com.tcn.cloud.api.api.v0alpha.GetEmailGroupByGroupSidReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.EmailGroupDetailsWithAttachments> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetEmailGroupByGroupSidMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetEmailGroupByGroupSidMethod(), responseObserver);
     }
 
     /**
@@ -2237,7 +2280,7 @@ public final class EmailApiGrpc {
      */
     public void getEmailGroupByGroupId(com.tcn.cloud.api.api.v0alpha.GetEmailGroupByGroupIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.EmailGroupDetailsWithAttachments> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetEmailGroupByGroupIdMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetEmailGroupByGroupIdMethod(), responseObserver);
     }
 
     /**
@@ -2252,7 +2295,7 @@ public final class EmailApiGrpc {
      */
     public void schedulePureOmniLinkInboundEmail(com.tcn.cloud.api.api.v0alpha.SchedulePureOmniLinkInboundEmailReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SchedulePureOmniLinkInboundEmailRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSchedulePureOmniLinkInboundEmailMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getSchedulePureOmniLinkInboundEmailMethod(), responseObserver);
     }
 
     /**
@@ -2264,7 +2307,7 @@ public final class EmailApiGrpc {
      */
     public void updateInboundEmailGroup(com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailGroupRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateInboundEmailGroupMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateInboundEmailGroupMethod(), responseObserver);
     }
 
     /**
@@ -2279,7 +2322,7 @@ public final class EmailApiGrpc {
      */
     public void updateEmailGroupMstrSendsPerMinute(com.tcn.cloud.api.api.v0alpha.EmailGroupSendsPerMinuteReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.EmailGroupSendsPerMinuteRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateEmailGroupMstrSendsPerMinuteMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateEmailGroupMstrSendsPerMinuteMethod(), responseObserver);
     }
 
     /**
@@ -2291,7 +2334,7 @@ public final class EmailApiGrpc {
      */
     public void updateOutboundEmailGroup(com.tcn.cloud.api.api.v0alpha.UpdateOutboundEmailGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateOutboundEmailGroupRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateOutboundEmailGroupMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateOutboundEmailGroupMethod(), responseObserver);
     }
 
     /**
@@ -2305,7 +2348,7 @@ public final class EmailApiGrpc {
      */
     public void getInboundEmailGroupById(com.tcn.cloud.api.api.v0alpha.InboundEmailGroupByIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.InboundEmailGroup> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetInboundEmailGroupByIdMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetInboundEmailGroupByIdMethod(), responseObserver);
     }
 
     /**
@@ -2319,7 +2362,7 @@ public final class EmailApiGrpc {
      */
     public void createEmailMessageAttachment(com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAttachmentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAttachmentRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateEmailMessageAttachmentMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateEmailMessageAttachmentMethod(), responseObserver);
     }
 
     /**
@@ -2332,7 +2375,7 @@ public final class EmailApiGrpc {
      */
     public void listEmailMessageAttachments(com.tcn.cloud.api.api.v0alpha.ListEmailMessageAttachmentsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListEmailMessageAttachmentsRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListEmailMessageAttachmentsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListEmailMessageAttachmentsMethod(), responseObserver);
     }
 
     /**
@@ -2344,7 +2387,7 @@ public final class EmailApiGrpc {
      */
     public void unassignCurrentUserFromEmailConversation(com.tcn.cloud.api.api.v0alpha.UnassignCurrentUserFromEmailConversationReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UnassignUserFromEmailConversationRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUnassignCurrentUserFromEmailConversationMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUnassignCurrentUserFromEmailConversationMethod(), responseObserver);
     }
 
     /**
@@ -2356,7 +2399,7 @@ public final class EmailApiGrpc {
      */
     public void dashboardEmailConversationSearch(com.tcn.cloud.api.api.v0alpha.DashboardEmailConversationSearchReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DashboardEmailConversationSearchRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDashboardEmailConversationSearchMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDashboardEmailConversationSearchMethod(), responseObserver);
     }
 
     /**
@@ -2370,7 +2413,7 @@ public final class EmailApiGrpc {
      */
     public void reassignEmailConversation(com.tcn.cloud.api.api.v0alpha.ReassignEmailConversationReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ReassignEmailConversationRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getReassignEmailConversationMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getReassignEmailConversationMethod(), responseObserver);
     }
 
     /**
@@ -2381,7 +2424,7 @@ public final class EmailApiGrpc {
      */
     public void assignEmailConversation(com.tcn.cloud.api.api.v0alpha.AssignEmailConversationReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AssignEmailConversationRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAssignEmailConversationMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getAssignEmailConversationMethod(), responseObserver);
     }
 
     /**
@@ -2391,7 +2434,7 @@ public final class EmailApiGrpc {
      */
     public void suspendEmailConversation(com.tcn.cloud.api.api.v0alpha.SuspendEmailConversationReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SuspendEmailConversationRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSuspendEmailConversationMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getSuspendEmailConversationMethod(), responseObserver);
     }
 
     /**
@@ -2405,7 +2448,7 @@ public final class EmailApiGrpc {
      */
     public void listCampaignsByConnectedInboxId(com.tcn.cloud.api.api.v0alpha.ListCampaignsByConnectedInboxIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCampaignsByConnectedInboxIdRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCampaignsByConnectedInboxIdMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListCampaignsByConnectedInboxIdMethod(), responseObserver);
     }
 
     /**
@@ -2417,371 +2460,371 @@ public final class EmailApiGrpc {
      */
     public void closeEmailConversation(com.tcn.cloud.api.api.v0alpha.CloseEmailConversationReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CloseEmailConversationRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCloseEmailConversationMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCloseEmailConversationMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getCreateEmailTemplateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CreateEmailTemplateReq,
                 com.tcn.cloud.api.api.v0alpha.CreateEmailTemplateRes>(
                   this, METHODID_CREATE_EMAIL_TEMPLATE)))
           .addMethod(
             getUpdateEmailTemplateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateEmailTemplateReq,
                 com.tcn.cloud.api.api.v0alpha.UpdateEmailTemplateRes>(
                   this, METHODID_UPDATE_EMAIL_TEMPLATE)))
           .addMethod(
             getCreateEmailTemplateAttachmentMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CreateEmailTemplateAttachmentReq,
                 com.tcn.cloud.api.api.v0alpha.CreateEmailTemplateAttachmentRes>(
                   this, METHODID_CREATE_EMAIL_TEMPLATE_ATTACHMENT)))
           .addMethod(
             getCopyEmailTemplateWithAttachmentsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CopyEmailTemplateWithAttachmentsReq,
                 com.tcn.cloud.api.api.v0alpha.CopyEmailTemplateWithAttachmentsRes>(
                   this, METHODID_COPY_EMAIL_TEMPLATE_WITH_ATTACHMENTS)))
           .addMethod(
             getUpdateEmailTemplateAttachmentMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateEmailTemplateAttachmentReq,
                 com.tcn.cloud.api.api.v0alpha.UpdateEmailTemplateAttachmentRes>(
                   this, METHODID_UPDATE_EMAIL_TEMPLATE_ATTACHMENT)))
           .addMethod(
             getGetEmailTemplateByTemplateSidMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetEmailTemplateByTemplateSidReq,
                 com.tcn.cloud.api.api.v0alpha.EmailTemplateWithAttachments>(
                   this, METHODID_GET_EMAIL_TEMPLATE_BY_TEMPLATE_SID)))
           .addMethod(
             getGetAllEmailTemplatesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetAllEmailTemplatesReq,
                 com.tcn.cloud.api.api.v0alpha.GetAllEmailTemplatesRes>(
                   this, METHODID_GET_ALL_EMAIL_TEMPLATES)))
           .addMethod(
             getDeleteEmailTemplateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.DeleteEmailTemplateReq,
                 com.tcn.cloud.api.api.v0alpha.DeleteEmailTemplateRes>(
                   this, METHODID_DELETE_EMAIL_TEMPLATE)))
           .addMethod(
             getDeleteEmailTemplateAttachmentByIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.DeleteEmailTemplateAttachmentByIdReq,
                 com.tcn.cloud.api.api.v0alpha.DeleteEmailTemplateAttachmentByIdRes>(
                   this, METHODID_DELETE_EMAIL_TEMPLATE_ATTACHMENT_BY_ID)))
           .addMethod(
             getDownloadInboundEmailAttachmentMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.DownloadInboundEmailAttachmentReq,
                 com.tcn.cloud.api.api.v0alpha.DownloadInboundEmailAttachmentRes>(
                   this, METHODID_DOWNLOAD_INBOUND_EMAIL_ATTACHMENT)))
           .addMethod(
             getPureEmailGroupSearchMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.EmailGroupSearchReq,
                 com.tcn.cloud.api.api.v0alpha.EmailGroupSearchRes>(
                   this, METHODID_PURE_EMAIL_GROUP_SEARCH)))
           .addMethod(
             getManagerListNewEmailMessageRepliesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListNewEmailMessageRepliesReq,
                 com.tcn.cloud.api.api.v0alpha.ListNewEmailMessageRepliesRes>(
                   this, METHODID_MANAGER_LIST_NEW_EMAIL_MESSAGE_REPLIES)))
           .addMethod(
             getListNewEmailMessageRepliesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListNewEmailMessageRepliesReq,
                 com.tcn.cloud.api.api.v0alpha.ListNewEmailMessageRepliesRes>(
                   this, METHODID_LIST_NEW_EMAIL_MESSAGE_REPLIES)))
           .addMethod(
             getGetEmailTasksByGroupSidsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetEmailTasksByGroupSidsReq,
                 com.tcn.cloud.api.api.v0alpha.GetEmailTasksByGroupSidsRes>(
                   this, METHODID_GET_EMAIL_TASKS_BY_GROUP_SIDS)))
           .addMethod(
             getUpdateEmailGroupStatusMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.EmailGroupStatusReq,
                 com.tcn.cloud.api.api.v0alpha.EmailGroupStatusRes>(
                   this, METHODID_UPDATE_EMAIL_GROUP_STATUS)))
           .addMethod(
             getGetEmailMessageDetailsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetEmailMessageReq,
                 com.tcn.cloud.api.api.v0alpha.GetEmailMessageRes>(
                   this, METHODID_GET_EMAIL_MESSAGE_DETAILS)))
           .addMethod(
             getCreateInboundEmailTemplateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CreateInboundEmailTemplateReq,
                 com.tcn.cloud.api.api.v0alpha.CreateInboundEmailTemplateRes>(
                   this, METHODID_CREATE_INBOUND_EMAIL_TEMPLATE)))
           .addMethod(
             getUpdateInboundEmailTemplateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailTemplateReq,
                 com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailTemplateRes>(
                   this, METHODID_UPDATE_INBOUND_EMAIL_TEMPLATE)))
           .addMethod(
             getDeleteInboundEmailTemplateByIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.DeleteInboundEmailTemplateByIdReq,
                 com.tcn.cloud.api.api.v0alpha.DeleteInboundEmailTemplateByIdRes>(
                   this, METHODID_DELETE_INBOUND_EMAIL_TEMPLATE_BY_ID)))
           .addMethod(
             getListInboundEmailTemplatesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListInboundEmailTemplatesReq,
                 com.tcn.cloud.api.api.v0alpha.ListInboundEmailTemplatesRes>(
                   this, METHODID_LIST_INBOUND_EMAIL_TEMPLATES)))
           .addMethod(
             getGetInboundEmailTemplateByIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetInboundEmailTemplateByIdReq,
                 com.tcn.cloud.api.api.v0alpha.InboundEmailTemplate>(
                   this, METHODID_GET_INBOUND_EMAIL_TEMPLATE_BY_ID)))
           .addMethod(
             getUpdateInboundEmailGroupStatusMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailGroupStatusReq,
                 com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailGroupStatusRes>(
                   this, METHODID_UPDATE_INBOUND_EMAIL_GROUP_STATUS)))
           .addMethod(
             getStopInboundEmailGroupMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.StopInboundEmailGroupReq,
                 com.tcn.cloud.api.api.v0alpha.StopInboundEmailGroupRes>(
                   this, METHODID_STOP_INBOUND_EMAIL_GROUP)))
           .addMethod(
             getStopAllInboundEmailGroupsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.StopAllInboundEmailGroupsReq,
                 com.tcn.cloud.api.api.v0alpha.StopInboundEmailGroupRes>(
                   this, METHODID_STOP_ALL_INBOUND_EMAIL_GROUPS)))
           .addMethod(
             getPureInboundEmailGroupSearchMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.PureInboundEmailGroupSearchReq,
                 com.tcn.cloud.api.api.v0alpha.PureInboundEmailGroupSearchRes>(
                   this, METHODID_PURE_INBOUND_EMAIL_GROUP_SEARCH)))
           .addMethod(
             getInboundEmailGroupSearchMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.InboundEmailGroupSearchReq,
                 com.tcn.cloud.api.api.v0alpha.InboundEmailGroupSearchRes>(
                   this, METHODID_INBOUND_EMAIL_GROUP_SEARCH)))
           .addMethod(
             getListInboundEmailGroupsByGroupIdsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListInboundEmailGroupsByGroupIdsReq,
                 com.tcn.cloud.api.api.v0alpha.ListInboundEmailGroupsByGroupIdsRes>(
                   this, METHODID_LIST_INBOUND_EMAIL_GROUPS_BY_GROUP_IDS)))
           .addMethod(
             getListInboundEmailTasksByGroupIdsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListInboundEmailTasksByGroupIdsReq,
                 com.tcn.cloud.api.api.v0alpha.ListInboundEmailTasksByGroupIdsRes>(
                   this, METHODID_LIST_INBOUND_EMAIL_TASKS_BY_GROUP_IDS)))
           .addMethod(
             getListActiveInboundEmailGroupsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListActiveInboundEmailGroupsReq,
                 com.tcn.cloud.api.api.v0alpha.ListActiveInboundEmailGroupsRes>(
                   this, METHODID_LIST_ACTIVE_INBOUND_EMAIL_GROUPS)))
           .addMethod(
             getScheduleMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ScheduleReq,
                 com.tcn.cloud.api.api.v0alpha.ScheduleRes>(
                   this, METHODID_SCHEDULE)))
           .addMethod(
             getScheduleOutboundEmailGroupMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ScheduleOutboundEmailGroupReq,
                 com.tcn.cloud.api.api.v0alpha.ScheduleOutboundEmailGroupRes>(
                   this, METHODID_SCHEDULE_OUTBOUND_EMAIL_GROUP)))
           .addMethod(
             getSchedulePureInboundEmailMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.SchedulePureInboundEmailReq,
                 com.tcn.cloud.api.api.v0alpha.SchedulePureInboundEmailRes>(
                   this, METHODID_SCHEDULE_PURE_INBOUND_EMAIL)))
           .addMethod(
             getCreateEmailMessageAgentReplyMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAgentReplyReq,
                 com.tcn.cloud.api.api.v0alpha.EmailMessageReplyWithAttachments>(
                   this, METHODID_CREATE_EMAIL_MESSAGE_AGENT_REPLY)))
           .addMethod(
             getCreateEmailMessageAgentReplyAttachmentMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAgentReplyAttachmentReq,
                 com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAgentReplyAttachmentRes>(
                   this, METHODID_CREATE_EMAIL_MESSAGE_AGENT_REPLY_ATTACHMENT)))
           .addMethod(
             getSendReplyMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.SendReplyReq,
                 com.tcn.cloud.api.api.v0alpha.EmailMessageReplyWithAttachments>(
                   this, METHODID_SEND_REPLY)))
           .addMethod(
             getGetEmailGroupsByGroupSidsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetEmailGroupsByGroupSidsReq,
                 com.tcn.cloud.api.api.v0alpha.GetEmailGroupsByGroupSidsRes>(
                   this, METHODID_GET_EMAIL_GROUPS_BY_GROUP_SIDS)))
           .addMethod(
             getGetEmailGroupByGroupSidMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetEmailGroupByGroupSidReq,
                 com.tcn.cloud.api.api.v0alpha.EmailGroupDetailsWithAttachments>(
                   this, METHODID_GET_EMAIL_GROUP_BY_GROUP_SID)))
           .addMethod(
             getGetEmailGroupByGroupIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetEmailGroupByGroupIdReq,
                 com.tcn.cloud.api.api.v0alpha.EmailGroupDetailsWithAttachments>(
                   this, METHODID_GET_EMAIL_GROUP_BY_GROUP_ID)))
           .addMethod(
             getSchedulePureOmniLinkInboundEmailMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.SchedulePureOmniLinkInboundEmailReq,
                 com.tcn.cloud.api.api.v0alpha.SchedulePureOmniLinkInboundEmailRes>(
                   this, METHODID_SCHEDULE_PURE_OMNI_LINK_INBOUND_EMAIL)))
           .addMethod(
             getUpdateInboundEmailGroupMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailGroupReq,
                 com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailGroupRes>(
                   this, METHODID_UPDATE_INBOUND_EMAIL_GROUP)))
           .addMethod(
             getUpdateEmailGroupMstrSendsPerMinuteMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.EmailGroupSendsPerMinuteReq,
                 com.tcn.cloud.api.api.v0alpha.EmailGroupSendsPerMinuteRes>(
                   this, METHODID_UPDATE_EMAIL_GROUP_MSTR_SENDS_PER_MINUTE)))
           .addMethod(
             getUpdateOutboundEmailGroupMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateOutboundEmailGroupReq,
                 com.tcn.cloud.api.api.v0alpha.UpdateOutboundEmailGroupRes>(
                   this, METHODID_UPDATE_OUTBOUND_EMAIL_GROUP)))
           .addMethod(
             getGetInboundEmailGroupByIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.InboundEmailGroupByIdReq,
                 com.tcn.cloud.api.api.v0alpha.InboundEmailGroup>(
                   this, METHODID_GET_INBOUND_EMAIL_GROUP_BY_ID)))
           .addMethod(
             getCreateEmailMessageAttachmentMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAttachmentReq,
                 com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAttachmentRes>(
                   this, METHODID_CREATE_EMAIL_MESSAGE_ATTACHMENT)))
           .addMethod(
             getListEmailMessageAttachmentsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListEmailMessageAttachmentsReq,
                 com.tcn.cloud.api.api.v0alpha.ListEmailMessageAttachmentsRes>(
                   this, METHODID_LIST_EMAIL_MESSAGE_ATTACHMENTS)))
           .addMethod(
             getUnassignCurrentUserFromEmailConversationMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UnassignCurrentUserFromEmailConversationReq,
                 com.tcn.cloud.api.api.v0alpha.UnassignUserFromEmailConversationRes>(
                   this, METHODID_UNASSIGN_CURRENT_USER_FROM_EMAIL_CONVERSATION)))
           .addMethod(
             getDashboardEmailConversationSearchMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.DashboardEmailConversationSearchReq,
                 com.tcn.cloud.api.api.v0alpha.DashboardEmailConversationSearchRes>(
                   this, METHODID_DASHBOARD_EMAIL_CONVERSATION_SEARCH)))
           .addMethod(
             getReassignEmailConversationMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ReassignEmailConversationReq,
                 com.tcn.cloud.api.api.v0alpha.ReassignEmailConversationRes>(
                   this, METHODID_REASSIGN_EMAIL_CONVERSATION)))
           .addMethod(
             getAssignEmailConversationMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.AssignEmailConversationReq,
                 com.tcn.cloud.api.api.v0alpha.AssignEmailConversationRes>(
                   this, METHODID_ASSIGN_EMAIL_CONVERSATION)))
           .addMethod(
             getSuspendEmailConversationMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.SuspendEmailConversationReq,
                 com.tcn.cloud.api.api.v0alpha.SuspendEmailConversationRes>(
                   this, METHODID_SUSPEND_EMAIL_CONVERSATION)))
           .addMethod(
             getListCampaignsByConnectedInboxIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListCampaignsByConnectedInboxIdReq,
                 com.tcn.cloud.api.api.v0alpha.ListCampaignsByConnectedInboxIdRes>(
                   this, METHODID_LIST_CAMPAIGNS_BY_CONNECTED_INBOX_ID)))
           .addMethod(
             getCloseEmailConversationMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CloseEmailConversationReq,
                 com.tcn.cloud.api.api.v0alpha.CloseEmailConversationRes>(
@@ -2792,15 +2835,19 @@ public final class EmailApiGrpc {
 
   /**
    */
-  public static final class EmailApiStub extends io.grpc.stub.AbstractAsyncStub<EmailApiStub> {
-    private EmailApiStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class EmailApiStub extends io.grpc.stub.AbstractStub<EmailApiStub> {
+    private EmailApiStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private EmailApiStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected EmailApiStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected EmailApiStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new EmailApiStub(channel, callOptions);
     }
 
@@ -2816,7 +2863,7 @@ public final class EmailApiGrpc {
      */
     public void createEmailTemplate(com.tcn.cloud.api.api.v0alpha.CreateEmailTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateEmailTemplateRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateEmailTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2832,7 +2879,7 @@ public final class EmailApiGrpc {
      */
     public void updateEmailTemplate(com.tcn.cloud.api.api.v0alpha.UpdateEmailTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateEmailTemplateRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateEmailTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2848,7 +2895,7 @@ public final class EmailApiGrpc {
      */
     public void createEmailTemplateAttachment(com.tcn.cloud.api.api.v0alpha.CreateEmailTemplateAttachmentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateEmailTemplateAttachmentRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateEmailTemplateAttachmentMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2864,7 +2911,7 @@ public final class EmailApiGrpc {
      */
     public void copyEmailTemplateWithAttachments(com.tcn.cloud.api.api.v0alpha.CopyEmailTemplateWithAttachmentsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CopyEmailTemplateWithAttachmentsRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCopyEmailTemplateWithAttachmentsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2880,7 +2927,7 @@ public final class EmailApiGrpc {
      */
     public void updateEmailTemplateAttachment(com.tcn.cloud.api.api.v0alpha.UpdateEmailTemplateAttachmentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateEmailTemplateAttachmentRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateEmailTemplateAttachmentMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2896,7 +2943,7 @@ public final class EmailApiGrpc {
      */
     public void getEmailTemplateByTemplateSid(com.tcn.cloud.api.api.v0alpha.GetEmailTemplateByTemplateSidReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.EmailTemplateWithAttachments> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetEmailTemplateByTemplateSidMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2911,7 +2958,7 @@ public final class EmailApiGrpc {
      */
     public void getAllEmailTemplates(com.tcn.cloud.api.api.v0alpha.GetAllEmailTemplatesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetAllEmailTemplatesRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetAllEmailTemplatesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2927,7 +2974,7 @@ public final class EmailApiGrpc {
      */
     public void deleteEmailTemplate(com.tcn.cloud.api.api.v0alpha.DeleteEmailTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteEmailTemplateRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDeleteEmailTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2943,7 +2990,7 @@ public final class EmailApiGrpc {
      */
     public void deleteEmailTemplateAttachmentById(com.tcn.cloud.api.api.v0alpha.DeleteEmailTemplateAttachmentByIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteEmailTemplateAttachmentByIdRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDeleteEmailTemplateAttachmentByIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2960,7 +3007,7 @@ public final class EmailApiGrpc {
      */
     public void downloadInboundEmailAttachment(com.tcn.cloud.api.api.v0alpha.DownloadInboundEmailAttachmentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DownloadInboundEmailAttachmentRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDownloadInboundEmailAttachmentMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2976,7 +3023,7 @@ public final class EmailApiGrpc {
      */
     public void pureEmailGroupSearch(com.tcn.cloud.api.api.v0alpha.EmailGroupSearchReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.EmailGroupSearchRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getPureEmailGroupSearchMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2990,7 +3037,7 @@ public final class EmailApiGrpc {
      */
     public void managerListNewEmailMessageReplies(com.tcn.cloud.api.api.v0alpha.ListNewEmailMessageRepliesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListNewEmailMessageRepliesRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getManagerListNewEmailMessageRepliesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3004,7 +3051,7 @@ public final class EmailApiGrpc {
      */
     public void listNewEmailMessageReplies(com.tcn.cloud.api.api.v0alpha.ListNewEmailMessageRepliesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListNewEmailMessageRepliesRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListNewEmailMessageRepliesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3020,7 +3067,7 @@ public final class EmailApiGrpc {
      */
     public void getEmailTasksByGroupSids(com.tcn.cloud.api.api.v0alpha.GetEmailTasksByGroupSidsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetEmailTasksByGroupSidsRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetEmailTasksByGroupSidsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3036,7 +3083,7 @@ public final class EmailApiGrpc {
      */
     public void updateEmailGroupStatus(com.tcn.cloud.api.api.v0alpha.EmailGroupStatusReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.EmailGroupStatusRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateEmailGroupStatusMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3052,7 +3099,7 @@ public final class EmailApiGrpc {
      */
     public void getEmailMessageDetails(com.tcn.cloud.api.api.v0alpha.GetEmailMessageReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetEmailMessageRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetEmailMessageDetailsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3068,7 +3115,7 @@ public final class EmailApiGrpc {
      */
     public void createInboundEmailTemplate(com.tcn.cloud.api.api.v0alpha.CreateInboundEmailTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateInboundEmailTemplateRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateInboundEmailTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3084,7 +3131,7 @@ public final class EmailApiGrpc {
      */
     public void updateInboundEmailTemplate(com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailTemplateRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateInboundEmailTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3100,7 +3147,7 @@ public final class EmailApiGrpc {
      */
     public void deleteInboundEmailTemplateById(com.tcn.cloud.api.api.v0alpha.DeleteInboundEmailTemplateByIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteInboundEmailTemplateByIdRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDeleteInboundEmailTemplateByIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3115,7 +3162,7 @@ public final class EmailApiGrpc {
      */
     public void listInboundEmailTemplates(com.tcn.cloud.api.api.v0alpha.ListInboundEmailTemplatesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListInboundEmailTemplatesRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListInboundEmailTemplatesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3131,7 +3178,7 @@ public final class EmailApiGrpc {
      */
     public void getInboundEmailTemplateById(com.tcn.cloud.api.api.v0alpha.GetInboundEmailTemplateByIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.InboundEmailTemplate> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetInboundEmailTemplateByIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3146,7 +3193,7 @@ public final class EmailApiGrpc {
      */
     public void updateInboundEmailGroupStatus(com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailGroupStatusReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailGroupStatusRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateInboundEmailGroupStatusMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3162,7 +3209,7 @@ public final class EmailApiGrpc {
      */
     public void stopInboundEmailGroup(com.tcn.cloud.api.api.v0alpha.StopInboundEmailGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StopInboundEmailGroupRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getStopInboundEmailGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3176,7 +3223,7 @@ public final class EmailApiGrpc {
      */
     public void stopAllInboundEmailGroups(com.tcn.cloud.api.api.v0alpha.StopAllInboundEmailGroupsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StopInboundEmailGroupRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getStopAllInboundEmailGroupsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3192,7 +3239,7 @@ public final class EmailApiGrpc {
      */
     public void pureInboundEmailGroupSearch(com.tcn.cloud.api.api.v0alpha.PureInboundEmailGroupSearchReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.PureInboundEmailGroupSearchRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getPureInboundEmailGroupSearchMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3209,7 +3256,7 @@ public final class EmailApiGrpc {
      */
     public void inboundEmailGroupSearch(com.tcn.cloud.api.api.v0alpha.InboundEmailGroupSearchReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.InboundEmailGroupSearchRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getInboundEmailGroupSearchMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3225,7 +3272,7 @@ public final class EmailApiGrpc {
      */
     public void listInboundEmailGroupsByGroupIds(com.tcn.cloud.api.api.v0alpha.ListInboundEmailGroupsByGroupIdsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListInboundEmailGroupsByGroupIdsRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListInboundEmailGroupsByGroupIdsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3241,7 +3288,7 @@ public final class EmailApiGrpc {
      */
     public void listInboundEmailTasksByGroupIds(com.tcn.cloud.api.api.v0alpha.ListInboundEmailTasksByGroupIdsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListInboundEmailTasksByGroupIdsRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListInboundEmailTasksByGroupIdsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3256,7 +3303,7 @@ public final class EmailApiGrpc {
      */
     public void listActiveInboundEmailGroups(com.tcn.cloud.api.api.v0alpha.ListActiveInboundEmailGroupsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListActiveInboundEmailGroupsRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListActiveInboundEmailGroupsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3273,7 +3320,7 @@ public final class EmailApiGrpc {
      */
     public void schedule(com.tcn.cloud.api.api.v0alpha.ScheduleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ScheduleRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getScheduleMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3290,7 +3337,7 @@ public final class EmailApiGrpc {
      */
     public void scheduleOutboundEmailGroup(com.tcn.cloud.api.api.v0alpha.ScheduleOutboundEmailGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ScheduleOutboundEmailGroupRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getScheduleOutboundEmailGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3306,7 +3353,7 @@ public final class EmailApiGrpc {
      */
     public void schedulePureInboundEmail(com.tcn.cloud.api.api.v0alpha.SchedulePureInboundEmailReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SchedulePureInboundEmailRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getSchedulePureInboundEmailMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3322,7 +3369,7 @@ public final class EmailApiGrpc {
      */
     public void createEmailMessageAgentReply(com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAgentReplyReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.EmailMessageReplyWithAttachments> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateEmailMessageAgentReplyMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3338,7 +3385,7 @@ public final class EmailApiGrpc {
      */
     public void createEmailMessageAgentReplyAttachment(com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAgentReplyAttachmentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAgentReplyAttachmentRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateEmailMessageAgentReplyAttachmentMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3355,7 +3402,7 @@ public final class EmailApiGrpc {
      */
     public void sendReply(com.tcn.cloud.api.api.v0alpha.SendReplyReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.EmailMessageReplyWithAttachments> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getSendReplyMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3371,7 +3418,7 @@ public final class EmailApiGrpc {
      */
     public void getEmailGroupsByGroupSids(com.tcn.cloud.api.api.v0alpha.GetEmailGroupsByGroupSidsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetEmailGroupsByGroupSidsRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetEmailGroupsByGroupSidsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3387,7 +3434,7 @@ public final class EmailApiGrpc {
      */
     public void getEmailGroupByGroupSid(com.tcn.cloud.api.api.v0alpha.GetEmailGroupByGroupSidReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.EmailGroupDetailsWithAttachments> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetEmailGroupByGroupSidMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3403,7 +3450,7 @@ public final class EmailApiGrpc {
      */
     public void getEmailGroupByGroupId(com.tcn.cloud.api.api.v0alpha.GetEmailGroupByGroupIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.EmailGroupDetailsWithAttachments> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetEmailGroupByGroupIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3419,7 +3466,7 @@ public final class EmailApiGrpc {
      */
     public void schedulePureOmniLinkInboundEmail(com.tcn.cloud.api.api.v0alpha.SchedulePureOmniLinkInboundEmailReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SchedulePureOmniLinkInboundEmailRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getSchedulePureOmniLinkInboundEmailMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3432,7 +3479,7 @@ public final class EmailApiGrpc {
      */
     public void updateInboundEmailGroup(com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailGroupRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateInboundEmailGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3448,7 +3495,7 @@ public final class EmailApiGrpc {
      */
     public void updateEmailGroupMstrSendsPerMinute(com.tcn.cloud.api.api.v0alpha.EmailGroupSendsPerMinuteReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.EmailGroupSendsPerMinuteRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateEmailGroupMstrSendsPerMinuteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3461,7 +3508,7 @@ public final class EmailApiGrpc {
      */
     public void updateOutboundEmailGroup(com.tcn.cloud.api.api.v0alpha.UpdateOutboundEmailGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateOutboundEmailGroupRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateOutboundEmailGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3476,7 +3523,7 @@ public final class EmailApiGrpc {
      */
     public void getInboundEmailGroupById(com.tcn.cloud.api.api.v0alpha.InboundEmailGroupByIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.InboundEmailGroup> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetInboundEmailGroupByIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3491,7 +3538,7 @@ public final class EmailApiGrpc {
      */
     public void createEmailMessageAttachment(com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAttachmentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAttachmentRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateEmailMessageAttachmentMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3505,7 +3552,7 @@ public final class EmailApiGrpc {
      */
     public void listEmailMessageAttachments(com.tcn.cloud.api.api.v0alpha.ListEmailMessageAttachmentsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListEmailMessageAttachmentsRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListEmailMessageAttachmentsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3518,7 +3565,7 @@ public final class EmailApiGrpc {
      */
     public void unassignCurrentUserFromEmailConversation(com.tcn.cloud.api.api.v0alpha.UnassignCurrentUserFromEmailConversationReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UnassignUserFromEmailConversationRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUnassignCurrentUserFromEmailConversationMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3531,7 +3578,7 @@ public final class EmailApiGrpc {
      */
     public void dashboardEmailConversationSearch(com.tcn.cloud.api.api.v0alpha.DashboardEmailConversationSearchReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DashboardEmailConversationSearchRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDashboardEmailConversationSearchMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3546,7 +3593,7 @@ public final class EmailApiGrpc {
      */
     public void reassignEmailConversation(com.tcn.cloud.api.api.v0alpha.ReassignEmailConversationReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ReassignEmailConversationRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getReassignEmailConversationMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3558,7 +3605,7 @@ public final class EmailApiGrpc {
      */
     public void assignEmailConversation(com.tcn.cloud.api.api.v0alpha.AssignEmailConversationReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AssignEmailConversationRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getAssignEmailConversationMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3569,7 +3616,7 @@ public final class EmailApiGrpc {
      */
     public void suspendEmailConversation(com.tcn.cloud.api.api.v0alpha.SuspendEmailConversationReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SuspendEmailConversationRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getSuspendEmailConversationMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3584,7 +3631,7 @@ public final class EmailApiGrpc {
      */
     public void listCampaignsByConnectedInboxId(com.tcn.cloud.api.api.v0alpha.ListCampaignsByConnectedInboxIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCampaignsByConnectedInboxIdRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListCampaignsByConnectedInboxIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3597,22 +3644,26 @@ public final class EmailApiGrpc {
      */
     public void closeEmailConversation(com.tcn.cloud.api.api.v0alpha.CloseEmailConversationReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CloseEmailConversationRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCloseEmailConversationMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
    */
-  public static final class EmailApiBlockingStub extends io.grpc.stub.AbstractBlockingStub<EmailApiBlockingStub> {
-    private EmailApiBlockingStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class EmailApiBlockingStub extends io.grpc.stub.AbstractStub<EmailApiBlockingStub> {
+    private EmailApiBlockingStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private EmailApiBlockingStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected EmailApiBlockingStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected EmailApiBlockingStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new EmailApiBlockingStub(channel, callOptions);
     }
 
@@ -3627,7 +3678,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateEmailTemplateRes createEmailTemplate(com.tcn.cloud.api.api.v0alpha.CreateEmailTemplateReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateEmailTemplateMethod(), getCallOptions(), request);
     }
 
@@ -3642,7 +3693,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateEmailTemplateRes updateEmailTemplate(com.tcn.cloud.api.api.v0alpha.UpdateEmailTemplateReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateEmailTemplateMethod(), getCallOptions(), request);
     }
 
@@ -3657,7 +3708,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateEmailTemplateAttachmentRes createEmailTemplateAttachment(com.tcn.cloud.api.api.v0alpha.CreateEmailTemplateAttachmentReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateEmailTemplateAttachmentMethod(), getCallOptions(), request);
     }
 
@@ -3672,7 +3723,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CopyEmailTemplateWithAttachmentsRes copyEmailTemplateWithAttachments(com.tcn.cloud.api.api.v0alpha.CopyEmailTemplateWithAttachmentsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCopyEmailTemplateWithAttachmentsMethod(), getCallOptions(), request);
     }
 
@@ -3687,7 +3738,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateEmailTemplateAttachmentRes updateEmailTemplateAttachment(com.tcn.cloud.api.api.v0alpha.UpdateEmailTemplateAttachmentReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateEmailTemplateAttachmentMethod(), getCallOptions(), request);
     }
 
@@ -3702,7 +3753,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.EmailTemplateWithAttachments getEmailTemplateByTemplateSid(com.tcn.cloud.api.api.v0alpha.GetEmailTemplateByTemplateSidReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetEmailTemplateByTemplateSidMethod(), getCallOptions(), request);
     }
 
@@ -3716,7 +3767,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetAllEmailTemplatesRes getAllEmailTemplates(com.tcn.cloud.api.api.v0alpha.GetAllEmailTemplatesReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetAllEmailTemplatesMethod(), getCallOptions(), request);
     }
 
@@ -3731,7 +3782,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.DeleteEmailTemplateRes deleteEmailTemplate(com.tcn.cloud.api.api.v0alpha.DeleteEmailTemplateReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDeleteEmailTemplateMethod(), getCallOptions(), request);
     }
 
@@ -3746,7 +3797,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.DeleteEmailTemplateAttachmentByIdRes deleteEmailTemplateAttachmentById(com.tcn.cloud.api.api.v0alpha.DeleteEmailTemplateAttachmentByIdReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDeleteEmailTemplateAttachmentByIdMethod(), getCallOptions(), request);
     }
 
@@ -3762,7 +3813,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.DownloadInboundEmailAttachmentRes downloadInboundEmailAttachment(com.tcn.cloud.api.api.v0alpha.DownloadInboundEmailAttachmentReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDownloadInboundEmailAttachmentMethod(), getCallOptions(), request);
     }
 
@@ -3777,7 +3828,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.EmailGroupSearchRes pureEmailGroupSearch(com.tcn.cloud.api.api.v0alpha.EmailGroupSearchReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getPureEmailGroupSearchMethod(), getCallOptions(), request);
     }
 
@@ -3790,7 +3841,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListNewEmailMessageRepliesRes managerListNewEmailMessageReplies(com.tcn.cloud.api.api.v0alpha.ListNewEmailMessageRepliesReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getManagerListNewEmailMessageRepliesMethod(), getCallOptions(), request);
     }
 
@@ -3803,7 +3854,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListNewEmailMessageRepliesRes listNewEmailMessageReplies(com.tcn.cloud.api.api.v0alpha.ListNewEmailMessageRepliesReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListNewEmailMessageRepliesMethod(), getCallOptions(), request);
     }
 
@@ -3818,7 +3869,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetEmailTasksByGroupSidsRes getEmailTasksByGroupSids(com.tcn.cloud.api.api.v0alpha.GetEmailTasksByGroupSidsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetEmailTasksByGroupSidsMethod(), getCallOptions(), request);
     }
 
@@ -3833,7 +3884,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.EmailGroupStatusRes updateEmailGroupStatus(com.tcn.cloud.api.api.v0alpha.EmailGroupStatusReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateEmailGroupStatusMethod(), getCallOptions(), request);
     }
 
@@ -3848,7 +3899,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetEmailMessageRes getEmailMessageDetails(com.tcn.cloud.api.api.v0alpha.GetEmailMessageReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetEmailMessageDetailsMethod(), getCallOptions(), request);
     }
 
@@ -3863,7 +3914,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateInboundEmailTemplateRes createInboundEmailTemplate(com.tcn.cloud.api.api.v0alpha.CreateInboundEmailTemplateReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateInboundEmailTemplateMethod(), getCallOptions(), request);
     }
 
@@ -3878,7 +3929,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailTemplateRes updateInboundEmailTemplate(com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailTemplateReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateInboundEmailTemplateMethod(), getCallOptions(), request);
     }
 
@@ -3893,7 +3944,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.DeleteInboundEmailTemplateByIdRes deleteInboundEmailTemplateById(com.tcn.cloud.api.api.v0alpha.DeleteInboundEmailTemplateByIdReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDeleteInboundEmailTemplateByIdMethod(), getCallOptions(), request);
     }
 
@@ -3907,7 +3958,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListInboundEmailTemplatesRes listInboundEmailTemplates(com.tcn.cloud.api.api.v0alpha.ListInboundEmailTemplatesReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListInboundEmailTemplatesMethod(), getCallOptions(), request);
     }
 
@@ -3922,7 +3973,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.InboundEmailTemplate getInboundEmailTemplateById(com.tcn.cloud.api.api.v0alpha.GetInboundEmailTemplateByIdReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetInboundEmailTemplateByIdMethod(), getCallOptions(), request);
     }
 
@@ -3936,7 +3987,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailGroupStatusRes updateInboundEmailGroupStatus(com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailGroupStatusReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateInboundEmailGroupStatusMethod(), getCallOptions(), request);
     }
 
@@ -3951,7 +4002,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.StopInboundEmailGroupRes stopInboundEmailGroup(com.tcn.cloud.api.api.v0alpha.StopInboundEmailGroupReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getStopInboundEmailGroupMethod(), getCallOptions(), request);
     }
 
@@ -3964,7 +4015,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.StopInboundEmailGroupRes stopAllInboundEmailGroups(com.tcn.cloud.api.api.v0alpha.StopAllInboundEmailGroupsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getStopAllInboundEmailGroupsMethod(), getCallOptions(), request);
     }
 
@@ -3979,7 +4030,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.PureInboundEmailGroupSearchRes pureInboundEmailGroupSearch(com.tcn.cloud.api.api.v0alpha.PureInboundEmailGroupSearchReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getPureInboundEmailGroupSearchMethod(), getCallOptions(), request);
     }
 
@@ -3995,7 +4046,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.InboundEmailGroupSearchRes inboundEmailGroupSearch(com.tcn.cloud.api.api.v0alpha.InboundEmailGroupSearchReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getInboundEmailGroupSearchMethod(), getCallOptions(), request);
     }
 
@@ -4010,7 +4061,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListInboundEmailGroupsByGroupIdsRes listInboundEmailGroupsByGroupIds(com.tcn.cloud.api.api.v0alpha.ListInboundEmailGroupsByGroupIdsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListInboundEmailGroupsByGroupIdsMethod(), getCallOptions(), request);
     }
 
@@ -4025,7 +4076,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListInboundEmailTasksByGroupIdsRes listInboundEmailTasksByGroupIds(com.tcn.cloud.api.api.v0alpha.ListInboundEmailTasksByGroupIdsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListInboundEmailTasksByGroupIdsMethod(), getCallOptions(), request);
     }
 
@@ -4039,7 +4090,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListActiveInboundEmailGroupsRes listActiveInboundEmailGroups(com.tcn.cloud.api.api.v0alpha.ListActiveInboundEmailGroupsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListActiveInboundEmailGroupsMethod(), getCallOptions(), request);
     }
 
@@ -4055,7 +4106,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ScheduleRes schedule(com.tcn.cloud.api.api.v0alpha.ScheduleReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getScheduleMethod(), getCallOptions(), request);
     }
 
@@ -4071,7 +4122,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ScheduleOutboundEmailGroupRes scheduleOutboundEmailGroup(com.tcn.cloud.api.api.v0alpha.ScheduleOutboundEmailGroupReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getScheduleOutboundEmailGroupMethod(), getCallOptions(), request);
     }
 
@@ -4086,7 +4137,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.SchedulePureInboundEmailRes schedulePureInboundEmail(com.tcn.cloud.api.api.v0alpha.SchedulePureInboundEmailReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getSchedulePureInboundEmailMethod(), getCallOptions(), request);
     }
 
@@ -4101,7 +4152,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.EmailMessageReplyWithAttachments createEmailMessageAgentReply(com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAgentReplyReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateEmailMessageAgentReplyMethod(), getCallOptions(), request);
     }
 
@@ -4116,7 +4167,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAgentReplyAttachmentRes createEmailMessageAgentReplyAttachment(com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAgentReplyAttachmentReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateEmailMessageAgentReplyAttachmentMethod(), getCallOptions(), request);
     }
 
@@ -4132,7 +4183,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.EmailMessageReplyWithAttachments sendReply(com.tcn.cloud.api.api.v0alpha.SendReplyReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getSendReplyMethod(), getCallOptions(), request);
     }
 
@@ -4147,7 +4198,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetEmailGroupsByGroupSidsRes getEmailGroupsByGroupSids(com.tcn.cloud.api.api.v0alpha.GetEmailGroupsByGroupSidsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetEmailGroupsByGroupSidsMethod(), getCallOptions(), request);
     }
 
@@ -4162,7 +4213,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.EmailGroupDetailsWithAttachments getEmailGroupByGroupSid(com.tcn.cloud.api.api.v0alpha.GetEmailGroupByGroupSidReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetEmailGroupByGroupSidMethod(), getCallOptions(), request);
     }
 
@@ -4177,7 +4228,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.EmailGroupDetailsWithAttachments getEmailGroupByGroupId(com.tcn.cloud.api.api.v0alpha.GetEmailGroupByGroupIdReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetEmailGroupByGroupIdMethod(), getCallOptions(), request);
     }
 
@@ -4192,7 +4243,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.SchedulePureOmniLinkInboundEmailRes schedulePureOmniLinkInboundEmail(com.tcn.cloud.api.api.v0alpha.SchedulePureOmniLinkInboundEmailReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getSchedulePureOmniLinkInboundEmailMethod(), getCallOptions(), request);
     }
 
@@ -4204,7 +4255,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailGroupRes updateInboundEmailGroup(com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailGroupReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateInboundEmailGroupMethod(), getCallOptions(), request);
     }
 
@@ -4219,7 +4270,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.EmailGroupSendsPerMinuteRes updateEmailGroupMstrSendsPerMinute(com.tcn.cloud.api.api.v0alpha.EmailGroupSendsPerMinuteReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateEmailGroupMstrSendsPerMinuteMethod(), getCallOptions(), request);
     }
 
@@ -4231,7 +4282,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateOutboundEmailGroupRes updateOutboundEmailGroup(com.tcn.cloud.api.api.v0alpha.UpdateOutboundEmailGroupReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateOutboundEmailGroupMethod(), getCallOptions(), request);
     }
 
@@ -4245,7 +4296,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.InboundEmailGroup getInboundEmailGroupById(com.tcn.cloud.api.api.v0alpha.InboundEmailGroupByIdReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetInboundEmailGroupByIdMethod(), getCallOptions(), request);
     }
 
@@ -4259,7 +4310,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAttachmentRes createEmailMessageAttachment(com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAttachmentReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateEmailMessageAttachmentMethod(), getCallOptions(), request);
     }
 
@@ -4272,7 +4323,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListEmailMessageAttachmentsRes listEmailMessageAttachments(com.tcn.cloud.api.api.v0alpha.ListEmailMessageAttachmentsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListEmailMessageAttachmentsMethod(), getCallOptions(), request);
     }
 
@@ -4284,7 +4335,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UnassignUserFromEmailConversationRes unassignCurrentUserFromEmailConversation(com.tcn.cloud.api.api.v0alpha.UnassignCurrentUserFromEmailConversationReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUnassignCurrentUserFromEmailConversationMethod(), getCallOptions(), request);
     }
 
@@ -4296,7 +4347,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.DashboardEmailConversationSearchRes dashboardEmailConversationSearch(com.tcn.cloud.api.api.v0alpha.DashboardEmailConversationSearchReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDashboardEmailConversationSearchMethod(), getCallOptions(), request);
     }
 
@@ -4310,7 +4361,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ReassignEmailConversationRes reassignEmailConversation(com.tcn.cloud.api.api.v0alpha.ReassignEmailConversationReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getReassignEmailConversationMethod(), getCallOptions(), request);
     }
 
@@ -4321,7 +4372,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.AssignEmailConversationRes assignEmailConversation(com.tcn.cloud.api.api.v0alpha.AssignEmailConversationReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getAssignEmailConversationMethod(), getCallOptions(), request);
     }
 
@@ -4331,7 +4382,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.SuspendEmailConversationRes suspendEmailConversation(com.tcn.cloud.api.api.v0alpha.SuspendEmailConversationReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getSuspendEmailConversationMethod(), getCallOptions(), request);
     }
 
@@ -4345,7 +4396,7 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListCampaignsByConnectedInboxIdRes listCampaignsByConnectedInboxId(com.tcn.cloud.api.api.v0alpha.ListCampaignsByConnectedInboxIdReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListCampaignsByConnectedInboxIdMethod(), getCallOptions(), request);
     }
 
@@ -4357,22 +4408,26 @@ public final class EmailApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CloseEmailConversationRes closeEmailConversation(com.tcn.cloud.api.api.v0alpha.CloseEmailConversationReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCloseEmailConversationMethod(), getCallOptions(), request);
     }
   }
 
   /**
    */
-  public static final class EmailApiFutureStub extends io.grpc.stub.AbstractFutureStub<EmailApiFutureStub> {
-    private EmailApiFutureStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class EmailApiFutureStub extends io.grpc.stub.AbstractStub<EmailApiFutureStub> {
+    private EmailApiFutureStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private EmailApiFutureStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected EmailApiFutureStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected EmailApiFutureStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new EmailApiFutureStub(channel, callOptions);
     }
 
@@ -4388,7 +4443,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateEmailTemplateRes> createEmailTemplate(
         com.tcn.cloud.api.api.v0alpha.CreateEmailTemplateReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateEmailTemplateMethod(), getCallOptions()), request);
     }
 
@@ -4404,7 +4459,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateEmailTemplateRes> updateEmailTemplate(
         com.tcn.cloud.api.api.v0alpha.UpdateEmailTemplateReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateEmailTemplateMethod(), getCallOptions()), request);
     }
 
@@ -4420,7 +4475,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateEmailTemplateAttachmentRes> createEmailTemplateAttachment(
         com.tcn.cloud.api.api.v0alpha.CreateEmailTemplateAttachmentReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateEmailTemplateAttachmentMethod(), getCallOptions()), request);
     }
 
@@ -4436,7 +4491,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CopyEmailTemplateWithAttachmentsRes> copyEmailTemplateWithAttachments(
         com.tcn.cloud.api.api.v0alpha.CopyEmailTemplateWithAttachmentsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCopyEmailTemplateWithAttachmentsMethod(), getCallOptions()), request);
     }
 
@@ -4452,7 +4507,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateEmailTemplateAttachmentRes> updateEmailTemplateAttachment(
         com.tcn.cloud.api.api.v0alpha.UpdateEmailTemplateAttachmentReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateEmailTemplateAttachmentMethod(), getCallOptions()), request);
     }
 
@@ -4468,7 +4523,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.EmailTemplateWithAttachments> getEmailTemplateByTemplateSid(
         com.tcn.cloud.api.api.v0alpha.GetEmailTemplateByTemplateSidReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetEmailTemplateByTemplateSidMethod(), getCallOptions()), request);
     }
 
@@ -4483,7 +4538,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetAllEmailTemplatesRes> getAllEmailTemplates(
         com.tcn.cloud.api.api.v0alpha.GetAllEmailTemplatesReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetAllEmailTemplatesMethod(), getCallOptions()), request);
     }
 
@@ -4499,7 +4554,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeleteEmailTemplateRes> deleteEmailTemplate(
         com.tcn.cloud.api.api.v0alpha.DeleteEmailTemplateReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDeleteEmailTemplateMethod(), getCallOptions()), request);
     }
 
@@ -4515,7 +4570,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeleteEmailTemplateAttachmentByIdRes> deleteEmailTemplateAttachmentById(
         com.tcn.cloud.api.api.v0alpha.DeleteEmailTemplateAttachmentByIdReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDeleteEmailTemplateAttachmentByIdMethod(), getCallOptions()), request);
     }
 
@@ -4532,7 +4587,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DownloadInboundEmailAttachmentRes> downloadInboundEmailAttachment(
         com.tcn.cloud.api.api.v0alpha.DownloadInboundEmailAttachmentReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDownloadInboundEmailAttachmentMethod(), getCallOptions()), request);
     }
 
@@ -4548,7 +4603,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.EmailGroupSearchRes> pureEmailGroupSearch(
         com.tcn.cloud.api.api.v0alpha.EmailGroupSearchReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getPureEmailGroupSearchMethod(), getCallOptions()), request);
     }
 
@@ -4562,7 +4617,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListNewEmailMessageRepliesRes> managerListNewEmailMessageReplies(
         com.tcn.cloud.api.api.v0alpha.ListNewEmailMessageRepliesReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getManagerListNewEmailMessageRepliesMethod(), getCallOptions()), request);
     }
 
@@ -4576,7 +4631,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListNewEmailMessageRepliesRes> listNewEmailMessageReplies(
         com.tcn.cloud.api.api.v0alpha.ListNewEmailMessageRepliesReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListNewEmailMessageRepliesMethod(), getCallOptions()), request);
     }
 
@@ -4592,7 +4647,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetEmailTasksByGroupSidsRes> getEmailTasksByGroupSids(
         com.tcn.cloud.api.api.v0alpha.GetEmailTasksByGroupSidsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetEmailTasksByGroupSidsMethod(), getCallOptions()), request);
     }
 
@@ -4608,7 +4663,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.EmailGroupStatusRes> updateEmailGroupStatus(
         com.tcn.cloud.api.api.v0alpha.EmailGroupStatusReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateEmailGroupStatusMethod(), getCallOptions()), request);
     }
 
@@ -4624,7 +4679,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetEmailMessageRes> getEmailMessageDetails(
         com.tcn.cloud.api.api.v0alpha.GetEmailMessageReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetEmailMessageDetailsMethod(), getCallOptions()), request);
     }
 
@@ -4640,7 +4695,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateInboundEmailTemplateRes> createInboundEmailTemplate(
         com.tcn.cloud.api.api.v0alpha.CreateInboundEmailTemplateReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateInboundEmailTemplateMethod(), getCallOptions()), request);
     }
 
@@ -4656,7 +4711,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailTemplateRes> updateInboundEmailTemplate(
         com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailTemplateReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateInboundEmailTemplateMethod(), getCallOptions()), request);
     }
 
@@ -4672,7 +4727,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeleteInboundEmailTemplateByIdRes> deleteInboundEmailTemplateById(
         com.tcn.cloud.api.api.v0alpha.DeleteInboundEmailTemplateByIdReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDeleteInboundEmailTemplateByIdMethod(), getCallOptions()), request);
     }
 
@@ -4687,7 +4742,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListInboundEmailTemplatesRes> listInboundEmailTemplates(
         com.tcn.cloud.api.api.v0alpha.ListInboundEmailTemplatesReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListInboundEmailTemplatesMethod(), getCallOptions()), request);
     }
 
@@ -4703,7 +4758,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.InboundEmailTemplate> getInboundEmailTemplateById(
         com.tcn.cloud.api.api.v0alpha.GetInboundEmailTemplateByIdReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetInboundEmailTemplateByIdMethod(), getCallOptions()), request);
     }
 
@@ -4718,7 +4773,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailGroupStatusRes> updateInboundEmailGroupStatus(
         com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailGroupStatusReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateInboundEmailGroupStatusMethod(), getCallOptions()), request);
     }
 
@@ -4734,7 +4789,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.StopInboundEmailGroupRes> stopInboundEmailGroup(
         com.tcn.cloud.api.api.v0alpha.StopInboundEmailGroupReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getStopInboundEmailGroupMethod(), getCallOptions()), request);
     }
 
@@ -4748,7 +4803,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.StopInboundEmailGroupRes> stopAllInboundEmailGroups(
         com.tcn.cloud.api.api.v0alpha.StopAllInboundEmailGroupsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getStopAllInboundEmailGroupsMethod(), getCallOptions()), request);
     }
 
@@ -4764,7 +4819,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.PureInboundEmailGroupSearchRes> pureInboundEmailGroupSearch(
         com.tcn.cloud.api.api.v0alpha.PureInboundEmailGroupSearchReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getPureInboundEmailGroupSearchMethod(), getCallOptions()), request);
     }
 
@@ -4781,7 +4836,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.InboundEmailGroupSearchRes> inboundEmailGroupSearch(
         com.tcn.cloud.api.api.v0alpha.InboundEmailGroupSearchReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getInboundEmailGroupSearchMethod(), getCallOptions()), request);
     }
 
@@ -4797,7 +4852,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListInboundEmailGroupsByGroupIdsRes> listInboundEmailGroupsByGroupIds(
         com.tcn.cloud.api.api.v0alpha.ListInboundEmailGroupsByGroupIdsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListInboundEmailGroupsByGroupIdsMethod(), getCallOptions()), request);
     }
 
@@ -4813,7 +4868,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListInboundEmailTasksByGroupIdsRes> listInboundEmailTasksByGroupIds(
         com.tcn.cloud.api.api.v0alpha.ListInboundEmailTasksByGroupIdsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListInboundEmailTasksByGroupIdsMethod(), getCallOptions()), request);
     }
 
@@ -4828,7 +4883,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListActiveInboundEmailGroupsRes> listActiveInboundEmailGroups(
         com.tcn.cloud.api.api.v0alpha.ListActiveInboundEmailGroupsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListActiveInboundEmailGroupsMethod(), getCallOptions()), request);
     }
 
@@ -4845,7 +4900,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ScheduleRes> schedule(
         com.tcn.cloud.api.api.v0alpha.ScheduleReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getScheduleMethod(), getCallOptions()), request);
     }
 
@@ -4862,7 +4917,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ScheduleOutboundEmailGroupRes> scheduleOutboundEmailGroup(
         com.tcn.cloud.api.api.v0alpha.ScheduleOutboundEmailGroupReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getScheduleOutboundEmailGroupMethod(), getCallOptions()), request);
     }
 
@@ -4878,7 +4933,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SchedulePureInboundEmailRes> schedulePureInboundEmail(
         com.tcn.cloud.api.api.v0alpha.SchedulePureInboundEmailReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getSchedulePureInboundEmailMethod(), getCallOptions()), request);
     }
 
@@ -4894,7 +4949,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.EmailMessageReplyWithAttachments> createEmailMessageAgentReply(
         com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAgentReplyReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateEmailMessageAgentReplyMethod(), getCallOptions()), request);
     }
 
@@ -4910,7 +4965,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAgentReplyAttachmentRes> createEmailMessageAgentReplyAttachment(
         com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAgentReplyAttachmentReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateEmailMessageAgentReplyAttachmentMethod(), getCallOptions()), request);
     }
 
@@ -4927,7 +4982,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.EmailMessageReplyWithAttachments> sendReply(
         com.tcn.cloud.api.api.v0alpha.SendReplyReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getSendReplyMethod(), getCallOptions()), request);
     }
 
@@ -4943,7 +4998,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetEmailGroupsByGroupSidsRes> getEmailGroupsByGroupSids(
         com.tcn.cloud.api.api.v0alpha.GetEmailGroupsByGroupSidsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetEmailGroupsByGroupSidsMethod(), getCallOptions()), request);
     }
 
@@ -4959,7 +5014,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.EmailGroupDetailsWithAttachments> getEmailGroupByGroupSid(
         com.tcn.cloud.api.api.v0alpha.GetEmailGroupByGroupSidReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetEmailGroupByGroupSidMethod(), getCallOptions()), request);
     }
 
@@ -4975,7 +5030,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.EmailGroupDetailsWithAttachments> getEmailGroupByGroupId(
         com.tcn.cloud.api.api.v0alpha.GetEmailGroupByGroupIdReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetEmailGroupByGroupIdMethod(), getCallOptions()), request);
     }
 
@@ -4991,7 +5046,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SchedulePureOmniLinkInboundEmailRes> schedulePureOmniLinkInboundEmail(
         com.tcn.cloud.api.api.v0alpha.SchedulePureOmniLinkInboundEmailReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getSchedulePureOmniLinkInboundEmailMethod(), getCallOptions()), request);
     }
 
@@ -5004,7 +5059,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailGroupRes> updateInboundEmailGroup(
         com.tcn.cloud.api.api.v0alpha.UpdateInboundEmailGroupReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateInboundEmailGroupMethod(), getCallOptions()), request);
     }
 
@@ -5020,7 +5075,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.EmailGroupSendsPerMinuteRes> updateEmailGroupMstrSendsPerMinute(
         com.tcn.cloud.api.api.v0alpha.EmailGroupSendsPerMinuteReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateEmailGroupMstrSendsPerMinuteMethod(), getCallOptions()), request);
     }
 
@@ -5033,7 +5088,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateOutboundEmailGroupRes> updateOutboundEmailGroup(
         com.tcn.cloud.api.api.v0alpha.UpdateOutboundEmailGroupReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateOutboundEmailGroupMethod(), getCallOptions()), request);
     }
 
@@ -5048,7 +5103,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.InboundEmailGroup> getInboundEmailGroupById(
         com.tcn.cloud.api.api.v0alpha.InboundEmailGroupByIdReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetInboundEmailGroupByIdMethod(), getCallOptions()), request);
     }
 
@@ -5063,7 +5118,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAttachmentRes> createEmailMessageAttachment(
         com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAttachmentReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateEmailMessageAttachmentMethod(), getCallOptions()), request);
     }
 
@@ -5077,7 +5132,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListEmailMessageAttachmentsRes> listEmailMessageAttachments(
         com.tcn.cloud.api.api.v0alpha.ListEmailMessageAttachmentsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListEmailMessageAttachmentsMethod(), getCallOptions()), request);
     }
 
@@ -5090,7 +5145,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UnassignUserFromEmailConversationRes> unassignCurrentUserFromEmailConversation(
         com.tcn.cloud.api.api.v0alpha.UnassignCurrentUserFromEmailConversationReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUnassignCurrentUserFromEmailConversationMethod(), getCallOptions()), request);
     }
 
@@ -5103,7 +5158,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DashboardEmailConversationSearchRes> dashboardEmailConversationSearch(
         com.tcn.cloud.api.api.v0alpha.DashboardEmailConversationSearchReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDashboardEmailConversationSearchMethod(), getCallOptions()), request);
     }
 
@@ -5118,7 +5173,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ReassignEmailConversationRes> reassignEmailConversation(
         com.tcn.cloud.api.api.v0alpha.ReassignEmailConversationReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getReassignEmailConversationMethod(), getCallOptions()), request);
     }
 
@@ -5130,7 +5185,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.AssignEmailConversationRes> assignEmailConversation(
         com.tcn.cloud.api.api.v0alpha.AssignEmailConversationReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getAssignEmailConversationMethod(), getCallOptions()), request);
     }
 
@@ -5141,7 +5196,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SuspendEmailConversationRes> suspendEmailConversation(
         com.tcn.cloud.api.api.v0alpha.SuspendEmailConversationReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getSuspendEmailConversationMethod(), getCallOptions()), request);
     }
 
@@ -5156,7 +5211,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListCampaignsByConnectedInboxIdRes> listCampaignsByConnectedInboxId(
         com.tcn.cloud.api.api.v0alpha.ListCampaignsByConnectedInboxIdReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListCampaignsByConnectedInboxIdMethod(), getCallOptions()), request);
     }
 
@@ -5169,7 +5224,7 @@ public final class EmailApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CloseEmailConversationRes> closeEmailConversation(
         com.tcn.cloud.api.api.v0alpha.CloseEmailConversationReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCloseEmailConversationMethod(), getCallOptions()), request);
     }
   }

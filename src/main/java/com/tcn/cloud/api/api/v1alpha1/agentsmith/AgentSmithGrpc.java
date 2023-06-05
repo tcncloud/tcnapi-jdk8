@@ -1,6 +1,19 @@
 package com.tcn.cloud.api.api.v1alpha1.agentsmith;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -9,9 +22,8 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.50.0)",
+    value = "by gRPC proto compiler (version 1.14.0)",
     comments = "Source: api/v1alpha1/agentsmith/service.proto")
-@io.grpc.stub.annotations.GrpcGenerated
 public final class AgentSmithGrpc {
 
   private AgentSmithGrpc() {}
@@ -33,35 +45,29 @@ public final class AgentSmithGrpc {
     if ((getFollowAgentMethod = AgentSmithGrpc.getFollowAgentMethod) == null) {
       synchronized (AgentSmithGrpc.class) {
         if ((getFollowAgentMethod = AgentSmithGrpc.getFollowAgentMethod) == null) {
-          AgentSmithGrpc.getFollowAgentMethod = getFollowAgentMethod =
+          AgentSmithGrpc.getFollowAgentMethod = getFollowAgentMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentReq, com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "FollowAgent"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v1alpha1.agentsmith.AgentSmith", "FollowAgent"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentRes.getDefaultInstance()))
-              .setSchemaDescriptor(new AgentSmithMethodDescriptorSupplier("FollowAgent"))
-              .build();
+                  .setSchemaDescriptor(new AgentSmithMethodDescriptorSupplier("FollowAgent"))
+                  .build();
+          }
         }
-      }
-    }
-    return getFollowAgentMethod;
+     }
+     return getFollowAgentMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static AgentSmithStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<AgentSmithStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<AgentSmithStub>() {
-        @java.lang.Override
-        public AgentSmithStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new AgentSmithStub(channel, callOptions);
-        }
-      };
-    return AgentSmithStub.newStub(factory, channel);
+    return new AgentSmithStub(channel);
   }
 
   /**
@@ -69,14 +75,7 @@ public final class AgentSmithGrpc {
    */
   public static AgentSmithBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<AgentSmithBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<AgentSmithBlockingStub>() {
-        @java.lang.Override
-        public AgentSmithBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new AgentSmithBlockingStub(channel, callOptions);
-        }
-      };
-    return AgentSmithBlockingStub.newStub(factory, channel);
+    return new AgentSmithBlockingStub(channel);
   }
 
   /**
@@ -84,14 +83,7 @@ public final class AgentSmithGrpc {
    */
   public static AgentSmithFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<AgentSmithFutureStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<AgentSmithFutureStub>() {
-        @java.lang.Override
-        public AgentSmithFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new AgentSmithFutureStub(channel, callOptions);
-        }
-      };
-    return AgentSmithFutureStub.newStub(factory, channel);
+    return new AgentSmithFutureStub(channel);
   }
 
   /**
@@ -113,14 +105,14 @@ public final class AgentSmithGrpc {
      */
     public void followAgent(com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFollowAgentMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getFollowAgentMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getFollowAgentMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            asyncServerStreamingCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentReq,
                 com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentRes>(
@@ -135,15 +127,19 @@ public final class AgentSmithGrpc {
    * to follow agents and/or create virtual agents.
    * </pre>
    */
-  public static final class AgentSmithStub extends io.grpc.stub.AbstractAsyncStub<AgentSmithStub> {
-    private AgentSmithStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class AgentSmithStub extends io.grpc.stub.AbstractStub<AgentSmithStub> {
+    private AgentSmithStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private AgentSmithStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AgentSmithStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected AgentSmithStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new AgentSmithStub(channel, callOptions);
     }
 
@@ -158,7 +154,7 @@ public final class AgentSmithGrpc {
      */
     public void followAgent(com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+      asyncServerStreamingCall(
           getChannel().newCall(getFollowAgentMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -169,15 +165,19 @@ public final class AgentSmithGrpc {
    * to follow agents and/or create virtual agents.
    * </pre>
    */
-  public static final class AgentSmithBlockingStub extends io.grpc.stub.AbstractBlockingStub<AgentSmithBlockingStub> {
-    private AgentSmithBlockingStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class AgentSmithBlockingStub extends io.grpc.stub.AbstractStub<AgentSmithBlockingStub> {
+    private AgentSmithBlockingStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private AgentSmithBlockingStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AgentSmithBlockingStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected AgentSmithBlockingStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new AgentSmithBlockingStub(channel, callOptions);
     }
 
@@ -192,7 +192,7 @@ public final class AgentSmithGrpc {
      */
     public java.util.Iterator<com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentRes> followAgent(
         com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentReq request) {
-      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+      return blockingServerStreamingCall(
           getChannel(), getFollowAgentMethod(), getCallOptions(), request);
     }
   }
@@ -203,15 +203,19 @@ public final class AgentSmithGrpc {
    * to follow agents and/or create virtual agents.
    * </pre>
    */
-  public static final class AgentSmithFutureStub extends io.grpc.stub.AbstractFutureStub<AgentSmithFutureStub> {
-    private AgentSmithFutureStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class AgentSmithFutureStub extends io.grpc.stub.AbstractStub<AgentSmithFutureStub> {
+    private AgentSmithFutureStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private AgentSmithFutureStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AgentSmithFutureStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected AgentSmithFutureStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new AgentSmithFutureStub(channel, callOptions);
     }
   }

@@ -1,6 +1,19 @@
 package com.tcn.cloud.api.api.v0alpha;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -10,9 +23,8 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.50.0)",
+    value = "by gRPC proto compiler (version 1.14.0)",
     comments = "Source: api/v0alpha/omniapi.proto")
-@io.grpc.stub.annotations.GrpcGenerated
 public final class OmniApiGrpc {
 
   private OmniApiGrpc() {}
@@ -34,21 +46,22 @@ public final class OmniApiGrpc {
     if ((getArchiveCampaignMethod = OmniApiGrpc.getArchiveCampaignMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getArchiveCampaignMethod = OmniApiGrpc.getArchiveCampaignMethod) == null) {
-          OmniApiGrpc.getArchiveCampaignMethod = getArchiveCampaignMethod =
+          OmniApiGrpc.getArchiveCampaignMethod = getArchiveCampaignMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ArchiveCampaignReq, com.tcn.cloud.api.api.v0alpha.ArchiveCampaignRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ArchiveCampaign"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "ArchiveCampaign"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ArchiveCampaignReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ArchiveCampaignRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ArchiveCampaign"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ArchiveCampaign"))
+                  .build();
+          }
         }
-      }
-    }
-    return getArchiveCampaignMethod;
+     }
+     return getArchiveCampaignMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateCampaignReq,
@@ -65,21 +78,22 @@ public final class OmniApiGrpc {
     if ((getCreateCampaignMethod = OmniApiGrpc.getCreateCampaignMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getCreateCampaignMethod = OmniApiGrpc.getCreateCampaignMethod) == null) {
-          OmniApiGrpc.getCreateCampaignMethod = getCreateCampaignMethod =
+          OmniApiGrpc.getCreateCampaignMethod = getCreateCampaignMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateCampaignReq, com.tcn.cloud.api.api.commons.OmniCampaign>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateCampaign"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "CreateCampaign"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateCampaignReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.commons.OmniCampaign.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("CreateCampaign"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("CreateCampaign"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateCampaignMethod;
+     }
+     return getCreateCampaignMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetCampaignByIdReq,
@@ -96,21 +110,22 @@ public final class OmniApiGrpc {
     if ((getGetCampaignByIdMethod = OmniApiGrpc.getGetCampaignByIdMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getGetCampaignByIdMethod = OmniApiGrpc.getGetCampaignByIdMethod) == null) {
-          OmniApiGrpc.getGetCampaignByIdMethod = getGetCampaignByIdMethod =
+          OmniApiGrpc.getGetCampaignByIdMethod = getGetCampaignByIdMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetCampaignByIdReq, com.tcn.cloud.api.api.commons.OmniCampaign>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCampaignById"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "GetCampaignById"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetCampaignByIdReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.commons.OmniCampaign.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("GetCampaignById"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("GetCampaignById"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetCampaignByIdMethod;
+     }
+     return getGetCampaignByIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.PauseCampaignReq,
@@ -127,21 +142,22 @@ public final class OmniApiGrpc {
     if ((getPauseCampaignMethod = OmniApiGrpc.getPauseCampaignMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getPauseCampaignMethod = OmniApiGrpc.getPauseCampaignMethod) == null) {
-          OmniApiGrpc.getPauseCampaignMethod = getPauseCampaignMethod =
+          OmniApiGrpc.getPauseCampaignMethod = getPauseCampaignMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.PauseCampaignReq, com.tcn.cloud.api.api.v0alpha.PauseCampaignRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "PauseCampaign"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "PauseCampaign"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.PauseCampaignReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.PauseCampaignRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("PauseCampaign"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("PauseCampaign"))
+                  .build();
+          }
         }
-      }
-    }
-    return getPauseCampaignMethod;
+     }
+     return getPauseCampaignMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ResumeCampaignReq,
@@ -158,21 +174,22 @@ public final class OmniApiGrpc {
     if ((getResumeCampaignMethod = OmniApiGrpc.getResumeCampaignMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getResumeCampaignMethod = OmniApiGrpc.getResumeCampaignMethod) == null) {
-          OmniApiGrpc.getResumeCampaignMethod = getResumeCampaignMethod =
+          OmniApiGrpc.getResumeCampaignMethod = getResumeCampaignMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ResumeCampaignReq, com.tcn.cloud.api.api.v0alpha.ResumeCampaignRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ResumeCampaign"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "ResumeCampaign"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ResumeCampaignReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ResumeCampaignRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ResumeCampaign"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ResumeCampaign"))
+                  .build();
+          }
         }
-      }
-    }
-    return getResumeCampaignMethod;
+     }
+     return getResumeCampaignMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateCampaignReq,
@@ -189,21 +206,22 @@ public final class OmniApiGrpc {
     if ((getUpdateCampaignMethod = OmniApiGrpc.getUpdateCampaignMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getUpdateCampaignMethod = OmniApiGrpc.getUpdateCampaignMethod) == null) {
-          OmniApiGrpc.getUpdateCampaignMethod = getUpdateCampaignMethod =
+          OmniApiGrpc.getUpdateCampaignMethod = getUpdateCampaignMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateCampaignReq, com.tcn.cloud.api.api.v0alpha.UpdateCampaignRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateCampaign"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "UpdateCampaign"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateCampaignReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateCampaignRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("UpdateCampaign"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("UpdateCampaign"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateCampaignMethod;
+     }
+     return getUpdateCampaignMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateCampaignPacingSpeedReq,
@@ -220,21 +238,22 @@ public final class OmniApiGrpc {
     if ((getUpdateCampaignPacingSpeedMethod = OmniApiGrpc.getUpdateCampaignPacingSpeedMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getUpdateCampaignPacingSpeedMethod = OmniApiGrpc.getUpdateCampaignPacingSpeedMethod) == null) {
-          OmniApiGrpc.getUpdateCampaignPacingSpeedMethod = getUpdateCampaignPacingSpeedMethod =
+          OmniApiGrpc.getUpdateCampaignPacingSpeedMethod = getUpdateCampaignPacingSpeedMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateCampaignPacingSpeedReq, com.tcn.cloud.api.api.v0alpha.UpdateCampaignPacingSpeedRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateCampaignPacingSpeed"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "UpdateCampaignPacingSpeed"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateCampaignPacingSpeedReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateCampaignPacingSpeedRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("UpdateCampaignPacingSpeed"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("UpdateCampaignPacingSpeed"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateCampaignPacingSpeedMethod;
+     }
+     return getUpdateCampaignPacingSpeedMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SendOmniMessageReq,
@@ -251,21 +270,22 @@ public final class OmniApiGrpc {
     if ((getSendOmniMessageMethod = OmniApiGrpc.getSendOmniMessageMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getSendOmniMessageMethod = OmniApiGrpc.getSendOmniMessageMethod) == null) {
-          OmniApiGrpc.getSendOmniMessageMethod = getSendOmniMessageMethod =
+          OmniApiGrpc.getSendOmniMessageMethod = getSendOmniMessageMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SendOmniMessageReq, com.tcn.cloud.api.api.commons.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SendOmniMessage"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "SendOmniMessage"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SendOmniMessageReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.commons.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("SendOmniMessage"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("SendOmniMessage"))
+                  .build();
+          }
         }
-      }
-    }
-    return getSendOmniMessageMethod;
+     }
+     return getSendOmniMessageMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SendOmniMessageReq,
@@ -282,21 +302,22 @@ public final class OmniApiGrpc {
     if ((getManagerSendOmniMessageMethod = OmniApiGrpc.getManagerSendOmniMessageMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getManagerSendOmniMessageMethod = OmniApiGrpc.getManagerSendOmniMessageMethod) == null) {
-          OmniApiGrpc.getManagerSendOmniMessageMethod = getManagerSendOmniMessageMethod =
+          OmniApiGrpc.getManagerSendOmniMessageMethod = getManagerSendOmniMessageMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SendOmniMessageReq, com.tcn.cloud.api.api.commons.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ManagerSendOmniMessage"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "ManagerSendOmniMessage"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SendOmniMessageReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.commons.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ManagerSendOmniMessage"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ManagerSendOmniMessage"))
+                  .build();
+          }
         }
-      }
-    }
-    return getManagerSendOmniMessageMethod;
+     }
+     return getManagerSendOmniMessageMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateDispositionReq,
@@ -313,21 +334,22 @@ public final class OmniApiGrpc {
     if ((getCreateDispositionMethod = OmniApiGrpc.getCreateDispositionMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getCreateDispositionMethod = OmniApiGrpc.getCreateDispositionMethod) == null) {
-          OmniApiGrpc.getCreateDispositionMethod = getCreateDispositionMethod =
+          OmniApiGrpc.getCreateDispositionMethod = getCreateDispositionMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateDispositionReq, com.tcn.cloud.api.api.v0alpha.CreateDispositionRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateDisposition"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "CreateDisposition"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateDispositionReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateDispositionRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("CreateDisposition"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("CreateDisposition"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateDispositionMethod;
+     }
+     return getCreateDispositionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteDispositionReq,
@@ -344,21 +366,22 @@ public final class OmniApiGrpc {
     if ((getDeleteDispositionMethod = OmniApiGrpc.getDeleteDispositionMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getDeleteDispositionMethod = OmniApiGrpc.getDeleteDispositionMethod) == null) {
-          OmniApiGrpc.getDeleteDispositionMethod = getDeleteDispositionMethod =
+          OmniApiGrpc.getDeleteDispositionMethod = getDeleteDispositionMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteDispositionReq, com.tcn.cloud.api.api.commons.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteDisposition"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "DeleteDisposition"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteDispositionReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.commons.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("DeleteDisposition"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("DeleteDisposition"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDeleteDispositionMethod;
+     }
+     return getDeleteDispositionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListDispositionsReq,
@@ -375,21 +398,22 @@ public final class OmniApiGrpc {
     if ((getListDispositionsMethod = OmniApiGrpc.getListDispositionsMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getListDispositionsMethod = OmniApiGrpc.getListDispositionsMethod) == null) {
-          OmniApiGrpc.getListDispositionsMethod = getListDispositionsMethod =
+          OmniApiGrpc.getListDispositionsMethod = getListDispositionsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListDispositionsReq, com.tcn.cloud.api.api.v0alpha.ListDispositionsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListDispositions"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "ListDispositions"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListDispositionsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListDispositionsRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ListDispositions"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ListDispositions"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListDispositionsMethod;
+     }
+     return getListDispositionsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateDispositionReq,
@@ -406,21 +430,22 @@ public final class OmniApiGrpc {
     if ((getUpdateDispositionMethod = OmniApiGrpc.getUpdateDispositionMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getUpdateDispositionMethod = OmniApiGrpc.getUpdateDispositionMethod) == null) {
-          OmniApiGrpc.getUpdateDispositionMethod = getUpdateDispositionMethod =
+          OmniApiGrpc.getUpdateDispositionMethod = getUpdateDispositionMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateDispositionReq, com.tcn.cloud.api.api.commons.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateDisposition"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "UpdateDisposition"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateDispositionReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.commons.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("UpdateDisposition"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("UpdateDisposition"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateDispositionMethod;
+     }
+     return getUpdateDispositionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.commons.Empty,
@@ -437,21 +462,22 @@ public final class OmniApiGrpc {
     if ((getListCustomUnsubscribeLinksMethod = OmniApiGrpc.getListCustomUnsubscribeLinksMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getListCustomUnsubscribeLinksMethod = OmniApiGrpc.getListCustomUnsubscribeLinksMethod) == null) {
-          OmniApiGrpc.getListCustomUnsubscribeLinksMethod = getListCustomUnsubscribeLinksMethod =
+          OmniApiGrpc.getListCustomUnsubscribeLinksMethod = getListCustomUnsubscribeLinksMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.commons.Empty, com.tcn.cloud.api.api.v0alpha.ListCustomUnsubscribeLinksRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListCustomUnsubscribeLinks"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "ListCustomUnsubscribeLinks"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.commons.Empty.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListCustomUnsubscribeLinksRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ListCustomUnsubscribeLinks"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ListCustomUnsubscribeLinks"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListCustomUnsubscribeLinksMethod;
+     }
+     return getListCustomUnsubscribeLinksMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.commons.OmniCustomUnsubscribeLink,
@@ -468,21 +494,22 @@ public final class OmniApiGrpc {
     if ((getCreateCustomUnsubscribeLinkMethod = OmniApiGrpc.getCreateCustomUnsubscribeLinkMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getCreateCustomUnsubscribeLinkMethod = OmniApiGrpc.getCreateCustomUnsubscribeLinkMethod) == null) {
-          OmniApiGrpc.getCreateCustomUnsubscribeLinkMethod = getCreateCustomUnsubscribeLinkMethod =
+          OmniApiGrpc.getCreateCustomUnsubscribeLinkMethod = getCreateCustomUnsubscribeLinkMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.commons.OmniCustomUnsubscribeLink, com.tcn.cloud.api.api.v0alpha.CreateCustomUnsubscribeLinkRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateCustomUnsubscribeLink"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "CreateCustomUnsubscribeLink"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.commons.OmniCustomUnsubscribeLink.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateCustomUnsubscribeLinkRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("CreateCustomUnsubscribeLink"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("CreateCustomUnsubscribeLink"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateCustomUnsubscribeLinkMethod;
+     }
+     return getCreateCustomUnsubscribeLinkMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateCustomUnsubscribeLinkReq,
@@ -499,21 +526,22 @@ public final class OmniApiGrpc {
     if ((getUpdateCustomUnsubscribeLinkMethod = OmniApiGrpc.getUpdateCustomUnsubscribeLinkMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getUpdateCustomUnsubscribeLinkMethod = OmniApiGrpc.getUpdateCustomUnsubscribeLinkMethod) == null) {
-          OmniApiGrpc.getUpdateCustomUnsubscribeLinkMethod = getUpdateCustomUnsubscribeLinkMethod =
+          OmniApiGrpc.getUpdateCustomUnsubscribeLinkMethod = getUpdateCustomUnsubscribeLinkMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateCustomUnsubscribeLinkReq, com.tcn.cloud.api.api.v0alpha.UpdateCustomUnsubscribeLinkRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateCustomUnsubscribeLink"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "UpdateCustomUnsubscribeLink"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateCustomUnsubscribeLinkReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateCustomUnsubscribeLinkRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("UpdateCustomUnsubscribeLink"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("UpdateCustomUnsubscribeLink"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateCustomUnsubscribeLinkMethod;
+     }
+     return getUpdateCustomUnsubscribeLinkMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteCustomUnsubscribeLinkReq,
@@ -530,21 +558,22 @@ public final class OmniApiGrpc {
     if ((getDeleteCustomUnsubscribeLinkMethod = OmniApiGrpc.getDeleteCustomUnsubscribeLinkMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getDeleteCustomUnsubscribeLinkMethod = OmniApiGrpc.getDeleteCustomUnsubscribeLinkMethod) == null) {
-          OmniApiGrpc.getDeleteCustomUnsubscribeLinkMethod = getDeleteCustomUnsubscribeLinkMethod =
+          OmniApiGrpc.getDeleteCustomUnsubscribeLinkMethod = getDeleteCustomUnsubscribeLinkMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteCustomUnsubscribeLinkReq, com.tcn.cloud.api.api.commons.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteCustomUnsubscribeLink"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "DeleteCustomUnsubscribeLink"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteCustomUnsubscribeLinkReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.commons.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("DeleteCustomUnsubscribeLink"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("DeleteCustomUnsubscribeLink"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDeleteCustomUnsubscribeLinkMethod;
+     }
+     return getDeleteCustomUnsubscribeLinkMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListCampaignsReq,
@@ -561,21 +590,22 @@ public final class OmniApiGrpc {
     if ((getListCampaignsMethod = OmniApiGrpc.getListCampaignsMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getListCampaignsMethod = OmniApiGrpc.getListCampaignsMethod) == null) {
-          OmniApiGrpc.getListCampaignsMethod = getListCampaignsMethod =
+          OmniApiGrpc.getListCampaignsMethod = getListCampaignsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListCampaignsReq, com.tcn.cloud.api.api.v0alpha.ListCampaignsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListCampaigns"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "ListCampaigns"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListCampaignsRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ListCampaigns"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ListCampaigns"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListCampaignsMethod;
+     }
+     return getListCampaignsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ManagerListMessagesReq,
@@ -592,21 +622,22 @@ public final class OmniApiGrpc {
     if ((getManagerListMessagesMethod = OmniApiGrpc.getManagerListMessagesMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getManagerListMessagesMethod = OmniApiGrpc.getManagerListMessagesMethod) == null) {
-          OmniApiGrpc.getManagerListMessagesMethod = getManagerListMessagesMethod =
+          OmniApiGrpc.getManagerListMessagesMethod = getManagerListMessagesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ManagerListMessagesReq, com.tcn.cloud.api.api.commons.OmniMessage>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ManagerListMessages"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "ManagerListMessages"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ManagerListMessagesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.commons.OmniMessage.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ManagerListMessages"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ManagerListMessages"))
+                  .build();
+          }
         }
-      }
-    }
-    return getManagerListMessagesMethod;
+     }
+     return getManagerListMessagesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListMessagesReq,
@@ -623,21 +654,22 @@ public final class OmniApiGrpc {
     if ((getListMessagesMethod = OmniApiGrpc.getListMessagesMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getListMessagesMethod = OmniApiGrpc.getListMessagesMethod) == null) {
-          OmniApiGrpc.getListMessagesMethod = getListMessagesMethod =
+          OmniApiGrpc.getListMessagesMethod = getListMessagesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListMessagesReq, com.tcn.cloud.api.api.commons.OmniMessage>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListMessages"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "ListMessages"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListMessagesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.commons.OmniMessage.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ListMessages"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ListMessages"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListMessagesMethod;
+     }
+     return getListMessagesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListConversationsReq,
@@ -654,21 +686,22 @@ public final class OmniApiGrpc {
     if ((getManagerListConversationsMethod = OmniApiGrpc.getManagerListConversationsMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getManagerListConversationsMethod = OmniApiGrpc.getManagerListConversationsMethod) == null) {
-          OmniApiGrpc.getManagerListConversationsMethod = getManagerListConversationsMethod =
+          OmniApiGrpc.getManagerListConversationsMethod = getManagerListConversationsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListConversationsReq, com.tcn.cloud.api.api.v0alpha.ListConversationsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ManagerListConversations"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "ManagerListConversations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListConversationsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListConversationsRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ManagerListConversations"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ManagerListConversations"))
+                  .build();
+          }
         }
-      }
-    }
-    return getManagerListConversationsMethod;
+     }
+     return getManagerListConversationsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListContactListsReq,
@@ -685,21 +718,22 @@ public final class OmniApiGrpc {
     if ((getListContactListsMethod = OmniApiGrpc.getListContactListsMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getListContactListsMethod = OmniApiGrpc.getListContactListsMethod) == null) {
-          OmniApiGrpc.getListContactListsMethod = getListContactListsMethod =
+          OmniApiGrpc.getListContactListsMethod = getListContactListsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListContactListsReq, com.tcn.cloud.api.api.v0alpha.ListContactListsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListContactLists"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "ListContactLists"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListContactListsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListContactListsRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ListContactLists"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ListContactLists"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListContactListsMethod;
+     }
+     return getListContactListsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetAvailableHeadersReq,
@@ -716,21 +750,22 @@ public final class OmniApiGrpc {
     if ((getGetAvailableHeadersMethod = OmniApiGrpc.getGetAvailableHeadersMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getGetAvailableHeadersMethod = OmniApiGrpc.getGetAvailableHeadersMethod) == null) {
-          OmniApiGrpc.getGetAvailableHeadersMethod = getGetAvailableHeadersMethod =
+          OmniApiGrpc.getGetAvailableHeadersMethod = getGetAvailableHeadersMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetAvailableHeadersReq, com.tcn.cloud.api.api.v0alpha.GetAvailableHeadersRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAvailableHeaders"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "GetAvailableHeaders"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetAvailableHeadersReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetAvailableHeadersRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("GetAvailableHeaders"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("GetAvailableHeaders"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetAvailableHeadersMethod;
+     }
+     return getGetAvailableHeadersMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetTaskReq,
@@ -747,21 +782,22 @@ public final class OmniApiGrpc {
     if ((getGetTaskMethod = OmniApiGrpc.getGetTaskMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getGetTaskMethod = OmniApiGrpc.getGetTaskMethod) == null) {
-          OmniApiGrpc.getGetTaskMethod = getGetTaskMethod =
+          OmniApiGrpc.getGetTaskMethod = getGetTaskMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetTaskReq, com.tcn.cloud.api.api.commons.OmniTask>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetTask"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "GetTask"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetTaskReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.commons.OmniTask.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("GetTask"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("GetTask"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetTaskMethod;
+     }
+     return getGetTaskMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListTasksReq,
@@ -778,21 +814,22 @@ public final class OmniApiGrpc {
     if ((getListTasksMethod = OmniApiGrpc.getListTasksMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getListTasksMethod = OmniApiGrpc.getListTasksMethod) == null) {
-          OmniApiGrpc.getListTasksMethod = getListTasksMethod =
+          OmniApiGrpc.getListTasksMethod = getListTasksMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListTasksReq, com.tcn.cloud.api.api.v0alpha.ListTasksRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListTasks"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "ListTasks"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListTasksReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListTasksRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ListTasks"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ListTasks"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListTasksMethod;
+     }
+     return getListTasksMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.commons.ConnectedInbox,
@@ -809,21 +846,22 @@ public final class OmniApiGrpc {
     if ((getCreateConnectedInboxMethod = OmniApiGrpc.getCreateConnectedInboxMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getCreateConnectedInboxMethod = OmniApiGrpc.getCreateConnectedInboxMethod) == null) {
-          OmniApiGrpc.getCreateConnectedInboxMethod = getCreateConnectedInboxMethod =
+          OmniApiGrpc.getCreateConnectedInboxMethod = getCreateConnectedInboxMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.commons.ConnectedInbox, com.tcn.cloud.api.api.v0alpha.CreateConnectedInboxRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateConnectedInbox"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "CreateConnectedInbox"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.commons.ConnectedInbox.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateConnectedInboxRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("CreateConnectedInbox"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("CreateConnectedInbox"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateConnectedInboxMethod;
+     }
+     return getCreateConnectedInboxMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteConnectedInboxBySidReq,
@@ -840,21 +878,22 @@ public final class OmniApiGrpc {
     if ((getDeleteConnectedInboxBySidMethod = OmniApiGrpc.getDeleteConnectedInboxBySidMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getDeleteConnectedInboxBySidMethod = OmniApiGrpc.getDeleteConnectedInboxBySidMethod) == null) {
-          OmniApiGrpc.getDeleteConnectedInboxBySidMethod = getDeleteConnectedInboxBySidMethod =
+          OmniApiGrpc.getDeleteConnectedInboxBySidMethod = getDeleteConnectedInboxBySidMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteConnectedInboxBySidReq, com.tcn.cloud.api.api.commons.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteConnectedInboxBySid"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "DeleteConnectedInboxBySid"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteConnectedInboxBySidReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.commons.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("DeleteConnectedInboxBySid"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("DeleteConnectedInboxBySid"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDeleteConnectedInboxBySidMethod;
+     }
+     return getDeleteConnectedInboxBySidMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetConnectedInboxBySidReq,
@@ -871,21 +910,22 @@ public final class OmniApiGrpc {
     if ((getGetConnectedInboxBySidMethod = OmniApiGrpc.getGetConnectedInboxBySidMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getGetConnectedInboxBySidMethod = OmniApiGrpc.getGetConnectedInboxBySidMethod) == null) {
-          OmniApiGrpc.getGetConnectedInboxBySidMethod = getGetConnectedInboxBySidMethod =
+          OmniApiGrpc.getGetConnectedInboxBySidMethod = getGetConnectedInboxBySidMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetConnectedInboxBySidReq, com.tcn.cloud.api.api.commons.ConnectedInbox>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetConnectedInboxBySid"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "GetConnectedInboxBySid"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetConnectedInboxBySidReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.commons.ConnectedInbox.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("GetConnectedInboxBySid"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("GetConnectedInboxBySid"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetConnectedInboxBySidMethod;
+     }
+     return getGetConnectedInboxBySidMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SendgridAccountByClientReq,
@@ -902,21 +942,22 @@ public final class OmniApiGrpc {
     if ((getPerformSendgridAccountChecksMethod = OmniApiGrpc.getPerformSendgridAccountChecksMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getPerformSendgridAccountChecksMethod = OmniApiGrpc.getPerformSendgridAccountChecksMethod) == null) {
-          OmniApiGrpc.getPerformSendgridAccountChecksMethod = getPerformSendgridAccountChecksMethod =
+          OmniApiGrpc.getPerformSendgridAccountChecksMethod = getPerformSendgridAccountChecksMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SendgridAccountByClientReq, com.tcn.cloud.api.api.v0alpha.SendgridAccountByClientRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "PerformSendgridAccountChecks"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "PerformSendgridAccountChecks"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SendgridAccountByClientReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SendgridAccountByClientRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("PerformSendgridAccountChecks"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("PerformSendgridAccountChecks"))
+                  .build();
+          }
         }
-      }
-    }
-    return getPerformSendgridAccountChecksMethod;
+     }
+     return getPerformSendgridAccountChecksMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesReq,
@@ -933,21 +974,22 @@ public final class OmniApiGrpc {
     if ((getListConnectedInboxesMethod = OmniApiGrpc.getListConnectedInboxesMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getListConnectedInboxesMethod = OmniApiGrpc.getListConnectedInboxesMethod) == null) {
-          OmniApiGrpc.getListConnectedInboxesMethod = getListConnectedInboxesMethod =
+          OmniApiGrpc.getListConnectedInboxesMethod = getListConnectedInboxesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesReq, com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListConnectedInboxes"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "ListConnectedInboxes"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ListConnectedInboxes"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ListConnectedInboxes"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListConnectedInboxesMethod;
+     }
+     return getListConnectedInboxesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.commons.ConnectedInbox,
@@ -964,21 +1006,22 @@ public final class OmniApiGrpc {
     if ((getTestConnectedInboxMethod = OmniApiGrpc.getTestConnectedInboxMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getTestConnectedInboxMethod = OmniApiGrpc.getTestConnectedInboxMethod) == null) {
-          OmniApiGrpc.getTestConnectedInboxMethod = getTestConnectedInboxMethod =
+          OmniApiGrpc.getTestConnectedInboxMethod = getTestConnectedInboxMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.commons.ConnectedInbox, com.tcn.cloud.api.api.v0alpha.TestConnectedInboxRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TestConnectedInbox"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "TestConnectedInbox"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.commons.ConnectedInbox.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.TestConnectedInboxRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("TestConnectedInbox"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("TestConnectedInbox"))
+                  .build();
+          }
         }
-      }
-    }
-    return getTestConnectedInboxMethod;
+     }
+     return getTestConnectedInboxMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateConnectedInboxReq,
@@ -995,21 +1038,22 @@ public final class OmniApiGrpc {
     if ((getUpdateConnectedInboxMethod = OmniApiGrpc.getUpdateConnectedInboxMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getUpdateConnectedInboxMethod = OmniApiGrpc.getUpdateConnectedInboxMethod) == null) {
-          OmniApiGrpc.getUpdateConnectedInboxMethod = getUpdateConnectedInboxMethod =
+          OmniApiGrpc.getUpdateConnectedInboxMethod = getUpdateConnectedInboxMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateConnectedInboxReq, com.tcn.cloud.api.api.commons.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateConnectedInbox"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "UpdateConnectedInbox"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateConnectedInboxReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.commons.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("UpdateConnectedInbox"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("UpdateConnectedInbox"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateConnectedInboxMethod;
+     }
+     return getUpdateConnectedInboxMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.commons.VerifiedEmail,
@@ -1026,21 +1070,22 @@ public final class OmniApiGrpc {
     if ((getCreateVerifiedEmailMethod = OmniApiGrpc.getCreateVerifiedEmailMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getCreateVerifiedEmailMethod = OmniApiGrpc.getCreateVerifiedEmailMethod) == null) {
-          OmniApiGrpc.getCreateVerifiedEmailMethod = getCreateVerifiedEmailMethod =
+          OmniApiGrpc.getCreateVerifiedEmailMethod = getCreateVerifiedEmailMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.commons.VerifiedEmail, com.tcn.cloud.api.api.v0alpha.CreateVerifiedEmailRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateVerifiedEmail"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "CreateVerifiedEmail"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.commons.VerifiedEmail.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateVerifiedEmailRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("CreateVerifiedEmail"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("CreateVerifiedEmail"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateVerifiedEmailMethod;
+     }
+     return getCreateVerifiedEmailMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteVerifiedEmailReq,
@@ -1057,21 +1102,22 @@ public final class OmniApiGrpc {
     if ((getDeleteVerifiedEmailMethod = OmniApiGrpc.getDeleteVerifiedEmailMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getDeleteVerifiedEmailMethod = OmniApiGrpc.getDeleteVerifiedEmailMethod) == null) {
-          OmniApiGrpc.getDeleteVerifiedEmailMethod = getDeleteVerifiedEmailMethod =
+          OmniApiGrpc.getDeleteVerifiedEmailMethod = getDeleteVerifiedEmailMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteVerifiedEmailReq, com.tcn.cloud.api.api.commons.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteVerifiedEmail"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "DeleteVerifiedEmail"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteVerifiedEmailReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.commons.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("DeleteVerifiedEmail"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("DeleteVerifiedEmail"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDeleteVerifiedEmailMethod;
+     }
+     return getDeleteVerifiedEmailMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetVerifiedEmailBySidReq,
@@ -1088,21 +1134,22 @@ public final class OmniApiGrpc {
     if ((getGetVerifiedEmailBySidMethod = OmniApiGrpc.getGetVerifiedEmailBySidMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getGetVerifiedEmailBySidMethod = OmniApiGrpc.getGetVerifiedEmailBySidMethod) == null) {
-          OmniApiGrpc.getGetVerifiedEmailBySidMethod = getGetVerifiedEmailBySidMethod =
+          OmniApiGrpc.getGetVerifiedEmailBySidMethod = getGetVerifiedEmailBySidMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetVerifiedEmailBySidReq, com.tcn.cloud.api.api.commons.VerifiedEmail>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetVerifiedEmailBySid"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "GetVerifiedEmailBySid"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetVerifiedEmailBySidReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.commons.VerifiedEmail.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("GetVerifiedEmailBySid"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("GetVerifiedEmailBySid"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetVerifiedEmailBySidMethod;
+     }
+     return getGetVerifiedEmailBySidMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListVerifiedEmailsReq,
@@ -1119,21 +1166,22 @@ public final class OmniApiGrpc {
     if ((getListVerifiedEmailsMethod = OmniApiGrpc.getListVerifiedEmailsMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getListVerifiedEmailsMethod = OmniApiGrpc.getListVerifiedEmailsMethod) == null) {
-          OmniApiGrpc.getListVerifiedEmailsMethod = getListVerifiedEmailsMethod =
+          OmniApiGrpc.getListVerifiedEmailsMethod = getListVerifiedEmailsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListVerifiedEmailsReq, com.tcn.cloud.api.api.v0alpha.ListVerifiedEmailsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListVerifiedEmails"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "ListVerifiedEmails"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListVerifiedEmailsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListVerifiedEmailsRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ListVerifiedEmails"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ListVerifiedEmails"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListVerifiedEmailsMethod;
+     }
+     return getListVerifiedEmailsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ResendVerifiedEmailReq,
@@ -1150,21 +1198,22 @@ public final class OmniApiGrpc {
     if ((getResendVerifiedEmailMethod = OmniApiGrpc.getResendVerifiedEmailMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getResendVerifiedEmailMethod = OmniApiGrpc.getResendVerifiedEmailMethod) == null) {
-          OmniApiGrpc.getResendVerifiedEmailMethod = getResendVerifiedEmailMethod =
+          OmniApiGrpc.getResendVerifiedEmailMethod = getResendVerifiedEmailMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ResendVerifiedEmailReq, com.tcn.cloud.api.api.v0alpha.ResendVerifiedEmailRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ResendVerifiedEmail"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "ResendVerifiedEmail"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ResendVerifiedEmailReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ResendVerifiedEmailRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ResendVerifiedEmail"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ResendVerifiedEmail"))
+                  .build();
+          }
         }
-      }
-    }
-    return getResendVerifiedEmailMethod;
+     }
+     return getResendVerifiedEmailMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateVerifiedEmailReq,
@@ -1181,21 +1230,22 @@ public final class OmniApiGrpc {
     if ((getUpdateVerifiedEmailMethod = OmniApiGrpc.getUpdateVerifiedEmailMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getUpdateVerifiedEmailMethod = OmniApiGrpc.getUpdateVerifiedEmailMethod) == null) {
-          OmniApiGrpc.getUpdateVerifiedEmailMethod = getUpdateVerifiedEmailMethod =
+          OmniApiGrpc.getUpdateVerifiedEmailMethod = getUpdateVerifiedEmailMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateVerifiedEmailReq, com.tcn.cloud.api.api.commons.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateVerifiedEmail"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "UpdateVerifiedEmail"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateVerifiedEmailReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.commons.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("UpdateVerifiedEmail"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("UpdateVerifiedEmail"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateVerifiedEmailMethod;
+     }
+     return getUpdateVerifiedEmailMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetPendingGoogleXOAuth2DataReq,
@@ -1212,21 +1262,22 @@ public final class OmniApiGrpc {
     if ((getGetPendingGoogleXOAuth2DataMethod = OmniApiGrpc.getGetPendingGoogleXOAuth2DataMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getGetPendingGoogleXOAuth2DataMethod = OmniApiGrpc.getGetPendingGoogleXOAuth2DataMethod) == null) {
-          OmniApiGrpc.getGetPendingGoogleXOAuth2DataMethod = getGetPendingGoogleXOAuth2DataMethod =
+          OmniApiGrpc.getGetPendingGoogleXOAuth2DataMethod = getGetPendingGoogleXOAuth2DataMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetPendingGoogleXOAuth2DataReq, com.tcn.cloud.api.api.v0alpha.GetPendingGoogleXOAuth2DataRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPendingGoogleXOAuth2Data"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "GetPendingGoogleXOAuth2Data"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetPendingGoogleXOAuth2DataReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetPendingGoogleXOAuth2DataRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("GetPendingGoogleXOAuth2Data"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("GetPendingGoogleXOAuth2Data"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetPendingGoogleXOAuth2DataMethod;
+     }
+     return getGetPendingGoogleXOAuth2DataMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SendEmailNotificationReq,
@@ -1243,21 +1294,22 @@ public final class OmniApiGrpc {
     if ((getSendEmailNotificationMethod = OmniApiGrpc.getSendEmailNotificationMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getSendEmailNotificationMethod = OmniApiGrpc.getSendEmailNotificationMethod) == null) {
-          OmniApiGrpc.getSendEmailNotificationMethod = getSendEmailNotificationMethod =
+          OmniApiGrpc.getSendEmailNotificationMethod = getSendEmailNotificationMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SendEmailNotificationReq, com.tcn.cloud.api.api.v0alpha.SendEmailNotificationRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SendEmailNotification"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "SendEmailNotification"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SendEmailNotificationReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SendEmailNotificationRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("SendEmailNotification"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("SendEmailNotification"))
+                  .build();
+          }
         }
-      }
-    }
-    return getSendEmailNotificationMethod;
+     }
+     return getSendEmailNotificationMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SendFeedbackEmailReq,
@@ -1274,21 +1326,22 @@ public final class OmniApiGrpc {
     if ((getSendFeedbackEmailMethod = OmniApiGrpc.getSendFeedbackEmailMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getSendFeedbackEmailMethod = OmniApiGrpc.getSendFeedbackEmailMethod) == null) {
-          OmniApiGrpc.getSendFeedbackEmailMethod = getSendFeedbackEmailMethod =
+          OmniApiGrpc.getSendFeedbackEmailMethod = getSendFeedbackEmailMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SendFeedbackEmailReq, com.tcn.cloud.api.api.v0alpha.SendFeedbackEmailRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SendFeedbackEmail"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "SendFeedbackEmail"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SendFeedbackEmailReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SendFeedbackEmailRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("SendFeedbackEmail"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("SendFeedbackEmail"))
+                  .build();
+          }
         }
-      }
-    }
-    return getSendFeedbackEmailMethod;
+     }
+     return getSendFeedbackEmailMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetOmniAttachmentReq,
@@ -1305,21 +1358,22 @@ public final class OmniApiGrpc {
     if ((getGetOmniAttachmentMethod = OmniApiGrpc.getGetOmniAttachmentMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getGetOmniAttachmentMethod = OmniApiGrpc.getGetOmniAttachmentMethod) == null) {
-          OmniApiGrpc.getGetOmniAttachmentMethod = getGetOmniAttachmentMethod =
+          OmniApiGrpc.getGetOmniAttachmentMethod = getGetOmniAttachmentMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetOmniAttachmentReq, com.tcn.cloud.api.api.commons.OmniAttachment>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetOmniAttachment"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "GetOmniAttachment"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetOmniAttachmentReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.commons.OmniAttachment.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("GetOmniAttachment"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("GetOmniAttachment"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetOmniAttachmentMethod;
+     }
+     return getGetOmniAttachmentMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateTasksReq,
@@ -1336,21 +1390,22 @@ public final class OmniApiGrpc {
     if ((getCreateTasksMethod = OmniApiGrpc.getCreateTasksMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getCreateTasksMethod = OmniApiGrpc.getCreateTasksMethod) == null) {
-          OmniApiGrpc.getCreateTasksMethod = getCreateTasksMethod =
+          OmniApiGrpc.getCreateTasksMethod = getCreateTasksMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateTasksReq, com.tcn.cloud.api.api.v0alpha.CreateTasksRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateTasks"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "CreateTasks"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateTasksReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateTasksRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("CreateTasks"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("CreateTasks"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateTasksMethod;
+     }
+     return getCreateTasksMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateSignatureReq,
@@ -1367,21 +1422,22 @@ public final class OmniApiGrpc {
     if ((getCreateSignatureMethod = OmniApiGrpc.getCreateSignatureMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getCreateSignatureMethod = OmniApiGrpc.getCreateSignatureMethod) == null) {
-          OmniApiGrpc.getCreateSignatureMethod = getCreateSignatureMethod =
+          OmniApiGrpc.getCreateSignatureMethod = getCreateSignatureMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateSignatureReq, com.tcn.cloud.api.api.v0alpha.CreateSignatureRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateSignature"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "CreateSignature"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateSignatureReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateSignatureRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("CreateSignature"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("CreateSignature"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateSignatureMethod;
+     }
+     return getCreateSignatureMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteSignatureReq,
@@ -1398,21 +1454,22 @@ public final class OmniApiGrpc {
     if ((getDeleteSignatureMethod = OmniApiGrpc.getDeleteSignatureMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getDeleteSignatureMethod = OmniApiGrpc.getDeleteSignatureMethod) == null) {
-          OmniApiGrpc.getDeleteSignatureMethod = getDeleteSignatureMethod =
+          OmniApiGrpc.getDeleteSignatureMethod = getDeleteSignatureMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteSignatureReq, com.tcn.cloud.api.api.v0alpha.DeleteSignatureRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteSignature"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "DeleteSignature"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteSignatureReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteSignatureRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("DeleteSignature"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("DeleteSignature"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDeleteSignatureMethod;
+     }
+     return getDeleteSignatureMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListSignaturesReq,
@@ -1429,21 +1486,22 @@ public final class OmniApiGrpc {
     if ((getListSignaturesMethod = OmniApiGrpc.getListSignaturesMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getListSignaturesMethod = OmniApiGrpc.getListSignaturesMethod) == null) {
-          OmniApiGrpc.getListSignaturesMethod = getListSignaturesMethod =
+          OmniApiGrpc.getListSignaturesMethod = getListSignaturesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListSignaturesReq, com.tcn.cloud.api.api.v0alpha.ListSignaturesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListSignatures"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "ListSignatures"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListSignaturesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListSignaturesRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ListSignatures"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ListSignatures"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListSignaturesMethod;
+     }
+     return getListSignaturesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateSignatureReq,
@@ -1460,21 +1518,22 @@ public final class OmniApiGrpc {
     if ((getUpdateSignatureMethod = OmniApiGrpc.getUpdateSignatureMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getUpdateSignatureMethod = OmniApiGrpc.getUpdateSignatureMethod) == null) {
-          OmniApiGrpc.getUpdateSignatureMethod = getUpdateSignatureMethod =
+          OmniApiGrpc.getUpdateSignatureMethod = getUpdateSignatureMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateSignatureReq, com.tcn.cloud.api.api.v0alpha.UpdateSignatureRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateSignature"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "UpdateSignature"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateSignatureReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateSignatureRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("UpdateSignature"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("UpdateSignature"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateSignatureMethod;
+     }
+     return getUpdateSignatureMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SuggestResponseReq,
@@ -1491,21 +1550,22 @@ public final class OmniApiGrpc {
     if ((getSuggestResponseMethod = OmniApiGrpc.getSuggestResponseMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getSuggestResponseMethod = OmniApiGrpc.getSuggestResponseMethod) == null) {
-          OmniApiGrpc.getSuggestResponseMethod = getSuggestResponseMethod =
+          OmniApiGrpc.getSuggestResponseMethod = getSuggestResponseMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SuggestResponseReq, com.tcn.cloud.api.api.v0alpha.SuggestResponseRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SuggestResponse"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "SuggestResponse"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SuggestResponseReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SuggestResponseRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("SuggestResponse"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("SuggestResponse"))
+                  .build();
+          }
         }
-      }
-    }
-    return getSuggestResponseMethod;
+     }
+     return getSuggestResponseMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateProjectReq,
@@ -1522,21 +1582,22 @@ public final class OmniApiGrpc {
     if ((getCreateProjectMethod = OmniApiGrpc.getCreateProjectMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getCreateProjectMethod = OmniApiGrpc.getCreateProjectMethod) == null) {
-          OmniApiGrpc.getCreateProjectMethod = getCreateProjectMethod =
+          OmniApiGrpc.getCreateProjectMethod = getCreateProjectMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateProjectReq, com.tcn.cloud.api.api.v0alpha.CreateProjectRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateProject"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "CreateProject"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateProjectReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateProjectRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("CreateProject"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("CreateProject"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateProjectMethod;
+     }
+     return getCreateProjectMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListProjectsReq,
@@ -1553,21 +1614,22 @@ public final class OmniApiGrpc {
     if ((getListProjectsMethod = OmniApiGrpc.getListProjectsMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getListProjectsMethod = OmniApiGrpc.getListProjectsMethod) == null) {
-          OmniApiGrpc.getListProjectsMethod = getListProjectsMethod =
+          OmniApiGrpc.getListProjectsMethod = getListProjectsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListProjectsReq, com.tcn.cloud.api.api.v0alpha.ListProjectsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListProjects"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "ListProjects"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListProjectsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListProjectsRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ListProjects"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ListProjects"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListProjectsMethod;
+     }
+     return getListProjectsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.EditProjectByIdReq,
@@ -1584,21 +1646,22 @@ public final class OmniApiGrpc {
     if ((getEditProjectByIdMethod = OmniApiGrpc.getEditProjectByIdMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getEditProjectByIdMethod = OmniApiGrpc.getEditProjectByIdMethod) == null) {
-          OmniApiGrpc.getEditProjectByIdMethod = getEditProjectByIdMethod =
+          OmniApiGrpc.getEditProjectByIdMethod = getEditProjectByIdMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.EditProjectByIdReq, com.tcn.cloud.api.api.v0alpha.EditProjectByIdRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EditProjectById"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "EditProjectById"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.EditProjectByIdReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.EditProjectByIdRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("EditProjectById"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("EditProjectById"))
+                  .build();
+          }
         }
-      }
-    }
-    return getEditProjectByIdMethod;
+     }
+     return getEditProjectByIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CloseProjectByIdReq,
@@ -1615,21 +1678,22 @@ public final class OmniApiGrpc {
     if ((getCloseProjectByIdMethod = OmniApiGrpc.getCloseProjectByIdMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getCloseProjectByIdMethod = OmniApiGrpc.getCloseProjectByIdMethod) == null) {
-          OmniApiGrpc.getCloseProjectByIdMethod = getCloseProjectByIdMethod =
+          OmniApiGrpc.getCloseProjectByIdMethod = getCloseProjectByIdMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CloseProjectByIdReq, com.tcn.cloud.api.api.v0alpha.CloseProjectByIdRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CloseProjectById"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "CloseProjectById"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CloseProjectByIdReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CloseProjectByIdRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("CloseProjectById"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("CloseProjectById"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCloseProjectByIdMethod;
+     }
+     return getCloseProjectByIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetProjectByIdReq,
@@ -1646,21 +1710,22 @@ public final class OmniApiGrpc {
     if ((getGetProjectByIdMethod = OmniApiGrpc.getGetProjectByIdMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getGetProjectByIdMethod = OmniApiGrpc.getGetProjectByIdMethod) == null) {
-          OmniApiGrpc.getGetProjectByIdMethod = getGetProjectByIdMethod =
+          OmniApiGrpc.getGetProjectByIdMethod = getGetProjectByIdMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetProjectByIdReq, com.tcn.cloud.api.api.v0alpha.Project>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetProjectById"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "GetProjectById"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetProjectByIdReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.Project.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("GetProjectById"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("GetProjectById"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetProjectByIdMethod;
+     }
+     return getGetProjectByIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateCannedMessageReq,
@@ -1677,21 +1742,22 @@ public final class OmniApiGrpc {
     if ((getCreateCannedMessageMethod = OmniApiGrpc.getCreateCannedMessageMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getCreateCannedMessageMethod = OmniApiGrpc.getCreateCannedMessageMethod) == null) {
-          OmniApiGrpc.getCreateCannedMessageMethod = getCreateCannedMessageMethod =
+          OmniApiGrpc.getCreateCannedMessageMethod = getCreateCannedMessageMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateCannedMessageReq, com.tcn.cloud.api.api.v0alpha.CannedMessage>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateCannedMessage"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "CreateCannedMessage"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateCannedMessageReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CannedMessage.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("CreateCannedMessage"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("CreateCannedMessage"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateCannedMessageMethod;
+     }
+     return getCreateCannedMessageMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListCannedMessagesReq,
@@ -1708,21 +1774,22 @@ public final class OmniApiGrpc {
     if ((getListCannedMessagesMethod = OmniApiGrpc.getListCannedMessagesMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getListCannedMessagesMethod = OmniApiGrpc.getListCannedMessagesMethod) == null) {
-          OmniApiGrpc.getListCannedMessagesMethod = getListCannedMessagesMethod =
+          OmniApiGrpc.getListCannedMessagesMethod = getListCannedMessagesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListCannedMessagesReq, com.tcn.cloud.api.api.v0alpha.ListCannedMessagesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListCannedMessages"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "ListCannedMessages"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListCannedMessagesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListCannedMessagesRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ListCannedMessages"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ListCannedMessages"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListCannedMessagesMethod;
+     }
+     return getListCannedMessagesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateCannedMessageReq,
@@ -1739,21 +1806,22 @@ public final class OmniApiGrpc {
     if ((getUpdateCannedMessageMethod = OmniApiGrpc.getUpdateCannedMessageMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getUpdateCannedMessageMethod = OmniApiGrpc.getUpdateCannedMessageMethod) == null) {
-          OmniApiGrpc.getUpdateCannedMessageMethod = getUpdateCannedMessageMethod =
+          OmniApiGrpc.getUpdateCannedMessageMethod = getUpdateCannedMessageMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateCannedMessageReq, com.tcn.cloud.api.api.v0alpha.CannedMessage>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateCannedMessage"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "UpdateCannedMessage"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateCannedMessageReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CannedMessage.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("UpdateCannedMessage"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("UpdateCannedMessage"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateCannedMessageMethod;
+     }
+     return getUpdateCannedMessageMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetCannedMessageByIdReq,
@@ -1770,21 +1838,22 @@ public final class OmniApiGrpc {
     if ((getGetCannedMessageByIdMethod = OmniApiGrpc.getGetCannedMessageByIdMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getGetCannedMessageByIdMethod = OmniApiGrpc.getGetCannedMessageByIdMethod) == null) {
-          OmniApiGrpc.getGetCannedMessageByIdMethod = getGetCannedMessageByIdMethod =
+          OmniApiGrpc.getGetCannedMessageByIdMethod = getGetCannedMessageByIdMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetCannedMessageByIdReq, com.tcn.cloud.api.api.v0alpha.CannedMessageWithGroup>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCannedMessageById"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "GetCannedMessageById"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetCannedMessageByIdReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CannedMessageWithGroup.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("GetCannedMessageById"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("GetCannedMessageById"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetCannedMessageByIdMethod;
+     }
+     return getGetCannedMessageByIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteCannedMessageByIdReq,
@@ -1801,21 +1870,22 @@ public final class OmniApiGrpc {
     if ((getDeleteCannedMessageByIdMethod = OmniApiGrpc.getDeleteCannedMessageByIdMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getDeleteCannedMessageByIdMethod = OmniApiGrpc.getDeleteCannedMessageByIdMethod) == null) {
-          OmniApiGrpc.getDeleteCannedMessageByIdMethod = getDeleteCannedMessageByIdMethod =
+          OmniApiGrpc.getDeleteCannedMessageByIdMethod = getDeleteCannedMessageByIdMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteCannedMessageByIdReq, com.tcn.cloud.api.api.v0alpha.DeleteCannedMessageByIdRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteCannedMessageById"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "DeleteCannedMessageById"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteCannedMessageByIdReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteCannedMessageByIdRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("DeleteCannedMessageById"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("DeleteCannedMessageById"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDeleteCannedMessageByIdMethod;
+     }
+     return getDeleteCannedMessageByIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateCannedMessageGroupReq,
@@ -1832,21 +1902,22 @@ public final class OmniApiGrpc {
     if ((getCreateCannedMessageGroupMethod = OmniApiGrpc.getCreateCannedMessageGroupMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getCreateCannedMessageGroupMethod = OmniApiGrpc.getCreateCannedMessageGroupMethod) == null) {
-          OmniApiGrpc.getCreateCannedMessageGroupMethod = getCreateCannedMessageGroupMethod =
+          OmniApiGrpc.getCreateCannedMessageGroupMethod = getCreateCannedMessageGroupMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateCannedMessageGroupReq, com.tcn.cloud.api.api.v0alpha.CannedMessageGroup>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateCannedMessageGroup"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "CreateCannedMessageGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateCannedMessageGroupReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CannedMessageGroup.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("CreateCannedMessageGroup"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("CreateCannedMessageGroup"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateCannedMessageGroupMethod;
+     }
+     return getCreateCannedMessageGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListCannedMessageGroupsReq,
@@ -1863,21 +1934,22 @@ public final class OmniApiGrpc {
     if ((getListCannedMessageGroupsMethod = OmniApiGrpc.getListCannedMessageGroupsMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getListCannedMessageGroupsMethod = OmniApiGrpc.getListCannedMessageGroupsMethod) == null) {
-          OmniApiGrpc.getListCannedMessageGroupsMethod = getListCannedMessageGroupsMethod =
+          OmniApiGrpc.getListCannedMessageGroupsMethod = getListCannedMessageGroupsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListCannedMessageGroupsReq, com.tcn.cloud.api.api.v0alpha.ListCannedMessageGroupsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListCannedMessageGroups"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "ListCannedMessageGroups"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListCannedMessageGroupsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListCannedMessageGroupsRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ListCannedMessageGroups"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ListCannedMessageGroups"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListCannedMessageGroupsMethod;
+     }
+     return getListCannedMessageGroupsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateCannedMessageGroupReq,
@@ -1894,21 +1966,22 @@ public final class OmniApiGrpc {
     if ((getUpdateCannedMessageGroupMethod = OmniApiGrpc.getUpdateCannedMessageGroupMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getUpdateCannedMessageGroupMethod = OmniApiGrpc.getUpdateCannedMessageGroupMethod) == null) {
-          OmniApiGrpc.getUpdateCannedMessageGroupMethod = getUpdateCannedMessageGroupMethod =
+          OmniApiGrpc.getUpdateCannedMessageGroupMethod = getUpdateCannedMessageGroupMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateCannedMessageGroupReq, com.tcn.cloud.api.api.v0alpha.UpdateCannedMessageGroupRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateCannedMessageGroup"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "UpdateCannedMessageGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateCannedMessageGroupReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateCannedMessageGroupRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("UpdateCannedMessageGroup"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("UpdateCannedMessageGroup"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateCannedMessageGroupMethod;
+     }
+     return getUpdateCannedMessageGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteCannedMessageGroupReq,
@@ -1925,21 +1998,22 @@ public final class OmniApiGrpc {
     if ((getDeleteCannedMessageGroupMethod = OmniApiGrpc.getDeleteCannedMessageGroupMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getDeleteCannedMessageGroupMethod = OmniApiGrpc.getDeleteCannedMessageGroupMethod) == null) {
-          OmniApiGrpc.getDeleteCannedMessageGroupMethod = getDeleteCannedMessageGroupMethod =
+          OmniApiGrpc.getDeleteCannedMessageGroupMethod = getDeleteCannedMessageGroupMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteCannedMessageGroupReq, com.tcn.cloud.api.api.v0alpha.DeleteCannedMessageGroupRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteCannedMessageGroup"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "DeleteCannedMessageGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteCannedMessageGroupReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteCannedMessageGroupRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("DeleteCannedMessageGroup"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("DeleteCannedMessageGroup"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDeleteCannedMessageGroupMethod;
+     }
+     return getDeleteCannedMessageGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListCannedMessagesByGroupIdReq,
@@ -1956,21 +2030,22 @@ public final class OmniApiGrpc {
     if ((getListCannedMessagesByGroupIdMethod = OmniApiGrpc.getListCannedMessagesByGroupIdMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getListCannedMessagesByGroupIdMethod = OmniApiGrpc.getListCannedMessagesByGroupIdMethod) == null) {
-          OmniApiGrpc.getListCannedMessagesByGroupIdMethod = getListCannedMessagesByGroupIdMethod =
+          OmniApiGrpc.getListCannedMessagesByGroupIdMethod = getListCannedMessagesByGroupIdMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListCannedMessagesByGroupIdReq, com.tcn.cloud.api.api.v0alpha.ListCannedMessagesByGroupIdRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListCannedMessagesByGroupId"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "ListCannedMessagesByGroupId"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListCannedMessagesByGroupIdReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListCannedMessagesByGroupIdRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ListCannedMessagesByGroupId"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("ListCannedMessagesByGroupId"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListCannedMessagesByGroupIdMethod;
+     }
+     return getListCannedMessagesByGroupIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetCannedMessageGroupByIdReq,
@@ -1987,35 +2062,29 @@ public final class OmniApiGrpc {
     if ((getGetCannedMessageGroupByIdMethod = OmniApiGrpc.getGetCannedMessageGroupByIdMethod) == null) {
       synchronized (OmniApiGrpc.class) {
         if ((getGetCannedMessageGroupByIdMethod = OmniApiGrpc.getGetCannedMessageGroupByIdMethod) == null) {
-          OmniApiGrpc.getGetCannedMessageGroupByIdMethod = getGetCannedMessageGroupByIdMethod =
+          OmniApiGrpc.getGetCannedMessageGroupByIdMethod = getGetCannedMessageGroupByIdMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetCannedMessageGroupByIdReq, com.tcn.cloud.api.api.v0alpha.CannedMessageGroup>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCannedMessageGroupById"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.OmniApi", "GetCannedMessageGroupById"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetCannedMessageGroupByIdReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CannedMessageGroup.getDefaultInstance()))
-              .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("GetCannedMessageGroupById"))
-              .build();
+                  .setSchemaDescriptor(new OmniApiMethodDescriptorSupplier("GetCannedMessageGroupById"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetCannedMessageGroupByIdMethod;
+     }
+     return getGetCannedMessageGroupByIdMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static OmniApiStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<OmniApiStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<OmniApiStub>() {
-        @java.lang.Override
-        public OmniApiStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new OmniApiStub(channel, callOptions);
-        }
-      };
-    return OmniApiStub.newStub(factory, channel);
+    return new OmniApiStub(channel);
   }
 
   /**
@@ -2023,14 +2092,7 @@ public final class OmniApiGrpc {
    */
   public static OmniApiBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<OmniApiBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<OmniApiBlockingStub>() {
-        @java.lang.Override
-        public OmniApiBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new OmniApiBlockingStub(channel, callOptions);
-        }
-      };
-    return OmniApiBlockingStub.newStub(factory, channel);
+    return new OmniApiBlockingStub(channel);
   }
 
   /**
@@ -2038,14 +2100,7 @@ public final class OmniApiGrpc {
    */
   public static OmniApiFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<OmniApiFutureStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<OmniApiFutureStub>() {
-        @java.lang.Override
-        public OmniApiFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new OmniApiFutureStub(channel, callOptions);
-        }
-      };
-    return OmniApiFutureStub.newStub(factory, channel);
+    return new OmniApiFutureStub(channel);
   }
 
   /**
@@ -2064,7 +2119,7 @@ public final class OmniApiGrpc {
      */
     public void archiveCampaign(com.tcn.cloud.api.api.v0alpha.ArchiveCampaignReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ArchiveCampaignRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getArchiveCampaignMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getArchiveCampaignMethod(), responseObserver);
     }
 
     /**
@@ -2078,7 +2133,7 @@ public final class OmniApiGrpc {
      */
     public void createCampaign(com.tcn.cloud.api.api.v0alpha.CreateCampaignReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.OmniCampaign> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateCampaignMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateCampaignMethod(), responseObserver);
     }
 
     /**
@@ -2088,7 +2143,7 @@ public final class OmniApiGrpc {
      */
     public void getCampaignById(com.tcn.cloud.api.api.v0alpha.GetCampaignByIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.OmniCampaign> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCampaignByIdMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetCampaignByIdMethod(), responseObserver);
     }
 
     /**
@@ -2098,7 +2153,7 @@ public final class OmniApiGrpc {
      */
     public void pauseCampaign(com.tcn.cloud.api.api.v0alpha.PauseCampaignReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.PauseCampaignRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPauseCampaignMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getPauseCampaignMethod(), responseObserver);
     }
 
     /**
@@ -2108,7 +2163,7 @@ public final class OmniApiGrpc {
      */
     public void resumeCampaign(com.tcn.cloud.api.api.v0alpha.ResumeCampaignReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ResumeCampaignRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getResumeCampaignMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getResumeCampaignMethod(), responseObserver);
     }
 
     /**
@@ -2120,7 +2175,7 @@ public final class OmniApiGrpc {
      */
     public void updateCampaign(com.tcn.cloud.api.api.v0alpha.UpdateCampaignReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateCampaignRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateCampaignMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateCampaignMethod(), responseObserver);
     }
 
     /**
@@ -2130,7 +2185,7 @@ public final class OmniApiGrpc {
      */
     public void updateCampaignPacingSpeed(com.tcn.cloud.api.api.v0alpha.UpdateCampaignPacingSpeedReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateCampaignPacingSpeedRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateCampaignPacingSpeedMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateCampaignPacingSpeedMethod(), responseObserver);
     }
 
     /**
@@ -2140,7 +2195,7 @@ public final class OmniApiGrpc {
      */
     public void sendOmniMessage(com.tcn.cloud.api.api.v0alpha.SendOmniMessageReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Empty> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendOmniMessageMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getSendOmniMessageMethod(), responseObserver);
     }
 
     /**
@@ -2150,7 +2205,7 @@ public final class OmniApiGrpc {
      */
     public void managerSendOmniMessage(com.tcn.cloud.api.api.v0alpha.SendOmniMessageReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Empty> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getManagerSendOmniMessageMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getManagerSendOmniMessageMethod(), responseObserver);
     }
 
     /**
@@ -2160,7 +2215,7 @@ public final class OmniApiGrpc {
      */
     public void createDisposition(com.tcn.cloud.api.api.v0alpha.CreateDispositionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateDispositionRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateDispositionMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateDispositionMethod(), responseObserver);
     }
 
     /**
@@ -2170,7 +2225,7 @@ public final class OmniApiGrpc {
      */
     public void deleteDisposition(com.tcn.cloud.api.api.v0alpha.DeleteDispositionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Empty> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteDispositionMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteDispositionMethod(), responseObserver);
     }
 
     /**
@@ -2180,7 +2235,7 @@ public final class OmniApiGrpc {
      */
     public void listDispositions(com.tcn.cloud.api.api.v0alpha.ListDispositionsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListDispositionsRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListDispositionsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListDispositionsMethod(), responseObserver);
     }
 
     /**
@@ -2190,7 +2245,7 @@ public final class OmniApiGrpc {
      */
     public void updateDisposition(com.tcn.cloud.api.api.v0alpha.UpdateDispositionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Empty> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateDispositionMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateDispositionMethod(), responseObserver);
     }
 
     /**
@@ -2200,7 +2255,7 @@ public final class OmniApiGrpc {
      */
     public void listCustomUnsubscribeLinks(com.tcn.cloud.api.api.commons.Empty request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCustomUnsubscribeLinksRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCustomUnsubscribeLinksMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListCustomUnsubscribeLinksMethod(), responseObserver);
     }
 
     /**
@@ -2210,7 +2265,7 @@ public final class OmniApiGrpc {
      */
     public void createCustomUnsubscribeLink(com.tcn.cloud.api.api.commons.OmniCustomUnsubscribeLink request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateCustomUnsubscribeLinkRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateCustomUnsubscribeLinkMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateCustomUnsubscribeLinkMethod(), responseObserver);
     }
 
     /**
@@ -2220,7 +2275,7 @@ public final class OmniApiGrpc {
      */
     public void updateCustomUnsubscribeLink(com.tcn.cloud.api.api.v0alpha.UpdateCustomUnsubscribeLinkReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateCustomUnsubscribeLinkRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateCustomUnsubscribeLinkMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateCustomUnsubscribeLinkMethod(), responseObserver);
     }
 
     /**
@@ -2230,7 +2285,7 @@ public final class OmniApiGrpc {
      */
     public void deleteCustomUnsubscribeLink(com.tcn.cloud.api.api.v0alpha.DeleteCustomUnsubscribeLinkReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Empty> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteCustomUnsubscribeLinkMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteCustomUnsubscribeLinkMethod(), responseObserver);
     }
 
     /**
@@ -2242,7 +2297,7 @@ public final class OmniApiGrpc {
      */
     public void listCampaigns(com.tcn.cloud.api.api.v0alpha.ListCampaignsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCampaignsRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCampaignsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListCampaignsMethod(), responseObserver);
     }
 
     /**
@@ -2253,7 +2308,7 @@ public final class OmniApiGrpc {
      */
     public void managerListMessages(com.tcn.cloud.api.api.v0alpha.ManagerListMessagesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.OmniMessage> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getManagerListMessagesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getManagerListMessagesMethod(), responseObserver);
     }
 
     /**
@@ -2264,7 +2319,7 @@ public final class OmniApiGrpc {
      */
     public void listMessages(com.tcn.cloud.api.api.v0alpha.ListMessagesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.OmniMessage> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMessagesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListMessagesMethod(), responseObserver);
     }
 
     /**
@@ -2276,7 +2331,7 @@ public final class OmniApiGrpc {
      */
     public void managerListConversations(com.tcn.cloud.api.api.v0alpha.ListConversationsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListConversationsRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getManagerListConversationsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getManagerListConversationsMethod(), responseObserver);
     }
 
     /**
@@ -2286,7 +2341,7 @@ public final class OmniApiGrpc {
      */
     public void listContactLists(com.tcn.cloud.api.api.v0alpha.ListContactListsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListContactListsRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListContactListsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListContactListsMethod(), responseObserver);
     }
 
     /**
@@ -2298,7 +2353,7 @@ public final class OmniApiGrpc {
      */
     public void getAvailableHeaders(com.tcn.cloud.api.api.v0alpha.GetAvailableHeadersReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetAvailableHeadersRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAvailableHeadersMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetAvailableHeadersMethod(), responseObserver);
     }
 
     /**
@@ -2310,7 +2365,7 @@ public final class OmniApiGrpc {
      */
     public void getTask(com.tcn.cloud.api.api.v0alpha.GetTaskReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.OmniTask> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTaskMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetTaskMethod(), responseObserver);
     }
 
     /**
@@ -2322,7 +2377,7 @@ public final class OmniApiGrpc {
      */
     public void listTasks(com.tcn.cloud.api.api.v0alpha.ListTasksReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListTasksRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListTasksMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListTasksMethod(), responseObserver);
     }
 
     /**
@@ -2334,7 +2389,7 @@ public final class OmniApiGrpc {
      */
     public void createConnectedInbox(com.tcn.cloud.api.api.commons.ConnectedInbox request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateConnectedInboxRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateConnectedInboxMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateConnectedInboxMethod(), responseObserver);
     }
 
     /**
@@ -2346,7 +2401,7 @@ public final class OmniApiGrpc {
      */
     public void deleteConnectedInboxBySid(com.tcn.cloud.api.api.v0alpha.DeleteConnectedInboxBySidReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Empty> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteConnectedInboxBySidMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteConnectedInboxBySidMethod(), responseObserver);
     }
 
     /**
@@ -2358,7 +2413,7 @@ public final class OmniApiGrpc {
      */
     public void getConnectedInboxBySid(com.tcn.cloud.api.api.v0alpha.GetConnectedInboxBySidReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.ConnectedInbox> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetConnectedInboxBySidMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetConnectedInboxBySidMethod(), responseObserver);
     }
 
     /**
@@ -2372,7 +2427,7 @@ public final class OmniApiGrpc {
      */
     public void performSendgridAccountChecks(com.tcn.cloud.api.api.v0alpha.SendgridAccountByClientReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SendgridAccountByClientRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPerformSendgridAccountChecksMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getPerformSendgridAccountChecksMethod(), responseObserver);
     }
 
     /**
@@ -2384,7 +2439,7 @@ public final class OmniApiGrpc {
      */
     public void listConnectedInboxes(com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListConnectedInboxesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListConnectedInboxesMethod(), responseObserver);
     }
 
     /**
@@ -2397,7 +2452,7 @@ public final class OmniApiGrpc {
      */
     public void testConnectedInbox(com.tcn.cloud.api.api.commons.ConnectedInbox request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.TestConnectedInboxRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTestConnectedInboxMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getTestConnectedInboxMethod(), responseObserver);
     }
 
     /**
@@ -2409,7 +2464,7 @@ public final class OmniApiGrpc {
      */
     public void updateConnectedInbox(com.tcn.cloud.api.api.v0alpha.UpdateConnectedInboxReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Empty> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateConnectedInboxMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateConnectedInboxMethod(), responseObserver);
     }
 
     /**
@@ -2421,7 +2476,7 @@ public final class OmniApiGrpc {
      */
     public void createVerifiedEmail(com.tcn.cloud.api.api.commons.VerifiedEmail request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateVerifiedEmailRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateVerifiedEmailMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateVerifiedEmailMethod(), responseObserver);
     }
 
     /**
@@ -2436,7 +2491,7 @@ public final class OmniApiGrpc {
      */
     public void deleteVerifiedEmail(com.tcn.cloud.api.api.v0alpha.DeleteVerifiedEmailReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Empty> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteVerifiedEmailMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteVerifiedEmailMethod(), responseObserver);
     }
 
     /**
@@ -2450,7 +2505,7 @@ public final class OmniApiGrpc {
      */
     public void getVerifiedEmailBySid(com.tcn.cloud.api.api.v0alpha.GetVerifiedEmailBySidReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.VerifiedEmail> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetVerifiedEmailBySidMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetVerifiedEmailBySidMethod(), responseObserver);
     }
 
     /**
@@ -2464,7 +2519,7 @@ public final class OmniApiGrpc {
      */
     public void listVerifiedEmails(com.tcn.cloud.api.api.v0alpha.ListVerifiedEmailsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListVerifiedEmailsRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListVerifiedEmailsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListVerifiedEmailsMethod(), responseObserver);
     }
 
     /**
@@ -2478,7 +2533,7 @@ public final class OmniApiGrpc {
      */
     public void resendVerifiedEmail(com.tcn.cloud.api.api.v0alpha.ResendVerifiedEmailReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ResendVerifiedEmailRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getResendVerifiedEmailMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getResendVerifiedEmailMethod(), responseObserver);
     }
 
     /**
@@ -2488,7 +2543,7 @@ public final class OmniApiGrpc {
      */
     public void updateVerifiedEmail(com.tcn.cloud.api.api.v0alpha.UpdateVerifiedEmailReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Empty> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateVerifiedEmailMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateVerifiedEmailMethod(), responseObserver);
     }
 
     /**
@@ -2500,7 +2555,7 @@ public final class OmniApiGrpc {
      */
     public void getPendingGoogleXOAuth2Data(com.tcn.cloud.api.api.v0alpha.GetPendingGoogleXOAuth2DataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetPendingGoogleXOAuth2DataRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPendingGoogleXOAuth2DataMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetPendingGoogleXOAuth2DataMethod(), responseObserver);
     }
 
     /**
@@ -2515,7 +2570,7 @@ public final class OmniApiGrpc {
      */
     public void sendEmailNotification(com.tcn.cloud.api.api.v0alpha.SendEmailNotificationReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SendEmailNotificationRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendEmailNotificationMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getSendEmailNotificationMethod(), responseObserver);
     }
 
     /**
@@ -2525,7 +2580,7 @@ public final class OmniApiGrpc {
      */
     public void sendFeedbackEmail(com.tcn.cloud.api.api.v0alpha.SendFeedbackEmailReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SendFeedbackEmailRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendFeedbackEmailMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getSendFeedbackEmailMethod(), responseObserver);
     }
 
     /**
@@ -2537,7 +2592,7 @@ public final class OmniApiGrpc {
      */
     public void getOmniAttachment(com.tcn.cloud.api.api.v0alpha.GetOmniAttachmentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.OmniAttachment> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetOmniAttachmentMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetOmniAttachmentMethod(), responseObserver);
     }
 
     /**
@@ -2547,7 +2602,7 @@ public final class OmniApiGrpc {
      */
     public void createTasks(com.tcn.cloud.api.api.v0alpha.CreateTasksReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateTasksRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateTasksMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateTasksMethod(), responseObserver);
     }
 
     /**
@@ -2559,7 +2614,7 @@ public final class OmniApiGrpc {
      */
     public void createSignature(com.tcn.cloud.api.api.v0alpha.CreateSignatureReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateSignatureRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateSignatureMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateSignatureMethod(), responseObserver);
     }
 
     /**
@@ -2571,7 +2626,7 @@ public final class OmniApiGrpc {
      */
     public void deleteSignature(com.tcn.cloud.api.api.v0alpha.DeleteSignatureReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteSignatureRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteSignatureMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteSignatureMethod(), responseObserver);
     }
 
     /**
@@ -2583,7 +2638,7 @@ public final class OmniApiGrpc {
      */
     public void listSignatures(com.tcn.cloud.api.api.v0alpha.ListSignaturesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSignaturesRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSignaturesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListSignaturesMethod(), responseObserver);
     }
 
     /**
@@ -2595,7 +2650,7 @@ public final class OmniApiGrpc {
      */
     public void updateSignature(com.tcn.cloud.api.api.v0alpha.UpdateSignatureReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateSignatureRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateSignatureMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateSignatureMethod(), responseObserver);
     }
 
     /**
@@ -2605,7 +2660,7 @@ public final class OmniApiGrpc {
      */
     public void suggestResponse(com.tcn.cloud.api.api.v0alpha.SuggestResponseReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SuggestResponseRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSuggestResponseMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getSuggestResponseMethod(), responseObserver);
     }
 
     /**
@@ -2620,7 +2675,7 @@ public final class OmniApiGrpc {
      */
     public void createProject(com.tcn.cloud.api.api.v0alpha.CreateProjectReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateProjectRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateProjectMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateProjectMethod(), responseObserver);
     }
 
     /**
@@ -2633,7 +2688,7 @@ public final class OmniApiGrpc {
      */
     public void listProjects(com.tcn.cloud.api.api.v0alpha.ListProjectsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListProjectsRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListProjectsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListProjectsMethod(), responseObserver);
     }
 
     /**
@@ -2648,7 +2703,7 @@ public final class OmniApiGrpc {
      */
     public void editProjectById(com.tcn.cloud.api.api.v0alpha.EditProjectByIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.EditProjectByIdRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEditProjectByIdMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getEditProjectByIdMethod(), responseObserver);
     }
 
     /**
@@ -2663,7 +2718,7 @@ public final class OmniApiGrpc {
      */
     public void closeProjectById(com.tcn.cloud.api.api.v0alpha.CloseProjectByIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CloseProjectByIdRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCloseProjectByIdMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCloseProjectByIdMethod(), responseObserver);
     }
 
     /**
@@ -2678,7 +2733,7 @@ public final class OmniApiGrpc {
      */
     public void getProjectById(com.tcn.cloud.api.api.v0alpha.GetProjectByIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Project> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetProjectByIdMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetProjectByIdMethod(), responseObserver);
     }
 
     /**
@@ -2693,7 +2748,7 @@ public final class OmniApiGrpc {
      */
     public void createCannedMessage(com.tcn.cloud.api.api.v0alpha.CreateCannedMessageReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CannedMessage> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateCannedMessageMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateCannedMessageMethod(), responseObserver);
     }
 
     /**
@@ -2706,7 +2761,7 @@ public final class OmniApiGrpc {
      */
     public void listCannedMessages(com.tcn.cloud.api.api.v0alpha.ListCannedMessagesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCannedMessagesRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCannedMessagesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListCannedMessagesMethod(), responseObserver);
     }
 
     /**
@@ -2721,7 +2776,7 @@ public final class OmniApiGrpc {
      */
     public void updateCannedMessage(com.tcn.cloud.api.api.v0alpha.UpdateCannedMessageReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CannedMessage> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateCannedMessageMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateCannedMessageMethod(), responseObserver);
     }
 
     /**
@@ -2734,7 +2789,7 @@ public final class OmniApiGrpc {
      */
     public void getCannedMessageById(com.tcn.cloud.api.api.v0alpha.GetCannedMessageByIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CannedMessageWithGroup> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCannedMessageByIdMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetCannedMessageByIdMethod(), responseObserver);
     }
 
     /**
@@ -2747,7 +2802,7 @@ public final class OmniApiGrpc {
      */
     public void deleteCannedMessageById(com.tcn.cloud.api.api.v0alpha.DeleteCannedMessageByIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteCannedMessageByIdRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteCannedMessageByIdMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteCannedMessageByIdMethod(), responseObserver);
     }
 
     /**
@@ -2762,7 +2817,7 @@ public final class OmniApiGrpc {
      */
     public void createCannedMessageGroup(com.tcn.cloud.api.api.v0alpha.CreateCannedMessageGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CannedMessageGroup> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateCannedMessageGroupMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateCannedMessageGroupMethod(), responseObserver);
     }
 
     /**
@@ -2775,7 +2830,7 @@ public final class OmniApiGrpc {
      */
     public void listCannedMessageGroups(com.tcn.cloud.api.api.v0alpha.ListCannedMessageGroupsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCannedMessageGroupsRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCannedMessageGroupsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListCannedMessageGroupsMethod(), responseObserver);
     }
 
     /**
@@ -2788,7 +2843,7 @@ public final class OmniApiGrpc {
      */
     public void updateCannedMessageGroup(com.tcn.cloud.api.api.v0alpha.UpdateCannedMessageGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateCannedMessageGroupRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateCannedMessageGroupMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateCannedMessageGroupMethod(), responseObserver);
     }
 
     /**
@@ -2801,7 +2856,7 @@ public final class OmniApiGrpc {
      */
     public void deleteCannedMessageGroup(com.tcn.cloud.api.api.v0alpha.DeleteCannedMessageGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteCannedMessageGroupRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteCannedMessageGroupMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteCannedMessageGroupMethod(), responseObserver);
     }
 
     /**
@@ -2814,7 +2869,7 @@ public final class OmniApiGrpc {
      */
     public void listCannedMessagesByGroupId(com.tcn.cloud.api.api.v0alpha.ListCannedMessagesByGroupIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCannedMessagesByGroupIdRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCannedMessagesByGroupIdMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListCannedMessagesByGroupIdMethod(), responseObserver);
     }
 
     /**
@@ -2827,455 +2882,455 @@ public final class OmniApiGrpc {
      */
     public void getCannedMessageGroupById(com.tcn.cloud.api.api.v0alpha.GetCannedMessageGroupByIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CannedMessageGroup> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCannedMessageGroupByIdMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetCannedMessageGroupByIdMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getArchiveCampaignMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ArchiveCampaignReq,
                 com.tcn.cloud.api.api.v0alpha.ArchiveCampaignRes>(
                   this, METHODID_ARCHIVE_CAMPAIGN)))
           .addMethod(
             getCreateCampaignMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CreateCampaignReq,
                 com.tcn.cloud.api.api.commons.OmniCampaign>(
                   this, METHODID_CREATE_CAMPAIGN)))
           .addMethod(
             getGetCampaignByIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetCampaignByIdReq,
                 com.tcn.cloud.api.api.commons.OmniCampaign>(
                   this, METHODID_GET_CAMPAIGN_BY_ID)))
           .addMethod(
             getPauseCampaignMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.PauseCampaignReq,
                 com.tcn.cloud.api.api.v0alpha.PauseCampaignRes>(
                   this, METHODID_PAUSE_CAMPAIGN)))
           .addMethod(
             getResumeCampaignMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ResumeCampaignReq,
                 com.tcn.cloud.api.api.v0alpha.ResumeCampaignRes>(
                   this, METHODID_RESUME_CAMPAIGN)))
           .addMethod(
             getUpdateCampaignMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateCampaignReq,
                 com.tcn.cloud.api.api.v0alpha.UpdateCampaignRes>(
                   this, METHODID_UPDATE_CAMPAIGN)))
           .addMethod(
             getUpdateCampaignPacingSpeedMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateCampaignPacingSpeedReq,
                 com.tcn.cloud.api.api.v0alpha.UpdateCampaignPacingSpeedRes>(
                   this, METHODID_UPDATE_CAMPAIGN_PACING_SPEED)))
           .addMethod(
             getSendOmniMessageMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.SendOmniMessageReq,
                 com.tcn.cloud.api.api.commons.Empty>(
                   this, METHODID_SEND_OMNI_MESSAGE)))
           .addMethod(
             getManagerSendOmniMessageMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.SendOmniMessageReq,
                 com.tcn.cloud.api.api.commons.Empty>(
                   this, METHODID_MANAGER_SEND_OMNI_MESSAGE)))
           .addMethod(
             getCreateDispositionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CreateDispositionReq,
                 com.tcn.cloud.api.api.v0alpha.CreateDispositionRes>(
                   this, METHODID_CREATE_DISPOSITION)))
           .addMethod(
             getDeleteDispositionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.DeleteDispositionReq,
                 com.tcn.cloud.api.api.commons.Empty>(
                   this, METHODID_DELETE_DISPOSITION)))
           .addMethod(
             getListDispositionsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListDispositionsReq,
                 com.tcn.cloud.api.api.v0alpha.ListDispositionsRes>(
                   this, METHODID_LIST_DISPOSITIONS)))
           .addMethod(
             getUpdateDispositionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateDispositionReq,
                 com.tcn.cloud.api.api.commons.Empty>(
                   this, METHODID_UPDATE_DISPOSITION)))
           .addMethod(
             getListCustomUnsubscribeLinksMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.commons.Empty,
                 com.tcn.cloud.api.api.v0alpha.ListCustomUnsubscribeLinksRes>(
                   this, METHODID_LIST_CUSTOM_UNSUBSCRIBE_LINKS)))
           .addMethod(
             getCreateCustomUnsubscribeLinkMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.commons.OmniCustomUnsubscribeLink,
                 com.tcn.cloud.api.api.v0alpha.CreateCustomUnsubscribeLinkRes>(
                   this, METHODID_CREATE_CUSTOM_UNSUBSCRIBE_LINK)))
           .addMethod(
             getUpdateCustomUnsubscribeLinkMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateCustomUnsubscribeLinkReq,
                 com.tcn.cloud.api.api.v0alpha.UpdateCustomUnsubscribeLinkRes>(
                   this, METHODID_UPDATE_CUSTOM_UNSUBSCRIBE_LINK)))
           .addMethod(
             getDeleteCustomUnsubscribeLinkMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.DeleteCustomUnsubscribeLinkReq,
                 com.tcn.cloud.api.api.commons.Empty>(
                   this, METHODID_DELETE_CUSTOM_UNSUBSCRIBE_LINK)))
           .addMethod(
             getListCampaignsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListCampaignsReq,
                 com.tcn.cloud.api.api.v0alpha.ListCampaignsRes>(
                   this, METHODID_LIST_CAMPAIGNS)))
           .addMethod(
             getManagerListMessagesMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            asyncServerStreamingCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ManagerListMessagesReq,
                 com.tcn.cloud.api.api.commons.OmniMessage>(
                   this, METHODID_MANAGER_LIST_MESSAGES)))
           .addMethod(
             getListMessagesMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            asyncServerStreamingCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListMessagesReq,
                 com.tcn.cloud.api.api.commons.OmniMessage>(
                   this, METHODID_LIST_MESSAGES)))
           .addMethod(
             getManagerListConversationsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListConversationsReq,
                 com.tcn.cloud.api.api.v0alpha.ListConversationsRes>(
                   this, METHODID_MANAGER_LIST_CONVERSATIONS)))
           .addMethod(
             getListContactListsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListContactListsReq,
                 com.tcn.cloud.api.api.v0alpha.ListContactListsRes>(
                   this, METHODID_LIST_CONTACT_LISTS)))
           .addMethod(
             getGetAvailableHeadersMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetAvailableHeadersReq,
                 com.tcn.cloud.api.api.v0alpha.GetAvailableHeadersRes>(
                   this, METHODID_GET_AVAILABLE_HEADERS)))
           .addMethod(
             getGetTaskMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetTaskReq,
                 com.tcn.cloud.api.api.commons.OmniTask>(
                   this, METHODID_GET_TASK)))
           .addMethod(
             getListTasksMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListTasksReq,
                 com.tcn.cloud.api.api.v0alpha.ListTasksRes>(
                   this, METHODID_LIST_TASKS)))
           .addMethod(
             getCreateConnectedInboxMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.commons.ConnectedInbox,
                 com.tcn.cloud.api.api.v0alpha.CreateConnectedInboxRes>(
                   this, METHODID_CREATE_CONNECTED_INBOX)))
           .addMethod(
             getDeleteConnectedInboxBySidMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.DeleteConnectedInboxBySidReq,
                 com.tcn.cloud.api.api.commons.Empty>(
                   this, METHODID_DELETE_CONNECTED_INBOX_BY_SID)))
           .addMethod(
             getGetConnectedInboxBySidMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetConnectedInboxBySidReq,
                 com.tcn.cloud.api.api.commons.ConnectedInbox>(
                   this, METHODID_GET_CONNECTED_INBOX_BY_SID)))
           .addMethod(
             getPerformSendgridAccountChecksMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.SendgridAccountByClientReq,
                 com.tcn.cloud.api.api.v0alpha.SendgridAccountByClientRes>(
                   this, METHODID_PERFORM_SENDGRID_ACCOUNT_CHECKS)))
           .addMethod(
             getListConnectedInboxesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesReq,
                 com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesRes>(
                   this, METHODID_LIST_CONNECTED_INBOXES)))
           .addMethod(
             getTestConnectedInboxMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.commons.ConnectedInbox,
                 com.tcn.cloud.api.api.v0alpha.TestConnectedInboxRes>(
                   this, METHODID_TEST_CONNECTED_INBOX)))
           .addMethod(
             getUpdateConnectedInboxMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateConnectedInboxReq,
                 com.tcn.cloud.api.api.commons.Empty>(
                   this, METHODID_UPDATE_CONNECTED_INBOX)))
           .addMethod(
             getCreateVerifiedEmailMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.commons.VerifiedEmail,
                 com.tcn.cloud.api.api.v0alpha.CreateVerifiedEmailRes>(
                   this, METHODID_CREATE_VERIFIED_EMAIL)))
           .addMethod(
             getDeleteVerifiedEmailMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.DeleteVerifiedEmailReq,
                 com.tcn.cloud.api.api.commons.Empty>(
                   this, METHODID_DELETE_VERIFIED_EMAIL)))
           .addMethod(
             getGetVerifiedEmailBySidMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetVerifiedEmailBySidReq,
                 com.tcn.cloud.api.api.commons.VerifiedEmail>(
                   this, METHODID_GET_VERIFIED_EMAIL_BY_SID)))
           .addMethod(
             getListVerifiedEmailsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListVerifiedEmailsReq,
                 com.tcn.cloud.api.api.v0alpha.ListVerifiedEmailsRes>(
                   this, METHODID_LIST_VERIFIED_EMAILS)))
           .addMethod(
             getResendVerifiedEmailMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ResendVerifiedEmailReq,
                 com.tcn.cloud.api.api.v0alpha.ResendVerifiedEmailRes>(
                   this, METHODID_RESEND_VERIFIED_EMAIL)))
           .addMethod(
             getUpdateVerifiedEmailMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateVerifiedEmailReq,
                 com.tcn.cloud.api.api.commons.Empty>(
                   this, METHODID_UPDATE_VERIFIED_EMAIL)))
           .addMethod(
             getGetPendingGoogleXOAuth2DataMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetPendingGoogleXOAuth2DataReq,
                 com.tcn.cloud.api.api.v0alpha.GetPendingGoogleXOAuth2DataRes>(
                   this, METHODID_GET_PENDING_GOOGLE_XOAUTH2DATA)))
           .addMethod(
             getSendEmailNotificationMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.SendEmailNotificationReq,
                 com.tcn.cloud.api.api.v0alpha.SendEmailNotificationRes>(
                   this, METHODID_SEND_EMAIL_NOTIFICATION)))
           .addMethod(
             getSendFeedbackEmailMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.SendFeedbackEmailReq,
                 com.tcn.cloud.api.api.v0alpha.SendFeedbackEmailRes>(
                   this, METHODID_SEND_FEEDBACK_EMAIL)))
           .addMethod(
             getGetOmniAttachmentMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetOmniAttachmentReq,
                 com.tcn.cloud.api.api.commons.OmniAttachment>(
                   this, METHODID_GET_OMNI_ATTACHMENT)))
           .addMethod(
             getCreateTasksMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CreateTasksReq,
                 com.tcn.cloud.api.api.v0alpha.CreateTasksRes>(
                   this, METHODID_CREATE_TASKS)))
           .addMethod(
             getCreateSignatureMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CreateSignatureReq,
                 com.tcn.cloud.api.api.v0alpha.CreateSignatureRes>(
                   this, METHODID_CREATE_SIGNATURE)))
           .addMethod(
             getDeleteSignatureMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.DeleteSignatureReq,
                 com.tcn.cloud.api.api.v0alpha.DeleteSignatureRes>(
                   this, METHODID_DELETE_SIGNATURE)))
           .addMethod(
             getListSignaturesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListSignaturesReq,
                 com.tcn.cloud.api.api.v0alpha.ListSignaturesRes>(
                   this, METHODID_LIST_SIGNATURES)))
           .addMethod(
             getUpdateSignatureMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateSignatureReq,
                 com.tcn.cloud.api.api.v0alpha.UpdateSignatureRes>(
                   this, METHODID_UPDATE_SIGNATURE)))
           .addMethod(
             getSuggestResponseMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.SuggestResponseReq,
                 com.tcn.cloud.api.api.v0alpha.SuggestResponseRes>(
                   this, METHODID_SUGGEST_RESPONSE)))
           .addMethod(
             getCreateProjectMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CreateProjectReq,
                 com.tcn.cloud.api.api.v0alpha.CreateProjectRes>(
                   this, METHODID_CREATE_PROJECT)))
           .addMethod(
             getListProjectsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListProjectsReq,
                 com.tcn.cloud.api.api.v0alpha.ListProjectsRes>(
                   this, METHODID_LIST_PROJECTS)))
           .addMethod(
             getEditProjectByIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.EditProjectByIdReq,
                 com.tcn.cloud.api.api.v0alpha.EditProjectByIdRes>(
                   this, METHODID_EDIT_PROJECT_BY_ID)))
           .addMethod(
             getCloseProjectByIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CloseProjectByIdReq,
                 com.tcn.cloud.api.api.v0alpha.CloseProjectByIdRes>(
                   this, METHODID_CLOSE_PROJECT_BY_ID)))
           .addMethod(
             getGetProjectByIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetProjectByIdReq,
                 com.tcn.cloud.api.api.v0alpha.Project>(
                   this, METHODID_GET_PROJECT_BY_ID)))
           .addMethod(
             getCreateCannedMessageMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CreateCannedMessageReq,
                 com.tcn.cloud.api.api.v0alpha.CannedMessage>(
                   this, METHODID_CREATE_CANNED_MESSAGE)))
           .addMethod(
             getListCannedMessagesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListCannedMessagesReq,
                 com.tcn.cloud.api.api.v0alpha.ListCannedMessagesRes>(
                   this, METHODID_LIST_CANNED_MESSAGES)))
           .addMethod(
             getUpdateCannedMessageMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateCannedMessageReq,
                 com.tcn.cloud.api.api.v0alpha.CannedMessage>(
                   this, METHODID_UPDATE_CANNED_MESSAGE)))
           .addMethod(
             getGetCannedMessageByIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetCannedMessageByIdReq,
                 com.tcn.cloud.api.api.v0alpha.CannedMessageWithGroup>(
                   this, METHODID_GET_CANNED_MESSAGE_BY_ID)))
           .addMethod(
             getDeleteCannedMessageByIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.DeleteCannedMessageByIdReq,
                 com.tcn.cloud.api.api.v0alpha.DeleteCannedMessageByIdRes>(
                   this, METHODID_DELETE_CANNED_MESSAGE_BY_ID)))
           .addMethod(
             getCreateCannedMessageGroupMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CreateCannedMessageGroupReq,
                 com.tcn.cloud.api.api.v0alpha.CannedMessageGroup>(
                   this, METHODID_CREATE_CANNED_MESSAGE_GROUP)))
           .addMethod(
             getListCannedMessageGroupsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListCannedMessageGroupsReq,
                 com.tcn.cloud.api.api.v0alpha.ListCannedMessageGroupsRes>(
                   this, METHODID_LIST_CANNED_MESSAGE_GROUPS)))
           .addMethod(
             getUpdateCannedMessageGroupMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateCannedMessageGroupReq,
                 com.tcn.cloud.api.api.v0alpha.UpdateCannedMessageGroupRes>(
                   this, METHODID_UPDATE_CANNED_MESSAGE_GROUP)))
           .addMethod(
             getDeleteCannedMessageGroupMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.DeleteCannedMessageGroupReq,
                 com.tcn.cloud.api.api.v0alpha.DeleteCannedMessageGroupRes>(
                   this, METHODID_DELETE_CANNED_MESSAGE_GROUP)))
           .addMethod(
             getListCannedMessagesByGroupIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListCannedMessagesByGroupIdReq,
                 com.tcn.cloud.api.api.v0alpha.ListCannedMessagesByGroupIdRes>(
                   this, METHODID_LIST_CANNED_MESSAGES_BY_GROUP_ID)))
           .addMethod(
             getGetCannedMessageGroupByIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetCannedMessageGroupByIdReq,
                 com.tcn.cloud.api.api.v0alpha.CannedMessageGroup>(
@@ -3291,15 +3346,19 @@ public final class OmniApiGrpc {
    * permissions.
    * </pre>
    */
-  public static final class OmniApiStub extends io.grpc.stub.AbstractAsyncStub<OmniApiStub> {
-    private OmniApiStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class OmniApiStub extends io.grpc.stub.AbstractStub<OmniApiStub> {
+    private OmniApiStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private OmniApiStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected OmniApiStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected OmniApiStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new OmniApiStub(channel, callOptions);
     }
 
@@ -3310,7 +3369,7 @@ public final class OmniApiGrpc {
      */
     public void archiveCampaign(com.tcn.cloud.api.api.v0alpha.ArchiveCampaignReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ArchiveCampaignRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getArchiveCampaignMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3325,7 +3384,7 @@ public final class OmniApiGrpc {
      */
     public void createCampaign(com.tcn.cloud.api.api.v0alpha.CreateCampaignReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.OmniCampaign> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateCampaignMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3336,7 +3395,7 @@ public final class OmniApiGrpc {
      */
     public void getCampaignById(com.tcn.cloud.api.api.v0alpha.GetCampaignByIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.OmniCampaign> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetCampaignByIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3347,7 +3406,7 @@ public final class OmniApiGrpc {
      */
     public void pauseCampaign(com.tcn.cloud.api.api.v0alpha.PauseCampaignReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.PauseCampaignRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getPauseCampaignMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3358,7 +3417,7 @@ public final class OmniApiGrpc {
      */
     public void resumeCampaign(com.tcn.cloud.api.api.v0alpha.ResumeCampaignReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ResumeCampaignRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getResumeCampaignMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3371,7 +3430,7 @@ public final class OmniApiGrpc {
      */
     public void updateCampaign(com.tcn.cloud.api.api.v0alpha.UpdateCampaignReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateCampaignRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateCampaignMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3382,7 +3441,7 @@ public final class OmniApiGrpc {
      */
     public void updateCampaignPacingSpeed(com.tcn.cloud.api.api.v0alpha.UpdateCampaignPacingSpeedReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateCampaignPacingSpeedRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateCampaignPacingSpeedMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3393,7 +3452,7 @@ public final class OmniApiGrpc {
      */
     public void sendOmniMessage(com.tcn.cloud.api.api.v0alpha.SendOmniMessageReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Empty> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getSendOmniMessageMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3404,7 +3463,7 @@ public final class OmniApiGrpc {
      */
     public void managerSendOmniMessage(com.tcn.cloud.api.api.v0alpha.SendOmniMessageReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Empty> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getManagerSendOmniMessageMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3415,7 +3474,7 @@ public final class OmniApiGrpc {
      */
     public void createDisposition(com.tcn.cloud.api.api.v0alpha.CreateDispositionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateDispositionRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateDispositionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3426,7 +3485,7 @@ public final class OmniApiGrpc {
      */
     public void deleteDisposition(com.tcn.cloud.api.api.v0alpha.DeleteDispositionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Empty> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDeleteDispositionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3437,7 +3496,7 @@ public final class OmniApiGrpc {
      */
     public void listDispositions(com.tcn.cloud.api.api.v0alpha.ListDispositionsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListDispositionsRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListDispositionsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3448,7 +3507,7 @@ public final class OmniApiGrpc {
      */
     public void updateDisposition(com.tcn.cloud.api.api.v0alpha.UpdateDispositionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Empty> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateDispositionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3459,7 +3518,7 @@ public final class OmniApiGrpc {
      */
     public void listCustomUnsubscribeLinks(com.tcn.cloud.api.api.commons.Empty request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCustomUnsubscribeLinksRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListCustomUnsubscribeLinksMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3470,7 +3529,7 @@ public final class OmniApiGrpc {
      */
     public void createCustomUnsubscribeLink(com.tcn.cloud.api.api.commons.OmniCustomUnsubscribeLink request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateCustomUnsubscribeLinkRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateCustomUnsubscribeLinkMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3481,7 +3540,7 @@ public final class OmniApiGrpc {
      */
     public void updateCustomUnsubscribeLink(com.tcn.cloud.api.api.v0alpha.UpdateCustomUnsubscribeLinkReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateCustomUnsubscribeLinkRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateCustomUnsubscribeLinkMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3492,7 +3551,7 @@ public final class OmniApiGrpc {
      */
     public void deleteCustomUnsubscribeLink(com.tcn.cloud.api.api.v0alpha.DeleteCustomUnsubscribeLinkReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Empty> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDeleteCustomUnsubscribeLinkMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3505,7 +3564,7 @@ public final class OmniApiGrpc {
      */
     public void listCampaigns(com.tcn.cloud.api.api.v0alpha.ListCampaignsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCampaignsRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListCampaignsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3517,7 +3576,7 @@ public final class OmniApiGrpc {
      */
     public void managerListMessages(com.tcn.cloud.api.api.v0alpha.ManagerListMessagesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.OmniMessage> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+      asyncServerStreamingCall(
           getChannel().newCall(getManagerListMessagesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3529,7 +3588,7 @@ public final class OmniApiGrpc {
      */
     public void listMessages(com.tcn.cloud.api.api.v0alpha.ListMessagesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.OmniMessage> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+      asyncServerStreamingCall(
           getChannel().newCall(getListMessagesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3542,7 +3601,7 @@ public final class OmniApiGrpc {
      */
     public void managerListConversations(com.tcn.cloud.api.api.v0alpha.ListConversationsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListConversationsRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getManagerListConversationsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3553,7 +3612,7 @@ public final class OmniApiGrpc {
      */
     public void listContactLists(com.tcn.cloud.api.api.v0alpha.ListContactListsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListContactListsRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListContactListsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3566,7 +3625,7 @@ public final class OmniApiGrpc {
      */
     public void getAvailableHeaders(com.tcn.cloud.api.api.v0alpha.GetAvailableHeadersReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetAvailableHeadersRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetAvailableHeadersMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3579,7 +3638,7 @@ public final class OmniApiGrpc {
      */
     public void getTask(com.tcn.cloud.api.api.v0alpha.GetTaskReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.OmniTask> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetTaskMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3592,7 +3651,7 @@ public final class OmniApiGrpc {
      */
     public void listTasks(com.tcn.cloud.api.api.v0alpha.ListTasksReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListTasksRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListTasksMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3605,7 +3664,7 @@ public final class OmniApiGrpc {
      */
     public void createConnectedInbox(com.tcn.cloud.api.api.commons.ConnectedInbox request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateConnectedInboxRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateConnectedInboxMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3618,7 +3677,7 @@ public final class OmniApiGrpc {
      */
     public void deleteConnectedInboxBySid(com.tcn.cloud.api.api.v0alpha.DeleteConnectedInboxBySidReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Empty> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDeleteConnectedInboxBySidMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3631,7 +3690,7 @@ public final class OmniApiGrpc {
      */
     public void getConnectedInboxBySid(com.tcn.cloud.api.api.v0alpha.GetConnectedInboxBySidReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.ConnectedInbox> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetConnectedInboxBySidMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3646,7 +3705,7 @@ public final class OmniApiGrpc {
      */
     public void performSendgridAccountChecks(com.tcn.cloud.api.api.v0alpha.SendgridAccountByClientReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SendgridAccountByClientRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getPerformSendgridAccountChecksMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3659,7 +3718,7 @@ public final class OmniApiGrpc {
      */
     public void listConnectedInboxes(com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListConnectedInboxesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3673,7 +3732,7 @@ public final class OmniApiGrpc {
      */
     public void testConnectedInbox(com.tcn.cloud.api.api.commons.ConnectedInbox request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.TestConnectedInboxRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getTestConnectedInboxMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3686,7 +3745,7 @@ public final class OmniApiGrpc {
      */
     public void updateConnectedInbox(com.tcn.cloud.api.api.v0alpha.UpdateConnectedInboxReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Empty> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateConnectedInboxMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3699,7 +3758,7 @@ public final class OmniApiGrpc {
      */
     public void createVerifiedEmail(com.tcn.cloud.api.api.commons.VerifiedEmail request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateVerifiedEmailRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateVerifiedEmailMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3715,7 +3774,7 @@ public final class OmniApiGrpc {
      */
     public void deleteVerifiedEmail(com.tcn.cloud.api.api.v0alpha.DeleteVerifiedEmailReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Empty> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDeleteVerifiedEmailMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3730,7 +3789,7 @@ public final class OmniApiGrpc {
      */
     public void getVerifiedEmailBySid(com.tcn.cloud.api.api.v0alpha.GetVerifiedEmailBySidReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.VerifiedEmail> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetVerifiedEmailBySidMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3745,7 +3804,7 @@ public final class OmniApiGrpc {
      */
     public void listVerifiedEmails(com.tcn.cloud.api.api.v0alpha.ListVerifiedEmailsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListVerifiedEmailsRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListVerifiedEmailsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3760,7 +3819,7 @@ public final class OmniApiGrpc {
      */
     public void resendVerifiedEmail(com.tcn.cloud.api.api.v0alpha.ResendVerifiedEmailReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ResendVerifiedEmailRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getResendVerifiedEmailMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3771,7 +3830,7 @@ public final class OmniApiGrpc {
      */
     public void updateVerifiedEmail(com.tcn.cloud.api.api.v0alpha.UpdateVerifiedEmailReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Empty> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateVerifiedEmailMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3784,7 +3843,7 @@ public final class OmniApiGrpc {
      */
     public void getPendingGoogleXOAuth2Data(com.tcn.cloud.api.api.v0alpha.GetPendingGoogleXOAuth2DataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetPendingGoogleXOAuth2DataRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetPendingGoogleXOAuth2DataMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3800,7 +3859,7 @@ public final class OmniApiGrpc {
      */
     public void sendEmailNotification(com.tcn.cloud.api.api.v0alpha.SendEmailNotificationReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SendEmailNotificationRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getSendEmailNotificationMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3811,7 +3870,7 @@ public final class OmniApiGrpc {
      */
     public void sendFeedbackEmail(com.tcn.cloud.api.api.v0alpha.SendFeedbackEmailReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SendFeedbackEmailRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getSendFeedbackEmailMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3824,7 +3883,7 @@ public final class OmniApiGrpc {
      */
     public void getOmniAttachment(com.tcn.cloud.api.api.v0alpha.GetOmniAttachmentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.OmniAttachment> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetOmniAttachmentMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3835,7 +3894,7 @@ public final class OmniApiGrpc {
      */
     public void createTasks(com.tcn.cloud.api.api.v0alpha.CreateTasksReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateTasksRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateTasksMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3848,7 +3907,7 @@ public final class OmniApiGrpc {
      */
     public void createSignature(com.tcn.cloud.api.api.v0alpha.CreateSignatureReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateSignatureRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateSignatureMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3861,7 +3920,7 @@ public final class OmniApiGrpc {
      */
     public void deleteSignature(com.tcn.cloud.api.api.v0alpha.DeleteSignatureReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteSignatureRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDeleteSignatureMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3874,7 +3933,7 @@ public final class OmniApiGrpc {
      */
     public void listSignatures(com.tcn.cloud.api.api.v0alpha.ListSignaturesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListSignaturesRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListSignaturesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3887,7 +3946,7 @@ public final class OmniApiGrpc {
      */
     public void updateSignature(com.tcn.cloud.api.api.v0alpha.UpdateSignatureReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateSignatureRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateSignatureMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3898,7 +3957,7 @@ public final class OmniApiGrpc {
      */
     public void suggestResponse(com.tcn.cloud.api.api.v0alpha.SuggestResponseReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SuggestResponseRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getSuggestResponseMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3914,7 +3973,7 @@ public final class OmniApiGrpc {
      */
     public void createProject(com.tcn.cloud.api.api.v0alpha.CreateProjectReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateProjectRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateProjectMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3928,7 +3987,7 @@ public final class OmniApiGrpc {
      */
     public void listProjects(com.tcn.cloud.api.api.v0alpha.ListProjectsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListProjectsRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListProjectsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3944,7 +4003,7 @@ public final class OmniApiGrpc {
      */
     public void editProjectById(com.tcn.cloud.api.api.v0alpha.EditProjectByIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.EditProjectByIdRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getEditProjectByIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3960,7 +4019,7 @@ public final class OmniApiGrpc {
      */
     public void closeProjectById(com.tcn.cloud.api.api.v0alpha.CloseProjectByIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CloseProjectByIdRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCloseProjectByIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3976,7 +4035,7 @@ public final class OmniApiGrpc {
      */
     public void getProjectById(com.tcn.cloud.api.api.v0alpha.GetProjectByIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Project> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetProjectByIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -3992,7 +4051,7 @@ public final class OmniApiGrpc {
      */
     public void createCannedMessage(com.tcn.cloud.api.api.v0alpha.CreateCannedMessageReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CannedMessage> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateCannedMessageMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -4006,7 +4065,7 @@ public final class OmniApiGrpc {
      */
     public void listCannedMessages(com.tcn.cloud.api.api.v0alpha.ListCannedMessagesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCannedMessagesRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListCannedMessagesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -4022,7 +4081,7 @@ public final class OmniApiGrpc {
      */
     public void updateCannedMessage(com.tcn.cloud.api.api.v0alpha.UpdateCannedMessageReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CannedMessage> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateCannedMessageMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -4036,7 +4095,7 @@ public final class OmniApiGrpc {
      */
     public void getCannedMessageById(com.tcn.cloud.api.api.v0alpha.GetCannedMessageByIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CannedMessageWithGroup> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetCannedMessageByIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -4050,7 +4109,7 @@ public final class OmniApiGrpc {
      */
     public void deleteCannedMessageById(com.tcn.cloud.api.api.v0alpha.DeleteCannedMessageByIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteCannedMessageByIdRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDeleteCannedMessageByIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -4066,7 +4125,7 @@ public final class OmniApiGrpc {
      */
     public void createCannedMessageGroup(com.tcn.cloud.api.api.v0alpha.CreateCannedMessageGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CannedMessageGroup> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateCannedMessageGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -4080,7 +4139,7 @@ public final class OmniApiGrpc {
      */
     public void listCannedMessageGroups(com.tcn.cloud.api.api.v0alpha.ListCannedMessageGroupsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCannedMessageGroupsRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListCannedMessageGroupsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -4094,7 +4153,7 @@ public final class OmniApiGrpc {
      */
     public void updateCannedMessageGroup(com.tcn.cloud.api.api.v0alpha.UpdateCannedMessageGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateCannedMessageGroupRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateCannedMessageGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -4108,7 +4167,7 @@ public final class OmniApiGrpc {
      */
     public void deleteCannedMessageGroup(com.tcn.cloud.api.api.v0alpha.DeleteCannedMessageGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteCannedMessageGroupRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDeleteCannedMessageGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -4122,7 +4181,7 @@ public final class OmniApiGrpc {
      */
     public void listCannedMessagesByGroupId(com.tcn.cloud.api.api.v0alpha.ListCannedMessagesByGroupIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCannedMessagesByGroupIdRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListCannedMessagesByGroupIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -4136,7 +4195,7 @@ public final class OmniApiGrpc {
      */
     public void getCannedMessageGroupById(com.tcn.cloud.api.api.v0alpha.GetCannedMessageGroupByIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CannedMessageGroup> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetCannedMessageGroupByIdMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -4148,15 +4207,19 @@ public final class OmniApiGrpc {
    * permissions.
    * </pre>
    */
-  public static final class OmniApiBlockingStub extends io.grpc.stub.AbstractBlockingStub<OmniApiBlockingStub> {
-    private OmniApiBlockingStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class OmniApiBlockingStub extends io.grpc.stub.AbstractStub<OmniApiBlockingStub> {
+    private OmniApiBlockingStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private OmniApiBlockingStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected OmniApiBlockingStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected OmniApiBlockingStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new OmniApiBlockingStub(channel, callOptions);
     }
 
@@ -4166,7 +4229,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ArchiveCampaignRes archiveCampaign(com.tcn.cloud.api.api.v0alpha.ArchiveCampaignReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getArchiveCampaignMethod(), getCallOptions(), request);
     }
 
@@ -4180,7 +4243,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.commons.OmniCampaign createCampaign(com.tcn.cloud.api.api.v0alpha.CreateCampaignReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateCampaignMethod(), getCallOptions(), request);
     }
 
@@ -4190,7 +4253,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.commons.OmniCampaign getCampaignById(com.tcn.cloud.api.api.v0alpha.GetCampaignByIdReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetCampaignByIdMethod(), getCallOptions(), request);
     }
 
@@ -4200,7 +4263,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.PauseCampaignRes pauseCampaign(com.tcn.cloud.api.api.v0alpha.PauseCampaignReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getPauseCampaignMethod(), getCallOptions(), request);
     }
 
@@ -4210,7 +4273,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ResumeCampaignRes resumeCampaign(com.tcn.cloud.api.api.v0alpha.ResumeCampaignReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getResumeCampaignMethod(), getCallOptions(), request);
     }
 
@@ -4222,7 +4285,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateCampaignRes updateCampaign(com.tcn.cloud.api.api.v0alpha.UpdateCampaignReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateCampaignMethod(), getCallOptions(), request);
     }
 
@@ -4232,7 +4295,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateCampaignPacingSpeedRes updateCampaignPacingSpeed(com.tcn.cloud.api.api.v0alpha.UpdateCampaignPacingSpeedReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateCampaignPacingSpeedMethod(), getCallOptions(), request);
     }
 
@@ -4242,7 +4305,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.commons.Empty sendOmniMessage(com.tcn.cloud.api.api.v0alpha.SendOmniMessageReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getSendOmniMessageMethod(), getCallOptions(), request);
     }
 
@@ -4252,7 +4315,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.commons.Empty managerSendOmniMessage(com.tcn.cloud.api.api.v0alpha.SendOmniMessageReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getManagerSendOmniMessageMethod(), getCallOptions(), request);
     }
 
@@ -4262,7 +4325,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateDispositionRes createDisposition(com.tcn.cloud.api.api.v0alpha.CreateDispositionReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateDispositionMethod(), getCallOptions(), request);
     }
 
@@ -4272,7 +4335,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.commons.Empty deleteDisposition(com.tcn.cloud.api.api.v0alpha.DeleteDispositionReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDeleteDispositionMethod(), getCallOptions(), request);
     }
 
@@ -4282,7 +4345,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListDispositionsRes listDispositions(com.tcn.cloud.api.api.v0alpha.ListDispositionsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListDispositionsMethod(), getCallOptions(), request);
     }
 
@@ -4292,7 +4355,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.commons.Empty updateDisposition(com.tcn.cloud.api.api.v0alpha.UpdateDispositionReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateDispositionMethod(), getCallOptions(), request);
     }
 
@@ -4302,7 +4365,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListCustomUnsubscribeLinksRes listCustomUnsubscribeLinks(com.tcn.cloud.api.api.commons.Empty request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListCustomUnsubscribeLinksMethod(), getCallOptions(), request);
     }
 
@@ -4312,7 +4375,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateCustomUnsubscribeLinkRes createCustomUnsubscribeLink(com.tcn.cloud.api.api.commons.OmniCustomUnsubscribeLink request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateCustomUnsubscribeLinkMethod(), getCallOptions(), request);
     }
 
@@ -4322,7 +4385,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateCustomUnsubscribeLinkRes updateCustomUnsubscribeLink(com.tcn.cloud.api.api.v0alpha.UpdateCustomUnsubscribeLinkReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateCustomUnsubscribeLinkMethod(), getCallOptions(), request);
     }
 
@@ -4332,7 +4395,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.commons.Empty deleteCustomUnsubscribeLink(com.tcn.cloud.api.api.v0alpha.DeleteCustomUnsubscribeLinkReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDeleteCustomUnsubscribeLinkMethod(), getCallOptions(), request);
     }
 
@@ -4344,7 +4407,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListCampaignsRes listCampaigns(com.tcn.cloud.api.api.v0alpha.ListCampaignsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListCampaignsMethod(), getCallOptions(), request);
     }
 
@@ -4356,7 +4419,7 @@ public final class OmniApiGrpc {
      */
     public java.util.Iterator<com.tcn.cloud.api.api.commons.OmniMessage> managerListMessages(
         com.tcn.cloud.api.api.v0alpha.ManagerListMessagesReq request) {
-      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+      return blockingServerStreamingCall(
           getChannel(), getManagerListMessagesMethod(), getCallOptions(), request);
     }
 
@@ -4368,7 +4431,7 @@ public final class OmniApiGrpc {
      */
     public java.util.Iterator<com.tcn.cloud.api.api.commons.OmniMessage> listMessages(
         com.tcn.cloud.api.api.v0alpha.ListMessagesReq request) {
-      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+      return blockingServerStreamingCall(
           getChannel(), getListMessagesMethod(), getCallOptions(), request);
     }
 
@@ -4380,7 +4443,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListConversationsRes managerListConversations(com.tcn.cloud.api.api.v0alpha.ListConversationsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getManagerListConversationsMethod(), getCallOptions(), request);
     }
 
@@ -4390,7 +4453,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListContactListsRes listContactLists(com.tcn.cloud.api.api.v0alpha.ListContactListsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListContactListsMethod(), getCallOptions(), request);
     }
 
@@ -4402,7 +4465,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetAvailableHeadersRes getAvailableHeaders(com.tcn.cloud.api.api.v0alpha.GetAvailableHeadersReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetAvailableHeadersMethod(), getCallOptions(), request);
     }
 
@@ -4414,7 +4477,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.commons.OmniTask getTask(com.tcn.cloud.api.api.v0alpha.GetTaskReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetTaskMethod(), getCallOptions(), request);
     }
 
@@ -4426,7 +4489,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListTasksRes listTasks(com.tcn.cloud.api.api.v0alpha.ListTasksReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListTasksMethod(), getCallOptions(), request);
     }
 
@@ -4438,7 +4501,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateConnectedInboxRes createConnectedInbox(com.tcn.cloud.api.api.commons.ConnectedInbox request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateConnectedInboxMethod(), getCallOptions(), request);
     }
 
@@ -4450,7 +4513,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.commons.Empty deleteConnectedInboxBySid(com.tcn.cloud.api.api.v0alpha.DeleteConnectedInboxBySidReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDeleteConnectedInboxBySidMethod(), getCallOptions(), request);
     }
 
@@ -4462,7 +4525,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.commons.ConnectedInbox getConnectedInboxBySid(com.tcn.cloud.api.api.v0alpha.GetConnectedInboxBySidReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetConnectedInboxBySidMethod(), getCallOptions(), request);
     }
 
@@ -4476,7 +4539,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.SendgridAccountByClientRes performSendgridAccountChecks(com.tcn.cloud.api.api.v0alpha.SendgridAccountByClientReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getPerformSendgridAccountChecksMethod(), getCallOptions(), request);
     }
 
@@ -4488,7 +4551,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesRes listConnectedInboxes(com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListConnectedInboxesMethod(), getCallOptions(), request);
     }
 
@@ -4501,7 +4564,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.TestConnectedInboxRes testConnectedInbox(com.tcn.cloud.api.api.commons.ConnectedInbox request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getTestConnectedInboxMethod(), getCallOptions(), request);
     }
 
@@ -4513,7 +4576,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.commons.Empty updateConnectedInbox(com.tcn.cloud.api.api.v0alpha.UpdateConnectedInboxReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateConnectedInboxMethod(), getCallOptions(), request);
     }
 
@@ -4525,7 +4588,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateVerifiedEmailRes createVerifiedEmail(com.tcn.cloud.api.api.commons.VerifiedEmail request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateVerifiedEmailMethod(), getCallOptions(), request);
     }
 
@@ -4540,7 +4603,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.commons.Empty deleteVerifiedEmail(com.tcn.cloud.api.api.v0alpha.DeleteVerifiedEmailReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDeleteVerifiedEmailMethod(), getCallOptions(), request);
     }
 
@@ -4554,7 +4617,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.commons.VerifiedEmail getVerifiedEmailBySid(com.tcn.cloud.api.api.v0alpha.GetVerifiedEmailBySidReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetVerifiedEmailBySidMethod(), getCallOptions(), request);
     }
 
@@ -4568,7 +4631,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListVerifiedEmailsRes listVerifiedEmails(com.tcn.cloud.api.api.v0alpha.ListVerifiedEmailsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListVerifiedEmailsMethod(), getCallOptions(), request);
     }
 
@@ -4582,7 +4645,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ResendVerifiedEmailRes resendVerifiedEmail(com.tcn.cloud.api.api.v0alpha.ResendVerifiedEmailReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getResendVerifiedEmailMethod(), getCallOptions(), request);
     }
 
@@ -4592,7 +4655,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.commons.Empty updateVerifiedEmail(com.tcn.cloud.api.api.v0alpha.UpdateVerifiedEmailReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateVerifiedEmailMethod(), getCallOptions(), request);
     }
 
@@ -4604,7 +4667,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetPendingGoogleXOAuth2DataRes getPendingGoogleXOAuth2Data(com.tcn.cloud.api.api.v0alpha.GetPendingGoogleXOAuth2DataReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetPendingGoogleXOAuth2DataMethod(), getCallOptions(), request);
     }
 
@@ -4619,7 +4682,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.SendEmailNotificationRes sendEmailNotification(com.tcn.cloud.api.api.v0alpha.SendEmailNotificationReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getSendEmailNotificationMethod(), getCallOptions(), request);
     }
 
@@ -4629,7 +4692,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.SendFeedbackEmailRes sendFeedbackEmail(com.tcn.cloud.api.api.v0alpha.SendFeedbackEmailReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getSendFeedbackEmailMethod(), getCallOptions(), request);
     }
 
@@ -4641,7 +4704,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.commons.OmniAttachment getOmniAttachment(com.tcn.cloud.api.api.v0alpha.GetOmniAttachmentReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetOmniAttachmentMethod(), getCallOptions(), request);
     }
 
@@ -4651,7 +4714,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateTasksRes createTasks(com.tcn.cloud.api.api.v0alpha.CreateTasksReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateTasksMethod(), getCallOptions(), request);
     }
 
@@ -4663,7 +4726,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateSignatureRes createSignature(com.tcn.cloud.api.api.v0alpha.CreateSignatureReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateSignatureMethod(), getCallOptions(), request);
     }
 
@@ -4675,7 +4738,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.DeleteSignatureRes deleteSignature(com.tcn.cloud.api.api.v0alpha.DeleteSignatureReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDeleteSignatureMethod(), getCallOptions(), request);
     }
 
@@ -4687,7 +4750,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListSignaturesRes listSignatures(com.tcn.cloud.api.api.v0alpha.ListSignaturesReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListSignaturesMethod(), getCallOptions(), request);
     }
 
@@ -4699,7 +4762,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateSignatureRes updateSignature(com.tcn.cloud.api.api.v0alpha.UpdateSignatureReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateSignatureMethod(), getCallOptions(), request);
     }
 
@@ -4709,7 +4772,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.SuggestResponseRes suggestResponse(com.tcn.cloud.api.api.v0alpha.SuggestResponseReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getSuggestResponseMethod(), getCallOptions(), request);
     }
 
@@ -4724,7 +4787,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateProjectRes createProject(com.tcn.cloud.api.api.v0alpha.CreateProjectReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateProjectMethod(), getCallOptions(), request);
     }
 
@@ -4737,7 +4800,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListProjectsRes listProjects(com.tcn.cloud.api.api.v0alpha.ListProjectsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListProjectsMethod(), getCallOptions(), request);
     }
 
@@ -4752,7 +4815,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.EditProjectByIdRes editProjectById(com.tcn.cloud.api.api.v0alpha.EditProjectByIdReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getEditProjectByIdMethod(), getCallOptions(), request);
     }
 
@@ -4767,7 +4830,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CloseProjectByIdRes closeProjectById(com.tcn.cloud.api.api.v0alpha.CloseProjectByIdReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCloseProjectByIdMethod(), getCallOptions(), request);
     }
 
@@ -4782,7 +4845,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.Project getProjectById(com.tcn.cloud.api.api.v0alpha.GetProjectByIdReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetProjectByIdMethod(), getCallOptions(), request);
     }
 
@@ -4797,7 +4860,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CannedMessage createCannedMessage(com.tcn.cloud.api.api.v0alpha.CreateCannedMessageReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateCannedMessageMethod(), getCallOptions(), request);
     }
 
@@ -4810,7 +4873,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListCannedMessagesRes listCannedMessages(com.tcn.cloud.api.api.v0alpha.ListCannedMessagesReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListCannedMessagesMethod(), getCallOptions(), request);
     }
 
@@ -4825,7 +4888,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CannedMessage updateCannedMessage(com.tcn.cloud.api.api.v0alpha.UpdateCannedMessageReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateCannedMessageMethod(), getCallOptions(), request);
     }
 
@@ -4838,7 +4901,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CannedMessageWithGroup getCannedMessageById(com.tcn.cloud.api.api.v0alpha.GetCannedMessageByIdReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetCannedMessageByIdMethod(), getCallOptions(), request);
     }
 
@@ -4851,7 +4914,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.DeleteCannedMessageByIdRes deleteCannedMessageById(com.tcn.cloud.api.api.v0alpha.DeleteCannedMessageByIdReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDeleteCannedMessageByIdMethod(), getCallOptions(), request);
     }
 
@@ -4866,7 +4929,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CannedMessageGroup createCannedMessageGroup(com.tcn.cloud.api.api.v0alpha.CreateCannedMessageGroupReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateCannedMessageGroupMethod(), getCallOptions(), request);
     }
 
@@ -4879,7 +4942,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListCannedMessageGroupsRes listCannedMessageGroups(com.tcn.cloud.api.api.v0alpha.ListCannedMessageGroupsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListCannedMessageGroupsMethod(), getCallOptions(), request);
     }
 
@@ -4892,7 +4955,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateCannedMessageGroupRes updateCannedMessageGroup(com.tcn.cloud.api.api.v0alpha.UpdateCannedMessageGroupReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateCannedMessageGroupMethod(), getCallOptions(), request);
     }
 
@@ -4905,7 +4968,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.DeleteCannedMessageGroupRes deleteCannedMessageGroup(com.tcn.cloud.api.api.v0alpha.DeleteCannedMessageGroupReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDeleteCannedMessageGroupMethod(), getCallOptions(), request);
     }
 
@@ -4918,7 +4981,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListCannedMessagesByGroupIdRes listCannedMessagesByGroupId(com.tcn.cloud.api.api.v0alpha.ListCannedMessagesByGroupIdReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListCannedMessagesByGroupIdMethod(), getCallOptions(), request);
     }
 
@@ -4931,7 +4994,7 @@ public final class OmniApiGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CannedMessageGroup getCannedMessageGroupById(com.tcn.cloud.api.api.v0alpha.GetCannedMessageGroupByIdReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetCannedMessageGroupByIdMethod(), getCallOptions(), request);
     }
   }
@@ -4943,15 +5006,19 @@ public final class OmniApiGrpc {
    * permissions.
    * </pre>
    */
-  public static final class OmniApiFutureStub extends io.grpc.stub.AbstractFutureStub<OmniApiFutureStub> {
-    private OmniApiFutureStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class OmniApiFutureStub extends io.grpc.stub.AbstractStub<OmniApiFutureStub> {
+    private OmniApiFutureStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private OmniApiFutureStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected OmniApiFutureStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected OmniApiFutureStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new OmniApiFutureStub(channel, callOptions);
     }
 
@@ -4962,7 +5029,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ArchiveCampaignRes> archiveCampaign(
         com.tcn.cloud.api.api.v0alpha.ArchiveCampaignReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getArchiveCampaignMethod(), getCallOptions()), request);
     }
 
@@ -4977,7 +5044,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.commons.OmniCampaign> createCampaign(
         com.tcn.cloud.api.api.v0alpha.CreateCampaignReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateCampaignMethod(), getCallOptions()), request);
     }
 
@@ -4988,7 +5055,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.commons.OmniCampaign> getCampaignById(
         com.tcn.cloud.api.api.v0alpha.GetCampaignByIdReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetCampaignByIdMethod(), getCallOptions()), request);
     }
 
@@ -4999,7 +5066,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.PauseCampaignRes> pauseCampaign(
         com.tcn.cloud.api.api.v0alpha.PauseCampaignReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getPauseCampaignMethod(), getCallOptions()), request);
     }
 
@@ -5010,7 +5077,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ResumeCampaignRes> resumeCampaign(
         com.tcn.cloud.api.api.v0alpha.ResumeCampaignReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getResumeCampaignMethod(), getCallOptions()), request);
     }
 
@@ -5023,7 +5090,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateCampaignRes> updateCampaign(
         com.tcn.cloud.api.api.v0alpha.UpdateCampaignReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateCampaignMethod(), getCallOptions()), request);
     }
 
@@ -5034,7 +5101,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateCampaignPacingSpeedRes> updateCampaignPacingSpeed(
         com.tcn.cloud.api.api.v0alpha.UpdateCampaignPacingSpeedReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateCampaignPacingSpeedMethod(), getCallOptions()), request);
     }
 
@@ -5045,7 +5112,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.commons.Empty> sendOmniMessage(
         com.tcn.cloud.api.api.v0alpha.SendOmniMessageReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getSendOmniMessageMethod(), getCallOptions()), request);
     }
 
@@ -5056,7 +5123,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.commons.Empty> managerSendOmniMessage(
         com.tcn.cloud.api.api.v0alpha.SendOmniMessageReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getManagerSendOmniMessageMethod(), getCallOptions()), request);
     }
 
@@ -5067,7 +5134,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateDispositionRes> createDisposition(
         com.tcn.cloud.api.api.v0alpha.CreateDispositionReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateDispositionMethod(), getCallOptions()), request);
     }
 
@@ -5078,7 +5145,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.commons.Empty> deleteDisposition(
         com.tcn.cloud.api.api.v0alpha.DeleteDispositionReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDeleteDispositionMethod(), getCallOptions()), request);
     }
 
@@ -5089,7 +5156,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListDispositionsRes> listDispositions(
         com.tcn.cloud.api.api.v0alpha.ListDispositionsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListDispositionsMethod(), getCallOptions()), request);
     }
 
@@ -5100,7 +5167,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.commons.Empty> updateDisposition(
         com.tcn.cloud.api.api.v0alpha.UpdateDispositionReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateDispositionMethod(), getCallOptions()), request);
     }
 
@@ -5111,7 +5178,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListCustomUnsubscribeLinksRes> listCustomUnsubscribeLinks(
         com.tcn.cloud.api.api.commons.Empty request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListCustomUnsubscribeLinksMethod(), getCallOptions()), request);
     }
 
@@ -5122,7 +5189,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateCustomUnsubscribeLinkRes> createCustomUnsubscribeLink(
         com.tcn.cloud.api.api.commons.OmniCustomUnsubscribeLink request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateCustomUnsubscribeLinkMethod(), getCallOptions()), request);
     }
 
@@ -5133,7 +5200,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateCustomUnsubscribeLinkRes> updateCustomUnsubscribeLink(
         com.tcn.cloud.api.api.v0alpha.UpdateCustomUnsubscribeLinkReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateCustomUnsubscribeLinkMethod(), getCallOptions()), request);
     }
 
@@ -5144,7 +5211,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.commons.Empty> deleteCustomUnsubscribeLink(
         com.tcn.cloud.api.api.v0alpha.DeleteCustomUnsubscribeLinkReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDeleteCustomUnsubscribeLinkMethod(), getCallOptions()), request);
     }
 
@@ -5157,7 +5224,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListCampaignsRes> listCampaigns(
         com.tcn.cloud.api.api.v0alpha.ListCampaignsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListCampaignsMethod(), getCallOptions()), request);
     }
 
@@ -5170,7 +5237,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListConversationsRes> managerListConversations(
         com.tcn.cloud.api.api.v0alpha.ListConversationsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getManagerListConversationsMethod(), getCallOptions()), request);
     }
 
@@ -5181,7 +5248,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListContactListsRes> listContactLists(
         com.tcn.cloud.api.api.v0alpha.ListContactListsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListContactListsMethod(), getCallOptions()), request);
     }
 
@@ -5194,7 +5261,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetAvailableHeadersRes> getAvailableHeaders(
         com.tcn.cloud.api.api.v0alpha.GetAvailableHeadersReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetAvailableHeadersMethod(), getCallOptions()), request);
     }
 
@@ -5207,7 +5274,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.commons.OmniTask> getTask(
         com.tcn.cloud.api.api.v0alpha.GetTaskReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetTaskMethod(), getCallOptions()), request);
     }
 
@@ -5220,7 +5287,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListTasksRes> listTasks(
         com.tcn.cloud.api.api.v0alpha.ListTasksReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListTasksMethod(), getCallOptions()), request);
     }
 
@@ -5233,7 +5300,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateConnectedInboxRes> createConnectedInbox(
         com.tcn.cloud.api.api.commons.ConnectedInbox request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateConnectedInboxMethod(), getCallOptions()), request);
     }
 
@@ -5246,7 +5313,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.commons.Empty> deleteConnectedInboxBySid(
         com.tcn.cloud.api.api.v0alpha.DeleteConnectedInboxBySidReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDeleteConnectedInboxBySidMethod(), getCallOptions()), request);
     }
 
@@ -5259,7 +5326,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.commons.ConnectedInbox> getConnectedInboxBySid(
         com.tcn.cloud.api.api.v0alpha.GetConnectedInboxBySidReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetConnectedInboxBySidMethod(), getCallOptions()), request);
     }
 
@@ -5274,7 +5341,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SendgridAccountByClientRes> performSendgridAccountChecks(
         com.tcn.cloud.api.api.v0alpha.SendgridAccountByClientReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getPerformSendgridAccountChecksMethod(), getCallOptions()), request);
     }
 
@@ -5287,7 +5354,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesRes> listConnectedInboxes(
         com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListConnectedInboxesMethod(), getCallOptions()), request);
     }
 
@@ -5301,7 +5368,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.TestConnectedInboxRes> testConnectedInbox(
         com.tcn.cloud.api.api.commons.ConnectedInbox request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getTestConnectedInboxMethod(), getCallOptions()), request);
     }
 
@@ -5314,7 +5381,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.commons.Empty> updateConnectedInbox(
         com.tcn.cloud.api.api.v0alpha.UpdateConnectedInboxReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateConnectedInboxMethod(), getCallOptions()), request);
     }
 
@@ -5327,7 +5394,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateVerifiedEmailRes> createVerifiedEmail(
         com.tcn.cloud.api.api.commons.VerifiedEmail request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateVerifiedEmailMethod(), getCallOptions()), request);
     }
 
@@ -5343,7 +5410,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.commons.Empty> deleteVerifiedEmail(
         com.tcn.cloud.api.api.v0alpha.DeleteVerifiedEmailReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDeleteVerifiedEmailMethod(), getCallOptions()), request);
     }
 
@@ -5358,7 +5425,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.commons.VerifiedEmail> getVerifiedEmailBySid(
         com.tcn.cloud.api.api.v0alpha.GetVerifiedEmailBySidReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetVerifiedEmailBySidMethod(), getCallOptions()), request);
     }
 
@@ -5373,7 +5440,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListVerifiedEmailsRes> listVerifiedEmails(
         com.tcn.cloud.api.api.v0alpha.ListVerifiedEmailsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListVerifiedEmailsMethod(), getCallOptions()), request);
     }
 
@@ -5388,7 +5455,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ResendVerifiedEmailRes> resendVerifiedEmail(
         com.tcn.cloud.api.api.v0alpha.ResendVerifiedEmailReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getResendVerifiedEmailMethod(), getCallOptions()), request);
     }
 
@@ -5399,7 +5466,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.commons.Empty> updateVerifiedEmail(
         com.tcn.cloud.api.api.v0alpha.UpdateVerifiedEmailReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateVerifiedEmailMethod(), getCallOptions()), request);
     }
 
@@ -5412,7 +5479,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetPendingGoogleXOAuth2DataRes> getPendingGoogleXOAuth2Data(
         com.tcn.cloud.api.api.v0alpha.GetPendingGoogleXOAuth2DataReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetPendingGoogleXOAuth2DataMethod(), getCallOptions()), request);
     }
 
@@ -5428,7 +5495,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SendEmailNotificationRes> sendEmailNotification(
         com.tcn.cloud.api.api.v0alpha.SendEmailNotificationReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getSendEmailNotificationMethod(), getCallOptions()), request);
     }
 
@@ -5439,7 +5506,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SendFeedbackEmailRes> sendFeedbackEmail(
         com.tcn.cloud.api.api.v0alpha.SendFeedbackEmailReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getSendFeedbackEmailMethod(), getCallOptions()), request);
     }
 
@@ -5452,7 +5519,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.commons.OmniAttachment> getOmniAttachment(
         com.tcn.cloud.api.api.v0alpha.GetOmniAttachmentReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetOmniAttachmentMethod(), getCallOptions()), request);
     }
 
@@ -5463,7 +5530,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateTasksRes> createTasks(
         com.tcn.cloud.api.api.v0alpha.CreateTasksReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateTasksMethod(), getCallOptions()), request);
     }
 
@@ -5476,7 +5543,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateSignatureRes> createSignature(
         com.tcn.cloud.api.api.v0alpha.CreateSignatureReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateSignatureMethod(), getCallOptions()), request);
     }
 
@@ -5489,7 +5556,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeleteSignatureRes> deleteSignature(
         com.tcn.cloud.api.api.v0alpha.DeleteSignatureReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDeleteSignatureMethod(), getCallOptions()), request);
     }
 
@@ -5502,7 +5569,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListSignaturesRes> listSignatures(
         com.tcn.cloud.api.api.v0alpha.ListSignaturesReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListSignaturesMethod(), getCallOptions()), request);
     }
 
@@ -5515,7 +5582,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateSignatureRes> updateSignature(
         com.tcn.cloud.api.api.v0alpha.UpdateSignatureReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateSignatureMethod(), getCallOptions()), request);
     }
 
@@ -5526,7 +5593,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SuggestResponseRes> suggestResponse(
         com.tcn.cloud.api.api.v0alpha.SuggestResponseReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getSuggestResponseMethod(), getCallOptions()), request);
     }
 
@@ -5542,7 +5609,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateProjectRes> createProject(
         com.tcn.cloud.api.api.v0alpha.CreateProjectReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateProjectMethod(), getCallOptions()), request);
     }
 
@@ -5556,7 +5623,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListProjectsRes> listProjects(
         com.tcn.cloud.api.api.v0alpha.ListProjectsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListProjectsMethod(), getCallOptions()), request);
     }
 
@@ -5572,7 +5639,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.EditProjectByIdRes> editProjectById(
         com.tcn.cloud.api.api.v0alpha.EditProjectByIdReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getEditProjectByIdMethod(), getCallOptions()), request);
     }
 
@@ -5588,7 +5655,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CloseProjectByIdRes> closeProjectById(
         com.tcn.cloud.api.api.v0alpha.CloseProjectByIdReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCloseProjectByIdMethod(), getCallOptions()), request);
     }
 
@@ -5604,7 +5671,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.Project> getProjectById(
         com.tcn.cloud.api.api.v0alpha.GetProjectByIdReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetProjectByIdMethod(), getCallOptions()), request);
     }
 
@@ -5620,7 +5687,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CannedMessage> createCannedMessage(
         com.tcn.cloud.api.api.v0alpha.CreateCannedMessageReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateCannedMessageMethod(), getCallOptions()), request);
     }
 
@@ -5634,7 +5701,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListCannedMessagesRes> listCannedMessages(
         com.tcn.cloud.api.api.v0alpha.ListCannedMessagesReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListCannedMessagesMethod(), getCallOptions()), request);
     }
 
@@ -5650,7 +5717,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CannedMessage> updateCannedMessage(
         com.tcn.cloud.api.api.v0alpha.UpdateCannedMessageReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateCannedMessageMethod(), getCallOptions()), request);
     }
 
@@ -5664,7 +5731,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CannedMessageWithGroup> getCannedMessageById(
         com.tcn.cloud.api.api.v0alpha.GetCannedMessageByIdReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetCannedMessageByIdMethod(), getCallOptions()), request);
     }
 
@@ -5678,7 +5745,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeleteCannedMessageByIdRes> deleteCannedMessageById(
         com.tcn.cloud.api.api.v0alpha.DeleteCannedMessageByIdReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDeleteCannedMessageByIdMethod(), getCallOptions()), request);
     }
 
@@ -5694,7 +5761,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CannedMessageGroup> createCannedMessageGroup(
         com.tcn.cloud.api.api.v0alpha.CreateCannedMessageGroupReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateCannedMessageGroupMethod(), getCallOptions()), request);
     }
 
@@ -5708,7 +5775,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListCannedMessageGroupsRes> listCannedMessageGroups(
         com.tcn.cloud.api.api.v0alpha.ListCannedMessageGroupsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListCannedMessageGroupsMethod(), getCallOptions()), request);
     }
 
@@ -5722,7 +5789,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateCannedMessageGroupRes> updateCannedMessageGroup(
         com.tcn.cloud.api.api.v0alpha.UpdateCannedMessageGroupReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateCannedMessageGroupMethod(), getCallOptions()), request);
     }
 
@@ -5736,7 +5803,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeleteCannedMessageGroupRes> deleteCannedMessageGroup(
         com.tcn.cloud.api.api.v0alpha.DeleteCannedMessageGroupReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDeleteCannedMessageGroupMethod(), getCallOptions()), request);
     }
 
@@ -5750,7 +5817,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListCannedMessagesByGroupIdRes> listCannedMessagesByGroupId(
         com.tcn.cloud.api.api.v0alpha.ListCannedMessagesByGroupIdReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListCannedMessagesByGroupIdMethod(), getCallOptions()), request);
     }
 
@@ -5764,7 +5831,7 @@ public final class OmniApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CannedMessageGroup> getCannedMessageGroupById(
         com.tcn.cloud.api.api.v0alpha.GetCannedMessageGroupByIdReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetCannedMessageGroupByIdMethod(), getCallOptions()), request);
     }
   }

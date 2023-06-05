@@ -1,13 +1,25 @@
 package com.tcn.cloud.api.api.v0alpha;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.50.0)",
+    value = "by gRPC proto compiler (version 1.14.0)",
     comments = "Source: api/v0alpha/cbs.proto")
-@io.grpc.stub.annotations.GrpcGenerated
 public final class CBSGrpc {
 
   private CBSGrpc() {}
@@ -29,21 +41,22 @@ public final class CBSGrpc {
     if ((getCreateServiceIdMethod = CBSGrpc.getCreateServiceIdMethod) == null) {
       synchronized (CBSGrpc.class) {
         if ((getCreateServiceIdMethod = CBSGrpc.getCreateServiceIdMethod) == null) {
-          CBSGrpc.getCreateServiceIdMethod = getCreateServiceIdMethod =
+          CBSGrpc.getCreateServiceIdMethod = getCreateServiceIdMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateServiceIdReq, com.tcn.cloud.api.api.v0alpha.CreateServiceIdRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateServiceId"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.CBS", "CreateServiceId"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateServiceIdReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateServiceIdRes.getDefaultInstance()))
-              .setSchemaDescriptor(new CBSMethodDescriptorSupplier("CreateServiceId"))
-              .build();
+                  .setSchemaDescriptor(new CBSMethodDescriptorSupplier("CreateServiceId"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateServiceIdMethod;
+     }
+     return getCreateServiceIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateCallbackWithDetailsReq,
@@ -60,21 +73,22 @@ public final class CBSGrpc {
     if ((getCreateCallbackWithDetailsMethod = CBSGrpc.getCreateCallbackWithDetailsMethod) == null) {
       synchronized (CBSGrpc.class) {
         if ((getCreateCallbackWithDetailsMethod = CBSGrpc.getCreateCallbackWithDetailsMethod) == null) {
-          CBSGrpc.getCreateCallbackWithDetailsMethod = getCreateCallbackWithDetailsMethod =
+          CBSGrpc.getCreateCallbackWithDetailsMethod = getCreateCallbackWithDetailsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateCallbackWithDetailsReq, com.tcn.cloud.api.api.v0alpha.CreateCallbackWithDetailsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateCallbackWithDetails"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.CBS", "CreateCallbackWithDetails"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateCallbackWithDetailsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateCallbackWithDetailsRes.getDefaultInstance()))
-              .setSchemaDescriptor(new CBSMethodDescriptorSupplier("CreateCallbackWithDetails"))
-              .build();
+                  .setSchemaDescriptor(new CBSMethodDescriptorSupplier("CreateCallbackWithDetails"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateCallbackWithDetailsMethod;
+     }
+     return getCreateCallbackWithDetailsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToReadyReq,
@@ -91,21 +105,22 @@ public final class CBSGrpc {
     if ((getUpdateScheduledCallbackToReadyMethod = CBSGrpc.getUpdateScheduledCallbackToReadyMethod) == null) {
       synchronized (CBSGrpc.class) {
         if ((getUpdateScheduledCallbackToReadyMethod = CBSGrpc.getUpdateScheduledCallbackToReadyMethod) == null) {
-          CBSGrpc.getUpdateScheduledCallbackToReadyMethod = getUpdateScheduledCallbackToReadyMethod =
+          CBSGrpc.getUpdateScheduledCallbackToReadyMethod = getUpdateScheduledCallbackToReadyMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToReadyReq, com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToReadyRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateScheduledCallbackToReady"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.CBS", "UpdateScheduledCallbackToReady"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToReadyReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToReadyRes.getDefaultInstance()))
-              .setSchemaDescriptor(new CBSMethodDescriptorSupplier("UpdateScheduledCallbackToReady"))
-              .build();
+                  .setSchemaDescriptor(new CBSMethodDescriptorSupplier("UpdateScheduledCallbackToReady"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateScheduledCallbackToReadyMethod;
+     }
+     return getUpdateScheduledCallbackToReadyMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToCanceledReq,
@@ -122,21 +137,22 @@ public final class CBSGrpc {
     if ((getUpdateScheduledCallbackToCanceledMethod = CBSGrpc.getUpdateScheduledCallbackToCanceledMethod) == null) {
       synchronized (CBSGrpc.class) {
         if ((getUpdateScheduledCallbackToCanceledMethod = CBSGrpc.getUpdateScheduledCallbackToCanceledMethod) == null) {
-          CBSGrpc.getUpdateScheduledCallbackToCanceledMethod = getUpdateScheduledCallbackToCanceledMethod =
+          CBSGrpc.getUpdateScheduledCallbackToCanceledMethod = getUpdateScheduledCallbackToCanceledMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToCanceledReq, com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToCanceledRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateScheduledCallbackToCanceled"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.CBS", "UpdateScheduledCallbackToCanceled"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToCanceledReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToCanceledRes.getDefaultInstance()))
-              .setSchemaDescriptor(new CBSMethodDescriptorSupplier("UpdateScheduledCallbackToCanceled"))
-              .build();
+                  .setSchemaDescriptor(new CBSMethodDescriptorSupplier("UpdateScheduledCallbackToCanceled"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateScheduledCallbackToCanceledMethod;
+     }
+     return getUpdateScheduledCallbackToCanceledMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetNextScheduledCallbackWithDetailsReq,
@@ -153,21 +169,22 @@ public final class CBSGrpc {
     if ((getGetNextScheduledCallbackWithDetailsMethod = CBSGrpc.getGetNextScheduledCallbackWithDetailsMethod) == null) {
       synchronized (CBSGrpc.class) {
         if ((getGetNextScheduledCallbackWithDetailsMethod = CBSGrpc.getGetNextScheduledCallbackWithDetailsMethod) == null) {
-          CBSGrpc.getGetNextScheduledCallbackWithDetailsMethod = getGetNextScheduledCallbackWithDetailsMethod =
+          CBSGrpc.getGetNextScheduledCallbackWithDetailsMethod = getGetNextScheduledCallbackWithDetailsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetNextScheduledCallbackWithDetailsReq, com.tcn.cloud.api.api.v0alpha.GetNextScheduledCallbackWithDetailsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetNextScheduledCallbackWithDetails"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.CBS", "GetNextScheduledCallbackWithDetails"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetNextScheduledCallbackWithDetailsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetNextScheduledCallbackWithDetailsRes.getDefaultInstance()))
-              .setSchemaDescriptor(new CBSMethodDescriptorSupplier("GetNextScheduledCallbackWithDetails"))
-              .build();
+                  .setSchemaDescriptor(new CBSMethodDescriptorSupplier("GetNextScheduledCallbackWithDetails"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetNextScheduledCallbackWithDetailsMethod;
+     }
+     return getGetNextScheduledCallbackWithDetailsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToClosedReq,
@@ -184,21 +201,22 @@ public final class CBSGrpc {
     if ((getUpdateScheduledCallbackToClosedMethod = CBSGrpc.getUpdateScheduledCallbackToClosedMethod) == null) {
       synchronized (CBSGrpc.class) {
         if ((getUpdateScheduledCallbackToClosedMethod = CBSGrpc.getUpdateScheduledCallbackToClosedMethod) == null) {
-          CBSGrpc.getUpdateScheduledCallbackToClosedMethod = getUpdateScheduledCallbackToClosedMethod =
+          CBSGrpc.getUpdateScheduledCallbackToClosedMethod = getUpdateScheduledCallbackToClosedMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToClosedReq, com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToClosedRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateScheduledCallbackToClosed"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.CBS", "UpdateScheduledCallbackToClosed"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToClosedReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToClosedRes.getDefaultInstance()))
-              .setSchemaDescriptor(new CBSMethodDescriptorSupplier("UpdateScheduledCallbackToClosed"))
-              .build();
+                  .setSchemaDescriptor(new CBSMethodDescriptorSupplier("UpdateScheduledCallbackToClosed"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateScheduledCallbackToClosedMethod;
+     }
+     return getUpdateScheduledCallbackToClosedMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackReq,
@@ -215,21 +233,22 @@ public final class CBSGrpc {
     if ((getUpdateScheduledCallbackMethod = CBSGrpc.getUpdateScheduledCallbackMethod) == null) {
       synchronized (CBSGrpc.class) {
         if ((getUpdateScheduledCallbackMethod = CBSGrpc.getUpdateScheduledCallbackMethod) == null) {
-          CBSGrpc.getUpdateScheduledCallbackMethod = getUpdateScheduledCallbackMethod =
+          CBSGrpc.getUpdateScheduledCallbackMethod = getUpdateScheduledCallbackMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackReq, com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateScheduledCallback"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.CBS", "UpdateScheduledCallback"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackRes.getDefaultInstance()))
-              .setSchemaDescriptor(new CBSMethodDescriptorSupplier("UpdateScheduledCallback"))
-              .build();
+                  .setSchemaDescriptor(new CBSMethodDescriptorSupplier("UpdateScheduledCallback"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateScheduledCallbackMethod;
+     }
+     return getUpdateScheduledCallbackMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetScheduledCallbackWithDetailsReq,
@@ -246,21 +265,22 @@ public final class CBSGrpc {
     if ((getGetScheduledCallbackWithDetailsMethod = CBSGrpc.getGetScheduledCallbackWithDetailsMethod) == null) {
       synchronized (CBSGrpc.class) {
         if ((getGetScheduledCallbackWithDetailsMethod = CBSGrpc.getGetScheduledCallbackWithDetailsMethod) == null) {
-          CBSGrpc.getGetScheduledCallbackWithDetailsMethod = getGetScheduledCallbackWithDetailsMethod =
+          CBSGrpc.getGetScheduledCallbackWithDetailsMethod = getGetScheduledCallbackWithDetailsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetScheduledCallbackWithDetailsReq, com.tcn.cloud.api.api.v0alpha.GetScheduledCallbackWithDetailsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetScheduledCallbackWithDetails"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.CBS", "GetScheduledCallbackWithDetails"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetScheduledCallbackWithDetailsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetScheduledCallbackWithDetailsRes.getDefaultInstance()))
-              .setSchemaDescriptor(new CBSMethodDescriptorSupplier("GetScheduledCallbackWithDetails"))
-              .build();
+                  .setSchemaDescriptor(new CBSMethodDescriptorSupplier("GetScheduledCallbackWithDetails"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetScheduledCallbackWithDetailsMethod;
+     }
+     return getGetScheduledCallbackWithDetailsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsReq,
@@ -277,21 +297,22 @@ public final class CBSGrpc {
     if ((getListScheduledCallbacksWithDetailsMethod = CBSGrpc.getListScheduledCallbacksWithDetailsMethod) == null) {
       synchronized (CBSGrpc.class) {
         if ((getListScheduledCallbacksWithDetailsMethod = CBSGrpc.getListScheduledCallbacksWithDetailsMethod) == null) {
-          CBSGrpc.getListScheduledCallbacksWithDetailsMethod = getListScheduledCallbacksWithDetailsMethod =
+          CBSGrpc.getListScheduledCallbacksWithDetailsMethod = getListScheduledCallbacksWithDetailsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsReq, com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListScheduledCallbacksWithDetails"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.CBS", "ListScheduledCallbacksWithDetails"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsRes.getDefaultInstance()))
-              .setSchemaDescriptor(new CBSMethodDescriptorSupplier("ListScheduledCallbacksWithDetails"))
-              .build();
+                  .setSchemaDescriptor(new CBSMethodDescriptorSupplier("ListScheduledCallbacksWithDetails"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListScheduledCallbacksWithDetailsMethod;
+     }
+     return getListScheduledCallbacksWithDetailsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsBySkillsReq,
@@ -308,35 +329,29 @@ public final class CBSGrpc {
     if ((getListScheduledCallbacksWithDetailsBySkillsMethod = CBSGrpc.getListScheduledCallbacksWithDetailsBySkillsMethod) == null) {
       synchronized (CBSGrpc.class) {
         if ((getListScheduledCallbacksWithDetailsBySkillsMethod = CBSGrpc.getListScheduledCallbacksWithDetailsBySkillsMethod) == null) {
-          CBSGrpc.getListScheduledCallbacksWithDetailsBySkillsMethod = getListScheduledCallbacksWithDetailsBySkillsMethod =
+          CBSGrpc.getListScheduledCallbacksWithDetailsBySkillsMethod = getListScheduledCallbacksWithDetailsBySkillsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsBySkillsReq, com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListScheduledCallbacksWithDetailsBySkills"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.CBS", "ListScheduledCallbacksWithDetailsBySkills"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsBySkillsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsRes.getDefaultInstance()))
-              .setSchemaDescriptor(new CBSMethodDescriptorSupplier("ListScheduledCallbacksWithDetailsBySkills"))
-              .build();
+                  .setSchemaDescriptor(new CBSMethodDescriptorSupplier("ListScheduledCallbacksWithDetailsBySkills"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListScheduledCallbacksWithDetailsBySkillsMethod;
+     }
+     return getListScheduledCallbacksWithDetailsBySkillsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static CBSStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<CBSStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<CBSStub>() {
-        @java.lang.Override
-        public CBSStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new CBSStub(channel, callOptions);
-        }
-      };
-    return CBSStub.newStub(factory, channel);
+    return new CBSStub(channel);
   }
 
   /**
@@ -344,14 +359,7 @@ public final class CBSGrpc {
    */
   public static CBSBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<CBSBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<CBSBlockingStub>() {
-        @java.lang.Override
-        public CBSBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new CBSBlockingStub(channel, callOptions);
-        }
-      };
-    return CBSBlockingStub.newStub(factory, channel);
+    return new CBSBlockingStub(channel);
   }
 
   /**
@@ -359,14 +367,7 @@ public final class CBSGrpc {
    */
   public static CBSFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<CBSFutureStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<CBSFutureStub>() {
-        @java.lang.Override
-        public CBSFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new CBSFutureStub(channel, callOptions);
-        }
-      };
-    return CBSFutureStub.newStub(factory, channel);
+    return new CBSFutureStub(channel);
   }
 
   /**
@@ -377,28 +378,28 @@ public final class CBSGrpc {
      */
     public void createServiceId(com.tcn.cloud.api.api.v0alpha.CreateServiceIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateServiceIdRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateServiceIdMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateServiceIdMethod(), responseObserver);
     }
 
     /**
      */
     public void createCallbackWithDetails(com.tcn.cloud.api.api.v0alpha.CreateCallbackWithDetailsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateCallbackWithDetailsRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateCallbackWithDetailsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateCallbackWithDetailsMethod(), responseObserver);
     }
 
     /**
      */
     public void updateScheduledCallbackToReady(com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToReadyReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToReadyRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateScheduledCallbackToReadyMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateScheduledCallbackToReadyMethod(), responseObserver);
     }
 
     /**
      */
     public void updateScheduledCallbackToCanceled(com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToCanceledReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToCanceledRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateScheduledCallbackToCanceledMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateScheduledCallbackToCanceledMethod(), responseObserver);
     }
 
     /**
@@ -415,14 +416,14 @@ public final class CBSGrpc {
      */
     public void getNextScheduledCallbackWithDetails(com.tcn.cloud.api.api.v0alpha.GetNextScheduledCallbackWithDetailsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetNextScheduledCallbackWithDetailsRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetNextScheduledCallbackWithDetailsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetNextScheduledCallbackWithDetailsMethod(), responseObserver);
     }
 
     /**
      */
     public void updateScheduledCallbackToClosed(com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToClosedReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToClosedRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateScheduledCallbackToClosedMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateScheduledCallbackToClosedMethod(), responseObserver);
     }
 
     /**
@@ -432,7 +433,7 @@ public final class CBSGrpc {
      */
     public void updateScheduledCallback(com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateScheduledCallbackMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateScheduledCallbackMethod(), responseObserver);
     }
 
     /**
@@ -442,7 +443,7 @@ public final class CBSGrpc {
      */
     public void getScheduledCallbackWithDetails(com.tcn.cloud.api.api.v0alpha.GetScheduledCallbackWithDetailsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetScheduledCallbackWithDetailsRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetScheduledCallbackWithDetailsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetScheduledCallbackWithDetailsMethod(), responseObserver);
     }
 
     /**
@@ -452,7 +453,7 @@ public final class CBSGrpc {
      */
     public void listScheduledCallbacksWithDetails(com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListScheduledCallbacksWithDetailsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListScheduledCallbacksWithDetailsMethod(), responseObserver);
     }
 
     /**
@@ -462,77 +463,77 @@ public final class CBSGrpc {
      */
     public void listScheduledCallbacksWithDetailsBySkills(com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsBySkillsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListScheduledCallbacksWithDetailsBySkillsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListScheduledCallbacksWithDetailsBySkillsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getCreateServiceIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CreateServiceIdReq,
                 com.tcn.cloud.api.api.v0alpha.CreateServiceIdRes>(
                   this, METHODID_CREATE_SERVICE_ID)))
           .addMethod(
             getCreateCallbackWithDetailsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CreateCallbackWithDetailsReq,
                 com.tcn.cloud.api.api.v0alpha.CreateCallbackWithDetailsRes>(
                   this, METHODID_CREATE_CALLBACK_WITH_DETAILS)))
           .addMethod(
             getUpdateScheduledCallbackToReadyMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToReadyReq,
                 com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToReadyRes>(
                   this, METHODID_UPDATE_SCHEDULED_CALLBACK_TO_READY)))
           .addMethod(
             getUpdateScheduledCallbackToCanceledMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToCanceledReq,
                 com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToCanceledRes>(
                   this, METHODID_UPDATE_SCHEDULED_CALLBACK_TO_CANCELED)))
           .addMethod(
             getGetNextScheduledCallbackWithDetailsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetNextScheduledCallbackWithDetailsReq,
                 com.tcn.cloud.api.api.v0alpha.GetNextScheduledCallbackWithDetailsRes>(
                   this, METHODID_GET_NEXT_SCHEDULED_CALLBACK_WITH_DETAILS)))
           .addMethod(
             getUpdateScheduledCallbackToClosedMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToClosedReq,
                 com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToClosedRes>(
                   this, METHODID_UPDATE_SCHEDULED_CALLBACK_TO_CLOSED)))
           .addMethod(
             getUpdateScheduledCallbackMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackReq,
                 com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackRes>(
                   this, METHODID_UPDATE_SCHEDULED_CALLBACK)))
           .addMethod(
             getGetScheduledCallbackWithDetailsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetScheduledCallbackWithDetailsReq,
                 com.tcn.cloud.api.api.v0alpha.GetScheduledCallbackWithDetailsRes>(
                   this, METHODID_GET_SCHEDULED_CALLBACK_WITH_DETAILS)))
           .addMethod(
             getListScheduledCallbacksWithDetailsMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            asyncServerStreamingCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsReq,
                 com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsRes>(
                   this, METHODID_LIST_SCHEDULED_CALLBACKS_WITH_DETAILS)))
           .addMethod(
             getListScheduledCallbacksWithDetailsBySkillsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsBySkillsReq,
                 com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsRes>(
@@ -543,15 +544,19 @@ public final class CBSGrpc {
 
   /**
    */
-  public static final class CBSStub extends io.grpc.stub.AbstractAsyncStub<CBSStub> {
-    private CBSStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class CBSStub extends io.grpc.stub.AbstractStub<CBSStub> {
+    private CBSStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private CBSStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CBSStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected CBSStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new CBSStub(channel, callOptions);
     }
 
@@ -559,7 +564,7 @@ public final class CBSGrpc {
      */
     public void createServiceId(com.tcn.cloud.api.api.v0alpha.CreateServiceIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateServiceIdRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateServiceIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -567,7 +572,7 @@ public final class CBSGrpc {
      */
     public void createCallbackWithDetails(com.tcn.cloud.api.api.v0alpha.CreateCallbackWithDetailsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateCallbackWithDetailsRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateCallbackWithDetailsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -575,7 +580,7 @@ public final class CBSGrpc {
      */
     public void updateScheduledCallbackToReady(com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToReadyReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToReadyRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateScheduledCallbackToReadyMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -583,7 +588,7 @@ public final class CBSGrpc {
      */
     public void updateScheduledCallbackToCanceled(com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToCanceledReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToCanceledRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateScheduledCallbackToCanceledMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -601,7 +606,7 @@ public final class CBSGrpc {
      */
     public void getNextScheduledCallbackWithDetails(com.tcn.cloud.api.api.v0alpha.GetNextScheduledCallbackWithDetailsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetNextScheduledCallbackWithDetailsRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetNextScheduledCallbackWithDetailsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -609,7 +614,7 @@ public final class CBSGrpc {
      */
     public void updateScheduledCallbackToClosed(com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToClosedReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToClosedRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateScheduledCallbackToClosedMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -620,7 +625,7 @@ public final class CBSGrpc {
      */
     public void updateScheduledCallback(com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateScheduledCallbackMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -631,7 +636,7 @@ public final class CBSGrpc {
      */
     public void getScheduledCallbackWithDetails(com.tcn.cloud.api.api.v0alpha.GetScheduledCallbackWithDetailsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetScheduledCallbackWithDetailsRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetScheduledCallbackWithDetailsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -642,7 +647,7 @@ public final class CBSGrpc {
      */
     public void listScheduledCallbacksWithDetails(com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+      asyncServerStreamingCall(
           getChannel().newCall(getListScheduledCallbacksWithDetailsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -653,50 +658,54 @@ public final class CBSGrpc {
      */
     public void listScheduledCallbacksWithDetailsBySkills(com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsBySkillsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListScheduledCallbacksWithDetailsBySkillsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
    */
-  public static final class CBSBlockingStub extends io.grpc.stub.AbstractBlockingStub<CBSBlockingStub> {
-    private CBSBlockingStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class CBSBlockingStub extends io.grpc.stub.AbstractStub<CBSBlockingStub> {
+    private CBSBlockingStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private CBSBlockingStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CBSBlockingStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected CBSBlockingStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new CBSBlockingStub(channel, callOptions);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.CreateServiceIdRes createServiceId(com.tcn.cloud.api.api.v0alpha.CreateServiceIdReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateServiceIdMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.CreateCallbackWithDetailsRes createCallbackWithDetails(com.tcn.cloud.api.api.v0alpha.CreateCallbackWithDetailsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateCallbackWithDetailsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToReadyRes updateScheduledCallbackToReady(com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToReadyReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateScheduledCallbackToReadyMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToCanceledRes updateScheduledCallbackToCanceled(com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToCanceledReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateScheduledCallbackToCanceledMethod(), getCallOptions(), request);
     }
 
@@ -713,14 +722,14 @@ public final class CBSGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetNextScheduledCallbackWithDetailsRes getNextScheduledCallbackWithDetails(com.tcn.cloud.api.api.v0alpha.GetNextScheduledCallbackWithDetailsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetNextScheduledCallbackWithDetailsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToClosedRes updateScheduledCallbackToClosed(com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToClosedReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateScheduledCallbackToClosedMethod(), getCallOptions(), request);
     }
 
@@ -730,7 +739,7 @@ public final class CBSGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackRes updateScheduledCallback(com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateScheduledCallbackMethod(), getCallOptions(), request);
     }
 
@@ -740,7 +749,7 @@ public final class CBSGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetScheduledCallbackWithDetailsRes getScheduledCallbackWithDetails(com.tcn.cloud.api.api.v0alpha.GetScheduledCallbackWithDetailsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetScheduledCallbackWithDetailsMethod(), getCallOptions(), request);
     }
 
@@ -751,7 +760,7 @@ public final class CBSGrpc {
      */
     public java.util.Iterator<com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsRes> listScheduledCallbacksWithDetails(
         com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsReq request) {
-      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+      return blockingServerStreamingCall(
           getChannel(), getListScheduledCallbacksWithDetailsMethod(), getCallOptions(), request);
     }
 
@@ -761,22 +770,26 @@ public final class CBSGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsRes listScheduledCallbacksWithDetailsBySkills(com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsBySkillsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListScheduledCallbacksWithDetailsBySkillsMethod(), getCallOptions(), request);
     }
   }
 
   /**
    */
-  public static final class CBSFutureStub extends io.grpc.stub.AbstractFutureStub<CBSFutureStub> {
-    private CBSFutureStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class CBSFutureStub extends io.grpc.stub.AbstractStub<CBSFutureStub> {
+    private CBSFutureStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private CBSFutureStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CBSFutureStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected CBSFutureStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new CBSFutureStub(channel, callOptions);
     }
 
@@ -784,7 +797,7 @@ public final class CBSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateServiceIdRes> createServiceId(
         com.tcn.cloud.api.api.v0alpha.CreateServiceIdReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateServiceIdMethod(), getCallOptions()), request);
     }
 
@@ -792,7 +805,7 @@ public final class CBSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateCallbackWithDetailsRes> createCallbackWithDetails(
         com.tcn.cloud.api.api.v0alpha.CreateCallbackWithDetailsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateCallbackWithDetailsMethod(), getCallOptions()), request);
     }
 
@@ -800,7 +813,7 @@ public final class CBSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToReadyRes> updateScheduledCallbackToReady(
         com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToReadyReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateScheduledCallbackToReadyMethod(), getCallOptions()), request);
     }
 
@@ -808,7 +821,7 @@ public final class CBSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToCanceledRes> updateScheduledCallbackToCanceled(
         com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToCanceledReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateScheduledCallbackToCanceledMethod(), getCallOptions()), request);
     }
 
@@ -826,7 +839,7 @@ public final class CBSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetNextScheduledCallbackWithDetailsRes> getNextScheduledCallbackWithDetails(
         com.tcn.cloud.api.api.v0alpha.GetNextScheduledCallbackWithDetailsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetNextScheduledCallbackWithDetailsMethod(), getCallOptions()), request);
     }
 
@@ -834,7 +847,7 @@ public final class CBSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToClosedRes> updateScheduledCallbackToClosed(
         com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToClosedReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateScheduledCallbackToClosedMethod(), getCallOptions()), request);
     }
 
@@ -845,7 +858,7 @@ public final class CBSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackRes> updateScheduledCallback(
         com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateScheduledCallbackMethod(), getCallOptions()), request);
     }
 
@@ -856,7 +869,7 @@ public final class CBSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetScheduledCallbackWithDetailsRes> getScheduledCallbackWithDetails(
         com.tcn.cloud.api.api.v0alpha.GetScheduledCallbackWithDetailsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetScheduledCallbackWithDetailsMethod(), getCallOptions()), request);
     }
 
@@ -867,7 +880,7 @@ public final class CBSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsRes> listScheduledCallbacksWithDetailsBySkills(
         com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsBySkillsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListScheduledCallbacksWithDetailsBySkillsMethod(), getCallOptions()), request);
     }
   }

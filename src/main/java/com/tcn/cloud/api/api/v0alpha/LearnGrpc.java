@@ -1,6 +1,19 @@
 package com.tcn.cloud.api.api.v0alpha;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -8,9 +21,8 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.50.0)",
+    value = "by gRPC proto compiler (version 1.14.0)",
     comments = "Source: api/v0alpha/learn.proto")
-@io.grpc.stub.annotations.GrpcGenerated
 public final class LearnGrpc {
 
   private LearnGrpc() {}
@@ -32,21 +44,22 @@ public final class LearnGrpc {
     if ((getExistMethod = LearnGrpc.getExistMethod) == null) {
       synchronized (LearnGrpc.class) {
         if ((getExistMethod = LearnGrpc.getExistMethod) == null) {
-          LearnGrpc.getExistMethod = getExistMethod =
+          LearnGrpc.getExistMethod = getExistMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ExistReq, com.tcn.cloud.api.api.v0alpha.ExistRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Exist"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Learn", "Exist"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ExistReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ExistRes.getDefaultInstance()))
-              .setSchemaDescriptor(new LearnMethodDescriptorSupplier("Exist"))
-              .build();
+                  .setSchemaDescriptor(new LearnMethodDescriptorSupplier("Exist"))
+                  .build();
+          }
         }
-      }
-    }
-    return getExistMethod;
+     }
+     return getExistMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ContentReq,
@@ -63,21 +76,22 @@ public final class LearnGrpc {
     if ((getContentMethod = LearnGrpc.getContentMethod) == null) {
       synchronized (LearnGrpc.class) {
         if ((getContentMethod = LearnGrpc.getContentMethod) == null) {
-          LearnGrpc.getContentMethod = getContentMethod =
+          LearnGrpc.getContentMethod = getContentMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ContentReq, com.tcn.cloud.api.api.v0alpha.ContentRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Content"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Learn", "Content"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ContentReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ContentRes.getDefaultInstance()))
-              .setSchemaDescriptor(new LearnMethodDescriptorSupplier("Content"))
-              .build();
+                  .setSchemaDescriptor(new LearnMethodDescriptorSupplier("Content"))
+                  .build();
+          }
         }
-      }
-    }
-    return getContentMethod;
+     }
+     return getContentMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ContentEditorDataReq,
@@ -94,21 +108,22 @@ public final class LearnGrpc {
     if ((getContentEditorDataMethod = LearnGrpc.getContentEditorDataMethod) == null) {
       synchronized (LearnGrpc.class) {
         if ((getContentEditorDataMethod = LearnGrpc.getContentEditorDataMethod) == null) {
-          LearnGrpc.getContentEditorDataMethod = getContentEditorDataMethod =
+          LearnGrpc.getContentEditorDataMethod = getContentEditorDataMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ContentEditorDataReq, com.tcn.cloud.api.api.v0alpha.ContentEditorDataRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ContentEditorData"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Learn", "ContentEditorData"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ContentEditorDataReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ContentEditorDataRes.getDefaultInstance()))
-              .setSchemaDescriptor(new LearnMethodDescriptorSupplier("ContentEditorData"))
-              .build();
+                  .setSchemaDescriptor(new LearnMethodDescriptorSupplier("ContentEditorData"))
+                  .build();
+          }
         }
-      }
-    }
-    return getContentEditorDataMethod;
+     }
+     return getContentEditorDataMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateReq,
@@ -125,21 +140,22 @@ public final class LearnGrpc {
     if ((getUpdateMethod = LearnGrpc.getUpdateMethod) == null) {
       synchronized (LearnGrpc.class) {
         if ((getUpdateMethod = LearnGrpc.getUpdateMethod) == null) {
-          LearnGrpc.getUpdateMethod = getUpdateMethod =
+          LearnGrpc.getUpdateMethod = getUpdateMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateReq, com.tcn.cloud.api.api.v0alpha.UpdateRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Learn", "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateRes.getDefaultInstance()))
-              .setSchemaDescriptor(new LearnMethodDescriptorSupplier("Update"))
-              .build();
+                  .setSchemaDescriptor(new LearnMethodDescriptorSupplier("Update"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateMethod;
+     }
+     return getUpdateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ExportManyReq,
@@ -156,21 +172,22 @@ public final class LearnGrpc {
     if ((getExportManyMethod = LearnGrpc.getExportManyMethod) == null) {
       synchronized (LearnGrpc.class) {
         if ((getExportManyMethod = LearnGrpc.getExportManyMethod) == null) {
-          LearnGrpc.getExportManyMethod = getExportManyMethod =
+          LearnGrpc.getExportManyMethod = getExportManyMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ExportManyReq, com.tcn.cloud.api.api.v0alpha.ExportRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ExportMany"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Learn", "ExportMany"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ExportManyReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ExportRes.getDefaultInstance()))
-              .setSchemaDescriptor(new LearnMethodDescriptorSupplier("ExportMany"))
-              .build();
+                  .setSchemaDescriptor(new LearnMethodDescriptorSupplier("ExportMany"))
+                  .build();
+          }
         }
-      }
-    }
-    return getExportManyMethod;
+     }
+     return getExportManyMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.StoreStaticImageReq,
@@ -187,21 +204,22 @@ public final class LearnGrpc {
     if ((getStoreStaticImageMethod = LearnGrpc.getStoreStaticImageMethod) == null) {
       synchronized (LearnGrpc.class) {
         if ((getStoreStaticImageMethod = LearnGrpc.getStoreStaticImageMethod) == null) {
-          LearnGrpc.getStoreStaticImageMethod = getStoreStaticImageMethod =
+          LearnGrpc.getStoreStaticImageMethod = getStoreStaticImageMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.StoreStaticImageReq, com.tcn.cloud.api.api.v0alpha.StoreStaticImageRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StoreStaticImage"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Learn", "StoreStaticImage"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.StoreStaticImageReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.StoreStaticImageRes.getDefaultInstance()))
-              .setSchemaDescriptor(new LearnMethodDescriptorSupplier("StoreStaticImage"))
-              .build();
+                  .setSchemaDescriptor(new LearnMethodDescriptorSupplier("StoreStaticImage"))
+                  .build();
+          }
         }
-      }
-    }
-    return getStoreStaticImageMethod;
+     }
+     return getStoreStaticImageMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SearchContentReq,
@@ -218,21 +236,22 @@ public final class LearnGrpc {
     if ((getSearchContentMethod = LearnGrpc.getSearchContentMethod) == null) {
       synchronized (LearnGrpc.class) {
         if ((getSearchContentMethod = LearnGrpc.getSearchContentMethod) == null) {
-          LearnGrpc.getSearchContentMethod = getSearchContentMethod =
+          LearnGrpc.getSearchContentMethod = getSearchContentMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SearchContentReq, com.tcn.cloud.api.api.v0alpha.SearchRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SearchContent"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Learn", "SearchContent"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SearchContentReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SearchRes.getDefaultInstance()))
-              .setSchemaDescriptor(new LearnMethodDescriptorSupplier("SearchContent"))
-              .build();
+                  .setSchemaDescriptor(new LearnMethodDescriptorSupplier("SearchContent"))
+                  .build();
+          }
         }
-      }
-    }
-    return getSearchContentMethod;
+     }
+     return getSearchContentMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UploadDynamicScreenshotReq,
@@ -249,21 +268,22 @@ public final class LearnGrpc {
     if ((getUploadDynamicScreenshotMethod = LearnGrpc.getUploadDynamicScreenshotMethod) == null) {
       synchronized (LearnGrpc.class) {
         if ((getUploadDynamicScreenshotMethod = LearnGrpc.getUploadDynamicScreenshotMethod) == null) {
-          LearnGrpc.getUploadDynamicScreenshotMethod = getUploadDynamicScreenshotMethod =
+          LearnGrpc.getUploadDynamicScreenshotMethod = getUploadDynamicScreenshotMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UploadDynamicScreenshotReq, com.tcn.cloud.api.api.v0alpha.UploadDynamicScreenshotRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UploadDynamicScreenshot"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Learn", "UploadDynamicScreenshot"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UploadDynamicScreenshotReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UploadDynamicScreenshotRes.getDefaultInstance()))
-              .setSchemaDescriptor(new LearnMethodDescriptorSupplier("UploadDynamicScreenshot"))
-              .build();
+                  .setSchemaDescriptor(new LearnMethodDescriptorSupplier("UploadDynamicScreenshot"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUploadDynamicScreenshotMethod;
+     }
+     return getUploadDynamicScreenshotMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.StandaloneReq,
@@ -280,35 +300,29 @@ public final class LearnGrpc {
     if ((getStandaloneMethod = LearnGrpc.getStandaloneMethod) == null) {
       synchronized (LearnGrpc.class) {
         if ((getStandaloneMethod = LearnGrpc.getStandaloneMethod) == null) {
-          LearnGrpc.getStandaloneMethod = getStandaloneMethod =
+          LearnGrpc.getStandaloneMethod = getStandaloneMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.StandaloneReq, com.tcn.cloud.api.api.v0alpha.StandaloneRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Standalone"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Learn", "Standalone"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.StandaloneReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.StandaloneRes.getDefaultInstance()))
-              .setSchemaDescriptor(new LearnMethodDescriptorSupplier("Standalone"))
-              .build();
+                  .setSchemaDescriptor(new LearnMethodDescriptorSupplier("Standalone"))
+                  .build();
+          }
         }
-      }
-    }
-    return getStandaloneMethod;
+     }
+     return getStandaloneMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static LearnStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<LearnStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<LearnStub>() {
-        @java.lang.Override
-        public LearnStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new LearnStub(channel, callOptions);
-        }
-      };
-    return LearnStub.newStub(factory, channel);
+    return new LearnStub(channel);
   }
 
   /**
@@ -316,14 +330,7 @@ public final class LearnGrpc {
    */
   public static LearnBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<LearnBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<LearnBlockingStub>() {
-        @java.lang.Override
-        public LearnBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new LearnBlockingStub(channel, callOptions);
-        }
-      };
-    return LearnBlockingStub.newStub(factory, channel);
+    return new LearnBlockingStub(channel);
   }
 
   /**
@@ -331,14 +338,7 @@ public final class LearnGrpc {
    */
   public static LearnFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<LearnFutureStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<LearnFutureStub>() {
-        @java.lang.Override
-        public LearnFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new LearnFutureStub(channel, callOptions);
-        }
-      };
-    return LearnFutureStub.newStub(factory, channel);
+    return new LearnFutureStub(channel);
   }
 
   /**
@@ -352,28 +352,28 @@ public final class LearnGrpc {
      */
     public void exist(com.tcn.cloud.api.api.v0alpha.ExistReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ExistRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getExistMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getExistMethod(), responseObserver);
     }
 
     /**
      */
     public void content(com.tcn.cloud.api.api.v0alpha.ContentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ContentRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getContentMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getContentMethod(), responseObserver);
     }
 
     /**
      */
     public void contentEditorData(com.tcn.cloud.api.api.v0alpha.ContentEditorDataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ContentEditorDataRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getContentEditorDataMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getContentEditorDataMethod(), responseObserver);
     }
 
     /**
      */
     public void update(com.tcn.cloud.api.api.v0alpha.UpdateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
@@ -383,7 +383,7 @@ public final class LearnGrpc {
      */
     public void exportMany(com.tcn.cloud.api.api.v0alpha.ExportManyReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ExportRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getExportManyMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getExportManyMethod(), responseObserver);
     }
 
     /**
@@ -393,7 +393,7 @@ public final class LearnGrpc {
      */
     public void storeStaticImage(com.tcn.cloud.api.api.v0alpha.StoreStaticImageReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StoreStaticImageRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStoreStaticImageMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getStoreStaticImageMethod(), responseObserver);
     }
 
     /**
@@ -403,7 +403,7 @@ public final class LearnGrpc {
      */
     public void searchContent(com.tcn.cloud.api.api.v0alpha.SearchContentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SearchRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSearchContentMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getSearchContentMethod(), responseObserver);
     }
 
     /**
@@ -413,7 +413,7 @@ public final class LearnGrpc {
      */
     public void uploadDynamicScreenshot(com.tcn.cloud.api.api.v0alpha.UploadDynamicScreenshotReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UploadDynamicScreenshotRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUploadDynamicScreenshotMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUploadDynamicScreenshotMethod(), responseObserver);
     }
 
     /**
@@ -423,70 +423,70 @@ public final class LearnGrpc {
      */
     public void standalone(com.tcn.cloud.api.api.v0alpha.StandaloneReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StandaloneRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStandaloneMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getStandaloneMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getExistMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ExistReq,
                 com.tcn.cloud.api.api.v0alpha.ExistRes>(
                   this, METHODID_EXIST)))
           .addMethod(
             getContentMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ContentReq,
                 com.tcn.cloud.api.api.v0alpha.ContentRes>(
                   this, METHODID_CONTENT)))
           .addMethod(
             getContentEditorDataMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ContentEditorDataReq,
                 com.tcn.cloud.api.api.v0alpha.ContentEditorDataRes>(
                   this, METHODID_CONTENT_EDITOR_DATA)))
           .addMethod(
             getUpdateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateReq,
                 com.tcn.cloud.api.api.v0alpha.UpdateRes>(
                   this, METHODID_UPDATE)))
           .addMethod(
             getExportManyMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ExportManyReq,
                 com.tcn.cloud.api.api.v0alpha.ExportRes>(
                   this, METHODID_EXPORT_MANY)))
           .addMethod(
             getStoreStaticImageMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.StoreStaticImageReq,
                 com.tcn.cloud.api.api.v0alpha.StoreStaticImageRes>(
                   this, METHODID_STORE_STATIC_IMAGE)))
           .addMethod(
             getSearchContentMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.SearchContentReq,
                 com.tcn.cloud.api.api.v0alpha.SearchRes>(
                   this, METHODID_SEARCH_CONTENT)))
           .addMethod(
             getUploadDynamicScreenshotMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UploadDynamicScreenshotReq,
                 com.tcn.cloud.api.api.v0alpha.UploadDynamicScreenshotRes>(
                   this, METHODID_UPLOAD_DYNAMIC_SCREENSHOT)))
           .addMethod(
             getStandaloneMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.StandaloneReq,
                 com.tcn.cloud.api.api.v0alpha.StandaloneRes>(
@@ -500,15 +500,19 @@ public final class LearnGrpc {
    * A service for creating and reading learning material
    * </pre>
    */
-  public static final class LearnStub extends io.grpc.stub.AbstractAsyncStub<LearnStub> {
-    private LearnStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class LearnStub extends io.grpc.stub.AbstractStub<LearnStub> {
+    private LearnStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private LearnStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected LearnStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected LearnStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new LearnStub(channel, callOptions);
     }
 
@@ -516,7 +520,7 @@ public final class LearnGrpc {
      */
     public void exist(com.tcn.cloud.api.api.v0alpha.ExistReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ExistRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getExistMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -524,7 +528,7 @@ public final class LearnGrpc {
      */
     public void content(com.tcn.cloud.api.api.v0alpha.ContentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ContentRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getContentMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -532,7 +536,7 @@ public final class LearnGrpc {
      */
     public void contentEditorData(com.tcn.cloud.api.api.v0alpha.ContentEditorDataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ContentEditorDataRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getContentEditorDataMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -540,7 +544,7 @@ public final class LearnGrpc {
      */
     public void update(com.tcn.cloud.api.api.v0alpha.UpdateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -551,7 +555,7 @@ public final class LearnGrpc {
      */
     public void exportMany(com.tcn.cloud.api.api.v0alpha.ExportManyReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ExportRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getExportManyMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -562,7 +566,7 @@ public final class LearnGrpc {
      */
     public void storeStaticImage(com.tcn.cloud.api.api.v0alpha.StoreStaticImageReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StoreStaticImageRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getStoreStaticImageMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -573,7 +577,7 @@ public final class LearnGrpc {
      */
     public void searchContent(com.tcn.cloud.api.api.v0alpha.SearchContentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SearchRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getSearchContentMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -584,7 +588,7 @@ public final class LearnGrpc {
      */
     public void uploadDynamicScreenshot(com.tcn.cloud.api.api.v0alpha.UploadDynamicScreenshotReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UploadDynamicScreenshotRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUploadDynamicScreenshotMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -595,7 +599,7 @@ public final class LearnGrpc {
      */
     public void standalone(com.tcn.cloud.api.api.v0alpha.StandaloneReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StandaloneRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getStandaloneMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -605,43 +609,47 @@ public final class LearnGrpc {
    * A service for creating and reading learning material
    * </pre>
    */
-  public static final class LearnBlockingStub extends io.grpc.stub.AbstractBlockingStub<LearnBlockingStub> {
-    private LearnBlockingStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class LearnBlockingStub extends io.grpc.stub.AbstractStub<LearnBlockingStub> {
+    private LearnBlockingStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private LearnBlockingStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected LearnBlockingStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected LearnBlockingStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new LearnBlockingStub(channel, callOptions);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.ExistRes exist(com.tcn.cloud.api.api.v0alpha.ExistReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getExistMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.ContentRes content(com.tcn.cloud.api.api.v0alpha.ContentReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getContentMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.ContentEditorDataRes contentEditorData(com.tcn.cloud.api.api.v0alpha.ContentEditorDataReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getContentEditorDataMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateRes update(com.tcn.cloud.api.api.v0alpha.UpdateReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
@@ -651,7 +659,7 @@ public final class LearnGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ExportRes exportMany(com.tcn.cloud.api.api.v0alpha.ExportManyReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getExportManyMethod(), getCallOptions(), request);
     }
 
@@ -661,7 +669,7 @@ public final class LearnGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.StoreStaticImageRes storeStaticImage(com.tcn.cloud.api.api.v0alpha.StoreStaticImageReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getStoreStaticImageMethod(), getCallOptions(), request);
     }
 
@@ -671,7 +679,7 @@ public final class LearnGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.SearchRes searchContent(com.tcn.cloud.api.api.v0alpha.SearchContentReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getSearchContentMethod(), getCallOptions(), request);
     }
 
@@ -681,7 +689,7 @@ public final class LearnGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UploadDynamicScreenshotRes uploadDynamicScreenshot(com.tcn.cloud.api.api.v0alpha.UploadDynamicScreenshotReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUploadDynamicScreenshotMethod(), getCallOptions(), request);
     }
 
@@ -691,7 +699,7 @@ public final class LearnGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.StandaloneRes standalone(com.tcn.cloud.api.api.v0alpha.StandaloneReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getStandaloneMethod(), getCallOptions(), request);
     }
   }
@@ -701,15 +709,19 @@ public final class LearnGrpc {
    * A service for creating and reading learning material
    * </pre>
    */
-  public static final class LearnFutureStub extends io.grpc.stub.AbstractFutureStub<LearnFutureStub> {
-    private LearnFutureStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class LearnFutureStub extends io.grpc.stub.AbstractStub<LearnFutureStub> {
+    private LearnFutureStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private LearnFutureStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected LearnFutureStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected LearnFutureStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new LearnFutureStub(channel, callOptions);
     }
 
@@ -717,7 +729,7 @@ public final class LearnGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ExistRes> exist(
         com.tcn.cloud.api.api.v0alpha.ExistReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getExistMethod(), getCallOptions()), request);
     }
 
@@ -725,7 +737,7 @@ public final class LearnGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ContentRes> content(
         com.tcn.cloud.api.api.v0alpha.ContentReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getContentMethod(), getCallOptions()), request);
     }
 
@@ -733,7 +745,7 @@ public final class LearnGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ContentEditorDataRes> contentEditorData(
         com.tcn.cloud.api.api.v0alpha.ContentEditorDataReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getContentEditorDataMethod(), getCallOptions()), request);
     }
 
@@ -741,7 +753,7 @@ public final class LearnGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateRes> update(
         com.tcn.cloud.api.api.v0alpha.UpdateReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
@@ -752,7 +764,7 @@ public final class LearnGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ExportRes> exportMany(
         com.tcn.cloud.api.api.v0alpha.ExportManyReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getExportManyMethod(), getCallOptions()), request);
     }
 
@@ -763,7 +775,7 @@ public final class LearnGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.StoreStaticImageRes> storeStaticImage(
         com.tcn.cloud.api.api.v0alpha.StoreStaticImageReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getStoreStaticImageMethod(), getCallOptions()), request);
     }
 
@@ -774,7 +786,7 @@ public final class LearnGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SearchRes> searchContent(
         com.tcn.cloud.api.api.v0alpha.SearchContentReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getSearchContentMethod(), getCallOptions()), request);
     }
 
@@ -785,7 +797,7 @@ public final class LearnGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UploadDynamicScreenshotRes> uploadDynamicScreenshot(
         com.tcn.cloud.api.api.v0alpha.UploadDynamicScreenshotReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUploadDynamicScreenshotMethod(), getCallOptions()), request);
     }
 
@@ -796,7 +808,7 @@ public final class LearnGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.StandaloneRes> standalone(
         com.tcn.cloud.api.api.v0alpha.StandaloneReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getStandaloneMethod(), getCallOptions()), request);
     }
   }

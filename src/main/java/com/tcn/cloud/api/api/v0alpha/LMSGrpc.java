@@ -1,13 +1,25 @@
 package com.tcn.cloud.api.api.v0alpha;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.50.0)",
+    value = "by gRPC proto compiler (version 1.14.0)",
     comments = "Source: api/v0alpha/lms.proto")
-@io.grpc.stub.annotations.GrpcGenerated
 public final class LMSGrpc {
 
   private LMSGrpc() {}
@@ -29,21 +41,22 @@ public final class LMSGrpc {
     if ((getGetPublicKeyMethod = LMSGrpc.getGetPublicKeyMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getGetPublicKeyMethod = LMSGrpc.getGetPublicKeyMethod) == null) {
-          LMSGrpc.getGetPublicKeyMethod = getGetPublicKeyMethod =
+          LMSGrpc.getGetPublicKeyMethod = getGetPublicKeyMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetPublicKeyReq, com.tcn.cloud.api.api.v0alpha.PublicKey>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPublicKey"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "GetPublicKey"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetPublicKeyReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.PublicKey.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("GetPublicKey"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("GetPublicKey"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetPublicKeyMethod;
+     }
+     return getGetPublicKeyMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.FileTemplate,
@@ -60,21 +73,22 @@ public final class LMSGrpc {
     if ((getCreateFileTemplateMethod = LMSGrpc.getCreateFileTemplateMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getCreateFileTemplateMethod = LMSGrpc.getCreateFileTemplateMethod) == null) {
-          LMSGrpc.getCreateFileTemplateMethod = getCreateFileTemplateMethod =
+          LMSGrpc.getCreateFileTemplateMethod = getCreateFileTemplateMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.FileTemplate, com.tcn.cloud.api.api.v0alpha.FileTemplate>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateFileTemplate"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "CreateFileTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.FileTemplate.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.FileTemplate.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("CreateFileTemplate"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("CreateFileTemplate"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateFileTemplateMethod;
+     }
+     return getCreateFileTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetFileTemplatesReq,
@@ -91,21 +105,22 @@ public final class LMSGrpc {
     if ((getListFileTemplatesMethod = LMSGrpc.getListFileTemplatesMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getListFileTemplatesMethod = LMSGrpc.getListFileTemplatesMethod) == null) {
-          LMSGrpc.getListFileTemplatesMethod = getListFileTemplatesMethod =
+          LMSGrpc.getListFileTemplatesMethod = getListFileTemplatesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetFileTemplatesReq, com.tcn.cloud.api.api.v0alpha.FileTemplate>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListFileTemplates"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "ListFileTemplates"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetFileTemplatesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.FileTemplate.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("ListFileTemplates"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("ListFileTemplates"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListFileTemplatesMethod;
+     }
+     return getListFileTemplatesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.FileTemplate,
@@ -122,21 +137,22 @@ public final class LMSGrpc {
     if ((getUpdateFileTemplateMethod = LMSGrpc.getUpdateFileTemplateMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getUpdateFileTemplateMethod = LMSGrpc.getUpdateFileTemplateMethod) == null) {
-          LMSGrpc.getUpdateFileTemplateMethod = getUpdateFileTemplateMethod =
+          LMSGrpc.getUpdateFileTemplateMethod = getUpdateFileTemplateMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.FileTemplate, com.tcn.cloud.api.api.v0alpha.FileTemplate>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateFileTemplate"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "UpdateFileTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.FileTemplate.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.FileTemplate.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("UpdateFileTemplate"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("UpdateFileTemplate"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateFileTemplateMethod;
+     }
+     return getUpdateFileTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.FileTemplate,
@@ -153,21 +169,22 @@ public final class LMSGrpc {
     if ((getDeleteFileTemplateMethod = LMSGrpc.getDeleteFileTemplateMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getDeleteFileTemplateMethod = LMSGrpc.getDeleteFileTemplateMethod) == null) {
-          LMSGrpc.getDeleteFileTemplateMethod = getDeleteFileTemplateMethod =
+          LMSGrpc.getDeleteFileTemplateMethod = getDeleteFileTemplateMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.FileTemplate, com.tcn.cloud.api.api.v0alpha.FileTemplate>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteFileTemplate"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "DeleteFileTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.FileTemplate.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.FileTemplate.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("DeleteFileTemplate"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("DeleteFileTemplate"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDeleteFileTemplateMethod;
+     }
+     return getDeleteFileTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.FileTemplate,
@@ -184,21 +201,22 @@ public final class LMSGrpc {
     if ((getGetFileTemplateMethod = LMSGrpc.getGetFileTemplateMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getGetFileTemplateMethod = LMSGrpc.getGetFileTemplateMethod) == null) {
-          LMSGrpc.getGetFileTemplateMethod = getGetFileTemplateMethod =
+          LMSGrpc.getGetFileTemplateMethod = getGetFileTemplateMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.FileTemplate, com.tcn.cloud.api.api.v0alpha.FileTemplate>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetFileTemplate"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "GetFileTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.FileTemplate.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.FileTemplate.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("GetFileTemplate"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("GetFileTemplate"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetFileTemplateMethod;
+     }
+     return getGetFileTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.Field,
@@ -215,21 +233,22 @@ public final class LMSGrpc {
     if ((getCreateFieldMethod = LMSGrpc.getCreateFieldMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getCreateFieldMethod = LMSGrpc.getCreateFieldMethod) == null) {
-          LMSGrpc.getCreateFieldMethod = getCreateFieldMethod =
+          LMSGrpc.getCreateFieldMethod = getCreateFieldMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.Field, com.tcn.cloud.api.api.v0alpha.Field>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateField"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "CreateField"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.Field.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.Field.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("CreateField"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("CreateField"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateFieldMethod;
+     }
+     return getCreateFieldMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListFieldsReq,
@@ -246,21 +265,22 @@ public final class LMSGrpc {
     if ((getListFieldsMethod = LMSGrpc.getListFieldsMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getListFieldsMethod = LMSGrpc.getListFieldsMethod) == null) {
-          LMSGrpc.getListFieldsMethod = getListFieldsMethod =
+          LMSGrpc.getListFieldsMethod = getListFieldsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListFieldsReq, com.tcn.cloud.api.api.v0alpha.Fields>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListFields"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "ListFields"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListFieldsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.Fields.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("ListFields"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("ListFields"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListFieldsMethod;
+     }
+     return getListFieldsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.Field,
@@ -277,21 +297,22 @@ public final class LMSGrpc {
     if ((getGetFieldMethod = LMSGrpc.getGetFieldMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getGetFieldMethod = LMSGrpc.getGetFieldMethod) == null) {
-          LMSGrpc.getGetFieldMethod = getGetFieldMethod =
+          LMSGrpc.getGetFieldMethod = getGetFieldMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.Field, com.tcn.cloud.api.api.v0alpha.Field>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetField"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "GetField"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.Field.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.Field.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("GetField"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("GetField"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetFieldMethod;
+     }
+     return getGetFieldMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateFieldReq,
@@ -308,21 +329,22 @@ public final class LMSGrpc {
     if ((getUpdateFieldMethod = LMSGrpc.getUpdateFieldMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getUpdateFieldMethod = LMSGrpc.getUpdateFieldMethod) == null) {
-          LMSGrpc.getUpdateFieldMethod = getUpdateFieldMethod =
+          LMSGrpc.getUpdateFieldMethod = getUpdateFieldMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateFieldReq, com.tcn.cloud.api.api.v0alpha.Field>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateField"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "UpdateField"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateFieldReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.Field.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("UpdateField"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("UpdateField"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateFieldMethod;
+     }
+     return getUpdateFieldMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.Field,
@@ -339,21 +361,22 @@ public final class LMSGrpc {
     if ((getDeleteFieldMethod = LMSGrpc.getDeleteFieldMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getDeleteFieldMethod = LMSGrpc.getDeleteFieldMethod) == null) {
-          LMSGrpc.getDeleteFieldMethod = getDeleteFieldMethod =
+          LMSGrpc.getDeleteFieldMethod = getDeleteFieldMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.Field, com.tcn.cloud.api.api.v0alpha.Field>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteField"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "DeleteField"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.Field.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.Field.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("DeleteField"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("DeleteField"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDeleteFieldMethod;
+     }
+     return getDeleteFieldMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListAvailableFieldsByElementIdReq,
@@ -370,21 +393,22 @@ public final class LMSGrpc {
     if ((getListAvailableFieldsByElementIdMethod = LMSGrpc.getListAvailableFieldsByElementIdMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getListAvailableFieldsByElementIdMethod = LMSGrpc.getListAvailableFieldsByElementIdMethod) == null) {
-          LMSGrpc.getListAvailableFieldsByElementIdMethod = getListAvailableFieldsByElementIdMethod =
+          LMSGrpc.getListAvailableFieldsByElementIdMethod = getListAvailableFieldsByElementIdMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListAvailableFieldsByElementIdReq, com.tcn.cloud.api.api.v0alpha.ProcessFields>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAvailableFieldsByElementId"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "ListAvailableFieldsByElementId"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAvailableFieldsByElementIdReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ProcessFields.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("ListAvailableFieldsByElementId"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("ListAvailableFieldsByElementId"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListAvailableFieldsByElementIdMethod;
+     }
+     return getListAvailableFieldsByElementIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
@@ -401,21 +425,22 @@ public final class LMSGrpc {
     if ((getListCampaignLinksMethod = LMSGrpc.getListCampaignLinksMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getListCampaignLinksMethod = LMSGrpc.getListCampaignLinksMethod) == null) {
-          LMSGrpc.getListCampaignLinksMethod = getListCampaignLinksMethod =
+          LMSGrpc.getListCampaignLinksMethod = getListCampaignLinksMethod = 
               io.grpc.MethodDescriptor.<com.google.protobuf.Empty, com.tcn.cloud.api.api.v0alpha.ListCampaignLinksRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListCampaignLinks"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "ListCampaignLinks"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListCampaignLinksRes.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("ListCampaignLinks"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("ListCampaignLinks"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListCampaignLinksMethod;
+     }
+     return getListCampaignLinksMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.PeekListReq,
@@ -432,21 +457,22 @@ public final class LMSGrpc {
     if ((getPeekListMethod = LMSGrpc.getPeekListMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getPeekListMethod = LMSGrpc.getPeekListMethod) == null) {
-          LMSGrpc.getPeekListMethod = getPeekListMethod =
+          LMSGrpc.getPeekListMethod = getPeekListMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.PeekListReq, com.tcn.cloud.api.api.v0alpha.PeekListRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "PeekList"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "PeekList"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.PeekListReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.PeekListRes.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("PeekList"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("PeekList"))
+                  .build();
+          }
         }
-      }
-    }
-    return getPeekListMethod;
+     }
+     return getPeekListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetHistoryReq,
@@ -463,21 +489,22 @@ public final class LMSGrpc {
     if ((getGetHistoryMethod = LMSGrpc.getGetHistoryMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getGetHistoryMethod = LMSGrpc.getGetHistoryMethod) == null) {
-          LMSGrpc.getGetHistoryMethod = getGetHistoryMethod =
+          LMSGrpc.getGetHistoryMethod = getGetHistoryMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetHistoryReq, com.tcn.cloud.api.api.v0alpha.GetHistoryRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetHistory"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "GetHistory"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetHistoryReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetHistoryRes.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("GetHistory"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("GetHistory"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetHistoryMethod;
+     }
+     return getGetHistoryMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.Element,
@@ -494,21 +521,22 @@ public final class LMSGrpc {
     if ((getCreateElementMethod = LMSGrpc.getCreateElementMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getCreateElementMethod = LMSGrpc.getCreateElementMethod) == null) {
-          LMSGrpc.getCreateElementMethod = getCreateElementMethod =
+          LMSGrpc.getCreateElementMethod = getCreateElementMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.Element, com.tcn.cloud.api.api.v0alpha.Element>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateElement"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "CreateElement"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.Element.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.Element.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("CreateElement"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("CreateElement"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateElementMethod;
+     }
+     return getCreateElementMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListElementsReq,
@@ -525,21 +553,22 @@ public final class LMSGrpc {
     if ((getListElementsMethod = LMSGrpc.getListElementsMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getListElementsMethod = LMSGrpc.getListElementsMethod) == null) {
-          LMSGrpc.getListElementsMethod = getListElementsMethod =
+          LMSGrpc.getListElementsMethod = getListElementsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListElementsReq, com.tcn.cloud.api.api.v0alpha.Element>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListElements"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "ListElements"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListElementsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.Element.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("ListElements"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("ListElements"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListElementsMethod;
+     }
+     return getListElementsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.Element,
@@ -556,21 +585,22 @@ public final class LMSGrpc {
     if ((getUpdateElementMethod = LMSGrpc.getUpdateElementMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getUpdateElementMethod = LMSGrpc.getUpdateElementMethod) == null) {
-          LMSGrpc.getUpdateElementMethod = getUpdateElementMethod =
+          LMSGrpc.getUpdateElementMethod = getUpdateElementMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.Element, com.tcn.cloud.api.api.v0alpha.Element>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateElement"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "UpdateElement"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.Element.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.Element.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("UpdateElement"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("UpdateElement"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateElementMethod;
+     }
+     return getUpdateElementMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.Element,
@@ -587,21 +617,22 @@ public final class LMSGrpc {
     if ((getDeleteElementMethod = LMSGrpc.getDeleteElementMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getDeleteElementMethod = LMSGrpc.getDeleteElementMethod) == null) {
-          LMSGrpc.getDeleteElementMethod = getDeleteElementMethod =
+          LMSGrpc.getDeleteElementMethod = getDeleteElementMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.Element, com.tcn.cloud.api.api.v0alpha.Element>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteElement"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "DeleteElement"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.Element.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.Element.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("DeleteElement"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("DeleteElement"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDeleteElementMethod;
+     }
+     return getDeleteElementMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.Element,
@@ -618,21 +649,22 @@ public final class LMSGrpc {
     if ((getCopyPipelineUpstreamMethod = LMSGrpc.getCopyPipelineUpstreamMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getCopyPipelineUpstreamMethod = LMSGrpc.getCopyPipelineUpstreamMethod) == null) {
-          LMSGrpc.getCopyPipelineUpstreamMethod = getCopyPipelineUpstreamMethod =
+          LMSGrpc.getCopyPipelineUpstreamMethod = getCopyPipelineUpstreamMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.Element, com.tcn.cloud.api.api.v0alpha.Element>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CopyPipelineUpstream"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "CopyPipelineUpstream"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.Element.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.Element.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("CopyPipelineUpstream"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("CopyPipelineUpstream"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCopyPipelineUpstreamMethod;
+     }
+     return getCopyPipelineUpstreamMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.Element,
@@ -649,21 +681,22 @@ public final class LMSGrpc {
     if ((getCopyPipelineDownstreamMethod = LMSGrpc.getCopyPipelineDownstreamMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getCopyPipelineDownstreamMethod = LMSGrpc.getCopyPipelineDownstreamMethod) == null) {
-          LMSGrpc.getCopyPipelineDownstreamMethod = getCopyPipelineDownstreamMethod =
+          LMSGrpc.getCopyPipelineDownstreamMethod = getCopyPipelineDownstreamMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.Element, com.tcn.cloud.api.api.v0alpha.Element>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CopyPipelineDownstream"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "CopyPipelineDownstream"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.Element.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.Element.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("CopyPipelineDownstream"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("CopyPipelineDownstream"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCopyPipelineDownstreamMethod;
+     }
+     return getCopyPipelineDownstreamMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ProcessElementReq,
@@ -680,21 +713,22 @@ public final class LMSGrpc {
     if ((getProcessElementMethod = LMSGrpc.getProcessElementMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getProcessElementMethod = LMSGrpc.getProcessElementMethod) == null) {
-          LMSGrpc.getProcessElementMethod = getProcessElementMethod =
+          LMSGrpc.getProcessElementMethod = getProcessElementMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ProcessElementReq, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ProcessElement"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "ProcessElement"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ProcessElementReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("ProcessElement"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("ProcessElement"))
+                  .build();
+          }
         }
-      }
-    }
-    return getProcessElementMethod;
+     }
+     return getProcessElementMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
@@ -711,21 +745,22 @@ public final class LMSGrpc {
     if ((getGetAvailableFieldsMethod = LMSGrpc.getGetAvailableFieldsMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getGetAvailableFieldsMethod = LMSGrpc.getGetAvailableFieldsMethod) == null) {
-          LMSGrpc.getGetAvailableFieldsMethod = getGetAvailableFieldsMethod =
+          LMSGrpc.getGetAvailableFieldsMethod = getGetAvailableFieldsMethod = 
               io.grpc.MethodDescriptor.<com.google.protobuf.Empty, com.tcn.cloud.api.api.v0alpha.ProcessFields>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAvailableFields"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "GetAvailableFields"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ProcessFields.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("GetAvailableFields"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("GetAvailableFields"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetAvailableFieldsMethod;
+     }
+     return getGetAvailableFieldsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
@@ -742,21 +777,22 @@ public final class LMSGrpc {
     if ((getListNewEventsMethod = LMSGrpc.getListNewEventsMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getListNewEventsMethod = LMSGrpc.getListNewEventsMethod) == null) {
-          LMSGrpc.getListNewEventsMethod = getListNewEventsMethod =
+          LMSGrpc.getListNewEventsMethod = getListNewEventsMethod = 
               io.grpc.MethodDescriptor.<com.google.protobuf.Empty, com.tcn.cloud.api.api.v0alpha.Events>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListNewEvents"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "ListNewEvents"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.Events.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("ListNewEvents"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("ListNewEvents"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListNewEventsMethod;
+     }
+     return getListNewEventsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ViewQueueReq,
@@ -773,21 +809,22 @@ public final class LMSGrpc {
     if ((getViewQueueMethod = LMSGrpc.getViewQueueMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getViewQueueMethod = LMSGrpc.getViewQueueMethod) == null) {
-          LMSGrpc.getViewQueueMethod = getViewQueueMethod =
+          LMSGrpc.getViewQueueMethod = getViewQueueMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ViewQueueReq, com.tcn.cloud.api.api.v0alpha.Events>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ViewQueue"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "ViewQueue"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ViewQueueReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.Events.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("ViewQueue"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("ViewQueue"))
+                  .build();
+          }
         }
-      }
-    }
-    return getViewQueueMethod;
+     }
+     return getViewQueueMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ParseReq,
@@ -804,21 +841,22 @@ public final class LMSGrpc {
     if ((getAutocompleteMethod = LMSGrpc.getAutocompleteMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getAutocompleteMethod = LMSGrpc.getAutocompleteMethod) == null) {
-          LMSGrpc.getAutocompleteMethod = getAutocompleteMethod =
+          LMSGrpc.getAutocompleteMethod = getAutocompleteMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ParseReq, com.tcn.cloud.api.api.v0alpha.ParseRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Autocomplete"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "Autocomplete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ParseReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ParseRes.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("Autocomplete"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("Autocomplete"))
+                  .build();
+          }
         }
-      }
-    }
-    return getAutocompleteMethod;
+     }
+     return getAutocompleteMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetComplianceScrubListsReq,
@@ -835,21 +873,22 @@ public final class LMSGrpc {
     if ((getGetComplianceScrubListsMethod = LMSGrpc.getGetComplianceScrubListsMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getGetComplianceScrubListsMethod = LMSGrpc.getGetComplianceScrubListsMethod) == null) {
-          LMSGrpc.getGetComplianceScrubListsMethod = getGetComplianceScrubListsMethod =
+          LMSGrpc.getGetComplianceScrubListsMethod = getGetComplianceScrubListsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetComplianceScrubListsReq, com.tcn.cloud.api.api.v0alpha.GetComplianceScrubListsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetComplianceScrubLists"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "GetComplianceScrubLists"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetComplianceScrubListsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetComplianceScrubListsRes.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("GetComplianceScrubLists"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("GetComplianceScrubLists"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetComplianceScrubListsMethod;
+     }
+     return getGetComplianceScrubListsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.FindFieldUsagesReq,
@@ -866,21 +905,22 @@ public final class LMSGrpc {
     if ((getFindFieldUsagesMethod = LMSGrpc.getFindFieldUsagesMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getFindFieldUsagesMethod = LMSGrpc.getFindFieldUsagesMethod) == null) {
-          LMSGrpc.getFindFieldUsagesMethod = getFindFieldUsagesMethod =
+          LMSGrpc.getFindFieldUsagesMethod = getFindFieldUsagesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.FindFieldUsagesReq, com.tcn.cloud.api.api.v0alpha.FindFieldUsagesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "FindFieldUsages"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "FindFieldUsages"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.FindFieldUsagesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.FindFieldUsagesRes.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("FindFieldUsages"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("FindFieldUsages"))
+                  .build();
+          }
         }
-      }
-    }
-    return getFindFieldUsagesMethod;
+     }
+     return getFindFieldUsagesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.FindInvalidElementsReq,
@@ -897,21 +937,22 @@ public final class LMSGrpc {
     if ((getFindInvalidElementsMethod = LMSGrpc.getFindInvalidElementsMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getFindInvalidElementsMethod = LMSGrpc.getFindInvalidElementsMethod) == null) {
-          LMSGrpc.getFindInvalidElementsMethod = getFindInvalidElementsMethod =
+          LMSGrpc.getFindInvalidElementsMethod = getFindInvalidElementsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.FindInvalidElementsReq, com.tcn.cloud.api.api.v0alpha.FindInvalidElementsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "FindInvalidElements"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "FindInvalidElements"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.FindInvalidElementsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.FindInvalidElementsRes.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("FindInvalidElements"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("FindInvalidElements"))
+                  .build();
+          }
         }
-      }
-    }
-    return getFindInvalidElementsMethod;
+     }
+     return getFindInvalidElementsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CollectionMetadata,
@@ -928,21 +969,22 @@ public final class LMSGrpc {
     if ((getCreateCollectionMethod = LMSGrpc.getCreateCollectionMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getCreateCollectionMethod = LMSGrpc.getCreateCollectionMethod) == null) {
-          LMSGrpc.getCreateCollectionMethod = getCreateCollectionMethod =
+          LMSGrpc.getCreateCollectionMethod = getCreateCollectionMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CollectionMetadata, com.tcn.cloud.api.api.v0alpha.CollectionMetadata>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateCollection"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "CreateCollection"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CollectionMetadata.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CollectionMetadata.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("CreateCollection"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("CreateCollection"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateCollectionMethod;
+     }
+     return getCreateCollectionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetCollectionReq,
@@ -959,21 +1001,22 @@ public final class LMSGrpc {
     if ((getGetCollectionMethod = LMSGrpc.getGetCollectionMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getGetCollectionMethod = LMSGrpc.getGetCollectionMethod) == null) {
-          LMSGrpc.getGetCollectionMethod = getGetCollectionMethod =
+          LMSGrpc.getGetCollectionMethod = getGetCollectionMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetCollectionReq, com.tcn.cloud.api.api.v0alpha.CollectionMetadata>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCollection"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "GetCollection"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetCollectionReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CollectionMetadata.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("GetCollection"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("GetCollection"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetCollectionMethod;
+     }
+     return getGetCollectionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CollectionMetadata,
@@ -990,21 +1033,22 @@ public final class LMSGrpc {
     if ((getUpdateCollectionMethod = LMSGrpc.getUpdateCollectionMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getUpdateCollectionMethod = LMSGrpc.getUpdateCollectionMethod) == null) {
-          LMSGrpc.getUpdateCollectionMethod = getUpdateCollectionMethod =
+          LMSGrpc.getUpdateCollectionMethod = getUpdateCollectionMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CollectionMetadata, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateCollection"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "UpdateCollection"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CollectionMetadata.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("UpdateCollection"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("UpdateCollection"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateCollectionMethod;
+     }
+     return getUpdateCollectionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteCollectionReq,
@@ -1021,21 +1065,22 @@ public final class LMSGrpc {
     if ((getDeleteCollectionMethod = LMSGrpc.getDeleteCollectionMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getDeleteCollectionMethod = LMSGrpc.getDeleteCollectionMethod) == null) {
-          LMSGrpc.getDeleteCollectionMethod = getDeleteCollectionMethod =
+          LMSGrpc.getDeleteCollectionMethod = getDeleteCollectionMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteCollectionReq, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteCollection"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "DeleteCollection"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteCollectionReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("DeleteCollection"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("DeleteCollection"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDeleteCollectionMethod;
+     }
+     return getDeleteCollectionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListCollectionsReq,
@@ -1052,21 +1097,22 @@ public final class LMSGrpc {
     if ((getListCollectionsMethod = LMSGrpc.getListCollectionsMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getListCollectionsMethod = LMSGrpc.getListCollectionsMethod) == null) {
-          LMSGrpc.getListCollectionsMethod = getListCollectionsMethod =
+          LMSGrpc.getListCollectionsMethod = getListCollectionsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListCollectionsReq, com.tcn.cloud.api.api.v0alpha.ListCollectionsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListCollections"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "ListCollections"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListCollectionsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListCollectionsRes.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("ListCollections"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("ListCollections"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListCollectionsMethod;
+     }
+     return getListCollectionsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ResetCollectionReq,
@@ -1083,21 +1129,22 @@ public final class LMSGrpc {
     if ((getResetCollectionMethod = LMSGrpc.getResetCollectionMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getResetCollectionMethod = LMSGrpc.getResetCollectionMethod) == null) {
-          LMSGrpc.getResetCollectionMethod = getResetCollectionMethod =
+          LMSGrpc.getResetCollectionMethod = getResetCollectionMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ResetCollectionReq, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ResetCollection"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "ResetCollection"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ResetCollectionReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("ResetCollection"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("ResetCollection"))
+                  .build();
+          }
         }
-      }
-    }
-    return getResetCollectionMethod;
+     }
+     return getResetCollectionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CollectionEntry,
@@ -1114,21 +1161,22 @@ public final class LMSGrpc {
     if ((getAddCollectionEntryMethod = LMSGrpc.getAddCollectionEntryMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getAddCollectionEntryMethod = LMSGrpc.getAddCollectionEntryMethod) == null) {
-          LMSGrpc.getAddCollectionEntryMethod = getAddCollectionEntryMethod =
+          LMSGrpc.getAddCollectionEntryMethod = getAddCollectionEntryMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CollectionEntry, com.tcn.cloud.api.api.v0alpha.CollectionEntry>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddCollectionEntry"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "AddCollectionEntry"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CollectionEntry.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CollectionEntry.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("AddCollectionEntry"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("AddCollectionEntry"))
+                  .build();
+          }
         }
-      }
-    }
-    return getAddCollectionEntryMethod;
+     }
+     return getAddCollectionEntryMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteCollectionEntryReq,
@@ -1145,21 +1193,22 @@ public final class LMSGrpc {
     if ((getDeleteCollectionEntryMethod = LMSGrpc.getDeleteCollectionEntryMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getDeleteCollectionEntryMethod = LMSGrpc.getDeleteCollectionEntryMethod) == null) {
-          LMSGrpc.getDeleteCollectionEntryMethod = getDeleteCollectionEntryMethod =
+          LMSGrpc.getDeleteCollectionEntryMethod = getDeleteCollectionEntryMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteCollectionEntryReq, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteCollectionEntry"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "DeleteCollectionEntry"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteCollectionEntryReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("DeleteCollectionEntry"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("DeleteCollectionEntry"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDeleteCollectionEntryMethod;
+     }
+     return getDeleteCollectionEntryMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CollectionEntry,
@@ -1176,21 +1225,22 @@ public final class LMSGrpc {
     if ((getUpdateCollectionEntryMethod = LMSGrpc.getUpdateCollectionEntryMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getUpdateCollectionEntryMethod = LMSGrpc.getUpdateCollectionEntryMethod) == null) {
-          LMSGrpc.getUpdateCollectionEntryMethod = getUpdateCollectionEntryMethod =
+          LMSGrpc.getUpdateCollectionEntryMethod = getUpdateCollectionEntryMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CollectionEntry, com.tcn.cloud.api.api.v0alpha.CollectionEntry>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateCollectionEntry"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "UpdateCollectionEntry"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CollectionEntry.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CollectionEntry.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("UpdateCollectionEntry"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("UpdateCollectionEntry"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateCollectionEntryMethod;
+     }
+     return getUpdateCollectionEntryMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.StreamCollectionReq,
@@ -1207,21 +1257,22 @@ public final class LMSGrpc {
     if ((getStreamCollectionMethod = LMSGrpc.getStreamCollectionMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getStreamCollectionMethod = LMSGrpc.getStreamCollectionMethod) == null) {
-          LMSGrpc.getStreamCollectionMethod = getStreamCollectionMethod =
+          LMSGrpc.getStreamCollectionMethod = getStreamCollectionMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.StreamCollectionReq, com.tcn.cloud.api.api.v0alpha.CollectionEntry>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StreamCollection"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "StreamCollection"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.StreamCollectionReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CollectionEntry.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("StreamCollection"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("StreamCollection"))
+                  .build();
+          }
         }
-      }
-    }
-    return getStreamCollectionMethod;
+     }
+     return getStreamCollectionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SearchCollectionsPaginatedReq,
@@ -1238,21 +1289,22 @@ public final class LMSGrpc {
     if ((getSearchCollectionsPaginatedMethod = LMSGrpc.getSearchCollectionsPaginatedMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getSearchCollectionsPaginatedMethod = LMSGrpc.getSearchCollectionsPaginatedMethod) == null) {
-          LMSGrpc.getSearchCollectionsPaginatedMethod = getSearchCollectionsPaginatedMethod =
+          LMSGrpc.getSearchCollectionsPaginatedMethod = getSearchCollectionsPaginatedMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SearchCollectionsPaginatedReq, com.tcn.cloud.api.api.v0alpha.PaginatedSearchRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SearchCollectionsPaginated"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "SearchCollectionsPaginated"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SearchCollectionsPaginatedReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.PaginatedSearchRes.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("SearchCollectionsPaginated"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("SearchCollectionsPaginated"))
+                  .build();
+          }
         }
-      }
-    }
-    return getSearchCollectionsPaginatedMethod;
+     }
+     return getSearchCollectionsPaginatedMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetCollectionEntriesReq,
@@ -1269,21 +1321,22 @@ public final class LMSGrpc {
     if ((getGetCollectionEntriesMethod = LMSGrpc.getGetCollectionEntriesMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getGetCollectionEntriesMethod = LMSGrpc.getGetCollectionEntriesMethod) == null) {
-          LMSGrpc.getGetCollectionEntriesMethod = getGetCollectionEntriesMethod =
+          LMSGrpc.getGetCollectionEntriesMethod = getGetCollectionEntriesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetCollectionEntriesReq, com.tcn.cloud.api.api.v0alpha.GetCollectionEntriesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCollectionEntries"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "GetCollectionEntries"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetCollectionEntriesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetCollectionEntriesRes.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("GetCollectionEntries"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("GetCollectionEntries"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetCollectionEntriesMethod;
+     }
+     return getGetCollectionEntriesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CjsSearchDefinition,
@@ -1300,21 +1353,22 @@ public final class LMSGrpc {
     if ((getCreateCjsSearchDefinitionMethod = LMSGrpc.getCreateCjsSearchDefinitionMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getCreateCjsSearchDefinitionMethod = LMSGrpc.getCreateCjsSearchDefinitionMethod) == null) {
-          LMSGrpc.getCreateCjsSearchDefinitionMethod = getCreateCjsSearchDefinitionMethod =
+          LMSGrpc.getCreateCjsSearchDefinitionMethod = getCreateCjsSearchDefinitionMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CjsSearchDefinition, com.tcn.cloud.api.api.v0alpha.CjsSearchDefinition>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateCjsSearchDefinition"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "CreateCjsSearchDefinition"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CjsSearchDefinition.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CjsSearchDefinition.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("CreateCjsSearchDefinition"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("CreateCjsSearchDefinition"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateCjsSearchDefinitionMethod;
+     }
+     return getCreateCjsSearchDefinitionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetCjsSearchDefinitionReq,
@@ -1331,21 +1385,22 @@ public final class LMSGrpc {
     if ((getGetCjsSearchDefinitionMethod = LMSGrpc.getGetCjsSearchDefinitionMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getGetCjsSearchDefinitionMethod = LMSGrpc.getGetCjsSearchDefinitionMethod) == null) {
-          LMSGrpc.getGetCjsSearchDefinitionMethod = getGetCjsSearchDefinitionMethod =
+          LMSGrpc.getGetCjsSearchDefinitionMethod = getGetCjsSearchDefinitionMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetCjsSearchDefinitionReq, com.tcn.cloud.api.api.v0alpha.CjsSearchDefinition>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCjsSearchDefinition"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "GetCjsSearchDefinition"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetCjsSearchDefinitionReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CjsSearchDefinition.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("GetCjsSearchDefinition"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("GetCjsSearchDefinition"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetCjsSearchDefinitionMethod;
+     }
+     return getGetCjsSearchDefinitionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CjsSearchDefinition,
@@ -1362,21 +1417,22 @@ public final class LMSGrpc {
     if ((getUpdateCjsSearchDefinitionMethod = LMSGrpc.getUpdateCjsSearchDefinitionMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getUpdateCjsSearchDefinitionMethod = LMSGrpc.getUpdateCjsSearchDefinitionMethod) == null) {
-          LMSGrpc.getUpdateCjsSearchDefinitionMethod = getUpdateCjsSearchDefinitionMethod =
+          LMSGrpc.getUpdateCjsSearchDefinitionMethod = getUpdateCjsSearchDefinitionMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CjsSearchDefinition, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateCjsSearchDefinition"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "UpdateCjsSearchDefinition"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CjsSearchDefinition.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("UpdateCjsSearchDefinition"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("UpdateCjsSearchDefinition"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateCjsSearchDefinitionMethod;
+     }
+     return getUpdateCjsSearchDefinitionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteCjsSearchDefinitionReq,
@@ -1393,21 +1449,22 @@ public final class LMSGrpc {
     if ((getDeleteCjsSearchDefinitionMethod = LMSGrpc.getDeleteCjsSearchDefinitionMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getDeleteCjsSearchDefinitionMethod = LMSGrpc.getDeleteCjsSearchDefinitionMethod) == null) {
-          LMSGrpc.getDeleteCjsSearchDefinitionMethod = getDeleteCjsSearchDefinitionMethod =
+          LMSGrpc.getDeleteCjsSearchDefinitionMethod = getDeleteCjsSearchDefinitionMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteCjsSearchDefinitionReq, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteCjsSearchDefinition"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "DeleteCjsSearchDefinition"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteCjsSearchDefinitionReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("DeleteCjsSearchDefinition"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("DeleteCjsSearchDefinition"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDeleteCjsSearchDefinitionMethod;
+     }
+     return getDeleteCjsSearchDefinitionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListCjsSearchDefinitionsReq,
@@ -1424,21 +1481,22 @@ public final class LMSGrpc {
     if ((getListCjsSearchDefinitionsMethod = LMSGrpc.getListCjsSearchDefinitionsMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getListCjsSearchDefinitionsMethod = LMSGrpc.getListCjsSearchDefinitionsMethod) == null) {
-          LMSGrpc.getListCjsSearchDefinitionsMethod = getListCjsSearchDefinitionsMethod =
+          LMSGrpc.getListCjsSearchDefinitionsMethod = getListCjsSearchDefinitionsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListCjsSearchDefinitionsReq, com.tcn.cloud.api.api.v0alpha.ListCjsSearchDefinitionsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListCjsSearchDefinitions"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "ListCjsSearchDefinitions"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListCjsSearchDefinitionsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListCjsSearchDefinitionsRes.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("ListCjsSearchDefinitions"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("ListCjsSearchDefinitions"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListCjsSearchDefinitionsMethod;
+     }
+     return getListCjsSearchDefinitionsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ExecuteCjsSearchDefinitionReq,
@@ -1455,21 +1513,22 @@ public final class LMSGrpc {
     if ((getExecuteCjsSearchDefinitionMethod = LMSGrpc.getExecuteCjsSearchDefinitionMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getExecuteCjsSearchDefinitionMethod = LMSGrpc.getExecuteCjsSearchDefinitionMethod) == null) {
-          LMSGrpc.getExecuteCjsSearchDefinitionMethod = getExecuteCjsSearchDefinitionMethod =
+          LMSGrpc.getExecuteCjsSearchDefinitionMethod = getExecuteCjsSearchDefinitionMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ExecuteCjsSearchDefinitionReq, com.tcn.cloud.api.api.v0alpha.ExecuteCjsSearchDefinitionRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ExecuteCjsSearchDefinition"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "ExecuteCjsSearchDefinition"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ExecuteCjsSearchDefinitionReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ExecuteCjsSearchDefinitionRes.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("ExecuteCjsSearchDefinition"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("ExecuteCjsSearchDefinition"))
+                  .build();
+          }
         }
-      }
-    }
-    return getExecuteCjsSearchDefinitionMethod;
+     }
+     return getExecuteCjsSearchDefinitionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetCjsSecureSearchCriteriaReq,
@@ -1486,21 +1545,22 @@ public final class LMSGrpc {
     if ((getGetCjsSecureSearchCriteriaMethod = LMSGrpc.getGetCjsSecureSearchCriteriaMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getGetCjsSecureSearchCriteriaMethod = LMSGrpc.getGetCjsSecureSearchCriteriaMethod) == null) {
-          LMSGrpc.getGetCjsSecureSearchCriteriaMethod = getGetCjsSecureSearchCriteriaMethod =
+          LMSGrpc.getGetCjsSecureSearchCriteriaMethod = getGetCjsSecureSearchCriteriaMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetCjsSecureSearchCriteriaReq, com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCjsSecureSearchCriteria"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "GetCjsSecureSearchCriteria"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetCjsSecureSearchCriteriaReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("GetCjsSecureSearchCriteria"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("GetCjsSecureSearchCriteria"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetCjsSecureSearchCriteriaMethod;
+     }
+     return getGetCjsSecureSearchCriteriaMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria,
@@ -1517,21 +1577,22 @@ public final class LMSGrpc {
     if ((getCreateCjsSecureSearchCriteriaMethod = LMSGrpc.getCreateCjsSecureSearchCriteriaMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getCreateCjsSecureSearchCriteriaMethod = LMSGrpc.getCreateCjsSecureSearchCriteriaMethod) == null) {
-          LMSGrpc.getCreateCjsSecureSearchCriteriaMethod = getCreateCjsSecureSearchCriteriaMethod =
+          LMSGrpc.getCreateCjsSecureSearchCriteriaMethod = getCreateCjsSecureSearchCriteriaMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria, com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateCjsSecureSearchCriteria"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "CreateCjsSecureSearchCriteria"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("CreateCjsSecureSearchCriteria"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("CreateCjsSecureSearchCriteria"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateCjsSecureSearchCriteriaMethod;
+     }
+     return getCreateCjsSecureSearchCriteriaMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria,
@@ -1548,35 +1609,29 @@ public final class LMSGrpc {
     if ((getUpdateCjsSecureSearchCriteriaMethod = LMSGrpc.getUpdateCjsSecureSearchCriteriaMethod) == null) {
       synchronized (LMSGrpc.class) {
         if ((getUpdateCjsSecureSearchCriteriaMethod = LMSGrpc.getUpdateCjsSecureSearchCriteriaMethod) == null) {
-          LMSGrpc.getUpdateCjsSecureSearchCriteriaMethod = getUpdateCjsSecureSearchCriteriaMethod =
+          LMSGrpc.getUpdateCjsSecureSearchCriteriaMethod = getUpdateCjsSecureSearchCriteriaMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateCjsSecureSearchCriteria"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.LMS", "UpdateCjsSecureSearchCriteria"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new LMSMethodDescriptorSupplier("UpdateCjsSecureSearchCriteria"))
-              .build();
+                  .setSchemaDescriptor(new LMSMethodDescriptorSupplier("UpdateCjsSecureSearchCriteria"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateCjsSecureSearchCriteriaMethod;
+     }
+     return getUpdateCjsSecureSearchCriteriaMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static LMSStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<LMSStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<LMSStub>() {
-        @java.lang.Override
-        public LMSStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new LMSStub(channel, callOptions);
-        }
-      };
-    return LMSStub.newStub(factory, channel);
+    return new LMSStub(channel);
   }
 
   /**
@@ -1584,14 +1639,7 @@ public final class LMSGrpc {
    */
   public static LMSBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<LMSBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<LMSBlockingStub>() {
-        @java.lang.Override
-        public LMSBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new LMSBlockingStub(channel, callOptions);
-        }
-      };
-    return LMSBlockingStub.newStub(factory, channel);
+    return new LMSBlockingStub(channel);
   }
 
   /**
@@ -1599,14 +1647,7 @@ public final class LMSGrpc {
    */
   public static LMSFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<LMSFutureStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<LMSFutureStub>() {
-        @java.lang.Override
-        public LMSFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new LMSFutureStub(channel, callOptions);
-        }
-      };
-    return LMSFutureStub.newStub(factory, channel);
+    return new LMSFutureStub(channel);
   }
 
   /**
@@ -1617,84 +1658,84 @@ public final class LMSGrpc {
      */
     public void getPublicKey(com.tcn.cloud.api.api.v0alpha.GetPublicKeyReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.PublicKey> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPublicKeyMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetPublicKeyMethod(), responseObserver);
     }
 
     /**
      */
     public void createFileTemplate(com.tcn.cloud.api.api.v0alpha.FileTemplate request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.FileTemplate> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateFileTemplateMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateFileTemplateMethod(), responseObserver);
     }
 
     /**
      */
     public void listFileTemplates(com.tcn.cloud.api.api.v0alpha.GetFileTemplatesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.FileTemplate> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListFileTemplatesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListFileTemplatesMethod(), responseObserver);
     }
 
     /**
      */
     public void updateFileTemplate(com.tcn.cloud.api.api.v0alpha.FileTemplate request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.FileTemplate> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateFileTemplateMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateFileTemplateMethod(), responseObserver);
     }
 
     /**
      */
     public void deleteFileTemplate(com.tcn.cloud.api.api.v0alpha.FileTemplate request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.FileTemplate> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteFileTemplateMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteFileTemplateMethod(), responseObserver);
     }
 
     /**
      */
     public void getFileTemplate(com.tcn.cloud.api.api.v0alpha.FileTemplate request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.FileTemplate> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetFileTemplateMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetFileTemplateMethod(), responseObserver);
     }
 
     /**
      */
     public void createField(com.tcn.cloud.api.api.v0alpha.Field request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Field> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateFieldMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateFieldMethod(), responseObserver);
     }
 
     /**
      */
     public void listFields(com.tcn.cloud.api.api.v0alpha.ListFieldsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Fields> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListFieldsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListFieldsMethod(), responseObserver);
     }
 
     /**
      */
     public void getField(com.tcn.cloud.api.api.v0alpha.Field request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Field> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetFieldMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetFieldMethod(), responseObserver);
     }
 
     /**
      */
     public void updateField(com.tcn.cloud.api.api.v0alpha.UpdateFieldReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Field> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateFieldMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateFieldMethod(), responseObserver);
     }
 
     /**
      */
     public void deleteField(com.tcn.cloud.api.api.v0alpha.Field request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Field> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteFieldMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteFieldMethod(), responseObserver);
     }
 
     /**
      */
     public void listAvailableFieldsByElementId(com.tcn.cloud.api.api.v0alpha.ListAvailableFieldsByElementIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ProcessFields> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAvailableFieldsByElementIdMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListAvailableFieldsByElementIdMethod(), responseObserver);
     }
 
     /**
@@ -1704,49 +1745,49 @@ public final class LMSGrpc {
      */
     public void listCampaignLinks(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCampaignLinksRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCampaignLinksMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListCampaignLinksMethod(), responseObserver);
     }
 
     /**
      */
     public void peekList(com.tcn.cloud.api.api.v0alpha.PeekListReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.PeekListRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPeekListMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getPeekListMethod(), responseObserver);
     }
 
     /**
      */
     public void getHistory(com.tcn.cloud.api.api.v0alpha.GetHistoryReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetHistoryRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetHistoryMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetHistoryMethod(), responseObserver);
     }
 
     /**
      */
     public void createElement(com.tcn.cloud.api.api.v0alpha.Element request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Element> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateElementMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateElementMethod(), responseObserver);
     }
 
     /**
      */
     public void listElements(com.tcn.cloud.api.api.v0alpha.ListElementsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Element> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListElementsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListElementsMethod(), responseObserver);
     }
 
     /**
      */
     public void updateElement(com.tcn.cloud.api.api.v0alpha.Element request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Element> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateElementMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateElementMethod(), responseObserver);
     }
 
     /**
      */
     public void deleteElement(com.tcn.cloud.api.api.v0alpha.Element request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Element> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteElementMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteElementMethod(), responseObserver);
     }
 
     /**
@@ -1756,7 +1797,7 @@ public final class LMSGrpc {
      */
     public void copyPipelineUpstream(com.tcn.cloud.api.api.v0alpha.Element request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Element> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCopyPipelineUpstreamMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCopyPipelineUpstreamMethod(), responseObserver);
     }
 
     /**
@@ -1766,21 +1807,21 @@ public final class LMSGrpc {
      */
     public void copyPipelineDownstream(com.tcn.cloud.api.api.v0alpha.Element request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Element> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCopyPipelineDownstreamMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCopyPipelineDownstreamMethod(), responseObserver);
     }
 
     /**
      */
     public void processElement(com.tcn.cloud.api.api.v0alpha.ProcessElementReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getProcessElementMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getProcessElementMethod(), responseObserver);
     }
 
     /**
      */
     public void getAvailableFields(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ProcessFields> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAvailableFieldsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetAvailableFieldsMethod(), responseObserver);
     }
 
     /**
@@ -1790,42 +1831,42 @@ public final class LMSGrpc {
      */
     public void listNewEvents(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Events> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListNewEventsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListNewEventsMethod(), responseObserver);
     }
 
     /**
      */
     public void viewQueue(com.tcn.cloud.api.api.v0alpha.ViewQueueReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Events> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getViewQueueMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getViewQueueMethod(), responseObserver);
     }
 
     /**
      */
     public void autocomplete(com.tcn.cloud.api.api.v0alpha.ParseReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ParseRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAutocompleteMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getAutocompleteMethod(), responseObserver);
     }
 
     /**
      */
     public void getComplianceScrubLists(com.tcn.cloud.api.api.v0alpha.GetComplianceScrubListsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetComplianceScrubListsRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetComplianceScrubListsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetComplianceScrubListsMethod(), responseObserver);
     }
 
     /**
      */
     public void findFieldUsages(com.tcn.cloud.api.api.v0alpha.FindFieldUsagesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.FindFieldUsagesRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFindFieldUsagesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getFindFieldUsagesMethod(), responseObserver);
     }
 
     /**
      */
     public void findInvalidElements(com.tcn.cloud.api.api.v0alpha.FindInvalidElementsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.FindInvalidElementsRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFindInvalidElementsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getFindInvalidElementsMethod(), responseObserver);
     }
 
     /**
@@ -1835,63 +1876,63 @@ public final class LMSGrpc {
      */
     public void createCollection(com.tcn.cloud.api.api.v0alpha.CollectionMetadata request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CollectionMetadata> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateCollectionMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateCollectionMethod(), responseObserver);
     }
 
     /**
      */
     public void getCollection(com.tcn.cloud.api.api.v0alpha.GetCollectionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CollectionMetadata> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCollectionMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetCollectionMethod(), responseObserver);
     }
 
     /**
      */
     public void updateCollection(com.tcn.cloud.api.api.v0alpha.CollectionMetadata request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateCollectionMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateCollectionMethod(), responseObserver);
     }
 
     /**
      */
     public void deleteCollection(com.tcn.cloud.api.api.v0alpha.DeleteCollectionReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteCollectionMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteCollectionMethod(), responseObserver);
     }
 
     /**
      */
     public void listCollections(com.tcn.cloud.api.api.v0alpha.ListCollectionsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCollectionsRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCollectionsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListCollectionsMethod(), responseObserver);
     }
 
     /**
      */
     public void resetCollection(com.tcn.cloud.api.api.v0alpha.ResetCollectionReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getResetCollectionMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getResetCollectionMethod(), responseObserver);
     }
 
     /**
      */
     public void addCollectionEntry(com.tcn.cloud.api.api.v0alpha.CollectionEntry request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CollectionEntry> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddCollectionEntryMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getAddCollectionEntryMethod(), responseObserver);
     }
 
     /**
      */
     public void deleteCollectionEntry(com.tcn.cloud.api.api.v0alpha.DeleteCollectionEntryReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteCollectionEntryMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteCollectionEntryMethod(), responseObserver);
     }
 
     /**
      */
     public void updateCollectionEntry(com.tcn.cloud.api.api.v0alpha.CollectionEntry request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CollectionEntry> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateCollectionEntryMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateCollectionEntryMethod(), responseObserver);
     }
 
     /**
@@ -1902,7 +1943,7 @@ public final class LMSGrpc {
      */
     public void streamCollection(com.tcn.cloud.api.api.v0alpha.StreamCollectionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CollectionEntry> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStreamCollectionMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getStreamCollectionMethod(), responseObserver);
     }
 
     /**
@@ -1913,7 +1954,7 @@ public final class LMSGrpc {
      */
     public void searchCollectionsPaginated(com.tcn.cloud.api.api.v0alpha.SearchCollectionsPaginatedReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.PaginatedSearchRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSearchCollectionsPaginatedMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getSearchCollectionsPaginatedMethod(), responseObserver);
     }
 
     /**
@@ -1924,7 +1965,7 @@ public final class LMSGrpc {
      */
     public void getCollectionEntries(com.tcn.cloud.api.api.v0alpha.GetCollectionEntriesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetCollectionEntriesRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCollectionEntriesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetCollectionEntriesMethod(), responseObserver);
     }
 
     /**
@@ -1934,7 +1975,7 @@ public final class LMSGrpc {
      */
     public void createCjsSearchDefinition(com.tcn.cloud.api.api.v0alpha.CjsSearchDefinition request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CjsSearchDefinition> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateCjsSearchDefinitionMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateCjsSearchDefinitionMethod(), responseObserver);
     }
 
     /**
@@ -1944,7 +1985,7 @@ public final class LMSGrpc {
      */
     public void getCjsSearchDefinition(com.tcn.cloud.api.api.v0alpha.GetCjsSearchDefinitionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CjsSearchDefinition> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCjsSearchDefinitionMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetCjsSearchDefinitionMethod(), responseObserver);
     }
 
     /**
@@ -1954,7 +1995,7 @@ public final class LMSGrpc {
      */
     public void updateCjsSearchDefinition(com.tcn.cloud.api.api.v0alpha.CjsSearchDefinition request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateCjsSearchDefinitionMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateCjsSearchDefinitionMethod(), responseObserver);
     }
 
     /**
@@ -1964,7 +2005,7 @@ public final class LMSGrpc {
      */
     public void deleteCjsSearchDefinition(com.tcn.cloud.api.api.v0alpha.DeleteCjsSearchDefinitionReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteCjsSearchDefinitionMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteCjsSearchDefinitionMethod(), responseObserver);
     }
 
     /**
@@ -1974,7 +2015,7 @@ public final class LMSGrpc {
      */
     public void listCjsSearchDefinitions(com.tcn.cloud.api.api.v0alpha.ListCjsSearchDefinitionsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCjsSearchDefinitionsRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCjsSearchDefinitionsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListCjsSearchDefinitionsMethod(), responseObserver);
     }
 
     /**
@@ -1984,7 +2025,7 @@ public final class LMSGrpc {
      */
     public void executeCjsSearchDefinition(com.tcn.cloud.api.api.v0alpha.ExecuteCjsSearchDefinitionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ExecuteCjsSearchDefinitionRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getExecuteCjsSearchDefinitionMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getExecuteCjsSearchDefinitionMethod(), responseObserver);
     }
 
     /**
@@ -1994,7 +2035,7 @@ public final class LMSGrpc {
      */
     public void getCjsSecureSearchCriteria(com.tcn.cloud.api.api.v0alpha.GetCjsSecureSearchCriteriaReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCjsSecureSearchCriteriaMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetCjsSecureSearchCriteriaMethod(), responseObserver);
     }
 
     /**
@@ -2004,7 +2045,7 @@ public final class LMSGrpc {
      */
     public void createCjsSecureSearchCriteria(com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateCjsSecureSearchCriteriaMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateCjsSecureSearchCriteriaMethod(), responseObserver);
     }
 
     /**
@@ -2014,357 +2055,357 @@ public final class LMSGrpc {
      */
     public void updateCjsSecureSearchCriteria(com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateCjsSecureSearchCriteriaMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateCjsSecureSearchCriteriaMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetPublicKeyMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetPublicKeyReq,
                 com.tcn.cloud.api.api.v0alpha.PublicKey>(
                   this, METHODID_GET_PUBLIC_KEY)))
           .addMethod(
             getCreateFileTemplateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.FileTemplate,
                 com.tcn.cloud.api.api.v0alpha.FileTemplate>(
                   this, METHODID_CREATE_FILE_TEMPLATE)))
           .addMethod(
             getListFileTemplatesMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            asyncServerStreamingCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetFileTemplatesReq,
                 com.tcn.cloud.api.api.v0alpha.FileTemplate>(
                   this, METHODID_LIST_FILE_TEMPLATES)))
           .addMethod(
             getUpdateFileTemplateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.FileTemplate,
                 com.tcn.cloud.api.api.v0alpha.FileTemplate>(
                   this, METHODID_UPDATE_FILE_TEMPLATE)))
           .addMethod(
             getDeleteFileTemplateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.FileTemplate,
                 com.tcn.cloud.api.api.v0alpha.FileTemplate>(
                   this, METHODID_DELETE_FILE_TEMPLATE)))
           .addMethod(
             getGetFileTemplateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.FileTemplate,
                 com.tcn.cloud.api.api.v0alpha.FileTemplate>(
                   this, METHODID_GET_FILE_TEMPLATE)))
           .addMethod(
             getCreateFieldMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.Field,
                 com.tcn.cloud.api.api.v0alpha.Field>(
                   this, METHODID_CREATE_FIELD)))
           .addMethod(
             getListFieldsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListFieldsReq,
                 com.tcn.cloud.api.api.v0alpha.Fields>(
                   this, METHODID_LIST_FIELDS)))
           .addMethod(
             getGetFieldMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.Field,
                 com.tcn.cloud.api.api.v0alpha.Field>(
                   this, METHODID_GET_FIELD)))
           .addMethod(
             getUpdateFieldMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateFieldReq,
                 com.tcn.cloud.api.api.v0alpha.Field>(
                   this, METHODID_UPDATE_FIELD)))
           .addMethod(
             getDeleteFieldMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.Field,
                 com.tcn.cloud.api.api.v0alpha.Field>(
                   this, METHODID_DELETE_FIELD)))
           .addMethod(
             getListAvailableFieldsByElementIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListAvailableFieldsByElementIdReq,
                 com.tcn.cloud.api.api.v0alpha.ProcessFields>(
                   this, METHODID_LIST_AVAILABLE_FIELDS_BY_ELEMENT_ID)))
           .addMethod(
             getListCampaignLinksMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.google.protobuf.Empty,
                 com.tcn.cloud.api.api.v0alpha.ListCampaignLinksRes>(
                   this, METHODID_LIST_CAMPAIGN_LINKS)))
           .addMethod(
             getPeekListMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.PeekListReq,
                 com.tcn.cloud.api.api.v0alpha.PeekListRes>(
                   this, METHODID_PEEK_LIST)))
           .addMethod(
             getGetHistoryMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetHistoryReq,
                 com.tcn.cloud.api.api.v0alpha.GetHistoryRes>(
                   this, METHODID_GET_HISTORY)))
           .addMethod(
             getCreateElementMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.Element,
                 com.tcn.cloud.api.api.v0alpha.Element>(
                   this, METHODID_CREATE_ELEMENT)))
           .addMethod(
             getListElementsMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            asyncServerStreamingCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListElementsReq,
                 com.tcn.cloud.api.api.v0alpha.Element>(
                   this, METHODID_LIST_ELEMENTS)))
           .addMethod(
             getUpdateElementMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.Element,
                 com.tcn.cloud.api.api.v0alpha.Element>(
                   this, METHODID_UPDATE_ELEMENT)))
           .addMethod(
             getDeleteElementMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.Element,
                 com.tcn.cloud.api.api.v0alpha.Element>(
                   this, METHODID_DELETE_ELEMENT)))
           .addMethod(
             getCopyPipelineUpstreamMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            asyncServerStreamingCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.Element,
                 com.tcn.cloud.api.api.v0alpha.Element>(
                   this, METHODID_COPY_PIPELINE_UPSTREAM)))
           .addMethod(
             getCopyPipelineDownstreamMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            asyncServerStreamingCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.Element,
                 com.tcn.cloud.api.api.v0alpha.Element>(
                   this, METHODID_COPY_PIPELINE_DOWNSTREAM)))
           .addMethod(
             getProcessElementMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ProcessElementReq,
                 com.google.protobuf.Empty>(
                   this, METHODID_PROCESS_ELEMENT)))
           .addMethod(
             getGetAvailableFieldsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.google.protobuf.Empty,
                 com.tcn.cloud.api.api.v0alpha.ProcessFields>(
                   this, METHODID_GET_AVAILABLE_FIELDS)))
           .addMethod(
             getListNewEventsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.google.protobuf.Empty,
                 com.tcn.cloud.api.api.v0alpha.Events>(
                   this, METHODID_LIST_NEW_EVENTS)))
           .addMethod(
             getViewQueueMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ViewQueueReq,
                 com.tcn.cloud.api.api.v0alpha.Events>(
                   this, METHODID_VIEW_QUEUE)))
           .addMethod(
             getAutocompleteMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ParseReq,
                 com.tcn.cloud.api.api.v0alpha.ParseRes>(
                   this, METHODID_AUTOCOMPLETE)))
           .addMethod(
             getGetComplianceScrubListsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetComplianceScrubListsReq,
                 com.tcn.cloud.api.api.v0alpha.GetComplianceScrubListsRes>(
                   this, METHODID_GET_COMPLIANCE_SCRUB_LISTS)))
           .addMethod(
             getFindFieldUsagesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.FindFieldUsagesReq,
                 com.tcn.cloud.api.api.v0alpha.FindFieldUsagesRes>(
                   this, METHODID_FIND_FIELD_USAGES)))
           .addMethod(
             getFindInvalidElementsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.FindInvalidElementsReq,
                 com.tcn.cloud.api.api.v0alpha.FindInvalidElementsRes>(
                   this, METHODID_FIND_INVALID_ELEMENTS)))
           .addMethod(
             getCreateCollectionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CollectionMetadata,
                 com.tcn.cloud.api.api.v0alpha.CollectionMetadata>(
                   this, METHODID_CREATE_COLLECTION)))
           .addMethod(
             getGetCollectionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetCollectionReq,
                 com.tcn.cloud.api.api.v0alpha.CollectionMetadata>(
                   this, METHODID_GET_COLLECTION)))
           .addMethod(
             getUpdateCollectionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CollectionMetadata,
                 com.google.protobuf.Empty>(
                   this, METHODID_UPDATE_COLLECTION)))
           .addMethod(
             getDeleteCollectionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.DeleteCollectionReq,
                 com.google.protobuf.Empty>(
                   this, METHODID_DELETE_COLLECTION)))
           .addMethod(
             getListCollectionsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListCollectionsReq,
                 com.tcn.cloud.api.api.v0alpha.ListCollectionsRes>(
                   this, METHODID_LIST_COLLECTIONS)))
           .addMethod(
             getResetCollectionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ResetCollectionReq,
                 com.google.protobuf.Empty>(
                   this, METHODID_RESET_COLLECTION)))
           .addMethod(
             getAddCollectionEntryMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CollectionEntry,
                 com.tcn.cloud.api.api.v0alpha.CollectionEntry>(
                   this, METHODID_ADD_COLLECTION_ENTRY)))
           .addMethod(
             getDeleteCollectionEntryMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.DeleteCollectionEntryReq,
                 com.google.protobuf.Empty>(
                   this, METHODID_DELETE_COLLECTION_ENTRY)))
           .addMethod(
             getUpdateCollectionEntryMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CollectionEntry,
                 com.tcn.cloud.api.api.v0alpha.CollectionEntry>(
                   this, METHODID_UPDATE_COLLECTION_ENTRY)))
           .addMethod(
             getStreamCollectionMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            asyncServerStreamingCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.StreamCollectionReq,
                 com.tcn.cloud.api.api.v0alpha.CollectionEntry>(
                   this, METHODID_STREAM_COLLECTION)))
           .addMethod(
             getSearchCollectionsPaginatedMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.SearchCollectionsPaginatedReq,
                 com.tcn.cloud.api.api.v0alpha.PaginatedSearchRes>(
                   this, METHODID_SEARCH_COLLECTIONS_PAGINATED)))
           .addMethod(
             getGetCollectionEntriesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetCollectionEntriesReq,
                 com.tcn.cloud.api.api.v0alpha.GetCollectionEntriesRes>(
                   this, METHODID_GET_COLLECTION_ENTRIES)))
           .addMethod(
             getCreateCjsSearchDefinitionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CjsSearchDefinition,
                 com.tcn.cloud.api.api.v0alpha.CjsSearchDefinition>(
                   this, METHODID_CREATE_CJS_SEARCH_DEFINITION)))
           .addMethod(
             getGetCjsSearchDefinitionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetCjsSearchDefinitionReq,
                 com.tcn.cloud.api.api.v0alpha.CjsSearchDefinition>(
                   this, METHODID_GET_CJS_SEARCH_DEFINITION)))
           .addMethod(
             getUpdateCjsSearchDefinitionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CjsSearchDefinition,
                 com.google.protobuf.Empty>(
                   this, METHODID_UPDATE_CJS_SEARCH_DEFINITION)))
           .addMethod(
             getDeleteCjsSearchDefinitionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.DeleteCjsSearchDefinitionReq,
                 com.google.protobuf.Empty>(
                   this, METHODID_DELETE_CJS_SEARCH_DEFINITION)))
           .addMethod(
             getListCjsSearchDefinitionsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListCjsSearchDefinitionsReq,
                 com.tcn.cloud.api.api.v0alpha.ListCjsSearchDefinitionsRes>(
                   this, METHODID_LIST_CJS_SEARCH_DEFINITIONS)))
           .addMethod(
             getExecuteCjsSearchDefinitionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ExecuteCjsSearchDefinitionReq,
                 com.tcn.cloud.api.api.v0alpha.ExecuteCjsSearchDefinitionRes>(
                   this, METHODID_EXECUTE_CJS_SEARCH_DEFINITION)))
           .addMethod(
             getGetCjsSecureSearchCriteriaMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetCjsSecureSearchCriteriaReq,
                 com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria>(
                   this, METHODID_GET_CJS_SECURE_SEARCH_CRITERIA)))
           .addMethod(
             getCreateCjsSecureSearchCriteriaMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria,
                 com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria>(
                   this, METHODID_CREATE_CJS_SECURE_SEARCH_CRITERIA)))
           .addMethod(
             getUpdateCjsSecureSearchCriteriaMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria,
                 com.google.protobuf.Empty>(
@@ -2375,15 +2416,19 @@ public final class LMSGrpc {
 
   /**
    */
-  public static final class LMSStub extends io.grpc.stub.AbstractAsyncStub<LMSStub> {
-    private LMSStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class LMSStub extends io.grpc.stub.AbstractStub<LMSStub> {
+    private LMSStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private LMSStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected LMSStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected LMSStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new LMSStub(channel, callOptions);
     }
 
@@ -2391,7 +2436,7 @@ public final class LMSGrpc {
      */
     public void getPublicKey(com.tcn.cloud.api.api.v0alpha.GetPublicKeyReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.PublicKey> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetPublicKeyMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2399,7 +2444,7 @@ public final class LMSGrpc {
      */
     public void createFileTemplate(com.tcn.cloud.api.api.v0alpha.FileTemplate request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.FileTemplate> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateFileTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2407,7 +2452,7 @@ public final class LMSGrpc {
      */
     public void listFileTemplates(com.tcn.cloud.api.api.v0alpha.GetFileTemplatesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.FileTemplate> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+      asyncServerStreamingCall(
           getChannel().newCall(getListFileTemplatesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2415,7 +2460,7 @@ public final class LMSGrpc {
      */
     public void updateFileTemplate(com.tcn.cloud.api.api.v0alpha.FileTemplate request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.FileTemplate> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateFileTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2423,7 +2468,7 @@ public final class LMSGrpc {
      */
     public void deleteFileTemplate(com.tcn.cloud.api.api.v0alpha.FileTemplate request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.FileTemplate> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDeleteFileTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2431,7 +2476,7 @@ public final class LMSGrpc {
      */
     public void getFileTemplate(com.tcn.cloud.api.api.v0alpha.FileTemplate request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.FileTemplate> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetFileTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2439,7 +2484,7 @@ public final class LMSGrpc {
      */
     public void createField(com.tcn.cloud.api.api.v0alpha.Field request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Field> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateFieldMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2447,7 +2492,7 @@ public final class LMSGrpc {
      */
     public void listFields(com.tcn.cloud.api.api.v0alpha.ListFieldsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Fields> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListFieldsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2455,7 +2500,7 @@ public final class LMSGrpc {
      */
     public void getField(com.tcn.cloud.api.api.v0alpha.Field request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Field> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetFieldMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2463,7 +2508,7 @@ public final class LMSGrpc {
      */
     public void updateField(com.tcn.cloud.api.api.v0alpha.UpdateFieldReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Field> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateFieldMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2471,7 +2516,7 @@ public final class LMSGrpc {
      */
     public void deleteField(com.tcn.cloud.api.api.v0alpha.Field request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Field> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDeleteFieldMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2479,7 +2524,7 @@ public final class LMSGrpc {
      */
     public void listAvailableFieldsByElementId(com.tcn.cloud.api.api.v0alpha.ListAvailableFieldsByElementIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ProcessFields> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListAvailableFieldsByElementIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2490,7 +2535,7 @@ public final class LMSGrpc {
      */
     public void listCampaignLinks(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCampaignLinksRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListCampaignLinksMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2498,7 +2543,7 @@ public final class LMSGrpc {
      */
     public void peekList(com.tcn.cloud.api.api.v0alpha.PeekListReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.PeekListRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getPeekListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2506,7 +2551,7 @@ public final class LMSGrpc {
      */
     public void getHistory(com.tcn.cloud.api.api.v0alpha.GetHistoryReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetHistoryRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetHistoryMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2514,7 +2559,7 @@ public final class LMSGrpc {
      */
     public void createElement(com.tcn.cloud.api.api.v0alpha.Element request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Element> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateElementMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2522,7 +2567,7 @@ public final class LMSGrpc {
      */
     public void listElements(com.tcn.cloud.api.api.v0alpha.ListElementsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Element> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+      asyncServerStreamingCall(
           getChannel().newCall(getListElementsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2530,7 +2575,7 @@ public final class LMSGrpc {
      */
     public void updateElement(com.tcn.cloud.api.api.v0alpha.Element request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Element> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateElementMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2538,7 +2583,7 @@ public final class LMSGrpc {
      */
     public void deleteElement(com.tcn.cloud.api.api.v0alpha.Element request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Element> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDeleteElementMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2549,7 +2594,7 @@ public final class LMSGrpc {
      */
     public void copyPipelineUpstream(com.tcn.cloud.api.api.v0alpha.Element request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Element> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+      asyncServerStreamingCall(
           getChannel().newCall(getCopyPipelineUpstreamMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2560,7 +2605,7 @@ public final class LMSGrpc {
      */
     public void copyPipelineDownstream(com.tcn.cloud.api.api.v0alpha.Element request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Element> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+      asyncServerStreamingCall(
           getChannel().newCall(getCopyPipelineDownstreamMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2568,7 +2613,7 @@ public final class LMSGrpc {
      */
     public void processElement(com.tcn.cloud.api.api.v0alpha.ProcessElementReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getProcessElementMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2576,7 +2621,7 @@ public final class LMSGrpc {
      */
     public void getAvailableFields(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ProcessFields> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetAvailableFieldsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2587,7 +2632,7 @@ public final class LMSGrpc {
      */
     public void listNewEvents(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Events> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListNewEventsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2595,7 +2640,7 @@ public final class LMSGrpc {
      */
     public void viewQueue(com.tcn.cloud.api.api.v0alpha.ViewQueueReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Events> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getViewQueueMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2603,7 +2648,7 @@ public final class LMSGrpc {
      */
     public void autocomplete(com.tcn.cloud.api.api.v0alpha.ParseReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ParseRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getAutocompleteMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2611,7 +2656,7 @@ public final class LMSGrpc {
      */
     public void getComplianceScrubLists(com.tcn.cloud.api.api.v0alpha.GetComplianceScrubListsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetComplianceScrubListsRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetComplianceScrubListsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2619,7 +2664,7 @@ public final class LMSGrpc {
      */
     public void findFieldUsages(com.tcn.cloud.api.api.v0alpha.FindFieldUsagesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.FindFieldUsagesRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getFindFieldUsagesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2627,7 +2672,7 @@ public final class LMSGrpc {
      */
     public void findInvalidElements(com.tcn.cloud.api.api.v0alpha.FindInvalidElementsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.FindInvalidElementsRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getFindInvalidElementsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2638,7 +2683,7 @@ public final class LMSGrpc {
      */
     public void createCollection(com.tcn.cloud.api.api.v0alpha.CollectionMetadata request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CollectionMetadata> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateCollectionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2646,7 +2691,7 @@ public final class LMSGrpc {
      */
     public void getCollection(com.tcn.cloud.api.api.v0alpha.GetCollectionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CollectionMetadata> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetCollectionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2654,7 +2699,7 @@ public final class LMSGrpc {
      */
     public void updateCollection(com.tcn.cloud.api.api.v0alpha.CollectionMetadata request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateCollectionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2662,7 +2707,7 @@ public final class LMSGrpc {
      */
     public void deleteCollection(com.tcn.cloud.api.api.v0alpha.DeleteCollectionReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDeleteCollectionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2670,7 +2715,7 @@ public final class LMSGrpc {
      */
     public void listCollections(com.tcn.cloud.api.api.v0alpha.ListCollectionsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCollectionsRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListCollectionsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2678,7 +2723,7 @@ public final class LMSGrpc {
      */
     public void resetCollection(com.tcn.cloud.api.api.v0alpha.ResetCollectionReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getResetCollectionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2686,7 +2731,7 @@ public final class LMSGrpc {
      */
     public void addCollectionEntry(com.tcn.cloud.api.api.v0alpha.CollectionEntry request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CollectionEntry> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getAddCollectionEntryMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2694,7 +2739,7 @@ public final class LMSGrpc {
      */
     public void deleteCollectionEntry(com.tcn.cloud.api.api.v0alpha.DeleteCollectionEntryReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDeleteCollectionEntryMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2702,7 +2747,7 @@ public final class LMSGrpc {
      */
     public void updateCollectionEntry(com.tcn.cloud.api.api.v0alpha.CollectionEntry request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CollectionEntry> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateCollectionEntryMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2714,7 +2759,7 @@ public final class LMSGrpc {
      */
     public void streamCollection(com.tcn.cloud.api.api.v0alpha.StreamCollectionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CollectionEntry> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+      asyncServerStreamingCall(
           getChannel().newCall(getStreamCollectionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2726,7 +2771,7 @@ public final class LMSGrpc {
      */
     public void searchCollectionsPaginated(com.tcn.cloud.api.api.v0alpha.SearchCollectionsPaginatedReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.PaginatedSearchRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getSearchCollectionsPaginatedMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2738,7 +2783,7 @@ public final class LMSGrpc {
      */
     public void getCollectionEntries(com.tcn.cloud.api.api.v0alpha.GetCollectionEntriesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetCollectionEntriesRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetCollectionEntriesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2749,7 +2794,7 @@ public final class LMSGrpc {
      */
     public void createCjsSearchDefinition(com.tcn.cloud.api.api.v0alpha.CjsSearchDefinition request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CjsSearchDefinition> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateCjsSearchDefinitionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2760,7 +2805,7 @@ public final class LMSGrpc {
      */
     public void getCjsSearchDefinition(com.tcn.cloud.api.api.v0alpha.GetCjsSearchDefinitionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CjsSearchDefinition> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetCjsSearchDefinitionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2771,7 +2816,7 @@ public final class LMSGrpc {
      */
     public void updateCjsSearchDefinition(com.tcn.cloud.api.api.v0alpha.CjsSearchDefinition request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateCjsSearchDefinitionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2782,7 +2827,7 @@ public final class LMSGrpc {
      */
     public void deleteCjsSearchDefinition(com.tcn.cloud.api.api.v0alpha.DeleteCjsSearchDefinitionReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDeleteCjsSearchDefinitionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2793,7 +2838,7 @@ public final class LMSGrpc {
      */
     public void listCjsSearchDefinitions(com.tcn.cloud.api.api.v0alpha.ListCjsSearchDefinitionsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCjsSearchDefinitionsRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListCjsSearchDefinitionsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2804,7 +2849,7 @@ public final class LMSGrpc {
      */
     public void executeCjsSearchDefinition(com.tcn.cloud.api.api.v0alpha.ExecuteCjsSearchDefinitionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ExecuteCjsSearchDefinitionRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getExecuteCjsSearchDefinitionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2815,7 +2860,7 @@ public final class LMSGrpc {
      */
     public void getCjsSecureSearchCriteria(com.tcn.cloud.api.api.v0alpha.GetCjsSecureSearchCriteriaReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetCjsSecureSearchCriteriaMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2826,7 +2871,7 @@ public final class LMSGrpc {
      */
     public void createCjsSecureSearchCriteria(com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateCjsSecureSearchCriteriaMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2837,36 +2882,40 @@ public final class LMSGrpc {
      */
     public void updateCjsSecureSearchCriteria(com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateCjsSecureSearchCriteriaMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
    */
-  public static final class LMSBlockingStub extends io.grpc.stub.AbstractBlockingStub<LMSBlockingStub> {
-    private LMSBlockingStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class LMSBlockingStub extends io.grpc.stub.AbstractStub<LMSBlockingStub> {
+    private LMSBlockingStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private LMSBlockingStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected LMSBlockingStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected LMSBlockingStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new LMSBlockingStub(channel, callOptions);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.PublicKey getPublicKey(com.tcn.cloud.api.api.v0alpha.GetPublicKeyReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetPublicKeyMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.FileTemplate createFileTemplate(com.tcn.cloud.api.api.v0alpha.FileTemplate request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateFileTemplateMethod(), getCallOptions(), request);
     }
 
@@ -2874,70 +2923,70 @@ public final class LMSGrpc {
      */
     public java.util.Iterator<com.tcn.cloud.api.api.v0alpha.FileTemplate> listFileTemplates(
         com.tcn.cloud.api.api.v0alpha.GetFileTemplatesReq request) {
-      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+      return blockingServerStreamingCall(
           getChannel(), getListFileTemplatesMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.FileTemplate updateFileTemplate(com.tcn.cloud.api.api.v0alpha.FileTemplate request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateFileTemplateMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.FileTemplate deleteFileTemplate(com.tcn.cloud.api.api.v0alpha.FileTemplate request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDeleteFileTemplateMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.FileTemplate getFileTemplate(com.tcn.cloud.api.api.v0alpha.FileTemplate request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetFileTemplateMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.Field createField(com.tcn.cloud.api.api.v0alpha.Field request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateFieldMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.Fields listFields(com.tcn.cloud.api.api.v0alpha.ListFieldsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListFieldsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.Field getField(com.tcn.cloud.api.api.v0alpha.Field request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetFieldMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.Field updateField(com.tcn.cloud.api.api.v0alpha.UpdateFieldReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateFieldMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.Field deleteField(com.tcn.cloud.api.api.v0alpha.Field request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDeleteFieldMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.ProcessFields listAvailableFieldsByElementId(com.tcn.cloud.api.api.v0alpha.ListAvailableFieldsByElementIdReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListAvailableFieldsByElementIdMethod(), getCallOptions(), request);
     }
 
@@ -2947,28 +2996,28 @@ public final class LMSGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListCampaignLinksRes listCampaignLinks(com.google.protobuf.Empty request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListCampaignLinksMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.PeekListRes peekList(com.tcn.cloud.api.api.v0alpha.PeekListReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getPeekListMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.GetHistoryRes getHistory(com.tcn.cloud.api.api.v0alpha.GetHistoryReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetHistoryMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.Element createElement(com.tcn.cloud.api.api.v0alpha.Element request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateElementMethod(), getCallOptions(), request);
     }
 
@@ -2976,21 +3025,21 @@ public final class LMSGrpc {
      */
     public java.util.Iterator<com.tcn.cloud.api.api.v0alpha.Element> listElements(
         com.tcn.cloud.api.api.v0alpha.ListElementsReq request) {
-      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+      return blockingServerStreamingCall(
           getChannel(), getListElementsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.Element updateElement(com.tcn.cloud.api.api.v0alpha.Element request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateElementMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.Element deleteElement(com.tcn.cloud.api.api.v0alpha.Element request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDeleteElementMethod(), getCallOptions(), request);
     }
 
@@ -3001,7 +3050,7 @@ public final class LMSGrpc {
      */
     public java.util.Iterator<com.tcn.cloud.api.api.v0alpha.Element> copyPipelineUpstream(
         com.tcn.cloud.api.api.v0alpha.Element request) {
-      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+      return blockingServerStreamingCall(
           getChannel(), getCopyPipelineUpstreamMethod(), getCallOptions(), request);
     }
 
@@ -3012,21 +3061,21 @@ public final class LMSGrpc {
      */
     public java.util.Iterator<com.tcn.cloud.api.api.v0alpha.Element> copyPipelineDownstream(
         com.tcn.cloud.api.api.v0alpha.Element request) {
-      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+      return blockingServerStreamingCall(
           getChannel(), getCopyPipelineDownstreamMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.google.protobuf.Empty processElement(com.tcn.cloud.api.api.v0alpha.ProcessElementReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getProcessElementMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.ProcessFields getAvailableFields(com.google.protobuf.Empty request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetAvailableFieldsMethod(), getCallOptions(), request);
     }
 
@@ -3036,42 +3085,42 @@ public final class LMSGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.Events listNewEvents(com.google.protobuf.Empty request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListNewEventsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.Events viewQueue(com.tcn.cloud.api.api.v0alpha.ViewQueueReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getViewQueueMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.ParseRes autocomplete(com.tcn.cloud.api.api.v0alpha.ParseReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getAutocompleteMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.GetComplianceScrubListsRes getComplianceScrubLists(com.tcn.cloud.api.api.v0alpha.GetComplianceScrubListsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetComplianceScrubListsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.FindFieldUsagesRes findFieldUsages(com.tcn.cloud.api.api.v0alpha.FindFieldUsagesReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getFindFieldUsagesMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.FindInvalidElementsRes findInvalidElements(com.tcn.cloud.api.api.v0alpha.FindInvalidElementsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getFindInvalidElementsMethod(), getCallOptions(), request);
     }
 
@@ -3081,63 +3130,63 @@ public final class LMSGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CollectionMetadata createCollection(com.tcn.cloud.api.api.v0alpha.CollectionMetadata request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateCollectionMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.CollectionMetadata getCollection(com.tcn.cloud.api.api.v0alpha.GetCollectionReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetCollectionMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.google.protobuf.Empty updateCollection(com.tcn.cloud.api.api.v0alpha.CollectionMetadata request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateCollectionMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.google.protobuf.Empty deleteCollection(com.tcn.cloud.api.api.v0alpha.DeleteCollectionReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDeleteCollectionMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.ListCollectionsRes listCollections(com.tcn.cloud.api.api.v0alpha.ListCollectionsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListCollectionsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.google.protobuf.Empty resetCollection(com.tcn.cloud.api.api.v0alpha.ResetCollectionReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getResetCollectionMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.CollectionEntry addCollectionEntry(com.tcn.cloud.api.api.v0alpha.CollectionEntry request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getAddCollectionEntryMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.google.protobuf.Empty deleteCollectionEntry(com.tcn.cloud.api.api.v0alpha.DeleteCollectionEntryReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDeleteCollectionEntryMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.CollectionEntry updateCollectionEntry(com.tcn.cloud.api.api.v0alpha.CollectionEntry request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateCollectionEntryMethod(), getCallOptions(), request);
     }
 
@@ -3149,7 +3198,7 @@ public final class LMSGrpc {
      */
     public java.util.Iterator<com.tcn.cloud.api.api.v0alpha.CollectionEntry> streamCollection(
         com.tcn.cloud.api.api.v0alpha.StreamCollectionReq request) {
-      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+      return blockingServerStreamingCall(
           getChannel(), getStreamCollectionMethod(), getCallOptions(), request);
     }
 
@@ -3160,7 +3209,7 @@ public final class LMSGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.PaginatedSearchRes searchCollectionsPaginated(com.tcn.cloud.api.api.v0alpha.SearchCollectionsPaginatedReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getSearchCollectionsPaginatedMethod(), getCallOptions(), request);
     }
 
@@ -3171,7 +3220,7 @@ public final class LMSGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetCollectionEntriesRes getCollectionEntries(com.tcn.cloud.api.api.v0alpha.GetCollectionEntriesReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetCollectionEntriesMethod(), getCallOptions(), request);
     }
 
@@ -3181,7 +3230,7 @@ public final class LMSGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CjsSearchDefinition createCjsSearchDefinition(com.tcn.cloud.api.api.v0alpha.CjsSearchDefinition request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateCjsSearchDefinitionMethod(), getCallOptions(), request);
     }
 
@@ -3191,7 +3240,7 @@ public final class LMSGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CjsSearchDefinition getCjsSearchDefinition(com.tcn.cloud.api.api.v0alpha.GetCjsSearchDefinitionReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetCjsSearchDefinitionMethod(), getCallOptions(), request);
     }
 
@@ -3201,7 +3250,7 @@ public final class LMSGrpc {
      * </pre>
      */
     public com.google.protobuf.Empty updateCjsSearchDefinition(com.tcn.cloud.api.api.v0alpha.CjsSearchDefinition request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateCjsSearchDefinitionMethod(), getCallOptions(), request);
     }
 
@@ -3211,7 +3260,7 @@ public final class LMSGrpc {
      * </pre>
      */
     public com.google.protobuf.Empty deleteCjsSearchDefinition(com.tcn.cloud.api.api.v0alpha.DeleteCjsSearchDefinitionReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDeleteCjsSearchDefinitionMethod(), getCallOptions(), request);
     }
 
@@ -3221,7 +3270,7 @@ public final class LMSGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListCjsSearchDefinitionsRes listCjsSearchDefinitions(com.tcn.cloud.api.api.v0alpha.ListCjsSearchDefinitionsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListCjsSearchDefinitionsMethod(), getCallOptions(), request);
     }
 
@@ -3231,7 +3280,7 @@ public final class LMSGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ExecuteCjsSearchDefinitionRes executeCjsSearchDefinition(com.tcn.cloud.api.api.v0alpha.ExecuteCjsSearchDefinitionReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getExecuteCjsSearchDefinitionMethod(), getCallOptions(), request);
     }
 
@@ -3241,7 +3290,7 @@ public final class LMSGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria getCjsSecureSearchCriteria(com.tcn.cloud.api.api.v0alpha.GetCjsSecureSearchCriteriaReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetCjsSecureSearchCriteriaMethod(), getCallOptions(), request);
     }
 
@@ -3251,7 +3300,7 @@ public final class LMSGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria createCjsSecureSearchCriteria(com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateCjsSecureSearchCriteriaMethod(), getCallOptions(), request);
     }
 
@@ -3261,22 +3310,26 @@ public final class LMSGrpc {
      * </pre>
      */
     public com.google.protobuf.Empty updateCjsSecureSearchCriteria(com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateCjsSecureSearchCriteriaMethod(), getCallOptions(), request);
     }
   }
 
   /**
    */
-  public static final class LMSFutureStub extends io.grpc.stub.AbstractFutureStub<LMSFutureStub> {
-    private LMSFutureStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class LMSFutureStub extends io.grpc.stub.AbstractStub<LMSFutureStub> {
+    private LMSFutureStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private LMSFutureStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected LMSFutureStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected LMSFutureStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new LMSFutureStub(channel, callOptions);
     }
 
@@ -3284,7 +3337,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.PublicKey> getPublicKey(
         com.tcn.cloud.api.api.v0alpha.GetPublicKeyReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetPublicKeyMethod(), getCallOptions()), request);
     }
 
@@ -3292,7 +3345,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.FileTemplate> createFileTemplate(
         com.tcn.cloud.api.api.v0alpha.FileTemplate request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateFileTemplateMethod(), getCallOptions()), request);
     }
 
@@ -3300,7 +3353,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.FileTemplate> updateFileTemplate(
         com.tcn.cloud.api.api.v0alpha.FileTemplate request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateFileTemplateMethod(), getCallOptions()), request);
     }
 
@@ -3308,7 +3361,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.FileTemplate> deleteFileTemplate(
         com.tcn.cloud.api.api.v0alpha.FileTemplate request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDeleteFileTemplateMethod(), getCallOptions()), request);
     }
 
@@ -3316,7 +3369,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.FileTemplate> getFileTemplate(
         com.tcn.cloud.api.api.v0alpha.FileTemplate request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetFileTemplateMethod(), getCallOptions()), request);
     }
 
@@ -3324,7 +3377,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.Field> createField(
         com.tcn.cloud.api.api.v0alpha.Field request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateFieldMethod(), getCallOptions()), request);
     }
 
@@ -3332,7 +3385,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.Fields> listFields(
         com.tcn.cloud.api.api.v0alpha.ListFieldsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListFieldsMethod(), getCallOptions()), request);
     }
 
@@ -3340,7 +3393,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.Field> getField(
         com.tcn.cloud.api.api.v0alpha.Field request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetFieldMethod(), getCallOptions()), request);
     }
 
@@ -3348,7 +3401,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.Field> updateField(
         com.tcn.cloud.api.api.v0alpha.UpdateFieldReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateFieldMethod(), getCallOptions()), request);
     }
 
@@ -3356,7 +3409,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.Field> deleteField(
         com.tcn.cloud.api.api.v0alpha.Field request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDeleteFieldMethod(), getCallOptions()), request);
     }
 
@@ -3364,7 +3417,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ProcessFields> listAvailableFieldsByElementId(
         com.tcn.cloud.api.api.v0alpha.ListAvailableFieldsByElementIdReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListAvailableFieldsByElementIdMethod(), getCallOptions()), request);
     }
 
@@ -3375,7 +3428,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListCampaignLinksRes> listCampaignLinks(
         com.google.protobuf.Empty request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListCampaignLinksMethod(), getCallOptions()), request);
     }
 
@@ -3383,7 +3436,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.PeekListRes> peekList(
         com.tcn.cloud.api.api.v0alpha.PeekListReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getPeekListMethod(), getCallOptions()), request);
     }
 
@@ -3391,7 +3444,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetHistoryRes> getHistory(
         com.tcn.cloud.api.api.v0alpha.GetHistoryReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetHistoryMethod(), getCallOptions()), request);
     }
 
@@ -3399,7 +3452,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.Element> createElement(
         com.tcn.cloud.api.api.v0alpha.Element request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateElementMethod(), getCallOptions()), request);
     }
 
@@ -3407,7 +3460,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.Element> updateElement(
         com.tcn.cloud.api.api.v0alpha.Element request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateElementMethod(), getCallOptions()), request);
     }
 
@@ -3415,7 +3468,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.Element> deleteElement(
         com.tcn.cloud.api.api.v0alpha.Element request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDeleteElementMethod(), getCallOptions()), request);
     }
 
@@ -3423,7 +3476,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> processElement(
         com.tcn.cloud.api.api.v0alpha.ProcessElementReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getProcessElementMethod(), getCallOptions()), request);
     }
 
@@ -3431,7 +3484,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ProcessFields> getAvailableFields(
         com.google.protobuf.Empty request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetAvailableFieldsMethod(), getCallOptions()), request);
     }
 
@@ -3442,7 +3495,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.Events> listNewEvents(
         com.google.protobuf.Empty request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListNewEventsMethod(), getCallOptions()), request);
     }
 
@@ -3450,7 +3503,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.Events> viewQueue(
         com.tcn.cloud.api.api.v0alpha.ViewQueueReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getViewQueueMethod(), getCallOptions()), request);
     }
 
@@ -3458,7 +3511,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ParseRes> autocomplete(
         com.tcn.cloud.api.api.v0alpha.ParseReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getAutocompleteMethod(), getCallOptions()), request);
     }
 
@@ -3466,7 +3519,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetComplianceScrubListsRes> getComplianceScrubLists(
         com.tcn.cloud.api.api.v0alpha.GetComplianceScrubListsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetComplianceScrubListsMethod(), getCallOptions()), request);
     }
 
@@ -3474,7 +3527,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.FindFieldUsagesRes> findFieldUsages(
         com.tcn.cloud.api.api.v0alpha.FindFieldUsagesReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getFindFieldUsagesMethod(), getCallOptions()), request);
     }
 
@@ -3482,7 +3535,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.FindInvalidElementsRes> findInvalidElements(
         com.tcn.cloud.api.api.v0alpha.FindInvalidElementsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getFindInvalidElementsMethod(), getCallOptions()), request);
     }
 
@@ -3493,7 +3546,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CollectionMetadata> createCollection(
         com.tcn.cloud.api.api.v0alpha.CollectionMetadata request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateCollectionMethod(), getCallOptions()), request);
     }
 
@@ -3501,7 +3554,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CollectionMetadata> getCollection(
         com.tcn.cloud.api.api.v0alpha.GetCollectionReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetCollectionMethod(), getCallOptions()), request);
     }
 
@@ -3509,7 +3562,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> updateCollection(
         com.tcn.cloud.api.api.v0alpha.CollectionMetadata request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateCollectionMethod(), getCallOptions()), request);
     }
 
@@ -3517,7 +3570,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteCollection(
         com.tcn.cloud.api.api.v0alpha.DeleteCollectionReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDeleteCollectionMethod(), getCallOptions()), request);
     }
 
@@ -3525,7 +3578,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListCollectionsRes> listCollections(
         com.tcn.cloud.api.api.v0alpha.ListCollectionsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListCollectionsMethod(), getCallOptions()), request);
     }
 
@@ -3533,7 +3586,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> resetCollection(
         com.tcn.cloud.api.api.v0alpha.ResetCollectionReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getResetCollectionMethod(), getCallOptions()), request);
     }
 
@@ -3541,7 +3594,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CollectionEntry> addCollectionEntry(
         com.tcn.cloud.api.api.v0alpha.CollectionEntry request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getAddCollectionEntryMethod(), getCallOptions()), request);
     }
 
@@ -3549,7 +3602,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteCollectionEntry(
         com.tcn.cloud.api.api.v0alpha.DeleteCollectionEntryReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDeleteCollectionEntryMethod(), getCallOptions()), request);
     }
 
@@ -3557,7 +3610,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CollectionEntry> updateCollectionEntry(
         com.tcn.cloud.api.api.v0alpha.CollectionEntry request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateCollectionEntryMethod(), getCallOptions()), request);
     }
 
@@ -3569,7 +3622,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.PaginatedSearchRes> searchCollectionsPaginated(
         com.tcn.cloud.api.api.v0alpha.SearchCollectionsPaginatedReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getSearchCollectionsPaginatedMethod(), getCallOptions()), request);
     }
 
@@ -3581,7 +3634,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetCollectionEntriesRes> getCollectionEntries(
         com.tcn.cloud.api.api.v0alpha.GetCollectionEntriesReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetCollectionEntriesMethod(), getCallOptions()), request);
     }
 
@@ -3592,7 +3645,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CjsSearchDefinition> createCjsSearchDefinition(
         com.tcn.cloud.api.api.v0alpha.CjsSearchDefinition request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateCjsSearchDefinitionMethod(), getCallOptions()), request);
     }
 
@@ -3603,7 +3656,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CjsSearchDefinition> getCjsSearchDefinition(
         com.tcn.cloud.api.api.v0alpha.GetCjsSearchDefinitionReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetCjsSearchDefinitionMethod(), getCallOptions()), request);
     }
 
@@ -3614,7 +3667,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> updateCjsSearchDefinition(
         com.tcn.cloud.api.api.v0alpha.CjsSearchDefinition request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateCjsSearchDefinitionMethod(), getCallOptions()), request);
     }
 
@@ -3625,7 +3678,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteCjsSearchDefinition(
         com.tcn.cloud.api.api.v0alpha.DeleteCjsSearchDefinitionReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDeleteCjsSearchDefinitionMethod(), getCallOptions()), request);
     }
 
@@ -3636,7 +3689,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListCjsSearchDefinitionsRes> listCjsSearchDefinitions(
         com.tcn.cloud.api.api.v0alpha.ListCjsSearchDefinitionsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListCjsSearchDefinitionsMethod(), getCallOptions()), request);
     }
 
@@ -3647,7 +3700,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ExecuteCjsSearchDefinitionRes> executeCjsSearchDefinition(
         com.tcn.cloud.api.api.v0alpha.ExecuteCjsSearchDefinitionReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getExecuteCjsSearchDefinitionMethod(), getCallOptions()), request);
     }
 
@@ -3658,7 +3711,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria> getCjsSecureSearchCriteria(
         com.tcn.cloud.api.api.v0alpha.GetCjsSecureSearchCriteriaReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetCjsSecureSearchCriteriaMethod(), getCallOptions()), request);
     }
 
@@ -3669,7 +3722,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria> createCjsSecureSearchCriteria(
         com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateCjsSecureSearchCriteriaMethod(), getCallOptions()), request);
     }
 
@@ -3680,7 +3733,7 @@ public final class LMSGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> updateCjsSecureSearchCriteria(
         com.tcn.cloud.api.api.v0alpha.CjsSecureSearchCriteria request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateCjsSecureSearchCriteriaMethod(), getCallOptions()), request);
     }
   }

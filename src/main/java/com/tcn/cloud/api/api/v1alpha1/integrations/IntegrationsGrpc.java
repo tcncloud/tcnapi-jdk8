@@ -1,13 +1,25 @@
 package com.tcn.cloud.api.api.v1alpha1.integrations;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.50.0)",
+    value = "by gRPC proto compiler (version 1.14.0)",
     comments = "Source: api/v1alpha1/integrations/service.proto")
-@io.grpc.stub.annotations.GrpcGenerated
 public final class IntegrationsGrpc {
 
   private IntegrationsGrpc() {}
@@ -29,21 +41,22 @@ public final class IntegrationsGrpc {
     if ((getProcessMethod = IntegrationsGrpc.getProcessMethod) == null) {
       synchronized (IntegrationsGrpc.class) {
         if ((getProcessMethod = IntegrationsGrpc.getProcessMethod) == null) {
-          IntegrationsGrpc.getProcessMethod = getProcessMethod =
+          IntegrationsGrpc.getProcessMethod = getProcessMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.ProcessReq, com.tcn.cloud.api.api.v1alpha1.integrations.ProcessRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Process"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v1alpha1.integrations.Integrations", "Process"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.ProcessReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.ProcessRes.getDefaultInstance()))
-              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("Process"))
-              .build();
+                  .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("Process"))
+                  .build();
+          }
         }
-      }
-    }
-    return getProcessMethod;
+     }
+     return getProcessMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReq,
@@ -60,21 +73,22 @@ public final class IntegrationsGrpc {
     if ((getGetIntegrationTransactionMethod = IntegrationsGrpc.getGetIntegrationTransactionMethod) == null) {
       synchronized (IntegrationsGrpc.class) {
         if ((getGetIntegrationTransactionMethod = IntegrationsGrpc.getGetIntegrationTransactionMethod) == null) {
-          IntegrationsGrpc.getGetIntegrationTransactionMethod = getGetIntegrationTransactionMethod =
+          IntegrationsGrpc.getGetIntegrationTransactionMethod = getGetIntegrationTransactionMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReq, com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationTransaction>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetIntegrationTransaction"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v1alpha1.integrations.Integrations", "GetIntegrationTransaction"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationTransaction.getDefaultInstance()))
-              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("GetIntegrationTransaction"))
-              .build();
+                  .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("GetIntegrationTransaction"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetIntegrationTransactionMethod;
+     }
+     return getGetIntegrationTransactionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportReq,
@@ -91,21 +105,22 @@ public final class IntegrationsGrpc {
     if ((getGetIntegrationTransactionReportMethod = IntegrationsGrpc.getGetIntegrationTransactionReportMethod) == null) {
       synchronized (IntegrationsGrpc.class) {
         if ((getGetIntegrationTransactionReportMethod = IntegrationsGrpc.getGetIntegrationTransactionReportMethod) == null) {
-          IntegrationsGrpc.getGetIntegrationTransactionReportMethod = getGetIntegrationTransactionReportMethod =
+          IntegrationsGrpc.getGetIntegrationTransactionReportMethod = getGetIntegrationTransactionReportMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportReq, com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetIntegrationTransactionReport"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v1alpha1.integrations.Integrations", "GetIntegrationTransactionReport"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportRes.getDefaultInstance()))
-              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("GetIntegrationTransactionReport"))
-              .build();
+                  .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("GetIntegrationTransactionReport"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetIntegrationTransactionReportMethod;
+     }
+     return getGetIntegrationTransactionReportMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportDataReq,
@@ -122,21 +137,22 @@ public final class IntegrationsGrpc {
     if ((getGetIntegrationTransactionReportDataMethod = IntegrationsGrpc.getGetIntegrationTransactionReportDataMethod) == null) {
       synchronized (IntegrationsGrpc.class) {
         if ((getGetIntegrationTransactionReportDataMethod = IntegrationsGrpc.getGetIntegrationTransactionReportDataMethod) == null) {
-          IntegrationsGrpc.getGetIntegrationTransactionReportDataMethod = getGetIntegrationTransactionReportDataMethod =
+          IntegrationsGrpc.getGetIntegrationTransactionReportDataMethod = getGetIntegrationTransactionReportDataMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportDataReq, com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportDataRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetIntegrationTransactionReportData"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v1alpha1.integrations.Integrations", "GetIntegrationTransactionReportData"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportDataReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportDataRes.getDefaultInstance()))
-              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("GetIntegrationTransactionReportData"))
-              .build();
+                  .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("GetIntegrationTransactionReportData"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetIntegrationTransactionReportDataMethod;
+     }
+     return getGetIntegrationTransactionReportDataMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.GetAggregatedMetadataReq,
@@ -153,21 +169,22 @@ public final class IntegrationsGrpc {
     if ((getGetAggregatedMetadataMethod = IntegrationsGrpc.getGetAggregatedMetadataMethod) == null) {
       synchronized (IntegrationsGrpc.class) {
         if ((getGetAggregatedMetadataMethod = IntegrationsGrpc.getGetAggregatedMetadataMethod) == null) {
-          IntegrationsGrpc.getGetAggregatedMetadataMethod = getGetAggregatedMetadataMethod =
+          IntegrationsGrpc.getGetAggregatedMetadataMethod = getGetAggregatedMetadataMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.GetAggregatedMetadataReq, com.tcn.cloud.api.api.v1alpha1.integrations.GetAggregatedMetadataRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAggregatedMetadata"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v1alpha1.integrations.Integrations", "GetAggregatedMetadata"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.GetAggregatedMetadataReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.GetAggregatedMetadataRes.getDefaultInstance()))
-              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("GetAggregatedMetadata"))
-              .build();
+                  .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("GetAggregatedMetadata"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetAggregatedMetadataMethod;
+     }
+     return getGetAggregatedMetadataMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLinksByDateRangeReq,
@@ -184,21 +201,22 @@ public final class IntegrationsGrpc {
     if ((getGetPortalLinksByDateRangeMethod = IntegrationsGrpc.getGetPortalLinksByDateRangeMethod) == null) {
       synchronized (IntegrationsGrpc.class) {
         if ((getGetPortalLinksByDateRangeMethod = IntegrationsGrpc.getGetPortalLinksByDateRangeMethod) == null) {
-          IntegrationsGrpc.getGetPortalLinksByDateRangeMethod = getGetPortalLinksByDateRangeMethod =
+          IntegrationsGrpc.getGetPortalLinksByDateRangeMethod = getGetPortalLinksByDateRangeMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLinksByDateRangeReq, com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLinksByDateRangeRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPortalLinksByDateRange"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v1alpha1.integrations.Integrations", "GetPortalLinksByDateRange"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLinksByDateRangeReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLinksByDateRangeRes.getDefaultInstance()))
-              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("GetPortalLinksByDateRange"))
-              .build();
+                  .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("GetPortalLinksByDateRange"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetPortalLinksByDateRangeMethod;
+     }
+     return getGetPortalLinksByDateRangeMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationConfig,
@@ -215,21 +233,22 @@ public final class IntegrationsGrpc {
     if ((getCreateIntegrationConfigMethod = IntegrationsGrpc.getCreateIntegrationConfigMethod) == null) {
       synchronized (IntegrationsGrpc.class) {
         if ((getCreateIntegrationConfigMethod = IntegrationsGrpc.getCreateIntegrationConfigMethod) == null) {
-          IntegrationsGrpc.getCreateIntegrationConfigMethod = getCreateIntegrationConfigMethod =
+          IntegrationsGrpc.getCreateIntegrationConfigMethod = getCreateIntegrationConfigMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationConfig, com.tcn.cloud.api.api.v1alpha1.integrations.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateIntegrationConfig"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v1alpha1.integrations.Integrations", "CreateIntegrationConfig"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationConfig.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("CreateIntegrationConfig"))
-              .build();
+                  .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("CreateIntegrationConfig"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateIntegrationConfigMethod;
+     }
+     return getCreateIntegrationConfigMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationConfigReq,
@@ -246,21 +265,22 @@ public final class IntegrationsGrpc {
     if ((getGetIntegrationConfigMethod = IntegrationsGrpc.getGetIntegrationConfigMethod) == null) {
       synchronized (IntegrationsGrpc.class) {
         if ((getGetIntegrationConfigMethod = IntegrationsGrpc.getGetIntegrationConfigMethod) == null) {
-          IntegrationsGrpc.getGetIntegrationConfigMethod = getGetIntegrationConfigMethod =
+          IntegrationsGrpc.getGetIntegrationConfigMethod = getGetIntegrationConfigMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationConfigReq, com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationConfig>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetIntegrationConfig"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v1alpha1.integrations.Integrations", "GetIntegrationConfig"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationConfigReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationConfig.getDefaultInstance()))
-              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("GetIntegrationConfig"))
-              .build();
+                  .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("GetIntegrationConfig"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetIntegrationConfigMethod;
+     }
+     return getGetIntegrationConfigMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.UpdateIntegrationConfigReq,
@@ -277,21 +297,22 @@ public final class IntegrationsGrpc {
     if ((getUpdateIntegrationConfigMethod = IntegrationsGrpc.getUpdateIntegrationConfigMethod) == null) {
       synchronized (IntegrationsGrpc.class) {
         if ((getUpdateIntegrationConfigMethod = IntegrationsGrpc.getUpdateIntegrationConfigMethod) == null) {
-          IntegrationsGrpc.getUpdateIntegrationConfigMethod = getUpdateIntegrationConfigMethod =
+          IntegrationsGrpc.getUpdateIntegrationConfigMethod = getUpdateIntegrationConfigMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.UpdateIntegrationConfigReq, com.tcn.cloud.api.api.v1alpha1.integrations.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateIntegrationConfig"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v1alpha1.integrations.Integrations", "UpdateIntegrationConfig"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.UpdateIntegrationConfigReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("UpdateIntegrationConfig"))
-              .build();
+                  .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("UpdateIntegrationConfig"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateIntegrationConfigMethod;
+     }
+     return getUpdateIntegrationConfigMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.DeleteIntegrationConfigReq,
@@ -308,21 +329,22 @@ public final class IntegrationsGrpc {
     if ((getDeleteIntegrationConfigMethod = IntegrationsGrpc.getDeleteIntegrationConfigMethod) == null) {
       synchronized (IntegrationsGrpc.class) {
         if ((getDeleteIntegrationConfigMethod = IntegrationsGrpc.getDeleteIntegrationConfigMethod) == null) {
-          IntegrationsGrpc.getDeleteIntegrationConfigMethod = getDeleteIntegrationConfigMethod =
+          IntegrationsGrpc.getDeleteIntegrationConfigMethod = getDeleteIntegrationConfigMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.DeleteIntegrationConfigReq, com.tcn.cloud.api.api.v1alpha1.integrations.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteIntegrationConfig"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v1alpha1.integrations.Integrations", "DeleteIntegrationConfig"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.DeleteIntegrationConfigReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("DeleteIntegrationConfig"))
-              .build();
+                  .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("DeleteIntegrationConfig"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDeleteIntegrationConfigMethod;
+     }
+     return getDeleteIntegrationConfigMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.Empty,
@@ -339,21 +361,22 @@ public final class IntegrationsGrpc {
     if ((getListIntegrationsMethod = IntegrationsGrpc.getListIntegrationsMethod) == null) {
       synchronized (IntegrationsGrpc.class) {
         if ((getListIntegrationsMethod = IntegrationsGrpc.getListIntegrationsMethod) == null) {
-          IntegrationsGrpc.getListIntegrationsMethod = getListIntegrationsMethod =
+          IntegrationsGrpc.getListIntegrationsMethod = getListIntegrationsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.Empty, com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationInfos>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListIntegrations"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v1alpha1.integrations.Integrations", "ListIntegrations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.Empty.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationInfos.getDefaultInstance()))
-              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("ListIntegrations"))
-              .build();
+                  .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("ListIntegrations"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListIntegrationsMethod;
+     }
+     return getListIntegrationsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationConfigNamesReq,
@@ -370,21 +393,22 @@ public final class IntegrationsGrpc {
     if ((getListIntegrationConfigNamesMethod = IntegrationsGrpc.getListIntegrationConfigNamesMethod) == null) {
       synchronized (IntegrationsGrpc.class) {
         if ((getListIntegrationConfigNamesMethod = IntegrationsGrpc.getListIntegrationConfigNamesMethod) == null) {
-          IntegrationsGrpc.getListIntegrationConfigNamesMethod = getListIntegrationConfigNamesMethod =
+          IntegrationsGrpc.getListIntegrationConfigNamesMethod = getListIntegrationConfigNamesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationConfigNamesReq, com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationConfigNamesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListIntegrationConfigNames"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v1alpha1.integrations.Integrations", "ListIntegrationConfigNames"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationConfigNamesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationConfigNamesRes.getDefaultInstance()))
-              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("ListIntegrationConfigNames"))
-              .build();
+                  .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("ListIntegrationConfigNames"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListIntegrationConfigNamesMethod;
+     }
+     return getListIntegrationConfigNamesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.ListJourneyConfigsReq,
@@ -401,21 +425,22 @@ public final class IntegrationsGrpc {
     if ((getListJourneyConfigsMethod = IntegrationsGrpc.getListJourneyConfigsMethod) == null) {
       synchronized (IntegrationsGrpc.class) {
         if ((getListJourneyConfigsMethod = IntegrationsGrpc.getListJourneyConfigsMethod) == null) {
-          IntegrationsGrpc.getListJourneyConfigsMethod = getListJourneyConfigsMethod =
+          IntegrationsGrpc.getListJourneyConfigsMethod = getListJourneyConfigsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.ListJourneyConfigsReq, com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationConfigs>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListJourneyConfigs"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v1alpha1.integrations.Integrations", "ListJourneyConfigs"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.ListJourneyConfigsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationConfigs.getDefaultInstance()))
-              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("ListJourneyConfigs"))
-              .build();
+                  .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("ListJourneyConfigs"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListJourneyConfigsMethod;
+     }
+     return getListJourneyConfigsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.ListNonJourneyConfigsReq,
@@ -432,21 +457,22 @@ public final class IntegrationsGrpc {
     if ((getListNonJourneyConfigsMethod = IntegrationsGrpc.getListNonJourneyConfigsMethod) == null) {
       synchronized (IntegrationsGrpc.class) {
         if ((getListNonJourneyConfigsMethod = IntegrationsGrpc.getListNonJourneyConfigsMethod) == null) {
-          IntegrationsGrpc.getListNonJourneyConfigsMethod = getListNonJourneyConfigsMethod =
+          IntegrationsGrpc.getListNonJourneyConfigsMethod = getListNonJourneyConfigsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.ListNonJourneyConfigsReq, com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationConfigs>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListNonJourneyConfigs"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v1alpha1.integrations.Integrations", "ListNonJourneyConfigs"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.ListNonJourneyConfigsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationConfigs.getDefaultInstance()))
-              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("ListNonJourneyConfigs"))
-              .build();
+                  .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("ListNonJourneyConfigs"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListNonJourneyConfigsMethod;
+     }
+     return getListNonJourneyConfigsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.PortalConfig,
@@ -463,21 +489,22 @@ public final class IntegrationsGrpc {
     if ((getCreatePortalConfigMethod = IntegrationsGrpc.getCreatePortalConfigMethod) == null) {
       synchronized (IntegrationsGrpc.class) {
         if ((getCreatePortalConfigMethod = IntegrationsGrpc.getCreatePortalConfigMethod) == null) {
-          IntegrationsGrpc.getCreatePortalConfigMethod = getCreatePortalConfigMethod =
+          IntegrationsGrpc.getCreatePortalConfigMethod = getCreatePortalConfigMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.PortalConfig, com.tcn.cloud.api.api.v1alpha1.integrations.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreatePortalConfig"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v1alpha1.integrations.Integrations", "CreatePortalConfig"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.PortalConfig.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("CreatePortalConfig"))
-              .build();
+                  .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("CreatePortalConfig"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreatePortalConfigMethod;
+     }
+     return getCreatePortalConfigMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalConfigsReq,
@@ -494,21 +521,22 @@ public final class IntegrationsGrpc {
     if ((getListPortalConfigsMethod = IntegrationsGrpc.getListPortalConfigsMethod) == null) {
       synchronized (IntegrationsGrpc.class) {
         if ((getListPortalConfigsMethod = IntegrationsGrpc.getListPortalConfigsMethod) == null) {
-          IntegrationsGrpc.getListPortalConfigsMethod = getListPortalConfigsMethod =
+          IntegrationsGrpc.getListPortalConfigsMethod = getListPortalConfigsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalConfigsReq, com.tcn.cloud.api.api.v1alpha1.integrations.PortalConfigs>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListPortalConfigs"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v1alpha1.integrations.Integrations", "ListPortalConfigs"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalConfigsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.PortalConfigs.getDefaultInstance()))
-              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("ListPortalConfigs"))
-              .build();
+                  .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("ListPortalConfigs"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListPortalConfigsMethod;
+     }
+     return getListPortalConfigsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.PortalConfig,
@@ -525,21 +553,22 @@ public final class IntegrationsGrpc {
     if ((getUpdatePortalConfigMethod = IntegrationsGrpc.getUpdatePortalConfigMethod) == null) {
       synchronized (IntegrationsGrpc.class) {
         if ((getUpdatePortalConfigMethod = IntegrationsGrpc.getUpdatePortalConfigMethod) == null) {
-          IntegrationsGrpc.getUpdatePortalConfigMethod = getUpdatePortalConfigMethod =
+          IntegrationsGrpc.getUpdatePortalConfigMethod = getUpdatePortalConfigMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.PortalConfig, com.tcn.cloud.api.api.v1alpha1.integrations.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdatePortalConfig"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v1alpha1.integrations.Integrations", "UpdatePortalConfig"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.PortalConfig.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("UpdatePortalConfig"))
-              .build();
+                  .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("UpdatePortalConfig"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdatePortalConfigMethod;
+     }
+     return getUpdatePortalConfigMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigReq,
@@ -556,21 +585,22 @@ public final class IntegrationsGrpc {
     if ((getGetPortalConfigMethod = IntegrationsGrpc.getGetPortalConfigMethod) == null) {
       synchronized (IntegrationsGrpc.class) {
         if ((getGetPortalConfigMethod = IntegrationsGrpc.getGetPortalConfigMethod) == null) {
-          IntegrationsGrpc.getGetPortalConfigMethod = getGetPortalConfigMethod =
+          IntegrationsGrpc.getGetPortalConfigMethod = getGetPortalConfigMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigReq, com.tcn.cloud.api.api.v1alpha1.integrations.PortalConfig>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPortalConfig"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v1alpha1.integrations.Integrations", "GetPortalConfig"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.PortalConfig.getDefaultInstance()))
-              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("GetPortalConfig"))
-              .build();
+                  .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("GetPortalConfig"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetPortalConfigMethod;
+     }
+     return getGetPortalConfigMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalConfigReq,
@@ -587,21 +617,22 @@ public final class IntegrationsGrpc {
     if ((getDeletePortalConfigMethod = IntegrationsGrpc.getDeletePortalConfigMethod) == null) {
       synchronized (IntegrationsGrpc.class) {
         if ((getDeletePortalConfigMethod = IntegrationsGrpc.getDeletePortalConfigMethod) == null) {
-          IntegrationsGrpc.getDeletePortalConfigMethod = getDeletePortalConfigMethod =
+          IntegrationsGrpc.getDeletePortalConfigMethod = getDeletePortalConfigMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalConfigReq, com.tcn.cloud.api.api.v1alpha1.integrations.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeletePortalConfig"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v1alpha1.integrations.Integrations", "DeletePortalConfig"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalConfigReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("DeletePortalConfig"))
-              .build();
+                  .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("DeletePortalConfig"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDeletePortalConfigMethod;
+     }
+     return getDeletePortalConfigMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.UpdatePortalLogoReq,
@@ -618,21 +649,22 @@ public final class IntegrationsGrpc {
     if ((getUpdatePortalLogoMethod = IntegrationsGrpc.getUpdatePortalLogoMethod) == null) {
       synchronized (IntegrationsGrpc.class) {
         if ((getUpdatePortalLogoMethod = IntegrationsGrpc.getUpdatePortalLogoMethod) == null) {
-          IntegrationsGrpc.getUpdatePortalLogoMethod = getUpdatePortalLogoMethod =
+          IntegrationsGrpc.getUpdatePortalLogoMethod = getUpdatePortalLogoMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.UpdatePortalLogoReq, com.tcn.cloud.api.api.v1alpha1.integrations.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdatePortalLogo"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v1alpha1.integrations.Integrations", "UpdatePortalLogo"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.UpdatePortalLogoReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("UpdatePortalLogo"))
-              .build();
+                  .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("UpdatePortalLogo"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdatePortalLogoMethod;
+     }
+     return getUpdatePortalLogoMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLogoReq,
@@ -649,21 +681,22 @@ public final class IntegrationsGrpc {
     if ((getGetPortalLogoMethod = IntegrationsGrpc.getGetPortalLogoMethod) == null) {
       synchronized (IntegrationsGrpc.class) {
         if ((getGetPortalLogoMethod = IntegrationsGrpc.getGetPortalLogoMethod) == null) {
-          IntegrationsGrpc.getGetPortalLogoMethod = getGetPortalLogoMethod =
+          IntegrationsGrpc.getGetPortalLogoMethod = getGetPortalLogoMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLogoReq, com.tcn.cloud.api.api.v1alpha1.integrations.Logo>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPortalLogo"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v1alpha1.integrations.Integrations", "GetPortalLogo"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLogoReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.Logo.getDefaultInstance()))
-              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("GetPortalLogo"))
-              .build();
+                  .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("GetPortalLogo"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetPortalLogoMethod;
+     }
+     return getGetPortalLogoMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.CreatePaymentPortalLinksReq,
@@ -680,21 +713,22 @@ public final class IntegrationsGrpc {
     if ((getCreatePaymentPortalLinksMethod = IntegrationsGrpc.getCreatePaymentPortalLinksMethod) == null) {
       synchronized (IntegrationsGrpc.class) {
         if ((getCreatePaymentPortalLinksMethod = IntegrationsGrpc.getCreatePaymentPortalLinksMethod) == null) {
-          IntegrationsGrpc.getCreatePaymentPortalLinksMethod = getCreatePaymentPortalLinksMethod =
+          IntegrationsGrpc.getCreatePaymentPortalLinksMethod = getCreatePaymentPortalLinksMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.CreatePaymentPortalLinksReq, com.tcn.cloud.api.api.v1alpha1.integrations.CreatePaymentPortalLinksRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreatePaymentPortalLinks"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v1alpha1.integrations.Integrations", "CreatePaymentPortalLinks"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.CreatePaymentPortalLinksReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.CreatePaymentPortalLinksRes.getDefaultInstance()))
-              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("CreatePaymentPortalLinks"))
-              .build();
+                  .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("CreatePaymentPortalLinks"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreatePaymentPortalLinksMethod;
+     }
+     return getCreatePaymentPortalLinksMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.SummaryReq,
@@ -711,21 +745,22 @@ public final class IntegrationsGrpc {
     if ((getSummaryMethod = IntegrationsGrpc.getSummaryMethod) == null) {
       synchronized (IntegrationsGrpc.class) {
         if ((getSummaryMethod = IntegrationsGrpc.getSummaryMethod) == null) {
-          IntegrationsGrpc.getSummaryMethod = getSummaryMethod =
+          IntegrationsGrpc.getSummaryMethod = getSummaryMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.SummaryReq, com.tcn.cloud.api.api.v1alpha1.integrations.SummaryRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Summary"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v1alpha1.integrations.Integrations", "Summary"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.SummaryReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.SummaryRes.getDefaultInstance()))
-              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("Summary"))
-              .build();
+                  .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("Summary"))
+                  .build();
+          }
         }
-      }
-    }
-    return getSummaryMethod;
+     }
+     return getSummaryMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationTemplatesByConfigReq,
@@ -742,35 +777,29 @@ public final class IntegrationsGrpc {
     if ((getListIntegrationTemplatesByConfigMethod = IntegrationsGrpc.getListIntegrationTemplatesByConfigMethod) == null) {
       synchronized (IntegrationsGrpc.class) {
         if ((getListIntegrationTemplatesByConfigMethod = IntegrationsGrpc.getListIntegrationTemplatesByConfigMethod) == null) {
-          IntegrationsGrpc.getListIntegrationTemplatesByConfigMethod = getListIntegrationTemplatesByConfigMethod =
+          IntegrationsGrpc.getListIntegrationTemplatesByConfigMethod = getListIntegrationTemplatesByConfigMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationTemplatesByConfigReq, com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationTemplatesByConfigRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListIntegrationTemplatesByConfig"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v1alpha1.integrations.Integrations", "ListIntegrationTemplatesByConfig"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationTemplatesByConfigReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationTemplatesByConfigRes.getDefaultInstance()))
-              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("ListIntegrationTemplatesByConfig"))
-              .build();
+                  .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("ListIntegrationTemplatesByConfig"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListIntegrationTemplatesByConfigMethod;
+     }
+     return getListIntegrationTemplatesByConfigMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static IntegrationsStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<IntegrationsStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<IntegrationsStub>() {
-        @java.lang.Override
-        public IntegrationsStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new IntegrationsStub(channel, callOptions);
-        }
-      };
-    return IntegrationsStub.newStub(factory, channel);
+    return new IntegrationsStub(channel);
   }
 
   /**
@@ -778,14 +807,7 @@ public final class IntegrationsGrpc {
    */
   public static IntegrationsBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<IntegrationsBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<IntegrationsBlockingStub>() {
-        @java.lang.Override
-        public IntegrationsBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new IntegrationsBlockingStub(channel, callOptions);
-        }
-      };
-    return IntegrationsBlockingStub.newStub(factory, channel);
+    return new IntegrationsBlockingStub(channel);
   }
 
   /**
@@ -793,14 +815,7 @@ public final class IntegrationsGrpc {
    */
   public static IntegrationsFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<IntegrationsFutureStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<IntegrationsFutureStub>() {
-        @java.lang.Override
-        public IntegrationsFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new IntegrationsFutureStub(channel, callOptions);
-        }
-      };
-    return IntegrationsFutureStub.newStub(factory, channel);
+    return new IntegrationsFutureStub(channel);
   }
 
   /**
@@ -814,7 +829,7 @@ public final class IntegrationsGrpc {
      */
     public void process(com.tcn.cloud.api.api.v1alpha1.integrations.ProcessReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ProcessRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getProcessMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getProcessMethod(), responseObserver);
     }
 
     /**
@@ -824,21 +839,21 @@ public final class IntegrationsGrpc {
      */
     public void getIntegrationTransaction(com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationTransaction> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetIntegrationTransactionMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetIntegrationTransactionMethod(), responseObserver);
     }
 
     /**
      */
     public void getIntegrationTransactionReport(com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetIntegrationTransactionReportMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetIntegrationTransactionReportMethod(), responseObserver);
     }
 
     /**
      */
     public void getIntegrationTransactionReportData(com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportDataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportDataRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetIntegrationTransactionReportDataMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetIntegrationTransactionReportDataMethod(), responseObserver);
     }
 
     /**
@@ -848,7 +863,7 @@ public final class IntegrationsGrpc {
      */
     public void getAggregatedMetadata(com.tcn.cloud.api.api.v1alpha1.integrations.GetAggregatedMetadataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.GetAggregatedMetadataRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAggregatedMetadataMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetAggregatedMetadataMethod(), responseObserver);
     }
 
     /**
@@ -858,7 +873,7 @@ public final class IntegrationsGrpc {
      */
     public void getPortalLinksByDateRange(com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLinksByDateRangeReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLinksByDateRangeRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPortalLinksByDateRangeMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetPortalLinksByDateRangeMethod(), responseObserver);
     }
 
     /**
@@ -868,7 +883,7 @@ public final class IntegrationsGrpc {
      */
     public void createIntegrationConfig(com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationConfig request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.Empty> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateIntegrationConfigMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateIntegrationConfigMethod(), responseObserver);
     }
 
     /**
@@ -878,7 +893,7 @@ public final class IntegrationsGrpc {
      */
     public void getIntegrationConfig(com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationConfig> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetIntegrationConfigMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetIntegrationConfigMethod(), responseObserver);
     }
 
     /**
@@ -888,7 +903,7 @@ public final class IntegrationsGrpc {
      */
     public void updateIntegrationConfig(com.tcn.cloud.api.api.v1alpha1.integrations.UpdateIntegrationConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.Empty> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateIntegrationConfigMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateIntegrationConfigMethod(), responseObserver);
     }
 
     /**
@@ -898,7 +913,7 @@ public final class IntegrationsGrpc {
      */
     public void deleteIntegrationConfig(com.tcn.cloud.api.api.v1alpha1.integrations.DeleteIntegrationConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.Empty> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteIntegrationConfigMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteIntegrationConfigMethod(), responseObserver);
     }
 
     /**
@@ -908,7 +923,7 @@ public final class IntegrationsGrpc {
      */
     public void listIntegrations(com.tcn.cloud.api.api.v1alpha1.integrations.Empty request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationInfos> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListIntegrationsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListIntegrationsMethod(), responseObserver);
     }
 
     /**
@@ -918,21 +933,21 @@ public final class IntegrationsGrpc {
      */
     public void listIntegrationConfigNames(com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationConfigNamesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationConfigNamesRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListIntegrationConfigNamesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListIntegrationConfigNamesMethod(), responseObserver);
     }
 
     /**
      */
     public void listJourneyConfigs(com.tcn.cloud.api.api.v1alpha1.integrations.ListJourneyConfigsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationConfigs> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListJourneyConfigsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListJourneyConfigsMethod(), responseObserver);
     }
 
     /**
      */
     public void listNonJourneyConfigs(com.tcn.cloud.api.api.v1alpha1.integrations.ListNonJourneyConfigsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationConfigs> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListNonJourneyConfigsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListNonJourneyConfigsMethod(), responseObserver);
     }
 
     /**
@@ -944,7 +959,7 @@ public final class IntegrationsGrpc {
      */
     public void createPortalConfig(com.tcn.cloud.api.api.v1alpha1.integrations.PortalConfig request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.Empty> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreatePortalConfigMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreatePortalConfigMethod(), responseObserver);
     }
 
     /**
@@ -955,14 +970,14 @@ public final class IntegrationsGrpc {
      */
     public void listPortalConfigs(com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalConfigsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.PortalConfigs> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListPortalConfigsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListPortalConfigsMethod(), responseObserver);
     }
 
     /**
      */
     public void updatePortalConfig(com.tcn.cloud.api.api.v1alpha1.integrations.PortalConfig request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.Empty> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdatePortalConfigMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdatePortalConfigMethod(), responseObserver);
     }
 
     /**
@@ -973,7 +988,7 @@ public final class IntegrationsGrpc {
      */
     public void getPortalConfig(com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.PortalConfig> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPortalConfigMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetPortalConfigMethod(), responseObserver);
     }
 
     /**
@@ -984,7 +999,7 @@ public final class IntegrationsGrpc {
      */
     public void deletePortalConfig(com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.Empty> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeletePortalConfigMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeletePortalConfigMethod(), responseObserver);
     }
 
     /**
@@ -994,7 +1009,7 @@ public final class IntegrationsGrpc {
      */
     public void updatePortalLogo(com.tcn.cloud.api.api.v1alpha1.integrations.UpdatePortalLogoReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.Empty> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdatePortalLogoMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdatePortalLogoMethod(), responseObserver);
     }
 
     /**
@@ -1004,7 +1019,7 @@ public final class IntegrationsGrpc {
      */
     public void getPortalLogo(com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLogoReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.Logo> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPortalLogoMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetPortalLogoMethod(), responseObserver);
     }
 
     /**
@@ -1016,7 +1031,7 @@ public final class IntegrationsGrpc {
      */
     public void createPaymentPortalLinks(com.tcn.cloud.api.api.v1alpha1.integrations.CreatePaymentPortalLinksReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.CreatePaymentPortalLinksRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreatePaymentPortalLinksMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreatePaymentPortalLinksMethod(), responseObserver);
     }
 
     /**
@@ -1026,7 +1041,7 @@ public final class IntegrationsGrpc {
      */
     public void summary(com.tcn.cloud.api.api.v1alpha1.integrations.SummaryReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.SummaryRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSummaryMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getSummaryMethod(), responseObserver);
     }
 
     /**
@@ -1036,175 +1051,175 @@ public final class IntegrationsGrpc {
      */
     public void listIntegrationTemplatesByConfig(com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationTemplatesByConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationTemplatesByConfigRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListIntegrationTemplatesByConfigMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListIntegrationTemplatesByConfigMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getProcessMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v1alpha1.integrations.ProcessReq,
                 com.tcn.cloud.api.api.v1alpha1.integrations.ProcessRes>(
                   this, METHODID_PROCESS)))
           .addMethod(
             getGetIntegrationTransactionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReq,
                 com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationTransaction>(
                   this, METHODID_GET_INTEGRATION_TRANSACTION)))
           .addMethod(
             getGetIntegrationTransactionReportMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportReq,
                 com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportRes>(
                   this, METHODID_GET_INTEGRATION_TRANSACTION_REPORT)))
           .addMethod(
             getGetIntegrationTransactionReportDataMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportDataReq,
                 com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportDataRes>(
                   this, METHODID_GET_INTEGRATION_TRANSACTION_REPORT_DATA)))
           .addMethod(
             getGetAggregatedMetadataMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v1alpha1.integrations.GetAggregatedMetadataReq,
                 com.tcn.cloud.api.api.v1alpha1.integrations.GetAggregatedMetadataRes>(
                   this, METHODID_GET_AGGREGATED_METADATA)))
           .addMethod(
             getGetPortalLinksByDateRangeMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLinksByDateRangeReq,
                 com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLinksByDateRangeRes>(
                   this, METHODID_GET_PORTAL_LINKS_BY_DATE_RANGE)))
           .addMethod(
             getCreateIntegrationConfigMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationConfig,
                 com.tcn.cloud.api.api.v1alpha1.integrations.Empty>(
                   this, METHODID_CREATE_INTEGRATION_CONFIG)))
           .addMethod(
             getGetIntegrationConfigMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationConfigReq,
                 com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationConfig>(
                   this, METHODID_GET_INTEGRATION_CONFIG)))
           .addMethod(
             getUpdateIntegrationConfigMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v1alpha1.integrations.UpdateIntegrationConfigReq,
                 com.tcn.cloud.api.api.v1alpha1.integrations.Empty>(
                   this, METHODID_UPDATE_INTEGRATION_CONFIG)))
           .addMethod(
             getDeleteIntegrationConfigMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v1alpha1.integrations.DeleteIntegrationConfigReq,
                 com.tcn.cloud.api.api.v1alpha1.integrations.Empty>(
                   this, METHODID_DELETE_INTEGRATION_CONFIG)))
           .addMethod(
             getListIntegrationsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v1alpha1.integrations.Empty,
                 com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationInfos>(
                   this, METHODID_LIST_INTEGRATIONS)))
           .addMethod(
             getListIntegrationConfigNamesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationConfigNamesReq,
                 com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationConfigNamesRes>(
                   this, METHODID_LIST_INTEGRATION_CONFIG_NAMES)))
           .addMethod(
             getListJourneyConfigsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v1alpha1.integrations.ListJourneyConfigsReq,
                 com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationConfigs>(
                   this, METHODID_LIST_JOURNEY_CONFIGS)))
           .addMethod(
             getListNonJourneyConfigsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v1alpha1.integrations.ListNonJourneyConfigsReq,
                 com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationConfigs>(
                   this, METHODID_LIST_NON_JOURNEY_CONFIGS)))
           .addMethod(
             getCreatePortalConfigMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v1alpha1.integrations.PortalConfig,
                 com.tcn.cloud.api.api.v1alpha1.integrations.Empty>(
                   this, METHODID_CREATE_PORTAL_CONFIG)))
           .addMethod(
             getListPortalConfigsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalConfigsReq,
                 com.tcn.cloud.api.api.v1alpha1.integrations.PortalConfigs>(
                   this, METHODID_LIST_PORTAL_CONFIGS)))
           .addMethod(
             getUpdatePortalConfigMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v1alpha1.integrations.PortalConfig,
                 com.tcn.cloud.api.api.v1alpha1.integrations.Empty>(
                   this, METHODID_UPDATE_PORTAL_CONFIG)))
           .addMethod(
             getGetPortalConfigMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigReq,
                 com.tcn.cloud.api.api.v1alpha1.integrations.PortalConfig>(
                   this, METHODID_GET_PORTAL_CONFIG)))
           .addMethod(
             getDeletePortalConfigMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalConfigReq,
                 com.tcn.cloud.api.api.v1alpha1.integrations.Empty>(
                   this, METHODID_DELETE_PORTAL_CONFIG)))
           .addMethod(
             getUpdatePortalLogoMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v1alpha1.integrations.UpdatePortalLogoReq,
                 com.tcn.cloud.api.api.v1alpha1.integrations.Empty>(
                   this, METHODID_UPDATE_PORTAL_LOGO)))
           .addMethod(
             getGetPortalLogoMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLogoReq,
                 com.tcn.cloud.api.api.v1alpha1.integrations.Logo>(
                   this, METHODID_GET_PORTAL_LOGO)))
           .addMethod(
             getCreatePaymentPortalLinksMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v1alpha1.integrations.CreatePaymentPortalLinksReq,
                 com.tcn.cloud.api.api.v1alpha1.integrations.CreatePaymentPortalLinksRes>(
                   this, METHODID_CREATE_PAYMENT_PORTAL_LINKS)))
           .addMethod(
             getSummaryMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v1alpha1.integrations.SummaryReq,
                 com.tcn.cloud.api.api.v1alpha1.integrations.SummaryRes>(
                   this, METHODID_SUMMARY)))
           .addMethod(
             getListIntegrationTemplatesByConfigMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationTemplatesByConfigReq,
                 com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationTemplatesByConfigRes>(
@@ -1215,15 +1230,19 @@ public final class IntegrationsGrpc {
 
   /**
    */
-  public static final class IntegrationsStub extends io.grpc.stub.AbstractAsyncStub<IntegrationsStub> {
-    private IntegrationsStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class IntegrationsStub extends io.grpc.stub.AbstractStub<IntegrationsStub> {
+    private IntegrationsStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private IntegrationsStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected IntegrationsStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected IntegrationsStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new IntegrationsStub(channel, callOptions);
     }
 
@@ -1234,7 +1253,7 @@ public final class IntegrationsGrpc {
      */
     public void process(com.tcn.cloud.api.api.v1alpha1.integrations.ProcessReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ProcessRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getProcessMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1245,7 +1264,7 @@ public final class IntegrationsGrpc {
      */
     public void getIntegrationTransaction(com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationTransaction> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetIntegrationTransactionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1253,7 +1272,7 @@ public final class IntegrationsGrpc {
      */
     public void getIntegrationTransactionReport(com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetIntegrationTransactionReportMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1261,7 +1280,7 @@ public final class IntegrationsGrpc {
      */
     public void getIntegrationTransactionReportData(com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportDataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportDataRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetIntegrationTransactionReportDataMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1272,7 +1291,7 @@ public final class IntegrationsGrpc {
      */
     public void getAggregatedMetadata(com.tcn.cloud.api.api.v1alpha1.integrations.GetAggregatedMetadataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.GetAggregatedMetadataRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetAggregatedMetadataMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1283,7 +1302,7 @@ public final class IntegrationsGrpc {
      */
     public void getPortalLinksByDateRange(com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLinksByDateRangeReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLinksByDateRangeRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetPortalLinksByDateRangeMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1294,7 +1313,7 @@ public final class IntegrationsGrpc {
      */
     public void createIntegrationConfig(com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationConfig request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.Empty> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateIntegrationConfigMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1305,7 +1324,7 @@ public final class IntegrationsGrpc {
      */
     public void getIntegrationConfig(com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationConfig> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetIntegrationConfigMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1316,7 +1335,7 @@ public final class IntegrationsGrpc {
      */
     public void updateIntegrationConfig(com.tcn.cloud.api.api.v1alpha1.integrations.UpdateIntegrationConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.Empty> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateIntegrationConfigMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1327,7 +1346,7 @@ public final class IntegrationsGrpc {
      */
     public void deleteIntegrationConfig(com.tcn.cloud.api.api.v1alpha1.integrations.DeleteIntegrationConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.Empty> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDeleteIntegrationConfigMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1338,7 +1357,7 @@ public final class IntegrationsGrpc {
      */
     public void listIntegrations(com.tcn.cloud.api.api.v1alpha1.integrations.Empty request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationInfos> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListIntegrationsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1349,7 +1368,7 @@ public final class IntegrationsGrpc {
      */
     public void listIntegrationConfigNames(com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationConfigNamesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationConfigNamesRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListIntegrationConfigNamesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1357,7 +1376,7 @@ public final class IntegrationsGrpc {
      */
     public void listJourneyConfigs(com.tcn.cloud.api.api.v1alpha1.integrations.ListJourneyConfigsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationConfigs> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListJourneyConfigsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1365,7 +1384,7 @@ public final class IntegrationsGrpc {
      */
     public void listNonJourneyConfigs(com.tcn.cloud.api.api.v1alpha1.integrations.ListNonJourneyConfigsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationConfigs> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListNonJourneyConfigsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1378,7 +1397,7 @@ public final class IntegrationsGrpc {
      */
     public void createPortalConfig(com.tcn.cloud.api.api.v1alpha1.integrations.PortalConfig request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.Empty> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreatePortalConfigMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1390,7 +1409,7 @@ public final class IntegrationsGrpc {
      */
     public void listPortalConfigs(com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalConfigsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.PortalConfigs> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListPortalConfigsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1398,7 +1417,7 @@ public final class IntegrationsGrpc {
      */
     public void updatePortalConfig(com.tcn.cloud.api.api.v1alpha1.integrations.PortalConfig request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.Empty> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdatePortalConfigMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1410,7 +1429,7 @@ public final class IntegrationsGrpc {
      */
     public void getPortalConfig(com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.PortalConfig> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetPortalConfigMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1422,7 +1441,7 @@ public final class IntegrationsGrpc {
      */
     public void deletePortalConfig(com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.Empty> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDeletePortalConfigMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1433,7 +1452,7 @@ public final class IntegrationsGrpc {
      */
     public void updatePortalLogo(com.tcn.cloud.api.api.v1alpha1.integrations.UpdatePortalLogoReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.Empty> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdatePortalLogoMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1444,7 +1463,7 @@ public final class IntegrationsGrpc {
      */
     public void getPortalLogo(com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLogoReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.Logo> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetPortalLogoMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1457,7 +1476,7 @@ public final class IntegrationsGrpc {
      */
     public void createPaymentPortalLinks(com.tcn.cloud.api.api.v1alpha1.integrations.CreatePaymentPortalLinksReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.CreatePaymentPortalLinksRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreatePaymentPortalLinksMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1468,7 +1487,7 @@ public final class IntegrationsGrpc {
      */
     public void summary(com.tcn.cloud.api.api.v1alpha1.integrations.SummaryReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.SummaryRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getSummaryMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1479,22 +1498,26 @@ public final class IntegrationsGrpc {
      */
     public void listIntegrationTemplatesByConfig(com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationTemplatesByConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationTemplatesByConfigRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListIntegrationTemplatesByConfigMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
    */
-  public static final class IntegrationsBlockingStub extends io.grpc.stub.AbstractBlockingStub<IntegrationsBlockingStub> {
-    private IntegrationsBlockingStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class IntegrationsBlockingStub extends io.grpc.stub.AbstractStub<IntegrationsBlockingStub> {
+    private IntegrationsBlockingStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private IntegrationsBlockingStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected IntegrationsBlockingStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected IntegrationsBlockingStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new IntegrationsBlockingStub(channel, callOptions);
     }
 
@@ -1504,7 +1527,7 @@ public final class IntegrationsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.ProcessRes process(com.tcn.cloud.api.api.v1alpha1.integrations.ProcessReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getProcessMethod(), getCallOptions(), request);
     }
 
@@ -1514,21 +1537,21 @@ public final class IntegrationsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationTransaction getIntegrationTransaction(com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetIntegrationTransactionMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportRes getIntegrationTransactionReport(com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetIntegrationTransactionReportMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportDataRes getIntegrationTransactionReportData(com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportDataReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetIntegrationTransactionReportDataMethod(), getCallOptions(), request);
     }
 
@@ -1538,7 +1561,7 @@ public final class IntegrationsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.GetAggregatedMetadataRes getAggregatedMetadata(com.tcn.cloud.api.api.v1alpha1.integrations.GetAggregatedMetadataReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetAggregatedMetadataMethod(), getCallOptions(), request);
     }
 
@@ -1548,7 +1571,7 @@ public final class IntegrationsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLinksByDateRangeRes getPortalLinksByDateRange(com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLinksByDateRangeReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetPortalLinksByDateRangeMethod(), getCallOptions(), request);
     }
 
@@ -1558,7 +1581,7 @@ public final class IntegrationsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.Empty createIntegrationConfig(com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationConfig request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateIntegrationConfigMethod(), getCallOptions(), request);
     }
 
@@ -1568,7 +1591,7 @@ public final class IntegrationsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationConfig getIntegrationConfig(com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationConfigReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetIntegrationConfigMethod(), getCallOptions(), request);
     }
 
@@ -1578,7 +1601,7 @@ public final class IntegrationsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.Empty updateIntegrationConfig(com.tcn.cloud.api.api.v1alpha1.integrations.UpdateIntegrationConfigReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateIntegrationConfigMethod(), getCallOptions(), request);
     }
 
@@ -1588,7 +1611,7 @@ public final class IntegrationsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.Empty deleteIntegrationConfig(com.tcn.cloud.api.api.v1alpha1.integrations.DeleteIntegrationConfigReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDeleteIntegrationConfigMethod(), getCallOptions(), request);
     }
 
@@ -1598,7 +1621,7 @@ public final class IntegrationsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationInfos listIntegrations(com.tcn.cloud.api.api.v1alpha1.integrations.Empty request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListIntegrationsMethod(), getCallOptions(), request);
     }
 
@@ -1608,21 +1631,21 @@ public final class IntegrationsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationConfigNamesRes listIntegrationConfigNames(com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationConfigNamesReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListIntegrationConfigNamesMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationConfigs listJourneyConfigs(com.tcn.cloud.api.api.v1alpha1.integrations.ListJourneyConfigsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListJourneyConfigsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationConfigs listNonJourneyConfigs(com.tcn.cloud.api.api.v1alpha1.integrations.ListNonJourneyConfigsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListNonJourneyConfigsMethod(), getCallOptions(), request);
     }
 
@@ -1634,7 +1657,7 @@ public final class IntegrationsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.Empty createPortalConfig(com.tcn.cloud.api.api.v1alpha1.integrations.PortalConfig request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreatePortalConfigMethod(), getCallOptions(), request);
     }
 
@@ -1645,14 +1668,14 @@ public final class IntegrationsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.PortalConfigs listPortalConfigs(com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalConfigsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListPortalConfigsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.Empty updatePortalConfig(com.tcn.cloud.api.api.v1alpha1.integrations.PortalConfig request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdatePortalConfigMethod(), getCallOptions(), request);
     }
 
@@ -1663,7 +1686,7 @@ public final class IntegrationsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.PortalConfig getPortalConfig(com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetPortalConfigMethod(), getCallOptions(), request);
     }
 
@@ -1674,7 +1697,7 @@ public final class IntegrationsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.Empty deletePortalConfig(com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalConfigReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDeletePortalConfigMethod(), getCallOptions(), request);
     }
 
@@ -1684,7 +1707,7 @@ public final class IntegrationsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.Empty updatePortalLogo(com.tcn.cloud.api.api.v1alpha1.integrations.UpdatePortalLogoReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdatePortalLogoMethod(), getCallOptions(), request);
     }
 
@@ -1694,7 +1717,7 @@ public final class IntegrationsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.Logo getPortalLogo(com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLogoReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetPortalLogoMethod(), getCallOptions(), request);
     }
 
@@ -1706,7 +1729,7 @@ public final class IntegrationsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.CreatePaymentPortalLinksRes createPaymentPortalLinks(com.tcn.cloud.api.api.v1alpha1.integrations.CreatePaymentPortalLinksReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreatePaymentPortalLinksMethod(), getCallOptions(), request);
     }
 
@@ -1716,7 +1739,7 @@ public final class IntegrationsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.SummaryRes summary(com.tcn.cloud.api.api.v1alpha1.integrations.SummaryReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getSummaryMethod(), getCallOptions(), request);
     }
 
@@ -1726,22 +1749,26 @@ public final class IntegrationsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationTemplatesByConfigRes listIntegrationTemplatesByConfig(com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationTemplatesByConfigReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListIntegrationTemplatesByConfigMethod(), getCallOptions(), request);
     }
   }
 
   /**
    */
-  public static final class IntegrationsFutureStub extends io.grpc.stub.AbstractFutureStub<IntegrationsFutureStub> {
-    private IntegrationsFutureStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class IntegrationsFutureStub extends io.grpc.stub.AbstractStub<IntegrationsFutureStub> {
+    private IntegrationsFutureStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private IntegrationsFutureStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected IntegrationsFutureStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected IntegrationsFutureStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new IntegrationsFutureStub(channel, callOptions);
     }
 
@@ -1752,7 +1779,7 @@ public final class IntegrationsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.ProcessRes> process(
         com.tcn.cloud.api.api.v1alpha1.integrations.ProcessReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getProcessMethod(), getCallOptions()), request);
     }
 
@@ -1763,7 +1790,7 @@ public final class IntegrationsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationTransaction> getIntegrationTransaction(
         com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetIntegrationTransactionMethod(), getCallOptions()), request);
     }
 
@@ -1771,7 +1798,7 @@ public final class IntegrationsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportRes> getIntegrationTransactionReport(
         com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetIntegrationTransactionReportMethod(), getCallOptions()), request);
     }
 
@@ -1779,7 +1806,7 @@ public final class IntegrationsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportDataRes> getIntegrationTransactionReportData(
         com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportDataReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetIntegrationTransactionReportDataMethod(), getCallOptions()), request);
     }
 
@@ -1790,7 +1817,7 @@ public final class IntegrationsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.GetAggregatedMetadataRes> getAggregatedMetadata(
         com.tcn.cloud.api.api.v1alpha1.integrations.GetAggregatedMetadataReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetAggregatedMetadataMethod(), getCallOptions()), request);
     }
 
@@ -1801,7 +1828,7 @@ public final class IntegrationsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLinksByDateRangeRes> getPortalLinksByDateRange(
         com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLinksByDateRangeReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetPortalLinksByDateRangeMethod(), getCallOptions()), request);
     }
 
@@ -1812,7 +1839,7 @@ public final class IntegrationsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.Empty> createIntegrationConfig(
         com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationConfig request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateIntegrationConfigMethod(), getCallOptions()), request);
     }
 
@@ -1823,7 +1850,7 @@ public final class IntegrationsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationConfig> getIntegrationConfig(
         com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationConfigReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetIntegrationConfigMethod(), getCallOptions()), request);
     }
 
@@ -1834,7 +1861,7 @@ public final class IntegrationsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.Empty> updateIntegrationConfig(
         com.tcn.cloud.api.api.v1alpha1.integrations.UpdateIntegrationConfigReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateIntegrationConfigMethod(), getCallOptions()), request);
     }
 
@@ -1845,7 +1872,7 @@ public final class IntegrationsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.Empty> deleteIntegrationConfig(
         com.tcn.cloud.api.api.v1alpha1.integrations.DeleteIntegrationConfigReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDeleteIntegrationConfigMethod(), getCallOptions()), request);
     }
 
@@ -1856,7 +1883,7 @@ public final class IntegrationsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationInfos> listIntegrations(
         com.tcn.cloud.api.api.v1alpha1.integrations.Empty request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListIntegrationsMethod(), getCallOptions()), request);
     }
 
@@ -1867,7 +1894,7 @@ public final class IntegrationsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationConfigNamesRes> listIntegrationConfigNames(
         com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationConfigNamesReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListIntegrationConfigNamesMethod(), getCallOptions()), request);
     }
 
@@ -1875,7 +1902,7 @@ public final class IntegrationsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationConfigs> listJourneyConfigs(
         com.tcn.cloud.api.api.v1alpha1.integrations.ListJourneyConfigsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListJourneyConfigsMethod(), getCallOptions()), request);
     }
 
@@ -1883,7 +1910,7 @@ public final class IntegrationsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationConfigs> listNonJourneyConfigs(
         com.tcn.cloud.api.api.v1alpha1.integrations.ListNonJourneyConfigsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListNonJourneyConfigsMethod(), getCallOptions()), request);
     }
 
@@ -1896,7 +1923,7 @@ public final class IntegrationsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.Empty> createPortalConfig(
         com.tcn.cloud.api.api.v1alpha1.integrations.PortalConfig request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreatePortalConfigMethod(), getCallOptions()), request);
     }
 
@@ -1908,7 +1935,7 @@ public final class IntegrationsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.PortalConfigs> listPortalConfigs(
         com.tcn.cloud.api.api.v1alpha1.integrations.ListPortalConfigsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListPortalConfigsMethod(), getCallOptions()), request);
     }
 
@@ -1916,7 +1943,7 @@ public final class IntegrationsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.Empty> updatePortalConfig(
         com.tcn.cloud.api.api.v1alpha1.integrations.PortalConfig request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdatePortalConfigMethod(), getCallOptions()), request);
     }
 
@@ -1928,7 +1955,7 @@ public final class IntegrationsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.PortalConfig> getPortalConfig(
         com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalConfigReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetPortalConfigMethod(), getCallOptions()), request);
     }
 
@@ -1940,7 +1967,7 @@ public final class IntegrationsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.Empty> deletePortalConfig(
         com.tcn.cloud.api.api.v1alpha1.integrations.DeletePortalConfigReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDeletePortalConfigMethod(), getCallOptions()), request);
     }
 
@@ -1951,7 +1978,7 @@ public final class IntegrationsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.Empty> updatePortalLogo(
         com.tcn.cloud.api.api.v1alpha1.integrations.UpdatePortalLogoReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdatePortalLogoMethod(), getCallOptions()), request);
     }
 
@@ -1962,7 +1989,7 @@ public final class IntegrationsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.Logo> getPortalLogo(
         com.tcn.cloud.api.api.v1alpha1.integrations.GetPortalLogoReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetPortalLogoMethod(), getCallOptions()), request);
     }
 
@@ -1975,7 +2002,7 @@ public final class IntegrationsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.CreatePaymentPortalLinksRes> createPaymentPortalLinks(
         com.tcn.cloud.api.api.v1alpha1.integrations.CreatePaymentPortalLinksReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreatePaymentPortalLinksMethod(), getCallOptions()), request);
     }
 
@@ -1986,7 +2013,7 @@ public final class IntegrationsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.SummaryRes> summary(
         com.tcn.cloud.api.api.v1alpha1.integrations.SummaryReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getSummaryMethod(), getCallOptions()), request);
     }
 
@@ -1997,7 +2024,7 @@ public final class IntegrationsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationTemplatesByConfigRes> listIntegrationTemplatesByConfig(
         com.tcn.cloud.api.api.v1alpha1.integrations.ListIntegrationTemplatesByConfigReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListIntegrationTemplatesByConfigMethod(), getCallOptions()), request);
     }
   }

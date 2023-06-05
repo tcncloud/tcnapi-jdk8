@@ -1,13 +1,25 @@
 package com.tcn.cloud.api.api.v1alpha1.vanalytics.notifier;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.50.0)",
+    value = "by gRPC proto compiler (version 1.14.0)",
     comments = "Source: api/v1alpha1/vanalytics/notifier/service.proto")
-@io.grpc.stub.annotations.GrpcGenerated
 public final class NotifierGrpc {
 
   private NotifierGrpc() {}
@@ -29,35 +41,29 @@ public final class NotifierGrpc {
     if ((getGetNotifyMethod = NotifierGrpc.getGetNotifyMethod) == null) {
       synchronized (NotifierGrpc.class) {
         if ((getGetNotifyMethod = NotifierGrpc.getGetNotifyMethod) == null) {
-          NotifierGrpc.getGetNotifyMethod = getGetNotifyMethod =
+          NotifierGrpc.getGetNotifyMethod = getGetNotifyMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.vanalytics.notifier.GetNotifyRequest, com.tcn.cloud.api.api.v1alpha1.vanalytics.notifier.Notify>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetNotify"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v1alpha1.vanalytics.notifier.Notifier", "GetNotify"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.vanalytics.notifier.GetNotifyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.vanalytics.notifier.Notify.getDefaultInstance()))
-              .setSchemaDescriptor(new NotifierMethodDescriptorSupplier("GetNotify"))
-              .build();
+                  .setSchemaDescriptor(new NotifierMethodDescriptorSupplier("GetNotify"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetNotifyMethod;
+     }
+     return getGetNotifyMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static NotifierStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<NotifierStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<NotifierStub>() {
-        @java.lang.Override
-        public NotifierStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new NotifierStub(channel, callOptions);
-        }
-      };
-    return NotifierStub.newStub(factory, channel);
+    return new NotifierStub(channel);
   }
 
   /**
@@ -65,14 +71,7 @@ public final class NotifierGrpc {
    */
   public static NotifierBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<NotifierBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<NotifierBlockingStub>() {
-        @java.lang.Override
-        public NotifierBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new NotifierBlockingStub(channel, callOptions);
-        }
-      };
-    return NotifierBlockingStub.newStub(factory, channel);
+    return new NotifierBlockingStub(channel);
   }
 
   /**
@@ -80,14 +79,7 @@ public final class NotifierGrpc {
    */
   public static NotifierFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<NotifierFutureStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<NotifierFutureStub>() {
-        @java.lang.Override
-        public NotifierFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new NotifierFutureStub(channel, callOptions);
-        }
-      };
-    return NotifierFutureStub.newStub(factory, channel);
+    return new NotifierFutureStub(channel);
   }
 
   /**
@@ -101,14 +93,14 @@ public final class NotifierGrpc {
      */
     public void getNotify(com.tcn.cloud.api.api.v1alpha1.vanalytics.notifier.GetNotifyRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.notifier.Notify> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetNotifyMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetNotifyMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetNotifyMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v1alpha1.vanalytics.notifier.GetNotifyRequest,
                 com.tcn.cloud.api.api.v1alpha1.vanalytics.notifier.Notify>(
@@ -119,15 +111,19 @@ public final class NotifierGrpc {
 
   /**
    */
-  public static final class NotifierStub extends io.grpc.stub.AbstractAsyncStub<NotifierStub> {
-    private NotifierStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class NotifierStub extends io.grpc.stub.AbstractStub<NotifierStub> {
+    private NotifierStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private NotifierStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected NotifierStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected NotifierStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new NotifierStub(channel, callOptions);
     }
 
@@ -138,22 +134,26 @@ public final class NotifierGrpc {
      */
     public void getNotify(com.tcn.cloud.api.api.v1alpha1.vanalytics.notifier.GetNotifyRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.notifier.Notify> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetNotifyMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
    */
-  public static final class NotifierBlockingStub extends io.grpc.stub.AbstractBlockingStub<NotifierBlockingStub> {
-    private NotifierBlockingStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class NotifierBlockingStub extends io.grpc.stub.AbstractStub<NotifierBlockingStub> {
+    private NotifierBlockingStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private NotifierBlockingStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected NotifierBlockingStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected NotifierBlockingStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new NotifierBlockingStub(channel, callOptions);
     }
 
@@ -163,22 +163,26 @@ public final class NotifierGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.vanalytics.notifier.Notify getNotify(com.tcn.cloud.api.api.v1alpha1.vanalytics.notifier.GetNotifyRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetNotifyMethod(), getCallOptions(), request);
     }
   }
 
   /**
    */
-  public static final class NotifierFutureStub extends io.grpc.stub.AbstractFutureStub<NotifierFutureStub> {
-    private NotifierFutureStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class NotifierFutureStub extends io.grpc.stub.AbstractStub<NotifierFutureStub> {
+    private NotifierFutureStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private NotifierFutureStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected NotifierFutureStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected NotifierFutureStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new NotifierFutureStub(channel, callOptions);
     }
 
@@ -189,7 +193,7 @@ public final class NotifierGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.vanalytics.notifier.Notify> getNotify(
         com.tcn.cloud.api.api.v1alpha1.vanalytics.notifier.GetNotifyRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetNotifyMethod(), getCallOptions()), request);
     }
   }

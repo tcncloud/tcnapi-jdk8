@@ -1,13 +1,25 @@
 package com.tcn.cloud.api.api.v0alpha;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.50.0)",
+    value = "by gRPC proto compiler (version 1.14.0)",
     comments = "Source: api/v0alpha/sds.proto")
-@io.grpc.stub.annotations.GrpcGenerated
 public final class SdsGrpc {
 
   private SdsGrpc() {}
@@ -29,21 +41,22 @@ public final class SdsGrpc {
     if ((getGetAgentResponseDataMethod = SdsGrpc.getGetAgentResponseDataMethod) == null) {
       synchronized (SdsGrpc.class) {
         if ((getGetAgentResponseDataMethod = SdsGrpc.getGetAgentResponseDataMethod) == null) {
-          SdsGrpc.getGetAgentResponseDataMethod = getGetAgentResponseDataMethod =
+          SdsGrpc.getGetAgentResponseDataMethod = getGetAgentResponseDataMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetAgentResponseDataReq, com.tcn.cloud.api.api.v0alpha.GetAgentResponseDataRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAgentResponseData"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Sds", "GetAgentResponseData"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetAgentResponseDataReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetAgentResponseDataRes.getDefaultInstance()))
-              .setSchemaDescriptor(new SdsMethodDescriptorSupplier("GetAgentResponseData"))
-              .build();
+                  .setSchemaDescriptor(new SdsMethodDescriptorSupplier("GetAgentResponseData"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetAgentResponseDataMethod;
+     }
+     return getGetAgentResponseDataMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetCallReq,
@@ -60,21 +73,22 @@ public final class SdsGrpc {
     if ((getGetCallMethod = SdsGrpc.getGetCallMethod) == null) {
       synchronized (SdsGrpc.class) {
         if ((getGetCallMethod = SdsGrpc.getGetCallMethod) == null) {
-          SdsGrpc.getGetCallMethod = getGetCallMethod =
+          SdsGrpc.getGetCallMethod = getGetCallMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetCallReq, com.tcn.cloud.api.api.v0alpha.CallObject>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCall"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Sds", "GetCall"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetCallReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CallObject.getDefaultInstance()))
-              .setSchemaDescriptor(new SdsMethodDescriptorSupplier("GetCall"))
-              .build();
+                  .setSchemaDescriptor(new SdsMethodDescriptorSupplier("GetCall"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetCallMethod;
+     }
+     return getGetCallMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateAgentResponseDataReq,
@@ -91,21 +105,22 @@ public final class SdsGrpc {
     if ((getUpdateAgentResponseDataMethod = SdsGrpc.getUpdateAgentResponseDataMethod) == null) {
       synchronized (SdsGrpc.class) {
         if ((getUpdateAgentResponseDataMethod = SdsGrpc.getUpdateAgentResponseDataMethod) == null) {
-          SdsGrpc.getUpdateAgentResponseDataMethod = getUpdateAgentResponseDataMethod =
+          SdsGrpc.getUpdateAgentResponseDataMethod = getUpdateAgentResponseDataMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateAgentResponseDataReq, com.tcn.cloud.api.api.v0alpha.UpdateAgentResponseDataRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAgentResponseData"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Sds", "UpdateAgentResponseData"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateAgentResponseDataReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateAgentResponseDataRes.getDefaultInstance()))
-              .setSchemaDescriptor(new SdsMethodDescriptorSupplier("UpdateAgentResponseData"))
-              .build();
+                  .setSchemaDescriptor(new SdsMethodDescriptorSupplier("UpdateAgentResponseData"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateAgentResponseDataMethod;
+     }
+     return getUpdateAgentResponseDataMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateVoicemailBoxReq,
@@ -122,35 +137,29 @@ public final class SdsGrpc {
     if ((getUpdateVoicemailBoxMethod = SdsGrpc.getUpdateVoicemailBoxMethod) == null) {
       synchronized (SdsGrpc.class) {
         if ((getUpdateVoicemailBoxMethod = SdsGrpc.getUpdateVoicemailBoxMethod) == null) {
-          SdsGrpc.getUpdateVoicemailBoxMethod = getUpdateVoicemailBoxMethod =
+          SdsGrpc.getUpdateVoicemailBoxMethod = getUpdateVoicemailBoxMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateVoicemailBoxReq, com.tcn.cloud.api.api.v0alpha.UpdateVoicemailBoxRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateVoicemailBox"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Sds", "UpdateVoicemailBox"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateVoicemailBoxReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateVoicemailBoxRes.getDefaultInstance()))
-              .setSchemaDescriptor(new SdsMethodDescriptorSupplier("UpdateVoicemailBox"))
-              .build();
+                  .setSchemaDescriptor(new SdsMethodDescriptorSupplier("UpdateVoicemailBox"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateVoicemailBoxMethod;
+     }
+     return getUpdateVoicemailBoxMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static SdsStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<SdsStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<SdsStub>() {
-        @java.lang.Override
-        public SdsStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new SdsStub(channel, callOptions);
-        }
-      };
-    return SdsStub.newStub(factory, channel);
+    return new SdsStub(channel);
   }
 
   /**
@@ -158,14 +167,7 @@ public final class SdsGrpc {
    */
   public static SdsBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<SdsBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<SdsBlockingStub>() {
-        @java.lang.Override
-        public SdsBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new SdsBlockingStub(channel, callOptions);
-        }
-      };
-    return SdsBlockingStub.newStub(factory, channel);
+    return new SdsBlockingStub(channel);
   }
 
   /**
@@ -173,14 +175,7 @@ public final class SdsGrpc {
    */
   public static SdsFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<SdsFutureStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<SdsFutureStub>() {
-        @java.lang.Override
-        public SdsFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new SdsFutureStub(channel, callOptions);
-        }
-      };
-    return SdsFutureStub.newStub(factory, channel);
+    return new SdsFutureStub(channel);
   }
 
   /**
@@ -194,7 +189,7 @@ public final class SdsGrpc {
      */
     public void getAgentResponseData(com.tcn.cloud.api.api.v0alpha.GetAgentResponseDataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetAgentResponseDataRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAgentResponseDataMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetAgentResponseDataMethod(), responseObserver);
     }
 
     /**
@@ -204,7 +199,7 @@ public final class SdsGrpc {
      */
     public void getCall(com.tcn.cloud.api.api.v0alpha.GetCallReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CallObject> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCallMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetCallMethod(), responseObserver);
     }
 
     /**
@@ -214,7 +209,7 @@ public final class SdsGrpc {
      */
     public void updateAgentResponseData(com.tcn.cloud.api.api.v0alpha.UpdateAgentResponseDataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateAgentResponseDataRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAgentResponseDataMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateAgentResponseDataMethod(), responseObserver);
     }
 
     /**
@@ -224,35 +219,35 @@ public final class SdsGrpc {
      */
     public void updateVoicemailBox(com.tcn.cloud.api.api.v0alpha.UpdateVoicemailBoxReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateVoicemailBoxRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateVoicemailBoxMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateVoicemailBoxMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetAgentResponseDataMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetAgentResponseDataReq,
                 com.tcn.cloud.api.api.v0alpha.GetAgentResponseDataRes>(
                   this, METHODID_GET_AGENT_RESPONSE_DATA)))
           .addMethod(
             getGetCallMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetCallReq,
                 com.tcn.cloud.api.api.v0alpha.CallObject>(
                   this, METHODID_GET_CALL)))
           .addMethod(
             getUpdateAgentResponseDataMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateAgentResponseDataReq,
                 com.tcn.cloud.api.api.v0alpha.UpdateAgentResponseDataRes>(
                   this, METHODID_UPDATE_AGENT_RESPONSE_DATA)))
           .addMethod(
             getUpdateVoicemailBoxMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateVoicemailBoxReq,
                 com.tcn.cloud.api.api.v0alpha.UpdateVoicemailBoxRes>(
@@ -263,15 +258,19 @@ public final class SdsGrpc {
 
   /**
    */
-  public static final class SdsStub extends io.grpc.stub.AbstractAsyncStub<SdsStub> {
-    private SdsStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class SdsStub extends io.grpc.stub.AbstractStub<SdsStub> {
+    private SdsStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private SdsStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SdsStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected SdsStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new SdsStub(channel, callOptions);
     }
 
@@ -282,7 +281,7 @@ public final class SdsGrpc {
      */
     public void getAgentResponseData(com.tcn.cloud.api.api.v0alpha.GetAgentResponseDataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetAgentResponseDataRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetAgentResponseDataMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -293,7 +292,7 @@ public final class SdsGrpc {
      */
     public void getCall(com.tcn.cloud.api.api.v0alpha.GetCallReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CallObject> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetCallMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -304,7 +303,7 @@ public final class SdsGrpc {
      */
     public void updateAgentResponseData(com.tcn.cloud.api.api.v0alpha.UpdateAgentResponseDataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateAgentResponseDataRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateAgentResponseDataMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -315,22 +314,26 @@ public final class SdsGrpc {
      */
     public void updateVoicemailBox(com.tcn.cloud.api.api.v0alpha.UpdateVoicemailBoxReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateVoicemailBoxRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateVoicemailBoxMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
    */
-  public static final class SdsBlockingStub extends io.grpc.stub.AbstractBlockingStub<SdsBlockingStub> {
-    private SdsBlockingStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class SdsBlockingStub extends io.grpc.stub.AbstractStub<SdsBlockingStub> {
+    private SdsBlockingStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private SdsBlockingStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SdsBlockingStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected SdsBlockingStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new SdsBlockingStub(channel, callOptions);
     }
 
@@ -340,7 +343,7 @@ public final class SdsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetAgentResponseDataRes getAgentResponseData(com.tcn.cloud.api.api.v0alpha.GetAgentResponseDataReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetAgentResponseDataMethod(), getCallOptions(), request);
     }
 
@@ -350,7 +353,7 @@ public final class SdsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CallObject getCall(com.tcn.cloud.api.api.v0alpha.GetCallReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetCallMethod(), getCallOptions(), request);
     }
 
@@ -360,7 +363,7 @@ public final class SdsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateAgentResponseDataRes updateAgentResponseData(com.tcn.cloud.api.api.v0alpha.UpdateAgentResponseDataReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateAgentResponseDataMethod(), getCallOptions(), request);
     }
 
@@ -370,22 +373,26 @@ public final class SdsGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateVoicemailBoxRes updateVoicemailBox(com.tcn.cloud.api.api.v0alpha.UpdateVoicemailBoxReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateVoicemailBoxMethod(), getCallOptions(), request);
     }
   }
 
   /**
    */
-  public static final class SdsFutureStub extends io.grpc.stub.AbstractFutureStub<SdsFutureStub> {
-    private SdsFutureStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class SdsFutureStub extends io.grpc.stub.AbstractStub<SdsFutureStub> {
+    private SdsFutureStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private SdsFutureStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SdsFutureStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected SdsFutureStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new SdsFutureStub(channel, callOptions);
     }
 
@@ -396,7 +403,7 @@ public final class SdsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetAgentResponseDataRes> getAgentResponseData(
         com.tcn.cloud.api.api.v0alpha.GetAgentResponseDataReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetAgentResponseDataMethod(), getCallOptions()), request);
     }
 
@@ -407,7 +414,7 @@ public final class SdsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CallObject> getCall(
         com.tcn.cloud.api.api.v0alpha.GetCallReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetCallMethod(), getCallOptions()), request);
     }
 
@@ -418,7 +425,7 @@ public final class SdsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateAgentResponseDataRes> updateAgentResponseData(
         com.tcn.cloud.api.api.v0alpha.UpdateAgentResponseDataReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateAgentResponseDataMethod(), getCallOptions()), request);
     }
 
@@ -429,7 +436,7 @@ public final class SdsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateVoicemailBoxRes> updateVoicemailBox(
         com.tcn.cloud.api.api.v0alpha.UpdateVoicemailBoxReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateVoicemailBoxMethod(), getCallOptions()), request);
     }
   }

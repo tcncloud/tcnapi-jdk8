@@ -1,13 +1,25 @@
 package com.tcn.cloud.api.api.v0alpha;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.50.0)",
+    value = "by gRPC proto compiler (version 1.14.0)",
     comments = "Source: api/v0alpha/vmds.proto")
-@io.grpc.stub.annotations.GrpcGenerated
 public final class VmdsGrpc {
 
   private VmdsGrpc() {}
@@ -29,21 +41,22 @@ public final class VmdsGrpc {
     if ((getGetVoicemailMetadataMethod = VmdsGrpc.getGetVoicemailMetadataMethod) == null) {
       synchronized (VmdsGrpc.class) {
         if ((getGetVoicemailMetadataMethod = VmdsGrpc.getGetVoicemailMetadataMethod) == null) {
-          VmdsGrpc.getGetVoicemailMetadataMethod = getGetVoicemailMetadataMethod =
+          VmdsGrpc.getGetVoicemailMetadataMethod = getGetVoicemailMetadataMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetVoicemailMetadataReq, com.tcn.cloud.api.api.v0alpha.GetVoicemailMetadataRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetVoicemailMetadata"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Vmds", "GetVoicemailMetadata"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetVoicemailMetadataReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetVoicemailMetadataRes.getDefaultInstance()))
-              .setSchemaDescriptor(new VmdsMethodDescriptorSupplier("GetVoicemailMetadata"))
-              .build();
+                  .setSchemaDescriptor(new VmdsMethodDescriptorSupplier("GetVoicemailMetadata"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetVoicemailMetadataMethod;
+     }
+     return getGetVoicemailMetadataMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetVoicemailCountReq,
@@ -60,21 +73,22 @@ public final class VmdsGrpc {
     if ((getGetVoicemailMessageCountMethod = VmdsGrpc.getGetVoicemailMessageCountMethod) == null) {
       synchronized (VmdsGrpc.class) {
         if ((getGetVoicemailMessageCountMethod = VmdsGrpc.getGetVoicemailMessageCountMethod) == null) {
-          VmdsGrpc.getGetVoicemailMessageCountMethod = getGetVoicemailMessageCountMethod =
+          VmdsGrpc.getGetVoicemailMessageCountMethod = getGetVoicemailMessageCountMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetVoicemailCountReq, com.tcn.cloud.api.api.v0alpha.GetVoicemailCountRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetVoicemailMessageCount"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Vmds", "GetVoicemailMessageCount"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetVoicemailCountReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetVoicemailCountRes.getDefaultInstance()))
-              .setSchemaDescriptor(new VmdsMethodDescriptorSupplier("GetVoicemailMessageCount"))
-              .build();
+                  .setSchemaDescriptor(new VmdsMethodDescriptorSupplier("GetVoicemailMessageCount"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetVoicemailMessageCountMethod;
+     }
+     return getGetVoicemailMessageCountMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteVoicemailReq,
@@ -91,21 +105,22 @@ public final class VmdsGrpc {
     if ((getDeleteVoicemailMethod = VmdsGrpc.getDeleteVoicemailMethod) == null) {
       synchronized (VmdsGrpc.class) {
         if ((getDeleteVoicemailMethod = VmdsGrpc.getDeleteVoicemailMethod) == null) {
-          VmdsGrpc.getDeleteVoicemailMethod = getDeleteVoicemailMethod =
+          VmdsGrpc.getDeleteVoicemailMethod = getDeleteVoicemailMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteVoicemailReq, com.tcn.cloud.api.api.v0alpha.DeleteVoicemailRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteVoicemail"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Vmds", "DeleteVoicemail"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteVoicemailReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteVoicemailRes.getDefaultInstance()))
-              .setSchemaDescriptor(new VmdsMethodDescriptorSupplier("DeleteVoicemail"))
-              .build();
+                  .setSchemaDescriptor(new VmdsMethodDescriptorSupplier("DeleteVoicemail"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDeleteVoicemailMethod;
+     }
+     return getDeleteVoicemailMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteGreetingReq,
@@ -122,21 +137,22 @@ public final class VmdsGrpc {
     if ((getDeleteGreetingMethod = VmdsGrpc.getDeleteGreetingMethod) == null) {
       synchronized (VmdsGrpc.class) {
         if ((getDeleteGreetingMethod = VmdsGrpc.getDeleteGreetingMethod) == null) {
-          VmdsGrpc.getDeleteGreetingMethod = getDeleteGreetingMethod =
+          VmdsGrpc.getDeleteGreetingMethod = getDeleteGreetingMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteGreetingReq, com.tcn.cloud.api.api.v0alpha.DeleteGreetingRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteGreeting"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Vmds", "DeleteGreeting"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteGreetingReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteGreetingRes.getDefaultInstance()))
-              .setSchemaDescriptor(new VmdsMethodDescriptorSupplier("DeleteGreeting"))
-              .build();
+                  .setSchemaDescriptor(new VmdsMethodDescriptorSupplier("DeleteGreeting"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDeleteGreetingMethod;
+     }
+     return getDeleteGreetingMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateUploadNameReq,
@@ -153,21 +169,22 @@ public final class VmdsGrpc {
     if ((getUpdateUploadNameMethod = VmdsGrpc.getUpdateUploadNameMethod) == null) {
       synchronized (VmdsGrpc.class) {
         if ((getUpdateUploadNameMethod = VmdsGrpc.getUpdateUploadNameMethod) == null) {
-          VmdsGrpc.getUpdateUploadNameMethod = getUpdateUploadNameMethod =
+          VmdsGrpc.getUpdateUploadNameMethod = getUpdateUploadNameMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateUploadNameReq, com.tcn.cloud.api.api.v0alpha.UpdateUploadNameRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateUploadName"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Vmds", "UpdateUploadName"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateUploadNameReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateUploadNameRes.getDefaultInstance()))
-              .setSchemaDescriptor(new VmdsMethodDescriptorSupplier("UpdateUploadName"))
-              .build();
+                  .setSchemaDescriptor(new VmdsMethodDescriptorSupplier("UpdateUploadName"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateUploadNameMethod;
+     }
+     return getUpdateUploadNameMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateVoicemailFlagReadReq,
@@ -184,21 +201,22 @@ public final class VmdsGrpc {
     if ((getUpdateVoicemailFlagReadMethod = VmdsGrpc.getUpdateVoicemailFlagReadMethod) == null) {
       synchronized (VmdsGrpc.class) {
         if ((getUpdateVoicemailFlagReadMethod = VmdsGrpc.getUpdateVoicemailFlagReadMethod) == null) {
-          VmdsGrpc.getUpdateVoicemailFlagReadMethod = getUpdateVoicemailFlagReadMethod =
+          VmdsGrpc.getUpdateVoicemailFlagReadMethod = getUpdateVoicemailFlagReadMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateVoicemailFlagReadReq, com.tcn.cloud.api.api.v0alpha.UpdateVoicemailFlagReadRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateVoicemailFlagRead"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Vmds", "UpdateVoicemailFlagRead"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateVoicemailFlagReadReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateVoicemailFlagReadRes.getDefaultInstance()))
-              .setSchemaDescriptor(new VmdsMethodDescriptorSupplier("UpdateVoicemailFlagRead"))
-              .build();
+                  .setSchemaDescriptor(new VmdsMethodDescriptorSupplier("UpdateVoicemailFlagRead"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateVoicemailFlagReadMethod;
+     }
+     return getUpdateVoicemailFlagReadMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DownloadMessageReq,
@@ -215,21 +233,22 @@ public final class VmdsGrpc {
     if ((getDownloadMessageMethod = VmdsGrpc.getDownloadMessageMethod) == null) {
       synchronized (VmdsGrpc.class) {
         if ((getDownloadMessageMethod = VmdsGrpc.getDownloadMessageMethod) == null) {
-          VmdsGrpc.getDownloadMessageMethod = getDownloadMessageMethod =
+          VmdsGrpc.getDownloadMessageMethod = getDownloadMessageMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DownloadMessageReq, com.tcn.cloud.api.api.v0alpha.DownloadMessageRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DownloadMessage"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Vmds", "DownloadMessage"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DownloadMessageReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DownloadMessageRes.getDefaultInstance()))
-              .setSchemaDescriptor(new VmdsMethodDescriptorSupplier("DownloadMessage"))
-              .build();
+                  .setSchemaDescriptor(new VmdsMethodDescriptorSupplier("DownloadMessage"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDownloadMessageMethod;
+     }
+     return getDownloadMessageMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DownloadMessagesReq,
@@ -246,21 +265,22 @@ public final class VmdsGrpc {
     if ((getDownloadMessagesMethod = VmdsGrpc.getDownloadMessagesMethod) == null) {
       synchronized (VmdsGrpc.class) {
         if ((getDownloadMessagesMethod = VmdsGrpc.getDownloadMessagesMethod) == null) {
-          VmdsGrpc.getDownloadMessagesMethod = getDownloadMessagesMethod =
+          VmdsGrpc.getDownloadMessagesMethod = getDownloadMessagesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DownloadMessagesReq, com.tcn.cloud.api.api.v0alpha.DownloadMessagesRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DownloadMessages"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Vmds", "DownloadMessages"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DownloadMessagesReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DownloadMessagesRes.getDefaultInstance()))
-              .setSchemaDescriptor(new VmdsMethodDescriptorSupplier("DownloadMessages"))
-              .build();
+                  .setSchemaDescriptor(new VmdsMethodDescriptorSupplier("DownloadMessages"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDownloadMessagesMethod;
+     }
+     return getDownloadMessagesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DownloadGreetingForExtensionReq,
@@ -277,21 +297,22 @@ public final class VmdsGrpc {
     if ((getDownloadGreetingForExtensionMethod = VmdsGrpc.getDownloadGreetingForExtensionMethod) == null) {
       synchronized (VmdsGrpc.class) {
         if ((getDownloadGreetingForExtensionMethod = VmdsGrpc.getDownloadGreetingForExtensionMethod) == null) {
-          VmdsGrpc.getDownloadGreetingForExtensionMethod = getDownloadGreetingForExtensionMethod =
+          VmdsGrpc.getDownloadGreetingForExtensionMethod = getDownloadGreetingForExtensionMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DownloadGreetingForExtensionReq, com.tcn.cloud.api.api.v0alpha.DownloadGreetingForExtensionRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DownloadGreetingForExtension"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Vmds", "DownloadGreetingForExtension"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DownloadGreetingForExtensionReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DownloadGreetingForExtensionRes.getDefaultInstance()))
-              .setSchemaDescriptor(new VmdsMethodDescriptorSupplier("DownloadGreetingForExtension"))
-              .build();
+                  .setSchemaDescriptor(new VmdsMethodDescriptorSupplier("DownloadGreetingForExtension"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDownloadGreetingForExtensionMethod;
+     }
+     return getDownloadGreetingForExtensionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DownloadGreetingReq,
@@ -308,21 +329,22 @@ public final class VmdsGrpc {
     if ((getDownloadGreetingMethod = VmdsGrpc.getDownloadGreetingMethod) == null) {
       synchronized (VmdsGrpc.class) {
         if ((getDownloadGreetingMethod = VmdsGrpc.getDownloadGreetingMethod) == null) {
-          VmdsGrpc.getDownloadGreetingMethod = getDownloadGreetingMethod =
+          VmdsGrpc.getDownloadGreetingMethod = getDownloadGreetingMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DownloadGreetingReq, com.tcn.cloud.api.api.v0alpha.DownloadGreetingRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DownloadGreeting"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Vmds", "DownloadGreeting"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DownloadGreetingReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DownloadGreetingRes.getDefaultInstance()))
-              .setSchemaDescriptor(new VmdsMethodDescriptorSupplier("DownloadGreeting"))
-              .build();
+                  .setSchemaDescriptor(new VmdsMethodDescriptorSupplier("DownloadGreeting"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDownloadGreetingMethod;
+     }
+     return getDownloadGreetingMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetUploadGreetingUrlReq,
@@ -339,21 +361,22 @@ public final class VmdsGrpc {
     if ((getGetUploadGreetingUrlMethod = VmdsGrpc.getGetUploadGreetingUrlMethod) == null) {
       synchronized (VmdsGrpc.class) {
         if ((getGetUploadGreetingUrlMethod = VmdsGrpc.getGetUploadGreetingUrlMethod) == null) {
-          VmdsGrpc.getGetUploadGreetingUrlMethod = getGetUploadGreetingUrlMethod =
+          VmdsGrpc.getGetUploadGreetingUrlMethod = getGetUploadGreetingUrlMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetUploadGreetingUrlReq, com.tcn.cloud.api.api.v0alpha.GetUploadGreetingUrlRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetUploadGreetingUrl"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Vmds", "GetUploadGreetingUrl"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetUploadGreetingUrlReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetUploadGreetingUrlRes.getDefaultInstance()))
-              .setSchemaDescriptor(new VmdsMethodDescriptorSupplier("GetUploadGreetingUrl"))
-              .build();
+                  .setSchemaDescriptor(new VmdsMethodDescriptorSupplier("GetUploadGreetingUrl"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetUploadGreetingUrlMethod;
+     }
+     return getGetUploadGreetingUrlMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ProcessGreetingUploadReq,
@@ -370,21 +393,22 @@ public final class VmdsGrpc {
     if ((getProcessGreetingUploadMethod = VmdsGrpc.getProcessGreetingUploadMethod) == null) {
       synchronized (VmdsGrpc.class) {
         if ((getProcessGreetingUploadMethod = VmdsGrpc.getProcessGreetingUploadMethod) == null) {
-          VmdsGrpc.getProcessGreetingUploadMethod = getProcessGreetingUploadMethod =
+          VmdsGrpc.getProcessGreetingUploadMethod = getProcessGreetingUploadMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ProcessGreetingUploadReq, com.tcn.cloud.api.api.v0alpha.ProcessGreetingUploadRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ProcessGreetingUpload"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Vmds", "ProcessGreetingUpload"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ProcessGreetingUploadReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ProcessGreetingUploadRes.getDefaultInstance()))
-              .setSchemaDescriptor(new VmdsMethodDescriptorSupplier("ProcessGreetingUpload"))
-              .build();
+                  .setSchemaDescriptor(new VmdsMethodDescriptorSupplier("ProcessGreetingUpload"))
+                  .build();
+          }
         }
-      }
-    }
-    return getProcessGreetingUploadMethod;
+     }
+     return getProcessGreetingUploadMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateGreetingForExtensionReq,
@@ -401,21 +425,22 @@ public final class VmdsGrpc {
     if ((getUpdateGreetingForExtensionMethod = VmdsGrpc.getUpdateGreetingForExtensionMethod) == null) {
       synchronized (VmdsGrpc.class) {
         if ((getUpdateGreetingForExtensionMethod = VmdsGrpc.getUpdateGreetingForExtensionMethod) == null) {
-          VmdsGrpc.getUpdateGreetingForExtensionMethod = getUpdateGreetingForExtensionMethod =
+          VmdsGrpc.getUpdateGreetingForExtensionMethod = getUpdateGreetingForExtensionMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateGreetingForExtensionReq, com.tcn.cloud.api.api.v0alpha.UpdateGreetingForExtensionRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateGreetingForExtension"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Vmds", "UpdateGreetingForExtension"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateGreetingForExtensionReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateGreetingForExtensionRes.getDefaultInstance()))
-              .setSchemaDescriptor(new VmdsMethodDescriptorSupplier("UpdateGreetingForExtension"))
-              .build();
+                  .setSchemaDescriptor(new VmdsMethodDescriptorSupplier("UpdateGreetingForExtension"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateGreetingForExtensionMethod;
+     }
+     return getUpdateGreetingForExtensionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListAvailableGreetingsReq,
@@ -432,35 +457,29 @@ public final class VmdsGrpc {
     if ((getListAvailableGreetingsMethod = VmdsGrpc.getListAvailableGreetingsMethod) == null) {
       synchronized (VmdsGrpc.class) {
         if ((getListAvailableGreetingsMethod = VmdsGrpc.getListAvailableGreetingsMethod) == null) {
-          VmdsGrpc.getListAvailableGreetingsMethod = getListAvailableGreetingsMethod =
+          VmdsGrpc.getListAvailableGreetingsMethod = getListAvailableGreetingsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListAvailableGreetingsReq, com.tcn.cloud.api.api.v0alpha.ListAvailableGreetingsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAvailableGreetings"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Vmds", "ListAvailableGreetings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAvailableGreetingsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAvailableGreetingsRes.getDefaultInstance()))
-              .setSchemaDescriptor(new VmdsMethodDescriptorSupplier("ListAvailableGreetings"))
-              .build();
+                  .setSchemaDescriptor(new VmdsMethodDescriptorSupplier("ListAvailableGreetings"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListAvailableGreetingsMethod;
+     }
+     return getListAvailableGreetingsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static VmdsStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<VmdsStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<VmdsStub>() {
-        @java.lang.Override
-        public VmdsStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new VmdsStub(channel, callOptions);
-        }
-      };
-    return VmdsStub.newStub(factory, channel);
+    return new VmdsStub(channel);
   }
 
   /**
@@ -468,14 +487,7 @@ public final class VmdsGrpc {
    */
   public static VmdsBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<VmdsBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<VmdsBlockingStub>() {
-        @java.lang.Override
-        public VmdsBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new VmdsBlockingStub(channel, callOptions);
-        }
-      };
-    return VmdsBlockingStub.newStub(factory, channel);
+    return new VmdsBlockingStub(channel);
   }
 
   /**
@@ -483,14 +495,7 @@ public final class VmdsGrpc {
    */
   public static VmdsFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<VmdsFutureStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<VmdsFutureStub>() {
-        @java.lang.Override
-        public VmdsFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new VmdsFutureStub(channel, callOptions);
-        }
-      };
-    return VmdsFutureStub.newStub(factory, channel);
+    return new VmdsFutureStub(channel);
   }
 
   /**
@@ -501,196 +506,196 @@ public final class VmdsGrpc {
      */
     public void getVoicemailMetadata(com.tcn.cloud.api.api.v0alpha.GetVoicemailMetadataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetVoicemailMetadataRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetVoicemailMetadataMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetVoicemailMetadataMethod(), responseObserver);
     }
 
     /**
      */
     public void getVoicemailMessageCount(com.tcn.cloud.api.api.v0alpha.GetVoicemailCountReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetVoicemailCountRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetVoicemailMessageCountMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetVoicemailMessageCountMethod(), responseObserver);
     }
 
     /**
      */
     public void deleteVoicemail(com.tcn.cloud.api.api.v0alpha.DeleteVoicemailReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteVoicemailRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteVoicemailMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteVoicemailMethod(), responseObserver);
     }
 
     /**
      */
     public void deleteGreeting(com.tcn.cloud.api.api.v0alpha.DeleteGreetingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteGreetingRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteGreetingMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteGreetingMethod(), responseObserver);
     }
 
     /**
      */
     public void updateUploadName(com.tcn.cloud.api.api.v0alpha.UpdateUploadNameReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateUploadNameRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateUploadNameMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateUploadNameMethod(), responseObserver);
     }
 
     /**
      */
     public void updateVoicemailFlagRead(com.tcn.cloud.api.api.v0alpha.UpdateVoicemailFlagReadReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateVoicemailFlagReadRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateVoicemailFlagReadMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateVoicemailFlagReadMethod(), responseObserver);
     }
 
     /**
      */
     public void downloadMessage(com.tcn.cloud.api.api.v0alpha.DownloadMessageReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DownloadMessageRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDownloadMessageMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDownloadMessageMethod(), responseObserver);
     }
 
     /**
      */
     public void downloadMessages(com.tcn.cloud.api.api.v0alpha.DownloadMessagesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DownloadMessagesRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDownloadMessagesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDownloadMessagesMethod(), responseObserver);
     }
 
     /**
      */
     public void downloadGreetingForExtension(com.tcn.cloud.api.api.v0alpha.DownloadGreetingForExtensionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DownloadGreetingForExtensionRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDownloadGreetingForExtensionMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDownloadGreetingForExtensionMethod(), responseObserver);
     }
 
     /**
      */
     public void downloadGreeting(com.tcn.cloud.api.api.v0alpha.DownloadGreetingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DownloadGreetingRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDownloadGreetingMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDownloadGreetingMethod(), responseObserver);
     }
 
     /**
      */
     public void getUploadGreetingUrl(com.tcn.cloud.api.api.v0alpha.GetUploadGreetingUrlReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetUploadGreetingUrlRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetUploadGreetingUrlMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetUploadGreetingUrlMethod(), responseObserver);
     }
 
     /**
      */
     public void processGreetingUpload(com.tcn.cloud.api.api.v0alpha.ProcessGreetingUploadReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ProcessGreetingUploadRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getProcessGreetingUploadMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getProcessGreetingUploadMethod(), responseObserver);
     }
 
     /**
      */
     public void updateGreetingForExtension(com.tcn.cloud.api.api.v0alpha.UpdateGreetingForExtensionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateGreetingForExtensionRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateGreetingForExtensionMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateGreetingForExtensionMethod(), responseObserver);
     }
 
     /**
      */
     public void listAvailableGreetings(com.tcn.cloud.api.api.v0alpha.ListAvailableGreetingsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAvailableGreetingsRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAvailableGreetingsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListAvailableGreetingsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetVoicemailMetadataMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            asyncServerStreamingCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetVoicemailMetadataReq,
                 com.tcn.cloud.api.api.v0alpha.GetVoicemailMetadataRes>(
                   this, METHODID_GET_VOICEMAIL_METADATA)))
           .addMethod(
             getGetVoicemailMessageCountMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetVoicemailCountReq,
                 com.tcn.cloud.api.api.v0alpha.GetVoicemailCountRes>(
                   this, METHODID_GET_VOICEMAIL_MESSAGE_COUNT)))
           .addMethod(
             getDeleteVoicemailMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.DeleteVoicemailReq,
                 com.tcn.cloud.api.api.v0alpha.DeleteVoicemailRes>(
                   this, METHODID_DELETE_VOICEMAIL)))
           .addMethod(
             getDeleteGreetingMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.DeleteGreetingReq,
                 com.tcn.cloud.api.api.v0alpha.DeleteGreetingRes>(
                   this, METHODID_DELETE_GREETING)))
           .addMethod(
             getUpdateUploadNameMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateUploadNameReq,
                 com.tcn.cloud.api.api.v0alpha.UpdateUploadNameRes>(
                   this, METHODID_UPDATE_UPLOAD_NAME)))
           .addMethod(
             getUpdateVoicemailFlagReadMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateVoicemailFlagReadReq,
                 com.tcn.cloud.api.api.v0alpha.UpdateVoicemailFlagReadRes>(
                   this, METHODID_UPDATE_VOICEMAIL_FLAG_READ)))
           .addMethod(
             getDownloadMessageMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.DownloadMessageReq,
                 com.tcn.cloud.api.api.v0alpha.DownloadMessageRes>(
                   this, METHODID_DOWNLOAD_MESSAGE)))
           .addMethod(
             getDownloadMessagesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.DownloadMessagesReq,
                 com.tcn.cloud.api.api.v0alpha.DownloadMessagesRes>(
                   this, METHODID_DOWNLOAD_MESSAGES)))
           .addMethod(
             getDownloadGreetingForExtensionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.DownloadGreetingForExtensionReq,
                 com.tcn.cloud.api.api.v0alpha.DownloadGreetingForExtensionRes>(
                   this, METHODID_DOWNLOAD_GREETING_FOR_EXTENSION)))
           .addMethod(
             getDownloadGreetingMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.DownloadGreetingReq,
                 com.tcn.cloud.api.api.v0alpha.DownloadGreetingRes>(
                   this, METHODID_DOWNLOAD_GREETING)))
           .addMethod(
             getGetUploadGreetingUrlMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetUploadGreetingUrlReq,
                 com.tcn.cloud.api.api.v0alpha.GetUploadGreetingUrlRes>(
                   this, METHODID_GET_UPLOAD_GREETING_URL)))
           .addMethod(
             getProcessGreetingUploadMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ProcessGreetingUploadReq,
                 com.tcn.cloud.api.api.v0alpha.ProcessGreetingUploadRes>(
                   this, METHODID_PROCESS_GREETING_UPLOAD)))
           .addMethod(
             getUpdateGreetingForExtensionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateGreetingForExtensionReq,
                 com.tcn.cloud.api.api.v0alpha.UpdateGreetingForExtensionRes>(
                   this, METHODID_UPDATE_GREETING_FOR_EXTENSION)))
           .addMethod(
             getListAvailableGreetingsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListAvailableGreetingsReq,
                 com.tcn.cloud.api.api.v0alpha.ListAvailableGreetingsRes>(
@@ -701,15 +706,19 @@ public final class VmdsGrpc {
 
   /**
    */
-  public static final class VmdsStub extends io.grpc.stub.AbstractAsyncStub<VmdsStub> {
-    private VmdsStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class VmdsStub extends io.grpc.stub.AbstractStub<VmdsStub> {
+    private VmdsStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private VmdsStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected VmdsStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected VmdsStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new VmdsStub(channel, callOptions);
     }
 
@@ -717,7 +726,7 @@ public final class VmdsGrpc {
      */
     public void getVoicemailMetadata(com.tcn.cloud.api.api.v0alpha.GetVoicemailMetadataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetVoicemailMetadataRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+      asyncServerStreamingCall(
           getChannel().newCall(getGetVoicemailMetadataMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -725,7 +734,7 @@ public final class VmdsGrpc {
      */
     public void getVoicemailMessageCount(com.tcn.cloud.api.api.v0alpha.GetVoicemailCountReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetVoicemailCountRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetVoicemailMessageCountMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -733,7 +742,7 @@ public final class VmdsGrpc {
      */
     public void deleteVoicemail(com.tcn.cloud.api.api.v0alpha.DeleteVoicemailReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteVoicemailRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDeleteVoicemailMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -741,7 +750,7 @@ public final class VmdsGrpc {
      */
     public void deleteGreeting(com.tcn.cloud.api.api.v0alpha.DeleteGreetingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteGreetingRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDeleteGreetingMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -749,7 +758,7 @@ public final class VmdsGrpc {
      */
     public void updateUploadName(com.tcn.cloud.api.api.v0alpha.UpdateUploadNameReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateUploadNameRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateUploadNameMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -757,7 +766,7 @@ public final class VmdsGrpc {
      */
     public void updateVoicemailFlagRead(com.tcn.cloud.api.api.v0alpha.UpdateVoicemailFlagReadReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateVoicemailFlagReadRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateVoicemailFlagReadMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -765,7 +774,7 @@ public final class VmdsGrpc {
      */
     public void downloadMessage(com.tcn.cloud.api.api.v0alpha.DownloadMessageReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DownloadMessageRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDownloadMessageMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -773,7 +782,7 @@ public final class VmdsGrpc {
      */
     public void downloadMessages(com.tcn.cloud.api.api.v0alpha.DownloadMessagesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DownloadMessagesRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDownloadMessagesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -781,7 +790,7 @@ public final class VmdsGrpc {
      */
     public void downloadGreetingForExtension(com.tcn.cloud.api.api.v0alpha.DownloadGreetingForExtensionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DownloadGreetingForExtensionRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDownloadGreetingForExtensionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -789,7 +798,7 @@ public final class VmdsGrpc {
      */
     public void downloadGreeting(com.tcn.cloud.api.api.v0alpha.DownloadGreetingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DownloadGreetingRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDownloadGreetingMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -797,7 +806,7 @@ public final class VmdsGrpc {
      */
     public void getUploadGreetingUrl(com.tcn.cloud.api.api.v0alpha.GetUploadGreetingUrlReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetUploadGreetingUrlRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetUploadGreetingUrlMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -805,7 +814,7 @@ public final class VmdsGrpc {
      */
     public void processGreetingUpload(com.tcn.cloud.api.api.v0alpha.ProcessGreetingUploadReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ProcessGreetingUploadRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getProcessGreetingUploadMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -813,7 +822,7 @@ public final class VmdsGrpc {
      */
     public void updateGreetingForExtension(com.tcn.cloud.api.api.v0alpha.UpdateGreetingForExtensionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateGreetingForExtensionRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateGreetingForExtensionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -821,22 +830,26 @@ public final class VmdsGrpc {
      */
     public void listAvailableGreetings(com.tcn.cloud.api.api.v0alpha.ListAvailableGreetingsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAvailableGreetingsRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListAvailableGreetingsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
    */
-  public static final class VmdsBlockingStub extends io.grpc.stub.AbstractBlockingStub<VmdsBlockingStub> {
-    private VmdsBlockingStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class VmdsBlockingStub extends io.grpc.stub.AbstractStub<VmdsBlockingStub> {
+    private VmdsBlockingStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private VmdsBlockingStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected VmdsBlockingStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected VmdsBlockingStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new VmdsBlockingStub(channel, callOptions);
     }
 
@@ -844,113 +857,117 @@ public final class VmdsGrpc {
      */
     public java.util.Iterator<com.tcn.cloud.api.api.v0alpha.GetVoicemailMetadataRes> getVoicemailMetadata(
         com.tcn.cloud.api.api.v0alpha.GetVoicemailMetadataReq request) {
-      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+      return blockingServerStreamingCall(
           getChannel(), getGetVoicemailMetadataMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.GetVoicemailCountRes getVoicemailMessageCount(com.tcn.cloud.api.api.v0alpha.GetVoicemailCountReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetVoicemailMessageCountMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.DeleteVoicemailRes deleteVoicemail(com.tcn.cloud.api.api.v0alpha.DeleteVoicemailReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDeleteVoicemailMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.DeleteGreetingRes deleteGreeting(com.tcn.cloud.api.api.v0alpha.DeleteGreetingReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDeleteGreetingMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateUploadNameRes updateUploadName(com.tcn.cloud.api.api.v0alpha.UpdateUploadNameReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateUploadNameMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateVoicemailFlagReadRes updateVoicemailFlagRead(com.tcn.cloud.api.api.v0alpha.UpdateVoicemailFlagReadReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateVoicemailFlagReadMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.DownloadMessageRes downloadMessage(com.tcn.cloud.api.api.v0alpha.DownloadMessageReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDownloadMessageMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.DownloadMessagesRes downloadMessages(com.tcn.cloud.api.api.v0alpha.DownloadMessagesReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDownloadMessagesMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.DownloadGreetingForExtensionRes downloadGreetingForExtension(com.tcn.cloud.api.api.v0alpha.DownloadGreetingForExtensionReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDownloadGreetingForExtensionMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.DownloadGreetingRes downloadGreeting(com.tcn.cloud.api.api.v0alpha.DownloadGreetingReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDownloadGreetingMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.GetUploadGreetingUrlRes getUploadGreetingUrl(com.tcn.cloud.api.api.v0alpha.GetUploadGreetingUrlReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetUploadGreetingUrlMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.ProcessGreetingUploadRes processGreetingUpload(com.tcn.cloud.api.api.v0alpha.ProcessGreetingUploadReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getProcessGreetingUploadMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateGreetingForExtensionRes updateGreetingForExtension(com.tcn.cloud.api.api.v0alpha.UpdateGreetingForExtensionReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateGreetingForExtensionMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.ListAvailableGreetingsRes listAvailableGreetings(com.tcn.cloud.api.api.v0alpha.ListAvailableGreetingsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListAvailableGreetingsMethod(), getCallOptions(), request);
     }
   }
 
   /**
    */
-  public static final class VmdsFutureStub extends io.grpc.stub.AbstractFutureStub<VmdsFutureStub> {
-    private VmdsFutureStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class VmdsFutureStub extends io.grpc.stub.AbstractStub<VmdsFutureStub> {
+    private VmdsFutureStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private VmdsFutureStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected VmdsFutureStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected VmdsFutureStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new VmdsFutureStub(channel, callOptions);
     }
 
@@ -958,7 +975,7 @@ public final class VmdsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetVoicemailCountRes> getVoicemailMessageCount(
         com.tcn.cloud.api.api.v0alpha.GetVoicemailCountReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetVoicemailMessageCountMethod(), getCallOptions()), request);
     }
 
@@ -966,7 +983,7 @@ public final class VmdsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeleteVoicemailRes> deleteVoicemail(
         com.tcn.cloud.api.api.v0alpha.DeleteVoicemailReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDeleteVoicemailMethod(), getCallOptions()), request);
     }
 
@@ -974,7 +991,7 @@ public final class VmdsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeleteGreetingRes> deleteGreeting(
         com.tcn.cloud.api.api.v0alpha.DeleteGreetingReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDeleteGreetingMethod(), getCallOptions()), request);
     }
 
@@ -982,7 +999,7 @@ public final class VmdsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateUploadNameRes> updateUploadName(
         com.tcn.cloud.api.api.v0alpha.UpdateUploadNameReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateUploadNameMethod(), getCallOptions()), request);
     }
 
@@ -990,7 +1007,7 @@ public final class VmdsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateVoicemailFlagReadRes> updateVoicemailFlagRead(
         com.tcn.cloud.api.api.v0alpha.UpdateVoicemailFlagReadReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateVoicemailFlagReadMethod(), getCallOptions()), request);
     }
 
@@ -998,7 +1015,7 @@ public final class VmdsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DownloadMessageRes> downloadMessage(
         com.tcn.cloud.api.api.v0alpha.DownloadMessageReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDownloadMessageMethod(), getCallOptions()), request);
     }
 
@@ -1006,7 +1023,7 @@ public final class VmdsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DownloadMessagesRes> downloadMessages(
         com.tcn.cloud.api.api.v0alpha.DownloadMessagesReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDownloadMessagesMethod(), getCallOptions()), request);
     }
 
@@ -1014,7 +1031,7 @@ public final class VmdsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DownloadGreetingForExtensionRes> downloadGreetingForExtension(
         com.tcn.cloud.api.api.v0alpha.DownloadGreetingForExtensionReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDownloadGreetingForExtensionMethod(), getCallOptions()), request);
     }
 
@@ -1022,7 +1039,7 @@ public final class VmdsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DownloadGreetingRes> downloadGreeting(
         com.tcn.cloud.api.api.v0alpha.DownloadGreetingReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDownloadGreetingMethod(), getCallOptions()), request);
     }
 
@@ -1030,7 +1047,7 @@ public final class VmdsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetUploadGreetingUrlRes> getUploadGreetingUrl(
         com.tcn.cloud.api.api.v0alpha.GetUploadGreetingUrlReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetUploadGreetingUrlMethod(), getCallOptions()), request);
     }
 
@@ -1038,7 +1055,7 @@ public final class VmdsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ProcessGreetingUploadRes> processGreetingUpload(
         com.tcn.cloud.api.api.v0alpha.ProcessGreetingUploadReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getProcessGreetingUploadMethod(), getCallOptions()), request);
     }
 
@@ -1046,7 +1063,7 @@ public final class VmdsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateGreetingForExtensionRes> updateGreetingForExtension(
         com.tcn.cloud.api.api.v0alpha.UpdateGreetingForExtensionReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateGreetingForExtensionMethod(), getCallOptions()), request);
     }
 
@@ -1054,7 +1071,7 @@ public final class VmdsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListAvailableGreetingsRes> listAvailableGreetings(
         com.tcn.cloud.api.api.v0alpha.ListAvailableGreetingsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListAvailableGreetingsMethod(), getCallOptions()), request);
     }
   }

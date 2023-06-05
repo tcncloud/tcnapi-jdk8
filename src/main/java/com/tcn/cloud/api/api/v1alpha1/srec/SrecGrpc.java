@@ -1,13 +1,25 @@
 package com.tcn.cloud.api.api.v1alpha1.srec;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.50.0)",
+    value = "by gRPC proto compiler (version 1.14.0)",
     comments = "Source: api/v1alpha1/srec/service.proto")
-@io.grpc.stub.annotations.GrpcGenerated
 public final class SrecGrpc {
 
   private SrecGrpc() {}
@@ -29,21 +41,22 @@ public final class SrecGrpc {
     if ((getListScreenRecordingsMethod = SrecGrpc.getListScreenRecordingsMethod) == null) {
       synchronized (SrecGrpc.class) {
         if ((getListScreenRecordingsMethod = SrecGrpc.getListScreenRecordingsMethod) == null) {
-          SrecGrpc.getListScreenRecordingsMethod = getListScreenRecordingsMethod =
+          SrecGrpc.getListScreenRecordingsMethod = getListScreenRecordingsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.srec.ListScreenRecordingsRequest, com.tcn.cloud.api.api.v1alpha1.srec.ListScreenRecordingsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListScreenRecordings"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v1alpha1.srec.Srec", "ListScreenRecordings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.srec.ListScreenRecordingsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.srec.ListScreenRecordingsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new SrecMethodDescriptorSupplier("ListScreenRecordings"))
-              .build();
+                  .setSchemaDescriptor(new SrecMethodDescriptorSupplier("ListScreenRecordings"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListScreenRecordingsMethod;
+     }
+     return getListScreenRecordingsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.srec.GetScreenRecordingURLRequest,
@@ -60,21 +73,22 @@ public final class SrecGrpc {
     if ((getGetScreenRecordingURLMethod = SrecGrpc.getGetScreenRecordingURLMethod) == null) {
       synchronized (SrecGrpc.class) {
         if ((getGetScreenRecordingURLMethod = SrecGrpc.getGetScreenRecordingURLMethod) == null) {
-          SrecGrpc.getGetScreenRecordingURLMethod = getGetScreenRecordingURLMethod =
+          SrecGrpc.getGetScreenRecordingURLMethod = getGetScreenRecordingURLMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.srec.GetScreenRecordingURLRequest, com.tcn.cloud.api.api.v1alpha1.srec.GetScreenRecordingURLResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetScreenRecordingURL"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v1alpha1.srec.Srec", "GetScreenRecordingURL"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.srec.GetScreenRecordingURLRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.srec.GetScreenRecordingURLResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new SrecMethodDescriptorSupplier("GetScreenRecordingURL"))
-              .build();
+                  .setSchemaDescriptor(new SrecMethodDescriptorSupplier("GetScreenRecordingURL"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetScreenRecordingURLMethod;
+     }
+     return getGetScreenRecordingURLMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.srec.DeleteScreenRecordingRequest,
@@ -91,35 +105,29 @@ public final class SrecGrpc {
     if ((getDeleteScreenRecordingMethod = SrecGrpc.getDeleteScreenRecordingMethod) == null) {
       synchronized (SrecGrpc.class) {
         if ((getDeleteScreenRecordingMethod = SrecGrpc.getDeleteScreenRecordingMethod) == null) {
-          SrecGrpc.getDeleteScreenRecordingMethod = getDeleteScreenRecordingMethod =
+          SrecGrpc.getDeleteScreenRecordingMethod = getDeleteScreenRecordingMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.srec.DeleteScreenRecordingRequest, com.tcn.cloud.api.api.v1alpha1.srec.DeleteScreenRecordingResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteScreenRecording"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v1alpha1.srec.Srec", "DeleteScreenRecording"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.srec.DeleteScreenRecordingRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.srec.DeleteScreenRecordingResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new SrecMethodDescriptorSupplier("DeleteScreenRecording"))
-              .build();
+                  .setSchemaDescriptor(new SrecMethodDescriptorSupplier("DeleteScreenRecording"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDeleteScreenRecordingMethod;
+     }
+     return getDeleteScreenRecordingMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static SrecStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<SrecStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<SrecStub>() {
-        @java.lang.Override
-        public SrecStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new SrecStub(channel, callOptions);
-        }
-      };
-    return SrecStub.newStub(factory, channel);
+    return new SrecStub(channel);
   }
 
   /**
@@ -127,14 +135,7 @@ public final class SrecGrpc {
    */
   public static SrecBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<SrecBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<SrecBlockingStub>() {
-        @java.lang.Override
-        public SrecBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new SrecBlockingStub(channel, callOptions);
-        }
-      };
-    return SrecBlockingStub.newStub(factory, channel);
+    return new SrecBlockingStub(channel);
   }
 
   /**
@@ -142,14 +143,7 @@ public final class SrecGrpc {
    */
   public static SrecFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<SrecFutureStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<SrecFutureStub>() {
-        @java.lang.Override
-        public SrecFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new SrecFutureStub(channel, callOptions);
-        }
-      };
-    return SrecFutureStub.newStub(factory, channel);
+    return new SrecFutureStub(channel);
   }
 
   /**
@@ -163,7 +157,7 @@ public final class SrecGrpc {
      */
     public void listScreenRecordings(com.tcn.cloud.api.api.v1alpha1.srec.ListScreenRecordingsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.srec.ListScreenRecordingsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListScreenRecordingsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListScreenRecordingsMethod(), responseObserver);
     }
 
     /**
@@ -173,7 +167,7 @@ public final class SrecGrpc {
      */
     public void getScreenRecordingURL(com.tcn.cloud.api.api.v1alpha1.srec.GetScreenRecordingURLRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.srec.GetScreenRecordingURLResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetScreenRecordingURLMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetScreenRecordingURLMethod(), responseObserver);
     }
 
     /**
@@ -183,28 +177,28 @@ public final class SrecGrpc {
      */
     public void deleteScreenRecording(com.tcn.cloud.api.api.v1alpha1.srec.DeleteScreenRecordingRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.srec.DeleteScreenRecordingResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteScreenRecordingMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteScreenRecordingMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getListScreenRecordingsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v1alpha1.srec.ListScreenRecordingsRequest,
                 com.tcn.cloud.api.api.v1alpha1.srec.ListScreenRecordingsResponse>(
                   this, METHODID_LIST_SCREEN_RECORDINGS)))
           .addMethod(
             getGetScreenRecordingURLMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v1alpha1.srec.GetScreenRecordingURLRequest,
                 com.tcn.cloud.api.api.v1alpha1.srec.GetScreenRecordingURLResponse>(
                   this, METHODID_GET_SCREEN_RECORDING_URL)))
           .addMethod(
             getDeleteScreenRecordingMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v1alpha1.srec.DeleteScreenRecordingRequest,
                 com.tcn.cloud.api.api.v1alpha1.srec.DeleteScreenRecordingResponse>(
@@ -215,15 +209,19 @@ public final class SrecGrpc {
 
   /**
    */
-  public static final class SrecStub extends io.grpc.stub.AbstractAsyncStub<SrecStub> {
-    private SrecStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class SrecStub extends io.grpc.stub.AbstractStub<SrecStub> {
+    private SrecStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private SrecStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SrecStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected SrecStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new SrecStub(channel, callOptions);
     }
 
@@ -234,7 +232,7 @@ public final class SrecGrpc {
      */
     public void listScreenRecordings(com.tcn.cloud.api.api.v1alpha1.srec.ListScreenRecordingsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.srec.ListScreenRecordingsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListScreenRecordingsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -245,7 +243,7 @@ public final class SrecGrpc {
      */
     public void getScreenRecordingURL(com.tcn.cloud.api.api.v1alpha1.srec.GetScreenRecordingURLRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.srec.GetScreenRecordingURLResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetScreenRecordingURLMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -256,22 +254,26 @@ public final class SrecGrpc {
      */
     public void deleteScreenRecording(com.tcn.cloud.api.api.v1alpha1.srec.DeleteScreenRecordingRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.srec.DeleteScreenRecordingResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDeleteScreenRecordingMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
    */
-  public static final class SrecBlockingStub extends io.grpc.stub.AbstractBlockingStub<SrecBlockingStub> {
-    private SrecBlockingStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class SrecBlockingStub extends io.grpc.stub.AbstractStub<SrecBlockingStub> {
+    private SrecBlockingStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private SrecBlockingStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SrecBlockingStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected SrecBlockingStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new SrecBlockingStub(channel, callOptions);
     }
 
@@ -281,7 +283,7 @@ public final class SrecGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.srec.ListScreenRecordingsResponse listScreenRecordings(com.tcn.cloud.api.api.v1alpha1.srec.ListScreenRecordingsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListScreenRecordingsMethod(), getCallOptions(), request);
     }
 
@@ -291,7 +293,7 @@ public final class SrecGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.srec.GetScreenRecordingURLResponse getScreenRecordingURL(com.tcn.cloud.api.api.v1alpha1.srec.GetScreenRecordingURLRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetScreenRecordingURLMethod(), getCallOptions(), request);
     }
 
@@ -301,22 +303,26 @@ public final class SrecGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.srec.DeleteScreenRecordingResponse deleteScreenRecording(com.tcn.cloud.api.api.v1alpha1.srec.DeleteScreenRecordingRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDeleteScreenRecordingMethod(), getCallOptions(), request);
     }
   }
 
   /**
    */
-  public static final class SrecFutureStub extends io.grpc.stub.AbstractFutureStub<SrecFutureStub> {
-    private SrecFutureStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class SrecFutureStub extends io.grpc.stub.AbstractStub<SrecFutureStub> {
+    private SrecFutureStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private SrecFutureStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SrecFutureStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected SrecFutureStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new SrecFutureStub(channel, callOptions);
     }
 
@@ -327,7 +333,7 @@ public final class SrecGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.srec.ListScreenRecordingsResponse> listScreenRecordings(
         com.tcn.cloud.api.api.v1alpha1.srec.ListScreenRecordingsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListScreenRecordingsMethod(), getCallOptions()), request);
     }
 
@@ -338,7 +344,7 @@ public final class SrecGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.srec.GetScreenRecordingURLResponse> getScreenRecordingURL(
         com.tcn.cloud.api.api.v1alpha1.srec.GetScreenRecordingURLRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetScreenRecordingURLMethod(), getCallOptions()), request);
     }
 
@@ -349,7 +355,7 @@ public final class SrecGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.srec.DeleteScreenRecordingResponse> deleteScreenRecording(
         com.tcn.cloud.api.api.v1alpha1.srec.DeleteScreenRecordingRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDeleteScreenRecordingMethod(), getCallOptions()), request);
     }
   }

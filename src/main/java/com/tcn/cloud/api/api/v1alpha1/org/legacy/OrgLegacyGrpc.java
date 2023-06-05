@@ -1,13 +1,25 @@
 package com.tcn.cloud.api.api.v1alpha1.org.legacy;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.50.0)",
+    value = "by gRPC proto compiler (version 1.14.0)",
     comments = "Source: api/v1alpha1/org/legacy/service.proto")
-@io.grpc.stub.annotations.GrpcGenerated
 public final class OrgLegacyGrpc {
 
   private OrgLegacyGrpc() {}
@@ -29,35 +41,29 @@ public final class OrgLegacyGrpc {
     if ((getRegisterOrganizationMethod = OrgLegacyGrpc.getRegisterOrganizationMethod) == null) {
       synchronized (OrgLegacyGrpc.class) {
         if ((getRegisterOrganizationMethod = OrgLegacyGrpc.getRegisterOrganizationMethod) == null) {
-          OrgLegacyGrpc.getRegisterOrganizationMethod = getRegisterOrganizationMethod =
+          OrgLegacyGrpc.getRegisterOrganizationMethod = getRegisterOrganizationMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.org.legacy.RegisterOrganizationRequest, com.tcn.cloud.api.api.v1alpha1.org.legacy.RegisterOrganizationResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RegisterOrganization"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v1alpha1.org.legacy.OrgLegacy", "RegisterOrganization"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.org.legacy.RegisterOrganizationRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.org.legacy.RegisterOrganizationResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgLegacyMethodDescriptorSupplier("RegisterOrganization"))
-              .build();
+                  .setSchemaDescriptor(new OrgLegacyMethodDescriptorSupplier("RegisterOrganization"))
+                  .build();
+          }
         }
-      }
-    }
-    return getRegisterOrganizationMethod;
+     }
+     return getRegisterOrganizationMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static OrgLegacyStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<OrgLegacyStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<OrgLegacyStub>() {
-        @java.lang.Override
-        public OrgLegacyStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new OrgLegacyStub(channel, callOptions);
-        }
-      };
-    return OrgLegacyStub.newStub(factory, channel);
+    return new OrgLegacyStub(channel);
   }
 
   /**
@@ -65,14 +71,7 @@ public final class OrgLegacyGrpc {
    */
   public static OrgLegacyBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<OrgLegacyBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<OrgLegacyBlockingStub>() {
-        @java.lang.Override
-        public OrgLegacyBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new OrgLegacyBlockingStub(channel, callOptions);
-        }
-      };
-    return OrgLegacyBlockingStub.newStub(factory, channel);
+    return new OrgLegacyBlockingStub(channel);
   }
 
   /**
@@ -80,14 +79,7 @@ public final class OrgLegacyGrpc {
    */
   public static OrgLegacyFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<OrgLegacyFutureStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<OrgLegacyFutureStub>() {
-        @java.lang.Override
-        public OrgLegacyFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new OrgLegacyFutureStub(channel, callOptions);
-        }
-      };
-    return OrgLegacyFutureStub.newStub(factory, channel);
+    return new OrgLegacyFutureStub(channel);
   }
 
   /**
@@ -101,14 +93,14 @@ public final class OrgLegacyGrpc {
      */
     public void registerOrganization(com.tcn.cloud.api.api.v1alpha1.org.legacy.RegisterOrganizationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.legacy.RegisterOrganizationResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRegisterOrganizationMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getRegisterOrganizationMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getRegisterOrganizationMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v1alpha1.org.legacy.RegisterOrganizationRequest,
                 com.tcn.cloud.api.api.v1alpha1.org.legacy.RegisterOrganizationResponse>(
@@ -119,15 +111,19 @@ public final class OrgLegacyGrpc {
 
   /**
    */
-  public static final class OrgLegacyStub extends io.grpc.stub.AbstractAsyncStub<OrgLegacyStub> {
-    private OrgLegacyStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class OrgLegacyStub extends io.grpc.stub.AbstractStub<OrgLegacyStub> {
+    private OrgLegacyStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private OrgLegacyStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected OrgLegacyStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected OrgLegacyStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new OrgLegacyStub(channel, callOptions);
     }
 
@@ -138,22 +134,26 @@ public final class OrgLegacyGrpc {
      */
     public void registerOrganization(com.tcn.cloud.api.api.v1alpha1.org.legacy.RegisterOrganizationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.legacy.RegisterOrganizationResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getRegisterOrganizationMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
    */
-  public static final class OrgLegacyBlockingStub extends io.grpc.stub.AbstractBlockingStub<OrgLegacyBlockingStub> {
-    private OrgLegacyBlockingStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class OrgLegacyBlockingStub extends io.grpc.stub.AbstractStub<OrgLegacyBlockingStub> {
+    private OrgLegacyBlockingStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private OrgLegacyBlockingStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected OrgLegacyBlockingStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected OrgLegacyBlockingStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new OrgLegacyBlockingStub(channel, callOptions);
     }
 
@@ -163,22 +163,26 @@ public final class OrgLegacyGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.legacy.RegisterOrganizationResponse registerOrganization(com.tcn.cloud.api.api.v1alpha1.org.legacy.RegisterOrganizationRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getRegisterOrganizationMethod(), getCallOptions(), request);
     }
   }
 
   /**
    */
-  public static final class OrgLegacyFutureStub extends io.grpc.stub.AbstractFutureStub<OrgLegacyFutureStub> {
-    private OrgLegacyFutureStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class OrgLegacyFutureStub extends io.grpc.stub.AbstractStub<OrgLegacyFutureStub> {
+    private OrgLegacyFutureStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private OrgLegacyFutureStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected OrgLegacyFutureStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected OrgLegacyFutureStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new OrgLegacyFutureStub(channel, callOptions);
     }
 
@@ -189,7 +193,7 @@ public final class OrgLegacyGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.org.legacy.RegisterOrganizationResponse> registerOrganization(
         com.tcn.cloud.api.api.v1alpha1.org.legacy.RegisterOrganizationRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getRegisterOrganizationMethod(), getCallOptions()), request);
     }
   }

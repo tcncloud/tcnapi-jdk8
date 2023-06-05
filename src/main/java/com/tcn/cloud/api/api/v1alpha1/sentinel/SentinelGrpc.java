@@ -1,6 +1,19 @@
 package com.tcn.cloud.api.api.v1alpha1.sentinel;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
@@ -8,9 +21,8 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.50.0)",
+    value = "by gRPC proto compiler (version 1.14.0)",
     comments = "Source: api/v1alpha1/sentinel/service.proto")
-@io.grpc.stub.annotations.GrpcGenerated
 public final class SentinelGrpc {
 
   private SentinelGrpc() {}
@@ -32,35 +44,29 @@ public final class SentinelGrpc {
     if ((getSendEventsMethod = SentinelGrpc.getSendEventsMethod) == null) {
       synchronized (SentinelGrpc.class) {
         if ((getSendEventsMethod = SentinelGrpc.getSendEventsMethod) == null) {
-          SentinelGrpc.getSendEventsMethod = getSendEventsMethod =
+          SentinelGrpc.getSendEventsMethod = getSendEventsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.sentinel.SendEventsReq, com.tcn.cloud.api.api.v1alpha1.sentinel.SendEventsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SendEvents"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v1alpha1.sentinel.Sentinel", "SendEvents"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.sentinel.SendEventsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.sentinel.SendEventsRes.getDefaultInstance()))
-              .setSchemaDescriptor(new SentinelMethodDescriptorSupplier("SendEvents"))
-              .build();
+                  .setSchemaDescriptor(new SentinelMethodDescriptorSupplier("SendEvents"))
+                  .build();
+          }
         }
-      }
-    }
-    return getSendEventsMethod;
+     }
+     return getSendEventsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static SentinelStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<SentinelStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<SentinelStub>() {
-        @java.lang.Override
-        public SentinelStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new SentinelStub(channel, callOptions);
-        }
-      };
-    return SentinelStub.newStub(factory, channel);
+    return new SentinelStub(channel);
   }
 
   /**
@@ -68,14 +74,7 @@ public final class SentinelGrpc {
    */
   public static SentinelBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<SentinelBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<SentinelBlockingStub>() {
-        @java.lang.Override
-        public SentinelBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new SentinelBlockingStub(channel, callOptions);
-        }
-      };
-    return SentinelBlockingStub.newStub(factory, channel);
+    return new SentinelBlockingStub(channel);
   }
 
   /**
@@ -83,14 +82,7 @@ public final class SentinelGrpc {
    */
   public static SentinelFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<SentinelFutureStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<SentinelFutureStub>() {
-        @java.lang.Override
-        public SentinelFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new SentinelFutureStub(channel, callOptions);
-        }
-      };
-    return SentinelFutureStub.newStub(factory, channel);
+    return new SentinelFutureStub(channel);
   }
 
   /**
@@ -107,14 +99,14 @@ public final class SentinelGrpc {
      */
     public void sendEvents(com.tcn.cloud.api.api.v1alpha1.sentinel.SendEventsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.sentinel.SendEventsRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendEventsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getSendEventsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getSendEventsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v1alpha1.sentinel.SendEventsReq,
                 com.tcn.cloud.api.api.v1alpha1.sentinel.SendEventsRes>(
@@ -128,15 +120,19 @@ public final class SentinelGrpc {
    * A service for internal observability utilities.
    * </pre>
    */
-  public static final class SentinelStub extends io.grpc.stub.AbstractAsyncStub<SentinelStub> {
-    private SentinelStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class SentinelStub extends io.grpc.stub.AbstractStub<SentinelStub> {
+    private SentinelStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private SentinelStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SentinelStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected SentinelStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new SentinelStub(channel, callOptions);
     }
 
@@ -147,7 +143,7 @@ public final class SentinelGrpc {
      */
     public void sendEvents(com.tcn.cloud.api.api.v1alpha1.sentinel.SendEventsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.sentinel.SendEventsRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getSendEventsMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -157,15 +153,19 @@ public final class SentinelGrpc {
    * A service for internal observability utilities.
    * </pre>
    */
-  public static final class SentinelBlockingStub extends io.grpc.stub.AbstractBlockingStub<SentinelBlockingStub> {
-    private SentinelBlockingStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class SentinelBlockingStub extends io.grpc.stub.AbstractStub<SentinelBlockingStub> {
+    private SentinelBlockingStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private SentinelBlockingStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SentinelBlockingStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected SentinelBlockingStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new SentinelBlockingStub(channel, callOptions);
     }
 
@@ -175,7 +175,7 @@ public final class SentinelGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v1alpha1.sentinel.SendEventsRes sendEvents(com.tcn.cloud.api.api.v1alpha1.sentinel.SendEventsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getSendEventsMethod(), getCallOptions(), request);
     }
   }
@@ -185,15 +185,19 @@ public final class SentinelGrpc {
    * A service for internal observability utilities.
    * </pre>
    */
-  public static final class SentinelFutureStub extends io.grpc.stub.AbstractFutureStub<SentinelFutureStub> {
-    private SentinelFutureStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class SentinelFutureStub extends io.grpc.stub.AbstractStub<SentinelFutureStub> {
+    private SentinelFutureStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private SentinelFutureStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SentinelFutureStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected SentinelFutureStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new SentinelFutureStub(channel, callOptions);
     }
 
@@ -204,7 +208,7 @@ public final class SentinelGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.sentinel.SendEventsRes> sendEvents(
         com.tcn.cloud.api.api.v1alpha1.sentinel.SendEventsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getSendEventsMethod(), getCallOptions()), request);
     }
   }

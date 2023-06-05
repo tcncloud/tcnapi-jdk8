@@ -1,13 +1,25 @@
 package com.tcn.cloud.api.api.v0alpha;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.50.0)",
+    value = "by gRPC proto compiler (version 1.14.0)",
     comments = "Source: api/v0alpha/org.proto")
-@io.grpc.stub.annotations.GrpcGenerated
 public final class OrgGrpc {
 
   private OrgGrpc() {}
@@ -29,21 +41,22 @@ public final class OrgGrpc {
     if ((getRegisterOrganizationMethod = OrgGrpc.getRegisterOrganizationMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getRegisterOrganizationMethod = OrgGrpc.getRegisterOrganizationMethod) == null) {
-          OrgGrpc.getRegisterOrganizationMethod = getRegisterOrganizationMethod =
+          OrgGrpc.getRegisterOrganizationMethod = getRegisterOrganizationMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.RegisterOrganizationRequest, com.tcn.cloud.api.api.v0alpha.RegisterOrganizationResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RegisterOrganization"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "RegisterOrganization"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RegisterOrganizationRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RegisterOrganizationResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("RegisterOrganization"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("RegisterOrganization"))
+                  .build();
+          }
         }
-      }
-    }
-    return getRegisterOrganizationMethod;
+     }
+     return getRegisterOrganizationMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ConvertOrgToManualRequest,
@@ -60,21 +73,22 @@ public final class OrgGrpc {
     if ((getConvertOrgToManualMethod = OrgGrpc.getConvertOrgToManualMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getConvertOrgToManualMethod = OrgGrpc.getConvertOrgToManualMethod) == null) {
-          OrgGrpc.getConvertOrgToManualMethod = getConvertOrgToManualMethod =
+          OrgGrpc.getConvertOrgToManualMethod = getConvertOrgToManualMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ConvertOrgToManualRequest, com.tcn.cloud.api.api.v0alpha.ConvertOrgToManualResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ConvertOrgToManual"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "ConvertOrgToManual"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ConvertOrgToManualRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ConvertOrgToManualResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ConvertOrgToManual"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ConvertOrgToManual"))
+                  .build();
+          }
         }
-      }
-    }
-    return getConvertOrgToManualMethod;
+     }
+     return getConvertOrgToManualMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateOrganizationRequest,
@@ -91,21 +105,22 @@ public final class OrgGrpc {
     if ((getUpdateOrganizationMethod = OrgGrpc.getUpdateOrganizationMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateOrganizationMethod = OrgGrpc.getUpdateOrganizationMethod) == null) {
-          OrgGrpc.getUpdateOrganizationMethod = getUpdateOrganizationMethod =
+          OrgGrpc.getUpdateOrganizationMethod = getUpdateOrganizationMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateOrganizationRequest, com.tcn.cloud.api.api.v0alpha.UpdateOrganizationResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateOrganization"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateOrganization"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateOrganizationRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateOrganizationResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateOrganization"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateOrganization"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateOrganizationMethod;
+     }
+     return getUpdateOrganizationMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ArchiveOrganizationRequest,
@@ -122,21 +137,22 @@ public final class OrgGrpc {
     if ((getArchiveOrganizationMethod = OrgGrpc.getArchiveOrganizationMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getArchiveOrganizationMethod = OrgGrpc.getArchiveOrganizationMethod) == null) {
-          OrgGrpc.getArchiveOrganizationMethod = getArchiveOrganizationMethod =
+          OrgGrpc.getArchiveOrganizationMethod = getArchiveOrganizationMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ArchiveOrganizationRequest, com.tcn.cloud.api.api.v0alpha.ArchiveOrganizationResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ArchiveOrganization"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "ArchiveOrganization"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ArchiveOrganizationRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ArchiveOrganizationResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ArchiveOrganization"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ArchiveOrganization"))
+                  .build();
+          }
         }
-      }
-    }
-    return getArchiveOrganizationMethod;
+     }
+     return getArchiveOrganizationMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UnArchiveOrganizationRequest,
@@ -153,21 +169,22 @@ public final class OrgGrpc {
     if ((getUnArchiveOrganizationMethod = OrgGrpc.getUnArchiveOrganizationMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUnArchiveOrganizationMethod = OrgGrpc.getUnArchiveOrganizationMethod) == null) {
-          OrgGrpc.getUnArchiveOrganizationMethod = getUnArchiveOrganizationMethod =
+          OrgGrpc.getUnArchiveOrganizationMethod = getUnArchiveOrganizationMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UnArchiveOrganizationRequest, com.tcn.cloud.api.api.v0alpha.UnArchiveOrganizationResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UnArchiveOrganization"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UnArchiveOrganization"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UnArchiveOrganizationRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UnArchiveOrganizationResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UnArchiveOrganization"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UnArchiveOrganization"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUnArchiveOrganizationMethod;
+     }
+     return getUnArchiveOrganizationMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListArchivedOrganizationsRequest,
@@ -184,21 +201,22 @@ public final class OrgGrpc {
     if ((getListArchivedOrganizationsMethod = OrgGrpc.getListArchivedOrganizationsMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getListArchivedOrganizationsMethod = OrgGrpc.getListArchivedOrganizationsMethod) == null) {
-          OrgGrpc.getListArchivedOrganizationsMethod = getListArchivedOrganizationsMethod =
+          OrgGrpc.getListArchivedOrganizationsMethod = getListArchivedOrganizationsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListArchivedOrganizationsRequest, com.tcn.cloud.api.api.v0alpha.ListArchivedOrganizationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListArchivedOrganizations"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "ListArchivedOrganizations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListArchivedOrganizationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListArchivedOrganizationsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListArchivedOrganizations"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListArchivedOrganizations"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListArchivedOrganizationsMethod;
+     }
+     return getListArchivedOrganizationsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetOrganizationProfileRequest,
@@ -215,21 +233,22 @@ public final class OrgGrpc {
     if ((getGetOrganizationProfileMethod = OrgGrpc.getGetOrganizationProfileMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetOrganizationProfileMethod = OrgGrpc.getGetOrganizationProfileMethod) == null) {
-          OrgGrpc.getGetOrganizationProfileMethod = getGetOrganizationProfileMethod =
+          OrgGrpc.getGetOrganizationProfileMethod = getGetOrganizationProfileMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetOrganizationProfileRequest, com.tcn.cloud.api.api.v0alpha.GetOrganizationProfileResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetOrganizationProfile"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetOrganizationProfile"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetOrganizationProfileRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetOrganizationProfileResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetOrganizationProfile"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetOrganizationProfile"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetOrganizationProfileMethod;
+     }
+     return getGetOrganizationProfileMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetOrganizationProfileByIdRequest,
@@ -246,21 +265,22 @@ public final class OrgGrpc {
     if ((getGetOrganizationProfileByIdMethod = OrgGrpc.getGetOrganizationProfileByIdMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetOrganizationProfileByIdMethod = OrgGrpc.getGetOrganizationProfileByIdMethod) == null) {
-          OrgGrpc.getGetOrganizationProfileByIdMethod = getGetOrganizationProfileByIdMethod =
+          OrgGrpc.getGetOrganizationProfileByIdMethod = getGetOrganizationProfileByIdMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetOrganizationProfileByIdRequest, com.tcn.cloud.api.api.v0alpha.GetOrganizationProfileResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetOrganizationProfileById"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetOrganizationProfileById"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetOrganizationProfileByIdRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetOrganizationProfileResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetOrganizationProfileById"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetOrganizationProfileById"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetOrganizationProfileByIdMethod;
+     }
+     return getGetOrganizationProfileByIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListOrganizationDescriptionsRequest,
@@ -277,21 +297,22 @@ public final class OrgGrpc {
     if ((getListOrganizationDescriptionsMethod = OrgGrpc.getListOrganizationDescriptionsMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getListOrganizationDescriptionsMethod = OrgGrpc.getListOrganizationDescriptionsMethod) == null) {
-          OrgGrpc.getListOrganizationDescriptionsMethod = getListOrganizationDescriptionsMethod =
+          OrgGrpc.getListOrganizationDescriptionsMethod = getListOrganizationDescriptionsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListOrganizationDescriptionsRequest, com.tcn.cloud.api.api.v0alpha.ListOrganizationDescriptionsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOrganizationDescriptions"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "ListOrganizationDescriptions"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListOrganizationDescriptionsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListOrganizationDescriptionsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListOrganizationDescriptions"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListOrganizationDescriptions"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListOrganizationDescriptionsMethod;
+     }
+     return getListOrganizationDescriptionsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListRegionalOrganizationsRequest,
@@ -308,21 +329,22 @@ public final class OrgGrpc {
     if ((getListRegionalOrganizationsMethod = OrgGrpc.getListRegionalOrganizationsMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getListRegionalOrganizationsMethod = OrgGrpc.getListRegionalOrganizationsMethod) == null) {
-          OrgGrpc.getListRegionalOrganizationsMethod = getListRegionalOrganizationsMethod =
+          OrgGrpc.getListRegionalOrganizationsMethod = getListRegionalOrganizationsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListRegionalOrganizationsRequest, com.tcn.cloud.api.api.v0alpha.ListRegionalOrganizationsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListRegionalOrganizations"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "ListRegionalOrganizations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListRegionalOrganizationsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListRegionalOrganizationsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListRegionalOrganizations"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListRegionalOrganizations"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListRegionalOrganizationsMethod;
+     }
+     return getListRegionalOrganizationsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateP3OwningOrgRequest,
@@ -339,21 +361,22 @@ public final class OrgGrpc {
     if ((getUpdateP3OwningOrgMethod = OrgGrpc.getUpdateP3OwningOrgMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateP3OwningOrgMethod = OrgGrpc.getUpdateP3OwningOrgMethod) == null) {
-          OrgGrpc.getUpdateP3OwningOrgMethod = getUpdateP3OwningOrgMethod =
+          OrgGrpc.getUpdateP3OwningOrgMethod = getUpdateP3OwningOrgMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateP3OwningOrgRequest, com.tcn.cloud.api.api.v0alpha.UpdateP3OwningOrgResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateP3OwningOrg"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateP3OwningOrg"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateP3OwningOrgRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateP3OwningOrgResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateP3OwningOrg"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateP3OwningOrg"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateP3OwningOrgMethod;
+     }
+     return getUpdateP3OwningOrgMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetP3OwningOrgRequest,
@@ -370,21 +393,22 @@ public final class OrgGrpc {
     if ((getGetP3OwningOrgMethod = OrgGrpc.getGetP3OwningOrgMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetP3OwningOrgMethod = OrgGrpc.getGetP3OwningOrgMethod) == null) {
-          OrgGrpc.getGetP3OwningOrgMethod = getGetP3OwningOrgMethod =
+          OrgGrpc.getGetP3OwningOrgMethod = getGetP3OwningOrgMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetP3OwningOrgRequest, com.tcn.cloud.api.api.v0alpha.GetP3OwningOrgResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetP3OwningOrg"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetP3OwningOrg"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetP3OwningOrgRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetP3OwningOrgResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetP3OwningOrg"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetP3OwningOrg"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetP3OwningOrgMethod;
+     }
+     return getGetP3OwningOrgMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListOrganizationUserDescriptionsRequest,
@@ -401,21 +425,22 @@ public final class OrgGrpc {
     if ((getListOrganizationUserDescriptionsMethod = OrgGrpc.getListOrganizationUserDescriptionsMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getListOrganizationUserDescriptionsMethod = OrgGrpc.getListOrganizationUserDescriptionsMethod) == null) {
-          OrgGrpc.getListOrganizationUserDescriptionsMethod = getListOrganizationUserDescriptionsMethod =
+          OrgGrpc.getListOrganizationUserDescriptionsMethod = getListOrganizationUserDescriptionsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListOrganizationUserDescriptionsRequest, com.tcn.cloud.api.api.v0alpha.ListOrganizationUserDescriptionsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOrganizationUserDescriptions"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "ListOrganizationUserDescriptions"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListOrganizationUserDescriptionsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListOrganizationUserDescriptionsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListOrganizationUserDescriptions"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListOrganizationUserDescriptions"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListOrganizationUserDescriptionsMethod;
+     }
+     return getListOrganizationUserDescriptionsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.AdminListUserDescriptionsRequest,
@@ -432,21 +457,22 @@ public final class OrgGrpc {
     if ((getAdminListUserDescriptionsMethod = OrgGrpc.getAdminListUserDescriptionsMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getAdminListUserDescriptionsMethod = OrgGrpc.getAdminListUserDescriptionsMethod) == null) {
-          OrgGrpc.getAdminListUserDescriptionsMethod = getAdminListUserDescriptionsMethod =
+          OrgGrpc.getAdminListUserDescriptionsMethod = getAdminListUserDescriptionsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.AdminListUserDescriptionsRequest, com.tcn.cloud.api.api.v0alpha.AdminListUserDescriptionsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AdminListUserDescriptions"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "AdminListUserDescriptions"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AdminListUserDescriptionsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AdminListUserDescriptionsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AdminListUserDescriptions"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AdminListUserDescriptions"))
+                  .build();
+          }
         }
-      }
-    }
-    return getAdminListUserDescriptionsMethod;
+     }
+     return getAdminListUserDescriptionsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListUserDescriptionsRequest,
@@ -463,21 +489,22 @@ public final class OrgGrpc {
     if ((getListUserDescriptionsMethod = OrgGrpc.getListUserDescriptionsMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getListUserDescriptionsMethod = OrgGrpc.getListUserDescriptionsMethod) == null) {
-          OrgGrpc.getListUserDescriptionsMethod = getListUserDescriptionsMethod =
+          OrgGrpc.getListUserDescriptionsMethod = getListUserDescriptionsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListUserDescriptionsRequest, com.tcn.cloud.api.api.v0alpha.ListUserDescriptionsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListUserDescriptions"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "ListUserDescriptions"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListUserDescriptionsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListUserDescriptionsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListUserDescriptions"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListUserDescriptions"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListUserDescriptionsMethod;
+     }
+     return getListUserDescriptionsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetUserDirectoryRequest,
@@ -494,21 +521,22 @@ public final class OrgGrpc {
     if ((getGetUserDirectoryMethod = OrgGrpc.getGetUserDirectoryMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetUserDirectoryMethod = OrgGrpc.getGetUserDirectoryMethod) == null) {
-          OrgGrpc.getGetUserDirectoryMethod = getGetUserDirectoryMethod =
+          OrgGrpc.getGetUserDirectoryMethod = getGetUserDirectoryMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetUserDirectoryRequest, com.tcn.cloud.api.api.v0alpha.GetUserDirectoryResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetUserDirectory"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetUserDirectory"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetUserDirectoryRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetUserDirectoryResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetUserDirectory"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetUserDirectory"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetUserDirectoryMethod;
+     }
+     return getGetUserDirectoryMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetRegionsRequest,
@@ -525,21 +553,22 @@ public final class OrgGrpc {
     if ((getGetRegionsMethod = OrgGrpc.getGetRegionsMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetRegionsMethod = OrgGrpc.getGetRegionsMethod) == null) {
-          OrgGrpc.getGetRegionsMethod = getGetRegionsMethod =
+          OrgGrpc.getGetRegionsMethod = getGetRegionsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetRegionsRequest, com.tcn.cloud.api.api.v0alpha.GetRegionsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetRegions"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetRegions"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetRegionsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetRegionsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetRegions"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetRegions"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetRegionsMethod;
+     }
+     return getGetRegionsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetMyUserDetailsRequest,
@@ -556,21 +585,22 @@ public final class OrgGrpc {
     if ((getGetMyUserDetailsMethod = OrgGrpc.getGetMyUserDetailsMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetMyUserDetailsMethod = OrgGrpc.getGetMyUserDetailsMethod) == null) {
-          OrgGrpc.getGetMyUserDetailsMethod = getGetMyUserDetailsMethod =
+          OrgGrpc.getGetMyUserDetailsMethod = getGetMyUserDetailsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetMyUserDetailsRequest, com.tcn.cloud.api.api.v0alpha.UserDetails>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetMyUserDetails"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetMyUserDetails"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetMyUserDetailsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UserDetails.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetMyUserDetails"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetMyUserDetails"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetMyUserDetailsMethod;
+     }
+     return getGetMyUserDetailsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetUserDetailsRequest,
@@ -587,21 +617,22 @@ public final class OrgGrpc {
     if ((getGetUserDetailsMethod = OrgGrpc.getGetUserDetailsMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetUserDetailsMethod = OrgGrpc.getGetUserDetailsMethod) == null) {
-          OrgGrpc.getGetUserDetailsMethod = getGetUserDetailsMethod =
+          OrgGrpc.getGetUserDetailsMethod = getGetUserDetailsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetUserDetailsRequest, com.tcn.cloud.api.api.v0alpha.UserDetails>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetUserDetails"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetUserDetails"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetUserDetailsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UserDetails.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetUserDetails"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetUserDetails"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetUserDetailsMethod;
+     }
+     return getGetUserDetailsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.AdminGetUserDetailsRequest,
@@ -618,21 +649,22 @@ public final class OrgGrpc {
     if ((getAdminGetUserDetailsMethod = OrgGrpc.getAdminGetUserDetailsMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getAdminGetUserDetailsMethod = OrgGrpc.getAdminGetUserDetailsMethod) == null) {
-          OrgGrpc.getAdminGetUserDetailsMethod = getAdminGetUserDetailsMethod =
+          OrgGrpc.getAdminGetUserDetailsMethod = getAdminGetUserDetailsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.AdminGetUserDetailsRequest, com.tcn.cloud.api.api.v0alpha.UserDetails>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AdminGetUserDetails"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "AdminGetUserDetails"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AdminGetUserDetailsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UserDetails.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AdminGetUserDetails"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AdminGetUserDetails"))
+                  .build();
+          }
         }
-      }
-    }
-    return getAdminGetUserDetailsMethod;
+     }
+     return getAdminGetUserDetailsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetAgentUsersRequest,
@@ -649,21 +681,22 @@ public final class OrgGrpc {
     if ((getGetAgentUsersMethod = OrgGrpc.getGetAgentUsersMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetAgentUsersMethod = OrgGrpc.getGetAgentUsersMethod) == null) {
-          OrgGrpc.getGetAgentUsersMethod = getGetAgentUsersMethod =
+          OrgGrpc.getGetAgentUsersMethod = getGetAgentUsersMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetAgentUsersRequest, com.tcn.cloud.api.api.v0alpha.GetAgentUsersResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAgentUsers"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetAgentUsers"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetAgentUsersRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetAgentUsersResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetAgentUsers"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetAgentUsers"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetAgentUsersMethod;
+     }
+     return getGetAgentUsersMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetAgentSettingsRequest,
@@ -680,21 +713,22 @@ public final class OrgGrpc {
     if ((getGetAgentSettingsMethod = OrgGrpc.getGetAgentSettingsMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetAgentSettingsMethod = OrgGrpc.getGetAgentSettingsMethod) == null) {
-          OrgGrpc.getGetAgentSettingsMethod = getGetAgentSettingsMethod =
+          OrgGrpc.getGetAgentSettingsMethod = getGetAgentSettingsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetAgentSettingsRequest, com.tcn.cloud.api.api.v0alpha.GetAgentSettingsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAgentSettings"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetAgentSettings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetAgentSettingsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetAgentSettingsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetAgentSettings"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetAgentSettings"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetAgentSettingsMethod;
+     }
+     return getGetAgentSettingsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetAgentProfileGroupRequest,
@@ -711,21 +745,22 @@ public final class OrgGrpc {
     if ((getGetAgentProfileGroupMethod = OrgGrpc.getGetAgentProfileGroupMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetAgentProfileGroupMethod = OrgGrpc.getGetAgentProfileGroupMethod) == null) {
-          OrgGrpc.getGetAgentProfileGroupMethod = getGetAgentProfileGroupMethod =
+          OrgGrpc.getGetAgentProfileGroupMethod = getGetAgentProfileGroupMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetAgentProfileGroupRequest, com.tcn.cloud.api.api.v0alpha.GetAgentProfileGroupResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAgentProfileGroup"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetAgentProfileGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetAgentProfileGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetAgentProfileGroupResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetAgentProfileGroup"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetAgentProfileGroup"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetAgentProfileGroupMethod;
+     }
+     return getGetAgentProfileGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateAgentProfileGroupRequest,
@@ -742,21 +777,22 @@ public final class OrgGrpc {
     if ((getUpdateAgentProfileGroupMethod = OrgGrpc.getUpdateAgentProfileGroupMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateAgentProfileGroupMethod = OrgGrpc.getUpdateAgentProfileGroupMethod) == null) {
-          OrgGrpc.getUpdateAgentProfileGroupMethod = getUpdateAgentProfileGroupMethod =
+          OrgGrpc.getUpdateAgentProfileGroupMethod = getUpdateAgentProfileGroupMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateAgentProfileGroupRequest, com.tcn.cloud.api.api.v0alpha.UpdateAgentProfileGroupResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAgentProfileGroup"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateAgentProfileGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateAgentProfileGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateAgentProfileGroupResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateAgentProfileGroup"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateAgentProfileGroup"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateAgentProfileGroupMethod;
+     }
+     return getUpdateAgentProfileGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateAgentProfileGroupRequest,
@@ -773,21 +809,22 @@ public final class OrgGrpc {
     if ((getCreateAgentProfileGroupMethod = OrgGrpc.getCreateAgentProfileGroupMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getCreateAgentProfileGroupMethod = OrgGrpc.getCreateAgentProfileGroupMethod) == null) {
-          OrgGrpc.getCreateAgentProfileGroupMethod = getCreateAgentProfileGroupMethod =
+          OrgGrpc.getCreateAgentProfileGroupMethod = getCreateAgentProfileGroupMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateAgentProfileGroupRequest, com.tcn.cloud.api.api.v0alpha.CreateAgentProfileGroupResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateAgentProfileGroup"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "CreateAgentProfileGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateAgentProfileGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateAgentProfileGroupResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreateAgentProfileGroup"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreateAgentProfileGroup"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateAgentProfileGroupMethod;
+     }
+     return getCreateAgentProfileGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListAgentProfileGroupsRequest,
@@ -804,21 +841,22 @@ public final class OrgGrpc {
     if ((getListAgentProfileGroupsMethod = OrgGrpc.getListAgentProfileGroupsMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getListAgentProfileGroupsMethod = OrgGrpc.getListAgentProfileGroupsMethod) == null) {
-          OrgGrpc.getListAgentProfileGroupsMethod = getListAgentProfileGroupsMethod =
+          OrgGrpc.getListAgentProfileGroupsMethod = getListAgentProfileGroupsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListAgentProfileGroupsRequest, com.tcn.cloud.api.api.v0alpha.ListAgentProfileGroupsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAgentProfileGroups"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "ListAgentProfileGroups"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAgentProfileGroupsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAgentProfileGroupsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListAgentProfileGroups"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListAgentProfileGroups"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListAgentProfileGroupsMethod;
+     }
+     return getListAgentProfileGroupsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteAgentProfileGroupRequest,
@@ -835,21 +873,22 @@ public final class OrgGrpc {
     if ((getDeleteAgentProfileGroupMethod = OrgGrpc.getDeleteAgentProfileGroupMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getDeleteAgentProfileGroupMethod = OrgGrpc.getDeleteAgentProfileGroupMethod) == null) {
-          OrgGrpc.getDeleteAgentProfileGroupMethod = getDeleteAgentProfileGroupMethod =
+          OrgGrpc.getDeleteAgentProfileGroupMethod = getDeleteAgentProfileGroupMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteAgentProfileGroupRequest, com.tcn.cloud.api.api.v0alpha.DeleteAgentProfileGroupResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteAgentProfileGroup"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "DeleteAgentProfileGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteAgentProfileGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteAgentProfileGroupResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("DeleteAgentProfileGroup"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("DeleteAgentProfileGroup"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDeleteAgentProfileGroupMethod;
+     }
+     return getDeleteAgentProfileGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.AssignAgentProfileGroupsRequest,
@@ -866,21 +905,22 @@ public final class OrgGrpc {
     if ((getAssignAgentProfileGroupsMethod = OrgGrpc.getAssignAgentProfileGroupsMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getAssignAgentProfileGroupsMethod = OrgGrpc.getAssignAgentProfileGroupsMethod) == null) {
-          OrgGrpc.getAssignAgentProfileGroupsMethod = getAssignAgentProfileGroupsMethod =
+          OrgGrpc.getAssignAgentProfileGroupsMethod = getAssignAgentProfileGroupsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.AssignAgentProfileGroupsRequest, com.tcn.cloud.api.api.v0alpha.AssignAgentProfileGroupsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AssignAgentProfileGroups"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "AssignAgentProfileGroups"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AssignAgentProfileGroupsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AssignAgentProfileGroupsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AssignAgentProfileGroups"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AssignAgentProfileGroups"))
+                  .build();
+          }
         }
-      }
-    }
-    return getAssignAgentProfileGroupsMethod;
+     }
+     return getAssignAgentProfileGroupsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateUserRequest,
@@ -897,21 +937,22 @@ public final class OrgGrpc {
     if ((getUpdateUserMethod = OrgGrpc.getUpdateUserMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateUserMethod = OrgGrpc.getUpdateUserMethod) == null) {
-          OrgGrpc.getUpdateUserMethod = getUpdateUserMethod =
+          OrgGrpc.getUpdateUserMethod = getUpdateUserMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateUserRequest, com.tcn.cloud.api.api.v0alpha.UpdateUserResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateUser"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateUser"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateUserRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateUserResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateUser"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateUser"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateUserMethod;
+     }
+     return getUpdateUserMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateMyUserRequest,
@@ -928,21 +969,22 @@ public final class OrgGrpc {
     if ((getUpdateMyUserMethod = OrgGrpc.getUpdateMyUserMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateMyUserMethod = OrgGrpc.getUpdateMyUserMethod) == null) {
-          OrgGrpc.getUpdateMyUserMethod = getUpdateMyUserMethod =
+          OrgGrpc.getUpdateMyUserMethod = getUpdateMyUserMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateMyUserRequest, com.tcn.cloud.api.api.v0alpha.UpdateMyUserResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateMyUser"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateMyUser"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateMyUserRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateMyUserResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateMyUser"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateMyUser"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateMyUserMethod;
+     }
+     return getUpdateMyUserMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest,
@@ -959,21 +1001,22 @@ public final class OrgGrpc {
     if ((getUpdateUserCallerIdMethod = OrgGrpc.getUpdateUserCallerIdMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateUserCallerIdMethod = OrgGrpc.getUpdateUserCallerIdMethod) == null) {
-          OrgGrpc.getUpdateUserCallerIdMethod = getUpdateUserCallerIdMethod =
+          OrgGrpc.getUpdateUserCallerIdMethod = getUpdateUserCallerIdMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest, com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateUserCallerId"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateUserCallerId"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateUserCallerId"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateUserCallerId"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateUserCallerIdMethod;
+     }
+     return getUpdateUserCallerIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateUserRequest,
@@ -990,21 +1033,22 @@ public final class OrgGrpc {
     if ((getCreateUserMethod = OrgGrpc.getCreateUserMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getCreateUserMethod = OrgGrpc.getCreateUserMethod) == null) {
-          OrgGrpc.getCreateUserMethod = getCreateUserMethod =
+          OrgGrpc.getCreateUserMethod = getCreateUserMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateUserRequest, com.tcn.cloud.api.api.v0alpha.CreateUserResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateUser"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "CreateUser"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateUserRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateUserResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreateUser"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreateUser"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateUserMethod;
+     }
+     return getCreateUserMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateUserByOrgIdRequest,
@@ -1021,21 +1065,22 @@ public final class OrgGrpc {
     if ((getCreateUserByOrgIdMethod = OrgGrpc.getCreateUserByOrgIdMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getCreateUserByOrgIdMethod = OrgGrpc.getCreateUserByOrgIdMethod) == null) {
-          OrgGrpc.getCreateUserByOrgIdMethod = getCreateUserByOrgIdMethod =
+          OrgGrpc.getCreateUserByOrgIdMethod = getCreateUserByOrgIdMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateUserByOrgIdRequest, com.tcn.cloud.api.api.v0alpha.CreateUserByOrgIdResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateUserByOrgId"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "CreateUserByOrgId"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateUserByOrgIdRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateUserByOrgIdResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreateUserByOrgId"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreateUserByOrgId"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateUserByOrgIdMethod;
+     }
+     return getCreateUserByOrgIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateDelegatedUserRequest,
@@ -1052,21 +1097,22 @@ public final class OrgGrpc {
     if ((getCreateDelegatedUserMethod = OrgGrpc.getCreateDelegatedUserMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getCreateDelegatedUserMethod = OrgGrpc.getCreateDelegatedUserMethod) == null) {
-          OrgGrpc.getCreateDelegatedUserMethod = getCreateDelegatedUserMethod =
+          OrgGrpc.getCreateDelegatedUserMethod = getCreateDelegatedUserMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateDelegatedUserRequest, com.tcn.cloud.api.api.v0alpha.CreateDelegatedUserResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateDelegatedUser"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "CreateDelegatedUser"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateDelegatedUserRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateDelegatedUserResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreateDelegatedUser"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreateDelegatedUser"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateDelegatedUserMethod;
+     }
+     return getCreateDelegatedUserMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordRequest,
@@ -1083,21 +1129,22 @@ public final class OrgGrpc {
     if ((getUpdateUserPasswordMethod = OrgGrpc.getUpdateUserPasswordMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateUserPasswordMethod = OrgGrpc.getUpdateUserPasswordMethod) == null) {
-          OrgGrpc.getUpdateUserPasswordMethod = getUpdateUserPasswordMethod =
+          OrgGrpc.getUpdateUserPasswordMethod = getUpdateUserPasswordMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordRequest, com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateUserPassword"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateUserPassword"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateUserPassword"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateUserPassword"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateUserPasswordMethod;
+     }
+     return getUpdateUserPasswordMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest,
@@ -1114,21 +1161,22 @@ public final class OrgGrpc {
     if ((getUpdateMyUserPasswordMethod = OrgGrpc.getUpdateMyUserPasswordMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateMyUserPasswordMethod = OrgGrpc.getUpdateMyUserPasswordMethod) == null) {
-          OrgGrpc.getUpdateMyUserPasswordMethod = getUpdateMyUserPasswordMethod =
+          OrgGrpc.getUpdateMyUserPasswordMethod = getUpdateMyUserPasswordMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest, com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateMyUserPassword"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateMyUserPassword"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateMyUserPassword"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateMyUserPassword"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateMyUserPasswordMethod;
+     }
+     return getUpdateMyUserPasswordMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByOrgIdRequest,
@@ -1145,21 +1193,22 @@ public final class OrgGrpc {
     if ((getUpdateUserPasswordByOrgIdMethod = OrgGrpc.getUpdateUserPasswordByOrgIdMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateUserPasswordByOrgIdMethod = OrgGrpc.getUpdateUserPasswordByOrgIdMethod) == null) {
-          OrgGrpc.getUpdateUserPasswordByOrgIdMethod = getUpdateUserPasswordByOrgIdMethod =
+          OrgGrpc.getUpdateUserPasswordByOrgIdMethod = getUpdateUserPasswordByOrgIdMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByOrgIdRequest, com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByOrgIdResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateUserPasswordByOrgId"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateUserPasswordByOrgId"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByOrgIdRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByOrgIdResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateUserPasswordByOrgId"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateUserPasswordByOrgId"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateUserPasswordByOrgIdMethod;
+     }
+     return getUpdateUserPasswordByOrgIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ResetUserRequirePasswordResetRequest,
@@ -1176,21 +1225,22 @@ public final class OrgGrpc {
     if ((getResetUserRequirePasswordResetMethod = OrgGrpc.getResetUserRequirePasswordResetMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getResetUserRequirePasswordResetMethod = OrgGrpc.getResetUserRequirePasswordResetMethod) == null) {
-          OrgGrpc.getResetUserRequirePasswordResetMethod = getResetUserRequirePasswordResetMethod =
+          OrgGrpc.getResetUserRequirePasswordResetMethod = getResetUserRequirePasswordResetMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ResetUserRequirePasswordResetRequest, com.tcn.cloud.api.api.v0alpha.ResetUserRequirePasswordResetResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ResetUserRequirePasswordReset"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "ResetUserRequirePasswordReset"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ResetUserRequirePasswordResetRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ResetUserRequirePasswordResetResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ResetUserRequirePasswordReset"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ResetUserRequirePasswordReset"))
+                  .build();
+          }
         }
-      }
-    }
-    return getResetUserRequirePasswordResetMethod;
+     }
+     return getResetUserRequirePasswordResetMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest,
@@ -1207,21 +1257,22 @@ public final class OrgGrpc {
     if ((getGetUserPasswordResetLinkMethod = OrgGrpc.getGetUserPasswordResetLinkMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetUserPasswordResetLinkMethod = OrgGrpc.getGetUserPasswordResetLinkMethod) == null) {
-          OrgGrpc.getGetUserPasswordResetLinkMethod = getGetUserPasswordResetLinkMethod =
+          OrgGrpc.getGetUserPasswordResetLinkMethod = getGetUserPasswordResetLinkMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest, com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetUserPasswordResetLink"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetUserPasswordResetLink"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetUserPasswordResetLink"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetUserPasswordResetLink"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetUserPasswordResetLinkMethod;
+     }
+     return getGetUserPasswordResetLinkMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkRequest,
@@ -1238,21 +1289,22 @@ public final class OrgGrpc {
     if ((getGetMyUserPasswordResetLinkMethod = OrgGrpc.getGetMyUserPasswordResetLinkMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetMyUserPasswordResetLinkMethod = OrgGrpc.getGetMyUserPasswordResetLinkMethod) == null) {
-          OrgGrpc.getGetMyUserPasswordResetLinkMethod = getGetMyUserPasswordResetLinkMethod =
+          OrgGrpc.getGetMyUserPasswordResetLinkMethod = getGetMyUserPasswordResetLinkMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkRequest, com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetMyUserPasswordResetLink"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetMyUserPasswordResetLink"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetMyUserPasswordResetLink"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetMyUserPasswordResetLink"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetMyUserPasswordResetLinkMethod;
+     }
+     return getGetMyUserPasswordResetLinkMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByOrgIdRequest,
@@ -1269,21 +1321,22 @@ public final class OrgGrpc {
     if ((getGetUserPasswordResetLinkByOrgIdMethod = OrgGrpc.getGetUserPasswordResetLinkByOrgIdMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetUserPasswordResetLinkByOrgIdMethod = OrgGrpc.getGetUserPasswordResetLinkByOrgIdMethod) == null) {
-          OrgGrpc.getGetUserPasswordResetLinkByOrgIdMethod = getGetUserPasswordResetLinkByOrgIdMethod =
+          OrgGrpc.getGetUserPasswordResetLinkByOrgIdMethod = getGetUserPasswordResetLinkByOrgIdMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByOrgIdRequest, com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByOrgIdResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetUserPasswordResetLinkByOrgId"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetUserPasswordResetLinkByOrgId"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByOrgIdRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByOrgIdResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetUserPasswordResetLinkByOrgId"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetUserPasswordResetLinkByOrgId"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetUserPasswordResetLinkByOrgIdMethod;
+     }
+     return getGetUserPasswordResetLinkByOrgIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetUserEmailVerifiedRequest,
@@ -1300,21 +1353,22 @@ public final class OrgGrpc {
     if ((getGetUserEmailVerifiedMethod = OrgGrpc.getGetUserEmailVerifiedMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetUserEmailVerifiedMethod = OrgGrpc.getGetUserEmailVerifiedMethod) == null) {
-          OrgGrpc.getGetUserEmailVerifiedMethod = getGetUserEmailVerifiedMethod =
+          OrgGrpc.getGetUserEmailVerifiedMethod = getGetUserEmailVerifiedMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetUserEmailVerifiedRequest, com.tcn.cloud.api.api.v0alpha.GetUserEmailVerifiedResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetUserEmailVerified"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetUserEmailVerified"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetUserEmailVerifiedRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetUserEmailVerifiedResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetUserEmailVerified"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetUserEmailVerified"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetUserEmailVerifiedMethod;
+     }
+     return getGetUserEmailVerifiedMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetUserEmailVerifiedByOrgIdRequest,
@@ -1331,21 +1385,22 @@ public final class OrgGrpc {
     if ((getGetUserEmailVerifiedByOrgIdMethod = OrgGrpc.getGetUserEmailVerifiedByOrgIdMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetUserEmailVerifiedByOrgIdMethod = OrgGrpc.getGetUserEmailVerifiedByOrgIdMethod) == null) {
-          OrgGrpc.getGetUserEmailVerifiedByOrgIdMethod = getGetUserEmailVerifiedByOrgIdMethod =
+          OrgGrpc.getGetUserEmailVerifiedByOrgIdMethod = getGetUserEmailVerifiedByOrgIdMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetUserEmailVerifiedByOrgIdRequest, com.tcn.cloud.api.api.v0alpha.GetUserEmailVerifiedByOrgIdResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetUserEmailVerifiedByOrgId"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetUserEmailVerifiedByOrgId"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetUserEmailVerifiedByOrgIdRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetUserEmailVerifiedByOrgIdResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetUserEmailVerifiedByOrgId"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetUserEmailVerifiedByOrgId"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetUserEmailVerifiedByOrgIdMethod;
+     }
+     return getGetUserEmailVerifiedByOrgIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SendUserVerificationEmailByOrgIdRequest,
@@ -1362,21 +1417,22 @@ public final class OrgGrpc {
     if ((getSendUserVerificationEmailByOrgIdMethod = OrgGrpc.getSendUserVerificationEmailByOrgIdMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getSendUserVerificationEmailByOrgIdMethod = OrgGrpc.getSendUserVerificationEmailByOrgIdMethod) == null) {
-          OrgGrpc.getSendUserVerificationEmailByOrgIdMethod = getSendUserVerificationEmailByOrgIdMethod =
+          OrgGrpc.getSendUserVerificationEmailByOrgIdMethod = getSendUserVerificationEmailByOrgIdMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SendUserVerificationEmailByOrgIdRequest, com.tcn.cloud.api.api.v0alpha.SendUserVerificationEmailByOrgIdResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SendUserVerificationEmailByOrgId"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "SendUserVerificationEmailByOrgId"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SendUserVerificationEmailByOrgIdRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SendUserVerificationEmailByOrgIdResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("SendUserVerificationEmailByOrgId"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("SendUserVerificationEmailByOrgId"))
+                  .build();
+          }
         }
-      }
-    }
-    return getSendUserVerificationEmailByOrgIdMethod;
+     }
+     return getSendUserVerificationEmailByOrgIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SendUserVerificationEmailRequest,
@@ -1393,21 +1449,22 @@ public final class OrgGrpc {
     if ((getSendUserVerificationEmailMethod = OrgGrpc.getSendUserVerificationEmailMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getSendUserVerificationEmailMethod = OrgGrpc.getSendUserVerificationEmailMethod) == null) {
-          OrgGrpc.getSendUserVerificationEmailMethod = getSendUserVerificationEmailMethod =
+          OrgGrpc.getSendUserVerificationEmailMethod = getSendUserVerificationEmailMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SendUserVerificationEmailRequest, com.tcn.cloud.api.api.v0alpha.SendUserVerificationEmailResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SendUserVerificationEmail"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "SendUserVerificationEmail"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SendUserVerificationEmailRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SendUserVerificationEmailResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("SendUserVerificationEmail"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("SendUserVerificationEmail"))
+                  .build();
+          }
         }
-      }
-    }
-    return getSendUserVerificationEmailMethod;
+     }
+     return getSendUserVerificationEmailMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ManualUserEmailVerificationByOrgIdRequest,
@@ -1424,21 +1481,22 @@ public final class OrgGrpc {
     if ((getManualUserEmailVerificationByOrgIdMethod = OrgGrpc.getManualUserEmailVerificationByOrgIdMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getManualUserEmailVerificationByOrgIdMethod = OrgGrpc.getManualUserEmailVerificationByOrgIdMethod) == null) {
-          OrgGrpc.getManualUserEmailVerificationByOrgIdMethod = getManualUserEmailVerificationByOrgIdMethod =
+          OrgGrpc.getManualUserEmailVerificationByOrgIdMethod = getManualUserEmailVerificationByOrgIdMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ManualUserEmailVerificationByOrgIdRequest, com.tcn.cloud.api.api.v0alpha.ManualUserEmailVerificationByOrgIdResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ManualUserEmailVerificationByOrgId"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "ManualUserEmailVerificationByOrgId"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ManualUserEmailVerificationByOrgIdRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ManualUserEmailVerificationByOrgIdResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ManualUserEmailVerificationByOrgId"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ManualUserEmailVerificationByOrgId"))
+                  .build();
+          }
         }
-      }
-    }
-    return getManualUserEmailVerificationByOrgIdMethod;
+     }
+     return getManualUserEmailVerificationByOrgIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ManualUserEmailVerificationRequest,
@@ -1455,21 +1513,22 @@ public final class OrgGrpc {
     if ((getManualUserEmailVerificationMethod = OrgGrpc.getManualUserEmailVerificationMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getManualUserEmailVerificationMethod = OrgGrpc.getManualUserEmailVerificationMethod) == null) {
-          OrgGrpc.getManualUserEmailVerificationMethod = getManualUserEmailVerificationMethod =
+          OrgGrpc.getManualUserEmailVerificationMethod = getManualUserEmailVerificationMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ManualUserEmailVerificationRequest, com.tcn.cloud.api.api.v0alpha.ManualUserEmailVerificationResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ManualUserEmailVerification"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "ManualUserEmailVerification"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ManualUserEmailVerificationRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ManualUserEmailVerificationResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ManualUserEmailVerification"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ManualUserEmailVerification"))
+                  .build();
+          }
         }
-      }
-    }
-    return getManualUserEmailVerificationMethod;
+     }
+     return getManualUserEmailVerificationMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq,
@@ -1486,21 +1545,22 @@ public final class OrgGrpc {
     if ((getGetTempUserTokenMethod = OrgGrpc.getGetTempUserTokenMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetTempUserTokenMethod = OrgGrpc.getGetTempUserTokenMethod) == null) {
-          OrgGrpc.getGetTempUserTokenMethod = getGetTempUserTokenMethod =
+          OrgGrpc.getGetTempUserTokenMethod = getGetTempUserTokenMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq, com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetTempUserToken"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetTempUserToken"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetTempUserToken"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetTempUserToken"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetTempUserTokenMethod;
+     }
+     return getGetTempUserTokenMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetTempUserTokenByUserIdReq,
@@ -1517,21 +1577,22 @@ public final class OrgGrpc {
     if ((getGetTempUserTokenByUserIdMethod = OrgGrpc.getGetTempUserTokenByUserIdMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetTempUserTokenByUserIdMethod = OrgGrpc.getGetTempUserTokenByUserIdMethod) == null) {
-          OrgGrpc.getGetTempUserTokenByUserIdMethod = getGetTempUserTokenByUserIdMethod =
+          OrgGrpc.getGetTempUserTokenByUserIdMethod = getGetTempUserTokenByUserIdMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetTempUserTokenByUserIdReq, com.tcn.cloud.api.api.v0alpha.GetTempUserTokenByUserIdRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetTempUserTokenByUserId"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetTempUserTokenByUserId"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetTempUserTokenByUserIdReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetTempUserTokenByUserIdRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetTempUserTokenByUserId"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetTempUserTokenByUserId"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetTempUserTokenByUserIdMethod;
+     }
+     return getGetTempUserTokenByUserIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetCountriesListRequest,
@@ -1548,21 +1609,22 @@ public final class OrgGrpc {
     if ((getGetCountriesListMethod = OrgGrpc.getGetCountriesListMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetCountriesListMethod = OrgGrpc.getGetCountriesListMethod) == null) {
-          OrgGrpc.getGetCountriesListMethod = getGetCountriesListMethod =
+          OrgGrpc.getGetCountriesListMethod = getGetCountriesListMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetCountriesListRequest, com.tcn.cloud.api.api.v0alpha.GetCountriesListResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCountriesList"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetCountriesList"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetCountriesListRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetCountriesListResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetCountriesList"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetCountriesList"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetCountriesListMethod;
+     }
+     return getGetCountriesListMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetAdminClientPreferencesRequest,
@@ -1579,21 +1641,22 @@ public final class OrgGrpc {
     if ((getGetAdminClientPreferencesMethod = OrgGrpc.getGetAdminClientPreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetAdminClientPreferencesMethod = OrgGrpc.getGetAdminClientPreferencesMethod) == null) {
-          OrgGrpc.getGetAdminClientPreferencesMethod = getGetAdminClientPreferencesMethod =
+          OrgGrpc.getGetAdminClientPreferencesMethod = getGetAdminClientPreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetAdminClientPreferencesRequest, com.tcn.cloud.api.api.v0alpha.GetAdminClientPreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAdminClientPreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetAdminClientPreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetAdminClientPreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetAdminClientPreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetAdminClientPreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetAdminClientPreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetAdminClientPreferencesMethod;
+     }
+     return getGetAdminClientPreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateAdminClientPreferencesRequest,
@@ -1610,21 +1673,22 @@ public final class OrgGrpc {
     if ((getUpdateAdminClientPreferencesMethod = OrgGrpc.getUpdateAdminClientPreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateAdminClientPreferencesMethod = OrgGrpc.getUpdateAdminClientPreferencesMethod) == null) {
-          OrgGrpc.getUpdateAdminClientPreferencesMethod = getUpdateAdminClientPreferencesMethod =
+          OrgGrpc.getUpdateAdminClientPreferencesMethod = getUpdateAdminClientPreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateAdminClientPreferencesRequest, com.tcn.cloud.api.api.v0alpha.UpdateAdminClientPreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAdminClientPreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateAdminClientPreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateAdminClientPreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateAdminClientPreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateAdminClientPreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateAdminClientPreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateAdminClientPreferencesMethod;
+     }
+     return getUpdateAdminClientPreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetPermissionsRequest,
@@ -1641,21 +1705,22 @@ public final class OrgGrpc {
     if ((getGetPermissionsMethod = OrgGrpc.getGetPermissionsMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetPermissionsMethod = OrgGrpc.getGetPermissionsMethod) == null) {
-          OrgGrpc.getGetPermissionsMethod = getGetPermissionsMethod =
+          OrgGrpc.getGetPermissionsMethod = getGetPermissionsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetPermissionsRequest, com.tcn.cloud.api.api.v0alpha.GetPermissionsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPermissions"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetPermissions"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetPermissionsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetPermissionsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetPermissions"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetPermissions"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetPermissionsMethod;
+     }
+     return getGetPermissionsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.RevokeAccountOwnerPermissionFromUserRequest,
@@ -1672,21 +1737,22 @@ public final class OrgGrpc {
     if ((getRevokeAccountOwnerPermissionFromUserMethod = OrgGrpc.getRevokeAccountOwnerPermissionFromUserMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getRevokeAccountOwnerPermissionFromUserMethod = OrgGrpc.getRevokeAccountOwnerPermissionFromUserMethod) == null) {
-          OrgGrpc.getRevokeAccountOwnerPermissionFromUserMethod = getRevokeAccountOwnerPermissionFromUserMethod =
+          OrgGrpc.getRevokeAccountOwnerPermissionFromUserMethod = getRevokeAccountOwnerPermissionFromUserMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.RevokeAccountOwnerPermissionFromUserRequest, com.tcn.cloud.api.api.v0alpha.RevokeAccountOwnerPermissionFromUserResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RevokeAccountOwnerPermissionFromUser"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "RevokeAccountOwnerPermissionFromUser"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RevokeAccountOwnerPermissionFromUserRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RevokeAccountOwnerPermissionFromUserResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("RevokeAccountOwnerPermissionFromUser"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("RevokeAccountOwnerPermissionFromUser"))
+                  .build();
+          }
         }
-      }
-    }
-    return getRevokeAccountOwnerPermissionFromUserMethod;
+     }
+     return getRevokeAccountOwnerPermissionFromUserMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateUserDisabledRequest,
@@ -1703,21 +1769,22 @@ public final class OrgGrpc {
     if ((getUpdateUserDisabledMethod = OrgGrpc.getUpdateUserDisabledMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateUserDisabledMethod = OrgGrpc.getUpdateUserDisabledMethod) == null) {
-          OrgGrpc.getUpdateUserDisabledMethod = getUpdateUserDisabledMethod =
+          OrgGrpc.getUpdateUserDisabledMethod = getUpdateUserDisabledMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateUserDisabledRequest, com.tcn.cloud.api.api.v0alpha.UpdateUserDisabledResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateUserDisabled"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateUserDisabled"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateUserDisabledRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateUserDisabledResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateUserDisabled"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateUserDisabled"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateUserDisabledMethod;
+     }
+     return getUpdateUserDisabledMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateUserDisabledByOrgIdRequest,
@@ -1734,21 +1801,22 @@ public final class OrgGrpc {
     if ((getUpdateUserDisabledByOrgIdMethod = OrgGrpc.getUpdateUserDisabledByOrgIdMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateUserDisabledByOrgIdMethod = OrgGrpc.getUpdateUserDisabledByOrgIdMethod) == null) {
-          OrgGrpc.getUpdateUserDisabledByOrgIdMethod = getUpdateUserDisabledByOrgIdMethod =
+          OrgGrpc.getUpdateUserDisabledByOrgIdMethod = getUpdateUserDisabledByOrgIdMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateUserDisabledByOrgIdRequest, com.tcn.cloud.api.api.v0alpha.UpdateUserDisabledByOrgIdResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateUserDisabledByOrgId"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateUserDisabledByOrgId"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateUserDisabledByOrgIdRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateUserDisabledByOrgIdResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateUserDisabledByOrgId"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateUserDisabledByOrgId"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateUserDisabledByOrgIdMethod;
+     }
+     return getUpdateUserDisabledByOrgIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateBulkUsersDisabledRequest,
@@ -1765,21 +1833,22 @@ public final class OrgGrpc {
     if ((getUpdateBulkUsersDisabledMethod = OrgGrpc.getUpdateBulkUsersDisabledMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateBulkUsersDisabledMethod = OrgGrpc.getUpdateBulkUsersDisabledMethod) == null) {
-          OrgGrpc.getUpdateBulkUsersDisabledMethod = getUpdateBulkUsersDisabledMethod =
+          OrgGrpc.getUpdateBulkUsersDisabledMethod = getUpdateBulkUsersDisabledMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateBulkUsersDisabledRequest, com.tcn.cloud.api.api.v0alpha.UpdateBulkUsersDisabledResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateBulkUsersDisabled"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateBulkUsersDisabled"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateBulkUsersDisabledRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateBulkUsersDisabledResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateBulkUsersDisabled"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateBulkUsersDisabled"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateBulkUsersDisabledMethod;
+     }
+     return getUpdateBulkUsersDisabledMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetOrgBillingSettingsByOrgIdRequest,
@@ -1796,21 +1865,22 @@ public final class OrgGrpc {
     if ((getGetOrgBillingSettingsByOrgIdMethod = OrgGrpc.getGetOrgBillingSettingsByOrgIdMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetOrgBillingSettingsByOrgIdMethod = OrgGrpc.getGetOrgBillingSettingsByOrgIdMethod) == null) {
-          OrgGrpc.getGetOrgBillingSettingsByOrgIdMethod = getGetOrgBillingSettingsByOrgIdMethod =
+          OrgGrpc.getGetOrgBillingSettingsByOrgIdMethod = getGetOrgBillingSettingsByOrgIdMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetOrgBillingSettingsByOrgIdRequest, com.tcn.cloud.api.api.v0alpha.GetOrgBillingSettingsByOrgIdResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetOrgBillingSettingsByOrgId"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetOrgBillingSettingsByOrgId"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetOrgBillingSettingsByOrgIdRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetOrgBillingSettingsByOrgIdResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetOrgBillingSettingsByOrgId"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetOrgBillingSettingsByOrgId"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetOrgBillingSettingsByOrgIdMethod;
+     }
+     return getGetOrgBillingSettingsByOrgIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetOrgBillingSettingsRequest,
@@ -1827,21 +1897,22 @@ public final class OrgGrpc {
     if ((getGetOrgBillingSettingsMethod = OrgGrpc.getGetOrgBillingSettingsMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetOrgBillingSettingsMethod = OrgGrpc.getGetOrgBillingSettingsMethod) == null) {
-          OrgGrpc.getGetOrgBillingSettingsMethod = getGetOrgBillingSettingsMethod =
+          OrgGrpc.getGetOrgBillingSettingsMethod = getGetOrgBillingSettingsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetOrgBillingSettingsRequest, com.tcn.cloud.api.api.v0alpha.GetOrgBillingSettingsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetOrgBillingSettings"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetOrgBillingSettings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetOrgBillingSettingsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetOrgBillingSettingsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetOrgBillingSettings"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetOrgBillingSettings"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetOrgBillingSettingsMethod;
+     }
+     return getGetOrgBillingSettingsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SetOrgBillingSettingsRequest,
@@ -1858,21 +1929,22 @@ public final class OrgGrpc {
     if ((getSetOrgBillingSettingsMethod = OrgGrpc.getSetOrgBillingSettingsMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getSetOrgBillingSettingsMethod = OrgGrpc.getSetOrgBillingSettingsMethod) == null) {
-          OrgGrpc.getSetOrgBillingSettingsMethod = getSetOrgBillingSettingsMethod =
+          OrgGrpc.getSetOrgBillingSettingsMethod = getSetOrgBillingSettingsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SetOrgBillingSettingsRequest, com.tcn.cloud.api.api.v0alpha.SetOrgBillingSettingsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetOrgBillingSettings"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "SetOrgBillingSettings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SetOrgBillingSettingsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SetOrgBillingSettingsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("SetOrgBillingSettings"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("SetOrgBillingSettings"))
+                  .build();
+          }
         }
-      }
-    }
-    return getSetOrgBillingSettingsMethod;
+     }
+     return getSetOrgBillingSettingsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.AddOrgBillingOverrideRequest,
@@ -1889,21 +1961,22 @@ public final class OrgGrpc {
     if ((getAddOrgBillingOverrideMethod = OrgGrpc.getAddOrgBillingOverrideMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getAddOrgBillingOverrideMethod = OrgGrpc.getAddOrgBillingOverrideMethod) == null) {
-          OrgGrpc.getAddOrgBillingOverrideMethod = getAddOrgBillingOverrideMethod =
+          OrgGrpc.getAddOrgBillingOverrideMethod = getAddOrgBillingOverrideMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.AddOrgBillingOverrideRequest, com.tcn.cloud.api.api.v0alpha.AddOrgBillingOverrideResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddOrgBillingOverride"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "AddOrgBillingOverride"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AddOrgBillingOverrideRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AddOrgBillingOverrideResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AddOrgBillingOverride"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AddOrgBillingOverride"))
+                  .build();
+          }
         }
-      }
-    }
-    return getAddOrgBillingOverrideMethod;
+     }
+     return getAddOrgBillingOverrideMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.RemoveOrgBillingOverrideRequest,
@@ -1920,21 +1993,22 @@ public final class OrgGrpc {
     if ((getRemoveOrgBillingOverrideMethod = OrgGrpc.getRemoveOrgBillingOverrideMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getRemoveOrgBillingOverrideMethod = OrgGrpc.getRemoveOrgBillingOverrideMethod) == null) {
-          OrgGrpc.getRemoveOrgBillingOverrideMethod = getRemoveOrgBillingOverrideMethod =
+          OrgGrpc.getRemoveOrgBillingOverrideMethod = getRemoveOrgBillingOverrideMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.RemoveOrgBillingOverrideRequest, com.tcn.cloud.api.api.v0alpha.RemoveOrgBillingOverrideResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveOrgBillingOverride"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "RemoveOrgBillingOverride"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RemoveOrgBillingOverrideRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RemoveOrgBillingOverrideResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("RemoveOrgBillingOverride"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("RemoveOrgBillingOverride"))
+                  .build();
+          }
         }
-      }
-    }
-    return getRemoveOrgBillingOverrideMethod;
+     }
+     return getRemoveOrgBillingOverrideMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetSystemDefaultBillingRatesRequest,
@@ -1951,21 +2025,22 @@ public final class OrgGrpc {
     if ((getGetSystemDefaultBillingRatesMethod = OrgGrpc.getGetSystemDefaultBillingRatesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetSystemDefaultBillingRatesMethod = OrgGrpc.getGetSystemDefaultBillingRatesMethod) == null) {
-          OrgGrpc.getGetSystemDefaultBillingRatesMethod = getGetSystemDefaultBillingRatesMethod =
+          OrgGrpc.getGetSystemDefaultBillingRatesMethod = getGetSystemDefaultBillingRatesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetSystemDefaultBillingRatesRequest, com.tcn.cloud.api.api.v0alpha.GetSystemDefaultBillingRatesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSystemDefaultBillingRates"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetSystemDefaultBillingRates"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetSystemDefaultBillingRatesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetSystemDefaultBillingRatesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetSystemDefaultBillingRates"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetSystemDefaultBillingRates"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetSystemDefaultBillingRatesMethod;
+     }
+     return getGetSystemDefaultBillingRatesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListPermissionGroupsByOrgIdRequest,
@@ -1982,21 +2057,22 @@ public final class OrgGrpc {
     if ((getListPermissionGroupsByOrgIdMethod = OrgGrpc.getListPermissionGroupsByOrgIdMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getListPermissionGroupsByOrgIdMethod = OrgGrpc.getListPermissionGroupsByOrgIdMethod) == null) {
-          OrgGrpc.getListPermissionGroupsByOrgIdMethod = getListPermissionGroupsByOrgIdMethod =
+          OrgGrpc.getListPermissionGroupsByOrgIdMethod = getListPermissionGroupsByOrgIdMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListPermissionGroupsByOrgIdRequest, com.tcn.cloud.api.api.v0alpha.ListPermissionGroupsByOrgIdResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListPermissionGroupsByOrgId"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "ListPermissionGroupsByOrgId"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListPermissionGroupsByOrgIdRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListPermissionGroupsByOrgIdResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListPermissionGroupsByOrgId"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListPermissionGroupsByOrgId"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListPermissionGroupsByOrgIdMethod;
+     }
+     return getListPermissionGroupsByOrgIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListPermissionGroupsRequest,
@@ -2013,21 +2089,22 @@ public final class OrgGrpc {
     if ((getListPermissionGroupsMethod = OrgGrpc.getListPermissionGroupsMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getListPermissionGroupsMethod = OrgGrpc.getListPermissionGroupsMethod) == null) {
-          OrgGrpc.getListPermissionGroupsMethod = getListPermissionGroupsMethod =
+          OrgGrpc.getListPermissionGroupsMethod = getListPermissionGroupsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListPermissionGroupsRequest, com.tcn.cloud.api.api.v0alpha.ListPermissionGroupsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListPermissionGroups"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "ListPermissionGroups"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListPermissionGroupsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListPermissionGroupsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListPermissionGroups"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListPermissionGroups"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListPermissionGroupsMethod;
+     }
+     return getListPermissionGroupsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreatePermissionGroupRequest,
@@ -2044,21 +2121,22 @@ public final class OrgGrpc {
     if ((getCreatePermissionGroupMethod = OrgGrpc.getCreatePermissionGroupMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getCreatePermissionGroupMethod = OrgGrpc.getCreatePermissionGroupMethod) == null) {
-          OrgGrpc.getCreatePermissionGroupMethod = getCreatePermissionGroupMethod =
+          OrgGrpc.getCreatePermissionGroupMethod = getCreatePermissionGroupMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreatePermissionGroupRequest, com.tcn.cloud.api.api.v0alpha.CreatePermissionGroupResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreatePermissionGroup"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "CreatePermissionGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreatePermissionGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreatePermissionGroupResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreatePermissionGroup"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreatePermissionGroup"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreatePermissionGroupMethod;
+     }
+     return getCreatePermissionGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdatePermissionGroupRequest,
@@ -2075,21 +2153,22 @@ public final class OrgGrpc {
     if ((getUpdatePermissionGroupMethod = OrgGrpc.getUpdatePermissionGroupMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdatePermissionGroupMethod = OrgGrpc.getUpdatePermissionGroupMethod) == null) {
-          OrgGrpc.getUpdatePermissionGroupMethod = getUpdatePermissionGroupMethod =
+          OrgGrpc.getUpdatePermissionGroupMethod = getUpdatePermissionGroupMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdatePermissionGroupRequest, com.tcn.cloud.api.api.v0alpha.UpdatePermissionGroupResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdatePermissionGroup"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdatePermissionGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdatePermissionGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdatePermissionGroupResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdatePermissionGroup"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdatePermissionGroup"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdatePermissionGroupMethod;
+     }
+     return getUpdatePermissionGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeletePermissionGroupRequest,
@@ -2106,21 +2185,22 @@ public final class OrgGrpc {
     if ((getDeletePermissionGroupMethod = OrgGrpc.getDeletePermissionGroupMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getDeletePermissionGroupMethod = OrgGrpc.getDeletePermissionGroupMethod) == null) {
-          OrgGrpc.getDeletePermissionGroupMethod = getDeletePermissionGroupMethod =
+          OrgGrpc.getDeletePermissionGroupMethod = getDeletePermissionGroupMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeletePermissionGroupRequest, com.tcn.cloud.api.api.v0alpha.DeletePermissionGroupResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeletePermissionGroup"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "DeletePermissionGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeletePermissionGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeletePermissionGroupResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("DeletePermissionGroup"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("DeletePermissionGroup"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDeletePermissionGroupMethod;
+     }
+     return getDeletePermissionGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.AssignUserToAccountOwnerPermissionGroupRequest,
@@ -2137,21 +2217,22 @@ public final class OrgGrpc {
     if ((getAssignUserToAccountOwnerPermissionGroupMethod = OrgGrpc.getAssignUserToAccountOwnerPermissionGroupMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getAssignUserToAccountOwnerPermissionGroupMethod = OrgGrpc.getAssignUserToAccountOwnerPermissionGroupMethod) == null) {
-          OrgGrpc.getAssignUserToAccountOwnerPermissionGroupMethod = getAssignUserToAccountOwnerPermissionGroupMethod =
+          OrgGrpc.getAssignUserToAccountOwnerPermissionGroupMethod = getAssignUserToAccountOwnerPermissionGroupMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.AssignUserToAccountOwnerPermissionGroupRequest, com.tcn.cloud.api.api.v0alpha.AssignUserToAccountOwnerPermissionGroupResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AssignUserToAccountOwnerPermissionGroup"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "AssignUserToAccountOwnerPermissionGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AssignUserToAccountOwnerPermissionGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AssignUserToAccountOwnerPermissionGroupResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AssignUserToAccountOwnerPermissionGroup"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AssignUserToAccountOwnerPermissionGroup"))
+                  .build();
+          }
         }
-      }
-    }
-    return getAssignUserToAccountOwnerPermissionGroupMethod;
+     }
+     return getAssignUserToAccountOwnerPermissionGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.AssignUserPermissionGroupRequest,
@@ -2168,21 +2249,22 @@ public final class OrgGrpc {
     if ((getAssignUserPermissionGroupMethod = OrgGrpc.getAssignUserPermissionGroupMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getAssignUserPermissionGroupMethod = OrgGrpc.getAssignUserPermissionGroupMethod) == null) {
-          OrgGrpc.getAssignUserPermissionGroupMethod = getAssignUserPermissionGroupMethod =
+          OrgGrpc.getAssignUserPermissionGroupMethod = getAssignUserPermissionGroupMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.AssignUserPermissionGroupRequest, com.tcn.cloud.api.api.v0alpha.AssignUserPermissionGroupResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AssignUserPermissionGroup"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "AssignUserPermissionGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AssignUserPermissionGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AssignUserPermissionGroupResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AssignUserPermissionGroup"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AssignUserPermissionGroup"))
+                  .build();
+          }
         }
-      }
-    }
-    return getAssignUserPermissionGroupMethod;
+     }
+     return getAssignUserPermissionGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.AssignUsersPermissionGroupRequest,
@@ -2199,21 +2281,22 @@ public final class OrgGrpc {
     if ((getAssignUsersPermissionGroupMethod = OrgGrpc.getAssignUsersPermissionGroupMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getAssignUsersPermissionGroupMethod = OrgGrpc.getAssignUsersPermissionGroupMethod) == null) {
-          OrgGrpc.getAssignUsersPermissionGroupMethod = getAssignUsersPermissionGroupMethod =
+          OrgGrpc.getAssignUsersPermissionGroupMethod = getAssignUsersPermissionGroupMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.AssignUsersPermissionGroupRequest, com.tcn.cloud.api.api.v0alpha.AssignUsersPermissionGroupResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AssignUsersPermissionGroup"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "AssignUsersPermissionGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AssignUsersPermissionGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AssignUsersPermissionGroupResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AssignUsersPermissionGroup"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AssignUsersPermissionGroup"))
+                  .build();
+          }
         }
-      }
-    }
-    return getAssignUsersPermissionGroupMethod;
+     }
+     return getAssignUsersPermissionGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateUserNeoPermissionGroupsRequest,
@@ -2230,21 +2313,22 @@ public final class OrgGrpc {
     if ((getUpdateUserNeoPermissionGroupsMethod = OrgGrpc.getUpdateUserNeoPermissionGroupsMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateUserNeoPermissionGroupsMethod = OrgGrpc.getUpdateUserNeoPermissionGroupsMethod) == null) {
-          OrgGrpc.getUpdateUserNeoPermissionGroupsMethod = getUpdateUserNeoPermissionGroupsMethod =
+          OrgGrpc.getUpdateUserNeoPermissionGroupsMethod = getUpdateUserNeoPermissionGroupsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateUserNeoPermissionGroupsRequest, com.tcn.cloud.api.api.v0alpha.UpdateUserNeoPermissionGroupsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateUserNeoPermissionGroups"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateUserNeoPermissionGroups"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateUserNeoPermissionGroupsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateUserNeoPermissionGroupsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateUserNeoPermissionGroups"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateUserNeoPermissionGroups"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateUserNeoPermissionGroupsMethod;
+     }
+     return getUpdateUserNeoPermissionGroupsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.RevokeUserPermissionGroupRequest,
@@ -2261,21 +2345,22 @@ public final class OrgGrpc {
     if ((getRevokeUserPermissionGroupMethod = OrgGrpc.getRevokeUserPermissionGroupMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getRevokeUserPermissionGroupMethod = OrgGrpc.getRevokeUserPermissionGroupMethod) == null) {
-          OrgGrpc.getRevokeUserPermissionGroupMethod = getRevokeUserPermissionGroupMethod =
+          OrgGrpc.getRevokeUserPermissionGroupMethod = getRevokeUserPermissionGroupMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.RevokeUserPermissionGroupRequest, com.tcn.cloud.api.api.v0alpha.RevokeUserPermissionGroupResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RevokeUserPermissionGroup"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "RevokeUserPermissionGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RevokeUserPermissionGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RevokeUserPermissionGroupResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("RevokeUserPermissionGroup"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("RevokeUserPermissionGroup"))
+                  .build();
+          }
         }
-      }
-    }
-    return getRevokeUserPermissionGroupMethod;
+     }
+     return getRevokeUserPermissionGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.RevokeUsersPermissionGroupRequest,
@@ -2292,21 +2377,22 @@ public final class OrgGrpc {
     if ((getRevokeUsersPermissionGroupMethod = OrgGrpc.getRevokeUsersPermissionGroupMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getRevokeUsersPermissionGroupMethod = OrgGrpc.getRevokeUsersPermissionGroupMethod) == null) {
-          OrgGrpc.getRevokeUsersPermissionGroupMethod = getRevokeUsersPermissionGroupMethod =
+          OrgGrpc.getRevokeUsersPermissionGroupMethod = getRevokeUsersPermissionGroupMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.RevokeUsersPermissionGroupRequest, com.tcn.cloud.api.api.v0alpha.RevokeUsersPermissionGroupResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RevokeUsersPermissionGroup"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "RevokeUsersPermissionGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RevokeUsersPermissionGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RevokeUsersPermissionGroupResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("RevokeUsersPermissionGroup"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("RevokeUsersPermissionGroup"))
+                  .build();
+          }
         }
-      }
-    }
-    return getRevokeUsersPermissionGroupMethod;
+     }
+     return getRevokeUsersPermissionGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.InitDefaultPermissionGroupsRequest,
@@ -2323,21 +2409,22 @@ public final class OrgGrpc {
     if ((getInitDefaultPermissionGroupsMethod = OrgGrpc.getInitDefaultPermissionGroupsMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getInitDefaultPermissionGroupsMethod = OrgGrpc.getInitDefaultPermissionGroupsMethod) == null) {
-          OrgGrpc.getInitDefaultPermissionGroupsMethod = getInitDefaultPermissionGroupsMethod =
+          OrgGrpc.getInitDefaultPermissionGroupsMethod = getInitDefaultPermissionGroupsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.InitDefaultPermissionGroupsRequest, com.tcn.cloud.api.api.v0alpha.InitDefaultPermissionGroupsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "InitDefaultPermissionGroups"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "InitDefaultPermissionGroups"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.InitDefaultPermissionGroupsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.InitDefaultPermissionGroupsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("InitDefaultPermissionGroups"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("InitDefaultPermissionGroups"))
+                  .build();
+          }
         }
-      }
-    }
-    return getInitDefaultPermissionGroupsMethod;
+     }
+     return getInitDefaultPermissionGroupsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.AddPermissionToAccountOwnerPermissionGroupRequest,
@@ -2354,21 +2441,22 @@ public final class OrgGrpc {
     if ((getAddPermissionToAccountOwnerPermissionGroupMethod = OrgGrpc.getAddPermissionToAccountOwnerPermissionGroupMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getAddPermissionToAccountOwnerPermissionGroupMethod = OrgGrpc.getAddPermissionToAccountOwnerPermissionGroupMethod) == null) {
-          OrgGrpc.getAddPermissionToAccountOwnerPermissionGroupMethod = getAddPermissionToAccountOwnerPermissionGroupMethod =
+          OrgGrpc.getAddPermissionToAccountOwnerPermissionGroupMethod = getAddPermissionToAccountOwnerPermissionGroupMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.AddPermissionToAccountOwnerPermissionGroupRequest, com.tcn.cloud.api.api.v0alpha.AddPermissionToAccountOwnerPermissionGroupResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddPermissionToAccountOwnerPermissionGroup"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "AddPermissionToAccountOwnerPermissionGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AddPermissionToAccountOwnerPermissionGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AddPermissionToAccountOwnerPermissionGroupResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AddPermissionToAccountOwnerPermissionGroup"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AddPermissionToAccountOwnerPermissionGroup"))
+                  .build();
+          }
         }
-      }
-    }
-    return getAddPermissionToAccountOwnerPermissionGroupMethod;
+     }
+     return getAddPermissionToAccountOwnerPermissionGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.RevokePermissionToAccountOwnerPermissionGroupRequest,
@@ -2385,21 +2473,22 @@ public final class OrgGrpc {
     if ((getRevokePermissionToAccountOwnerPermissionGroupMethod = OrgGrpc.getRevokePermissionToAccountOwnerPermissionGroupMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getRevokePermissionToAccountOwnerPermissionGroupMethod = OrgGrpc.getRevokePermissionToAccountOwnerPermissionGroupMethod) == null) {
-          OrgGrpc.getRevokePermissionToAccountOwnerPermissionGroupMethod = getRevokePermissionToAccountOwnerPermissionGroupMethod =
+          OrgGrpc.getRevokePermissionToAccountOwnerPermissionGroupMethod = getRevokePermissionToAccountOwnerPermissionGroupMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.RevokePermissionToAccountOwnerPermissionGroupRequest, com.tcn.cloud.api.api.v0alpha.RevokePermissionToAccountOwnerPermissionGroupResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RevokePermissionToAccountOwnerPermissionGroup"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "RevokePermissionToAccountOwnerPermissionGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RevokePermissionToAccountOwnerPermissionGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RevokePermissionToAccountOwnerPermissionGroupResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("RevokePermissionToAccountOwnerPermissionGroup"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("RevokePermissionToAccountOwnerPermissionGroup"))
+                  .build();
+          }
         }
-      }
-    }
-    return getRevokePermissionToAccountOwnerPermissionGroupMethod;
+     }
+     return getRevokePermissionToAccountOwnerPermissionGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.AddPermissionToOrgDefaultGroupRequest,
@@ -2416,21 +2505,22 @@ public final class OrgGrpc {
     if ((getAddPermissionToOrgDefaultGroupMethod = OrgGrpc.getAddPermissionToOrgDefaultGroupMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getAddPermissionToOrgDefaultGroupMethod = OrgGrpc.getAddPermissionToOrgDefaultGroupMethod) == null) {
-          OrgGrpc.getAddPermissionToOrgDefaultGroupMethod = getAddPermissionToOrgDefaultGroupMethod =
+          OrgGrpc.getAddPermissionToOrgDefaultGroupMethod = getAddPermissionToOrgDefaultGroupMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.AddPermissionToOrgDefaultGroupRequest, com.tcn.cloud.api.api.v0alpha.AddPermissionToOrgDefaultGroupResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddPermissionToOrgDefaultGroup"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "AddPermissionToOrgDefaultGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AddPermissionToOrgDefaultGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AddPermissionToOrgDefaultGroupResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AddPermissionToOrgDefaultGroup"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AddPermissionToOrgDefaultGroup"))
+                  .build();
+          }
         }
-      }
-    }
-    return getAddPermissionToOrgDefaultGroupMethod;
+     }
+     return getAddPermissionToOrgDefaultGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.RemovePermissionFromOrgDefaultGroupRequest,
@@ -2447,21 +2537,22 @@ public final class OrgGrpc {
     if ((getRemovePermissionFromOrgDefaultGroupMethod = OrgGrpc.getRemovePermissionFromOrgDefaultGroupMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getRemovePermissionFromOrgDefaultGroupMethod = OrgGrpc.getRemovePermissionFromOrgDefaultGroupMethod) == null) {
-          OrgGrpc.getRemovePermissionFromOrgDefaultGroupMethod = getRemovePermissionFromOrgDefaultGroupMethod =
+          OrgGrpc.getRemovePermissionFromOrgDefaultGroupMethod = getRemovePermissionFromOrgDefaultGroupMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.RemovePermissionFromOrgDefaultGroupRequest, com.tcn.cloud.api.api.v0alpha.RemovePermissionFromOrgDefaultGroupResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemovePermissionFromOrgDefaultGroup"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "RemovePermissionFromOrgDefaultGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RemovePermissionFromOrgDefaultGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RemovePermissionFromOrgDefaultGroupResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("RemovePermissionFromOrgDefaultGroup"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("RemovePermissionFromOrgDefaultGroup"))
+                  .build();
+          }
         }
-      }
-    }
-    return getRemovePermissionFromOrgDefaultGroupMethod;
+     }
+     return getRemovePermissionFromOrgDefaultGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetOrgDefaultSuperUserGroupRequest,
@@ -2478,21 +2569,22 @@ public final class OrgGrpc {
     if ((getGetOrgDefaultSuperUserGroupMethod = OrgGrpc.getGetOrgDefaultSuperUserGroupMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetOrgDefaultSuperUserGroupMethod = OrgGrpc.getGetOrgDefaultSuperUserGroupMethod) == null) {
-          OrgGrpc.getGetOrgDefaultSuperUserGroupMethod = getGetOrgDefaultSuperUserGroupMethod =
+          OrgGrpc.getGetOrgDefaultSuperUserGroupMethod = getGetOrgDefaultSuperUserGroupMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetOrgDefaultSuperUserGroupRequest, com.tcn.cloud.api.api.v0alpha.GetOrgDefaultSuperUserGroupResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetOrgDefaultSuperUserGroup"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetOrgDefaultSuperUserGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetOrgDefaultSuperUserGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetOrgDefaultSuperUserGroupResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetOrgDefaultSuperUserGroup"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetOrgDefaultSuperUserGroup"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetOrgDefaultSuperUserGroupMethod;
+     }
+     return getGetOrgDefaultSuperUserGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListP3PermissionGroupsByOrgIdRequest,
@@ -2509,21 +2601,22 @@ public final class OrgGrpc {
     if ((getListP3PermissionGroupsByOrgIdMethod = OrgGrpc.getListP3PermissionGroupsByOrgIdMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getListP3PermissionGroupsByOrgIdMethod = OrgGrpc.getListP3PermissionGroupsByOrgIdMethod) == null) {
-          OrgGrpc.getListP3PermissionGroupsByOrgIdMethod = getListP3PermissionGroupsByOrgIdMethod =
+          OrgGrpc.getListP3PermissionGroupsByOrgIdMethod = getListP3PermissionGroupsByOrgIdMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListP3PermissionGroupsByOrgIdRequest, com.tcn.cloud.api.api.v0alpha.ListP3PermissionGroupsByOrgIdResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListP3PermissionGroupsByOrgId"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "ListP3PermissionGroupsByOrgId"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListP3PermissionGroupsByOrgIdRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListP3PermissionGroupsByOrgIdResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListP3PermissionGroupsByOrgId"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListP3PermissionGroupsByOrgId"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListP3PermissionGroupsByOrgIdMethod;
+     }
+     return getListP3PermissionGroupsByOrgIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListP3PermissionGroupsRequest,
@@ -2540,21 +2633,22 @@ public final class OrgGrpc {
     if ((getListP3PermissionGroupsMethod = OrgGrpc.getListP3PermissionGroupsMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getListP3PermissionGroupsMethod = OrgGrpc.getListP3PermissionGroupsMethod) == null) {
-          OrgGrpc.getListP3PermissionGroupsMethod = getListP3PermissionGroupsMethod =
+          OrgGrpc.getListP3PermissionGroupsMethod = getListP3PermissionGroupsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListP3PermissionGroupsRequest, com.tcn.cloud.api.api.v0alpha.ListP3PermissionGroupsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListP3PermissionGroups"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "ListP3PermissionGroups"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListP3PermissionGroupsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListP3PermissionGroupsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListP3PermissionGroups"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListP3PermissionGroups"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListP3PermissionGroupsMethod;
+     }
+     return getListP3PermissionGroupsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.AddUserRegionRequest,
@@ -2571,21 +2665,22 @@ public final class OrgGrpc {
     if ((getAddUserRegionMethod = OrgGrpc.getAddUserRegionMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getAddUserRegionMethod = OrgGrpc.getAddUserRegionMethod) == null) {
-          OrgGrpc.getAddUserRegionMethod = getAddUserRegionMethod =
+          OrgGrpc.getAddUserRegionMethod = getAddUserRegionMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.AddUserRegionRequest, com.tcn.cloud.api.api.v0alpha.AddUserRegionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddUserRegion"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "AddUserRegion"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AddUserRegionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AddUserRegionResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AddUserRegion"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AddUserRegion"))
+                  .build();
+          }
         }
-      }
-    }
-    return getAddUserRegionMethod;
+     }
+     return getAddUserRegionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.RemoveUserRegionRequest,
@@ -2602,21 +2697,22 @@ public final class OrgGrpc {
     if ((getRemoveUserRegionMethod = OrgGrpc.getRemoveUserRegionMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getRemoveUserRegionMethod = OrgGrpc.getRemoveUserRegionMethod) == null) {
-          OrgGrpc.getRemoveUserRegionMethod = getRemoveUserRegionMethod =
+          OrgGrpc.getRemoveUserRegionMethod = getRemoveUserRegionMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.RemoveUserRegionRequest, com.tcn.cloud.api.api.v0alpha.RemoveUserRegionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveUserRegion"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "RemoveUserRegion"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RemoveUserRegionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RemoveUserRegionResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("RemoveUserRegion"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("RemoveUserRegion"))
+                  .build();
+          }
         }
-      }
-    }
-    return getRemoveUserRegionMethod;
+     }
+     return getRemoveUserRegionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateP3PermissionGroupRequest,
@@ -2633,21 +2729,22 @@ public final class OrgGrpc {
     if ((getCreateP3PermissionGroupMethod = OrgGrpc.getCreateP3PermissionGroupMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getCreateP3PermissionGroupMethod = OrgGrpc.getCreateP3PermissionGroupMethod) == null) {
-          OrgGrpc.getCreateP3PermissionGroupMethod = getCreateP3PermissionGroupMethod =
+          OrgGrpc.getCreateP3PermissionGroupMethod = getCreateP3PermissionGroupMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateP3PermissionGroupRequest, com.tcn.cloud.api.api.v0alpha.CreateP3PermissionGroupResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateP3PermissionGroup"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "CreateP3PermissionGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateP3PermissionGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateP3PermissionGroupResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreateP3PermissionGroup"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreateP3PermissionGroup"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateP3PermissionGroupMethod;
+     }
+     return getCreateP3PermissionGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupByOrgIdRequest,
@@ -2664,21 +2761,22 @@ public final class OrgGrpc {
     if ((getUpdateP3PermissionGroupByOrgIdMethod = OrgGrpc.getUpdateP3PermissionGroupByOrgIdMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateP3PermissionGroupByOrgIdMethod = OrgGrpc.getUpdateP3PermissionGroupByOrgIdMethod) == null) {
-          OrgGrpc.getUpdateP3PermissionGroupByOrgIdMethod = getUpdateP3PermissionGroupByOrgIdMethod =
+          OrgGrpc.getUpdateP3PermissionGroupByOrgIdMethod = getUpdateP3PermissionGroupByOrgIdMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupByOrgIdRequest, com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupByOrgIdResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateP3PermissionGroupByOrgId"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateP3PermissionGroupByOrgId"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupByOrgIdRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupByOrgIdResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateP3PermissionGroupByOrgId"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateP3PermissionGroupByOrgId"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateP3PermissionGroupByOrgIdMethod;
+     }
+     return getUpdateP3PermissionGroupByOrgIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupRequest,
@@ -2695,21 +2793,22 @@ public final class OrgGrpc {
     if ((getUpdateP3PermissionGroupMethod = OrgGrpc.getUpdateP3PermissionGroupMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateP3PermissionGroupMethod = OrgGrpc.getUpdateP3PermissionGroupMethod) == null) {
-          OrgGrpc.getUpdateP3PermissionGroupMethod = getUpdateP3PermissionGroupMethod =
+          OrgGrpc.getUpdateP3PermissionGroupMethod = getUpdateP3PermissionGroupMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupRequest, com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateP3PermissionGroup"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateP3PermissionGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateP3PermissionGroup"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateP3PermissionGroup"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateP3PermissionGroupMethod;
+     }
+     return getUpdateP3PermissionGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteP3PermissionGroupRequest,
@@ -2726,21 +2825,22 @@ public final class OrgGrpc {
     if ((getDeleteP3PermissionGroupMethod = OrgGrpc.getDeleteP3PermissionGroupMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getDeleteP3PermissionGroupMethod = OrgGrpc.getDeleteP3PermissionGroupMethod) == null) {
-          OrgGrpc.getDeleteP3PermissionGroupMethod = getDeleteP3PermissionGroupMethod =
+          OrgGrpc.getDeleteP3PermissionGroupMethod = getDeleteP3PermissionGroupMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteP3PermissionGroupRequest, com.tcn.cloud.api.api.v0alpha.DeleteP3PermissionGroupResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteP3PermissionGroup"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "DeleteP3PermissionGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteP3PermissionGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteP3PermissionGroupResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("DeleteP3PermissionGroup"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("DeleteP3PermissionGroup"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDeleteP3PermissionGroupMethod;
+     }
+     return getDeleteP3PermissionGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.AssignUsersP3PermissionGroupRequest,
@@ -2757,21 +2857,22 @@ public final class OrgGrpc {
     if ((getAssignUsersP3PermissionGroupMethod = OrgGrpc.getAssignUsersP3PermissionGroupMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getAssignUsersP3PermissionGroupMethod = OrgGrpc.getAssignUsersP3PermissionGroupMethod) == null) {
-          OrgGrpc.getAssignUsersP3PermissionGroupMethod = getAssignUsersP3PermissionGroupMethod =
+          OrgGrpc.getAssignUsersP3PermissionGroupMethod = getAssignUsersP3PermissionGroupMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.AssignUsersP3PermissionGroupRequest, com.tcn.cloud.api.api.v0alpha.AssignUsersP3PermissionGroupResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AssignUsersP3PermissionGroup"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "AssignUsersP3PermissionGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AssignUsersP3PermissionGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AssignUsersP3PermissionGroupResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AssignUsersP3PermissionGroup"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AssignUsersP3PermissionGroup"))
+                  .build();
+          }
         }
-      }
-    }
-    return getAssignUsersP3PermissionGroupMethod;
+     }
+     return getAssignUsersP3PermissionGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.AddLoginToUserRequest,
@@ -2788,21 +2889,22 @@ public final class OrgGrpc {
     if ((getAddLoginToUserMethod = OrgGrpc.getAddLoginToUserMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getAddLoginToUserMethod = OrgGrpc.getAddLoginToUserMethod) == null) {
-          OrgGrpc.getAddLoginToUserMethod = getAddLoginToUserMethod =
+          OrgGrpc.getAddLoginToUserMethod = getAddLoginToUserMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.AddLoginToUserRequest, com.tcn.cloud.api.api.v0alpha.AddLoginToUserResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddLoginToUser"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "AddLoginToUser"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AddLoginToUserRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AddLoginToUserResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AddLoginToUser"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AddLoginToUser"))
+                  .build();
+          }
         }
-      }
-    }
-    return getAddLoginToUserMethod;
+     }
+     return getAddLoginToUserMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.RevokeUsersP3PermissionGroupRequest,
@@ -2819,21 +2921,22 @@ public final class OrgGrpc {
     if ((getRevokeUsersP3PermissionGroupMethod = OrgGrpc.getRevokeUsersP3PermissionGroupMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getRevokeUsersP3PermissionGroupMethod = OrgGrpc.getRevokeUsersP3PermissionGroupMethod) == null) {
-          OrgGrpc.getRevokeUsersP3PermissionGroupMethod = getRevokeUsersP3PermissionGroupMethod =
+          OrgGrpc.getRevokeUsersP3PermissionGroupMethod = getRevokeUsersP3PermissionGroupMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.RevokeUsersP3PermissionGroupRequest, com.tcn.cloud.api.api.v0alpha.RevokeUsersP3PermissionGroupResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RevokeUsersP3PermissionGroup"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "RevokeUsersP3PermissionGroup"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RevokeUsersP3PermissionGroupRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RevokeUsersP3PermissionGroupResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("RevokeUsersP3PermissionGroup"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("RevokeUsersP3PermissionGroup"))
+                  .build();
+          }
         }
-      }
-    }
-    return getRevokeUsersP3PermissionGroupMethod;
+     }
+     return getRevokeUsersP3PermissionGroupMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetContactPreferencesRequest,
@@ -2850,21 +2953,22 @@ public final class OrgGrpc {
     if ((getGetContactPreferencesMethod = OrgGrpc.getGetContactPreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetContactPreferencesMethod = OrgGrpc.getGetContactPreferencesMethod) == null) {
-          OrgGrpc.getGetContactPreferencesMethod = getGetContactPreferencesMethod =
+          OrgGrpc.getGetContactPreferencesMethod = getGetContactPreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetContactPreferencesRequest, com.tcn.cloud.api.api.v0alpha.GetContactPreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetContactPreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetContactPreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetContactPreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetContactPreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetContactPreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetContactPreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetContactPreferencesMethod;
+     }
+     return getGetContactPreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateContactPreferencesRequest,
@@ -2881,21 +2985,22 @@ public final class OrgGrpc {
     if ((getUpdateContactPreferencesMethod = OrgGrpc.getUpdateContactPreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateContactPreferencesMethod = OrgGrpc.getUpdateContactPreferencesMethod) == null) {
-          OrgGrpc.getUpdateContactPreferencesMethod = getUpdateContactPreferencesMethod =
+          OrgGrpc.getUpdateContactPreferencesMethod = getUpdateContactPreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateContactPreferencesRequest, com.tcn.cloud.api.api.v0alpha.UpdateContactPreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateContactPreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateContactPreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateContactPreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateContactPreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateContactPreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateContactPreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateContactPreferencesMethod;
+     }
+     return getUpdateContactPreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetCompliancePreferencesRequest,
@@ -2912,21 +3017,22 @@ public final class OrgGrpc {
     if ((getGetCompliancePreferencesMethod = OrgGrpc.getGetCompliancePreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetCompliancePreferencesMethod = OrgGrpc.getGetCompliancePreferencesMethod) == null) {
-          OrgGrpc.getGetCompliancePreferencesMethod = getGetCompliancePreferencesMethod =
+          OrgGrpc.getGetCompliancePreferencesMethod = getGetCompliancePreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetCompliancePreferencesRequest, com.tcn.cloud.api.api.v0alpha.GetCompliancePreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCompliancePreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetCompliancePreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetCompliancePreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetCompliancePreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetCompliancePreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetCompliancePreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetCompliancePreferencesMethod;
+     }
+     return getGetCompliancePreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateCompliancePreferencesRequest,
@@ -2943,21 +3049,22 @@ public final class OrgGrpc {
     if ((getUpdateCompliancePreferencesMethod = OrgGrpc.getUpdateCompliancePreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateCompliancePreferencesMethod = OrgGrpc.getUpdateCompliancePreferencesMethod) == null) {
-          OrgGrpc.getUpdateCompliancePreferencesMethod = getUpdateCompliancePreferencesMethod =
+          OrgGrpc.getUpdateCompliancePreferencesMethod = getUpdateCompliancePreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateCompliancePreferencesRequest, com.tcn.cloud.api.api.v0alpha.UpdateCompliancePreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateCompliancePreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateCompliancePreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateCompliancePreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateCompliancePreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateCompliancePreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateCompliancePreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateCompliancePreferencesMethod;
+     }
+     return getUpdateCompliancePreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetAgentPreferencesRequest,
@@ -2974,21 +3081,22 @@ public final class OrgGrpc {
     if ((getGetAgentPreferencesMethod = OrgGrpc.getGetAgentPreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetAgentPreferencesMethod = OrgGrpc.getGetAgentPreferencesMethod) == null) {
-          OrgGrpc.getGetAgentPreferencesMethod = getGetAgentPreferencesMethod =
+          OrgGrpc.getGetAgentPreferencesMethod = getGetAgentPreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetAgentPreferencesRequest, com.tcn.cloud.api.api.v0alpha.GetAgentPreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAgentPreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetAgentPreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetAgentPreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetAgentPreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetAgentPreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetAgentPreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetAgentPreferencesMethod;
+     }
+     return getGetAgentPreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateAgentPreferencesRequest,
@@ -3005,21 +3113,22 @@ public final class OrgGrpc {
     if ((getUpdateAgentPreferencesMethod = OrgGrpc.getUpdateAgentPreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateAgentPreferencesMethod = OrgGrpc.getUpdateAgentPreferencesMethod) == null) {
-          OrgGrpc.getUpdateAgentPreferencesMethod = getUpdateAgentPreferencesMethod =
+          OrgGrpc.getUpdateAgentPreferencesMethod = getUpdateAgentPreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateAgentPreferencesRequest, com.tcn.cloud.api.api.v0alpha.UpdateAgentPreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAgentPreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateAgentPreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateAgentPreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateAgentPreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateAgentPreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateAgentPreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateAgentPreferencesMethod;
+     }
+     return getUpdateAgentPreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetOrganizationPreferencesRequest,
@@ -3036,21 +3145,22 @@ public final class OrgGrpc {
     if ((getGetOrganizationPreferencesMethod = OrgGrpc.getGetOrganizationPreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetOrganizationPreferencesMethod = OrgGrpc.getGetOrganizationPreferencesMethod) == null) {
-          OrgGrpc.getGetOrganizationPreferencesMethod = getGetOrganizationPreferencesMethod =
+          OrgGrpc.getGetOrganizationPreferencesMethod = getGetOrganizationPreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetOrganizationPreferencesRequest, com.tcn.cloud.api.api.v0alpha.GetOrganizationPreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetOrganizationPreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetOrganizationPreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetOrganizationPreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetOrganizationPreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetOrganizationPreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetOrganizationPreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetOrganizationPreferencesMethod;
+     }
+     return getGetOrganizationPreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateOrganizationPreferencesRequest,
@@ -3067,21 +3177,22 @@ public final class OrgGrpc {
     if ((getUpdateOrganizationPreferencesMethod = OrgGrpc.getUpdateOrganizationPreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateOrganizationPreferencesMethod = OrgGrpc.getUpdateOrganizationPreferencesMethod) == null) {
-          OrgGrpc.getUpdateOrganizationPreferencesMethod = getUpdateOrganizationPreferencesMethod =
+          OrgGrpc.getUpdateOrganizationPreferencesMethod = getUpdateOrganizationPreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateOrganizationPreferencesRequest, com.tcn.cloud.api.api.v0alpha.UpdateOrganizationPreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateOrganizationPreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateOrganizationPreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateOrganizationPreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateOrganizationPreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateOrganizationPreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateOrganizationPreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateOrganizationPreferencesMethod;
+     }
+     return getUpdateOrganizationPreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetSchedulePreferencesRequest,
@@ -3098,21 +3209,22 @@ public final class OrgGrpc {
     if ((getGetSchedulePreferencesMethod = OrgGrpc.getGetSchedulePreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetSchedulePreferencesMethod = OrgGrpc.getGetSchedulePreferencesMethod) == null) {
-          OrgGrpc.getGetSchedulePreferencesMethod = getGetSchedulePreferencesMethod =
+          OrgGrpc.getGetSchedulePreferencesMethod = getGetSchedulePreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetSchedulePreferencesRequest, com.tcn.cloud.api.api.v0alpha.GetSchedulePreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSchedulePreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetSchedulePreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetSchedulePreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetSchedulePreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetSchedulePreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetSchedulePreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetSchedulePreferencesMethod;
+     }
+     return getGetSchedulePreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateSchedulePreferencesRequest,
@@ -3129,21 +3241,22 @@ public final class OrgGrpc {
     if ((getUpdateSchedulePreferencesMethod = OrgGrpc.getUpdateSchedulePreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateSchedulePreferencesMethod = OrgGrpc.getUpdateSchedulePreferencesMethod) == null) {
-          OrgGrpc.getUpdateSchedulePreferencesMethod = getUpdateSchedulePreferencesMethod =
+          OrgGrpc.getUpdateSchedulePreferencesMethod = getUpdateSchedulePreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateSchedulePreferencesRequest, com.tcn.cloud.api.api.v0alpha.UpdateSchedulePreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateSchedulePreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateSchedulePreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateSchedulePreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateSchedulePreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateSchedulePreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateSchedulePreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateSchedulePreferencesMethod;
+     }
+     return getUpdateSchedulePreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetBusinessPreferencesRequest,
@@ -3160,21 +3273,22 @@ public final class OrgGrpc {
     if ((getGetBusinessPreferencesMethod = OrgGrpc.getGetBusinessPreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetBusinessPreferencesMethod = OrgGrpc.getGetBusinessPreferencesMethod) == null) {
-          OrgGrpc.getGetBusinessPreferencesMethod = getGetBusinessPreferencesMethod =
+          OrgGrpc.getGetBusinessPreferencesMethod = getGetBusinessPreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetBusinessPreferencesRequest, com.tcn.cloud.api.api.v0alpha.GetBusinessPreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetBusinessPreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetBusinessPreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetBusinessPreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetBusinessPreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetBusinessPreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetBusinessPreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetBusinessPreferencesMethod;
+     }
+     return getGetBusinessPreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateBusinessPreferencesRequest,
@@ -3191,21 +3305,22 @@ public final class OrgGrpc {
     if ((getUpdateBusinessPreferencesMethod = OrgGrpc.getUpdateBusinessPreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateBusinessPreferencesMethod = OrgGrpc.getUpdateBusinessPreferencesMethod) == null) {
-          OrgGrpc.getUpdateBusinessPreferencesMethod = getUpdateBusinessPreferencesMethod =
+          OrgGrpc.getUpdateBusinessPreferencesMethod = getUpdateBusinessPreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateBusinessPreferencesRequest, com.tcn.cloud.api.api.v0alpha.UpdateBusinessPreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateBusinessPreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateBusinessPreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateBusinessPreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateBusinessPreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateBusinessPreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateBusinessPreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateBusinessPreferencesMethod;
+     }
+     return getUpdateBusinessPreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetEndOfDayPreferencesRequest,
@@ -3222,21 +3337,22 @@ public final class OrgGrpc {
     if ((getGetEndOfDayPreferencesMethod = OrgGrpc.getGetEndOfDayPreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetEndOfDayPreferencesMethod = OrgGrpc.getGetEndOfDayPreferencesMethod) == null) {
-          OrgGrpc.getGetEndOfDayPreferencesMethod = getGetEndOfDayPreferencesMethod =
+          OrgGrpc.getGetEndOfDayPreferencesMethod = getGetEndOfDayPreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetEndOfDayPreferencesRequest, com.tcn.cloud.api.api.v0alpha.GetEndOfDayPreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetEndOfDayPreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetEndOfDayPreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetEndOfDayPreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetEndOfDayPreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetEndOfDayPreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetEndOfDayPreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetEndOfDayPreferencesMethod;
+     }
+     return getGetEndOfDayPreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateEndOfDayPreferencesRequest,
@@ -3253,21 +3369,22 @@ public final class OrgGrpc {
     if ((getUpdateEndOfDayPreferencesMethod = OrgGrpc.getUpdateEndOfDayPreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateEndOfDayPreferencesMethod = OrgGrpc.getUpdateEndOfDayPreferencesMethod) == null) {
-          OrgGrpc.getUpdateEndOfDayPreferencesMethod = getUpdateEndOfDayPreferencesMethod =
+          OrgGrpc.getUpdateEndOfDayPreferencesMethod = getUpdateEndOfDayPreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateEndOfDayPreferencesRequest, com.tcn.cloud.api.api.v0alpha.UpdateEndOfDayPreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateEndOfDayPreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateEndOfDayPreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateEndOfDayPreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateEndOfDayPreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateEndOfDayPreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateEndOfDayPreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateEndOfDayPreferencesMethod;
+     }
+     return getUpdateEndOfDayPreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetFilterPreferencesRequest,
@@ -3284,21 +3401,22 @@ public final class OrgGrpc {
     if ((getGetReportFilterPreferencesMethod = OrgGrpc.getGetReportFilterPreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetReportFilterPreferencesMethod = OrgGrpc.getGetReportFilterPreferencesMethod) == null) {
-          OrgGrpc.getGetReportFilterPreferencesMethod = getGetReportFilterPreferencesMethod =
+          OrgGrpc.getGetReportFilterPreferencesMethod = getGetReportFilterPreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetFilterPreferencesRequest, com.tcn.cloud.api.api.v0alpha.GetFilterPreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetReportFilterPreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetReportFilterPreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetFilterPreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetFilterPreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetReportFilterPreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetReportFilterPreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetReportFilterPreferencesMethod;
+     }
+     return getGetReportFilterPreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateFilterPreferencesRequest,
@@ -3315,21 +3433,22 @@ public final class OrgGrpc {
     if ((getUpdateReportFilterPreferencesMethod = OrgGrpc.getUpdateReportFilterPreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateReportFilterPreferencesMethod = OrgGrpc.getUpdateReportFilterPreferencesMethod) == null) {
-          OrgGrpc.getUpdateReportFilterPreferencesMethod = getUpdateReportFilterPreferencesMethod =
+          OrgGrpc.getUpdateReportFilterPreferencesMethod = getUpdateReportFilterPreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateFilterPreferencesRequest, com.tcn.cloud.api.api.v0alpha.UpdateFilterPreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateReportFilterPreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateReportFilterPreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateFilterPreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateFilterPreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateReportFilterPreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateReportFilterPreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateReportFilterPreferencesMethod;
+     }
+     return getUpdateReportFilterPreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetPhonePreferencesRequest,
@@ -3346,21 +3465,22 @@ public final class OrgGrpc {
     if ((getGetPhonePreferencesMethod = OrgGrpc.getGetPhonePreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetPhonePreferencesMethod = OrgGrpc.getGetPhonePreferencesMethod) == null) {
-          OrgGrpc.getGetPhonePreferencesMethod = getGetPhonePreferencesMethod =
+          OrgGrpc.getGetPhonePreferencesMethod = getGetPhonePreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetPhonePreferencesRequest, com.tcn.cloud.api.api.v0alpha.GetPhonePreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPhonePreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetPhonePreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetPhonePreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetPhonePreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetPhonePreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetPhonePreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetPhonePreferencesMethod;
+     }
+     return getGetPhonePreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdatePhonePreferencesRequest,
@@ -3377,21 +3497,22 @@ public final class OrgGrpc {
     if ((getUpdatePhonePreferencesMethod = OrgGrpc.getUpdatePhonePreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdatePhonePreferencesMethod = OrgGrpc.getUpdatePhonePreferencesMethod) == null) {
-          OrgGrpc.getUpdatePhonePreferencesMethod = getUpdatePhonePreferencesMethod =
+          OrgGrpc.getUpdatePhonePreferencesMethod = getUpdatePhonePreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdatePhonePreferencesRequest, com.tcn.cloud.api.api.v0alpha.UpdatePhonePreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdatePhonePreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdatePhonePreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdatePhonePreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdatePhonePreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdatePhonePreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdatePhonePreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdatePhonePreferencesMethod;
+     }
+     return getUpdatePhonePreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetDashboardGeneralPreferencesRequest,
@@ -3408,21 +3529,22 @@ public final class OrgGrpc {
     if ((getGetDashboardGeneralPreferencesMethod = OrgGrpc.getGetDashboardGeneralPreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetDashboardGeneralPreferencesMethod = OrgGrpc.getGetDashboardGeneralPreferencesMethod) == null) {
-          OrgGrpc.getGetDashboardGeneralPreferencesMethod = getGetDashboardGeneralPreferencesMethod =
+          OrgGrpc.getGetDashboardGeneralPreferencesMethod = getGetDashboardGeneralPreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetDashboardGeneralPreferencesRequest, com.tcn.cloud.api.api.v0alpha.GetDashboardGeneralPreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDashboardGeneralPreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetDashboardGeneralPreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetDashboardGeneralPreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetDashboardGeneralPreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetDashboardGeneralPreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetDashboardGeneralPreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetDashboardGeneralPreferencesMethod;
+     }
+     return getGetDashboardGeneralPreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateDashboardGeneralPreferencesRequest,
@@ -3439,21 +3561,22 @@ public final class OrgGrpc {
     if ((getUpdateDashboardGeneralPreferencesMethod = OrgGrpc.getUpdateDashboardGeneralPreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateDashboardGeneralPreferencesMethod = OrgGrpc.getUpdateDashboardGeneralPreferencesMethod) == null) {
-          OrgGrpc.getUpdateDashboardGeneralPreferencesMethod = getUpdateDashboardGeneralPreferencesMethod =
+          OrgGrpc.getUpdateDashboardGeneralPreferencesMethod = getUpdateDashboardGeneralPreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateDashboardGeneralPreferencesRequest, com.tcn.cloud.api.api.v0alpha.UpdateDashboardGeneralPreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateDashboardGeneralPreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateDashboardGeneralPreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateDashboardGeneralPreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateDashboardGeneralPreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateDashboardGeneralPreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateDashboardGeneralPreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateDashboardGeneralPreferencesMethod;
+     }
+     return getUpdateDashboardGeneralPreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetWebhookPreferencesRequest,
@@ -3470,21 +3593,22 @@ public final class OrgGrpc {
     if ((getGetWebhookPreferencesMethod = OrgGrpc.getGetWebhookPreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetWebhookPreferencesMethod = OrgGrpc.getGetWebhookPreferencesMethod) == null) {
-          OrgGrpc.getGetWebhookPreferencesMethod = getGetWebhookPreferencesMethod =
+          OrgGrpc.getGetWebhookPreferencesMethod = getGetWebhookPreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetWebhookPreferencesRequest, com.tcn.cloud.api.api.v0alpha.GetWebhookPreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetWebhookPreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetWebhookPreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetWebhookPreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetWebhookPreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetWebhookPreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetWebhookPreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetWebhookPreferencesMethod;
+     }
+     return getGetWebhookPreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateWebhookPreferencesRequest,
@@ -3501,21 +3625,22 @@ public final class OrgGrpc {
     if ((getUpdateWebhookPreferencesMethod = OrgGrpc.getUpdateWebhookPreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateWebhookPreferencesMethod = OrgGrpc.getUpdateWebhookPreferencesMethod) == null) {
-          OrgGrpc.getUpdateWebhookPreferencesMethod = getUpdateWebhookPreferencesMethod =
+          OrgGrpc.getUpdateWebhookPreferencesMethod = getUpdateWebhookPreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateWebhookPreferencesRequest, com.tcn.cloud.api.api.v0alpha.UpdateWebhookPreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateWebhookPreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateWebhookPreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateWebhookPreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateWebhookPreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateWebhookPreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateWebhookPreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateWebhookPreferencesMethod;
+     }
+     return getUpdateWebhookPreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetBroadcastPreferencesRequest,
@@ -3532,21 +3657,22 @@ public final class OrgGrpc {
     if ((getGetBroadcastPreferencesMethod = OrgGrpc.getGetBroadcastPreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetBroadcastPreferencesMethod = OrgGrpc.getGetBroadcastPreferencesMethod) == null) {
-          OrgGrpc.getGetBroadcastPreferencesMethod = getGetBroadcastPreferencesMethod =
+          OrgGrpc.getGetBroadcastPreferencesMethod = getGetBroadcastPreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetBroadcastPreferencesRequest, com.tcn.cloud.api.api.v0alpha.GetBroadcastPreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetBroadcastPreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetBroadcastPreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetBroadcastPreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetBroadcastPreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetBroadcastPreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetBroadcastPreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetBroadcastPreferencesMethod;
+     }
+     return getGetBroadcastPreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateBroadcastPreferencesRequest,
@@ -3563,21 +3689,22 @@ public final class OrgGrpc {
     if ((getUpdateBroadcastPreferencesMethod = OrgGrpc.getUpdateBroadcastPreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateBroadcastPreferencesMethod = OrgGrpc.getUpdateBroadcastPreferencesMethod) == null) {
-          OrgGrpc.getUpdateBroadcastPreferencesMethod = getUpdateBroadcastPreferencesMethod =
+          OrgGrpc.getUpdateBroadcastPreferencesMethod = getUpdateBroadcastPreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateBroadcastPreferencesRequest, com.tcn.cloud.api.api.v0alpha.UpdateBroadcastPreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateBroadcastPreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateBroadcastPreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateBroadcastPreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateBroadcastPreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateBroadcastPreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateBroadcastPreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateBroadcastPreferencesMethod;
+     }
+     return getUpdateBroadcastPreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetAuthenticationPreferencesRequest,
@@ -3594,21 +3721,22 @@ public final class OrgGrpc {
     if ((getGetAuthenticationPreferencesMethod = OrgGrpc.getGetAuthenticationPreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetAuthenticationPreferencesMethod = OrgGrpc.getGetAuthenticationPreferencesMethod) == null) {
-          OrgGrpc.getGetAuthenticationPreferencesMethod = getGetAuthenticationPreferencesMethod =
+          OrgGrpc.getGetAuthenticationPreferencesMethod = getGetAuthenticationPreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetAuthenticationPreferencesRequest, com.tcn.cloud.api.api.v0alpha.GetAuthenticationPreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAuthenticationPreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetAuthenticationPreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetAuthenticationPreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetAuthenticationPreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetAuthenticationPreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetAuthenticationPreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetAuthenticationPreferencesMethod;
+     }
+     return getGetAuthenticationPreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateAuthenticationPreferencesRequest,
@@ -3625,21 +3753,22 @@ public final class OrgGrpc {
     if ((getUpdateAuthenticationPreferencesMethod = OrgGrpc.getUpdateAuthenticationPreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateAuthenticationPreferencesMethod = OrgGrpc.getUpdateAuthenticationPreferencesMethod) == null) {
-          OrgGrpc.getUpdateAuthenticationPreferencesMethod = getUpdateAuthenticationPreferencesMethod =
+          OrgGrpc.getUpdateAuthenticationPreferencesMethod = getUpdateAuthenticationPreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateAuthenticationPreferencesRequest, com.tcn.cloud.api.api.v0alpha.UpdateAuthenticationPreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAuthenticationPreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateAuthenticationPreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateAuthenticationPreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateAuthenticationPreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateAuthenticationPreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateAuthenticationPreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateAuthenticationPreferencesMethod;
+     }
+     return getUpdateAuthenticationPreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetRecordingPreferencesRequest,
@@ -3656,21 +3785,22 @@ public final class OrgGrpc {
     if ((getGetRecordingPreferencesMethod = OrgGrpc.getGetRecordingPreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetRecordingPreferencesMethod = OrgGrpc.getGetRecordingPreferencesMethod) == null) {
-          OrgGrpc.getGetRecordingPreferencesMethod = getGetRecordingPreferencesMethod =
+          OrgGrpc.getGetRecordingPreferencesMethod = getGetRecordingPreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetRecordingPreferencesRequest, com.tcn.cloud.api.api.v0alpha.GetRecordingPreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetRecordingPreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetRecordingPreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetRecordingPreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetRecordingPreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetRecordingPreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetRecordingPreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetRecordingPreferencesMethod;
+     }
+     return getGetRecordingPreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateRecordingPreferencesRequest,
@@ -3687,21 +3817,22 @@ public final class OrgGrpc {
     if ((getUpdateRecordingPreferencesMethod = OrgGrpc.getUpdateRecordingPreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateRecordingPreferencesMethod = OrgGrpc.getUpdateRecordingPreferencesMethod) == null) {
-          OrgGrpc.getUpdateRecordingPreferencesMethod = getUpdateRecordingPreferencesMethod =
+          OrgGrpc.getUpdateRecordingPreferencesMethod = getUpdateRecordingPreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateRecordingPreferencesRequest, com.tcn.cloud.api.api.v0alpha.UpdateRecordingPreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateRecordingPreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateRecordingPreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateRecordingPreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateRecordingPreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateRecordingPreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateRecordingPreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateRecordingPreferencesMethod;
+     }
+     return getUpdateRecordingPreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetDashboardQueuePreferencesRequest,
@@ -3718,21 +3849,22 @@ public final class OrgGrpc {
     if ((getGetDashboardQueuePreferencesMethod = OrgGrpc.getGetDashboardQueuePreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetDashboardQueuePreferencesMethod = OrgGrpc.getGetDashboardQueuePreferencesMethod) == null) {
-          OrgGrpc.getGetDashboardQueuePreferencesMethod = getGetDashboardQueuePreferencesMethod =
+          OrgGrpc.getGetDashboardQueuePreferencesMethod = getGetDashboardQueuePreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetDashboardQueuePreferencesRequest, com.tcn.cloud.api.api.v0alpha.GetDashboardQueuePreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDashboardQueuePreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetDashboardQueuePreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetDashboardQueuePreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetDashboardQueuePreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetDashboardQueuePreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetDashboardQueuePreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetDashboardQueuePreferencesMethod;
+     }
+     return getGetDashboardQueuePreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateDashboardQueuePreferencesRequest,
@@ -3749,21 +3881,22 @@ public final class OrgGrpc {
     if ((getUpdateDashboardQueuePreferencesMethod = OrgGrpc.getUpdateDashboardQueuePreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateDashboardQueuePreferencesMethod = OrgGrpc.getUpdateDashboardQueuePreferencesMethod) == null) {
-          OrgGrpc.getUpdateDashboardQueuePreferencesMethod = getUpdateDashboardQueuePreferencesMethod =
+          OrgGrpc.getUpdateDashboardQueuePreferencesMethod = getUpdateDashboardQueuePreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateDashboardQueuePreferencesRequest, com.tcn.cloud.api.api.v0alpha.UpdateDashboardQueuePreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateDashboardQueuePreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateDashboardQueuePreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateDashboardQueuePreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateDashboardQueuePreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateDashboardQueuePreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateDashboardQueuePreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateDashboardQueuePreferencesMethod;
+     }
+     return getUpdateDashboardQueuePreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetAgentQuickViewPreferencesRequest,
@@ -3780,21 +3913,22 @@ public final class OrgGrpc {
     if ((getGetAgentQuickViewPreferencesMethod = OrgGrpc.getGetAgentQuickViewPreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetAgentQuickViewPreferencesMethod = OrgGrpc.getGetAgentQuickViewPreferencesMethod) == null) {
-          OrgGrpc.getGetAgentQuickViewPreferencesMethod = getGetAgentQuickViewPreferencesMethod =
+          OrgGrpc.getGetAgentQuickViewPreferencesMethod = getGetAgentQuickViewPreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetAgentQuickViewPreferencesRequest, com.tcn.cloud.api.api.v0alpha.GetAgentQuickViewPreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAgentQuickViewPreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetAgentQuickViewPreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetAgentQuickViewPreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetAgentQuickViewPreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetAgentQuickViewPreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetAgentQuickViewPreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetAgentQuickViewPreferencesMethod;
+     }
+     return getGetAgentQuickViewPreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetVoiceAnalyticsPreferencesRequest,
@@ -3811,21 +3945,22 @@ public final class OrgGrpc {
     if ((getGetVoiceAnalyticsPreferencesMethod = OrgGrpc.getGetVoiceAnalyticsPreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetVoiceAnalyticsPreferencesMethod = OrgGrpc.getGetVoiceAnalyticsPreferencesMethod) == null) {
-          OrgGrpc.getGetVoiceAnalyticsPreferencesMethod = getGetVoiceAnalyticsPreferencesMethod =
+          OrgGrpc.getGetVoiceAnalyticsPreferencesMethod = getGetVoiceAnalyticsPreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetVoiceAnalyticsPreferencesRequest, com.tcn.cloud.api.api.v0alpha.GetVoiceAnalyticsPreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetVoiceAnalyticsPreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetVoiceAnalyticsPreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetVoiceAnalyticsPreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetVoiceAnalyticsPreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetVoiceAnalyticsPreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetVoiceAnalyticsPreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetVoiceAnalyticsPreferencesMethod;
+     }
+     return getGetVoiceAnalyticsPreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateVoiceAnalyticsPreferencesRequest,
@@ -3842,21 +3977,22 @@ public final class OrgGrpc {
     if ((getUpdateVoiceAnalyticsPreferencesMethod = OrgGrpc.getUpdateVoiceAnalyticsPreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateVoiceAnalyticsPreferencesMethod = OrgGrpc.getUpdateVoiceAnalyticsPreferencesMethod) == null) {
-          OrgGrpc.getUpdateVoiceAnalyticsPreferencesMethod = getUpdateVoiceAnalyticsPreferencesMethod =
+          OrgGrpc.getUpdateVoiceAnalyticsPreferencesMethod = getUpdateVoiceAnalyticsPreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateVoiceAnalyticsPreferencesRequest, com.tcn.cloud.api.api.v0alpha.UpdateVoiceAnalyticsPreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateVoiceAnalyticsPreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateVoiceAnalyticsPreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateVoiceAnalyticsPreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateVoiceAnalyticsPreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateVoiceAnalyticsPreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateVoiceAnalyticsPreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateVoiceAnalyticsPreferencesMethod;
+     }
+     return getUpdateVoiceAnalyticsPreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateVoiceAnalyticsPreferencesEnabledRequest,
@@ -3873,21 +4009,22 @@ public final class OrgGrpc {
     if ((getUpdateVoiceAnalyticsPreferencesEnabledMethod = OrgGrpc.getUpdateVoiceAnalyticsPreferencesEnabledMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateVoiceAnalyticsPreferencesEnabledMethod = OrgGrpc.getUpdateVoiceAnalyticsPreferencesEnabledMethod) == null) {
-          OrgGrpc.getUpdateVoiceAnalyticsPreferencesEnabledMethod = getUpdateVoiceAnalyticsPreferencesEnabledMethod =
+          OrgGrpc.getUpdateVoiceAnalyticsPreferencesEnabledMethod = getUpdateVoiceAnalyticsPreferencesEnabledMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateVoiceAnalyticsPreferencesEnabledRequest, com.tcn.cloud.api.api.v0alpha.UpdateVoiceAnalyticsPreferencesEnabledResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateVoiceAnalyticsPreferencesEnabled"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateVoiceAnalyticsPreferencesEnabled"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateVoiceAnalyticsPreferencesEnabledRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateVoiceAnalyticsPreferencesEnabledResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateVoiceAnalyticsPreferencesEnabled"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateVoiceAnalyticsPreferencesEnabled"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateVoiceAnalyticsPreferencesEnabledMethod;
+     }
+     return getUpdateVoiceAnalyticsPreferencesEnabledMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetScorecardsPreferencesRequest,
@@ -3904,21 +4041,22 @@ public final class OrgGrpc {
     if ((getGetScorecardsPreferencesMethod = OrgGrpc.getGetScorecardsPreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetScorecardsPreferencesMethod = OrgGrpc.getGetScorecardsPreferencesMethod) == null) {
-          OrgGrpc.getGetScorecardsPreferencesMethod = getGetScorecardsPreferencesMethod =
+          OrgGrpc.getGetScorecardsPreferencesMethod = getGetScorecardsPreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetScorecardsPreferencesRequest, com.tcn.cloud.api.api.v0alpha.GetScorecardsPreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetScorecardsPreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetScorecardsPreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetScorecardsPreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetScorecardsPreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetScorecardsPreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetScorecardsPreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetScorecardsPreferencesMethod;
+     }
+     return getGetScorecardsPreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateScorecardsPreferencesRequest,
@@ -3935,21 +4073,22 @@ public final class OrgGrpc {
     if ((getUpdateScorecardsPreferencesMethod = OrgGrpc.getUpdateScorecardsPreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateScorecardsPreferencesMethod = OrgGrpc.getUpdateScorecardsPreferencesMethod) == null) {
-          OrgGrpc.getUpdateScorecardsPreferencesMethod = getUpdateScorecardsPreferencesMethod =
+          OrgGrpc.getUpdateScorecardsPreferencesMethod = getUpdateScorecardsPreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateScorecardsPreferencesRequest, com.tcn.cloud.api.api.v0alpha.UpdateScorecardsPreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateScorecardsPreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateScorecardsPreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateScorecardsPreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateScorecardsPreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateScorecardsPreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateScorecardsPreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateScorecardsPreferencesMethod;
+     }
+     return getUpdateScorecardsPreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetEmailSmsPreferencesRequest,
@@ -3966,21 +4105,22 @@ public final class OrgGrpc {
     if ((getGetEmailSmsPreferencesMethod = OrgGrpc.getGetEmailSmsPreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetEmailSmsPreferencesMethod = OrgGrpc.getGetEmailSmsPreferencesMethod) == null) {
-          OrgGrpc.getGetEmailSmsPreferencesMethod = getGetEmailSmsPreferencesMethod =
+          OrgGrpc.getGetEmailSmsPreferencesMethod = getGetEmailSmsPreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetEmailSmsPreferencesRequest, com.tcn.cloud.api.api.v0alpha.GetEmailSmsPreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetEmailSmsPreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetEmailSmsPreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetEmailSmsPreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetEmailSmsPreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetEmailSmsPreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetEmailSmsPreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetEmailSmsPreferencesMethod;
+     }
+     return getGetEmailSmsPreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateEmailSmsPreferencesRequest,
@@ -3997,21 +4137,22 @@ public final class OrgGrpc {
     if ((getUpdateEmailSmsPreferencesMethod = OrgGrpc.getUpdateEmailSmsPreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateEmailSmsPreferencesMethod = OrgGrpc.getUpdateEmailSmsPreferencesMethod) == null) {
-          OrgGrpc.getUpdateEmailSmsPreferencesMethod = getUpdateEmailSmsPreferencesMethod =
+          OrgGrpc.getUpdateEmailSmsPreferencesMethod = getUpdateEmailSmsPreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateEmailSmsPreferencesRequest, com.tcn.cloud.api.api.v0alpha.UpdateEmailSmsPreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateEmailSmsPreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateEmailSmsPreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateEmailSmsPreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateEmailSmsPreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateEmailSmsPreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateEmailSmsPreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateEmailSmsPreferencesMethod;
+     }
+     return getUpdateEmailSmsPreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.EditAgentQuickViewPreferencesRequest,
@@ -4028,21 +4169,22 @@ public final class OrgGrpc {
     if ((getEditAgentQuickViewPreferencesMethod = OrgGrpc.getEditAgentQuickViewPreferencesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getEditAgentQuickViewPreferencesMethod = OrgGrpc.getEditAgentQuickViewPreferencesMethod) == null) {
-          OrgGrpc.getEditAgentQuickViewPreferencesMethod = getEditAgentQuickViewPreferencesMethod =
+          OrgGrpc.getEditAgentQuickViewPreferencesMethod = getEditAgentQuickViewPreferencesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.EditAgentQuickViewPreferencesRequest, com.tcn.cloud.api.api.v0alpha.EditAgentQuickViewPreferencesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EditAgentQuickViewPreferences"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "EditAgentQuickViewPreferences"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.EditAgentQuickViewPreferencesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.EditAgentQuickViewPreferencesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("EditAgentQuickViewPreferences"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("EditAgentQuickViewPreferences"))
+                  .build();
+          }
         }
-      }
-    }
-    return getEditAgentQuickViewPreferencesMethod;
+     }
+     return getEditAgentQuickViewPreferencesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.EditBackofficeThemePreferenceRequest,
@@ -4059,21 +4201,22 @@ public final class OrgGrpc {
     if ((getEditBackofficeThemePreferenceMethod = OrgGrpc.getEditBackofficeThemePreferenceMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getEditBackofficeThemePreferenceMethod = OrgGrpc.getEditBackofficeThemePreferenceMethod) == null) {
-          OrgGrpc.getEditBackofficeThemePreferenceMethod = getEditBackofficeThemePreferenceMethod =
+          OrgGrpc.getEditBackofficeThemePreferenceMethod = getEditBackofficeThemePreferenceMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.EditBackofficeThemePreferenceRequest, com.tcn.cloud.api.api.v0alpha.EditBackofficeThemePreferenceResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EditBackofficeThemePreference"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "EditBackofficeThemePreference"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.EditBackofficeThemePreferenceRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.EditBackofficeThemePreferenceResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("EditBackofficeThemePreference"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("EditBackofficeThemePreference"))
+                  .build();
+          }
         }
-      }
-    }
-    return getEditBackofficeThemePreferenceMethod;
+     }
+     return getEditBackofficeThemePreferenceMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetBackofficeThemePreferenceRequest,
@@ -4090,21 +4233,22 @@ public final class OrgGrpc {
     if ((getGetBackofficeThemePreferenceMethod = OrgGrpc.getGetBackofficeThemePreferenceMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetBackofficeThemePreferenceMethod = OrgGrpc.getGetBackofficeThemePreferenceMethod) == null) {
-          OrgGrpc.getGetBackofficeThemePreferenceMethod = getGetBackofficeThemePreferenceMethod =
+          OrgGrpc.getGetBackofficeThemePreferenceMethod = getGetBackofficeThemePreferenceMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetBackofficeThemePreferenceRequest, com.tcn.cloud.api.api.v0alpha.GetBackofficeThemePreferenceResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetBackofficeThemePreference"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetBackofficeThemePreference"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetBackofficeThemePreferenceRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetBackofficeThemePreferenceResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetBackofficeThemePreference"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetBackofficeThemePreference"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetBackofficeThemePreferenceMethod;
+     }
+     return getGetBackofficeThemePreferenceMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.AcceptLinkbackRecordingTermsRequest,
@@ -4121,21 +4265,22 @@ public final class OrgGrpc {
     if ((getAcceptLinkbackRecordingTermsMethod = OrgGrpc.getAcceptLinkbackRecordingTermsMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getAcceptLinkbackRecordingTermsMethod = OrgGrpc.getAcceptLinkbackRecordingTermsMethod) == null) {
-          OrgGrpc.getAcceptLinkbackRecordingTermsMethod = getAcceptLinkbackRecordingTermsMethod =
+          OrgGrpc.getAcceptLinkbackRecordingTermsMethod = getAcceptLinkbackRecordingTermsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.AcceptLinkbackRecordingTermsRequest, com.tcn.cloud.api.api.v0alpha.AcceptLinkbackRecordingTermsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AcceptLinkbackRecordingTerms"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "AcceptLinkbackRecordingTerms"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AcceptLinkbackRecordingTermsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AcceptLinkbackRecordingTermsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AcceptLinkbackRecordingTerms"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AcceptLinkbackRecordingTerms"))
+                  .build();
+          }
         }
-      }
-    }
-    return getAcceptLinkbackRecordingTermsMethod;
+     }
+     return getAcceptLinkbackRecordingTermsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.LinkbackUpdateBroadcastTemplatesRequest,
@@ -4152,21 +4297,22 @@ public final class OrgGrpc {
     if ((getLinkbackUpdateBroadcastTemplatesMethod = OrgGrpc.getLinkbackUpdateBroadcastTemplatesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getLinkbackUpdateBroadcastTemplatesMethod = OrgGrpc.getLinkbackUpdateBroadcastTemplatesMethod) == null) {
-          OrgGrpc.getLinkbackUpdateBroadcastTemplatesMethod = getLinkbackUpdateBroadcastTemplatesMethod =
+          OrgGrpc.getLinkbackUpdateBroadcastTemplatesMethod = getLinkbackUpdateBroadcastTemplatesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.LinkbackUpdateBroadcastTemplatesRequest, com.tcn.cloud.api.api.v0alpha.LinkbackUpdateBroadcastTemplatesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "LinkbackUpdateBroadcastTemplates"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "LinkbackUpdateBroadcastTemplates"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.LinkbackUpdateBroadcastTemplatesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.LinkbackUpdateBroadcastTemplatesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("LinkbackUpdateBroadcastTemplates"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("LinkbackUpdateBroadcastTemplates"))
+                  .build();
+          }
         }
-      }
-    }
-    return getLinkbackUpdateBroadcastTemplatesMethod;
+     }
+     return getLinkbackUpdateBroadcastTemplatesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.RecordEmailUnsubscribeAcknowledgementRequest,
@@ -4183,21 +4329,22 @@ public final class OrgGrpc {
     if ((getRecordEmailUnsubscribeAcknowledgementMethod = OrgGrpc.getRecordEmailUnsubscribeAcknowledgementMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getRecordEmailUnsubscribeAcknowledgementMethod = OrgGrpc.getRecordEmailUnsubscribeAcknowledgementMethod) == null) {
-          OrgGrpc.getRecordEmailUnsubscribeAcknowledgementMethod = getRecordEmailUnsubscribeAcknowledgementMethod =
+          OrgGrpc.getRecordEmailUnsubscribeAcknowledgementMethod = getRecordEmailUnsubscribeAcknowledgementMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.RecordEmailUnsubscribeAcknowledgementRequest, com.tcn.cloud.api.api.v0alpha.RecordEmailUnsubscribeAcknowledgementResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RecordEmailUnsubscribeAcknowledgement"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "RecordEmailUnsubscribeAcknowledgement"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RecordEmailUnsubscribeAcknowledgementRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RecordEmailUnsubscribeAcknowledgementResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("RecordEmailUnsubscribeAcknowledgement"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("RecordEmailUnsubscribeAcknowledgement"))
+                  .build();
+          }
         }
-      }
-    }
-    return getRecordEmailUnsubscribeAcknowledgementMethod;
+     }
+     return getRecordEmailUnsubscribeAcknowledgementMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ClearEmailUnsubscribeAcknowledgementRequest,
@@ -4214,21 +4361,22 @@ public final class OrgGrpc {
     if ((getClearEmailUnsubscribeAcknowledgementMethod = OrgGrpc.getClearEmailUnsubscribeAcknowledgementMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getClearEmailUnsubscribeAcknowledgementMethod = OrgGrpc.getClearEmailUnsubscribeAcknowledgementMethod) == null) {
-          OrgGrpc.getClearEmailUnsubscribeAcknowledgementMethod = getClearEmailUnsubscribeAcknowledgementMethod =
+          OrgGrpc.getClearEmailUnsubscribeAcknowledgementMethod = getClearEmailUnsubscribeAcknowledgementMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ClearEmailUnsubscribeAcknowledgementRequest, com.tcn.cloud.api.api.v0alpha.ClearEmailUnsubscribeAcknowledgementResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ClearEmailUnsubscribeAcknowledgement"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "ClearEmailUnsubscribeAcknowledgement"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ClearEmailUnsubscribeAcknowledgementRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ClearEmailUnsubscribeAcknowledgementResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ClearEmailUnsubscribeAcknowledgement"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ClearEmailUnsubscribeAcknowledgement"))
+                  .build();
+          }
         }
-      }
-    }
-    return getClearEmailUnsubscribeAcknowledgementMethod;
+     }
+     return getClearEmailUnsubscribeAcknowledgementMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateWebLinkTemplateRequest,
@@ -4245,21 +4393,22 @@ public final class OrgGrpc {
     if ((getCreateWebLinkTemplateMethod = OrgGrpc.getCreateWebLinkTemplateMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getCreateWebLinkTemplateMethod = OrgGrpc.getCreateWebLinkTemplateMethod) == null) {
-          OrgGrpc.getCreateWebLinkTemplateMethod = getCreateWebLinkTemplateMethod =
+          OrgGrpc.getCreateWebLinkTemplateMethod = getCreateWebLinkTemplateMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateWebLinkTemplateRequest, com.tcn.cloud.api.api.v0alpha.CreateWebLinkTemplateResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateWebLinkTemplate"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "CreateWebLinkTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateWebLinkTemplateRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateWebLinkTemplateResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreateWebLinkTemplate"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreateWebLinkTemplate"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateWebLinkTemplateMethod;
+     }
+     return getCreateWebLinkTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListWebLinkTemplatesRequest,
@@ -4276,21 +4425,22 @@ public final class OrgGrpc {
     if ((getListWebLinkTemplatesMethod = OrgGrpc.getListWebLinkTemplatesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getListWebLinkTemplatesMethod = OrgGrpc.getListWebLinkTemplatesMethod) == null) {
-          OrgGrpc.getListWebLinkTemplatesMethod = getListWebLinkTemplatesMethod =
+          OrgGrpc.getListWebLinkTemplatesMethod = getListWebLinkTemplatesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListWebLinkTemplatesRequest, com.tcn.cloud.api.api.v0alpha.ListWebLinkTemplatesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListWebLinkTemplates"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "ListWebLinkTemplates"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListWebLinkTemplatesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListWebLinkTemplatesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListWebLinkTemplates"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListWebLinkTemplates"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListWebLinkTemplatesMethod;
+     }
+     return getListWebLinkTemplatesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetWebLinkTemplateRequest,
@@ -4307,21 +4457,22 @@ public final class OrgGrpc {
     if ((getGetWebLinkTemplateMethod = OrgGrpc.getGetWebLinkTemplateMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetWebLinkTemplateMethod = OrgGrpc.getGetWebLinkTemplateMethod) == null) {
-          OrgGrpc.getGetWebLinkTemplateMethod = getGetWebLinkTemplateMethod =
+          OrgGrpc.getGetWebLinkTemplateMethod = getGetWebLinkTemplateMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetWebLinkTemplateRequest, com.tcn.cloud.api.api.v0alpha.GetWebLinkTemplateResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetWebLinkTemplate"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetWebLinkTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetWebLinkTemplateRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetWebLinkTemplateResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetWebLinkTemplate"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetWebLinkTemplate"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetWebLinkTemplateMethod;
+     }
+     return getGetWebLinkTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateWebLinkTemplateRequest,
@@ -4338,21 +4489,22 @@ public final class OrgGrpc {
     if ((getUpdateWebLinkTemplateMethod = OrgGrpc.getUpdateWebLinkTemplateMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateWebLinkTemplateMethod = OrgGrpc.getUpdateWebLinkTemplateMethod) == null) {
-          OrgGrpc.getUpdateWebLinkTemplateMethod = getUpdateWebLinkTemplateMethod =
+          OrgGrpc.getUpdateWebLinkTemplateMethod = getUpdateWebLinkTemplateMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateWebLinkTemplateRequest, com.tcn.cloud.api.api.v0alpha.UpdateWebLinkTemplateResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateWebLinkTemplate"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateWebLinkTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateWebLinkTemplateRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateWebLinkTemplateResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateWebLinkTemplate"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateWebLinkTemplate"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateWebLinkTemplateMethod;
+     }
+     return getUpdateWebLinkTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteWebLinkTemplateRequest,
@@ -4369,21 +4521,22 @@ public final class OrgGrpc {
     if ((getDeleteWebLinkTemplateMethod = OrgGrpc.getDeleteWebLinkTemplateMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getDeleteWebLinkTemplateMethod = OrgGrpc.getDeleteWebLinkTemplateMethod) == null) {
-          OrgGrpc.getDeleteWebLinkTemplateMethod = getDeleteWebLinkTemplateMethod =
+          OrgGrpc.getDeleteWebLinkTemplateMethod = getDeleteWebLinkTemplateMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteWebLinkTemplateRequest, com.tcn.cloud.api.api.v0alpha.DeleteWebLinkTemplateResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteWebLinkTemplate"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "DeleteWebLinkTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteWebLinkTemplateRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteWebLinkTemplateResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("DeleteWebLinkTemplate"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("DeleteWebLinkTemplate"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDeleteWebLinkTemplateMethod;
+     }
+     return getDeleteWebLinkTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateAgentTriggerTemplateRequest,
@@ -4400,21 +4553,22 @@ public final class OrgGrpc {
     if ((getCreateAgentTriggerTemplateMethod = OrgGrpc.getCreateAgentTriggerTemplateMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getCreateAgentTriggerTemplateMethod = OrgGrpc.getCreateAgentTriggerTemplateMethod) == null) {
-          OrgGrpc.getCreateAgentTriggerTemplateMethod = getCreateAgentTriggerTemplateMethod =
+          OrgGrpc.getCreateAgentTriggerTemplateMethod = getCreateAgentTriggerTemplateMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateAgentTriggerTemplateRequest, com.tcn.cloud.api.api.v0alpha.CreateAgentTriggerTemplateResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateAgentTriggerTemplate"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "CreateAgentTriggerTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateAgentTriggerTemplateRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateAgentTriggerTemplateResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreateAgentTriggerTemplate"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreateAgentTriggerTemplate"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateAgentTriggerTemplateMethod;
+     }
+     return getCreateAgentTriggerTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListAgentTriggerTemplatesRequest,
@@ -4431,21 +4585,22 @@ public final class OrgGrpc {
     if ((getListAgentTriggerTemplatesMethod = OrgGrpc.getListAgentTriggerTemplatesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getListAgentTriggerTemplatesMethod = OrgGrpc.getListAgentTriggerTemplatesMethod) == null) {
-          OrgGrpc.getListAgentTriggerTemplatesMethod = getListAgentTriggerTemplatesMethod =
+          OrgGrpc.getListAgentTriggerTemplatesMethod = getListAgentTriggerTemplatesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListAgentTriggerTemplatesRequest, com.tcn.cloud.api.api.v0alpha.ListAgentTriggerTemplatesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAgentTriggerTemplates"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "ListAgentTriggerTemplates"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAgentTriggerTemplatesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAgentTriggerTemplatesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListAgentTriggerTemplates"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListAgentTriggerTemplates"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListAgentTriggerTemplatesMethod;
+     }
+     return getListAgentTriggerTemplatesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetAgentTriggerTemplateRequest,
@@ -4462,21 +4617,22 @@ public final class OrgGrpc {
     if ((getGetAgentTriggerTemplateMethod = OrgGrpc.getGetAgentTriggerTemplateMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetAgentTriggerTemplateMethod = OrgGrpc.getGetAgentTriggerTemplateMethod) == null) {
-          OrgGrpc.getGetAgentTriggerTemplateMethod = getGetAgentTriggerTemplateMethod =
+          OrgGrpc.getGetAgentTriggerTemplateMethod = getGetAgentTriggerTemplateMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetAgentTriggerTemplateRequest, com.tcn.cloud.api.api.v0alpha.GetAgentTriggerTemplateResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAgentTriggerTemplate"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetAgentTriggerTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetAgentTriggerTemplateRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetAgentTriggerTemplateResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetAgentTriggerTemplate"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetAgentTriggerTemplate"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetAgentTriggerTemplateMethod;
+     }
+     return getGetAgentTriggerTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateAgentTriggerTemplateRequest,
@@ -4493,21 +4649,22 @@ public final class OrgGrpc {
     if ((getUpdateAgentTriggerTemplateMethod = OrgGrpc.getUpdateAgentTriggerTemplateMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateAgentTriggerTemplateMethod = OrgGrpc.getUpdateAgentTriggerTemplateMethod) == null) {
-          OrgGrpc.getUpdateAgentTriggerTemplateMethod = getUpdateAgentTriggerTemplateMethod =
+          OrgGrpc.getUpdateAgentTriggerTemplateMethod = getUpdateAgentTriggerTemplateMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateAgentTriggerTemplateRequest, com.tcn.cloud.api.api.v0alpha.UpdateAgentTriggerTemplateResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAgentTriggerTemplate"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateAgentTriggerTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateAgentTriggerTemplateRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateAgentTriggerTemplateResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateAgentTriggerTemplate"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateAgentTriggerTemplate"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateAgentTriggerTemplateMethod;
+     }
+     return getUpdateAgentTriggerTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteAgentTriggerTemplateRequest,
@@ -4524,21 +4681,22 @@ public final class OrgGrpc {
     if ((getDeleteAgentTriggerTemplateMethod = OrgGrpc.getDeleteAgentTriggerTemplateMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getDeleteAgentTriggerTemplateMethod = OrgGrpc.getDeleteAgentTriggerTemplateMethod) == null) {
-          OrgGrpc.getDeleteAgentTriggerTemplateMethod = getDeleteAgentTriggerTemplateMethod =
+          OrgGrpc.getDeleteAgentTriggerTemplateMethod = getDeleteAgentTriggerTemplateMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteAgentTriggerTemplateRequest, com.tcn.cloud.api.api.v0alpha.DeleteAgentTriggerTemplateResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteAgentTriggerTemplate"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "DeleteAgentTriggerTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteAgentTriggerTemplateRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteAgentTriggerTemplateResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("DeleteAgentTriggerTemplate"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("DeleteAgentTriggerTemplate"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDeleteAgentTriggerTemplateMethod;
+     }
+     return getDeleteAgentTriggerTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateClientInfoDisplayTemplateRequest,
@@ -4555,21 +4713,22 @@ public final class OrgGrpc {
     if ((getCreateClientInfoDisplayTemplateMethod = OrgGrpc.getCreateClientInfoDisplayTemplateMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getCreateClientInfoDisplayTemplateMethod = OrgGrpc.getCreateClientInfoDisplayTemplateMethod) == null) {
-          OrgGrpc.getCreateClientInfoDisplayTemplateMethod = getCreateClientInfoDisplayTemplateMethod =
+          OrgGrpc.getCreateClientInfoDisplayTemplateMethod = getCreateClientInfoDisplayTemplateMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateClientInfoDisplayTemplateRequest, com.tcn.cloud.api.api.v0alpha.CreateClientInfoDisplayTemplateResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateClientInfoDisplayTemplate"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "CreateClientInfoDisplayTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateClientInfoDisplayTemplateRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateClientInfoDisplayTemplateResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreateClientInfoDisplayTemplate"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreateClientInfoDisplayTemplate"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateClientInfoDisplayTemplateMethod;
+     }
+     return getCreateClientInfoDisplayTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListClientInfoDisplayTemplatesRequest,
@@ -4586,21 +4745,22 @@ public final class OrgGrpc {
     if ((getListClientInfoDisplayTemplatesMethod = OrgGrpc.getListClientInfoDisplayTemplatesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getListClientInfoDisplayTemplatesMethod = OrgGrpc.getListClientInfoDisplayTemplatesMethod) == null) {
-          OrgGrpc.getListClientInfoDisplayTemplatesMethod = getListClientInfoDisplayTemplatesMethod =
+          OrgGrpc.getListClientInfoDisplayTemplatesMethod = getListClientInfoDisplayTemplatesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListClientInfoDisplayTemplatesRequest, com.tcn.cloud.api.api.v0alpha.ListClientInfoDisplayTemplatesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListClientInfoDisplayTemplates"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "ListClientInfoDisplayTemplates"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListClientInfoDisplayTemplatesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListClientInfoDisplayTemplatesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListClientInfoDisplayTemplates"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListClientInfoDisplayTemplates"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListClientInfoDisplayTemplatesMethod;
+     }
+     return getListClientInfoDisplayTemplatesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateClientInfoDisplayTemplateRequest,
@@ -4617,21 +4777,22 @@ public final class OrgGrpc {
     if ((getUpdateClientInfoDisplayTemplateMethod = OrgGrpc.getUpdateClientInfoDisplayTemplateMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateClientInfoDisplayTemplateMethod = OrgGrpc.getUpdateClientInfoDisplayTemplateMethod) == null) {
-          OrgGrpc.getUpdateClientInfoDisplayTemplateMethod = getUpdateClientInfoDisplayTemplateMethod =
+          OrgGrpc.getUpdateClientInfoDisplayTemplateMethod = getUpdateClientInfoDisplayTemplateMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateClientInfoDisplayTemplateRequest, com.tcn.cloud.api.api.v0alpha.UpdateClientInfoDisplayTemplateResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateClientInfoDisplayTemplate"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateClientInfoDisplayTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateClientInfoDisplayTemplateRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateClientInfoDisplayTemplateResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateClientInfoDisplayTemplate"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateClientInfoDisplayTemplate"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateClientInfoDisplayTemplateMethod;
+     }
+     return getUpdateClientInfoDisplayTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteClientInfoDisplayTemplateRequest,
@@ -4648,21 +4809,22 @@ public final class OrgGrpc {
     if ((getDeleteClientInfoDisplayTemplateMethod = OrgGrpc.getDeleteClientInfoDisplayTemplateMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getDeleteClientInfoDisplayTemplateMethod = OrgGrpc.getDeleteClientInfoDisplayTemplateMethod) == null) {
-          OrgGrpc.getDeleteClientInfoDisplayTemplateMethod = getDeleteClientInfoDisplayTemplateMethod =
+          OrgGrpc.getDeleteClientInfoDisplayTemplateMethod = getDeleteClientInfoDisplayTemplateMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteClientInfoDisplayTemplateRequest, com.tcn.cloud.api.api.v0alpha.DeleteClientInfoDisplayTemplateResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteClientInfoDisplayTemplate"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "DeleteClientInfoDisplayTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteClientInfoDisplayTemplateRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteClientInfoDisplayTemplateResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("DeleteClientInfoDisplayTemplate"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("DeleteClientInfoDisplayTemplate"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDeleteClientInfoDisplayTemplateMethod;
+     }
+     return getDeleteClientInfoDisplayTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateRequest,
@@ -4679,21 +4841,22 @@ public final class OrgGrpc {
     if ((getGetClientInfoDisplayTemplateMethod = OrgGrpc.getGetClientInfoDisplayTemplateMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetClientInfoDisplayTemplateMethod = OrgGrpc.getGetClientInfoDisplayTemplateMethod) == null) {
-          OrgGrpc.getGetClientInfoDisplayTemplateMethod = getGetClientInfoDisplayTemplateMethod =
+          OrgGrpc.getGetClientInfoDisplayTemplateMethod = getGetClientInfoDisplayTemplateMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateRequest, com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetClientInfoDisplayTemplate"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetClientInfoDisplayTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetClientInfoDisplayTemplate"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetClientInfoDisplayTemplate"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetClientInfoDisplayTemplateMethod;
+     }
+     return getGetClientInfoDisplayTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListAgentPauseCodesRequest,
@@ -4710,21 +4873,22 @@ public final class OrgGrpc {
     if ((getListAgentPauseCodesMethod = OrgGrpc.getListAgentPauseCodesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getListAgentPauseCodesMethod = OrgGrpc.getListAgentPauseCodesMethod) == null) {
-          OrgGrpc.getListAgentPauseCodesMethod = getListAgentPauseCodesMethod =
+          OrgGrpc.getListAgentPauseCodesMethod = getListAgentPauseCodesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListAgentPauseCodesRequest, com.tcn.cloud.api.api.v0alpha.ListAgentPauseCodesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAgentPauseCodes"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "ListAgentPauseCodes"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAgentPauseCodesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAgentPauseCodesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListAgentPauseCodes"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListAgentPauseCodes"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListAgentPauseCodesMethod;
+     }
+     return getListAgentPauseCodesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateAgentPauseCodeRequest,
@@ -4741,21 +4905,22 @@ public final class OrgGrpc {
     if ((getCreateAgentPauseCodeMethod = OrgGrpc.getCreateAgentPauseCodeMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getCreateAgentPauseCodeMethod = OrgGrpc.getCreateAgentPauseCodeMethod) == null) {
-          OrgGrpc.getCreateAgentPauseCodeMethod = getCreateAgentPauseCodeMethod =
+          OrgGrpc.getCreateAgentPauseCodeMethod = getCreateAgentPauseCodeMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateAgentPauseCodeRequest, com.tcn.cloud.api.api.v0alpha.CreateAgentPauseCodeResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateAgentPauseCode"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "CreateAgentPauseCode"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateAgentPauseCodeRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateAgentPauseCodeResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreateAgentPauseCode"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreateAgentPauseCode"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateAgentPauseCodeMethod;
+     }
+     return getCreateAgentPauseCodeMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateAgentPauseCodeRequest,
@@ -4772,21 +4937,22 @@ public final class OrgGrpc {
     if ((getUpdateAgentPauseCodeMethod = OrgGrpc.getUpdateAgentPauseCodeMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateAgentPauseCodeMethod = OrgGrpc.getUpdateAgentPauseCodeMethod) == null) {
-          OrgGrpc.getUpdateAgentPauseCodeMethod = getUpdateAgentPauseCodeMethod =
+          OrgGrpc.getUpdateAgentPauseCodeMethod = getUpdateAgentPauseCodeMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateAgentPauseCodeRequest, com.tcn.cloud.api.api.v0alpha.UpdateAgentPauseCodeResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAgentPauseCode"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateAgentPauseCode"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateAgentPauseCodeRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateAgentPauseCodeResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateAgentPauseCode"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateAgentPauseCode"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateAgentPauseCodeMethod;
+     }
+     return getUpdateAgentPauseCodeMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteAgentPauseCodeRequest,
@@ -4803,21 +4969,22 @@ public final class OrgGrpc {
     if ((getDeleteAgentPauseCodeMethod = OrgGrpc.getDeleteAgentPauseCodeMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getDeleteAgentPauseCodeMethod = OrgGrpc.getDeleteAgentPauseCodeMethod) == null) {
-          OrgGrpc.getDeleteAgentPauseCodeMethod = getDeleteAgentPauseCodeMethod =
+          OrgGrpc.getDeleteAgentPauseCodeMethod = getDeleteAgentPauseCodeMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteAgentPauseCodeRequest, com.tcn.cloud.api.api.v0alpha.DeleteAgentPauseCodeResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteAgentPauseCode"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "DeleteAgentPauseCode"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteAgentPauseCodeRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteAgentPauseCodeResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("DeleteAgentPauseCode"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("DeleteAgentPauseCode"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDeleteAgentPauseCodeMethod;
+     }
+     return getDeleteAgentPauseCodeMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListCustomReportFiltersRequest,
@@ -4834,21 +5001,22 @@ public final class OrgGrpc {
     if ((getListCustomReportFiltersMethod = OrgGrpc.getListCustomReportFiltersMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getListCustomReportFiltersMethod = OrgGrpc.getListCustomReportFiltersMethod) == null) {
-          OrgGrpc.getListCustomReportFiltersMethod = getListCustomReportFiltersMethod =
+          OrgGrpc.getListCustomReportFiltersMethod = getListCustomReportFiltersMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListCustomReportFiltersRequest, com.tcn.cloud.api.api.v0alpha.ListCustomReportFiltersResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListCustomReportFilters"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "ListCustomReportFilters"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListCustomReportFiltersRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListCustomReportFiltersResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListCustomReportFilters"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListCustomReportFilters"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListCustomReportFiltersMethod;
+     }
+     return getListCustomReportFiltersMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateCustomReportFilterRequest,
@@ -4865,21 +5033,22 @@ public final class OrgGrpc {
     if ((getCreateCustomReportFilterMethod = OrgGrpc.getCreateCustomReportFilterMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getCreateCustomReportFilterMethod = OrgGrpc.getCreateCustomReportFilterMethod) == null) {
-          OrgGrpc.getCreateCustomReportFilterMethod = getCreateCustomReportFilterMethod =
+          OrgGrpc.getCreateCustomReportFilterMethod = getCreateCustomReportFilterMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateCustomReportFilterRequest, com.tcn.cloud.api.api.v0alpha.CreateCustomReportFilterResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateCustomReportFilter"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "CreateCustomReportFilter"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateCustomReportFilterRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateCustomReportFilterResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreateCustomReportFilter"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreateCustomReportFilter"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateCustomReportFilterMethod;
+     }
+     return getCreateCustomReportFilterMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateCustomReportFilterRequest,
@@ -4896,21 +5065,22 @@ public final class OrgGrpc {
     if ((getUpdateCustomReportFilterMethod = OrgGrpc.getUpdateCustomReportFilterMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateCustomReportFilterMethod = OrgGrpc.getUpdateCustomReportFilterMethod) == null) {
-          OrgGrpc.getUpdateCustomReportFilterMethod = getUpdateCustomReportFilterMethod =
+          OrgGrpc.getUpdateCustomReportFilterMethod = getUpdateCustomReportFilterMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateCustomReportFilterRequest, com.tcn.cloud.api.api.v0alpha.UpdateCustomReportFilterResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateCustomReportFilter"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateCustomReportFilter"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateCustomReportFilterRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateCustomReportFilterResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateCustomReportFilter"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateCustomReportFilter"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateCustomReportFilterMethod;
+     }
+     return getUpdateCustomReportFilterMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteCustomReportFilterRequest,
@@ -4927,21 +5097,22 @@ public final class OrgGrpc {
     if ((getDeleteCustomReportFilterMethod = OrgGrpc.getDeleteCustomReportFilterMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getDeleteCustomReportFilterMethod = OrgGrpc.getDeleteCustomReportFilterMethod) == null) {
-          OrgGrpc.getDeleteCustomReportFilterMethod = getDeleteCustomReportFilterMethod =
+          OrgGrpc.getDeleteCustomReportFilterMethod = getDeleteCustomReportFilterMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteCustomReportFilterRequest, com.tcn.cloud.api.api.v0alpha.DeleteCustomReportFilterResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteCustomReportFilter"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "DeleteCustomReportFilter"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteCustomReportFilterRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteCustomReportFilterResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("DeleteCustomReportFilter"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("DeleteCustomReportFilter"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDeleteCustomReportFilterMethod;
+     }
+     return getDeleteCustomReportFilterMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListAgentResponseGroupsRequest,
@@ -4958,21 +5129,22 @@ public final class OrgGrpc {
     if ((getListAgentResponseGroupsMethod = OrgGrpc.getListAgentResponseGroupsMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getListAgentResponseGroupsMethod = OrgGrpc.getListAgentResponseGroupsMethod) == null) {
-          OrgGrpc.getListAgentResponseGroupsMethod = getListAgentResponseGroupsMethod =
+          OrgGrpc.getListAgentResponseGroupsMethod = getListAgentResponseGroupsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListAgentResponseGroupsRequest, com.tcn.cloud.api.api.v0alpha.ListAgentResponseGroupsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAgentResponseGroups"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "ListAgentResponseGroups"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAgentResponseGroupsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAgentResponseGroupsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListAgentResponseGroups"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListAgentResponseGroups"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListAgentResponseGroupsMethod;
+     }
+     return getListAgentResponseGroupsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListLastTemplateElementsRequest,
@@ -4989,21 +5161,22 @@ public final class OrgGrpc {
     if ((getListLastTemplateElementsMethod = OrgGrpc.getListLastTemplateElementsMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getListLastTemplateElementsMethod = OrgGrpc.getListLastTemplateElementsMethod) == null) {
-          OrgGrpc.getListLastTemplateElementsMethod = getListLastTemplateElementsMethod =
+          OrgGrpc.getListLastTemplateElementsMethod = getListLastTemplateElementsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListLastTemplateElementsRequest, com.tcn.cloud.api.api.v0alpha.ListLastTemplateElementsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListLastTemplateElements"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "ListLastTemplateElements"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListLastTemplateElementsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListLastTemplateElementsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListLastTemplateElements"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListLastTemplateElements"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListLastTemplateElementsMethod;
+     }
+     return getListLastTemplateElementsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq,
@@ -5020,21 +5193,22 @@ public final class OrgGrpc {
     if ((getListQueueConfigsMethod = OrgGrpc.getListQueueConfigsMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getListQueueConfigsMethod = OrgGrpc.getListQueueConfigsMethod) == null) {
-          OrgGrpc.getListQueueConfigsMethod = getListQueueConfigsMethod =
+          OrgGrpc.getListQueueConfigsMethod = getListQueueConfigsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq, com.tcn.cloud.api.api.v0alpha.ListQueueConfigsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListQueueConfigs"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "ListQueueConfigs"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListQueueConfigsRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListQueueConfigs"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListQueueConfigs"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListQueueConfigsMethod;
+     }
+     return getListQueueConfigsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq,
@@ -5051,21 +5225,22 @@ public final class OrgGrpc {
     if ((getListQueueConfigsByOrgIdMethod = OrgGrpc.getListQueueConfigsByOrgIdMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getListQueueConfigsByOrgIdMethod = OrgGrpc.getListQueueConfigsByOrgIdMethod) == null) {
-          OrgGrpc.getListQueueConfigsByOrgIdMethod = getListQueueConfigsByOrgIdMethod =
+          OrgGrpc.getListQueueConfigsByOrgIdMethod = getListQueueConfigsByOrgIdMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq, com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListQueueConfigsByOrgId"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "ListQueueConfigsByOrgId"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListQueueConfigsByOrgId"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListQueueConfigsByOrgId"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListQueueConfigsByOrgIdMethod;
+     }
+     return getListQueueConfigsByOrgIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteQueueConfigReq,
@@ -5082,21 +5257,22 @@ public final class OrgGrpc {
     if ((getDeleteQueueConfigMethod = OrgGrpc.getDeleteQueueConfigMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getDeleteQueueConfigMethod = OrgGrpc.getDeleteQueueConfigMethod) == null) {
-          OrgGrpc.getDeleteQueueConfigMethod = getDeleteQueueConfigMethod =
+          OrgGrpc.getDeleteQueueConfigMethod = getDeleteQueueConfigMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteQueueConfigReq, com.tcn.cloud.api.api.v0alpha.DeleteQueueConfigRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteQueueConfig"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "DeleteQueueConfig"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteQueueConfigReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteQueueConfigRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("DeleteQueueConfig"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("DeleteQueueConfig"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDeleteQueueConfigMethod;
+     }
+     return getDeleteQueueConfigMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetQueueConfigReq,
@@ -5113,21 +5289,22 @@ public final class OrgGrpc {
     if ((getGetQueueConfigMethod = OrgGrpc.getGetQueueConfigMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetQueueConfigMethod = OrgGrpc.getGetQueueConfigMethod) == null) {
-          OrgGrpc.getGetQueueConfigMethod = getGetQueueConfigMethod =
+          OrgGrpc.getGetQueueConfigMethod = getGetQueueConfigMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetQueueConfigReq, com.tcn.cloud.api.api.v0alpha.GetQueueConfigRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetQueueConfig"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetQueueConfig"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetQueueConfigReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetQueueConfigRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetQueueConfig"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetQueueConfig"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetQueueConfigMethod;
+     }
+     return getGetQueueConfigMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateQueueConfigReq,
@@ -5144,21 +5321,22 @@ public final class OrgGrpc {
     if ((getCreateQueueConfigMethod = OrgGrpc.getCreateQueueConfigMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getCreateQueueConfigMethod = OrgGrpc.getCreateQueueConfigMethod) == null) {
-          OrgGrpc.getCreateQueueConfigMethod = getCreateQueueConfigMethod =
+          OrgGrpc.getCreateQueueConfigMethod = getCreateQueueConfigMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateQueueConfigReq, com.tcn.cloud.api.api.v0alpha.CreateQueueConfigRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateQueueConfig"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "CreateQueueConfig"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateQueueConfigReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateQueueConfigRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreateQueueConfig"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreateQueueConfig"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateQueueConfigMethod;
+     }
+     return getCreateQueueConfigMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateQueueConfigReq,
@@ -5175,21 +5353,22 @@ public final class OrgGrpc {
     if ((getUpdateQueueConfigMethod = OrgGrpc.getUpdateQueueConfigMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateQueueConfigMethod = OrgGrpc.getUpdateQueueConfigMethod) == null) {
-          OrgGrpc.getUpdateQueueConfigMethod = getUpdateQueueConfigMethod =
+          OrgGrpc.getUpdateQueueConfigMethod = getUpdateQueueConfigMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateQueueConfigReq, com.tcn.cloud.api.api.v0alpha.UpdateQueueConfigRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateQueueConfig"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateQueueConfig"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateQueueConfigReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateQueueConfigRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateQueueConfig"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateQueueConfig"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateQueueConfigMethod;
+     }
+     return getUpdateQueueConfigMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CopyQueueConfigReq,
@@ -5206,21 +5385,22 @@ public final class OrgGrpc {
     if ((getCopyQueueConfigMethod = OrgGrpc.getCopyQueueConfigMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getCopyQueueConfigMethod = OrgGrpc.getCopyQueueConfigMethod) == null) {
-          OrgGrpc.getCopyQueueConfigMethod = getCopyQueueConfigMethod =
+          OrgGrpc.getCopyQueueConfigMethod = getCopyQueueConfigMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CopyQueueConfigReq, com.tcn.cloud.api.api.v0alpha.CopyQueueConfigRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CopyQueueConfig"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "CopyQueueConfig"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CopyQueueConfigReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CopyQueueConfigRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CopyQueueConfig"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CopyQueueConfig"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCopyQueueConfigMethod;
+     }
+     return getCopyQueueConfigMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetAllQueueConfigSoundsReq,
@@ -5237,21 +5417,22 @@ public final class OrgGrpc {
     if ((getGetAllQueueConfigSoundsMethod = OrgGrpc.getGetAllQueueConfigSoundsMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetAllQueueConfigSoundsMethod = OrgGrpc.getGetAllQueueConfigSoundsMethod) == null) {
-          OrgGrpc.getGetAllQueueConfigSoundsMethod = getGetAllQueueConfigSoundsMethod =
+          OrgGrpc.getGetAllQueueConfigSoundsMethod = getGetAllQueueConfigSoundsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetAllQueueConfigSoundsReq, com.tcn.cloud.api.api.v0alpha.GetAllQueueConfigSoundsRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAllQueueConfigSounds"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetAllQueueConfigSounds"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetAllQueueConfigSoundsReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetAllQueueConfigSoundsRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetAllQueueConfigSounds"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetAllQueueConfigSounds"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetAllQueueConfigSoundsMethod;
+     }
+     return getGetAllQueueConfigSoundsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetQueueConfigSoundReq,
@@ -5268,21 +5449,22 @@ public final class OrgGrpc {
     if ((getGetQueueConfigSoundMethod = OrgGrpc.getGetQueueConfigSoundMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetQueueConfigSoundMethod = OrgGrpc.getGetQueueConfigSoundMethod) == null) {
-          OrgGrpc.getGetQueueConfigSoundMethod = getGetQueueConfigSoundMethod =
+          OrgGrpc.getGetQueueConfigSoundMethod = getGetQueueConfigSoundMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetQueueConfigSoundReq, com.tcn.cloud.api.api.v0alpha.GetQueueConfigSoundRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetQueueConfigSound"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetQueueConfigSound"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetQueueConfigSoundReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetQueueConfigSoundRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetQueueConfigSound"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetQueueConfigSound"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetQueueConfigSoundMethod;
+     }
+     return getGetQueueConfigSoundMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SetQueueConfigSoundReq,
@@ -5299,21 +5481,22 @@ public final class OrgGrpc {
     if ((getSetQueueConfigSoundMethod = OrgGrpc.getSetQueueConfigSoundMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getSetQueueConfigSoundMethod = OrgGrpc.getSetQueueConfigSoundMethod) == null) {
-          OrgGrpc.getSetQueueConfigSoundMethod = getSetQueueConfigSoundMethod =
+          OrgGrpc.getSetQueueConfigSoundMethod = getSetQueueConfigSoundMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SetQueueConfigSoundReq, com.tcn.cloud.api.api.v0alpha.SetQueueConfigSoundRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetQueueConfigSound"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "SetQueueConfigSound"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SetQueueConfigSoundReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SetQueueConfigSoundRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("SetQueueConfigSound"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("SetQueueConfigSound"))
+                  .build();
+          }
         }
-      }
-    }
-    return getSetQueueConfigSoundMethod;
+     }
+     return getSetQueueConfigSoundMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.SetAllQueueConfigSoundsFromSourceReq,
@@ -5330,21 +5513,22 @@ public final class OrgGrpc {
     if ((getSetAllQueueConfigSoundsFromSourceMethod = OrgGrpc.getSetAllQueueConfigSoundsFromSourceMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getSetAllQueueConfigSoundsFromSourceMethod = OrgGrpc.getSetAllQueueConfigSoundsFromSourceMethod) == null) {
-          OrgGrpc.getSetAllQueueConfigSoundsFromSourceMethod = getSetAllQueueConfigSoundsFromSourceMethod =
+          OrgGrpc.getSetAllQueueConfigSoundsFromSourceMethod = getSetAllQueueConfigSoundsFromSourceMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.SetAllQueueConfigSoundsFromSourceReq, com.tcn.cloud.api.api.v0alpha.SetAllQueueConfigSoundsFromSourceRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetAllQueueConfigSoundsFromSource"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "SetAllQueueConfigSoundsFromSource"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SetAllQueueConfigSoundsFromSourceReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.SetAllQueueConfigSoundsFromSourceRes.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("SetAllQueueConfigSoundsFromSource"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("SetAllQueueConfigSoundsFromSource"))
+                  .build();
+          }
         }
-      }
-    }
-    return getSetAllQueueConfigSoundsFromSourceMethod;
+     }
+     return getSetAllQueueConfigSoundsFromSourceMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetUserBlockedRequest,
@@ -5361,21 +5545,22 @@ public final class OrgGrpc {
     if ((getGetUserBlockedMethod = OrgGrpc.getGetUserBlockedMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetUserBlockedMethod = OrgGrpc.getGetUserBlockedMethod) == null) {
-          OrgGrpc.getGetUserBlockedMethod = getGetUserBlockedMethod =
+          OrgGrpc.getGetUserBlockedMethod = getGetUserBlockedMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetUserBlockedRequest, com.tcn.cloud.api.api.v0alpha.GetUserBlockedResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetUserBlocked"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetUserBlocked"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetUserBlockedRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetUserBlockedResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetUserBlocked"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetUserBlocked"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetUserBlockedMethod;
+     }
+     return getGetUserBlockedMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UnblockUserRequest,
@@ -5392,21 +5577,22 @@ public final class OrgGrpc {
     if ((getUnblockUserMethod = OrgGrpc.getUnblockUserMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUnblockUserMethod = OrgGrpc.getUnblockUserMethod) == null) {
-          OrgGrpc.getUnblockUserMethod = getUnblockUserMethod =
+          OrgGrpc.getUnblockUserMethod = getUnblockUserMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UnblockUserRequest, com.tcn.cloud.api.api.v0alpha.UnblockUserResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UnblockUser"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UnblockUser"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UnblockUserRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UnblockUserResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UnblockUser"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UnblockUser"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUnblockUserMethod;
+     }
+     return getUnblockUserMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListP3UnMigratedUsersRequest,
@@ -5423,21 +5609,22 @@ public final class OrgGrpc {
     if ((getListP3UnMigratedUsersMethod = OrgGrpc.getListP3UnMigratedUsersMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getListP3UnMigratedUsersMethod = OrgGrpc.getListP3UnMigratedUsersMethod) == null) {
-          OrgGrpc.getListP3UnMigratedUsersMethod = getListP3UnMigratedUsersMethod =
+          OrgGrpc.getListP3UnMigratedUsersMethod = getListP3UnMigratedUsersMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListP3UnMigratedUsersRequest, com.tcn.cloud.api.api.v0alpha.ListP3UnMigratedUsersResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListP3UnMigratedUsers"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "ListP3UnMigratedUsers"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListP3UnMigratedUsersRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListP3UnMigratedUsersResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListP3UnMigratedUsers"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListP3UnMigratedUsers"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListP3UnMigratedUsersMethod;
+     }
+     return getListP3UnMigratedUsersMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.MigrateP3UserRequest,
@@ -5454,21 +5641,22 @@ public final class OrgGrpc {
     if ((getMigrateP3UserMethod = OrgGrpc.getMigrateP3UserMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getMigrateP3UserMethod = OrgGrpc.getMigrateP3UserMethod) == null) {
-          OrgGrpc.getMigrateP3UserMethod = getMigrateP3UserMethod =
+          OrgGrpc.getMigrateP3UserMethod = getMigrateP3UserMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.MigrateP3UserRequest, com.tcn.cloud.api.api.v0alpha.MigrateP3UserResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MigrateP3User"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "MigrateP3User"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.MigrateP3UserRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.MigrateP3UserResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("MigrateP3User"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("MigrateP3User"))
+                  .build();
+          }
         }
-      }
-    }
-    return getMigrateP3UserMethod;
+     }
+     return getMigrateP3UserMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateP3UserNameRequest,
@@ -5485,21 +5673,22 @@ public final class OrgGrpc {
     if ((getUpdateP3UserNameMethod = OrgGrpc.getUpdateP3UserNameMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateP3UserNameMethod = OrgGrpc.getUpdateP3UserNameMethod) == null) {
-          OrgGrpc.getUpdateP3UserNameMethod = getUpdateP3UserNameMethod =
+          OrgGrpc.getUpdateP3UserNameMethod = getUpdateP3UserNameMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateP3UserNameRequest, com.tcn.cloud.api.api.v0alpha.UpdateP3UserNameResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateP3UserName"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateP3UserName"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateP3UserNameRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateP3UserNameResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateP3UserName"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateP3UserName"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateP3UserNameMethod;
+     }
+     return getUpdateP3UserNameMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListOwnedUsersRequest,
@@ -5516,21 +5705,22 @@ public final class OrgGrpc {
     if ((getListOwnedUsersMethod = OrgGrpc.getListOwnedUsersMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getListOwnedUsersMethod = OrgGrpc.getListOwnedUsersMethod) == null) {
-          OrgGrpc.getListOwnedUsersMethod = getListOwnedUsersMethod =
+          OrgGrpc.getListOwnedUsersMethod = getListOwnedUsersMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListOwnedUsersRequest, com.tcn.cloud.api.api.v0alpha.ListOwnedUsersResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOwnedUsers"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "ListOwnedUsers"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListOwnedUsersRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListOwnedUsersResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListOwnedUsers"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListOwnedUsers"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListOwnedUsersMethod;
+     }
+     return getListOwnedUsersMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListOwnedOrgsByOrgIdRequest,
@@ -5547,21 +5737,22 @@ public final class OrgGrpc {
     if ((getListOwnedOrgsByOrgIdMethod = OrgGrpc.getListOwnedOrgsByOrgIdMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getListOwnedOrgsByOrgIdMethod = OrgGrpc.getListOwnedOrgsByOrgIdMethod) == null) {
-          OrgGrpc.getListOwnedOrgsByOrgIdMethod = getListOwnedOrgsByOrgIdMethod =
+          OrgGrpc.getListOwnedOrgsByOrgIdMethod = getListOwnedOrgsByOrgIdMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListOwnedOrgsByOrgIdRequest, com.tcn.cloud.api.api.v0alpha.ListOwnedOrgsByOrgIdResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOwnedOrgsByOrgId"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "ListOwnedOrgsByOrgId"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListOwnedOrgsByOrgIdRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListOwnedOrgsByOrgIdResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListOwnedOrgsByOrgId"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListOwnedOrgsByOrgId"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListOwnedOrgsByOrgIdMethod;
+     }
+     return getListOwnedOrgsByOrgIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListOwnedOrgsRequest,
@@ -5578,21 +5769,22 @@ public final class OrgGrpc {
     if ((getListOwnedOrgsMethod = OrgGrpc.getListOwnedOrgsMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getListOwnedOrgsMethod = OrgGrpc.getListOwnedOrgsMethod) == null) {
-          OrgGrpc.getListOwnedOrgsMethod = getListOwnedOrgsMethod =
+          OrgGrpc.getListOwnedOrgsMethod = getListOwnedOrgsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListOwnedOrgsRequest, com.tcn.cloud.api.api.v0alpha.ListOwnedOrgsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOwnedOrgs"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "ListOwnedOrgs"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListOwnedOrgsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListOwnedOrgsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListOwnedOrgs"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListOwnedOrgs"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListOwnedOrgsMethod;
+     }
+     return getListOwnedOrgsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.RemoveLoginStrikesRequest,
@@ -5609,21 +5801,22 @@ public final class OrgGrpc {
     if ((getRemoveLoginStrikesMethod = OrgGrpc.getRemoveLoginStrikesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getRemoveLoginStrikesMethod = OrgGrpc.getRemoveLoginStrikesMethod) == null) {
-          OrgGrpc.getRemoveLoginStrikesMethod = getRemoveLoginStrikesMethod =
+          OrgGrpc.getRemoveLoginStrikesMethod = getRemoveLoginStrikesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.RemoveLoginStrikesRequest, com.tcn.cloud.api.api.v0alpha.RemoveLoginStrikesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveLoginStrikes"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "RemoveLoginStrikes"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RemoveLoginStrikesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RemoveLoginStrikesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("RemoveLoginStrikes"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("RemoveLoginStrikes"))
+                  .build();
+          }
         }
-      }
-    }
-    return getRemoveLoginStrikesMethod;
+     }
+     return getRemoveLoginStrikesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.RemoveUserLoginStrikesRequest,
@@ -5640,21 +5833,22 @@ public final class OrgGrpc {
     if ((getRemoveUserLoginStrikesMethod = OrgGrpc.getRemoveUserLoginStrikesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getRemoveUserLoginStrikesMethod = OrgGrpc.getRemoveUserLoginStrikesMethod) == null) {
-          OrgGrpc.getRemoveUserLoginStrikesMethod = getRemoveUserLoginStrikesMethod =
+          OrgGrpc.getRemoveUserLoginStrikesMethod = getRemoveUserLoginStrikesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.RemoveUserLoginStrikesRequest, com.tcn.cloud.api.api.v0alpha.RemoveUserLoginStrikesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveUserLoginStrikes"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "RemoveUserLoginStrikes"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RemoveUserLoginStrikesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RemoveUserLoginStrikesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("RemoveUserLoginStrikes"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("RemoveUserLoginStrikes"))
+                  .build();
+          }
         }
-      }
-    }
-    return getRemoveUserLoginStrikesMethod;
+     }
+     return getRemoveUserLoginStrikesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListLoginHistoryRequest,
@@ -5671,21 +5865,22 @@ public final class OrgGrpc {
     if ((getListLoginHistoryMethod = OrgGrpc.getListLoginHistoryMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getListLoginHistoryMethod = OrgGrpc.getListLoginHistoryMethod) == null) {
-          OrgGrpc.getListLoginHistoryMethod = getListLoginHistoryMethod =
+          OrgGrpc.getListLoginHistoryMethod = getListLoginHistoryMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListLoginHistoryRequest, com.tcn.cloud.api.api.v0alpha.ListLoginHistoryResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListLoginHistory"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "ListLoginHistory"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListLoginHistoryRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListLoginHistoryResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListLoginHistory"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListLoginHistory"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListLoginHistoryMethod;
+     }
+     return getListLoginHistoryMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateP3UserSidsRequest,
@@ -5702,21 +5897,22 @@ public final class OrgGrpc {
     if ((getUpdateP3UserSidsMethod = OrgGrpc.getUpdateP3UserSidsMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateP3UserSidsMethod = OrgGrpc.getUpdateP3UserSidsMethod) == null) {
-          OrgGrpc.getUpdateP3UserSidsMethod = getUpdateP3UserSidsMethod =
+          OrgGrpc.getUpdateP3UserSidsMethod = getUpdateP3UserSidsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateP3UserSidsRequest, com.tcn.cloud.api.api.v0alpha.UpdateP3UserSidsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateP3UserSids"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateP3UserSids"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateP3UserSidsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateP3UserSidsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateP3UserSids"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateP3UserSids"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateP3UserSidsMethod;
+     }
+     return getUpdateP3UserSidsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateAuthConnectionRequest,
@@ -5733,21 +5929,22 @@ public final class OrgGrpc {
     if ((getCreateAuthConnectionMethod = OrgGrpc.getCreateAuthConnectionMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getCreateAuthConnectionMethod = OrgGrpc.getCreateAuthConnectionMethod) == null) {
-          OrgGrpc.getCreateAuthConnectionMethod = getCreateAuthConnectionMethod =
+          OrgGrpc.getCreateAuthConnectionMethod = getCreateAuthConnectionMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateAuthConnectionRequest, com.tcn.cloud.api.api.v0alpha.CreateAuthConnectionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateAuthConnection"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "CreateAuthConnection"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateAuthConnectionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateAuthConnectionResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreateAuthConnection"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreateAuthConnection"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateAuthConnectionMethod;
+     }
+     return getCreateAuthConnectionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetAuthConnectionSettingsRequest,
@@ -5764,21 +5961,22 @@ public final class OrgGrpc {
     if ((getGetAuthConnectionSettingsMethod = OrgGrpc.getGetAuthConnectionSettingsMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetAuthConnectionSettingsMethod = OrgGrpc.getGetAuthConnectionSettingsMethod) == null) {
-          OrgGrpc.getGetAuthConnectionSettingsMethod = getGetAuthConnectionSettingsMethod =
+          OrgGrpc.getGetAuthConnectionSettingsMethod = getGetAuthConnectionSettingsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetAuthConnectionSettingsRequest, com.tcn.cloud.api.api.v0alpha.GetAuthConnectionSettingsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAuthConnectionSettings"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetAuthConnectionSettings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetAuthConnectionSettingsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetAuthConnectionSettingsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetAuthConnectionSettings"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetAuthConnectionSettings"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetAuthConnectionSettingsMethod;
+     }
+     return getGetAuthConnectionSettingsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateAuthConnectionSettingsRequest,
@@ -5795,21 +5993,22 @@ public final class OrgGrpc {
     if ((getUpdateAuthConnectionSettingsMethod = OrgGrpc.getUpdateAuthConnectionSettingsMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateAuthConnectionSettingsMethod = OrgGrpc.getUpdateAuthConnectionSettingsMethod) == null) {
-          OrgGrpc.getUpdateAuthConnectionSettingsMethod = getUpdateAuthConnectionSettingsMethod =
+          OrgGrpc.getUpdateAuthConnectionSettingsMethod = getUpdateAuthConnectionSettingsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateAuthConnectionSettingsRequest, com.tcn.cloud.api.api.v0alpha.UpdateAuthConnectionSettingsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAuthConnectionSettings"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateAuthConnectionSettings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateAuthConnectionSettingsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateAuthConnectionSettingsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateAuthConnectionSettings"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateAuthConnectionSettings"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateAuthConnectionSettingsMethod;
+     }
+     return getUpdateAuthConnectionSettingsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteAuthConnectionRequest,
@@ -5826,21 +6025,22 @@ public final class OrgGrpc {
     if ((getDeleteAuthConnectionMethod = OrgGrpc.getDeleteAuthConnectionMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getDeleteAuthConnectionMethod = OrgGrpc.getDeleteAuthConnectionMethod) == null) {
-          OrgGrpc.getDeleteAuthConnectionMethod = getDeleteAuthConnectionMethod =
+          OrgGrpc.getDeleteAuthConnectionMethod = getDeleteAuthConnectionMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteAuthConnectionRequest, com.tcn.cloud.api.api.v0alpha.DeleteAuthConnectionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteAuthConnection"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "DeleteAuthConnection"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteAuthConnectionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteAuthConnectionResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("DeleteAuthConnection"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("DeleteAuthConnection"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDeleteAuthConnectionMethod;
+     }
+     return getDeleteAuthConnectionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetUserSubscriptionRequest,
@@ -5857,21 +6057,22 @@ public final class OrgGrpc {
     if ((getGetUserSubscriptionMethod = OrgGrpc.getGetUserSubscriptionMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetUserSubscriptionMethod = OrgGrpc.getGetUserSubscriptionMethod) == null) {
-          OrgGrpc.getGetUserSubscriptionMethod = getGetUserSubscriptionMethod =
+          OrgGrpc.getGetUserSubscriptionMethod = getGetUserSubscriptionMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetUserSubscriptionRequest, com.tcn.cloud.api.api.v0alpha.GetUserSubscriptionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetUserSubscription"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetUserSubscription"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetUserSubscriptionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetUserSubscriptionResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetUserSubscription"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetUserSubscription"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetUserSubscriptionMethod;
+     }
+     return getGetUserSubscriptionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionRequest,
@@ -5888,21 +6089,22 @@ public final class OrgGrpc {
     if ((getGetMyUserSubscriptionMethod = OrgGrpc.getGetMyUserSubscriptionMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetMyUserSubscriptionMethod = OrgGrpc.getGetMyUserSubscriptionMethod) == null) {
-          OrgGrpc.getGetMyUserSubscriptionMethod = getGetMyUserSubscriptionMethod =
+          OrgGrpc.getGetMyUserSubscriptionMethod = getGetMyUserSubscriptionMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionRequest, com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetMyUserSubscription"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetMyUserSubscription"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetMyUserSubscription"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetMyUserSubscription"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetMyUserSubscriptionMethod;
+     }
+     return getGetMyUserSubscriptionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.AddUserSubscriptionRequest,
@@ -5919,21 +6121,22 @@ public final class OrgGrpc {
     if ((getAddUserSubscriptionMethod = OrgGrpc.getAddUserSubscriptionMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getAddUserSubscriptionMethod = OrgGrpc.getAddUserSubscriptionMethod) == null) {
-          OrgGrpc.getAddUserSubscriptionMethod = getAddUserSubscriptionMethod =
+          OrgGrpc.getAddUserSubscriptionMethod = getAddUserSubscriptionMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.AddUserSubscriptionRequest, com.tcn.cloud.api.api.v0alpha.AddUserSubscriptionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddUserSubscription"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "AddUserSubscription"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AddUserSubscriptionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AddUserSubscriptionResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AddUserSubscription"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AddUserSubscription"))
+                  .build();
+          }
         }
-      }
-    }
-    return getAddUserSubscriptionMethod;
+     }
+     return getAddUserSubscriptionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionRequest,
@@ -5950,21 +6153,22 @@ public final class OrgGrpc {
     if ((getAddMyUserSubscriptionMethod = OrgGrpc.getAddMyUserSubscriptionMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getAddMyUserSubscriptionMethod = OrgGrpc.getAddMyUserSubscriptionMethod) == null) {
-          OrgGrpc.getAddMyUserSubscriptionMethod = getAddMyUserSubscriptionMethod =
+          OrgGrpc.getAddMyUserSubscriptionMethod = getAddMyUserSubscriptionMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionRequest, com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddMyUserSubscription"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "AddMyUserSubscription"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AddMyUserSubscription"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("AddMyUserSubscription"))
+                  .build();
+          }
         }
-      }
-    }
-    return getAddMyUserSubscriptionMethod;
+     }
+     return getAddMyUserSubscriptionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.RemoveUserSubscriptionRequest,
@@ -5981,21 +6185,22 @@ public final class OrgGrpc {
     if ((getRemoveUserSubscriptionMethod = OrgGrpc.getRemoveUserSubscriptionMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getRemoveUserSubscriptionMethod = OrgGrpc.getRemoveUserSubscriptionMethod) == null) {
-          OrgGrpc.getRemoveUserSubscriptionMethod = getRemoveUserSubscriptionMethod =
+          OrgGrpc.getRemoveUserSubscriptionMethod = getRemoveUserSubscriptionMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.RemoveUserSubscriptionRequest, com.tcn.cloud.api.api.v0alpha.RemoveUserSubscriptionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveUserSubscription"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "RemoveUserSubscription"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RemoveUserSubscriptionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RemoveUserSubscriptionResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("RemoveUserSubscription"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("RemoveUserSubscription"))
+                  .build();
+          }
         }
-      }
-    }
-    return getRemoveUserSubscriptionMethod;
+     }
+     return getRemoveUserSubscriptionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.RemoveMyUserSubscriptionRequest,
@@ -6012,21 +6217,22 @@ public final class OrgGrpc {
     if ((getRemoveMyUserSubscriptionMethod = OrgGrpc.getRemoveMyUserSubscriptionMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getRemoveMyUserSubscriptionMethod = OrgGrpc.getRemoveMyUserSubscriptionMethod) == null) {
-          OrgGrpc.getRemoveMyUserSubscriptionMethod = getRemoveMyUserSubscriptionMethod =
+          OrgGrpc.getRemoveMyUserSubscriptionMethod = getRemoveMyUserSubscriptionMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.RemoveMyUserSubscriptionRequest, com.tcn.cloud.api.api.v0alpha.RemoveMyUserSubscriptionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveMyUserSubscription"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "RemoveMyUserSubscription"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RemoveMyUserSubscriptionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.RemoveMyUserSubscriptionResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("RemoveMyUserSubscription"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("RemoveMyUserSubscription"))
+                  .build();
+          }
         }
-      }
-    }
-    return getRemoveMyUserSubscriptionMethod;
+     }
+     return getRemoveMyUserSubscriptionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateUserSubscriptionRequest,
@@ -6043,21 +6249,22 @@ public final class OrgGrpc {
     if ((getUpdateUserSubscriptionMethod = OrgGrpc.getUpdateUserSubscriptionMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateUserSubscriptionMethod = OrgGrpc.getUpdateUserSubscriptionMethod) == null) {
-          OrgGrpc.getUpdateUserSubscriptionMethod = getUpdateUserSubscriptionMethod =
+          OrgGrpc.getUpdateUserSubscriptionMethod = getUpdateUserSubscriptionMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateUserSubscriptionRequest, com.tcn.cloud.api.api.v0alpha.UpdateUserSubscriptionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateUserSubscription"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateUserSubscription"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateUserSubscriptionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateUserSubscriptionResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateUserSubscription"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateUserSubscription"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateUserSubscriptionMethod;
+     }
+     return getUpdateUserSubscriptionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionRequest,
@@ -6074,21 +6281,22 @@ public final class OrgGrpc {
     if ((getUpdateMyUserSubscriptionMethod = OrgGrpc.getUpdateMyUserSubscriptionMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateMyUserSubscriptionMethod = OrgGrpc.getUpdateMyUserSubscriptionMethod) == null) {
-          OrgGrpc.getUpdateMyUserSubscriptionMethod = getUpdateMyUserSubscriptionMethod =
+          OrgGrpc.getUpdateMyUserSubscriptionMethod = getUpdateMyUserSubscriptionMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionRequest, com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateMyUserSubscription"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateMyUserSubscription"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateMyUserSubscription"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateMyUserSubscription"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateMyUserSubscriptionMethod;
+     }
+     return getUpdateMyUserSubscriptionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListUserSubscriptionsRequest,
@@ -6105,21 +6313,22 @@ public final class OrgGrpc {
     if ((getListUserSubscriptionsMethod = OrgGrpc.getListUserSubscriptionsMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getListUserSubscriptionsMethod = OrgGrpc.getListUserSubscriptionsMethod) == null) {
-          OrgGrpc.getListUserSubscriptionsMethod = getListUserSubscriptionsMethod =
+          OrgGrpc.getListUserSubscriptionsMethod = getListUserSubscriptionsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListUserSubscriptionsRequest, com.tcn.cloud.api.api.v0alpha.ListUserSubscriptionsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListUserSubscriptions"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "ListUserSubscriptions"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListUserSubscriptionsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListUserSubscriptionsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListUserSubscriptions"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListUserSubscriptions"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListUserSubscriptionsMethod;
+     }
+     return getListUserSubscriptionsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsRequest,
@@ -6136,21 +6345,22 @@ public final class OrgGrpc {
     if ((getListMyUserSubscriptionsMethod = OrgGrpc.getListMyUserSubscriptionsMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getListMyUserSubscriptionsMethod = OrgGrpc.getListMyUserSubscriptionsMethod) == null) {
-          OrgGrpc.getListMyUserSubscriptionsMethod = getListMyUserSubscriptionsMethod =
+          OrgGrpc.getListMyUserSubscriptionsMethod = getListMyUserSubscriptionsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsRequest, com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListMyUserSubscriptions"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "ListMyUserSubscriptions"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListMyUserSubscriptions"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListMyUserSubscriptions"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListMyUserSubscriptionsMethod;
+     }
+     return getListMyUserSubscriptionsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListOrgSubscriptionsRequest,
@@ -6167,21 +6377,22 @@ public final class OrgGrpc {
     if ((getListOrgSubscriptionsMethod = OrgGrpc.getListOrgSubscriptionsMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getListOrgSubscriptionsMethod = OrgGrpc.getListOrgSubscriptionsMethod) == null) {
-          OrgGrpc.getListOrgSubscriptionsMethod = getListOrgSubscriptionsMethod =
+          OrgGrpc.getListOrgSubscriptionsMethod = getListOrgSubscriptionsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListOrgSubscriptionsRequest, com.tcn.cloud.api.api.v0alpha.ListOrgSubscriptionsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOrgSubscriptions"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "ListOrgSubscriptions"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListOrgSubscriptionsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListOrgSubscriptionsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListOrgSubscriptions"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListOrgSubscriptions"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListOrgSubscriptionsMethod;
+     }
+     return getListOrgSubscriptionsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.GetSystemEnvironmentDetailsRequest,
@@ -6198,21 +6409,22 @@ public final class OrgGrpc {
     if ((getGetSystemEnvironmentDetailsMethod = OrgGrpc.getGetSystemEnvironmentDetailsMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getGetSystemEnvironmentDetailsMethod = OrgGrpc.getGetSystemEnvironmentDetailsMethod) == null) {
-          OrgGrpc.getGetSystemEnvironmentDetailsMethod = getGetSystemEnvironmentDetailsMethod =
+          OrgGrpc.getGetSystemEnvironmentDetailsMethod = getGetSystemEnvironmentDetailsMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.GetSystemEnvironmentDetailsRequest, com.tcn.cloud.api.api.v0alpha.GetSystemEnvironmentDetailsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSystemEnvironmentDetails"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "GetSystemEnvironmentDetails"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetSystemEnvironmentDetailsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.GetSystemEnvironmentDetailsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetSystemEnvironmentDetails"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("GetSystemEnvironmentDetails"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetSystemEnvironmentDetailsMethod;
+     }
+     return getGetSystemEnvironmentDetailsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.ListAgentStatisticsTemplatesRequest,
@@ -6229,21 +6441,22 @@ public final class OrgGrpc {
     if ((getListAgentStatisticsTemplatesMethod = OrgGrpc.getListAgentStatisticsTemplatesMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getListAgentStatisticsTemplatesMethod = OrgGrpc.getListAgentStatisticsTemplatesMethod) == null) {
-          OrgGrpc.getListAgentStatisticsTemplatesMethod = getListAgentStatisticsTemplatesMethod =
+          OrgGrpc.getListAgentStatisticsTemplatesMethod = getListAgentStatisticsTemplatesMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.ListAgentStatisticsTemplatesRequest, com.tcn.cloud.api.api.v0alpha.ListAgentStatisticsTemplatesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAgentStatisticsTemplates"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "ListAgentStatisticsTemplates"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAgentStatisticsTemplatesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.ListAgentStatisticsTemplatesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListAgentStatisticsTemplates"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("ListAgentStatisticsTemplates"))
+                  .build();
+          }
         }
-      }
-    }
-    return getListAgentStatisticsTemplatesMethod;
+     }
+     return getListAgentStatisticsTemplatesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.CreateAgentStatisticsTemplateRequest,
@@ -6260,21 +6473,22 @@ public final class OrgGrpc {
     if ((getCreateAgentStatisticsTemplateMethod = OrgGrpc.getCreateAgentStatisticsTemplateMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getCreateAgentStatisticsTemplateMethod = OrgGrpc.getCreateAgentStatisticsTemplateMethod) == null) {
-          OrgGrpc.getCreateAgentStatisticsTemplateMethod = getCreateAgentStatisticsTemplateMethod =
+          OrgGrpc.getCreateAgentStatisticsTemplateMethod = getCreateAgentStatisticsTemplateMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.CreateAgentStatisticsTemplateRequest, com.tcn.cloud.api.api.v0alpha.CreateAgentStatisticsTemplateResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateAgentStatisticsTemplate"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "CreateAgentStatisticsTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateAgentStatisticsTemplateRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.CreateAgentStatisticsTemplateResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreateAgentStatisticsTemplate"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("CreateAgentStatisticsTemplate"))
+                  .build();
+          }
         }
-      }
-    }
-    return getCreateAgentStatisticsTemplateMethod;
+     }
+     return getCreateAgentStatisticsTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.UpdateAgentStatisticsTemplateRequest,
@@ -6291,21 +6505,22 @@ public final class OrgGrpc {
     if ((getUpdateAgentStatisticsTemplateMethod = OrgGrpc.getUpdateAgentStatisticsTemplateMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getUpdateAgentStatisticsTemplateMethod = OrgGrpc.getUpdateAgentStatisticsTemplateMethod) == null) {
-          OrgGrpc.getUpdateAgentStatisticsTemplateMethod = getUpdateAgentStatisticsTemplateMethod =
+          OrgGrpc.getUpdateAgentStatisticsTemplateMethod = getUpdateAgentStatisticsTemplateMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.UpdateAgentStatisticsTemplateRequest, com.tcn.cloud.api.api.v0alpha.UpdateAgentStatisticsTemplateResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAgentStatisticsTemplate"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "UpdateAgentStatisticsTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateAgentStatisticsTemplateRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.UpdateAgentStatisticsTemplateResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateAgentStatisticsTemplate"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("UpdateAgentStatisticsTemplate"))
+                  .build();
+          }
         }
-      }
-    }
-    return getUpdateAgentStatisticsTemplateMethod;
+     }
+     return getUpdateAgentStatisticsTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v0alpha.DeleteAgentStatisticsTemplateRequest,
@@ -6322,35 +6537,29 @@ public final class OrgGrpc {
     if ((getDeleteAgentStatisticsTemplateMethod = OrgGrpc.getDeleteAgentStatisticsTemplateMethod) == null) {
       synchronized (OrgGrpc.class) {
         if ((getDeleteAgentStatisticsTemplateMethod = OrgGrpc.getDeleteAgentStatisticsTemplateMethod) == null) {
-          OrgGrpc.getDeleteAgentStatisticsTemplateMethod = getDeleteAgentStatisticsTemplateMethod =
+          OrgGrpc.getDeleteAgentStatisticsTemplateMethod = getDeleteAgentStatisticsTemplateMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v0alpha.DeleteAgentStatisticsTemplateRequest, com.tcn.cloud.api.api.v0alpha.DeleteAgentStatisticsTemplateResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteAgentStatisticsTemplate"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v0alpha.Org", "DeleteAgentStatisticsTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteAgentStatisticsTemplateRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v0alpha.DeleteAgentStatisticsTemplateResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrgMethodDescriptorSupplier("DeleteAgentStatisticsTemplate"))
-              .build();
+                  .setSchemaDescriptor(new OrgMethodDescriptorSupplier("DeleteAgentStatisticsTemplate"))
+                  .build();
+          }
         }
-      }
-    }
-    return getDeleteAgentStatisticsTemplateMethod;
+     }
+     return getDeleteAgentStatisticsTemplateMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static OrgStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<OrgStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<OrgStub>() {
-        @java.lang.Override
-        public OrgStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new OrgStub(channel, callOptions);
-        }
-      };
-    return OrgStub.newStub(factory, channel);
+    return new OrgStub(channel);
   }
 
   /**
@@ -6358,14 +6567,7 @@ public final class OrgGrpc {
    */
   public static OrgBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<OrgBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<OrgBlockingStub>() {
-        @java.lang.Override
-        public OrgBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new OrgBlockingStub(channel, callOptions);
-        }
-      };
-    return OrgBlockingStub.newStub(factory, channel);
+    return new OrgBlockingStub(channel);
   }
 
   /**
@@ -6373,14 +6575,7 @@ public final class OrgGrpc {
    */
   public static OrgFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<OrgFutureStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<OrgFutureStub>() {
-        @java.lang.Override
-        public OrgFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new OrgFutureStub(channel, callOptions);
-        }
-      };
-    return OrgFutureStub.newStub(factory, channel);
+    return new OrgFutureStub(channel);
   }
 
   /**
@@ -6394,7 +6589,7 @@ public final class OrgGrpc {
      */
     public void registerOrganization(com.tcn.cloud.api.api.v0alpha.RegisterOrganizationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RegisterOrganizationResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRegisterOrganizationMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getRegisterOrganizationMethod(), responseObserver);
     }
 
     /**
@@ -6405,7 +6600,7 @@ public final class OrgGrpc {
      */
     public void convertOrgToManual(com.tcn.cloud.api.api.v0alpha.ConvertOrgToManualRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ConvertOrgToManualResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getConvertOrgToManualMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getConvertOrgToManualMethod(), responseObserver);
     }
 
     /**
@@ -6415,7 +6610,7 @@ public final class OrgGrpc {
      */
     public void updateOrganization(com.tcn.cloud.api.api.v0alpha.UpdateOrganizationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateOrganizationResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateOrganizationMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateOrganizationMethod(), responseObserver);
     }
 
     /**
@@ -6425,7 +6620,7 @@ public final class OrgGrpc {
      */
     public void archiveOrganization(com.tcn.cloud.api.api.v0alpha.ArchiveOrganizationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ArchiveOrganizationResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getArchiveOrganizationMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getArchiveOrganizationMethod(), responseObserver);
     }
 
     /**
@@ -6435,7 +6630,7 @@ public final class OrgGrpc {
      */
     public void unArchiveOrganization(com.tcn.cloud.api.api.v0alpha.UnArchiveOrganizationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UnArchiveOrganizationResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUnArchiveOrganizationMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUnArchiveOrganizationMethod(), responseObserver);
     }
 
     /**
@@ -6445,35 +6640,35 @@ public final class OrgGrpc {
      */
     public void listArchivedOrganizations(com.tcn.cloud.api.api.v0alpha.ListArchivedOrganizationsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListArchivedOrganizationsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListArchivedOrganizationsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListArchivedOrganizationsMethod(), responseObserver);
     }
 
     /**
      */
     public void getOrganizationProfile(com.tcn.cloud.api.api.v0alpha.GetOrganizationProfileRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetOrganizationProfileResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetOrganizationProfileMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetOrganizationProfileMethod(), responseObserver);
     }
 
     /**
      */
     public void getOrganizationProfileById(com.tcn.cloud.api.api.v0alpha.GetOrganizationProfileByIdRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetOrganizationProfileResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetOrganizationProfileByIdMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetOrganizationProfileByIdMethod(), responseObserver);
     }
 
     /**
      */
     public void listOrganizationDescriptions(com.tcn.cloud.api.api.v0alpha.ListOrganizationDescriptionsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListOrganizationDescriptionsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOrganizationDescriptionsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListOrganizationDescriptionsMethod(), responseObserver);
     }
 
     /**
      */
     public void listRegionalOrganizations(com.tcn.cloud.api.api.v0alpha.ListRegionalOrganizationsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListRegionalOrganizationsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListRegionalOrganizationsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListRegionalOrganizationsMethod(), responseObserver);
     }
 
     /**
@@ -6485,7 +6680,7 @@ public final class OrgGrpc {
      */
     public void updateP3OwningOrg(com.tcn.cloud.api.api.v0alpha.UpdateP3OwningOrgRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateP3OwningOrgResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateP3OwningOrgMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateP3OwningOrgMethod(), responseObserver);
     }
 
     /**
@@ -6497,35 +6692,35 @@ public final class OrgGrpc {
      */
     public void getP3OwningOrg(com.tcn.cloud.api.api.v0alpha.GetP3OwningOrgRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetP3OwningOrgResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetP3OwningOrgMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetP3OwningOrgMethod(), responseObserver);
     }
 
     /**
      */
     public void listOrganizationUserDescriptions(com.tcn.cloud.api.api.v0alpha.ListOrganizationUserDescriptionsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListOrganizationUserDescriptionsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOrganizationUserDescriptionsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListOrganizationUserDescriptionsMethod(), responseObserver);
     }
 
     /**
      */
     public void adminListUserDescriptions(com.tcn.cloud.api.api.v0alpha.AdminListUserDescriptionsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AdminListUserDescriptionsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAdminListUserDescriptionsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getAdminListUserDescriptionsMethod(), responseObserver);
     }
 
     /**
      */
     public void listUserDescriptions(com.tcn.cloud.api.api.v0alpha.ListUserDescriptionsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListUserDescriptionsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListUserDescriptionsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListUserDescriptionsMethod(), responseObserver);
     }
 
     /**
      */
     public void getUserDirectory(com.tcn.cloud.api.api.v0alpha.GetUserDirectoryRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetUserDirectoryResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetUserDirectoryMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetUserDirectoryMethod(), responseObserver);
     }
 
     /**
@@ -6535,35 +6730,35 @@ public final class OrgGrpc {
      */
     public void getRegions(com.tcn.cloud.api.api.v0alpha.GetRegionsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetRegionsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetRegionsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetRegionsMethod(), responseObserver);
     }
 
     /**
      */
     public void getMyUserDetails(com.tcn.cloud.api.api.v0alpha.GetMyUserDetailsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UserDetails> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMyUserDetailsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetMyUserDetailsMethod(), responseObserver);
     }
 
     /**
      */
     public void getUserDetails(com.tcn.cloud.api.api.v0alpha.GetUserDetailsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UserDetails> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetUserDetailsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetUserDetailsMethod(), responseObserver);
     }
 
     /**
      */
     public void adminGetUserDetails(com.tcn.cloud.api.api.v0alpha.AdminGetUserDetailsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UserDetails> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAdminGetUserDetailsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getAdminGetUserDetailsMethod(), responseObserver);
     }
 
     /**
      */
     public void getAgentUsers(com.tcn.cloud.api.api.v0alpha.GetAgentUsersRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetAgentUsersResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAgentUsersMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetAgentUsersMethod(), responseObserver);
     }
 
     /**
@@ -6576,7 +6771,7 @@ public final class OrgGrpc {
      */
     public void getAgentSettings(com.tcn.cloud.api.api.v0alpha.GetAgentSettingsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetAgentSettingsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAgentSettingsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetAgentSettingsMethod(), responseObserver);
     }
 
     /**
@@ -6588,7 +6783,7 @@ public final class OrgGrpc {
      */
     public void getAgentProfileGroup(com.tcn.cloud.api.api.v0alpha.GetAgentProfileGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetAgentProfileGroupResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAgentProfileGroupMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetAgentProfileGroupMethod(), responseObserver);
     }
 
     /**
@@ -6600,7 +6795,7 @@ public final class OrgGrpc {
      */
     public void updateAgentProfileGroup(com.tcn.cloud.api.api.v0alpha.UpdateAgentProfileGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateAgentProfileGroupResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAgentProfileGroupMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateAgentProfileGroupMethod(), responseObserver);
     }
 
     /**
@@ -6612,7 +6807,7 @@ public final class OrgGrpc {
      */
     public void createAgentProfileGroup(com.tcn.cloud.api.api.v0alpha.CreateAgentProfileGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateAgentProfileGroupResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateAgentProfileGroupMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateAgentProfileGroupMethod(), responseObserver);
     }
 
     /**
@@ -6624,7 +6819,7 @@ public final class OrgGrpc {
      */
     public void listAgentProfileGroups(com.tcn.cloud.api.api.v0alpha.ListAgentProfileGroupsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAgentProfileGroupsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAgentProfileGroupsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListAgentProfileGroupsMethod(), responseObserver);
     }
 
     /**
@@ -6636,7 +6831,7 @@ public final class OrgGrpc {
      */
     public void deleteAgentProfileGroup(com.tcn.cloud.api.api.v0alpha.DeleteAgentProfileGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteAgentProfileGroupResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteAgentProfileGroupMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteAgentProfileGroupMethod(), responseObserver);
     }
 
     /**
@@ -6648,7 +6843,7 @@ public final class OrgGrpc {
      */
     public void assignAgentProfileGroups(com.tcn.cloud.api.api.v0alpha.AssignAgentProfileGroupsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AssignAgentProfileGroupsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAssignAgentProfileGroupsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getAssignAgentProfileGroupsMethod(), responseObserver);
     }
 
     /**
@@ -6659,7 +6854,7 @@ public final class OrgGrpc {
      */
     public void updateUser(com.tcn.cloud.api.api.v0alpha.UpdateUserRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateUserResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateUserMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateUserMethod(), responseObserver);
     }
 
     /**
@@ -6673,7 +6868,7 @@ public final class OrgGrpc {
      */
     public void updateMyUser(com.tcn.cloud.api.api.v0alpha.UpdateMyUserRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateMyUserResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMyUserMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateMyUserMethod(), responseObserver);
     }
 
     /**
@@ -6684,7 +6879,7 @@ public final class OrgGrpc {
      */
     public void updateUserCallerId(com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateUserCallerIdMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateUserCallerIdMethod(), responseObserver);
     }
 
     /**
@@ -6696,7 +6891,7 @@ public final class OrgGrpc {
      */
     public void createUser(com.tcn.cloud.api.api.v0alpha.CreateUserRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateUserResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateUserMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateUserMethod(), responseObserver);
     }
 
     /**
@@ -6708,7 +6903,7 @@ public final class OrgGrpc {
      */
     public void createUserByOrgId(com.tcn.cloud.api.api.v0alpha.CreateUserByOrgIdRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateUserByOrgIdResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateUserByOrgIdMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateUserByOrgIdMethod(), responseObserver);
     }
 
     /**
@@ -6718,7 +6913,7 @@ public final class OrgGrpc {
      */
     public void createDelegatedUser(com.tcn.cloud.api.api.v0alpha.CreateDelegatedUserRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateDelegatedUserResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateDelegatedUserMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateDelegatedUserMethod(), responseObserver);
     }
 
     /**
@@ -6730,7 +6925,7 @@ public final class OrgGrpc {
      */
     public void updateUserPassword(com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateUserPasswordMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateUserPasswordMethod(), responseObserver);
     }
 
     /**
@@ -6742,7 +6937,7 @@ public final class OrgGrpc {
      */
     public void updateMyUserPassword(com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMyUserPasswordMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateMyUserPasswordMethod(), responseObserver);
     }
 
     /**
@@ -6754,7 +6949,7 @@ public final class OrgGrpc {
      */
     public void updateUserPasswordByOrgId(com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByOrgIdRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByOrgIdResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateUserPasswordByOrgIdMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateUserPasswordByOrgIdMethod(), responseObserver);
     }
 
     /**
@@ -6765,7 +6960,7 @@ public final class OrgGrpc {
      */
     public void resetUserRequirePasswordReset(com.tcn.cloud.api.api.v0alpha.ResetUserRequirePasswordResetRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ResetUserRequirePasswordResetResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getResetUserRequirePasswordResetMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getResetUserRequirePasswordResetMethod(), responseObserver);
     }
 
     /**
@@ -6778,7 +6973,7 @@ public final class OrgGrpc {
      */
     public void getUserPasswordResetLink(com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetUserPasswordResetLinkMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetUserPasswordResetLinkMethod(), responseObserver);
     }
 
     /**
@@ -6789,7 +6984,7 @@ public final class OrgGrpc {
      */
     public void getMyUserPasswordResetLink(com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMyUserPasswordResetLinkMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetMyUserPasswordResetLinkMethod(), responseObserver);
     }
 
     /**
@@ -6801,7 +6996,7 @@ public final class OrgGrpc {
      */
     public void getUserPasswordResetLinkByOrgId(com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByOrgIdRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByOrgIdResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetUserPasswordResetLinkByOrgIdMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetUserPasswordResetLinkByOrgIdMethod(), responseObserver);
     }
 
     /**
@@ -6812,7 +7007,7 @@ public final class OrgGrpc {
      */
     public void getUserEmailVerified(com.tcn.cloud.api.api.v0alpha.GetUserEmailVerifiedRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetUserEmailVerifiedResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetUserEmailVerifiedMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetUserEmailVerifiedMethod(), responseObserver);
     }
 
     /**
@@ -6824,7 +7019,7 @@ public final class OrgGrpc {
      */
     public void getUserEmailVerifiedByOrgId(com.tcn.cloud.api.api.v0alpha.GetUserEmailVerifiedByOrgIdRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetUserEmailVerifiedByOrgIdResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetUserEmailVerifiedByOrgIdMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetUserEmailVerifiedByOrgIdMethod(), responseObserver);
     }
 
     /**
@@ -6834,7 +7029,7 @@ public final class OrgGrpc {
      */
     public void sendUserVerificationEmailByOrgId(com.tcn.cloud.api.api.v0alpha.SendUserVerificationEmailByOrgIdRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SendUserVerificationEmailByOrgIdResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendUserVerificationEmailByOrgIdMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getSendUserVerificationEmailByOrgIdMethod(), responseObserver);
     }
 
     /**
@@ -6844,7 +7039,7 @@ public final class OrgGrpc {
      */
     public void sendUserVerificationEmail(com.tcn.cloud.api.api.v0alpha.SendUserVerificationEmailRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SendUserVerificationEmailResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendUserVerificationEmailMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getSendUserVerificationEmailMethod(), responseObserver);
     }
 
     /**
@@ -6854,7 +7049,7 @@ public final class OrgGrpc {
      */
     public void manualUserEmailVerificationByOrgId(com.tcn.cloud.api.api.v0alpha.ManualUserEmailVerificationByOrgIdRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ManualUserEmailVerificationByOrgIdResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getManualUserEmailVerificationByOrgIdMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getManualUserEmailVerificationByOrgIdMethod(), responseObserver);
     }
 
     /**
@@ -6864,7 +7059,7 @@ public final class OrgGrpc {
      */
     public void manualUserEmailVerification(com.tcn.cloud.api.api.v0alpha.ManualUserEmailVerificationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ManualUserEmailVerificationResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getManualUserEmailVerificationMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getManualUserEmailVerificationMethod(), responseObserver);
     }
 
     /**
@@ -6876,7 +7071,7 @@ public final class OrgGrpc {
      */
     public void getTempUserToken(com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTempUserTokenMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetTempUserTokenMethod(), responseObserver);
     }
 
     /**
@@ -6888,35 +7083,35 @@ public final class OrgGrpc {
      */
     public void getTempUserTokenByUserId(com.tcn.cloud.api.api.v0alpha.GetTempUserTokenByUserIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetTempUserTokenByUserIdRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTempUserTokenByUserIdMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetTempUserTokenByUserIdMethod(), responseObserver);
     }
 
     /**
      */
     public void getCountriesList(com.tcn.cloud.api.api.v0alpha.GetCountriesListRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetCountriesListResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCountriesListMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetCountriesListMethod(), responseObserver);
     }
 
     /**
      */
     public void getAdminClientPreferences(com.tcn.cloud.api.api.v0alpha.GetAdminClientPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetAdminClientPreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAdminClientPreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetAdminClientPreferencesMethod(), responseObserver);
     }
 
     /**
      */
     public void updateAdminClientPreferences(com.tcn.cloud.api.api.v0alpha.UpdateAdminClientPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateAdminClientPreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAdminClientPreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateAdminClientPreferencesMethod(), responseObserver);
     }
 
     /**
      */
     public void getPermissions(com.tcn.cloud.api.api.v0alpha.GetPermissionsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetPermissionsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPermissionsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetPermissionsMethod(), responseObserver);
     }
 
     /**
@@ -6927,7 +7122,7 @@ public final class OrgGrpc {
      */
     public void revokeAccountOwnerPermissionFromUser(com.tcn.cloud.api.api.v0alpha.RevokeAccountOwnerPermissionFromUserRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RevokeAccountOwnerPermissionFromUserResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRevokeAccountOwnerPermissionFromUserMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getRevokeAccountOwnerPermissionFromUserMethod(), responseObserver);
     }
 
     /**
@@ -6937,7 +7132,7 @@ public final class OrgGrpc {
      */
     public void updateUserDisabled(com.tcn.cloud.api.api.v0alpha.UpdateUserDisabledRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateUserDisabledResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateUserDisabledMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateUserDisabledMethod(), responseObserver);
     }
 
     /**
@@ -6947,7 +7142,7 @@ public final class OrgGrpc {
      */
     public void updateUserDisabledByOrgId(com.tcn.cloud.api.api.v0alpha.UpdateUserDisabledByOrgIdRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateUserDisabledByOrgIdResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateUserDisabledByOrgIdMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateUserDisabledByOrgIdMethod(), responseObserver);
     }
 
     /**
@@ -6959,7 +7154,7 @@ public final class OrgGrpc {
      */
     public void updateBulkUsersDisabled(com.tcn.cloud.api.api.v0alpha.UpdateBulkUsersDisabledRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateBulkUsersDisabledResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateBulkUsersDisabledMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateBulkUsersDisabledMethod(), responseObserver);
     }
 
     /**
@@ -6975,7 +7170,7 @@ public final class OrgGrpc {
      */
     public void getOrgBillingSettingsByOrgId(com.tcn.cloud.api.api.v0alpha.GetOrgBillingSettingsByOrgIdRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetOrgBillingSettingsByOrgIdResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetOrgBillingSettingsByOrgIdMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetOrgBillingSettingsByOrgIdMethod(), responseObserver);
     }
 
     /**
@@ -6991,7 +7186,7 @@ public final class OrgGrpc {
      */
     public void getOrgBillingSettings(com.tcn.cloud.api.api.v0alpha.GetOrgBillingSettingsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetOrgBillingSettingsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetOrgBillingSettingsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetOrgBillingSettingsMethod(), responseObserver);
     }
 
     /**
@@ -7009,7 +7204,7 @@ public final class OrgGrpc {
      */
     public void setOrgBillingSettings(com.tcn.cloud.api.api.v0alpha.SetOrgBillingSettingsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SetOrgBillingSettingsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetOrgBillingSettingsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getSetOrgBillingSettingsMethod(), responseObserver);
     }
 
     /**
@@ -7026,7 +7221,7 @@ public final class OrgGrpc {
      */
     public void addOrgBillingOverride(com.tcn.cloud.api.api.v0alpha.AddOrgBillingOverrideRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AddOrgBillingOverrideResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddOrgBillingOverrideMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getAddOrgBillingOverrideMethod(), responseObserver);
     }
 
     /**
@@ -7043,7 +7238,7 @@ public final class OrgGrpc {
      */
     public void removeOrgBillingOverride(com.tcn.cloud.api.api.v0alpha.RemoveOrgBillingOverrideRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RemoveOrgBillingOverrideResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveOrgBillingOverrideMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getRemoveOrgBillingOverrideMethod(), responseObserver);
     }
 
     /**
@@ -7055,7 +7250,7 @@ public final class OrgGrpc {
      */
     public void getSystemDefaultBillingRates(com.tcn.cloud.api.api.v0alpha.GetSystemDefaultBillingRatesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetSystemDefaultBillingRatesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSystemDefaultBillingRatesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetSystemDefaultBillingRatesMethod(), responseObserver);
     }
 
     /**
@@ -7065,7 +7260,7 @@ public final class OrgGrpc {
      */
     public void listPermissionGroupsByOrgId(com.tcn.cloud.api.api.v0alpha.ListPermissionGroupsByOrgIdRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListPermissionGroupsByOrgIdResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListPermissionGroupsByOrgIdMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListPermissionGroupsByOrgIdMethod(), responseObserver);
     }
 
     /**
@@ -7075,7 +7270,7 @@ public final class OrgGrpc {
      */
     public void listPermissionGroups(com.tcn.cloud.api.api.v0alpha.ListPermissionGroupsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListPermissionGroupsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListPermissionGroupsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListPermissionGroupsMethod(), responseObserver);
     }
 
     /**
@@ -7085,7 +7280,7 @@ public final class OrgGrpc {
      */
     public void createPermissionGroup(com.tcn.cloud.api.api.v0alpha.CreatePermissionGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreatePermissionGroupResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreatePermissionGroupMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreatePermissionGroupMethod(), responseObserver);
     }
 
     /**
@@ -7095,7 +7290,7 @@ public final class OrgGrpc {
      */
     public void updatePermissionGroup(com.tcn.cloud.api.api.v0alpha.UpdatePermissionGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdatePermissionGroupResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdatePermissionGroupMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdatePermissionGroupMethod(), responseObserver);
     }
 
     /**
@@ -7105,7 +7300,7 @@ public final class OrgGrpc {
      */
     public void deletePermissionGroup(com.tcn.cloud.api.api.v0alpha.DeletePermissionGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeletePermissionGroupResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeletePermissionGroupMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeletePermissionGroupMethod(), responseObserver);
     }
 
     /**
@@ -7115,7 +7310,7 @@ public final class OrgGrpc {
      */
     public void assignUserToAccountOwnerPermissionGroup(com.tcn.cloud.api.api.v0alpha.AssignUserToAccountOwnerPermissionGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AssignUserToAccountOwnerPermissionGroupResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAssignUserToAccountOwnerPermissionGroupMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getAssignUserToAccountOwnerPermissionGroupMethod(), responseObserver);
     }
 
     /**
@@ -7127,7 +7322,7 @@ public final class OrgGrpc {
      */
     public void assignUserPermissionGroup(com.tcn.cloud.api.api.v0alpha.AssignUserPermissionGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AssignUserPermissionGroupResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAssignUserPermissionGroupMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getAssignUserPermissionGroupMethod(), responseObserver);
     }
 
     /**
@@ -7139,7 +7334,7 @@ public final class OrgGrpc {
      */
     public void assignUsersPermissionGroup(com.tcn.cloud.api.api.v0alpha.AssignUsersPermissionGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AssignUsersPermissionGroupResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAssignUsersPermissionGroupMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getAssignUsersPermissionGroupMethod(), responseObserver);
     }
 
     /**
@@ -7151,7 +7346,7 @@ public final class OrgGrpc {
      */
     public void updateUserNeoPermissionGroups(com.tcn.cloud.api.api.v0alpha.UpdateUserNeoPermissionGroupsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateUserNeoPermissionGroupsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateUserNeoPermissionGroupsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateUserNeoPermissionGroupsMethod(), responseObserver);
     }
 
     /**
@@ -7163,7 +7358,7 @@ public final class OrgGrpc {
      */
     public void revokeUserPermissionGroup(com.tcn.cloud.api.api.v0alpha.RevokeUserPermissionGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RevokeUserPermissionGroupResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRevokeUserPermissionGroupMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getRevokeUserPermissionGroupMethod(), responseObserver);
     }
 
     /**
@@ -7175,7 +7370,7 @@ public final class OrgGrpc {
      */
     public void revokeUsersPermissionGroup(com.tcn.cloud.api.api.v0alpha.RevokeUsersPermissionGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RevokeUsersPermissionGroupResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRevokeUsersPermissionGroupMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getRevokeUsersPermissionGroupMethod(), responseObserver);
     }
 
     /**
@@ -7186,7 +7381,7 @@ public final class OrgGrpc {
      */
     public void initDefaultPermissionGroups(com.tcn.cloud.api.api.v0alpha.InitDefaultPermissionGroupsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.InitDefaultPermissionGroupsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getInitDefaultPermissionGroupsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getInitDefaultPermissionGroupsMethod(), responseObserver);
     }
 
     /**
@@ -7196,7 +7391,7 @@ public final class OrgGrpc {
      */
     public void addPermissionToAccountOwnerPermissionGroup(com.tcn.cloud.api.api.v0alpha.AddPermissionToAccountOwnerPermissionGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AddPermissionToAccountOwnerPermissionGroupResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddPermissionToAccountOwnerPermissionGroupMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getAddPermissionToAccountOwnerPermissionGroupMethod(), responseObserver);
     }
 
     /**
@@ -7206,7 +7401,7 @@ public final class OrgGrpc {
      */
     public void revokePermissionToAccountOwnerPermissionGroup(com.tcn.cloud.api.api.v0alpha.RevokePermissionToAccountOwnerPermissionGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RevokePermissionToAccountOwnerPermissionGroupResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRevokePermissionToAccountOwnerPermissionGroupMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getRevokePermissionToAccountOwnerPermissionGroupMethod(), responseObserver);
     }
 
     /**
@@ -7218,7 +7413,7 @@ public final class OrgGrpc {
      */
     public void addPermissionToOrgDefaultGroup(com.tcn.cloud.api.api.v0alpha.AddPermissionToOrgDefaultGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AddPermissionToOrgDefaultGroupResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddPermissionToOrgDefaultGroupMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getAddPermissionToOrgDefaultGroupMethod(), responseObserver);
     }
 
     /**
@@ -7230,7 +7425,7 @@ public final class OrgGrpc {
      */
     public void removePermissionFromOrgDefaultGroup(com.tcn.cloud.api.api.v0alpha.RemovePermissionFromOrgDefaultGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RemovePermissionFromOrgDefaultGroupResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemovePermissionFromOrgDefaultGroupMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getRemovePermissionFromOrgDefaultGroupMethod(), responseObserver);
     }
 
     /**
@@ -7242,7 +7437,7 @@ public final class OrgGrpc {
      */
     public void getOrgDefaultSuperUserGroup(com.tcn.cloud.api.api.v0alpha.GetOrgDefaultSuperUserGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetOrgDefaultSuperUserGroupResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetOrgDefaultSuperUserGroupMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetOrgDefaultSuperUserGroupMethod(), responseObserver);
     }
 
     /**
@@ -7252,7 +7447,7 @@ public final class OrgGrpc {
      */
     public void listP3PermissionGroupsByOrgId(com.tcn.cloud.api.api.v0alpha.ListP3PermissionGroupsByOrgIdRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListP3PermissionGroupsByOrgIdResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListP3PermissionGroupsByOrgIdMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListP3PermissionGroupsByOrgIdMethod(), responseObserver);
     }
 
     /**
@@ -7262,7 +7457,7 @@ public final class OrgGrpc {
      */
     public void listP3PermissionGroups(com.tcn.cloud.api.api.v0alpha.ListP3PermissionGroupsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListP3PermissionGroupsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListP3PermissionGroupsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListP3PermissionGroupsMethod(), responseObserver);
     }
 
     /**
@@ -7272,7 +7467,7 @@ public final class OrgGrpc {
      */
     public void addUserRegion(com.tcn.cloud.api.api.v0alpha.AddUserRegionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AddUserRegionResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddUserRegionMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getAddUserRegionMethod(), responseObserver);
     }
 
     /**
@@ -7282,7 +7477,7 @@ public final class OrgGrpc {
      */
     public void removeUserRegion(com.tcn.cloud.api.api.v0alpha.RemoveUserRegionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RemoveUserRegionResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveUserRegionMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getRemoveUserRegionMethod(), responseObserver);
     }
 
     /**
@@ -7292,7 +7487,7 @@ public final class OrgGrpc {
      */
     public void createP3PermissionGroup(com.tcn.cloud.api.api.v0alpha.CreateP3PermissionGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateP3PermissionGroupResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateP3PermissionGroupMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateP3PermissionGroupMethod(), responseObserver);
     }
 
     /**
@@ -7302,7 +7497,7 @@ public final class OrgGrpc {
      */
     public void updateP3PermissionGroupByOrgId(com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupByOrgIdRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupByOrgIdResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateP3PermissionGroupByOrgIdMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateP3PermissionGroupByOrgIdMethod(), responseObserver);
     }
 
     /**
@@ -7312,7 +7507,7 @@ public final class OrgGrpc {
      */
     public void updateP3PermissionGroup(com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateP3PermissionGroupMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateP3PermissionGroupMethod(), responseObserver);
     }
 
     /**
@@ -7322,7 +7517,7 @@ public final class OrgGrpc {
      */
     public void deleteP3PermissionGroup(com.tcn.cloud.api.api.v0alpha.DeleteP3PermissionGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteP3PermissionGroupResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteP3PermissionGroupMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteP3PermissionGroupMethod(), responseObserver);
     }
 
     /**
@@ -7332,7 +7527,7 @@ public final class OrgGrpc {
      */
     public void assignUsersP3PermissionGroup(com.tcn.cloud.api.api.v0alpha.AssignUsersP3PermissionGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AssignUsersP3PermissionGroupResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAssignUsersP3PermissionGroupMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getAssignUsersP3PermissionGroupMethod(), responseObserver);
     }
 
     /**
@@ -7342,7 +7537,7 @@ public final class OrgGrpc {
      */
     public void addLoginToUser(com.tcn.cloud.api.api.v0alpha.AddLoginToUserRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AddLoginToUserResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddLoginToUserMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getAddLoginToUserMethod(), responseObserver);
     }
 
     /**
@@ -7354,7 +7549,7 @@ public final class OrgGrpc {
      */
     public void revokeUsersP3PermissionGroup(com.tcn.cloud.api.api.v0alpha.RevokeUsersP3PermissionGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RevokeUsersP3PermissionGroupResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRevokeUsersP3PermissionGroupMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getRevokeUsersP3PermissionGroupMethod(), responseObserver);
     }
 
     /**
@@ -7364,7 +7559,7 @@ public final class OrgGrpc {
      */
     public void getContactPreferences(com.tcn.cloud.api.api.v0alpha.GetContactPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetContactPreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetContactPreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetContactPreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7374,7 +7569,7 @@ public final class OrgGrpc {
      */
     public void updateContactPreferences(com.tcn.cloud.api.api.v0alpha.UpdateContactPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateContactPreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateContactPreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateContactPreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7384,7 +7579,7 @@ public final class OrgGrpc {
      */
     public void getCompliancePreferences(com.tcn.cloud.api.api.v0alpha.GetCompliancePreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetCompliancePreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCompliancePreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetCompliancePreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7394,7 +7589,7 @@ public final class OrgGrpc {
      */
     public void updateCompliancePreferences(com.tcn.cloud.api.api.v0alpha.UpdateCompliancePreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateCompliancePreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateCompliancePreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateCompliancePreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7404,7 +7599,7 @@ public final class OrgGrpc {
      */
     public void getAgentPreferences(com.tcn.cloud.api.api.v0alpha.GetAgentPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetAgentPreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAgentPreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetAgentPreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7414,7 +7609,7 @@ public final class OrgGrpc {
      */
     public void updateAgentPreferences(com.tcn.cloud.api.api.v0alpha.UpdateAgentPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateAgentPreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAgentPreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateAgentPreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7424,7 +7619,7 @@ public final class OrgGrpc {
      */
     public void getOrganizationPreferences(com.tcn.cloud.api.api.v0alpha.GetOrganizationPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetOrganizationPreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetOrganizationPreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetOrganizationPreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7434,7 +7629,7 @@ public final class OrgGrpc {
      */
     public void updateOrganizationPreferences(com.tcn.cloud.api.api.v0alpha.UpdateOrganizationPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateOrganizationPreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateOrganizationPreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateOrganizationPreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7444,7 +7639,7 @@ public final class OrgGrpc {
      */
     public void getSchedulePreferences(com.tcn.cloud.api.api.v0alpha.GetSchedulePreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetSchedulePreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSchedulePreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetSchedulePreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7454,7 +7649,7 @@ public final class OrgGrpc {
      */
     public void updateSchedulePreferences(com.tcn.cloud.api.api.v0alpha.UpdateSchedulePreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateSchedulePreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateSchedulePreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateSchedulePreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7464,7 +7659,7 @@ public final class OrgGrpc {
      */
     public void getBusinessPreferences(com.tcn.cloud.api.api.v0alpha.GetBusinessPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetBusinessPreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetBusinessPreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetBusinessPreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7474,7 +7669,7 @@ public final class OrgGrpc {
      */
     public void updateBusinessPreferences(com.tcn.cloud.api.api.v0alpha.UpdateBusinessPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateBusinessPreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateBusinessPreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateBusinessPreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7484,7 +7679,7 @@ public final class OrgGrpc {
      */
     public void getEndOfDayPreferences(com.tcn.cloud.api.api.v0alpha.GetEndOfDayPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetEndOfDayPreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetEndOfDayPreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetEndOfDayPreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7494,7 +7689,7 @@ public final class OrgGrpc {
      */
     public void updateEndOfDayPreferences(com.tcn.cloud.api.api.v0alpha.UpdateEndOfDayPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateEndOfDayPreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateEndOfDayPreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateEndOfDayPreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7504,7 +7699,7 @@ public final class OrgGrpc {
      */
     public void getReportFilterPreferences(com.tcn.cloud.api.api.v0alpha.GetFilterPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetFilterPreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetReportFilterPreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetReportFilterPreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7514,7 +7709,7 @@ public final class OrgGrpc {
      */
     public void updateReportFilterPreferences(com.tcn.cloud.api.api.v0alpha.UpdateFilterPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateFilterPreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateReportFilterPreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateReportFilterPreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7524,7 +7719,7 @@ public final class OrgGrpc {
      */
     public void getPhonePreferences(com.tcn.cloud.api.api.v0alpha.GetPhonePreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetPhonePreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPhonePreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetPhonePreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7534,7 +7729,7 @@ public final class OrgGrpc {
      */
     public void updatePhonePreferences(com.tcn.cloud.api.api.v0alpha.UpdatePhonePreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdatePhonePreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdatePhonePreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdatePhonePreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7544,7 +7739,7 @@ public final class OrgGrpc {
      */
     public void getDashboardGeneralPreferences(com.tcn.cloud.api.api.v0alpha.GetDashboardGeneralPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetDashboardGeneralPreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDashboardGeneralPreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetDashboardGeneralPreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7554,7 +7749,7 @@ public final class OrgGrpc {
      */
     public void updateDashboardGeneralPreferences(com.tcn.cloud.api.api.v0alpha.UpdateDashboardGeneralPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateDashboardGeneralPreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateDashboardGeneralPreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateDashboardGeneralPreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7564,7 +7759,7 @@ public final class OrgGrpc {
      */
     public void getWebhookPreferences(com.tcn.cloud.api.api.v0alpha.GetWebhookPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetWebhookPreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetWebhookPreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetWebhookPreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7574,7 +7769,7 @@ public final class OrgGrpc {
      */
     public void updateWebhookPreferences(com.tcn.cloud.api.api.v0alpha.UpdateWebhookPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateWebhookPreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateWebhookPreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateWebhookPreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7584,7 +7779,7 @@ public final class OrgGrpc {
      */
     public void getBroadcastPreferences(com.tcn.cloud.api.api.v0alpha.GetBroadcastPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetBroadcastPreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetBroadcastPreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetBroadcastPreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7594,7 +7789,7 @@ public final class OrgGrpc {
      */
     public void updateBroadcastPreferences(com.tcn.cloud.api.api.v0alpha.UpdateBroadcastPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateBroadcastPreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateBroadcastPreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateBroadcastPreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7604,7 +7799,7 @@ public final class OrgGrpc {
      */
     public void getAuthenticationPreferences(com.tcn.cloud.api.api.v0alpha.GetAuthenticationPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetAuthenticationPreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAuthenticationPreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetAuthenticationPreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7614,7 +7809,7 @@ public final class OrgGrpc {
      */
     public void updateAuthenticationPreferences(com.tcn.cloud.api.api.v0alpha.UpdateAuthenticationPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateAuthenticationPreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAuthenticationPreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateAuthenticationPreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7624,7 +7819,7 @@ public final class OrgGrpc {
      */
     public void getRecordingPreferences(com.tcn.cloud.api.api.v0alpha.GetRecordingPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetRecordingPreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetRecordingPreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetRecordingPreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7634,7 +7829,7 @@ public final class OrgGrpc {
      */
     public void updateRecordingPreferences(com.tcn.cloud.api.api.v0alpha.UpdateRecordingPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateRecordingPreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateRecordingPreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateRecordingPreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7644,7 +7839,7 @@ public final class OrgGrpc {
      */
     public void getDashboardQueuePreferences(com.tcn.cloud.api.api.v0alpha.GetDashboardQueuePreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetDashboardQueuePreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDashboardQueuePreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetDashboardQueuePreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7654,7 +7849,7 @@ public final class OrgGrpc {
      */
     public void updateDashboardQueuePreferences(com.tcn.cloud.api.api.v0alpha.UpdateDashboardQueuePreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateDashboardQueuePreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateDashboardQueuePreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateDashboardQueuePreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7664,7 +7859,7 @@ public final class OrgGrpc {
      */
     public void getAgentQuickViewPreferences(com.tcn.cloud.api.api.v0alpha.GetAgentQuickViewPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetAgentQuickViewPreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAgentQuickViewPreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetAgentQuickViewPreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7674,7 +7869,7 @@ public final class OrgGrpc {
      */
     public void getVoiceAnalyticsPreferences(com.tcn.cloud.api.api.v0alpha.GetVoiceAnalyticsPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetVoiceAnalyticsPreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetVoiceAnalyticsPreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetVoiceAnalyticsPreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7684,7 +7879,7 @@ public final class OrgGrpc {
      */
     public void updateVoiceAnalyticsPreferences(com.tcn.cloud.api.api.v0alpha.UpdateVoiceAnalyticsPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateVoiceAnalyticsPreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateVoiceAnalyticsPreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateVoiceAnalyticsPreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7694,7 +7889,7 @@ public final class OrgGrpc {
      */
     public void updateVoiceAnalyticsPreferencesEnabled(com.tcn.cloud.api.api.v0alpha.UpdateVoiceAnalyticsPreferencesEnabledRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateVoiceAnalyticsPreferencesEnabledResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateVoiceAnalyticsPreferencesEnabledMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateVoiceAnalyticsPreferencesEnabledMethod(), responseObserver);
     }
 
     /**
@@ -7704,7 +7899,7 @@ public final class OrgGrpc {
      */
     public void getScorecardsPreferences(com.tcn.cloud.api.api.v0alpha.GetScorecardsPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetScorecardsPreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetScorecardsPreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetScorecardsPreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7714,7 +7909,7 @@ public final class OrgGrpc {
      */
     public void updateScorecardsPreferences(com.tcn.cloud.api.api.v0alpha.UpdateScorecardsPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateScorecardsPreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateScorecardsPreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateScorecardsPreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7724,7 +7919,7 @@ public final class OrgGrpc {
      */
     public void getEmailSmsPreferences(com.tcn.cloud.api.api.v0alpha.GetEmailSmsPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetEmailSmsPreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetEmailSmsPreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetEmailSmsPreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7734,7 +7929,7 @@ public final class OrgGrpc {
      */
     public void updateEmailSmsPreferences(com.tcn.cloud.api.api.v0alpha.UpdateEmailSmsPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateEmailSmsPreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateEmailSmsPreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateEmailSmsPreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7744,7 +7939,7 @@ public final class OrgGrpc {
      */
     public void editAgentQuickViewPreferences(com.tcn.cloud.api.api.v0alpha.EditAgentQuickViewPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.EditAgentQuickViewPreferencesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEditAgentQuickViewPreferencesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getEditAgentQuickViewPreferencesMethod(), responseObserver);
     }
 
     /**
@@ -7755,14 +7950,14 @@ public final class OrgGrpc {
      */
     public void editBackofficeThemePreference(com.tcn.cloud.api.api.v0alpha.EditBackofficeThemePreferenceRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.EditBackofficeThemePreferenceResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEditBackofficeThemePreferenceMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getEditBackofficeThemePreferenceMethod(), responseObserver);
     }
 
     /**
      */
     public void getBackofficeThemePreference(com.tcn.cloud.api.api.v0alpha.GetBackofficeThemePreferenceRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetBackofficeThemePreferenceResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetBackofficeThemePreferenceMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetBackofficeThemePreferenceMethod(), responseObserver);
     }
 
     /**
@@ -7772,7 +7967,7 @@ public final class OrgGrpc {
      */
     public void acceptLinkbackRecordingTerms(com.tcn.cloud.api.api.v0alpha.AcceptLinkbackRecordingTermsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AcceptLinkbackRecordingTermsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAcceptLinkbackRecordingTermsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getAcceptLinkbackRecordingTermsMethod(), responseObserver);
     }
 
     /**
@@ -7782,7 +7977,7 @@ public final class OrgGrpc {
      */
     public void linkbackUpdateBroadcastTemplates(com.tcn.cloud.api.api.v0alpha.LinkbackUpdateBroadcastTemplatesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.LinkbackUpdateBroadcastTemplatesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getLinkbackUpdateBroadcastTemplatesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getLinkbackUpdateBroadcastTemplatesMethod(), responseObserver);
     }
 
     /**
@@ -7793,7 +7988,7 @@ public final class OrgGrpc {
      */
     public void recordEmailUnsubscribeAcknowledgement(com.tcn.cloud.api.api.v0alpha.RecordEmailUnsubscribeAcknowledgementRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RecordEmailUnsubscribeAcknowledgementResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRecordEmailUnsubscribeAcknowledgementMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getRecordEmailUnsubscribeAcknowledgementMethod(), responseObserver);
     }
 
     /**
@@ -7804,7 +7999,7 @@ public final class OrgGrpc {
      */
     public void clearEmailUnsubscribeAcknowledgement(com.tcn.cloud.api.api.v0alpha.ClearEmailUnsubscribeAcknowledgementRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ClearEmailUnsubscribeAcknowledgementResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getClearEmailUnsubscribeAcknowledgementMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getClearEmailUnsubscribeAcknowledgementMethod(), responseObserver);
     }
 
     /**
@@ -7816,7 +8011,7 @@ public final class OrgGrpc {
      */
     public void createWebLinkTemplate(com.tcn.cloud.api.api.v0alpha.CreateWebLinkTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateWebLinkTemplateResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateWebLinkTemplateMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateWebLinkTemplateMethod(), responseObserver);
     }
 
     /**
@@ -7828,7 +8023,7 @@ public final class OrgGrpc {
      */
     public void listWebLinkTemplates(com.tcn.cloud.api.api.v0alpha.ListWebLinkTemplatesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListWebLinkTemplatesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListWebLinkTemplatesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListWebLinkTemplatesMethod(), responseObserver);
     }
 
     /**
@@ -7840,7 +8035,7 @@ public final class OrgGrpc {
      */
     public void getWebLinkTemplate(com.tcn.cloud.api.api.v0alpha.GetWebLinkTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetWebLinkTemplateResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetWebLinkTemplateMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetWebLinkTemplateMethod(), responseObserver);
     }
 
     /**
@@ -7852,7 +8047,7 @@ public final class OrgGrpc {
      */
     public void updateWebLinkTemplate(com.tcn.cloud.api.api.v0alpha.UpdateWebLinkTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateWebLinkTemplateResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateWebLinkTemplateMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateWebLinkTemplateMethod(), responseObserver);
     }
 
     /**
@@ -7864,7 +8059,7 @@ public final class OrgGrpc {
      */
     public void deleteWebLinkTemplate(com.tcn.cloud.api.api.v0alpha.DeleteWebLinkTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteWebLinkTemplateResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteWebLinkTemplateMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteWebLinkTemplateMethod(), responseObserver);
     }
 
     /**
@@ -7878,7 +8073,7 @@ public final class OrgGrpc {
      */
     public void createAgentTriggerTemplate(com.tcn.cloud.api.api.v0alpha.CreateAgentTriggerTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateAgentTriggerTemplateResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateAgentTriggerTemplateMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateAgentTriggerTemplateMethod(), responseObserver);
     }
 
     /**
@@ -7891,7 +8086,7 @@ public final class OrgGrpc {
      */
     public void listAgentTriggerTemplates(com.tcn.cloud.api.api.v0alpha.ListAgentTriggerTemplatesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAgentTriggerTemplatesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAgentTriggerTemplatesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListAgentTriggerTemplatesMethod(), responseObserver);
     }
 
     /**
@@ -7903,7 +8098,7 @@ public final class OrgGrpc {
      */
     public void getAgentTriggerTemplate(com.tcn.cloud.api.api.v0alpha.GetAgentTriggerTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetAgentTriggerTemplateResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAgentTriggerTemplateMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetAgentTriggerTemplateMethod(), responseObserver);
     }
 
     /**
@@ -7915,7 +8110,7 @@ public final class OrgGrpc {
      */
     public void updateAgentTriggerTemplate(com.tcn.cloud.api.api.v0alpha.UpdateAgentTriggerTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateAgentTriggerTemplateResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAgentTriggerTemplateMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateAgentTriggerTemplateMethod(), responseObserver);
     }
 
     /**
@@ -7927,7 +8122,7 @@ public final class OrgGrpc {
      */
     public void deleteAgentTriggerTemplate(com.tcn.cloud.api.api.v0alpha.DeleteAgentTriggerTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteAgentTriggerTemplateResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteAgentTriggerTemplateMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteAgentTriggerTemplateMethod(), responseObserver);
     }
 
     /**
@@ -7940,7 +8135,7 @@ public final class OrgGrpc {
      */
     public void createClientInfoDisplayTemplate(com.tcn.cloud.api.api.v0alpha.CreateClientInfoDisplayTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateClientInfoDisplayTemplateResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateClientInfoDisplayTemplateMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateClientInfoDisplayTemplateMethod(), responseObserver);
     }
 
     /**
@@ -7952,7 +8147,7 @@ public final class OrgGrpc {
      */
     public void listClientInfoDisplayTemplates(com.tcn.cloud.api.api.v0alpha.ListClientInfoDisplayTemplatesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListClientInfoDisplayTemplatesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListClientInfoDisplayTemplatesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListClientInfoDisplayTemplatesMethod(), responseObserver);
     }
 
     /**
@@ -7965,7 +8160,7 @@ public final class OrgGrpc {
      */
     public void updateClientInfoDisplayTemplate(com.tcn.cloud.api.api.v0alpha.UpdateClientInfoDisplayTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateClientInfoDisplayTemplateResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateClientInfoDisplayTemplateMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateClientInfoDisplayTemplateMethod(), responseObserver);
     }
 
     /**
@@ -7978,7 +8173,7 @@ public final class OrgGrpc {
      */
     public void deleteClientInfoDisplayTemplate(com.tcn.cloud.api.api.v0alpha.DeleteClientInfoDisplayTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteClientInfoDisplayTemplateResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteClientInfoDisplayTemplateMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteClientInfoDisplayTemplateMethod(), responseObserver);
     }
 
     /**
@@ -7991,7 +8186,7 @@ public final class OrgGrpc {
      */
     public void getClientInfoDisplayTemplate(com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetClientInfoDisplayTemplateMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetClientInfoDisplayTemplateMethod(), responseObserver);
     }
 
     /**
@@ -8001,7 +8196,7 @@ public final class OrgGrpc {
      */
     public void listAgentPauseCodes(com.tcn.cloud.api.api.v0alpha.ListAgentPauseCodesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAgentPauseCodesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAgentPauseCodesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListAgentPauseCodesMethod(), responseObserver);
     }
 
     /**
@@ -8014,7 +8209,7 @@ public final class OrgGrpc {
      */
     public void createAgentPauseCode(com.tcn.cloud.api.api.v0alpha.CreateAgentPauseCodeRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateAgentPauseCodeResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateAgentPauseCodeMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateAgentPauseCodeMethod(), responseObserver);
     }
 
     /**
@@ -8032,7 +8227,7 @@ public final class OrgGrpc {
      */
     public void updateAgentPauseCode(com.tcn.cloud.api.api.v0alpha.UpdateAgentPauseCodeRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateAgentPauseCodeResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAgentPauseCodeMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateAgentPauseCodeMethod(), responseObserver);
     }
 
     /**
@@ -8044,7 +8239,7 @@ public final class OrgGrpc {
      */
     public void deleteAgentPauseCode(com.tcn.cloud.api.api.v0alpha.DeleteAgentPauseCodeRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteAgentPauseCodeResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteAgentPauseCodeMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteAgentPauseCodeMethod(), responseObserver);
     }
 
     /**
@@ -8058,7 +8253,7 @@ public final class OrgGrpc {
      */
     public void listCustomReportFilters(com.tcn.cloud.api.api.v0alpha.ListCustomReportFiltersRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCustomReportFiltersResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCustomReportFiltersMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListCustomReportFiltersMethod(), responseObserver);
     }
 
     /**
@@ -8073,7 +8268,7 @@ public final class OrgGrpc {
      */
     public void createCustomReportFilter(com.tcn.cloud.api.api.v0alpha.CreateCustomReportFilterRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateCustomReportFilterResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateCustomReportFilterMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateCustomReportFilterMethod(), responseObserver);
     }
 
     /**
@@ -8089,7 +8284,7 @@ public final class OrgGrpc {
      */
     public void updateCustomReportFilter(com.tcn.cloud.api.api.v0alpha.UpdateCustomReportFilterRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateCustomReportFilterResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateCustomReportFilterMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateCustomReportFilterMethod(), responseObserver);
     }
 
     /**
@@ -8103,7 +8298,7 @@ public final class OrgGrpc {
      */
     public void deleteCustomReportFilter(com.tcn.cloud.api.api.v0alpha.DeleteCustomReportFilterRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteCustomReportFilterResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteCustomReportFilterMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteCustomReportFilterMethod(), responseObserver);
     }
 
     /**
@@ -8117,7 +8312,7 @@ public final class OrgGrpc {
      */
     public void listAgentResponseGroups(com.tcn.cloud.api.api.v0alpha.ListAgentResponseGroupsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAgentResponseGroupsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAgentResponseGroupsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListAgentResponseGroupsMethod(), responseObserver);
     }
 
     /**
@@ -8131,7 +8326,7 @@ public final class OrgGrpc {
      */
     public void listLastTemplateElements(com.tcn.cloud.api.api.v0alpha.ListLastTemplateElementsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListLastTemplateElementsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListLastTemplateElementsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListLastTemplateElementsMethod(), responseObserver);
     }
 
     /**
@@ -8144,7 +8339,7 @@ public final class OrgGrpc {
      */
     public void listQueueConfigs(com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListQueueConfigsRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListQueueConfigsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListQueueConfigsMethod(), responseObserver);
     }
 
     /**
@@ -8157,7 +8352,7 @@ public final class OrgGrpc {
      */
     public void listQueueConfigsByOrgId(com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListQueueConfigsByOrgIdMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListQueueConfigsByOrgIdMethod(), responseObserver);
     }
 
     /**
@@ -8172,7 +8367,7 @@ public final class OrgGrpc {
      */
     public void deleteQueueConfig(com.tcn.cloud.api.api.v0alpha.DeleteQueueConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteQueueConfigRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteQueueConfigMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteQueueConfigMethod(), responseObserver);
     }
 
     /**
@@ -8189,7 +8384,7 @@ public final class OrgGrpc {
      */
     public void getQueueConfig(com.tcn.cloud.api.api.v0alpha.GetQueueConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetQueueConfigRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetQueueConfigMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetQueueConfigMethod(), responseObserver);
     }
 
     /**
@@ -8205,7 +8400,7 @@ public final class OrgGrpc {
      */
     public void createQueueConfig(com.tcn.cloud.api.api.v0alpha.CreateQueueConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateQueueConfigRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateQueueConfigMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateQueueConfigMethod(), responseObserver);
     }
 
     /**
@@ -8222,7 +8417,7 @@ public final class OrgGrpc {
      */
     public void updateQueueConfig(com.tcn.cloud.api.api.v0alpha.UpdateQueueConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateQueueConfigRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateQueueConfigMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateQueueConfigMethod(), responseObserver);
     }
 
     /**
@@ -8242,7 +8437,7 @@ public final class OrgGrpc {
      */
     public void copyQueueConfig(com.tcn.cloud.api.api.v0alpha.CopyQueueConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CopyQueueConfigRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCopyQueueConfigMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCopyQueueConfigMethod(), responseObserver);
     }
 
     /**
@@ -8258,7 +8453,7 @@ public final class OrgGrpc {
      */
     public void getAllQueueConfigSounds(com.tcn.cloud.api.api.v0alpha.GetAllQueueConfigSoundsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetAllQueueConfigSoundsRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAllQueueConfigSoundsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetAllQueueConfigSoundsMethod(), responseObserver);
     }
 
     /**
@@ -8277,7 +8472,7 @@ public final class OrgGrpc {
      */
     public void getQueueConfigSound(com.tcn.cloud.api.api.v0alpha.GetQueueConfigSoundReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetQueueConfigSoundRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetQueueConfigSoundMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetQueueConfigSoundMethod(), responseObserver);
     }
 
     /**
@@ -8298,7 +8493,7 @@ public final class OrgGrpc {
      */
     public void setQueueConfigSound(com.tcn.cloud.api.api.v0alpha.SetQueueConfigSoundReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SetQueueConfigSoundRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetQueueConfigSoundMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getSetQueueConfigSoundMethod(), responseObserver);
     }
 
     /**
@@ -8321,7 +8516,7 @@ public final class OrgGrpc {
      */
     public void setAllQueueConfigSoundsFromSource(com.tcn.cloud.api.api.v0alpha.SetAllQueueConfigSoundsFromSourceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SetAllQueueConfigSoundsFromSourceRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetAllQueueConfigSoundsFromSourceMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getSetAllQueueConfigSoundsFromSourceMethod(), responseObserver);
     }
 
     /**
@@ -8336,7 +8531,7 @@ public final class OrgGrpc {
      */
     public void getUserBlocked(com.tcn.cloud.api.api.v0alpha.GetUserBlockedRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetUserBlockedResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetUserBlockedMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetUserBlockedMethod(), responseObserver);
     }
 
     /**
@@ -8351,7 +8546,7 @@ public final class OrgGrpc {
      */
     public void unblockUser(com.tcn.cloud.api.api.v0alpha.UnblockUserRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UnblockUserResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUnblockUserMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUnblockUserMethod(), responseObserver);
     }
 
     /**
@@ -8363,7 +8558,7 @@ public final class OrgGrpc {
      */
     public void listP3UnMigratedUsers(com.tcn.cloud.api.api.v0alpha.ListP3UnMigratedUsersRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListP3UnMigratedUsersResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListP3UnMigratedUsersMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListP3UnMigratedUsersMethod(), responseObserver);
     }
 
     /**
@@ -8375,7 +8570,7 @@ public final class OrgGrpc {
      */
     public void migrateP3User(com.tcn.cloud.api.api.v0alpha.MigrateP3UserRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.MigrateP3UserResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMigrateP3UserMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getMigrateP3UserMethod(), responseObserver);
     }
 
     /**
@@ -8387,7 +8582,7 @@ public final class OrgGrpc {
      */
     public void updateP3UserName(com.tcn.cloud.api.api.v0alpha.UpdateP3UserNameRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateP3UserNameResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateP3UserNameMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateP3UserNameMethod(), responseObserver);
     }
 
     /**
@@ -8399,7 +8594,7 @@ public final class OrgGrpc {
      */
     public void listOwnedUsers(com.tcn.cloud.api.api.v0alpha.ListOwnedUsersRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListOwnedUsersResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOwnedUsersMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListOwnedUsersMethod(), responseObserver);
     }
 
     /**
@@ -8409,7 +8604,7 @@ public final class OrgGrpc {
      */
     public void listOwnedOrgsByOrgId(com.tcn.cloud.api.api.v0alpha.ListOwnedOrgsByOrgIdRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListOwnedOrgsByOrgIdResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOwnedOrgsByOrgIdMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListOwnedOrgsByOrgIdMethod(), responseObserver);
     }
 
     /**
@@ -8419,7 +8614,7 @@ public final class OrgGrpc {
      */
     public void listOwnedOrgs(com.tcn.cloud.api.api.v0alpha.ListOwnedOrgsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListOwnedOrgsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOwnedOrgsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListOwnedOrgsMethod(), responseObserver);
     }
 
     /**
@@ -8431,7 +8626,7 @@ public final class OrgGrpc {
      */
     public void removeLoginStrikes(com.tcn.cloud.api.api.v0alpha.RemoveLoginStrikesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RemoveLoginStrikesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveLoginStrikesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getRemoveLoginStrikesMethod(), responseObserver);
     }
 
     /**
@@ -8443,7 +8638,7 @@ public final class OrgGrpc {
      */
     public void removeUserLoginStrikes(com.tcn.cloud.api.api.v0alpha.RemoveUserLoginStrikesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RemoveUserLoginStrikesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveUserLoginStrikesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getRemoveUserLoginStrikesMethod(), responseObserver);
     }
 
     /**
@@ -8455,7 +8650,7 @@ public final class OrgGrpc {
      */
     public void listLoginHistory(com.tcn.cloud.api.api.v0alpha.ListLoginHistoryRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListLoginHistoryResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListLoginHistoryMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListLoginHistoryMethod(), responseObserver);
     }
 
     /**
@@ -8467,7 +8662,7 @@ public final class OrgGrpc {
      */
     public void updateP3UserSids(com.tcn.cloud.api.api.v0alpha.UpdateP3UserSidsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateP3UserSidsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateP3UserSidsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateP3UserSidsMethod(), responseObserver);
     }
 
     /**
@@ -8477,7 +8672,7 @@ public final class OrgGrpc {
      */
     public void createAuthConnection(com.tcn.cloud.api.api.v0alpha.CreateAuthConnectionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateAuthConnectionResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateAuthConnectionMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateAuthConnectionMethod(), responseObserver);
     }
 
     /**
@@ -8487,7 +8682,7 @@ public final class OrgGrpc {
      */
     public void getAuthConnectionSettings(com.tcn.cloud.api.api.v0alpha.GetAuthConnectionSettingsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetAuthConnectionSettingsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAuthConnectionSettingsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetAuthConnectionSettingsMethod(), responseObserver);
     }
 
     /**
@@ -8497,7 +8692,7 @@ public final class OrgGrpc {
      */
     public void updateAuthConnectionSettings(com.tcn.cloud.api.api.v0alpha.UpdateAuthConnectionSettingsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateAuthConnectionSettingsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAuthConnectionSettingsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateAuthConnectionSettingsMethod(), responseObserver);
     }
 
     /**
@@ -8507,7 +8702,7 @@ public final class OrgGrpc {
      */
     public void deleteAuthConnection(com.tcn.cloud.api.api.v0alpha.DeleteAuthConnectionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteAuthConnectionResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteAuthConnectionMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteAuthConnectionMethod(), responseObserver);
     }
 
     /**
@@ -8517,7 +8712,7 @@ public final class OrgGrpc {
      */
     public void getUserSubscription(com.tcn.cloud.api.api.v0alpha.GetUserSubscriptionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetUserSubscriptionResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetUserSubscriptionMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetUserSubscriptionMethod(), responseObserver);
     }
 
     /**
@@ -8527,7 +8722,7 @@ public final class OrgGrpc {
      */
     public void getMyUserSubscription(com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMyUserSubscriptionMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetMyUserSubscriptionMethod(), responseObserver);
     }
 
     /**
@@ -8537,7 +8732,7 @@ public final class OrgGrpc {
      */
     public void addUserSubscription(com.tcn.cloud.api.api.v0alpha.AddUserSubscriptionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AddUserSubscriptionResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddUserSubscriptionMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getAddUserSubscriptionMethod(), responseObserver);
     }
 
     /**
@@ -8547,7 +8742,7 @@ public final class OrgGrpc {
      */
     public void addMyUserSubscription(com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddMyUserSubscriptionMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getAddMyUserSubscriptionMethod(), responseObserver);
     }
 
     /**
@@ -8557,7 +8752,7 @@ public final class OrgGrpc {
      */
     public void removeUserSubscription(com.tcn.cloud.api.api.v0alpha.RemoveUserSubscriptionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RemoveUserSubscriptionResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveUserSubscriptionMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getRemoveUserSubscriptionMethod(), responseObserver);
     }
 
     /**
@@ -8567,7 +8762,7 @@ public final class OrgGrpc {
      */
     public void removeMyUserSubscription(com.tcn.cloud.api.api.v0alpha.RemoveMyUserSubscriptionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RemoveMyUserSubscriptionResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveMyUserSubscriptionMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getRemoveMyUserSubscriptionMethod(), responseObserver);
     }
 
     /**
@@ -8577,7 +8772,7 @@ public final class OrgGrpc {
      */
     public void updateUserSubscription(com.tcn.cloud.api.api.v0alpha.UpdateUserSubscriptionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateUserSubscriptionResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateUserSubscriptionMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateUserSubscriptionMethod(), responseObserver);
     }
 
     /**
@@ -8587,7 +8782,7 @@ public final class OrgGrpc {
      */
     public void updateMyUserSubscription(com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMyUserSubscriptionMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateMyUserSubscriptionMethod(), responseObserver);
     }
 
     /**
@@ -8597,7 +8792,7 @@ public final class OrgGrpc {
      */
     public void listUserSubscriptions(com.tcn.cloud.api.api.v0alpha.ListUserSubscriptionsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListUserSubscriptionsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListUserSubscriptionsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListUserSubscriptionsMethod(), responseObserver);
     }
 
     /**
@@ -8607,7 +8802,7 @@ public final class OrgGrpc {
      */
     public void listMyUserSubscriptions(com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMyUserSubscriptionsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListMyUserSubscriptionsMethod(), responseObserver);
     }
 
     /**
@@ -8619,7 +8814,7 @@ public final class OrgGrpc {
      */
     public void listOrgSubscriptions(com.tcn.cloud.api.api.v0alpha.ListOrgSubscriptionsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListOrgSubscriptionsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOrgSubscriptionsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListOrgSubscriptionsMethod(), responseObserver);
     }
 
     /**
@@ -8631,7 +8826,7 @@ public final class OrgGrpc {
      */
     public void getSystemEnvironmentDetails(com.tcn.cloud.api.api.v0alpha.GetSystemEnvironmentDetailsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetSystemEnvironmentDetailsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSystemEnvironmentDetailsMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetSystemEnvironmentDetailsMethod(), responseObserver);
     }
 
     /**
@@ -8645,7 +8840,7 @@ public final class OrgGrpc {
      */
     public void listAgentStatisticsTemplates(com.tcn.cloud.api.api.v0alpha.ListAgentStatisticsTemplatesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAgentStatisticsTemplatesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAgentStatisticsTemplatesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListAgentStatisticsTemplatesMethod(), responseObserver);
     }
 
     /**
@@ -8659,7 +8854,7 @@ public final class OrgGrpc {
      */
     public void createAgentStatisticsTemplate(com.tcn.cloud.api.api.v0alpha.CreateAgentStatisticsTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateAgentStatisticsTemplateResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateAgentStatisticsTemplateMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateAgentStatisticsTemplateMethod(), responseObserver);
     }
 
     /**
@@ -8673,7 +8868,7 @@ public final class OrgGrpc {
      */
     public void updateAgentStatisticsTemplate(com.tcn.cloud.api.api.v0alpha.UpdateAgentStatisticsTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateAgentStatisticsTemplateResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAgentStatisticsTemplateMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateAgentStatisticsTemplateMethod(), responseObserver);
     }
 
     /**
@@ -8687,1435 +8882,1435 @@ public final class OrgGrpc {
      */
     public void deleteAgentStatisticsTemplate(com.tcn.cloud.api.api.v0alpha.DeleteAgentStatisticsTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteAgentStatisticsTemplateResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteAgentStatisticsTemplateMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteAgentStatisticsTemplateMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getRegisterOrganizationMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.RegisterOrganizationRequest,
                 com.tcn.cloud.api.api.v0alpha.RegisterOrganizationResponse>(
                   this, METHODID_REGISTER_ORGANIZATION)))
           .addMethod(
             getConvertOrgToManualMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ConvertOrgToManualRequest,
                 com.tcn.cloud.api.api.v0alpha.ConvertOrgToManualResponse>(
                   this, METHODID_CONVERT_ORG_TO_MANUAL)))
           .addMethod(
             getUpdateOrganizationMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateOrganizationRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateOrganizationResponse>(
                   this, METHODID_UPDATE_ORGANIZATION)))
           .addMethod(
             getArchiveOrganizationMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ArchiveOrganizationRequest,
                 com.tcn.cloud.api.api.v0alpha.ArchiveOrganizationResponse>(
                   this, METHODID_ARCHIVE_ORGANIZATION)))
           .addMethod(
             getUnArchiveOrganizationMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UnArchiveOrganizationRequest,
                 com.tcn.cloud.api.api.v0alpha.UnArchiveOrganizationResponse>(
                   this, METHODID_UN_ARCHIVE_ORGANIZATION)))
           .addMethod(
             getListArchivedOrganizationsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListArchivedOrganizationsRequest,
                 com.tcn.cloud.api.api.v0alpha.ListArchivedOrganizationsResponse>(
                   this, METHODID_LIST_ARCHIVED_ORGANIZATIONS)))
           .addMethod(
             getGetOrganizationProfileMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetOrganizationProfileRequest,
                 com.tcn.cloud.api.api.v0alpha.GetOrganizationProfileResponse>(
                   this, METHODID_GET_ORGANIZATION_PROFILE)))
           .addMethod(
             getGetOrganizationProfileByIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetOrganizationProfileByIdRequest,
                 com.tcn.cloud.api.api.v0alpha.GetOrganizationProfileResponse>(
                   this, METHODID_GET_ORGANIZATION_PROFILE_BY_ID)))
           .addMethod(
             getListOrganizationDescriptionsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListOrganizationDescriptionsRequest,
                 com.tcn.cloud.api.api.v0alpha.ListOrganizationDescriptionsResponse>(
                   this, METHODID_LIST_ORGANIZATION_DESCRIPTIONS)))
           .addMethod(
             getListRegionalOrganizationsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListRegionalOrganizationsRequest,
                 com.tcn.cloud.api.api.v0alpha.ListRegionalOrganizationsResponse>(
                   this, METHODID_LIST_REGIONAL_ORGANIZATIONS)))
           .addMethod(
             getUpdateP3OwningOrgMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateP3OwningOrgRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateP3OwningOrgResponse>(
                   this, METHODID_UPDATE_P3OWNING_ORG)))
           .addMethod(
             getGetP3OwningOrgMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetP3OwningOrgRequest,
                 com.tcn.cloud.api.api.v0alpha.GetP3OwningOrgResponse>(
                   this, METHODID_GET_P3OWNING_ORG)))
           .addMethod(
             getListOrganizationUserDescriptionsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListOrganizationUserDescriptionsRequest,
                 com.tcn.cloud.api.api.v0alpha.ListOrganizationUserDescriptionsResponse>(
                   this, METHODID_LIST_ORGANIZATION_USER_DESCRIPTIONS)))
           .addMethod(
             getAdminListUserDescriptionsMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            asyncServerStreamingCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.AdminListUserDescriptionsRequest,
                 com.tcn.cloud.api.api.v0alpha.AdminListUserDescriptionsResponse>(
                   this, METHODID_ADMIN_LIST_USER_DESCRIPTIONS)))
           .addMethod(
             getListUserDescriptionsMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            asyncServerStreamingCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListUserDescriptionsRequest,
                 com.tcn.cloud.api.api.v0alpha.ListUserDescriptionsResponse>(
                   this, METHODID_LIST_USER_DESCRIPTIONS)))
           .addMethod(
             getGetUserDirectoryMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetUserDirectoryRequest,
                 com.tcn.cloud.api.api.v0alpha.GetUserDirectoryResponse>(
                   this, METHODID_GET_USER_DIRECTORY)))
           .addMethod(
             getGetRegionsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetRegionsRequest,
                 com.tcn.cloud.api.api.v0alpha.GetRegionsResponse>(
                   this, METHODID_GET_REGIONS)))
           .addMethod(
             getGetMyUserDetailsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetMyUserDetailsRequest,
                 com.tcn.cloud.api.api.v0alpha.UserDetails>(
                   this, METHODID_GET_MY_USER_DETAILS)))
           .addMethod(
             getGetUserDetailsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetUserDetailsRequest,
                 com.tcn.cloud.api.api.v0alpha.UserDetails>(
                   this, METHODID_GET_USER_DETAILS)))
           .addMethod(
             getAdminGetUserDetailsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.AdminGetUserDetailsRequest,
                 com.tcn.cloud.api.api.v0alpha.UserDetails>(
                   this, METHODID_ADMIN_GET_USER_DETAILS)))
           .addMethod(
             getGetAgentUsersMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetAgentUsersRequest,
                 com.tcn.cloud.api.api.v0alpha.GetAgentUsersResponse>(
                   this, METHODID_GET_AGENT_USERS)))
           .addMethod(
             getGetAgentSettingsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetAgentSettingsRequest,
                 com.tcn.cloud.api.api.v0alpha.GetAgentSettingsResponse>(
                   this, METHODID_GET_AGENT_SETTINGS)))
           .addMethod(
             getGetAgentProfileGroupMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetAgentProfileGroupRequest,
                 com.tcn.cloud.api.api.v0alpha.GetAgentProfileGroupResponse>(
                   this, METHODID_GET_AGENT_PROFILE_GROUP)))
           .addMethod(
             getUpdateAgentProfileGroupMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateAgentProfileGroupRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateAgentProfileGroupResponse>(
                   this, METHODID_UPDATE_AGENT_PROFILE_GROUP)))
           .addMethod(
             getCreateAgentProfileGroupMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CreateAgentProfileGroupRequest,
                 com.tcn.cloud.api.api.v0alpha.CreateAgentProfileGroupResponse>(
                   this, METHODID_CREATE_AGENT_PROFILE_GROUP)))
           .addMethod(
             getListAgentProfileGroupsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListAgentProfileGroupsRequest,
                 com.tcn.cloud.api.api.v0alpha.ListAgentProfileGroupsResponse>(
                   this, METHODID_LIST_AGENT_PROFILE_GROUPS)))
           .addMethod(
             getDeleteAgentProfileGroupMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.DeleteAgentProfileGroupRequest,
                 com.tcn.cloud.api.api.v0alpha.DeleteAgentProfileGroupResponse>(
                   this, METHODID_DELETE_AGENT_PROFILE_GROUP)))
           .addMethod(
             getAssignAgentProfileGroupsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.AssignAgentProfileGroupsRequest,
                 com.tcn.cloud.api.api.v0alpha.AssignAgentProfileGroupsResponse>(
                   this, METHODID_ASSIGN_AGENT_PROFILE_GROUPS)))
           .addMethod(
             getUpdateUserMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateUserRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateUserResponse>(
                   this, METHODID_UPDATE_USER)))
           .addMethod(
             getUpdateMyUserMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateMyUserRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateMyUserResponse>(
                   this, METHODID_UPDATE_MY_USER)))
           .addMethod(
             getUpdateUserCallerIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse>(
                   this, METHODID_UPDATE_USER_CALLER_ID)))
           .addMethod(
             getCreateUserMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CreateUserRequest,
                 com.tcn.cloud.api.api.v0alpha.CreateUserResponse>(
                   this, METHODID_CREATE_USER)))
           .addMethod(
             getCreateUserByOrgIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CreateUserByOrgIdRequest,
                 com.tcn.cloud.api.api.v0alpha.CreateUserByOrgIdResponse>(
                   this, METHODID_CREATE_USER_BY_ORG_ID)))
           .addMethod(
             getCreateDelegatedUserMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CreateDelegatedUserRequest,
                 com.tcn.cloud.api.api.v0alpha.CreateDelegatedUserResponse>(
                   this, METHODID_CREATE_DELEGATED_USER)))
           .addMethod(
             getUpdateUserPasswordMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordResponse>(
                   this, METHODID_UPDATE_USER_PASSWORD)))
           .addMethod(
             getUpdateMyUserPasswordMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse>(
                   this, METHODID_UPDATE_MY_USER_PASSWORD)))
           .addMethod(
             getUpdateUserPasswordByOrgIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByOrgIdRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByOrgIdResponse>(
                   this, METHODID_UPDATE_USER_PASSWORD_BY_ORG_ID)))
           .addMethod(
             getResetUserRequirePasswordResetMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ResetUserRequirePasswordResetRequest,
                 com.tcn.cloud.api.api.v0alpha.ResetUserRequirePasswordResetResponse>(
                   this, METHODID_RESET_USER_REQUIRE_PASSWORD_RESET)))
           .addMethod(
             getGetUserPasswordResetLinkMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest,
                 com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkResponse>(
                   this, METHODID_GET_USER_PASSWORD_RESET_LINK)))
           .addMethod(
             getGetMyUserPasswordResetLinkMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkRequest,
                 com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkResponse>(
                   this, METHODID_GET_MY_USER_PASSWORD_RESET_LINK)))
           .addMethod(
             getGetUserPasswordResetLinkByOrgIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByOrgIdRequest,
                 com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByOrgIdResponse>(
                   this, METHODID_GET_USER_PASSWORD_RESET_LINK_BY_ORG_ID)))
           .addMethod(
             getGetUserEmailVerifiedMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetUserEmailVerifiedRequest,
                 com.tcn.cloud.api.api.v0alpha.GetUserEmailVerifiedResponse>(
                   this, METHODID_GET_USER_EMAIL_VERIFIED)))
           .addMethod(
             getGetUserEmailVerifiedByOrgIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetUserEmailVerifiedByOrgIdRequest,
                 com.tcn.cloud.api.api.v0alpha.GetUserEmailVerifiedByOrgIdResponse>(
                   this, METHODID_GET_USER_EMAIL_VERIFIED_BY_ORG_ID)))
           .addMethod(
             getSendUserVerificationEmailByOrgIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.SendUserVerificationEmailByOrgIdRequest,
                 com.tcn.cloud.api.api.v0alpha.SendUserVerificationEmailByOrgIdResponse>(
                   this, METHODID_SEND_USER_VERIFICATION_EMAIL_BY_ORG_ID)))
           .addMethod(
             getSendUserVerificationEmailMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.SendUserVerificationEmailRequest,
                 com.tcn.cloud.api.api.v0alpha.SendUserVerificationEmailResponse>(
                   this, METHODID_SEND_USER_VERIFICATION_EMAIL)))
           .addMethod(
             getManualUserEmailVerificationByOrgIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ManualUserEmailVerificationByOrgIdRequest,
                 com.tcn.cloud.api.api.v0alpha.ManualUserEmailVerificationByOrgIdResponse>(
                   this, METHODID_MANUAL_USER_EMAIL_VERIFICATION_BY_ORG_ID)))
           .addMethod(
             getManualUserEmailVerificationMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ManualUserEmailVerificationRequest,
                 com.tcn.cloud.api.api.v0alpha.ManualUserEmailVerificationResponse>(
                   this, METHODID_MANUAL_USER_EMAIL_VERIFICATION)))
           .addMethod(
             getGetTempUserTokenMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq,
                 com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes>(
                   this, METHODID_GET_TEMP_USER_TOKEN)))
           .addMethod(
             getGetTempUserTokenByUserIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetTempUserTokenByUserIdReq,
                 com.tcn.cloud.api.api.v0alpha.GetTempUserTokenByUserIdRes>(
                   this, METHODID_GET_TEMP_USER_TOKEN_BY_USER_ID)))
           .addMethod(
             getGetCountriesListMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetCountriesListRequest,
                 com.tcn.cloud.api.api.v0alpha.GetCountriesListResponse>(
                   this, METHODID_GET_COUNTRIES_LIST)))
           .addMethod(
             getGetAdminClientPreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetAdminClientPreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.GetAdminClientPreferencesResponse>(
                   this, METHODID_GET_ADMIN_CLIENT_PREFERENCES)))
           .addMethod(
             getUpdateAdminClientPreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateAdminClientPreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateAdminClientPreferencesResponse>(
                   this, METHODID_UPDATE_ADMIN_CLIENT_PREFERENCES)))
           .addMethod(
             getGetPermissionsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetPermissionsRequest,
                 com.tcn.cloud.api.api.v0alpha.GetPermissionsResponse>(
                   this, METHODID_GET_PERMISSIONS)))
           .addMethod(
             getRevokeAccountOwnerPermissionFromUserMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.RevokeAccountOwnerPermissionFromUserRequest,
                 com.tcn.cloud.api.api.v0alpha.RevokeAccountOwnerPermissionFromUserResponse>(
                   this, METHODID_REVOKE_ACCOUNT_OWNER_PERMISSION_FROM_USER)))
           .addMethod(
             getUpdateUserDisabledMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateUserDisabledRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateUserDisabledResponse>(
                   this, METHODID_UPDATE_USER_DISABLED)))
           .addMethod(
             getUpdateUserDisabledByOrgIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateUserDisabledByOrgIdRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateUserDisabledByOrgIdResponse>(
                   this, METHODID_UPDATE_USER_DISABLED_BY_ORG_ID)))
           .addMethod(
             getUpdateBulkUsersDisabledMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateBulkUsersDisabledRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateBulkUsersDisabledResponse>(
                   this, METHODID_UPDATE_BULK_USERS_DISABLED)))
           .addMethod(
             getGetOrgBillingSettingsByOrgIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetOrgBillingSettingsByOrgIdRequest,
                 com.tcn.cloud.api.api.v0alpha.GetOrgBillingSettingsByOrgIdResponse>(
                   this, METHODID_GET_ORG_BILLING_SETTINGS_BY_ORG_ID)))
           .addMethod(
             getGetOrgBillingSettingsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetOrgBillingSettingsRequest,
                 com.tcn.cloud.api.api.v0alpha.GetOrgBillingSettingsResponse>(
                   this, METHODID_GET_ORG_BILLING_SETTINGS)))
           .addMethod(
             getSetOrgBillingSettingsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.SetOrgBillingSettingsRequest,
                 com.tcn.cloud.api.api.v0alpha.SetOrgBillingSettingsResponse>(
                   this, METHODID_SET_ORG_BILLING_SETTINGS)))
           .addMethod(
             getAddOrgBillingOverrideMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.AddOrgBillingOverrideRequest,
                 com.tcn.cloud.api.api.v0alpha.AddOrgBillingOverrideResponse>(
                   this, METHODID_ADD_ORG_BILLING_OVERRIDE)))
           .addMethod(
             getRemoveOrgBillingOverrideMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.RemoveOrgBillingOverrideRequest,
                 com.tcn.cloud.api.api.v0alpha.RemoveOrgBillingOverrideResponse>(
                   this, METHODID_REMOVE_ORG_BILLING_OVERRIDE)))
           .addMethod(
             getGetSystemDefaultBillingRatesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetSystemDefaultBillingRatesRequest,
                 com.tcn.cloud.api.api.v0alpha.GetSystemDefaultBillingRatesResponse>(
                   this, METHODID_GET_SYSTEM_DEFAULT_BILLING_RATES)))
           .addMethod(
             getListPermissionGroupsByOrgIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListPermissionGroupsByOrgIdRequest,
                 com.tcn.cloud.api.api.v0alpha.ListPermissionGroupsByOrgIdResponse>(
                   this, METHODID_LIST_PERMISSION_GROUPS_BY_ORG_ID)))
           .addMethod(
             getListPermissionGroupsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListPermissionGroupsRequest,
                 com.tcn.cloud.api.api.v0alpha.ListPermissionGroupsResponse>(
                   this, METHODID_LIST_PERMISSION_GROUPS)))
           .addMethod(
             getCreatePermissionGroupMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CreatePermissionGroupRequest,
                 com.tcn.cloud.api.api.v0alpha.CreatePermissionGroupResponse>(
                   this, METHODID_CREATE_PERMISSION_GROUP)))
           .addMethod(
             getUpdatePermissionGroupMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdatePermissionGroupRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdatePermissionGroupResponse>(
                   this, METHODID_UPDATE_PERMISSION_GROUP)))
           .addMethod(
             getDeletePermissionGroupMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.DeletePermissionGroupRequest,
                 com.tcn.cloud.api.api.v0alpha.DeletePermissionGroupResponse>(
                   this, METHODID_DELETE_PERMISSION_GROUP)))
           .addMethod(
             getAssignUserToAccountOwnerPermissionGroupMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.AssignUserToAccountOwnerPermissionGroupRequest,
                 com.tcn.cloud.api.api.v0alpha.AssignUserToAccountOwnerPermissionGroupResponse>(
                   this, METHODID_ASSIGN_USER_TO_ACCOUNT_OWNER_PERMISSION_GROUP)))
           .addMethod(
             getAssignUserPermissionGroupMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.AssignUserPermissionGroupRequest,
                 com.tcn.cloud.api.api.v0alpha.AssignUserPermissionGroupResponse>(
                   this, METHODID_ASSIGN_USER_PERMISSION_GROUP)))
           .addMethod(
             getAssignUsersPermissionGroupMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.AssignUsersPermissionGroupRequest,
                 com.tcn.cloud.api.api.v0alpha.AssignUsersPermissionGroupResponse>(
                   this, METHODID_ASSIGN_USERS_PERMISSION_GROUP)))
           .addMethod(
             getUpdateUserNeoPermissionGroupsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateUserNeoPermissionGroupsRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateUserNeoPermissionGroupsResponse>(
                   this, METHODID_UPDATE_USER_NEO_PERMISSION_GROUPS)))
           .addMethod(
             getRevokeUserPermissionGroupMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.RevokeUserPermissionGroupRequest,
                 com.tcn.cloud.api.api.v0alpha.RevokeUserPermissionGroupResponse>(
                   this, METHODID_REVOKE_USER_PERMISSION_GROUP)))
           .addMethod(
             getRevokeUsersPermissionGroupMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.RevokeUsersPermissionGroupRequest,
                 com.tcn.cloud.api.api.v0alpha.RevokeUsersPermissionGroupResponse>(
                   this, METHODID_REVOKE_USERS_PERMISSION_GROUP)))
           .addMethod(
             getInitDefaultPermissionGroupsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.InitDefaultPermissionGroupsRequest,
                 com.tcn.cloud.api.api.v0alpha.InitDefaultPermissionGroupsResponse>(
                   this, METHODID_INIT_DEFAULT_PERMISSION_GROUPS)))
           .addMethod(
             getAddPermissionToAccountOwnerPermissionGroupMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.AddPermissionToAccountOwnerPermissionGroupRequest,
                 com.tcn.cloud.api.api.v0alpha.AddPermissionToAccountOwnerPermissionGroupResponse>(
                   this, METHODID_ADD_PERMISSION_TO_ACCOUNT_OWNER_PERMISSION_GROUP)))
           .addMethod(
             getRevokePermissionToAccountOwnerPermissionGroupMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.RevokePermissionToAccountOwnerPermissionGroupRequest,
                 com.tcn.cloud.api.api.v0alpha.RevokePermissionToAccountOwnerPermissionGroupResponse>(
                   this, METHODID_REVOKE_PERMISSION_TO_ACCOUNT_OWNER_PERMISSION_GROUP)))
           .addMethod(
             getAddPermissionToOrgDefaultGroupMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.AddPermissionToOrgDefaultGroupRequest,
                 com.tcn.cloud.api.api.v0alpha.AddPermissionToOrgDefaultGroupResponse>(
                   this, METHODID_ADD_PERMISSION_TO_ORG_DEFAULT_GROUP)))
           .addMethod(
             getRemovePermissionFromOrgDefaultGroupMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.RemovePermissionFromOrgDefaultGroupRequest,
                 com.tcn.cloud.api.api.v0alpha.RemovePermissionFromOrgDefaultGroupResponse>(
                   this, METHODID_REMOVE_PERMISSION_FROM_ORG_DEFAULT_GROUP)))
           .addMethod(
             getGetOrgDefaultSuperUserGroupMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetOrgDefaultSuperUserGroupRequest,
                 com.tcn.cloud.api.api.v0alpha.GetOrgDefaultSuperUserGroupResponse>(
                   this, METHODID_GET_ORG_DEFAULT_SUPER_USER_GROUP)))
           .addMethod(
             getListP3PermissionGroupsByOrgIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListP3PermissionGroupsByOrgIdRequest,
                 com.tcn.cloud.api.api.v0alpha.ListP3PermissionGroupsByOrgIdResponse>(
                   this, METHODID_LIST_P3PERMISSION_GROUPS_BY_ORG_ID)))
           .addMethod(
             getListP3PermissionGroupsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListP3PermissionGroupsRequest,
                 com.tcn.cloud.api.api.v0alpha.ListP3PermissionGroupsResponse>(
                   this, METHODID_LIST_P3PERMISSION_GROUPS)))
           .addMethod(
             getAddUserRegionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.AddUserRegionRequest,
                 com.tcn.cloud.api.api.v0alpha.AddUserRegionResponse>(
                   this, METHODID_ADD_USER_REGION)))
           .addMethod(
             getRemoveUserRegionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.RemoveUserRegionRequest,
                 com.tcn.cloud.api.api.v0alpha.RemoveUserRegionResponse>(
                   this, METHODID_REMOVE_USER_REGION)))
           .addMethod(
             getCreateP3PermissionGroupMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CreateP3PermissionGroupRequest,
                 com.tcn.cloud.api.api.v0alpha.CreateP3PermissionGroupResponse>(
                   this, METHODID_CREATE_P3PERMISSION_GROUP)))
           .addMethod(
             getUpdateP3PermissionGroupByOrgIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupByOrgIdRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupByOrgIdResponse>(
                   this, METHODID_UPDATE_P3PERMISSION_GROUP_BY_ORG_ID)))
           .addMethod(
             getUpdateP3PermissionGroupMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupResponse>(
                   this, METHODID_UPDATE_P3PERMISSION_GROUP)))
           .addMethod(
             getDeleteP3PermissionGroupMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.DeleteP3PermissionGroupRequest,
                 com.tcn.cloud.api.api.v0alpha.DeleteP3PermissionGroupResponse>(
                   this, METHODID_DELETE_P3PERMISSION_GROUP)))
           .addMethod(
             getAssignUsersP3PermissionGroupMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.AssignUsersP3PermissionGroupRequest,
                 com.tcn.cloud.api.api.v0alpha.AssignUsersP3PermissionGroupResponse>(
                   this, METHODID_ASSIGN_USERS_P3PERMISSION_GROUP)))
           .addMethod(
             getAddLoginToUserMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.AddLoginToUserRequest,
                 com.tcn.cloud.api.api.v0alpha.AddLoginToUserResponse>(
                   this, METHODID_ADD_LOGIN_TO_USER)))
           .addMethod(
             getRevokeUsersP3PermissionGroupMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.RevokeUsersP3PermissionGroupRequest,
                 com.tcn.cloud.api.api.v0alpha.RevokeUsersP3PermissionGroupResponse>(
                   this, METHODID_REVOKE_USERS_P3PERMISSION_GROUP)))
           .addMethod(
             getGetContactPreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetContactPreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.GetContactPreferencesResponse>(
                   this, METHODID_GET_CONTACT_PREFERENCES)))
           .addMethod(
             getUpdateContactPreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateContactPreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateContactPreferencesResponse>(
                   this, METHODID_UPDATE_CONTACT_PREFERENCES)))
           .addMethod(
             getGetCompliancePreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetCompliancePreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.GetCompliancePreferencesResponse>(
                   this, METHODID_GET_COMPLIANCE_PREFERENCES)))
           .addMethod(
             getUpdateCompliancePreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateCompliancePreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateCompliancePreferencesResponse>(
                   this, METHODID_UPDATE_COMPLIANCE_PREFERENCES)))
           .addMethod(
             getGetAgentPreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetAgentPreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.GetAgentPreferencesResponse>(
                   this, METHODID_GET_AGENT_PREFERENCES)))
           .addMethod(
             getUpdateAgentPreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateAgentPreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateAgentPreferencesResponse>(
                   this, METHODID_UPDATE_AGENT_PREFERENCES)))
           .addMethod(
             getGetOrganizationPreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetOrganizationPreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.GetOrganizationPreferencesResponse>(
                   this, METHODID_GET_ORGANIZATION_PREFERENCES)))
           .addMethod(
             getUpdateOrganizationPreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateOrganizationPreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateOrganizationPreferencesResponse>(
                   this, METHODID_UPDATE_ORGANIZATION_PREFERENCES)))
           .addMethod(
             getGetSchedulePreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetSchedulePreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.GetSchedulePreferencesResponse>(
                   this, METHODID_GET_SCHEDULE_PREFERENCES)))
           .addMethod(
             getUpdateSchedulePreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateSchedulePreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateSchedulePreferencesResponse>(
                   this, METHODID_UPDATE_SCHEDULE_PREFERENCES)))
           .addMethod(
             getGetBusinessPreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetBusinessPreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.GetBusinessPreferencesResponse>(
                   this, METHODID_GET_BUSINESS_PREFERENCES)))
           .addMethod(
             getUpdateBusinessPreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateBusinessPreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateBusinessPreferencesResponse>(
                   this, METHODID_UPDATE_BUSINESS_PREFERENCES)))
           .addMethod(
             getGetEndOfDayPreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetEndOfDayPreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.GetEndOfDayPreferencesResponse>(
                   this, METHODID_GET_END_OF_DAY_PREFERENCES)))
           .addMethod(
             getUpdateEndOfDayPreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateEndOfDayPreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateEndOfDayPreferencesResponse>(
                   this, METHODID_UPDATE_END_OF_DAY_PREFERENCES)))
           .addMethod(
             getGetReportFilterPreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetFilterPreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.GetFilterPreferencesResponse>(
                   this, METHODID_GET_REPORT_FILTER_PREFERENCES)))
           .addMethod(
             getUpdateReportFilterPreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateFilterPreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateFilterPreferencesResponse>(
                   this, METHODID_UPDATE_REPORT_FILTER_PREFERENCES)))
           .addMethod(
             getGetPhonePreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetPhonePreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.GetPhonePreferencesResponse>(
                   this, METHODID_GET_PHONE_PREFERENCES)))
           .addMethod(
             getUpdatePhonePreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdatePhonePreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdatePhonePreferencesResponse>(
                   this, METHODID_UPDATE_PHONE_PREFERENCES)))
           .addMethod(
             getGetDashboardGeneralPreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetDashboardGeneralPreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.GetDashboardGeneralPreferencesResponse>(
                   this, METHODID_GET_DASHBOARD_GENERAL_PREFERENCES)))
           .addMethod(
             getUpdateDashboardGeneralPreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateDashboardGeneralPreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateDashboardGeneralPreferencesResponse>(
                   this, METHODID_UPDATE_DASHBOARD_GENERAL_PREFERENCES)))
           .addMethod(
             getGetWebhookPreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetWebhookPreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.GetWebhookPreferencesResponse>(
                   this, METHODID_GET_WEBHOOK_PREFERENCES)))
           .addMethod(
             getUpdateWebhookPreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateWebhookPreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateWebhookPreferencesResponse>(
                   this, METHODID_UPDATE_WEBHOOK_PREFERENCES)))
           .addMethod(
             getGetBroadcastPreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetBroadcastPreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.GetBroadcastPreferencesResponse>(
                   this, METHODID_GET_BROADCAST_PREFERENCES)))
           .addMethod(
             getUpdateBroadcastPreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateBroadcastPreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateBroadcastPreferencesResponse>(
                   this, METHODID_UPDATE_BROADCAST_PREFERENCES)))
           .addMethod(
             getGetAuthenticationPreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetAuthenticationPreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.GetAuthenticationPreferencesResponse>(
                   this, METHODID_GET_AUTHENTICATION_PREFERENCES)))
           .addMethod(
             getUpdateAuthenticationPreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateAuthenticationPreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateAuthenticationPreferencesResponse>(
                   this, METHODID_UPDATE_AUTHENTICATION_PREFERENCES)))
           .addMethod(
             getGetRecordingPreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetRecordingPreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.GetRecordingPreferencesResponse>(
                   this, METHODID_GET_RECORDING_PREFERENCES)))
           .addMethod(
             getUpdateRecordingPreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateRecordingPreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateRecordingPreferencesResponse>(
                   this, METHODID_UPDATE_RECORDING_PREFERENCES)))
           .addMethod(
             getGetDashboardQueuePreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetDashboardQueuePreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.GetDashboardQueuePreferencesResponse>(
                   this, METHODID_GET_DASHBOARD_QUEUE_PREFERENCES)))
           .addMethod(
             getUpdateDashboardQueuePreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateDashboardQueuePreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateDashboardQueuePreferencesResponse>(
                   this, METHODID_UPDATE_DASHBOARD_QUEUE_PREFERENCES)))
           .addMethod(
             getGetAgentQuickViewPreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetAgentQuickViewPreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.GetAgentQuickViewPreferencesResponse>(
                   this, METHODID_GET_AGENT_QUICK_VIEW_PREFERENCES)))
           .addMethod(
             getGetVoiceAnalyticsPreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetVoiceAnalyticsPreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.GetVoiceAnalyticsPreferencesResponse>(
                   this, METHODID_GET_VOICE_ANALYTICS_PREFERENCES)))
           .addMethod(
             getUpdateVoiceAnalyticsPreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateVoiceAnalyticsPreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateVoiceAnalyticsPreferencesResponse>(
                   this, METHODID_UPDATE_VOICE_ANALYTICS_PREFERENCES)))
           .addMethod(
             getUpdateVoiceAnalyticsPreferencesEnabledMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateVoiceAnalyticsPreferencesEnabledRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateVoiceAnalyticsPreferencesEnabledResponse>(
                   this, METHODID_UPDATE_VOICE_ANALYTICS_PREFERENCES_ENABLED)))
           .addMethod(
             getGetScorecardsPreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetScorecardsPreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.GetScorecardsPreferencesResponse>(
                   this, METHODID_GET_SCORECARDS_PREFERENCES)))
           .addMethod(
             getUpdateScorecardsPreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateScorecardsPreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateScorecardsPreferencesResponse>(
                   this, METHODID_UPDATE_SCORECARDS_PREFERENCES)))
           .addMethod(
             getGetEmailSmsPreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetEmailSmsPreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.GetEmailSmsPreferencesResponse>(
                   this, METHODID_GET_EMAIL_SMS_PREFERENCES)))
           .addMethod(
             getUpdateEmailSmsPreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateEmailSmsPreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateEmailSmsPreferencesResponse>(
                   this, METHODID_UPDATE_EMAIL_SMS_PREFERENCES)))
           .addMethod(
             getEditAgentQuickViewPreferencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.EditAgentQuickViewPreferencesRequest,
                 com.tcn.cloud.api.api.v0alpha.EditAgentQuickViewPreferencesResponse>(
                   this, METHODID_EDIT_AGENT_QUICK_VIEW_PREFERENCES)))
           .addMethod(
             getEditBackofficeThemePreferenceMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.EditBackofficeThemePreferenceRequest,
                 com.tcn.cloud.api.api.v0alpha.EditBackofficeThemePreferenceResponse>(
                   this, METHODID_EDIT_BACKOFFICE_THEME_PREFERENCE)))
           .addMethod(
             getGetBackofficeThemePreferenceMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetBackofficeThemePreferenceRequest,
                 com.tcn.cloud.api.api.v0alpha.GetBackofficeThemePreferenceResponse>(
                   this, METHODID_GET_BACKOFFICE_THEME_PREFERENCE)))
           .addMethod(
             getAcceptLinkbackRecordingTermsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.AcceptLinkbackRecordingTermsRequest,
                 com.tcn.cloud.api.api.v0alpha.AcceptLinkbackRecordingTermsResponse>(
                   this, METHODID_ACCEPT_LINKBACK_RECORDING_TERMS)))
           .addMethod(
             getLinkbackUpdateBroadcastTemplatesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.LinkbackUpdateBroadcastTemplatesRequest,
                 com.tcn.cloud.api.api.v0alpha.LinkbackUpdateBroadcastTemplatesResponse>(
                   this, METHODID_LINKBACK_UPDATE_BROADCAST_TEMPLATES)))
           .addMethod(
             getRecordEmailUnsubscribeAcknowledgementMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.RecordEmailUnsubscribeAcknowledgementRequest,
                 com.tcn.cloud.api.api.v0alpha.RecordEmailUnsubscribeAcknowledgementResponse>(
                   this, METHODID_RECORD_EMAIL_UNSUBSCRIBE_ACKNOWLEDGEMENT)))
           .addMethod(
             getClearEmailUnsubscribeAcknowledgementMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ClearEmailUnsubscribeAcknowledgementRequest,
                 com.tcn.cloud.api.api.v0alpha.ClearEmailUnsubscribeAcknowledgementResponse>(
                   this, METHODID_CLEAR_EMAIL_UNSUBSCRIBE_ACKNOWLEDGEMENT)))
           .addMethod(
             getCreateWebLinkTemplateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CreateWebLinkTemplateRequest,
                 com.tcn.cloud.api.api.v0alpha.CreateWebLinkTemplateResponse>(
                   this, METHODID_CREATE_WEB_LINK_TEMPLATE)))
           .addMethod(
             getListWebLinkTemplatesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListWebLinkTemplatesRequest,
                 com.tcn.cloud.api.api.v0alpha.ListWebLinkTemplatesResponse>(
                   this, METHODID_LIST_WEB_LINK_TEMPLATES)))
           .addMethod(
             getGetWebLinkTemplateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetWebLinkTemplateRequest,
                 com.tcn.cloud.api.api.v0alpha.GetWebLinkTemplateResponse>(
                   this, METHODID_GET_WEB_LINK_TEMPLATE)))
           .addMethod(
             getUpdateWebLinkTemplateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateWebLinkTemplateRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateWebLinkTemplateResponse>(
                   this, METHODID_UPDATE_WEB_LINK_TEMPLATE)))
           .addMethod(
             getDeleteWebLinkTemplateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.DeleteWebLinkTemplateRequest,
                 com.tcn.cloud.api.api.v0alpha.DeleteWebLinkTemplateResponse>(
                   this, METHODID_DELETE_WEB_LINK_TEMPLATE)))
           .addMethod(
             getCreateAgentTriggerTemplateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CreateAgentTriggerTemplateRequest,
                 com.tcn.cloud.api.api.v0alpha.CreateAgentTriggerTemplateResponse>(
                   this, METHODID_CREATE_AGENT_TRIGGER_TEMPLATE)))
           .addMethod(
             getListAgentTriggerTemplatesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListAgentTriggerTemplatesRequest,
                 com.tcn.cloud.api.api.v0alpha.ListAgentTriggerTemplatesResponse>(
                   this, METHODID_LIST_AGENT_TRIGGER_TEMPLATES)))
           .addMethod(
             getGetAgentTriggerTemplateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetAgentTriggerTemplateRequest,
                 com.tcn.cloud.api.api.v0alpha.GetAgentTriggerTemplateResponse>(
                   this, METHODID_GET_AGENT_TRIGGER_TEMPLATE)))
           .addMethod(
             getUpdateAgentTriggerTemplateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateAgentTriggerTemplateRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateAgentTriggerTemplateResponse>(
                   this, METHODID_UPDATE_AGENT_TRIGGER_TEMPLATE)))
           .addMethod(
             getDeleteAgentTriggerTemplateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.DeleteAgentTriggerTemplateRequest,
                 com.tcn.cloud.api.api.v0alpha.DeleteAgentTriggerTemplateResponse>(
                   this, METHODID_DELETE_AGENT_TRIGGER_TEMPLATE)))
           .addMethod(
             getCreateClientInfoDisplayTemplateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CreateClientInfoDisplayTemplateRequest,
                 com.tcn.cloud.api.api.v0alpha.CreateClientInfoDisplayTemplateResponse>(
                   this, METHODID_CREATE_CLIENT_INFO_DISPLAY_TEMPLATE)))
           .addMethod(
             getListClientInfoDisplayTemplatesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListClientInfoDisplayTemplatesRequest,
                 com.tcn.cloud.api.api.v0alpha.ListClientInfoDisplayTemplatesResponse>(
                   this, METHODID_LIST_CLIENT_INFO_DISPLAY_TEMPLATES)))
           .addMethod(
             getUpdateClientInfoDisplayTemplateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateClientInfoDisplayTemplateRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateClientInfoDisplayTemplateResponse>(
                   this, METHODID_UPDATE_CLIENT_INFO_DISPLAY_TEMPLATE)))
           .addMethod(
             getDeleteClientInfoDisplayTemplateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.DeleteClientInfoDisplayTemplateRequest,
                 com.tcn.cloud.api.api.v0alpha.DeleteClientInfoDisplayTemplateResponse>(
                   this, METHODID_DELETE_CLIENT_INFO_DISPLAY_TEMPLATE)))
           .addMethod(
             getGetClientInfoDisplayTemplateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateRequest,
                 com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateResponse>(
                   this, METHODID_GET_CLIENT_INFO_DISPLAY_TEMPLATE)))
           .addMethod(
             getListAgentPauseCodesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListAgentPauseCodesRequest,
                 com.tcn.cloud.api.api.v0alpha.ListAgentPauseCodesResponse>(
                   this, METHODID_LIST_AGENT_PAUSE_CODES)))
           .addMethod(
             getCreateAgentPauseCodeMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CreateAgentPauseCodeRequest,
                 com.tcn.cloud.api.api.v0alpha.CreateAgentPauseCodeResponse>(
                   this, METHODID_CREATE_AGENT_PAUSE_CODE)))
           .addMethod(
             getUpdateAgentPauseCodeMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateAgentPauseCodeRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateAgentPauseCodeResponse>(
                   this, METHODID_UPDATE_AGENT_PAUSE_CODE)))
           .addMethod(
             getDeleteAgentPauseCodeMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.DeleteAgentPauseCodeRequest,
                 com.tcn.cloud.api.api.v0alpha.DeleteAgentPauseCodeResponse>(
                   this, METHODID_DELETE_AGENT_PAUSE_CODE)))
           .addMethod(
             getListCustomReportFiltersMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListCustomReportFiltersRequest,
                 com.tcn.cloud.api.api.v0alpha.ListCustomReportFiltersResponse>(
                   this, METHODID_LIST_CUSTOM_REPORT_FILTERS)))
           .addMethod(
             getCreateCustomReportFilterMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CreateCustomReportFilterRequest,
                 com.tcn.cloud.api.api.v0alpha.CreateCustomReportFilterResponse>(
                   this, METHODID_CREATE_CUSTOM_REPORT_FILTER)))
           .addMethod(
             getUpdateCustomReportFilterMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateCustomReportFilterRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateCustomReportFilterResponse>(
                   this, METHODID_UPDATE_CUSTOM_REPORT_FILTER)))
           .addMethod(
             getDeleteCustomReportFilterMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.DeleteCustomReportFilterRequest,
                 com.tcn.cloud.api.api.v0alpha.DeleteCustomReportFilterResponse>(
                   this, METHODID_DELETE_CUSTOM_REPORT_FILTER)))
           .addMethod(
             getListAgentResponseGroupsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListAgentResponseGroupsRequest,
                 com.tcn.cloud.api.api.v0alpha.ListAgentResponseGroupsResponse>(
                   this, METHODID_LIST_AGENT_RESPONSE_GROUPS)))
           .addMethod(
             getListLastTemplateElementsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListLastTemplateElementsRequest,
                 com.tcn.cloud.api.api.v0alpha.ListLastTemplateElementsResponse>(
                   this, METHODID_LIST_LAST_TEMPLATE_ELEMENTS)))
           .addMethod(
             getListQueueConfigsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq,
                 com.tcn.cloud.api.api.v0alpha.ListQueueConfigsRes>(
                   this, METHODID_LIST_QUEUE_CONFIGS)))
           .addMethod(
             getListQueueConfigsByOrgIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq,
                 com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdRes>(
                   this, METHODID_LIST_QUEUE_CONFIGS_BY_ORG_ID)))
           .addMethod(
             getDeleteQueueConfigMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.DeleteQueueConfigReq,
                 com.tcn.cloud.api.api.v0alpha.DeleteQueueConfigRes>(
                   this, METHODID_DELETE_QUEUE_CONFIG)))
           .addMethod(
             getGetQueueConfigMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetQueueConfigReq,
                 com.tcn.cloud.api.api.v0alpha.GetQueueConfigRes>(
                   this, METHODID_GET_QUEUE_CONFIG)))
           .addMethod(
             getCreateQueueConfigMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CreateQueueConfigReq,
                 com.tcn.cloud.api.api.v0alpha.CreateQueueConfigRes>(
                   this, METHODID_CREATE_QUEUE_CONFIG)))
           .addMethod(
             getUpdateQueueConfigMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateQueueConfigReq,
                 com.tcn.cloud.api.api.v0alpha.UpdateQueueConfigRes>(
                   this, METHODID_UPDATE_QUEUE_CONFIG)))
           .addMethod(
             getCopyQueueConfigMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CopyQueueConfigReq,
                 com.tcn.cloud.api.api.v0alpha.CopyQueueConfigRes>(
                   this, METHODID_COPY_QUEUE_CONFIG)))
           .addMethod(
             getGetAllQueueConfigSoundsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetAllQueueConfigSoundsReq,
                 com.tcn.cloud.api.api.v0alpha.GetAllQueueConfigSoundsRes>(
                   this, METHODID_GET_ALL_QUEUE_CONFIG_SOUNDS)))
           .addMethod(
             getGetQueueConfigSoundMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetQueueConfigSoundReq,
                 com.tcn.cloud.api.api.v0alpha.GetQueueConfigSoundRes>(
                   this, METHODID_GET_QUEUE_CONFIG_SOUND)))
           .addMethod(
             getSetQueueConfigSoundMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.SetQueueConfigSoundReq,
                 com.tcn.cloud.api.api.v0alpha.SetQueueConfigSoundRes>(
                   this, METHODID_SET_QUEUE_CONFIG_SOUND)))
           .addMethod(
             getSetAllQueueConfigSoundsFromSourceMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.SetAllQueueConfigSoundsFromSourceReq,
                 com.tcn.cloud.api.api.v0alpha.SetAllQueueConfigSoundsFromSourceRes>(
                   this, METHODID_SET_ALL_QUEUE_CONFIG_SOUNDS_FROM_SOURCE)))
           .addMethod(
             getGetUserBlockedMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetUserBlockedRequest,
                 com.tcn.cloud.api.api.v0alpha.GetUserBlockedResponse>(
                   this, METHODID_GET_USER_BLOCKED)))
           .addMethod(
             getUnblockUserMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UnblockUserRequest,
                 com.tcn.cloud.api.api.v0alpha.UnblockUserResponse>(
                   this, METHODID_UNBLOCK_USER)))
           .addMethod(
             getListP3UnMigratedUsersMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListP3UnMigratedUsersRequest,
                 com.tcn.cloud.api.api.v0alpha.ListP3UnMigratedUsersResponse>(
                   this, METHODID_LIST_P3UN_MIGRATED_USERS)))
           .addMethod(
             getMigrateP3UserMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.MigrateP3UserRequest,
                 com.tcn.cloud.api.api.v0alpha.MigrateP3UserResponse>(
                   this, METHODID_MIGRATE_P3USER)))
           .addMethod(
             getUpdateP3UserNameMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateP3UserNameRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateP3UserNameResponse>(
                   this, METHODID_UPDATE_P3USER_NAME)))
           .addMethod(
             getListOwnedUsersMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListOwnedUsersRequest,
                 com.tcn.cloud.api.api.v0alpha.ListOwnedUsersResponse>(
                   this, METHODID_LIST_OWNED_USERS)))
           .addMethod(
             getListOwnedOrgsByOrgIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListOwnedOrgsByOrgIdRequest,
                 com.tcn.cloud.api.api.v0alpha.ListOwnedOrgsByOrgIdResponse>(
                   this, METHODID_LIST_OWNED_ORGS_BY_ORG_ID)))
           .addMethod(
             getListOwnedOrgsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListOwnedOrgsRequest,
                 com.tcn.cloud.api.api.v0alpha.ListOwnedOrgsResponse>(
                   this, METHODID_LIST_OWNED_ORGS)))
           .addMethod(
             getRemoveLoginStrikesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.RemoveLoginStrikesRequest,
                 com.tcn.cloud.api.api.v0alpha.RemoveLoginStrikesResponse>(
                   this, METHODID_REMOVE_LOGIN_STRIKES)))
           .addMethod(
             getRemoveUserLoginStrikesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.RemoveUserLoginStrikesRequest,
                 com.tcn.cloud.api.api.v0alpha.RemoveUserLoginStrikesResponse>(
                   this, METHODID_REMOVE_USER_LOGIN_STRIKES)))
           .addMethod(
             getListLoginHistoryMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListLoginHistoryRequest,
                 com.tcn.cloud.api.api.v0alpha.ListLoginHistoryResponse>(
                   this, METHODID_LIST_LOGIN_HISTORY)))
           .addMethod(
             getUpdateP3UserSidsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateP3UserSidsRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateP3UserSidsResponse>(
                   this, METHODID_UPDATE_P3USER_SIDS)))
           .addMethod(
             getCreateAuthConnectionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CreateAuthConnectionRequest,
                 com.tcn.cloud.api.api.v0alpha.CreateAuthConnectionResponse>(
                   this, METHODID_CREATE_AUTH_CONNECTION)))
           .addMethod(
             getGetAuthConnectionSettingsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetAuthConnectionSettingsRequest,
                 com.tcn.cloud.api.api.v0alpha.GetAuthConnectionSettingsResponse>(
                   this, METHODID_GET_AUTH_CONNECTION_SETTINGS)))
           .addMethod(
             getUpdateAuthConnectionSettingsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateAuthConnectionSettingsRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateAuthConnectionSettingsResponse>(
                   this, METHODID_UPDATE_AUTH_CONNECTION_SETTINGS)))
           .addMethod(
             getDeleteAuthConnectionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.DeleteAuthConnectionRequest,
                 com.tcn.cloud.api.api.v0alpha.DeleteAuthConnectionResponse>(
                   this, METHODID_DELETE_AUTH_CONNECTION)))
           .addMethod(
             getGetUserSubscriptionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetUserSubscriptionRequest,
                 com.tcn.cloud.api.api.v0alpha.GetUserSubscriptionResponse>(
                   this, METHODID_GET_USER_SUBSCRIPTION)))
           .addMethod(
             getGetMyUserSubscriptionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionRequest,
                 com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionResponse>(
                   this, METHODID_GET_MY_USER_SUBSCRIPTION)))
           .addMethod(
             getAddUserSubscriptionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.AddUserSubscriptionRequest,
                 com.tcn.cloud.api.api.v0alpha.AddUserSubscriptionResponse>(
                   this, METHODID_ADD_USER_SUBSCRIPTION)))
           .addMethod(
             getAddMyUserSubscriptionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionRequest,
                 com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionResponse>(
                   this, METHODID_ADD_MY_USER_SUBSCRIPTION)))
           .addMethod(
             getRemoveUserSubscriptionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.RemoveUserSubscriptionRequest,
                 com.tcn.cloud.api.api.v0alpha.RemoveUserSubscriptionResponse>(
                   this, METHODID_REMOVE_USER_SUBSCRIPTION)))
           .addMethod(
             getRemoveMyUserSubscriptionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.RemoveMyUserSubscriptionRequest,
                 com.tcn.cloud.api.api.v0alpha.RemoveMyUserSubscriptionResponse>(
                   this, METHODID_REMOVE_MY_USER_SUBSCRIPTION)))
           .addMethod(
             getUpdateUserSubscriptionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateUserSubscriptionRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateUserSubscriptionResponse>(
                   this, METHODID_UPDATE_USER_SUBSCRIPTION)))
           .addMethod(
             getUpdateMyUserSubscriptionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionResponse>(
                   this, METHODID_UPDATE_MY_USER_SUBSCRIPTION)))
           .addMethod(
             getListUserSubscriptionsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListUserSubscriptionsRequest,
                 com.tcn.cloud.api.api.v0alpha.ListUserSubscriptionsResponse>(
                   this, METHODID_LIST_USER_SUBSCRIPTIONS)))
           .addMethod(
             getListMyUserSubscriptionsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsRequest,
                 com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsResponse>(
                   this, METHODID_LIST_MY_USER_SUBSCRIPTIONS)))
           .addMethod(
             getListOrgSubscriptionsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListOrgSubscriptionsRequest,
                 com.tcn.cloud.api.api.v0alpha.ListOrgSubscriptionsResponse>(
                   this, METHODID_LIST_ORG_SUBSCRIPTIONS)))
           .addMethod(
             getGetSystemEnvironmentDetailsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.GetSystemEnvironmentDetailsRequest,
                 com.tcn.cloud.api.api.v0alpha.GetSystemEnvironmentDetailsResponse>(
                   this, METHODID_GET_SYSTEM_ENVIRONMENT_DETAILS)))
           .addMethod(
             getListAgentStatisticsTemplatesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.ListAgentStatisticsTemplatesRequest,
                 com.tcn.cloud.api.api.v0alpha.ListAgentStatisticsTemplatesResponse>(
                   this, METHODID_LIST_AGENT_STATISTICS_TEMPLATES)))
           .addMethod(
             getCreateAgentStatisticsTemplateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.CreateAgentStatisticsTemplateRequest,
                 com.tcn.cloud.api.api.v0alpha.CreateAgentStatisticsTemplateResponse>(
                   this, METHODID_CREATE_AGENT_STATISTICS_TEMPLATE)))
           .addMethod(
             getUpdateAgentStatisticsTemplateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.UpdateAgentStatisticsTemplateRequest,
                 com.tcn.cloud.api.api.v0alpha.UpdateAgentStatisticsTemplateResponse>(
                   this, METHODID_UPDATE_AGENT_STATISTICS_TEMPLATE)))
           .addMethod(
             getDeleteAgentStatisticsTemplateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v0alpha.DeleteAgentStatisticsTemplateRequest,
                 com.tcn.cloud.api.api.v0alpha.DeleteAgentStatisticsTemplateResponse>(
@@ -10126,15 +10321,19 @@ public final class OrgGrpc {
 
   /**
    */
-  public static final class OrgStub extends io.grpc.stub.AbstractAsyncStub<OrgStub> {
-    private OrgStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class OrgStub extends io.grpc.stub.AbstractStub<OrgStub> {
+    private OrgStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private OrgStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected OrgStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected OrgStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new OrgStub(channel, callOptions);
     }
 
@@ -10145,7 +10344,7 @@ public final class OrgGrpc {
      */
     public void registerOrganization(com.tcn.cloud.api.api.v0alpha.RegisterOrganizationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RegisterOrganizationResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getRegisterOrganizationMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10157,7 +10356,7 @@ public final class OrgGrpc {
      */
     public void convertOrgToManual(com.tcn.cloud.api.api.v0alpha.ConvertOrgToManualRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ConvertOrgToManualResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getConvertOrgToManualMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10168,7 +10367,7 @@ public final class OrgGrpc {
      */
     public void updateOrganization(com.tcn.cloud.api.api.v0alpha.UpdateOrganizationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateOrganizationResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateOrganizationMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10179,7 +10378,7 @@ public final class OrgGrpc {
      */
     public void archiveOrganization(com.tcn.cloud.api.api.v0alpha.ArchiveOrganizationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ArchiveOrganizationResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getArchiveOrganizationMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10190,7 +10389,7 @@ public final class OrgGrpc {
      */
     public void unArchiveOrganization(com.tcn.cloud.api.api.v0alpha.UnArchiveOrganizationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UnArchiveOrganizationResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUnArchiveOrganizationMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10201,7 +10400,7 @@ public final class OrgGrpc {
      */
     public void listArchivedOrganizations(com.tcn.cloud.api.api.v0alpha.ListArchivedOrganizationsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListArchivedOrganizationsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListArchivedOrganizationsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10209,7 +10408,7 @@ public final class OrgGrpc {
      */
     public void getOrganizationProfile(com.tcn.cloud.api.api.v0alpha.GetOrganizationProfileRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetOrganizationProfileResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetOrganizationProfileMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10217,7 +10416,7 @@ public final class OrgGrpc {
      */
     public void getOrganizationProfileById(com.tcn.cloud.api.api.v0alpha.GetOrganizationProfileByIdRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetOrganizationProfileResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetOrganizationProfileByIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10225,7 +10424,7 @@ public final class OrgGrpc {
      */
     public void listOrganizationDescriptions(com.tcn.cloud.api.api.v0alpha.ListOrganizationDescriptionsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListOrganizationDescriptionsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListOrganizationDescriptionsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10233,7 +10432,7 @@ public final class OrgGrpc {
      */
     public void listRegionalOrganizations(com.tcn.cloud.api.api.v0alpha.ListRegionalOrganizationsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListRegionalOrganizationsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListRegionalOrganizationsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10246,7 +10445,7 @@ public final class OrgGrpc {
      */
     public void updateP3OwningOrg(com.tcn.cloud.api.api.v0alpha.UpdateP3OwningOrgRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateP3OwningOrgResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateP3OwningOrgMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10259,7 +10458,7 @@ public final class OrgGrpc {
      */
     public void getP3OwningOrg(com.tcn.cloud.api.api.v0alpha.GetP3OwningOrgRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetP3OwningOrgResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetP3OwningOrgMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10267,7 +10466,7 @@ public final class OrgGrpc {
      */
     public void listOrganizationUserDescriptions(com.tcn.cloud.api.api.v0alpha.ListOrganizationUserDescriptionsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListOrganizationUserDescriptionsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListOrganizationUserDescriptionsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10275,7 +10474,7 @@ public final class OrgGrpc {
      */
     public void adminListUserDescriptions(com.tcn.cloud.api.api.v0alpha.AdminListUserDescriptionsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AdminListUserDescriptionsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+      asyncServerStreamingCall(
           getChannel().newCall(getAdminListUserDescriptionsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10283,7 +10482,7 @@ public final class OrgGrpc {
      */
     public void listUserDescriptions(com.tcn.cloud.api.api.v0alpha.ListUserDescriptionsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListUserDescriptionsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+      asyncServerStreamingCall(
           getChannel().newCall(getListUserDescriptionsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10291,7 +10490,7 @@ public final class OrgGrpc {
      */
     public void getUserDirectory(com.tcn.cloud.api.api.v0alpha.GetUserDirectoryRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetUserDirectoryResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetUserDirectoryMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10302,7 +10501,7 @@ public final class OrgGrpc {
      */
     public void getRegions(com.tcn.cloud.api.api.v0alpha.GetRegionsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetRegionsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetRegionsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10310,7 +10509,7 @@ public final class OrgGrpc {
      */
     public void getMyUserDetails(com.tcn.cloud.api.api.v0alpha.GetMyUserDetailsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UserDetails> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetMyUserDetailsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10318,7 +10517,7 @@ public final class OrgGrpc {
      */
     public void getUserDetails(com.tcn.cloud.api.api.v0alpha.GetUserDetailsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UserDetails> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetUserDetailsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10326,7 +10525,7 @@ public final class OrgGrpc {
      */
     public void adminGetUserDetails(com.tcn.cloud.api.api.v0alpha.AdminGetUserDetailsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UserDetails> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getAdminGetUserDetailsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10334,7 +10533,7 @@ public final class OrgGrpc {
      */
     public void getAgentUsers(com.tcn.cloud.api.api.v0alpha.GetAgentUsersRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetAgentUsersResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetAgentUsersMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10348,7 +10547,7 @@ public final class OrgGrpc {
      */
     public void getAgentSettings(com.tcn.cloud.api.api.v0alpha.GetAgentSettingsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetAgentSettingsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetAgentSettingsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10361,7 +10560,7 @@ public final class OrgGrpc {
      */
     public void getAgentProfileGroup(com.tcn.cloud.api.api.v0alpha.GetAgentProfileGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetAgentProfileGroupResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetAgentProfileGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10374,7 +10573,7 @@ public final class OrgGrpc {
      */
     public void updateAgentProfileGroup(com.tcn.cloud.api.api.v0alpha.UpdateAgentProfileGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateAgentProfileGroupResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateAgentProfileGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10387,7 +10586,7 @@ public final class OrgGrpc {
      */
     public void createAgentProfileGroup(com.tcn.cloud.api.api.v0alpha.CreateAgentProfileGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateAgentProfileGroupResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateAgentProfileGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10400,7 +10599,7 @@ public final class OrgGrpc {
      */
     public void listAgentProfileGroups(com.tcn.cloud.api.api.v0alpha.ListAgentProfileGroupsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAgentProfileGroupsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListAgentProfileGroupsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10413,7 +10612,7 @@ public final class OrgGrpc {
      */
     public void deleteAgentProfileGroup(com.tcn.cloud.api.api.v0alpha.DeleteAgentProfileGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteAgentProfileGroupResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDeleteAgentProfileGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10426,7 +10625,7 @@ public final class OrgGrpc {
      */
     public void assignAgentProfileGroups(com.tcn.cloud.api.api.v0alpha.AssignAgentProfileGroupsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AssignAgentProfileGroupsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getAssignAgentProfileGroupsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10438,7 +10637,7 @@ public final class OrgGrpc {
      */
     public void updateUser(com.tcn.cloud.api.api.v0alpha.UpdateUserRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateUserResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateUserMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10453,7 +10652,7 @@ public final class OrgGrpc {
      */
     public void updateMyUser(com.tcn.cloud.api.api.v0alpha.UpdateMyUserRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateMyUserResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateMyUserMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10465,7 +10664,7 @@ public final class OrgGrpc {
      */
     public void updateUserCallerId(com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateUserCallerIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10478,7 +10677,7 @@ public final class OrgGrpc {
      */
     public void createUser(com.tcn.cloud.api.api.v0alpha.CreateUserRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateUserResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateUserMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10491,7 +10690,7 @@ public final class OrgGrpc {
      */
     public void createUserByOrgId(com.tcn.cloud.api.api.v0alpha.CreateUserByOrgIdRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateUserByOrgIdResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateUserByOrgIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10502,7 +10701,7 @@ public final class OrgGrpc {
      */
     public void createDelegatedUser(com.tcn.cloud.api.api.v0alpha.CreateDelegatedUserRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateDelegatedUserResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateDelegatedUserMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10515,7 +10714,7 @@ public final class OrgGrpc {
      */
     public void updateUserPassword(com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateUserPasswordMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10528,7 +10727,7 @@ public final class OrgGrpc {
      */
     public void updateMyUserPassword(com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateMyUserPasswordMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10541,7 +10740,7 @@ public final class OrgGrpc {
      */
     public void updateUserPasswordByOrgId(com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByOrgIdRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByOrgIdResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateUserPasswordByOrgIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10553,7 +10752,7 @@ public final class OrgGrpc {
      */
     public void resetUserRequirePasswordReset(com.tcn.cloud.api.api.v0alpha.ResetUserRequirePasswordResetRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ResetUserRequirePasswordResetResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getResetUserRequirePasswordResetMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10567,7 +10766,7 @@ public final class OrgGrpc {
      */
     public void getUserPasswordResetLink(com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetUserPasswordResetLinkMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10579,7 +10778,7 @@ public final class OrgGrpc {
      */
     public void getMyUserPasswordResetLink(com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetMyUserPasswordResetLinkMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10592,7 +10791,7 @@ public final class OrgGrpc {
      */
     public void getUserPasswordResetLinkByOrgId(com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByOrgIdRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByOrgIdResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetUserPasswordResetLinkByOrgIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10604,7 +10803,7 @@ public final class OrgGrpc {
      */
     public void getUserEmailVerified(com.tcn.cloud.api.api.v0alpha.GetUserEmailVerifiedRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetUserEmailVerifiedResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetUserEmailVerifiedMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10617,7 +10816,7 @@ public final class OrgGrpc {
      */
     public void getUserEmailVerifiedByOrgId(com.tcn.cloud.api.api.v0alpha.GetUserEmailVerifiedByOrgIdRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetUserEmailVerifiedByOrgIdResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetUserEmailVerifiedByOrgIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10628,7 +10827,7 @@ public final class OrgGrpc {
      */
     public void sendUserVerificationEmailByOrgId(com.tcn.cloud.api.api.v0alpha.SendUserVerificationEmailByOrgIdRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SendUserVerificationEmailByOrgIdResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getSendUserVerificationEmailByOrgIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10639,7 +10838,7 @@ public final class OrgGrpc {
      */
     public void sendUserVerificationEmail(com.tcn.cloud.api.api.v0alpha.SendUserVerificationEmailRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SendUserVerificationEmailResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getSendUserVerificationEmailMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10650,7 +10849,7 @@ public final class OrgGrpc {
      */
     public void manualUserEmailVerificationByOrgId(com.tcn.cloud.api.api.v0alpha.ManualUserEmailVerificationByOrgIdRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ManualUserEmailVerificationByOrgIdResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getManualUserEmailVerificationByOrgIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10661,7 +10860,7 @@ public final class OrgGrpc {
      */
     public void manualUserEmailVerification(com.tcn.cloud.api.api.v0alpha.ManualUserEmailVerificationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ManualUserEmailVerificationResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getManualUserEmailVerificationMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10674,7 +10873,7 @@ public final class OrgGrpc {
      */
     public void getTempUserToken(com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetTempUserTokenMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10687,7 +10886,7 @@ public final class OrgGrpc {
      */
     public void getTempUserTokenByUserId(com.tcn.cloud.api.api.v0alpha.GetTempUserTokenByUserIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetTempUserTokenByUserIdRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetTempUserTokenByUserIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10695,7 +10894,7 @@ public final class OrgGrpc {
      */
     public void getCountriesList(com.tcn.cloud.api.api.v0alpha.GetCountriesListRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetCountriesListResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetCountriesListMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10703,7 +10902,7 @@ public final class OrgGrpc {
      */
     public void getAdminClientPreferences(com.tcn.cloud.api.api.v0alpha.GetAdminClientPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetAdminClientPreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetAdminClientPreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10711,7 +10910,7 @@ public final class OrgGrpc {
      */
     public void updateAdminClientPreferences(com.tcn.cloud.api.api.v0alpha.UpdateAdminClientPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateAdminClientPreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateAdminClientPreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10719,7 +10918,7 @@ public final class OrgGrpc {
      */
     public void getPermissions(com.tcn.cloud.api.api.v0alpha.GetPermissionsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetPermissionsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetPermissionsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10731,7 +10930,7 @@ public final class OrgGrpc {
      */
     public void revokeAccountOwnerPermissionFromUser(com.tcn.cloud.api.api.v0alpha.RevokeAccountOwnerPermissionFromUserRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RevokeAccountOwnerPermissionFromUserResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getRevokeAccountOwnerPermissionFromUserMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10742,7 +10941,7 @@ public final class OrgGrpc {
      */
     public void updateUserDisabled(com.tcn.cloud.api.api.v0alpha.UpdateUserDisabledRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateUserDisabledResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateUserDisabledMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10753,7 +10952,7 @@ public final class OrgGrpc {
      */
     public void updateUserDisabledByOrgId(com.tcn.cloud.api.api.v0alpha.UpdateUserDisabledByOrgIdRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateUserDisabledByOrgIdResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateUserDisabledByOrgIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10766,7 +10965,7 @@ public final class OrgGrpc {
      */
     public void updateBulkUsersDisabled(com.tcn.cloud.api.api.v0alpha.UpdateBulkUsersDisabledRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateBulkUsersDisabledResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateBulkUsersDisabledMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10783,7 +10982,7 @@ public final class OrgGrpc {
      */
     public void getOrgBillingSettingsByOrgId(com.tcn.cloud.api.api.v0alpha.GetOrgBillingSettingsByOrgIdRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetOrgBillingSettingsByOrgIdResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetOrgBillingSettingsByOrgIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10800,7 +10999,7 @@ public final class OrgGrpc {
      */
     public void getOrgBillingSettings(com.tcn.cloud.api.api.v0alpha.GetOrgBillingSettingsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetOrgBillingSettingsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetOrgBillingSettingsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10819,7 +11018,7 @@ public final class OrgGrpc {
      */
     public void setOrgBillingSettings(com.tcn.cloud.api.api.v0alpha.SetOrgBillingSettingsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SetOrgBillingSettingsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getSetOrgBillingSettingsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10837,7 +11036,7 @@ public final class OrgGrpc {
      */
     public void addOrgBillingOverride(com.tcn.cloud.api.api.v0alpha.AddOrgBillingOverrideRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AddOrgBillingOverrideResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getAddOrgBillingOverrideMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10855,7 +11054,7 @@ public final class OrgGrpc {
      */
     public void removeOrgBillingOverride(com.tcn.cloud.api.api.v0alpha.RemoveOrgBillingOverrideRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RemoveOrgBillingOverrideResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getRemoveOrgBillingOverrideMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10868,7 +11067,7 @@ public final class OrgGrpc {
      */
     public void getSystemDefaultBillingRates(com.tcn.cloud.api.api.v0alpha.GetSystemDefaultBillingRatesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetSystemDefaultBillingRatesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetSystemDefaultBillingRatesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10879,7 +11078,7 @@ public final class OrgGrpc {
      */
     public void listPermissionGroupsByOrgId(com.tcn.cloud.api.api.v0alpha.ListPermissionGroupsByOrgIdRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListPermissionGroupsByOrgIdResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListPermissionGroupsByOrgIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10890,7 +11089,7 @@ public final class OrgGrpc {
      */
     public void listPermissionGroups(com.tcn.cloud.api.api.v0alpha.ListPermissionGroupsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListPermissionGroupsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListPermissionGroupsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10901,7 +11100,7 @@ public final class OrgGrpc {
      */
     public void createPermissionGroup(com.tcn.cloud.api.api.v0alpha.CreatePermissionGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreatePermissionGroupResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreatePermissionGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10912,7 +11111,7 @@ public final class OrgGrpc {
      */
     public void updatePermissionGroup(com.tcn.cloud.api.api.v0alpha.UpdatePermissionGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdatePermissionGroupResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdatePermissionGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10923,7 +11122,7 @@ public final class OrgGrpc {
      */
     public void deletePermissionGroup(com.tcn.cloud.api.api.v0alpha.DeletePermissionGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeletePermissionGroupResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDeletePermissionGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10934,7 +11133,7 @@ public final class OrgGrpc {
      */
     public void assignUserToAccountOwnerPermissionGroup(com.tcn.cloud.api.api.v0alpha.AssignUserToAccountOwnerPermissionGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AssignUserToAccountOwnerPermissionGroupResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getAssignUserToAccountOwnerPermissionGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10947,7 +11146,7 @@ public final class OrgGrpc {
      */
     public void assignUserPermissionGroup(com.tcn.cloud.api.api.v0alpha.AssignUserPermissionGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AssignUserPermissionGroupResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getAssignUserPermissionGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10960,7 +11159,7 @@ public final class OrgGrpc {
      */
     public void assignUsersPermissionGroup(com.tcn.cloud.api.api.v0alpha.AssignUsersPermissionGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AssignUsersPermissionGroupResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getAssignUsersPermissionGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10973,7 +11172,7 @@ public final class OrgGrpc {
      */
     public void updateUserNeoPermissionGroups(com.tcn.cloud.api.api.v0alpha.UpdateUserNeoPermissionGroupsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateUserNeoPermissionGroupsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateUserNeoPermissionGroupsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10986,7 +11185,7 @@ public final class OrgGrpc {
      */
     public void revokeUserPermissionGroup(com.tcn.cloud.api.api.v0alpha.RevokeUserPermissionGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RevokeUserPermissionGroupResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getRevokeUserPermissionGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -10999,7 +11198,7 @@ public final class OrgGrpc {
      */
     public void revokeUsersPermissionGroup(com.tcn.cloud.api.api.v0alpha.RevokeUsersPermissionGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RevokeUsersPermissionGroupResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getRevokeUsersPermissionGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11011,7 +11210,7 @@ public final class OrgGrpc {
      */
     public void initDefaultPermissionGroups(com.tcn.cloud.api.api.v0alpha.InitDefaultPermissionGroupsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.InitDefaultPermissionGroupsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getInitDefaultPermissionGroupsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11022,7 +11221,7 @@ public final class OrgGrpc {
      */
     public void addPermissionToAccountOwnerPermissionGroup(com.tcn.cloud.api.api.v0alpha.AddPermissionToAccountOwnerPermissionGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AddPermissionToAccountOwnerPermissionGroupResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getAddPermissionToAccountOwnerPermissionGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11033,7 +11232,7 @@ public final class OrgGrpc {
      */
     public void revokePermissionToAccountOwnerPermissionGroup(com.tcn.cloud.api.api.v0alpha.RevokePermissionToAccountOwnerPermissionGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RevokePermissionToAccountOwnerPermissionGroupResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getRevokePermissionToAccountOwnerPermissionGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11046,7 +11245,7 @@ public final class OrgGrpc {
      */
     public void addPermissionToOrgDefaultGroup(com.tcn.cloud.api.api.v0alpha.AddPermissionToOrgDefaultGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AddPermissionToOrgDefaultGroupResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getAddPermissionToOrgDefaultGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11059,7 +11258,7 @@ public final class OrgGrpc {
      */
     public void removePermissionFromOrgDefaultGroup(com.tcn.cloud.api.api.v0alpha.RemovePermissionFromOrgDefaultGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RemovePermissionFromOrgDefaultGroupResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getRemovePermissionFromOrgDefaultGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11072,7 +11271,7 @@ public final class OrgGrpc {
      */
     public void getOrgDefaultSuperUserGroup(com.tcn.cloud.api.api.v0alpha.GetOrgDefaultSuperUserGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetOrgDefaultSuperUserGroupResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetOrgDefaultSuperUserGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11083,7 +11282,7 @@ public final class OrgGrpc {
      */
     public void listP3PermissionGroupsByOrgId(com.tcn.cloud.api.api.v0alpha.ListP3PermissionGroupsByOrgIdRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListP3PermissionGroupsByOrgIdResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListP3PermissionGroupsByOrgIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11094,7 +11293,7 @@ public final class OrgGrpc {
      */
     public void listP3PermissionGroups(com.tcn.cloud.api.api.v0alpha.ListP3PermissionGroupsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListP3PermissionGroupsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListP3PermissionGroupsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11105,7 +11304,7 @@ public final class OrgGrpc {
      */
     public void addUserRegion(com.tcn.cloud.api.api.v0alpha.AddUserRegionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AddUserRegionResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getAddUserRegionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11116,7 +11315,7 @@ public final class OrgGrpc {
      */
     public void removeUserRegion(com.tcn.cloud.api.api.v0alpha.RemoveUserRegionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RemoveUserRegionResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getRemoveUserRegionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11127,7 +11326,7 @@ public final class OrgGrpc {
      */
     public void createP3PermissionGroup(com.tcn.cloud.api.api.v0alpha.CreateP3PermissionGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateP3PermissionGroupResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateP3PermissionGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11138,7 +11337,7 @@ public final class OrgGrpc {
      */
     public void updateP3PermissionGroupByOrgId(com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupByOrgIdRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupByOrgIdResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateP3PermissionGroupByOrgIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11149,7 +11348,7 @@ public final class OrgGrpc {
      */
     public void updateP3PermissionGroup(com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateP3PermissionGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11160,7 +11359,7 @@ public final class OrgGrpc {
      */
     public void deleteP3PermissionGroup(com.tcn.cloud.api.api.v0alpha.DeleteP3PermissionGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteP3PermissionGroupResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDeleteP3PermissionGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11171,7 +11370,7 @@ public final class OrgGrpc {
      */
     public void assignUsersP3PermissionGroup(com.tcn.cloud.api.api.v0alpha.AssignUsersP3PermissionGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AssignUsersP3PermissionGroupResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getAssignUsersP3PermissionGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11182,7 +11381,7 @@ public final class OrgGrpc {
      */
     public void addLoginToUser(com.tcn.cloud.api.api.v0alpha.AddLoginToUserRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AddLoginToUserResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getAddLoginToUserMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11195,7 +11394,7 @@ public final class OrgGrpc {
      */
     public void revokeUsersP3PermissionGroup(com.tcn.cloud.api.api.v0alpha.RevokeUsersP3PermissionGroupRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RevokeUsersP3PermissionGroupResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getRevokeUsersP3PermissionGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11206,7 +11405,7 @@ public final class OrgGrpc {
      */
     public void getContactPreferences(com.tcn.cloud.api.api.v0alpha.GetContactPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetContactPreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetContactPreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11217,7 +11416,7 @@ public final class OrgGrpc {
      */
     public void updateContactPreferences(com.tcn.cloud.api.api.v0alpha.UpdateContactPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateContactPreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateContactPreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11228,7 +11427,7 @@ public final class OrgGrpc {
      */
     public void getCompliancePreferences(com.tcn.cloud.api.api.v0alpha.GetCompliancePreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetCompliancePreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetCompliancePreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11239,7 +11438,7 @@ public final class OrgGrpc {
      */
     public void updateCompliancePreferences(com.tcn.cloud.api.api.v0alpha.UpdateCompliancePreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateCompliancePreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateCompliancePreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11250,7 +11449,7 @@ public final class OrgGrpc {
      */
     public void getAgentPreferences(com.tcn.cloud.api.api.v0alpha.GetAgentPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetAgentPreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetAgentPreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11261,7 +11460,7 @@ public final class OrgGrpc {
      */
     public void updateAgentPreferences(com.tcn.cloud.api.api.v0alpha.UpdateAgentPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateAgentPreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateAgentPreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11272,7 +11471,7 @@ public final class OrgGrpc {
      */
     public void getOrganizationPreferences(com.tcn.cloud.api.api.v0alpha.GetOrganizationPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetOrganizationPreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetOrganizationPreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11283,7 +11482,7 @@ public final class OrgGrpc {
      */
     public void updateOrganizationPreferences(com.tcn.cloud.api.api.v0alpha.UpdateOrganizationPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateOrganizationPreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateOrganizationPreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11294,7 +11493,7 @@ public final class OrgGrpc {
      */
     public void getSchedulePreferences(com.tcn.cloud.api.api.v0alpha.GetSchedulePreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetSchedulePreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetSchedulePreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11305,7 +11504,7 @@ public final class OrgGrpc {
      */
     public void updateSchedulePreferences(com.tcn.cloud.api.api.v0alpha.UpdateSchedulePreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateSchedulePreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateSchedulePreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11316,7 +11515,7 @@ public final class OrgGrpc {
      */
     public void getBusinessPreferences(com.tcn.cloud.api.api.v0alpha.GetBusinessPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetBusinessPreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetBusinessPreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11327,7 +11526,7 @@ public final class OrgGrpc {
      */
     public void updateBusinessPreferences(com.tcn.cloud.api.api.v0alpha.UpdateBusinessPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateBusinessPreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateBusinessPreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11338,7 +11537,7 @@ public final class OrgGrpc {
      */
     public void getEndOfDayPreferences(com.tcn.cloud.api.api.v0alpha.GetEndOfDayPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetEndOfDayPreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetEndOfDayPreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11349,7 +11548,7 @@ public final class OrgGrpc {
      */
     public void updateEndOfDayPreferences(com.tcn.cloud.api.api.v0alpha.UpdateEndOfDayPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateEndOfDayPreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateEndOfDayPreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11360,7 +11559,7 @@ public final class OrgGrpc {
      */
     public void getReportFilterPreferences(com.tcn.cloud.api.api.v0alpha.GetFilterPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetFilterPreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetReportFilterPreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11371,7 +11570,7 @@ public final class OrgGrpc {
      */
     public void updateReportFilterPreferences(com.tcn.cloud.api.api.v0alpha.UpdateFilterPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateFilterPreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateReportFilterPreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11382,7 +11581,7 @@ public final class OrgGrpc {
      */
     public void getPhonePreferences(com.tcn.cloud.api.api.v0alpha.GetPhonePreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetPhonePreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetPhonePreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11393,7 +11592,7 @@ public final class OrgGrpc {
      */
     public void updatePhonePreferences(com.tcn.cloud.api.api.v0alpha.UpdatePhonePreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdatePhonePreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdatePhonePreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11404,7 +11603,7 @@ public final class OrgGrpc {
      */
     public void getDashboardGeneralPreferences(com.tcn.cloud.api.api.v0alpha.GetDashboardGeneralPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetDashboardGeneralPreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetDashboardGeneralPreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11415,7 +11614,7 @@ public final class OrgGrpc {
      */
     public void updateDashboardGeneralPreferences(com.tcn.cloud.api.api.v0alpha.UpdateDashboardGeneralPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateDashboardGeneralPreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateDashboardGeneralPreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11426,7 +11625,7 @@ public final class OrgGrpc {
      */
     public void getWebhookPreferences(com.tcn.cloud.api.api.v0alpha.GetWebhookPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetWebhookPreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetWebhookPreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11437,7 +11636,7 @@ public final class OrgGrpc {
      */
     public void updateWebhookPreferences(com.tcn.cloud.api.api.v0alpha.UpdateWebhookPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateWebhookPreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateWebhookPreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11448,7 +11647,7 @@ public final class OrgGrpc {
      */
     public void getBroadcastPreferences(com.tcn.cloud.api.api.v0alpha.GetBroadcastPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetBroadcastPreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetBroadcastPreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11459,7 +11658,7 @@ public final class OrgGrpc {
      */
     public void updateBroadcastPreferences(com.tcn.cloud.api.api.v0alpha.UpdateBroadcastPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateBroadcastPreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateBroadcastPreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11470,7 +11669,7 @@ public final class OrgGrpc {
      */
     public void getAuthenticationPreferences(com.tcn.cloud.api.api.v0alpha.GetAuthenticationPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetAuthenticationPreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetAuthenticationPreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11481,7 +11680,7 @@ public final class OrgGrpc {
      */
     public void updateAuthenticationPreferences(com.tcn.cloud.api.api.v0alpha.UpdateAuthenticationPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateAuthenticationPreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateAuthenticationPreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11492,7 +11691,7 @@ public final class OrgGrpc {
      */
     public void getRecordingPreferences(com.tcn.cloud.api.api.v0alpha.GetRecordingPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetRecordingPreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetRecordingPreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11503,7 +11702,7 @@ public final class OrgGrpc {
      */
     public void updateRecordingPreferences(com.tcn.cloud.api.api.v0alpha.UpdateRecordingPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateRecordingPreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateRecordingPreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11514,7 +11713,7 @@ public final class OrgGrpc {
      */
     public void getDashboardQueuePreferences(com.tcn.cloud.api.api.v0alpha.GetDashboardQueuePreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetDashboardQueuePreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetDashboardQueuePreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11525,7 +11724,7 @@ public final class OrgGrpc {
      */
     public void updateDashboardQueuePreferences(com.tcn.cloud.api.api.v0alpha.UpdateDashboardQueuePreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateDashboardQueuePreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateDashboardQueuePreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11536,7 +11735,7 @@ public final class OrgGrpc {
      */
     public void getAgentQuickViewPreferences(com.tcn.cloud.api.api.v0alpha.GetAgentQuickViewPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetAgentQuickViewPreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetAgentQuickViewPreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11547,7 +11746,7 @@ public final class OrgGrpc {
      */
     public void getVoiceAnalyticsPreferences(com.tcn.cloud.api.api.v0alpha.GetVoiceAnalyticsPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetVoiceAnalyticsPreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetVoiceAnalyticsPreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11558,7 +11757,7 @@ public final class OrgGrpc {
      */
     public void updateVoiceAnalyticsPreferences(com.tcn.cloud.api.api.v0alpha.UpdateVoiceAnalyticsPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateVoiceAnalyticsPreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateVoiceAnalyticsPreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11569,7 +11768,7 @@ public final class OrgGrpc {
      */
     public void updateVoiceAnalyticsPreferencesEnabled(com.tcn.cloud.api.api.v0alpha.UpdateVoiceAnalyticsPreferencesEnabledRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateVoiceAnalyticsPreferencesEnabledResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateVoiceAnalyticsPreferencesEnabledMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11580,7 +11779,7 @@ public final class OrgGrpc {
      */
     public void getScorecardsPreferences(com.tcn.cloud.api.api.v0alpha.GetScorecardsPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetScorecardsPreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetScorecardsPreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11591,7 +11790,7 @@ public final class OrgGrpc {
      */
     public void updateScorecardsPreferences(com.tcn.cloud.api.api.v0alpha.UpdateScorecardsPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateScorecardsPreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateScorecardsPreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11602,7 +11801,7 @@ public final class OrgGrpc {
      */
     public void getEmailSmsPreferences(com.tcn.cloud.api.api.v0alpha.GetEmailSmsPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetEmailSmsPreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetEmailSmsPreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11613,7 +11812,7 @@ public final class OrgGrpc {
      */
     public void updateEmailSmsPreferences(com.tcn.cloud.api.api.v0alpha.UpdateEmailSmsPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateEmailSmsPreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateEmailSmsPreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11624,7 +11823,7 @@ public final class OrgGrpc {
      */
     public void editAgentQuickViewPreferences(com.tcn.cloud.api.api.v0alpha.EditAgentQuickViewPreferencesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.EditAgentQuickViewPreferencesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getEditAgentQuickViewPreferencesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11636,7 +11835,7 @@ public final class OrgGrpc {
      */
     public void editBackofficeThemePreference(com.tcn.cloud.api.api.v0alpha.EditBackofficeThemePreferenceRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.EditBackofficeThemePreferenceResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getEditBackofficeThemePreferenceMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11644,7 +11843,7 @@ public final class OrgGrpc {
      */
     public void getBackofficeThemePreference(com.tcn.cloud.api.api.v0alpha.GetBackofficeThemePreferenceRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetBackofficeThemePreferenceResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetBackofficeThemePreferenceMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11655,7 +11854,7 @@ public final class OrgGrpc {
      */
     public void acceptLinkbackRecordingTerms(com.tcn.cloud.api.api.v0alpha.AcceptLinkbackRecordingTermsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AcceptLinkbackRecordingTermsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getAcceptLinkbackRecordingTermsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11666,7 +11865,7 @@ public final class OrgGrpc {
      */
     public void linkbackUpdateBroadcastTemplates(com.tcn.cloud.api.api.v0alpha.LinkbackUpdateBroadcastTemplatesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.LinkbackUpdateBroadcastTemplatesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getLinkbackUpdateBroadcastTemplatesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11678,7 +11877,7 @@ public final class OrgGrpc {
      */
     public void recordEmailUnsubscribeAcknowledgement(com.tcn.cloud.api.api.v0alpha.RecordEmailUnsubscribeAcknowledgementRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RecordEmailUnsubscribeAcknowledgementResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getRecordEmailUnsubscribeAcknowledgementMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11690,7 +11889,7 @@ public final class OrgGrpc {
      */
     public void clearEmailUnsubscribeAcknowledgement(com.tcn.cloud.api.api.v0alpha.ClearEmailUnsubscribeAcknowledgementRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ClearEmailUnsubscribeAcknowledgementResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getClearEmailUnsubscribeAcknowledgementMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11703,7 +11902,7 @@ public final class OrgGrpc {
      */
     public void createWebLinkTemplate(com.tcn.cloud.api.api.v0alpha.CreateWebLinkTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateWebLinkTemplateResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateWebLinkTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11716,7 +11915,7 @@ public final class OrgGrpc {
      */
     public void listWebLinkTemplates(com.tcn.cloud.api.api.v0alpha.ListWebLinkTemplatesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListWebLinkTemplatesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListWebLinkTemplatesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11729,7 +11928,7 @@ public final class OrgGrpc {
      */
     public void getWebLinkTemplate(com.tcn.cloud.api.api.v0alpha.GetWebLinkTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetWebLinkTemplateResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetWebLinkTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11742,7 +11941,7 @@ public final class OrgGrpc {
      */
     public void updateWebLinkTemplate(com.tcn.cloud.api.api.v0alpha.UpdateWebLinkTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateWebLinkTemplateResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateWebLinkTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11755,7 +11954,7 @@ public final class OrgGrpc {
      */
     public void deleteWebLinkTemplate(com.tcn.cloud.api.api.v0alpha.DeleteWebLinkTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteWebLinkTemplateResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDeleteWebLinkTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11770,7 +11969,7 @@ public final class OrgGrpc {
      */
     public void createAgentTriggerTemplate(com.tcn.cloud.api.api.v0alpha.CreateAgentTriggerTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateAgentTriggerTemplateResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateAgentTriggerTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11784,7 +11983,7 @@ public final class OrgGrpc {
      */
     public void listAgentTriggerTemplates(com.tcn.cloud.api.api.v0alpha.ListAgentTriggerTemplatesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAgentTriggerTemplatesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListAgentTriggerTemplatesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11797,7 +11996,7 @@ public final class OrgGrpc {
      */
     public void getAgentTriggerTemplate(com.tcn.cloud.api.api.v0alpha.GetAgentTriggerTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetAgentTriggerTemplateResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetAgentTriggerTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11810,7 +12009,7 @@ public final class OrgGrpc {
      */
     public void updateAgentTriggerTemplate(com.tcn.cloud.api.api.v0alpha.UpdateAgentTriggerTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateAgentTriggerTemplateResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateAgentTriggerTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11823,7 +12022,7 @@ public final class OrgGrpc {
      */
     public void deleteAgentTriggerTemplate(com.tcn.cloud.api.api.v0alpha.DeleteAgentTriggerTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteAgentTriggerTemplateResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDeleteAgentTriggerTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11837,7 +12036,7 @@ public final class OrgGrpc {
      */
     public void createClientInfoDisplayTemplate(com.tcn.cloud.api.api.v0alpha.CreateClientInfoDisplayTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateClientInfoDisplayTemplateResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateClientInfoDisplayTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11850,7 +12049,7 @@ public final class OrgGrpc {
      */
     public void listClientInfoDisplayTemplates(com.tcn.cloud.api.api.v0alpha.ListClientInfoDisplayTemplatesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListClientInfoDisplayTemplatesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListClientInfoDisplayTemplatesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11864,7 +12063,7 @@ public final class OrgGrpc {
      */
     public void updateClientInfoDisplayTemplate(com.tcn.cloud.api.api.v0alpha.UpdateClientInfoDisplayTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateClientInfoDisplayTemplateResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateClientInfoDisplayTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11878,7 +12077,7 @@ public final class OrgGrpc {
      */
     public void deleteClientInfoDisplayTemplate(com.tcn.cloud.api.api.v0alpha.DeleteClientInfoDisplayTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteClientInfoDisplayTemplateResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDeleteClientInfoDisplayTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11892,7 +12091,7 @@ public final class OrgGrpc {
      */
     public void getClientInfoDisplayTemplate(com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetClientInfoDisplayTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11903,7 +12102,7 @@ public final class OrgGrpc {
      */
     public void listAgentPauseCodes(com.tcn.cloud.api.api.v0alpha.ListAgentPauseCodesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAgentPauseCodesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListAgentPauseCodesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11917,7 +12116,7 @@ public final class OrgGrpc {
      */
     public void createAgentPauseCode(com.tcn.cloud.api.api.v0alpha.CreateAgentPauseCodeRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateAgentPauseCodeResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateAgentPauseCodeMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11936,7 +12135,7 @@ public final class OrgGrpc {
      */
     public void updateAgentPauseCode(com.tcn.cloud.api.api.v0alpha.UpdateAgentPauseCodeRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateAgentPauseCodeResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateAgentPauseCodeMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11949,7 +12148,7 @@ public final class OrgGrpc {
      */
     public void deleteAgentPauseCode(com.tcn.cloud.api.api.v0alpha.DeleteAgentPauseCodeRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteAgentPauseCodeResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDeleteAgentPauseCodeMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11964,7 +12163,7 @@ public final class OrgGrpc {
      */
     public void listCustomReportFilters(com.tcn.cloud.api.api.v0alpha.ListCustomReportFiltersRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListCustomReportFiltersResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListCustomReportFiltersMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11980,7 +12179,7 @@ public final class OrgGrpc {
      */
     public void createCustomReportFilter(com.tcn.cloud.api.api.v0alpha.CreateCustomReportFilterRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateCustomReportFilterResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateCustomReportFilterMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -11997,7 +12196,7 @@ public final class OrgGrpc {
      */
     public void updateCustomReportFilter(com.tcn.cloud.api.api.v0alpha.UpdateCustomReportFilterRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateCustomReportFilterResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateCustomReportFilterMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12012,7 +12211,7 @@ public final class OrgGrpc {
      */
     public void deleteCustomReportFilter(com.tcn.cloud.api.api.v0alpha.DeleteCustomReportFilterRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteCustomReportFilterResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDeleteCustomReportFilterMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12027,7 +12226,7 @@ public final class OrgGrpc {
      */
     public void listAgentResponseGroups(com.tcn.cloud.api.api.v0alpha.ListAgentResponseGroupsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAgentResponseGroupsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListAgentResponseGroupsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12042,7 +12241,7 @@ public final class OrgGrpc {
      */
     public void listLastTemplateElements(com.tcn.cloud.api.api.v0alpha.ListLastTemplateElementsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListLastTemplateElementsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListLastTemplateElementsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12056,7 +12255,7 @@ public final class OrgGrpc {
      */
     public void listQueueConfigs(com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListQueueConfigsRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListQueueConfigsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12070,7 +12269,7 @@ public final class OrgGrpc {
      */
     public void listQueueConfigsByOrgId(com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListQueueConfigsByOrgIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12086,7 +12285,7 @@ public final class OrgGrpc {
      */
     public void deleteQueueConfig(com.tcn.cloud.api.api.v0alpha.DeleteQueueConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteQueueConfigRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDeleteQueueConfigMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12104,7 +12303,7 @@ public final class OrgGrpc {
      */
     public void getQueueConfig(com.tcn.cloud.api.api.v0alpha.GetQueueConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetQueueConfigRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetQueueConfigMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12121,7 +12320,7 @@ public final class OrgGrpc {
      */
     public void createQueueConfig(com.tcn.cloud.api.api.v0alpha.CreateQueueConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateQueueConfigRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateQueueConfigMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12139,7 +12338,7 @@ public final class OrgGrpc {
      */
     public void updateQueueConfig(com.tcn.cloud.api.api.v0alpha.UpdateQueueConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateQueueConfigRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateQueueConfigMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12160,7 +12359,7 @@ public final class OrgGrpc {
      */
     public void copyQueueConfig(com.tcn.cloud.api.api.v0alpha.CopyQueueConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CopyQueueConfigRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCopyQueueConfigMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12177,7 +12376,7 @@ public final class OrgGrpc {
      */
     public void getAllQueueConfigSounds(com.tcn.cloud.api.api.v0alpha.GetAllQueueConfigSoundsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetAllQueueConfigSoundsRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetAllQueueConfigSoundsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12197,7 +12396,7 @@ public final class OrgGrpc {
      */
     public void getQueueConfigSound(com.tcn.cloud.api.api.v0alpha.GetQueueConfigSoundReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetQueueConfigSoundRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetQueueConfigSoundMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12219,7 +12418,7 @@ public final class OrgGrpc {
      */
     public void setQueueConfigSound(com.tcn.cloud.api.api.v0alpha.SetQueueConfigSoundReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SetQueueConfigSoundRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getSetQueueConfigSoundMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12243,7 +12442,7 @@ public final class OrgGrpc {
      */
     public void setAllQueueConfigSoundsFromSource(com.tcn.cloud.api.api.v0alpha.SetAllQueueConfigSoundsFromSourceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SetAllQueueConfigSoundsFromSourceRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getSetAllQueueConfigSoundsFromSourceMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12259,7 +12458,7 @@ public final class OrgGrpc {
      */
     public void getUserBlocked(com.tcn.cloud.api.api.v0alpha.GetUserBlockedRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetUserBlockedResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetUserBlockedMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12275,7 +12474,7 @@ public final class OrgGrpc {
      */
     public void unblockUser(com.tcn.cloud.api.api.v0alpha.UnblockUserRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UnblockUserResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUnblockUserMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12288,7 +12487,7 @@ public final class OrgGrpc {
      */
     public void listP3UnMigratedUsers(com.tcn.cloud.api.api.v0alpha.ListP3UnMigratedUsersRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListP3UnMigratedUsersResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListP3UnMigratedUsersMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12301,7 +12500,7 @@ public final class OrgGrpc {
      */
     public void migrateP3User(com.tcn.cloud.api.api.v0alpha.MigrateP3UserRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.MigrateP3UserResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getMigrateP3UserMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12314,7 +12513,7 @@ public final class OrgGrpc {
      */
     public void updateP3UserName(com.tcn.cloud.api.api.v0alpha.UpdateP3UserNameRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateP3UserNameResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateP3UserNameMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12327,7 +12526,7 @@ public final class OrgGrpc {
      */
     public void listOwnedUsers(com.tcn.cloud.api.api.v0alpha.ListOwnedUsersRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListOwnedUsersResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListOwnedUsersMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12338,7 +12537,7 @@ public final class OrgGrpc {
      */
     public void listOwnedOrgsByOrgId(com.tcn.cloud.api.api.v0alpha.ListOwnedOrgsByOrgIdRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListOwnedOrgsByOrgIdResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListOwnedOrgsByOrgIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12349,7 +12548,7 @@ public final class OrgGrpc {
      */
     public void listOwnedOrgs(com.tcn.cloud.api.api.v0alpha.ListOwnedOrgsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListOwnedOrgsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListOwnedOrgsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12362,7 +12561,7 @@ public final class OrgGrpc {
      */
     public void removeLoginStrikes(com.tcn.cloud.api.api.v0alpha.RemoveLoginStrikesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RemoveLoginStrikesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getRemoveLoginStrikesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12375,7 +12574,7 @@ public final class OrgGrpc {
      */
     public void removeUserLoginStrikes(com.tcn.cloud.api.api.v0alpha.RemoveUserLoginStrikesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RemoveUserLoginStrikesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getRemoveUserLoginStrikesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12388,7 +12587,7 @@ public final class OrgGrpc {
      */
     public void listLoginHistory(com.tcn.cloud.api.api.v0alpha.ListLoginHistoryRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListLoginHistoryResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListLoginHistoryMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12401,7 +12600,7 @@ public final class OrgGrpc {
      */
     public void updateP3UserSids(com.tcn.cloud.api.api.v0alpha.UpdateP3UserSidsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateP3UserSidsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateP3UserSidsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12412,7 +12611,7 @@ public final class OrgGrpc {
      */
     public void createAuthConnection(com.tcn.cloud.api.api.v0alpha.CreateAuthConnectionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateAuthConnectionResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateAuthConnectionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12423,7 +12622,7 @@ public final class OrgGrpc {
      */
     public void getAuthConnectionSettings(com.tcn.cloud.api.api.v0alpha.GetAuthConnectionSettingsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetAuthConnectionSettingsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetAuthConnectionSettingsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12434,7 +12633,7 @@ public final class OrgGrpc {
      */
     public void updateAuthConnectionSettings(com.tcn.cloud.api.api.v0alpha.UpdateAuthConnectionSettingsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateAuthConnectionSettingsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateAuthConnectionSettingsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12445,7 +12644,7 @@ public final class OrgGrpc {
      */
     public void deleteAuthConnection(com.tcn.cloud.api.api.v0alpha.DeleteAuthConnectionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteAuthConnectionResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDeleteAuthConnectionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12456,7 +12655,7 @@ public final class OrgGrpc {
      */
     public void getUserSubscription(com.tcn.cloud.api.api.v0alpha.GetUserSubscriptionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetUserSubscriptionResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetUserSubscriptionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12467,7 +12666,7 @@ public final class OrgGrpc {
      */
     public void getMyUserSubscription(com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetMyUserSubscriptionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12478,7 +12677,7 @@ public final class OrgGrpc {
      */
     public void addUserSubscription(com.tcn.cloud.api.api.v0alpha.AddUserSubscriptionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AddUserSubscriptionResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getAddUserSubscriptionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12489,7 +12688,7 @@ public final class OrgGrpc {
      */
     public void addMyUserSubscription(com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getAddMyUserSubscriptionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12500,7 +12699,7 @@ public final class OrgGrpc {
      */
     public void removeUserSubscription(com.tcn.cloud.api.api.v0alpha.RemoveUserSubscriptionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RemoveUserSubscriptionResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getRemoveUserSubscriptionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12511,7 +12710,7 @@ public final class OrgGrpc {
      */
     public void removeMyUserSubscription(com.tcn.cloud.api.api.v0alpha.RemoveMyUserSubscriptionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RemoveMyUserSubscriptionResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getRemoveMyUserSubscriptionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12522,7 +12721,7 @@ public final class OrgGrpc {
      */
     public void updateUserSubscription(com.tcn.cloud.api.api.v0alpha.UpdateUserSubscriptionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateUserSubscriptionResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateUserSubscriptionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12533,7 +12732,7 @@ public final class OrgGrpc {
      */
     public void updateMyUserSubscription(com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateMyUserSubscriptionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12544,7 +12743,7 @@ public final class OrgGrpc {
      */
     public void listUserSubscriptions(com.tcn.cloud.api.api.v0alpha.ListUserSubscriptionsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListUserSubscriptionsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListUserSubscriptionsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12555,7 +12754,7 @@ public final class OrgGrpc {
      */
     public void listMyUserSubscriptions(com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListMyUserSubscriptionsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12568,7 +12767,7 @@ public final class OrgGrpc {
      */
     public void listOrgSubscriptions(com.tcn.cloud.api.api.v0alpha.ListOrgSubscriptionsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListOrgSubscriptionsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListOrgSubscriptionsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12581,7 +12780,7 @@ public final class OrgGrpc {
      */
     public void getSystemEnvironmentDetails(com.tcn.cloud.api.api.v0alpha.GetSystemEnvironmentDetailsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetSystemEnvironmentDetailsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetSystemEnvironmentDetailsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12596,7 +12795,7 @@ public final class OrgGrpc {
      */
     public void listAgentStatisticsTemplates(com.tcn.cloud.api.api.v0alpha.ListAgentStatisticsTemplatesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAgentStatisticsTemplatesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getListAgentStatisticsTemplatesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12611,7 +12810,7 @@ public final class OrgGrpc {
      */
     public void createAgentStatisticsTemplate(com.tcn.cloud.api.api.v0alpha.CreateAgentStatisticsTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateAgentStatisticsTemplateResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getCreateAgentStatisticsTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12626,7 +12825,7 @@ public final class OrgGrpc {
      */
     public void updateAgentStatisticsTemplate(com.tcn.cloud.api.api.v0alpha.UpdateAgentStatisticsTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateAgentStatisticsTemplateResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getUpdateAgentStatisticsTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -12641,22 +12840,26 @@ public final class OrgGrpc {
      */
     public void deleteAgentStatisticsTemplate(com.tcn.cloud.api.api.v0alpha.DeleteAgentStatisticsTemplateRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteAgentStatisticsTemplateResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getDeleteAgentStatisticsTemplateMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
    */
-  public static final class OrgBlockingStub extends io.grpc.stub.AbstractBlockingStub<OrgBlockingStub> {
-    private OrgBlockingStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class OrgBlockingStub extends io.grpc.stub.AbstractStub<OrgBlockingStub> {
+    private OrgBlockingStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private OrgBlockingStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected OrgBlockingStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected OrgBlockingStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new OrgBlockingStub(channel, callOptions);
     }
 
@@ -12666,7 +12869,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.RegisterOrganizationResponse registerOrganization(com.tcn.cloud.api.api.v0alpha.RegisterOrganizationRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getRegisterOrganizationMethod(), getCallOptions(), request);
     }
 
@@ -12677,7 +12880,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ConvertOrgToManualResponse convertOrgToManual(com.tcn.cloud.api.api.v0alpha.ConvertOrgToManualRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getConvertOrgToManualMethod(), getCallOptions(), request);
     }
 
@@ -12687,7 +12890,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateOrganizationResponse updateOrganization(com.tcn.cloud.api.api.v0alpha.UpdateOrganizationRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateOrganizationMethod(), getCallOptions(), request);
     }
 
@@ -12697,7 +12900,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ArchiveOrganizationResponse archiveOrganization(com.tcn.cloud.api.api.v0alpha.ArchiveOrganizationRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getArchiveOrganizationMethod(), getCallOptions(), request);
     }
 
@@ -12707,7 +12910,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UnArchiveOrganizationResponse unArchiveOrganization(com.tcn.cloud.api.api.v0alpha.UnArchiveOrganizationRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUnArchiveOrganizationMethod(), getCallOptions(), request);
     }
 
@@ -12717,35 +12920,35 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListArchivedOrganizationsResponse listArchivedOrganizations(com.tcn.cloud.api.api.v0alpha.ListArchivedOrganizationsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListArchivedOrganizationsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.GetOrganizationProfileResponse getOrganizationProfile(com.tcn.cloud.api.api.v0alpha.GetOrganizationProfileRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetOrganizationProfileMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.GetOrganizationProfileResponse getOrganizationProfileById(com.tcn.cloud.api.api.v0alpha.GetOrganizationProfileByIdRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetOrganizationProfileByIdMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.ListOrganizationDescriptionsResponse listOrganizationDescriptions(com.tcn.cloud.api.api.v0alpha.ListOrganizationDescriptionsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListOrganizationDescriptionsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.ListRegionalOrganizationsResponse listRegionalOrganizations(com.tcn.cloud.api.api.v0alpha.ListRegionalOrganizationsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListRegionalOrganizationsMethod(), getCallOptions(), request);
     }
 
@@ -12757,7 +12960,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateP3OwningOrgResponse updateP3OwningOrg(com.tcn.cloud.api.api.v0alpha.UpdateP3OwningOrgRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateP3OwningOrgMethod(), getCallOptions(), request);
     }
 
@@ -12769,14 +12972,14 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetP3OwningOrgResponse getP3OwningOrg(com.tcn.cloud.api.api.v0alpha.GetP3OwningOrgRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetP3OwningOrgMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.ListOrganizationUserDescriptionsResponse listOrganizationUserDescriptions(com.tcn.cloud.api.api.v0alpha.ListOrganizationUserDescriptionsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListOrganizationUserDescriptionsMethod(), getCallOptions(), request);
     }
 
@@ -12784,7 +12987,7 @@ public final class OrgGrpc {
      */
     public java.util.Iterator<com.tcn.cloud.api.api.v0alpha.AdminListUserDescriptionsResponse> adminListUserDescriptions(
         com.tcn.cloud.api.api.v0alpha.AdminListUserDescriptionsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+      return blockingServerStreamingCall(
           getChannel(), getAdminListUserDescriptionsMethod(), getCallOptions(), request);
     }
 
@@ -12792,14 +12995,14 @@ public final class OrgGrpc {
      */
     public java.util.Iterator<com.tcn.cloud.api.api.v0alpha.ListUserDescriptionsResponse> listUserDescriptions(
         com.tcn.cloud.api.api.v0alpha.ListUserDescriptionsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+      return blockingServerStreamingCall(
           getChannel(), getListUserDescriptionsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.GetUserDirectoryResponse getUserDirectory(com.tcn.cloud.api.api.v0alpha.GetUserDirectoryRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetUserDirectoryMethod(), getCallOptions(), request);
     }
 
@@ -12809,35 +13012,35 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetRegionsResponse getRegions(com.tcn.cloud.api.api.v0alpha.GetRegionsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetRegionsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.UserDetails getMyUserDetails(com.tcn.cloud.api.api.v0alpha.GetMyUserDetailsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetMyUserDetailsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.UserDetails getUserDetails(com.tcn.cloud.api.api.v0alpha.GetUserDetailsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetUserDetailsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.UserDetails adminGetUserDetails(com.tcn.cloud.api.api.v0alpha.AdminGetUserDetailsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getAdminGetUserDetailsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.GetAgentUsersResponse getAgentUsers(com.tcn.cloud.api.api.v0alpha.GetAgentUsersRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetAgentUsersMethod(), getCallOptions(), request);
     }
 
@@ -12850,7 +13053,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetAgentSettingsResponse getAgentSettings(com.tcn.cloud.api.api.v0alpha.GetAgentSettingsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetAgentSettingsMethod(), getCallOptions(), request);
     }
 
@@ -12862,7 +13065,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetAgentProfileGroupResponse getAgentProfileGroup(com.tcn.cloud.api.api.v0alpha.GetAgentProfileGroupRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetAgentProfileGroupMethod(), getCallOptions(), request);
     }
 
@@ -12874,7 +13077,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateAgentProfileGroupResponse updateAgentProfileGroup(com.tcn.cloud.api.api.v0alpha.UpdateAgentProfileGroupRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateAgentProfileGroupMethod(), getCallOptions(), request);
     }
 
@@ -12886,7 +13089,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateAgentProfileGroupResponse createAgentProfileGroup(com.tcn.cloud.api.api.v0alpha.CreateAgentProfileGroupRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateAgentProfileGroupMethod(), getCallOptions(), request);
     }
 
@@ -12898,7 +13101,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListAgentProfileGroupsResponse listAgentProfileGroups(com.tcn.cloud.api.api.v0alpha.ListAgentProfileGroupsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListAgentProfileGroupsMethod(), getCallOptions(), request);
     }
 
@@ -12910,7 +13113,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.DeleteAgentProfileGroupResponse deleteAgentProfileGroup(com.tcn.cloud.api.api.v0alpha.DeleteAgentProfileGroupRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDeleteAgentProfileGroupMethod(), getCallOptions(), request);
     }
 
@@ -12922,7 +13125,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.AssignAgentProfileGroupsResponse assignAgentProfileGroups(com.tcn.cloud.api.api.v0alpha.AssignAgentProfileGroupsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getAssignAgentProfileGroupsMethod(), getCallOptions(), request);
     }
 
@@ -12933,7 +13136,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateUserResponse updateUser(com.tcn.cloud.api.api.v0alpha.UpdateUserRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateUserMethod(), getCallOptions(), request);
     }
 
@@ -12947,7 +13150,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateMyUserResponse updateMyUser(com.tcn.cloud.api.api.v0alpha.UpdateMyUserRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateMyUserMethod(), getCallOptions(), request);
     }
 
@@ -12958,7 +13161,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse updateUserCallerId(com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateUserCallerIdMethod(), getCallOptions(), request);
     }
 
@@ -12970,7 +13173,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateUserResponse createUser(com.tcn.cloud.api.api.v0alpha.CreateUserRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateUserMethod(), getCallOptions(), request);
     }
 
@@ -12982,7 +13185,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateUserByOrgIdResponse createUserByOrgId(com.tcn.cloud.api.api.v0alpha.CreateUserByOrgIdRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateUserByOrgIdMethod(), getCallOptions(), request);
     }
 
@@ -12992,7 +13195,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateDelegatedUserResponse createDelegatedUser(com.tcn.cloud.api.api.v0alpha.CreateDelegatedUserRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateDelegatedUserMethod(), getCallOptions(), request);
     }
 
@@ -13004,7 +13207,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordResponse updateUserPassword(com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateUserPasswordMethod(), getCallOptions(), request);
     }
 
@@ -13016,7 +13219,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse updateMyUserPassword(com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateMyUserPasswordMethod(), getCallOptions(), request);
     }
 
@@ -13028,7 +13231,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByOrgIdResponse updateUserPasswordByOrgId(com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByOrgIdRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateUserPasswordByOrgIdMethod(), getCallOptions(), request);
     }
 
@@ -13039,7 +13242,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ResetUserRequirePasswordResetResponse resetUserRequirePasswordReset(com.tcn.cloud.api.api.v0alpha.ResetUserRequirePasswordResetRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getResetUserRequirePasswordResetMethod(), getCallOptions(), request);
     }
 
@@ -13052,7 +13255,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkResponse getUserPasswordResetLink(com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetUserPasswordResetLinkMethod(), getCallOptions(), request);
     }
 
@@ -13063,7 +13266,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkResponse getMyUserPasswordResetLink(com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetMyUserPasswordResetLinkMethod(), getCallOptions(), request);
     }
 
@@ -13075,7 +13278,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByOrgIdResponse getUserPasswordResetLinkByOrgId(com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByOrgIdRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetUserPasswordResetLinkByOrgIdMethod(), getCallOptions(), request);
     }
 
@@ -13086,7 +13289,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetUserEmailVerifiedResponse getUserEmailVerified(com.tcn.cloud.api.api.v0alpha.GetUserEmailVerifiedRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetUserEmailVerifiedMethod(), getCallOptions(), request);
     }
 
@@ -13098,7 +13301,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetUserEmailVerifiedByOrgIdResponse getUserEmailVerifiedByOrgId(com.tcn.cloud.api.api.v0alpha.GetUserEmailVerifiedByOrgIdRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetUserEmailVerifiedByOrgIdMethod(), getCallOptions(), request);
     }
 
@@ -13108,7 +13311,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.SendUserVerificationEmailByOrgIdResponse sendUserVerificationEmailByOrgId(com.tcn.cloud.api.api.v0alpha.SendUserVerificationEmailByOrgIdRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getSendUserVerificationEmailByOrgIdMethod(), getCallOptions(), request);
     }
 
@@ -13118,7 +13321,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.SendUserVerificationEmailResponse sendUserVerificationEmail(com.tcn.cloud.api.api.v0alpha.SendUserVerificationEmailRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getSendUserVerificationEmailMethod(), getCallOptions(), request);
     }
 
@@ -13128,7 +13331,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ManualUserEmailVerificationByOrgIdResponse manualUserEmailVerificationByOrgId(com.tcn.cloud.api.api.v0alpha.ManualUserEmailVerificationByOrgIdRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getManualUserEmailVerificationByOrgIdMethod(), getCallOptions(), request);
     }
 
@@ -13138,7 +13341,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ManualUserEmailVerificationResponse manualUserEmailVerification(com.tcn.cloud.api.api.v0alpha.ManualUserEmailVerificationRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getManualUserEmailVerificationMethod(), getCallOptions(), request);
     }
 
@@ -13150,7 +13353,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes getTempUserToken(com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetTempUserTokenMethod(), getCallOptions(), request);
     }
 
@@ -13162,35 +13365,35 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetTempUserTokenByUserIdRes getTempUserTokenByUserId(com.tcn.cloud.api.api.v0alpha.GetTempUserTokenByUserIdReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetTempUserTokenByUserIdMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.GetCountriesListResponse getCountriesList(com.tcn.cloud.api.api.v0alpha.GetCountriesListRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetCountriesListMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.GetAdminClientPreferencesResponse getAdminClientPreferences(com.tcn.cloud.api.api.v0alpha.GetAdminClientPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetAdminClientPreferencesMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateAdminClientPreferencesResponse updateAdminClientPreferences(com.tcn.cloud.api.api.v0alpha.UpdateAdminClientPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateAdminClientPreferencesMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.GetPermissionsResponse getPermissions(com.tcn.cloud.api.api.v0alpha.GetPermissionsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetPermissionsMethod(), getCallOptions(), request);
     }
 
@@ -13201,7 +13404,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.RevokeAccountOwnerPermissionFromUserResponse revokeAccountOwnerPermissionFromUser(com.tcn.cloud.api.api.v0alpha.RevokeAccountOwnerPermissionFromUserRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getRevokeAccountOwnerPermissionFromUserMethod(), getCallOptions(), request);
     }
 
@@ -13211,7 +13414,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateUserDisabledResponse updateUserDisabled(com.tcn.cloud.api.api.v0alpha.UpdateUserDisabledRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateUserDisabledMethod(), getCallOptions(), request);
     }
 
@@ -13221,7 +13424,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateUserDisabledByOrgIdResponse updateUserDisabledByOrgId(com.tcn.cloud.api.api.v0alpha.UpdateUserDisabledByOrgIdRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateUserDisabledByOrgIdMethod(), getCallOptions(), request);
     }
 
@@ -13233,7 +13436,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateBulkUsersDisabledResponse updateBulkUsersDisabled(com.tcn.cloud.api.api.v0alpha.UpdateBulkUsersDisabledRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateBulkUsersDisabledMethod(), getCallOptions(), request);
     }
 
@@ -13249,7 +13452,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetOrgBillingSettingsByOrgIdResponse getOrgBillingSettingsByOrgId(com.tcn.cloud.api.api.v0alpha.GetOrgBillingSettingsByOrgIdRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetOrgBillingSettingsByOrgIdMethod(), getCallOptions(), request);
     }
 
@@ -13265,7 +13468,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetOrgBillingSettingsResponse getOrgBillingSettings(com.tcn.cloud.api.api.v0alpha.GetOrgBillingSettingsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetOrgBillingSettingsMethod(), getCallOptions(), request);
     }
 
@@ -13283,7 +13486,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.SetOrgBillingSettingsResponse setOrgBillingSettings(com.tcn.cloud.api.api.v0alpha.SetOrgBillingSettingsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getSetOrgBillingSettingsMethod(), getCallOptions(), request);
     }
 
@@ -13300,7 +13503,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.AddOrgBillingOverrideResponse addOrgBillingOverride(com.tcn.cloud.api.api.v0alpha.AddOrgBillingOverrideRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getAddOrgBillingOverrideMethod(), getCallOptions(), request);
     }
 
@@ -13317,7 +13520,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.RemoveOrgBillingOverrideResponse removeOrgBillingOverride(com.tcn.cloud.api.api.v0alpha.RemoveOrgBillingOverrideRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getRemoveOrgBillingOverrideMethod(), getCallOptions(), request);
     }
 
@@ -13329,7 +13532,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetSystemDefaultBillingRatesResponse getSystemDefaultBillingRates(com.tcn.cloud.api.api.v0alpha.GetSystemDefaultBillingRatesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetSystemDefaultBillingRatesMethod(), getCallOptions(), request);
     }
 
@@ -13339,7 +13542,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListPermissionGroupsByOrgIdResponse listPermissionGroupsByOrgId(com.tcn.cloud.api.api.v0alpha.ListPermissionGroupsByOrgIdRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListPermissionGroupsByOrgIdMethod(), getCallOptions(), request);
     }
 
@@ -13349,7 +13552,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListPermissionGroupsResponse listPermissionGroups(com.tcn.cloud.api.api.v0alpha.ListPermissionGroupsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListPermissionGroupsMethod(), getCallOptions(), request);
     }
 
@@ -13359,7 +13562,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreatePermissionGroupResponse createPermissionGroup(com.tcn.cloud.api.api.v0alpha.CreatePermissionGroupRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreatePermissionGroupMethod(), getCallOptions(), request);
     }
 
@@ -13369,7 +13572,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdatePermissionGroupResponse updatePermissionGroup(com.tcn.cloud.api.api.v0alpha.UpdatePermissionGroupRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdatePermissionGroupMethod(), getCallOptions(), request);
     }
 
@@ -13379,7 +13582,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.DeletePermissionGroupResponse deletePermissionGroup(com.tcn.cloud.api.api.v0alpha.DeletePermissionGroupRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDeletePermissionGroupMethod(), getCallOptions(), request);
     }
 
@@ -13389,7 +13592,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.AssignUserToAccountOwnerPermissionGroupResponse assignUserToAccountOwnerPermissionGroup(com.tcn.cloud.api.api.v0alpha.AssignUserToAccountOwnerPermissionGroupRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getAssignUserToAccountOwnerPermissionGroupMethod(), getCallOptions(), request);
     }
 
@@ -13401,7 +13604,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.AssignUserPermissionGroupResponse assignUserPermissionGroup(com.tcn.cloud.api.api.v0alpha.AssignUserPermissionGroupRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getAssignUserPermissionGroupMethod(), getCallOptions(), request);
     }
 
@@ -13413,7 +13616,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.AssignUsersPermissionGroupResponse assignUsersPermissionGroup(com.tcn.cloud.api.api.v0alpha.AssignUsersPermissionGroupRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getAssignUsersPermissionGroupMethod(), getCallOptions(), request);
     }
 
@@ -13425,7 +13628,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateUserNeoPermissionGroupsResponse updateUserNeoPermissionGroups(com.tcn.cloud.api.api.v0alpha.UpdateUserNeoPermissionGroupsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateUserNeoPermissionGroupsMethod(), getCallOptions(), request);
     }
 
@@ -13437,7 +13640,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.RevokeUserPermissionGroupResponse revokeUserPermissionGroup(com.tcn.cloud.api.api.v0alpha.RevokeUserPermissionGroupRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getRevokeUserPermissionGroupMethod(), getCallOptions(), request);
     }
 
@@ -13449,7 +13652,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.RevokeUsersPermissionGroupResponse revokeUsersPermissionGroup(com.tcn.cloud.api.api.v0alpha.RevokeUsersPermissionGroupRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getRevokeUsersPermissionGroupMethod(), getCallOptions(), request);
     }
 
@@ -13460,7 +13663,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.InitDefaultPermissionGroupsResponse initDefaultPermissionGroups(com.tcn.cloud.api.api.v0alpha.InitDefaultPermissionGroupsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getInitDefaultPermissionGroupsMethod(), getCallOptions(), request);
     }
 
@@ -13470,7 +13673,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.AddPermissionToAccountOwnerPermissionGroupResponse addPermissionToAccountOwnerPermissionGroup(com.tcn.cloud.api.api.v0alpha.AddPermissionToAccountOwnerPermissionGroupRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getAddPermissionToAccountOwnerPermissionGroupMethod(), getCallOptions(), request);
     }
 
@@ -13480,7 +13683,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.RevokePermissionToAccountOwnerPermissionGroupResponse revokePermissionToAccountOwnerPermissionGroup(com.tcn.cloud.api.api.v0alpha.RevokePermissionToAccountOwnerPermissionGroupRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getRevokePermissionToAccountOwnerPermissionGroupMethod(), getCallOptions(), request);
     }
 
@@ -13492,7 +13695,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.AddPermissionToOrgDefaultGroupResponse addPermissionToOrgDefaultGroup(com.tcn.cloud.api.api.v0alpha.AddPermissionToOrgDefaultGroupRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getAddPermissionToOrgDefaultGroupMethod(), getCallOptions(), request);
     }
 
@@ -13504,7 +13707,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.RemovePermissionFromOrgDefaultGroupResponse removePermissionFromOrgDefaultGroup(com.tcn.cloud.api.api.v0alpha.RemovePermissionFromOrgDefaultGroupRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getRemovePermissionFromOrgDefaultGroupMethod(), getCallOptions(), request);
     }
 
@@ -13516,7 +13719,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetOrgDefaultSuperUserGroupResponse getOrgDefaultSuperUserGroup(com.tcn.cloud.api.api.v0alpha.GetOrgDefaultSuperUserGroupRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetOrgDefaultSuperUserGroupMethod(), getCallOptions(), request);
     }
 
@@ -13526,7 +13729,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListP3PermissionGroupsByOrgIdResponse listP3PermissionGroupsByOrgId(com.tcn.cloud.api.api.v0alpha.ListP3PermissionGroupsByOrgIdRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListP3PermissionGroupsByOrgIdMethod(), getCallOptions(), request);
     }
 
@@ -13536,7 +13739,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListP3PermissionGroupsResponse listP3PermissionGroups(com.tcn.cloud.api.api.v0alpha.ListP3PermissionGroupsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListP3PermissionGroupsMethod(), getCallOptions(), request);
     }
 
@@ -13546,7 +13749,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.AddUserRegionResponse addUserRegion(com.tcn.cloud.api.api.v0alpha.AddUserRegionRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getAddUserRegionMethod(), getCallOptions(), request);
     }
 
@@ -13556,7 +13759,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.RemoveUserRegionResponse removeUserRegion(com.tcn.cloud.api.api.v0alpha.RemoveUserRegionRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getRemoveUserRegionMethod(), getCallOptions(), request);
     }
 
@@ -13566,7 +13769,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateP3PermissionGroupResponse createP3PermissionGroup(com.tcn.cloud.api.api.v0alpha.CreateP3PermissionGroupRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateP3PermissionGroupMethod(), getCallOptions(), request);
     }
 
@@ -13576,7 +13779,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupByOrgIdResponse updateP3PermissionGroupByOrgId(com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupByOrgIdRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateP3PermissionGroupByOrgIdMethod(), getCallOptions(), request);
     }
 
@@ -13586,7 +13789,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupResponse updateP3PermissionGroup(com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateP3PermissionGroupMethod(), getCallOptions(), request);
     }
 
@@ -13596,7 +13799,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.DeleteP3PermissionGroupResponse deleteP3PermissionGroup(com.tcn.cloud.api.api.v0alpha.DeleteP3PermissionGroupRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDeleteP3PermissionGroupMethod(), getCallOptions(), request);
     }
 
@@ -13606,7 +13809,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.AssignUsersP3PermissionGroupResponse assignUsersP3PermissionGroup(com.tcn.cloud.api.api.v0alpha.AssignUsersP3PermissionGroupRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getAssignUsersP3PermissionGroupMethod(), getCallOptions(), request);
     }
 
@@ -13616,7 +13819,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.AddLoginToUserResponse addLoginToUser(com.tcn.cloud.api.api.v0alpha.AddLoginToUserRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getAddLoginToUserMethod(), getCallOptions(), request);
     }
 
@@ -13628,7 +13831,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.RevokeUsersP3PermissionGroupResponse revokeUsersP3PermissionGroup(com.tcn.cloud.api.api.v0alpha.RevokeUsersP3PermissionGroupRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getRevokeUsersP3PermissionGroupMethod(), getCallOptions(), request);
     }
 
@@ -13638,7 +13841,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetContactPreferencesResponse getContactPreferences(com.tcn.cloud.api.api.v0alpha.GetContactPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetContactPreferencesMethod(), getCallOptions(), request);
     }
 
@@ -13648,7 +13851,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateContactPreferencesResponse updateContactPreferences(com.tcn.cloud.api.api.v0alpha.UpdateContactPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateContactPreferencesMethod(), getCallOptions(), request);
     }
 
@@ -13658,7 +13861,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetCompliancePreferencesResponse getCompliancePreferences(com.tcn.cloud.api.api.v0alpha.GetCompliancePreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetCompliancePreferencesMethod(), getCallOptions(), request);
     }
 
@@ -13668,7 +13871,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateCompliancePreferencesResponse updateCompliancePreferences(com.tcn.cloud.api.api.v0alpha.UpdateCompliancePreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateCompliancePreferencesMethod(), getCallOptions(), request);
     }
 
@@ -13678,7 +13881,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetAgentPreferencesResponse getAgentPreferences(com.tcn.cloud.api.api.v0alpha.GetAgentPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetAgentPreferencesMethod(), getCallOptions(), request);
     }
 
@@ -13688,7 +13891,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateAgentPreferencesResponse updateAgentPreferences(com.tcn.cloud.api.api.v0alpha.UpdateAgentPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateAgentPreferencesMethod(), getCallOptions(), request);
     }
 
@@ -13698,7 +13901,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetOrganizationPreferencesResponse getOrganizationPreferences(com.tcn.cloud.api.api.v0alpha.GetOrganizationPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetOrganizationPreferencesMethod(), getCallOptions(), request);
     }
 
@@ -13708,7 +13911,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateOrganizationPreferencesResponse updateOrganizationPreferences(com.tcn.cloud.api.api.v0alpha.UpdateOrganizationPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateOrganizationPreferencesMethod(), getCallOptions(), request);
     }
 
@@ -13718,7 +13921,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetSchedulePreferencesResponse getSchedulePreferences(com.tcn.cloud.api.api.v0alpha.GetSchedulePreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetSchedulePreferencesMethod(), getCallOptions(), request);
     }
 
@@ -13728,7 +13931,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateSchedulePreferencesResponse updateSchedulePreferences(com.tcn.cloud.api.api.v0alpha.UpdateSchedulePreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateSchedulePreferencesMethod(), getCallOptions(), request);
     }
 
@@ -13738,7 +13941,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetBusinessPreferencesResponse getBusinessPreferences(com.tcn.cloud.api.api.v0alpha.GetBusinessPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetBusinessPreferencesMethod(), getCallOptions(), request);
     }
 
@@ -13748,7 +13951,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateBusinessPreferencesResponse updateBusinessPreferences(com.tcn.cloud.api.api.v0alpha.UpdateBusinessPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateBusinessPreferencesMethod(), getCallOptions(), request);
     }
 
@@ -13758,7 +13961,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetEndOfDayPreferencesResponse getEndOfDayPreferences(com.tcn.cloud.api.api.v0alpha.GetEndOfDayPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetEndOfDayPreferencesMethod(), getCallOptions(), request);
     }
 
@@ -13768,7 +13971,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateEndOfDayPreferencesResponse updateEndOfDayPreferences(com.tcn.cloud.api.api.v0alpha.UpdateEndOfDayPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateEndOfDayPreferencesMethod(), getCallOptions(), request);
     }
 
@@ -13778,7 +13981,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetFilterPreferencesResponse getReportFilterPreferences(com.tcn.cloud.api.api.v0alpha.GetFilterPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetReportFilterPreferencesMethod(), getCallOptions(), request);
     }
 
@@ -13788,7 +13991,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateFilterPreferencesResponse updateReportFilterPreferences(com.tcn.cloud.api.api.v0alpha.UpdateFilterPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateReportFilterPreferencesMethod(), getCallOptions(), request);
     }
 
@@ -13798,7 +14001,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetPhonePreferencesResponse getPhonePreferences(com.tcn.cloud.api.api.v0alpha.GetPhonePreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetPhonePreferencesMethod(), getCallOptions(), request);
     }
 
@@ -13808,7 +14011,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdatePhonePreferencesResponse updatePhonePreferences(com.tcn.cloud.api.api.v0alpha.UpdatePhonePreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdatePhonePreferencesMethod(), getCallOptions(), request);
     }
 
@@ -13818,7 +14021,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetDashboardGeneralPreferencesResponse getDashboardGeneralPreferences(com.tcn.cloud.api.api.v0alpha.GetDashboardGeneralPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetDashboardGeneralPreferencesMethod(), getCallOptions(), request);
     }
 
@@ -13828,7 +14031,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateDashboardGeneralPreferencesResponse updateDashboardGeneralPreferences(com.tcn.cloud.api.api.v0alpha.UpdateDashboardGeneralPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateDashboardGeneralPreferencesMethod(), getCallOptions(), request);
     }
 
@@ -13838,7 +14041,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetWebhookPreferencesResponse getWebhookPreferences(com.tcn.cloud.api.api.v0alpha.GetWebhookPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetWebhookPreferencesMethod(), getCallOptions(), request);
     }
 
@@ -13848,7 +14051,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateWebhookPreferencesResponse updateWebhookPreferences(com.tcn.cloud.api.api.v0alpha.UpdateWebhookPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateWebhookPreferencesMethod(), getCallOptions(), request);
     }
 
@@ -13858,7 +14061,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetBroadcastPreferencesResponse getBroadcastPreferences(com.tcn.cloud.api.api.v0alpha.GetBroadcastPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetBroadcastPreferencesMethod(), getCallOptions(), request);
     }
 
@@ -13868,7 +14071,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateBroadcastPreferencesResponse updateBroadcastPreferences(com.tcn.cloud.api.api.v0alpha.UpdateBroadcastPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateBroadcastPreferencesMethod(), getCallOptions(), request);
     }
 
@@ -13878,7 +14081,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetAuthenticationPreferencesResponse getAuthenticationPreferences(com.tcn.cloud.api.api.v0alpha.GetAuthenticationPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetAuthenticationPreferencesMethod(), getCallOptions(), request);
     }
 
@@ -13888,7 +14091,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateAuthenticationPreferencesResponse updateAuthenticationPreferences(com.tcn.cloud.api.api.v0alpha.UpdateAuthenticationPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateAuthenticationPreferencesMethod(), getCallOptions(), request);
     }
 
@@ -13898,7 +14101,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetRecordingPreferencesResponse getRecordingPreferences(com.tcn.cloud.api.api.v0alpha.GetRecordingPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetRecordingPreferencesMethod(), getCallOptions(), request);
     }
 
@@ -13908,7 +14111,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateRecordingPreferencesResponse updateRecordingPreferences(com.tcn.cloud.api.api.v0alpha.UpdateRecordingPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateRecordingPreferencesMethod(), getCallOptions(), request);
     }
 
@@ -13918,7 +14121,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetDashboardQueuePreferencesResponse getDashboardQueuePreferences(com.tcn.cloud.api.api.v0alpha.GetDashboardQueuePreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetDashboardQueuePreferencesMethod(), getCallOptions(), request);
     }
 
@@ -13928,7 +14131,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateDashboardQueuePreferencesResponse updateDashboardQueuePreferences(com.tcn.cloud.api.api.v0alpha.UpdateDashboardQueuePreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateDashboardQueuePreferencesMethod(), getCallOptions(), request);
     }
 
@@ -13938,7 +14141,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetAgentQuickViewPreferencesResponse getAgentQuickViewPreferences(com.tcn.cloud.api.api.v0alpha.GetAgentQuickViewPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetAgentQuickViewPreferencesMethod(), getCallOptions(), request);
     }
 
@@ -13948,7 +14151,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetVoiceAnalyticsPreferencesResponse getVoiceAnalyticsPreferences(com.tcn.cloud.api.api.v0alpha.GetVoiceAnalyticsPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetVoiceAnalyticsPreferencesMethod(), getCallOptions(), request);
     }
 
@@ -13958,7 +14161,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateVoiceAnalyticsPreferencesResponse updateVoiceAnalyticsPreferences(com.tcn.cloud.api.api.v0alpha.UpdateVoiceAnalyticsPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateVoiceAnalyticsPreferencesMethod(), getCallOptions(), request);
     }
 
@@ -13968,7 +14171,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateVoiceAnalyticsPreferencesEnabledResponse updateVoiceAnalyticsPreferencesEnabled(com.tcn.cloud.api.api.v0alpha.UpdateVoiceAnalyticsPreferencesEnabledRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateVoiceAnalyticsPreferencesEnabledMethod(), getCallOptions(), request);
     }
 
@@ -13978,7 +14181,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetScorecardsPreferencesResponse getScorecardsPreferences(com.tcn.cloud.api.api.v0alpha.GetScorecardsPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetScorecardsPreferencesMethod(), getCallOptions(), request);
     }
 
@@ -13988,7 +14191,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateScorecardsPreferencesResponse updateScorecardsPreferences(com.tcn.cloud.api.api.v0alpha.UpdateScorecardsPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateScorecardsPreferencesMethod(), getCallOptions(), request);
     }
 
@@ -13998,7 +14201,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetEmailSmsPreferencesResponse getEmailSmsPreferences(com.tcn.cloud.api.api.v0alpha.GetEmailSmsPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetEmailSmsPreferencesMethod(), getCallOptions(), request);
     }
 
@@ -14008,7 +14211,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateEmailSmsPreferencesResponse updateEmailSmsPreferences(com.tcn.cloud.api.api.v0alpha.UpdateEmailSmsPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateEmailSmsPreferencesMethod(), getCallOptions(), request);
     }
 
@@ -14018,7 +14221,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.EditAgentQuickViewPreferencesResponse editAgentQuickViewPreferences(com.tcn.cloud.api.api.v0alpha.EditAgentQuickViewPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getEditAgentQuickViewPreferencesMethod(), getCallOptions(), request);
     }
 
@@ -14029,14 +14232,14 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.EditBackofficeThemePreferenceResponse editBackofficeThemePreference(com.tcn.cloud.api.api.v0alpha.EditBackofficeThemePreferenceRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getEditBackofficeThemePreferenceMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v0alpha.GetBackofficeThemePreferenceResponse getBackofficeThemePreference(com.tcn.cloud.api.api.v0alpha.GetBackofficeThemePreferenceRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetBackofficeThemePreferenceMethod(), getCallOptions(), request);
     }
 
@@ -14046,7 +14249,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.AcceptLinkbackRecordingTermsResponse acceptLinkbackRecordingTerms(com.tcn.cloud.api.api.v0alpha.AcceptLinkbackRecordingTermsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getAcceptLinkbackRecordingTermsMethod(), getCallOptions(), request);
     }
 
@@ -14056,7 +14259,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.LinkbackUpdateBroadcastTemplatesResponse linkbackUpdateBroadcastTemplates(com.tcn.cloud.api.api.v0alpha.LinkbackUpdateBroadcastTemplatesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getLinkbackUpdateBroadcastTemplatesMethod(), getCallOptions(), request);
     }
 
@@ -14067,7 +14270,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.RecordEmailUnsubscribeAcknowledgementResponse recordEmailUnsubscribeAcknowledgement(com.tcn.cloud.api.api.v0alpha.RecordEmailUnsubscribeAcknowledgementRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getRecordEmailUnsubscribeAcknowledgementMethod(), getCallOptions(), request);
     }
 
@@ -14078,7 +14281,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ClearEmailUnsubscribeAcknowledgementResponse clearEmailUnsubscribeAcknowledgement(com.tcn.cloud.api.api.v0alpha.ClearEmailUnsubscribeAcknowledgementRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getClearEmailUnsubscribeAcknowledgementMethod(), getCallOptions(), request);
     }
 
@@ -14090,7 +14293,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateWebLinkTemplateResponse createWebLinkTemplate(com.tcn.cloud.api.api.v0alpha.CreateWebLinkTemplateRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateWebLinkTemplateMethod(), getCallOptions(), request);
     }
 
@@ -14102,7 +14305,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListWebLinkTemplatesResponse listWebLinkTemplates(com.tcn.cloud.api.api.v0alpha.ListWebLinkTemplatesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListWebLinkTemplatesMethod(), getCallOptions(), request);
     }
 
@@ -14114,7 +14317,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetWebLinkTemplateResponse getWebLinkTemplate(com.tcn.cloud.api.api.v0alpha.GetWebLinkTemplateRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetWebLinkTemplateMethod(), getCallOptions(), request);
     }
 
@@ -14126,7 +14329,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateWebLinkTemplateResponse updateWebLinkTemplate(com.tcn.cloud.api.api.v0alpha.UpdateWebLinkTemplateRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateWebLinkTemplateMethod(), getCallOptions(), request);
     }
 
@@ -14138,7 +14341,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.DeleteWebLinkTemplateResponse deleteWebLinkTemplate(com.tcn.cloud.api.api.v0alpha.DeleteWebLinkTemplateRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDeleteWebLinkTemplateMethod(), getCallOptions(), request);
     }
 
@@ -14152,7 +14355,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateAgentTriggerTemplateResponse createAgentTriggerTemplate(com.tcn.cloud.api.api.v0alpha.CreateAgentTriggerTemplateRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateAgentTriggerTemplateMethod(), getCallOptions(), request);
     }
 
@@ -14165,7 +14368,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListAgentTriggerTemplatesResponse listAgentTriggerTemplates(com.tcn.cloud.api.api.v0alpha.ListAgentTriggerTemplatesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListAgentTriggerTemplatesMethod(), getCallOptions(), request);
     }
 
@@ -14177,7 +14380,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetAgentTriggerTemplateResponse getAgentTriggerTemplate(com.tcn.cloud.api.api.v0alpha.GetAgentTriggerTemplateRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetAgentTriggerTemplateMethod(), getCallOptions(), request);
     }
 
@@ -14189,7 +14392,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateAgentTriggerTemplateResponse updateAgentTriggerTemplate(com.tcn.cloud.api.api.v0alpha.UpdateAgentTriggerTemplateRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateAgentTriggerTemplateMethod(), getCallOptions(), request);
     }
 
@@ -14201,7 +14404,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.DeleteAgentTriggerTemplateResponse deleteAgentTriggerTemplate(com.tcn.cloud.api.api.v0alpha.DeleteAgentTriggerTemplateRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDeleteAgentTriggerTemplateMethod(), getCallOptions(), request);
     }
 
@@ -14214,7 +14417,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateClientInfoDisplayTemplateResponse createClientInfoDisplayTemplate(com.tcn.cloud.api.api.v0alpha.CreateClientInfoDisplayTemplateRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateClientInfoDisplayTemplateMethod(), getCallOptions(), request);
     }
 
@@ -14226,7 +14429,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListClientInfoDisplayTemplatesResponse listClientInfoDisplayTemplates(com.tcn.cloud.api.api.v0alpha.ListClientInfoDisplayTemplatesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListClientInfoDisplayTemplatesMethod(), getCallOptions(), request);
     }
 
@@ -14239,7 +14442,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateClientInfoDisplayTemplateResponse updateClientInfoDisplayTemplate(com.tcn.cloud.api.api.v0alpha.UpdateClientInfoDisplayTemplateRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateClientInfoDisplayTemplateMethod(), getCallOptions(), request);
     }
 
@@ -14252,7 +14455,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.DeleteClientInfoDisplayTemplateResponse deleteClientInfoDisplayTemplate(com.tcn.cloud.api.api.v0alpha.DeleteClientInfoDisplayTemplateRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDeleteClientInfoDisplayTemplateMethod(), getCallOptions(), request);
     }
 
@@ -14265,7 +14468,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateResponse getClientInfoDisplayTemplate(com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetClientInfoDisplayTemplateMethod(), getCallOptions(), request);
     }
 
@@ -14275,7 +14478,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListAgentPauseCodesResponse listAgentPauseCodes(com.tcn.cloud.api.api.v0alpha.ListAgentPauseCodesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListAgentPauseCodesMethod(), getCallOptions(), request);
     }
 
@@ -14288,7 +14491,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateAgentPauseCodeResponse createAgentPauseCode(com.tcn.cloud.api.api.v0alpha.CreateAgentPauseCodeRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateAgentPauseCodeMethod(), getCallOptions(), request);
     }
 
@@ -14306,7 +14509,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateAgentPauseCodeResponse updateAgentPauseCode(com.tcn.cloud.api.api.v0alpha.UpdateAgentPauseCodeRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateAgentPauseCodeMethod(), getCallOptions(), request);
     }
 
@@ -14318,7 +14521,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.DeleteAgentPauseCodeResponse deleteAgentPauseCode(com.tcn.cloud.api.api.v0alpha.DeleteAgentPauseCodeRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDeleteAgentPauseCodeMethod(), getCallOptions(), request);
     }
 
@@ -14332,7 +14535,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListCustomReportFiltersResponse listCustomReportFilters(com.tcn.cloud.api.api.v0alpha.ListCustomReportFiltersRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListCustomReportFiltersMethod(), getCallOptions(), request);
     }
 
@@ -14347,7 +14550,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateCustomReportFilterResponse createCustomReportFilter(com.tcn.cloud.api.api.v0alpha.CreateCustomReportFilterRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateCustomReportFilterMethod(), getCallOptions(), request);
     }
 
@@ -14363,7 +14566,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateCustomReportFilterResponse updateCustomReportFilter(com.tcn.cloud.api.api.v0alpha.UpdateCustomReportFilterRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateCustomReportFilterMethod(), getCallOptions(), request);
     }
 
@@ -14377,7 +14580,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.DeleteCustomReportFilterResponse deleteCustomReportFilter(com.tcn.cloud.api.api.v0alpha.DeleteCustomReportFilterRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDeleteCustomReportFilterMethod(), getCallOptions(), request);
     }
 
@@ -14391,7 +14594,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListAgentResponseGroupsResponse listAgentResponseGroups(com.tcn.cloud.api.api.v0alpha.ListAgentResponseGroupsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListAgentResponseGroupsMethod(), getCallOptions(), request);
     }
 
@@ -14405,7 +14608,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListLastTemplateElementsResponse listLastTemplateElements(com.tcn.cloud.api.api.v0alpha.ListLastTemplateElementsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListLastTemplateElementsMethod(), getCallOptions(), request);
     }
 
@@ -14418,7 +14621,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListQueueConfigsRes listQueueConfigs(com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListQueueConfigsMethod(), getCallOptions(), request);
     }
 
@@ -14431,7 +14634,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdRes listQueueConfigsByOrgId(com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListQueueConfigsByOrgIdMethod(), getCallOptions(), request);
     }
 
@@ -14446,7 +14649,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.DeleteQueueConfigRes deleteQueueConfig(com.tcn.cloud.api.api.v0alpha.DeleteQueueConfigReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDeleteQueueConfigMethod(), getCallOptions(), request);
     }
 
@@ -14463,7 +14666,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetQueueConfigRes getQueueConfig(com.tcn.cloud.api.api.v0alpha.GetQueueConfigReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetQueueConfigMethod(), getCallOptions(), request);
     }
 
@@ -14479,7 +14682,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateQueueConfigRes createQueueConfig(com.tcn.cloud.api.api.v0alpha.CreateQueueConfigReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateQueueConfigMethod(), getCallOptions(), request);
     }
 
@@ -14496,7 +14699,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateQueueConfigRes updateQueueConfig(com.tcn.cloud.api.api.v0alpha.UpdateQueueConfigReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateQueueConfigMethod(), getCallOptions(), request);
     }
 
@@ -14516,7 +14719,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CopyQueueConfigRes copyQueueConfig(com.tcn.cloud.api.api.v0alpha.CopyQueueConfigReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCopyQueueConfigMethod(), getCallOptions(), request);
     }
 
@@ -14532,7 +14735,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetAllQueueConfigSoundsRes getAllQueueConfigSounds(com.tcn.cloud.api.api.v0alpha.GetAllQueueConfigSoundsReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetAllQueueConfigSoundsMethod(), getCallOptions(), request);
     }
 
@@ -14551,7 +14754,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetQueueConfigSoundRes getQueueConfigSound(com.tcn.cloud.api.api.v0alpha.GetQueueConfigSoundReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetQueueConfigSoundMethod(), getCallOptions(), request);
     }
 
@@ -14572,7 +14775,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.SetQueueConfigSoundRes setQueueConfigSound(com.tcn.cloud.api.api.v0alpha.SetQueueConfigSoundReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getSetQueueConfigSoundMethod(), getCallOptions(), request);
     }
 
@@ -14595,7 +14798,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.SetAllQueueConfigSoundsFromSourceRes setAllQueueConfigSoundsFromSource(com.tcn.cloud.api.api.v0alpha.SetAllQueueConfigSoundsFromSourceReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getSetAllQueueConfigSoundsFromSourceMethod(), getCallOptions(), request);
     }
 
@@ -14610,7 +14813,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetUserBlockedResponse getUserBlocked(com.tcn.cloud.api.api.v0alpha.GetUserBlockedRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetUserBlockedMethod(), getCallOptions(), request);
     }
 
@@ -14625,7 +14828,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UnblockUserResponse unblockUser(com.tcn.cloud.api.api.v0alpha.UnblockUserRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUnblockUserMethod(), getCallOptions(), request);
     }
 
@@ -14637,7 +14840,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListP3UnMigratedUsersResponse listP3UnMigratedUsers(com.tcn.cloud.api.api.v0alpha.ListP3UnMigratedUsersRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListP3UnMigratedUsersMethod(), getCallOptions(), request);
     }
 
@@ -14649,7 +14852,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.MigrateP3UserResponse migrateP3User(com.tcn.cloud.api.api.v0alpha.MigrateP3UserRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getMigrateP3UserMethod(), getCallOptions(), request);
     }
 
@@ -14661,7 +14864,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateP3UserNameResponse updateP3UserName(com.tcn.cloud.api.api.v0alpha.UpdateP3UserNameRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateP3UserNameMethod(), getCallOptions(), request);
     }
 
@@ -14673,7 +14876,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListOwnedUsersResponse listOwnedUsers(com.tcn.cloud.api.api.v0alpha.ListOwnedUsersRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListOwnedUsersMethod(), getCallOptions(), request);
     }
 
@@ -14683,7 +14886,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListOwnedOrgsByOrgIdResponse listOwnedOrgsByOrgId(com.tcn.cloud.api.api.v0alpha.ListOwnedOrgsByOrgIdRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListOwnedOrgsByOrgIdMethod(), getCallOptions(), request);
     }
 
@@ -14693,7 +14896,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListOwnedOrgsResponse listOwnedOrgs(com.tcn.cloud.api.api.v0alpha.ListOwnedOrgsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListOwnedOrgsMethod(), getCallOptions(), request);
     }
 
@@ -14705,7 +14908,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.RemoveLoginStrikesResponse removeLoginStrikes(com.tcn.cloud.api.api.v0alpha.RemoveLoginStrikesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getRemoveLoginStrikesMethod(), getCallOptions(), request);
     }
 
@@ -14717,7 +14920,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.RemoveUserLoginStrikesResponse removeUserLoginStrikes(com.tcn.cloud.api.api.v0alpha.RemoveUserLoginStrikesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getRemoveUserLoginStrikesMethod(), getCallOptions(), request);
     }
 
@@ -14729,7 +14932,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListLoginHistoryResponse listLoginHistory(com.tcn.cloud.api.api.v0alpha.ListLoginHistoryRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListLoginHistoryMethod(), getCallOptions(), request);
     }
 
@@ -14741,7 +14944,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateP3UserSidsResponse updateP3UserSids(com.tcn.cloud.api.api.v0alpha.UpdateP3UserSidsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateP3UserSidsMethod(), getCallOptions(), request);
     }
 
@@ -14751,7 +14954,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateAuthConnectionResponse createAuthConnection(com.tcn.cloud.api.api.v0alpha.CreateAuthConnectionRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateAuthConnectionMethod(), getCallOptions(), request);
     }
 
@@ -14761,7 +14964,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetAuthConnectionSettingsResponse getAuthConnectionSettings(com.tcn.cloud.api.api.v0alpha.GetAuthConnectionSettingsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetAuthConnectionSettingsMethod(), getCallOptions(), request);
     }
 
@@ -14771,7 +14974,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateAuthConnectionSettingsResponse updateAuthConnectionSettings(com.tcn.cloud.api.api.v0alpha.UpdateAuthConnectionSettingsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateAuthConnectionSettingsMethod(), getCallOptions(), request);
     }
 
@@ -14781,7 +14984,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.DeleteAuthConnectionResponse deleteAuthConnection(com.tcn.cloud.api.api.v0alpha.DeleteAuthConnectionRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDeleteAuthConnectionMethod(), getCallOptions(), request);
     }
 
@@ -14791,7 +14994,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetUserSubscriptionResponse getUserSubscription(com.tcn.cloud.api.api.v0alpha.GetUserSubscriptionRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetUserSubscriptionMethod(), getCallOptions(), request);
     }
 
@@ -14801,7 +15004,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionResponse getMyUserSubscription(com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetMyUserSubscriptionMethod(), getCallOptions(), request);
     }
 
@@ -14811,7 +15014,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.AddUserSubscriptionResponse addUserSubscription(com.tcn.cloud.api.api.v0alpha.AddUserSubscriptionRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getAddUserSubscriptionMethod(), getCallOptions(), request);
     }
 
@@ -14821,7 +15024,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionResponse addMyUserSubscription(com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getAddMyUserSubscriptionMethod(), getCallOptions(), request);
     }
 
@@ -14831,7 +15034,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.RemoveUserSubscriptionResponse removeUserSubscription(com.tcn.cloud.api.api.v0alpha.RemoveUserSubscriptionRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getRemoveUserSubscriptionMethod(), getCallOptions(), request);
     }
 
@@ -14841,7 +15044,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.RemoveMyUserSubscriptionResponse removeMyUserSubscription(com.tcn.cloud.api.api.v0alpha.RemoveMyUserSubscriptionRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getRemoveMyUserSubscriptionMethod(), getCallOptions(), request);
     }
 
@@ -14851,7 +15054,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateUserSubscriptionResponse updateUserSubscription(com.tcn.cloud.api.api.v0alpha.UpdateUserSubscriptionRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateUserSubscriptionMethod(), getCallOptions(), request);
     }
 
@@ -14861,7 +15064,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionResponse updateMyUserSubscription(com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateMyUserSubscriptionMethod(), getCallOptions(), request);
     }
 
@@ -14871,7 +15074,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListUserSubscriptionsResponse listUserSubscriptions(com.tcn.cloud.api.api.v0alpha.ListUserSubscriptionsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListUserSubscriptionsMethod(), getCallOptions(), request);
     }
 
@@ -14881,7 +15084,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsResponse listMyUserSubscriptions(com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListMyUserSubscriptionsMethod(), getCallOptions(), request);
     }
 
@@ -14893,7 +15096,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListOrgSubscriptionsResponse listOrgSubscriptions(com.tcn.cloud.api.api.v0alpha.ListOrgSubscriptionsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListOrgSubscriptionsMethod(), getCallOptions(), request);
     }
 
@@ -14905,7 +15108,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.GetSystemEnvironmentDetailsResponse getSystemEnvironmentDetails(com.tcn.cloud.api.api.v0alpha.GetSystemEnvironmentDetailsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetSystemEnvironmentDetailsMethod(), getCallOptions(), request);
     }
 
@@ -14919,7 +15122,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.ListAgentStatisticsTemplatesResponse listAgentStatisticsTemplates(com.tcn.cloud.api.api.v0alpha.ListAgentStatisticsTemplatesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getListAgentStatisticsTemplatesMethod(), getCallOptions(), request);
     }
 
@@ -14933,7 +15136,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.CreateAgentStatisticsTemplateResponse createAgentStatisticsTemplate(com.tcn.cloud.api.api.v0alpha.CreateAgentStatisticsTemplateRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getCreateAgentStatisticsTemplateMethod(), getCallOptions(), request);
     }
 
@@ -14947,7 +15150,7 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.UpdateAgentStatisticsTemplateResponse updateAgentStatisticsTemplate(com.tcn.cloud.api.api.v0alpha.UpdateAgentStatisticsTemplateRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getUpdateAgentStatisticsTemplateMethod(), getCallOptions(), request);
     }
 
@@ -14961,22 +15164,26 @@ public final class OrgGrpc {
      * </pre>
      */
     public com.tcn.cloud.api.api.v0alpha.DeleteAgentStatisticsTemplateResponse deleteAgentStatisticsTemplate(com.tcn.cloud.api.api.v0alpha.DeleteAgentStatisticsTemplateRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getDeleteAgentStatisticsTemplateMethod(), getCallOptions(), request);
     }
   }
 
   /**
    */
-  public static final class OrgFutureStub extends io.grpc.stub.AbstractFutureStub<OrgFutureStub> {
-    private OrgFutureStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class OrgFutureStub extends io.grpc.stub.AbstractStub<OrgFutureStub> {
+    private OrgFutureStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private OrgFutureStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected OrgFutureStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected OrgFutureStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new OrgFutureStub(channel, callOptions);
     }
 
@@ -14987,7 +15194,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.RegisterOrganizationResponse> registerOrganization(
         com.tcn.cloud.api.api.v0alpha.RegisterOrganizationRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getRegisterOrganizationMethod(), getCallOptions()), request);
     }
 
@@ -14999,7 +15206,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ConvertOrgToManualResponse> convertOrgToManual(
         com.tcn.cloud.api.api.v0alpha.ConvertOrgToManualRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getConvertOrgToManualMethod(), getCallOptions()), request);
     }
 
@@ -15010,7 +15217,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateOrganizationResponse> updateOrganization(
         com.tcn.cloud.api.api.v0alpha.UpdateOrganizationRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateOrganizationMethod(), getCallOptions()), request);
     }
 
@@ -15021,7 +15228,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ArchiveOrganizationResponse> archiveOrganization(
         com.tcn.cloud.api.api.v0alpha.ArchiveOrganizationRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getArchiveOrganizationMethod(), getCallOptions()), request);
     }
 
@@ -15032,7 +15239,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UnArchiveOrganizationResponse> unArchiveOrganization(
         com.tcn.cloud.api.api.v0alpha.UnArchiveOrganizationRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUnArchiveOrganizationMethod(), getCallOptions()), request);
     }
 
@@ -15043,7 +15250,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListArchivedOrganizationsResponse> listArchivedOrganizations(
         com.tcn.cloud.api.api.v0alpha.ListArchivedOrganizationsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListArchivedOrganizationsMethod(), getCallOptions()), request);
     }
 
@@ -15051,7 +15258,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetOrganizationProfileResponse> getOrganizationProfile(
         com.tcn.cloud.api.api.v0alpha.GetOrganizationProfileRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetOrganizationProfileMethod(), getCallOptions()), request);
     }
 
@@ -15059,7 +15266,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetOrganizationProfileResponse> getOrganizationProfileById(
         com.tcn.cloud.api.api.v0alpha.GetOrganizationProfileByIdRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetOrganizationProfileByIdMethod(), getCallOptions()), request);
     }
 
@@ -15067,7 +15274,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListOrganizationDescriptionsResponse> listOrganizationDescriptions(
         com.tcn.cloud.api.api.v0alpha.ListOrganizationDescriptionsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListOrganizationDescriptionsMethod(), getCallOptions()), request);
     }
 
@@ -15075,7 +15282,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListRegionalOrganizationsResponse> listRegionalOrganizations(
         com.tcn.cloud.api.api.v0alpha.ListRegionalOrganizationsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListRegionalOrganizationsMethod(), getCallOptions()), request);
     }
 
@@ -15088,7 +15295,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateP3OwningOrgResponse> updateP3OwningOrg(
         com.tcn.cloud.api.api.v0alpha.UpdateP3OwningOrgRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateP3OwningOrgMethod(), getCallOptions()), request);
     }
 
@@ -15101,7 +15308,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetP3OwningOrgResponse> getP3OwningOrg(
         com.tcn.cloud.api.api.v0alpha.GetP3OwningOrgRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetP3OwningOrgMethod(), getCallOptions()), request);
     }
 
@@ -15109,7 +15316,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListOrganizationUserDescriptionsResponse> listOrganizationUserDescriptions(
         com.tcn.cloud.api.api.v0alpha.ListOrganizationUserDescriptionsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListOrganizationUserDescriptionsMethod(), getCallOptions()), request);
     }
 
@@ -15117,7 +15324,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetUserDirectoryResponse> getUserDirectory(
         com.tcn.cloud.api.api.v0alpha.GetUserDirectoryRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetUserDirectoryMethod(), getCallOptions()), request);
     }
 
@@ -15128,7 +15335,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetRegionsResponse> getRegions(
         com.tcn.cloud.api.api.v0alpha.GetRegionsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetRegionsMethod(), getCallOptions()), request);
     }
 
@@ -15136,7 +15343,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UserDetails> getMyUserDetails(
         com.tcn.cloud.api.api.v0alpha.GetMyUserDetailsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetMyUserDetailsMethod(), getCallOptions()), request);
     }
 
@@ -15144,7 +15351,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UserDetails> getUserDetails(
         com.tcn.cloud.api.api.v0alpha.GetUserDetailsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetUserDetailsMethod(), getCallOptions()), request);
     }
 
@@ -15152,7 +15359,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UserDetails> adminGetUserDetails(
         com.tcn.cloud.api.api.v0alpha.AdminGetUserDetailsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getAdminGetUserDetailsMethod(), getCallOptions()), request);
     }
 
@@ -15160,7 +15367,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetAgentUsersResponse> getAgentUsers(
         com.tcn.cloud.api.api.v0alpha.GetAgentUsersRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetAgentUsersMethod(), getCallOptions()), request);
     }
 
@@ -15174,7 +15381,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetAgentSettingsResponse> getAgentSettings(
         com.tcn.cloud.api.api.v0alpha.GetAgentSettingsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetAgentSettingsMethod(), getCallOptions()), request);
     }
 
@@ -15187,7 +15394,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetAgentProfileGroupResponse> getAgentProfileGroup(
         com.tcn.cloud.api.api.v0alpha.GetAgentProfileGroupRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetAgentProfileGroupMethod(), getCallOptions()), request);
     }
 
@@ -15200,7 +15407,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateAgentProfileGroupResponse> updateAgentProfileGroup(
         com.tcn.cloud.api.api.v0alpha.UpdateAgentProfileGroupRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateAgentProfileGroupMethod(), getCallOptions()), request);
     }
 
@@ -15213,7 +15420,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateAgentProfileGroupResponse> createAgentProfileGroup(
         com.tcn.cloud.api.api.v0alpha.CreateAgentProfileGroupRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateAgentProfileGroupMethod(), getCallOptions()), request);
     }
 
@@ -15226,7 +15433,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListAgentProfileGroupsResponse> listAgentProfileGroups(
         com.tcn.cloud.api.api.v0alpha.ListAgentProfileGroupsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListAgentProfileGroupsMethod(), getCallOptions()), request);
     }
 
@@ -15239,7 +15446,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeleteAgentProfileGroupResponse> deleteAgentProfileGroup(
         com.tcn.cloud.api.api.v0alpha.DeleteAgentProfileGroupRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDeleteAgentProfileGroupMethod(), getCallOptions()), request);
     }
 
@@ -15252,7 +15459,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.AssignAgentProfileGroupsResponse> assignAgentProfileGroups(
         com.tcn.cloud.api.api.v0alpha.AssignAgentProfileGroupsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getAssignAgentProfileGroupsMethod(), getCallOptions()), request);
     }
 
@@ -15264,7 +15471,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateUserResponse> updateUser(
         com.tcn.cloud.api.api.v0alpha.UpdateUserRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateUserMethod(), getCallOptions()), request);
     }
 
@@ -15279,7 +15486,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateMyUserResponse> updateMyUser(
         com.tcn.cloud.api.api.v0alpha.UpdateMyUserRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateMyUserMethod(), getCallOptions()), request);
     }
 
@@ -15291,7 +15498,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdResponse> updateUserCallerId(
         com.tcn.cloud.api.api.v0alpha.UpdateUserCallerIdRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateUserCallerIdMethod(), getCallOptions()), request);
     }
 
@@ -15304,7 +15511,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateUserResponse> createUser(
         com.tcn.cloud.api.api.v0alpha.CreateUserRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateUserMethod(), getCallOptions()), request);
     }
 
@@ -15317,7 +15524,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateUserByOrgIdResponse> createUserByOrgId(
         com.tcn.cloud.api.api.v0alpha.CreateUserByOrgIdRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateUserByOrgIdMethod(), getCallOptions()), request);
     }
 
@@ -15328,7 +15535,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateDelegatedUserResponse> createDelegatedUser(
         com.tcn.cloud.api.api.v0alpha.CreateDelegatedUserRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateDelegatedUserMethod(), getCallOptions()), request);
     }
 
@@ -15341,7 +15548,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordResponse> updateUserPassword(
         com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateUserPasswordMethod(), getCallOptions()), request);
     }
 
@@ -15354,7 +15561,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordResponse> updateMyUserPassword(
         com.tcn.cloud.api.api.v0alpha.UpdateMyUserPasswordRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateMyUserPasswordMethod(), getCallOptions()), request);
     }
 
@@ -15367,7 +15574,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByOrgIdResponse> updateUserPasswordByOrgId(
         com.tcn.cloud.api.api.v0alpha.UpdateUserPasswordByOrgIdRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateUserPasswordByOrgIdMethod(), getCallOptions()), request);
     }
 
@@ -15379,7 +15586,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ResetUserRequirePasswordResetResponse> resetUserRequirePasswordReset(
         com.tcn.cloud.api.api.v0alpha.ResetUserRequirePasswordResetRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getResetUserRequirePasswordResetMethod(), getCallOptions()), request);
     }
 
@@ -15393,7 +15600,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkResponse> getUserPasswordResetLink(
         com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetUserPasswordResetLinkMethod(), getCallOptions()), request);
     }
 
@@ -15405,7 +15612,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkResponse> getMyUserPasswordResetLink(
         com.tcn.cloud.api.api.v0alpha.GetMyUserPasswordResetLinkRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetMyUserPasswordResetLinkMethod(), getCallOptions()), request);
     }
 
@@ -15418,7 +15625,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByOrgIdResponse> getUserPasswordResetLinkByOrgId(
         com.tcn.cloud.api.api.v0alpha.GetUserPasswordResetLinkByOrgIdRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetUserPasswordResetLinkByOrgIdMethod(), getCallOptions()), request);
     }
 
@@ -15430,7 +15637,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetUserEmailVerifiedResponse> getUserEmailVerified(
         com.tcn.cloud.api.api.v0alpha.GetUserEmailVerifiedRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetUserEmailVerifiedMethod(), getCallOptions()), request);
     }
 
@@ -15443,7 +15650,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetUserEmailVerifiedByOrgIdResponse> getUserEmailVerifiedByOrgId(
         com.tcn.cloud.api.api.v0alpha.GetUserEmailVerifiedByOrgIdRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetUserEmailVerifiedByOrgIdMethod(), getCallOptions()), request);
     }
 
@@ -15454,7 +15661,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SendUserVerificationEmailByOrgIdResponse> sendUserVerificationEmailByOrgId(
         com.tcn.cloud.api.api.v0alpha.SendUserVerificationEmailByOrgIdRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getSendUserVerificationEmailByOrgIdMethod(), getCallOptions()), request);
     }
 
@@ -15465,7 +15672,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SendUserVerificationEmailResponse> sendUserVerificationEmail(
         com.tcn.cloud.api.api.v0alpha.SendUserVerificationEmailRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getSendUserVerificationEmailMethod(), getCallOptions()), request);
     }
 
@@ -15476,7 +15683,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ManualUserEmailVerificationByOrgIdResponse> manualUserEmailVerificationByOrgId(
         com.tcn.cloud.api.api.v0alpha.ManualUserEmailVerificationByOrgIdRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getManualUserEmailVerificationByOrgIdMethod(), getCallOptions()), request);
     }
 
@@ -15487,7 +15694,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ManualUserEmailVerificationResponse> manualUserEmailVerification(
         com.tcn.cloud.api.api.v0alpha.ManualUserEmailVerificationRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getManualUserEmailVerificationMethod(), getCallOptions()), request);
     }
 
@@ -15500,7 +15707,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetTempUserTokenRes> getTempUserToken(
         com.tcn.cloud.api.api.v0alpha.GetTempUserTokenReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetTempUserTokenMethod(), getCallOptions()), request);
     }
 
@@ -15513,7 +15720,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetTempUserTokenByUserIdRes> getTempUserTokenByUserId(
         com.tcn.cloud.api.api.v0alpha.GetTempUserTokenByUserIdReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetTempUserTokenByUserIdMethod(), getCallOptions()), request);
     }
 
@@ -15521,7 +15728,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetCountriesListResponse> getCountriesList(
         com.tcn.cloud.api.api.v0alpha.GetCountriesListRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetCountriesListMethod(), getCallOptions()), request);
     }
 
@@ -15529,7 +15736,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetAdminClientPreferencesResponse> getAdminClientPreferences(
         com.tcn.cloud.api.api.v0alpha.GetAdminClientPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetAdminClientPreferencesMethod(), getCallOptions()), request);
     }
 
@@ -15537,7 +15744,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateAdminClientPreferencesResponse> updateAdminClientPreferences(
         com.tcn.cloud.api.api.v0alpha.UpdateAdminClientPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateAdminClientPreferencesMethod(), getCallOptions()), request);
     }
 
@@ -15545,7 +15752,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetPermissionsResponse> getPermissions(
         com.tcn.cloud.api.api.v0alpha.GetPermissionsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetPermissionsMethod(), getCallOptions()), request);
     }
 
@@ -15557,7 +15764,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.RevokeAccountOwnerPermissionFromUserResponse> revokeAccountOwnerPermissionFromUser(
         com.tcn.cloud.api.api.v0alpha.RevokeAccountOwnerPermissionFromUserRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getRevokeAccountOwnerPermissionFromUserMethod(), getCallOptions()), request);
     }
 
@@ -15568,7 +15775,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateUserDisabledResponse> updateUserDisabled(
         com.tcn.cloud.api.api.v0alpha.UpdateUserDisabledRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateUserDisabledMethod(), getCallOptions()), request);
     }
 
@@ -15579,7 +15786,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateUserDisabledByOrgIdResponse> updateUserDisabledByOrgId(
         com.tcn.cloud.api.api.v0alpha.UpdateUserDisabledByOrgIdRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateUserDisabledByOrgIdMethod(), getCallOptions()), request);
     }
 
@@ -15592,7 +15799,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateBulkUsersDisabledResponse> updateBulkUsersDisabled(
         com.tcn.cloud.api.api.v0alpha.UpdateBulkUsersDisabledRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateBulkUsersDisabledMethod(), getCallOptions()), request);
     }
 
@@ -15609,7 +15816,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetOrgBillingSettingsByOrgIdResponse> getOrgBillingSettingsByOrgId(
         com.tcn.cloud.api.api.v0alpha.GetOrgBillingSettingsByOrgIdRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetOrgBillingSettingsByOrgIdMethod(), getCallOptions()), request);
     }
 
@@ -15626,7 +15833,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetOrgBillingSettingsResponse> getOrgBillingSettings(
         com.tcn.cloud.api.api.v0alpha.GetOrgBillingSettingsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetOrgBillingSettingsMethod(), getCallOptions()), request);
     }
 
@@ -15645,7 +15852,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SetOrgBillingSettingsResponse> setOrgBillingSettings(
         com.tcn.cloud.api.api.v0alpha.SetOrgBillingSettingsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getSetOrgBillingSettingsMethod(), getCallOptions()), request);
     }
 
@@ -15663,7 +15870,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.AddOrgBillingOverrideResponse> addOrgBillingOverride(
         com.tcn.cloud.api.api.v0alpha.AddOrgBillingOverrideRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getAddOrgBillingOverrideMethod(), getCallOptions()), request);
     }
 
@@ -15681,7 +15888,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.RemoveOrgBillingOverrideResponse> removeOrgBillingOverride(
         com.tcn.cloud.api.api.v0alpha.RemoveOrgBillingOverrideRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getRemoveOrgBillingOverrideMethod(), getCallOptions()), request);
     }
 
@@ -15694,7 +15901,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetSystemDefaultBillingRatesResponse> getSystemDefaultBillingRates(
         com.tcn.cloud.api.api.v0alpha.GetSystemDefaultBillingRatesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetSystemDefaultBillingRatesMethod(), getCallOptions()), request);
     }
 
@@ -15705,7 +15912,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListPermissionGroupsByOrgIdResponse> listPermissionGroupsByOrgId(
         com.tcn.cloud.api.api.v0alpha.ListPermissionGroupsByOrgIdRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListPermissionGroupsByOrgIdMethod(), getCallOptions()), request);
     }
 
@@ -15716,7 +15923,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListPermissionGroupsResponse> listPermissionGroups(
         com.tcn.cloud.api.api.v0alpha.ListPermissionGroupsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListPermissionGroupsMethod(), getCallOptions()), request);
     }
 
@@ -15727,7 +15934,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreatePermissionGroupResponse> createPermissionGroup(
         com.tcn.cloud.api.api.v0alpha.CreatePermissionGroupRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreatePermissionGroupMethod(), getCallOptions()), request);
     }
 
@@ -15738,7 +15945,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdatePermissionGroupResponse> updatePermissionGroup(
         com.tcn.cloud.api.api.v0alpha.UpdatePermissionGroupRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdatePermissionGroupMethod(), getCallOptions()), request);
     }
 
@@ -15749,7 +15956,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeletePermissionGroupResponse> deletePermissionGroup(
         com.tcn.cloud.api.api.v0alpha.DeletePermissionGroupRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDeletePermissionGroupMethod(), getCallOptions()), request);
     }
 
@@ -15760,7 +15967,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.AssignUserToAccountOwnerPermissionGroupResponse> assignUserToAccountOwnerPermissionGroup(
         com.tcn.cloud.api.api.v0alpha.AssignUserToAccountOwnerPermissionGroupRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getAssignUserToAccountOwnerPermissionGroupMethod(), getCallOptions()), request);
     }
 
@@ -15773,7 +15980,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.AssignUserPermissionGroupResponse> assignUserPermissionGroup(
         com.tcn.cloud.api.api.v0alpha.AssignUserPermissionGroupRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getAssignUserPermissionGroupMethod(), getCallOptions()), request);
     }
 
@@ -15786,7 +15993,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.AssignUsersPermissionGroupResponse> assignUsersPermissionGroup(
         com.tcn.cloud.api.api.v0alpha.AssignUsersPermissionGroupRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getAssignUsersPermissionGroupMethod(), getCallOptions()), request);
     }
 
@@ -15799,7 +16006,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateUserNeoPermissionGroupsResponse> updateUserNeoPermissionGroups(
         com.tcn.cloud.api.api.v0alpha.UpdateUserNeoPermissionGroupsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateUserNeoPermissionGroupsMethod(), getCallOptions()), request);
     }
 
@@ -15812,7 +16019,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.RevokeUserPermissionGroupResponse> revokeUserPermissionGroup(
         com.tcn.cloud.api.api.v0alpha.RevokeUserPermissionGroupRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getRevokeUserPermissionGroupMethod(), getCallOptions()), request);
     }
 
@@ -15825,7 +16032,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.RevokeUsersPermissionGroupResponse> revokeUsersPermissionGroup(
         com.tcn.cloud.api.api.v0alpha.RevokeUsersPermissionGroupRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getRevokeUsersPermissionGroupMethod(), getCallOptions()), request);
     }
 
@@ -15837,7 +16044,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.InitDefaultPermissionGroupsResponse> initDefaultPermissionGroups(
         com.tcn.cloud.api.api.v0alpha.InitDefaultPermissionGroupsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getInitDefaultPermissionGroupsMethod(), getCallOptions()), request);
     }
 
@@ -15848,7 +16055,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.AddPermissionToAccountOwnerPermissionGroupResponse> addPermissionToAccountOwnerPermissionGroup(
         com.tcn.cloud.api.api.v0alpha.AddPermissionToAccountOwnerPermissionGroupRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getAddPermissionToAccountOwnerPermissionGroupMethod(), getCallOptions()), request);
     }
 
@@ -15859,7 +16066,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.RevokePermissionToAccountOwnerPermissionGroupResponse> revokePermissionToAccountOwnerPermissionGroup(
         com.tcn.cloud.api.api.v0alpha.RevokePermissionToAccountOwnerPermissionGroupRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getRevokePermissionToAccountOwnerPermissionGroupMethod(), getCallOptions()), request);
     }
 
@@ -15872,7 +16079,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.AddPermissionToOrgDefaultGroupResponse> addPermissionToOrgDefaultGroup(
         com.tcn.cloud.api.api.v0alpha.AddPermissionToOrgDefaultGroupRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getAddPermissionToOrgDefaultGroupMethod(), getCallOptions()), request);
     }
 
@@ -15885,7 +16092,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.RemovePermissionFromOrgDefaultGroupResponse> removePermissionFromOrgDefaultGroup(
         com.tcn.cloud.api.api.v0alpha.RemovePermissionFromOrgDefaultGroupRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getRemovePermissionFromOrgDefaultGroupMethod(), getCallOptions()), request);
     }
 
@@ -15898,7 +16105,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetOrgDefaultSuperUserGroupResponse> getOrgDefaultSuperUserGroup(
         com.tcn.cloud.api.api.v0alpha.GetOrgDefaultSuperUserGroupRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetOrgDefaultSuperUserGroupMethod(), getCallOptions()), request);
     }
 
@@ -15909,7 +16116,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListP3PermissionGroupsByOrgIdResponse> listP3PermissionGroupsByOrgId(
         com.tcn.cloud.api.api.v0alpha.ListP3PermissionGroupsByOrgIdRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListP3PermissionGroupsByOrgIdMethod(), getCallOptions()), request);
     }
 
@@ -15920,7 +16127,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListP3PermissionGroupsResponse> listP3PermissionGroups(
         com.tcn.cloud.api.api.v0alpha.ListP3PermissionGroupsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListP3PermissionGroupsMethod(), getCallOptions()), request);
     }
 
@@ -15931,7 +16138,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.AddUserRegionResponse> addUserRegion(
         com.tcn.cloud.api.api.v0alpha.AddUserRegionRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getAddUserRegionMethod(), getCallOptions()), request);
     }
 
@@ -15942,7 +16149,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.RemoveUserRegionResponse> removeUserRegion(
         com.tcn.cloud.api.api.v0alpha.RemoveUserRegionRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getRemoveUserRegionMethod(), getCallOptions()), request);
     }
 
@@ -15953,7 +16160,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateP3PermissionGroupResponse> createP3PermissionGroup(
         com.tcn.cloud.api.api.v0alpha.CreateP3PermissionGroupRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateP3PermissionGroupMethod(), getCallOptions()), request);
     }
 
@@ -15964,7 +16171,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupByOrgIdResponse> updateP3PermissionGroupByOrgId(
         com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupByOrgIdRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateP3PermissionGroupByOrgIdMethod(), getCallOptions()), request);
     }
 
@@ -15975,7 +16182,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupResponse> updateP3PermissionGroup(
         com.tcn.cloud.api.api.v0alpha.UpdateP3PermissionGroupRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateP3PermissionGroupMethod(), getCallOptions()), request);
     }
 
@@ -15986,7 +16193,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeleteP3PermissionGroupResponse> deleteP3PermissionGroup(
         com.tcn.cloud.api.api.v0alpha.DeleteP3PermissionGroupRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDeleteP3PermissionGroupMethod(), getCallOptions()), request);
     }
 
@@ -15997,7 +16204,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.AssignUsersP3PermissionGroupResponse> assignUsersP3PermissionGroup(
         com.tcn.cloud.api.api.v0alpha.AssignUsersP3PermissionGroupRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getAssignUsersP3PermissionGroupMethod(), getCallOptions()), request);
     }
 
@@ -16008,7 +16215,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.AddLoginToUserResponse> addLoginToUser(
         com.tcn.cloud.api.api.v0alpha.AddLoginToUserRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getAddLoginToUserMethod(), getCallOptions()), request);
     }
 
@@ -16021,7 +16228,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.RevokeUsersP3PermissionGroupResponse> revokeUsersP3PermissionGroup(
         com.tcn.cloud.api.api.v0alpha.RevokeUsersP3PermissionGroupRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getRevokeUsersP3PermissionGroupMethod(), getCallOptions()), request);
     }
 
@@ -16032,7 +16239,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetContactPreferencesResponse> getContactPreferences(
         com.tcn.cloud.api.api.v0alpha.GetContactPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetContactPreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16043,7 +16250,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateContactPreferencesResponse> updateContactPreferences(
         com.tcn.cloud.api.api.v0alpha.UpdateContactPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateContactPreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16054,7 +16261,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetCompliancePreferencesResponse> getCompliancePreferences(
         com.tcn.cloud.api.api.v0alpha.GetCompliancePreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetCompliancePreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16065,7 +16272,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateCompliancePreferencesResponse> updateCompliancePreferences(
         com.tcn.cloud.api.api.v0alpha.UpdateCompliancePreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateCompliancePreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16076,7 +16283,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetAgentPreferencesResponse> getAgentPreferences(
         com.tcn.cloud.api.api.v0alpha.GetAgentPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetAgentPreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16087,7 +16294,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateAgentPreferencesResponse> updateAgentPreferences(
         com.tcn.cloud.api.api.v0alpha.UpdateAgentPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateAgentPreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16098,7 +16305,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetOrganizationPreferencesResponse> getOrganizationPreferences(
         com.tcn.cloud.api.api.v0alpha.GetOrganizationPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetOrganizationPreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16109,7 +16316,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateOrganizationPreferencesResponse> updateOrganizationPreferences(
         com.tcn.cloud.api.api.v0alpha.UpdateOrganizationPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateOrganizationPreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16120,7 +16327,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetSchedulePreferencesResponse> getSchedulePreferences(
         com.tcn.cloud.api.api.v0alpha.GetSchedulePreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetSchedulePreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16131,7 +16338,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateSchedulePreferencesResponse> updateSchedulePreferences(
         com.tcn.cloud.api.api.v0alpha.UpdateSchedulePreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateSchedulePreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16142,7 +16349,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetBusinessPreferencesResponse> getBusinessPreferences(
         com.tcn.cloud.api.api.v0alpha.GetBusinessPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetBusinessPreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16153,7 +16360,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateBusinessPreferencesResponse> updateBusinessPreferences(
         com.tcn.cloud.api.api.v0alpha.UpdateBusinessPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateBusinessPreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16164,7 +16371,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetEndOfDayPreferencesResponse> getEndOfDayPreferences(
         com.tcn.cloud.api.api.v0alpha.GetEndOfDayPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetEndOfDayPreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16175,7 +16382,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateEndOfDayPreferencesResponse> updateEndOfDayPreferences(
         com.tcn.cloud.api.api.v0alpha.UpdateEndOfDayPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateEndOfDayPreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16186,7 +16393,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetFilterPreferencesResponse> getReportFilterPreferences(
         com.tcn.cloud.api.api.v0alpha.GetFilterPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetReportFilterPreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16197,7 +16404,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateFilterPreferencesResponse> updateReportFilterPreferences(
         com.tcn.cloud.api.api.v0alpha.UpdateFilterPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateReportFilterPreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16208,7 +16415,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetPhonePreferencesResponse> getPhonePreferences(
         com.tcn.cloud.api.api.v0alpha.GetPhonePreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetPhonePreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16219,7 +16426,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdatePhonePreferencesResponse> updatePhonePreferences(
         com.tcn.cloud.api.api.v0alpha.UpdatePhonePreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdatePhonePreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16230,7 +16437,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetDashboardGeneralPreferencesResponse> getDashboardGeneralPreferences(
         com.tcn.cloud.api.api.v0alpha.GetDashboardGeneralPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetDashboardGeneralPreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16241,7 +16448,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateDashboardGeneralPreferencesResponse> updateDashboardGeneralPreferences(
         com.tcn.cloud.api.api.v0alpha.UpdateDashboardGeneralPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateDashboardGeneralPreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16252,7 +16459,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetWebhookPreferencesResponse> getWebhookPreferences(
         com.tcn.cloud.api.api.v0alpha.GetWebhookPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetWebhookPreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16263,7 +16470,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateWebhookPreferencesResponse> updateWebhookPreferences(
         com.tcn.cloud.api.api.v0alpha.UpdateWebhookPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateWebhookPreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16274,7 +16481,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetBroadcastPreferencesResponse> getBroadcastPreferences(
         com.tcn.cloud.api.api.v0alpha.GetBroadcastPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetBroadcastPreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16285,7 +16492,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateBroadcastPreferencesResponse> updateBroadcastPreferences(
         com.tcn.cloud.api.api.v0alpha.UpdateBroadcastPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateBroadcastPreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16296,7 +16503,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetAuthenticationPreferencesResponse> getAuthenticationPreferences(
         com.tcn.cloud.api.api.v0alpha.GetAuthenticationPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetAuthenticationPreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16307,7 +16514,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateAuthenticationPreferencesResponse> updateAuthenticationPreferences(
         com.tcn.cloud.api.api.v0alpha.UpdateAuthenticationPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateAuthenticationPreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16318,7 +16525,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetRecordingPreferencesResponse> getRecordingPreferences(
         com.tcn.cloud.api.api.v0alpha.GetRecordingPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetRecordingPreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16329,7 +16536,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateRecordingPreferencesResponse> updateRecordingPreferences(
         com.tcn.cloud.api.api.v0alpha.UpdateRecordingPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateRecordingPreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16340,7 +16547,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetDashboardQueuePreferencesResponse> getDashboardQueuePreferences(
         com.tcn.cloud.api.api.v0alpha.GetDashboardQueuePreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetDashboardQueuePreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16351,7 +16558,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateDashboardQueuePreferencesResponse> updateDashboardQueuePreferences(
         com.tcn.cloud.api.api.v0alpha.UpdateDashboardQueuePreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateDashboardQueuePreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16362,7 +16569,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetAgentQuickViewPreferencesResponse> getAgentQuickViewPreferences(
         com.tcn.cloud.api.api.v0alpha.GetAgentQuickViewPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetAgentQuickViewPreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16373,7 +16580,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetVoiceAnalyticsPreferencesResponse> getVoiceAnalyticsPreferences(
         com.tcn.cloud.api.api.v0alpha.GetVoiceAnalyticsPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetVoiceAnalyticsPreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16384,7 +16591,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateVoiceAnalyticsPreferencesResponse> updateVoiceAnalyticsPreferences(
         com.tcn.cloud.api.api.v0alpha.UpdateVoiceAnalyticsPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateVoiceAnalyticsPreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16395,7 +16602,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateVoiceAnalyticsPreferencesEnabledResponse> updateVoiceAnalyticsPreferencesEnabled(
         com.tcn.cloud.api.api.v0alpha.UpdateVoiceAnalyticsPreferencesEnabledRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateVoiceAnalyticsPreferencesEnabledMethod(), getCallOptions()), request);
     }
 
@@ -16406,7 +16613,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetScorecardsPreferencesResponse> getScorecardsPreferences(
         com.tcn.cloud.api.api.v0alpha.GetScorecardsPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetScorecardsPreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16417,7 +16624,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateScorecardsPreferencesResponse> updateScorecardsPreferences(
         com.tcn.cloud.api.api.v0alpha.UpdateScorecardsPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateScorecardsPreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16428,7 +16635,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetEmailSmsPreferencesResponse> getEmailSmsPreferences(
         com.tcn.cloud.api.api.v0alpha.GetEmailSmsPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetEmailSmsPreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16439,7 +16646,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateEmailSmsPreferencesResponse> updateEmailSmsPreferences(
         com.tcn.cloud.api.api.v0alpha.UpdateEmailSmsPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateEmailSmsPreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16450,7 +16657,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.EditAgentQuickViewPreferencesResponse> editAgentQuickViewPreferences(
         com.tcn.cloud.api.api.v0alpha.EditAgentQuickViewPreferencesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getEditAgentQuickViewPreferencesMethod(), getCallOptions()), request);
     }
 
@@ -16462,7 +16669,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.EditBackofficeThemePreferenceResponse> editBackofficeThemePreference(
         com.tcn.cloud.api.api.v0alpha.EditBackofficeThemePreferenceRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getEditBackofficeThemePreferenceMethod(), getCallOptions()), request);
     }
 
@@ -16470,7 +16677,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetBackofficeThemePreferenceResponse> getBackofficeThemePreference(
         com.tcn.cloud.api.api.v0alpha.GetBackofficeThemePreferenceRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetBackofficeThemePreferenceMethod(), getCallOptions()), request);
     }
 
@@ -16481,7 +16688,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.AcceptLinkbackRecordingTermsResponse> acceptLinkbackRecordingTerms(
         com.tcn.cloud.api.api.v0alpha.AcceptLinkbackRecordingTermsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getAcceptLinkbackRecordingTermsMethod(), getCallOptions()), request);
     }
 
@@ -16492,7 +16699,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.LinkbackUpdateBroadcastTemplatesResponse> linkbackUpdateBroadcastTemplates(
         com.tcn.cloud.api.api.v0alpha.LinkbackUpdateBroadcastTemplatesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getLinkbackUpdateBroadcastTemplatesMethod(), getCallOptions()), request);
     }
 
@@ -16504,7 +16711,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.RecordEmailUnsubscribeAcknowledgementResponse> recordEmailUnsubscribeAcknowledgement(
         com.tcn.cloud.api.api.v0alpha.RecordEmailUnsubscribeAcknowledgementRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getRecordEmailUnsubscribeAcknowledgementMethod(), getCallOptions()), request);
     }
 
@@ -16516,7 +16723,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ClearEmailUnsubscribeAcknowledgementResponse> clearEmailUnsubscribeAcknowledgement(
         com.tcn.cloud.api.api.v0alpha.ClearEmailUnsubscribeAcknowledgementRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getClearEmailUnsubscribeAcknowledgementMethod(), getCallOptions()), request);
     }
 
@@ -16529,7 +16736,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateWebLinkTemplateResponse> createWebLinkTemplate(
         com.tcn.cloud.api.api.v0alpha.CreateWebLinkTemplateRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateWebLinkTemplateMethod(), getCallOptions()), request);
     }
 
@@ -16542,7 +16749,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListWebLinkTemplatesResponse> listWebLinkTemplates(
         com.tcn.cloud.api.api.v0alpha.ListWebLinkTemplatesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListWebLinkTemplatesMethod(), getCallOptions()), request);
     }
 
@@ -16555,7 +16762,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetWebLinkTemplateResponse> getWebLinkTemplate(
         com.tcn.cloud.api.api.v0alpha.GetWebLinkTemplateRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetWebLinkTemplateMethod(), getCallOptions()), request);
     }
 
@@ -16568,7 +16775,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateWebLinkTemplateResponse> updateWebLinkTemplate(
         com.tcn.cloud.api.api.v0alpha.UpdateWebLinkTemplateRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateWebLinkTemplateMethod(), getCallOptions()), request);
     }
 
@@ -16581,7 +16788,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeleteWebLinkTemplateResponse> deleteWebLinkTemplate(
         com.tcn.cloud.api.api.v0alpha.DeleteWebLinkTemplateRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDeleteWebLinkTemplateMethod(), getCallOptions()), request);
     }
 
@@ -16596,7 +16803,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateAgentTriggerTemplateResponse> createAgentTriggerTemplate(
         com.tcn.cloud.api.api.v0alpha.CreateAgentTriggerTemplateRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateAgentTriggerTemplateMethod(), getCallOptions()), request);
     }
 
@@ -16610,7 +16817,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListAgentTriggerTemplatesResponse> listAgentTriggerTemplates(
         com.tcn.cloud.api.api.v0alpha.ListAgentTriggerTemplatesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListAgentTriggerTemplatesMethod(), getCallOptions()), request);
     }
 
@@ -16623,7 +16830,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetAgentTriggerTemplateResponse> getAgentTriggerTemplate(
         com.tcn.cloud.api.api.v0alpha.GetAgentTriggerTemplateRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetAgentTriggerTemplateMethod(), getCallOptions()), request);
     }
 
@@ -16636,7 +16843,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateAgentTriggerTemplateResponse> updateAgentTriggerTemplate(
         com.tcn.cloud.api.api.v0alpha.UpdateAgentTriggerTemplateRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateAgentTriggerTemplateMethod(), getCallOptions()), request);
     }
 
@@ -16649,7 +16856,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeleteAgentTriggerTemplateResponse> deleteAgentTriggerTemplate(
         com.tcn.cloud.api.api.v0alpha.DeleteAgentTriggerTemplateRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDeleteAgentTriggerTemplateMethod(), getCallOptions()), request);
     }
 
@@ -16663,7 +16870,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateClientInfoDisplayTemplateResponse> createClientInfoDisplayTemplate(
         com.tcn.cloud.api.api.v0alpha.CreateClientInfoDisplayTemplateRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateClientInfoDisplayTemplateMethod(), getCallOptions()), request);
     }
 
@@ -16676,7 +16883,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListClientInfoDisplayTemplatesResponse> listClientInfoDisplayTemplates(
         com.tcn.cloud.api.api.v0alpha.ListClientInfoDisplayTemplatesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListClientInfoDisplayTemplatesMethod(), getCallOptions()), request);
     }
 
@@ -16690,7 +16897,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateClientInfoDisplayTemplateResponse> updateClientInfoDisplayTemplate(
         com.tcn.cloud.api.api.v0alpha.UpdateClientInfoDisplayTemplateRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateClientInfoDisplayTemplateMethod(), getCallOptions()), request);
     }
 
@@ -16704,7 +16911,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeleteClientInfoDisplayTemplateResponse> deleteClientInfoDisplayTemplate(
         com.tcn.cloud.api.api.v0alpha.DeleteClientInfoDisplayTemplateRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDeleteClientInfoDisplayTemplateMethod(), getCallOptions()), request);
     }
 
@@ -16718,7 +16925,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateResponse> getClientInfoDisplayTemplate(
         com.tcn.cloud.api.api.v0alpha.GetClientInfoDisplayTemplateRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetClientInfoDisplayTemplateMethod(), getCallOptions()), request);
     }
 
@@ -16729,7 +16936,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListAgentPauseCodesResponse> listAgentPauseCodes(
         com.tcn.cloud.api.api.v0alpha.ListAgentPauseCodesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListAgentPauseCodesMethod(), getCallOptions()), request);
     }
 
@@ -16743,7 +16950,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateAgentPauseCodeResponse> createAgentPauseCode(
         com.tcn.cloud.api.api.v0alpha.CreateAgentPauseCodeRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateAgentPauseCodeMethod(), getCallOptions()), request);
     }
 
@@ -16762,7 +16969,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateAgentPauseCodeResponse> updateAgentPauseCode(
         com.tcn.cloud.api.api.v0alpha.UpdateAgentPauseCodeRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateAgentPauseCodeMethod(), getCallOptions()), request);
     }
 
@@ -16775,7 +16982,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeleteAgentPauseCodeResponse> deleteAgentPauseCode(
         com.tcn.cloud.api.api.v0alpha.DeleteAgentPauseCodeRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDeleteAgentPauseCodeMethod(), getCallOptions()), request);
     }
 
@@ -16790,7 +16997,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListCustomReportFiltersResponse> listCustomReportFilters(
         com.tcn.cloud.api.api.v0alpha.ListCustomReportFiltersRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListCustomReportFiltersMethod(), getCallOptions()), request);
     }
 
@@ -16806,7 +17013,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateCustomReportFilterResponse> createCustomReportFilter(
         com.tcn.cloud.api.api.v0alpha.CreateCustomReportFilterRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateCustomReportFilterMethod(), getCallOptions()), request);
     }
 
@@ -16823,7 +17030,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateCustomReportFilterResponse> updateCustomReportFilter(
         com.tcn.cloud.api.api.v0alpha.UpdateCustomReportFilterRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateCustomReportFilterMethod(), getCallOptions()), request);
     }
 
@@ -16838,7 +17045,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeleteCustomReportFilterResponse> deleteCustomReportFilter(
         com.tcn.cloud.api.api.v0alpha.DeleteCustomReportFilterRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDeleteCustomReportFilterMethod(), getCallOptions()), request);
     }
 
@@ -16853,7 +17060,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListAgentResponseGroupsResponse> listAgentResponseGroups(
         com.tcn.cloud.api.api.v0alpha.ListAgentResponseGroupsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListAgentResponseGroupsMethod(), getCallOptions()), request);
     }
 
@@ -16868,7 +17075,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListLastTemplateElementsResponse> listLastTemplateElements(
         com.tcn.cloud.api.api.v0alpha.ListLastTemplateElementsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListLastTemplateElementsMethod(), getCallOptions()), request);
     }
 
@@ -16882,7 +17089,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListQueueConfigsRes> listQueueConfigs(
         com.tcn.cloud.api.api.v0alpha.ListQueueConfigsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListQueueConfigsMethod(), getCallOptions()), request);
     }
 
@@ -16896,7 +17103,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdRes> listQueueConfigsByOrgId(
         com.tcn.cloud.api.api.v0alpha.ListQueueConfigsByOrgIdReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListQueueConfigsByOrgIdMethod(), getCallOptions()), request);
     }
 
@@ -16912,7 +17119,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeleteQueueConfigRes> deleteQueueConfig(
         com.tcn.cloud.api.api.v0alpha.DeleteQueueConfigReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDeleteQueueConfigMethod(), getCallOptions()), request);
     }
 
@@ -16930,7 +17137,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetQueueConfigRes> getQueueConfig(
         com.tcn.cloud.api.api.v0alpha.GetQueueConfigReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetQueueConfigMethod(), getCallOptions()), request);
     }
 
@@ -16947,7 +17154,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateQueueConfigRes> createQueueConfig(
         com.tcn.cloud.api.api.v0alpha.CreateQueueConfigReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateQueueConfigMethod(), getCallOptions()), request);
     }
 
@@ -16965,7 +17172,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateQueueConfigRes> updateQueueConfig(
         com.tcn.cloud.api.api.v0alpha.UpdateQueueConfigReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateQueueConfigMethod(), getCallOptions()), request);
     }
 
@@ -16986,7 +17193,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CopyQueueConfigRes> copyQueueConfig(
         com.tcn.cloud.api.api.v0alpha.CopyQueueConfigReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCopyQueueConfigMethod(), getCallOptions()), request);
     }
 
@@ -17003,7 +17210,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetAllQueueConfigSoundsRes> getAllQueueConfigSounds(
         com.tcn.cloud.api.api.v0alpha.GetAllQueueConfigSoundsReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetAllQueueConfigSoundsMethod(), getCallOptions()), request);
     }
 
@@ -17023,7 +17230,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetQueueConfigSoundRes> getQueueConfigSound(
         com.tcn.cloud.api.api.v0alpha.GetQueueConfigSoundReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetQueueConfigSoundMethod(), getCallOptions()), request);
     }
 
@@ -17045,7 +17252,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SetQueueConfigSoundRes> setQueueConfigSound(
         com.tcn.cloud.api.api.v0alpha.SetQueueConfigSoundReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getSetQueueConfigSoundMethod(), getCallOptions()), request);
     }
 
@@ -17069,7 +17276,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.SetAllQueueConfigSoundsFromSourceRes> setAllQueueConfigSoundsFromSource(
         com.tcn.cloud.api.api.v0alpha.SetAllQueueConfigSoundsFromSourceReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getSetAllQueueConfigSoundsFromSourceMethod(), getCallOptions()), request);
     }
 
@@ -17085,7 +17292,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetUserBlockedResponse> getUserBlocked(
         com.tcn.cloud.api.api.v0alpha.GetUserBlockedRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetUserBlockedMethod(), getCallOptions()), request);
     }
 
@@ -17101,7 +17308,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UnblockUserResponse> unblockUser(
         com.tcn.cloud.api.api.v0alpha.UnblockUserRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUnblockUserMethod(), getCallOptions()), request);
     }
 
@@ -17114,7 +17321,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListP3UnMigratedUsersResponse> listP3UnMigratedUsers(
         com.tcn.cloud.api.api.v0alpha.ListP3UnMigratedUsersRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListP3UnMigratedUsersMethod(), getCallOptions()), request);
     }
 
@@ -17127,7 +17334,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.MigrateP3UserResponse> migrateP3User(
         com.tcn.cloud.api.api.v0alpha.MigrateP3UserRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getMigrateP3UserMethod(), getCallOptions()), request);
     }
 
@@ -17140,7 +17347,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateP3UserNameResponse> updateP3UserName(
         com.tcn.cloud.api.api.v0alpha.UpdateP3UserNameRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateP3UserNameMethod(), getCallOptions()), request);
     }
 
@@ -17153,7 +17360,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListOwnedUsersResponse> listOwnedUsers(
         com.tcn.cloud.api.api.v0alpha.ListOwnedUsersRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListOwnedUsersMethod(), getCallOptions()), request);
     }
 
@@ -17164,7 +17371,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListOwnedOrgsByOrgIdResponse> listOwnedOrgsByOrgId(
         com.tcn.cloud.api.api.v0alpha.ListOwnedOrgsByOrgIdRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListOwnedOrgsByOrgIdMethod(), getCallOptions()), request);
     }
 
@@ -17175,7 +17382,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListOwnedOrgsResponse> listOwnedOrgs(
         com.tcn.cloud.api.api.v0alpha.ListOwnedOrgsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListOwnedOrgsMethod(), getCallOptions()), request);
     }
 
@@ -17188,7 +17395,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.RemoveLoginStrikesResponse> removeLoginStrikes(
         com.tcn.cloud.api.api.v0alpha.RemoveLoginStrikesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getRemoveLoginStrikesMethod(), getCallOptions()), request);
     }
 
@@ -17201,7 +17408,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.RemoveUserLoginStrikesResponse> removeUserLoginStrikes(
         com.tcn.cloud.api.api.v0alpha.RemoveUserLoginStrikesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getRemoveUserLoginStrikesMethod(), getCallOptions()), request);
     }
 
@@ -17214,7 +17421,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListLoginHistoryResponse> listLoginHistory(
         com.tcn.cloud.api.api.v0alpha.ListLoginHistoryRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListLoginHistoryMethod(), getCallOptions()), request);
     }
 
@@ -17227,7 +17434,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateP3UserSidsResponse> updateP3UserSids(
         com.tcn.cloud.api.api.v0alpha.UpdateP3UserSidsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateP3UserSidsMethod(), getCallOptions()), request);
     }
 
@@ -17238,7 +17445,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateAuthConnectionResponse> createAuthConnection(
         com.tcn.cloud.api.api.v0alpha.CreateAuthConnectionRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateAuthConnectionMethod(), getCallOptions()), request);
     }
 
@@ -17249,7 +17456,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetAuthConnectionSettingsResponse> getAuthConnectionSettings(
         com.tcn.cloud.api.api.v0alpha.GetAuthConnectionSettingsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetAuthConnectionSettingsMethod(), getCallOptions()), request);
     }
 
@@ -17260,7 +17467,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateAuthConnectionSettingsResponse> updateAuthConnectionSettings(
         com.tcn.cloud.api.api.v0alpha.UpdateAuthConnectionSettingsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateAuthConnectionSettingsMethod(), getCallOptions()), request);
     }
 
@@ -17271,7 +17478,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeleteAuthConnectionResponse> deleteAuthConnection(
         com.tcn.cloud.api.api.v0alpha.DeleteAuthConnectionRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDeleteAuthConnectionMethod(), getCallOptions()), request);
     }
 
@@ -17282,7 +17489,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetUserSubscriptionResponse> getUserSubscription(
         com.tcn.cloud.api.api.v0alpha.GetUserSubscriptionRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetUserSubscriptionMethod(), getCallOptions()), request);
     }
 
@@ -17293,7 +17500,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionResponse> getMyUserSubscription(
         com.tcn.cloud.api.api.v0alpha.GetMyUserSubscriptionRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetMyUserSubscriptionMethod(), getCallOptions()), request);
     }
 
@@ -17304,7 +17511,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.AddUserSubscriptionResponse> addUserSubscription(
         com.tcn.cloud.api.api.v0alpha.AddUserSubscriptionRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getAddUserSubscriptionMethod(), getCallOptions()), request);
     }
 
@@ -17315,7 +17522,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionResponse> addMyUserSubscription(
         com.tcn.cloud.api.api.v0alpha.AddMyUserSubscriptionRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getAddMyUserSubscriptionMethod(), getCallOptions()), request);
     }
 
@@ -17326,7 +17533,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.RemoveUserSubscriptionResponse> removeUserSubscription(
         com.tcn.cloud.api.api.v0alpha.RemoveUserSubscriptionRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getRemoveUserSubscriptionMethod(), getCallOptions()), request);
     }
 
@@ -17337,7 +17544,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.RemoveMyUserSubscriptionResponse> removeMyUserSubscription(
         com.tcn.cloud.api.api.v0alpha.RemoveMyUserSubscriptionRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getRemoveMyUserSubscriptionMethod(), getCallOptions()), request);
     }
 
@@ -17348,7 +17555,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateUserSubscriptionResponse> updateUserSubscription(
         com.tcn.cloud.api.api.v0alpha.UpdateUserSubscriptionRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateUserSubscriptionMethod(), getCallOptions()), request);
     }
 
@@ -17359,7 +17566,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionResponse> updateMyUserSubscription(
         com.tcn.cloud.api.api.v0alpha.UpdateMyUserSubscriptionRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateMyUserSubscriptionMethod(), getCallOptions()), request);
     }
 
@@ -17370,7 +17577,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListUserSubscriptionsResponse> listUserSubscriptions(
         com.tcn.cloud.api.api.v0alpha.ListUserSubscriptionsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListUserSubscriptionsMethod(), getCallOptions()), request);
     }
 
@@ -17381,7 +17588,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsResponse> listMyUserSubscriptions(
         com.tcn.cloud.api.api.v0alpha.ListMyUserSubscriptionsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListMyUserSubscriptionsMethod(), getCallOptions()), request);
     }
 
@@ -17394,7 +17601,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListOrgSubscriptionsResponse> listOrgSubscriptions(
         com.tcn.cloud.api.api.v0alpha.ListOrgSubscriptionsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListOrgSubscriptionsMethod(), getCallOptions()), request);
     }
 
@@ -17407,7 +17614,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.GetSystemEnvironmentDetailsResponse> getSystemEnvironmentDetails(
         com.tcn.cloud.api.api.v0alpha.GetSystemEnvironmentDetailsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetSystemEnvironmentDetailsMethod(), getCallOptions()), request);
     }
 
@@ -17422,7 +17629,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.ListAgentStatisticsTemplatesResponse> listAgentStatisticsTemplates(
         com.tcn.cloud.api.api.v0alpha.ListAgentStatisticsTemplatesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getListAgentStatisticsTemplatesMethod(), getCallOptions()), request);
     }
 
@@ -17437,7 +17644,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.CreateAgentStatisticsTemplateResponse> createAgentStatisticsTemplate(
         com.tcn.cloud.api.api.v0alpha.CreateAgentStatisticsTemplateRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getCreateAgentStatisticsTemplateMethod(), getCallOptions()), request);
     }
 
@@ -17452,7 +17659,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.UpdateAgentStatisticsTemplateResponse> updateAgentStatisticsTemplate(
         com.tcn.cloud.api.api.v0alpha.UpdateAgentStatisticsTemplateRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getUpdateAgentStatisticsTemplateMethod(), getCallOptions()), request);
     }
 
@@ -17467,7 +17674,7 @@ public final class OrgGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v0alpha.DeleteAgentStatisticsTemplateResponse> deleteAgentStatisticsTemplate(
         com.tcn.cloud.api.api.v0alpha.DeleteAgentStatisticsTemplateRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getDeleteAgentStatisticsTemplateMethod(), getCallOptions()), request);
     }
   }

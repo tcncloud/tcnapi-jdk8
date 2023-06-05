@@ -1,13 +1,25 @@
 package com.tcn.cloud.api.api.v1alpha1.fts;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.50.0)",
+    value = "by gRPC proto compiler (version 1.14.0)",
     comments = "Source: api/v1alpha1/fts/service.proto")
-@io.grpc.stub.annotations.GrpcGenerated
 public final class FtsApiGrpc {
 
   private FtsApiGrpc() {}
@@ -29,35 +41,29 @@ public final class FtsApiGrpc {
     if ((getGetUploadFileUrlMethod = FtsApiGrpc.getGetUploadFileUrlMethod) == null) {
       synchronized (FtsApiGrpc.class) {
         if ((getGetUploadFileUrlMethod = FtsApiGrpc.getGetUploadFileUrlMethod) == null) {
-          FtsApiGrpc.getGetUploadFileUrlMethod = getGetUploadFileUrlMethod =
+          FtsApiGrpc.getGetUploadFileUrlMethod = getGetUploadFileUrlMethod = 
               io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.fts.GetUploadFileUrlReq, com.tcn.cloud.api.api.v1alpha1.fts.GetUploadFileUrlRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetUploadFileUrl"))
+              .setFullMethodName(generateFullMethodName(
+                  "api.v1alpha1.fts.FtsApi", "GetUploadFileUrl"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.fts.GetUploadFileUrlReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.tcn.cloud.api.api.v1alpha1.fts.GetUploadFileUrlRes.getDefaultInstance()))
-              .setSchemaDescriptor(new FtsApiMethodDescriptorSupplier("GetUploadFileUrl"))
-              .build();
+                  .setSchemaDescriptor(new FtsApiMethodDescriptorSupplier("GetUploadFileUrl"))
+                  .build();
+          }
         }
-      }
-    }
-    return getGetUploadFileUrlMethod;
+     }
+     return getGetUploadFileUrlMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static FtsApiStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<FtsApiStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<FtsApiStub>() {
-        @java.lang.Override
-        public FtsApiStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new FtsApiStub(channel, callOptions);
-        }
-      };
-    return FtsApiStub.newStub(factory, channel);
+    return new FtsApiStub(channel);
   }
 
   /**
@@ -65,14 +71,7 @@ public final class FtsApiGrpc {
    */
   public static FtsApiBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<FtsApiBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<FtsApiBlockingStub>() {
-        @java.lang.Override
-        public FtsApiBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new FtsApiBlockingStub(channel, callOptions);
-        }
-      };
-    return FtsApiBlockingStub.newStub(factory, channel);
+    return new FtsApiBlockingStub(channel);
   }
 
   /**
@@ -80,14 +79,7 @@ public final class FtsApiGrpc {
    */
   public static FtsApiFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<FtsApiFutureStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<FtsApiFutureStub>() {
-        @java.lang.Override
-        public FtsApiFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new FtsApiFutureStub(channel, callOptions);
-        }
-      };
-    return FtsApiFutureStub.newStub(factory, channel);
+    return new FtsApiFutureStub(channel);
   }
 
   /**
@@ -98,14 +90,14 @@ public final class FtsApiGrpc {
      */
     public void getUploadFileUrl(com.tcn.cloud.api.api.v1alpha1.fts.GetUploadFileUrlReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.fts.GetUploadFileUrlRes> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetUploadFileUrlMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetUploadFileUrlMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetUploadFileUrlMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            asyncUnaryCall(
               new MethodHandlers<
                 com.tcn.cloud.api.api.v1alpha1.fts.GetUploadFileUrlReq,
                 com.tcn.cloud.api.api.v1alpha1.fts.GetUploadFileUrlRes>(
@@ -116,15 +108,19 @@ public final class FtsApiGrpc {
 
   /**
    */
-  public static final class FtsApiStub extends io.grpc.stub.AbstractAsyncStub<FtsApiStub> {
-    private FtsApiStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class FtsApiStub extends io.grpc.stub.AbstractStub<FtsApiStub> {
+    private FtsApiStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private FtsApiStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected FtsApiStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected FtsApiStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new FtsApiStub(channel, callOptions);
     }
 
@@ -132,44 +128,52 @@ public final class FtsApiGrpc {
      */
     public void getUploadFileUrl(com.tcn.cloud.api.api.v1alpha1.fts.GetUploadFileUrlReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.fts.GetUploadFileUrlRes> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
+      asyncUnaryCall(
           getChannel().newCall(getGetUploadFileUrlMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
    */
-  public static final class FtsApiBlockingStub extends io.grpc.stub.AbstractBlockingStub<FtsApiBlockingStub> {
-    private FtsApiBlockingStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class FtsApiBlockingStub extends io.grpc.stub.AbstractStub<FtsApiBlockingStub> {
+    private FtsApiBlockingStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private FtsApiBlockingStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected FtsApiBlockingStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected FtsApiBlockingStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new FtsApiBlockingStub(channel, callOptions);
     }
 
     /**
      */
     public com.tcn.cloud.api.api.v1alpha1.fts.GetUploadFileUrlRes getUploadFileUrl(com.tcn.cloud.api.api.v1alpha1.fts.GetUploadFileUrlReq request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+      return blockingUnaryCall(
           getChannel(), getGetUploadFileUrlMethod(), getCallOptions(), request);
     }
   }
 
   /**
    */
-  public static final class FtsApiFutureStub extends io.grpc.stub.AbstractFutureStub<FtsApiFutureStub> {
-    private FtsApiFutureStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+  public static final class FtsApiFutureStub extends io.grpc.stub.AbstractStub<FtsApiFutureStub> {
+    private FtsApiFutureStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private FtsApiFutureStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected FtsApiFutureStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+    protected FtsApiFutureStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
       return new FtsApiFutureStub(channel, callOptions);
     }
 
@@ -177,7 +181,7 @@ public final class FtsApiGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.fts.GetUploadFileUrlRes> getUploadFileUrl(
         com.tcn.cloud.api.api.v1alpha1.fts.GetUploadFileUrlReq request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
+      return futureUnaryCall(
           getChannel().newCall(getGetUploadFileUrlMethod(), getCallOptions()), request);
     }
   }
