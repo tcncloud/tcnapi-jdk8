@@ -3006,6 +3006,38 @@ public final class WFMGrpc {
      return getCreateDraftScheduleMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleRes> getUpdateDraftScheduleMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateDraftSchedule",
+      requestType = com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleReq.class,
+      responseType = com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleReq,
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleRes> getUpdateDraftScheduleMethod() {
+    io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleRes> getUpdateDraftScheduleMethod;
+    if ((getUpdateDraftScheduleMethod = WFMGrpc.getUpdateDraftScheduleMethod) == null) {
+      synchronized (WFMGrpc.class) {
+        if ((getUpdateDraftScheduleMethod = WFMGrpc.getUpdateDraftScheduleMethod) == null) {
+          WFMGrpc.getUpdateDraftScheduleMethod = getUpdateDraftScheduleMethod = 
+              io.grpc.MethodDescriptor.<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleReq, com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "api.v1alpha1.wfm.WFM", "UpdateDraftSchedule"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleRes.getDefaultInstance()))
+                  .setSchemaDescriptor(new WFMMethodDescriptorSupplier("UpdateDraftSchedule"))
+                  .build();
+          }
+        }
+     }
+     return getUpdateDraftScheduleMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleReq,
       com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes> getBuildDraftScheduleMethod;
 
@@ -5130,6 +5162,24 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Updates the &#64;name, &#64;description, and &#64;datetime_range of the given &#64;draft_schedule_sid for the org sending the request.
+     * The &#64;name, &#64;description, and &#64;datetime_range fields must all be set with their desired values.
+     * If &#64;delete_shifts_not_in_range if true, then any instances outside of the &#64;datetime_range will be permenantly deleted with no recovery option.
+     * If &#64;delete_shifts_not_in_range is false, instances outside of the new &#64;datetime_range will be retained, for use if the datetime range is expanded to cover the instances in the future.
+     * If &#64;copy_shifts_into_new_range time is true, then new the portion of an expanded &#64;datetime_range which has no instances will copy the instances from the published schedule. If false, no instances will be created for an expanded &#64;scheduling_range.
+     * If &#64;get_updated_shifts is true, then the returned draft schedule will also contain the shift instances and segments in the given &#64;datetime_range.
+     * Errors:
+     *   - grpc.Invalid: the &#64;name, &#64;description or &#64;datetime_range are invalid.
+     *   - grpc.Internal: error occurs when updating the schedule or its instances.
+     * </pre>
+     */
+    public void updateDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleRes> responseObserver) {
+      asyncUnimplementedUnaryCall(getUpdateDraftScheduleMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Builds a draft schedule for the given &#64;node_selector in &#64;schedule_scenario_sid over &#64;schedule_scenario_scheduling_range for &#64;draft_schedule_sid and the org making the request.
      * The &#64;schedule_scenario_scheduling_range field is optional. If not set, the draft schedule will be obtained with it's default range from it's start to end time.
      * &#64;include parameters are used when retrieving the resulting draft schedule, and work in the same way as for GetDraftSchedule.
@@ -6017,6 +6067,13 @@ public final class WFMGrpc {
                 com.tcn.cloud.api.api.v1alpha1.wfm.CreateDraftScheduleReq,
                 com.tcn.cloud.api.api.v1alpha1.wfm.CreateDraftScheduleRes>(
                   this, METHODID_CREATE_DRAFT_SCHEDULE)))
+          .addMethod(
+            getUpdateDraftScheduleMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleRes>(
+                  this, METHODID_UPDATE_DRAFT_SCHEDULE)))
           .addMethod(
             getBuildDraftScheduleMethod(),
             asyncUnaryCall(
@@ -7875,6 +7932,25 @@ public final class WFMGrpc {
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateDraftScheduleRes> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getCreateDraftScheduleMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates the &#64;name, &#64;description, and &#64;datetime_range of the given &#64;draft_schedule_sid for the org sending the request.
+     * The &#64;name, &#64;description, and &#64;datetime_range fields must all be set with their desired values.
+     * If &#64;delete_shifts_not_in_range if true, then any instances outside of the &#64;datetime_range will be permenantly deleted with no recovery option.
+     * If &#64;delete_shifts_not_in_range is false, instances outside of the new &#64;datetime_range will be retained, for use if the datetime range is expanded to cover the instances in the future.
+     * If &#64;copy_shifts_into_new_range time is true, then new the portion of an expanded &#64;datetime_range which has no instances will copy the instances from the published schedule. If false, no instances will be created for an expanded &#64;scheduling_range.
+     * If &#64;get_updated_shifts is true, then the returned draft schedule will also contain the shift instances and segments in the given &#64;datetime_range.
+     * Errors:
+     *   - grpc.Invalid: the &#64;name, &#64;description or &#64;datetime_range are invalid.
+     *   - grpc.Internal: error occurs when updating the schedule or its instances.
+     * </pre>
+     */
+    public void updateDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleReq request,
+        io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleRes> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getUpdateDraftScheduleMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -9800,6 +9876,24 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Updates the &#64;name, &#64;description, and &#64;datetime_range of the given &#64;draft_schedule_sid for the org sending the request.
+     * The &#64;name, &#64;description, and &#64;datetime_range fields must all be set with their desired values.
+     * If &#64;delete_shifts_not_in_range if true, then any instances outside of the &#64;datetime_range will be permenantly deleted with no recovery option.
+     * If &#64;delete_shifts_not_in_range is false, instances outside of the new &#64;datetime_range will be retained, for use if the datetime range is expanded to cover the instances in the future.
+     * If &#64;copy_shifts_into_new_range time is true, then new the portion of an expanded &#64;datetime_range which has no instances will copy the instances from the published schedule. If false, no instances will be created for an expanded &#64;scheduling_range.
+     * If &#64;get_updated_shifts is true, then the returned draft schedule will also contain the shift instances and segments in the given &#64;datetime_range.
+     * Errors:
+     *   - grpc.Invalid: the &#64;name, &#64;description or &#64;datetime_range are invalid.
+     *   - grpc.Internal: error occurs when updating the schedule or its instances.
+     * </pre>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleRes updateDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleReq request) {
+      return blockingUnaryCall(
+          getChannel(), getUpdateDraftScheduleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Builds a draft schedule for the given &#64;node_selector in &#64;schedule_scenario_sid over &#64;schedule_scenario_scheduling_range for &#64;draft_schedule_sid and the org making the request.
      * The &#64;schedule_scenario_scheduling_range field is optional. If not set, the draft schedule will be obtained with it's default range from it's start to end time.
      * &#64;include parameters are used when retrieving the resulting draft schedule, and work in the same way as for GetDraftSchedule.
@@ -11699,6 +11793,25 @@ public final class WFMGrpc {
 
     /**
      * <pre>
+     * Updates the &#64;name, &#64;description, and &#64;datetime_range of the given &#64;draft_schedule_sid for the org sending the request.
+     * The &#64;name, &#64;description, and &#64;datetime_range fields must all be set with their desired values.
+     * If &#64;delete_shifts_not_in_range if true, then any instances outside of the &#64;datetime_range will be permenantly deleted with no recovery option.
+     * If &#64;delete_shifts_not_in_range is false, instances outside of the new &#64;datetime_range will be retained, for use if the datetime range is expanded to cover the instances in the future.
+     * If &#64;copy_shifts_into_new_range time is true, then new the portion of an expanded &#64;datetime_range which has no instances will copy the instances from the published schedule. If false, no instances will be created for an expanded &#64;scheduling_range.
+     * If &#64;get_updated_shifts is true, then the returned draft schedule will also contain the shift instances and segments in the given &#64;datetime_range.
+     * Errors:
+     *   - grpc.Invalid: the &#64;name, &#64;description or &#64;datetime_range are invalid.
+     *   - grpc.Internal: error occurs when updating the schedule or its instances.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleRes> updateDraftSchedule(
+        com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleReq request) {
+      return futureUnaryCall(
+          getChannel().newCall(getUpdateDraftScheduleMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Builds a draft schedule for the given &#64;node_selector in &#64;schedule_scenario_sid over &#64;schedule_scenario_scheduling_range for &#64;draft_schedule_sid and the org making the request.
      * The &#64;schedule_scenario_scheduling_range field is optional. If not set, the draft schedule will be obtained with it's default range from it's start to end time.
      * &#64;include parameters are used when retrieving the resulting draft schedule, and work in the same way as for GetDraftSchedule.
@@ -12041,20 +12154,21 @@ public final class WFMGrpc {
   private static final int METHODID_GET_PUBLISHED_SCHEDULE_REQUIRED_CALLS = 90;
   private static final int METHODID_GET_DRAFT_SCHEDULE_REQUIRED_CALLS = 91;
   private static final int METHODID_CREATE_DRAFT_SCHEDULE = 92;
-  private static final int METHODID_BUILD_DRAFT_SCHEDULE = 93;
-  private static final int METHODID_PUBLISH_DRAFT_SCHEDULE = 94;
-  private static final int METHODID_GET_DRAFT_SCHEDULE = 95;
-  private static final int METHODID_LIST_DRAFT_SCHEDULES = 96;
-  private static final int METHODID_DELETE_DRAFT_SCHEDULE = 97;
-  private static final int METHODID_CREATE_SHIFT_INSTANCE = 98;
-  private static final int METHODID_SWAP_SHIFT_INSTANCES = 99;
-  private static final int METHODID_UPDATE_SHIFT_INSTANCE = 100;
-  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 101;
-  private static final int METHODID_SET_SCHEDULING_TARGET = 102;
-  private static final int METHODID_GET_SCHEDULING_TARGET = 103;
-  private static final int METHODID_DELETE_SCHEDULING_TARGET = 104;
-  private static final int METHODID_GET_PERFORMANCE_METRICS = 105;
-  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 106;
+  private static final int METHODID_UPDATE_DRAFT_SCHEDULE = 93;
+  private static final int METHODID_BUILD_DRAFT_SCHEDULE = 94;
+  private static final int METHODID_PUBLISH_DRAFT_SCHEDULE = 95;
+  private static final int METHODID_GET_DRAFT_SCHEDULE = 96;
+  private static final int METHODID_LIST_DRAFT_SCHEDULES = 97;
+  private static final int METHODID_DELETE_DRAFT_SCHEDULE = 98;
+  private static final int METHODID_CREATE_SHIFT_INSTANCE = 99;
+  private static final int METHODID_SWAP_SHIFT_INSTANCES = 100;
+  private static final int METHODID_UPDATE_SHIFT_INSTANCE = 101;
+  private static final int METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS = 102;
+  private static final int METHODID_SET_SCHEDULING_TARGET = 103;
+  private static final int METHODID_GET_SCHEDULING_TARGET = 104;
+  private static final int METHODID_DELETE_SCHEDULING_TARGET = 105;
+  private static final int METHODID_GET_PERFORMANCE_METRICS = 106;
+  private static final int METHODID_LIST_REQUIRED_CALLS_INTERVALS = 107;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -12445,6 +12559,10 @@ public final class WFMGrpc {
           serviceImpl.createDraftSchedule((com.tcn.cloud.api.api.v1alpha1.wfm.CreateDraftScheduleReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateDraftScheduleRes>) responseObserver);
           break;
+        case METHODID_UPDATE_DRAFT_SCHEDULE:
+          serviceImpl.updateDraftSchedule((com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleReq) request,
+              (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateDraftScheduleRes>) responseObserver);
+          break;
         case METHODID_BUILD_DRAFT_SCHEDULE:
           serviceImpl.buildDraftSchedule((com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleReq) request,
               (io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes>) responseObserver);
@@ -12655,6 +12773,7 @@ public final class WFMGrpc {
               .addMethod(getGetPublishedScheduleRequiredCallsMethod())
               .addMethod(getGetDraftScheduleRequiredCallsMethod())
               .addMethod(getCreateDraftScheduleMethod())
+              .addMethod(getUpdateDraftScheduleMethod())
               .addMethod(getBuildDraftScheduleMethod())
               .addMethod(getPublishDraftScheduleMethod())
               .addMethod(getGetDraftScheduleMethod())
