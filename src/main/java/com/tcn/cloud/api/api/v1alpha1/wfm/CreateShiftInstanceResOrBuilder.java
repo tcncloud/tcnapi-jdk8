@@ -9,72 +9,89 @@ public interface CreateShiftInstanceResOrBuilder extends
 
   /**
    * <pre>
-   * Shift instance that was created.
+   * Any shift instances that were created.
    * </pre>
    *
-   * <code>.api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
-   * @return Whether the shiftInstance field is set.
+   * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
    */
-  boolean hasShiftInstance();
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance> 
+      getShiftInstanceList();
   /**
    * <pre>
-   * Shift instance that was created.
+   * Any shift instances that were created.
    * </pre>
    *
-   * <code>.api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
-   * @return The shiftInstance.
+   * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance getShiftInstance();
+  com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance getShiftInstance(int index);
   /**
    * <pre>
-   * Shift instance that was created.
+   * Any shift instances that were created.
    * </pre>
    *
-   * <code>.api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+   * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstanceOrBuilder getShiftInstanceOrBuilder();
+  int getShiftInstanceCount();
+  /**
+   * <pre>
+   * Any shift instances that were created.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+   */
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstanceOrBuilder> 
+      getShiftInstanceOrBuilderList();
+  /**
+   * <pre>
+   * Any shift instances that were created.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+   */
+  com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstanceOrBuilder getShiftInstanceOrBuilder(
+      int index);
 
   /**
    * <pre>
-   * Performance metrics that this shift instance has.
+   * Diagnostics to report cause if shift instances fail to build.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
    */
-  java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric> 
-      getPerformanceMetricsList();
+  java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic> 
+      getDiagnosticsList();
   /**
    * <pre>
-   * Performance metrics that this shift instance has.
+   * Diagnostics to report cause if shift instances fail to build.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric getPerformanceMetrics(int index);
+  com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic getDiagnostics(int index);
   /**
    * <pre>
-   * Performance metrics that this shift instance has.
+   * Diagnostics to report cause if shift instances fail to build.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
    */
-  int getPerformanceMetricsCount();
+  int getDiagnosticsCount();
   /**
    * <pre>
-   * Performance metrics that this shift instance has.
+   * Diagnostics to report cause if shift instances fail to build.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
    */
-  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricOrBuilder> 
-      getPerformanceMetricsOrBuilderList();
+  java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder> 
+      getDiagnosticsOrBuilderList();
   /**
    * <pre>
-   * Performance metrics that this shift instance has.
+   * Diagnostics to report cause if shift instances fail to build.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
    */
-  com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricOrBuilder getPerformanceMetricsOrBuilder(
+  com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder getDiagnosticsOrBuilder(
       int index);
 }

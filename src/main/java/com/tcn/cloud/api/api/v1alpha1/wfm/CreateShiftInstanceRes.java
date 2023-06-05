@@ -20,7 +20,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CreateShiftInstanceRes() {
-    performanceMetrics_ = java.util.Collections.emptyList();
+    shiftInstance_ = java.util.Collections.emptyList();
+    diagnostics_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -44,102 +45,125 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SHIFT_INSTANCE_FIELD_NUMBER = 1;
-  private com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance shiftInstance_;
+  @SuppressWarnings("serial")
+  private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance> shiftInstance_;
   /**
    * <pre>
-   * Shift instance that was created.
+   * Any shift instances that were created.
    * </pre>
    *
-   * <code>.api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
-   * @return Whether the shiftInstance field is set.
+   * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
    */
   @java.lang.Override
-  public boolean hasShiftInstance() {
-    return shiftInstance_ != null;
+  public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance> getShiftInstanceList() {
+    return shiftInstance_;
   }
   /**
    * <pre>
-   * Shift instance that was created.
+   * Any shift instances that were created.
    * </pre>
    *
-   * <code>.api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
-   * @return The shiftInstance.
+   * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance getShiftInstance() {
-    return shiftInstance_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.getDefaultInstance() : shiftInstance_;
+  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstanceOrBuilder> 
+      getShiftInstanceOrBuilderList() {
+    return shiftInstance_;
   }
   /**
    * <pre>
-   * Shift instance that was created.
+   * Any shift instances that were created.
    * </pre>
    *
-   * <code>.api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+   * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstanceOrBuilder getShiftInstanceOrBuilder() {
-    return shiftInstance_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.getDefaultInstance() : shiftInstance_;
+  public int getShiftInstanceCount() {
+    return shiftInstance_.size();
+  }
+  /**
+   * <pre>
+   * Any shift instances that were created.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance getShiftInstance(int index) {
+    return shiftInstance_.get(index);
+  }
+  /**
+   * <pre>
+   * Any shift instances that were created.
+   * </pre>
+   *
+   * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+   */
+  @java.lang.Override
+  public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstanceOrBuilder getShiftInstanceOrBuilder(
+      int index) {
+    return shiftInstance_.get(index);
   }
 
-  public static final int PERFORMANCE_METRICS_FIELD_NUMBER = 2;
+  public static final int DIAGNOSTICS_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric> performanceMetrics_;
+  private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic> diagnostics_;
   /**
    * <pre>
-   * Performance metrics that this shift instance has.
+   * Diagnostics to report cause if shift instances fail to build.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric> getPerformanceMetricsList() {
-    return performanceMetrics_;
+  public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic> getDiagnosticsList() {
+    return diagnostics_;
   }
   /**
    * <pre>
-   * Performance metrics that this shift instance has.
+   * Diagnostics to report cause if shift instances fail to build.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricOrBuilder> 
-      getPerformanceMetricsOrBuilderList() {
-    return performanceMetrics_;
+  public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder> 
+      getDiagnosticsOrBuilderList() {
+    return diagnostics_;
   }
   /**
    * <pre>
-   * Performance metrics that this shift instance has.
+   * Diagnostics to report cause if shift instances fail to build.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
    */
   @java.lang.Override
-  public int getPerformanceMetricsCount() {
-    return performanceMetrics_.size();
+  public int getDiagnosticsCount() {
+    return diagnostics_.size();
   }
   /**
    * <pre>
-   * Performance metrics that this shift instance has.
+   * Diagnostics to report cause if shift instances fail to build.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric getPerformanceMetrics(int index) {
-    return performanceMetrics_.get(index);
+  public com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic getDiagnostics(int index) {
+    return diagnostics_.get(index);
   }
   /**
    * <pre>
-   * Performance metrics that this shift instance has.
+   * Diagnostics to report cause if shift instances fail to build.
    * </pre>
    *
-   * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+   * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
    */
   @java.lang.Override
-  public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricOrBuilder getPerformanceMetricsOrBuilder(
+  public com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder getDiagnosticsOrBuilder(
       int index) {
-    return performanceMetrics_.get(index);
+    return diagnostics_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -156,11 +180,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (shiftInstance_ != null) {
-      output.writeMessage(1, getShiftInstance());
+    for (int i = 0; i < shiftInstance_.size(); i++) {
+      output.writeMessage(1, shiftInstance_.get(i));
     }
-    for (int i = 0; i < performanceMetrics_.size(); i++) {
-      output.writeMessage(2, performanceMetrics_.get(i));
+    for (int i = 0; i < diagnostics_.size(); i++) {
+      output.writeMessage(2, diagnostics_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -171,13 +195,13 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (shiftInstance_ != null) {
+    for (int i = 0; i < shiftInstance_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getShiftInstance());
+        .computeMessageSize(1, shiftInstance_.get(i));
     }
-    for (int i = 0; i < performanceMetrics_.size(); i++) {
+    for (int i = 0; i < diagnostics_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, performanceMetrics_.get(i));
+        .computeMessageSize(2, diagnostics_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -194,13 +218,10 @@ private static final long serialVersionUID = 0L;
     }
     com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceRes other = (com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceRes) obj;
 
-    if (hasShiftInstance() != other.hasShiftInstance()) return false;
-    if (hasShiftInstance()) {
-      if (!getShiftInstance()
-          .equals(other.getShiftInstance())) return false;
-    }
-    if (!getPerformanceMetricsList()
-        .equals(other.getPerformanceMetricsList())) return false;
+    if (!getShiftInstanceList()
+        .equals(other.getShiftInstanceList())) return false;
+    if (!getDiagnosticsList()
+        .equals(other.getDiagnosticsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -212,13 +233,13 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasShiftInstance()) {
+    if (getShiftInstanceCount() > 0) {
       hash = (37 * hash) + SHIFT_INSTANCE_FIELD_NUMBER;
-      hash = (53 * hash) + getShiftInstance().hashCode();
+      hash = (53 * hash) + getShiftInstanceList().hashCode();
     }
-    if (getPerformanceMetricsCount() > 0) {
-      hash = (37 * hash) + PERFORMANCE_METRICS_FIELD_NUMBER;
-      hash = (53 * hash) + getPerformanceMetricsList().hashCode();
+    if (getDiagnosticsCount() > 0) {
+      hash = (37 * hash) + DIAGNOSTICS_FIELD_NUMBER;
+      hash = (53 * hash) + getDiagnosticsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -355,16 +376,18 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      shiftInstance_ = null;
-      if (shiftInstanceBuilder_ != null) {
-        shiftInstanceBuilder_.dispose();
-        shiftInstanceBuilder_ = null;
-      }
-      if (performanceMetricsBuilder_ == null) {
-        performanceMetrics_ = java.util.Collections.emptyList();
+      if (shiftInstanceBuilder_ == null) {
+        shiftInstance_ = java.util.Collections.emptyList();
       } else {
-        performanceMetrics_ = null;
-        performanceMetricsBuilder_.clear();
+        shiftInstance_ = null;
+        shiftInstanceBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000001);
+      if (diagnosticsBuilder_ == null) {
+        diagnostics_ = java.util.Collections.emptyList();
+      } else {
+        diagnostics_ = null;
+        diagnosticsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000002);
       return this;
@@ -400,24 +423,28 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceRes result) {
-      if (performanceMetricsBuilder_ == null) {
+      if (shiftInstanceBuilder_ == null) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          shiftInstance_ = java.util.Collections.unmodifiableList(shiftInstance_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.shiftInstance_ = shiftInstance_;
+      } else {
+        result.shiftInstance_ = shiftInstanceBuilder_.build();
+      }
+      if (diagnosticsBuilder_ == null) {
         if (((bitField0_ & 0x00000002) != 0)) {
-          performanceMetrics_ = java.util.Collections.unmodifiableList(performanceMetrics_);
+          diagnostics_ = java.util.Collections.unmodifiableList(diagnostics_);
           bitField0_ = (bitField0_ & ~0x00000002);
         }
-        result.performanceMetrics_ = performanceMetrics_;
+        result.diagnostics_ = diagnostics_;
       } else {
-        result.performanceMetrics_ = performanceMetricsBuilder_.build();
+        result.diagnostics_ = diagnosticsBuilder_.build();
       }
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceRes result) {
       int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.shiftInstance_ = shiftInstanceBuilder_ == null
-            ? shiftInstance_
-            : shiftInstanceBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -464,32 +491,55 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceRes other) {
       if (other == com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceRes.getDefaultInstance()) return this;
-      if (other.hasShiftInstance()) {
-        mergeShiftInstance(other.getShiftInstance());
-      }
-      if (performanceMetricsBuilder_ == null) {
-        if (!other.performanceMetrics_.isEmpty()) {
-          if (performanceMetrics_.isEmpty()) {
-            performanceMetrics_ = other.performanceMetrics_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+      if (shiftInstanceBuilder_ == null) {
+        if (!other.shiftInstance_.isEmpty()) {
+          if (shiftInstance_.isEmpty()) {
+            shiftInstance_ = other.shiftInstance_;
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
-            ensurePerformanceMetricsIsMutable();
-            performanceMetrics_.addAll(other.performanceMetrics_);
+            ensureShiftInstanceIsMutable();
+            shiftInstance_.addAll(other.shiftInstance_);
           }
           onChanged();
         }
       } else {
-        if (!other.performanceMetrics_.isEmpty()) {
-          if (performanceMetricsBuilder_.isEmpty()) {
-            performanceMetricsBuilder_.dispose();
-            performanceMetricsBuilder_ = null;
-            performanceMetrics_ = other.performanceMetrics_;
-            bitField0_ = (bitField0_ & ~0x00000002);
-            performanceMetricsBuilder_ = 
+        if (!other.shiftInstance_.isEmpty()) {
+          if (shiftInstanceBuilder_.isEmpty()) {
+            shiftInstanceBuilder_.dispose();
+            shiftInstanceBuilder_ = null;
+            shiftInstance_ = other.shiftInstance_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+            shiftInstanceBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getPerformanceMetricsFieldBuilder() : null;
+                 getShiftInstanceFieldBuilder() : null;
           } else {
-            performanceMetricsBuilder_.addAllMessages(other.performanceMetrics_);
+            shiftInstanceBuilder_.addAllMessages(other.shiftInstance_);
+          }
+        }
+      }
+      if (diagnosticsBuilder_ == null) {
+        if (!other.diagnostics_.isEmpty()) {
+          if (diagnostics_.isEmpty()) {
+            diagnostics_ = other.diagnostics_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureDiagnosticsIsMutable();
+            diagnostics_.addAll(other.diagnostics_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.diagnostics_.isEmpty()) {
+          if (diagnosticsBuilder_.isEmpty()) {
+            diagnosticsBuilder_.dispose();
+            diagnosticsBuilder_ = null;
+            diagnostics_ = other.diagnostics_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+            diagnosticsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getDiagnosticsFieldBuilder() : null;
+          } else {
+            diagnosticsBuilder_.addAllMessages(other.diagnostics_);
           }
         }
       }
@@ -520,22 +570,28 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              input.readMessage(
-                  getShiftInstanceFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
+              com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance m =
+                  input.readMessage(
+                      com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.parser(),
+                      extensionRegistry);
+              if (shiftInstanceBuilder_ == null) {
+                ensureShiftInstanceIsMutable();
+                shiftInstance_.add(m);
+              } else {
+                shiftInstanceBuilder_.addMessage(m);
+              }
               break;
             } // case 10
             case 18: {
-              com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric m =
+              com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic m =
                   input.readMessage(
-                      com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.parser(),
+                      com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.parser(),
                       extensionRegistry);
-              if (performanceMetricsBuilder_ == null) {
-                ensurePerformanceMetricsIsMutable();
-                performanceMetrics_.add(m);
+              if (diagnosticsBuilder_ == null) {
+                ensureDiagnosticsIsMutable();
+                diagnostics_.add(m);
               } else {
-                performanceMetricsBuilder_.addMessage(m);
+                diagnosticsBuilder_.addMessage(m);
               }
               break;
             } // case 18
@@ -556,154 +612,311 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance shiftInstance_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstanceOrBuilder> shiftInstanceBuilder_;
-    /**
-     * <pre>
-     * Shift instance that was created.
-     * </pre>
-     *
-     * <code>.api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
-     * @return Whether the shiftInstance field is set.
-     */
-    public boolean hasShiftInstance() {
-      return ((bitField0_ & 0x00000001) != 0);
+    private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance> shiftInstance_ =
+      java.util.Collections.emptyList();
+    private void ensureShiftInstanceIsMutable() {
+      if (!((bitField0_ & 0x00000001) != 0)) {
+        shiftInstance_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance>(shiftInstance_);
+        bitField0_ |= 0x00000001;
+       }
     }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstanceOrBuilder> shiftInstanceBuilder_;
+
     /**
      * <pre>
-     * Shift instance that was created.
+     * Any shift instances that were created.
      * </pre>
      *
-     * <code>.api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
-     * @return The shiftInstance.
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance getShiftInstance() {
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance> getShiftInstanceList() {
       if (shiftInstanceBuilder_ == null) {
-        return shiftInstance_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.getDefaultInstance() : shiftInstance_;
+        return java.util.Collections.unmodifiableList(shiftInstance_);
       } else {
-        return shiftInstanceBuilder_.getMessage();
+        return shiftInstanceBuilder_.getMessageList();
       }
     }
     /**
      * <pre>
-     * Shift instance that was created.
+     * Any shift instances that were created.
      * </pre>
      *
-     * <code>.api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
      */
-    public Builder setShiftInstance(com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance value) {
+    public int getShiftInstanceCount() {
+      if (shiftInstanceBuilder_ == null) {
+        return shiftInstance_.size();
+      } else {
+        return shiftInstanceBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Any shift instances that were created.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance getShiftInstance(int index) {
+      if (shiftInstanceBuilder_ == null) {
+        return shiftInstance_.get(index);
+      } else {
+        return shiftInstanceBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Any shift instances that were created.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+     */
+    public Builder setShiftInstance(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance value) {
       if (shiftInstanceBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        shiftInstance_ = value;
+        ensureShiftInstanceIsMutable();
+        shiftInstance_.set(index, value);
+        onChanged();
       } else {
-        shiftInstanceBuilder_.setMessage(value);
+        shiftInstanceBuilder_.setMessage(index, value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Shift instance that was created.
+     * Any shift instances that were created.
      * </pre>
      *
-     * <code>.api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
      */
     public Builder setShiftInstance(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.Builder builderForValue) {
+      if (shiftInstanceBuilder_ == null) {
+        ensureShiftInstanceIsMutable();
+        shiftInstance_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        shiftInstanceBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Any shift instances that were created.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+     */
+    public Builder addShiftInstance(com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance value) {
+      if (shiftInstanceBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureShiftInstanceIsMutable();
+        shiftInstance_.add(value);
+        onChanged();
+      } else {
+        shiftInstanceBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Any shift instances that were created.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+     */
+    public Builder addShiftInstance(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance value) {
+      if (shiftInstanceBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureShiftInstanceIsMutable();
+        shiftInstance_.add(index, value);
+        onChanged();
+      } else {
+        shiftInstanceBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Any shift instances that were created.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+     */
+    public Builder addShiftInstance(
         com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.Builder builderForValue) {
       if (shiftInstanceBuilder_ == null) {
-        shiftInstance_ = builderForValue.build();
+        ensureShiftInstanceIsMutable();
+        shiftInstance_.add(builderForValue.build());
+        onChanged();
       } else {
-        shiftInstanceBuilder_.setMessage(builderForValue.build());
+        shiftInstanceBuilder_.addMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Shift instance that was created.
+     * Any shift instances that were created.
      * </pre>
      *
-     * <code>.api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
      */
-    public Builder mergeShiftInstance(com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance value) {
+    public Builder addShiftInstance(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.Builder builderForValue) {
       if (shiftInstanceBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          shiftInstance_ != null &&
-          shiftInstance_ != com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.getDefaultInstance()) {
-          getShiftInstanceBuilder().mergeFrom(value);
-        } else {
-          shiftInstance_ = value;
-        }
+        ensureShiftInstanceIsMutable();
+        shiftInstance_.add(index, builderForValue.build());
+        onChanged();
       } else {
-        shiftInstanceBuilder_.mergeFrom(value);
+        shiftInstanceBuilder_.addMessage(index, builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Shift instance that was created.
+     * Any shift instances that were created.
      * </pre>
      *
-     * <code>.api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+     */
+    public Builder addAllShiftInstance(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance> values) {
+      if (shiftInstanceBuilder_ == null) {
+        ensureShiftInstanceIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, shiftInstance_);
+        onChanged();
+      } else {
+        shiftInstanceBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Any shift instances that were created.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
      */
     public Builder clearShiftInstance() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      shiftInstance_ = null;
-      if (shiftInstanceBuilder_ != null) {
-        shiftInstanceBuilder_.dispose();
-        shiftInstanceBuilder_ = null;
+      if (shiftInstanceBuilder_ == null) {
+        shiftInstance_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+      } else {
+        shiftInstanceBuilder_.clear();
       }
-      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Shift instance that was created.
+     * Any shift instances that were created.
      * </pre>
      *
-     * <code>.api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.Builder getShiftInstanceBuilder() {
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return getShiftInstanceFieldBuilder().getBuilder();
+    public Builder removeShiftInstance(int index) {
+      if (shiftInstanceBuilder_ == null) {
+        ensureShiftInstanceIsMutable();
+        shiftInstance_.remove(index);
+        onChanged();
+      } else {
+        shiftInstanceBuilder_.remove(index);
+      }
+      return this;
     }
     /**
      * <pre>
-     * Shift instance that was created.
+     * Any shift instances that were created.
      * </pre>
      *
-     * <code>.api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstanceOrBuilder getShiftInstanceOrBuilder() {
-      if (shiftInstanceBuilder_ != null) {
-        return shiftInstanceBuilder_.getMessageOrBuilder();
-      } else {
-        return shiftInstance_ == null ?
-            com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.getDefaultInstance() : shiftInstance_;
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.Builder getShiftInstanceBuilder(
+        int index) {
+      return getShiftInstanceFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Any shift instances that were created.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstanceOrBuilder getShiftInstanceOrBuilder(
+        int index) {
+      if (shiftInstanceBuilder_ == null) {
+        return shiftInstance_.get(index);  } else {
+        return shiftInstanceBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
      * <pre>
-     * Shift instance that was created.
+     * Any shift instances that were created.
      * </pre>
      *
-     * <code>.api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
      */
-    private com.google.protobuf.SingleFieldBuilderV3<
+    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstanceOrBuilder> 
+         getShiftInstanceOrBuilderList() {
+      if (shiftInstanceBuilder_ != null) {
+        return shiftInstanceBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(shiftInstance_);
+      }
+    }
+    /**
+     * <pre>
+     * Any shift instances that were created.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.Builder addShiftInstanceBuilder() {
+      return getShiftInstanceFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Any shift instances that were created.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+     */
+    public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.Builder addShiftInstanceBuilder(
+        int index) {
+      return getShiftInstanceFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Any shift instances that were created.
+     * </pre>
+     *
+     * <code>repeated .api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
+     */
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.Builder> 
+         getShiftInstanceBuilderList() {
+      return getShiftInstanceFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstanceOrBuilder> 
         getShiftInstanceFieldBuilder() {
       if (shiftInstanceBuilder_ == null) {
-        shiftInstanceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        shiftInstanceBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstanceOrBuilder>(
-                getShiftInstance(),
+                shiftInstance_,
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         shiftInstance_ = null;
@@ -711,316 +924,316 @@ private static final long serialVersionUID = 0L;
       return shiftInstanceBuilder_;
     }
 
-    private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric> performanceMetrics_ =
+    private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic> diagnostics_ =
       java.util.Collections.emptyList();
-    private void ensurePerformanceMetricsIsMutable() {
+    private void ensureDiagnosticsIsMutable() {
       if (!((bitField0_ & 0x00000002) != 0)) {
-        performanceMetrics_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric>(performanceMetrics_);
+        diagnostics_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic>(diagnostics_);
         bitField0_ |= 0x00000002;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricOrBuilder> performanceMetricsBuilder_;
+        com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder> diagnosticsBuilder_;
 
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Diagnostics to report cause if shift instances fail to build.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric> getPerformanceMetricsList() {
-      if (performanceMetricsBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(performanceMetrics_);
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic> getDiagnosticsList() {
+      if (diagnosticsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(diagnostics_);
       } else {
-        return performanceMetricsBuilder_.getMessageList();
+        return diagnosticsBuilder_.getMessageList();
       }
     }
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Diagnostics to report cause if shift instances fail to build.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
      */
-    public int getPerformanceMetricsCount() {
-      if (performanceMetricsBuilder_ == null) {
-        return performanceMetrics_.size();
+    public int getDiagnosticsCount() {
+      if (diagnosticsBuilder_ == null) {
+        return diagnostics_.size();
       } else {
-        return performanceMetricsBuilder_.getCount();
+        return diagnosticsBuilder_.getCount();
       }
     }
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Diagnostics to report cause if shift instances fail to build.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric getPerformanceMetrics(int index) {
-      if (performanceMetricsBuilder_ == null) {
-        return performanceMetrics_.get(index);
+    public com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic getDiagnostics(int index) {
+      if (diagnosticsBuilder_ == null) {
+        return diagnostics_.get(index);
       } else {
-        return performanceMetricsBuilder_.getMessage(index);
+        return diagnosticsBuilder_.getMessage(index);
       }
     }
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Diagnostics to report cause if shift instances fail to build.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
      */
-    public Builder setPerformanceMetrics(
-        int index, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric value) {
-      if (performanceMetricsBuilder_ == null) {
+    public Builder setDiagnostics(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic value) {
+      if (diagnosticsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensurePerformanceMetricsIsMutable();
-        performanceMetrics_.set(index, value);
+        ensureDiagnosticsIsMutable();
+        diagnostics_.set(index, value);
         onChanged();
       } else {
-        performanceMetricsBuilder_.setMessage(index, value);
+        diagnosticsBuilder_.setMessage(index, value);
       }
       return this;
     }
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Diagnostics to report cause if shift instances fail to build.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
      */
-    public Builder setPerformanceMetrics(
-        int index, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.Builder builderForValue) {
-      if (performanceMetricsBuilder_ == null) {
-        ensurePerformanceMetricsIsMutable();
-        performanceMetrics_.set(index, builderForValue.build());
+    public Builder setDiagnostics(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder builderForValue) {
+      if (diagnosticsBuilder_ == null) {
+        ensureDiagnosticsIsMutable();
+        diagnostics_.set(index, builderForValue.build());
         onChanged();
       } else {
-        performanceMetricsBuilder_.setMessage(index, builderForValue.build());
+        diagnosticsBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Diagnostics to report cause if shift instances fail to build.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
      */
-    public Builder addPerformanceMetrics(com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric value) {
-      if (performanceMetricsBuilder_ == null) {
+    public Builder addDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic value) {
+      if (diagnosticsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensurePerformanceMetricsIsMutable();
-        performanceMetrics_.add(value);
+        ensureDiagnosticsIsMutable();
+        diagnostics_.add(value);
         onChanged();
       } else {
-        performanceMetricsBuilder_.addMessage(value);
+        diagnosticsBuilder_.addMessage(value);
       }
       return this;
     }
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Diagnostics to report cause if shift instances fail to build.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
      */
-    public Builder addPerformanceMetrics(
-        int index, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric value) {
-      if (performanceMetricsBuilder_ == null) {
+    public Builder addDiagnostics(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic value) {
+      if (diagnosticsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensurePerformanceMetricsIsMutable();
-        performanceMetrics_.add(index, value);
+        ensureDiagnosticsIsMutable();
+        diagnostics_.add(index, value);
         onChanged();
       } else {
-        performanceMetricsBuilder_.addMessage(index, value);
+        diagnosticsBuilder_.addMessage(index, value);
       }
       return this;
     }
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Diagnostics to report cause if shift instances fail to build.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
      */
-    public Builder addPerformanceMetrics(
-        com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.Builder builderForValue) {
-      if (performanceMetricsBuilder_ == null) {
-        ensurePerformanceMetricsIsMutable();
-        performanceMetrics_.add(builderForValue.build());
+    public Builder addDiagnostics(
+        com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder builderForValue) {
+      if (diagnosticsBuilder_ == null) {
+        ensureDiagnosticsIsMutable();
+        diagnostics_.add(builderForValue.build());
         onChanged();
       } else {
-        performanceMetricsBuilder_.addMessage(builderForValue.build());
+        diagnosticsBuilder_.addMessage(builderForValue.build());
       }
       return this;
     }
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Diagnostics to report cause if shift instances fail to build.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
      */
-    public Builder addPerformanceMetrics(
-        int index, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.Builder builderForValue) {
-      if (performanceMetricsBuilder_ == null) {
-        ensurePerformanceMetricsIsMutable();
-        performanceMetrics_.add(index, builderForValue.build());
+    public Builder addDiagnostics(
+        int index, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder builderForValue) {
+      if (diagnosticsBuilder_ == null) {
+        ensureDiagnosticsIsMutable();
+        diagnostics_.add(index, builderForValue.build());
         onChanged();
       } else {
-        performanceMetricsBuilder_.addMessage(index, builderForValue.build());
+        diagnosticsBuilder_.addMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Diagnostics to report cause if shift instances fail to build.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
      */
-    public Builder addAllPerformanceMetrics(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric> values) {
-      if (performanceMetricsBuilder_ == null) {
-        ensurePerformanceMetricsIsMutable();
+    public Builder addAllDiagnostics(
+        java.lang.Iterable<? extends com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic> values) {
+      if (diagnosticsBuilder_ == null) {
+        ensureDiagnosticsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, performanceMetrics_);
+            values, diagnostics_);
         onChanged();
       } else {
-        performanceMetricsBuilder_.addAllMessages(values);
+        diagnosticsBuilder_.addAllMessages(values);
       }
       return this;
     }
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Diagnostics to report cause if shift instances fail to build.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
      */
-    public Builder clearPerformanceMetrics() {
-      if (performanceMetricsBuilder_ == null) {
-        performanceMetrics_ = java.util.Collections.emptyList();
+    public Builder clearDiagnostics() {
+      if (diagnosticsBuilder_ == null) {
+        diagnostics_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
-        performanceMetricsBuilder_.clear();
+        diagnosticsBuilder_.clear();
       }
       return this;
     }
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Diagnostics to report cause if shift instances fail to build.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
      */
-    public Builder removePerformanceMetrics(int index) {
-      if (performanceMetricsBuilder_ == null) {
-        ensurePerformanceMetricsIsMutable();
-        performanceMetrics_.remove(index);
+    public Builder removeDiagnostics(int index) {
+      if (diagnosticsBuilder_ == null) {
+        ensureDiagnosticsIsMutable();
+        diagnostics_.remove(index);
         onChanged();
       } else {
-        performanceMetricsBuilder_.remove(index);
+        diagnosticsBuilder_.remove(index);
       }
       return this;
     }
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Diagnostics to report cause if shift instances fail to build.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.Builder getPerformanceMetricsBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder getDiagnosticsBuilder(
         int index) {
-      return getPerformanceMetricsFieldBuilder().getBuilder(index);
+      return getDiagnosticsFieldBuilder().getBuilder(index);
     }
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Diagnostics to report cause if shift instances fail to build.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricOrBuilder getPerformanceMetricsOrBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder getDiagnosticsOrBuilder(
         int index) {
-      if (performanceMetricsBuilder_ == null) {
-        return performanceMetrics_.get(index);  } else {
-        return performanceMetricsBuilder_.getMessageOrBuilder(index);
+      if (diagnosticsBuilder_ == null) {
+        return diagnostics_.get(index);  } else {
+        return diagnosticsBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Diagnostics to report cause if shift instances fail to build.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
      */
-    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricOrBuilder> 
-         getPerformanceMetricsOrBuilderList() {
-      if (performanceMetricsBuilder_ != null) {
-        return performanceMetricsBuilder_.getMessageOrBuilderList();
+    public java.util.List<? extends com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder> 
+         getDiagnosticsOrBuilderList() {
+      if (diagnosticsBuilder_ != null) {
+        return diagnosticsBuilder_.getMessageOrBuilderList();
       } else {
-        return java.util.Collections.unmodifiableList(performanceMetrics_);
+        return java.util.Collections.unmodifiableList(diagnostics_);
       }
     }
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Diagnostics to report cause if shift instances fail to build.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.Builder addPerformanceMetricsBuilder() {
-      return getPerformanceMetricsFieldBuilder().addBuilder(
-          com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.getDefaultInstance());
+    public com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder addDiagnosticsBuilder() {
+      return getDiagnosticsFieldBuilder().addBuilder(
+          com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.getDefaultInstance());
     }
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Diagnostics to report cause if shift instances fail to build.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
      */
-    public com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.Builder addPerformanceMetricsBuilder(
+    public com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder addDiagnosticsBuilder(
         int index) {
-      return getPerformanceMetricsFieldBuilder().addBuilder(
-          index, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.getDefaultInstance());
+      return getDiagnosticsFieldBuilder().addBuilder(
+          index, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.getDefaultInstance());
     }
     /**
      * <pre>
-     * Performance metrics that this shift instance has.
+     * Diagnostics to report cause if shift instances fail to build.
      * </pre>
      *
-     * <code>repeated .api.v1alpha1.wfm.PerformanceMetric performance_metrics = 2 [json_name = "performanceMetrics"];</code>
+     * <code>repeated .api.v1alpha1.wfm.Diagnostic diagnostics = 2 [json_name = "diagnostics"];</code>
      */
-    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.Builder> 
-         getPerformanceMetricsBuilderList() {
-      return getPerformanceMetricsFieldBuilder().getBuilderList();
+    public java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder> 
+         getDiagnosticsBuilderList() {
+      return getDiagnosticsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricOrBuilder> 
-        getPerformanceMetricsFieldBuilder() {
-      if (performanceMetricsBuilder_ == null) {
-        performanceMetricsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricOrBuilder>(
-                performanceMetrics_,
+        com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder> 
+        getDiagnosticsFieldBuilder() {
+      if (diagnosticsBuilder_ == null) {
+        diagnosticsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic, com.tcn.cloud.api.api.v1alpha1.wfm.Diagnostic.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.DiagnosticOrBuilder>(
+                diagnostics_,
                 ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
-        performanceMetrics_ = null;
+        diagnostics_ = null;
       }
-      return performanceMetricsBuilder_;
+      return diagnosticsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
