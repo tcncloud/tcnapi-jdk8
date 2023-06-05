@@ -57,14 +57,14 @@ public interface SubmitPaymentReqOrBuilder extends
   /**
    * <code>map&lt;string, .api.v1alpha1.integrationspublic.Value&gt; payment_fields = 3 [json_name = "paymentFields"];</code>
    */
-  /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value getPaymentFieldsOrDefault(
+
+  com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value getPaymentFieldsOrDefault(
       java.lang.String key,
-      /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue);
+      com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue);
   /**
    * <code>map&lt;string, .api.v1alpha1.integrationspublic.Value&gt; payment_fields = 3 [json_name = "paymentFields"];</code>
    */
+
   com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value getPaymentFieldsOrThrow(
       java.lang.String key);
 

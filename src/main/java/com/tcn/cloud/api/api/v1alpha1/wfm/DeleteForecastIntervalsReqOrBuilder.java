@@ -13,15 +13,6 @@ public interface DeleteForecastIntervalsReqOrBuilder extends
    * </pre>
    *
    * <code>int64 skill_profile_sid = 1 [json_name = "skillProfileSid"];</code>
-   * @return Whether the skillProfileSid field is set.
-   */
-  boolean hasSkillProfileSid();
-  /**
-   * <pre>
-   * ID of the skill profile of which to delete the intervas/deltas.
-   * </pre>
-   *
-   * <code>int64 skill_profile_sid = 1 [json_name = "skillProfileSid"];</code>
    * @return The skillProfileSid.
    */
   long getSkillProfileSid();
@@ -72,5 +63,5 @@ public interface DeleteForecastIntervalsReqOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.ForecastIntervalDeleteType getForecastIntervalDeleteType();
 
-  com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.DeleteParamCase getDeleteParamCase();
+  public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq.DeleteParamCase getDeleteParamCase();
 }

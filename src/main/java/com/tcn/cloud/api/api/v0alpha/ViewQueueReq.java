@@ -25,6 +25,84 @@ private static final long serialVersionUID = 0L;
     return new ViewQueueReq();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private ViewQueueReq(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            com.google.protobuf.Timestamp.Builder subBuilder = null;
+            if (newerThan_ != null) {
+              subBuilder = newerThan_.toBuilder();
+            }
+            newerThan_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(newerThan_);
+              newerThan_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 18: {
+            com.google.protobuf.Timestamp.Builder subBuilder = null;
+            if (noNewerThan_ != null) {
+              subBuilder = noNewerThan_.toBuilder();
+            }
+            noNewerThan_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(noNewerThan_);
+              noNewerThan_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 24: {
+
+            afterEventId_ = input.readInt64();
+            break;
+          }
+          case 32: {
+
+            numberOfRecords_ = input.readInt64();
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.LmsProto.internal_static_api_v0alpha_ViewQueueReq_descriptor;
@@ -73,7 +151,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getNewerThanOrBuilder() {
-    return newerThan_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : newerThan_;
+    return getNewerThan();
   }
 
   public static final int NO_NEWER_THAN_FIELD_NUMBER = 2;
@@ -111,11 +189,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getNoNewerThanOrBuilder() {
-    return noNewerThan_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : noNewerThan_;
+    return getNoNewerThan();
   }
 
   public static final int AFTER_EVENT_ID_FIELD_NUMBER = 3;
-  private long afterEventId_ = 0L;
+  private long afterEventId_;
   /**
    * <pre>
    * skip records with event_id smaller than this id
@@ -130,7 +208,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NUMBER_OF_RECORDS_FIELD_NUMBER = 4;
-  private long numberOfRecords_ = 0L;
+  private long numberOfRecords_;
   /**
    * <pre>
    * max number of records to retrieve
@@ -170,7 +248,7 @@ private static final long serialVersionUID = 0L;
     if (numberOfRecords_ != 0L) {
       output.writeInt64(4, numberOfRecords_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -195,7 +273,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(4, numberOfRecords_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -224,7 +302,7 @@ private static final long serialVersionUID = 0L;
         != other.getAfterEventId()) return false;
     if (getNumberOfRecords()
         != other.getNumberOfRecords()) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -249,7 +327,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + NUMBER_OF_RECORDS_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getNumberOfRecords());
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -298,13 +376,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.ViewQueueReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.ViewQueueReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -368,30 +444,38 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ViewQueueReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      newerThan_ = null;
-      if (newerThanBuilder_ != null) {
-        newerThanBuilder_.dispose();
+      if (newerThanBuilder_ == null) {
+        newerThan_ = null;
+      } else {
+        newerThan_ = null;
         newerThanBuilder_ = null;
       }
-      noNewerThan_ = null;
-      if (noNewerThanBuilder_ != null) {
-        noNewerThanBuilder_.dispose();
+      if (noNewerThanBuilder_ == null) {
+        noNewerThan_ = null;
+      } else {
+        noNewerThan_ = null;
         noNewerThanBuilder_ = null;
       }
       afterEventId_ = 0L;
+
       numberOfRecords_ = 0L;
+
       return this;
     }
 
@@ -418,29 +502,20 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.ViewQueueReq buildPartial() {
       com.tcn.cloud.api.api.v0alpha.ViewQueueReq result = new com.tcn.cloud.api.api.v0alpha.ViewQueueReq(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      if (newerThanBuilder_ == null) {
+        result.newerThan_ = newerThan_;
+      } else {
+        result.newerThan_ = newerThanBuilder_.build();
+      }
+      if (noNewerThanBuilder_ == null) {
+        result.noNewerThan_ = noNewerThan_;
+      } else {
+        result.noNewerThan_ = noNewerThanBuilder_.build();
+      }
+      result.afterEventId_ = afterEventId_;
+      result.numberOfRecords_ = numberOfRecords_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ViewQueueReq result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.newerThan_ = newerThanBuilder_ == null
-            ? newerThan_
-            : newerThanBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.noNewerThan_ = noNewerThanBuilder_ == null
-            ? noNewerThan_
-            : noNewerThanBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.afterEventId_ = afterEventId_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.numberOfRecords_ = numberOfRecords_;
-      }
     }
 
     @java.lang.Override
@@ -499,7 +574,7 @@ private static final long serialVersionUID = 0L;
       if (other.getNumberOfRecords() != 0L) {
         setNumberOfRecords(other.getNumberOfRecords());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -514,57 +589,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.ViewQueueReq parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              input.readMessage(
-                  getNewerThanFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              input.readMessage(
-                  getNoNewerThanFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 24: {
-              afterEventId_ = input.readInt64();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 24
-            case 32: {
-              numberOfRecords_ = input.readInt64();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 32
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.ViewQueueReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private com.google.protobuf.Timestamp newerThan_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -578,7 +615,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the newerThan field is set.
      */
     public boolean hasNewerThan() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return newerThanBuilder_ != null || newerThan_ != null;
     }
     /**
      * <pre>
@@ -608,11 +645,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         newerThan_ = value;
+        onChanged();
       } else {
         newerThanBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -626,11 +663,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (newerThanBuilder_ == null) {
         newerThan_ = builderForValue.build();
+        onChanged();
       } else {
         newerThanBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -642,18 +679,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeNewerThan(com.google.protobuf.Timestamp value) {
       if (newerThanBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          newerThan_ != null &&
-          newerThan_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getNewerThanBuilder().mergeFrom(value);
+        if (newerThan_ != null) {
+          newerThan_ =
+            com.google.protobuf.Timestamp.newBuilder(newerThan_).mergeFrom(value).buildPartial();
         } else {
           newerThan_ = value;
         }
+        onChanged();
       } else {
         newerThanBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -664,13 +700,14 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp newer_than = 1 [json_name = "newerThan"];</code>
      */
     public Builder clearNewerThan() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      newerThan_ = null;
-      if (newerThanBuilder_ != null) {
-        newerThanBuilder_.dispose();
+      if (newerThanBuilder_ == null) {
+        newerThan_ = null;
+        onChanged();
+      } else {
+        newerThan_ = null;
         newerThanBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -681,7 +718,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp newer_than = 1 [json_name = "newerThan"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getNewerThanBuilder() {
-      bitField0_ |= 0x00000001;
+      
       onChanged();
       return getNewerThanFieldBuilder().getBuilder();
     }
@@ -733,7 +770,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the noNewerThan field is set.
      */
     public boolean hasNoNewerThan() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return noNewerThanBuilder_ != null || noNewerThan_ != null;
     }
     /**
      * <pre>
@@ -763,11 +800,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         noNewerThan_ = value;
+        onChanged();
       } else {
         noNewerThanBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -781,11 +818,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (noNewerThanBuilder_ == null) {
         noNewerThan_ = builderForValue.build();
+        onChanged();
       } else {
         noNewerThanBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -797,18 +834,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeNoNewerThan(com.google.protobuf.Timestamp value) {
       if (noNewerThanBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
-          noNewerThan_ != null &&
-          noNewerThan_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getNoNewerThanBuilder().mergeFrom(value);
+        if (noNewerThan_ != null) {
+          noNewerThan_ =
+            com.google.protobuf.Timestamp.newBuilder(noNewerThan_).mergeFrom(value).buildPartial();
         } else {
           noNewerThan_ = value;
         }
+        onChanged();
       } else {
         noNewerThanBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -819,13 +855,14 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp no_newer_than = 2 [json_name = "noNewerThan"];</code>
      */
     public Builder clearNoNewerThan() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      noNewerThan_ = null;
-      if (noNewerThanBuilder_ != null) {
-        noNewerThanBuilder_.dispose();
+      if (noNewerThanBuilder_ == null) {
+        noNewerThan_ = null;
+        onChanged();
+      } else {
+        noNewerThan_ = null;
         noNewerThanBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -836,7 +873,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp no_newer_than = 2 [json_name = "noNewerThan"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getNoNewerThanBuilder() {
-      bitField0_ |= 0x00000002;
+      
       onChanged();
       return getNoNewerThanFieldBuilder().getBuilder();
     }
@@ -899,9 +936,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAfterEventId(long value) {
-
+      
       afterEventId_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -914,7 +950,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAfterEventId() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       afterEventId_ = 0L;
       onChanged();
       return this;
@@ -943,9 +979,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setNumberOfRecords(long value) {
-
+      
       numberOfRecords_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -958,7 +993,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearNumberOfRecords() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      
       numberOfRecords_ = 0L;
       onChanged();
       return this;
@@ -996,18 +1031,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new ViewQueueReq(input, extensionRegistry);
     }
   };
 

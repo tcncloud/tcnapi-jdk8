@@ -247,54 +247,54 @@ public final class CbsProto {
       "ceId\022\026\n\006skills\030\003 \003(\tR\006skills2\273\017\n\003CBS\022\207\001\n" +
       "\017CreateServiceId\022\037.api.v0alpha.CreateSer" +
       "viceIdReq\032\037.api.v0alpha.CreateServiceIdR" +
-      "es\"2\272\270\221\002\002\030\001\202\323\344\223\002%\" /api/v0alpha/cbs/crea" +
-      "teserviceid:\001*\022\257\001\n\031CreateCallbackWithDet" +
+      "es\"2\272\270\221\002\002\030\001\202\323\344\223\002%:\001*\" /api/v0alpha/cbs/c" +
+      "reateserviceid\022\257\001\n\031CreateCallbackWithDet" +
       "ails\022).api.v0alpha.CreateCallbackWithDet" +
       "ailsReq\032).api.v0alpha.CreateCallbackWith" +
-      "DetailsRes\"<\272\270\221\002\002\030\001\202\323\344\223\002/\"*/api/v0alpha/" +
-      "cbs/createcallbackwithdetails:\001*\022\303\001\n\036Upd" +
+      "DetailsRes\"<\272\270\221\002\002\030\001\202\323\344\223\002/:\001*\"*/api/v0alp" +
+      "ha/cbs/createcallbackwithdetails\022\303\001\n\036Upd" +
       "ateScheduledCallbackToReady\022..api.v0alph" +
       "a.UpdateScheduledCallbackToReadyReq\032..ap" +
       "i.v0alpha.UpdateScheduledCallbackToReady" +
-      "Res\"A\272\270\221\002\002\030\001\202\323\344\223\0024\"//api/v0alpha/cbs/upd" +
-      "atescheduledcallbacktoready:\001*\022\317\001\n!Updat" +
+      "Res\"A\272\270\221\002\002\030\001\202\323\344\223\0024:\001*\"//api/v0alpha/cbs/" +
+      "updatescheduledcallbacktoready\022\317\001\n!Updat" +
       "eScheduledCallbackToCanceled\0221.api.v0alp" +
       "ha.UpdateScheduledCallbackToCanceledReq\032" +
       "1.api.v0alpha.UpdateScheduledCallbackToC" +
-      "anceledRes\"D\272\270\221\002\002\030\001\202\323\344\223\0027\"2/api/v0alpha/" +
-      "cbs/updatescheduledcallbacktocanceled:\001*" +
+      "anceledRes\"D\272\270\221\002\002\030\001\202\323\344\223\0027:\001*\"2/api/v0alp" +
+      "ha/cbs/updatescheduledcallbacktocanceled" +
       "\022\327\001\n#GetNextScheduledCallbackWithDetails" +
       "\0223.api.v0alpha.GetNextScheduledCallbackW" +
       "ithDetailsReq\0323.api.v0alpha.GetNextSched" +
       "uledCallbackWithDetailsRes\"F\272\270\221\002\002\030\001\202\323\344\223\002" +
-      "9\"4/api/v0alpha/cbs/getnextscheduledcall" +
-      "backwithdetails:\001*\022\307\001\n\037UpdateScheduledCa" +
+      "9:\001*\"4/api/v0alpha/cbs/getnextscheduledc" +
+      "allbackwithdetails\022\307\001\n\037UpdateScheduledCa" +
       "llbackToClosed\022/.api.v0alpha.UpdateSched" +
       "uledCallbackToClosedReq\032/.api.v0alpha.Up" +
       "dateScheduledCallbackToClosedRes\"B\272\270\221\002\002\030" +
-      "\001\202\323\344\223\0025\"0/api/v0alpha/cbs/updateschedule" +
-      "dcallbacktoclosed:\001*\022\252\001\n\027UpdateScheduled" +
+      "\001\202\323\344\223\0025:\001*\"0/api/v0alpha/cbs/updatesched" +
+      "uledcallbacktoclosed\022\252\001\n\027UpdateScheduled" +
       "Callback\022\'.api.v0alpha.UpdateScheduledCa" +
       "llbackReq\032\'.api.v0alpha.UpdateScheduledC" +
-      "allbackRes\"=\272\270\221\002\005\n\003\010\220\003\202\323\344\223\002-\"(/api/v0alp" +
-      "ha/cbs/updatescheduledcallback:\001*\022\307\001\n\037Ge" +
+      "allbackRes\"=\272\270\221\002\005\n\003\010\220\003\202\323\344\223\002-:\001*\"(/api/v0" +
+      "alpha/cbs/updatescheduledcallback\022\307\001\n\037Ge" +
       "tScheduledCallbackWithDetails\022/.api.v0al" +
       "pha.GetScheduledCallbackWithDetailsReq\032/" +
       ".api.v0alpha.GetScheduledCallbackWithDet" +
-      "ailsRes\"B\272\270\221\002\002\030\001\202\323\344\223\0025\"0/api/v0alpha/cbs" +
-      "/getscheduledcallbackwithdetails:\001*\022\324\001\n!" +
+      "ailsRes\"B\272\270\221\002\002\030\001\202\323\344\223\0025:\001*\"0/api/v0alpha/" +
+      "cbs/getscheduledcallbackwithdetails\022\324\001\n!" +
       "ListScheduledCallbacksWithDetails\0221.api." +
       "v0alpha.ListScheduledCallbacksWithDetail" +
       "sReq\0321.api.v0alpha.ListScheduledCallback" +
-      "sWithDetailsRes\"G\272\270\221\002\005\n\003\010\220\003\202\323\344\223\0027\"2/api/" +
-      "v0alpha/cbs/listscheduledcallbackswithde" +
-      "tails:\001*0\001\022\355\001\n)ListScheduledCallbacksWit" +
+      "sWithDetailsRes\"G\272\270\221\002\005\n\003\010\220\003\202\323\344\223\0027:\001*\"2/a" +
+      "pi/v0alpha/cbs/listscheduledcallbackswit" +
+      "hdetails0\001\022\355\001\n)ListScheduledCallbacksWit" +
       "hDetailsBySkills\0229.api.v0alpha.ListSched" +
       "uledCallbacksWithDetailsBySkillsReq\0321.ap" +
       "i.v0alpha.ListScheduledCallbacksWithDeta" +
-      "ilsRes\"R\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002B\"=/api/v0alpha/c" +
-      "bs/listscheduledcallbackswithdetailsbysk" +
-      "illsreq:\001*Bv\n\035com.tcn.cloud.api.api.v0al" +
+      "ilsRes\"R\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002B:\001*\"=/api/v0alph" +
+      "a/cbs/listscheduledcallbackswithdetailsb" +
+      "yskillsreqBv\n\035com.tcn.cloud.api.api.v0al" +
       "phaB\010CbsProtoP\001\242\002\003AVX\252\002\013Api.V0alpha\312\002\013Ap" +
       "i\\V0alpha\342\002\027Api\\V0alpha\\GPBMetadata\352\002\014Ap" +
       "i::V0alphab\006proto3"

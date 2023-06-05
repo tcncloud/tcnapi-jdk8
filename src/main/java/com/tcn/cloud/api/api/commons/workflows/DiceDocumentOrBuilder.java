@@ -60,14 +60,14 @@ public interface DiceDocumentOrBuilder extends
   /**
    * <code>map&lt;string, string&gt; variables = 5 [json_name = "variables"];</code>
    */
-  /* nullable */
-java.lang.String getVariablesOrDefault(
+
+  java.lang.String getVariablesOrDefault(
       java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue);
+      java.lang.String defaultValue);
   /**
    * <code>map&lt;string, string&gt; variables = 5 [json_name = "variables"];</code>
    */
+
   java.lang.String getVariablesOrThrow(
       java.lang.String key);
 

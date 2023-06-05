@@ -61,5 +61,5 @@ public interface TimestampExprOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.vanalytics.MomentOrBuilder getMomentOrBuilder();
 
-  com.tcn.cloud.api.api.v1alpha1.vanalytics.TimestampExpr.WhereCase getWhereCase();
+  public com.tcn.cloud.api.api.v1alpha1.vanalytics.TimestampExpr.WhereCase getWhereCase();
 }

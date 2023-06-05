@@ -31,6 +31,97 @@ private static final long serialVersionUID = 0L;
     return new BarChart();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private BarChart(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            fieldDataPointId_ = s;
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            groupingDataPointId_ = s;
+            break;
+          }
+          case 24: {
+            int rawValue = input.readEnum();
+
+            orientation_ = rawValue;
+            break;
+          }
+          case 34: {
+            com.tcn.cloud.api.api.v0alpha.Threshold.Builder subBuilder = null;
+            if (threshold_ != null) {
+              subBuilder = threshold_.toBuilder();
+            }
+            threshold_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.Threshold.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(threshold_);
+              threshold_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 42: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            xLabel_ = s;
+            break;
+          }
+          case 50: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            yLabel_ = s;
+            break;
+          }
+          case 58: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            legend_ = s;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.AnaProto.internal_static_api_v0alpha_BarChart_descriptor;
@@ -45,8 +136,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FIELD_DATA_POINT_ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object fieldDataPointId_ = "";
+  private volatile java.lang.Object fieldDataPointId_;
   /**
    * <code>string field_data_point_id = 1 [json_name = "fieldDataPointId"];</code>
    * @return The fieldDataPointId.
@@ -84,8 +174,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GROUPING_DATA_POINT_ID_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object groupingDataPointId_ = "";
+  private volatile java.lang.Object groupingDataPointId_;
   /**
    * <code>string grouping_data_point_id = 2 [json_name = "groupingDataPointId"];</code>
    * @return The groupingDataPointId.
@@ -123,7 +212,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ORIENTATION_FIELD_NUMBER = 3;
-  private int orientation_ = 0;
+  private int orientation_;
   /**
    * <code>.api.commons.BarChartOrientation orientation = 3 [json_name = "orientation"];</code>
    * @return The enum numeric value on the wire for orientation.
@@ -136,7 +225,8 @@ private static final long serialVersionUID = 0L;
    * @return The orientation.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.BarChartOrientation getOrientation() {
-    com.tcn.cloud.api.api.commons.BarChartOrientation result = com.tcn.cloud.api.api.commons.BarChartOrientation.forNumber(orientation_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.BarChartOrientation result = com.tcn.cloud.api.api.commons.BarChartOrientation.valueOf(orientation_);
     return result == null ? com.tcn.cloud.api.api.commons.BarChartOrientation.UNRECOGNIZED : result;
   }
 
@@ -163,12 +253,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.ThresholdOrBuilder getThresholdOrBuilder() {
-    return threshold_ == null ? com.tcn.cloud.api.api.v0alpha.Threshold.getDefaultInstance() : threshold_;
+    return getThreshold();
   }
 
   public static final int X_LABEL_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object xLabel_ = "";
+  private volatile java.lang.Object xLabel_;
   /**
    * <code>string x_label = 5 [json_name = "xLabel"];</code>
    * @return The xLabel.
@@ -206,8 +295,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int Y_LABEL_FIELD_NUMBER = 6;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object yLabel_ = "";
+  private volatile java.lang.Object yLabel_;
   /**
    * <code>string y_label = 6 [json_name = "yLabel"];</code>
    * @return The yLabel.
@@ -245,8 +333,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LEGEND_FIELD_NUMBER = 7;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object legend_ = "";
+  private volatile java.lang.Object legend_;
   /**
    * <code>string legend = 7 [json_name = "legend"];</code>
    * @return The legend.
@@ -297,10 +384,10 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fieldDataPointId_)) {
+    if (!getFieldDataPointIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, fieldDataPointId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupingDataPointId_)) {
+    if (!getGroupingDataPointIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, groupingDataPointId_);
     }
     if (orientation_ != com.tcn.cloud.api.api.commons.BarChartOrientation.BAR_CHART_ORIENTATION_BAR.getNumber()) {
@@ -309,16 +396,16 @@ private static final long serialVersionUID = 0L;
     if (threshold_ != null) {
       output.writeMessage(4, getThreshold());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(xLabel_)) {
+    if (!getXLabelBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, xLabel_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(yLabel_)) {
+    if (!getYLabelBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, yLabel_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(legend_)) {
+    if (!getLegendBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, legend_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -327,10 +414,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fieldDataPointId_)) {
+    if (!getFieldDataPointIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, fieldDataPointId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupingDataPointId_)) {
+    if (!getGroupingDataPointIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, groupingDataPointId_);
     }
     if (orientation_ != com.tcn.cloud.api.api.commons.BarChartOrientation.BAR_CHART_ORIENTATION_BAR.getNumber()) {
@@ -341,16 +428,16 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getThreshold());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(xLabel_)) {
+    if (!getXLabelBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, xLabel_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(yLabel_)) {
+    if (!getYLabelBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, yLabel_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(legend_)) {
+    if (!getLegendBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, legend_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -381,7 +468,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getYLabel())) return false;
     if (!getLegend()
         .equals(other.getLegend())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -408,7 +495,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getYLabel().hashCode();
     hash = (37 * hash) + LEGEND_FIELD_NUMBER;
     hash = (53 * hash) + getLegend().hashCode();
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -457,13 +544,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.BarChart parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.BarChart parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -527,29 +612,40 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.BarChart.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       fieldDataPointId_ = "";
+
       groupingDataPointId_ = "";
+
       orientation_ = 0;
-      threshold_ = null;
-      if (thresholdBuilder_ != null) {
-        thresholdBuilder_.dispose();
+
+      if (thresholdBuilder_ == null) {
+        threshold_ = null;
+      } else {
+        threshold_ = null;
         thresholdBuilder_ = null;
       }
       xLabel_ = "";
+
       yLabel_ = "";
+
       legend_ = "";
+
       return this;
     }
 
@@ -576,36 +672,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.BarChart buildPartial() {
       com.tcn.cloud.api.api.v0alpha.BarChart result = new com.tcn.cloud.api.api.v0alpha.BarChart(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.fieldDataPointId_ = fieldDataPointId_;
+      result.groupingDataPointId_ = groupingDataPointId_;
+      result.orientation_ = orientation_;
+      if (thresholdBuilder_ == null) {
+        result.threshold_ = threshold_;
+      } else {
+        result.threshold_ = thresholdBuilder_.build();
+      }
+      result.xLabel_ = xLabel_;
+      result.yLabel_ = yLabel_;
+      result.legend_ = legend_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.BarChart result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.fieldDataPointId_ = fieldDataPointId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.groupingDataPointId_ = groupingDataPointId_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.orientation_ = orientation_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.threshold_ = thresholdBuilder_ == null
-            ? threshold_
-            : thresholdBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.xLabel_ = xLabel_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.yLabel_ = yLabel_;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.legend_ = legend_;
-      }
     }
 
     @java.lang.Override
@@ -654,12 +733,10 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v0alpha.BarChart.getDefaultInstance()) return this;
       if (!other.getFieldDataPointId().isEmpty()) {
         fieldDataPointId_ = other.fieldDataPointId_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getGroupingDataPointId().isEmpty()) {
         groupingDataPointId_ = other.groupingDataPointId_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.orientation_ != 0) {
@@ -670,20 +747,17 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getXLabel().isEmpty()) {
         xLabel_ = other.xLabel_;
-        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (!other.getYLabel().isEmpty()) {
         yLabel_ = other.yLabel_;
-        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (!other.getLegend().isEmpty()) {
         legend_ = other.legend_;
-        bitField0_ |= 0x00000040;
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -698,70 +772,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.BarChart parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              fieldDataPointId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              groupingDataPointId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 24: {
-              orientation_ = input.readEnum();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 24
-            case 34: {
-              input.readMessage(
-                  getThresholdFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
-            case 42: {
-              xLabel_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 42
-            case 50: {
-              yLabel_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 50
-            case 58: {
-              legend_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 58
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.BarChart) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private java.lang.Object fieldDataPointId_ = "";
     /**
@@ -804,9 +827,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFieldDataPointId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       fieldDataPointId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -815,8 +840,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFieldDataPointId() {
+      
       fieldDataPointId_ = getDefaultInstance().getFieldDataPointId();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -827,10 +852,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFieldDataPointIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       fieldDataPointId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -876,9 +903,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setGroupingDataPointId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       groupingDataPointId_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -887,8 +916,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGroupingDataPointId() {
+      
       groupingDataPointId_ = getDefaultInstance().getGroupingDataPointId();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -899,10 +928,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setGroupingDataPointIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       groupingDataPointId_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -921,8 +952,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOrientationValue(int value) {
+      
       orientation_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -932,7 +963,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.BarChartOrientation getOrientation() {
-      com.tcn.cloud.api.api.commons.BarChartOrientation result = com.tcn.cloud.api.api.commons.BarChartOrientation.forNumber(orientation_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.BarChartOrientation result = com.tcn.cloud.api.api.commons.BarChartOrientation.valueOf(orientation_);
       return result == null ? com.tcn.cloud.api.api.commons.BarChartOrientation.UNRECOGNIZED : result;
     }
     /**
@@ -944,7 +976,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000004;
+      
       orientation_ = value.getNumber();
       onChanged();
       return this;
@@ -954,7 +986,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOrientation() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       orientation_ = 0;
       onChanged();
       return this;
@@ -968,7 +1000,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the threshold field is set.
      */
     public boolean hasThreshold() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return thresholdBuilder_ != null || threshold_ != null;
     }
     /**
      * <code>.api.v0alpha.Threshold threshold = 4 [json_name = "threshold"];</code>
@@ -990,11 +1022,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         threshold_ = value;
+        onChanged();
       } else {
         thresholdBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
@@ -1004,11 +1036,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.Threshold.Builder builderForValue) {
       if (thresholdBuilder_ == null) {
         threshold_ = builderForValue.build();
+        onChanged();
       } else {
         thresholdBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
@@ -1016,38 +1048,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeThreshold(com.tcn.cloud.api.api.v0alpha.Threshold value) {
       if (thresholdBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0) &&
-          threshold_ != null &&
-          threshold_ != com.tcn.cloud.api.api.v0alpha.Threshold.getDefaultInstance()) {
-          getThresholdBuilder().mergeFrom(value);
+        if (threshold_ != null) {
+          threshold_ =
+            com.tcn.cloud.api.api.v0alpha.Threshold.newBuilder(threshold_).mergeFrom(value).buildPartial();
         } else {
           threshold_ = value;
         }
+        onChanged();
       } else {
         thresholdBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.Threshold threshold = 4 [json_name = "threshold"];</code>
      */
     public Builder clearThreshold() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      threshold_ = null;
-      if (thresholdBuilder_ != null) {
-        thresholdBuilder_.dispose();
+      if (thresholdBuilder_ == null) {
+        threshold_ = null;
+        onChanged();
+      } else {
+        threshold_ = null;
         thresholdBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.Threshold threshold = 4 [json_name = "threshold"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.Threshold.Builder getThresholdBuilder() {
-      bitField0_ |= 0x00000008;
+      
       onChanged();
       return getThresholdFieldBuilder().getBuilder();
     }
@@ -1120,9 +1152,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setXLabel(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       xLabel_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1131,8 +1165,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearXLabel() {
+      
       xLabel_ = getDefaultInstance().getXLabel();
-      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1143,10 +1177,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setXLabelBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       xLabel_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1192,9 +1228,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setYLabel(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       yLabel_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1203,8 +1241,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearYLabel() {
+      
       yLabel_ = getDefaultInstance().getYLabel();
-      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1215,10 +1253,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setYLabelBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       yLabel_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1264,9 +1304,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLegend(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       legend_ = value;
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1275,8 +1317,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLegend() {
+      
       legend_ = getDefaultInstance().getLegend();
-      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -1287,10 +1329,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLegendBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       legend_ = value;
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1327,18 +1371,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new BarChart(input, extensionRegistry);
     }
   };
 

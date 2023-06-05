@@ -30,6 +30,80 @@ private static final long serialVersionUID = 0L;
     return new PlayDTMFRequest();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private PlayDTMFRequest(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+
+            sessionSid_ = input.readInt64();
+            break;
+          }
+          case 16: {
+            int rawValue = input.readEnum();
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              dtmfDigits_ = new java.util.ArrayList<java.lang.Integer>();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            dtmfDigits_.add(rawValue);
+            break;
+          }
+          case 18: {
+            int length = input.readRawVarint32();
+            int oldLimit = input.pushLimit(length);
+            while(input.getBytesUntilLimit() > 0) {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                dtmfDigits_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              dtmfDigits_.add(rawValue);
+            }
+            input.popLimit(oldLimit);
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        dtmfDigits_ = java.util.Collections.unmodifiableList(dtmfDigits_);
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.AcdProto.internal_static_api_v0alpha_PlayDTMFRequest_descriptor;
@@ -44,7 +118,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SESSION_SID_FIELD_NUMBER = 1;
-  private long sessionSid_ = 0L;
+  private long sessionSid_;
   /**
    * <pre>
    * the session sid for the agent
@@ -59,14 +133,14 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DTMF_DIGITS_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> dtmfDigits_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, com.tcn.cloud.api.api.commons.DTMFDigit> dtmfDigits_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.tcn.cloud.api.api.commons.DTMFDigit>() {
             public com.tcn.cloud.api.api.commons.DTMFDigit convert(java.lang.Integer from) {
-              com.tcn.cloud.api.api.commons.DTMFDigit result = com.tcn.cloud.api.api.commons.DTMFDigit.forNumber(from);
+              @SuppressWarnings("deprecation")
+              com.tcn.cloud.api.api.commons.DTMFDigit result = com.tcn.cloud.api.api.commons.DTMFDigit.valueOf(from);
               return result == null ? com.tcn.cloud.api.api.commons.DTMFDigit.UNRECOGNIZED : result;
             }
           };
@@ -161,7 +235,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < dtmfDigits_.size(); i++) {
       output.writeEnumNoTag(dtmfDigits_.get(i));
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -186,7 +260,7 @@ private static final long serialVersionUID = 0L;
           .computeUInt32SizeNoTag(dataSize);
       }dtmfDigitsMemoizedSerializedSize = dataSize;
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -204,7 +278,7 @@ private static final long serialVersionUID = 0L;
     if (getSessionSid()
         != other.getSessionSid()) return false;
     if (!dtmfDigits_.equals(other.dtmfDigits_)) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -222,7 +296,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DTMF_DIGITS_FIELD_NUMBER;
       hash = (53 * hash) + dtmfDigits_.hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -271,13 +345,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.PlayDTMFRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.PlayDTMFRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -345,21 +417,26 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.PlayDTMFRequest.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       sessionSid_ = 0L;
+
       dtmfDigits_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -386,25 +463,15 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.PlayDTMFRequest buildPartial() {
       com.tcn.cloud.api.api.v0alpha.PlayDTMFRequest result = new com.tcn.cloud.api.api.v0alpha.PlayDTMFRequest(this);
-      buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      onBuilt();
-      return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.PlayDTMFRequest result) {
-      if (((bitField0_ & 0x00000002) != 0)) {
+      int from_bitField0_ = bitField0_;
+      result.sessionSid_ = sessionSid_;
+      if (((bitField0_ & 0x00000001) != 0)) {
         dtmfDigits_ = java.util.Collections.unmodifiableList(dtmfDigits_);
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.dtmfDigits_ = dtmfDigits_;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.PlayDTMFRequest result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.sessionSid_ = sessionSid_;
-      }
+      onBuilt();
+      return result;
     }
 
     @java.lang.Override
@@ -457,14 +524,14 @@ private static final long serialVersionUID = 0L;
       if (!other.dtmfDigits_.isEmpty()) {
         if (dtmfDigits_.isEmpty()) {
           dtmfDigits_ = other.dtmfDigits_;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensureDtmfDigitsIsMutable();
           dtmfDigits_.addAll(other.dtmfDigits_);
         }
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -479,52 +546,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.PlayDTMFRequest parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              sessionSid_ = input.readInt64();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 16: {
-              int tmpRaw = input.readEnum();
-              ensureDtmfDigitsIsMutable();
-              dtmfDigits_.add(tmpRaw);
-              break;
-            } // case 16
-            case 18: {
-              int length = input.readRawVarint32();
-              int oldLimit = input.pushLimit(length);
-              while(input.getBytesUntilLimit() > 0) {
-                int tmpRaw = input.readEnum();
-                ensureDtmfDigitsIsMutable();
-                dtmfDigits_.add(tmpRaw);
-              }
-              input.popLimit(oldLimit);
-              break;
-            } // case 18
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.PlayDTMFRequest) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -552,9 +584,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSessionSid(long value) {
-
+      
       sessionSid_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -567,7 +598,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSessionSid() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       sessionSid_ = 0L;
       onChanged();
       return this;
@@ -576,9 +607,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> dtmfDigits_ =
       java.util.Collections.emptyList();
     private void ensureDtmfDigitsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         dtmfDigits_ = new java.util.ArrayList<java.lang.Integer>(dtmfDigits_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
       }
     }
     /**
@@ -682,7 +713,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearDtmfDigits() {
       dtmfDigits_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -716,8 +747,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .api.commons.DTMFDigit dtmf_digits = 2 [json_name = "dtmfDigits"];</code>
-     * @param index The index to set the value at.
-     * @param value The enum numeric value on the wire for dtmfDigits to set.
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of dtmfDigits at the given index.
      * @return This builder for chaining.
      */
     public Builder setDtmfDigitsValue(
@@ -793,18 +824,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new PlayDTMFRequest(input, extensionRegistry);
     }
   };
 

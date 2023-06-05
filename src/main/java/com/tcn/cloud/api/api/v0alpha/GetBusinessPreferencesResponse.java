@@ -29,6 +29,61 @@ private static final long serialVersionUID = 0L;
     return new GetBusinessPreferencesResponse();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private GetBusinessPreferencesResponse(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            com.tcn.cloud.api.api.v0alpha.BusinessPreferences.Builder subBuilder = null;
+            if (businessPreferences_ != null) {
+              subBuilder = businessPreferences_.toBuilder();
+            }
+            businessPreferences_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.BusinessPreferences.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(businessPreferences_);
+              businessPreferences_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_GetBusinessPreferencesResponse_descriptor;
@@ -77,7 +132,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.BusinessPreferencesOrBuilder getBusinessPreferencesOrBuilder() {
-    return businessPreferences_ == null ? com.tcn.cloud.api.api.v0alpha.BusinessPreferences.getDefaultInstance() : businessPreferences_;
+    return getBusinessPreferences();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -97,7 +152,7 @@ private static final long serialVersionUID = 0L;
     if (businessPreferences_ != null) {
       output.writeMessage(1, getBusinessPreferences());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -110,7 +165,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getBusinessPreferences());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -130,7 +185,7 @@ private static final long serialVersionUID = 0L;
       if (!getBusinessPreferences()
           .equals(other.getBusinessPreferences())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -145,7 +200,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + BUSINESS_PREFERENCES_FIELD_NUMBER;
       hash = (53 * hash) + getBusinessPreferences().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -194,13 +249,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.GetBusinessPreferencesResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.GetBusinessPreferencesResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -268,21 +321,26 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.GetBusinessPreferencesResponse.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      businessPreferences_ = null;
-      if (businessPreferencesBuilder_ != null) {
-        businessPreferencesBuilder_.dispose();
+      if (businessPreferencesBuilder_ == null) {
+        businessPreferences_ = null;
+      } else {
+        businessPreferences_ = null;
         businessPreferencesBuilder_ = null;
       }
       return this;
@@ -311,18 +369,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.GetBusinessPreferencesResponse buildPartial() {
       com.tcn.cloud.api.api.v0alpha.GetBusinessPreferencesResponse result = new com.tcn.cloud.api.api.v0alpha.GetBusinessPreferencesResponse(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      if (businessPreferencesBuilder_ == null) {
+        result.businessPreferences_ = businessPreferences_;
+      } else {
+        result.businessPreferences_ = businessPreferencesBuilder_.build();
+      }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.GetBusinessPreferencesResponse result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.businessPreferences_ = businessPreferencesBuilder_ == null
-            ? businessPreferences_
-            : businessPreferencesBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -372,7 +425,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasBusinessPreferences()) {
         mergeBusinessPreferences(other.getBusinessPreferences());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -387,40 +440,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.GetBusinessPreferencesResponse parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              input.readMessage(
-                  getBusinessPreferencesFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.GetBusinessPreferencesResponse) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private com.tcn.cloud.api.api.v0alpha.BusinessPreferences businessPreferences_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -434,7 +466,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the businessPreferences field is set.
      */
     public boolean hasBusinessPreferences() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return businessPreferencesBuilder_ != null || businessPreferences_ != null;
     }
     /**
      * <pre>
@@ -464,11 +496,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         businessPreferences_ = value;
+        onChanged();
       } else {
         businessPreferencesBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -482,11 +514,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.BusinessPreferences.Builder builderForValue) {
       if (businessPreferencesBuilder_ == null) {
         businessPreferences_ = builderForValue.build();
+        onChanged();
       } else {
         businessPreferencesBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -498,18 +530,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeBusinessPreferences(com.tcn.cloud.api.api.v0alpha.BusinessPreferences value) {
       if (businessPreferencesBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          businessPreferences_ != null &&
-          businessPreferences_ != com.tcn.cloud.api.api.v0alpha.BusinessPreferences.getDefaultInstance()) {
-          getBusinessPreferencesBuilder().mergeFrom(value);
+        if (businessPreferences_ != null) {
+          businessPreferences_ =
+            com.tcn.cloud.api.api.v0alpha.BusinessPreferences.newBuilder(businessPreferences_).mergeFrom(value).buildPartial();
         } else {
           businessPreferences_ = value;
         }
+        onChanged();
       } else {
         businessPreferencesBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -520,13 +551,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v0alpha.BusinessPreferences business_preferences = 1 [json_name = "businessPreferences"];</code>
      */
     public Builder clearBusinessPreferences() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      businessPreferences_ = null;
-      if (businessPreferencesBuilder_ != null) {
-        businessPreferencesBuilder_.dispose();
+      if (businessPreferencesBuilder_ == null) {
+        businessPreferences_ = null;
+        onChanged();
+      } else {
+        businessPreferences_ = null;
         businessPreferencesBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -537,7 +569,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v0alpha.BusinessPreferences business_preferences = 1 [json_name = "businessPreferences"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.BusinessPreferences.Builder getBusinessPreferencesBuilder() {
-      bitField0_ |= 0x00000001;
+      
       onChanged();
       return getBusinessPreferencesFieldBuilder().getBuilder();
     }
@@ -609,18 +641,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new GetBusinessPreferencesResponse(input, extensionRegistry);
     }
   };
 

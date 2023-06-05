@@ -30,6 +30,162 @@ private static final long serialVersionUID = 0L;
     return new CallProfileTemplate();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private CallProfileTemplate(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+
+            callProfileTemplateSid_ = input.readInt64();
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            name_ = s;
+            break;
+          }
+          case 26: {
+            com.tcn.cloud.api.api.commons.CallProfileGroupCalls.Builder subBuilder = null;
+            if (totalCallsProfile_ != null) {
+              subBuilder = totalCallsProfile_.toBuilder();
+            }
+            totalCallsProfile_ = input.readMessage(com.tcn.cloud.api.api.commons.CallProfileGroupCalls.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(totalCallsProfile_);
+              totalCallsProfile_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 34: {
+            com.tcn.cloud.api.api.commons.CallProfileGroupCalls.Builder subBuilder = null;
+            if (totalAbandonedCallsProfile_ != null) {
+              subBuilder = totalAbandonedCallsProfile_.toBuilder();
+            }
+            totalAbandonedCallsProfile_ = input.readMessage(com.tcn.cloud.api.api.commons.CallProfileGroupCalls.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(totalAbandonedCallsProfile_);
+              totalAbandonedCallsProfile_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 42: {
+            com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.Builder subBuilder = null;
+            if (averageSpeedOfAnswerProfile_ != null) {
+              subBuilder = averageSpeedOfAnswerProfile_.toBuilder();
+            }
+            averageSpeedOfAnswerProfile_ = input.readMessage(com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(averageSpeedOfAnswerProfile_);
+              averageSpeedOfAnswerProfile_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 50: {
+            com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.Builder subBuilder = null;
+            if (averageHandleTimeProfile_ != null) {
+              subBuilder = averageHandleTimeProfile_.toBuilder();
+            }
+            averageHandleTimeProfile_ = input.readMessage(com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(averageHandleTimeProfile_);
+              averageHandleTimeProfile_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 58: {
+            com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.Builder subBuilder = null;
+            if (averageAfterCallWorkProfile_ != null) {
+              subBuilder = averageAfterCallWorkProfile_.toBuilder();
+            }
+            averageAfterCallWorkProfile_ = input.readMessage(com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(averageAfterCallWorkProfile_);
+              averageAfterCallWorkProfile_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 66: {
+            com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.Builder subBuilder = null;
+            if (averageTimeToAbortProfile_ != null) {
+              subBuilder = averageTimeToAbortProfile_.toBuilder();
+            }
+            averageTimeToAbortProfile_ = input.readMessage(com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(averageTimeToAbortProfile_);
+              averageTimeToAbortProfile_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 77: {
+
+            fixedAverageSpeedOfAnswer_ = input.readFloat();
+            break;
+          }
+          case 85: {
+
+            fixedAverageHandleTime_ = input.readFloat();
+            break;
+          }
+          case 93: {
+
+            fixedAverageAfterCallWork_ = input.readFloat();
+            break;
+          }
+          case 101: {
+
+            fixedAverageTimeToAbort_ = input.readFloat();
+            break;
+          }
+          case 104: {
+
+            defaultToFixedAveragesForecast_ = input.readBool();
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_CallProfileTemplate_descriptor;
@@ -44,7 +200,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALL_PROFILE_TEMPLATE_SID_FIELD_NUMBER = 1;
-  private long callProfileTemplateSid_ = 0L;
+  private long callProfileTemplateSid_;
   /**
    * <pre>
    * ID of the template
@@ -59,8 +215,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object name_ = "";
+  private volatile java.lang.Object name_;
   /**
    * <pre>
    * Name of the template.
@@ -140,7 +295,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.CallProfileGroupCallsOrBuilder getTotalCallsProfileOrBuilder() {
-    return totalCallsProfile_ == null ? com.tcn.cloud.api.api.commons.CallProfileGroupCalls.getDefaultInstance() : totalCallsProfile_;
+    return getTotalCallsProfile();
   }
 
   public static final int TOTAL_ABANDONED_CALLS_PROFILE_FIELD_NUMBER = 4;
@@ -178,7 +333,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.CallProfileGroupCallsOrBuilder getTotalAbandonedCallsProfileOrBuilder() {
-    return totalAbandonedCallsProfile_ == null ? com.tcn.cloud.api.api.commons.CallProfileGroupCalls.getDefaultInstance() : totalAbandonedCallsProfile_;
+    return getTotalAbandonedCallsProfile();
   }
 
   public static final int AVERAGE_SPEED_OF_ANSWER_PROFILE_FIELD_NUMBER = 5;
@@ -216,7 +371,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.CallProfileGroupAvgsOrBuilder getAverageSpeedOfAnswerProfileOrBuilder() {
-    return averageSpeedOfAnswerProfile_ == null ? com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.getDefaultInstance() : averageSpeedOfAnswerProfile_;
+    return getAverageSpeedOfAnswerProfile();
   }
 
   public static final int AVERAGE_HANDLE_TIME_PROFILE_FIELD_NUMBER = 6;
@@ -254,7 +409,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.CallProfileGroupAvgsOrBuilder getAverageHandleTimeProfileOrBuilder() {
-    return averageHandleTimeProfile_ == null ? com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.getDefaultInstance() : averageHandleTimeProfile_;
+    return getAverageHandleTimeProfile();
   }
 
   public static final int AVERAGE_AFTER_CALL_WORK_PROFILE_FIELD_NUMBER = 7;
@@ -292,7 +447,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.CallProfileGroupAvgsOrBuilder getAverageAfterCallWorkProfileOrBuilder() {
-    return averageAfterCallWorkProfile_ == null ? com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.getDefaultInstance() : averageAfterCallWorkProfile_;
+    return getAverageAfterCallWorkProfile();
   }
 
   public static final int AVERAGE_TIME_TO_ABORT_PROFILE_FIELD_NUMBER = 8;
@@ -330,11 +485,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.CallProfileGroupAvgsOrBuilder getAverageTimeToAbortProfileOrBuilder() {
-    return averageTimeToAbortProfile_ == null ? com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.getDefaultInstance() : averageTimeToAbortProfile_;
+    return getAverageTimeToAbortProfile();
   }
 
   public static final int FIXED_AVERAGE_SPEED_OF_ANSWER_FIELD_NUMBER = 9;
-  private float fixedAverageSpeedOfAnswer_ = 0F;
+  private float fixedAverageSpeedOfAnswer_;
   /**
    * <pre>
    * Fixed average for speed of answer
@@ -349,7 +504,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FIXED_AVERAGE_HANDLE_TIME_FIELD_NUMBER = 10;
-  private float fixedAverageHandleTime_ = 0F;
+  private float fixedAverageHandleTime_;
   /**
    * <pre>
    * Fixed average for handle time
@@ -364,7 +519,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FIXED_AVERAGE_AFTER_CALL_WORK_FIELD_NUMBER = 11;
-  private float fixedAverageAfterCallWork_ = 0F;
+  private float fixedAverageAfterCallWork_;
   /**
    * <pre>
    * Fixed average for after call work
@@ -379,7 +534,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FIXED_AVERAGE_TIME_TO_ABORT_FIELD_NUMBER = 12;
-  private float fixedAverageTimeToAbort_ = 0F;
+  private float fixedAverageTimeToAbort_;
   /**
    * <pre>
    * Fixed average for time to abort
@@ -394,7 +549,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DEFAULT_TO_FIXED_AVERAGES_FORECAST_FIELD_NUMBER = 13;
-  private boolean defaultToFixedAveragesForecast_ = false;
+  private boolean defaultToFixedAveragesForecast_;
   /**
    * <pre>
    * Indicates if fixed averages is the default forecast that this template should be used for.
@@ -425,7 +580,7 @@ private static final long serialVersionUID = 0L;
     if (callProfileTemplateSid_ != 0L) {
       output.writeInt64(1, callProfileTemplateSid_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+    if (!getNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
     }
     if (totalCallsProfile_ != null) {
@@ -446,22 +601,22 @@ private static final long serialVersionUID = 0L;
     if (averageTimeToAbortProfile_ != null) {
       output.writeMessage(8, getAverageTimeToAbortProfile());
     }
-    if (java.lang.Float.floatToRawIntBits(fixedAverageSpeedOfAnswer_) != 0) {
+    if (fixedAverageSpeedOfAnswer_ != 0F) {
       output.writeFloat(9, fixedAverageSpeedOfAnswer_);
     }
-    if (java.lang.Float.floatToRawIntBits(fixedAverageHandleTime_) != 0) {
+    if (fixedAverageHandleTime_ != 0F) {
       output.writeFloat(10, fixedAverageHandleTime_);
     }
-    if (java.lang.Float.floatToRawIntBits(fixedAverageAfterCallWork_) != 0) {
+    if (fixedAverageAfterCallWork_ != 0F) {
       output.writeFloat(11, fixedAverageAfterCallWork_);
     }
-    if (java.lang.Float.floatToRawIntBits(fixedAverageTimeToAbort_) != 0) {
+    if (fixedAverageTimeToAbort_ != 0F) {
       output.writeFloat(12, fixedAverageTimeToAbort_);
     }
     if (defaultToFixedAveragesForecast_ != false) {
       output.writeBool(13, defaultToFixedAveragesForecast_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -474,7 +629,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, callProfileTemplateSid_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+    if (!getNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
     }
     if (totalCallsProfile_ != null) {
@@ -501,19 +656,19 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getAverageTimeToAbortProfile());
     }
-    if (java.lang.Float.floatToRawIntBits(fixedAverageSpeedOfAnswer_) != 0) {
+    if (fixedAverageSpeedOfAnswer_ != 0F) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(9, fixedAverageSpeedOfAnswer_);
     }
-    if (java.lang.Float.floatToRawIntBits(fixedAverageHandleTime_) != 0) {
+    if (fixedAverageHandleTime_ != 0F) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(10, fixedAverageHandleTime_);
     }
-    if (java.lang.Float.floatToRawIntBits(fixedAverageAfterCallWork_) != 0) {
+    if (fixedAverageAfterCallWork_ != 0F) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(11, fixedAverageAfterCallWork_);
     }
-    if (java.lang.Float.floatToRawIntBits(fixedAverageTimeToAbort_) != 0) {
+    if (fixedAverageTimeToAbort_ != 0F) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(12, fixedAverageTimeToAbort_);
     }
@@ -521,7 +676,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(13, defaultToFixedAveragesForecast_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -584,7 +739,7 @@ private static final long serialVersionUID = 0L;
             other.getFixedAverageTimeToAbort())) return false;
     if (getDefaultToFixedAveragesForecast()
         != other.getDefaultToFixedAveragesForecast()) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -639,7 +794,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + DEFAULT_TO_FIXED_AVERAGES_FORECAST_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getDefaultToFixedAveragesForecast());
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -688,13 +843,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.wfm.CallProfileTemplate parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.wfm.CallProfileTemplate parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -762,55 +915,72 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.CallProfileTemplate.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       callProfileTemplateSid_ = 0L;
+
       name_ = "";
-      totalCallsProfile_ = null;
-      if (totalCallsProfileBuilder_ != null) {
-        totalCallsProfileBuilder_.dispose();
+
+      if (totalCallsProfileBuilder_ == null) {
+        totalCallsProfile_ = null;
+      } else {
+        totalCallsProfile_ = null;
         totalCallsProfileBuilder_ = null;
       }
-      totalAbandonedCallsProfile_ = null;
-      if (totalAbandonedCallsProfileBuilder_ != null) {
-        totalAbandonedCallsProfileBuilder_.dispose();
+      if (totalAbandonedCallsProfileBuilder_ == null) {
+        totalAbandonedCallsProfile_ = null;
+      } else {
+        totalAbandonedCallsProfile_ = null;
         totalAbandonedCallsProfileBuilder_ = null;
       }
-      averageSpeedOfAnswerProfile_ = null;
-      if (averageSpeedOfAnswerProfileBuilder_ != null) {
-        averageSpeedOfAnswerProfileBuilder_.dispose();
+      if (averageSpeedOfAnswerProfileBuilder_ == null) {
+        averageSpeedOfAnswerProfile_ = null;
+      } else {
+        averageSpeedOfAnswerProfile_ = null;
         averageSpeedOfAnswerProfileBuilder_ = null;
       }
-      averageHandleTimeProfile_ = null;
-      if (averageHandleTimeProfileBuilder_ != null) {
-        averageHandleTimeProfileBuilder_.dispose();
+      if (averageHandleTimeProfileBuilder_ == null) {
+        averageHandleTimeProfile_ = null;
+      } else {
+        averageHandleTimeProfile_ = null;
         averageHandleTimeProfileBuilder_ = null;
       }
-      averageAfterCallWorkProfile_ = null;
-      if (averageAfterCallWorkProfileBuilder_ != null) {
-        averageAfterCallWorkProfileBuilder_.dispose();
+      if (averageAfterCallWorkProfileBuilder_ == null) {
+        averageAfterCallWorkProfile_ = null;
+      } else {
+        averageAfterCallWorkProfile_ = null;
         averageAfterCallWorkProfileBuilder_ = null;
       }
-      averageTimeToAbortProfile_ = null;
-      if (averageTimeToAbortProfileBuilder_ != null) {
-        averageTimeToAbortProfileBuilder_.dispose();
+      if (averageTimeToAbortProfileBuilder_ == null) {
+        averageTimeToAbortProfile_ = null;
+      } else {
+        averageTimeToAbortProfile_ = null;
         averageTimeToAbortProfileBuilder_ = null;
       }
       fixedAverageSpeedOfAnswer_ = 0F;
+
       fixedAverageHandleTime_ = 0F;
+
       fixedAverageAfterCallWork_ = 0F;
+
       fixedAverageTimeToAbort_ = 0F;
+
       defaultToFixedAveragesForecast_ = false;
+
       return this;
     }
 
@@ -837,64 +1007,45 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.CallProfileTemplate buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.CallProfileTemplate result = new com.tcn.cloud.api.api.v1alpha1.wfm.CallProfileTemplate(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.callProfileTemplateSid_ = callProfileTemplateSid_;
+      result.name_ = name_;
+      if (totalCallsProfileBuilder_ == null) {
+        result.totalCallsProfile_ = totalCallsProfile_;
+      } else {
+        result.totalCallsProfile_ = totalCallsProfileBuilder_.build();
+      }
+      if (totalAbandonedCallsProfileBuilder_ == null) {
+        result.totalAbandonedCallsProfile_ = totalAbandonedCallsProfile_;
+      } else {
+        result.totalAbandonedCallsProfile_ = totalAbandonedCallsProfileBuilder_.build();
+      }
+      if (averageSpeedOfAnswerProfileBuilder_ == null) {
+        result.averageSpeedOfAnswerProfile_ = averageSpeedOfAnswerProfile_;
+      } else {
+        result.averageSpeedOfAnswerProfile_ = averageSpeedOfAnswerProfileBuilder_.build();
+      }
+      if (averageHandleTimeProfileBuilder_ == null) {
+        result.averageHandleTimeProfile_ = averageHandleTimeProfile_;
+      } else {
+        result.averageHandleTimeProfile_ = averageHandleTimeProfileBuilder_.build();
+      }
+      if (averageAfterCallWorkProfileBuilder_ == null) {
+        result.averageAfterCallWorkProfile_ = averageAfterCallWorkProfile_;
+      } else {
+        result.averageAfterCallWorkProfile_ = averageAfterCallWorkProfileBuilder_.build();
+      }
+      if (averageTimeToAbortProfileBuilder_ == null) {
+        result.averageTimeToAbortProfile_ = averageTimeToAbortProfile_;
+      } else {
+        result.averageTimeToAbortProfile_ = averageTimeToAbortProfileBuilder_.build();
+      }
+      result.fixedAverageSpeedOfAnswer_ = fixedAverageSpeedOfAnswer_;
+      result.fixedAverageHandleTime_ = fixedAverageHandleTime_;
+      result.fixedAverageAfterCallWork_ = fixedAverageAfterCallWork_;
+      result.fixedAverageTimeToAbort_ = fixedAverageTimeToAbort_;
+      result.defaultToFixedAveragesForecast_ = defaultToFixedAveragesForecast_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.CallProfileTemplate result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.callProfileTemplateSid_ = callProfileTemplateSid_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.name_ = name_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.totalCallsProfile_ = totalCallsProfileBuilder_ == null
-            ? totalCallsProfile_
-            : totalCallsProfileBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.totalAbandonedCallsProfile_ = totalAbandonedCallsProfileBuilder_ == null
-            ? totalAbandonedCallsProfile_
-            : totalAbandonedCallsProfileBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.averageSpeedOfAnswerProfile_ = averageSpeedOfAnswerProfileBuilder_ == null
-            ? averageSpeedOfAnswerProfile_
-            : averageSpeedOfAnswerProfileBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.averageHandleTimeProfile_ = averageHandleTimeProfileBuilder_ == null
-            ? averageHandleTimeProfile_
-            : averageHandleTimeProfileBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.averageAfterCallWorkProfile_ = averageAfterCallWorkProfileBuilder_ == null
-            ? averageAfterCallWorkProfile_
-            : averageAfterCallWorkProfileBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.averageTimeToAbortProfile_ = averageTimeToAbortProfileBuilder_ == null
-            ? averageTimeToAbortProfile_
-            : averageTimeToAbortProfileBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
-        result.fixedAverageSpeedOfAnswer_ = fixedAverageSpeedOfAnswer_;
-      }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
-        result.fixedAverageHandleTime_ = fixedAverageHandleTime_;
-      }
-      if (((from_bitField0_ & 0x00000400) != 0)) {
-        result.fixedAverageAfterCallWork_ = fixedAverageAfterCallWork_;
-      }
-      if (((from_bitField0_ & 0x00000800) != 0)) {
-        result.fixedAverageTimeToAbort_ = fixedAverageTimeToAbort_;
-      }
-      if (((from_bitField0_ & 0x00001000) != 0)) {
-        result.defaultToFixedAveragesForecast_ = defaultToFixedAveragesForecast_;
-      }
     }
 
     @java.lang.Override
@@ -946,7 +1097,6 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasTotalCallsProfile()) {
@@ -982,7 +1132,7 @@ private static final long serialVersionUID = 0L;
       if (other.getDefaultToFixedAveragesForecast() != false) {
         setDefaultToFixedAveragesForecast(other.getDefaultToFixedAveragesForecast());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -997,110 +1147,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.wfm.CallProfileTemplate parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              callProfileTemplateSid_ = input.readInt64();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 18: {
-              name_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 26: {
-              input.readMessage(
-                  getTotalCallsProfileFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            case 34: {
-              input.readMessage(
-                  getTotalAbandonedCallsProfileFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
-            case 42: {
-              input.readMessage(
-                  getAverageSpeedOfAnswerProfileFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 42
-            case 50: {
-              input.readMessage(
-                  getAverageHandleTimeProfileFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 50
-            case 58: {
-              input.readMessage(
-                  getAverageAfterCallWorkProfileFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 58
-            case 66: {
-              input.readMessage(
-                  getAverageTimeToAbortProfileFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000080;
-              break;
-            } // case 66
-            case 77: {
-              fixedAverageSpeedOfAnswer_ = input.readFloat();
-              bitField0_ |= 0x00000100;
-              break;
-            } // case 77
-            case 85: {
-              fixedAverageHandleTime_ = input.readFloat();
-              bitField0_ |= 0x00000200;
-              break;
-            } // case 85
-            case 93: {
-              fixedAverageAfterCallWork_ = input.readFloat();
-              bitField0_ |= 0x00000400;
-              break;
-            } // case 93
-            case 101: {
-              fixedAverageTimeToAbort_ = input.readFloat();
-              bitField0_ |= 0x00000800;
-              break;
-            } // case 101
-            case 104: {
-              defaultToFixedAveragesForecast_ = input.readBool();
-              bitField0_ |= 0x00001000;
-              break;
-            } // case 104
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.CallProfileTemplate) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private long callProfileTemplateSid_ ;
     /**
@@ -1125,9 +1184,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCallProfileTemplateSid(long value) {
-
+      
       callProfileTemplateSid_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1140,7 +1198,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallProfileTemplateSid() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       callProfileTemplateSid_ = 0L;
       onChanged();
       return this;
@@ -1199,9 +1257,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       name_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1214,8 +1274,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
+      
       name_ = getDefaultInstance().getName();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1230,10 +1290,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       name_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1250,7 +1312,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the totalCallsProfile field is set.
      */
     public boolean hasTotalCallsProfile() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return totalCallsProfileBuilder_ != null || totalCallsProfile_ != null;
     }
     /**
      * <pre>
@@ -1280,11 +1342,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         totalCallsProfile_ = value;
+        onChanged();
       } else {
         totalCallsProfileBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -1298,11 +1360,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.CallProfileGroupCalls.Builder builderForValue) {
       if (totalCallsProfileBuilder_ == null) {
         totalCallsProfile_ = builderForValue.build();
+        onChanged();
       } else {
         totalCallsProfileBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -1314,18 +1376,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeTotalCallsProfile(com.tcn.cloud.api.api.commons.CallProfileGroupCalls value) {
       if (totalCallsProfileBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0) &&
-          totalCallsProfile_ != null &&
-          totalCallsProfile_ != com.tcn.cloud.api.api.commons.CallProfileGroupCalls.getDefaultInstance()) {
-          getTotalCallsProfileBuilder().mergeFrom(value);
+        if (totalCallsProfile_ != null) {
+          totalCallsProfile_ =
+            com.tcn.cloud.api.api.commons.CallProfileGroupCalls.newBuilder(totalCallsProfile_).mergeFrom(value).buildPartial();
         } else {
           totalCallsProfile_ = value;
         }
+        onChanged();
       } else {
         totalCallsProfileBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -1336,13 +1397,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.CallProfileGroupCalls total_calls_profile = 3 [json_name = "totalCallsProfile"];</code>
      */
     public Builder clearTotalCallsProfile() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      totalCallsProfile_ = null;
-      if (totalCallsProfileBuilder_ != null) {
-        totalCallsProfileBuilder_.dispose();
+      if (totalCallsProfileBuilder_ == null) {
+        totalCallsProfile_ = null;
+        onChanged();
+      } else {
+        totalCallsProfile_ = null;
         totalCallsProfileBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -1353,7 +1415,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.CallProfileGroupCalls total_calls_profile = 3 [json_name = "totalCallsProfile"];</code>
      */
     public com.tcn.cloud.api.api.commons.CallProfileGroupCalls.Builder getTotalCallsProfileBuilder() {
-      bitField0_ |= 0x00000004;
+      
       onChanged();
       return getTotalCallsProfileFieldBuilder().getBuilder();
     }
@@ -1405,7 +1467,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the totalAbandonedCallsProfile field is set.
      */
     public boolean hasTotalAbandonedCallsProfile() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return totalAbandonedCallsProfileBuilder_ != null || totalAbandonedCallsProfile_ != null;
     }
     /**
      * <pre>
@@ -1435,11 +1497,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         totalAbandonedCallsProfile_ = value;
+        onChanged();
       } else {
         totalAbandonedCallsProfileBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
@@ -1453,11 +1515,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.CallProfileGroupCalls.Builder builderForValue) {
       if (totalAbandonedCallsProfileBuilder_ == null) {
         totalAbandonedCallsProfile_ = builderForValue.build();
+        onChanged();
       } else {
         totalAbandonedCallsProfileBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
@@ -1469,18 +1531,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeTotalAbandonedCallsProfile(com.tcn.cloud.api.api.commons.CallProfileGroupCalls value) {
       if (totalAbandonedCallsProfileBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0) &&
-          totalAbandonedCallsProfile_ != null &&
-          totalAbandonedCallsProfile_ != com.tcn.cloud.api.api.commons.CallProfileGroupCalls.getDefaultInstance()) {
-          getTotalAbandonedCallsProfileBuilder().mergeFrom(value);
+        if (totalAbandonedCallsProfile_ != null) {
+          totalAbandonedCallsProfile_ =
+            com.tcn.cloud.api.api.commons.CallProfileGroupCalls.newBuilder(totalAbandonedCallsProfile_).mergeFrom(value).buildPartial();
         } else {
           totalAbandonedCallsProfile_ = value;
         }
+        onChanged();
       } else {
         totalAbandonedCallsProfileBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
@@ -1491,13 +1552,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.CallProfileGroupCalls total_abandoned_calls_profile = 4 [json_name = "totalAbandonedCallsProfile"];</code>
      */
     public Builder clearTotalAbandonedCallsProfile() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      totalAbandonedCallsProfile_ = null;
-      if (totalAbandonedCallsProfileBuilder_ != null) {
-        totalAbandonedCallsProfileBuilder_.dispose();
+      if (totalAbandonedCallsProfileBuilder_ == null) {
+        totalAbandonedCallsProfile_ = null;
+        onChanged();
+      } else {
+        totalAbandonedCallsProfile_ = null;
         totalAbandonedCallsProfileBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -1508,7 +1570,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.CallProfileGroupCalls total_abandoned_calls_profile = 4 [json_name = "totalAbandonedCallsProfile"];</code>
      */
     public com.tcn.cloud.api.api.commons.CallProfileGroupCalls.Builder getTotalAbandonedCallsProfileBuilder() {
-      bitField0_ |= 0x00000008;
+      
       onChanged();
       return getTotalAbandonedCallsProfileFieldBuilder().getBuilder();
     }
@@ -1560,7 +1622,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the averageSpeedOfAnswerProfile field is set.
      */
     public boolean hasAverageSpeedOfAnswerProfile() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return averageSpeedOfAnswerProfileBuilder_ != null || averageSpeedOfAnswerProfile_ != null;
     }
     /**
      * <pre>
@@ -1590,11 +1652,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         averageSpeedOfAnswerProfile_ = value;
+        onChanged();
       } else {
         averageSpeedOfAnswerProfileBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
@@ -1608,11 +1670,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.Builder builderForValue) {
       if (averageSpeedOfAnswerProfileBuilder_ == null) {
         averageSpeedOfAnswerProfile_ = builderForValue.build();
+        onChanged();
       } else {
         averageSpeedOfAnswerProfileBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
@@ -1624,18 +1686,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAverageSpeedOfAnswerProfile(com.tcn.cloud.api.api.commons.CallProfileGroupAvgs value) {
       if (averageSpeedOfAnswerProfileBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0) &&
-          averageSpeedOfAnswerProfile_ != null &&
-          averageSpeedOfAnswerProfile_ != com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.getDefaultInstance()) {
-          getAverageSpeedOfAnswerProfileBuilder().mergeFrom(value);
+        if (averageSpeedOfAnswerProfile_ != null) {
+          averageSpeedOfAnswerProfile_ =
+            com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.newBuilder(averageSpeedOfAnswerProfile_).mergeFrom(value).buildPartial();
         } else {
           averageSpeedOfAnswerProfile_ = value;
         }
+        onChanged();
       } else {
         averageSpeedOfAnswerProfileBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
@@ -1646,13 +1707,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.CallProfileGroupAvgs average_speed_of_answer_profile = 5 [json_name = "averageSpeedOfAnswerProfile"];</code>
      */
     public Builder clearAverageSpeedOfAnswerProfile() {
-      bitField0_ = (bitField0_ & ~0x00000010);
-      averageSpeedOfAnswerProfile_ = null;
-      if (averageSpeedOfAnswerProfileBuilder_ != null) {
-        averageSpeedOfAnswerProfileBuilder_.dispose();
+      if (averageSpeedOfAnswerProfileBuilder_ == null) {
+        averageSpeedOfAnswerProfile_ = null;
+        onChanged();
+      } else {
+        averageSpeedOfAnswerProfile_ = null;
         averageSpeedOfAnswerProfileBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -1663,7 +1725,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.CallProfileGroupAvgs average_speed_of_answer_profile = 5 [json_name = "averageSpeedOfAnswerProfile"];</code>
      */
     public com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.Builder getAverageSpeedOfAnswerProfileBuilder() {
-      bitField0_ |= 0x00000010;
+      
       onChanged();
       return getAverageSpeedOfAnswerProfileFieldBuilder().getBuilder();
     }
@@ -1715,7 +1777,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the averageHandleTimeProfile field is set.
      */
     public boolean hasAverageHandleTimeProfile() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return averageHandleTimeProfileBuilder_ != null || averageHandleTimeProfile_ != null;
     }
     /**
      * <pre>
@@ -1745,11 +1807,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         averageHandleTimeProfile_ = value;
+        onChanged();
       } else {
         averageHandleTimeProfileBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+
       return this;
     }
     /**
@@ -1763,11 +1825,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.Builder builderForValue) {
       if (averageHandleTimeProfileBuilder_ == null) {
         averageHandleTimeProfile_ = builderForValue.build();
+        onChanged();
       } else {
         averageHandleTimeProfileBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+
       return this;
     }
     /**
@@ -1779,18 +1841,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAverageHandleTimeProfile(com.tcn.cloud.api.api.commons.CallProfileGroupAvgs value) {
       if (averageHandleTimeProfileBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0) &&
-          averageHandleTimeProfile_ != null &&
-          averageHandleTimeProfile_ != com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.getDefaultInstance()) {
-          getAverageHandleTimeProfileBuilder().mergeFrom(value);
+        if (averageHandleTimeProfile_ != null) {
+          averageHandleTimeProfile_ =
+            com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.newBuilder(averageHandleTimeProfile_).mergeFrom(value).buildPartial();
         } else {
           averageHandleTimeProfile_ = value;
         }
+        onChanged();
       } else {
         averageHandleTimeProfileBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+
       return this;
     }
     /**
@@ -1801,13 +1862,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.CallProfileGroupAvgs average_handle_time_profile = 6 [json_name = "averageHandleTimeProfile"];</code>
      */
     public Builder clearAverageHandleTimeProfile() {
-      bitField0_ = (bitField0_ & ~0x00000020);
-      averageHandleTimeProfile_ = null;
-      if (averageHandleTimeProfileBuilder_ != null) {
-        averageHandleTimeProfileBuilder_.dispose();
+      if (averageHandleTimeProfileBuilder_ == null) {
+        averageHandleTimeProfile_ = null;
+        onChanged();
+      } else {
+        averageHandleTimeProfile_ = null;
         averageHandleTimeProfileBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -1818,7 +1880,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.CallProfileGroupAvgs average_handle_time_profile = 6 [json_name = "averageHandleTimeProfile"];</code>
      */
     public com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.Builder getAverageHandleTimeProfileBuilder() {
-      bitField0_ |= 0x00000020;
+      
       onChanged();
       return getAverageHandleTimeProfileFieldBuilder().getBuilder();
     }
@@ -1870,7 +1932,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the averageAfterCallWorkProfile field is set.
      */
     public boolean hasAverageAfterCallWorkProfile() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return averageAfterCallWorkProfileBuilder_ != null || averageAfterCallWorkProfile_ != null;
     }
     /**
      * <pre>
@@ -1900,11 +1962,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         averageAfterCallWorkProfile_ = value;
+        onChanged();
       } else {
         averageAfterCallWorkProfileBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+
       return this;
     }
     /**
@@ -1918,11 +1980,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.Builder builderForValue) {
       if (averageAfterCallWorkProfileBuilder_ == null) {
         averageAfterCallWorkProfile_ = builderForValue.build();
+        onChanged();
       } else {
         averageAfterCallWorkProfileBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+
       return this;
     }
     /**
@@ -1934,18 +1996,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAverageAfterCallWorkProfile(com.tcn.cloud.api.api.commons.CallProfileGroupAvgs value) {
       if (averageAfterCallWorkProfileBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0) &&
-          averageAfterCallWorkProfile_ != null &&
-          averageAfterCallWorkProfile_ != com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.getDefaultInstance()) {
-          getAverageAfterCallWorkProfileBuilder().mergeFrom(value);
+        if (averageAfterCallWorkProfile_ != null) {
+          averageAfterCallWorkProfile_ =
+            com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.newBuilder(averageAfterCallWorkProfile_).mergeFrom(value).buildPartial();
         } else {
           averageAfterCallWorkProfile_ = value;
         }
+        onChanged();
       } else {
         averageAfterCallWorkProfileBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+
       return this;
     }
     /**
@@ -1956,13 +2017,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.CallProfileGroupAvgs average_after_call_work_profile = 7 [json_name = "averageAfterCallWorkProfile"];</code>
      */
     public Builder clearAverageAfterCallWorkProfile() {
-      bitField0_ = (bitField0_ & ~0x00000040);
-      averageAfterCallWorkProfile_ = null;
-      if (averageAfterCallWorkProfileBuilder_ != null) {
-        averageAfterCallWorkProfileBuilder_.dispose();
+      if (averageAfterCallWorkProfileBuilder_ == null) {
+        averageAfterCallWorkProfile_ = null;
+        onChanged();
+      } else {
+        averageAfterCallWorkProfile_ = null;
         averageAfterCallWorkProfileBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -1973,7 +2035,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.CallProfileGroupAvgs average_after_call_work_profile = 7 [json_name = "averageAfterCallWorkProfile"];</code>
      */
     public com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.Builder getAverageAfterCallWorkProfileBuilder() {
-      bitField0_ |= 0x00000040;
+      
       onChanged();
       return getAverageAfterCallWorkProfileFieldBuilder().getBuilder();
     }
@@ -2025,7 +2087,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the averageTimeToAbortProfile field is set.
      */
     public boolean hasAverageTimeToAbortProfile() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return averageTimeToAbortProfileBuilder_ != null || averageTimeToAbortProfile_ != null;
     }
     /**
      * <pre>
@@ -2055,11 +2117,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         averageTimeToAbortProfile_ = value;
+        onChanged();
       } else {
         averageTimeToAbortProfileBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000080;
-      onChanged();
+
       return this;
     }
     /**
@@ -2073,11 +2135,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.Builder builderForValue) {
       if (averageTimeToAbortProfileBuilder_ == null) {
         averageTimeToAbortProfile_ = builderForValue.build();
+        onChanged();
       } else {
         averageTimeToAbortProfileBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000080;
-      onChanged();
+
       return this;
     }
     /**
@@ -2089,18 +2151,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAverageTimeToAbortProfile(com.tcn.cloud.api.api.commons.CallProfileGroupAvgs value) {
       if (averageTimeToAbortProfileBuilder_ == null) {
-        if (((bitField0_ & 0x00000080) != 0) &&
-          averageTimeToAbortProfile_ != null &&
-          averageTimeToAbortProfile_ != com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.getDefaultInstance()) {
-          getAverageTimeToAbortProfileBuilder().mergeFrom(value);
+        if (averageTimeToAbortProfile_ != null) {
+          averageTimeToAbortProfile_ =
+            com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.newBuilder(averageTimeToAbortProfile_).mergeFrom(value).buildPartial();
         } else {
           averageTimeToAbortProfile_ = value;
         }
+        onChanged();
       } else {
         averageTimeToAbortProfileBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000080;
-      onChanged();
+
       return this;
     }
     /**
@@ -2111,13 +2172,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.CallProfileGroupAvgs average_time_to_abort_profile = 8 [json_name = "averageTimeToAbortProfile"];</code>
      */
     public Builder clearAverageTimeToAbortProfile() {
-      bitField0_ = (bitField0_ & ~0x00000080);
-      averageTimeToAbortProfile_ = null;
-      if (averageTimeToAbortProfileBuilder_ != null) {
-        averageTimeToAbortProfileBuilder_.dispose();
+      if (averageTimeToAbortProfileBuilder_ == null) {
+        averageTimeToAbortProfile_ = null;
+        onChanged();
+      } else {
+        averageTimeToAbortProfile_ = null;
         averageTimeToAbortProfileBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -2128,7 +2190,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.CallProfileGroupAvgs average_time_to_abort_profile = 8 [json_name = "averageTimeToAbortProfile"];</code>
      */
     public com.tcn.cloud.api.api.commons.CallProfileGroupAvgs.Builder getAverageTimeToAbortProfileBuilder() {
-      bitField0_ |= 0x00000080;
+      
       onChanged();
       return getAverageTimeToAbortProfileFieldBuilder().getBuilder();
     }
@@ -2191,9 +2253,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFixedAverageSpeedOfAnswer(float value) {
-
+      
       fixedAverageSpeedOfAnswer_ = value;
-      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2206,7 +2267,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFixedAverageSpeedOfAnswer() {
-      bitField0_ = (bitField0_ & ~0x00000100);
+      
       fixedAverageSpeedOfAnswer_ = 0F;
       onChanged();
       return this;
@@ -2235,9 +2296,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFixedAverageHandleTime(float value) {
-
+      
       fixedAverageHandleTime_ = value;
-      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2250,7 +2310,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFixedAverageHandleTime() {
-      bitField0_ = (bitField0_ & ~0x00000200);
+      
       fixedAverageHandleTime_ = 0F;
       onChanged();
       return this;
@@ -2279,9 +2339,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFixedAverageAfterCallWork(float value) {
-
+      
       fixedAverageAfterCallWork_ = value;
-      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2294,7 +2353,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFixedAverageAfterCallWork() {
-      bitField0_ = (bitField0_ & ~0x00000400);
+      
       fixedAverageAfterCallWork_ = 0F;
       onChanged();
       return this;
@@ -2323,9 +2382,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFixedAverageTimeToAbort(float value) {
-
+      
       fixedAverageTimeToAbort_ = value;
-      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -2338,7 +2396,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFixedAverageTimeToAbort() {
-      bitField0_ = (bitField0_ & ~0x00000800);
+      
       fixedAverageTimeToAbort_ = 0F;
       onChanged();
       return this;
@@ -2367,9 +2425,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDefaultToFixedAveragesForecast(boolean value) {
-
+      
       defaultToFixedAveragesForecast_ = value;
-      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -2382,7 +2439,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDefaultToFixedAveragesForecast() {
-      bitField0_ = (bitField0_ & ~0x00001000);
+      
       defaultToFixedAveragesForecast_ = false;
       onChanged();
       return this;
@@ -2420,18 +2477,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new CallProfileTemplate(input, extensionRegistry);
     }
   };
 

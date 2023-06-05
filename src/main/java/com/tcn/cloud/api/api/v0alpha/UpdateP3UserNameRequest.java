@@ -26,6 +26,69 @@ private static final long serialVersionUID = 0L;
     return new UpdateP3UserNameRequest();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private UpdateP3UserNameRequest(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+
+            agentSid_ = input.readInt64();
+            break;
+          }
+          case 16: {
+
+            loginSid_ = input.readInt64();
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            userName_ = s;
+            break;
+          }
+          case 32: {
+
+            clientSid_ = input.readInt64();
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_UpdateP3UserNameRequest_descriptor;
@@ -40,7 +103,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AGENT_SID_FIELD_NUMBER = 1;
-  private long agentSid_ = 0L;
+  private long agentSid_;
   /**
    * <pre>
    * Optional agent_sid or login_sid (must have one)
@@ -55,7 +118,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LOGIN_SID_FIELD_NUMBER = 2;
-  private long loginSid_ = 0L;
+  private long loginSid_;
   /**
    * <code>int64 login_sid = 2 [json_name = "loginSid"];</code>
    * @return The loginSid.
@@ -66,8 +129,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int USER_NAME_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object userName_ = "";
+  private volatile java.lang.Object userName_;
   /**
    * <code>string user_name = 3 [json_name = "userName"];</code>
    * @return The userName.
@@ -105,7 +167,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CLIENT_SID_FIELD_NUMBER = 4;
-  private long clientSid_ = 0L;
+  private long clientSid_;
   /**
    * <code>int64 client_sid = 4 [json_name = "clientSid"];</code>
    * @return The clientSid.
@@ -135,13 +197,13 @@ private static final long serialVersionUID = 0L;
     if (loginSid_ != 0L) {
       output.writeInt64(2, loginSid_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
+    if (!getUserNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, userName_);
     }
     if (clientSid_ != 0L) {
       output.writeInt64(4, clientSid_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -158,14 +220,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, loginSid_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
+    if (!getUserNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, userName_);
     }
     if (clientSid_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(4, clientSid_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -188,7 +250,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getUserName())) return false;
     if (getClientSid()
         != other.getClientSid()) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -210,7 +272,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + CLIENT_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getClientSid());
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -259,13 +321,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.UpdateP3UserNameRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.UpdateP3UserNameRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -329,22 +389,30 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.UpdateP3UserNameRequest.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       agentSid_ = 0L;
+
       loginSid_ = 0L;
+
       userName_ = "";
+
       clientSid_ = 0L;
+
       return this;
     }
 
@@ -371,25 +439,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.UpdateP3UserNameRequest buildPartial() {
       com.tcn.cloud.api.api.v0alpha.UpdateP3UserNameRequest result = new com.tcn.cloud.api.api.v0alpha.UpdateP3UserNameRequest(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.agentSid_ = agentSid_;
+      result.loginSid_ = loginSid_;
+      result.userName_ = userName_;
+      result.clientSid_ = clientSid_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.UpdateP3UserNameRequest result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.agentSid_ = agentSid_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.loginSid_ = loginSid_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.userName_ = userName_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.clientSid_ = clientSid_;
-      }
     }
 
     @java.lang.Override
@@ -444,13 +499,12 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getUserName().isEmpty()) {
         userName_ = other.userName_;
-        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.getClientSid() != 0L) {
         setClientSid(other.getClientSid());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -465,53 +519,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.UpdateP3UserNameRequest parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              agentSid_ = input.readInt64();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 16: {
-              loginSid_ = input.readInt64();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 16
-            case 26: {
-              userName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            case 32: {
-              clientSid_ = input.readInt64();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 32
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.UpdateP3UserNameRequest) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private long agentSid_ ;
     /**
@@ -536,9 +556,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAgentSid(long value) {
-
+      
       agentSid_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -551,7 +570,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAgentSid() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       agentSid_ = 0L;
       onChanged();
       return this;
@@ -572,9 +591,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLoginSid(long value) {
-
+      
       loginSid_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -583,7 +601,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLoginSid() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       loginSid_ = 0L;
       onChanged();
       return this;
@@ -630,9 +648,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUserName(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       userName_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -641,8 +661,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUserName() {
+      
       userName_ = getDefaultInstance().getUserName();
-      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -653,10 +673,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUserNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       userName_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -676,9 +698,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setClientSid(long value) {
-
+      
       clientSid_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -687,7 +708,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearClientSid() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      
       clientSid_ = 0L;
       onChanged();
       return this;
@@ -725,18 +746,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new UpdateP3UserNameRequest(input, extensionRegistry);
     }
   };
 

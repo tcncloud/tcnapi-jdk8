@@ -26,8 +26,7 @@ private static final long serialVersionUID = 0L;
     campaignType_ = "";
     highestTrafficDate_ = "";
     lowestTrafficDate_ = "";
-    fields_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    fields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
   }
 
   @java.lang.Override
@@ -37,6 +36,180 @@ private static final long serialVersionUID = 0L;
     return new IntegrationTransactionReportRow();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private IntegrationTransactionReportRow(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 40: {
+            int rawValue = input.readEnum();
+
+            integrationId_ = rawValue;
+            break;
+          }
+          case 48: {
+            int rawValue = input.readEnum();
+
+            methodId_ = rawValue;
+            break;
+          }
+          case 56: {
+            int rawValue = input.readEnum();
+
+            transactionType_ = rawValue;
+            break;
+          }
+          case 64: {
+            int rawValue = input.readEnum();
+
+            requestSource_ = rawValue;
+            break;
+          }
+          case 81: {
+
+            revenue_ = input.readDouble();
+            break;
+          }
+          case 88: {
+
+            successCount_ = input.readInt64();
+            break;
+          }
+          case 96: {
+
+            failureCount_ = input.readInt64();
+            break;
+          }
+          case 104: {
+
+            totalCount_ = input.readInt64();
+            break;
+          }
+          case 122: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            highestTrafficDate_ = s;
+            break;
+          }
+          case 130: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            lowestTrafficDate_ = s;
+            break;
+          }
+          case 138: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            integrationName_ = s;
+            break;
+          }
+          case 146: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            methodName_ = s;
+            break;
+          }
+          case 154: {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              revenueSubtotals_ = com.google.protobuf.MapField.newMapField(
+                  RevenueSubtotalsDefaultEntryHolder.defaultEntry);
+              mutable_bitField0_ |= 0x00000002;
+            }
+            com.google.protobuf.MapEntry<java.lang.String, java.lang.Double>
+            revenueSubtotals__ = input.readMessage(
+                RevenueSubtotalsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+            revenueSubtotals_.getMutableMap().put(
+                revenueSubtotals__.getKey(), revenueSubtotals__.getValue());
+            break;
+          }
+          case 162: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            flowName_ = s;
+            break;
+          }
+          case 178: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            campaignType_ = s;
+            break;
+          }
+          case 186: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              groupByValues_ = com.google.protobuf.MapField.newMapField(
+                  GroupByValuesDefaultEntryHolder.defaultEntry);
+              mutable_bitField0_ |= 0x00000001;
+            }
+            com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+            groupByValues__ = input.readMessage(
+                GroupByValuesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+            groupByValues_.getMutableMap().put(
+                groupByValues__.getKey(), groupByValues__.getValue());
+            break;
+          }
+          case 194: {
+            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+              countMetrics_ = com.google.protobuf.MapField.newMapField(
+                  CountMetricsDefaultEntryHolder.defaultEntry);
+              mutable_bitField0_ |= 0x00000004;
+            }
+            com.google.protobuf.MapEntry<java.lang.String, java.lang.Long>
+            countMetrics__ = input.readMessage(
+                CountMetricsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+            countMetrics_.getMutableMap().put(
+                countMetrics__.getKey(), countMetrics__.getValue());
+            break;
+          }
+          case 202: {
+            java.lang.String s = input.readStringRequireUtf8();
+            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+              fields_ = new com.google.protobuf.LazyStringArrayList();
+              mutable_bitField0_ |= 0x00000008;
+            }
+            fields_.add(s);
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000008) != 0)) {
+        fields_ = fields_.getUnmodifiableView();
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_IntegrationTransactionReportRow_descriptor;
@@ -67,7 +240,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INTEGRATION_ID_FIELD_NUMBER = 5;
-  private int integrationId_ = 0;
+  private int integrationId_;
   /**
    * <pre>
    * integration used
@@ -88,13 +261,13 @@ private static final long serialVersionUID = 0L;
    * @return The integrationId.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.IntegrationType getIntegrationId() {
-    com.tcn.cloud.api.api.commons.integrations.IntegrationType result = com.tcn.cloud.api.api.commons.integrations.IntegrationType.forNumber(integrationId_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.integrations.IntegrationType result = com.tcn.cloud.api.api.commons.integrations.IntegrationType.valueOf(integrationId_);
     return result == null ? com.tcn.cloud.api.api.commons.integrations.IntegrationType.UNRECOGNIZED : result;
   }
 
   public static final int INTEGRATION_NAME_FIELD_NUMBER = 17;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object integrationName_ = "";
+  private volatile java.lang.Object integrationName_;
   /**
    * <code>string integration_name = 17 [json_name = "integrationName"];</code>
    * @return The integrationName.
@@ -132,7 +305,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int METHOD_ID_FIELD_NUMBER = 6;
-  private int methodId_ = 0;
+  private int methodId_;
   /**
    * <pre>
    * external service method
@@ -153,13 +326,13 @@ private static final long serialVersionUID = 0L;
    * @return The methodId.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.RequestMethod getMethodId() {
-    com.tcn.cloud.api.api.commons.integrations.RequestMethod result = com.tcn.cloud.api.api.commons.integrations.RequestMethod.forNumber(methodId_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.integrations.RequestMethod result = com.tcn.cloud.api.api.commons.integrations.RequestMethod.valueOf(methodId_);
     return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestMethod.UNRECOGNIZED : result;
   }
 
   public static final int METHOD_NAME_FIELD_NUMBER = 18;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object methodName_ = "";
+  private volatile java.lang.Object methodName_;
   /**
    * <code>string method_name = 18 [json_name = "methodName"];</code>
    * @return The methodName.
@@ -197,7 +370,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TRANSACTION_TYPE_FIELD_NUMBER = 7;
-  private int transactionType_ = 0;
+  private int transactionType_;
   /**
    * <pre>
    * payment, data inquiry, etc.
@@ -218,12 +391,13 @@ private static final long serialVersionUID = 0L;
    * @return The transactionType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.TransactionType getTransactionType() {
-    com.tcn.cloud.api.api.commons.integrations.TransactionType result = com.tcn.cloud.api.api.commons.integrations.TransactionType.forNumber(transactionType_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.integrations.TransactionType result = com.tcn.cloud.api.api.commons.integrations.TransactionType.valueOf(transactionType_);
     return result == null ? com.tcn.cloud.api.api.commons.integrations.TransactionType.UNRECOGNIZED : result;
   }
 
   public static final int REQUEST_SOURCE_FIELD_NUMBER = 8;
-  private int requestSource_ = 0;
+  private int requestSource_;
   /**
    * <pre>
    * email/web/sms/ivr/chat
@@ -244,13 +418,13 @@ private static final long serialVersionUID = 0L;
    * @return The requestSource.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.RequestSource getRequestSource() {
-    com.tcn.cloud.api.api.commons.integrations.RequestSource result = com.tcn.cloud.api.api.commons.integrations.RequestSource.forNumber(requestSource_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.integrations.RequestSource result = com.tcn.cloud.api.api.commons.integrations.RequestSource.valueOf(requestSource_);
     return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestSource.UNRECOGNIZED : result;
   }
 
   public static final int FLOW_NAME_FIELD_NUMBER = 20;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object flowName_ = "";
+  private volatile java.lang.Object flowName_;
   /**
    * <pre>
    * name of the flow that was ran.
@@ -302,8 +476,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CAMPAIGN_TYPE_FIELD_NUMBER = 22;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object campaignType_ = "";
+  private volatile java.lang.Object campaignType_;
   /**
    * <code>string campaign_type = 22 [json_name = "campaignType"];</code>
    * @return The campaignType.
@@ -352,7 +525,6 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "");
   }
-  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, java.lang.String> groupByValues_;
   private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -363,6 +535,7 @@ private static final long serialVersionUID = 0L;
     }
     return groupByValues_;
   }
+
   public int getGroupByValuesCount() {
     return internalGetGroupByValues().getMap().size();
   }
@@ -373,10 +546,11 @@ private static final long serialVersionUID = 0L;
    *
    * <code>map&lt;string, string&gt; group_by_values = 23 [json_name = "groupByValues"];</code>
    */
+
   @java.lang.Override
   public boolean containsGroupByValues(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     return internalGetGroupByValues().getMap().containsKey(key);
   }
   /**
@@ -395,6 +569,7 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; group_by_values = 23 [json_name = "groupByValues"];</code>
    */
   @java.lang.Override
+
   public java.util.Map<java.lang.String, java.lang.String> getGroupByValuesMap() {
     return internalGetGroupByValues().getMap();
   }
@@ -406,12 +581,11 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; group_by_values = 23 [json_name = "groupByValues"];</code>
    */
   @java.lang.Override
-  public /* nullable */
-java.lang.String getGroupByValuesOrDefault(
+
+  public java.lang.String getGroupByValuesOrDefault(
       java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue) {
-    if (key == null) { throw new NullPointerException("map key"); }
+      java.lang.String defaultValue) {
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetGroupByValues().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -424,9 +598,10 @@ java.lang.String defaultValue) {
    * <code>map&lt;string, string&gt; group_by_values = 23 [json_name = "groupByValues"];</code>
    */
   @java.lang.Override
+
   public java.lang.String getGroupByValuesOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetGroupByValues().getMap();
     if (!map.containsKey(key)) {
@@ -436,7 +611,7 @@ java.lang.String defaultValue) {
   }
 
   public static final int REVENUE_FIELD_NUMBER = 10;
-  private double revenue_ = 0D;
+  private double revenue_;
   /**
    * <pre>
    * aggregate results
@@ -462,7 +637,6 @@ java.lang.String defaultValue) {
                 com.google.protobuf.WireFormat.FieldType.DOUBLE,
                 0D);
   }
-  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, java.lang.Double> revenueSubtotals_;
   private com.google.protobuf.MapField<java.lang.String, java.lang.Double>
@@ -473,6 +647,7 @@ java.lang.String defaultValue) {
     }
     return revenueSubtotals_;
   }
+
   public int getRevenueSubtotalsCount() {
     return internalGetRevenueSubtotals().getMap().size();
   }
@@ -485,10 +660,11 @@ java.lang.String defaultValue) {
    *
    * <code>map&lt;string, double&gt; revenue_subtotals = 19 [json_name = "revenueSubtotals"];</code>
    */
+
   @java.lang.Override
   public boolean containsRevenueSubtotals(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     return internalGetRevenueSubtotals().getMap().containsKey(key);
   }
   /**
@@ -509,6 +685,7 @@ java.lang.String defaultValue) {
    * <code>map&lt;string, double&gt; revenue_subtotals = 19 [json_name = "revenueSubtotals"];</code>
    */
   @java.lang.Override
+
   public java.util.Map<java.lang.String, java.lang.Double> getRevenueSubtotalsMap() {
     return internalGetRevenueSubtotals().getMap();
   }
@@ -522,10 +699,11 @@ java.lang.String defaultValue) {
    * <code>map&lt;string, double&gt; revenue_subtotals = 19 [json_name = "revenueSubtotals"];</code>
    */
   @java.lang.Override
+
   public double getRevenueSubtotalsOrDefault(
       java.lang.String key,
       double defaultValue) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, java.lang.Double> map =
         internalGetRevenueSubtotals().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -540,9 +718,10 @@ java.lang.String defaultValue) {
    * <code>map&lt;string, double&gt; revenue_subtotals = 19 [json_name = "revenueSubtotals"];</code>
    */
   @java.lang.Override
+
   public double getRevenueSubtotalsOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, java.lang.Double> map =
         internalGetRevenueSubtotals().getMap();
     if (!map.containsKey(key)) {
@@ -552,7 +731,7 @@ java.lang.String defaultValue) {
   }
 
   public static final int SUCCESS_COUNT_FIELD_NUMBER = 11;
-  private long successCount_ = 0L;
+  private long successCount_;
   /**
    * <code>int64 success_count = 11 [json_name = "successCount"];</code>
    * @return The successCount.
@@ -563,7 +742,7 @@ java.lang.String defaultValue) {
   }
 
   public static final int FAILURE_COUNT_FIELD_NUMBER = 12;
-  private long failureCount_ = 0L;
+  private long failureCount_;
   /**
    * <code>int64 failure_count = 12 [json_name = "failureCount"];</code>
    * @return The failureCount.
@@ -574,7 +753,7 @@ java.lang.String defaultValue) {
   }
 
   public static final int TOTAL_COUNT_FIELD_NUMBER = 13;
-  private long totalCount_ = 0L;
+  private long totalCount_;
   /**
    * <code>int64 total_count = 13 [json_name = "totalCount"];</code>
    * @return The totalCount.
@@ -585,8 +764,7 @@ java.lang.String defaultValue) {
   }
 
   public static final int HIGHEST_TRAFFIC_DATE_FIELD_NUMBER = 15;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object highestTrafficDate_ = "";
+  private volatile java.lang.Object highestTrafficDate_;
   /**
    * <pre>
    * DD-MM-YYYY format of highest traffic day
@@ -632,8 +810,7 @@ java.lang.String defaultValue) {
   }
 
   public static final int LOWEST_TRAFFIC_DATE_FIELD_NUMBER = 16;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object lowestTrafficDate_ = "";
+  private volatile java.lang.Object lowestTrafficDate_;
   /**
    * <pre>
    * DD-MM-YYYY format of lowest traffic day
@@ -690,7 +867,6 @@ java.lang.String defaultValue) {
                 com.google.protobuf.WireFormat.FieldType.INT64,
                 0L);
   }
-  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, java.lang.Long> countMetrics_;
   private com.google.protobuf.MapField<java.lang.String, java.lang.Long>
@@ -701,6 +877,7 @@ java.lang.String defaultValue) {
     }
     return countMetrics_;
   }
+
   public int getCountMetricsCount() {
     return internalGetCountMetrics().getMap().size();
   }
@@ -711,10 +888,11 @@ java.lang.String defaultValue) {
    *
    * <code>map&lt;string, int64&gt; count_metrics = 24 [json_name = "countMetrics"];</code>
    */
+
   @java.lang.Override
   public boolean containsCountMetrics(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     return internalGetCountMetrics().getMap().containsKey(key);
   }
   /**
@@ -733,6 +911,7 @@ java.lang.String defaultValue) {
    * <code>map&lt;string, int64&gt; count_metrics = 24 [json_name = "countMetrics"];</code>
    */
   @java.lang.Override
+
   public java.util.Map<java.lang.String, java.lang.Long> getCountMetricsMap() {
     return internalGetCountMetrics().getMap();
   }
@@ -744,10 +923,11 @@ java.lang.String defaultValue) {
    * <code>map&lt;string, int64&gt; count_metrics = 24 [json_name = "countMetrics"];</code>
    */
   @java.lang.Override
+
   public long getCountMetricsOrDefault(
       java.lang.String key,
       long defaultValue) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, java.lang.Long> map =
         internalGetCountMetrics().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -760,9 +940,10 @@ java.lang.String defaultValue) {
    * <code>map&lt;string, int64&gt; count_metrics = 24 [json_name = "countMetrics"];</code>
    */
   @java.lang.Override
+
   public long getCountMetricsOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, java.lang.Long> map =
         internalGetCountMetrics().getMap();
     if (!map.containsKey(key)) {
@@ -772,9 +953,7 @@ java.lang.String defaultValue) {
   }
 
   public static final int FIELDS_FIELD_NUMBER = 25;
-  @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList fields_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
+  private com.google.protobuf.LazyStringList fields_;
   /**
    * <pre>
    * the names of the fields uploaded to portal link, and sent for enriching portal link campaign info
@@ -854,7 +1033,7 @@ java.lang.String defaultValue) {
     if (requestSource_ != com.tcn.cloud.api.api.commons.integrations.RequestSource.REQUEST_SOURCE_IVR.getNumber()) {
       output.writeEnum(8, requestSource_);
     }
-    if (java.lang.Double.doubleToRawLongBits(revenue_) != 0) {
+    if (revenue_ != 0D) {
       output.writeDouble(10, revenue_);
     }
     if (successCount_ != 0L) {
@@ -866,16 +1045,16 @@ java.lang.String defaultValue) {
     if (totalCount_ != 0L) {
       output.writeInt64(13, totalCount_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(highestTrafficDate_)) {
+    if (!getHighestTrafficDateBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 15, highestTrafficDate_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lowestTrafficDate_)) {
+    if (!getLowestTrafficDateBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 16, lowestTrafficDate_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(integrationName_)) {
+    if (!getIntegrationNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 17, integrationName_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(methodName_)) {
+    if (!getMethodNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 18, methodName_);
     }
     com.google.protobuf.GeneratedMessageV3
@@ -884,10 +1063,10 @@ java.lang.String defaultValue) {
         internalGetRevenueSubtotals(),
         RevenueSubtotalsDefaultEntryHolder.defaultEntry,
         19);
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(flowName_)) {
+    if (!getFlowNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 20, flowName_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(campaignType_)) {
+    if (!getCampaignTypeBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 22, campaignType_);
     }
     com.google.protobuf.GeneratedMessageV3
@@ -905,7 +1084,7 @@ java.lang.String defaultValue) {
     for (int i = 0; i < fields_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 25, fields_.getRaw(i));
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -930,7 +1109,7 @@ java.lang.String defaultValue) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(8, requestSource_);
     }
-    if (java.lang.Double.doubleToRawLongBits(revenue_) != 0) {
+    if (revenue_ != 0D) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(10, revenue_);
     }
@@ -946,16 +1125,16 @@ java.lang.String defaultValue) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(13, totalCount_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(highestTrafficDate_)) {
+    if (!getHighestTrafficDateBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, highestTrafficDate_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lowestTrafficDate_)) {
+    if (!getLowestTrafficDateBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, lowestTrafficDate_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(integrationName_)) {
+    if (!getIntegrationNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, integrationName_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(methodName_)) {
+    if (!getMethodNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, methodName_);
     }
     for (java.util.Map.Entry<java.lang.String, java.lang.Double> entry
@@ -968,10 +1147,10 @@ java.lang.String defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(19, revenueSubtotals__);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(flowName_)) {
+    if (!getFlowNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, flowName_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(campaignType_)) {
+    if (!getCampaignTypeBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(22, campaignType_);
     }
     for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -1002,7 +1181,7 @@ java.lang.String defaultValue) {
       size += dataSize;
       size += 2 * getFieldsList().size();
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -1050,7 +1229,7 @@ java.lang.String defaultValue) {
         other.internalGetCountMetrics())) return false;
     if (!getFieldsList()
         .equals(other.getFieldsList())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -1109,7 +1288,7 @@ java.lang.String defaultValue) {
       hash = (37 * hash) + FIELDS_FIELD_NUMBER;
       hash = (53 * hash) + getFieldsList().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1158,13 +1337,11 @@ java.lang.String defaultValue) {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationTransactionReportRow parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationTransactionReportRow parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1258,37 +1435,55 @@ java.lang.String defaultValue) {
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationTransactionReportRow.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       integrationId_ = 0;
+
       integrationName_ = "";
+
       methodId_ = 0;
+
       methodName_ = "";
+
       transactionType_ = 0;
+
       requestSource_ = 0;
+
       flowName_ = "";
+
       campaignType_ = "";
+
       internalGetMutableGroupByValues().clear();
       revenue_ = 0D;
+
       internalGetMutableRevenueSubtotals().clear();
       successCount_ = 0L;
+
       failureCount_ = 0L;
+
       totalCount_ = 0L;
+
       highestTrafficDate_ = "";
+
       lowestTrafficDate_ = "";
+
       internalGetMutableCountMetrics().clear();
-      fields_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      fields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000008);
       return this;
     }
 
@@ -1315,71 +1510,34 @@ java.lang.String defaultValue) {
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationTransactionReportRow buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationTransactionReportRow result = new com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationTransactionReportRow(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      int from_bitField0_ = bitField0_;
+      result.integrationId_ = integrationId_;
+      result.integrationName_ = integrationName_;
+      result.methodId_ = methodId_;
+      result.methodName_ = methodName_;
+      result.transactionType_ = transactionType_;
+      result.requestSource_ = requestSource_;
+      result.flowName_ = flowName_;
+      result.campaignType_ = campaignType_;
+      result.groupByValues_ = internalGetGroupByValues();
+      result.groupByValues_.makeImmutable();
+      result.revenue_ = revenue_;
+      result.revenueSubtotals_ = internalGetRevenueSubtotals();
+      result.revenueSubtotals_.makeImmutable();
+      result.successCount_ = successCount_;
+      result.failureCount_ = failureCount_;
+      result.totalCount_ = totalCount_;
+      result.highestTrafficDate_ = highestTrafficDate_;
+      result.lowestTrafficDate_ = lowestTrafficDate_;
+      result.countMetrics_ = internalGetCountMetrics();
+      result.countMetrics_.makeImmutable();
+      if (((bitField0_ & 0x00000008) != 0)) {
+        fields_ = fields_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000008);
+      }
+      result.fields_ = fields_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationTransactionReportRow result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.integrationId_ = integrationId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.integrationName_ = integrationName_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.methodId_ = methodId_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.methodName_ = methodName_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.transactionType_ = transactionType_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.requestSource_ = requestSource_;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.flowName_ = flowName_;
-      }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.campaignType_ = campaignType_;
-      }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
-        result.groupByValues_ = internalGetGroupByValues();
-        result.groupByValues_.makeImmutable();
-      }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
-        result.revenue_ = revenue_;
-      }
-      if (((from_bitField0_ & 0x00000400) != 0)) {
-        result.revenueSubtotals_ = internalGetRevenueSubtotals();
-        result.revenueSubtotals_.makeImmutable();
-      }
-      if (((from_bitField0_ & 0x00000800) != 0)) {
-        result.successCount_ = successCount_;
-      }
-      if (((from_bitField0_ & 0x00001000) != 0)) {
-        result.failureCount_ = failureCount_;
-      }
-      if (((from_bitField0_ & 0x00002000) != 0)) {
-        result.totalCount_ = totalCount_;
-      }
-      if (((from_bitField0_ & 0x00004000) != 0)) {
-        result.highestTrafficDate_ = highestTrafficDate_;
-      }
-      if (((from_bitField0_ & 0x00008000) != 0)) {
-        result.lowestTrafficDate_ = lowestTrafficDate_;
-      }
-      if (((from_bitField0_ & 0x00010000) != 0)) {
-        result.countMetrics_ = internalGetCountMetrics();
-        result.countMetrics_.makeImmutable();
-      }
-      if (((from_bitField0_ & 0x00020000) != 0)) {
-        fields_.makeImmutable();
-        result.fields_ = fields_;
-      }
     }
 
     @java.lang.Override
@@ -1431,7 +1589,6 @@ java.lang.String defaultValue) {
       }
       if (!other.getIntegrationName().isEmpty()) {
         integrationName_ = other.integrationName_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.methodId_ != 0) {
@@ -1439,7 +1596,6 @@ java.lang.String defaultValue) {
       }
       if (!other.getMethodName().isEmpty()) {
         methodName_ = other.methodName_;
-        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.transactionType_ != 0) {
@@ -1450,23 +1606,19 @@ java.lang.String defaultValue) {
       }
       if (!other.getFlowName().isEmpty()) {
         flowName_ = other.flowName_;
-        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (!other.getCampaignType().isEmpty()) {
         campaignType_ = other.campaignType_;
-        bitField0_ |= 0x00000080;
         onChanged();
       }
       internalGetMutableGroupByValues().mergeFrom(
           other.internalGetGroupByValues());
-      bitField0_ |= 0x00000100;
       if (other.getRevenue() != 0D) {
         setRevenue(other.getRevenue());
       }
       internalGetMutableRevenueSubtotals().mergeFrom(
           other.internalGetRevenueSubtotals());
-      bitField0_ |= 0x00000400;
       if (other.getSuccessCount() != 0L) {
         setSuccessCount(other.getSuccessCount());
       }
@@ -1478,28 +1630,25 @@ java.lang.String defaultValue) {
       }
       if (!other.getHighestTrafficDate().isEmpty()) {
         highestTrafficDate_ = other.highestTrafficDate_;
-        bitField0_ |= 0x00004000;
         onChanged();
       }
       if (!other.getLowestTrafficDate().isEmpty()) {
         lowestTrafficDate_ = other.lowestTrafficDate_;
-        bitField0_ |= 0x00008000;
         onChanged();
       }
       internalGetMutableCountMetrics().mergeFrom(
           other.internalGetCountMetrics());
-      bitField0_ |= 0x00010000;
       if (!other.fields_.isEmpty()) {
         if (fields_.isEmpty()) {
           fields_ = other.fields_;
-          bitField0_ |= 0x00020000;
+          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
           ensureFieldsIsMutable();
           fields_.addAll(other.fields_);
         }
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -1514,133 +1663,17 @@ java.lang.String defaultValue) {
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationTransactionReportRow parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 40: {
-              integrationId_ = input.readEnum();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 40
-            case 48: {
-              methodId_ = input.readEnum();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 48
-            case 56: {
-              transactionType_ = input.readEnum();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 56
-            case 64: {
-              requestSource_ = input.readEnum();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 64
-            case 81: {
-              revenue_ = input.readDouble();
-              bitField0_ |= 0x00000200;
-              break;
-            } // case 81
-            case 88: {
-              successCount_ = input.readInt64();
-              bitField0_ |= 0x00000800;
-              break;
-            } // case 88
-            case 96: {
-              failureCount_ = input.readInt64();
-              bitField0_ |= 0x00001000;
-              break;
-            } // case 96
-            case 104: {
-              totalCount_ = input.readInt64();
-              bitField0_ |= 0x00002000;
-              break;
-            } // case 104
-            case 122: {
-              highestTrafficDate_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00004000;
-              break;
-            } // case 122
-            case 130: {
-              lowestTrafficDate_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00008000;
-              break;
-            } // case 130
-            case 138: {
-              integrationName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 138
-            case 146: {
-              methodName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 146
-            case 154: {
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.Double>
-              revenueSubtotals__ = input.readMessage(
-                  RevenueSubtotalsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              internalGetMutableRevenueSubtotals().getMutableMap().put(
-                  revenueSubtotals__.getKey(), revenueSubtotals__.getValue());
-              bitField0_ |= 0x00000400;
-              break;
-            } // case 154
-            case 162: {
-              flowName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 162
-            case 178: {
-              campaignType_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000080;
-              break;
-            } // case 178
-            case 186: {
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-              groupByValues__ = input.readMessage(
-                  GroupByValuesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              internalGetMutableGroupByValues().getMutableMap().put(
-                  groupByValues__.getKey(), groupByValues__.getValue());
-              bitField0_ |= 0x00000100;
-              break;
-            } // case 186
-            case 194: {
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.Long>
-              countMetrics__ = input.readMessage(
-                  CountMetricsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              internalGetMutableCountMetrics().getMutableMap().put(
-                  countMetrics__.getKey(), countMetrics__.getValue());
-              bitField0_ |= 0x00010000;
-              break;
-            } // case 194
-            case 202: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensureFieldsIsMutable();
-              fields_.add(s);
-              break;
-            } // case 202
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.integrations.IntegrationTransactionReportRow) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -1667,8 +1700,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setIntegrationIdValue(int value) {
+      
       integrationId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1682,7 +1715,8 @@ java.lang.String defaultValue) {
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.integrations.IntegrationType getIntegrationId() {
-      com.tcn.cloud.api.api.commons.integrations.IntegrationType result = com.tcn.cloud.api.api.commons.integrations.IntegrationType.forNumber(integrationId_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.integrations.IntegrationType result = com.tcn.cloud.api.api.commons.integrations.IntegrationType.valueOf(integrationId_);
       return result == null ? com.tcn.cloud.api.api.commons.integrations.IntegrationType.UNRECOGNIZED : result;
     }
     /**
@@ -1698,7 +1732,7 @@ java.lang.String defaultValue) {
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000001;
+      
       integrationId_ = value.getNumber();
       onChanged();
       return this;
@@ -1712,7 +1746,7 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearIntegrationId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       integrationId_ = 0;
       onChanged();
       return this;
@@ -1759,9 +1793,11 @@ java.lang.String defaultValue) {
      */
     public Builder setIntegrationName(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       integrationName_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1770,8 +1806,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearIntegrationName() {
+      
       integrationName_ = getDefaultInstance().getIntegrationName();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1782,10 +1818,12 @@ java.lang.String defaultValue) {
      */
     public Builder setIntegrationNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       integrationName_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1812,8 +1850,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setMethodIdValue(int value) {
+      
       methodId_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1827,7 +1865,8 @@ java.lang.String defaultValue) {
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.integrations.RequestMethod getMethodId() {
-      com.tcn.cloud.api.api.commons.integrations.RequestMethod result = com.tcn.cloud.api.api.commons.integrations.RequestMethod.forNumber(methodId_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.integrations.RequestMethod result = com.tcn.cloud.api.api.commons.integrations.RequestMethod.valueOf(methodId_);
       return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestMethod.UNRECOGNIZED : result;
     }
     /**
@@ -1843,7 +1882,7 @@ java.lang.String defaultValue) {
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000004;
+      
       methodId_ = value.getNumber();
       onChanged();
       return this;
@@ -1857,7 +1896,7 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearMethodId() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       methodId_ = 0;
       onChanged();
       return this;
@@ -1904,9 +1943,11 @@ java.lang.String defaultValue) {
      */
     public Builder setMethodName(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       methodName_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1915,8 +1956,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearMethodName() {
+      
       methodName_ = getDefaultInstance().getMethodName();
-      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1927,10 +1968,12 @@ java.lang.String defaultValue) {
      */
     public Builder setMethodNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       methodName_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1957,8 +2000,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setTransactionTypeValue(int value) {
+      
       transactionType_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1972,7 +2015,8 @@ java.lang.String defaultValue) {
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.integrations.TransactionType getTransactionType() {
-      com.tcn.cloud.api.api.commons.integrations.TransactionType result = com.tcn.cloud.api.api.commons.integrations.TransactionType.forNumber(transactionType_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.integrations.TransactionType result = com.tcn.cloud.api.api.commons.integrations.TransactionType.valueOf(transactionType_);
       return result == null ? com.tcn.cloud.api.api.commons.integrations.TransactionType.UNRECOGNIZED : result;
     }
     /**
@@ -1988,7 +2032,7 @@ java.lang.String defaultValue) {
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000010;
+      
       transactionType_ = value.getNumber();
       onChanged();
       return this;
@@ -2002,7 +2046,7 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearTransactionType() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      
       transactionType_ = 0;
       onChanged();
       return this;
@@ -2030,8 +2074,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setRequestSourceValue(int value) {
+      
       requestSource_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -2045,7 +2089,8 @@ java.lang.String defaultValue) {
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.integrations.RequestSource getRequestSource() {
-      com.tcn.cloud.api.api.commons.integrations.RequestSource result = com.tcn.cloud.api.api.commons.integrations.RequestSource.forNumber(requestSource_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.integrations.RequestSource result = com.tcn.cloud.api.api.commons.integrations.RequestSource.valueOf(requestSource_);
       return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestSource.UNRECOGNIZED : result;
     }
     /**
@@ -2061,7 +2106,7 @@ java.lang.String defaultValue) {
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000020;
+      
       requestSource_ = value.getNumber();
       onChanged();
       return this;
@@ -2075,7 +2120,7 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearRequestSource() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      
       requestSource_ = 0;
       onChanged();
       return this;
@@ -2143,9 +2188,11 @@ java.lang.String defaultValue) {
      */
     public Builder setFlowName(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       flowName_ = value;
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2161,8 +2208,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearFlowName() {
+      
       flowName_ = getDefaultInstance().getFlowName();
-      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -2180,10 +2227,12 @@ java.lang.String defaultValue) {
      */
     public Builder setFlowNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       flowName_ = value;
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2229,9 +2278,11 @@ java.lang.String defaultValue) {
      */
     public Builder setCampaignType(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       campaignType_ = value;
-      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2240,8 +2291,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearCampaignType() {
+      
       campaignType_ = getDefaultInstance().getCampaignType();
-      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -2252,10 +2303,12 @@ java.lang.String defaultValue) {
      */
     public Builder setCampaignTypeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       campaignType_ = value;
-      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2263,7 +2316,7 @@ java.lang.String defaultValue) {
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.String> groupByValues_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetGroupByValues() {
+    internalGetGroupByValues() {
       if (groupByValues_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             GroupByValuesDefaultEntryHolder.defaultEntry);
@@ -2271,7 +2324,8 @@ java.lang.String defaultValue) {
       return groupByValues_;
     }
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetMutableGroupByValues() {
+    internalGetMutableGroupByValues() {
+      onChanged();;
       if (groupByValues_ == null) {
         groupByValues_ = com.google.protobuf.MapField.newMapField(
             GroupByValuesDefaultEntryHolder.defaultEntry);
@@ -2279,10 +2333,9 @@ java.lang.String defaultValue) {
       if (!groupByValues_.isMutable()) {
         groupByValues_ = groupByValues_.copy();
       }
-      bitField0_ |= 0x00000100;
-      onChanged();
       return groupByValues_;
     }
+
     public int getGroupByValuesCount() {
       return internalGetGroupByValues().getMap().size();
     }
@@ -2293,10 +2346,11 @@ java.lang.String defaultValue) {
      *
      * <code>map&lt;string, string&gt; group_by_values = 23 [json_name = "groupByValues"];</code>
      */
+
     @java.lang.Override
     public boolean containsGroupByValues(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetGroupByValues().getMap().containsKey(key);
     }
     /**
@@ -2315,6 +2369,7 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, string&gt; group_by_values = 23 [json_name = "groupByValues"];</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.String, java.lang.String> getGroupByValuesMap() {
       return internalGetGroupByValues().getMap();
     }
@@ -2326,12 +2381,11 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, string&gt; group_by_values = 23 [json_name = "groupByValues"];</code>
      */
     @java.lang.Override
-    public /* nullable */
-java.lang.String getGroupByValuesOrDefault(
+
+    public java.lang.String getGroupByValuesOrDefault(
         java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetGroupByValues().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2344,9 +2398,10 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, string&gt; group_by_values = 23 [json_name = "groupByValues"];</code>
      */
     @java.lang.Override
+
     public java.lang.String getGroupByValuesOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetGroupByValues().getMap();
       if (!map.containsKey(key)) {
@@ -2354,8 +2409,8 @@ java.lang.String defaultValue) {
       }
       return map.get(key);
     }
+
     public Builder clearGroupByValues() {
-      bitField0_ = (bitField0_ & ~0x00000100);
       internalGetMutableGroupByValues().getMutableMap()
           .clear();
       return this;
@@ -2367,9 +2422,10 @@ java.lang.String defaultValue) {
      *
      * <code>map&lt;string, string&gt; group_by_values = 23 [json_name = "groupByValues"];</code>
      */
+
     public Builder removeGroupByValues(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableGroupByValues().getMutableMap()
           .remove(key);
       return this;
@@ -2379,8 +2435,7 @@ java.lang.String defaultValue) {
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String>
-        getMutableGroupByValues() {
-      bitField0_ |= 0x00000100;
+    getMutableGroupByValues() {
       return internalGetMutableGroupByValues().getMutableMap();
     }
     /**
@@ -2393,11 +2448,10 @@ java.lang.String defaultValue) {
     public Builder putGroupByValues(
         java.lang.String key,
         java.lang.String value) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      if (value == null) { throw new NullPointerException("map value"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (value == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableGroupByValues().getMutableMap()
           .put(key, value);
-      bitField0_ |= 0x00000100;
       return this;
     }
     /**
@@ -2407,11 +2461,11 @@ java.lang.String defaultValue) {
      *
      * <code>map&lt;string, string&gt; group_by_values = 23 [json_name = "groupByValues"];</code>
      */
+
     public Builder putAllGroupByValues(
         java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableGroupByValues().getMutableMap()
           .putAll(values);
-      bitField0_ |= 0x00000100;
       return this;
     }
 
@@ -2438,9 +2492,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setRevenue(double value) {
-
+      
       revenue_ = value;
-      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2453,7 +2506,7 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearRevenue() {
-      bitField0_ = (bitField0_ & ~0x00000200);
+      
       revenue_ = 0D;
       onChanged();
       return this;
@@ -2462,7 +2515,7 @@ java.lang.String defaultValue) {
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.Double> revenueSubtotals_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.Double>
-        internalGetRevenueSubtotals() {
+    internalGetRevenueSubtotals() {
       if (revenueSubtotals_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             RevenueSubtotalsDefaultEntryHolder.defaultEntry);
@@ -2470,7 +2523,8 @@ java.lang.String defaultValue) {
       return revenueSubtotals_;
     }
     private com.google.protobuf.MapField<java.lang.String, java.lang.Double>
-        internalGetMutableRevenueSubtotals() {
+    internalGetMutableRevenueSubtotals() {
+      onChanged();;
       if (revenueSubtotals_ == null) {
         revenueSubtotals_ = com.google.protobuf.MapField.newMapField(
             RevenueSubtotalsDefaultEntryHolder.defaultEntry);
@@ -2478,10 +2532,9 @@ java.lang.String defaultValue) {
       if (!revenueSubtotals_.isMutable()) {
         revenueSubtotals_ = revenueSubtotals_.copy();
       }
-      bitField0_ |= 0x00000400;
-      onChanged();
       return revenueSubtotals_;
     }
+
     public int getRevenueSubtotalsCount() {
       return internalGetRevenueSubtotals().getMap().size();
     }
@@ -2494,10 +2547,11 @@ java.lang.String defaultValue) {
      *
      * <code>map&lt;string, double&gt; revenue_subtotals = 19 [json_name = "revenueSubtotals"];</code>
      */
+
     @java.lang.Override
     public boolean containsRevenueSubtotals(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetRevenueSubtotals().getMap().containsKey(key);
     }
     /**
@@ -2518,6 +2572,7 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, double&gt; revenue_subtotals = 19 [json_name = "revenueSubtotals"];</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.String, java.lang.Double> getRevenueSubtotalsMap() {
       return internalGetRevenueSubtotals().getMap();
     }
@@ -2531,10 +2586,11 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, double&gt; revenue_subtotals = 19 [json_name = "revenueSubtotals"];</code>
      */
     @java.lang.Override
+
     public double getRevenueSubtotalsOrDefault(
         java.lang.String key,
         double defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.Double> map =
           internalGetRevenueSubtotals().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2549,9 +2605,10 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, double&gt; revenue_subtotals = 19 [json_name = "revenueSubtotals"];</code>
      */
     @java.lang.Override
+
     public double getRevenueSubtotalsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.Double> map =
           internalGetRevenueSubtotals().getMap();
       if (!map.containsKey(key)) {
@@ -2559,8 +2616,8 @@ java.lang.String defaultValue) {
       }
       return map.get(key);
     }
+
     public Builder clearRevenueSubtotals() {
-      bitField0_ = (bitField0_ & ~0x00000400);
       internalGetMutableRevenueSubtotals().getMutableMap()
           .clear();
       return this;
@@ -2574,9 +2631,10 @@ java.lang.String defaultValue) {
      *
      * <code>map&lt;string, double&gt; revenue_subtotals = 19 [json_name = "revenueSubtotals"];</code>
      */
+
     public Builder removeRevenueSubtotals(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableRevenueSubtotals().getMutableMap()
           .remove(key);
       return this;
@@ -2586,8 +2644,7 @@ java.lang.String defaultValue) {
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.Double>
-        getMutableRevenueSubtotals() {
-      bitField0_ |= 0x00000400;
+    getMutableRevenueSubtotals() {
       return internalGetMutableRevenueSubtotals().getMutableMap();
     }
     /**
@@ -2602,11 +2659,10 @@ java.lang.String defaultValue) {
     public Builder putRevenueSubtotals(
         java.lang.String key,
         double value) {
-      if (key == null) { throw new NullPointerException("map key"); }
-
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      
       internalGetMutableRevenueSubtotals().getMutableMap()
           .put(key, value);
-      bitField0_ |= 0x00000400;
       return this;
     }
     /**
@@ -2618,11 +2674,11 @@ java.lang.String defaultValue) {
      *
      * <code>map&lt;string, double&gt; revenue_subtotals = 19 [json_name = "revenueSubtotals"];</code>
      */
+
     public Builder putAllRevenueSubtotals(
         java.util.Map<java.lang.String, java.lang.Double> values) {
       internalGetMutableRevenueSubtotals().getMutableMap()
           .putAll(values);
-      bitField0_ |= 0x00000400;
       return this;
     }
 
@@ -2641,9 +2697,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setSuccessCount(long value) {
-
+      
       successCount_ = value;
-      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -2652,7 +2707,7 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearSuccessCount() {
-      bitField0_ = (bitField0_ & ~0x00000800);
+      
       successCount_ = 0L;
       onChanged();
       return this;
@@ -2673,9 +2728,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setFailureCount(long value) {
-
+      
       failureCount_ = value;
-      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -2684,7 +2738,7 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearFailureCount() {
-      bitField0_ = (bitField0_ & ~0x00001000);
+      
       failureCount_ = 0L;
       onChanged();
       return this;
@@ -2705,9 +2759,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setTotalCount(long value) {
-
+      
       totalCount_ = value;
-      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -2716,7 +2769,7 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearTotalCount() {
-      bitField0_ = (bitField0_ & ~0x00002000);
+      
       totalCount_ = 0L;
       onChanged();
       return this;
@@ -2775,9 +2828,11 @@ java.lang.String defaultValue) {
      */
     public Builder setHighestTrafficDate(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       highestTrafficDate_ = value;
-      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -2790,8 +2845,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearHighestTrafficDate() {
+      
       highestTrafficDate_ = getDefaultInstance().getHighestTrafficDate();
-      bitField0_ = (bitField0_ & ~0x00004000);
       onChanged();
       return this;
     }
@@ -2806,10 +2861,12 @@ java.lang.String defaultValue) {
      */
     public Builder setHighestTrafficDateBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       highestTrafficDate_ = value;
-      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -2867,9 +2924,11 @@ java.lang.String defaultValue) {
      */
     public Builder setLowestTrafficDate(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       lowestTrafficDate_ = value;
-      bitField0_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -2882,8 +2941,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearLowestTrafficDate() {
+      
       lowestTrafficDate_ = getDefaultInstance().getLowestTrafficDate();
-      bitField0_ = (bitField0_ & ~0x00008000);
       onChanged();
       return this;
     }
@@ -2898,10 +2957,12 @@ java.lang.String defaultValue) {
      */
     public Builder setLowestTrafficDateBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       lowestTrafficDate_ = value;
-      bitField0_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -2909,7 +2970,7 @@ java.lang.String defaultValue) {
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.Long> countMetrics_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.Long>
-        internalGetCountMetrics() {
+    internalGetCountMetrics() {
       if (countMetrics_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             CountMetricsDefaultEntryHolder.defaultEntry);
@@ -2917,7 +2978,8 @@ java.lang.String defaultValue) {
       return countMetrics_;
     }
     private com.google.protobuf.MapField<java.lang.String, java.lang.Long>
-        internalGetMutableCountMetrics() {
+    internalGetMutableCountMetrics() {
+      onChanged();;
       if (countMetrics_ == null) {
         countMetrics_ = com.google.protobuf.MapField.newMapField(
             CountMetricsDefaultEntryHolder.defaultEntry);
@@ -2925,10 +2987,9 @@ java.lang.String defaultValue) {
       if (!countMetrics_.isMutable()) {
         countMetrics_ = countMetrics_.copy();
       }
-      bitField0_ |= 0x00010000;
-      onChanged();
       return countMetrics_;
     }
+
     public int getCountMetricsCount() {
       return internalGetCountMetrics().getMap().size();
     }
@@ -2939,10 +3000,11 @@ java.lang.String defaultValue) {
      *
      * <code>map&lt;string, int64&gt; count_metrics = 24 [json_name = "countMetrics"];</code>
      */
+
     @java.lang.Override
     public boolean containsCountMetrics(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetCountMetrics().getMap().containsKey(key);
     }
     /**
@@ -2961,6 +3023,7 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, int64&gt; count_metrics = 24 [json_name = "countMetrics"];</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.String, java.lang.Long> getCountMetricsMap() {
       return internalGetCountMetrics().getMap();
     }
@@ -2972,10 +3035,11 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, int64&gt; count_metrics = 24 [json_name = "countMetrics"];</code>
      */
     @java.lang.Override
+
     public long getCountMetricsOrDefault(
         java.lang.String key,
         long defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.Long> map =
           internalGetCountMetrics().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2988,9 +3052,10 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, int64&gt; count_metrics = 24 [json_name = "countMetrics"];</code>
      */
     @java.lang.Override
+
     public long getCountMetricsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.Long> map =
           internalGetCountMetrics().getMap();
       if (!map.containsKey(key)) {
@@ -2998,8 +3063,8 @@ java.lang.String defaultValue) {
       }
       return map.get(key);
     }
+
     public Builder clearCountMetrics() {
-      bitField0_ = (bitField0_ & ~0x00010000);
       internalGetMutableCountMetrics().getMutableMap()
           .clear();
       return this;
@@ -3011,9 +3076,10 @@ java.lang.String defaultValue) {
      *
      * <code>map&lt;string, int64&gt; count_metrics = 24 [json_name = "countMetrics"];</code>
      */
+
     public Builder removeCountMetrics(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableCountMetrics().getMutableMap()
           .remove(key);
       return this;
@@ -3023,8 +3089,7 @@ java.lang.String defaultValue) {
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.Long>
-        getMutableCountMetrics() {
-      bitField0_ |= 0x00010000;
+    getMutableCountMetrics() {
       return internalGetMutableCountMetrics().getMutableMap();
     }
     /**
@@ -3037,11 +3102,10 @@ java.lang.String defaultValue) {
     public Builder putCountMetrics(
         java.lang.String key,
         long value) {
-      if (key == null) { throw new NullPointerException("map key"); }
-
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      
       internalGetMutableCountMetrics().getMutableMap()
           .put(key, value);
-      bitField0_ |= 0x00010000;
       return this;
     }
     /**
@@ -3051,21 +3115,20 @@ java.lang.String defaultValue) {
      *
      * <code>map&lt;string, int64&gt; count_metrics = 24 [json_name = "countMetrics"];</code>
      */
+
     public Builder putAllCountMetrics(
         java.util.Map<java.lang.String, java.lang.Long> values) {
       internalGetMutableCountMetrics().getMutableMap()
           .putAll(values);
-      bitField0_ |= 0x00010000;
       return this;
     }
 
-    private com.google.protobuf.LazyStringArrayList fields_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.LazyStringList fields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureFieldsIsMutable() {
-      if (!fields_.isModifiable()) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         fields_ = new com.google.protobuf.LazyStringArrayList(fields_);
-      }
-      bitField0_ |= 0x00020000;
+        bitField0_ |= 0x00000008;
+       }
     }
     /**
      * <pre>
@@ -3078,8 +3141,7 @@ java.lang.String defaultValue) {
      */
     public com.google.protobuf.ProtocolStringList
         getFieldsList() {
-      fields_.makeImmutable();
-      return fields_;
+      return fields_.getUnmodifiableView();
     }
     /**
      * <pre>
@@ -3133,10 +3195,11 @@ java.lang.String defaultValue) {
      */
     public Builder setFields(
         int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureFieldsIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureFieldsIsMutable();
       fields_.set(index, value);
-      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -3152,10 +3215,11 @@ java.lang.String defaultValue) {
      */
     public Builder addFields(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureFieldsIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureFieldsIsMutable();
       fields_.add(value);
-      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -3174,7 +3238,6 @@ java.lang.String defaultValue) {
       ensureFieldsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, fields_);
-      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -3188,9 +3251,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearFields() {
-      fields_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00020000);;
+      fields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -3206,11 +3268,12 @@ java.lang.String defaultValue) {
      */
     public Builder addFieldsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
       ensureFieldsIsMutable();
       fields_.add(value);
-      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -3247,18 +3310,7 @@ java.lang.String defaultValue) {
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new IntegrationTransactionReportRow(input, extensionRegistry);
     }
   };
 

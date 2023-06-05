@@ -13,15 +13,6 @@ public interface FollowAgentReqOrBuilder extends
    * </pre>
    *
    * <code>string user_id = 1 [json_name = "userId"];</code>
-   * @return Whether the userId field is set.
-   */
-  boolean hasUserId();
-  /**
-   * <pre>
-   * user_id of the given agent that can be obtain from ...
-   * </pre>
-   *
-   * <code>string user_id = 1 [json_name = "userId"];</code>
    * @return The userId.
    */
   java.lang.String getUserId();
@@ -42,18 +33,9 @@ public interface FollowAgentReqOrBuilder extends
    * </pre>
    *
    * <code>int64 asm_session_sid = 2 [json_name = "asmSessionSid"];</code>
-   * @return Whether the asmSessionSid field is set.
-   */
-  boolean hasAsmSessionSid();
-  /**
-   * <pre>
-   * asm_session_sid of the given agent that can be obtain from ...
-   * </pre>
-   *
-   * <code>int64 asm_session_sid = 2 [json_name = "asmSessionSid"];</code>
    * @return The asmSessionSid.
    */
   long getAsmSessionSid();
 
-  com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentReq.IdCase getIdCase();
+  public com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentReq.IdCase getIdCase();
 }

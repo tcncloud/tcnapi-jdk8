@@ -28,5 +28,5 @@ public interface ExportOptionsOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.CsvOptionsOrBuilder getCsvOptionsOrBuilder();
 
-  com.tcn.cloud.api.api.v0alpha.ExportOptions.ExportTypeCase getExportTypeCase();
+  public com.tcn.cloud.api.api.v0alpha.ExportOptions.ExportTypeCase getExportTypeCase();
 }

@@ -32,6 +32,106 @@ private static final long serialVersionUID = 0L;
     return new ContactPreferences();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private ContactPreferences(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 82: {
+            com.tcn.cloud.api.api.v1alpha1.org.legacy.ImportFormat.Builder subBuilder = null;
+            if (defaultContactImportFormat_ != null) {
+              subBuilder = defaultContactImportFormat_.toBuilder();
+            }
+            defaultContactImportFormat_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.org.legacy.ImportFormat.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(defaultContactImportFormat_);
+              defaultContactImportFormat_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 88: {
+
+            useContactImportFormat_ = input.readBool();
+            break;
+          }
+          case 98: {
+            com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactAreaCode.Builder subBuilder = null;
+            if (defaultContactAreaCode_ != null) {
+              subBuilder = defaultContactAreaCode_.toBuilder();
+            }
+            defaultContactAreaCode_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactAreaCode.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(defaultContactAreaCode_);
+              defaultContactAreaCode_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 104: {
+
+            discardRecordDefaultAbsentNumbersHandling_ = input.readBool();
+            break;
+          }
+          case 112: {
+
+            defaultContactsImportRandomization_ = input.readBool();
+            break;
+          }
+          case 122: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            defaultEmailColumn_ = s;
+            break;
+          }
+          case 128: {
+
+            useContactAreaCode_ = input.readBool();
+            break;
+          }
+          case 136: {
+            int rawValue = input.readEnum();
+
+            defaultDuplicateHandling_ = rawValue;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.org.legacy.EntitiesProto.internal_static_api_v1alpha1_org_legacy_ContactPreferences_descriptor;
@@ -80,11 +180,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.org.legacy.ImportFormatOrBuilder getDefaultContactImportFormatOrBuilder() {
-    return defaultContactImportFormat_ == null ? com.tcn.cloud.api.api.v1alpha1.org.legacy.ImportFormat.getDefaultInstance() : defaultContactImportFormat_;
+    return getDefaultContactImportFormat();
   }
 
   public static final int USE_CONTACT_IMPORT_FORMAT_FIELD_NUMBER = 11;
-  private boolean useContactImportFormat_ = false;
+  private boolean useContactImportFormat_;
   /**
    * <pre>
    * UseContactImportFormat controls whether the default import format is enabled
@@ -133,11 +233,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactAreaCodeOrBuilder getDefaultContactAreaCodeOrBuilder() {
-    return defaultContactAreaCode_ == null ? com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactAreaCode.getDefaultInstance() : defaultContactAreaCode_;
+    return getDefaultContactAreaCode();
   }
 
   public static final int USE_CONTACT_AREA_CODE_FIELD_NUMBER = 16;
-  private boolean useContactAreaCode_ = false;
+  private boolean useContactAreaCode_;
   /**
    * <pre>
    * UseContactAreaCode controls whether the default area code is enabled
@@ -152,7 +252,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DISCARD_RECORD_DEFAULT_ABSENT_NUMBERS_HANDLING_FIELD_NUMBER = 13;
-  private boolean discardRecordDefaultAbsentNumbersHandling_ = false;
+  private boolean discardRecordDefaultAbsentNumbersHandling_;
   /**
    * <pre>
    * DefaultAbsentNumbersHandling False: Keep Record, True: Discard Record
@@ -167,7 +267,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DEFAULT_CONTACTS_IMPORT_RANDOMIZATION_FIELD_NUMBER = 14;
-  private boolean defaultContactsImportRandomization_ = false;
+  private boolean defaultContactsImportRandomization_;
   /**
    * <pre>
    * ContactsImportRandomization if true randomize the imported contact list default false
@@ -182,8 +282,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DEFAULT_EMAIL_COLUMN_FIELD_NUMBER = 15;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object defaultEmailColumn_ = "";
+  private volatile java.lang.Object defaultEmailColumn_;
   /**
    * <pre>
    * DefaultEmailColumn sets the DefaultEmailColumn oneof
@@ -229,7 +328,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DEFAULT_DUPLICATE_HANDLING_FIELD_NUMBER = 17;
-  private int defaultDuplicateHandling_ = 0;
+  private int defaultDuplicateHandling_;
   /**
    * <pre>
    * DefaultDuplicateHandling sets a string choice for duplicate numbers
@@ -250,7 +349,8 @@ private static final long serialVersionUID = 0L;
    * @return The defaultDuplicateHandling.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.DefaultDuplicateHandling getDefaultDuplicateHandling() {
-    com.tcn.cloud.api.api.commons.DefaultDuplicateHandling result = com.tcn.cloud.api.api.commons.DefaultDuplicateHandling.forNumber(defaultDuplicateHandling_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.DefaultDuplicateHandling result = com.tcn.cloud.api.api.commons.DefaultDuplicateHandling.valueOf(defaultDuplicateHandling_);
     return result == null ? com.tcn.cloud.api.api.commons.DefaultDuplicateHandling.UNRECOGNIZED : result;
   }
 
@@ -283,7 +383,7 @@ private static final long serialVersionUID = 0L;
     if (defaultContactsImportRandomization_ != false) {
       output.writeBool(14, defaultContactsImportRandomization_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultEmailColumn_)) {
+    if (!getDefaultEmailColumnBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 15, defaultEmailColumn_);
     }
     if (useContactAreaCode_ != false) {
@@ -292,7 +392,7 @@ private static final long serialVersionUID = 0L;
     if (defaultDuplicateHandling_ != com.tcn.cloud.api.api.commons.DefaultDuplicateHandling.DEFAULT_DUPLICATE_HANDLING_KEEP_RECORD_AND_DISCARD_NUMBER.getNumber()) {
       output.writeEnum(17, defaultDuplicateHandling_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -321,7 +421,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(14, defaultContactsImportRandomization_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultEmailColumn_)) {
+    if (!getDefaultEmailColumnBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, defaultEmailColumn_);
     }
     if (useContactAreaCode_ != false) {
@@ -332,7 +432,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(17, defaultDuplicateHandling_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -368,7 +468,7 @@ private static final long serialVersionUID = 0L;
     if (!getDefaultEmailColumn()
         .equals(other.getDefaultEmailColumn())) return false;
     if (defaultDuplicateHandling_ != other.defaultDuplicateHandling_) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -403,7 +503,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getDefaultEmailColumn().hashCode();
     hash = (37 * hash) + DEFAULT_DUPLICATE_HANDLING_FIELD_NUMBER;
     hash = (53 * hash) + defaultDuplicateHandling_;
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -452,13 +552,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactPreferences parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactPreferences parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -527,34 +625,46 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactPreferences.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      defaultContactImportFormat_ = null;
-      if (defaultContactImportFormatBuilder_ != null) {
-        defaultContactImportFormatBuilder_.dispose();
+      if (defaultContactImportFormatBuilder_ == null) {
+        defaultContactImportFormat_ = null;
+      } else {
+        defaultContactImportFormat_ = null;
         defaultContactImportFormatBuilder_ = null;
       }
       useContactImportFormat_ = false;
-      defaultContactAreaCode_ = null;
-      if (defaultContactAreaCodeBuilder_ != null) {
-        defaultContactAreaCodeBuilder_.dispose();
+
+      if (defaultContactAreaCodeBuilder_ == null) {
+        defaultContactAreaCode_ = null;
+      } else {
+        defaultContactAreaCode_ = null;
         defaultContactAreaCodeBuilder_ = null;
       }
       useContactAreaCode_ = false;
+
       discardRecordDefaultAbsentNumbersHandling_ = false;
+
       defaultContactsImportRandomization_ = false;
+
       defaultEmailColumn_ = "";
+
       defaultDuplicateHandling_ = 0;
+
       return this;
     }
 
@@ -581,41 +691,24 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactPreferences buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactPreferences result = new com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactPreferences(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      if (defaultContactImportFormatBuilder_ == null) {
+        result.defaultContactImportFormat_ = defaultContactImportFormat_;
+      } else {
+        result.defaultContactImportFormat_ = defaultContactImportFormatBuilder_.build();
+      }
+      result.useContactImportFormat_ = useContactImportFormat_;
+      if (defaultContactAreaCodeBuilder_ == null) {
+        result.defaultContactAreaCode_ = defaultContactAreaCode_;
+      } else {
+        result.defaultContactAreaCode_ = defaultContactAreaCodeBuilder_.build();
+      }
+      result.useContactAreaCode_ = useContactAreaCode_;
+      result.discardRecordDefaultAbsentNumbersHandling_ = discardRecordDefaultAbsentNumbersHandling_;
+      result.defaultContactsImportRandomization_ = defaultContactsImportRandomization_;
+      result.defaultEmailColumn_ = defaultEmailColumn_;
+      result.defaultDuplicateHandling_ = defaultDuplicateHandling_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactPreferences result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.defaultContactImportFormat_ = defaultContactImportFormatBuilder_ == null
-            ? defaultContactImportFormat_
-            : defaultContactImportFormatBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.useContactImportFormat_ = useContactImportFormat_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.defaultContactAreaCode_ = defaultContactAreaCodeBuilder_ == null
-            ? defaultContactAreaCode_
-            : defaultContactAreaCodeBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.useContactAreaCode_ = useContactAreaCode_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.discardRecordDefaultAbsentNumbersHandling_ = discardRecordDefaultAbsentNumbersHandling_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.defaultContactsImportRandomization_ = defaultContactsImportRandomization_;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.defaultEmailColumn_ = defaultEmailColumn_;
-      }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.defaultDuplicateHandling_ = defaultDuplicateHandling_;
-      }
     }
 
     @java.lang.Override
@@ -682,13 +775,12 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getDefaultEmailColumn().isEmpty()) {
         defaultEmailColumn_ = other.defaultEmailColumn_;
-        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (other.defaultDuplicateHandling_ != 0) {
         setDefaultDuplicateHandlingValue(other.getDefaultDuplicateHandlingValue());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -703,77 +795,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactPreferences parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 82: {
-              input.readMessage(
-                  getDefaultContactImportFormatFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 82
-            case 88: {
-              useContactImportFormat_ = input.readBool();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 88
-            case 98: {
-              input.readMessage(
-                  getDefaultContactAreaCodeFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 98
-            case 104: {
-              discardRecordDefaultAbsentNumbersHandling_ = input.readBool();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 104
-            case 112: {
-              defaultContactsImportRandomization_ = input.readBool();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 112
-            case 122: {
-              defaultEmailColumn_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 122
-            case 128: {
-              useContactAreaCode_ = input.readBool();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 128
-            case 136: {
-              defaultDuplicateHandling_ = input.readEnum();
-              bitField0_ |= 0x00000080;
-              break;
-            } // case 136
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactPreferences) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private com.tcn.cloud.api.api.v1alpha1.org.legacy.ImportFormat defaultContactImportFormat_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -787,7 +821,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the defaultContactImportFormat field is set.
      */
     public boolean hasDefaultContactImportFormat() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return defaultContactImportFormatBuilder_ != null || defaultContactImportFormat_ != null;
     }
     /**
      * <pre>
@@ -817,11 +851,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         defaultContactImportFormat_ = value;
+        onChanged();
       } else {
         defaultContactImportFormatBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -835,11 +869,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.org.legacy.ImportFormat.Builder builderForValue) {
       if (defaultContactImportFormatBuilder_ == null) {
         defaultContactImportFormat_ = builderForValue.build();
+        onChanged();
       } else {
         defaultContactImportFormatBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -851,18 +885,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDefaultContactImportFormat(com.tcn.cloud.api.api.v1alpha1.org.legacy.ImportFormat value) {
       if (defaultContactImportFormatBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          defaultContactImportFormat_ != null &&
-          defaultContactImportFormat_ != com.tcn.cloud.api.api.v1alpha1.org.legacy.ImportFormat.getDefaultInstance()) {
-          getDefaultContactImportFormatBuilder().mergeFrom(value);
+        if (defaultContactImportFormat_ != null) {
+          defaultContactImportFormat_ =
+            com.tcn.cloud.api.api.v1alpha1.org.legacy.ImportFormat.newBuilder(defaultContactImportFormat_).mergeFrom(value).buildPartial();
         } else {
           defaultContactImportFormat_ = value;
         }
+        onChanged();
       } else {
         defaultContactImportFormatBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -873,13 +906,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.org.legacy.ImportFormat default_contact_import_format = 10 [json_name = "defaultContactImportFormat"];</code>
      */
     public Builder clearDefaultContactImportFormat() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      defaultContactImportFormat_ = null;
-      if (defaultContactImportFormatBuilder_ != null) {
-        defaultContactImportFormatBuilder_.dispose();
+      if (defaultContactImportFormatBuilder_ == null) {
+        defaultContactImportFormat_ = null;
+        onChanged();
+      } else {
+        defaultContactImportFormat_ = null;
         defaultContactImportFormatBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -890,7 +924,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.org.legacy.ImportFormat default_contact_import_format = 10 [json_name = "defaultContactImportFormat"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.legacy.ImportFormat.Builder getDefaultContactImportFormatBuilder() {
-      bitField0_ |= 0x00000001;
+      
       onChanged();
       return getDefaultContactImportFormatFieldBuilder().getBuilder();
     }
@@ -953,9 +987,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setUseContactImportFormat(boolean value) {
-
+      
       useContactImportFormat_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -968,7 +1001,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUseContactImportFormat() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       useContactImportFormat_ = false;
       onChanged();
       return this;
@@ -986,7 +1019,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the defaultContactAreaCode field is set.
      */
     public boolean hasDefaultContactAreaCode() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return defaultContactAreaCodeBuilder_ != null || defaultContactAreaCode_ != null;
     }
     /**
      * <pre>
@@ -1016,11 +1049,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         defaultContactAreaCode_ = value;
+        onChanged();
       } else {
         defaultContactAreaCodeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -1034,11 +1067,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactAreaCode.Builder builderForValue) {
       if (defaultContactAreaCodeBuilder_ == null) {
         defaultContactAreaCode_ = builderForValue.build();
+        onChanged();
       } else {
         defaultContactAreaCodeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -1050,18 +1083,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDefaultContactAreaCode(com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactAreaCode value) {
       if (defaultContactAreaCodeBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0) &&
-          defaultContactAreaCode_ != null &&
-          defaultContactAreaCode_ != com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactAreaCode.getDefaultInstance()) {
-          getDefaultContactAreaCodeBuilder().mergeFrom(value);
+        if (defaultContactAreaCode_ != null) {
+          defaultContactAreaCode_ =
+            com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactAreaCode.newBuilder(defaultContactAreaCode_).mergeFrom(value).buildPartial();
         } else {
           defaultContactAreaCode_ = value;
         }
+        onChanged();
       } else {
         defaultContactAreaCodeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -1072,13 +1104,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.org.legacy.ContactAreaCode default_contact_area_code = 12 [json_name = "defaultContactAreaCode"];</code>
      */
     public Builder clearDefaultContactAreaCode() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      defaultContactAreaCode_ = null;
-      if (defaultContactAreaCodeBuilder_ != null) {
-        defaultContactAreaCodeBuilder_.dispose();
+      if (defaultContactAreaCodeBuilder_ == null) {
+        defaultContactAreaCode_ = null;
+        onChanged();
+      } else {
+        defaultContactAreaCode_ = null;
         defaultContactAreaCodeBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -1089,7 +1122,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.org.legacy.ContactAreaCode default_contact_area_code = 12 [json_name = "defaultContactAreaCode"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactAreaCode.Builder getDefaultContactAreaCodeBuilder() {
-      bitField0_ |= 0x00000004;
+      
       onChanged();
       return getDefaultContactAreaCodeFieldBuilder().getBuilder();
     }
@@ -1152,9 +1185,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setUseContactAreaCode(boolean value) {
-
+      
       useContactAreaCode_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1167,7 +1199,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUseContactAreaCode() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      
       useContactAreaCode_ = false;
       onChanged();
       return this;
@@ -1196,9 +1228,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDiscardRecordDefaultAbsentNumbersHandling(boolean value) {
-
+      
       discardRecordDefaultAbsentNumbersHandling_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1211,7 +1242,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDiscardRecordDefaultAbsentNumbersHandling() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      
       discardRecordDefaultAbsentNumbersHandling_ = false;
       onChanged();
       return this;
@@ -1240,9 +1271,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDefaultContactsImportRandomization(boolean value) {
-
+      
       defaultContactsImportRandomization_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1255,7 +1285,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDefaultContactsImportRandomization() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      
       defaultContactsImportRandomization_ = false;
       onChanged();
       return this;
@@ -1314,9 +1344,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDefaultEmailColumn(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       defaultEmailColumn_ = value;
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1329,8 +1361,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDefaultEmailColumn() {
+      
       defaultEmailColumn_ = getDefaultInstance().getDefaultEmailColumn();
-      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -1345,10 +1377,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDefaultEmailColumnBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       defaultEmailColumn_ = value;
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1375,8 +1409,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDefaultDuplicateHandlingValue(int value) {
+      
       defaultDuplicateHandling_ = value;
-      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1390,7 +1424,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.DefaultDuplicateHandling getDefaultDuplicateHandling() {
-      com.tcn.cloud.api.api.commons.DefaultDuplicateHandling result = com.tcn.cloud.api.api.commons.DefaultDuplicateHandling.forNumber(defaultDuplicateHandling_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.DefaultDuplicateHandling result = com.tcn.cloud.api.api.commons.DefaultDuplicateHandling.valueOf(defaultDuplicateHandling_);
       return result == null ? com.tcn.cloud.api.api.commons.DefaultDuplicateHandling.UNRECOGNIZED : result;
     }
     /**
@@ -1406,7 +1441,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000080;
+      
       defaultDuplicateHandling_ = value.getNumber();
       onChanged();
       return this;
@@ -1420,7 +1455,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDefaultDuplicateHandling() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      
       defaultDuplicateHandling_ = 0;
       onChanged();
       return this;
@@ -1458,18 +1493,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new ContactPreferences(input, extensionRegistry);
     }
   };
 

@@ -64,5 +64,5 @@ public interface BuildRegressionForecastByIntervalWithStatsResOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastStatisticsResOrBuilder getForecastStatsOrBuilder();
 
-  com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsRes.ResultOneofCase getResultOneofCase();
+  public com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsRes.ResultOneofCase getResultOneofCase();
 }

@@ -31,6 +31,86 @@ private static final long serialVersionUID = 0L;
     return new ViewTicketRes();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private ViewTicketRes(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            com.tcn.cloud.api.api.commons.Ticket.Builder subBuilder = null;
+            if (ticket_ != null) {
+              subBuilder = ticket_.toBuilder();
+            }
+            ticket_ = input.readMessage(com.tcn.cloud.api.api.commons.Ticket.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(ticket_);
+              ticket_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 18: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              comments_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.Comment>();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            comments_.add(
+                input.readMessage(com.tcn.cloud.api.api.commons.Comment.parser(), extensionRegistry));
+            break;
+          }
+          case 26: {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              replyComment_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.ReplyComment>();
+              mutable_bitField0_ |= 0x00000002;
+            }
+            replyComment_.add(
+                input.readMessage(com.tcn.cloud.api.api.commons.ReplyComment.parser(), extensionRegistry));
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        comments_ = java.util.Collections.unmodifiableList(comments_);
+      }
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        replyComment_ = java.util.Collections.unmodifiableList(replyComment_);
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_ViewTicketRes_descriptor;
@@ -79,11 +159,10 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.TicketOrBuilder getTicketOrBuilder() {
-    return ticket_ == null ? com.tcn.cloud.api.api.commons.Ticket.getDefaultInstance() : ticket_;
+    return getTicket();
   }
 
   public static final int COMMENTS_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.Comment> comments_;
   /**
    * <pre>
@@ -144,7 +223,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int REPLY_COMMENT_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.ReplyComment> replyComment_;
   /**
    * <code>repeated .api.commons.ReplyComment reply_comment = 3 [json_name = "replyComment"];</code>
@@ -207,7 +285,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < replyComment_.size(); i++) {
       output.writeMessage(3, replyComment_.get(i));
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -228,7 +306,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, replyComment_.get(i));
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -252,7 +330,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getCommentsList())) return false;
     if (!getReplyCommentList()
         .equals(other.getReplyCommentList())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -275,7 +353,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + REPLY_COMMENT_FIELD_NUMBER;
       hash = (53 * hash) + getReplyCommentList().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -324,13 +402,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.tickets.ViewTicketRes parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.tickets.ViewTicketRes parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -398,37 +474,42 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.tickets.ViewTicketRes.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getCommentsFieldBuilder();
+        getReplyCommentFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      ticket_ = null;
-      if (ticketBuilder_ != null) {
-        ticketBuilder_.dispose();
+      if (ticketBuilder_ == null) {
+        ticket_ = null;
+      } else {
+        ticket_ = null;
         ticketBuilder_ = null;
       }
       if (commentsBuilder_ == null) {
         comments_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
-        comments_ = null;
         commentsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000002);
       if (replyCommentBuilder_ == null) {
         replyComment_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
-        replyComment_ = null;
         replyCommentBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -455,40 +536,32 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.tickets.ViewTicketRes buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.tickets.ViewTicketRes result = new com.tcn.cloud.api.api.v1alpha1.tickets.ViewTicketRes(this);
-      buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      onBuilt();
-      return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.tickets.ViewTicketRes result) {
+      int from_bitField0_ = bitField0_;
+      if (ticketBuilder_ == null) {
+        result.ticket_ = ticket_;
+      } else {
+        result.ticket_ = ticketBuilder_.build();
+      }
       if (commentsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           comments_ = java.util.Collections.unmodifiableList(comments_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.comments_ = comments_;
       } else {
         result.comments_ = commentsBuilder_.build();
       }
       if (replyCommentBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           replyComment_ = java.util.Collections.unmodifiableList(replyComment_);
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.replyComment_ = replyComment_;
       } else {
         result.replyComment_ = replyCommentBuilder_.build();
       }
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.tickets.ViewTicketRes result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.ticket_ = ticketBuilder_ == null
-            ? ticket_
-            : ticketBuilder_.build();
-      }
+      onBuilt();
+      return result;
     }
 
     @java.lang.Override
@@ -542,7 +615,7 @@ private static final long serialVersionUID = 0L;
         if (!other.comments_.isEmpty()) {
           if (comments_.isEmpty()) {
             comments_ = other.comments_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureCommentsIsMutable();
             comments_.addAll(other.comments_);
@@ -555,7 +628,7 @@ private static final long serialVersionUID = 0L;
             commentsBuilder_.dispose();
             commentsBuilder_ = null;
             comments_ = other.comments_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
             commentsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getCommentsFieldBuilder() : null;
@@ -568,7 +641,7 @@ private static final long serialVersionUID = 0L;
         if (!other.replyComment_.isEmpty()) {
           if (replyComment_.isEmpty()) {
             replyComment_ = other.replyComment_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureReplyCommentIsMutable();
             replyComment_.addAll(other.replyComment_);
@@ -581,7 +654,7 @@ private static final long serialVersionUID = 0L;
             replyCommentBuilder_.dispose();
             replyCommentBuilder_ = null;
             replyComment_ = other.replyComment_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
             replyCommentBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getReplyCommentFieldBuilder() : null;
@@ -590,7 +663,7 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -605,63 +678,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.tickets.ViewTicketRes parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              input.readMessage(
-                  getTicketFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              com.tcn.cloud.api.api.commons.Comment m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.commons.Comment.parser(),
-                      extensionRegistry);
-              if (commentsBuilder_ == null) {
-                ensureCommentsIsMutable();
-                comments_.add(m);
-              } else {
-                commentsBuilder_.addMessage(m);
-              }
-              break;
-            } // case 18
-            case 26: {
-              com.tcn.cloud.api.api.commons.ReplyComment m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.commons.ReplyComment.parser(),
-                      extensionRegistry);
-              if (replyCommentBuilder_ == null) {
-                ensureReplyCommentIsMutable();
-                replyComment_.add(m);
-              } else {
-                replyCommentBuilder_.addMessage(m);
-              }
-              break;
-            } // case 26
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.tickets.ViewTicketRes) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -678,7 +705,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the ticket field is set.
      */
     public boolean hasTicket() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ticketBuilder_ != null || ticket_ != null;
     }
     /**
      * <pre>
@@ -708,11 +735,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         ticket_ = value;
+        onChanged();
       } else {
         ticketBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -726,11 +753,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.Ticket.Builder builderForValue) {
       if (ticketBuilder_ == null) {
         ticket_ = builderForValue.build();
+        onChanged();
       } else {
         ticketBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -742,18 +769,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeTicket(com.tcn.cloud.api.api.commons.Ticket value) {
       if (ticketBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          ticket_ != null &&
-          ticket_ != com.tcn.cloud.api.api.commons.Ticket.getDefaultInstance()) {
-          getTicketBuilder().mergeFrom(value);
+        if (ticket_ != null) {
+          ticket_ =
+            com.tcn.cloud.api.api.commons.Ticket.newBuilder(ticket_).mergeFrom(value).buildPartial();
         } else {
           ticket_ = value;
         }
+        onChanged();
       } else {
         ticketBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -764,13 +790,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.Ticket ticket = 1 [json_name = "ticket"];</code>
      */
     public Builder clearTicket() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      ticket_ = null;
-      if (ticketBuilder_ != null) {
-        ticketBuilder_.dispose();
+      if (ticketBuilder_ == null) {
+        ticket_ = null;
+        onChanged();
+      } else {
+        ticket_ = null;
         ticketBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -781,7 +808,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.Ticket ticket = 1 [json_name = "ticket"];</code>
      */
     public com.tcn.cloud.api.api.commons.Ticket.Builder getTicketBuilder() {
-      bitField0_ |= 0x00000001;
+      
       onChanged();
       return getTicketFieldBuilder().getBuilder();
     }
@@ -824,9 +851,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.commons.Comment> comments_ =
       java.util.Collections.emptyList();
     private void ensureCommentsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         comments_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.Comment>(comments_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -1020,7 +1047,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearComments() {
       if (commentsBuilder_ == null) {
         comments_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         commentsBuilder_.clear();
@@ -1125,7 +1152,7 @@ private static final long serialVersionUID = 0L;
         commentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.Comment, com.tcn.cloud.api.api.commons.Comment.Builder, com.tcn.cloud.api.api.commons.CommentOrBuilder>(
                 comments_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         comments_ = null;
@@ -1136,9 +1163,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.commons.ReplyComment> replyComment_ =
       java.util.Collections.emptyList();
     private void ensureReplyCommentIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         replyComment_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.ReplyComment>(replyComment_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -1288,7 +1315,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearReplyComment() {
       if (replyCommentBuilder_ == null) {
         replyComment_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         replyCommentBuilder_.clear();
@@ -1365,7 +1392,7 @@ private static final long serialVersionUID = 0L;
         replyCommentBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.ReplyComment, com.tcn.cloud.api.api.commons.ReplyComment.Builder, com.tcn.cloud.api.api.commons.ReplyCommentOrBuilder>(
                 replyComment_,
-                ((bitField0_ & 0x00000004) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         replyComment_ = null;
@@ -1405,18 +1432,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new ViewTicketRes(input, extensionRegistry);
     }
   };
 

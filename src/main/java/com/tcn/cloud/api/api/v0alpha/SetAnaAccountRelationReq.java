@@ -27,6 +27,60 @@ private static final long serialVersionUID = 0L;
     return new SetAnaAccountRelationReq();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private SetAnaAccountRelationReq(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 34: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            parentOrgId_ = s;
+            break;
+          }
+          case 42: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            childOrgId_ = s;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.AnaProto.internal_static_api_v0alpha_SetAnaAccountRelationReq_descriptor;
@@ -41,8 +95,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PARENT_ORG_ID_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object parentOrgId_ = "";
+  private volatile java.lang.Object parentOrgId_;
   /**
    * <pre>
    * Parent account to adopt child
@@ -88,8 +141,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CHILD_ORG_ID_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object childOrgId_ = "";
+  private volatile java.lang.Object childOrgId_;
   /**
    * <pre>
    * Child account to be adopted
@@ -148,13 +200,13 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(parentOrgId_)) {
+    if (!getParentOrgIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, parentOrgId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(childOrgId_)) {
+    if (!getChildOrgIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, childOrgId_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -163,13 +215,13 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(parentOrgId_)) {
+    if (!getParentOrgIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, parentOrgId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(childOrgId_)) {
+    if (!getChildOrgIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, childOrgId_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -188,7 +240,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getParentOrgId())) return false;
     if (!getChildOrgId()
         .equals(other.getChildOrgId())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -203,7 +255,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getParentOrgId().hashCode();
     hash = (37 * hash) + CHILD_ORG_ID_FIELD_NUMBER;
     hash = (53 * hash) + getChildOrgId().hashCode();
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -252,13 +304,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -322,20 +372,26 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       parentOrgId_ = "";
+
       childOrgId_ = "";
+
       return this;
     }
 
@@ -362,19 +418,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationReq buildPartial() {
       com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationReq result = new com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationReq(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.parentOrgId_ = parentOrgId_;
+      result.childOrgId_ = childOrgId_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationReq result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.parentOrgId_ = parentOrgId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.childOrgId_ = childOrgId_;
-      }
     }
 
     @java.lang.Override
@@ -423,15 +470,13 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationReq.getDefaultInstance()) return this;
       if (!other.getParentOrgId().isEmpty()) {
         parentOrgId_ = other.parentOrgId_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getChildOrgId().isEmpty()) {
         childOrgId_ = other.childOrgId_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -446,43 +491,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationReq parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 34: {
-              parentOrgId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 34
-            case 42: {
-              childOrgId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 42
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.SetAnaAccountRelationReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private java.lang.Object parentOrgId_ = "";
     /**
@@ -537,9 +558,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setParentOrgId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       parentOrgId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -552,8 +575,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearParentOrgId() {
+      
       parentOrgId_ = getDefaultInstance().getParentOrgId();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -568,10 +591,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setParentOrgIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       parentOrgId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -629,9 +654,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setChildOrgId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       childOrgId_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -644,8 +671,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearChildOrgId() {
+      
       childOrgId_ = getDefaultInstance().getChildOrgId();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -660,10 +687,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setChildOrgIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       childOrgId_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -700,18 +729,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new SetAnaAccountRelationReq(input, extensionRegistry);
     }
   };
 

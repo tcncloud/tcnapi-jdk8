@@ -31,6 +31,109 @@ private static final long serialVersionUID = 0L;
     return new SchedulePreferences();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private SchedulePreferences(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+
+            displayScheduleByTimeZone_ = input.readBool();
+            break;
+          }
+          case 16: {
+
+            useScheduleByTimeZone_ = input.readBool();
+            break;
+          }
+          case 24: {
+            int rawValue = input.readEnum();
+
+            scheduleByTimeZoneScope_ = rawValue;
+            break;
+          }
+          case 32: {
+
+            displayScheduleAsPaused_ = input.readBool();
+            break;
+          }
+          case 40: {
+
+            scheduleAsPaused_ = input.readBool();
+            break;
+          }
+          case 48: {
+
+            defaultCompletionThreshold_ = input.readInt64();
+            break;
+          }
+          case 56: {
+
+            displayCampaignLinking_ = input.readBool();
+            break;
+          }
+          case 64: {
+
+            useCampaignLinking_ = input.readBool();
+            break;
+          }
+          case 74: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              campaignLinks_ = com.google.protobuf.MapField.newMapField(
+                  CampaignLinksDefaultEntryHolder.defaultEntry);
+              mutable_bitField0_ |= 0x00000001;
+            }
+            com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+            campaignLinks__ = input.readMessage(
+                CampaignLinksDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+            campaignLinks_.getMutableMap().put(
+                campaignLinks__.getKey(), campaignLinks__.getValue());
+            break;
+          }
+          case 82: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            defaultCampaignLinkId_ = s;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_SchedulePreferences_descriptor;
@@ -57,7 +160,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DISPLAY_SCHEDULE_BY_TIME_ZONE_FIELD_NUMBER = 1;
-  private boolean displayScheduleByTimeZone_ = false;
+  private boolean displayScheduleByTimeZone_;
   /**
    * <pre>
    * Display campaign schedule by time zone
@@ -72,7 +175,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int USE_SCHEDULE_BY_TIME_ZONE_FIELD_NUMBER = 2;
-  private boolean useScheduleByTimeZone_ = false;
+  private boolean useScheduleByTimeZone_;
   /**
    * <pre>
    * Whether or not by defualt campaigns are scheduled by time zone
@@ -87,7 +190,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SCHEDULE_BY_TIME_ZONE_SCOPE_FIELD_NUMBER = 3;
-  private int scheduleByTimeZoneScope_ = 0;
+  private int scheduleByTimeZoneScope_;
   /**
    * <pre>
    * Schedule by time zone scope
@@ -108,12 +211,13 @@ private static final long serialVersionUID = 0L;
    * @return The scheduleByTimeZoneScope.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.ScheduleByTimeZoneScope getScheduleByTimeZoneScope() {
-    com.tcn.cloud.api.api.commons.ScheduleByTimeZoneScope result = com.tcn.cloud.api.api.commons.ScheduleByTimeZoneScope.forNumber(scheduleByTimeZoneScope_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.ScheduleByTimeZoneScope result = com.tcn.cloud.api.api.commons.ScheduleByTimeZoneScope.valueOf(scheduleByTimeZoneScope_);
     return result == null ? com.tcn.cloud.api.api.commons.ScheduleByTimeZoneScope.UNRECOGNIZED : result;
   }
 
   public static final int DISPLAY_SCHEDULE_AS_PAUSED_FIELD_NUMBER = 4;
-  private boolean displayScheduleAsPaused_ = false;
+  private boolean displayScheduleAsPaused_;
   /**
    * <pre>
    * Display "schedule as paused" field
@@ -128,7 +232,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SCHEDULE_AS_PAUSED_FIELD_NUMBER = 5;
-  private boolean scheduleAsPaused_ = false;
+  private boolean scheduleAsPaused_;
   /**
    * <pre>
    * Schedule paused by default
@@ -143,7 +247,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DEFAULT_COMPLETION_THRESHOLD_FIELD_NUMBER = 6;
-  private long defaultCompletionThreshold_ = 0L;
+  private long defaultCompletionThreshold_;
   /**
    * <pre>
    * Default completion threshold
@@ -158,7 +262,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DISPLAY_CAMPAIGN_LINKING_FIELD_NUMBER = 7;
-  private boolean displayCampaignLinking_ = false;
+  private boolean displayCampaignLinking_;
   /**
    * <pre>
    * Display "campaign link" field
@@ -173,7 +277,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int USE_CAMPAIGN_LINKING_FIELD_NUMBER = 8;
-  private boolean useCampaignLinking_ = false;
+  private boolean useCampaignLinking_;
   /**
    * <pre>
    * Use campaign linking by default
@@ -199,7 +303,6 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "");
   }
-  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, java.lang.String> campaignLinks_;
   private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -210,6 +313,7 @@ private static final long serialVersionUID = 0L;
     }
     return campaignLinks_;
   }
+
   public int getCampaignLinksCount() {
     return internalGetCampaignLinks().getMap().size();
   }
@@ -220,10 +324,11 @@ private static final long serialVersionUID = 0L;
    *
    * <code>map&lt;string, string&gt; campaign_links = 9 [json_name = "campaignLinks"];</code>
    */
+
   @java.lang.Override
   public boolean containsCampaignLinks(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     return internalGetCampaignLinks().getMap().containsKey(key);
   }
   /**
@@ -242,6 +347,7 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; campaign_links = 9 [json_name = "campaignLinks"];</code>
    */
   @java.lang.Override
+
   public java.util.Map<java.lang.String, java.lang.String> getCampaignLinksMap() {
     return internalGetCampaignLinks().getMap();
   }
@@ -253,12 +359,11 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; campaign_links = 9 [json_name = "campaignLinks"];</code>
    */
   @java.lang.Override
-  public /* nullable */
-java.lang.String getCampaignLinksOrDefault(
+
+  public java.lang.String getCampaignLinksOrDefault(
       java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue) {
-    if (key == null) { throw new NullPointerException("map key"); }
+      java.lang.String defaultValue) {
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetCampaignLinks().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -271,9 +376,10 @@ java.lang.String defaultValue) {
    * <code>map&lt;string, string&gt; campaign_links = 9 [json_name = "campaignLinks"];</code>
    */
   @java.lang.Override
+
   public java.lang.String getCampaignLinksOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetCampaignLinks().getMap();
     if (!map.containsKey(key)) {
@@ -283,8 +389,7 @@ java.lang.String defaultValue) {
   }
 
   public static final int DEFAULT_CAMPAIGN_LINK_ID_FIELD_NUMBER = 10;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object defaultCampaignLinkId_ = "";
+  private volatile java.lang.Object defaultCampaignLinkId_;
   /**
    * <pre>
    * Default campaign link ID (id in CampaignLink associated with default)
@@ -373,10 +478,10 @@ java.lang.String defaultValue) {
         internalGetCampaignLinks(),
         CampaignLinksDefaultEntryHolder.defaultEntry,
         9);
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultCampaignLinkId_)) {
+    if (!getDefaultCampaignLinkIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 10, defaultCampaignLinkId_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -427,10 +532,10 @@ java.lang.String defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, campaignLinks__);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultCampaignLinkId_)) {
+    if (!getDefaultCampaignLinkIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, defaultCampaignLinkId_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -464,7 +569,7 @@ java.lang.String defaultValue) {
         other.internalGetCampaignLinks())) return false;
     if (!getDefaultCampaignLinkId()
         .equals(other.getDefaultCampaignLinkId())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -504,7 +609,7 @@ java.lang.String defaultValue) {
     }
     hash = (37 * hash) + DEFAULT_CAMPAIGN_LINK_ID_FIELD_NUMBER;
     hash = (53 * hash) + getDefaultCampaignLinkId().hashCode();
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -553,13 +658,11 @@ java.lang.String defaultValue) {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.SchedulePreferences parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.SchedulePreferences parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -649,28 +752,41 @@ java.lang.String defaultValue) {
 
     // Construct using com.tcn.cloud.api.api.v0alpha.SchedulePreferences.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       displayScheduleByTimeZone_ = false;
+
       useScheduleByTimeZone_ = false;
+
       scheduleByTimeZoneScope_ = 0;
+
       displayScheduleAsPaused_ = false;
+
       scheduleAsPaused_ = false;
+
       defaultCompletionThreshold_ = 0L;
+
       displayCampaignLinking_ = false;
+
       useCampaignLinking_ = false;
+
       internalGetMutableCampaignLinks().clear();
       defaultCampaignLinkId_ = "";
+
       return this;
     }
 
@@ -697,44 +813,20 @@ java.lang.String defaultValue) {
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.SchedulePreferences buildPartial() {
       com.tcn.cloud.api.api.v0alpha.SchedulePreferences result = new com.tcn.cloud.api.api.v0alpha.SchedulePreferences(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      int from_bitField0_ = bitField0_;
+      result.displayScheduleByTimeZone_ = displayScheduleByTimeZone_;
+      result.useScheduleByTimeZone_ = useScheduleByTimeZone_;
+      result.scheduleByTimeZoneScope_ = scheduleByTimeZoneScope_;
+      result.displayScheduleAsPaused_ = displayScheduleAsPaused_;
+      result.scheduleAsPaused_ = scheduleAsPaused_;
+      result.defaultCompletionThreshold_ = defaultCompletionThreshold_;
+      result.displayCampaignLinking_ = displayCampaignLinking_;
+      result.useCampaignLinking_ = useCampaignLinking_;
+      result.campaignLinks_ = internalGetCampaignLinks();
+      result.campaignLinks_.makeImmutable();
+      result.defaultCampaignLinkId_ = defaultCampaignLinkId_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.SchedulePreferences result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.displayScheduleByTimeZone_ = displayScheduleByTimeZone_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.useScheduleByTimeZone_ = useScheduleByTimeZone_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.scheduleByTimeZoneScope_ = scheduleByTimeZoneScope_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.displayScheduleAsPaused_ = displayScheduleAsPaused_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.scheduleAsPaused_ = scheduleAsPaused_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.defaultCompletionThreshold_ = defaultCompletionThreshold_;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.displayCampaignLinking_ = displayCampaignLinking_;
-      }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.useCampaignLinking_ = useCampaignLinking_;
-      }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
-        result.campaignLinks_ = internalGetCampaignLinks();
-        result.campaignLinks_.makeImmutable();
-      }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
-        result.defaultCampaignLinkId_ = defaultCampaignLinkId_;
-      }
     }
 
     @java.lang.Override
@@ -807,13 +899,11 @@ java.lang.String defaultValue) {
       }
       internalGetMutableCampaignLinks().mergeFrom(
           other.internalGetCampaignLinks());
-      bitField0_ |= 0x00000100;
       if (!other.getDefaultCampaignLinkId().isEmpty()) {
         defaultCampaignLinkId_ = other.defaultCampaignLinkId_;
-        bitField0_ |= 0x00000200;
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -828,84 +918,17 @@ java.lang.String defaultValue) {
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.SchedulePreferences parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              displayScheduleByTimeZone_ = input.readBool();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 16: {
-              useScheduleByTimeZone_ = input.readBool();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 16
-            case 24: {
-              scheduleByTimeZoneScope_ = input.readEnum();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 24
-            case 32: {
-              displayScheduleAsPaused_ = input.readBool();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 32
-            case 40: {
-              scheduleAsPaused_ = input.readBool();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 40
-            case 48: {
-              defaultCompletionThreshold_ = input.readInt64();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 48
-            case 56: {
-              displayCampaignLinking_ = input.readBool();
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 56
-            case 64: {
-              useCampaignLinking_ = input.readBool();
-              bitField0_ |= 0x00000080;
-              break;
-            } // case 64
-            case 74: {
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-              campaignLinks__ = input.readMessage(
-                  CampaignLinksDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              internalGetMutableCampaignLinks().getMutableMap().put(
-                  campaignLinks__.getKey(), campaignLinks__.getValue());
-              bitField0_ |= 0x00000100;
-              break;
-            } // case 74
-            case 82: {
-              defaultCampaignLinkId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000200;
-              break;
-            } // case 82
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.SchedulePreferences) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -933,9 +956,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setDisplayScheduleByTimeZone(boolean value) {
-
+      
       displayScheduleByTimeZone_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -948,7 +970,7 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearDisplayScheduleByTimeZone() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       displayScheduleByTimeZone_ = false;
       onChanged();
       return this;
@@ -977,9 +999,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setUseScheduleByTimeZone(boolean value) {
-
+      
       useScheduleByTimeZone_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -992,7 +1013,7 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearUseScheduleByTimeZone() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       useScheduleByTimeZone_ = false;
       onChanged();
       return this;
@@ -1020,8 +1041,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setScheduleByTimeZoneScopeValue(int value) {
+      
       scheduleByTimeZoneScope_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1035,7 +1056,8 @@ java.lang.String defaultValue) {
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.ScheduleByTimeZoneScope getScheduleByTimeZoneScope() {
-      com.tcn.cloud.api.api.commons.ScheduleByTimeZoneScope result = com.tcn.cloud.api.api.commons.ScheduleByTimeZoneScope.forNumber(scheduleByTimeZoneScope_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.ScheduleByTimeZoneScope result = com.tcn.cloud.api.api.commons.ScheduleByTimeZoneScope.valueOf(scheduleByTimeZoneScope_);
       return result == null ? com.tcn.cloud.api.api.commons.ScheduleByTimeZoneScope.UNRECOGNIZED : result;
     }
     /**
@@ -1051,7 +1073,7 @@ java.lang.String defaultValue) {
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000004;
+      
       scheduleByTimeZoneScope_ = value.getNumber();
       onChanged();
       return this;
@@ -1065,7 +1087,7 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearScheduleByTimeZoneScope() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       scheduleByTimeZoneScope_ = 0;
       onChanged();
       return this;
@@ -1094,9 +1116,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setDisplayScheduleAsPaused(boolean value) {
-
+      
       displayScheduleAsPaused_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1109,7 +1130,7 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearDisplayScheduleAsPaused() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      
       displayScheduleAsPaused_ = false;
       onChanged();
       return this;
@@ -1138,9 +1159,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setScheduleAsPaused(boolean value) {
-
+      
       scheduleAsPaused_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1153,7 +1173,7 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearScheduleAsPaused() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      
       scheduleAsPaused_ = false;
       onChanged();
       return this;
@@ -1182,9 +1202,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setDefaultCompletionThreshold(long value) {
-
+      
       defaultCompletionThreshold_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1197,7 +1216,7 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearDefaultCompletionThreshold() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      
       defaultCompletionThreshold_ = 0L;
       onChanged();
       return this;
@@ -1226,9 +1245,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setDisplayCampaignLinking(boolean value) {
-
+      
       displayCampaignLinking_ = value;
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1241,7 +1259,7 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearDisplayCampaignLinking() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      
       displayCampaignLinking_ = false;
       onChanged();
       return this;
@@ -1270,9 +1288,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setUseCampaignLinking(boolean value) {
-
+      
       useCampaignLinking_ = value;
-      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1285,7 +1302,7 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearUseCampaignLinking() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      
       useCampaignLinking_ = false;
       onChanged();
       return this;
@@ -1294,7 +1311,7 @@ java.lang.String defaultValue) {
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.String> campaignLinks_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetCampaignLinks() {
+    internalGetCampaignLinks() {
       if (campaignLinks_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             CampaignLinksDefaultEntryHolder.defaultEntry);
@@ -1302,7 +1319,8 @@ java.lang.String defaultValue) {
       return campaignLinks_;
     }
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetMutableCampaignLinks() {
+    internalGetMutableCampaignLinks() {
+      onChanged();;
       if (campaignLinks_ == null) {
         campaignLinks_ = com.google.protobuf.MapField.newMapField(
             CampaignLinksDefaultEntryHolder.defaultEntry);
@@ -1310,10 +1328,9 @@ java.lang.String defaultValue) {
       if (!campaignLinks_.isMutable()) {
         campaignLinks_ = campaignLinks_.copy();
       }
-      bitField0_ |= 0x00000100;
-      onChanged();
       return campaignLinks_;
     }
+
     public int getCampaignLinksCount() {
       return internalGetCampaignLinks().getMap().size();
     }
@@ -1324,10 +1341,11 @@ java.lang.String defaultValue) {
      *
      * <code>map&lt;string, string&gt; campaign_links = 9 [json_name = "campaignLinks"];</code>
      */
+
     @java.lang.Override
     public boolean containsCampaignLinks(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetCampaignLinks().getMap().containsKey(key);
     }
     /**
@@ -1346,6 +1364,7 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, string&gt; campaign_links = 9 [json_name = "campaignLinks"];</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.String, java.lang.String> getCampaignLinksMap() {
       return internalGetCampaignLinks().getMap();
     }
@@ -1357,12 +1376,11 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, string&gt; campaign_links = 9 [json_name = "campaignLinks"];</code>
      */
     @java.lang.Override
-    public /* nullable */
-java.lang.String getCampaignLinksOrDefault(
+
+    public java.lang.String getCampaignLinksOrDefault(
         java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetCampaignLinks().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1375,9 +1393,10 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, string&gt; campaign_links = 9 [json_name = "campaignLinks"];</code>
      */
     @java.lang.Override
+
     public java.lang.String getCampaignLinksOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetCampaignLinks().getMap();
       if (!map.containsKey(key)) {
@@ -1385,8 +1404,8 @@ java.lang.String defaultValue) {
       }
       return map.get(key);
     }
+
     public Builder clearCampaignLinks() {
-      bitField0_ = (bitField0_ & ~0x00000100);
       internalGetMutableCampaignLinks().getMutableMap()
           .clear();
       return this;
@@ -1398,9 +1417,10 @@ java.lang.String defaultValue) {
      *
      * <code>map&lt;string, string&gt; campaign_links = 9 [json_name = "campaignLinks"];</code>
      */
+
     public Builder removeCampaignLinks(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableCampaignLinks().getMutableMap()
           .remove(key);
       return this;
@@ -1410,8 +1430,7 @@ java.lang.String defaultValue) {
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String>
-        getMutableCampaignLinks() {
-      bitField0_ |= 0x00000100;
+    getMutableCampaignLinks() {
       return internalGetMutableCampaignLinks().getMutableMap();
     }
     /**
@@ -1424,11 +1443,10 @@ java.lang.String defaultValue) {
     public Builder putCampaignLinks(
         java.lang.String key,
         java.lang.String value) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      if (value == null) { throw new NullPointerException("map value"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (value == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableCampaignLinks().getMutableMap()
           .put(key, value);
-      bitField0_ |= 0x00000100;
       return this;
     }
     /**
@@ -1438,11 +1456,11 @@ java.lang.String defaultValue) {
      *
      * <code>map&lt;string, string&gt; campaign_links = 9 [json_name = "campaignLinks"];</code>
      */
+
     public Builder putAllCampaignLinks(
         java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableCampaignLinks().getMutableMap()
           .putAll(values);
-      bitField0_ |= 0x00000100;
       return this;
     }
 
@@ -1499,9 +1517,11 @@ java.lang.String defaultValue) {
      */
     public Builder setDefaultCampaignLinkId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       defaultCampaignLinkId_ = value;
-      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1514,8 +1534,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearDefaultCampaignLinkId() {
+      
       defaultCampaignLinkId_ = getDefaultInstance().getDefaultCampaignLinkId();
-      bitField0_ = (bitField0_ & ~0x00000200);
       onChanged();
       return this;
     }
@@ -1530,10 +1550,12 @@ java.lang.String defaultValue) {
      */
     public Builder setDefaultCampaignLinkIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       defaultCampaignLinkId_ = value;
-      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1570,18 +1592,7 @@ java.lang.String defaultValue) {
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new SchedulePreferences(input, extensionRegistry);
     }
   };
 

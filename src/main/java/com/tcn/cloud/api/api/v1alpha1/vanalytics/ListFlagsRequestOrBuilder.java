@@ -74,15 +74,6 @@ public interface ListFlagsRequestOrBuilder extends
    * </pre>
    *
    * <code>int64 filter_sid = 5 [json_name = "filterSid"];</code>
-   * @return Whether the filterSid field is set.
-   */
-  boolean hasFilterSid();
-  /**
-   * <pre>
-   * Optional. Lists flags which are associated with given filter sid.
-   * </pre>
-   *
-   * <code>int64 filter_sid = 5 [json_name = "filterSid"];</code>
    * @return The filterSid.
    */
   long getFilterSid();
@@ -277,5 +268,5 @@ public interface ListFlagsRequestOrBuilder extends
    */
   boolean getMustNotify(int index);
 
-  com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagsRequest.WhereCase getWhereCase();
+  public com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagsRequest.WhereCase getWhereCase();
 }

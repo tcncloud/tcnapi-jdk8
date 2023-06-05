@@ -31,6 +31,111 @@ private static final long serialVersionUID = 0L;
     return new ComplianceProcessor();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private ComplianceProcessor(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            ruleSetId_ = s;
+            break;
+          }
+          case 42: {
+            com.tcn.cloud.api.api.commons.CommType.Builder subBuilder = null;
+            if (commType_ != null) {
+              subBuilder = commType_.toBuilder();
+            }
+            commType_ = input.readMessage(com.tcn.cloud.api.api.commons.CommType.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(commType_);
+              commType_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 50: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            callType_ = s;
+            break;
+          }
+          case 58: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            phoneNumberField_ = s;
+            break;
+          }
+          case 66: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            emailField_ = s;
+            break;
+          }
+          case 74: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            zipCodeField_ = s;
+            break;
+          }
+          case 82: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              callMetadata_ = com.google.protobuf.MapField.newMapField(
+                  CallMetadataDefaultEntryHolder.defaultEntry);
+              mutable_bitField0_ |= 0x00000001;
+            }
+            com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+            callMetadata__ = input.readMessage(
+                CallMetadataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+            callMetadata_.getMutableMap().put(
+                callMetadata__.getKey(), callMetadata__.getValue());
+            break;
+          }
+          case 90: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            countryCode_ = s;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.LmsProto.internal_static_api_v0alpha_ComplianceProcessor_descriptor;
@@ -57,8 +162,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RULE_SET_ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object ruleSetId_ = "";
+  private volatile java.lang.Object ruleSetId_;
   /**
    * <pre>
    * ID for the rulset to run against
@@ -138,12 +242,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.CommTypeOrBuilder getCommTypeOrBuilder() {
-    return commType_ == null ? com.tcn.cloud.api.api.commons.CommType.getDefaultInstance() : commType_;
+    return getCommType();
   }
 
   public static final int CALL_TYPE_FIELD_NUMBER = 6;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object callType_ = "";
+  private volatile java.lang.Object callType_;
   /**
    * <pre>
    * call type we are checking (inbound, outbound, preview, mac)
@@ -191,8 +294,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PHONE_NUMBER_FIELD_FIELD_NUMBER = 7;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object phoneNumberField_ = "";
+  private volatile java.lang.Object phoneNumberField_;
   /**
    * <pre>
    * Field containing the phone number (optional)
@@ -238,8 +340,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EMAIL_FIELD_FIELD_NUMBER = 8;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object emailField_ = "";
+  private volatile java.lang.Object emailField_;
   /**
    * <pre>
    * Field containing the email (optional)
@@ -285,8 +386,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ZIP_CODE_FIELD_FIELD_NUMBER = 9;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object zipCodeField_ = "";
+  private volatile java.lang.Object zipCodeField_;
   /**
    * <pre>
    * Field containing the zip code
@@ -343,7 +443,6 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "");
   }
-  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, java.lang.String> callMetadata_;
   private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -354,6 +453,7 @@ private static final long serialVersionUID = 0L;
     }
     return callMetadata_;
   }
+
   public int getCallMetadataCount() {
     return internalGetCallMetadata().getMap().size();
   }
@@ -366,10 +466,11 @@ private static final long serialVersionUID = 0L;
    *
    * <code>map&lt;string, string&gt; call_metadata = 10 [json_name = "callMetadata"];</code>
    */
+
   @java.lang.Override
   public boolean containsCallMetadata(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     return internalGetCallMetadata().getMap().containsKey(key);
   }
   /**
@@ -390,6 +491,7 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; call_metadata = 10 [json_name = "callMetadata"];</code>
    */
   @java.lang.Override
+
   public java.util.Map<java.lang.String, java.lang.String> getCallMetadataMap() {
     return internalGetCallMetadata().getMap();
   }
@@ -403,12 +505,11 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; call_metadata = 10 [json_name = "callMetadata"];</code>
    */
   @java.lang.Override
-  public /* nullable */
-java.lang.String getCallMetadataOrDefault(
+
+  public java.lang.String getCallMetadataOrDefault(
       java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue) {
-    if (key == null) { throw new NullPointerException("map key"); }
+      java.lang.String defaultValue) {
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetCallMetadata().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -423,9 +524,10 @@ java.lang.String defaultValue) {
    * <code>map&lt;string, string&gt; call_metadata = 10 [json_name = "callMetadata"];</code>
    */
   @java.lang.Override
+
   public java.lang.String getCallMetadataOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetCallMetadata().getMap();
     if (!map.containsKey(key)) {
@@ -435,8 +537,7 @@ java.lang.String defaultValue) {
   }
 
   public static final int COUNTRY_CODE_FIELD_NUMBER = 11;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object countryCode_ = "";
+  private volatile java.lang.Object countryCode_;
   /**
    * <pre>
    * Country code, or field containing
@@ -497,22 +598,22 @@ java.lang.String defaultValue) {
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ruleSetId_)) {
+    if (!getRuleSetIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, ruleSetId_);
     }
     if (commType_ != null) {
       output.writeMessage(5, getCommType());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callType_)) {
+    if (!getCallTypeBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, callType_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(phoneNumberField_)) {
+    if (!getPhoneNumberFieldBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, phoneNumberField_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emailField_)) {
+    if (!getEmailFieldBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 8, emailField_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zipCodeField_)) {
+    if (!getZipCodeFieldBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 9, zipCodeField_);
     }
     com.google.protobuf.GeneratedMessageV3
@@ -521,10 +622,10 @@ java.lang.String defaultValue) {
         internalGetCallMetadata(),
         CallMetadataDefaultEntryHolder.defaultEntry,
         10);
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(countryCode_)) {
+    if (!getCountryCodeBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 11, countryCode_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -533,23 +634,23 @@ java.lang.String defaultValue) {
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ruleSetId_)) {
+    if (!getRuleSetIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, ruleSetId_);
     }
     if (commType_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getCommType());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callType_)) {
+    if (!getCallTypeBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, callType_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(phoneNumberField_)) {
+    if (!getPhoneNumberFieldBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, phoneNumberField_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emailField_)) {
+    if (!getEmailFieldBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, emailField_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zipCodeField_)) {
+    if (!getZipCodeFieldBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, zipCodeField_);
     }
     for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -562,10 +663,10 @@ java.lang.String defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, callMetadata__);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(countryCode_)) {
+    if (!getCountryCodeBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, countryCode_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -599,7 +700,7 @@ java.lang.String defaultValue) {
         other.internalGetCallMetadata())) return false;
     if (!getCountryCode()
         .equals(other.getCountryCode())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -630,7 +731,7 @@ java.lang.String defaultValue) {
     }
     hash = (37 * hash) + COUNTRY_CODE_FIELD_NUMBER;
     hash = (53 * hash) + getCountryCode().hashCode();
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -679,13 +780,11 @@ java.lang.String defaultValue) {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.ComplianceProcessor parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.ComplianceProcessor parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -771,30 +870,41 @@ java.lang.String defaultValue) {
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ComplianceProcessor.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       ruleSetId_ = "";
-      commType_ = null;
-      if (commTypeBuilder_ != null) {
-        commTypeBuilder_.dispose();
+
+      if (commTypeBuilder_ == null) {
+        commType_ = null;
+      } else {
+        commType_ = null;
         commTypeBuilder_ = null;
       }
       callType_ = "";
+
       phoneNumberField_ = "";
+
       emailField_ = "";
+
       zipCodeField_ = "";
+
       internalGetMutableCallMetadata().clear();
       countryCode_ = "";
+
       return this;
     }
 
@@ -821,40 +931,22 @@ java.lang.String defaultValue) {
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.ComplianceProcessor buildPartial() {
       com.tcn.cloud.api.api.v0alpha.ComplianceProcessor result = new com.tcn.cloud.api.api.v0alpha.ComplianceProcessor(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      int from_bitField0_ = bitField0_;
+      result.ruleSetId_ = ruleSetId_;
+      if (commTypeBuilder_ == null) {
+        result.commType_ = commType_;
+      } else {
+        result.commType_ = commTypeBuilder_.build();
+      }
+      result.callType_ = callType_;
+      result.phoneNumberField_ = phoneNumberField_;
+      result.emailField_ = emailField_;
+      result.zipCodeField_ = zipCodeField_;
+      result.callMetadata_ = internalGetCallMetadata();
+      result.callMetadata_.makeImmutable();
+      result.countryCode_ = countryCode_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ComplianceProcessor result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.ruleSetId_ = ruleSetId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.commType_ = commTypeBuilder_ == null
-            ? commType_
-            : commTypeBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.callType_ = callType_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.phoneNumberField_ = phoneNumberField_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.emailField_ = emailField_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.zipCodeField_ = zipCodeField_;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.callMetadata_ = internalGetCallMetadata();
-        result.callMetadata_.makeImmutable();
-      }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.countryCode_ = countryCode_;
-      }
     }
 
     @java.lang.Override
@@ -903,7 +995,6 @@ java.lang.String defaultValue) {
       if (other == com.tcn.cloud.api.api.v0alpha.ComplianceProcessor.getDefaultInstance()) return this;
       if (!other.getRuleSetId().isEmpty()) {
         ruleSetId_ = other.ruleSetId_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasCommType()) {
@@ -911,33 +1002,27 @@ java.lang.String defaultValue) {
       }
       if (!other.getCallType().isEmpty()) {
         callType_ = other.callType_;
-        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getPhoneNumberField().isEmpty()) {
         phoneNumberField_ = other.phoneNumberField_;
-        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.getEmailField().isEmpty()) {
         emailField_ = other.emailField_;
-        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (!other.getZipCodeField().isEmpty()) {
         zipCodeField_ = other.zipCodeField_;
-        bitField0_ |= 0x00000020;
         onChanged();
       }
       internalGetMutableCallMetadata().mergeFrom(
           other.internalGetCallMetadata());
-      bitField0_ |= 0x00000040;
       if (!other.getCountryCode().isEmpty()) {
         countryCode_ = other.countryCode_;
-        bitField0_ |= 0x00000080;
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -952,76 +1037,17 @@ java.lang.String defaultValue) {
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.ComplianceProcessor parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              ruleSetId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 42: {
-              input.readMessage(
-                  getCommTypeFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 42
-            case 50: {
-              callType_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 50
-            case 58: {
-              phoneNumberField_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 58
-            case 66: {
-              emailField_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 66
-            case 74: {
-              zipCodeField_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 74
-            case 82: {
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-              callMetadata__ = input.readMessage(
-                  CallMetadataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              internalGetMutableCallMetadata().getMutableMap().put(
-                  callMetadata__.getKey(), callMetadata__.getValue());
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 82
-            case 90: {
-              countryCode_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000080;
-              break;
-            } // case 90
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.ComplianceProcessor) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -1079,9 +1105,11 @@ java.lang.String defaultValue) {
      */
     public Builder setRuleSetId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       ruleSetId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1094,8 +1122,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearRuleSetId() {
+      
       ruleSetId_ = getDefaultInstance().getRuleSetId();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1110,10 +1138,12 @@ java.lang.String defaultValue) {
      */
     public Builder setRuleSetIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       ruleSetId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1130,7 +1160,7 @@ java.lang.String defaultValue) {
      * @return Whether the commType field is set.
      */
     public boolean hasCommType() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return commTypeBuilder_ != null || commType_ != null;
     }
     /**
      * <pre>
@@ -1160,11 +1190,11 @@ java.lang.String defaultValue) {
           throw new NullPointerException();
         }
         commType_ = value;
+        onChanged();
       } else {
         commTypeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -1178,11 +1208,11 @@ java.lang.String defaultValue) {
         com.tcn.cloud.api.api.commons.CommType.Builder builderForValue) {
       if (commTypeBuilder_ == null) {
         commType_ = builderForValue.build();
+        onChanged();
       } else {
         commTypeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -1194,18 +1224,17 @@ java.lang.String defaultValue) {
      */
     public Builder mergeCommType(com.tcn.cloud.api.api.commons.CommType value) {
       if (commTypeBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
-          commType_ != null &&
-          commType_ != com.tcn.cloud.api.api.commons.CommType.getDefaultInstance()) {
-          getCommTypeBuilder().mergeFrom(value);
+        if (commType_ != null) {
+          commType_ =
+            com.tcn.cloud.api.api.commons.CommType.newBuilder(commType_).mergeFrom(value).buildPartial();
         } else {
           commType_ = value;
         }
+        onChanged();
       } else {
         commTypeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -1216,13 +1245,14 @@ java.lang.String defaultValue) {
      * <code>.api.commons.CommType comm_type = 5 [json_name = "commType"];</code>
      */
     public Builder clearCommType() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      commType_ = null;
-      if (commTypeBuilder_ != null) {
-        commTypeBuilder_.dispose();
+      if (commTypeBuilder_ == null) {
+        commType_ = null;
+        onChanged();
+      } else {
+        commType_ = null;
         commTypeBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -1233,7 +1263,7 @@ java.lang.String defaultValue) {
      * <code>.api.commons.CommType comm_type = 5 [json_name = "commType"];</code>
      */
     public com.tcn.cloud.api.api.commons.CommType.Builder getCommTypeBuilder() {
-      bitField0_ |= 0x00000002;
+      
       onChanged();
       return getCommTypeFieldBuilder().getBuilder();
     }
@@ -1329,9 +1359,11 @@ java.lang.String defaultValue) {
      */
     public Builder setCallType(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       callType_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1345,8 +1377,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearCallType() {
+      
       callType_ = getDefaultInstance().getCallType();
-      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1362,10 +1394,12 @@ java.lang.String defaultValue) {
      */
     public Builder setCallTypeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       callType_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1423,9 +1457,11 @@ java.lang.String defaultValue) {
      */
     public Builder setPhoneNumberField(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       phoneNumberField_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1438,8 +1474,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearPhoneNumberField() {
+      
       phoneNumberField_ = getDefaultInstance().getPhoneNumberField();
-      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1454,10 +1490,12 @@ java.lang.String defaultValue) {
      */
     public Builder setPhoneNumberFieldBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       phoneNumberField_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1515,9 +1553,11 @@ java.lang.String defaultValue) {
      */
     public Builder setEmailField(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       emailField_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1530,8 +1570,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearEmailField() {
+      
       emailField_ = getDefaultInstance().getEmailField();
-      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1546,10 +1586,12 @@ java.lang.String defaultValue) {
      */
     public Builder setEmailFieldBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       emailField_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1607,9 +1649,11 @@ java.lang.String defaultValue) {
      */
     public Builder setZipCodeField(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       zipCodeField_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1622,8 +1666,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearZipCodeField() {
+      
       zipCodeField_ = getDefaultInstance().getZipCodeField();
-      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1638,10 +1682,12 @@ java.lang.String defaultValue) {
      */
     public Builder setZipCodeFieldBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       zipCodeField_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1649,7 +1695,7 @@ java.lang.String defaultValue) {
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.String> callMetadata_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetCallMetadata() {
+    internalGetCallMetadata() {
       if (callMetadata_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             CallMetadataDefaultEntryHolder.defaultEntry);
@@ -1657,7 +1703,8 @@ java.lang.String defaultValue) {
       return callMetadata_;
     }
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetMutableCallMetadata() {
+    internalGetMutableCallMetadata() {
+      onChanged();;
       if (callMetadata_ == null) {
         callMetadata_ = com.google.protobuf.MapField.newMapField(
             CallMetadataDefaultEntryHolder.defaultEntry);
@@ -1665,10 +1712,9 @@ java.lang.String defaultValue) {
       if (!callMetadata_.isMutable()) {
         callMetadata_ = callMetadata_.copy();
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
       return callMetadata_;
     }
+
     public int getCallMetadataCount() {
       return internalGetCallMetadata().getMap().size();
     }
@@ -1681,10 +1727,11 @@ java.lang.String defaultValue) {
      *
      * <code>map&lt;string, string&gt; call_metadata = 10 [json_name = "callMetadata"];</code>
      */
+
     @java.lang.Override
     public boolean containsCallMetadata(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetCallMetadata().getMap().containsKey(key);
     }
     /**
@@ -1705,6 +1752,7 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, string&gt; call_metadata = 10 [json_name = "callMetadata"];</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.String, java.lang.String> getCallMetadataMap() {
       return internalGetCallMetadata().getMap();
     }
@@ -1718,12 +1766,11 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, string&gt; call_metadata = 10 [json_name = "callMetadata"];</code>
      */
     @java.lang.Override
-    public /* nullable */
-java.lang.String getCallMetadataOrDefault(
+
+    public java.lang.String getCallMetadataOrDefault(
         java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetCallMetadata().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1738,9 +1785,10 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, string&gt; call_metadata = 10 [json_name = "callMetadata"];</code>
      */
     @java.lang.Override
+
     public java.lang.String getCallMetadataOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetCallMetadata().getMap();
       if (!map.containsKey(key)) {
@@ -1748,8 +1796,8 @@ java.lang.String defaultValue) {
       }
       return map.get(key);
     }
+
     public Builder clearCallMetadata() {
-      bitField0_ = (bitField0_ & ~0x00000040);
       internalGetMutableCallMetadata().getMutableMap()
           .clear();
       return this;
@@ -1763,9 +1811,10 @@ java.lang.String defaultValue) {
      *
      * <code>map&lt;string, string&gt; call_metadata = 10 [json_name = "callMetadata"];</code>
      */
+
     public Builder removeCallMetadata(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableCallMetadata().getMutableMap()
           .remove(key);
       return this;
@@ -1775,8 +1824,7 @@ java.lang.String defaultValue) {
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String>
-        getMutableCallMetadata() {
-      bitField0_ |= 0x00000040;
+    getMutableCallMetadata() {
       return internalGetMutableCallMetadata().getMutableMap();
     }
     /**
@@ -1791,11 +1839,10 @@ java.lang.String defaultValue) {
     public Builder putCallMetadata(
         java.lang.String key,
         java.lang.String value) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      if (value == null) { throw new NullPointerException("map value"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (value == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableCallMetadata().getMutableMap()
           .put(key, value);
-      bitField0_ |= 0x00000040;
       return this;
     }
     /**
@@ -1807,11 +1854,11 @@ java.lang.String defaultValue) {
      *
      * <code>map&lt;string, string&gt; call_metadata = 10 [json_name = "callMetadata"];</code>
      */
+
     public Builder putAllCallMetadata(
         java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableCallMetadata().getMutableMap()
           .putAll(values);
-      bitField0_ |= 0x00000040;
       return this;
     }
 
@@ -1871,9 +1918,11 @@ java.lang.String defaultValue) {
      */
     public Builder setCountryCode(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       countryCode_ = value;
-      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1887,8 +1936,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearCountryCode() {
+      
       countryCode_ = getDefaultInstance().getCountryCode();
-      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -1904,10 +1953,12 @@ java.lang.String defaultValue) {
      */
     public Builder setCountryCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       countryCode_ = value;
-      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1944,18 +1995,7 @@ java.lang.String defaultValue) {
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new ComplianceProcessor(input, extensionRegistry);
     }
   };
 

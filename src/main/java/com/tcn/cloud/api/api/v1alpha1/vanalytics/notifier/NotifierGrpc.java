@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.50.0)",
     comments = "Source: api/v1alpha1/vanalytics/notifier/service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class NotifierGrpc {
@@ -92,35 +92,34 @@ public final class NotifierGrpc {
 
   /**
    */
-  public interface AsyncService {
+  public static abstract class NotifierImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
      * GetNotify returns a notify.
      * </pre>
      */
-    default void getNotify(com.tcn.cloud.api.api.v1alpha1.vanalytics.notifier.GetNotifyRequest request,
+    public void getNotify(com.tcn.cloud.api.api.v1alpha1.vanalytics.notifier.GetNotifyRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.notifier.Notify> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetNotifyMethod(), responseObserver);
     }
-  }
-
-  /**
-   * Base class for the server implementation of the service Notifier.
-   */
-  public static abstract class NotifierImplBase
-      implements io.grpc.BindableService, AsyncService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return NotifierGrpc.bindService(this);
+      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getGetNotifyMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.notifier.GetNotifyRequest,
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.notifier.Notify>(
+                  this, METHODID_GET_NOTIFY)))
+          .build();
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service Notifier.
    */
-  public static final class NotifierStub
-      extends io.grpc.stub.AbstractAsyncStub<NotifierStub> {
+  public static final class NotifierStub extends io.grpc.stub.AbstractAsyncStub<NotifierStub> {
     private NotifierStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -145,10 +144,8 @@ public final class NotifierGrpc {
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service Notifier.
    */
-  public static final class NotifierBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<NotifierBlockingStub> {
+  public static final class NotifierBlockingStub extends io.grpc.stub.AbstractBlockingStub<NotifierBlockingStub> {
     private NotifierBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -172,10 +169,8 @@ public final class NotifierGrpc {
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service Notifier.
    */
-  public static final class NotifierFutureStub
-      extends io.grpc.stub.AbstractFutureStub<NotifierFutureStub> {
+  public static final class NotifierFutureStub extends io.grpc.stub.AbstractFutureStub<NotifierFutureStub> {
     private NotifierFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -206,10 +201,10 @@ public final class NotifierGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AsyncService serviceImpl;
+    private final NotifierImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AsyncService serviceImpl, int methodId) {
+    MethodHandlers(NotifierImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -236,18 +231,6 @@ public final class NotifierGrpc {
           throw new AssertionError();
       }
     }
-  }
-
-  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
-    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-        .addMethod(
-          getGetNotifyMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.notifier.GetNotifyRequest,
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.notifier.Notify>(
-                service, METHODID_GET_NOTIFY)))
-        .build();
   }
 
   private static abstract class NotifierBaseDescriptorSupplier

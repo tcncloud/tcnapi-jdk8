@@ -30,6 +30,78 @@ private static final long serialVersionUID = 0L;
     return new DeleteWFMAgentMembershipsReq();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private DeleteWFMAgentMembershipsReq(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              wfmAgentSids_ = newLongList();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            wfmAgentSids_.addLong(input.readInt64());
+            break;
+          }
+          case 10: {
+            int length = input.readRawVarint32();
+            int limit = input.pushLimit(length);
+            if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+              wfmAgentSids_ = newLongList();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            while (input.getBytesUntilLimit() > 0) {
+              wfmAgentSids_.addLong(input.readInt64());
+            }
+            input.popLimit(limit);
+            break;
+          }
+          case 16: {
+
+            agentGroupSid_ = input.readInt64();
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        wfmAgentSids_.makeImmutable(); // C
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_DeleteWFMAgentMembershipsReq_descriptor;
@@ -44,7 +116,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WFM_AGENT_SIDS_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
   private com.google.protobuf.Internal.LongList wfmAgentSids_;
   /**
    * <pre>
@@ -85,7 +156,7 @@ private static final long serialVersionUID = 0L;
   private int wfmAgentSidsMemoizedSerializedSize = -1;
 
   public static final int AGENT_GROUP_SID_FIELD_NUMBER = 2;
-  private long agentGroupSid_ = 0L;
+  private long agentGroupSid_;
   /**
    * <pre>
    * ID of the agent group to that the agents associate with.
@@ -124,7 +195,7 @@ private static final long serialVersionUID = 0L;
     if (agentGroupSid_ != 0L) {
       output.writeInt64(2, agentGroupSid_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -151,7 +222,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, agentGroupSid_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -170,7 +241,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getWfmAgentSidsList())) return false;
     if (getAgentGroupSid()
         != other.getAgentGroupSid()) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -188,7 +259,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + AGENT_GROUP_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getAgentGroupSid());
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -237,13 +308,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -311,20 +380,26 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       wfmAgentSids_ = emptyLongList();
+      bitField0_ = (bitField0_ & ~0x00000001);
       agentGroupSid_ = 0L;
+
       return this;
     }
 
@@ -351,25 +426,15 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsReq buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsReq result = new com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsReq(this);
-      buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      onBuilt();
-      return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsReq result) {
+      int from_bitField0_ = bitField0_;
       if (((bitField0_ & 0x00000001) != 0)) {
         wfmAgentSids_.makeImmutable();
         bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.wfmAgentSids_ = wfmAgentSids_;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsReq result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.agentGroupSid_ = agentGroupSid_;
-      }
+      result.agentGroupSid_ = agentGroupSid_;
+      onBuilt();
+      return result;
     }
 
     @java.lang.Override
@@ -429,7 +494,7 @@ private static final long serialVersionUID = 0L;
       if (other.getAgentGroupSid() != 0L) {
         setAgentGroupSid(other.getAgentGroupSid());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -444,51 +509,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsReq parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              long v = input.readInt64();
-              ensureWfmAgentSidsIsMutable();
-              wfmAgentSids_.addLong(v);
-              break;
-            } // case 8
-            case 10: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              ensureWfmAgentSidsIsMutable();
-              while (input.getBytesUntilLimit() > 0) {
-                wfmAgentSids_.addLong(input.readInt64());
-              }
-              input.popLimit(limit);
-              break;
-            } // case 10
-            case 16: {
-              agentGroupSid_ = input.readInt64();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 16
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -498,7 +529,7 @@ private static final long serialVersionUID = 0L;
       if (!((bitField0_ & 0x00000001) != 0)) {
         wfmAgentSids_ = mutableCopy(wfmAgentSids_);
         bitField0_ |= 0x00000001;
-      }
+       }
     }
     /**
      * <pre>
@@ -548,7 +579,6 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setWfmAgentSids(
         int index, long value) {
-
       ensureWfmAgentSidsIsMutable();
       wfmAgentSids_.setLong(index, value);
       onChanged();
@@ -564,7 +594,6 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder addWfmAgentSids(long value) {
-
       ensureWfmAgentSidsIsMutable();
       wfmAgentSids_.addLong(value);
       onChanged();
@@ -625,9 +654,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAgentGroupSid(long value) {
-
+      
       agentGroupSid_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -640,7 +668,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAgentGroupSid() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       agentGroupSid_ = 0L;
       onChanged();
       return this;
@@ -678,18 +706,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new DeleteWFMAgentMembershipsReq(input, extensionRegistry);
     }
   };
 

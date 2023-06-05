@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.50.0)",
     comments = "Source: api/v1alpha1/insights/service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class InsightsGrpc {
@@ -371,14 +371,14 @@ public final class InsightsGrpc {
 
   /**
    */
-  public interface AsyncService {
+  public static abstract class InsightsImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
      * CreateInsight creates a new insight
      * </pre>
      */
-    default void createInsight(com.tcn.cloud.api.api.v1alpha1.insights.CreateInsightRequest request,
+    public void createInsight(com.tcn.cloud.api.api.v1alpha1.insights.CreateInsightRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.CreateInsightResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateInsightMethod(), responseObserver);
     }
@@ -388,7 +388,7 @@ public final class InsightsGrpc {
      * ListInsights lists insights
      * </pre>
      */
-    default void listInsights(com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest request,
+    public void listInsights(com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListInsightsMethod(), responseObserver);
     }
@@ -398,7 +398,7 @@ public final class InsightsGrpc {
      * UpdateInsight updates an existing insight
      * </pre>
      */
-    default void updateInsight(com.tcn.cloud.api.api.v1alpha1.insights.UpdateInsightRequest request,
+    public void updateInsight(com.tcn.cloud.api.api.v1alpha1.insights.UpdateInsightRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.UpdateInsightResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateInsightMethod(), responseObserver);
     }
@@ -408,7 +408,7 @@ public final class InsightsGrpc {
      * DeleteInsight deletes a insight
      * </pre>
      */
-    default void deleteInsight(com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest request,
+    public void deleteInsight(com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteInsightMethod(), responseObserver);
     }
@@ -418,7 +418,7 @@ public final class InsightsGrpc {
      * GetInsight gets a insight by id
      * </pre>
      */
-    default void getInsight(com.tcn.cloud.api.api.v1alpha1.insights.GetInsightRequest request,
+    public void getInsight(com.tcn.cloud.api.api.v1alpha1.insights.GetInsightRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.GetInsightResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetInsightMethod(), responseObserver);
     }
@@ -428,7 +428,7 @@ public final class InsightsGrpc {
      * CreateCommonsInsight creates a common library insight
      * </pre>
      */
-    default void createCommonsInsight(com.tcn.cloud.api.api.v1alpha1.insights.CreateInsightRequest request,
+    public void createCommonsInsight(com.tcn.cloud.api.api.v1alpha1.insights.CreateInsightRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.CreateInsightResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateCommonsInsightMethod(), responseObserver);
     }
@@ -438,7 +438,7 @@ public final class InsightsGrpc {
      * UpdateCommonsInsight updates a common library insight
      * </pre>
      */
-    default void updateCommonsInsight(com.tcn.cloud.api.api.v1alpha1.insights.UpdateInsightRequest request,
+    public void updateCommonsInsight(com.tcn.cloud.api.api.v1alpha1.insights.UpdateInsightRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.UpdateInsightResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateCommonsInsightMethod(), responseObserver);
     }
@@ -448,7 +448,7 @@ public final class InsightsGrpc {
      * DeleteCommonsInsight deletes a common library insight
      * </pre>
      */
-    default void deleteCommonsInsight(com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest request,
+    public void deleteCommonsInsight(com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteCommonsInsightMethod(), responseObserver);
     }
@@ -458,7 +458,7 @@ public final class InsightsGrpc {
      * GetVfsSchema gets schema for a vfs
      * </pre>
      */
-    default void getVfsSchema(com.tcn.cloud.api.api.v1alpha1.insights.GetVfsSchemaRequest request,
+    public void getVfsSchema(com.tcn.cloud.api.api.v1alpha1.insights.GetVfsSchemaRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.GetVfsSchemaResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetVfsSchemaMethod(), responseObserver);
     }
@@ -468,28 +468,90 @@ public final class InsightsGrpc {
      * ListVfses lists exported vfs aliases
      * </pre>
      */
-    default void listVfses(com.tcn.cloud.api.api.v1alpha1.insights.ListVfsesRequest request,
+    public void listVfses(com.tcn.cloud.api.api.v1alpha1.insights.ListVfsesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.insights.ListVfsesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListVfsesMethod(), responseObserver);
     }
-  }
-
-  /**
-   * Base class for the server implementation of the service Insights.
-   */
-  public static abstract class InsightsImplBase
-      implements io.grpc.BindableService, AsyncService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return InsightsGrpc.bindService(this);
+      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getCreateInsightMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.insights.CreateInsightRequest,
+                com.tcn.cloud.api.api.v1alpha1.insights.CreateInsightResponse>(
+                  this, METHODID_CREATE_INSIGHT)))
+          .addMethod(
+            getListInsightsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest,
+                com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse>(
+                  this, METHODID_LIST_INSIGHTS)))
+          .addMethod(
+            getUpdateInsightMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.insights.UpdateInsightRequest,
+                com.tcn.cloud.api.api.v1alpha1.insights.UpdateInsightResponse>(
+                  this, METHODID_UPDATE_INSIGHT)))
+          .addMethod(
+            getDeleteInsightMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest,
+                com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightResponse>(
+                  this, METHODID_DELETE_INSIGHT)))
+          .addMethod(
+            getGetInsightMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.insights.GetInsightRequest,
+                com.tcn.cloud.api.api.v1alpha1.insights.GetInsightResponse>(
+                  this, METHODID_GET_INSIGHT)))
+          .addMethod(
+            getCreateCommonsInsightMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.insights.CreateInsightRequest,
+                com.tcn.cloud.api.api.v1alpha1.insights.CreateInsightResponse>(
+                  this, METHODID_CREATE_COMMONS_INSIGHT)))
+          .addMethod(
+            getUpdateCommonsInsightMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.insights.UpdateInsightRequest,
+                com.tcn.cloud.api.api.v1alpha1.insights.UpdateInsightResponse>(
+                  this, METHODID_UPDATE_COMMONS_INSIGHT)))
+          .addMethod(
+            getDeleteCommonsInsightMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest,
+                com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightResponse>(
+                  this, METHODID_DELETE_COMMONS_INSIGHT)))
+          .addMethod(
+            getGetVfsSchemaMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.insights.GetVfsSchemaRequest,
+                com.tcn.cloud.api.api.v1alpha1.insights.GetVfsSchemaResponse>(
+                  this, METHODID_GET_VFS_SCHEMA)))
+          .addMethod(
+            getListVfsesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.insights.ListVfsesRequest,
+                com.tcn.cloud.api.api.v1alpha1.insights.ListVfsesResponse>(
+                  this, METHODID_LIST_VFSES)))
+          .build();
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service Insights.
    */
-  public static final class InsightsStub
-      extends io.grpc.stub.AbstractAsyncStub<InsightsStub> {
+  public static final class InsightsStub extends io.grpc.stub.AbstractAsyncStub<InsightsStub> {
     private InsightsStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -613,10 +675,8 @@ public final class InsightsGrpc {
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service Insights.
    */
-  public static final class InsightsBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<InsightsBlockingStub> {
+  public static final class InsightsBlockingStub extends io.grpc.stub.AbstractBlockingStub<InsightsBlockingStub> {
     private InsightsBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -730,10 +790,8 @@ public final class InsightsGrpc {
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service Insights.
    */
-  public static final class InsightsFutureStub
-      extends io.grpc.stub.AbstractFutureStub<InsightsFutureStub> {
+  public static final class InsightsFutureStub extends io.grpc.stub.AbstractFutureStub<InsightsFutureStub> {
     private InsightsFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -872,10 +930,10 @@ public final class InsightsGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AsyncService serviceImpl;
+    private final InsightsImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AsyncService serviceImpl, int methodId) {
+    MethodHandlers(InsightsImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -938,81 +996,6 @@ public final class InsightsGrpc {
           throw new AssertionError();
       }
     }
-  }
-
-  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
-    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-        .addMethod(
-          getCreateInsightMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.insights.CreateInsightRequest,
-              com.tcn.cloud.api.api.v1alpha1.insights.CreateInsightResponse>(
-                service, METHODID_CREATE_INSIGHT)))
-        .addMethod(
-          getListInsightsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsRequest,
-              com.tcn.cloud.api.api.v1alpha1.insights.ListInsightsResponse>(
-                service, METHODID_LIST_INSIGHTS)))
-        .addMethod(
-          getUpdateInsightMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.insights.UpdateInsightRequest,
-              com.tcn.cloud.api.api.v1alpha1.insights.UpdateInsightResponse>(
-                service, METHODID_UPDATE_INSIGHT)))
-        .addMethod(
-          getDeleteInsightMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest,
-              com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightResponse>(
-                service, METHODID_DELETE_INSIGHT)))
-        .addMethod(
-          getGetInsightMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.insights.GetInsightRequest,
-              com.tcn.cloud.api.api.v1alpha1.insights.GetInsightResponse>(
-                service, METHODID_GET_INSIGHT)))
-        .addMethod(
-          getCreateCommonsInsightMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.insights.CreateInsightRequest,
-              com.tcn.cloud.api.api.v1alpha1.insights.CreateInsightResponse>(
-                service, METHODID_CREATE_COMMONS_INSIGHT)))
-        .addMethod(
-          getUpdateCommonsInsightMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.insights.UpdateInsightRequest,
-              com.tcn.cloud.api.api.v1alpha1.insights.UpdateInsightResponse>(
-                service, METHODID_UPDATE_COMMONS_INSIGHT)))
-        .addMethod(
-          getDeleteCommonsInsightMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightRequest,
-              com.tcn.cloud.api.api.v1alpha1.insights.DeleteInsightResponse>(
-                service, METHODID_DELETE_COMMONS_INSIGHT)))
-        .addMethod(
-          getGetVfsSchemaMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.insights.GetVfsSchemaRequest,
-              com.tcn.cloud.api.api.v1alpha1.insights.GetVfsSchemaResponse>(
-                service, METHODID_GET_VFS_SCHEMA)))
-        .addMethod(
-          getListVfsesMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.insights.ListVfsesRequest,
-              com.tcn.cloud.api.api.v1alpha1.insights.ListVfsesResponse>(
-                service, METHODID_LIST_VFSES)))
-        .build();
   }
 
   private static abstract class InsightsBaseDescriptorSupplier

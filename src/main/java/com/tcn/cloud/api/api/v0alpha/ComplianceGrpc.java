@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.50.0)",
     comments = "Source: api/v0alpha/compliance.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ComplianceGrpc {
@@ -1983,81 +1983,81 @@ public final class ComplianceGrpc {
 
   /**
    */
-  public interface AsyncService {
+  public static abstract class ComplianceImplBase implements io.grpc.BindableService {
 
     /**
      */
-    default void ruleAutoComplete(com.tcn.cloud.api.api.v0alpha.RuleAutoCompleteReq request,
+    public void ruleAutoComplete(com.tcn.cloud.api.api.v0alpha.RuleAutoCompleteReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RuleAutoCompleteRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRuleAutoCompleteMethod(), responseObserver);
     }
 
     /**
      */
-    default void checkRuleSet(com.tcn.cloud.api.api.v0alpha.CheckRuleSetReq request,
+    public void checkRuleSet(com.tcn.cloud.api.api.v0alpha.CheckRuleSetReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CheckRuleSetRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCheckRuleSetMethod(), responseObserver);
     }
 
     /**
      */
-    default void assignRuleSet(com.tcn.cloud.api.api.v0alpha.AssignRuleSetReq request,
+    public void assignRuleSet(com.tcn.cloud.api.api.v0alpha.AssignRuleSetReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AssignRuleSetRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAssignRuleSetMethod(), responseObserver);
     }
 
     /**
      */
-    default void listRuleSets(com.tcn.cloud.api.api.v0alpha.ListRuleSetsReq request,
+    public void listRuleSets(com.tcn.cloud.api.api.v0alpha.ListRuleSetsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListRuleSetsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListRuleSetsMethod(), responseObserver);
     }
 
     /**
      */
-    default void getRuleSet(com.tcn.cloud.api.api.v0alpha.GetRuleSetReq request,
+    public void getRuleSet(com.tcn.cloud.api.api.v0alpha.GetRuleSetReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RuleSet> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetRuleSetMethod(), responseObserver);
     }
 
     /**
      */
-    default void getRuleSetByName(com.tcn.cloud.api.api.v0alpha.GetRuleSetByNameReq request,
+    public void getRuleSetByName(com.tcn.cloud.api.api.v0alpha.GetRuleSetByNameReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RuleSet> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetRuleSetByNameMethod(), responseObserver);
     }
 
     /**
      */
-    default void createRuleSet(com.tcn.cloud.api.api.v0alpha.CreateRuleSetReq request,
+    public void createRuleSet(com.tcn.cloud.api.api.v0alpha.CreateRuleSetReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RuleSet> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateRuleSetMethod(), responseObserver);
     }
 
     /**
      */
-    default void renameRuleSet(com.tcn.cloud.api.api.v0alpha.RenameRuleSetReq request,
+    public void renameRuleSet(com.tcn.cloud.api.api.v0alpha.RenameRuleSetReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RenameRuleSetRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRenameRuleSetMethod(), responseObserver);
     }
 
     /**
      */
-    default void enableRuleSet(com.tcn.cloud.api.api.v0alpha.EnableRuleSetReq request,
+    public void enableRuleSet(com.tcn.cloud.api.api.v0alpha.EnableRuleSetReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.EnableRuleSetRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEnableRuleSetMethod(), responseObserver);
     }
 
     /**
      */
-    default void disableRuleSet(com.tcn.cloud.api.api.v0alpha.DisableRuleSetReq request,
+    public void disableRuleSet(com.tcn.cloud.api.api.v0alpha.DisableRuleSetReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DisableRuleSetRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDisableRuleSetMethod(), responseObserver);
     }
 
     /**
      */
-    default void createScrubList(com.tcn.cloud.api.api.v0alpha.CreateScrubListReq request,
+    public void createScrubList(com.tcn.cloud.api.api.v0alpha.CreateScrubListReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ScrubListRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateScrubListMethod(), responseObserver);
     }
@@ -2071,7 +2071,7 @@ public final class ComplianceGrpc {
      *      EXECUTE_DO_NOT_CALL_LIST
      * </pre>
      */
-    default void addScrubListEntries(com.tcn.cloud.api.api.v0alpha.AddScrubListEntriesReq request,
+    public void addScrubListEntries(com.tcn.cloud.api.api.v0alpha.AddScrubListEntriesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ScrubListRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddScrubListEntriesMethod(), responseObserver);
     }
@@ -2084,77 +2084,77 @@ public final class ComplianceGrpc {
      *      EXECUTE_DO_NOT_CALL_LIST
      * </pre>
      */
-    default void updateScrubEntry(com.tcn.cloud.api.api.v0alpha.UpdateScrubEntryReq request,
+    public void updateScrubEntry(com.tcn.cloud.api.api.v0alpha.UpdateScrubEntryReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateScrubEntryRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateScrubEntryMethod(), responseObserver);
     }
 
     /**
      */
-    default void deleteScrubListEntries(com.tcn.cloud.api.api.v0alpha.DeleteScrubListEntriesReq request,
+    public void deleteScrubListEntries(com.tcn.cloud.api.api.v0alpha.DeleteScrubListEntriesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ScrubListRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteScrubListEntriesMethod(), responseObserver);
     }
 
     /**
      */
-    default void getScrubList(com.tcn.cloud.api.api.v0alpha.GetScrubListReq request,
+    public void getScrubList(com.tcn.cloud.api.api.v0alpha.GetScrubListReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ScrubListRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetScrubListMethod(), responseObserver);
     }
 
     /**
      */
-    default void deleteScrubList(com.tcn.cloud.api.api.v0alpha.DeleteScrubListReq request,
+    public void deleteScrubList(com.tcn.cloud.api.api.v0alpha.DeleteScrubListReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ScrubListRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteScrubListMethod(), responseObserver);
     }
 
     /**
      */
-    default void getDefaultRules(com.tcn.cloud.api.api.v0alpha.GetDefaultRulesReq request,
+    public void getDefaultRules(com.tcn.cloud.api.api.v0alpha.GetDefaultRulesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetDefaultRulesRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDefaultRulesMethod(), responseObserver);
     }
 
     /**
      */
-    default void getScrubLists(com.tcn.cloud.api.api.v0alpha.GetScrubListsReq request,
+    public void getScrubLists(com.tcn.cloud.api.api.v0alpha.GetScrubListsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ScrubListsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetScrubListsMethod(), responseObserver);
     }
 
     /**
      */
-    default void searchScrubList(com.tcn.cloud.api.api.v0alpha.SearchScrubListReq request,
+    public void searchScrubList(com.tcn.cloud.api.api.v0alpha.SearchScrubListReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ScrubList> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSearchScrubListMethod(), responseObserver);
     }
 
     /**
      */
-    default void getScrubListUploadUrl(com.tcn.cloud.api.api.v0alpha.GetScrubListUploadUrlReq request,
+    public void getScrubListUploadUrl(com.tcn.cloud.api.api.v0alpha.GetScrubListUploadUrlReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetScrubListUploadUrlRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetScrubListUploadUrlMethod(), responseObserver);
     }
 
     /**
      */
-    default void processScrubListUpload(com.tcn.cloud.api.api.v0alpha.ProcessScrubListUploadReq request,
+    public void processScrubListUpload(com.tcn.cloud.api.api.v0alpha.ProcessScrubListUploadReq request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getProcessScrubListUploadMethod(), responseObserver);
     }
 
     /**
      */
-    default void processScrubListDeleteUpload(com.tcn.cloud.api.api.v0alpha.ProcessScrubListDeleteUploadReq request,
+    public void processScrubListDeleteUpload(com.tcn.cloud.api.api.v0alpha.ProcessScrubListDeleteUploadReq request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getProcessScrubListDeleteUploadMethod(), responseObserver);
     }
 
     /**
      */
-    default void exportScrubList(com.tcn.cloud.api.api.v0alpha.ExportScrubListReq request,
+    public void exportScrubList(com.tcn.cloud.api.api.v0alpha.ExportScrubListReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ExportScrubListRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getExportScrubListMethod(), responseObserver);
     }
@@ -2166,7 +2166,7 @@ public final class ComplianceGrpc {
      *      EXECUTE_DO_NOT_CALL_LIST
      * </pre>
      */
-    default void purgeScrubList(com.tcn.cloud.api.api.v0alpha.PurgeScrubListReq request,
+    public void purgeScrubList(com.tcn.cloud.api.api.v0alpha.PurgeScrubListReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.PurgeScrubListRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPurgeScrubListMethod(), responseObserver);
     }
@@ -2176,7 +2176,7 @@ public final class ComplianceGrpc {
      * Creates a new Scenario
      * </pre>
      */
-    default void createScenario(com.tcn.cloud.api.api.v0alpha.CreateScenarioReq request,
+    public void createScenario(com.tcn.cloud.api.api.v0alpha.CreateScenarioReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateScenarioRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateScenarioMethod(), responseObserver);
     }
@@ -2186,7 +2186,7 @@ public final class ComplianceGrpc {
      * Gets one Scenario
      * </pre>
      */
-    default void getScenario(com.tcn.cloud.api.api.v0alpha.GetScenarioReq request,
+    public void getScenario(com.tcn.cloud.api.api.v0alpha.GetScenarioReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetScenarioRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetScenarioMethod(), responseObserver);
     }
@@ -2196,7 +2196,7 @@ public final class ComplianceGrpc {
      * Updates a Scenario
      * </pre>
      */
-    default void updateScenario(com.tcn.cloud.api.api.v0alpha.UpdateScenarioReq request,
+    public void updateScenario(com.tcn.cloud.api.api.v0alpha.UpdateScenarioReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateScenarioRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateScenarioMethod(), responseObserver);
     }
@@ -2206,7 +2206,7 @@ public final class ComplianceGrpc {
      * Deletes a Scenario
      * </pre>
      */
-    default void deleteScenario(com.tcn.cloud.api.api.v0alpha.DeleteScenarioReq request,
+    public void deleteScenario(com.tcn.cloud.api.api.v0alpha.DeleteScenarioReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteScenarioRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteScenarioMethod(), responseObserver);
     }
@@ -2216,7 +2216,7 @@ public final class ComplianceGrpc {
      * Run scenarios against ruleset
      * </pre>
      */
-    default void runAssignedScenarios(com.tcn.cloud.api.api.v0alpha.RunAssignedScenariosReq request,
+    public void runAssignedScenarios(com.tcn.cloud.api.api.v0alpha.RunAssignedScenariosReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RunAssignedScenariosRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRunAssignedScenariosMethod(), responseObserver);
     }
@@ -2226,7 +2226,7 @@ public final class ComplianceGrpc {
      * Lists all scenarios
      * </pre>
      */
-    default void listAllScenarios(com.tcn.cloud.api.api.v0alpha.ListAllScenariosReq request,
+    public void listAllScenarios(com.tcn.cloud.api.api.v0alpha.ListAllScenariosReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAllScenariosRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAllScenariosMethod(), responseObserver);
     }
@@ -2236,7 +2236,7 @@ public final class ComplianceGrpc {
      * List currently unassigned scenarios available to be assigned to a given ruleset
      * </pre>
      */
-    default void listUnassignedScenarios(com.tcn.cloud.api.api.v0alpha.ListUnassignedScenariosReq request,
+    public void listUnassignedScenarios(com.tcn.cloud.api.api.v0alpha.ListUnassignedScenariosReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListUnassignedScenariosRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListUnassignedScenariosMethod(), responseObserver);
     }
@@ -2246,7 +2246,7 @@ public final class ComplianceGrpc {
      * List rule sets currently assigned to a given scenario
      * </pre>
      */
-    default void listAssignedRuleSets(com.tcn.cloud.api.api.v0alpha.ListAssignedRuleSetsReq request,
+    public void listAssignedRuleSets(com.tcn.cloud.api.api.v0alpha.ListAssignedRuleSetsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAssignedRuleSetsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAssignedRuleSetsMethod(), responseObserver);
     }
@@ -2256,7 +2256,7 @@ public final class ComplianceGrpc {
      * List scenarios currently assigned to a given ruleset
      * </pre>
      */
-    default void listAssignedScenarios(com.tcn.cloud.api.api.v0alpha.ListAssignedScenariosReq request,
+    public void listAssignedScenarios(com.tcn.cloud.api.api.v0alpha.ListAssignedScenariosReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAssignedScenariosRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAssignedScenariosMethod(), responseObserver);
     }
@@ -2266,7 +2266,7 @@ public final class ComplianceGrpc {
      * Assign a scenario to a given ruleset
      * </pre>
      */
-    default void assignScenario(com.tcn.cloud.api.api.v0alpha.AssignScenarioReq request,
+    public void assignScenario(com.tcn.cloud.api.api.v0alpha.AssignScenarioReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAssignScenarioMethod(), responseObserver);
     }
@@ -2276,7 +2276,7 @@ public final class ComplianceGrpc {
      * Unassign a scenario from a given ruleset
      * </pre>
      */
-    default void unassignScenario(com.tcn.cloud.api.api.v0alpha.UnassignScenarioReq request,
+    public void unassignScenario(com.tcn.cloud.api.api.v0alpha.UnassignScenarioReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUnassignScenarioMethod(), responseObserver);
     }
@@ -2286,7 +2286,7 @@ public final class ComplianceGrpc {
      * Enable an scenario
      * </pre>
      */
-    default void enableScenario(com.tcn.cloud.api.api.v0alpha.EnableScenarioReq request,
+    public void enableScenario(com.tcn.cloud.api.api.v0alpha.EnableScenarioReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEnableScenarioMethod(), responseObserver);
     }
@@ -2296,7 +2296,7 @@ public final class ComplianceGrpc {
      * Disable an scenario
      * </pre>
      */
-    default void disableScenario(com.tcn.cloud.api.api.v0alpha.DisableScenarioReq request,
+    public void disableScenario(com.tcn.cloud.api.api.v0alpha.DisableScenarioReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDisableScenarioMethod(), responseObserver);
     }
@@ -2307,7 +2307,7 @@ public final class ComplianceGrpc {
      * This will get all available Meta Fields
      * </pre>
      */
-    default void getFieldNames(com.tcn.cloud.api.api.v0alpha.GetFieldNamesReq request,
+    public void getFieldNames(com.tcn.cloud.api.api.v0alpha.GetFieldNamesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.FieldNames> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetFieldNamesMethod(), responseObserver);
     }
@@ -2317,7 +2317,7 @@ public final class ComplianceGrpc {
      * This will get all possible results (Answered, Answered Machine, Busy, etc.)
      * </pre>
      */
-    default void getResultDescriptions(com.tcn.cloud.api.api.v0alpha.GetResultDescriptionsReq request,
+    public void getResultDescriptions(com.tcn.cloud.api.api.v0alpha.GetResultDescriptionsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.FieldNames> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetResultDescriptionsMethod(), responseObserver);
     }
@@ -2331,7 +2331,7 @@ public final class ComplianceGrpc {
      *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
-    default void createConsentProfile(com.tcn.cloud.api.api.v0alpha.CreateConsentProfileReq request,
+    public void createConsentProfile(com.tcn.cloud.api.api.v0alpha.CreateConsentProfileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateConsentProfileRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateConsentProfileMethod(), responseObserver);
     }
@@ -2345,7 +2345,7 @@ public final class ComplianceGrpc {
      *      none
      * </pre>
      */
-    default void createConsent(com.tcn.cloud.api.api.v0alpha.CreateConsentReq request,
+    public void createConsent(com.tcn.cloud.api.api.v0alpha.CreateConsentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateConsentRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateConsentMethod(), responseObserver);
     }
@@ -2359,7 +2359,7 @@ public final class ComplianceGrpc {
      *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
-    default void getConsentProfile(com.tcn.cloud.api.api.v0alpha.GetConsentProfileReq request,
+    public void getConsentProfile(com.tcn.cloud.api.api.v0alpha.GetConsentProfileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ConsentProfile> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetConsentProfileMethod(), responseObserver);
     }
@@ -2373,7 +2373,7 @@ public final class ComplianceGrpc {
      *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
-    default void getConsent(com.tcn.cloud.api.api.v0alpha.GetConsentReq request,
+    public void getConsent(com.tcn.cloud.api.api.v0alpha.GetConsentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Consent> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetConsentMethod(), responseObserver);
     }
@@ -2387,7 +2387,7 @@ public final class ComplianceGrpc {
      *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
-    default void getConsentByProfileAndContent(com.tcn.cloud.api.api.v0alpha.GetConsentByProfileAndContentReq request,
+    public void getConsentByProfileAndContent(com.tcn.cloud.api.api.v0alpha.GetConsentByProfileAndContentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetConsentByProfileAndContentRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetConsentByProfileAndContentMethod(), responseObserver);
     }
@@ -2401,7 +2401,7 @@ public final class ComplianceGrpc {
      *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
-    default void getConsentByContent(com.tcn.cloud.api.api.v0alpha.GetConsentByContentReq request,
+    public void getConsentByContent(com.tcn.cloud.api.api.v0alpha.GetConsentByContentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetConsentByContentRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetConsentByContentMethod(), responseObserver);
     }
@@ -2415,7 +2415,7 @@ public final class ComplianceGrpc {
      *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
-    default void searchConsentByContent(com.tcn.cloud.api.api.v0alpha.SearchConsentByContentReq request,
+    public void searchConsentByContent(com.tcn.cloud.api.api.v0alpha.SearchConsentByContentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SearchConsentByContentRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSearchConsentByContentMethod(), responseObserver);
     }
@@ -2435,7 +2435,7 @@ public final class ComplianceGrpc {
      *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
-    default void updateConsent(com.tcn.cloud.api.api.v0alpha.UpdateConsentReq request,
+    public void updateConsent(com.tcn.cloud.api.api.v0alpha.UpdateConsentReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateConsentMethod(), responseObserver);
     }
@@ -2449,7 +2449,7 @@ public final class ComplianceGrpc {
      *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
-    default void expireConsent(com.tcn.cloud.api.api.v0alpha.ExpireConsentReq request,
+    public void expireConsent(com.tcn.cloud.api.api.v0alpha.ExpireConsentReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getExpireConsentMethod(), responseObserver);
     }
@@ -2464,7 +2464,7 @@ public final class ComplianceGrpc {
      *      none
      * </pre>
      */
-    default void revokeConsent(com.tcn.cloud.api.api.v0alpha.RevokeConsentReq request,
+    public void revokeConsent(com.tcn.cloud.api.api.v0alpha.RevokeConsentReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRevokeConsentMethod(), responseObserver);
     }
@@ -2477,7 +2477,7 @@ public final class ComplianceGrpc {
      *      PERMISSION_COMPLIANCE_CONSENT
      * </pre>
      */
-    default void deleteConsent(com.tcn.cloud.api.api.v0alpha.DeleteConsentReq request,
+    public void deleteConsent(com.tcn.cloud.api.api.v0alpha.DeleteConsentReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteConsentMethod(), responseObserver);
     }
@@ -2490,7 +2490,7 @@ public final class ComplianceGrpc {
      *      EXECUTE_DO_NOT_CALL_LIST
      * </pre>
      */
-    default void processConsentListDeleteUpload(com.tcn.cloud.api.api.v0alpha.ProcessConsentListDeleteUploadReq request,
+    public void processConsentListDeleteUpload(com.tcn.cloud.api.api.v0alpha.ProcessConsentListDeleteUploadReq request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getProcessConsentListDeleteUploadMethod(), responseObserver);
     }
@@ -2505,7 +2505,7 @@ public final class ComplianceGrpc {
      *      EXECUTE_DO_NOT_CALL_LIST
      * </pre>
      */
-    default void enableConsentProfile(com.tcn.cloud.api.api.v0alpha.EnableConsentProfileReq request,
+    public void enableConsentProfile(com.tcn.cloud.api.api.v0alpha.EnableConsentProfileReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEnableConsentProfileMethod(), responseObserver);
     }
@@ -2520,7 +2520,7 @@ public final class ComplianceGrpc {
      *      EXECUTE_DO_NOT_CALL_LIST
      * </pre>
      */
-    default void disableConsentProfile(com.tcn.cloud.api.api.v0alpha.DisableConsentProfileReq request,
+    public void disableConsentProfile(com.tcn.cloud.api.api.v0alpha.DisableConsentProfileReq request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDisableConsentProfileMethod(), responseObserver);
     }
@@ -2536,7 +2536,7 @@ public final class ComplianceGrpc {
      *      EXECUTE_DO_NOT_CALL_LIST
      * </pre>
      */
-    default void listConsentProfiles(com.tcn.cloud.api.api.v0alpha.ListConsentProfilesReq request,
+    public void listConsentProfiles(com.tcn.cloud.api.api.v0alpha.ListConsentProfilesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListConsentProfilesRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListConsentProfilesMethod(), responseObserver);
     }
@@ -2550,7 +2550,7 @@ public final class ComplianceGrpc {
      *      EXECUTE_DO_NOT_CALL_LIST
      * </pre>
      */
-    default void getConsentUploadUrl(com.tcn.cloud.api.api.v0alpha.GetConsentUploadUrlReq request,
+    public void getConsentUploadUrl(com.tcn.cloud.api.api.v0alpha.GetConsentUploadUrlReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetConsentUploadUrlRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetConsentUploadUrlMethod(), responseObserver);
     }
@@ -2563,7 +2563,7 @@ public final class ComplianceGrpc {
      *      EXECUTE_DO_NOT_CALL_LIST
      * </pre>
      */
-    default void processConsentUpload(com.tcn.cloud.api.api.v0alpha.ProcessConsentUploadReq request,
+    public void processConsentUpload(com.tcn.cloud.api.api.v0alpha.ProcessConsentUploadReq request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getProcessConsentUploadMethod(), responseObserver);
     }
@@ -2578,7 +2578,7 @@ public final class ComplianceGrpc {
      *      EXECUTE_DO_NOT_CALL_LIST
      * </pre>
      */
-    default void listConsentTopics(com.tcn.cloud.api.api.v0alpha.ListConsentTopicsReq request,
+    public void listConsentTopics(com.tcn.cloud.api.api.v0alpha.ListConsentTopicsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListConsentTopicsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListConsentTopicsMethod(), responseObserver);
     }
@@ -2592,7 +2592,7 @@ public final class ComplianceGrpc {
      *      EXECUTE_DO_NOT_CALL_LIST
      * </pre>
      */
-    default void getConsentTopic(com.tcn.cloud.api.api.v0alpha.GetConsentTopicReq request,
+    public void getConsentTopic(com.tcn.cloud.api.api.v0alpha.GetConsentTopicReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ConsentTopic> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetConsentTopicMethod(), responseObserver);
     }
@@ -2605,7 +2605,7 @@ public final class ComplianceGrpc {
      *      EXECUTE_DO_NOT_CALL_LIST
      * </pre>
      */
-    default void createConsentTopic(com.tcn.cloud.api.api.v0alpha.ConsentTopic request,
+    public void createConsentTopic(com.tcn.cloud.api.api.v0alpha.ConsentTopic request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateConsentTopicMethod(), responseObserver);
     }
@@ -2618,7 +2618,7 @@ public final class ComplianceGrpc {
      *      EXECUTE_DO_NOT_CALL_LIST
      * </pre>
      */
-    default void deleteConsentTopic(com.tcn.cloud.api.api.v0alpha.ConsentTopic request,
+    public void deleteConsentTopic(com.tcn.cloud.api.api.v0alpha.ConsentTopic request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteConsentTopicMethod(), responseObserver);
     }
@@ -2631,7 +2631,7 @@ public final class ComplianceGrpc {
      *      EXECUTE_DO_NOT_CALL_LIST
      * </pre>
      */
-    default void updateConsentTopic(com.tcn.cloud.api.api.v0alpha.UpdateConsentTopicReq request,
+    public void updateConsentTopic(com.tcn.cloud.api.api.v0alpha.UpdateConsentTopicReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateConsentTopicMethod(), responseObserver);
     }
@@ -2646,28 +2646,454 @@ public final class ComplianceGrpc {
      *      AGENT
      * </pre>
      */
-    default void processOutboundCall(com.tcn.cloud.api.api.v0alpha.ProcessOutboundCallReq request,
+    public void processOutboundCall(com.tcn.cloud.api.api.v0alpha.ProcessOutboundCallReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ProcessRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getProcessOutboundCallMethod(), responseObserver);
     }
-  }
-
-  /**
-   * Base class for the server implementation of the service Compliance.
-   */
-  public static abstract class ComplianceImplBase
-      implements io.grpc.BindableService, AsyncService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return ComplianceGrpc.bindService(this);
+      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getRuleAutoCompleteMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.RuleAutoCompleteReq,
+                com.tcn.cloud.api.api.v0alpha.RuleAutoCompleteRes>(
+                  this, METHODID_RULE_AUTO_COMPLETE)))
+          .addMethod(
+            getCheckRuleSetMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.CheckRuleSetReq,
+                com.tcn.cloud.api.api.v0alpha.CheckRuleSetRes>(
+                  this, METHODID_CHECK_RULE_SET)))
+          .addMethod(
+            getAssignRuleSetMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.AssignRuleSetReq,
+                com.tcn.cloud.api.api.v0alpha.AssignRuleSetRes>(
+                  this, METHODID_ASSIGN_RULE_SET)))
+          .addMethod(
+            getListRuleSetsMethod(),
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.ListRuleSetsReq,
+                com.tcn.cloud.api.api.v0alpha.ListRuleSetsRes>(
+                  this, METHODID_LIST_RULE_SETS)))
+          .addMethod(
+            getGetRuleSetMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.GetRuleSetReq,
+                com.tcn.cloud.api.api.v0alpha.RuleSet>(
+                  this, METHODID_GET_RULE_SET)))
+          .addMethod(
+            getGetRuleSetByNameMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.GetRuleSetByNameReq,
+                com.tcn.cloud.api.api.v0alpha.RuleSet>(
+                  this, METHODID_GET_RULE_SET_BY_NAME)))
+          .addMethod(
+            getCreateRuleSetMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.CreateRuleSetReq,
+                com.tcn.cloud.api.api.v0alpha.RuleSet>(
+                  this, METHODID_CREATE_RULE_SET)))
+          .addMethod(
+            getRenameRuleSetMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.RenameRuleSetReq,
+                com.tcn.cloud.api.api.v0alpha.RenameRuleSetRes>(
+                  this, METHODID_RENAME_RULE_SET)))
+          .addMethod(
+            getEnableRuleSetMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.EnableRuleSetReq,
+                com.tcn.cloud.api.api.v0alpha.EnableRuleSetRes>(
+                  this, METHODID_ENABLE_RULE_SET)))
+          .addMethod(
+            getDisableRuleSetMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.DisableRuleSetReq,
+                com.tcn.cloud.api.api.v0alpha.DisableRuleSetRes>(
+                  this, METHODID_DISABLE_RULE_SET)))
+          .addMethod(
+            getCreateScrubListMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.CreateScrubListReq,
+                com.tcn.cloud.api.api.v0alpha.ScrubListRes>(
+                  this, METHODID_CREATE_SCRUB_LIST)))
+          .addMethod(
+            getAddScrubListEntriesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.AddScrubListEntriesReq,
+                com.tcn.cloud.api.api.v0alpha.ScrubListRes>(
+                  this, METHODID_ADD_SCRUB_LIST_ENTRIES)))
+          .addMethod(
+            getUpdateScrubEntryMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.UpdateScrubEntryReq,
+                com.tcn.cloud.api.api.v0alpha.UpdateScrubEntryRes>(
+                  this, METHODID_UPDATE_SCRUB_ENTRY)))
+          .addMethod(
+            getDeleteScrubListEntriesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.DeleteScrubListEntriesReq,
+                com.tcn.cloud.api.api.v0alpha.ScrubListRes>(
+                  this, METHODID_DELETE_SCRUB_LIST_ENTRIES)))
+          .addMethod(
+            getGetScrubListMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.GetScrubListReq,
+                com.tcn.cloud.api.api.v0alpha.ScrubListRes>(
+                  this, METHODID_GET_SCRUB_LIST)))
+          .addMethod(
+            getDeleteScrubListMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.DeleteScrubListReq,
+                com.tcn.cloud.api.api.v0alpha.ScrubListRes>(
+                  this, METHODID_DELETE_SCRUB_LIST)))
+          .addMethod(
+            getGetDefaultRulesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.GetDefaultRulesReq,
+                com.tcn.cloud.api.api.v0alpha.GetDefaultRulesRes>(
+                  this, METHODID_GET_DEFAULT_RULES)))
+          .addMethod(
+            getGetScrubListsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.GetScrubListsReq,
+                com.tcn.cloud.api.api.v0alpha.ScrubListsRes>(
+                  this, METHODID_GET_SCRUB_LISTS)))
+          .addMethod(
+            getSearchScrubListMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.SearchScrubListReq,
+                com.tcn.cloud.api.api.v0alpha.ScrubList>(
+                  this, METHODID_SEARCH_SCRUB_LIST)))
+          .addMethod(
+            getGetScrubListUploadUrlMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.GetScrubListUploadUrlReq,
+                com.tcn.cloud.api.api.v0alpha.GetScrubListUploadUrlRes>(
+                  this, METHODID_GET_SCRUB_LIST_UPLOAD_URL)))
+          .addMethod(
+            getProcessScrubListUploadMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.ProcessScrubListUploadReq,
+                com.google.longrunning.Operation>(
+                  this, METHODID_PROCESS_SCRUB_LIST_UPLOAD)))
+          .addMethod(
+            getProcessScrubListDeleteUploadMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.ProcessScrubListDeleteUploadReq,
+                com.google.longrunning.Operation>(
+                  this, METHODID_PROCESS_SCRUB_LIST_DELETE_UPLOAD)))
+          .addMethod(
+            getExportScrubListMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.ExportScrubListReq,
+                com.tcn.cloud.api.api.v0alpha.ExportScrubListRes>(
+                  this, METHODID_EXPORT_SCRUB_LIST)))
+          .addMethod(
+            getPurgeScrubListMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.PurgeScrubListReq,
+                com.tcn.cloud.api.api.v0alpha.PurgeScrubListRes>(
+                  this, METHODID_PURGE_SCRUB_LIST)))
+          .addMethod(
+            getCreateScenarioMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.CreateScenarioReq,
+                com.tcn.cloud.api.api.v0alpha.CreateScenarioRes>(
+                  this, METHODID_CREATE_SCENARIO)))
+          .addMethod(
+            getGetScenarioMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.GetScenarioReq,
+                com.tcn.cloud.api.api.v0alpha.GetScenarioRes>(
+                  this, METHODID_GET_SCENARIO)))
+          .addMethod(
+            getUpdateScenarioMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.UpdateScenarioReq,
+                com.tcn.cloud.api.api.v0alpha.UpdateScenarioRes>(
+                  this, METHODID_UPDATE_SCENARIO)))
+          .addMethod(
+            getDeleteScenarioMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.DeleteScenarioReq,
+                com.tcn.cloud.api.api.v0alpha.DeleteScenarioRes>(
+                  this, METHODID_DELETE_SCENARIO)))
+          .addMethod(
+            getRunAssignedScenariosMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.RunAssignedScenariosReq,
+                com.tcn.cloud.api.api.v0alpha.RunAssignedScenariosRes>(
+                  this, METHODID_RUN_ASSIGNED_SCENARIOS)))
+          .addMethod(
+            getListAllScenariosMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.ListAllScenariosReq,
+                com.tcn.cloud.api.api.v0alpha.ListAllScenariosRes>(
+                  this, METHODID_LIST_ALL_SCENARIOS)))
+          .addMethod(
+            getListUnassignedScenariosMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.ListUnassignedScenariosReq,
+                com.tcn.cloud.api.api.v0alpha.ListUnassignedScenariosRes>(
+                  this, METHODID_LIST_UNASSIGNED_SCENARIOS)))
+          .addMethod(
+            getListAssignedRuleSetsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.ListAssignedRuleSetsReq,
+                com.tcn.cloud.api.api.v0alpha.ListAssignedRuleSetsRes>(
+                  this, METHODID_LIST_ASSIGNED_RULE_SETS)))
+          .addMethod(
+            getListAssignedScenariosMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.ListAssignedScenariosReq,
+                com.tcn.cloud.api.api.v0alpha.ListAssignedScenariosRes>(
+                  this, METHODID_LIST_ASSIGNED_SCENARIOS)))
+          .addMethod(
+            getAssignScenarioMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.AssignScenarioReq,
+                com.google.protobuf.Empty>(
+                  this, METHODID_ASSIGN_SCENARIO)))
+          .addMethod(
+            getUnassignScenarioMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.UnassignScenarioReq,
+                com.google.protobuf.Empty>(
+                  this, METHODID_UNASSIGN_SCENARIO)))
+          .addMethod(
+            getEnableScenarioMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.EnableScenarioReq,
+                com.google.protobuf.Empty>(
+                  this, METHODID_ENABLE_SCENARIO)))
+          .addMethod(
+            getDisableScenarioMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.DisableScenarioReq,
+                com.google.protobuf.Empty>(
+                  this, METHODID_DISABLE_SCENARIO)))
+          .addMethod(
+            getGetFieldNamesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.GetFieldNamesReq,
+                com.tcn.cloud.api.api.v0alpha.FieldNames>(
+                  this, METHODID_GET_FIELD_NAMES)))
+          .addMethod(
+            getGetResultDescriptionsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.GetResultDescriptionsReq,
+                com.tcn.cloud.api.api.v0alpha.FieldNames>(
+                  this, METHODID_GET_RESULT_DESCRIPTIONS)))
+          .addMethod(
+            getCreateConsentProfileMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.CreateConsentProfileReq,
+                com.tcn.cloud.api.api.v0alpha.CreateConsentProfileRes>(
+                  this, METHODID_CREATE_CONSENT_PROFILE)))
+          .addMethod(
+            getCreateConsentMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.CreateConsentReq,
+                com.tcn.cloud.api.api.v0alpha.CreateConsentRes>(
+                  this, METHODID_CREATE_CONSENT)))
+          .addMethod(
+            getGetConsentProfileMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.GetConsentProfileReq,
+                com.tcn.cloud.api.api.v0alpha.ConsentProfile>(
+                  this, METHODID_GET_CONSENT_PROFILE)))
+          .addMethod(
+            getGetConsentMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.GetConsentReq,
+                com.tcn.cloud.api.api.v0alpha.Consent>(
+                  this, METHODID_GET_CONSENT)))
+          .addMethod(
+            getGetConsentByProfileAndContentMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.GetConsentByProfileAndContentReq,
+                com.tcn.cloud.api.api.v0alpha.GetConsentByProfileAndContentRes>(
+                  this, METHODID_GET_CONSENT_BY_PROFILE_AND_CONTENT)))
+          .addMethod(
+            getGetConsentByContentMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.GetConsentByContentReq,
+                com.tcn.cloud.api.api.v0alpha.GetConsentByContentRes>(
+                  this, METHODID_GET_CONSENT_BY_CONTENT)))
+          .addMethod(
+            getSearchConsentByContentMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.SearchConsentByContentReq,
+                com.tcn.cloud.api.api.v0alpha.SearchConsentByContentRes>(
+                  this, METHODID_SEARCH_CONSENT_BY_CONTENT)))
+          .addMethod(
+            getUpdateConsentMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.UpdateConsentReq,
+                com.google.protobuf.Empty>(
+                  this, METHODID_UPDATE_CONSENT)))
+          .addMethod(
+            getExpireConsentMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.ExpireConsentReq,
+                com.google.protobuf.Empty>(
+                  this, METHODID_EXPIRE_CONSENT)))
+          .addMethod(
+            getRevokeConsentMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.RevokeConsentReq,
+                com.google.protobuf.Empty>(
+                  this, METHODID_REVOKE_CONSENT)))
+          .addMethod(
+            getDeleteConsentMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.DeleteConsentReq,
+                com.google.protobuf.Empty>(
+                  this, METHODID_DELETE_CONSENT)))
+          .addMethod(
+            getProcessConsentListDeleteUploadMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.ProcessConsentListDeleteUploadReq,
+                com.google.longrunning.Operation>(
+                  this, METHODID_PROCESS_CONSENT_LIST_DELETE_UPLOAD)))
+          .addMethod(
+            getEnableConsentProfileMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.EnableConsentProfileReq,
+                com.google.protobuf.Empty>(
+                  this, METHODID_ENABLE_CONSENT_PROFILE)))
+          .addMethod(
+            getDisableConsentProfileMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.DisableConsentProfileReq,
+                com.google.protobuf.Empty>(
+                  this, METHODID_DISABLE_CONSENT_PROFILE)))
+          .addMethod(
+            getListConsentProfilesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.ListConsentProfilesReq,
+                com.tcn.cloud.api.api.v0alpha.ListConsentProfilesRes>(
+                  this, METHODID_LIST_CONSENT_PROFILES)))
+          .addMethod(
+            getGetConsentUploadUrlMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.GetConsentUploadUrlReq,
+                com.tcn.cloud.api.api.v0alpha.GetConsentUploadUrlRes>(
+                  this, METHODID_GET_CONSENT_UPLOAD_URL)))
+          .addMethod(
+            getProcessConsentUploadMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.ProcessConsentUploadReq,
+                com.google.longrunning.Operation>(
+                  this, METHODID_PROCESS_CONSENT_UPLOAD)))
+          .addMethod(
+            getListConsentTopicsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.ListConsentTopicsReq,
+                com.tcn.cloud.api.api.v0alpha.ListConsentTopicsRes>(
+                  this, METHODID_LIST_CONSENT_TOPICS)))
+          .addMethod(
+            getGetConsentTopicMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.GetConsentTopicReq,
+                com.tcn.cloud.api.api.v0alpha.ConsentTopic>(
+                  this, METHODID_GET_CONSENT_TOPIC)))
+          .addMethod(
+            getCreateConsentTopicMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.ConsentTopic,
+                com.tcn.cloud.api.api.v0alpha.Empty>(
+                  this, METHODID_CREATE_CONSENT_TOPIC)))
+          .addMethod(
+            getDeleteConsentTopicMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.ConsentTopic,
+                com.tcn.cloud.api.api.v0alpha.Empty>(
+                  this, METHODID_DELETE_CONSENT_TOPIC)))
+          .addMethod(
+            getUpdateConsentTopicMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.UpdateConsentTopicReq,
+                com.tcn.cloud.api.api.v0alpha.Empty>(
+                  this, METHODID_UPDATE_CONSENT_TOPIC)))
+          .addMethod(
+            getProcessOutboundCallMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.ProcessOutboundCallReq,
+                com.tcn.cloud.api.api.v0alpha.ProcessRes>(
+                  this, METHODID_PROCESS_OUTBOUND_CALL)))
+          .build();
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service Compliance.
    */
-  public static final class ComplianceStub
-      extends io.grpc.stub.AbstractAsyncStub<ComplianceStub> {
+  public static final class ComplianceStub extends io.grpc.stub.AbstractAsyncStub<ComplianceStub> {
     private ComplianceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -3409,10 +3835,8 @@ public final class ComplianceGrpc {
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service Compliance.
    */
-  public static final class ComplianceBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<ComplianceBlockingStub> {
+  public static final class ComplianceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ComplianceBlockingStub> {
     private ComplianceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -4093,10 +4517,8 @@ public final class ComplianceGrpc {
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service Compliance.
    */
-  public static final class ComplianceFutureStub
-      extends io.grpc.stub.AbstractFutureStub<ComplianceFutureStub> {
+  public static final class ComplianceFutureStub extends io.grpc.stub.AbstractFutureStub<ComplianceFutureStub> {
     private ComplianceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -4897,10 +5319,10 @@ public final class ComplianceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AsyncService serviceImpl;
+    private final ComplianceImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AsyncService serviceImpl, int methodId) {
+    MethodHandlers(ComplianceImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -5171,445 +5593,6 @@ public final class ComplianceGrpc {
           throw new AssertionError();
       }
     }
-  }
-
-  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
-    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-        .addMethod(
-          getRuleAutoCompleteMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.RuleAutoCompleteReq,
-              com.tcn.cloud.api.api.v0alpha.RuleAutoCompleteRes>(
-                service, METHODID_RULE_AUTO_COMPLETE)))
-        .addMethod(
-          getCheckRuleSetMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.CheckRuleSetReq,
-              com.tcn.cloud.api.api.v0alpha.CheckRuleSetRes>(
-                service, METHODID_CHECK_RULE_SET)))
-        .addMethod(
-          getAssignRuleSetMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.AssignRuleSetReq,
-              com.tcn.cloud.api.api.v0alpha.AssignRuleSetRes>(
-                service, METHODID_ASSIGN_RULE_SET)))
-        .addMethod(
-          getListRuleSetsMethod(),
-          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.ListRuleSetsReq,
-              com.tcn.cloud.api.api.v0alpha.ListRuleSetsRes>(
-                service, METHODID_LIST_RULE_SETS)))
-        .addMethod(
-          getGetRuleSetMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.GetRuleSetReq,
-              com.tcn.cloud.api.api.v0alpha.RuleSet>(
-                service, METHODID_GET_RULE_SET)))
-        .addMethod(
-          getGetRuleSetByNameMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.GetRuleSetByNameReq,
-              com.tcn.cloud.api.api.v0alpha.RuleSet>(
-                service, METHODID_GET_RULE_SET_BY_NAME)))
-        .addMethod(
-          getCreateRuleSetMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.CreateRuleSetReq,
-              com.tcn.cloud.api.api.v0alpha.RuleSet>(
-                service, METHODID_CREATE_RULE_SET)))
-        .addMethod(
-          getRenameRuleSetMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.RenameRuleSetReq,
-              com.tcn.cloud.api.api.v0alpha.RenameRuleSetRes>(
-                service, METHODID_RENAME_RULE_SET)))
-        .addMethod(
-          getEnableRuleSetMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.EnableRuleSetReq,
-              com.tcn.cloud.api.api.v0alpha.EnableRuleSetRes>(
-                service, METHODID_ENABLE_RULE_SET)))
-        .addMethod(
-          getDisableRuleSetMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.DisableRuleSetReq,
-              com.tcn.cloud.api.api.v0alpha.DisableRuleSetRes>(
-                service, METHODID_DISABLE_RULE_SET)))
-        .addMethod(
-          getCreateScrubListMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.CreateScrubListReq,
-              com.tcn.cloud.api.api.v0alpha.ScrubListRes>(
-                service, METHODID_CREATE_SCRUB_LIST)))
-        .addMethod(
-          getAddScrubListEntriesMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.AddScrubListEntriesReq,
-              com.tcn.cloud.api.api.v0alpha.ScrubListRes>(
-                service, METHODID_ADD_SCRUB_LIST_ENTRIES)))
-        .addMethod(
-          getUpdateScrubEntryMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.UpdateScrubEntryReq,
-              com.tcn.cloud.api.api.v0alpha.UpdateScrubEntryRes>(
-                service, METHODID_UPDATE_SCRUB_ENTRY)))
-        .addMethod(
-          getDeleteScrubListEntriesMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.DeleteScrubListEntriesReq,
-              com.tcn.cloud.api.api.v0alpha.ScrubListRes>(
-                service, METHODID_DELETE_SCRUB_LIST_ENTRIES)))
-        .addMethod(
-          getGetScrubListMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.GetScrubListReq,
-              com.tcn.cloud.api.api.v0alpha.ScrubListRes>(
-                service, METHODID_GET_SCRUB_LIST)))
-        .addMethod(
-          getDeleteScrubListMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.DeleteScrubListReq,
-              com.tcn.cloud.api.api.v0alpha.ScrubListRes>(
-                service, METHODID_DELETE_SCRUB_LIST)))
-        .addMethod(
-          getGetDefaultRulesMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.GetDefaultRulesReq,
-              com.tcn.cloud.api.api.v0alpha.GetDefaultRulesRes>(
-                service, METHODID_GET_DEFAULT_RULES)))
-        .addMethod(
-          getGetScrubListsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.GetScrubListsReq,
-              com.tcn.cloud.api.api.v0alpha.ScrubListsRes>(
-                service, METHODID_GET_SCRUB_LISTS)))
-        .addMethod(
-          getSearchScrubListMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.SearchScrubListReq,
-              com.tcn.cloud.api.api.v0alpha.ScrubList>(
-                service, METHODID_SEARCH_SCRUB_LIST)))
-        .addMethod(
-          getGetScrubListUploadUrlMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.GetScrubListUploadUrlReq,
-              com.tcn.cloud.api.api.v0alpha.GetScrubListUploadUrlRes>(
-                service, METHODID_GET_SCRUB_LIST_UPLOAD_URL)))
-        .addMethod(
-          getProcessScrubListUploadMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.ProcessScrubListUploadReq,
-              com.google.longrunning.Operation>(
-                service, METHODID_PROCESS_SCRUB_LIST_UPLOAD)))
-        .addMethod(
-          getProcessScrubListDeleteUploadMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.ProcessScrubListDeleteUploadReq,
-              com.google.longrunning.Operation>(
-                service, METHODID_PROCESS_SCRUB_LIST_DELETE_UPLOAD)))
-        .addMethod(
-          getExportScrubListMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.ExportScrubListReq,
-              com.tcn.cloud.api.api.v0alpha.ExportScrubListRes>(
-                service, METHODID_EXPORT_SCRUB_LIST)))
-        .addMethod(
-          getPurgeScrubListMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.PurgeScrubListReq,
-              com.tcn.cloud.api.api.v0alpha.PurgeScrubListRes>(
-                service, METHODID_PURGE_SCRUB_LIST)))
-        .addMethod(
-          getCreateScenarioMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.CreateScenarioReq,
-              com.tcn.cloud.api.api.v0alpha.CreateScenarioRes>(
-                service, METHODID_CREATE_SCENARIO)))
-        .addMethod(
-          getGetScenarioMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.GetScenarioReq,
-              com.tcn.cloud.api.api.v0alpha.GetScenarioRes>(
-                service, METHODID_GET_SCENARIO)))
-        .addMethod(
-          getUpdateScenarioMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.UpdateScenarioReq,
-              com.tcn.cloud.api.api.v0alpha.UpdateScenarioRes>(
-                service, METHODID_UPDATE_SCENARIO)))
-        .addMethod(
-          getDeleteScenarioMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.DeleteScenarioReq,
-              com.tcn.cloud.api.api.v0alpha.DeleteScenarioRes>(
-                service, METHODID_DELETE_SCENARIO)))
-        .addMethod(
-          getRunAssignedScenariosMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.RunAssignedScenariosReq,
-              com.tcn.cloud.api.api.v0alpha.RunAssignedScenariosRes>(
-                service, METHODID_RUN_ASSIGNED_SCENARIOS)))
-        .addMethod(
-          getListAllScenariosMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.ListAllScenariosReq,
-              com.tcn.cloud.api.api.v0alpha.ListAllScenariosRes>(
-                service, METHODID_LIST_ALL_SCENARIOS)))
-        .addMethod(
-          getListUnassignedScenariosMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.ListUnassignedScenariosReq,
-              com.tcn.cloud.api.api.v0alpha.ListUnassignedScenariosRes>(
-                service, METHODID_LIST_UNASSIGNED_SCENARIOS)))
-        .addMethod(
-          getListAssignedRuleSetsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.ListAssignedRuleSetsReq,
-              com.tcn.cloud.api.api.v0alpha.ListAssignedRuleSetsRes>(
-                service, METHODID_LIST_ASSIGNED_RULE_SETS)))
-        .addMethod(
-          getListAssignedScenariosMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.ListAssignedScenariosReq,
-              com.tcn.cloud.api.api.v0alpha.ListAssignedScenariosRes>(
-                service, METHODID_LIST_ASSIGNED_SCENARIOS)))
-        .addMethod(
-          getAssignScenarioMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.AssignScenarioReq,
-              com.google.protobuf.Empty>(
-                service, METHODID_ASSIGN_SCENARIO)))
-        .addMethod(
-          getUnassignScenarioMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.UnassignScenarioReq,
-              com.google.protobuf.Empty>(
-                service, METHODID_UNASSIGN_SCENARIO)))
-        .addMethod(
-          getEnableScenarioMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.EnableScenarioReq,
-              com.google.protobuf.Empty>(
-                service, METHODID_ENABLE_SCENARIO)))
-        .addMethod(
-          getDisableScenarioMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.DisableScenarioReq,
-              com.google.protobuf.Empty>(
-                service, METHODID_DISABLE_SCENARIO)))
-        .addMethod(
-          getGetFieldNamesMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.GetFieldNamesReq,
-              com.tcn.cloud.api.api.v0alpha.FieldNames>(
-                service, METHODID_GET_FIELD_NAMES)))
-        .addMethod(
-          getGetResultDescriptionsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.GetResultDescriptionsReq,
-              com.tcn.cloud.api.api.v0alpha.FieldNames>(
-                service, METHODID_GET_RESULT_DESCRIPTIONS)))
-        .addMethod(
-          getCreateConsentProfileMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.CreateConsentProfileReq,
-              com.tcn.cloud.api.api.v0alpha.CreateConsentProfileRes>(
-                service, METHODID_CREATE_CONSENT_PROFILE)))
-        .addMethod(
-          getCreateConsentMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.CreateConsentReq,
-              com.tcn.cloud.api.api.v0alpha.CreateConsentRes>(
-                service, METHODID_CREATE_CONSENT)))
-        .addMethod(
-          getGetConsentProfileMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.GetConsentProfileReq,
-              com.tcn.cloud.api.api.v0alpha.ConsentProfile>(
-                service, METHODID_GET_CONSENT_PROFILE)))
-        .addMethod(
-          getGetConsentMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.GetConsentReq,
-              com.tcn.cloud.api.api.v0alpha.Consent>(
-                service, METHODID_GET_CONSENT)))
-        .addMethod(
-          getGetConsentByProfileAndContentMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.GetConsentByProfileAndContentReq,
-              com.tcn.cloud.api.api.v0alpha.GetConsentByProfileAndContentRes>(
-                service, METHODID_GET_CONSENT_BY_PROFILE_AND_CONTENT)))
-        .addMethod(
-          getGetConsentByContentMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.GetConsentByContentReq,
-              com.tcn.cloud.api.api.v0alpha.GetConsentByContentRes>(
-                service, METHODID_GET_CONSENT_BY_CONTENT)))
-        .addMethod(
-          getSearchConsentByContentMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.SearchConsentByContentReq,
-              com.tcn.cloud.api.api.v0alpha.SearchConsentByContentRes>(
-                service, METHODID_SEARCH_CONSENT_BY_CONTENT)))
-        .addMethod(
-          getUpdateConsentMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.UpdateConsentReq,
-              com.google.protobuf.Empty>(
-                service, METHODID_UPDATE_CONSENT)))
-        .addMethod(
-          getExpireConsentMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.ExpireConsentReq,
-              com.google.protobuf.Empty>(
-                service, METHODID_EXPIRE_CONSENT)))
-        .addMethod(
-          getRevokeConsentMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.RevokeConsentReq,
-              com.google.protobuf.Empty>(
-                service, METHODID_REVOKE_CONSENT)))
-        .addMethod(
-          getDeleteConsentMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.DeleteConsentReq,
-              com.google.protobuf.Empty>(
-                service, METHODID_DELETE_CONSENT)))
-        .addMethod(
-          getProcessConsentListDeleteUploadMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.ProcessConsentListDeleteUploadReq,
-              com.google.longrunning.Operation>(
-                service, METHODID_PROCESS_CONSENT_LIST_DELETE_UPLOAD)))
-        .addMethod(
-          getEnableConsentProfileMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.EnableConsentProfileReq,
-              com.google.protobuf.Empty>(
-                service, METHODID_ENABLE_CONSENT_PROFILE)))
-        .addMethod(
-          getDisableConsentProfileMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.DisableConsentProfileReq,
-              com.google.protobuf.Empty>(
-                service, METHODID_DISABLE_CONSENT_PROFILE)))
-        .addMethod(
-          getListConsentProfilesMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.ListConsentProfilesReq,
-              com.tcn.cloud.api.api.v0alpha.ListConsentProfilesRes>(
-                service, METHODID_LIST_CONSENT_PROFILES)))
-        .addMethod(
-          getGetConsentUploadUrlMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.GetConsentUploadUrlReq,
-              com.tcn.cloud.api.api.v0alpha.GetConsentUploadUrlRes>(
-                service, METHODID_GET_CONSENT_UPLOAD_URL)))
-        .addMethod(
-          getProcessConsentUploadMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.ProcessConsentUploadReq,
-              com.google.longrunning.Operation>(
-                service, METHODID_PROCESS_CONSENT_UPLOAD)))
-        .addMethod(
-          getListConsentTopicsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.ListConsentTopicsReq,
-              com.tcn.cloud.api.api.v0alpha.ListConsentTopicsRes>(
-                service, METHODID_LIST_CONSENT_TOPICS)))
-        .addMethod(
-          getGetConsentTopicMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.GetConsentTopicReq,
-              com.tcn.cloud.api.api.v0alpha.ConsentTopic>(
-                service, METHODID_GET_CONSENT_TOPIC)))
-        .addMethod(
-          getCreateConsentTopicMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.ConsentTopic,
-              com.tcn.cloud.api.api.v0alpha.Empty>(
-                service, METHODID_CREATE_CONSENT_TOPIC)))
-        .addMethod(
-          getDeleteConsentTopicMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.ConsentTopic,
-              com.tcn.cloud.api.api.v0alpha.Empty>(
-                service, METHODID_DELETE_CONSENT_TOPIC)))
-        .addMethod(
-          getUpdateConsentTopicMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.UpdateConsentTopicReq,
-              com.tcn.cloud.api.api.v0alpha.Empty>(
-                service, METHODID_UPDATE_CONSENT_TOPIC)))
-        .addMethod(
-          getProcessOutboundCallMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.ProcessOutboundCallReq,
-              com.tcn.cloud.api.api.v0alpha.ProcessRes>(
-                service, METHODID_PROCESS_OUTBOUND_CALL)))
-        .build();
   }
 
   private static abstract class ComplianceBaseDescriptorSupplier

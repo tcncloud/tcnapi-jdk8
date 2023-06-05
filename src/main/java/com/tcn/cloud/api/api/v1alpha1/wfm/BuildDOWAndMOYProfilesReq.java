@@ -29,6 +29,79 @@ private static final long serialVersionUID = 0L;
     return new BuildDOWAndMOYProfilesReq();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private BuildDOWAndMOYProfilesReq(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            com.tcn.cloud.api.api.commons.ProfileTOD.Builder subBuilder = null;
+            if (profileTod_ != null) {
+              subBuilder = profileTod_.toBuilder();
+            }
+            profileTod_ = input.readMessage(com.tcn.cloud.api.api.commons.ProfileTOD.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(profileTod_);
+              profileTod_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 18: {
+            com.tcn.cloud.api.api.commons.ProfileWOMS.Builder subBuilder = null;
+            if (profileWoms_ != null) {
+              subBuilder = profileWoms_.toBuilder();
+            }
+            profileWoms_ = input.readMessage(com.tcn.cloud.api.api.commons.ProfileWOMS.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(profileWoms_);
+              profileWoms_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 24: {
+
+            isAverageProfile_ = input.readBool();
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_BuildDOWAndMOYProfilesReq_descriptor;
@@ -77,7 +150,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.ProfileTODOrBuilder getProfileTodOrBuilder() {
-    return profileTod_ == null ? com.tcn.cloud.api.api.commons.ProfileTOD.getDefaultInstance() : profileTod_;
+    return getProfileTod();
   }
 
   public static final int PROFILE_WOMS_FIELD_NUMBER = 2;
@@ -115,11 +188,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.ProfileWOMSOrBuilder getProfileWomsOrBuilder() {
-    return profileWoms_ == null ? com.tcn.cloud.api.api.commons.ProfileWOMS.getDefaultInstance() : profileWoms_;
+    return getProfileWoms();
   }
 
   public static final int IS_AVERAGE_PROFILE_FIELD_NUMBER = 3;
-  private boolean isAverageProfile_ = false;
+  private boolean isAverageProfile_;
   /**
    * <pre>
    * Indicates if the &#64;profile_tod and &#64;profile_woms belongs to the average fields of a call profile template.
@@ -156,7 +229,7 @@ private static final long serialVersionUID = 0L;
     if (isAverageProfile_ != false) {
       output.writeBool(3, isAverageProfile_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -177,7 +250,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(3, isAverageProfile_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -204,7 +277,7 @@ private static final long serialVersionUID = 0L;
     }
     if (getIsAverageProfile()
         != other.getIsAverageProfile()) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -226,7 +299,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + IS_AVERAGE_PROFILE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getIsAverageProfile());
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -275,13 +348,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.wfm.BuildDOWAndMOYProfilesReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.wfm.BuildDOWAndMOYProfilesReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -349,29 +420,36 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.BuildDOWAndMOYProfilesReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      profileTod_ = null;
-      if (profileTodBuilder_ != null) {
-        profileTodBuilder_.dispose();
+      if (profileTodBuilder_ == null) {
+        profileTod_ = null;
+      } else {
+        profileTod_ = null;
         profileTodBuilder_ = null;
       }
-      profileWoms_ = null;
-      if (profileWomsBuilder_ != null) {
-        profileWomsBuilder_.dispose();
+      if (profileWomsBuilder_ == null) {
+        profileWoms_ = null;
+      } else {
+        profileWoms_ = null;
         profileWomsBuilder_ = null;
       }
       isAverageProfile_ = false;
+
       return this;
     }
 
@@ -398,26 +476,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.BuildDOWAndMOYProfilesReq buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.BuildDOWAndMOYProfilesReq result = new com.tcn.cloud.api.api.v1alpha1.wfm.BuildDOWAndMOYProfilesReq(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      if (profileTodBuilder_ == null) {
+        result.profileTod_ = profileTod_;
+      } else {
+        result.profileTod_ = profileTodBuilder_.build();
+      }
+      if (profileWomsBuilder_ == null) {
+        result.profileWoms_ = profileWoms_;
+      } else {
+        result.profileWoms_ = profileWomsBuilder_.build();
+      }
+      result.isAverageProfile_ = isAverageProfile_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.BuildDOWAndMOYProfilesReq result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.profileTod_ = profileTodBuilder_ == null
-            ? profileTod_
-            : profileTodBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.profileWoms_ = profileWomsBuilder_ == null
-            ? profileWoms_
-            : profileWomsBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.isAverageProfile_ = isAverageProfile_;
-      }
     }
 
     @java.lang.Override
@@ -473,7 +544,7 @@ private static final long serialVersionUID = 0L;
       if (other.getIsAverageProfile() != false) {
         setIsAverageProfile(other.getIsAverageProfile());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -488,52 +559,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.wfm.BuildDOWAndMOYProfilesReq parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              input.readMessage(
-                  getProfileTodFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              input.readMessage(
-                  getProfileWomsFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 24: {
-              isAverageProfile_ = input.readBool();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 24
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.BuildDOWAndMOYProfilesReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private com.tcn.cloud.api.api.commons.ProfileTOD profileTod_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -547,7 +585,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the profileTod field is set.
      */
     public boolean hasProfileTod() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return profileTodBuilder_ != null || profileTod_ != null;
     }
     /**
      * <pre>
@@ -577,11 +615,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         profileTod_ = value;
+        onChanged();
       } else {
         profileTodBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -595,11 +633,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.ProfileTOD.Builder builderForValue) {
       if (profileTodBuilder_ == null) {
         profileTod_ = builderForValue.build();
+        onChanged();
       } else {
         profileTodBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -611,18 +649,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeProfileTod(com.tcn.cloud.api.api.commons.ProfileTOD value) {
       if (profileTodBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          profileTod_ != null &&
-          profileTod_ != com.tcn.cloud.api.api.commons.ProfileTOD.getDefaultInstance()) {
-          getProfileTodBuilder().mergeFrom(value);
+        if (profileTod_ != null) {
+          profileTod_ =
+            com.tcn.cloud.api.api.commons.ProfileTOD.newBuilder(profileTod_).mergeFrom(value).buildPartial();
         } else {
           profileTod_ = value;
         }
+        onChanged();
       } else {
         profileTodBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -633,13 +670,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.ProfileTOD profile_tod = 1 [json_name = "profileTod"];</code>
      */
     public Builder clearProfileTod() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      profileTod_ = null;
-      if (profileTodBuilder_ != null) {
-        profileTodBuilder_.dispose();
+      if (profileTodBuilder_ == null) {
+        profileTod_ = null;
+        onChanged();
+      } else {
+        profileTod_ = null;
         profileTodBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -650,7 +688,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.ProfileTOD profile_tod = 1 [json_name = "profileTod"];</code>
      */
     public com.tcn.cloud.api.api.commons.ProfileTOD.Builder getProfileTodBuilder() {
-      bitField0_ |= 0x00000001;
+      
       onChanged();
       return getProfileTodFieldBuilder().getBuilder();
     }
@@ -702,7 +740,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the profileWoms field is set.
      */
     public boolean hasProfileWoms() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return profileWomsBuilder_ != null || profileWoms_ != null;
     }
     /**
      * <pre>
@@ -732,11 +770,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         profileWoms_ = value;
+        onChanged();
       } else {
         profileWomsBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -750,11 +788,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.ProfileWOMS.Builder builderForValue) {
       if (profileWomsBuilder_ == null) {
         profileWoms_ = builderForValue.build();
+        onChanged();
       } else {
         profileWomsBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -766,18 +804,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeProfileWoms(com.tcn.cloud.api.api.commons.ProfileWOMS value) {
       if (profileWomsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
-          profileWoms_ != null &&
-          profileWoms_ != com.tcn.cloud.api.api.commons.ProfileWOMS.getDefaultInstance()) {
-          getProfileWomsBuilder().mergeFrom(value);
+        if (profileWoms_ != null) {
+          profileWoms_ =
+            com.tcn.cloud.api.api.commons.ProfileWOMS.newBuilder(profileWoms_).mergeFrom(value).buildPartial();
         } else {
           profileWoms_ = value;
         }
+        onChanged();
       } else {
         profileWomsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -788,13 +825,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.ProfileWOMS profile_woms = 2 [json_name = "profileWoms"];</code>
      */
     public Builder clearProfileWoms() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      profileWoms_ = null;
-      if (profileWomsBuilder_ != null) {
-        profileWomsBuilder_.dispose();
+      if (profileWomsBuilder_ == null) {
+        profileWoms_ = null;
+        onChanged();
+      } else {
+        profileWoms_ = null;
         profileWomsBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -805,7 +843,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.ProfileWOMS profile_woms = 2 [json_name = "profileWoms"];</code>
      */
     public com.tcn.cloud.api.api.commons.ProfileWOMS.Builder getProfileWomsBuilder() {
-      bitField0_ |= 0x00000002;
+      
       onChanged();
       return getProfileWomsFieldBuilder().getBuilder();
     }
@@ -868,9 +906,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIsAverageProfile(boolean value) {
-
+      
       isAverageProfile_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -883,7 +920,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIsAverageProfile() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       isAverageProfile_ = false;
       onChanged();
       return this;
@@ -921,18 +958,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new BuildDOWAndMOYProfilesReq(input, extensionRegistry);
     }
   };
 

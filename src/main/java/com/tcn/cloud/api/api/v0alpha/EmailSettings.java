@@ -17,8 +17,7 @@ private static final long serialVersionUID = 0L;
   }
   private EmailSettings() {
     reportType_ = "";
-    emailAddresses_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    emailAddresses_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     reportFormat_ = "";
     fromEmailAddress_ = "";
   }
@@ -30,6 +29,79 @@ private static final long serialVersionUID = 0L;
     return new EmailSettings();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private EmailSettings(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            reportType_ = s;
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              emailAddresses_ = new com.google.protobuf.LazyStringArrayList();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            emailAddresses_.add(s);
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            reportFormat_ = s;
+            break;
+          }
+          case 34: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            fromEmailAddress_ = s;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        emailAddresses_ = emailAddresses_.getUnmodifiableView();
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.SmsapiProto.internal_static_api_v0alpha_EmailSettings_descriptor;
@@ -44,8 +116,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int REPORT_TYPE_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object reportType_ = "";
+  private volatile java.lang.Object reportType_;
   /**
    * <code>string report_type = 1 [json_name = "reportType"];</code>
    * @return The reportType.
@@ -83,9 +154,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EMAIL_ADDRESSES_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList emailAddresses_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
+  private com.google.protobuf.LazyStringList emailAddresses_;
   /**
    * <code>repeated string email_addresses = 2 [json_name = "emailAddresses"];</code>
    * @return A list containing the emailAddresses.
@@ -120,8 +189,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int REPORT_FORMAT_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object reportFormat_ = "";
+  private volatile java.lang.Object reportFormat_;
   /**
    * <code>string report_format = 3 [json_name = "reportFormat"];</code>
    * @return The reportFormat.
@@ -159,8 +227,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FROM_EMAIL_ADDRESS_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object fromEmailAddress_ = "";
+  private volatile java.lang.Object fromEmailAddress_;
   /**
    * <code>string from_email_address = 4 [json_name = "fromEmailAddress"];</code>
    * @return The fromEmailAddress.
@@ -211,19 +278,19 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reportType_)) {
+    if (!getReportTypeBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, reportType_);
     }
     for (int i = 0; i < emailAddresses_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, emailAddresses_.getRaw(i));
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reportFormat_)) {
+    if (!getReportFormatBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, reportFormat_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fromEmailAddress_)) {
+    if (!getFromEmailAddressBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, fromEmailAddress_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -232,7 +299,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reportType_)) {
+    if (!getReportTypeBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, reportType_);
     }
     {
@@ -243,13 +310,13 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getEmailAddressesList().size();
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reportFormat_)) {
+    if (!getReportFormatBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, reportFormat_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fromEmailAddress_)) {
+    if (!getFromEmailAddressBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, fromEmailAddress_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -272,7 +339,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getReportFormat())) return false;
     if (!getFromEmailAddress()
         .equals(other.getFromEmailAddress())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -293,7 +360,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getReportFormat().hashCode();
     hash = (37 * hash) + FROM_EMAIL_ADDRESS_FIELD_NUMBER;
     hash = (53 * hash) + getFromEmailAddress().hashCode();
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -342,13 +409,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.EmailSettings parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.EmailSettings parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -412,23 +477,30 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.EmailSettings.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       reportType_ = "";
-      emailAddresses_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+
+      emailAddresses_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000001);
       reportFormat_ = "";
+
       fromEmailAddress_ = "";
+
       return this;
     }
 
@@ -455,26 +527,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.EmailSettings buildPartial() {
       com.tcn.cloud.api.api.v0alpha.EmailSettings result = new com.tcn.cloud.api.api.v0alpha.EmailSettings(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      int from_bitField0_ = bitField0_;
+      result.reportType_ = reportType_;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        emailAddresses_ = emailAddresses_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000001);
+      }
+      result.emailAddresses_ = emailAddresses_;
+      result.reportFormat_ = reportFormat_;
+      result.fromEmailAddress_ = fromEmailAddress_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.EmailSettings result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.reportType_ = reportType_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        emailAddresses_.makeImmutable();
-        result.emailAddresses_ = emailAddresses_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.reportFormat_ = reportFormat_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.fromEmailAddress_ = fromEmailAddress_;
-      }
     }
 
     @java.lang.Override
@@ -523,13 +586,12 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v0alpha.EmailSettings.getDefaultInstance()) return this;
       if (!other.getReportType().isEmpty()) {
         reportType_ = other.reportType_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.emailAddresses_.isEmpty()) {
         if (emailAddresses_.isEmpty()) {
           emailAddresses_ = other.emailAddresses_;
-          bitField0_ |= 0x00000002;
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensureEmailAddressesIsMutable();
           emailAddresses_.addAll(other.emailAddresses_);
@@ -538,15 +600,13 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getReportFormat().isEmpty()) {
         reportFormat_ = other.reportFormat_;
-        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getFromEmailAddress().isEmpty()) {
         fromEmailAddress_ = other.fromEmailAddress_;
-        bitField0_ |= 0x00000008;
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -561,51 +621,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.EmailSettings parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              reportType_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensureEmailAddressesIsMutable();
-              emailAddresses_.add(s);
-              break;
-            } // case 18
-            case 26: {
-              reportFormat_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            case 34: {
-              fromEmailAddress_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.EmailSettings) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -651,9 +677,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setReportType(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       reportType_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -662,8 +690,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearReportType() {
+      
       reportType_ = getDefaultInstance().getReportType();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -674,21 +702,22 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setReportTypeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       reportType_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringArrayList emailAddresses_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.LazyStringList emailAddresses_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureEmailAddressesIsMutable() {
-      if (!emailAddresses_.isModifiable()) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         emailAddresses_ = new com.google.protobuf.LazyStringArrayList(emailAddresses_);
-      }
-      bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
+       }
     }
     /**
      * <code>repeated string email_addresses = 2 [json_name = "emailAddresses"];</code>
@@ -696,8 +725,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getEmailAddressesList() {
-      emailAddresses_.makeImmutable();
-      return emailAddresses_;
+      return emailAddresses_.getUnmodifiableView();
     }
     /**
      * <code>repeated string email_addresses = 2 [json_name = "emailAddresses"];</code>
@@ -731,10 +759,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEmailAddresses(
         int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureEmailAddressesIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureEmailAddressesIsMutable();
       emailAddresses_.set(index, value);
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -745,10 +774,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addEmailAddresses(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureEmailAddressesIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureEmailAddressesIsMutable();
       emailAddresses_.add(value);
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -762,7 +792,6 @@ private static final long serialVersionUID = 0L;
       ensureEmailAddressesIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, emailAddresses_);
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -771,9 +800,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEmailAddresses() {
-      emailAddresses_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000002);;
+      emailAddresses_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -784,11 +812,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addEmailAddressesBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
       ensureEmailAddressesIsMutable();
       emailAddresses_.add(value);
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -834,9 +863,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setReportFormat(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       reportFormat_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -845,8 +876,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearReportFormat() {
+      
       reportFormat_ = getDefaultInstance().getReportFormat();
-      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -857,10 +888,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setReportFormatBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       reportFormat_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -906,9 +939,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFromEmailAddress(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       fromEmailAddress_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -917,8 +952,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFromEmailAddress() {
+      
       fromEmailAddress_ = getDefaultInstance().getFromEmailAddress();
-      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -929,10 +964,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFromEmailAddressBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       fromEmailAddress_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -969,18 +1006,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new EmailSettings(input, extensionRegistry);
     }
   };
 

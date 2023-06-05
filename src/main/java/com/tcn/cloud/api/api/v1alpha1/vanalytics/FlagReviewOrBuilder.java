@@ -33,8 +33,6 @@ public interface FlagReviewOrBuilder extends
    * </pre>
    *
    * <code>int64 flag_sid = 3 [json_name = "flagSid", deprecated = true];</code>
-   * @deprecated api.v1alpha1.vanalytics.FlagReview.flag_sid is deprecated.
-   *     See api/v1alpha1/vanalytics/flag_review.proto;l=72
    * @return The flagSid.
    */
   @java.lang.Deprecated long getFlagSid();

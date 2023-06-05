@@ -27,6 +27,60 @@ private static final long serialVersionUID = 0L;
     return new ListUserDescriptionsRequest();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private ListUserDescriptionsRequest(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            regionId_ = s;
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            orgIdFilter_ = s;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_ListUserDescriptionsRequest_descriptor;
@@ -41,8 +95,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int REGION_ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object regionId_ = "";
+  private volatile java.lang.Object regionId_;
   /**
    * <pre>
    * DEPRECATED. region_id was previously optional,
@@ -50,8 +103,6 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string region_id = 1 [json_name = "regionId", deprecated = true];</code>
-   * @deprecated api.v0alpha.ListUserDescriptionsRequest.region_id is deprecated.
-   *     See api/v0alpha/org.proto;l=3155
    * @return The regionId.
    */
   @java.lang.Override
@@ -74,8 +125,6 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string region_id = 1 [json_name = "regionId", deprecated = true];</code>
-   * @deprecated api.v0alpha.ListUserDescriptionsRequest.region_id is deprecated.
-   *     See api/v0alpha/org.proto;l=3155
    * @return The bytes for regionId.
    */
   @java.lang.Override
@@ -94,8 +143,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ORG_ID_FILTER_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object orgIdFilter_ = "";
+  private volatile java.lang.Object orgIdFilter_;
   /**
    * <pre>
    * DEPRECATED. org_id_filter was previously optional,
@@ -103,8 +151,6 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string org_id_filter = 2 [json_name = "orgIdFilter", deprecated = true];</code>
-   * @deprecated api.v0alpha.ListUserDescriptionsRequest.org_id_filter is deprecated.
-   *     See api/v0alpha/org.proto;l=3158
    * @return The orgIdFilter.
    */
   @java.lang.Override
@@ -127,8 +173,6 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string org_id_filter = 2 [json_name = "orgIdFilter", deprecated = true];</code>
-   * @deprecated api.v0alpha.ListUserDescriptionsRequest.org_id_filter is deprecated.
-   *     See api/v0alpha/org.proto;l=3158
    * @return The bytes for orgIdFilter.
    */
   @java.lang.Override
@@ -160,13 +204,13 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regionId_)) {
+    if (!getRegionIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, regionId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgIdFilter_)) {
+    if (!getOrgIdFilterBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, orgIdFilter_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -175,13 +219,13 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regionId_)) {
+    if (!getRegionIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, regionId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgIdFilter_)) {
+    if (!getOrgIdFilterBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, orgIdFilter_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -200,7 +244,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getRegionId())) return false;
     if (!getOrgIdFilter()
         .equals(other.getOrgIdFilter())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -215,7 +259,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getRegionId().hashCode();
     hash = (37 * hash) + ORG_ID_FILTER_FIELD_NUMBER;
     hash = (53 * hash) + getOrgIdFilter().hashCode();
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -264,13 +308,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.ListUserDescriptionsRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.ListUserDescriptionsRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -334,20 +376,26 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ListUserDescriptionsRequest.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       regionId_ = "";
+
       orgIdFilter_ = "";
+
       return this;
     }
 
@@ -374,19 +422,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.ListUserDescriptionsRequest buildPartial() {
       com.tcn.cloud.api.api.v0alpha.ListUserDescriptionsRequest result = new com.tcn.cloud.api.api.v0alpha.ListUserDescriptionsRequest(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.regionId_ = regionId_;
+      result.orgIdFilter_ = orgIdFilter_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ListUserDescriptionsRequest result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.regionId_ = regionId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.orgIdFilter_ = orgIdFilter_;
-      }
     }
 
     @java.lang.Override
@@ -435,15 +474,13 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v0alpha.ListUserDescriptionsRequest.getDefaultInstance()) return this;
       if (!other.getRegionId().isEmpty()) {
         regionId_ = other.regionId_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getOrgIdFilter().isEmpty()) {
         orgIdFilter_ = other.orgIdFilter_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -458,43 +495,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.ListUserDescriptionsRequest parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              regionId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              orgIdFilter_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.ListUserDescriptionsRequest) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private java.lang.Object regionId_ = "";
     /**
@@ -504,8 +517,6 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string region_id = 1 [json_name = "regionId", deprecated = true];</code>
-     * @deprecated api.v0alpha.ListUserDescriptionsRequest.region_id is deprecated.
-     *     See api/v0alpha/org.proto;l=3155
      * @return The regionId.
      */
     @java.lang.Deprecated public java.lang.String getRegionId() {
@@ -527,8 +538,6 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string region_id = 1 [json_name = "regionId", deprecated = true];</code>
-     * @deprecated api.v0alpha.ListUserDescriptionsRequest.region_id is deprecated.
-     *     See api/v0alpha/org.proto;l=3155
      * @return The bytes for regionId.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -551,16 +560,16 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string region_id = 1 [json_name = "regionId", deprecated = true];</code>
-     * @deprecated api.v0alpha.ListUserDescriptionsRequest.region_id is deprecated.
-     *     See api/v0alpha/org.proto;l=3155
      * @param value The regionId to set.
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder setRegionId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       regionId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -571,13 +580,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string region_id = 1 [json_name = "regionId", deprecated = true];</code>
-     * @deprecated api.v0alpha.ListUserDescriptionsRequest.region_id is deprecated.
-     *     See api/v0alpha/org.proto;l=3155
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearRegionId() {
+      
       regionId_ = getDefaultInstance().getRegionId();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -588,17 +595,17 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string region_id = 1 [json_name = "regionId", deprecated = true];</code>
-     * @deprecated api.v0alpha.ListUserDescriptionsRequest.region_id is deprecated.
-     *     See api/v0alpha/org.proto;l=3155
      * @param value The bytes for regionId to set.
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder setRegionIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       regionId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -611,8 +618,6 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string org_id_filter = 2 [json_name = "orgIdFilter", deprecated = true];</code>
-     * @deprecated api.v0alpha.ListUserDescriptionsRequest.org_id_filter is deprecated.
-     *     See api/v0alpha/org.proto;l=3158
      * @return The orgIdFilter.
      */
     @java.lang.Deprecated public java.lang.String getOrgIdFilter() {
@@ -634,8 +639,6 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string org_id_filter = 2 [json_name = "orgIdFilter", deprecated = true];</code>
-     * @deprecated api.v0alpha.ListUserDescriptionsRequest.org_id_filter is deprecated.
-     *     See api/v0alpha/org.proto;l=3158
      * @return The bytes for orgIdFilter.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -658,16 +661,16 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string org_id_filter = 2 [json_name = "orgIdFilter", deprecated = true];</code>
-     * @deprecated api.v0alpha.ListUserDescriptionsRequest.org_id_filter is deprecated.
-     *     See api/v0alpha/org.proto;l=3158
      * @param value The orgIdFilter to set.
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder setOrgIdFilter(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       orgIdFilter_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -678,13 +681,11 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string org_id_filter = 2 [json_name = "orgIdFilter", deprecated = true];</code>
-     * @deprecated api.v0alpha.ListUserDescriptionsRequest.org_id_filter is deprecated.
-     *     See api/v0alpha/org.proto;l=3158
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearOrgIdFilter() {
+      
       orgIdFilter_ = getDefaultInstance().getOrgIdFilter();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -695,17 +696,17 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>string org_id_filter = 2 [json_name = "orgIdFilter", deprecated = true];</code>
-     * @deprecated api.v0alpha.ListUserDescriptionsRequest.org_id_filter is deprecated.
-     *     See api/v0alpha/org.proto;l=3158
      * @param value The bytes for orgIdFilter to set.
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder setOrgIdFilterBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       orgIdFilter_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -742,18 +743,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new ListUserDescriptionsRequest(input, extensionRegistry);
     }
   };
 

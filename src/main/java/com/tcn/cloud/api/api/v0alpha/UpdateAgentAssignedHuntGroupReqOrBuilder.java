@@ -36,12 +36,14 @@ public interface UpdateAgentAssignedHuntGroupReqOrBuilder extends
   /**
    * <code>map&lt;string, int64&gt; skills = 4 [json_name = "skills"];</code>
    */
+
   long getSkillsOrDefault(
       java.lang.String key,
       long defaultValue);
   /**
    * <code>map&lt;string, int64&gt; skills = 4 [json_name = "skills"];</code>
    */
+
   long getSkillsOrThrow(
       java.lang.String key);
 

@@ -29,6 +29,61 @@ private static final long serialVersionUID = 0L;
     return new GetAgentPreferencesResponse();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private GetAgentPreferencesResponse(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 82: {
+            com.tcn.cloud.api.api.v0alpha.AgentPreferences.Builder subBuilder = null;
+            if (agentPreferences_ != null) {
+              subBuilder = agentPreferences_.toBuilder();
+            }
+            agentPreferences_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.AgentPreferences.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(agentPreferences_);
+              agentPreferences_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_GetAgentPreferencesResponse_descriptor;
@@ -77,7 +132,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.AgentPreferencesOrBuilder getAgentPreferencesOrBuilder() {
-    return agentPreferences_ == null ? com.tcn.cloud.api.api.v0alpha.AgentPreferences.getDefaultInstance() : agentPreferences_;
+    return getAgentPreferences();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -97,7 +152,7 @@ private static final long serialVersionUID = 0L;
     if (agentPreferences_ != null) {
       output.writeMessage(10, getAgentPreferences());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -110,7 +165,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getAgentPreferences());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -130,7 +185,7 @@ private static final long serialVersionUID = 0L;
       if (!getAgentPreferences()
           .equals(other.getAgentPreferences())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -145,7 +200,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + AGENT_PREFERENCES_FIELD_NUMBER;
       hash = (53 * hash) + getAgentPreferences().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -194,13 +249,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.GetAgentPreferencesResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.GetAgentPreferencesResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -268,21 +321,26 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.GetAgentPreferencesResponse.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      agentPreferences_ = null;
-      if (agentPreferencesBuilder_ != null) {
-        agentPreferencesBuilder_.dispose();
+      if (agentPreferencesBuilder_ == null) {
+        agentPreferences_ = null;
+      } else {
+        agentPreferences_ = null;
         agentPreferencesBuilder_ = null;
       }
       return this;
@@ -311,18 +369,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.GetAgentPreferencesResponse buildPartial() {
       com.tcn.cloud.api.api.v0alpha.GetAgentPreferencesResponse result = new com.tcn.cloud.api.api.v0alpha.GetAgentPreferencesResponse(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      if (agentPreferencesBuilder_ == null) {
+        result.agentPreferences_ = agentPreferences_;
+      } else {
+        result.agentPreferences_ = agentPreferencesBuilder_.build();
+      }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.GetAgentPreferencesResponse result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.agentPreferences_ = agentPreferencesBuilder_ == null
-            ? agentPreferences_
-            : agentPreferencesBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -372,7 +425,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasAgentPreferences()) {
         mergeAgentPreferences(other.getAgentPreferences());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -387,40 +440,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.GetAgentPreferencesResponse parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 82: {
-              input.readMessage(
-                  getAgentPreferencesFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 82
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.GetAgentPreferencesResponse) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private com.tcn.cloud.api.api.v0alpha.AgentPreferences agentPreferences_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -434,7 +466,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the agentPreferences field is set.
      */
     public boolean hasAgentPreferences() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return agentPreferencesBuilder_ != null || agentPreferences_ != null;
     }
     /**
      * <pre>
@@ -464,11 +496,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         agentPreferences_ = value;
+        onChanged();
       } else {
         agentPreferencesBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -482,11 +514,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.AgentPreferences.Builder builderForValue) {
       if (agentPreferencesBuilder_ == null) {
         agentPreferences_ = builderForValue.build();
+        onChanged();
       } else {
         agentPreferencesBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -498,18 +530,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAgentPreferences(com.tcn.cloud.api.api.v0alpha.AgentPreferences value) {
       if (agentPreferencesBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          agentPreferences_ != null &&
-          agentPreferences_ != com.tcn.cloud.api.api.v0alpha.AgentPreferences.getDefaultInstance()) {
-          getAgentPreferencesBuilder().mergeFrom(value);
+        if (agentPreferences_ != null) {
+          agentPreferences_ =
+            com.tcn.cloud.api.api.v0alpha.AgentPreferences.newBuilder(agentPreferences_).mergeFrom(value).buildPartial();
         } else {
           agentPreferences_ = value;
         }
+        onChanged();
       } else {
         agentPreferencesBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -520,13 +551,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v0alpha.AgentPreferences agent_preferences = 10 [json_name = "agentPreferences"];</code>
      */
     public Builder clearAgentPreferences() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      agentPreferences_ = null;
-      if (agentPreferencesBuilder_ != null) {
-        agentPreferencesBuilder_.dispose();
+      if (agentPreferencesBuilder_ == null) {
+        agentPreferences_ = null;
+        onChanged();
+      } else {
+        agentPreferences_ = null;
         agentPreferencesBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -537,7 +569,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v0alpha.AgentPreferences agent_preferences = 10 [json_name = "agentPreferences"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.AgentPreferences.Builder getAgentPreferencesBuilder() {
-      bitField0_ |= 0x00000001;
+      
       onChanged();
       return getAgentPreferencesFieldBuilder().getBuilder();
     }
@@ -609,18 +641,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new GetAgentPreferencesResponse(input, extensionRegistry);
     }
   };
 

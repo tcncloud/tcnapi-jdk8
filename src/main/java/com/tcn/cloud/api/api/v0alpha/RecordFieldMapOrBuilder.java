@@ -30,14 +30,14 @@ public interface RecordFieldMapOrBuilder extends
   /**
    * <code>map&lt;string, .api.v0alpha.RecordFieldProto&gt; fields = 1 [json_name = "fields"];</code>
    */
-  /* nullable */
-com.tcn.cloud.api.api.v0alpha.RecordFieldProto getFieldsOrDefault(
+
+  com.tcn.cloud.api.api.v0alpha.RecordFieldProto getFieldsOrDefault(
       java.lang.String key,
-      /* nullable */
-com.tcn.cloud.api.api.v0alpha.RecordFieldProto defaultValue);
+      com.tcn.cloud.api.api.v0alpha.RecordFieldProto defaultValue);
   /**
    * <code>map&lt;string, .api.v0alpha.RecordFieldProto&gt; fields = 1 [json_name = "fields"];</code>
    */
+
   com.tcn.cloud.api.api.v0alpha.RecordFieldProto getFieldsOrThrow(
       java.lang.String key);
 }

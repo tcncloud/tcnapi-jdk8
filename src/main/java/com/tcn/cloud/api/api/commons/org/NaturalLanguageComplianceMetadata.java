@@ -31,6 +31,102 @@ private static final long serialVersionUID = 0L;
     return new NaturalLanguageComplianceMetadata();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private NaturalLanguageComplianceMetadata(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+
+            enabled_ = input.readBool();
+            break;
+          }
+          case 16: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              optionalData_ = newLongList();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            optionalData_.addLong(input.readInt64());
+            break;
+          }
+          case 18: {
+            int length = input.readRawVarint32();
+            int limit = input.pushLimit(length);
+            if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+              optionalData_ = newLongList();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            while (input.getBytesUntilLimit() > 0) {
+              optionalData_.addLong(input.readInt64());
+            }
+            input.popLimit(limit);
+            break;
+          }
+          case 24: {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              requiredData_ = newLongList();
+              mutable_bitField0_ |= 0x00000002;
+            }
+            requiredData_.addLong(input.readInt64());
+            break;
+          }
+          case 26: {
+            int length = input.readRawVarint32();
+            int limit = input.pushLimit(length);
+            if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+              requiredData_ = newLongList();
+              mutable_bitField0_ |= 0x00000002;
+            }
+            while (input.getBytesUntilLimit() > 0) {
+              requiredData_.addLong(input.readInt64());
+            }
+            input.popLimit(limit);
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        optionalData_.makeImmutable(); // C
+      }
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        requiredData_.makeImmutable(); // C
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.org.HuntgroupProto.internal_static_api_commons_org_NaturalLanguageComplianceMetadata_descriptor;
@@ -45,7 +141,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ENABLED_FIELD_NUMBER = 1;
-  private boolean enabled_ = false;
+  private boolean enabled_;
   /**
    * <pre>
    * Whether compliance metadata is used.
@@ -60,7 +156,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int OPTIONAL_DATA_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
   private com.google.protobuf.Internal.LongList optionalData_;
   /**
    * <pre>
@@ -104,7 +199,6 @@ private static final long serialVersionUID = 0L;
   private int optionalDataMemoizedSerializedSize = -1;
 
   public static final int REQUIRED_DATA_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
   private com.google.protobuf.Internal.LongList requiredData_;
   /**
    * <pre>
@@ -179,7 +273,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < requiredData_.size(); i++) {
       output.writeInt64NoTag(requiredData_.getLong(i));
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -220,7 +314,7 @@ private static final long serialVersionUID = 0L;
       }
       requiredDataMemoizedSerializedSize = dataSize;
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -241,7 +335,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getOptionalDataList())) return false;
     if (!getRequiredDataList()
         .equals(other.getRequiredDataList())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -263,7 +357,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + REQUIRED_DATA_FIELD_NUMBER;
       hash = (53 * hash) + getRequiredDataList().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -312,13 +406,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceMetadata parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceMetadata parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -386,21 +478,28 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceMetadata.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       enabled_ = false;
+
       optionalData_ = emptyLongList();
+      bitField0_ = (bitField0_ & ~0x00000001);
       requiredData_ = emptyLongList();
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -427,30 +526,20 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceMetadata buildPartial() {
       com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceMetadata result = new com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceMetadata(this);
-      buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      onBuilt();
-      return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceMetadata result) {
-      if (((bitField0_ & 0x00000002) != 0)) {
+      int from_bitField0_ = bitField0_;
+      result.enabled_ = enabled_;
+      if (((bitField0_ & 0x00000001) != 0)) {
         optionalData_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.optionalData_ = optionalData_;
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         requiredData_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
       }
       result.requiredData_ = requiredData_;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceMetadata result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.enabled_ = enabled_;
-      }
+      onBuilt();
+      return result;
     }
 
     @java.lang.Override
@@ -503,7 +592,7 @@ private static final long serialVersionUID = 0L;
       if (!other.optionalData_.isEmpty()) {
         if (optionalData_.isEmpty()) {
           optionalData_ = other.optionalData_;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensureOptionalDataIsMutable();
           optionalData_.addAll(other.optionalData_);
@@ -513,14 +602,14 @@ private static final long serialVersionUID = 0L;
       if (!other.requiredData_.isEmpty()) {
         if (requiredData_.isEmpty()) {
           requiredData_ = other.requiredData_;
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           ensureRequiredDataIsMutable();
           requiredData_.addAll(other.requiredData_);
         }
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -535,67 +624,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceMetadata parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              enabled_ = input.readBool();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 16: {
-              long v = input.readInt64();
-              ensureOptionalDataIsMutable();
-              optionalData_.addLong(v);
-              break;
-            } // case 16
-            case 18: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              ensureOptionalDataIsMutable();
-              while (input.getBytesUntilLimit() > 0) {
-                optionalData_.addLong(input.readInt64());
-              }
-              input.popLimit(limit);
-              break;
-            } // case 18
-            case 24: {
-              long v = input.readInt64();
-              ensureRequiredDataIsMutable();
-              requiredData_.addLong(v);
-              break;
-            } // case 24
-            case 26: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              ensureRequiredDataIsMutable();
-              while (input.getBytesUntilLimit() > 0) {
-                requiredData_.addLong(input.readInt64());
-              }
-              input.popLimit(limit);
-              break;
-            } // case 26
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.commons.org.NaturalLanguageComplianceMetadata) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -623,9 +662,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEnabled(boolean value) {
-
+      
       enabled_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -638,7 +676,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnabled() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       enabled_ = false;
       onChanged();
       return this;
@@ -646,10 +684,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList optionalData_ = emptyLongList();
     private void ensureOptionalDataIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         optionalData_ = mutableCopy(optionalData_);
-        bitField0_ |= 0x00000002;
-      }
+        bitField0_ |= 0x00000001;
+       }
     }
     /**
      * <pre>
@@ -662,7 +700,7 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getOptionalDataList() {
-      return ((bitField0_ & 0x00000002) != 0) ?
+      return ((bitField0_ & 0x00000001) != 0) ?
                java.util.Collections.unmodifiableList(optionalData_) : optionalData_;
     }
     /**
@@ -703,7 +741,6 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOptionalData(
         int index, long value) {
-
       ensureOptionalDataIsMutable();
       optionalData_.setLong(index, value);
       onChanged();
@@ -720,7 +757,6 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder addOptionalData(long value) {
-
       ensureOptionalDataIsMutable();
       optionalData_.addLong(value);
       onChanged();
@@ -755,17 +791,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearOptionalData() {
       optionalData_ = emptyLongList();
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
 
     private com.google.protobuf.Internal.LongList requiredData_ = emptyLongList();
     private void ensureRequiredDataIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         requiredData_ = mutableCopy(requiredData_);
-        bitField0_ |= 0x00000004;
-      }
+        bitField0_ |= 0x00000002;
+       }
     }
     /**
      * <pre>
@@ -778,7 +814,7 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getRequiredDataList() {
-      return ((bitField0_ & 0x00000004) != 0) ?
+      return ((bitField0_ & 0x00000002) != 0) ?
                java.util.Collections.unmodifiableList(requiredData_) : requiredData_;
     }
     /**
@@ -819,7 +855,6 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRequiredData(
         int index, long value) {
-
       ensureRequiredDataIsMutable();
       requiredData_.setLong(index, value);
       onChanged();
@@ -836,7 +871,6 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder addRequiredData(long value) {
-
       ensureRequiredDataIsMutable();
       requiredData_.addLong(value);
       onChanged();
@@ -871,7 +905,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearRequiredData() {
       requiredData_ = emptyLongList();
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -908,18 +942,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new NaturalLanguageComplianceMetadata(input, extensionRegistry);
     }
   };
 

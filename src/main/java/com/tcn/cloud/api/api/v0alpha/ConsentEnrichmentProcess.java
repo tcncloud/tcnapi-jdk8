@@ -28,6 +28,66 @@ private static final long serialVersionUID = 0L;
     return new ConsentEnrichmentProcess();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private ConsentEnrichmentProcess(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            contentField_ = s;
+            break;
+          }
+          case 34: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            consentProfile_ = s;
+            break;
+          }
+          case 42: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            consentProfileId_ = s;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.LmsProto.internal_static_api_v0alpha_ConsentEnrichmentProcess_descriptor;
@@ -42,8 +102,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONTENT_FIELD_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object contentField_ = "";
+  private volatile java.lang.Object contentField_;
   /**
    * <pre>
    * Specifies which record field contains the content
@@ -89,8 +148,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONSENT_PROFILE_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object consentProfile_ = "";
+  private volatile java.lang.Object consentProfile_;
   /**
    * <pre>
    * Profile to use
@@ -136,8 +194,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONSENT_PROFILE_ID_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object consentProfileId_ = "";
+  private volatile java.lang.Object consentProfileId_;
   /**
    * <pre>
    * Profile Id
@@ -196,16 +253,16 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contentField_)) {
+    if (!getContentFieldBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, contentField_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(consentProfile_)) {
+    if (!getConsentProfileBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, consentProfile_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(consentProfileId_)) {
+    if (!getConsentProfileIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, consentProfileId_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -214,16 +271,16 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contentField_)) {
+    if (!getContentFieldBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, contentField_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(consentProfile_)) {
+    if (!getConsentProfileBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, consentProfile_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(consentProfileId_)) {
+    if (!getConsentProfileIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, consentProfileId_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -244,7 +301,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getConsentProfile())) return false;
     if (!getConsentProfileId()
         .equals(other.getConsentProfileId())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -261,7 +318,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getConsentProfile().hashCode();
     hash = (37 * hash) + CONSENT_PROFILE_ID_FIELD_NUMBER;
     hash = (53 * hash) + getConsentProfileId().hashCode();
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -310,13 +367,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.ConsentEnrichmentProcess parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.ConsentEnrichmentProcess parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -380,21 +435,28 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ConsentEnrichmentProcess.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       contentField_ = "";
+
       consentProfile_ = "";
+
       consentProfileId_ = "";
+
       return this;
     }
 
@@ -421,22 +483,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.ConsentEnrichmentProcess buildPartial() {
       com.tcn.cloud.api.api.v0alpha.ConsentEnrichmentProcess result = new com.tcn.cloud.api.api.v0alpha.ConsentEnrichmentProcess(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.contentField_ = contentField_;
+      result.consentProfile_ = consentProfile_;
+      result.consentProfileId_ = consentProfileId_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ConsentEnrichmentProcess result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.contentField_ = contentField_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.consentProfile_ = consentProfile_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.consentProfileId_ = consentProfileId_;
-      }
     }
 
     @java.lang.Override
@@ -485,20 +536,17 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v0alpha.ConsentEnrichmentProcess.getDefaultInstance()) return this;
       if (!other.getContentField().isEmpty()) {
         contentField_ = other.contentField_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getConsentProfile().isEmpty()) {
         consentProfile_ = other.consentProfile_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getConsentProfileId().isEmpty()) {
         consentProfileId_ = other.consentProfileId_;
-        bitField0_ |= 0x00000004;
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -513,48 +561,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.ConsentEnrichmentProcess parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 26: {
-              contentField_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 26
-            case 34: {
-              consentProfile_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 34
-            case 42: {
-              consentProfileId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 42
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.ConsentEnrichmentProcess) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private java.lang.Object contentField_ = "";
     /**
@@ -609,9 +628,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setContentField(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       contentField_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -624,8 +645,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearContentField() {
+      
       contentField_ = getDefaultInstance().getContentField();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -640,10 +661,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setContentFieldBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       contentField_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -701,9 +724,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setConsentProfile(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       consentProfile_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -716,8 +741,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConsentProfile() {
+      
       consentProfile_ = getDefaultInstance().getConsentProfile();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -732,10 +757,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setConsentProfileBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       consentProfile_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -793,9 +820,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setConsentProfileId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       consentProfileId_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -808,8 +837,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConsentProfileId() {
+      
       consentProfileId_ = getDefaultInstance().getConsentProfileId();
-      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -824,10 +853,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setConsentProfileIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       consentProfileId_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -864,18 +895,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new ConsentEnrichmentProcess(input, extensionRegistry);
     }
   };
 

@@ -30,14 +30,14 @@ public interface GetCallDataResOrBuilder extends
   /**
    * <code>map&lt;string, string&gt; ivr_data = 1 [json_name = "ivrData"];</code>
    */
-  /* nullable */
-java.lang.String getIvrDataOrDefault(
+
+  java.lang.String getIvrDataOrDefault(
       java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue);
+      java.lang.String defaultValue);
   /**
    * <code>map&lt;string, string&gt; ivr_data = 1 [json_name = "ivrData"];</code>
    */
+
   java.lang.String getIvrDataOrThrow(
       java.lang.String key);
 
@@ -64,14 +64,14 @@ java.lang.String defaultValue);
   /**
    * <code>map&lt;string, string&gt; phone_enhanced_data = 2 [json_name = "phoneEnhancedData"];</code>
    */
-  /* nullable */
-java.lang.String getPhoneEnhancedDataOrDefault(
+
+  java.lang.String getPhoneEnhancedDataOrDefault(
       java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue);
+      java.lang.String defaultValue);
   /**
    * <code>map&lt;string, string&gt; phone_enhanced_data = 2 [json_name = "phoneEnhancedData"];</code>
    */
+
   java.lang.String getPhoneEnhancedDataOrThrow(
       java.lang.String key);
 
@@ -98,14 +98,14 @@ java.lang.String defaultValue);
   /**
    * <code>map&lt;string, string&gt; data_collect_data = 3 [json_name = "dataCollectData"];</code>
    */
-  /* nullable */
-java.lang.String getDataCollectDataOrDefault(
+
+  java.lang.String getDataCollectDataOrDefault(
       java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue);
+      java.lang.String defaultValue);
   /**
    * <code>map&lt;string, string&gt; data_collect_data = 3 [json_name = "dataCollectData"];</code>
    */
+
   java.lang.String getDataCollectDataOrThrow(
       java.lang.String key);
 
@@ -132,14 +132,14 @@ java.lang.String defaultValue);
   /**
    * <code>map&lt;string, string&gt; data_dip_data = 4 [json_name = "dataDipData"];</code>
    */
-  /* nullable */
-java.lang.String getDataDipDataOrDefault(
+
+  java.lang.String getDataDipDataOrDefault(
       java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue);
+      java.lang.String defaultValue);
   /**
    * <code>map&lt;string, string&gt; data_dip_data = 4 [json_name = "dataDipData"];</code>
    */
+
   java.lang.String getDataDipDataOrThrow(
       java.lang.String key);
 
@@ -190,14 +190,14 @@ java.lang.String defaultValue);
   /**
    * <code>map&lt;string, string&gt; sip_header_data = 7 [json_name = "sipHeaderData"];</code>
    */
-  /* nullable */
-java.lang.String getSipHeaderDataOrDefault(
+
+  java.lang.String getSipHeaderDataOrDefault(
       java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue);
+      java.lang.String defaultValue);
   /**
    * <code>map&lt;string, string&gt; sip_header_data = 7 [json_name = "sipHeaderData"];</code>
    */
+
   java.lang.String getSipHeaderDataOrThrow(
       java.lang.String key);
 
@@ -224,14 +224,14 @@ java.lang.String defaultValue);
   /**
    * <code>map&lt;string, string&gt; queued_callback_data = 8 [json_name = "queuedCallbackData"];</code>
    */
-  /* nullable */
-java.lang.String getQueuedCallbackDataOrDefault(
+
+  java.lang.String getQueuedCallbackDataOrDefault(
       java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue);
+      java.lang.String defaultValue);
   /**
    * <code>map&lt;string, string&gt; queued_callback_data = 8 [json_name = "queuedCallbackData"];</code>
    */
+
   java.lang.String getQueuedCallbackDataOrThrow(
       java.lang.String key);
 
@@ -258,14 +258,14 @@ java.lang.String defaultValue);
   /**
    * <code>map&lt;string, string&gt; journey_retrieved_data = 9 [json_name = "journeyRetrievedData"];</code>
    */
-  /* nullable */
-java.lang.String getJourneyRetrievedDataOrDefault(
+
+  java.lang.String getJourneyRetrievedDataOrDefault(
       java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue);
+      java.lang.String defaultValue);
   /**
    * <code>map&lt;string, string&gt; journey_retrieved_data = 9 [json_name = "journeyRetrievedData"];</code>
    */
+
   java.lang.String getJourneyRetrievedDataOrThrow(
       java.lang.String key);
 
@@ -292,14 +292,14 @@ java.lang.String defaultValue);
   /**
    * <code>map&lt;string, string&gt; integration_data = 10 [json_name = "integrationData"];</code>
    */
-  /* nullable */
-java.lang.String getIntegrationDataOrDefault(
+
+  java.lang.String getIntegrationDataOrDefault(
       java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue);
+      java.lang.String defaultValue);
   /**
    * <code>map&lt;string, string&gt; integration_data = 10 [json_name = "integrationData"];</code>
    */
+
   java.lang.String getIntegrationDataOrThrow(
       java.lang.String key);
 }

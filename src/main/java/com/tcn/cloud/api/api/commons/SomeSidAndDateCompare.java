@@ -25,6 +25,79 @@ private static final long serialVersionUID = 0L;
     return new SomeSidAndDateCompare();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private SomeSidAndDateCompare(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+
+            someSid_ = input.readInt64();
+            break;
+          }
+          case 18: {
+            com.google.protobuf.Timestamp.Builder subBuilder = null;
+            if (dateGreater_ != null) {
+              subBuilder = dateGreater_.toBuilder();
+            }
+            dateGreater_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(dateGreater_);
+              dateGreater_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 26: {
+            com.google.protobuf.Timestamp.Builder subBuilder = null;
+            if (dateLess_ != null) {
+              subBuilder = dateLess_.toBuilder();
+            }
+            dateLess_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(dateLess_);
+              dateLess_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.TypesProto.internal_static_api_commons_SomeSidAndDateCompare_descriptor;
@@ -39,7 +112,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SOME_SID_FIELD_NUMBER = 1;
-  private long someSid_ = 0L;
+  private long someSid_;
   /**
    * <code>int64 some_sid = 1 [json_name = "someSid"];</code>
    * @return The someSid.
@@ -72,7 +145,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getDateGreaterOrBuilder() {
-    return dateGreater_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateGreater_;
+    return getDateGreater();
   }
 
   public static final int DATE_LESS_FIELD_NUMBER = 3;
@@ -98,7 +171,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getDateLessOrBuilder() {
-    return dateLess_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateLess_;
+    return getDateLess();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -124,7 +197,7 @@ private static final long serialVersionUID = 0L;
     if (dateLess_ != null) {
       output.writeMessage(3, getDateLess());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -145,7 +218,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getDateLess());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -172,7 +245,7 @@ private static final long serialVersionUID = 0L;
       if (!getDateLess()
           .equals(other.getDateLess())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -194,7 +267,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DATE_LESS_FIELD_NUMBER;
       hash = (53 * hash) + getDateLess().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -243,13 +316,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.commons.SomeSidAndDateCompare parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.commons.SomeSidAndDateCompare parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -313,27 +384,34 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.SomeSidAndDateCompare.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       someSid_ = 0L;
-      dateGreater_ = null;
-      if (dateGreaterBuilder_ != null) {
-        dateGreaterBuilder_.dispose();
+
+      if (dateGreaterBuilder_ == null) {
+        dateGreater_ = null;
+      } else {
+        dateGreater_ = null;
         dateGreaterBuilder_ = null;
       }
-      dateLess_ = null;
-      if (dateLessBuilder_ != null) {
-        dateLessBuilder_.dispose();
+      if (dateLessBuilder_ == null) {
+        dateLess_ = null;
+      } else {
+        dateLess_ = null;
         dateLessBuilder_ = null;
       }
       return this;
@@ -362,26 +440,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.SomeSidAndDateCompare buildPartial() {
       com.tcn.cloud.api.api.commons.SomeSidAndDateCompare result = new com.tcn.cloud.api.api.commons.SomeSidAndDateCompare(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.someSid_ = someSid_;
+      if (dateGreaterBuilder_ == null) {
+        result.dateGreater_ = dateGreater_;
+      } else {
+        result.dateGreater_ = dateGreaterBuilder_.build();
+      }
+      if (dateLessBuilder_ == null) {
+        result.dateLess_ = dateLess_;
+      } else {
+        result.dateLess_ = dateLessBuilder_.build();
+      }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.commons.SomeSidAndDateCompare result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.someSid_ = someSid_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.dateGreater_ = dateGreaterBuilder_ == null
-            ? dateGreater_
-            : dateGreaterBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.dateLess_ = dateLessBuilder_ == null
-            ? dateLess_
-            : dateLessBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -437,7 +508,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasDateLess()) {
         mergeDateLess(other.getDateLess());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -452,52 +523,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.commons.SomeSidAndDateCompare parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              someSid_ = input.readInt64();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 18: {
-              input.readMessage(
-                  getDateGreaterFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 26: {
-              input.readMessage(
-                  getDateLessFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.commons.SomeSidAndDateCompare) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private long someSid_ ;
     /**
@@ -514,9 +552,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSomeSid(long value) {
-
+      
       someSid_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -525,7 +562,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSomeSid() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       someSid_ = 0L;
       onChanged();
       return this;
@@ -539,7 +576,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dateGreater field is set.
      */
     public boolean hasDateGreater() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return dateGreaterBuilder_ != null || dateGreater_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp date_greater = 2 [json_name = "dateGreater"];</code>
@@ -561,11 +598,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dateGreater_ = value;
+        onChanged();
       } else {
         dateGreaterBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -575,11 +612,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (dateGreaterBuilder_ == null) {
         dateGreater_ = builderForValue.build();
+        onChanged();
       } else {
         dateGreaterBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -587,38 +624,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDateGreater(com.google.protobuf.Timestamp value) {
       if (dateGreaterBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
-          dateGreater_ != null &&
-          dateGreater_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getDateGreaterBuilder().mergeFrom(value);
+        if (dateGreater_ != null) {
+          dateGreater_ =
+            com.google.protobuf.Timestamp.newBuilder(dateGreater_).mergeFrom(value).buildPartial();
         } else {
           dateGreater_ = value;
         }
+        onChanged();
       } else {
         dateGreaterBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp date_greater = 2 [json_name = "dateGreater"];</code>
      */
     public Builder clearDateGreater() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      dateGreater_ = null;
-      if (dateGreaterBuilder_ != null) {
-        dateGreaterBuilder_.dispose();
+      if (dateGreaterBuilder_ == null) {
+        dateGreater_ = null;
+        onChanged();
+      } else {
+        dateGreater_ = null;
         dateGreaterBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp date_greater = 2 [json_name = "dateGreater"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getDateGreaterBuilder() {
-      bitField0_ |= 0x00000002;
+      
       onChanged();
       return getDateGreaterFieldBuilder().getBuilder();
     }
@@ -658,7 +695,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dateLess field is set.
      */
     public boolean hasDateLess() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return dateLessBuilder_ != null || dateLess_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp date_less = 3 [json_name = "dateLess"];</code>
@@ -680,11 +717,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dateLess_ = value;
+        onChanged();
       } else {
         dateLessBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -694,11 +731,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (dateLessBuilder_ == null) {
         dateLess_ = builderForValue.build();
+        onChanged();
       } else {
         dateLessBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -706,38 +743,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDateLess(com.google.protobuf.Timestamp value) {
       if (dateLessBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0) &&
-          dateLess_ != null &&
-          dateLess_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getDateLessBuilder().mergeFrom(value);
+        if (dateLess_ != null) {
+          dateLess_ =
+            com.google.protobuf.Timestamp.newBuilder(dateLess_).mergeFrom(value).buildPartial();
         } else {
           dateLess_ = value;
         }
+        onChanged();
       } else {
         dateLessBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp date_less = 3 [json_name = "dateLess"];</code>
      */
     public Builder clearDateLess() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      dateLess_ = null;
-      if (dateLessBuilder_ != null) {
-        dateLessBuilder_.dispose();
+      if (dateLessBuilder_ == null) {
+        dateLess_ = null;
+        onChanged();
+      } else {
+        dateLess_ = null;
         dateLessBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp date_less = 3 [json_name = "dateLess"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getDateLessBuilder() {
-      bitField0_ |= 0x00000004;
+      
       onChanged();
       return getDateLessFieldBuilder().getBuilder();
     }
@@ -801,18 +838,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new SomeSidAndDateCompare(input, extensionRegistry);
     }
   };
 

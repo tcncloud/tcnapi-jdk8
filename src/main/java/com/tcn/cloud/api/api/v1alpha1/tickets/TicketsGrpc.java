@@ -8,7 +8,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.50.0)",
     comments = "Source: api/v1alpha1/tickets/service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class TicketsGrpc {
@@ -532,14 +532,14 @@ public final class TicketsGrpc {
    * Tickets service is the public api for the tickets service., for public integrations to manage tickets / customer service requests. Can be used by any authorized frontend-app.
    * </pre>
    */
-  public interface AsyncService {
+  public static abstract class TicketsImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
      * Public Method to create a ticket.
      * </pre>
      */
-    default void createTicket(com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketReq request,
+    public void createTicket(com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateTicketMethod(), responseObserver);
     }
@@ -549,7 +549,7 @@ public final class TicketsGrpc {
      * Public Method to create a ticket.
      * </pre>
      */
-    default void editTicket(com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketReq request,
+    public void editTicket(com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEditTicketMethod(), responseObserver);
     }
@@ -559,7 +559,7 @@ public final class TicketsGrpc {
      * Public method to list tickets
      * </pre>
      */
-    default void listTickets(com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketsReq request,
+    public void listTickets(com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListTicketsMethod(), responseObserver);
     }
@@ -569,7 +569,7 @@ public final class TicketsGrpc {
      * Public method to assign ticket
      * </pre>
      */
-    default void assignTicket(com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketReq request,
+    public void assignTicket(com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAssignTicketMethod(), responseObserver);
     }
@@ -579,7 +579,7 @@ public final class TicketsGrpc {
      * Closes the ticket
      * </pre>
      */
-    default void closeTicket(com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketReq request,
+    public void closeTicket(com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCloseTicketMethod(), responseObserver);
     }
@@ -589,7 +589,7 @@ public final class TicketsGrpc {
      * Public method to view ticket
      * </pre>
      */
-    default void viewTicket(com.tcn.cloud.api.api.v1alpha1.tickets.ViewTicketReq request,
+    public void viewTicket(com.tcn.cloud.api.api.v1alpha1.tickets.ViewTicketReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.ViewTicketRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getViewTicketMethod(), responseObserver);
     }
@@ -599,7 +599,7 @@ public final class TicketsGrpc {
      * Public Method to create a Comment.
      * </pre>
      */
-    default void createComment(com.tcn.cloud.api.api.v1alpha1.tickets.CreateCommentReq request,
+    public void createComment(com.tcn.cloud.api.api.v1alpha1.tickets.CreateCommentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.CreateCommentRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateCommentMethod(), responseObserver);
     }
@@ -609,7 +609,7 @@ public final class TicketsGrpc {
      * Public method to Enable Project for Ticketing system
      * </pre>
      */
-    default void enableProject(com.tcn.cloud.api.api.v1alpha1.tickets.EnableProjectReq request,
+    public void enableProject(com.tcn.cloud.api.api.v1alpha1.tickets.EnableProjectReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.EnableProjectRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEnableProjectMethod(), responseObserver);
     }
@@ -619,7 +619,7 @@ public final class TicketsGrpc {
      * Public method to List projects enabled for Ticketing system
      * </pre>
      */
-    default void listEnabledProjects(com.tcn.cloud.api.api.v1alpha1.tickets.ListEnabledProjectsReq request,
+    public void listEnabledProjects(com.tcn.cloud.api.api.v1alpha1.tickets.ListEnabledProjectsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.ListEnabledProjectsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListEnabledProjectsMethod(), responseObserver);
     }
@@ -629,7 +629,7 @@ public final class TicketsGrpc {
      * Public Method to create a sla.
      * </pre>
      */
-    default void createSLA(com.tcn.cloud.api.api.v1alpha1.tickets.CreateSlaReq request,
+    public void createSLA(com.tcn.cloud.api.api.v1alpha1.tickets.CreateSlaReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.CreateSlaRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateSLAMethod(), responseObserver);
     }
@@ -639,7 +639,7 @@ public final class TicketsGrpc {
      * Public method to list sla
      * </pre>
      */
-    default void listSLA(com.tcn.cloud.api.api.v1alpha1.tickets.ListSlaReq request,
+    public void listSLA(com.tcn.cloud.api.api.v1alpha1.tickets.ListSlaReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.ListSlaRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSLAMethod(), responseObserver);
     }
@@ -649,7 +649,7 @@ public final class TicketsGrpc {
      * Public method to update sla
      * </pre>
      */
-    default void updateSLA(com.tcn.cloud.api.api.v1alpha1.tickets.UpdateSlaReq request,
+    public void updateSLA(com.tcn.cloud.api.api.v1alpha1.tickets.UpdateSlaReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.UpdateSlaRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateSLAMethod(), responseObserver);
     }
@@ -659,7 +659,7 @@ public final class TicketsGrpc {
      * Public method to list sla_condition
      * </pre>
      */
-    default void listSLACondition(com.tcn.cloud.api.api.v1alpha1.tickets.ListSlaConditionReq request,
+    public void listSLACondition(com.tcn.cloud.api.api.v1alpha1.tickets.ListSlaConditionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.ListSlaConditionRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSLAConditionMethod(), responseObserver);
     }
@@ -669,7 +669,7 @@ public final class TicketsGrpc {
      * Public method to list sla_condition
      * </pre>
      */
-    default void replyComment(com.tcn.cloud.api.api.v1alpha1.tickets.ReplyCommentReq request,
+    public void replyComment(com.tcn.cloud.api.api.v1alpha1.tickets.ReplyCommentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.ReplyCommentRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getReplyCommentMethod(), responseObserver);
     }
@@ -679,34 +679,128 @@ public final class TicketsGrpc {
      * Public method to List audit log for Ticketing system
      * </pre>
      */
-    default void listTicketAuditLog(com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketAuditLogReq request,
+    public void listTicketAuditLog(com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketAuditLogReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketAuditLogRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListTicketAuditLogMethod(), responseObserver);
     }
-  }
-
-  /**
-   * Base class for the server implementation of the service Tickets.
-   * <pre>
-   * Tickets service is the public api for the tickets service., for public integrations to manage tickets / customer service requests. Can be used by any authorized frontend-app.
-   * </pre>
-   */
-  public static abstract class TicketsImplBase
-      implements io.grpc.BindableService, AsyncService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return TicketsGrpc.bindService(this);
+      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getCreateTicketMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketReq,
+                com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketRes>(
+                  this, METHODID_CREATE_TICKET)))
+          .addMethod(
+            getEditTicketMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketReq,
+                com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketRes>(
+                  this, METHODID_EDIT_TICKET)))
+          .addMethod(
+            getListTicketsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketsReq,
+                com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketsRes>(
+                  this, METHODID_LIST_TICKETS)))
+          .addMethod(
+            getAssignTicketMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketReq,
+                com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes>(
+                  this, METHODID_ASSIGN_TICKET)))
+          .addMethod(
+            getCloseTicketMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketReq,
+                com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketRes>(
+                  this, METHODID_CLOSE_TICKET)))
+          .addMethod(
+            getViewTicketMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.tickets.ViewTicketReq,
+                com.tcn.cloud.api.api.v1alpha1.tickets.ViewTicketRes>(
+                  this, METHODID_VIEW_TICKET)))
+          .addMethod(
+            getCreateCommentMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.tickets.CreateCommentReq,
+                com.tcn.cloud.api.api.v1alpha1.tickets.CreateCommentRes>(
+                  this, METHODID_CREATE_COMMENT)))
+          .addMethod(
+            getEnableProjectMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.tickets.EnableProjectReq,
+                com.tcn.cloud.api.api.v1alpha1.tickets.EnableProjectRes>(
+                  this, METHODID_ENABLE_PROJECT)))
+          .addMethod(
+            getListEnabledProjectsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.tickets.ListEnabledProjectsReq,
+                com.tcn.cloud.api.api.v1alpha1.tickets.ListEnabledProjectsRes>(
+                  this, METHODID_LIST_ENABLED_PROJECTS)))
+          .addMethod(
+            getCreateSLAMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.tickets.CreateSlaReq,
+                com.tcn.cloud.api.api.v1alpha1.tickets.CreateSlaRes>(
+                  this, METHODID_CREATE_SLA)))
+          .addMethod(
+            getListSLAMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.tickets.ListSlaReq,
+                com.tcn.cloud.api.api.v1alpha1.tickets.ListSlaRes>(
+                  this, METHODID_LIST_SLA)))
+          .addMethod(
+            getUpdateSLAMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.tickets.UpdateSlaReq,
+                com.tcn.cloud.api.api.v1alpha1.tickets.UpdateSlaRes>(
+                  this, METHODID_UPDATE_SLA)))
+          .addMethod(
+            getListSLAConditionMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.tickets.ListSlaConditionReq,
+                com.tcn.cloud.api.api.v1alpha1.tickets.ListSlaConditionRes>(
+                  this, METHODID_LIST_SLACONDITION)))
+          .addMethod(
+            getReplyCommentMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.tickets.ReplyCommentReq,
+                com.tcn.cloud.api.api.v1alpha1.tickets.ReplyCommentRes>(
+                  this, METHODID_REPLY_COMMENT)))
+          .addMethod(
+            getListTicketAuditLogMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketAuditLogReq,
+                com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketAuditLogRes>(
+                  this, METHODID_LIST_TICKET_AUDIT_LOG)))
+          .build();
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service Tickets.
    * <pre>
    * Tickets service is the public api for the tickets service., for public integrations to manage tickets / customer service requests. Can be used by any authorized frontend-app.
    * </pre>
    */
-  public static final class TicketsStub
-      extends io.grpc.stub.AbstractAsyncStub<TicketsStub> {
+  public static final class TicketsStub extends io.grpc.stub.AbstractAsyncStub<TicketsStub> {
     private TicketsStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -885,13 +979,11 @@ public final class TicketsGrpc {
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service Tickets.
    * <pre>
    * Tickets service is the public api for the tickets service., for public integrations to manage tickets / customer service requests. Can be used by any authorized frontend-app.
    * </pre>
    */
-  public static final class TicketsBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<TicketsBlockingStub> {
+  public static final class TicketsBlockingStub extends io.grpc.stub.AbstractBlockingStub<TicketsBlockingStub> {
     private TicketsBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -1055,13 +1147,11 @@ public final class TicketsGrpc {
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service Tickets.
    * <pre>
    * Tickets service is the public api for the tickets service., for public integrations to manage tickets / customer service requests. Can be used by any authorized frontend-app.
    * </pre>
    */
-  public static final class TicketsFutureStub
-      extends io.grpc.stub.AbstractFutureStub<TicketsFutureStub> {
+  public static final class TicketsFutureStub extends io.grpc.stub.AbstractFutureStub<TicketsFutureStub> {
     private TicketsFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -1260,10 +1350,10 @@ public final class TicketsGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AsyncService serviceImpl;
+    private final TicketsImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AsyncService serviceImpl, int methodId) {
+    MethodHandlers(TicketsImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -1346,116 +1436,6 @@ public final class TicketsGrpc {
           throw new AssertionError();
       }
     }
-  }
-
-  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
-    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-        .addMethod(
-          getCreateTicketMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketReq,
-              com.tcn.cloud.api.api.v1alpha1.tickets.CreateTicketRes>(
-                service, METHODID_CREATE_TICKET)))
-        .addMethod(
-          getEditTicketMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketReq,
-              com.tcn.cloud.api.api.v1alpha1.tickets.EditTicketRes>(
-                service, METHODID_EDIT_TICKET)))
-        .addMethod(
-          getListTicketsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketsReq,
-              com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketsRes>(
-                service, METHODID_LIST_TICKETS)))
-        .addMethod(
-          getAssignTicketMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketReq,
-              com.tcn.cloud.api.api.v1alpha1.tickets.AssignTicketRes>(
-                service, METHODID_ASSIGN_TICKET)))
-        .addMethod(
-          getCloseTicketMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketReq,
-              com.tcn.cloud.api.api.v1alpha1.tickets.CloseTicketRes>(
-                service, METHODID_CLOSE_TICKET)))
-        .addMethod(
-          getViewTicketMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.tickets.ViewTicketReq,
-              com.tcn.cloud.api.api.v1alpha1.tickets.ViewTicketRes>(
-                service, METHODID_VIEW_TICKET)))
-        .addMethod(
-          getCreateCommentMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.tickets.CreateCommentReq,
-              com.tcn.cloud.api.api.v1alpha1.tickets.CreateCommentRes>(
-                service, METHODID_CREATE_COMMENT)))
-        .addMethod(
-          getEnableProjectMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.tickets.EnableProjectReq,
-              com.tcn.cloud.api.api.v1alpha1.tickets.EnableProjectRes>(
-                service, METHODID_ENABLE_PROJECT)))
-        .addMethod(
-          getListEnabledProjectsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.tickets.ListEnabledProjectsReq,
-              com.tcn.cloud.api.api.v1alpha1.tickets.ListEnabledProjectsRes>(
-                service, METHODID_LIST_ENABLED_PROJECTS)))
-        .addMethod(
-          getCreateSLAMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.tickets.CreateSlaReq,
-              com.tcn.cloud.api.api.v1alpha1.tickets.CreateSlaRes>(
-                service, METHODID_CREATE_SLA)))
-        .addMethod(
-          getListSLAMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.tickets.ListSlaReq,
-              com.tcn.cloud.api.api.v1alpha1.tickets.ListSlaRes>(
-                service, METHODID_LIST_SLA)))
-        .addMethod(
-          getUpdateSLAMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.tickets.UpdateSlaReq,
-              com.tcn.cloud.api.api.v1alpha1.tickets.UpdateSlaRes>(
-                service, METHODID_UPDATE_SLA)))
-        .addMethod(
-          getListSLAConditionMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.tickets.ListSlaConditionReq,
-              com.tcn.cloud.api.api.v1alpha1.tickets.ListSlaConditionRes>(
-                service, METHODID_LIST_SLACONDITION)))
-        .addMethod(
-          getReplyCommentMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.tickets.ReplyCommentReq,
-              com.tcn.cloud.api.api.v1alpha1.tickets.ReplyCommentRes>(
-                service, METHODID_REPLY_COMMENT)))
-        .addMethod(
-          getListTicketAuditLogMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketAuditLogReq,
-              com.tcn.cloud.api.api.v1alpha1.tickets.ListTicketAuditLogRes>(
-                service, METHODID_LIST_TICKET_AUDIT_LOG)))
-        .build();
   }
 
   private static abstract class TicketsBaseDescriptorSupplier

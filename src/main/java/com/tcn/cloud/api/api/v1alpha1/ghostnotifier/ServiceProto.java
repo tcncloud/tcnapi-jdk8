@@ -35,8 +35,8 @@ public final class ServiceProto {
       "\n\020GhostNotifierApi\022\262\001\n\021ListNotifications" +
       "\0220.api.v1alpha1.ghostnotifier.ListNotifi" +
       "cationsReq\032\036.api.commons.GhostNotificati" +
-      "on\"I\202\323\344\223\002C\">/api/v1alpha1/ghostnotifier/" +
-      "ghostnotifierapi/listnotifications:\001*0\001B" +
+      "on\"I\202\323\344\223\002C:\001*\">/api/v1alpha1/ghostnotifi" +
+      "er/ghostnotifierapi/listnotifications0\001B" +
       "\306\001\n,com.tcn.cloud.api.api.v1alpha1.ghost" +
       "notifierB\014ServiceProtoP\001\242\002\003AVG\252\002\032Api.V1a" +
       "lpha1.Ghostnotifier\312\002\032Api\\V1alpha1\\Ghost" +

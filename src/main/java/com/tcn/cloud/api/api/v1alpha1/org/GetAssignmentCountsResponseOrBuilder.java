@@ -54,6 +54,7 @@ public interface GetAssignmentCountsResponseOrBuilder extends
    *
    * <code>map&lt;int32, int64&gt; counts = 1 [json_name = "counts"];</code>
    */
+
   long getCountsOrDefault(
       int key,
       long defaultValue);
@@ -66,6 +67,7 @@ public interface GetAssignmentCountsResponseOrBuilder extends
    *
    * <code>map&lt;int32, int64&gt; counts = 1 [json_name = "counts"];</code>
    */
+
   long getCountsOrThrow(
       int key);
 }

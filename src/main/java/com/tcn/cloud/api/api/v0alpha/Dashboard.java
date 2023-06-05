@@ -32,6 +32,105 @@ private static final long serialVersionUID = 0L;
     return new Dashboard();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private Dashboard(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            dashboardId_ = s;
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            title_ = s;
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            description_ = s;
+            break;
+          }
+          case 34: {
+            com.tcn.cloud.api.api.v0alpha.DashboardLayout.Builder subBuilder = null;
+            if (layout_ != null) {
+              subBuilder = layout_.toBuilder();
+            }
+            layout_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.DashboardLayout.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(layout_);
+              layout_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 42: {
+            com.tcn.cloud.api.api.v0alpha.DashboardView.Builder subBuilder = null;
+            if (view_ != null) {
+              subBuilder = view_.toBuilder();
+            }
+            view_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.DashboardView.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(view_);
+              view_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 50: {
+            com.tcn.cloud.api.api.v0alpha.DashboardType.Builder subBuilder = null;
+            if (type_ != null) {
+              subBuilder = type_.toBuilder();
+            }
+            type_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.DashboardType.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(type_);
+              type_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.DashboardsProto.internal_static_api_v0alpha_Dashboard_descriptor;
@@ -46,8 +145,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DASHBOARD_ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object dashboardId_ = "";
+  private volatile java.lang.Object dashboardId_;
   /**
    * <pre>
    * unique ID for this dashboard
@@ -93,8 +191,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TITLE_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object title_ = "";
+  private volatile java.lang.Object title_;
   /**
    * <pre>
    * required dashboard title
@@ -140,8 +237,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTION_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object description_ = "";
+  private volatile java.lang.Object description_;
   /**
    * <pre>
    * optional dashboard description
@@ -221,7 +317,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.DashboardLayoutOrBuilder getLayoutOrBuilder() {
-    return layout_ == null ? com.tcn.cloud.api.api.v0alpha.DashboardLayout.getDefaultInstance() : layout_;
+    return getLayout();
   }
 
   public static final int VIEW_FIELD_NUMBER = 5;
@@ -259,7 +355,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.DashboardViewOrBuilder getViewOrBuilder() {
-    return view_ == null ? com.tcn.cloud.api.api.v0alpha.DashboardView.getDefaultInstance() : view_;
+    return getView();
   }
 
   public static final int TYPE_FIELD_NUMBER = 6;
@@ -297,7 +393,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.DashboardTypeOrBuilder getTypeOrBuilder() {
-    return type_ == null ? com.tcn.cloud.api.api.v0alpha.DashboardType.getDefaultInstance() : type_;
+    return getType();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -314,13 +410,13 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dashboardId_)) {
+    if (!getDashboardIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dashboardId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+    if (!getTitleBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, title_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+    if (!getDescriptionBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
     }
     if (layout_ != null) {
@@ -332,7 +428,7 @@ private static final long serialVersionUID = 0L;
     if (type_ != null) {
       output.writeMessage(6, getType());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -341,13 +437,13 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dashboardId_)) {
+    if (!getDashboardIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dashboardId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+    if (!getTitleBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, title_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+    if (!getDescriptionBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
     }
     if (layout_ != null) {
@@ -362,7 +458,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getType());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -398,7 +494,7 @@ private static final long serialVersionUID = 0L;
       if (!getType()
           .equals(other.getType())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -427,7 +523,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getType().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -476,13 +572,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.Dashboard parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.Dashboard parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -550,34 +644,44 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.Dashboard.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       dashboardId_ = "";
+
       title_ = "";
+
       description_ = "";
-      layout_ = null;
-      if (layoutBuilder_ != null) {
-        layoutBuilder_.dispose();
+
+      if (layoutBuilder_ == null) {
+        layout_ = null;
+      } else {
+        layout_ = null;
         layoutBuilder_ = null;
       }
-      view_ = null;
-      if (viewBuilder_ != null) {
-        viewBuilder_.dispose();
+      if (viewBuilder_ == null) {
+        view_ = null;
+      } else {
+        view_ = null;
         viewBuilder_ = null;
       }
-      type_ = null;
-      if (typeBuilder_ != null) {
-        typeBuilder_.dispose();
+      if (typeBuilder_ == null) {
+        type_ = null;
+      } else {
+        type_ = null;
         typeBuilder_ = null;
       }
       return this;
@@ -606,37 +710,26 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.Dashboard buildPartial() {
       com.tcn.cloud.api.api.v0alpha.Dashboard result = new com.tcn.cloud.api.api.v0alpha.Dashboard(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.dashboardId_ = dashboardId_;
+      result.title_ = title_;
+      result.description_ = description_;
+      if (layoutBuilder_ == null) {
+        result.layout_ = layout_;
+      } else {
+        result.layout_ = layoutBuilder_.build();
+      }
+      if (viewBuilder_ == null) {
+        result.view_ = view_;
+      } else {
+        result.view_ = viewBuilder_.build();
+      }
+      if (typeBuilder_ == null) {
+        result.type_ = type_;
+      } else {
+        result.type_ = typeBuilder_.build();
+      }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.Dashboard result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.dashboardId_ = dashboardId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.title_ = title_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.description_ = description_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.layout_ = layoutBuilder_ == null
-            ? layout_
-            : layoutBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.view_ = viewBuilder_ == null
-            ? view_
-            : viewBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.type_ = typeBuilder_ == null
-            ? type_
-            : typeBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -685,17 +778,14 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v0alpha.Dashboard.getDefaultInstance()) return this;
       if (!other.getDashboardId().isEmpty()) {
         dashboardId_ = other.dashboardId_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getTitle().isEmpty()) {
         title_ = other.title_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getDescription().isEmpty()) {
         description_ = other.description_;
-        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.hasLayout()) {
@@ -707,7 +797,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasType()) {
         mergeType(other.getType());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -722,69 +812,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.Dashboard parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              dashboardId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              title_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 26: {
-              description_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            case 34: {
-              input.readMessage(
-                  getLayoutFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
-            case 42: {
-              input.readMessage(
-                  getViewFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 42
-            case 50: {
-              input.readMessage(
-                  getTypeFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 50
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.Dashboard) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private java.lang.Object dashboardId_ = "";
     /**
@@ -839,9 +879,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDashboardId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       dashboardId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -854,8 +896,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDashboardId() {
+      
       dashboardId_ = getDefaultInstance().getDashboardId();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -870,10 +912,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDashboardIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       dashboardId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -931,9 +975,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTitle(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       title_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -946,8 +992,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTitle() {
+      
       title_ = getDefaultInstance().getTitle();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -962,10 +1008,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTitleBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       title_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1023,9 +1071,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       description_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1038,8 +1088,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
+      
       description_ = getDefaultInstance().getDescription();
-      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1054,10 +1104,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescriptionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       description_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1074,7 +1126,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the layout field is set.
      */
     public boolean hasLayout() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return layoutBuilder_ != null || layout_ != null;
     }
     /**
      * <pre>
@@ -1104,11 +1156,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         layout_ = value;
+        onChanged();
       } else {
         layoutBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
@@ -1122,11 +1174,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.DashboardLayout.Builder builderForValue) {
       if (layoutBuilder_ == null) {
         layout_ = builderForValue.build();
+        onChanged();
       } else {
         layoutBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
@@ -1138,18 +1190,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeLayout(com.tcn.cloud.api.api.v0alpha.DashboardLayout value) {
       if (layoutBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0) &&
-          layout_ != null &&
-          layout_ != com.tcn.cloud.api.api.v0alpha.DashboardLayout.getDefaultInstance()) {
-          getLayoutBuilder().mergeFrom(value);
+        if (layout_ != null) {
+          layout_ =
+            com.tcn.cloud.api.api.v0alpha.DashboardLayout.newBuilder(layout_).mergeFrom(value).buildPartial();
         } else {
           layout_ = value;
         }
+        onChanged();
       } else {
         layoutBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
@@ -1160,13 +1211,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v0alpha.DashboardLayout layout = 4 [json_name = "layout"];</code>
      */
     public Builder clearLayout() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      layout_ = null;
-      if (layoutBuilder_ != null) {
-        layoutBuilder_.dispose();
+      if (layoutBuilder_ == null) {
+        layout_ = null;
+        onChanged();
+      } else {
+        layout_ = null;
         layoutBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -1177,7 +1229,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v0alpha.DashboardLayout layout = 4 [json_name = "layout"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.DashboardLayout.Builder getLayoutBuilder() {
-      bitField0_ |= 0x00000008;
+      
       onChanged();
       return getLayoutFieldBuilder().getBuilder();
     }
@@ -1229,7 +1281,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the view field is set.
      */
     public boolean hasView() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return viewBuilder_ != null || view_ != null;
     }
     /**
      * <pre>
@@ -1259,11 +1311,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         view_ = value;
+        onChanged();
       } else {
         viewBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
@@ -1277,11 +1329,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.DashboardView.Builder builderForValue) {
       if (viewBuilder_ == null) {
         view_ = builderForValue.build();
+        onChanged();
       } else {
         viewBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
@@ -1293,18 +1345,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeView(com.tcn.cloud.api.api.v0alpha.DashboardView value) {
       if (viewBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0) &&
-          view_ != null &&
-          view_ != com.tcn.cloud.api.api.v0alpha.DashboardView.getDefaultInstance()) {
-          getViewBuilder().mergeFrom(value);
+        if (view_ != null) {
+          view_ =
+            com.tcn.cloud.api.api.v0alpha.DashboardView.newBuilder(view_).mergeFrom(value).buildPartial();
         } else {
           view_ = value;
         }
+        onChanged();
       } else {
         viewBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
@@ -1315,13 +1366,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v0alpha.DashboardView view = 5 [json_name = "view"];</code>
      */
     public Builder clearView() {
-      bitField0_ = (bitField0_ & ~0x00000010);
-      view_ = null;
-      if (viewBuilder_ != null) {
-        viewBuilder_.dispose();
+      if (viewBuilder_ == null) {
+        view_ = null;
+        onChanged();
+      } else {
+        view_ = null;
         viewBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -1332,7 +1384,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v0alpha.DashboardView view = 5 [json_name = "view"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.DashboardView.Builder getViewBuilder() {
-      bitField0_ |= 0x00000010;
+      
       onChanged();
       return getViewFieldBuilder().getBuilder();
     }
@@ -1384,7 +1436,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the type field is set.
      */
     public boolean hasType() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return typeBuilder_ != null || type_ != null;
     }
     /**
      * <pre>
@@ -1414,11 +1466,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         type_ = value;
+        onChanged();
       } else {
         typeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+
       return this;
     }
     /**
@@ -1432,11 +1484,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.DashboardType.Builder builderForValue) {
       if (typeBuilder_ == null) {
         type_ = builderForValue.build();
+        onChanged();
       } else {
         typeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+
       return this;
     }
     /**
@@ -1448,18 +1500,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeType(com.tcn.cloud.api.api.v0alpha.DashboardType value) {
       if (typeBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0) &&
-          type_ != null &&
-          type_ != com.tcn.cloud.api.api.v0alpha.DashboardType.getDefaultInstance()) {
-          getTypeBuilder().mergeFrom(value);
+        if (type_ != null) {
+          type_ =
+            com.tcn.cloud.api.api.v0alpha.DashboardType.newBuilder(type_).mergeFrom(value).buildPartial();
         } else {
           type_ = value;
         }
+        onChanged();
       } else {
         typeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+
       return this;
     }
     /**
@@ -1470,13 +1521,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v0alpha.DashboardType type = 6 [json_name = "type"];</code>
      */
     public Builder clearType() {
-      bitField0_ = (bitField0_ & ~0x00000020);
-      type_ = null;
-      if (typeBuilder_ != null) {
-        typeBuilder_.dispose();
+      if (typeBuilder_ == null) {
+        type_ = null;
+        onChanged();
+      } else {
+        type_ = null;
         typeBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -1487,7 +1539,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v0alpha.DashboardType type = 6 [json_name = "type"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.DashboardType.Builder getTypeBuilder() {
-      bitField0_ |= 0x00000020;
+      
       onChanged();
       return getTypeFieldBuilder().getBuilder();
     }
@@ -1559,18 +1611,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new Dashboard(input, extensionRegistry);
     }
   };
 

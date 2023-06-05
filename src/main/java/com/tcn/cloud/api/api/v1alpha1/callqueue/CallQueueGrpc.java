@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.50.0)",
     comments = "Source: api/v1alpha1/callqueue/service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class CallQueueGrpc {
@@ -526,7 +526,7 @@ public final class CallQueueGrpc {
 
   /**
    */
-  public interface AsyncService {
+  public static abstract class CallQueueImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
@@ -535,7 +535,7 @@ public final class CallQueueGrpc {
      * It checks for a record first, if no record is dequeued, then the preview call queues will be checked.
      * </pre>
      */
-    default void dequeuePreviewRecordOrCall(com.tcn.cloud.api.api.v1alpha1.callqueue.DequeuePreviewRecordOrCallReq request,
+    public void dequeuePreviewRecordOrCall(com.tcn.cloud.api.api.v1alpha1.callqueue.DequeuePreviewRecordOrCallReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.callqueue.DequeuePreviewRecordOrCallRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDequeuePreviewRecordOrCallMethod(), responseObserver);
     }
@@ -545,7 +545,7 @@ public final class CallQueueGrpc {
      * Enqueues the given preview record into the specified queue.
      * </pre>
      */
-    default void enqueuePreviewRecord(com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueuePreviewRecordReq request,
+    public void enqueuePreviewRecord(com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueuePreviewRecordReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueuePreviewRecordRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEnqueuePreviewRecordMethod(), responseObserver);
     }
@@ -555,7 +555,7 @@ public final class CallQueueGrpc {
      * Returns the scrubbed simple call data for the given preview record.
      * </pre>
      */
-    default void dequeueScrubbedCallForPreviewRecord(com.tcn.cloud.api.api.v1alpha1.callqueue.DequeueScrubbedCallForPreviewRecordReq request,
+    public void dequeueScrubbedCallForPreviewRecord(com.tcn.cloud.api.api.v1alpha1.callqueue.DequeueScrubbedCallForPreviewRecordReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.callqueue.DequeueScrubbedCallForPreviewRecordRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDequeueScrubbedCallForPreviewRecordMethod(), responseObserver);
     }
@@ -565,7 +565,7 @@ public final class CallQueueGrpc {
      * Clears the preview record return queue for the requesting agent.
      * </pre>
      */
-    default void clearPreviewRecordReturnQueue(com.tcn.cloud.api.api.v1alpha1.callqueue.ClearPreviewRecordReturnQueueReq request,
+    public void clearPreviewRecordReturnQueue(com.tcn.cloud.api.api.v1alpha1.callqueue.ClearPreviewRecordReturnQueueReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.callqueue.ClearPreviewRecordReturnQueueRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getClearPreviewRecordReturnQueueMethod(), responseObserver);
     }
@@ -575,7 +575,7 @@ public final class CallQueueGrpc {
      * Enqueues the given preview dial call into the specified queue.
      * </pre>
      */
-    default void enqueuePreviewDialCall(com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueuePreviewDialCallReq request,
+    public void enqueuePreviewDialCall(com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueuePreviewDialCallReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueuePreviewDialCallRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEnqueuePreviewDialCallMethod(), responseObserver);
     }
@@ -585,7 +585,7 @@ public final class CallQueueGrpc {
      * Clears the manual dial return queue of the requesting agent.
      * </pre>
      */
-    default void clearManualDialQueue(com.tcn.cloud.api.api.v1alpha1.callqueue.ClearManualDialQueueReq request,
+    public void clearManualDialQueue(com.tcn.cloud.api.api.v1alpha1.callqueue.ClearManualDialQueueReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.callqueue.ClearManualDialQueueRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getClearManualDialQueueMethod(), responseObserver);
     }
@@ -597,7 +597,7 @@ public final class CallQueueGrpc {
      * The scrubbed call is then dequeued from that agent's manual dial return queue and returned.
      * </pre>
      */
-    default void processManualDialCall(com.tcn.cloud.api.api.v1alpha1.callqueue.ProcessManualDialCallReq request,
+    public void processManualDialCall(com.tcn.cloud.api.api.v1alpha1.callqueue.ProcessManualDialCallReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.callqueue.ProcessManualDialCallRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getProcessManualDialCallMethod(), responseObserver);
     }
@@ -608,7 +608,7 @@ public final class CallQueueGrpc {
      * it also returns a field for the queue name so call can be enqueued back to the same queue.
      * </pre>
      */
-    default void dequeueCallForManualApproval(com.tcn.cloud.api.api.v1alpha1.callqueue.DequeueCallForManualApprovalReq request,
+    public void dequeueCallForManualApproval(com.tcn.cloud.api.api.v1alpha1.callqueue.DequeueCallForManualApprovalReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.callqueue.DequeueCallForManualApprovalRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDequeueCallForManualApprovalMethod(), responseObserver);
     }
@@ -618,7 +618,7 @@ public final class CallQueueGrpc {
      * Enqueues a call in the MAC approval queue.
      * </pre>
      */
-    default void enqueueManuallyApprovedCall(com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueueManuallyApprovedCallReq request,
+    public void enqueueManuallyApprovedCall(com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueueManuallyApprovedCallReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueueManuallyApprovedCallRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEnqueueManuallyApprovedCallMethod(), responseObserver);
     }
@@ -628,7 +628,7 @@ public final class CallQueueGrpc {
      * Enqueues a call in the MAC rejection queue.
      * </pre>
      */
-    default void enqueueManuallyRejectedCall(com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueueManuallyRejectedCallReq request,
+    public void enqueueManuallyRejectedCall(com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueueManuallyRejectedCallReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueueManuallyRejectedCallRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEnqueueManuallyRejectedCallMethod(), responseObserver);
     }
@@ -638,7 +638,7 @@ public final class CallQueueGrpc {
      * Requeues a call requiring manual approval to the specified queue.
      * </pre>
      */
-    default void requeueManuallyApprovedCall(com.tcn.cloud.api.api.v1alpha1.callqueue.RequeueManuallyApprovedCallReq request,
+    public void requeueManuallyApprovedCall(com.tcn.cloud.api.api.v1alpha1.callqueue.RequeueManuallyApprovedCallReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.callqueue.RequeueManuallyApprovedCallRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRequeueManuallyApprovedCallMethod(), responseObserver);
     }
@@ -648,7 +648,7 @@ public final class CallQueueGrpc {
      * Enqueues sms msg in the MAM approval queue.
      * </pre>
      */
-    default void enqueueManuallyApprovedSms(com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueueManuallyApprovedSmsReq request,
+    public void enqueueManuallyApprovedSms(com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueueManuallyApprovedSmsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueueManuallyApprovedSmsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEnqueueManuallyApprovedSmsMethod(), responseObserver);
     }
@@ -658,7 +658,7 @@ public final class CallQueueGrpc {
      * Enqueues sms msg in the MAM rejection queue.
      * </pre>
      */
-    default void enqueueManuallyRejectedSms(com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueueManuallyRejectedSmsReq request,
+    public void enqueueManuallyRejectedSms(com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueueManuallyRejectedSmsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueueManuallyRejectedSmsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEnqueueManuallyRejectedSmsMethod(), responseObserver);
     }
@@ -668,7 +668,7 @@ public final class CallQueueGrpc {
      * Requeues sms msg requiring manual approval to the specified queue.
      * </pre>
      */
-    default void requeueManuallyApprovedSms(com.tcn.cloud.api.api.v1alpha1.callqueue.RequeueManuallyApprovedSmsReq request,
+    public void requeueManuallyApprovedSms(com.tcn.cloud.api.api.v1alpha1.callqueue.RequeueManuallyApprovedSmsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.callqueue.RequeueManuallyApprovedSmsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRequeueManuallyApprovedSmsMethod(), responseObserver);
     }
@@ -679,28 +679,125 @@ public final class CallQueueGrpc {
      * it also returns a field for the queue name so sms mam msg can be enqueued back to the same queue.
      * </pre>
      */
-    default void dequeueSmsMamForManualApproval(com.tcn.cloud.api.api.v1alpha1.callqueue.DequeueSmsMamForManualApprovalReq request,
+    public void dequeueSmsMamForManualApproval(com.tcn.cloud.api.api.v1alpha1.callqueue.DequeueSmsMamForManualApprovalReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.callqueue.DequeueSmsMamForManualApprovalRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDequeueSmsMamForManualApprovalMethod(), responseObserver);
     }
-  }
-
-  /**
-   * Base class for the server implementation of the service CallQueue.
-   */
-  public static abstract class CallQueueImplBase
-      implements io.grpc.BindableService, AsyncService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return CallQueueGrpc.bindService(this);
+      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getDequeuePreviewRecordOrCallMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.callqueue.DequeuePreviewRecordOrCallReq,
+                com.tcn.cloud.api.api.v1alpha1.callqueue.DequeuePreviewRecordOrCallRes>(
+                  this, METHODID_DEQUEUE_PREVIEW_RECORD_OR_CALL)))
+          .addMethod(
+            getEnqueuePreviewRecordMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueuePreviewRecordReq,
+                com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueuePreviewRecordRes>(
+                  this, METHODID_ENQUEUE_PREVIEW_RECORD)))
+          .addMethod(
+            getDequeueScrubbedCallForPreviewRecordMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.callqueue.DequeueScrubbedCallForPreviewRecordReq,
+                com.tcn.cloud.api.api.v1alpha1.callqueue.DequeueScrubbedCallForPreviewRecordRes>(
+                  this, METHODID_DEQUEUE_SCRUBBED_CALL_FOR_PREVIEW_RECORD)))
+          .addMethod(
+            getClearPreviewRecordReturnQueueMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.callqueue.ClearPreviewRecordReturnQueueReq,
+                com.tcn.cloud.api.api.v1alpha1.callqueue.ClearPreviewRecordReturnQueueRes>(
+                  this, METHODID_CLEAR_PREVIEW_RECORD_RETURN_QUEUE)))
+          .addMethod(
+            getEnqueuePreviewDialCallMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueuePreviewDialCallReq,
+                com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueuePreviewDialCallRes>(
+                  this, METHODID_ENQUEUE_PREVIEW_DIAL_CALL)))
+          .addMethod(
+            getClearManualDialQueueMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.callqueue.ClearManualDialQueueReq,
+                com.tcn.cloud.api.api.v1alpha1.callqueue.ClearManualDialQueueRes>(
+                  this, METHODID_CLEAR_MANUAL_DIAL_QUEUE)))
+          .addMethod(
+            getProcessManualDialCallMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.callqueue.ProcessManualDialCallReq,
+                com.tcn.cloud.api.api.v1alpha1.callqueue.ProcessManualDialCallRes>(
+                  this, METHODID_PROCESS_MANUAL_DIAL_CALL)))
+          .addMethod(
+            getDequeueCallForManualApprovalMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.callqueue.DequeueCallForManualApprovalReq,
+                com.tcn.cloud.api.api.v1alpha1.callqueue.DequeueCallForManualApprovalRes>(
+                  this, METHODID_DEQUEUE_CALL_FOR_MANUAL_APPROVAL)))
+          .addMethod(
+            getEnqueueManuallyApprovedCallMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueueManuallyApprovedCallReq,
+                com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueueManuallyApprovedCallRes>(
+                  this, METHODID_ENQUEUE_MANUALLY_APPROVED_CALL)))
+          .addMethod(
+            getEnqueueManuallyRejectedCallMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueueManuallyRejectedCallReq,
+                com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueueManuallyRejectedCallRes>(
+                  this, METHODID_ENQUEUE_MANUALLY_REJECTED_CALL)))
+          .addMethod(
+            getRequeueManuallyApprovedCallMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.callqueue.RequeueManuallyApprovedCallReq,
+                com.tcn.cloud.api.api.v1alpha1.callqueue.RequeueManuallyApprovedCallRes>(
+                  this, METHODID_REQUEUE_MANUALLY_APPROVED_CALL)))
+          .addMethod(
+            getEnqueueManuallyApprovedSmsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueueManuallyApprovedSmsReq,
+                com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueueManuallyApprovedSmsRes>(
+                  this, METHODID_ENQUEUE_MANUALLY_APPROVED_SMS)))
+          .addMethod(
+            getEnqueueManuallyRejectedSmsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueueManuallyRejectedSmsReq,
+                com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueueManuallyRejectedSmsRes>(
+                  this, METHODID_ENQUEUE_MANUALLY_REJECTED_SMS)))
+          .addMethod(
+            getRequeueManuallyApprovedSmsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.callqueue.RequeueManuallyApprovedSmsReq,
+                com.tcn.cloud.api.api.v1alpha1.callqueue.RequeueManuallyApprovedSmsRes>(
+                  this, METHODID_REQUEUE_MANUALLY_APPROVED_SMS)))
+          .addMethod(
+            getDequeueSmsMamForManualApprovalMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.callqueue.DequeueSmsMamForManualApprovalReq,
+                com.tcn.cloud.api.api.v1alpha1.callqueue.DequeueSmsMamForManualApprovalRes>(
+                  this, METHODID_DEQUEUE_SMS_MAM_FOR_MANUAL_APPROVAL)))
+          .build();
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service CallQueue.
    */
-  public static final class CallQueueStub
-      extends io.grpc.stub.AbstractAsyncStub<CallQueueStub> {
+  public static final class CallQueueStub extends io.grpc.stub.AbstractAsyncStub<CallQueueStub> {
     private CallQueueStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -885,10 +982,8 @@ public final class CallQueueGrpc {
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service CallQueue.
    */
-  public static final class CallQueueBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<CallQueueBlockingStub> {
+  public static final class CallQueueBlockingStub extends io.grpc.stub.AbstractBlockingStub<CallQueueBlockingStub> {
     private CallQueueBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -1058,10 +1153,8 @@ public final class CallQueueGrpc {
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service CallQueue.
    */
-  public static final class CallQueueFutureStub
-      extends io.grpc.stub.AbstractFutureStub<CallQueueFutureStub> {
+  public static final class CallQueueFutureStub extends io.grpc.stub.AbstractFutureStub<CallQueueFutureStub> {
     private CallQueueFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -1266,10 +1359,10 @@ public final class CallQueueGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AsyncService serviceImpl;
+    private final CallQueueImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AsyncService serviceImpl, int methodId) {
+    MethodHandlers(CallQueueImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -1352,116 +1445,6 @@ public final class CallQueueGrpc {
           throw new AssertionError();
       }
     }
-  }
-
-  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
-    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-        .addMethod(
-          getDequeuePreviewRecordOrCallMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.callqueue.DequeuePreviewRecordOrCallReq,
-              com.tcn.cloud.api.api.v1alpha1.callqueue.DequeuePreviewRecordOrCallRes>(
-                service, METHODID_DEQUEUE_PREVIEW_RECORD_OR_CALL)))
-        .addMethod(
-          getEnqueuePreviewRecordMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueuePreviewRecordReq,
-              com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueuePreviewRecordRes>(
-                service, METHODID_ENQUEUE_PREVIEW_RECORD)))
-        .addMethod(
-          getDequeueScrubbedCallForPreviewRecordMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.callqueue.DequeueScrubbedCallForPreviewRecordReq,
-              com.tcn.cloud.api.api.v1alpha1.callqueue.DequeueScrubbedCallForPreviewRecordRes>(
-                service, METHODID_DEQUEUE_SCRUBBED_CALL_FOR_PREVIEW_RECORD)))
-        .addMethod(
-          getClearPreviewRecordReturnQueueMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.callqueue.ClearPreviewRecordReturnQueueReq,
-              com.tcn.cloud.api.api.v1alpha1.callqueue.ClearPreviewRecordReturnQueueRes>(
-                service, METHODID_CLEAR_PREVIEW_RECORD_RETURN_QUEUE)))
-        .addMethod(
-          getEnqueuePreviewDialCallMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueuePreviewDialCallReq,
-              com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueuePreviewDialCallRes>(
-                service, METHODID_ENQUEUE_PREVIEW_DIAL_CALL)))
-        .addMethod(
-          getClearManualDialQueueMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.callqueue.ClearManualDialQueueReq,
-              com.tcn.cloud.api.api.v1alpha1.callqueue.ClearManualDialQueueRes>(
-                service, METHODID_CLEAR_MANUAL_DIAL_QUEUE)))
-        .addMethod(
-          getProcessManualDialCallMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.callqueue.ProcessManualDialCallReq,
-              com.tcn.cloud.api.api.v1alpha1.callqueue.ProcessManualDialCallRes>(
-                service, METHODID_PROCESS_MANUAL_DIAL_CALL)))
-        .addMethod(
-          getDequeueCallForManualApprovalMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.callqueue.DequeueCallForManualApprovalReq,
-              com.tcn.cloud.api.api.v1alpha1.callqueue.DequeueCallForManualApprovalRes>(
-                service, METHODID_DEQUEUE_CALL_FOR_MANUAL_APPROVAL)))
-        .addMethod(
-          getEnqueueManuallyApprovedCallMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueueManuallyApprovedCallReq,
-              com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueueManuallyApprovedCallRes>(
-                service, METHODID_ENQUEUE_MANUALLY_APPROVED_CALL)))
-        .addMethod(
-          getEnqueueManuallyRejectedCallMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueueManuallyRejectedCallReq,
-              com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueueManuallyRejectedCallRes>(
-                service, METHODID_ENQUEUE_MANUALLY_REJECTED_CALL)))
-        .addMethod(
-          getRequeueManuallyApprovedCallMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.callqueue.RequeueManuallyApprovedCallReq,
-              com.tcn.cloud.api.api.v1alpha1.callqueue.RequeueManuallyApprovedCallRes>(
-                service, METHODID_REQUEUE_MANUALLY_APPROVED_CALL)))
-        .addMethod(
-          getEnqueueManuallyApprovedSmsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueueManuallyApprovedSmsReq,
-              com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueueManuallyApprovedSmsRes>(
-                service, METHODID_ENQUEUE_MANUALLY_APPROVED_SMS)))
-        .addMethod(
-          getEnqueueManuallyRejectedSmsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueueManuallyRejectedSmsReq,
-              com.tcn.cloud.api.api.v1alpha1.callqueue.EnqueueManuallyRejectedSmsRes>(
-                service, METHODID_ENQUEUE_MANUALLY_REJECTED_SMS)))
-        .addMethod(
-          getRequeueManuallyApprovedSmsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.callqueue.RequeueManuallyApprovedSmsReq,
-              com.tcn.cloud.api.api.v1alpha1.callqueue.RequeueManuallyApprovedSmsRes>(
-                service, METHODID_REQUEUE_MANUALLY_APPROVED_SMS)))
-        .addMethod(
-          getDequeueSmsMamForManualApprovalMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.callqueue.DequeueSmsMamForManualApprovalReq,
-              com.tcn.cloud.api.api.v1alpha1.callqueue.DequeueSmsMamForManualApprovalRes>(
-                service, METHODID_DEQUEUE_SMS_MAM_FOR_MANUAL_APPROVAL)))
-        .build();
   }
 
   private static abstract class CallQueueBaseDescriptorSupplier

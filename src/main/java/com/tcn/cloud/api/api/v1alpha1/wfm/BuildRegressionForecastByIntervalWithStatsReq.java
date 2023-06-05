@@ -30,6 +30,106 @@ private static final long serialVersionUID = 0L;
     return new BuildRegressionForecastByIntervalWithStatsReq();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private BuildRegressionForecastByIntervalWithStatsReq(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 13: {
+
+            averageSpeedOfAnswerInSeconds_ = input.readFloat();
+            break;
+          }
+          case 21: {
+
+            averageHandleTimeInSeconds_ = input.readFloat();
+            break;
+          }
+          case 29: {
+
+            averageAfterCallWorkInSeconds_ = input.readFloat();
+            break;
+          }
+          case 37: {
+
+            averageTimeToAbortInSeconds_ = input.readFloat();
+            break;
+          }
+          case 42: {
+            com.tcn.cloud.api.api.v1alpha1.wfm.RegressionTemplate.Builder subBuilder = null;
+            if (regressionTemplate_ != null) {
+              subBuilder = regressionTemplate_.toBuilder();
+            }
+            regressionTemplate_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.wfm.RegressionTemplate.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(regressionTemplate_);
+              regressionTemplate_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 48: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              skillProfileSidsToForecast_ = newLongList();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            skillProfileSidsToForecast_.addLong(input.readInt64());
+            break;
+          }
+          case 50: {
+            int length = input.readRawVarint32();
+            int limit = input.pushLimit(length);
+            if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+              skillProfileSidsToForecast_ = newLongList();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            while (input.getBytesUntilLimit() > 0) {
+              skillProfileSidsToForecast_.addLong(input.readInt64());
+            }
+            input.popLimit(limit);
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        skillProfileSidsToForecast_.makeImmutable(); // C
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_BuildRegressionForecastByIntervalWithStatsReq_descriptor;
@@ -44,7 +144,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AVERAGE_SPEED_OF_ANSWER_IN_SECONDS_FIELD_NUMBER = 1;
-  private float averageSpeedOfAnswerInSeconds_ = 0F;
+  private float averageSpeedOfAnswerInSeconds_;
   /**
    * <pre>
    * the following only apply for avgs_processing_type=RegressionForecasterAvgsProcessingType.FIXED_AVERAGES
@@ -60,7 +160,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AVERAGE_HANDLE_TIME_IN_SECONDS_FIELD_NUMBER = 2;
-  private float averageHandleTimeInSeconds_ = 0F;
+  private float averageHandleTimeInSeconds_;
   /**
    * <pre>
    * optional
@@ -75,7 +175,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AVERAGE_AFTER_CALL_WORK_IN_SECONDS_FIELD_NUMBER = 3;
-  private float averageAfterCallWorkInSeconds_ = 0F;
+  private float averageAfterCallWorkInSeconds_;
   /**
    * <pre>
    * optional
@@ -90,7 +190,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AVERAGE_TIME_TO_ABORT_IN_SECONDS_FIELD_NUMBER = 4;
-  private float averageTimeToAbortInSeconds_ = 0F;
+  private float averageTimeToAbortInSeconds_;
   /**
    * <pre>
    * optional
@@ -139,11 +239,10 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.wfm.RegressionTemplateOrBuilder getRegressionTemplateOrBuilder() {
-    return regressionTemplate_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.RegressionTemplate.getDefaultInstance() : regressionTemplate_;
+    return getRegressionTemplate();
   }
 
   public static final int SKILL_PROFILE_SIDS_TO_FORECAST_FIELD_NUMBER = 6;
-  @SuppressWarnings("serial")
   private com.google.protobuf.Internal.LongList skillProfileSidsToForecast_;
   /**
    * <pre>
@@ -201,16 +300,16 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     getSerializedSize();
-    if (java.lang.Float.floatToRawIntBits(averageSpeedOfAnswerInSeconds_) != 0) {
+    if (averageSpeedOfAnswerInSeconds_ != 0F) {
       output.writeFloat(1, averageSpeedOfAnswerInSeconds_);
     }
-    if (java.lang.Float.floatToRawIntBits(averageHandleTimeInSeconds_) != 0) {
+    if (averageHandleTimeInSeconds_ != 0F) {
       output.writeFloat(2, averageHandleTimeInSeconds_);
     }
-    if (java.lang.Float.floatToRawIntBits(averageAfterCallWorkInSeconds_) != 0) {
+    if (averageAfterCallWorkInSeconds_ != 0F) {
       output.writeFloat(3, averageAfterCallWorkInSeconds_);
     }
-    if (java.lang.Float.floatToRawIntBits(averageTimeToAbortInSeconds_) != 0) {
+    if (averageTimeToAbortInSeconds_ != 0F) {
       output.writeFloat(4, averageTimeToAbortInSeconds_);
     }
     if (regressionTemplate_ != null) {
@@ -223,7 +322,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < skillProfileSidsToForecast_.size(); i++) {
       output.writeInt64NoTag(skillProfileSidsToForecast_.getLong(i));
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -232,19 +331,19 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (java.lang.Float.floatToRawIntBits(averageSpeedOfAnswerInSeconds_) != 0) {
+    if (averageSpeedOfAnswerInSeconds_ != 0F) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(1, averageSpeedOfAnswerInSeconds_);
     }
-    if (java.lang.Float.floatToRawIntBits(averageHandleTimeInSeconds_) != 0) {
+    if (averageHandleTimeInSeconds_ != 0F) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(2, averageHandleTimeInSeconds_);
     }
-    if (java.lang.Float.floatToRawIntBits(averageAfterCallWorkInSeconds_) != 0) {
+    if (averageAfterCallWorkInSeconds_ != 0F) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(3, averageAfterCallWorkInSeconds_);
     }
-    if (java.lang.Float.floatToRawIntBits(averageTimeToAbortInSeconds_) != 0) {
+    if (averageTimeToAbortInSeconds_ != 0F) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(4, averageTimeToAbortInSeconds_);
     }
@@ -266,7 +365,7 @@ private static final long serialVersionUID = 0L;
       }
       skillProfileSidsToForecastMemoizedSerializedSize = dataSize;
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -300,7 +399,7 @@ private static final long serialVersionUID = 0L;
     }
     if (!getSkillProfileSidsToForecastList()
         .equals(other.getSkillProfileSidsToForecastList())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -331,7 +430,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SKILL_PROFILE_SIDS_TO_FORECAST_FIELD_NUMBER;
       hash = (53 * hash) + getSkillProfileSidsToForecastList().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -380,13 +479,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -454,28 +551,38 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       averageSpeedOfAnswerInSeconds_ = 0F;
+
       averageHandleTimeInSeconds_ = 0F;
+
       averageAfterCallWorkInSeconds_ = 0F;
+
       averageTimeToAbortInSeconds_ = 0F;
-      regressionTemplate_ = null;
-      if (regressionTemplateBuilder_ != null) {
-        regressionTemplateBuilder_.dispose();
+
+      if (regressionTemplateBuilder_ == null) {
+        regressionTemplate_ = null;
+      } else {
+        regressionTemplate_ = null;
         regressionTemplateBuilder_ = null;
       }
       skillProfileSidsToForecast_ = emptyLongList();
+      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -502,39 +609,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsReq buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsReq result = new com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsReq(this);
-      buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      onBuilt();
-      return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsReq result) {
-      if (((bitField0_ & 0x00000020) != 0)) {
+      int from_bitField0_ = bitField0_;
+      result.averageSpeedOfAnswerInSeconds_ = averageSpeedOfAnswerInSeconds_;
+      result.averageHandleTimeInSeconds_ = averageHandleTimeInSeconds_;
+      result.averageAfterCallWorkInSeconds_ = averageAfterCallWorkInSeconds_;
+      result.averageTimeToAbortInSeconds_ = averageTimeToAbortInSeconds_;
+      if (regressionTemplateBuilder_ == null) {
+        result.regressionTemplate_ = regressionTemplate_;
+      } else {
+        result.regressionTemplate_ = regressionTemplateBuilder_.build();
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
         skillProfileSidsToForecast_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.skillProfileSidsToForecast_ = skillProfileSidsToForecast_;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsReq result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.averageSpeedOfAnswerInSeconds_ = averageSpeedOfAnswerInSeconds_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.averageHandleTimeInSeconds_ = averageHandleTimeInSeconds_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.averageAfterCallWorkInSeconds_ = averageAfterCallWorkInSeconds_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.averageTimeToAbortInSeconds_ = averageTimeToAbortInSeconds_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.regressionTemplate_ = regressionTemplateBuilder_ == null
-            ? regressionTemplate_
-            : regressionTemplateBuilder_.build();
-      }
+      onBuilt();
+      return result;
     }
 
     @java.lang.Override
@@ -599,14 +690,14 @@ private static final long serialVersionUID = 0L;
       if (!other.skillProfileSidsToForecast_.isEmpty()) {
         if (skillProfileSidsToForecast_.isEmpty()) {
           skillProfileSidsToForecast_ = other.skillProfileSidsToForecast_;
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensureSkillProfileSidsToForecastIsMutable();
           skillProfileSidsToForecast_.addAll(other.skillProfileSidsToForecast_);
         }
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -621,73 +712,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsReq parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 13: {
-              averageSpeedOfAnswerInSeconds_ = input.readFloat();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 13
-            case 21: {
-              averageHandleTimeInSeconds_ = input.readFloat();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 21
-            case 29: {
-              averageAfterCallWorkInSeconds_ = input.readFloat();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 29
-            case 37: {
-              averageTimeToAbortInSeconds_ = input.readFloat();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 37
-            case 42: {
-              input.readMessage(
-                  getRegressionTemplateFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 42
-            case 48: {
-              long v = input.readInt64();
-              ensureSkillProfileSidsToForecastIsMutable();
-              skillProfileSidsToForecast_.addLong(v);
-              break;
-            } // case 48
-            case 50: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              ensureSkillProfileSidsToForecastIsMutable();
-              while (input.getBytesUntilLimit() > 0) {
-                skillProfileSidsToForecast_.addLong(input.readInt64());
-              }
-              input.popLimit(limit);
-              break;
-            } // case 50
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -717,9 +752,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAverageSpeedOfAnswerInSeconds(float value) {
-
+      
       averageSpeedOfAnswerInSeconds_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -733,7 +767,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAverageSpeedOfAnswerInSeconds() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       averageSpeedOfAnswerInSeconds_ = 0F;
       onChanged();
       return this;
@@ -762,9 +796,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAverageHandleTimeInSeconds(float value) {
-
+      
       averageHandleTimeInSeconds_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -777,7 +810,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAverageHandleTimeInSeconds() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       averageHandleTimeInSeconds_ = 0F;
       onChanged();
       return this;
@@ -806,9 +839,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAverageAfterCallWorkInSeconds(float value) {
-
+      
       averageAfterCallWorkInSeconds_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -821,7 +853,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAverageAfterCallWorkInSeconds() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       averageAfterCallWorkInSeconds_ = 0F;
       onChanged();
       return this;
@@ -850,9 +882,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAverageTimeToAbortInSeconds(float value) {
-
+      
       averageTimeToAbortInSeconds_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -865,7 +896,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAverageTimeToAbortInSeconds() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      
       averageTimeToAbortInSeconds_ = 0F;
       onChanged();
       return this;
@@ -883,7 +914,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the regressionTemplate field is set.
      */
     public boolean hasRegressionTemplate() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return regressionTemplateBuilder_ != null || regressionTemplate_ != null;
     }
     /**
      * <pre>
@@ -913,11 +944,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         regressionTemplate_ = value;
+        onChanged();
       } else {
         regressionTemplateBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
@@ -931,11 +962,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.wfm.RegressionTemplate.Builder builderForValue) {
       if (regressionTemplateBuilder_ == null) {
         regressionTemplate_ = builderForValue.build();
+        onChanged();
       } else {
         regressionTemplateBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
@@ -947,18 +978,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeRegressionTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.RegressionTemplate value) {
       if (regressionTemplateBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0) &&
-          regressionTemplate_ != null &&
-          regressionTemplate_ != com.tcn.cloud.api.api.v1alpha1.wfm.RegressionTemplate.getDefaultInstance()) {
-          getRegressionTemplateBuilder().mergeFrom(value);
+        if (regressionTemplate_ != null) {
+          regressionTemplate_ =
+            com.tcn.cloud.api.api.v1alpha1.wfm.RegressionTemplate.newBuilder(regressionTemplate_).mergeFrom(value).buildPartial();
         } else {
           regressionTemplate_ = value;
         }
+        onChanged();
       } else {
         regressionTemplateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
@@ -969,13 +999,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.wfm.RegressionTemplate regression_template = 5 [json_name = "regressionTemplate"];</code>
      */
     public Builder clearRegressionTemplate() {
-      bitField0_ = (bitField0_ & ~0x00000010);
-      regressionTemplate_ = null;
-      if (regressionTemplateBuilder_ != null) {
-        regressionTemplateBuilder_.dispose();
+      if (regressionTemplateBuilder_ == null) {
+        regressionTemplate_ = null;
+        onChanged();
+      } else {
+        regressionTemplate_ = null;
         regressionTemplateBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -986,7 +1017,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.wfm.RegressionTemplate regression_template = 5 [json_name = "regressionTemplate"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.RegressionTemplate.Builder getRegressionTemplateBuilder() {
-      bitField0_ |= 0x00000010;
+      
       onChanged();
       return getRegressionTemplateFieldBuilder().getBuilder();
     }
@@ -1028,10 +1059,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList skillProfileSidsToForecast_ = emptyLongList();
     private void ensureSkillProfileSidsToForecastIsMutable() {
-      if (!((bitField0_ & 0x00000020) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         skillProfileSidsToForecast_ = mutableCopy(skillProfileSidsToForecast_);
-        bitField0_ |= 0x00000020;
-      }
+        bitField0_ |= 0x00000001;
+       }
     }
     /**
      * <pre>
@@ -1044,7 +1075,7 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getSkillProfileSidsToForecastList() {
-      return ((bitField0_ & 0x00000020) != 0) ?
+      return ((bitField0_ & 0x00000001) != 0) ?
                java.util.Collections.unmodifiableList(skillProfileSidsToForecast_) : skillProfileSidsToForecast_;
     }
     /**
@@ -1085,7 +1116,6 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSkillProfileSidsToForecast(
         int index, long value) {
-
       ensureSkillProfileSidsToForecastIsMutable();
       skillProfileSidsToForecast_.setLong(index, value);
       onChanged();
@@ -1102,7 +1132,6 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder addSkillProfileSidsToForecast(long value) {
-
       ensureSkillProfileSidsToForecastIsMutable();
       skillProfileSidsToForecast_.addLong(value);
       onChanged();
@@ -1137,7 +1166,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearSkillProfileSidsToForecast() {
       skillProfileSidsToForecast_ = emptyLongList();
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1174,18 +1203,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new BuildRegressionForecastByIntervalWithStatsReq(input, extensionRegistry);
     }
   };
 

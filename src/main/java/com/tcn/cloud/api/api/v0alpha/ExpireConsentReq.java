@@ -25,6 +25,66 @@ private static final long serialVersionUID = 0L;
     return new ExpireConsentReq();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private ExpireConsentReq(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+
+            consentId_ = input.readInt64();
+            break;
+          }
+          case 26: {
+            com.google.protobuf.Timestamp.Builder subBuilder = null;
+            if (expire_ != null) {
+              subBuilder = expire_.toBuilder();
+            }
+            expire_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(expire_);
+              expire_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.ComplianceProto.internal_static_api_v0alpha_ExpireConsentReq_descriptor;
@@ -39,7 +99,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONSENT_ID_FIELD_NUMBER = 1;
-  private long consentId_ = 0L;
+  private long consentId_;
   /**
    * <code>int64 consent_id = 1 [json_name = "consentId"];</code>
    * @return The consentId.
@@ -72,7 +132,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getExpireOrBuilder() {
-    return expire_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expire_;
+    return getExpire();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -95,7 +155,7 @@ private static final long serialVersionUID = 0L;
     if (expire_ != null) {
       output.writeMessage(3, getExpire());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -112,7 +172,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getExpire());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -134,7 +194,7 @@ private static final long serialVersionUID = 0L;
       if (!getExpire()
           .equals(other.getExpire())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -152,7 +212,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + EXPIRE_FIELD_NUMBER;
       hash = (53 * hash) + getExpire().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -201,13 +261,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.ExpireConsentReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.ExpireConsentReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -271,22 +329,28 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ExpireConsentReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       consentId_ = 0L;
-      expire_ = null;
-      if (expireBuilder_ != null) {
-        expireBuilder_.dispose();
+
+      if (expireBuilder_ == null) {
+        expire_ = null;
+      } else {
+        expire_ = null;
         expireBuilder_ = null;
       }
       return this;
@@ -315,21 +379,14 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.ExpireConsentReq buildPartial() {
       com.tcn.cloud.api.api.v0alpha.ExpireConsentReq result = new com.tcn.cloud.api.api.v0alpha.ExpireConsentReq(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.consentId_ = consentId_;
+      if (expireBuilder_ == null) {
+        result.expire_ = expire_;
+      } else {
+        result.expire_ = expireBuilder_.build();
+      }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ExpireConsentReq result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.consentId_ = consentId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.expire_ = expireBuilder_ == null
-            ? expire_
-            : expireBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -382,7 +439,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasExpire()) {
         mergeExpire(other.getExpire());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -397,45 +454,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.ExpireConsentReq parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              consentId_ = input.readInt64();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 26: {
-              input.readMessage(
-                  getExpireFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 26
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.ExpireConsentReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private long consentId_ ;
     /**
@@ -452,9 +483,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setConsentId(long value) {
-
+      
       consentId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -463,7 +493,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConsentId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       consentId_ = 0L;
       onChanged();
       return this;
@@ -477,7 +507,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the expire field is set.
      */
     public boolean hasExpire() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return expireBuilder_ != null || expire_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp expire = 3 [json_name = "expire"];</code>
@@ -499,11 +529,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         expire_ = value;
+        onChanged();
       } else {
         expireBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -513,11 +543,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (expireBuilder_ == null) {
         expire_ = builderForValue.build();
+        onChanged();
       } else {
         expireBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -525,38 +555,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeExpire(com.google.protobuf.Timestamp value) {
       if (expireBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
-          expire_ != null &&
-          expire_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getExpireBuilder().mergeFrom(value);
+        if (expire_ != null) {
+          expire_ =
+            com.google.protobuf.Timestamp.newBuilder(expire_).mergeFrom(value).buildPartial();
         } else {
           expire_ = value;
         }
+        onChanged();
       } else {
         expireBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp expire = 3 [json_name = "expire"];</code>
      */
     public Builder clearExpire() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      expire_ = null;
-      if (expireBuilder_ != null) {
-        expireBuilder_.dispose();
+      if (expireBuilder_ == null) {
+        expire_ = null;
+        onChanged();
+      } else {
+        expire_ = null;
         expireBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp expire = 3 [json_name = "expire"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getExpireBuilder() {
-      bitField0_ |= 0x00000002;
+      
       onChanged();
       return getExpireFieldBuilder().getBuilder();
     }
@@ -620,18 +650,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new ExpireConsentReq(input, extensionRegistry);
     }
   };
 

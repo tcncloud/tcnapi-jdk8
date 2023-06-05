@@ -29,6 +29,66 @@ private static final long serialVersionUID = 0L;
     return new CallProfileGroupCalls();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private CallProfileGroupCalls(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+
+            totalCalls_ = input.readInt32();
+            break;
+          }
+          case 18: {
+            com.tcn.cloud.api.api.commons.DistributionProfile.Builder subBuilder = null;
+            if (distributionProfile_ != null) {
+              subBuilder = distributionProfile_.toBuilder();
+            }
+            distributionProfile_ = input.readMessage(com.tcn.cloud.api.api.commons.DistributionProfile.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(distributionProfile_);
+              distributionProfile_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.WfmProto.internal_static_api_commons_CallProfileGroupCalls_descriptor;
@@ -43,7 +103,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTAL_CALLS_FIELD_NUMBER = 1;
-  private int totalCalls_ = 0;
+  private int totalCalls_;
   /**
    * <code>int32 total_calls = 1 [json_name = "totalCalls"];</code>
    * @return The totalCalls.
@@ -76,7 +136,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.DistributionProfileOrBuilder getDistributionProfileOrBuilder() {
-    return distributionProfile_ == null ? com.tcn.cloud.api.api.commons.DistributionProfile.getDefaultInstance() : distributionProfile_;
+    return getDistributionProfile();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -99,7 +159,7 @@ private static final long serialVersionUID = 0L;
     if (distributionProfile_ != null) {
       output.writeMessage(2, getDistributionProfile());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -116,7 +176,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getDistributionProfile());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -138,7 +198,7 @@ private static final long serialVersionUID = 0L;
       if (!getDistributionProfile()
           .equals(other.getDistributionProfile())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -155,7 +215,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DISTRIBUTION_PROFILE_FIELD_NUMBER;
       hash = (53 * hash) + getDistributionProfile().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -204,13 +264,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.commons.CallProfileGroupCalls parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.commons.CallProfileGroupCalls parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -278,22 +336,28 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.CallProfileGroupCalls.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       totalCalls_ = 0;
-      distributionProfile_ = null;
-      if (distributionProfileBuilder_ != null) {
-        distributionProfileBuilder_.dispose();
+
+      if (distributionProfileBuilder_ == null) {
+        distributionProfile_ = null;
+      } else {
+        distributionProfile_ = null;
         distributionProfileBuilder_ = null;
       }
       return this;
@@ -322,21 +386,14 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.CallProfileGroupCalls buildPartial() {
       com.tcn.cloud.api.api.commons.CallProfileGroupCalls result = new com.tcn.cloud.api.api.commons.CallProfileGroupCalls(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.totalCalls_ = totalCalls_;
+      if (distributionProfileBuilder_ == null) {
+        result.distributionProfile_ = distributionProfile_;
+      } else {
+        result.distributionProfile_ = distributionProfileBuilder_.build();
+      }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.commons.CallProfileGroupCalls result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.totalCalls_ = totalCalls_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.distributionProfile_ = distributionProfileBuilder_ == null
-            ? distributionProfile_
-            : distributionProfileBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -389,7 +446,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasDistributionProfile()) {
         mergeDistributionProfile(other.getDistributionProfile());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -404,45 +461,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.commons.CallProfileGroupCalls parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              totalCalls_ = input.readInt32();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 18: {
-              input.readMessage(
-                  getDistributionProfileFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.commons.CallProfileGroupCalls) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private int totalCalls_ ;
     /**
@@ -459,9 +490,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalCalls(int value) {
-
+      
       totalCalls_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -470,7 +500,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalCalls() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       totalCalls_ = 0;
       onChanged();
       return this;
@@ -484,7 +514,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the distributionProfile field is set.
      */
     public boolean hasDistributionProfile() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return distributionProfileBuilder_ != null || distributionProfile_ != null;
     }
     /**
      * <code>.api.commons.DistributionProfile distribution_profile = 2 [json_name = "distributionProfile"];</code>
@@ -506,11 +536,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         distributionProfile_ = value;
+        onChanged();
       } else {
         distributionProfileBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -520,11 +550,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.DistributionProfile.Builder builderForValue) {
       if (distributionProfileBuilder_ == null) {
         distributionProfile_ = builderForValue.build();
+        onChanged();
       } else {
         distributionProfileBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -532,38 +562,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDistributionProfile(com.tcn.cloud.api.api.commons.DistributionProfile value) {
       if (distributionProfileBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
-          distributionProfile_ != null &&
-          distributionProfile_ != com.tcn.cloud.api.api.commons.DistributionProfile.getDefaultInstance()) {
-          getDistributionProfileBuilder().mergeFrom(value);
+        if (distributionProfile_ != null) {
+          distributionProfile_ =
+            com.tcn.cloud.api.api.commons.DistributionProfile.newBuilder(distributionProfile_).mergeFrom(value).buildPartial();
         } else {
           distributionProfile_ = value;
         }
+        onChanged();
       } else {
         distributionProfileBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.commons.DistributionProfile distribution_profile = 2 [json_name = "distributionProfile"];</code>
      */
     public Builder clearDistributionProfile() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      distributionProfile_ = null;
-      if (distributionProfileBuilder_ != null) {
-        distributionProfileBuilder_.dispose();
+      if (distributionProfileBuilder_ == null) {
+        distributionProfile_ = null;
+        onChanged();
+      } else {
+        distributionProfile_ = null;
         distributionProfileBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.commons.DistributionProfile distribution_profile = 2 [json_name = "distributionProfile"];</code>
      */
     public com.tcn.cloud.api.api.commons.DistributionProfile.Builder getDistributionProfileBuilder() {
-      bitField0_ |= 0x00000002;
+      
       onChanged();
       return getDistributionProfileFieldBuilder().getBuilder();
     }
@@ -627,18 +657,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new CallProfileGroupCalls(input, extensionRegistry);
     }
   };
 

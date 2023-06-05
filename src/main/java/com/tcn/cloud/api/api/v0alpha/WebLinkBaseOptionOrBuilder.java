@@ -157,5 +157,5 @@ public interface WebLinkBaseOptionOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.WebLinkBaseOption.PostalFieldOrBuilder getPostalFieldOrBuilder();
 
-  com.tcn.cloud.api.api.v0alpha.WebLinkBaseOption.OptionCase getOptionCase();
+  public com.tcn.cloud.api.api.v0alpha.WebLinkBaseOption.OptionCase getOptionCase();
 }

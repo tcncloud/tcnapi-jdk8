@@ -33,6 +33,118 @@ private static final long serialVersionUID = 0L;
     return new GetUserSessionDataResponse();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private GetUserSessionDataResponse(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.Builder subBuilder = null;
+            if (user_ != null) {
+              subBuilder = user_.toBuilder();
+            }
+            user_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(user_);
+              user_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            orgName_ = s;
+            break;
+          }
+          case 24: {
+            int rawValue = input.readEnum();
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              p3Permissions_ = new java.util.ArrayList<java.lang.Integer>();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            p3Permissions_.add(rawValue);
+            break;
+          }
+          case 26: {
+            int length = input.readRawVarint32();
+            int oldLimit = input.pushLimit(length);
+            while(input.getBytesUntilLimit() > 0) {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                p3Permissions_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              p3Permissions_.add(rawValue);
+            }
+            input.popLimit(oldLimit);
+            break;
+          }
+          case 34: {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              permissionGroups_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.org.PermissionGroup>();
+              mutable_bitField0_ |= 0x00000002;
+            }
+            permissionGroups_.add(
+                input.readMessage(com.tcn.cloud.api.api.commons.org.PermissionGroup.parser(), extensionRegistry));
+            break;
+          }
+          case 42: {
+            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+              labels_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.org.Label>();
+              mutable_bitField0_ |= 0x00000004;
+            }
+            labels_.add(
+                input.readMessage(com.tcn.cloud.api.api.commons.org.Label.parser(), extensionRegistry));
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        p3Permissions_ = java.util.Collections.unmodifiableList(p3Permissions_);
+      }
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        permissionGroups_ = java.util.Collections.unmodifiableList(permissionGroups_);
+      }
+      if (((mutable_bitField0_ & 0x00000004) != 0)) {
+        labels_ = java.util.Collections.unmodifiableList(labels_);
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_GetUserSessionDataResponse_descriptor;
@@ -189,11 +301,10 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, .api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids&gt; region_sid_map = 10 [json_name = "regionSidMap"];</code>
      */
-    /* nullable */
-com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids getRegionSidMapOrDefault(
+
+    com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids getRegionSidMapOrDefault(
         java.lang.String key,
-        /* nullable */
-com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids defaultValue);
+        com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids defaultValue);
     /**
      * <pre>
      * The user's regional sids. The key of the map is a region id.
@@ -201,6 +312,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
      *
      * <code>map&lt;string, .api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids&gt; region_sid_map = 10 [json_name = "regionSidMap"];</code>
      */
+
     com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids getRegionSidMapOrThrow(
         java.lang.String key);
 
@@ -708,17 +820,13 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       defaultRegion_ = "";
       apiKey_ = "";
       email_ = "";
-      callerIds_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      linkbackNumbers_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      callerIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      linkbackNumbers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       authUserId_ = "";
       firstName_ = "";
       lastName_ = "";
-      permissionGroupIds_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      trustIds_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      permissionGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      trustIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       defaultApplication_ = 0;
       userCallerId_ = "";
       agentProfileGroupId_ = "";
@@ -731,6 +839,271 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       return new User();
     }
 
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private User(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              userId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              orgId_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              username_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              p3PermissionGroupId_ = s;
+              break;
+            }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              partnerAgentId_ = s;
+              break;
+            }
+            case 82: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                regionSidMap_ = com.google.protobuf.MapField.newMapField(
+                    RegionSidMapDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids>
+              regionSidMap__ = input.readMessage(
+                  RegionSidMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              regionSidMap_.getMutableMap().put(
+                  regionSidMap__.getKey(), regionSidMap__.getValue());
+              break;
+            }
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              defaultRegion_ = s;
+              break;
+            }
+            case 98: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              apiKey_ = s;
+              break;
+            }
+            case 106: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              email_ = s;
+              break;
+            }
+            case 112: {
+
+              loginDisabled_ = input.readBool();
+              break;
+            }
+            case 122: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                callerIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              callerIds_.add(s);
+              break;
+            }
+            case 130: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                linkbackNumbers_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              linkbackNumbers_.add(s);
+              break;
+            }
+            case 138: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              authUserId_ = s;
+              break;
+            }
+            case 144: {
+
+              enableMfa_ = input.readBool();
+              break;
+            }
+            case 154: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              firstName_ = s;
+              break;
+            }
+            case 162: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              lastName_ = s;
+              break;
+            }
+            case 170: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (created_ != null) {
+                subBuilder = created_.toBuilder();
+              }
+              created_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(created_);
+                created_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 178: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (lastUpdated_ != null) {
+                subBuilder = lastUpdated_.toBuilder();
+              }
+              lastUpdated_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(lastUpdated_);
+                lastUpdated_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 184: {
+
+              passwordResetRequired_ = input.readBool();
+              break;
+            }
+            case 194: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (connectionId_ != null) {
+                subBuilder = connectionId_.toBuilder();
+              }
+              connectionId_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(connectionId_);
+                connectionId_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 202: {
+              com.tcn.cloud.api.api.commons.TimeZoneWrapper.Builder subBuilder = null;
+              if (timeZoneOverride_ != null) {
+                subBuilder = timeZoneOverride_.toBuilder();
+              }
+              timeZoneOverride_ = input.readMessage(com.tcn.cloud.api.api.commons.TimeZoneWrapper.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(timeZoneOverride_);
+                timeZoneOverride_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 210: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                permissionGroupIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              permissionGroupIds_.add(s);
+              break;
+            }
+            case 218: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+                trustIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              trustIds_.add(s);
+              break;
+            }
+            case 224: {
+              int rawValue = input.readEnum();
+
+              defaultApplication_ = rawValue;
+              break;
+            }
+            case 234: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              userCallerId_ = s;
+              break;
+            }
+            case 242: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              agentProfileGroupId_ = s;
+              break;
+            }
+            case 248: {
+
+              agent_ = input.readBool();
+              break;
+            }
+            case 256: {
+
+              accountOwner_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          callerIds_ = callerIds_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          linkbackNumbers_ = linkbackNumbers_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+          permissionGroupIds_ = permissionGroupIds_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000010) != 0)) {
+          trustIds_ = trustIds_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_GetUserSessionDataResponse_User_descriptor;
@@ -816,6 +1189,63 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         return new RegionSids();
       }
 
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private RegionSids(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+
+                loginSid_ = input.readInt64();
+                break;
+              }
+              case 16: {
+
+                agentSid_ = input.readInt64();
+                break;
+              }
+              case 24: {
+
+                clientSid_ = input.readInt64();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return com.tcn.cloud.api.api.v1alpha1.org.UserProto.internal_static_api_v1alpha1_org_GetUserSessionDataResponse_User_RegionSids_descriptor;
@@ -830,7 +1260,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       }
 
       public static final int LOGIN_SID_FIELD_NUMBER = 1;
-      private long loginSid_ = 0L;
+      private long loginSid_;
       /**
        * <pre>
        * The login sid for the region.
@@ -845,7 +1275,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       }
 
       public static final int AGENT_SID_FIELD_NUMBER = 2;
-      private long agentSid_ = 0L;
+      private long agentSid_;
       /**
        * <pre>
        * THe agent sid for the region.
@@ -860,7 +1290,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       }
 
       public static final int CLIENT_SID_FIELD_NUMBER = 3;
-      private long clientSid_ = 0L;
+      private long clientSid_;
       /**
        * <pre>
        * THe client sid for the region.
@@ -897,7 +1327,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         if (clientSid_ != 0L) {
           output.writeInt64(3, clientSid_);
         }
-        getUnknownFields().writeTo(output);
+        unknownFields.writeTo(output);
       }
 
       @java.lang.Override
@@ -918,7 +1348,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
           size += com.google.protobuf.CodedOutputStream
             .computeInt64Size(3, clientSid_);
         }
-        size += getUnknownFields().getSerializedSize();
+        size += unknownFields.getSerializedSize();
         memoizedSize = size;
         return size;
       }
@@ -939,7 +1369,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
             != other.getAgentSid()) return false;
         if (getClientSid()
             != other.getClientSid()) return false;
-        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
 
@@ -959,7 +1389,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         hash = (37 * hash) + CLIENT_SID_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
             getClientSid());
-        hash = (29 * hash) + getUnknownFields().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
       }
@@ -1008,13 +1438,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
-
       public static com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
-
       public static com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1082,21 +1510,28 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
 
         // Construct using com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids.newBuilder()
         private Builder() {
-
+          maybeForceBuilderInitialization();
         }
 
         private Builder(
             com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
           super(parent);
-
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
         }
         @java.lang.Override
         public Builder clear() {
           super.clear();
-          bitField0_ = 0;
           loginSid_ = 0L;
+
           agentSid_ = 0L;
+
           clientSid_ = 0L;
+
           return this;
         }
 
@@ -1123,22 +1558,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         @java.lang.Override
         public com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids buildPartial() {
           com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids result = new com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids(this);
-          if (bitField0_ != 0) { buildPartial0(result); }
+          result.loginSid_ = loginSid_;
+          result.agentSid_ = agentSid_;
+          result.clientSid_ = clientSid_;
           onBuilt();
           return result;
-        }
-
-        private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids result) {
-          int from_bitField0_ = bitField0_;
-          if (((from_bitField0_ & 0x00000001) != 0)) {
-            result.loginSid_ = loginSid_;
-          }
-          if (((from_bitField0_ & 0x00000002) != 0)) {
-            result.agentSid_ = agentSid_;
-          }
-          if (((from_bitField0_ & 0x00000004) != 0)) {
-            result.clientSid_ = clientSid_;
-          }
         }
 
         @java.lang.Override
@@ -1194,7 +1618,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
           if (other.getClientSid() != 0L) {
             setClientSid(other.getClientSid());
           }
-          this.mergeUnknownFields(other.getUnknownFields());
+          this.mergeUnknownFields(other.unknownFields);
           onChanged();
           return this;
         }
@@ -1209,48 +1633,19 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          if (extensionRegistry == null) {
-            throw new java.lang.NullPointerException();
-          }
+          com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids parsedMessage = null;
           try {
-            boolean done = false;
-            while (!done) {
-              int tag = input.readTag();
-              switch (tag) {
-                case 0:
-                  done = true;
-                  break;
-                case 8: {
-                  loginSid_ = input.readInt64();
-                  bitField0_ |= 0x00000001;
-                  break;
-                } // case 8
-                case 16: {
-                  agentSid_ = input.readInt64();
-                  bitField0_ |= 0x00000002;
-                  break;
-                } // case 16
-                case 24: {
-                  clientSid_ = input.readInt64();
-                  bitField0_ |= 0x00000004;
-                  break;
-                } // case 24
-                default: {
-                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                    done = true; // was an endgroup tag
-                  }
-                  break;
-                } // default:
-              } // switch (tag)
-            } // while (!done)
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
-            onChanged();
-          } // finally
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
           return this;
         }
-        private int bitField0_;
 
         private long loginSid_ ;
         /**
@@ -1275,9 +1670,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
          * @return This builder for chaining.
          */
         public Builder setLoginSid(long value) {
-
+          
           loginSid_ = value;
-          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -1290,7 +1684,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
          * @return This builder for chaining.
          */
         public Builder clearLoginSid() {
-          bitField0_ = (bitField0_ & ~0x00000001);
+          
           loginSid_ = 0L;
           onChanged();
           return this;
@@ -1319,9 +1713,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
          * @return This builder for chaining.
          */
         public Builder setAgentSid(long value) {
-
+          
           agentSid_ = value;
-          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
@@ -1334,7 +1727,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
          * @return This builder for chaining.
          */
         public Builder clearAgentSid() {
-          bitField0_ = (bitField0_ & ~0x00000002);
+          
           agentSid_ = 0L;
           onChanged();
           return this;
@@ -1363,9 +1756,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
          * @return This builder for chaining.
          */
         public Builder setClientSid(long value) {
-
+          
           clientSid_ = value;
-          bitField0_ |= 0x00000004;
           onChanged();
           return this;
         }
@@ -1378,7 +1770,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
          * @return This builder for chaining.
          */
         public Builder clearClientSid() {
-          bitField0_ = (bitField0_ & ~0x00000004);
+          
           clientSid_ = 0L;
           onChanged();
           return this;
@@ -1416,18 +1808,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
+          return new RegionSids(input, extensionRegistry);
         }
       };
 
@@ -1448,8 +1829,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     }
 
     public static final int USER_ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object userId_ = "";
+    private volatile java.lang.Object userId_;
     /**
      * <pre>
      * The ID of the user
@@ -1495,8 +1875,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     }
 
     public static final int ORG_ID_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object orgId_ = "";
+    private volatile java.lang.Object orgId_;
     /**
      * <pre>
      * The ID of the org the user belongs to.
@@ -1542,8 +1921,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     }
 
     public static final int USERNAME_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object username_ = "";
+    private volatile java.lang.Object username_;
     /**
      * <pre>
      * The Username of the user.
@@ -1589,8 +1967,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     }
 
     public static final int P3_PERMISSION_GROUP_ID_FIELD_NUMBER = 4;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object p3PermissionGroupId_ = "";
+    private volatile java.lang.Object p3PermissionGroupId_;
     /**
      * <pre>
      * The ID of the p3 permission group the user has.
@@ -1636,8 +2013,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     }
 
     public static final int PARTNER_AGENT_ID_FIELD_NUMBER = 8;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object partnerAgentId_ = "";
+    private volatile java.lang.Object partnerAgentId_;
     /**
      * <pre>
      * The User's partner agent id.
@@ -1694,7 +2070,6 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
                   com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids.getDefaultInstance());
     }
-    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids> regionSidMap_;
     private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids>
@@ -1705,6 +2080,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       }
       return regionSidMap_;
     }
+
     public int getRegionSidMapCount() {
       return internalGetRegionSidMap().getMap().size();
     }
@@ -1715,10 +2091,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
      *
      * <code>map&lt;string, .api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids&gt; region_sid_map = 10 [json_name = "regionSidMap"];</code>
      */
+
     @java.lang.Override
     public boolean containsRegionSidMap(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetRegionSidMap().getMap().containsKey(key);
     }
     /**
@@ -1737,6 +2114,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
      * <code>map&lt;string, .api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids&gt; region_sid_map = 10 [json_name = "regionSidMap"];</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids> getRegionSidMapMap() {
       return internalGetRegionSidMap().getMap();
     }
@@ -1748,12 +2126,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
      * <code>map&lt;string, .api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids&gt; region_sid_map = 10 [json_name = "regionSidMap"];</code>
      */
     @java.lang.Override
-    public /* nullable */
-com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids getRegionSidMapOrDefault(
+
+    public com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids getRegionSidMapOrDefault(
         java.lang.String key,
-        /* nullable */
-com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+        com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids> map =
           internalGetRegionSidMap().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1766,9 +2143,10 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
      * <code>map&lt;string, .api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids&gt; region_sid_map = 10 [json_name = "regionSidMap"];</code>
      */
     @java.lang.Override
+
     public com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids getRegionSidMapOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids> map =
           internalGetRegionSidMap().getMap();
       if (!map.containsKey(key)) {
@@ -1778,8 +2156,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     }
 
     public static final int DEFAULT_REGION_FIELD_NUMBER = 11;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object defaultRegion_ = "";
+    private volatile java.lang.Object defaultRegion_;
     /**
      * <pre>
      * region_id of a the user's default region
@@ -1825,8 +2202,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     }
 
     public static final int API_KEY_FIELD_NUMBER = 12;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object apiKey_ = "";
+    private volatile java.lang.Object apiKey_;
     /**
      * <pre>
      * payload
@@ -1872,8 +2248,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     }
 
     public static final int EMAIL_FIELD_NUMBER = 13;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object email_ = "";
+    private volatile java.lang.Object email_;
     /**
      * <pre>
      * The User's email.
@@ -1919,7 +2294,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     }
 
     public static final int LOGIN_DISABLED_FIELD_NUMBER = 14;
-    private boolean loginDisabled_ = false;
+    private boolean loginDisabled_;
     /**
      * <pre>
      * Whether or not the user is disabled.
@@ -1934,9 +2309,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     }
 
     public static final int CALLER_IDS_FIELD_NUMBER = 15;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList callerIds_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.LazyStringList callerIds_;
     /**
      * <pre>
      * login preferences
@@ -1987,9 +2360,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     }
 
     public static final int LINKBACK_NUMBERS_FIELD_NUMBER = 16;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList linkbackNumbers_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.LazyStringList linkbackNumbers_;
     /**
      * <code>repeated string linkback_numbers = 16 [json_name = "linkbackNumbers"];</code>
      * @return A list containing the linkbackNumbers.
@@ -2024,8 +2395,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     }
 
     public static final int AUTH_USER_ID_FIELD_NUMBER = 17;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object authUserId_ = "";
+    private volatile java.lang.Object authUserId_;
     /**
      * <code>string auth_user_id = 17 [json_name = "authUserId"];</code>
      * @return The authUserId.
@@ -2063,7 +2433,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     }
 
     public static final int ENABLE_MFA_FIELD_NUMBER = 18;
-    private boolean enableMfa_ = false;
+    private boolean enableMfa_;
     /**
      * <code>bool enable_mfa = 18 [json_name = "enableMfa"];</code>
      * @return The enableMfa.
@@ -2074,8 +2444,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     }
 
     public static final int FIRST_NAME_FIELD_NUMBER = 19;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object firstName_ = "";
+    private volatile java.lang.Object firstName_;
     /**
      * <pre>
      * The user's first name.
@@ -2121,8 +2490,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     }
 
     public static final int LAST_NAME_FIELD_NUMBER = 20;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object lastName_ = "";
+    private volatile java.lang.Object lastName_;
     /**
      * <pre>
      * The user's last name.
@@ -2202,7 +2570,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder() {
-      return created_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : created_;
+      return getCreated();
     }
 
     public static final int LAST_UPDATED_FIELD_NUMBER = 22;
@@ -2240,11 +2608,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getLastUpdatedOrBuilder() {
-      return lastUpdated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastUpdated_;
+      return getLastUpdated();
     }
 
     public static final int PASSWORD_RESET_REQUIRED_FIELD_NUMBER = 23;
-    private boolean passwordResetRequired_ = false;
+    private boolean passwordResetRequired_;
     /**
      * <pre>
      * Whether or not the user must reset their password on next login.
@@ -2299,7 +2667,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
      */
     @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getConnectionIdOrBuilder() {
-      return connectionId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : connectionId_;
+      return getConnectionId();
     }
 
     public static final int TIME_ZONE_OVERRIDE_FIELD_NUMBER = 25;
@@ -2337,13 +2705,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.TimeZoneWrapperOrBuilder getTimeZoneOverrideOrBuilder() {
-      return timeZoneOverride_ == null ? com.tcn.cloud.api.api.commons.TimeZoneWrapper.getDefaultInstance() : timeZoneOverride_;
+      return getTimeZoneOverride();
     }
 
     public static final int PERMISSION_GROUP_IDS_FIELD_NUMBER = 26;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList permissionGroupIds_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.LazyStringList permissionGroupIds_;
     /**
      * <pre>
      * UserSettings
@@ -2398,9 +2764,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     }
 
     public static final int TRUST_IDS_FIELD_NUMBER = 27;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList trustIds_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.LazyStringList trustIds_;
     /**
      * <pre>
      * List of trust ids the user has been assigned.
@@ -2451,7 +2815,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     }
 
     public static final int DEFAULT_APPLICATION_FIELD_NUMBER = 28;
-    private int defaultApplication_ = 0;
+    private int defaultApplication_;
     /**
      * <pre>
      * default_app for a user
@@ -2472,13 +2836,13 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
      * @return The defaultApplication.
      */
     @java.lang.Override public com.tcn.cloud.api.api.commons.OperatorApplications getDefaultApplication() {
-      com.tcn.cloud.api.api.commons.OperatorApplications result = com.tcn.cloud.api.api.commons.OperatorApplications.forNumber(defaultApplication_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.OperatorApplications result = com.tcn.cloud.api.api.commons.OperatorApplications.valueOf(defaultApplication_);
       return result == null ? com.tcn.cloud.api.api.commons.OperatorApplications.UNRECOGNIZED : result;
     }
 
     public static final int USER_CALLER_ID_FIELD_NUMBER = 29;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object userCallerId_ = "";
+    private volatile java.lang.Object userCallerId_;
     /**
      * <pre>
      * User caller id
@@ -2524,8 +2888,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     }
 
     public static final int AGENT_PROFILE_GROUP_ID_FIELD_NUMBER = 30;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object agentProfileGroupId_ = "";
+    private volatile java.lang.Object agentProfileGroupId_;
     /**
      * <pre>
      * users assigned agent profile group
@@ -2571,7 +2934,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     }
 
     public static final int AGENT_FIELD_NUMBER = 31;
-    private boolean agent_ = false;
+    private boolean agent_;
     /**
      * <pre>
      * a bool signalling whether or not the user is also an agent
@@ -2586,7 +2949,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     }
 
     public static final int ACCOUNT_OWNER_FIELD_NUMBER = 32;
-    private boolean accountOwner_ = false;
+    private boolean accountOwner_;
     /**
      * <pre>
      * a bool to determine whether or not user is account owner
@@ -2614,19 +2977,19 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
+      if (!getUserIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, userId_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
+      if (!getOrgIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, orgId_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
+      if (!getUsernameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, username_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(p3PermissionGroupId_)) {
+      if (!getP3PermissionGroupIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, p3PermissionGroupId_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(partnerAgentId_)) {
+      if (!getPartnerAgentIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, partnerAgentId_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -2635,13 +2998,13 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
           internalGetRegionSidMap(),
           RegionSidMapDefaultEntryHolder.defaultEntry,
           10);
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultRegion_)) {
+      if (!getDefaultRegionBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, defaultRegion_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(apiKey_)) {
+      if (!getApiKeyBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, apiKey_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(email_)) {
+      if (!getEmailBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 13, email_);
       }
       if (loginDisabled_ != false) {
@@ -2653,16 +3016,16 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       for (int i = 0; i < linkbackNumbers_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 16, linkbackNumbers_.getRaw(i));
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authUserId_)) {
+      if (!getAuthUserIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 17, authUserId_);
       }
       if (enableMfa_ != false) {
         output.writeBool(18, enableMfa_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(firstName_)) {
+      if (!getFirstNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 19, firstName_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastName_)) {
+      if (!getLastNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 20, lastName_);
       }
       if (created_ != null) {
@@ -2689,10 +3052,10 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       if (defaultApplication_ != com.tcn.cloud.api.api.commons.OperatorApplications.AGENT_APP.getNumber()) {
         output.writeEnum(28, defaultApplication_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userCallerId_)) {
+      if (!getUserCallerIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 29, userCallerId_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentProfileGroupId_)) {
+      if (!getAgentProfileGroupIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 30, agentProfileGroupId_);
       }
       if (agent_ != false) {
@@ -2701,7 +3064,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       if (accountOwner_ != false) {
         output.writeBool(32, accountOwner_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -2710,19 +3073,19 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
+      if (!getUserIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, userId_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
+      if (!getOrgIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, orgId_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
+      if (!getUsernameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, username_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(p3PermissionGroupId_)) {
+      if (!getP3PermissionGroupIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, p3PermissionGroupId_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(partnerAgentId_)) {
+      if (!getPartnerAgentIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, partnerAgentId_);
       }
       for (java.util.Map.Entry<java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids> entry
@@ -2735,13 +3098,13 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(10, regionSidMap__);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultRegion_)) {
+      if (!getDefaultRegionBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, defaultRegion_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(apiKey_)) {
+      if (!getApiKeyBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, apiKey_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(email_)) {
+      if (!getEmailBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, email_);
       }
       if (loginDisabled_ != false) {
@@ -2764,17 +3127,17 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         size += dataSize;
         size += 2 * getLinkbackNumbersList().size();
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authUserId_)) {
+      if (!getAuthUserIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, authUserId_);
       }
       if (enableMfa_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(18, enableMfa_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(firstName_)) {
+      if (!getFirstNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(19, firstName_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastName_)) {
+      if (!getLastNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, lastName_);
       }
       if (created_ != null) {
@@ -2817,10 +3180,10 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(28, defaultApplication_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userCallerId_)) {
+      if (!getUserCallerIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(29, userCallerId_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentProfileGroupId_)) {
+      if (!getAgentProfileGroupIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(30, agentProfileGroupId_);
       }
       if (agent_ != false) {
@@ -2831,7 +3194,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(32, accountOwner_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2913,7 +3276,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
           != other.getAgent()) return false;
       if (getAccountOwner()
           != other.getAccountOwner()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -3003,7 +3366,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       hash = (37 * hash) + ACCOUNT_OWNER_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getAccountOwner());
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -3052,13 +3415,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-
     public static com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-
     public static com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3144,66 +3505,93 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
 
       // Construct using com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         userId_ = "";
+
         orgId_ = "";
+
         username_ = "";
+
         p3PermissionGroupId_ = "";
+
         partnerAgentId_ = "";
+
         internalGetMutableRegionSidMap().clear();
         defaultRegion_ = "";
+
         apiKey_ = "";
+
         email_ = "";
+
         loginDisabled_ = false;
-        callerIds_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
-        linkbackNumbers_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
+
+        callerIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        linkbackNumbers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
         authUserId_ = "";
+
         enableMfa_ = false;
+
         firstName_ = "";
+
         lastName_ = "";
-        created_ = null;
-        if (createdBuilder_ != null) {
-          createdBuilder_.dispose();
+
+        if (createdBuilder_ == null) {
+          created_ = null;
+        } else {
+          created_ = null;
           createdBuilder_ = null;
         }
-        lastUpdated_ = null;
-        if (lastUpdatedBuilder_ != null) {
-          lastUpdatedBuilder_.dispose();
+        if (lastUpdatedBuilder_ == null) {
+          lastUpdated_ = null;
+        } else {
+          lastUpdated_ = null;
           lastUpdatedBuilder_ = null;
         }
         passwordResetRequired_ = false;
-        connectionId_ = null;
-        if (connectionIdBuilder_ != null) {
-          connectionIdBuilder_.dispose();
+
+        if (connectionIdBuilder_ == null) {
+          connectionId_ = null;
+        } else {
+          connectionId_ = null;
           connectionIdBuilder_ = null;
         }
-        timeZoneOverride_ = null;
-        if (timeZoneOverrideBuilder_ != null) {
-          timeZoneOverrideBuilder_.dispose();
+        if (timeZoneOverrideBuilder_ == null) {
+          timeZoneOverride_ = null;
+        } else {
+          timeZoneOverride_ = null;
           timeZoneOverrideBuilder_ = null;
         }
-        permissionGroupIds_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
-        trustIds_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
+        permissionGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        trustIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
         defaultApplication_ = 0;
+
         userCallerId_ = "";
+
         agentProfileGroupId_ = "";
+
         agent_ = false;
+
         accountOwner_ = false;
+
         return this;
       }
 
@@ -3230,110 +3618,70 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       @java.lang.Override
       public com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User buildPartial() {
         com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User result = new com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        int from_bitField0_ = bitField0_;
+        result.userId_ = userId_;
+        result.orgId_ = orgId_;
+        result.username_ = username_;
+        result.p3PermissionGroupId_ = p3PermissionGroupId_;
+        result.partnerAgentId_ = partnerAgentId_;
+        result.regionSidMap_ = internalGetRegionSidMap();
+        result.regionSidMap_.makeImmutable();
+        result.defaultRegion_ = defaultRegion_;
+        result.apiKey_ = apiKey_;
+        result.email_ = email_;
+        result.loginDisabled_ = loginDisabled_;
+        if (((bitField0_ & 0x00000002) != 0)) {
+          callerIds_ = callerIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.callerIds_ = callerIds_;
+        if (((bitField0_ & 0x00000004) != 0)) {
+          linkbackNumbers_ = linkbackNumbers_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.linkbackNumbers_ = linkbackNumbers_;
+        result.authUserId_ = authUserId_;
+        result.enableMfa_ = enableMfa_;
+        result.firstName_ = firstName_;
+        result.lastName_ = lastName_;
+        if (createdBuilder_ == null) {
+          result.created_ = created_;
+        } else {
+          result.created_ = createdBuilder_.build();
+        }
+        if (lastUpdatedBuilder_ == null) {
+          result.lastUpdated_ = lastUpdated_;
+        } else {
+          result.lastUpdated_ = lastUpdatedBuilder_.build();
+        }
+        result.passwordResetRequired_ = passwordResetRequired_;
+        if (connectionIdBuilder_ == null) {
+          result.connectionId_ = connectionId_;
+        } else {
+          result.connectionId_ = connectionIdBuilder_.build();
+        }
+        if (timeZoneOverrideBuilder_ == null) {
+          result.timeZoneOverride_ = timeZoneOverride_;
+        } else {
+          result.timeZoneOverride_ = timeZoneOverrideBuilder_.build();
+        }
+        if (((bitField0_ & 0x00000008) != 0)) {
+          permissionGroupIds_ = permissionGroupIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.permissionGroupIds_ = permissionGroupIds_;
+        if (((bitField0_ & 0x00000010) != 0)) {
+          trustIds_ = trustIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.trustIds_ = trustIds_;
+        result.defaultApplication_ = defaultApplication_;
+        result.userCallerId_ = userCallerId_;
+        result.agentProfileGroupId_ = agentProfileGroupId_;
+        result.agent_ = agent_;
+        result.accountOwner_ = accountOwner_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.userId_ = userId_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.orgId_ = orgId_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.username_ = username_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.p3PermissionGroupId_ = p3PermissionGroupId_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.partnerAgentId_ = partnerAgentId_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.regionSidMap_ = internalGetRegionSidMap();
-          result.regionSidMap_.makeImmutable();
-        }
-        if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.defaultRegion_ = defaultRegion_;
-        }
-        if (((from_bitField0_ & 0x00000080) != 0)) {
-          result.apiKey_ = apiKey_;
-        }
-        if (((from_bitField0_ & 0x00000100) != 0)) {
-          result.email_ = email_;
-        }
-        if (((from_bitField0_ & 0x00000200) != 0)) {
-          result.loginDisabled_ = loginDisabled_;
-        }
-        if (((from_bitField0_ & 0x00000400) != 0)) {
-          callerIds_.makeImmutable();
-          result.callerIds_ = callerIds_;
-        }
-        if (((from_bitField0_ & 0x00000800) != 0)) {
-          linkbackNumbers_.makeImmutable();
-          result.linkbackNumbers_ = linkbackNumbers_;
-        }
-        if (((from_bitField0_ & 0x00001000) != 0)) {
-          result.authUserId_ = authUserId_;
-        }
-        if (((from_bitField0_ & 0x00002000) != 0)) {
-          result.enableMfa_ = enableMfa_;
-        }
-        if (((from_bitField0_ & 0x00004000) != 0)) {
-          result.firstName_ = firstName_;
-        }
-        if (((from_bitField0_ & 0x00008000) != 0)) {
-          result.lastName_ = lastName_;
-        }
-        if (((from_bitField0_ & 0x00010000) != 0)) {
-          result.created_ = createdBuilder_ == null
-              ? created_
-              : createdBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00020000) != 0)) {
-          result.lastUpdated_ = lastUpdatedBuilder_ == null
-              ? lastUpdated_
-              : lastUpdatedBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00040000) != 0)) {
-          result.passwordResetRequired_ = passwordResetRequired_;
-        }
-        if (((from_bitField0_ & 0x00080000) != 0)) {
-          result.connectionId_ = connectionIdBuilder_ == null
-              ? connectionId_
-              : connectionIdBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00100000) != 0)) {
-          result.timeZoneOverride_ = timeZoneOverrideBuilder_ == null
-              ? timeZoneOverride_
-              : timeZoneOverrideBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00200000) != 0)) {
-          permissionGroupIds_.makeImmutable();
-          result.permissionGroupIds_ = permissionGroupIds_;
-        }
-        if (((from_bitField0_ & 0x00400000) != 0)) {
-          trustIds_.makeImmutable();
-          result.trustIds_ = trustIds_;
-        }
-        if (((from_bitField0_ & 0x00800000) != 0)) {
-          result.defaultApplication_ = defaultApplication_;
-        }
-        if (((from_bitField0_ & 0x01000000) != 0)) {
-          result.userCallerId_ = userCallerId_;
-        }
-        if (((from_bitField0_ & 0x02000000) != 0)) {
-          result.agentProfileGroupId_ = agentProfileGroupId_;
-        }
-        if (((from_bitField0_ & 0x04000000) != 0)) {
-          result.agent_ = agent_;
-        }
-        if (((from_bitField0_ & 0x08000000) != 0)) {
-          result.accountOwner_ = accountOwner_;
-        }
       }
 
       @java.lang.Override
@@ -3382,45 +3730,36 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         if (other == com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.getDefaultInstance()) return this;
         if (!other.getUserId().isEmpty()) {
           userId_ = other.userId_;
-          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getOrgId().isEmpty()) {
           orgId_ = other.orgId_;
-          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getUsername().isEmpty()) {
           username_ = other.username_;
-          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getP3PermissionGroupId().isEmpty()) {
           p3PermissionGroupId_ = other.p3PermissionGroupId_;
-          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (!other.getPartnerAgentId().isEmpty()) {
           partnerAgentId_ = other.partnerAgentId_;
-          bitField0_ |= 0x00000010;
           onChanged();
         }
         internalGetMutableRegionSidMap().mergeFrom(
             other.internalGetRegionSidMap());
-        bitField0_ |= 0x00000020;
         if (!other.getDefaultRegion().isEmpty()) {
           defaultRegion_ = other.defaultRegion_;
-          bitField0_ |= 0x00000040;
           onChanged();
         }
         if (!other.getApiKey().isEmpty()) {
           apiKey_ = other.apiKey_;
-          bitField0_ |= 0x00000080;
           onChanged();
         }
         if (!other.getEmail().isEmpty()) {
           email_ = other.email_;
-          bitField0_ |= 0x00000100;
           onChanged();
         }
         if (other.getLoginDisabled() != false) {
@@ -3429,7 +3768,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         if (!other.callerIds_.isEmpty()) {
           if (callerIds_.isEmpty()) {
             callerIds_ = other.callerIds_;
-            bitField0_ |= 0x00000400;
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureCallerIdsIsMutable();
             callerIds_.addAll(other.callerIds_);
@@ -3439,7 +3778,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         if (!other.linkbackNumbers_.isEmpty()) {
           if (linkbackNumbers_.isEmpty()) {
             linkbackNumbers_ = other.linkbackNumbers_;
-            bitField0_ |= 0x00000800;
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureLinkbackNumbersIsMutable();
             linkbackNumbers_.addAll(other.linkbackNumbers_);
@@ -3448,7 +3787,6 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         }
         if (!other.getAuthUserId().isEmpty()) {
           authUserId_ = other.authUserId_;
-          bitField0_ |= 0x00001000;
           onChanged();
         }
         if (other.getEnableMfa() != false) {
@@ -3456,12 +3794,10 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         }
         if (!other.getFirstName().isEmpty()) {
           firstName_ = other.firstName_;
-          bitField0_ |= 0x00004000;
           onChanged();
         }
         if (!other.getLastName().isEmpty()) {
           lastName_ = other.lastName_;
-          bitField0_ |= 0x00008000;
           onChanged();
         }
         if (other.hasCreated()) {
@@ -3482,7 +3818,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         if (!other.permissionGroupIds_.isEmpty()) {
           if (permissionGroupIds_.isEmpty()) {
             permissionGroupIds_ = other.permissionGroupIds_;
-            bitField0_ |= 0x00200000;
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensurePermissionGroupIdsIsMutable();
             permissionGroupIds_.addAll(other.permissionGroupIds_);
@@ -3492,7 +3828,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         if (!other.trustIds_.isEmpty()) {
           if (trustIds_.isEmpty()) {
             trustIds_ = other.trustIds_;
-            bitField0_ |= 0x00400000;
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureTrustIdsIsMutable();
             trustIds_.addAll(other.trustIds_);
@@ -3504,12 +3840,10 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         }
         if (!other.getUserCallerId().isEmpty()) {
           userCallerId_ = other.userCallerId_;
-          bitField0_ |= 0x01000000;
           onChanged();
         }
         if (!other.getAgentProfileGroupId().isEmpty()) {
           agentProfileGroupId_ = other.agentProfileGroupId_;
-          bitField0_ |= 0x02000000;
           onChanged();
         }
         if (other.getAgent() != false) {
@@ -3518,7 +3852,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         if (other.getAccountOwner() != false) {
           setAccountOwner(other.getAccountOwner());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -3533,186 +3867,17 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                userId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                orgId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 26: {
-                username_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
-              case 34: {
-                p3PermissionGroupId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 34
-              case 66: {
-                partnerAgentId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 66
-              case 82: {
-                com.google.protobuf.MapEntry<java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids>
-                regionSidMap__ = input.readMessage(
-                    RegionSidMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableRegionSidMap().getMutableMap().put(
-                    regionSidMap__.getKey(), regionSidMap__.getValue());
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 82
-              case 90: {
-                defaultRegion_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000040;
-                break;
-              } // case 90
-              case 98: {
-                apiKey_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000080;
-                break;
-              } // case 98
-              case 106: {
-                email_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000100;
-                break;
-              } // case 106
-              case 112: {
-                loginDisabled_ = input.readBool();
-                bitField0_ |= 0x00000200;
-                break;
-              } // case 112
-              case 122: {
-                java.lang.String s = input.readStringRequireUtf8();
-                ensureCallerIdsIsMutable();
-                callerIds_.add(s);
-                break;
-              } // case 122
-              case 130: {
-                java.lang.String s = input.readStringRequireUtf8();
-                ensureLinkbackNumbersIsMutable();
-                linkbackNumbers_.add(s);
-                break;
-              } // case 130
-              case 138: {
-                authUserId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00001000;
-                break;
-              } // case 138
-              case 144: {
-                enableMfa_ = input.readBool();
-                bitField0_ |= 0x00002000;
-                break;
-              } // case 144
-              case 154: {
-                firstName_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00004000;
-                break;
-              } // case 154
-              case 162: {
-                lastName_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00008000;
-                break;
-              } // case 162
-              case 170: {
-                input.readMessage(
-                    getCreatedFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00010000;
-                break;
-              } // case 170
-              case 178: {
-                input.readMessage(
-                    getLastUpdatedFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00020000;
-                break;
-              } // case 178
-              case 184: {
-                passwordResetRequired_ = input.readBool();
-                bitField0_ |= 0x00040000;
-                break;
-              } // case 184
-              case 194: {
-                input.readMessage(
-                    getConnectionIdFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00080000;
-                break;
-              } // case 194
-              case 202: {
-                input.readMessage(
-                    getTimeZoneOverrideFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00100000;
-                break;
-              } // case 202
-              case 210: {
-                java.lang.String s = input.readStringRequireUtf8();
-                ensurePermissionGroupIdsIsMutable();
-                permissionGroupIds_.add(s);
-                break;
-              } // case 210
-              case 218: {
-                java.lang.String s = input.readStringRequireUtf8();
-                ensureTrustIdsIsMutable();
-                trustIds_.add(s);
-                break;
-              } // case 218
-              case 224: {
-                defaultApplication_ = input.readEnum();
-                bitField0_ |= 0x00800000;
-                break;
-              } // case 224
-              case 234: {
-                userCallerId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x01000000;
-                break;
-              } // case 234
-              case 242: {
-                agentProfileGroupId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x02000000;
-                break;
-              } // case 242
-              case 248: {
-                agent_ = input.readBool();
-                bitField0_ |= 0x04000000;
-                break;
-              } // case 248
-              case 256: {
-                accountOwner_ = input.readBool();
-                bitField0_ |= 0x08000000;
-                break;
-              } // case 256
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -3770,9 +3935,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder setUserId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
         userId_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3785,8 +3952,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * @return This builder for chaining.
        */
       public Builder clearUserId() {
+        
         userId_ = getDefaultInstance().getUserId();
-        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -3801,10 +3968,12 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder setUserIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         userId_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3862,9 +4031,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder setOrgId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
         orgId_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3877,8 +4048,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * @return This builder for chaining.
        */
       public Builder clearOrgId() {
+        
         orgId_ = getDefaultInstance().getOrgId();
-        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -3893,10 +4064,12 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder setOrgIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         orgId_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3954,9 +4127,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder setUsername(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
         username_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -3969,8 +4144,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * @return This builder for chaining.
        */
       public Builder clearUsername() {
+        
         username_ = getDefaultInstance().getUsername();
-        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -3985,10 +4160,12 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder setUsernameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         username_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -4046,9 +4223,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder setP3PermissionGroupId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
         p3PermissionGroupId_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -4061,8 +4240,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * @return This builder for chaining.
        */
       public Builder clearP3PermissionGroupId() {
+        
         p3PermissionGroupId_ = getDefaultInstance().getP3PermissionGroupId();
-        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -4077,10 +4256,12 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder setP3PermissionGroupIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         p3PermissionGroupId_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -4138,9 +4319,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder setPartnerAgentId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
         partnerAgentId_ = value;
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -4153,8 +4336,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * @return This builder for chaining.
        */
       public Builder clearPartnerAgentId() {
+        
         partnerAgentId_ = getDefaultInstance().getPartnerAgentId();
-        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -4169,10 +4352,12 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder setPartnerAgentIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         partnerAgentId_ = value;
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -4180,7 +4365,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       private com.google.protobuf.MapField<
           java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids> regionSidMap_;
       private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids>
-          internalGetRegionSidMap() {
+      internalGetRegionSidMap() {
         if (regionSidMap_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               RegionSidMapDefaultEntryHolder.defaultEntry);
@@ -4188,7 +4373,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         return regionSidMap_;
       }
       private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids>
-          internalGetMutableRegionSidMap() {
+      internalGetMutableRegionSidMap() {
+        onChanged();;
         if (regionSidMap_ == null) {
           regionSidMap_ = com.google.protobuf.MapField.newMapField(
               RegionSidMapDefaultEntryHolder.defaultEntry);
@@ -4196,10 +4382,9 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         if (!regionSidMap_.isMutable()) {
           regionSidMap_ = regionSidMap_.copy();
         }
-        bitField0_ |= 0x00000020;
-        onChanged();
         return regionSidMap_;
       }
+
       public int getRegionSidMapCount() {
         return internalGetRegionSidMap().getMap().size();
       }
@@ -4210,10 +4395,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        *
        * <code>map&lt;string, .api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids&gt; region_sid_map = 10 [json_name = "regionSidMap"];</code>
        */
+
       @java.lang.Override
       public boolean containsRegionSidMap(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         return internalGetRegionSidMap().getMap().containsKey(key);
       }
       /**
@@ -4232,6 +4418,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * <code>map&lt;string, .api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids&gt; region_sid_map = 10 [json_name = "regionSidMap"];</code>
        */
       @java.lang.Override
+
       public java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids> getRegionSidMapMap() {
         return internalGetRegionSidMap().getMap();
       }
@@ -4243,12 +4430,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * <code>map&lt;string, .api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids&gt; region_sid_map = 10 [json_name = "regionSidMap"];</code>
        */
       @java.lang.Override
-      public /* nullable */
-com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids getRegionSidMapOrDefault(
+
+      public com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids getRegionSidMapOrDefault(
           java.lang.String key,
-          /* nullable */
-com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
+          com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids> map =
             internalGetRegionSidMap().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -4261,9 +4447,10 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * <code>map&lt;string, .api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids&gt; region_sid_map = 10 [json_name = "regionSidMap"];</code>
        */
       @java.lang.Override
+
       public com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids getRegionSidMapOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids> map =
             internalGetRegionSidMap().getMap();
         if (!map.containsKey(key)) {
@@ -4271,8 +4458,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         }
         return map.get(key);
       }
+
       public Builder clearRegionSidMap() {
-        bitField0_ = (bitField0_ & ~0x00000020);
         internalGetMutableRegionSidMap().getMutableMap()
             .clear();
         return this;
@@ -4284,9 +4471,10 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        *
        * <code>map&lt;string, .api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids&gt; region_sid_map = 10 [json_name = "regionSidMap"];</code>
        */
+
       public Builder removeRegionSidMap(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableRegionSidMap().getMutableMap()
             .remove(key);
         return this;
@@ -4296,8 +4484,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids>
-          getMutableRegionSidMap() {
-        bitField0_ |= 0x00000020;
+      getMutableRegionSidMap() {
         return internalGetMutableRegionSidMap().getMutableMap();
       }
       /**
@@ -4310,11 +4497,10 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       public Builder putRegionSidMap(
           java.lang.String key,
           com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) { throw new NullPointerException("map value"); }
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutableRegionSidMap().getMutableMap()
             .put(key, value);
-        bitField0_ |= 0x00000020;
         return this;
       }
       /**
@@ -4324,11 +4510,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        *
        * <code>map&lt;string, .api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids&gt; region_sid_map = 10 [json_name = "regionSidMap"];</code>
        */
+
       public Builder putAllRegionSidMap(
           java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids> values) {
         internalGetMutableRegionSidMap().getMutableMap()
             .putAll(values);
-        bitField0_ |= 0x00000020;
         return this;
       }
 
@@ -4385,9 +4571,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder setDefaultRegion(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
         defaultRegion_ = value;
-        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -4400,8 +4588,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * @return This builder for chaining.
        */
       public Builder clearDefaultRegion() {
+        
         defaultRegion_ = getDefaultInstance().getDefaultRegion();
-        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -4416,10 +4604,12 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder setDefaultRegionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         defaultRegion_ = value;
-        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -4477,9 +4667,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder setApiKey(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
         apiKey_ = value;
-        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -4492,8 +4684,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * @return This builder for chaining.
        */
       public Builder clearApiKey() {
+        
         apiKey_ = getDefaultInstance().getApiKey();
-        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
         return this;
       }
@@ -4508,10 +4700,12 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder setApiKeyBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         apiKey_ = value;
-        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -4569,9 +4763,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder setEmail(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
         email_ = value;
-        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -4584,8 +4780,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * @return This builder for chaining.
        */
       public Builder clearEmail() {
+        
         email_ = getDefaultInstance().getEmail();
-        bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
         return this;
       }
@@ -4600,10 +4796,12 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder setEmailBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         email_ = value;
-        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -4631,9 +4829,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * @return This builder for chaining.
        */
       public Builder setLoginDisabled(boolean value) {
-
+        
         loginDisabled_ = value;
-        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -4646,19 +4843,18 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * @return This builder for chaining.
        */
       public Builder clearLoginDisabled() {
-        bitField0_ = (bitField0_ & ~0x00000200);
+        
         loginDisabled_ = false;
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.LazyStringArrayList callerIds_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      private com.google.protobuf.LazyStringList callerIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureCallerIdsIsMutable() {
-        if (!callerIds_.isModifiable()) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           callerIds_ = new com.google.protobuf.LazyStringArrayList(callerIds_);
-        }
-        bitField0_ |= 0x00000400;
+          bitField0_ |= 0x00000002;
+         }
       }
       /**
        * <pre>
@@ -4670,8 +4866,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public com.google.protobuf.ProtocolStringList
           getCallerIdsList() {
-        callerIds_.makeImmutable();
-        return callerIds_;
+        return callerIds_.getUnmodifiableView();
       }
       /**
        * <pre>
@@ -4721,10 +4916,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder setCallerIds(
           int index, java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureCallerIdsIsMutable();
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureCallerIdsIsMutable();
         callerIds_.set(index, value);
-        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -4739,10 +4935,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder addCallerIds(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureCallerIdsIsMutable();
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureCallerIdsIsMutable();
         callerIds_.add(value);
-        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -4760,7 +4957,6 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         ensureCallerIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, callerIds_);
-        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -4773,9 +4969,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * @return This builder for chaining.
        */
       public Builder clearCallerIds() {
-        callerIds_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000400);;
+        callerIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -4790,22 +4985,22 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder addCallerIdsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
         ensureCallerIdsIsMutable();
         callerIds_.add(value);
-        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.LazyStringArrayList linkbackNumbers_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      private com.google.protobuf.LazyStringList linkbackNumbers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureLinkbackNumbersIsMutable() {
-        if (!linkbackNumbers_.isModifiable()) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           linkbackNumbers_ = new com.google.protobuf.LazyStringArrayList(linkbackNumbers_);
-        }
-        bitField0_ |= 0x00000800;
+          bitField0_ |= 0x00000004;
+         }
       }
       /**
        * <code>repeated string linkback_numbers = 16 [json_name = "linkbackNumbers"];</code>
@@ -4813,8 +5008,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public com.google.protobuf.ProtocolStringList
           getLinkbackNumbersList() {
-        linkbackNumbers_.makeImmutable();
-        return linkbackNumbers_;
+        return linkbackNumbers_.getUnmodifiableView();
       }
       /**
        * <code>repeated string linkback_numbers = 16 [json_name = "linkbackNumbers"];</code>
@@ -4848,10 +5042,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder setLinkbackNumbers(
           int index, java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureLinkbackNumbersIsMutable();
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureLinkbackNumbersIsMutable();
         linkbackNumbers_.set(index, value);
-        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
@@ -4862,10 +5057,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder addLinkbackNumbers(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureLinkbackNumbersIsMutable();
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureLinkbackNumbersIsMutable();
         linkbackNumbers_.add(value);
-        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
@@ -4879,7 +5075,6 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         ensureLinkbackNumbersIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, linkbackNumbers_);
-        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
@@ -4888,9 +5083,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * @return This builder for chaining.
        */
       public Builder clearLinkbackNumbers() {
-        linkbackNumbers_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000800);;
+        linkbackNumbers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -4901,11 +5095,12 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder addLinkbackNumbersBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
         ensureLinkbackNumbersIsMutable();
         linkbackNumbers_.add(value);
-        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
@@ -4951,9 +5146,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder setAuthUserId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
         authUserId_ = value;
-        bitField0_ |= 0x00001000;
         onChanged();
         return this;
       }
@@ -4962,8 +5159,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * @return This builder for chaining.
        */
       public Builder clearAuthUserId() {
+        
         authUserId_ = getDefaultInstance().getAuthUserId();
-        bitField0_ = (bitField0_ & ~0x00001000);
         onChanged();
         return this;
       }
@@ -4974,10 +5171,12 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder setAuthUserIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         authUserId_ = value;
-        bitField0_ |= 0x00001000;
         onChanged();
         return this;
       }
@@ -4997,9 +5196,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * @return This builder for chaining.
        */
       public Builder setEnableMfa(boolean value) {
-
+        
         enableMfa_ = value;
-        bitField0_ |= 0x00002000;
         onChanged();
         return this;
       }
@@ -5008,7 +5206,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * @return This builder for chaining.
        */
       public Builder clearEnableMfa() {
-        bitField0_ = (bitField0_ & ~0x00002000);
+        
         enableMfa_ = false;
         onChanged();
         return this;
@@ -5067,9 +5265,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder setFirstName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
         firstName_ = value;
-        bitField0_ |= 0x00004000;
         onChanged();
         return this;
       }
@@ -5082,8 +5282,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * @return This builder for chaining.
        */
       public Builder clearFirstName() {
+        
         firstName_ = getDefaultInstance().getFirstName();
-        bitField0_ = (bitField0_ & ~0x00004000);
         onChanged();
         return this;
       }
@@ -5098,10 +5298,12 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder setFirstNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         firstName_ = value;
-        bitField0_ |= 0x00004000;
         onChanged();
         return this;
       }
@@ -5159,9 +5361,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder setLastName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
         lastName_ = value;
-        bitField0_ |= 0x00008000;
         onChanged();
         return this;
       }
@@ -5174,8 +5378,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * @return This builder for chaining.
        */
       public Builder clearLastName() {
+        
         lastName_ = getDefaultInstance().getLastName();
-        bitField0_ = (bitField0_ & ~0x00008000);
         onChanged();
         return this;
       }
@@ -5190,10 +5394,12 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder setLastNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         lastName_ = value;
-        bitField0_ |= 0x00008000;
         onChanged();
         return this;
       }
@@ -5210,7 +5416,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * @return Whether the created field is set.
        */
       public boolean hasCreated() {
-        return ((bitField0_ & 0x00010000) != 0);
+        return createdBuilder_ != null || created_ != null;
       }
       /**
        * <pre>
@@ -5240,11 +5446,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
             throw new NullPointerException();
           }
           created_ = value;
+          onChanged();
         } else {
           createdBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00010000;
-        onChanged();
+
         return this;
       }
       /**
@@ -5258,11 +5464,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (createdBuilder_ == null) {
           created_ = builderForValue.build();
+          onChanged();
         } else {
           createdBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00010000;
-        onChanged();
+
         return this;
       }
       /**
@@ -5274,18 +5480,17 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder mergeCreated(com.google.protobuf.Timestamp value) {
         if (createdBuilder_ == null) {
-          if (((bitField0_ & 0x00010000) != 0) &&
-            created_ != null &&
-            created_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-            getCreatedBuilder().mergeFrom(value);
+          if (created_ != null) {
+            created_ =
+              com.google.protobuf.Timestamp.newBuilder(created_).mergeFrom(value).buildPartial();
           } else {
             created_ = value;
           }
+          onChanged();
         } else {
           createdBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00010000;
-        onChanged();
+
         return this;
       }
       /**
@@ -5296,13 +5501,14 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * <code>.google.protobuf.Timestamp created = 21 [json_name = "created"];</code>
        */
       public Builder clearCreated() {
-        bitField0_ = (bitField0_ & ~0x00010000);
-        created_ = null;
-        if (createdBuilder_ != null) {
-          createdBuilder_.dispose();
+        if (createdBuilder_ == null) {
+          created_ = null;
+          onChanged();
+        } else {
+          created_ = null;
           createdBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
@@ -5313,7 +5519,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * <code>.google.protobuf.Timestamp created = 21 [json_name = "created"];</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedBuilder() {
-        bitField0_ |= 0x00010000;
+        
         onChanged();
         return getCreatedFieldBuilder().getBuilder();
       }
@@ -5365,7 +5571,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * @return Whether the lastUpdated field is set.
        */
       public boolean hasLastUpdated() {
-        return ((bitField0_ & 0x00020000) != 0);
+        return lastUpdatedBuilder_ != null || lastUpdated_ != null;
       }
       /**
        * <pre>
@@ -5395,11 +5601,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
             throw new NullPointerException();
           }
           lastUpdated_ = value;
+          onChanged();
         } else {
           lastUpdatedBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00020000;
-        onChanged();
+
         return this;
       }
       /**
@@ -5413,11 +5619,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (lastUpdatedBuilder_ == null) {
           lastUpdated_ = builderForValue.build();
+          onChanged();
         } else {
           lastUpdatedBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00020000;
-        onChanged();
+
         return this;
       }
       /**
@@ -5429,18 +5635,17 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder mergeLastUpdated(com.google.protobuf.Timestamp value) {
         if (lastUpdatedBuilder_ == null) {
-          if (((bitField0_ & 0x00020000) != 0) &&
-            lastUpdated_ != null &&
-            lastUpdated_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-            getLastUpdatedBuilder().mergeFrom(value);
+          if (lastUpdated_ != null) {
+            lastUpdated_ =
+              com.google.protobuf.Timestamp.newBuilder(lastUpdated_).mergeFrom(value).buildPartial();
           } else {
             lastUpdated_ = value;
           }
+          onChanged();
         } else {
           lastUpdatedBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00020000;
-        onChanged();
+
         return this;
       }
       /**
@@ -5451,13 +5656,14 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * <code>.google.protobuf.Timestamp last_updated = 22 [json_name = "lastUpdated"];</code>
        */
       public Builder clearLastUpdated() {
-        bitField0_ = (bitField0_ & ~0x00020000);
-        lastUpdated_ = null;
-        if (lastUpdatedBuilder_ != null) {
-          lastUpdatedBuilder_.dispose();
+        if (lastUpdatedBuilder_ == null) {
+          lastUpdated_ = null;
+          onChanged();
+        } else {
+          lastUpdated_ = null;
           lastUpdatedBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
@@ -5468,7 +5674,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * <code>.google.protobuf.Timestamp last_updated = 22 [json_name = "lastUpdated"];</code>
        */
       public com.google.protobuf.Timestamp.Builder getLastUpdatedBuilder() {
-        bitField0_ |= 0x00020000;
+        
         onChanged();
         return getLastUpdatedFieldBuilder().getBuilder();
       }
@@ -5531,9 +5737,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * @return This builder for chaining.
        */
       public Builder setPasswordResetRequired(boolean value) {
-
+        
         passwordResetRequired_ = value;
-        bitField0_ |= 0x00040000;
         onChanged();
         return this;
       }
@@ -5546,7 +5751,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * @return This builder for chaining.
        */
       public Builder clearPasswordResetRequired() {
-        bitField0_ = (bitField0_ & ~0x00040000);
+        
         passwordResetRequired_ = false;
         onChanged();
         return this;
@@ -5566,7 +5771,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * @return Whether the connectionId field is set.
        */
       public boolean hasConnectionId() {
-        return ((bitField0_ & 0x00080000) != 0);
+        return connectionIdBuilder_ != null || connectionId_ != null;
       }
       /**
        * <pre>
@@ -5600,11 +5805,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
             throw new NullPointerException();
           }
           connectionId_ = value;
+          onChanged();
         } else {
           connectionIdBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00080000;
-        onChanged();
+
         return this;
       }
       /**
@@ -5620,11 +5825,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
           com.google.protobuf.StringValue.Builder builderForValue) {
         if (connectionIdBuilder_ == null) {
           connectionId_ = builderForValue.build();
+          onChanged();
         } else {
           connectionIdBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00080000;
-        onChanged();
+
         return this;
       }
       /**
@@ -5638,18 +5843,17 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder mergeConnectionId(com.google.protobuf.StringValue value) {
         if (connectionIdBuilder_ == null) {
-          if (((bitField0_ & 0x00080000) != 0) &&
-            connectionId_ != null &&
-            connectionId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
-            getConnectionIdBuilder().mergeFrom(value);
+          if (connectionId_ != null) {
+            connectionId_ =
+              com.google.protobuf.StringValue.newBuilder(connectionId_).mergeFrom(value).buildPartial();
           } else {
             connectionId_ = value;
           }
+          onChanged();
         } else {
           connectionIdBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00080000;
-        onChanged();
+
         return this;
       }
       /**
@@ -5662,13 +5866,14 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * <code>.google.protobuf.StringValue connection_id = 24 [json_name = "connectionId"];</code>
        */
       public Builder clearConnectionId() {
-        bitField0_ = (bitField0_ & ~0x00080000);
-        connectionId_ = null;
-        if (connectionIdBuilder_ != null) {
-          connectionIdBuilder_.dispose();
+        if (connectionIdBuilder_ == null) {
+          connectionId_ = null;
+          onChanged();
+        } else {
+          connectionId_ = null;
           connectionIdBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
@@ -5681,7 +5886,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * <code>.google.protobuf.StringValue connection_id = 24 [json_name = "connectionId"];</code>
        */
       public com.google.protobuf.StringValue.Builder getConnectionIdBuilder() {
-        bitField0_ |= 0x00080000;
+        
         onChanged();
         return getConnectionIdFieldBuilder().getBuilder();
       }
@@ -5737,7 +5942,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * @return Whether the timeZoneOverride field is set.
        */
       public boolean hasTimeZoneOverride() {
-        return ((bitField0_ & 0x00100000) != 0);
+        return timeZoneOverrideBuilder_ != null || timeZoneOverride_ != null;
       }
       /**
        * <pre>
@@ -5767,11 +5972,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
             throw new NullPointerException();
           }
           timeZoneOverride_ = value;
+          onChanged();
         } else {
           timeZoneOverrideBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00100000;
-        onChanged();
+
         return this;
       }
       /**
@@ -5785,11 +5990,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
           com.tcn.cloud.api.api.commons.TimeZoneWrapper.Builder builderForValue) {
         if (timeZoneOverrideBuilder_ == null) {
           timeZoneOverride_ = builderForValue.build();
+          onChanged();
         } else {
           timeZoneOverrideBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00100000;
-        onChanged();
+
         return this;
       }
       /**
@@ -5801,18 +6006,17 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder mergeTimeZoneOverride(com.tcn.cloud.api.api.commons.TimeZoneWrapper value) {
         if (timeZoneOverrideBuilder_ == null) {
-          if (((bitField0_ & 0x00100000) != 0) &&
-            timeZoneOverride_ != null &&
-            timeZoneOverride_ != com.tcn.cloud.api.api.commons.TimeZoneWrapper.getDefaultInstance()) {
-            getTimeZoneOverrideBuilder().mergeFrom(value);
+          if (timeZoneOverride_ != null) {
+            timeZoneOverride_ =
+              com.tcn.cloud.api.api.commons.TimeZoneWrapper.newBuilder(timeZoneOverride_).mergeFrom(value).buildPartial();
           } else {
             timeZoneOverride_ = value;
           }
+          onChanged();
         } else {
           timeZoneOverrideBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00100000;
-        onChanged();
+
         return this;
       }
       /**
@@ -5823,13 +6027,14 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * <code>.api.commons.TimeZoneWrapper time_zone_override = 25 [json_name = "timeZoneOverride"];</code>
        */
       public Builder clearTimeZoneOverride() {
-        bitField0_ = (bitField0_ & ~0x00100000);
-        timeZoneOverride_ = null;
-        if (timeZoneOverrideBuilder_ != null) {
-          timeZoneOverrideBuilder_.dispose();
+        if (timeZoneOverrideBuilder_ == null) {
+          timeZoneOverride_ = null;
+          onChanged();
+        } else {
+          timeZoneOverride_ = null;
           timeZoneOverrideBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
@@ -5840,7 +6045,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * <code>.api.commons.TimeZoneWrapper time_zone_override = 25 [json_name = "timeZoneOverride"];</code>
        */
       public com.tcn.cloud.api.api.commons.TimeZoneWrapper.Builder getTimeZoneOverrideBuilder() {
-        bitField0_ |= 0x00100000;
+        
         onChanged();
         return getTimeZoneOverrideFieldBuilder().getBuilder();
       }
@@ -5880,13 +6085,12 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         return timeZoneOverrideBuilder_;
       }
 
-      private com.google.protobuf.LazyStringArrayList permissionGroupIds_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      private com.google.protobuf.LazyStringList permissionGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensurePermissionGroupIdsIsMutable() {
-        if (!permissionGroupIds_.isModifiable()) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           permissionGroupIds_ = new com.google.protobuf.LazyStringArrayList(permissionGroupIds_);
-        }
-        bitField0_ |= 0x00200000;
+          bitField0_ |= 0x00000008;
+         }
       }
       /**
        * <pre>
@@ -5899,8 +6103,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public com.google.protobuf.ProtocolStringList
           getPermissionGroupIdsList() {
-        permissionGroupIds_.makeImmutable();
-        return permissionGroupIds_;
+        return permissionGroupIds_.getUnmodifiableView();
       }
       /**
        * <pre>
@@ -5954,10 +6157,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder setPermissionGroupIds(
           int index, java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensurePermissionGroupIdsIsMutable();
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensurePermissionGroupIdsIsMutable();
         permissionGroupIds_.set(index, value);
-        bitField0_ |= 0x00200000;
         onChanged();
         return this;
       }
@@ -5973,10 +6177,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder addPermissionGroupIds(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensurePermissionGroupIdsIsMutable();
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensurePermissionGroupIdsIsMutable();
         permissionGroupIds_.add(value);
-        bitField0_ |= 0x00200000;
         onChanged();
         return this;
       }
@@ -5995,7 +6200,6 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         ensurePermissionGroupIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, permissionGroupIds_);
-        bitField0_ |= 0x00200000;
         onChanged();
         return this;
       }
@@ -6009,9 +6213,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * @return This builder for chaining.
        */
       public Builder clearPermissionGroupIds() {
-        permissionGroupIds_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-        bitField0_ = (bitField0_ & ~0x00200000);;
+        permissionGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -6027,22 +6230,22 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder addPermissionGroupIdsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
         ensurePermissionGroupIdsIsMutable();
         permissionGroupIds_.add(value);
-        bitField0_ |= 0x00200000;
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.LazyStringArrayList trustIds_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      private com.google.protobuf.LazyStringList trustIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTrustIdsIsMutable() {
-        if (!trustIds_.isModifiable()) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           trustIds_ = new com.google.protobuf.LazyStringArrayList(trustIds_);
-        }
-        bitField0_ |= 0x00400000;
+          bitField0_ |= 0x00000010;
+         }
       }
       /**
        * <pre>
@@ -6054,8 +6257,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public com.google.protobuf.ProtocolStringList
           getTrustIdsList() {
-        trustIds_.makeImmutable();
-        return trustIds_;
+        return trustIds_.getUnmodifiableView();
       }
       /**
        * <pre>
@@ -6105,10 +6307,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder setTrustIds(
           int index, java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureTrustIdsIsMutable();
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTrustIdsIsMutable();
         trustIds_.set(index, value);
-        bitField0_ |= 0x00400000;
         onChanged();
         return this;
       }
@@ -6123,10 +6326,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder addTrustIds(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureTrustIdsIsMutable();
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTrustIdsIsMutable();
         trustIds_.add(value);
-        bitField0_ |= 0x00400000;
         onChanged();
         return this;
       }
@@ -6144,7 +6348,6 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         ensureTrustIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, trustIds_);
-        bitField0_ |= 0x00400000;
         onChanged();
         return this;
       }
@@ -6157,9 +6360,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * @return This builder for chaining.
        */
       public Builder clearTrustIds() {
-        trustIds_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-        bitField0_ = (bitField0_ & ~0x00400000);;
+        trustIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -6174,11 +6376,12 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder addTrustIdsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
         ensureTrustIdsIsMutable();
         trustIds_.add(value);
-        bitField0_ |= 0x00400000;
         onChanged();
         return this;
       }
@@ -6205,8 +6408,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * @return This builder for chaining.
        */
       public Builder setDefaultApplicationValue(int value) {
+        
         defaultApplication_ = value;
-        bitField0_ |= 0x00800000;
         onChanged();
         return this;
       }
@@ -6220,7 +6423,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       @java.lang.Override
       public com.tcn.cloud.api.api.commons.OperatorApplications getDefaultApplication() {
-        com.tcn.cloud.api.api.commons.OperatorApplications result = com.tcn.cloud.api.api.commons.OperatorApplications.forNumber(defaultApplication_);
+        @SuppressWarnings("deprecation")
+        com.tcn.cloud.api.api.commons.OperatorApplications result = com.tcn.cloud.api.api.commons.OperatorApplications.valueOf(defaultApplication_);
         return result == null ? com.tcn.cloud.api.api.commons.OperatorApplications.UNRECOGNIZED : result;
       }
       /**
@@ -6236,7 +6440,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00800000;
+        
         defaultApplication_ = value.getNumber();
         onChanged();
         return this;
@@ -6250,7 +6454,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * @return This builder for chaining.
        */
       public Builder clearDefaultApplication() {
-        bitField0_ = (bitField0_ & ~0x00800000);
+        
         defaultApplication_ = 0;
         onChanged();
         return this;
@@ -6309,9 +6513,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder setUserCallerId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
         userCallerId_ = value;
-        bitField0_ |= 0x01000000;
         onChanged();
         return this;
       }
@@ -6324,8 +6530,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * @return This builder for chaining.
        */
       public Builder clearUserCallerId() {
+        
         userCallerId_ = getDefaultInstance().getUserCallerId();
-        bitField0_ = (bitField0_ & ~0x01000000);
         onChanged();
         return this;
       }
@@ -6340,10 +6546,12 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder setUserCallerIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         userCallerId_ = value;
-        bitField0_ |= 0x01000000;
         onChanged();
         return this;
       }
@@ -6401,9 +6609,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder setAgentProfileGroupId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
         agentProfileGroupId_ = value;
-        bitField0_ |= 0x02000000;
         onChanged();
         return this;
       }
@@ -6416,8 +6626,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * @return This builder for chaining.
        */
       public Builder clearAgentProfileGroupId() {
+        
         agentProfileGroupId_ = getDefaultInstance().getAgentProfileGroupId();
-        bitField0_ = (bitField0_ & ~0x02000000);
         onChanged();
         return this;
       }
@@ -6432,10 +6642,12 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        */
       public Builder setAgentProfileGroupIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         agentProfileGroupId_ = value;
-        bitField0_ |= 0x02000000;
         onChanged();
         return this;
       }
@@ -6463,9 +6675,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * @return This builder for chaining.
        */
       public Builder setAgent(boolean value) {
-
+        
         agent_ = value;
-        bitField0_ |= 0x04000000;
         onChanged();
         return this;
       }
@@ -6478,7 +6689,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * @return This builder for chaining.
        */
       public Builder clearAgent() {
-        bitField0_ = (bitField0_ & ~0x04000000);
+        
         agent_ = false;
         onChanged();
         return this;
@@ -6507,9 +6718,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * @return This builder for chaining.
        */
       public Builder setAccountOwner(boolean value) {
-
+        
         accountOwner_ = value;
-        bitField0_ |= 0x08000000;
         onChanged();
         return this;
       }
@@ -6522,7 +6732,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
        * @return This builder for chaining.
        */
       public Builder clearAccountOwner() {
-        bitField0_ = (bitField0_ & ~0x08000000);
+        
         accountOwner_ = false;
         onChanged();
         return this;
@@ -6560,18 +6770,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new User(input, extensionRegistry);
       }
     };
 
@@ -6626,12 +6825,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.UserOrBuilder getUserOrBuilder() {
-    return user_ == null ? com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.getDefaultInstance() : user_;
+    return getUser();
   }
 
   public static final int ORG_NAME_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object orgName_ = "";
+  private volatile java.lang.Object orgName_;
   /**
    * <pre>
    * The user's organizations's name
@@ -6677,14 +6875,14 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
   }
 
   public static final int P3_PERMISSIONS_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> p3Permissions_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, com.tcn.cloud.api.api.commons.Permission> p3Permissions_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.tcn.cloud.api.api.commons.Permission>() {
             public com.tcn.cloud.api.api.commons.Permission convert(java.lang.Integer from) {
-              com.tcn.cloud.api.api.commons.Permission result = com.tcn.cloud.api.api.commons.Permission.forNumber(from);
+              @SuppressWarnings("deprecation")
+              com.tcn.cloud.api.api.commons.Permission result = com.tcn.cloud.api.api.commons.Permission.valueOf(from);
               return result == null ? com.tcn.cloud.api.api.commons.Permission.UNRECOGNIZED : result;
             }
           };
@@ -6755,7 +6953,6 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
   private int p3PermissionsMemoizedSerializedSize;
 
   public static final int PERMISSION_GROUPS_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.org.PermissionGroup> permissionGroups_;
   /**
    * <pre>
@@ -6816,7 +7013,6 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
   }
 
   public static final int LABELS_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.org.Label> labels_;
   /**
    * <pre>
@@ -6894,7 +7090,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     if (user_ != null) {
       output.writeMessage(1, getUser());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgName_)) {
+    if (!getOrgNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, orgName_);
     }
     if (getP3PermissionsList().size() > 0) {
@@ -6910,7 +7106,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     for (int i = 0; i < labels_.size(); i++) {
       output.writeMessage(5, labels_.get(i));
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -6923,7 +7119,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getUser());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgName_)) {
+    if (!getOrgNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, orgName_);
     }
     {
@@ -6946,7 +7142,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, labels_.get(i));
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -6973,7 +7169,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         .equals(other.getPermissionGroupsList())) return false;
     if (!getLabelsList()
         .equals(other.getLabelsList())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -7002,7 +7198,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       hash = (37 * hash) + LABELS_FIELD_NUMBER;
       hash = (53 * hash) + getLabelsList().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -7051,13 +7247,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7125,40 +7319,46 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getPermissionGroupsFieldBuilder();
+        getLabelsFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      user_ = null;
-      if (userBuilder_ != null) {
-        userBuilder_.dispose();
+      if (userBuilder_ == null) {
+        user_ = null;
+      } else {
+        user_ = null;
         userBuilder_ = null;
       }
       orgName_ = "";
+
       p3Permissions_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000001);
       if (permissionGroupsBuilder_ == null) {
         permissionGroups_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
-        permissionGroups_ = null;
         permissionGroupsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000008);
       if (labelsBuilder_ == null) {
         labels_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
       } else {
-        labels_ = null;
         labelsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000010);
       return this;
     }
 
@@ -7185,48 +7385,38 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse result = new com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse(this);
-      buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      onBuilt();
-      return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse result) {
-      if (((bitField0_ & 0x00000004) != 0)) {
+      int from_bitField0_ = bitField0_;
+      if (userBuilder_ == null) {
+        result.user_ = user_;
+      } else {
+        result.user_ = userBuilder_.build();
+      }
+      result.orgName_ = orgName_;
+      if (((bitField0_ & 0x00000001) != 0)) {
         p3Permissions_ = java.util.Collections.unmodifiableList(p3Permissions_);
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.p3Permissions_ = p3Permissions_;
       if (permissionGroupsBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           permissionGroups_ = java.util.Collections.unmodifiableList(permissionGroups_);
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.permissionGroups_ = permissionGroups_;
       } else {
         result.permissionGroups_ = permissionGroupsBuilder_.build();
       }
       if (labelsBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           labels_ = java.util.Collections.unmodifiableList(labels_);
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.labels_ = labels_;
       } else {
         result.labels_ = labelsBuilder_.build();
       }
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.user_ = userBuilder_ == null
-            ? user_
-            : userBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.orgName_ = orgName_;
-      }
+      onBuilt();
+      return result;
     }
 
     @java.lang.Override
@@ -7278,13 +7468,12 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
       }
       if (!other.getOrgName().isEmpty()) {
         orgName_ = other.orgName_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.p3Permissions_.isEmpty()) {
         if (p3Permissions_.isEmpty()) {
           p3Permissions_ = other.p3Permissions_;
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensureP3PermissionsIsMutable();
           p3Permissions_.addAll(other.p3Permissions_);
@@ -7295,7 +7484,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         if (!other.permissionGroups_.isEmpty()) {
           if (permissionGroups_.isEmpty()) {
             permissionGroups_ = other.permissionGroups_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensurePermissionGroupsIsMutable();
             permissionGroups_.addAll(other.permissionGroups_);
@@ -7308,7 +7497,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
             permissionGroupsBuilder_.dispose();
             permissionGroupsBuilder_ = null;
             permissionGroups_ = other.permissionGroups_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000002);
             permissionGroupsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getPermissionGroupsFieldBuilder() : null;
@@ -7321,7 +7510,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         if (!other.labels_.isEmpty()) {
           if (labels_.isEmpty()) {
             labels_ = other.labels_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureLabelsIsMutable();
             labels_.addAll(other.labels_);
@@ -7334,7 +7523,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
             labelsBuilder_.dispose();
             labelsBuilder_ = null;
             labels_ = other.labels_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000004);
             labelsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getLabelsFieldBuilder() : null;
@@ -7343,7 +7532,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
           }
         }
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -7358,85 +7547,17 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              input.readMessage(
-                  getUserFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              orgName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 24: {
-              int tmpRaw = input.readEnum();
-              ensureP3PermissionsIsMutable();
-              p3Permissions_.add(tmpRaw);
-              break;
-            } // case 24
-            case 26: {
-              int length = input.readRawVarint32();
-              int oldLimit = input.pushLimit(length);
-              while(input.getBytesUntilLimit() > 0) {
-                int tmpRaw = input.readEnum();
-                ensureP3PermissionsIsMutable();
-                p3Permissions_.add(tmpRaw);
-              }
-              input.popLimit(oldLimit);
-              break;
-            } // case 26
-            case 34: {
-              com.tcn.cloud.api.api.commons.org.PermissionGroup m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.commons.org.PermissionGroup.parser(),
-                      extensionRegistry);
-              if (permissionGroupsBuilder_ == null) {
-                ensurePermissionGroupsIsMutable();
-                permissionGroups_.add(m);
-              } else {
-                permissionGroupsBuilder_.addMessage(m);
-              }
-              break;
-            } // case 34
-            case 42: {
-              com.tcn.cloud.api.api.commons.org.Label m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.commons.org.Label.parser(),
-                      extensionRegistry);
-              if (labelsBuilder_ == null) {
-                ensureLabelsIsMutable();
-                labels_.add(m);
-              } else {
-                labelsBuilder_.addMessage(m);
-              }
-              break;
-            } // case 42
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -7453,7 +7574,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
      * @return Whether the user field is set.
      */
     public boolean hasUser() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return userBuilder_ != null || user_ != null;
     }
     /**
      * <pre>
@@ -7483,11 +7604,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
           throw new NullPointerException();
         }
         user_ = value;
+        onChanged();
       } else {
         userBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -7501,11 +7622,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.Builder builderForValue) {
       if (userBuilder_ == null) {
         user_ = builderForValue.build();
+        onChanged();
       } else {
         userBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -7517,18 +7638,17 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
      */
     public Builder mergeUser(com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User value) {
       if (userBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          user_ != null &&
-          user_ != com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.getDefaultInstance()) {
-          getUserBuilder().mergeFrom(value);
+        if (user_ != null) {
+          user_ =
+            com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.newBuilder(user_).mergeFrom(value).buildPartial();
         } else {
           user_ = value;
         }
+        onChanged();
       } else {
         userBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -7539,13 +7659,14 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
      * <code>.api.v1alpha1.org.GetUserSessionDataResponse.User user = 1 [json_name = "user"];</code>
      */
     public Builder clearUser() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      user_ = null;
-      if (userBuilder_ != null) {
-        userBuilder_.dispose();
+      if (userBuilder_ == null) {
+        user_ = null;
+        onChanged();
+      } else {
+        user_ = null;
         userBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -7556,7 +7677,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
      * <code>.api.v1alpha1.org.GetUserSessionDataResponse.User user = 1 [json_name = "user"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.Builder getUserBuilder() {
-      bitField0_ |= 0x00000001;
+      
       onChanged();
       return getUserFieldBuilder().getBuilder();
     }
@@ -7649,9 +7770,11 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
      */
     public Builder setOrgName(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       orgName_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -7664,8 +7787,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
      * @return This builder for chaining.
      */
     public Builder clearOrgName() {
+      
       orgName_ = getDefaultInstance().getOrgName();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -7680,10 +7803,12 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
      */
     public Builder setOrgNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       orgName_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -7691,9 +7816,9 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     private java.util.List<java.lang.Integer> p3Permissions_ =
       java.util.Collections.emptyList();
     private void ensureP3PermissionsIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         p3Permissions_ = new java.util.ArrayList<java.lang.Integer>(p3Permissions_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000001;
       }
     }
     /**
@@ -7797,7 +7922,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
      */
     public Builder clearP3Permissions() {
       p3Permissions_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -7831,8 +7956,8 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
      * </pre>
      *
      * <code>repeated .api.commons.Permission p3_permissions = 3 [json_name = "p3Permissions"];</code>
-     * @param index The index to set the value at.
-     * @param value The enum numeric value on the wire for p3Permissions to set.
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of p3Permissions at the given index.
      * @return This builder for chaining.
      */
     public Builder setP3PermissionsValue(
@@ -7879,9 +8004,9 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     private java.util.List<com.tcn.cloud.api.api.commons.org.PermissionGroup> permissionGroups_ =
       java.util.Collections.emptyList();
     private void ensurePermissionGroupsIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         permissionGroups_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.org.PermissionGroup>(permissionGroups_);
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -8075,7 +8200,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     public Builder clearPermissionGroups() {
       if (permissionGroupsBuilder_ == null) {
         permissionGroups_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         permissionGroupsBuilder_.clear();
@@ -8180,7 +8305,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         permissionGroupsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.org.PermissionGroup, com.tcn.cloud.api.api.commons.org.PermissionGroup.Builder, com.tcn.cloud.api.api.commons.org.PermissionGroupOrBuilder>(
                 permissionGroups_,
-                ((bitField0_ & 0x00000008) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         permissionGroups_ = null;
@@ -8191,9 +8316,9 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     private java.util.List<com.tcn.cloud.api.api.commons.org.Label> labels_ =
       java.util.Collections.emptyList();
     private void ensureLabelsIsMutable() {
-      if (!((bitField0_ & 0x00000010) != 0)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         labels_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.org.Label>(labels_);
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000004;
        }
     }
 
@@ -8387,7 +8512,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
     public Builder clearLabels() {
       if (labelsBuilder_ == null) {
         labels_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
       } else {
         labelsBuilder_.clear();
@@ -8492,7 +8617,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         labelsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.org.Label, com.tcn.cloud.api.api.commons.org.Label.Builder, com.tcn.cloud.api.api.commons.org.LabelOrBuilder>(
                 labels_,
-                ((bitField0_ & 0x00000010) != 0),
+                ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
         labels_ = null;
@@ -8532,18 +8657,7 @@ com.tcn.cloud.api.api.v1alpha1.org.GetUserSessionDataResponse.User.RegionSids de
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new GetUserSessionDataResponse(input, extensionRegistry);
     }
   };
 

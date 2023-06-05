@@ -29,6 +29,78 @@ private static final long serialVersionUID = 0L;
     return new Date();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private Date(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 24: {
+
+            year_ = input.readInt32();
+            break;
+          }
+          case 32: {
+
+            month_ = input.readInt32();
+            break;
+          }
+          case 40: {
+
+            week_ = input.readInt32();
+            break;
+          }
+          case 48: {
+
+            dayOfMonth_ = input.readInt32();
+            break;
+          }
+          case 56: {
+
+            dayOfWeek_ = input.readInt32();
+            break;
+          }
+          case 64: {
+
+            dayOfYear_ = input.readInt32();
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.LmsProto.internal_static_api_v0alpha_Date_descriptor;
@@ -43,7 +115,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int YEAR_FIELD_NUMBER = 3;
-  private int year_ = 0;
+  private int year_;
   /**
    * <code>int32 year = 3 [json_name = "year"];</code>
    * @return The year.
@@ -54,7 +126,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MONTH_FIELD_NUMBER = 4;
-  private int month_ = 0;
+  private int month_;
   /**
    * <code>int32 month = 4 [json_name = "month"];</code>
    * @return The month.
@@ -65,7 +137,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WEEK_FIELD_NUMBER = 5;
-  private int week_ = 0;
+  private int week_;
   /**
    * <code>int32 week = 5 [json_name = "week"];</code>
    * @return The week.
@@ -76,7 +148,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DAY_OF_MONTH_FIELD_NUMBER = 6;
-  private int dayOfMonth_ = 0;
+  private int dayOfMonth_;
   /**
    * <code>int32 day_of_month = 6 [json_name = "dayOfMonth"];</code>
    * @return The dayOfMonth.
@@ -87,7 +159,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DAY_OF_WEEK_FIELD_NUMBER = 7;
-  private int dayOfWeek_ = 0;
+  private int dayOfWeek_;
   /**
    * <code>int32 day_of_week = 7 [json_name = "dayOfWeek"];</code>
    * @return The dayOfWeek.
@@ -98,7 +170,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DAY_OF_YEAR_FIELD_NUMBER = 8;
-  private int dayOfYear_ = 0;
+  private int dayOfYear_;
   /**
    * <code>int32 day_of_year = 8 [json_name = "dayOfYear"];</code>
    * @return The dayOfYear.
@@ -140,7 +212,7 @@ private static final long serialVersionUID = 0L;
     if (dayOfYear_ != 0) {
       output.writeInt32(8, dayOfYear_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -173,7 +245,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(8, dayOfYear_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -200,7 +272,7 @@ private static final long serialVersionUID = 0L;
         != other.getDayOfWeek()) return false;
     if (getDayOfYear()
         != other.getDayOfYear()) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -223,7 +295,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getDayOfWeek();
     hash = (37 * hash) + DAY_OF_YEAR_FIELD_NUMBER;
     hash = (53 * hash) + getDayOfYear();
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -272,13 +344,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.Date parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.Date parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -346,24 +416,34 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.Date.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       year_ = 0;
+
       month_ = 0;
+
       week_ = 0;
+
       dayOfMonth_ = 0;
+
       dayOfWeek_ = 0;
+
       dayOfYear_ = 0;
+
       return this;
     }
 
@@ -390,31 +470,14 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.Date buildPartial() {
       com.tcn.cloud.api.api.v0alpha.Date result = new com.tcn.cloud.api.api.v0alpha.Date(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.year_ = year_;
+      result.month_ = month_;
+      result.week_ = week_;
+      result.dayOfMonth_ = dayOfMonth_;
+      result.dayOfWeek_ = dayOfWeek_;
+      result.dayOfYear_ = dayOfYear_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.Date result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.year_ = year_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.month_ = month_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.week_ = week_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.dayOfMonth_ = dayOfMonth_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.dayOfWeek_ = dayOfWeek_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.dayOfYear_ = dayOfYear_;
-      }
     }
 
     @java.lang.Override
@@ -479,7 +542,7 @@ private static final long serialVersionUID = 0L;
       if (other.getDayOfYear() != 0) {
         setDayOfYear(other.getDayOfYear());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -494,63 +557,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.Date parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 24: {
-              year_ = input.readInt32();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 24
-            case 32: {
-              month_ = input.readInt32();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 32
-            case 40: {
-              week_ = input.readInt32();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 40
-            case 48: {
-              dayOfMonth_ = input.readInt32();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 48
-            case 56: {
-              dayOfWeek_ = input.readInt32();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 56
-            case 64: {
-              dayOfYear_ = input.readInt32();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 64
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.Date) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private int year_ ;
     /**
@@ -567,9 +586,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setYear(int value) {
-
+      
       year_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -578,7 +596,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearYear() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       year_ = 0;
       onChanged();
       return this;
@@ -599,9 +617,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMonth(int value) {
-
+      
       month_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -610,7 +627,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMonth() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       month_ = 0;
       onChanged();
       return this;
@@ -631,9 +648,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWeek(int value) {
-
+      
       week_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -642,7 +658,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWeek() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       week_ = 0;
       onChanged();
       return this;
@@ -663,9 +679,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDayOfMonth(int value) {
-
+      
       dayOfMonth_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -674,7 +689,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDayOfMonth() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      
       dayOfMonth_ = 0;
       onChanged();
       return this;
@@ -695,9 +710,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDayOfWeek(int value) {
-
+      
       dayOfWeek_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -706,7 +720,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDayOfWeek() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      
       dayOfWeek_ = 0;
       onChanged();
       return this;
@@ -727,9 +741,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDayOfYear(int value) {
-
+      
       dayOfYear_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -738,7 +751,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDayOfYear() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      
       dayOfYear_ = 0;
       onChanged();
       return this;
@@ -776,18 +789,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new Date(input, extensionRegistry);
     }
   };
 

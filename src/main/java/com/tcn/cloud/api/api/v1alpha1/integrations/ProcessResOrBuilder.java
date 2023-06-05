@@ -60,11 +60,10 @@ public interface ProcessResOrBuilder extends
    *
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; data = 2 [json_name = "data"];</code>
    */
-  /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrations.Value getDataOrDefault(
+
+  com.tcn.cloud.api.api.v1alpha1.integrations.Value getDataOrDefault(
       java.lang.String key,
-      /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue);
+      com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue);
   /**
    * <pre>
    * contains the response value from the transaction. This could be an amount for payments
@@ -73,6 +72,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue);
    *
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; data = 2 [json_name = "data"];</code>
    */
+
   com.tcn.cloud.api.api.v1alpha1.integrations.Value getDataOrThrow(
       java.lang.String key);
 

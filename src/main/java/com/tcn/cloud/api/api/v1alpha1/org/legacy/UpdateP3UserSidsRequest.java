@@ -26,6 +26,77 @@ private static final long serialVersionUID = 0L;
     return new UpdateP3UserSidsRequest();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private UpdateP3UserSidsRequest(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            userId_ = s;
+            break;
+          }
+          case 16: {
+
+            agentSid_ = input.readInt64();
+            break;
+          }
+          case 24: {
+
+            loginSid_ = input.readInt64();
+            break;
+          }
+          case 82: {
+            com.google.protobuf.FieldMask.Builder subBuilder = null;
+            if (fieldMask_ != null) {
+              subBuilder = fieldMask_.toBuilder();
+            }
+            fieldMask_ = input.readMessage(com.google.protobuf.FieldMask.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(fieldMask_);
+              fieldMask_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.org.legacy.EntitiesProto.internal_static_api_v1alpha1_org_legacy_UpdateP3UserSidsRequest_descriptor;
@@ -40,8 +111,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int USER_ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object userId_ = "";
+  private volatile java.lang.Object userId_;
   /**
    * <code>string user_id = 1 [json_name = "userId"];</code>
    * @return The userId.
@@ -79,7 +149,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AGENT_SID_FIELD_NUMBER = 2;
-  private long agentSid_ = 0L;
+  private long agentSid_;
   /**
    * <code>int64 agent_sid = 2 [json_name = "agentSid"];</code>
    * @return The agentSid.
@@ -90,7 +160,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LOGIN_SID_FIELD_NUMBER = 3;
-  private long loginSid_ = 0L;
+  private long loginSid_;
   /**
    * <code>int64 login_sid = 3 [json_name = "loginSid"];</code>
    * @return The loginSid.
@@ -123,7 +193,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder() {
-    return fieldMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : fieldMask_;
+    return getFieldMask();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -140,7 +210,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
+    if (!getUserIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, userId_);
     }
     if (agentSid_ != 0L) {
@@ -152,7 +222,7 @@ private static final long serialVersionUID = 0L;
     if (fieldMask_ != null) {
       output.writeMessage(10, getFieldMask());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -161,7 +231,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
+    if (!getUserIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, userId_);
     }
     if (agentSid_ != 0L) {
@@ -176,7 +246,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getFieldMask());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -202,7 +272,7 @@ private static final long serialVersionUID = 0L;
       if (!getFieldMask()
           .equals(other.getFieldMask())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -225,7 +295,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + FIELD_MASK_FIELD_NUMBER;
       hash = (53 * hash) + getFieldMask().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -274,13 +344,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.UpdateP3UserSidsRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.UpdateP3UserSidsRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -344,24 +412,32 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.legacy.UpdateP3UserSidsRequest.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       userId_ = "";
+
       agentSid_ = 0L;
+
       loginSid_ = 0L;
-      fieldMask_ = null;
-      if (fieldMaskBuilder_ != null) {
-        fieldMaskBuilder_.dispose();
+
+      if (fieldMaskBuilder_ == null) {
+        fieldMask_ = null;
+      } else {
+        fieldMask_ = null;
         fieldMaskBuilder_ = null;
       }
       return this;
@@ -390,27 +466,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.legacy.UpdateP3UserSidsRequest buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.legacy.UpdateP3UserSidsRequest result = new com.tcn.cloud.api.api.v1alpha1.org.legacy.UpdateP3UserSidsRequest(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.userId_ = userId_;
+      result.agentSid_ = agentSid_;
+      result.loginSid_ = loginSid_;
+      if (fieldMaskBuilder_ == null) {
+        result.fieldMask_ = fieldMask_;
+      } else {
+        result.fieldMask_ = fieldMaskBuilder_.build();
+      }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.legacy.UpdateP3UserSidsRequest result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.userId_ = userId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.agentSid_ = agentSid_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.loginSid_ = loginSid_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.fieldMask_ = fieldMaskBuilder_ == null
-            ? fieldMask_
-            : fieldMaskBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -459,7 +524,6 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v1alpha1.org.legacy.UpdateP3UserSidsRequest.getDefaultInstance()) return this;
       if (!other.getUserId().isEmpty()) {
         userId_ = other.userId_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.getAgentSid() != 0L) {
@@ -471,7 +535,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasFieldMask()) {
         mergeFieldMask(other.getFieldMask());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -486,55 +550,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.org.legacy.UpdateP3UserSidsRequest parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              userId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 16: {
-              agentSid_ = input.readInt64();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 16
-            case 24: {
-              loginSid_ = input.readInt64();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 24
-            case 82: {
-              input.readMessage(
-                  getFieldMaskFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 82
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.org.legacy.UpdateP3UserSidsRequest) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private java.lang.Object userId_ = "";
     /**
@@ -577,9 +605,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUserId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       userId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -588,8 +618,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUserId() {
+      
       userId_ = getDefaultInstance().getUserId();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -600,10 +630,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUserIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       userId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -623,9 +655,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAgentSid(long value) {
-
+      
       agentSid_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -634,7 +665,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAgentSid() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       agentSid_ = 0L;
       onChanged();
       return this;
@@ -655,9 +686,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLoginSid(long value) {
-
+      
       loginSid_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -666,7 +696,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLoginSid() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       loginSid_ = 0L;
       onChanged();
       return this;
@@ -680,7 +710,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the fieldMask field is set.
      */
     public boolean hasFieldMask() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return fieldMaskBuilder_ != null || fieldMask_ != null;
     }
     /**
      * <code>.google.protobuf.FieldMask field_mask = 10 [json_name = "fieldMask"];</code>
@@ -702,11 +732,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         fieldMask_ = value;
+        onChanged();
       } else {
         fieldMaskBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
@@ -716,11 +746,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.FieldMask.Builder builderForValue) {
       if (fieldMaskBuilder_ == null) {
         fieldMask_ = builderForValue.build();
+        onChanged();
       } else {
         fieldMaskBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
@@ -728,38 +758,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeFieldMask(com.google.protobuf.FieldMask value) {
       if (fieldMaskBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0) &&
-          fieldMask_ != null &&
-          fieldMask_ != com.google.protobuf.FieldMask.getDefaultInstance()) {
-          getFieldMaskBuilder().mergeFrom(value);
+        if (fieldMask_ != null) {
+          fieldMask_ =
+            com.google.protobuf.FieldMask.newBuilder(fieldMask_).mergeFrom(value).buildPartial();
         } else {
           fieldMask_ = value;
         }
+        onChanged();
       } else {
         fieldMaskBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.FieldMask field_mask = 10 [json_name = "fieldMask"];</code>
      */
     public Builder clearFieldMask() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      fieldMask_ = null;
-      if (fieldMaskBuilder_ != null) {
-        fieldMaskBuilder_.dispose();
+      if (fieldMaskBuilder_ == null) {
+        fieldMask_ = null;
+        onChanged();
+      } else {
+        fieldMask_ = null;
         fieldMaskBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.FieldMask field_mask = 10 [json_name = "fieldMask"];</code>
      */
     public com.google.protobuf.FieldMask.Builder getFieldMaskBuilder() {
-      bitField0_ |= 0x00000008;
+      
       onChanged();
       return getFieldMaskFieldBuilder().getBuilder();
     }
@@ -823,18 +853,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new UpdateP3UserSidsRequest(input, extensionRegistry);
     }
   };
 

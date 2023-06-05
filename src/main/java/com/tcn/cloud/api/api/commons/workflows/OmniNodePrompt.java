@@ -18,8 +18,7 @@ private static final long serialVersionUID = 0L;
   private OmniNodePrompt() {
     prompt_ = "";
     storeTo_ = "";
-    options_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    options_ = com.google.protobuf.LazyStringArrayList.EMPTY;
   }
 
   @java.lang.Override
@@ -29,6 +28,73 @@ private static final long serialVersionUID = 0L;
     return new OmniNodePrompt();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private OmniNodePrompt(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            prompt_ = s;
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            storeTo_ = s;
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              options_ = new com.google.protobuf.LazyStringArrayList();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            options_.add(s);
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        options_ = options_.getUnmodifiableView();
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.workflows.OmniProto.internal_static_api_commons_workflows_OmniNodePrompt_descriptor;
@@ -43,8 +109,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PROMPT_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object prompt_ = "";
+  private volatile java.lang.Object prompt_;
   /**
    * <code>string prompt = 1 [json_name = "prompt"];</code>
    * @return The prompt.
@@ -82,8 +147,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STORE_TO_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object storeTo_ = "";
+  private volatile java.lang.Object storeTo_;
   /**
    * <code>string store_to = 2 [json_name = "storeTo"];</code>
    * @return The storeTo.
@@ -121,9 +185,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int OPTIONS_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList options_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
+  private com.google.protobuf.LazyStringList options_;
   /**
    * <code>repeated string options = 3 [json_name = "options"];</code>
    * @return A list containing the options.
@@ -171,16 +233,16 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prompt_)) {
+    if (!getPromptBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, prompt_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(storeTo_)) {
+    if (!getStoreToBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, storeTo_);
     }
     for (int i = 0; i < options_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, options_.getRaw(i));
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -189,10 +251,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prompt_)) {
+    if (!getPromptBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, prompt_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(storeTo_)) {
+    if (!getStoreToBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, storeTo_);
     }
     {
@@ -203,7 +265,7 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getOptionsList().size();
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -224,7 +286,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getStoreTo())) return false;
     if (!getOptionsList()
         .equals(other.getOptionsList())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -243,7 +305,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + OPTIONS_FIELD_NUMBER;
       hash = (53 * hash) + getOptionsList().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -292,13 +354,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -362,22 +422,28 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       prompt_ = "";
+
       storeTo_ = "";
-      options_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+
+      options_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -404,23 +470,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt buildPartial() {
       com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt result = new com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      int from_bitField0_ = bitField0_;
+      result.prompt_ = prompt_;
+      result.storeTo_ = storeTo_;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        options_ = options_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000001);
+      }
+      result.options_ = options_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.prompt_ = prompt_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.storeTo_ = storeTo_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        options_.makeImmutable();
-        result.options_ = options_;
-      }
     }
 
     @java.lang.Override
@@ -469,25 +528,23 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt.getDefaultInstance()) return this;
       if (!other.getPrompt().isEmpty()) {
         prompt_ = other.prompt_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getStoreTo().isEmpty()) {
         storeTo_ = other.storeTo_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.options_.isEmpty()) {
         if (options_.isEmpty()) {
           options_ = other.options_;
-          bitField0_ |= 0x00000004;
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensureOptionsIsMutable();
           options_.addAll(other.options_);
         }
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -502,46 +559,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              prompt_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              storeTo_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensureOptionsIsMutable();
-              options_.add(s);
-              break;
-            } // case 26
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.commons.workflows.OmniNodePrompt) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -587,9 +615,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPrompt(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       prompt_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -598,8 +628,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPrompt() {
+      
       prompt_ = getDefaultInstance().getPrompt();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -610,10 +640,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPromptBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       prompt_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -659,9 +691,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStoreTo(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       storeTo_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -670,8 +704,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStoreTo() {
+      
       storeTo_ = getDefaultInstance().getStoreTo();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -682,21 +716,22 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStoreToBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       storeTo_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringArrayList options_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.LazyStringList options_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureOptionsIsMutable() {
-      if (!options_.isModifiable()) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         options_ = new com.google.protobuf.LazyStringArrayList(options_);
-      }
-      bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000001;
+       }
     }
     /**
      * <code>repeated string options = 3 [json_name = "options"];</code>
@@ -704,8 +739,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getOptionsList() {
-      options_.makeImmutable();
-      return options_;
+      return options_.getUnmodifiableView();
     }
     /**
      * <code>repeated string options = 3 [json_name = "options"];</code>
@@ -739,10 +773,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOptions(
         int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureOptionsIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureOptionsIsMutable();
       options_.set(index, value);
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -753,10 +788,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addOptions(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureOptionsIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureOptionsIsMutable();
       options_.add(value);
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -770,7 +806,6 @@ private static final long serialVersionUID = 0L;
       ensureOptionsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, options_);
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -779,9 +814,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOptions() {
-      options_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000004);;
+      options_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -792,11 +826,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addOptionsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
       ensureOptionsIsMutable();
       options_.add(value);
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -833,18 +868,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new OmniNodePrompt(input, extensionRegistry);
     }
   };
 

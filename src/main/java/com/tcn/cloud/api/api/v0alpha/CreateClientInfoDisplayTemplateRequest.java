@@ -25,6 +25,61 @@ private static final long serialVersionUID = 0L;
     return new CreateClientInfoDisplayTemplateRequest();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private CreateClientInfoDisplayTemplateRequest(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            com.tcn.cloud.api.api.v0alpha.ClientInfoDisplayTemplate.Builder subBuilder = null;
+            if (clientInfoDisplayTemplate_ != null) {
+              subBuilder = clientInfoDisplayTemplate_.toBuilder();
+            }
+            clientInfoDisplayTemplate_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.ClientInfoDisplayTemplate.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(clientInfoDisplayTemplate_);
+              clientInfoDisplayTemplate_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_CreateClientInfoDisplayTemplateRequest_descriptor;
@@ -61,7 +116,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.ClientInfoDisplayTemplateOrBuilder getClientInfoDisplayTemplateOrBuilder() {
-    return clientInfoDisplayTemplate_ == null ? com.tcn.cloud.api.api.v0alpha.ClientInfoDisplayTemplate.getDefaultInstance() : clientInfoDisplayTemplate_;
+    return getClientInfoDisplayTemplate();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -81,7 +136,7 @@ private static final long serialVersionUID = 0L;
     if (clientInfoDisplayTemplate_ != null) {
       output.writeMessage(1, getClientInfoDisplayTemplate());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -94,7 +149,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getClientInfoDisplayTemplate());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -114,7 +169,7 @@ private static final long serialVersionUID = 0L;
       if (!getClientInfoDisplayTemplate()
           .equals(other.getClientInfoDisplayTemplate())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -129,7 +184,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CLIENT_INFO_DISPLAY_TEMPLATE_FIELD_NUMBER;
       hash = (53 * hash) + getClientInfoDisplayTemplate().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -178,13 +233,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.CreateClientInfoDisplayTemplateRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.CreateClientInfoDisplayTemplateRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -248,21 +301,26 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.CreateClientInfoDisplayTemplateRequest.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      clientInfoDisplayTemplate_ = null;
-      if (clientInfoDisplayTemplateBuilder_ != null) {
-        clientInfoDisplayTemplateBuilder_.dispose();
+      if (clientInfoDisplayTemplateBuilder_ == null) {
+        clientInfoDisplayTemplate_ = null;
+      } else {
+        clientInfoDisplayTemplate_ = null;
         clientInfoDisplayTemplateBuilder_ = null;
       }
       return this;
@@ -291,18 +349,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.CreateClientInfoDisplayTemplateRequest buildPartial() {
       com.tcn.cloud.api.api.v0alpha.CreateClientInfoDisplayTemplateRequest result = new com.tcn.cloud.api.api.v0alpha.CreateClientInfoDisplayTemplateRequest(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      if (clientInfoDisplayTemplateBuilder_ == null) {
+        result.clientInfoDisplayTemplate_ = clientInfoDisplayTemplate_;
+      } else {
+        result.clientInfoDisplayTemplate_ = clientInfoDisplayTemplateBuilder_.build();
+      }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.CreateClientInfoDisplayTemplateRequest result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.clientInfoDisplayTemplate_ = clientInfoDisplayTemplateBuilder_ == null
-            ? clientInfoDisplayTemplate_
-            : clientInfoDisplayTemplateBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -352,7 +405,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasClientInfoDisplayTemplate()) {
         mergeClientInfoDisplayTemplate(other.getClientInfoDisplayTemplate());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -367,40 +420,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.CreateClientInfoDisplayTemplateRequest parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              input.readMessage(
-                  getClientInfoDisplayTemplateFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.CreateClientInfoDisplayTemplateRequest) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private com.tcn.cloud.api.api.v0alpha.ClientInfoDisplayTemplate clientInfoDisplayTemplate_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -410,7 +442,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the clientInfoDisplayTemplate field is set.
      */
     public boolean hasClientInfoDisplayTemplate() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return clientInfoDisplayTemplateBuilder_ != null || clientInfoDisplayTemplate_ != null;
     }
     /**
      * <code>.api.v0alpha.ClientInfoDisplayTemplate client_info_display_template = 1 [json_name = "clientInfoDisplayTemplate"];</code>
@@ -432,11 +464,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         clientInfoDisplayTemplate_ = value;
+        onChanged();
       } else {
         clientInfoDisplayTemplateBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -446,11 +478,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.ClientInfoDisplayTemplate.Builder builderForValue) {
       if (clientInfoDisplayTemplateBuilder_ == null) {
         clientInfoDisplayTemplate_ = builderForValue.build();
+        onChanged();
       } else {
         clientInfoDisplayTemplateBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -458,38 +490,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeClientInfoDisplayTemplate(com.tcn.cloud.api.api.v0alpha.ClientInfoDisplayTemplate value) {
       if (clientInfoDisplayTemplateBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          clientInfoDisplayTemplate_ != null &&
-          clientInfoDisplayTemplate_ != com.tcn.cloud.api.api.v0alpha.ClientInfoDisplayTemplate.getDefaultInstance()) {
-          getClientInfoDisplayTemplateBuilder().mergeFrom(value);
+        if (clientInfoDisplayTemplate_ != null) {
+          clientInfoDisplayTemplate_ =
+            com.tcn.cloud.api.api.v0alpha.ClientInfoDisplayTemplate.newBuilder(clientInfoDisplayTemplate_).mergeFrom(value).buildPartial();
         } else {
           clientInfoDisplayTemplate_ = value;
         }
+        onChanged();
       } else {
         clientInfoDisplayTemplateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.ClientInfoDisplayTemplate client_info_display_template = 1 [json_name = "clientInfoDisplayTemplate"];</code>
      */
     public Builder clearClientInfoDisplayTemplate() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      clientInfoDisplayTemplate_ = null;
-      if (clientInfoDisplayTemplateBuilder_ != null) {
-        clientInfoDisplayTemplateBuilder_.dispose();
+      if (clientInfoDisplayTemplateBuilder_ == null) {
+        clientInfoDisplayTemplate_ = null;
+        onChanged();
+      } else {
+        clientInfoDisplayTemplate_ = null;
         clientInfoDisplayTemplateBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.ClientInfoDisplayTemplate client_info_display_template = 1 [json_name = "clientInfoDisplayTemplate"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.ClientInfoDisplayTemplate.Builder getClientInfoDisplayTemplateBuilder() {
-      bitField0_ |= 0x00000001;
+      
       onChanged();
       return getClientInfoDisplayTemplateFieldBuilder().getBuilder();
     }
@@ -553,18 +585,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new CreateClientInfoDisplayTemplateRequest(input, extensionRegistry);
     }
   };
 

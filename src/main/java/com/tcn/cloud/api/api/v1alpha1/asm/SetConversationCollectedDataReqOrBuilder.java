@@ -75,11 +75,10 @@ public interface SetConversationCollectedDataReqOrBuilder extends
    *
    * <code>map&lt;string, string&gt; collected_data = 3 [json_name = "collectedData"];</code>
    */
-  /* nullable */
-java.lang.String getCollectedDataOrDefault(
+
+  java.lang.String getCollectedDataOrDefault(
       java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue);
+      java.lang.String defaultValue);
   /**
    * <pre>
    * collected data - key/value
@@ -87,6 +86,7 @@ java.lang.String defaultValue);
    *
    * <code>map&lt;string, string&gt; collected_data = 3 [json_name = "collectedData"];</code>
    */
+
   java.lang.String getCollectedDataOrThrow(
       java.lang.String key);
 }

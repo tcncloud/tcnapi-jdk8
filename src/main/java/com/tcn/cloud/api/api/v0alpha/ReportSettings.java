@@ -26,6 +26,116 @@ private static final long serialVersionUID = 0L;
     return new ReportSettings();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private ReportSettings(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+
+            enabled_ = input.readBool();
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            deliveryMethod_ = s;
+            break;
+          }
+          case 24: {
+
+            reportTemplateSid_ = input.readInt64();
+            break;
+          }
+          case 34: {
+            com.tcn.cloud.api.api.v0alpha.SmsSettings.Builder subBuilder = null;
+            if (smsSettings_ != null) {
+              subBuilder = smsSettings_.toBuilder();
+            }
+            smsSettings_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.SmsSettings.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(smsSettings_);
+              smsSettings_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 42: {
+            com.tcn.cloud.api.api.v0alpha.EmailSettings.Builder subBuilder = null;
+            if (emailSettings_ != null) {
+              subBuilder = emailSettings_.toBuilder();
+            }
+            emailSettings_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.EmailSettings.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(emailSettings_);
+              emailSettings_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 50: {
+            com.tcn.cloud.api.api.v0alpha.FtpSettings.Builder subBuilder = null;
+            if (ftpSettings_ != null) {
+              subBuilder = ftpSettings_.toBuilder();
+            }
+            ftpSettings_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.FtpSettings.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(ftpSettings_);
+              ftpSettings_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 58: {
+            com.tcn.cloud.api.api.v0alpha.SftpSettings.Builder subBuilder = null;
+            if (sftpSettings_ != null) {
+              subBuilder = sftpSettings_.toBuilder();
+            }
+            sftpSettings_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.SftpSettings.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(sftpSettings_);
+              sftpSettings_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.SmsapiProto.internal_static_api_v0alpha_ReportSettings_descriptor;
@@ -40,7 +150,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ENABLED_FIELD_NUMBER = 1;
-  private boolean enabled_ = false;
+  private boolean enabled_;
   /**
    * <code>bool enabled = 1 [json_name = "enabled"];</code>
    * @return The enabled.
@@ -51,8 +161,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DELIVERY_METHOD_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object deliveryMethod_ = "";
+  private volatile java.lang.Object deliveryMethod_;
   /**
    * <code>string delivery_method = 2 [json_name = "deliveryMethod"];</code>
    * @return The deliveryMethod.
@@ -90,7 +199,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int REPORT_TEMPLATE_SID_FIELD_NUMBER = 3;
-  private long reportTemplateSid_ = 0L;
+  private long reportTemplateSid_;
   /**
    * <code>int64 report_template_sid = 3 [json_name = "reportTemplateSid"];</code>
    * @return The reportTemplateSid.
@@ -123,7 +232,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.SmsSettingsOrBuilder getSmsSettingsOrBuilder() {
-    return smsSettings_ == null ? com.tcn.cloud.api.api.v0alpha.SmsSettings.getDefaultInstance() : smsSettings_;
+    return getSmsSettings();
   }
 
   public static final int EMAIL_SETTINGS_FIELD_NUMBER = 5;
@@ -149,7 +258,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.EmailSettingsOrBuilder getEmailSettingsOrBuilder() {
-    return emailSettings_ == null ? com.tcn.cloud.api.api.v0alpha.EmailSettings.getDefaultInstance() : emailSettings_;
+    return getEmailSettings();
   }
 
   public static final int FTP_SETTINGS_FIELD_NUMBER = 6;
@@ -175,7 +284,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.FtpSettingsOrBuilder getFtpSettingsOrBuilder() {
-    return ftpSettings_ == null ? com.tcn.cloud.api.api.v0alpha.FtpSettings.getDefaultInstance() : ftpSettings_;
+    return getFtpSettings();
   }
 
   public static final int SFTP_SETTINGS_FIELD_NUMBER = 7;
@@ -201,7 +310,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.SftpSettingsOrBuilder getSftpSettingsOrBuilder() {
-    return sftpSettings_ == null ? com.tcn.cloud.api.api.v0alpha.SftpSettings.getDefaultInstance() : sftpSettings_;
+    return getSftpSettings();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -221,7 +330,7 @@ private static final long serialVersionUID = 0L;
     if (enabled_ != false) {
       output.writeBool(1, enabled_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deliveryMethod_)) {
+    if (!getDeliveryMethodBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, deliveryMethod_);
     }
     if (reportTemplateSid_ != 0L) {
@@ -239,7 +348,7 @@ private static final long serialVersionUID = 0L;
     if (sftpSettings_ != null) {
       output.writeMessage(7, getSftpSettings());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -252,7 +361,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(1, enabled_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deliveryMethod_)) {
+    if (!getDeliveryMethodBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, deliveryMethod_);
     }
     if (reportTemplateSid_ != 0L) {
@@ -275,7 +384,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getSftpSettings());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -316,7 +425,7 @@ private static final long serialVersionUID = 0L;
       if (!getSftpSettings()
           .equals(other.getSftpSettings())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -351,7 +460,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SFTP_SETTINGS_FIELD_NUMBER;
       hash = (53 * hash) + getSftpSettings().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -400,13 +509,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.ReportSettings parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.ReportSettings parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -470,39 +577,50 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ReportSettings.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       enabled_ = false;
+
       deliveryMethod_ = "";
+
       reportTemplateSid_ = 0L;
-      smsSettings_ = null;
-      if (smsSettingsBuilder_ != null) {
-        smsSettingsBuilder_.dispose();
+
+      if (smsSettingsBuilder_ == null) {
+        smsSettings_ = null;
+      } else {
+        smsSettings_ = null;
         smsSettingsBuilder_ = null;
       }
-      emailSettings_ = null;
-      if (emailSettingsBuilder_ != null) {
-        emailSettingsBuilder_.dispose();
+      if (emailSettingsBuilder_ == null) {
+        emailSettings_ = null;
+      } else {
+        emailSettings_ = null;
         emailSettingsBuilder_ = null;
       }
-      ftpSettings_ = null;
-      if (ftpSettingsBuilder_ != null) {
-        ftpSettingsBuilder_.dispose();
+      if (ftpSettingsBuilder_ == null) {
+        ftpSettings_ = null;
+      } else {
+        ftpSettings_ = null;
         ftpSettingsBuilder_ = null;
       }
-      sftpSettings_ = null;
-      if (sftpSettingsBuilder_ != null) {
-        sftpSettingsBuilder_.dispose();
+      if (sftpSettingsBuilder_ == null) {
+        sftpSettings_ = null;
+      } else {
+        sftpSettings_ = null;
         sftpSettingsBuilder_ = null;
       }
       return this;
@@ -531,42 +649,31 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.ReportSettings buildPartial() {
       com.tcn.cloud.api.api.v0alpha.ReportSettings result = new com.tcn.cloud.api.api.v0alpha.ReportSettings(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.enabled_ = enabled_;
+      result.deliveryMethod_ = deliveryMethod_;
+      result.reportTemplateSid_ = reportTemplateSid_;
+      if (smsSettingsBuilder_ == null) {
+        result.smsSettings_ = smsSettings_;
+      } else {
+        result.smsSettings_ = smsSettingsBuilder_.build();
+      }
+      if (emailSettingsBuilder_ == null) {
+        result.emailSettings_ = emailSettings_;
+      } else {
+        result.emailSettings_ = emailSettingsBuilder_.build();
+      }
+      if (ftpSettingsBuilder_ == null) {
+        result.ftpSettings_ = ftpSettings_;
+      } else {
+        result.ftpSettings_ = ftpSettingsBuilder_.build();
+      }
+      if (sftpSettingsBuilder_ == null) {
+        result.sftpSettings_ = sftpSettings_;
+      } else {
+        result.sftpSettings_ = sftpSettingsBuilder_.build();
+      }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ReportSettings result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.enabled_ = enabled_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.deliveryMethod_ = deliveryMethod_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.reportTemplateSid_ = reportTemplateSid_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.smsSettings_ = smsSettingsBuilder_ == null
-            ? smsSettings_
-            : smsSettingsBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.emailSettings_ = emailSettingsBuilder_ == null
-            ? emailSettings_
-            : emailSettingsBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.ftpSettings_ = ftpSettingsBuilder_ == null
-            ? ftpSettings_
-            : ftpSettingsBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.sftpSettings_ = sftpSettingsBuilder_ == null
-            ? sftpSettings_
-            : sftpSettingsBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -618,7 +725,6 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getDeliveryMethod().isEmpty()) {
         deliveryMethod_ = other.deliveryMethod_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.getReportTemplateSid() != 0L) {
@@ -636,7 +742,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasSftpSettings()) {
         mergeSftpSettings(other.getSftpSettings());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -651,76 +757,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.ReportSettings parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              enabled_ = input.readBool();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 18: {
-              deliveryMethod_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 24: {
-              reportTemplateSid_ = input.readInt64();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 24
-            case 34: {
-              input.readMessage(
-                  getSmsSettingsFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
-            case 42: {
-              input.readMessage(
-                  getEmailSettingsFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 42
-            case 50: {
-              input.readMessage(
-                  getFtpSettingsFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 50
-            case 58: {
-              input.readMessage(
-                  getSftpSettingsFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 58
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.ReportSettings) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private boolean enabled_ ;
     /**
@@ -737,9 +786,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEnabled(boolean value) {
-
+      
       enabled_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -748,7 +796,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnabled() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       enabled_ = false;
       onChanged();
       return this;
@@ -795,9 +843,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDeliveryMethod(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       deliveryMethod_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -806,8 +856,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDeliveryMethod() {
+      
       deliveryMethod_ = getDefaultInstance().getDeliveryMethod();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -818,10 +868,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDeliveryMethodBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       deliveryMethod_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -841,9 +893,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setReportTemplateSid(long value) {
-
+      
       reportTemplateSid_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -852,7 +903,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearReportTemplateSid() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       reportTemplateSid_ = 0L;
       onChanged();
       return this;
@@ -866,7 +917,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the smsSettings field is set.
      */
     public boolean hasSmsSettings() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return smsSettingsBuilder_ != null || smsSettings_ != null;
     }
     /**
      * <code>.api.v0alpha.SmsSettings sms_settings = 4 [json_name = "smsSettings"];</code>
@@ -888,11 +939,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         smsSettings_ = value;
+        onChanged();
       } else {
         smsSettingsBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
@@ -902,11 +953,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.SmsSettings.Builder builderForValue) {
       if (smsSettingsBuilder_ == null) {
         smsSettings_ = builderForValue.build();
+        onChanged();
       } else {
         smsSettingsBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
@@ -914,38 +965,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeSmsSettings(com.tcn.cloud.api.api.v0alpha.SmsSettings value) {
       if (smsSettingsBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0) &&
-          smsSettings_ != null &&
-          smsSettings_ != com.tcn.cloud.api.api.v0alpha.SmsSettings.getDefaultInstance()) {
-          getSmsSettingsBuilder().mergeFrom(value);
+        if (smsSettings_ != null) {
+          smsSettings_ =
+            com.tcn.cloud.api.api.v0alpha.SmsSettings.newBuilder(smsSettings_).mergeFrom(value).buildPartial();
         } else {
           smsSettings_ = value;
         }
+        onChanged();
       } else {
         smsSettingsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.SmsSettings sms_settings = 4 [json_name = "smsSettings"];</code>
      */
     public Builder clearSmsSettings() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      smsSettings_ = null;
-      if (smsSettingsBuilder_ != null) {
-        smsSettingsBuilder_.dispose();
+      if (smsSettingsBuilder_ == null) {
+        smsSettings_ = null;
+        onChanged();
+      } else {
+        smsSettings_ = null;
         smsSettingsBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.SmsSettings sms_settings = 4 [json_name = "smsSettings"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.SmsSettings.Builder getSmsSettingsBuilder() {
-      bitField0_ |= 0x00000008;
+      
       onChanged();
       return getSmsSettingsFieldBuilder().getBuilder();
     }
@@ -985,7 +1036,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the emailSettings field is set.
      */
     public boolean hasEmailSettings() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return emailSettingsBuilder_ != null || emailSettings_ != null;
     }
     /**
      * <code>.api.v0alpha.EmailSettings email_settings = 5 [json_name = "emailSettings"];</code>
@@ -1007,11 +1058,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         emailSettings_ = value;
+        onChanged();
       } else {
         emailSettingsBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
@@ -1021,11 +1072,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.EmailSettings.Builder builderForValue) {
       if (emailSettingsBuilder_ == null) {
         emailSettings_ = builderForValue.build();
+        onChanged();
       } else {
         emailSettingsBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
@@ -1033,38 +1084,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeEmailSettings(com.tcn.cloud.api.api.v0alpha.EmailSettings value) {
       if (emailSettingsBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0) &&
-          emailSettings_ != null &&
-          emailSettings_ != com.tcn.cloud.api.api.v0alpha.EmailSettings.getDefaultInstance()) {
-          getEmailSettingsBuilder().mergeFrom(value);
+        if (emailSettings_ != null) {
+          emailSettings_ =
+            com.tcn.cloud.api.api.v0alpha.EmailSettings.newBuilder(emailSettings_).mergeFrom(value).buildPartial();
         } else {
           emailSettings_ = value;
         }
+        onChanged();
       } else {
         emailSettingsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.EmailSettings email_settings = 5 [json_name = "emailSettings"];</code>
      */
     public Builder clearEmailSettings() {
-      bitField0_ = (bitField0_ & ~0x00000010);
-      emailSettings_ = null;
-      if (emailSettingsBuilder_ != null) {
-        emailSettingsBuilder_.dispose();
+      if (emailSettingsBuilder_ == null) {
+        emailSettings_ = null;
+        onChanged();
+      } else {
+        emailSettings_ = null;
         emailSettingsBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.EmailSettings email_settings = 5 [json_name = "emailSettings"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.EmailSettings.Builder getEmailSettingsBuilder() {
-      bitField0_ |= 0x00000010;
+      
       onChanged();
       return getEmailSettingsFieldBuilder().getBuilder();
     }
@@ -1104,7 +1155,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the ftpSettings field is set.
      */
     public boolean hasFtpSettings() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ftpSettingsBuilder_ != null || ftpSettings_ != null;
     }
     /**
      * <code>.api.v0alpha.FtpSettings ftp_settings = 6 [json_name = "ftpSettings"];</code>
@@ -1126,11 +1177,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         ftpSettings_ = value;
+        onChanged();
       } else {
         ftpSettingsBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+
       return this;
     }
     /**
@@ -1140,11 +1191,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.FtpSettings.Builder builderForValue) {
       if (ftpSettingsBuilder_ == null) {
         ftpSettings_ = builderForValue.build();
+        onChanged();
       } else {
         ftpSettingsBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+
       return this;
     }
     /**
@@ -1152,38 +1203,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeFtpSettings(com.tcn.cloud.api.api.v0alpha.FtpSettings value) {
       if (ftpSettingsBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0) &&
-          ftpSettings_ != null &&
-          ftpSettings_ != com.tcn.cloud.api.api.v0alpha.FtpSettings.getDefaultInstance()) {
-          getFtpSettingsBuilder().mergeFrom(value);
+        if (ftpSettings_ != null) {
+          ftpSettings_ =
+            com.tcn.cloud.api.api.v0alpha.FtpSettings.newBuilder(ftpSettings_).mergeFrom(value).buildPartial();
         } else {
           ftpSettings_ = value;
         }
+        onChanged();
       } else {
         ftpSettingsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.FtpSettings ftp_settings = 6 [json_name = "ftpSettings"];</code>
      */
     public Builder clearFtpSettings() {
-      bitField0_ = (bitField0_ & ~0x00000020);
-      ftpSettings_ = null;
-      if (ftpSettingsBuilder_ != null) {
-        ftpSettingsBuilder_.dispose();
+      if (ftpSettingsBuilder_ == null) {
+        ftpSettings_ = null;
+        onChanged();
+      } else {
+        ftpSettings_ = null;
         ftpSettingsBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.FtpSettings ftp_settings = 6 [json_name = "ftpSettings"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.FtpSettings.Builder getFtpSettingsBuilder() {
-      bitField0_ |= 0x00000020;
+      
       onChanged();
       return getFtpSettingsFieldBuilder().getBuilder();
     }
@@ -1223,7 +1274,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the sftpSettings field is set.
      */
     public boolean hasSftpSettings() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return sftpSettingsBuilder_ != null || sftpSettings_ != null;
     }
     /**
      * <code>.api.v0alpha.SftpSettings sftp_settings = 7 [json_name = "sftpSettings"];</code>
@@ -1245,11 +1296,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         sftpSettings_ = value;
+        onChanged();
       } else {
         sftpSettingsBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+
       return this;
     }
     /**
@@ -1259,11 +1310,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.SftpSettings.Builder builderForValue) {
       if (sftpSettingsBuilder_ == null) {
         sftpSettings_ = builderForValue.build();
+        onChanged();
       } else {
         sftpSettingsBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+
       return this;
     }
     /**
@@ -1271,38 +1322,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeSftpSettings(com.tcn.cloud.api.api.v0alpha.SftpSettings value) {
       if (sftpSettingsBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0) &&
-          sftpSettings_ != null &&
-          sftpSettings_ != com.tcn.cloud.api.api.v0alpha.SftpSettings.getDefaultInstance()) {
-          getSftpSettingsBuilder().mergeFrom(value);
+        if (sftpSettings_ != null) {
+          sftpSettings_ =
+            com.tcn.cloud.api.api.v0alpha.SftpSettings.newBuilder(sftpSettings_).mergeFrom(value).buildPartial();
         } else {
           sftpSettings_ = value;
         }
+        onChanged();
       } else {
         sftpSettingsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.SftpSettings sftp_settings = 7 [json_name = "sftpSettings"];</code>
      */
     public Builder clearSftpSettings() {
-      bitField0_ = (bitField0_ & ~0x00000040);
-      sftpSettings_ = null;
-      if (sftpSettingsBuilder_ != null) {
-        sftpSettingsBuilder_.dispose();
+      if (sftpSettingsBuilder_ == null) {
+        sftpSettings_ = null;
+        onChanged();
+      } else {
+        sftpSettings_ = null;
         sftpSettingsBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.SftpSettings sftp_settings = 7 [json_name = "sftpSettings"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.SftpSettings.Builder getSftpSettingsBuilder() {
-      bitField0_ |= 0x00000040;
+      
       onChanged();
       return getSftpSettingsFieldBuilder().getBuilder();
     }
@@ -1366,18 +1417,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new ReportSettings(input, extensionRegistry);
     }
   };
 

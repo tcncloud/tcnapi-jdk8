@@ -25,6 +25,62 @@ private static final long serialVersionUID = 0L;
     return new RecordFieldMap();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private RecordFieldMap(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              fields_ = com.google.protobuf.MapField.newMapField(
+                  FieldsDefaultEntryHolder.defaultEntry);
+              mutable_bitField0_ |= 0x00000001;
+            }
+            com.google.protobuf.MapEntry<java.lang.String, com.tcn.cloud.api.api.v0alpha.RecordFieldProto>
+            fields__ = input.readMessage(
+                FieldsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+            fields_.getMutableMap().put(
+                fields__.getKey(), fields__.getValue());
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.LmsProto.internal_static_api_v0alpha_RecordFieldMap_descriptor;
@@ -62,7 +118,6 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.MESSAGE,
                 com.tcn.cloud.api.api.v0alpha.RecordFieldProto.getDefaultInstance());
   }
-  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, com.tcn.cloud.api.api.v0alpha.RecordFieldProto> fields_;
   private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.v0alpha.RecordFieldProto>
@@ -73,16 +128,18 @@ private static final long serialVersionUID = 0L;
     }
     return fields_;
   }
+
   public int getFieldsCount() {
     return internalGetFields().getMap().size();
   }
   /**
    * <code>map&lt;string, .api.v0alpha.RecordFieldProto&gt; fields = 1 [json_name = "fields"];</code>
    */
+
   @java.lang.Override
   public boolean containsFields(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     return internalGetFields().getMap().containsKey(key);
   }
   /**
@@ -97,6 +154,7 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, .api.v0alpha.RecordFieldProto&gt; fields = 1 [json_name = "fields"];</code>
    */
   @java.lang.Override
+
   public java.util.Map<java.lang.String, com.tcn.cloud.api.api.v0alpha.RecordFieldProto> getFieldsMap() {
     return internalGetFields().getMap();
   }
@@ -104,12 +162,11 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, .api.v0alpha.RecordFieldProto&gt; fields = 1 [json_name = "fields"];</code>
    */
   @java.lang.Override
-  public /* nullable */
-com.tcn.cloud.api.api.v0alpha.RecordFieldProto getFieldsOrDefault(
+
+  public com.tcn.cloud.api.api.v0alpha.RecordFieldProto getFieldsOrDefault(
       java.lang.String key,
-      /* nullable */
-com.tcn.cloud.api.api.v0alpha.RecordFieldProto defaultValue) {
-    if (key == null) { throw new NullPointerException("map key"); }
+      com.tcn.cloud.api.api.v0alpha.RecordFieldProto defaultValue) {
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, com.tcn.cloud.api.api.v0alpha.RecordFieldProto> map =
         internalGetFields().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -118,9 +175,10 @@ com.tcn.cloud.api.api.v0alpha.RecordFieldProto defaultValue) {
    * <code>map&lt;string, .api.v0alpha.RecordFieldProto&gt; fields = 1 [json_name = "fields"];</code>
    */
   @java.lang.Override
+
   public com.tcn.cloud.api.api.v0alpha.RecordFieldProto getFieldsOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, com.tcn.cloud.api.api.v0alpha.RecordFieldProto> map =
         internalGetFields().getMap();
     if (!map.containsKey(key)) {
@@ -149,7 +207,7 @@ com.tcn.cloud.api.api.v0alpha.RecordFieldProto defaultValue) {
         internalGetFields(),
         FieldsDefaultEntryHolder.defaultEntry,
         1);
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -168,7 +226,7 @@ com.tcn.cloud.api.api.v0alpha.RecordFieldProto defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, fields__);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -185,7 +243,7 @@ com.tcn.cloud.api.api.v0alpha.RecordFieldProto defaultValue) {
 
     if (!internalGetFields().equals(
         other.internalGetFields())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -200,7 +258,7 @@ com.tcn.cloud.api.api.v0alpha.RecordFieldProto defaultValue) {
       hash = (37 * hash) + FIELDS_FIELD_NUMBER;
       hash = (53 * hash) + internalGetFields().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -249,13 +307,11 @@ com.tcn.cloud.api.api.v0alpha.RecordFieldProto defaultValue) {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.RecordFieldMap parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.RecordFieldMap parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -341,18 +397,22 @@ com.tcn.cloud.api.api.v0alpha.RecordFieldProto defaultValue) {
 
     // Construct using com.tcn.cloud.api.api.v0alpha.RecordFieldMap.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       internalGetMutableFields().clear();
       return this;
     }
@@ -380,17 +440,11 @@ com.tcn.cloud.api.api.v0alpha.RecordFieldProto defaultValue) {
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.RecordFieldMap buildPartial() {
       com.tcn.cloud.api.api.v0alpha.RecordFieldMap result = new com.tcn.cloud.api.api.v0alpha.RecordFieldMap(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      int from_bitField0_ = bitField0_;
+      result.fields_ = internalGetFields();
+      result.fields_.makeImmutable();
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.RecordFieldMap result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.fields_ = internalGetFields();
-        result.fields_.makeImmutable();
-      }
     }
 
     @java.lang.Override
@@ -439,8 +493,7 @@ com.tcn.cloud.api.api.v0alpha.RecordFieldProto defaultValue) {
       if (other == com.tcn.cloud.api.api.v0alpha.RecordFieldMap.getDefaultInstance()) return this;
       internalGetMutableFields().mergeFrom(
           other.internalGetFields());
-      bitField0_ |= 0x00000001;
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -455,39 +508,17 @@ com.tcn.cloud.api.api.v0alpha.RecordFieldProto defaultValue) {
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.RecordFieldMap parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.google.protobuf.MapEntry<java.lang.String, com.tcn.cloud.api.api.v0alpha.RecordFieldProto>
-              fields__ = input.readMessage(
-                  FieldsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              internalGetMutableFields().getMutableMap().put(
-                  fields__.getKey(), fields__.getValue());
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.RecordFieldMap) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -495,7 +526,7 @@ com.tcn.cloud.api.api.v0alpha.RecordFieldProto defaultValue) {
     private com.google.protobuf.MapField<
         java.lang.String, com.tcn.cloud.api.api.v0alpha.RecordFieldProto> fields_;
     private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.v0alpha.RecordFieldProto>
-        internalGetFields() {
+    internalGetFields() {
       if (fields_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             FieldsDefaultEntryHolder.defaultEntry);
@@ -503,7 +534,8 @@ com.tcn.cloud.api.api.v0alpha.RecordFieldProto defaultValue) {
       return fields_;
     }
     private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.v0alpha.RecordFieldProto>
-        internalGetMutableFields() {
+    internalGetMutableFields() {
+      onChanged();;
       if (fields_ == null) {
         fields_ = com.google.protobuf.MapField.newMapField(
             FieldsDefaultEntryHolder.defaultEntry);
@@ -511,20 +543,20 @@ com.tcn.cloud.api.api.v0alpha.RecordFieldProto defaultValue) {
       if (!fields_.isMutable()) {
         fields_ = fields_.copy();
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
       return fields_;
     }
+
     public int getFieldsCount() {
       return internalGetFields().getMap().size();
     }
     /**
      * <code>map&lt;string, .api.v0alpha.RecordFieldProto&gt; fields = 1 [json_name = "fields"];</code>
      */
+
     @java.lang.Override
     public boolean containsFields(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetFields().getMap().containsKey(key);
     }
     /**
@@ -539,6 +571,7 @@ com.tcn.cloud.api.api.v0alpha.RecordFieldProto defaultValue) {
      * <code>map&lt;string, .api.v0alpha.RecordFieldProto&gt; fields = 1 [json_name = "fields"];</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.String, com.tcn.cloud.api.api.v0alpha.RecordFieldProto> getFieldsMap() {
       return internalGetFields().getMap();
     }
@@ -546,12 +579,11 @@ com.tcn.cloud.api.api.v0alpha.RecordFieldProto defaultValue) {
      * <code>map&lt;string, .api.v0alpha.RecordFieldProto&gt; fields = 1 [json_name = "fields"];</code>
      */
     @java.lang.Override
-    public /* nullable */
-com.tcn.cloud.api.api.v0alpha.RecordFieldProto getFieldsOrDefault(
+
+    public com.tcn.cloud.api.api.v0alpha.RecordFieldProto getFieldsOrDefault(
         java.lang.String key,
-        /* nullable */
-com.tcn.cloud.api.api.v0alpha.RecordFieldProto defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+        com.tcn.cloud.api.api.v0alpha.RecordFieldProto defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, com.tcn.cloud.api.api.v0alpha.RecordFieldProto> map =
           internalGetFields().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -560,9 +592,10 @@ com.tcn.cloud.api.api.v0alpha.RecordFieldProto defaultValue) {
      * <code>map&lt;string, .api.v0alpha.RecordFieldProto&gt; fields = 1 [json_name = "fields"];</code>
      */
     @java.lang.Override
+
     public com.tcn.cloud.api.api.v0alpha.RecordFieldProto getFieldsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, com.tcn.cloud.api.api.v0alpha.RecordFieldProto> map =
           internalGetFields().getMap();
       if (!map.containsKey(key)) {
@@ -570,8 +603,8 @@ com.tcn.cloud.api.api.v0alpha.RecordFieldProto defaultValue) {
       }
       return map.get(key);
     }
+
     public Builder clearFields() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       internalGetMutableFields().getMutableMap()
           .clear();
       return this;
@@ -579,9 +612,10 @@ com.tcn.cloud.api.api.v0alpha.RecordFieldProto defaultValue) {
     /**
      * <code>map&lt;string, .api.v0alpha.RecordFieldProto&gt; fields = 1 [json_name = "fields"];</code>
      */
+
     public Builder removeFields(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableFields().getMutableMap()
           .remove(key);
       return this;
@@ -591,8 +625,7 @@ com.tcn.cloud.api.api.v0alpha.RecordFieldProto defaultValue) {
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, com.tcn.cloud.api.api.v0alpha.RecordFieldProto>
-        getMutableFields() {
-      bitField0_ |= 0x00000001;
+    getMutableFields() {
       return internalGetMutableFields().getMutableMap();
     }
     /**
@@ -601,21 +634,20 @@ com.tcn.cloud.api.api.v0alpha.RecordFieldProto defaultValue) {
     public Builder putFields(
         java.lang.String key,
         com.tcn.cloud.api.api.v0alpha.RecordFieldProto value) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      if (value == null) { throw new NullPointerException("map value"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (value == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableFields().getMutableMap()
           .put(key, value);
-      bitField0_ |= 0x00000001;
       return this;
     }
     /**
      * <code>map&lt;string, .api.v0alpha.RecordFieldProto&gt; fields = 1 [json_name = "fields"];</code>
      */
+
     public Builder putAllFields(
         java.util.Map<java.lang.String, com.tcn.cloud.api.api.v0alpha.RecordFieldProto> values) {
       internalGetMutableFields().getMutableMap()
           .putAll(values);
-      bitField0_ |= 0x00000001;
       return this;
     }
     @java.lang.Override
@@ -651,18 +683,7 @@ com.tcn.cloud.api.api.v0alpha.RecordFieldProto defaultValue) {
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new RecordFieldMap(input, extensionRegistry);
     }
   };
 

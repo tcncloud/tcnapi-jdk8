@@ -26,6 +26,73 @@ private static final long serialVersionUID = 0L;
     return new GetAgentResponseDataRes();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private GetAgentResponseDataRes(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+
+            callSid_ = input.readInt64();
+            break;
+          }
+          case 16: {
+            int rawValue = input.readEnum();
+
+            callType_ = rawValue;
+            break;
+          }
+          case 26: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              responses_ = com.google.protobuf.MapField.newMapField(
+                  ResponsesDefaultEntryHolder.defaultEntry);
+              mutable_bitField0_ |= 0x00000001;
+            }
+            com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+            responses__ = input.readMessage(
+                ResponsesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+            responses_.getMutableMap().put(
+                responses__.getKey(), responses__.getValue());
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.SdsProto.internal_static_api_v0alpha_GetAgentResponseDataRes_descriptor;
@@ -52,7 +119,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALL_SID_FIELD_NUMBER = 1;
-  private long callSid_ = 0L;
+  private long callSid_;
   /**
    * <code>int64 call_sid = 1 [json_name = "callSid"];</code>
    * @return The callSid.
@@ -63,7 +130,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALL_TYPE_FIELD_NUMBER = 2;
-  private int callType_ = 0;
+  private int callType_;
   /**
    * <code>.api.commons.CallType.Enum call_type = 2 [json_name = "callType"];</code>
    * @return The enum numeric value on the wire for callType.
@@ -76,7 +143,8 @@ private static final long serialVersionUID = 0L;
    * @return The callType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.CallType.Enum getCallType() {
-    com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.forNumber(callType_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.valueOf(callType_);
     return result == null ? com.tcn.cloud.api.api.commons.CallType.Enum.UNRECOGNIZED : result;
   }
 
@@ -92,7 +160,6 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "");
   }
-  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, java.lang.String> responses_;
   private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -103,16 +170,18 @@ private static final long serialVersionUID = 0L;
     }
     return responses_;
   }
+
   public int getResponsesCount() {
     return internalGetResponses().getMap().size();
   }
   /**
    * <code>map&lt;string, string&gt; responses = 3 [json_name = "responses"];</code>
    */
+
   @java.lang.Override
   public boolean containsResponses(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     return internalGetResponses().getMap().containsKey(key);
   }
   /**
@@ -127,6 +196,7 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; responses = 3 [json_name = "responses"];</code>
    */
   @java.lang.Override
+
   public java.util.Map<java.lang.String, java.lang.String> getResponsesMap() {
     return internalGetResponses().getMap();
   }
@@ -134,12 +204,11 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; responses = 3 [json_name = "responses"];</code>
    */
   @java.lang.Override
-  public /* nullable */
-java.lang.String getResponsesOrDefault(
+
+  public java.lang.String getResponsesOrDefault(
       java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue) {
-    if (key == null) { throw new NullPointerException("map key"); }
+      java.lang.String defaultValue) {
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetResponses().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -148,9 +217,10 @@ java.lang.String defaultValue) {
    * <code>map&lt;string, string&gt; responses = 3 [json_name = "responses"];</code>
    */
   @java.lang.Override
+
   public java.lang.String getResponsesOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetResponses().getMap();
     if (!map.containsKey(key)) {
@@ -185,7 +255,7 @@ java.lang.String defaultValue) {
         internalGetResponses(),
         ResponsesDefaultEntryHolder.defaultEntry,
         3);
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -212,7 +282,7 @@ java.lang.String defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, responses__);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -232,7 +302,7 @@ java.lang.String defaultValue) {
     if (callType_ != other.callType_) return false;
     if (!internalGetResponses().equals(
         other.internalGetResponses())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -252,7 +322,7 @@ java.lang.String defaultValue) {
       hash = (37 * hash) + RESPONSES_FIELD_NUMBER;
       hash = (53 * hash) + internalGetResponses().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -301,13 +371,11 @@ java.lang.String defaultValue) {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.GetAgentResponseDataRes parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.GetAgentResponseDataRes parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -393,20 +461,26 @@ java.lang.String defaultValue) {
 
     // Construct using com.tcn.cloud.api.api.v0alpha.GetAgentResponseDataRes.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       callSid_ = 0L;
+
       callType_ = 0;
+
       internalGetMutableResponses().clear();
       return this;
     }
@@ -434,23 +508,13 @@ java.lang.String defaultValue) {
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.GetAgentResponseDataRes buildPartial() {
       com.tcn.cloud.api.api.v0alpha.GetAgentResponseDataRes result = new com.tcn.cloud.api.api.v0alpha.GetAgentResponseDataRes(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      int from_bitField0_ = bitField0_;
+      result.callSid_ = callSid_;
+      result.callType_ = callType_;
+      result.responses_ = internalGetResponses();
+      result.responses_.makeImmutable();
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.GetAgentResponseDataRes result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.callSid_ = callSid_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.callType_ = callType_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.responses_ = internalGetResponses();
-        result.responses_.makeImmutable();
-      }
     }
 
     @java.lang.Override
@@ -505,8 +569,7 @@ java.lang.String defaultValue) {
       }
       internalGetMutableResponses().mergeFrom(
           other.internalGetResponses());
-      bitField0_ |= 0x00000004;
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -521,49 +584,17 @@ java.lang.String defaultValue) {
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.GetAgentResponseDataRes parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              callSid_ = input.readInt64();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 16: {
-              callType_ = input.readEnum();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 16
-            case 26: {
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-              responses__ = input.readMessage(
-                  ResponsesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              internalGetMutableResponses().getMutableMap().put(
-                  responses__.getKey(), responses__.getValue());
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.GetAgentResponseDataRes) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -583,9 +614,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setCallSid(long value) {
-
+      
       callSid_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -594,7 +624,7 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearCallSid() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       callSid_ = 0L;
       onChanged();
       return this;
@@ -614,8 +644,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setCallTypeValue(int value) {
+      
       callType_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -625,7 +655,8 @@ java.lang.String defaultValue) {
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.CallType.Enum getCallType() {
-      com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.forNumber(callType_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.valueOf(callType_);
       return result == null ? com.tcn.cloud.api.api.commons.CallType.Enum.UNRECOGNIZED : result;
     }
     /**
@@ -637,7 +668,7 @@ java.lang.String defaultValue) {
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000002;
+      
       callType_ = value.getNumber();
       onChanged();
       return this;
@@ -647,7 +678,7 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearCallType() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       callType_ = 0;
       onChanged();
       return this;
@@ -656,7 +687,7 @@ java.lang.String defaultValue) {
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.String> responses_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetResponses() {
+    internalGetResponses() {
       if (responses_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             ResponsesDefaultEntryHolder.defaultEntry);
@@ -664,7 +695,8 @@ java.lang.String defaultValue) {
       return responses_;
     }
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetMutableResponses() {
+    internalGetMutableResponses() {
+      onChanged();;
       if (responses_ == null) {
         responses_ = com.google.protobuf.MapField.newMapField(
             ResponsesDefaultEntryHolder.defaultEntry);
@@ -672,20 +704,20 @@ java.lang.String defaultValue) {
       if (!responses_.isMutable()) {
         responses_ = responses_.copy();
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
       return responses_;
     }
+
     public int getResponsesCount() {
       return internalGetResponses().getMap().size();
     }
     /**
      * <code>map&lt;string, string&gt; responses = 3 [json_name = "responses"];</code>
      */
+
     @java.lang.Override
     public boolean containsResponses(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetResponses().getMap().containsKey(key);
     }
     /**
@@ -700,6 +732,7 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, string&gt; responses = 3 [json_name = "responses"];</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.String, java.lang.String> getResponsesMap() {
       return internalGetResponses().getMap();
     }
@@ -707,12 +740,11 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, string&gt; responses = 3 [json_name = "responses"];</code>
      */
     @java.lang.Override
-    public /* nullable */
-java.lang.String getResponsesOrDefault(
+
+    public java.lang.String getResponsesOrDefault(
         java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetResponses().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -721,9 +753,10 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, string&gt; responses = 3 [json_name = "responses"];</code>
      */
     @java.lang.Override
+
     public java.lang.String getResponsesOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetResponses().getMap();
       if (!map.containsKey(key)) {
@@ -731,8 +764,8 @@ java.lang.String defaultValue) {
       }
       return map.get(key);
     }
+
     public Builder clearResponses() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       internalGetMutableResponses().getMutableMap()
           .clear();
       return this;
@@ -740,9 +773,10 @@ java.lang.String defaultValue) {
     /**
      * <code>map&lt;string, string&gt; responses = 3 [json_name = "responses"];</code>
      */
+
     public Builder removeResponses(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableResponses().getMutableMap()
           .remove(key);
       return this;
@@ -752,8 +786,7 @@ java.lang.String defaultValue) {
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String>
-        getMutableResponses() {
-      bitField0_ |= 0x00000004;
+    getMutableResponses() {
       return internalGetMutableResponses().getMutableMap();
     }
     /**
@@ -762,21 +795,20 @@ java.lang.String defaultValue) {
     public Builder putResponses(
         java.lang.String key,
         java.lang.String value) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      if (value == null) { throw new NullPointerException("map value"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (value == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableResponses().getMutableMap()
           .put(key, value);
-      bitField0_ |= 0x00000004;
       return this;
     }
     /**
      * <code>map&lt;string, string&gt; responses = 3 [json_name = "responses"];</code>
      */
+
     public Builder putAllResponses(
         java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableResponses().getMutableMap()
           .putAll(values);
-      bitField0_ |= 0x00000004;
       return this;
     }
     @java.lang.Override
@@ -812,18 +844,7 @@ java.lang.String defaultValue) {
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new GetAgentResponseDataRes(input, extensionRegistry);
     }
   };
 

@@ -31,6 +31,84 @@ private static final long serialVersionUID = 0L;
     return new PaymentLinkConfigTemplates();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private PaymentLinkConfigTemplates(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            receiptSmsTemplate_ = s;
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            receiptSmsSourcePhone_ = s;
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            receiptEmailTemplate_ = s;
+            break;
+          }
+          case 34: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            receiptEmailFromAddr_ = s;
+            break;
+          }
+          case 42: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            receiptTemplate_ = s;
+            break;
+          }
+          case 50: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            invoiceTemplate_ = s;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_PaymentLinkConfigTemplates_descriptor;
@@ -45,8 +123,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RECEIPT_SMS_TEMPLATE_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object receiptSmsTemplate_ = "";
+  private volatile java.lang.Object receiptSmsTemplate_;
   /**
    * <pre>
    * template string like: "{{name}} thanks for paying {{amount}}"
@@ -98,8 +175,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RECEIPT_SMS_SOURCE_PHONE_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object receiptSmsSourcePhone_ = "";
+  private volatile java.lang.Object receiptSmsSourcePhone_;
   /**
    * <pre>
    * text shows up as from this phone number
@@ -145,8 +221,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RECEIPT_EMAIL_TEMPLATE_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object receiptEmailTemplate_ = "";
+  private volatile java.lang.Object receiptEmailTemplate_;
   /**
    * <pre>
    * shows up in the email body, is a template string like above
@@ -192,8 +267,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RECEIPT_EMAIL_FROM_ADDR_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object receiptEmailFromAddr_ = "";
+  private volatile java.lang.Object receiptEmailFromAddr_;
   /**
    * <pre>
    * email shows up as from this address
@@ -239,8 +313,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RECEIPT_TEMPLATE_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object receiptTemplate_ = "";
+  private volatile java.lang.Object receiptTemplate_;
   /**
    * <pre>
    * template string for the receipt shown in the ui
@@ -286,8 +359,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INVOICE_TEMPLATE_FIELD_NUMBER = 6;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object invoiceTemplate_ = "";
+  private volatile java.lang.Object invoiceTemplate_;
   /**
    * <pre>
    * template string for the invoice shown in the ui
@@ -346,25 +418,25 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiptSmsTemplate_)) {
+    if (!getReceiptSmsTemplateBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, receiptSmsTemplate_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiptSmsSourcePhone_)) {
+    if (!getReceiptSmsSourcePhoneBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, receiptSmsSourcePhone_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiptEmailTemplate_)) {
+    if (!getReceiptEmailTemplateBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, receiptEmailTemplate_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiptEmailFromAddr_)) {
+    if (!getReceiptEmailFromAddrBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, receiptEmailFromAddr_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiptTemplate_)) {
+    if (!getReceiptTemplateBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, receiptTemplate_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(invoiceTemplate_)) {
+    if (!getInvoiceTemplateBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, invoiceTemplate_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -373,25 +445,25 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiptSmsTemplate_)) {
+    if (!getReceiptSmsTemplateBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, receiptSmsTemplate_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiptSmsSourcePhone_)) {
+    if (!getReceiptSmsSourcePhoneBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, receiptSmsSourcePhone_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiptEmailTemplate_)) {
+    if (!getReceiptEmailTemplateBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, receiptEmailTemplate_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiptEmailFromAddr_)) {
+    if (!getReceiptEmailFromAddrBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, receiptEmailFromAddr_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiptTemplate_)) {
+    if (!getReceiptTemplateBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, receiptTemplate_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(invoiceTemplate_)) {
+    if (!getInvoiceTemplateBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, invoiceTemplate_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -418,7 +490,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getReceiptTemplate())) return false;
     if (!getInvoiceTemplate()
         .equals(other.getInvoiceTemplate())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -441,7 +513,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getReceiptTemplate().hashCode();
     hash = (37 * hash) + INVOICE_TEMPLATE_FIELD_NUMBER;
     hash = (53 * hash) + getInvoiceTemplate().hashCode();
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -490,13 +562,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.integrations.PaymentLinkConfigTemplates parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.integrations.PaymentLinkConfigTemplates parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -560,24 +630,34 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.PaymentLinkConfigTemplates.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       receiptSmsTemplate_ = "";
+
       receiptSmsSourcePhone_ = "";
+
       receiptEmailTemplate_ = "";
+
       receiptEmailFromAddr_ = "";
+
       receiptTemplate_ = "";
+
       invoiceTemplate_ = "";
+
       return this;
     }
 
@@ -604,31 +684,14 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.integrations.PaymentLinkConfigTemplates buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.integrations.PaymentLinkConfigTemplates result = new com.tcn.cloud.api.api.v1alpha1.integrations.PaymentLinkConfigTemplates(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.receiptSmsTemplate_ = receiptSmsTemplate_;
+      result.receiptSmsSourcePhone_ = receiptSmsSourcePhone_;
+      result.receiptEmailTemplate_ = receiptEmailTemplate_;
+      result.receiptEmailFromAddr_ = receiptEmailFromAddr_;
+      result.receiptTemplate_ = receiptTemplate_;
+      result.invoiceTemplate_ = invoiceTemplate_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.PaymentLinkConfigTemplates result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.receiptSmsTemplate_ = receiptSmsTemplate_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.receiptSmsSourcePhone_ = receiptSmsSourcePhone_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.receiptEmailTemplate_ = receiptEmailTemplate_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.receiptEmailFromAddr_ = receiptEmailFromAddr_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.receiptTemplate_ = receiptTemplate_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.invoiceTemplate_ = invoiceTemplate_;
-      }
     }
 
     @java.lang.Override
@@ -677,35 +740,29 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v1alpha1.integrations.PaymentLinkConfigTemplates.getDefaultInstance()) return this;
       if (!other.getReceiptSmsTemplate().isEmpty()) {
         receiptSmsTemplate_ = other.receiptSmsTemplate_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getReceiptSmsSourcePhone().isEmpty()) {
         receiptSmsSourcePhone_ = other.receiptSmsSourcePhone_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getReceiptEmailTemplate().isEmpty()) {
         receiptEmailTemplate_ = other.receiptEmailTemplate_;
-        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getReceiptEmailFromAddr().isEmpty()) {
         receiptEmailFromAddr_ = other.receiptEmailFromAddr_;
-        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.getReceiptTemplate().isEmpty()) {
         receiptTemplate_ = other.receiptTemplate_;
-        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (!other.getInvoiceTemplate().isEmpty()) {
         invoiceTemplate_ = other.invoiceTemplate_;
-        bitField0_ |= 0x00000020;
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -720,63 +777,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.integrations.PaymentLinkConfigTemplates parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              receiptSmsTemplate_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              receiptSmsSourcePhone_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 26: {
-              receiptEmailTemplate_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            case 34: {
-              receiptEmailFromAddr_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
-            case 42: {
-              receiptTemplate_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 42
-            case 50: {
-              invoiceTemplate_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 50
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.integrations.PaymentLinkConfigTemplates) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private java.lang.Object receiptSmsTemplate_ = "";
     /**
@@ -840,9 +853,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setReceiptSmsTemplate(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       receiptSmsTemplate_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -858,8 +873,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearReceiptSmsTemplate() {
+      
       receiptSmsTemplate_ = getDefaultInstance().getReceiptSmsTemplate();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -877,10 +892,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setReceiptSmsTemplateBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       receiptSmsTemplate_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -938,9 +955,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setReceiptSmsSourcePhone(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       receiptSmsSourcePhone_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -953,8 +972,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearReceiptSmsSourcePhone() {
+      
       receiptSmsSourcePhone_ = getDefaultInstance().getReceiptSmsSourcePhone();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -969,10 +988,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setReceiptSmsSourcePhoneBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       receiptSmsSourcePhone_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1030,9 +1051,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setReceiptEmailTemplate(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       receiptEmailTemplate_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1045,8 +1068,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearReceiptEmailTemplate() {
+      
       receiptEmailTemplate_ = getDefaultInstance().getReceiptEmailTemplate();
-      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1061,10 +1084,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setReceiptEmailTemplateBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       receiptEmailTemplate_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1122,9 +1147,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setReceiptEmailFromAddr(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       receiptEmailFromAddr_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1137,8 +1164,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearReceiptEmailFromAddr() {
+      
       receiptEmailFromAddr_ = getDefaultInstance().getReceiptEmailFromAddr();
-      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1153,10 +1180,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setReceiptEmailFromAddrBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       receiptEmailFromAddr_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1214,9 +1243,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setReceiptTemplate(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       receiptTemplate_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1229,8 +1260,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearReceiptTemplate() {
+      
       receiptTemplate_ = getDefaultInstance().getReceiptTemplate();
-      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1245,10 +1276,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setReceiptTemplateBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       receiptTemplate_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1306,9 +1339,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setInvoiceTemplate(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       invoiceTemplate_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1321,8 +1356,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearInvoiceTemplate() {
+      
       invoiceTemplate_ = getDefaultInstance().getInvoiceTemplate();
-      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1337,10 +1372,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setInvoiceTemplateBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       invoiceTemplate_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1377,18 +1414,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new PaymentLinkConfigTemplates(input, extensionRegistry);
     }
   };
 

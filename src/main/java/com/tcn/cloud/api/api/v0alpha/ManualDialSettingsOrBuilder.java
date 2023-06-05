@@ -300,11 +300,10 @@ public interface ManualDialSettingsOrBuilder extends
    *
    * <code>map&lt;string, string&gt; data_dip_manual_dial_integration = 35 [json_name = "dataDipManualDialIntegration"];</code>
    */
-  /* nullable */
-java.lang.String getDataDipManualDialIntegrationOrDefault(
+
+  java.lang.String getDataDipManualDialIntegrationOrDefault(
       java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue);
+      java.lang.String defaultValue);
   /**
    * <pre>
    * Configuration for which Manual Dial Data Dip Parameters to replace
@@ -312,6 +311,7 @@ java.lang.String defaultValue);
    *
    * <code>map&lt;string, string&gt; data_dip_manual_dial_integration = 35 [json_name = "dataDipManualDialIntegration"];</code>
    */
+
   java.lang.String getDataDipManualDialIntegrationOrThrow(
       java.lang.String key);
 

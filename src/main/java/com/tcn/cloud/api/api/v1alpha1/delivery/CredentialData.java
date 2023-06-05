@@ -25,6 +25,118 @@ private static final long serialVersionUID = 0L;
     return new CredentialData();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private CredentialData(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            com.tcn.cloud.api.api.v1alpha1.delivery.UserPassword.Builder subBuilder = null;
+            if (dataCase_ == 1) {
+              subBuilder = ((com.tcn.cloud.api.api.v1alpha1.delivery.UserPassword) data_).toBuilder();
+            }
+            data_ =
+                input.readMessage(com.tcn.cloud.api.api.v1alpha1.delivery.UserPassword.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v1alpha1.delivery.UserPassword) data_);
+              data_ = subBuilder.buildPartial();
+            }
+            dataCase_ = 1;
+            break;
+          }
+          case 18: {
+            com.tcn.cloud.api.api.v1alpha1.delivery.Password.Builder subBuilder = null;
+            if (dataCase_ == 2) {
+              subBuilder = ((com.tcn.cloud.api.api.v1alpha1.delivery.Password) data_).toBuilder();
+            }
+            data_ =
+                input.readMessage(com.tcn.cloud.api.api.v1alpha1.delivery.Password.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v1alpha1.delivery.Password) data_);
+              data_ = subBuilder.buildPartial();
+            }
+            dataCase_ = 2;
+            break;
+          }
+          case 26: {
+            com.tcn.cloud.api.api.v1alpha1.delivery.SSHKeyPair.Builder subBuilder = null;
+            if (dataCase_ == 3) {
+              subBuilder = ((com.tcn.cloud.api.api.v1alpha1.delivery.SSHKeyPair) data_).toBuilder();
+            }
+            data_ =
+                input.readMessage(com.tcn.cloud.api.api.v1alpha1.delivery.SSHKeyPair.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v1alpha1.delivery.SSHKeyPair) data_);
+              data_ = subBuilder.buildPartial();
+            }
+            dataCase_ = 3;
+            break;
+          }
+          case 34: {
+            com.tcn.cloud.api.api.v1alpha1.delivery.PGPKeyPair.Builder subBuilder = null;
+            if (dataCase_ == 4) {
+              subBuilder = ((com.tcn.cloud.api.api.v1alpha1.delivery.PGPKeyPair) data_).toBuilder();
+            }
+            data_ =
+                input.readMessage(com.tcn.cloud.api.api.v1alpha1.delivery.PGPKeyPair.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v1alpha1.delivery.PGPKeyPair) data_);
+              data_ = subBuilder.buildPartial();
+            }
+            dataCase_ = 4;
+            break;
+          }
+          case 42: {
+            com.tcn.cloud.api.api.v1alpha1.delivery.AESPassword.Builder subBuilder = null;
+            if (dataCase_ == 5) {
+              subBuilder = ((com.tcn.cloud.api.api.v1alpha1.delivery.AESPassword) data_).toBuilder();
+            }
+            data_ =
+                input.readMessage(com.tcn.cloud.api.api.v1alpha1.delivery.AESPassword.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v1alpha1.delivery.AESPassword) data_);
+              data_ = subBuilder.buildPartial();
+            }
+            dataCase_ = 5;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.delivery.ServiceProto.internal_static_api_v1alpha1_delivery_CredentialData_descriptor;
@@ -39,7 +151,6 @@ private static final long serialVersionUID = 0L;
   }
 
   private int dataCase_ = 0;
-  @SuppressWarnings("serial")
   private java.lang.Object data_;
   public enum DataCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -270,7 +381,7 @@ private static final long serialVersionUID = 0L;
     if (dataCase_ == 5) {
       output.writeMessage(5, (com.tcn.cloud.api.api.v1alpha1.delivery.AESPassword) data_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -299,7 +410,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, (com.tcn.cloud.api.api.v1alpha1.delivery.AESPassword) data_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -339,7 +450,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -374,7 +485,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -423,13 +534,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.delivery.CredentialData parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.delivery.CredentialData parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -493,33 +602,22 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.delivery.CredentialData.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      if (userPasswordBuilder_ != null) {
-        userPasswordBuilder_.clear();
-      }
-      if (passwordBuilder_ != null) {
-        passwordBuilder_.clear();
-      }
-      if (sshKeyPairBuilder_ != null) {
-        sshKeyPairBuilder_.clear();
-      }
-      if (pgpKeyPairBuilder_ != null) {
-        pgpKeyPairBuilder_.clear();
-      }
-      if (aesPasswordBuilder_ != null) {
-        aesPasswordBuilder_.clear();
-      }
       dataCase_ = 0;
       data_ = null;
       return this;
@@ -548,39 +646,44 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.delivery.CredentialData buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.delivery.CredentialData result = new com.tcn.cloud.api.api.v1alpha1.delivery.CredentialData(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      buildPartialOneofs(result);
+      if (dataCase_ == 1) {
+        if (userPasswordBuilder_ == null) {
+          result.data_ = data_;
+        } else {
+          result.data_ = userPasswordBuilder_.build();
+        }
+      }
+      if (dataCase_ == 2) {
+        if (passwordBuilder_ == null) {
+          result.data_ = data_;
+        } else {
+          result.data_ = passwordBuilder_.build();
+        }
+      }
+      if (dataCase_ == 3) {
+        if (sshKeyPairBuilder_ == null) {
+          result.data_ = data_;
+        } else {
+          result.data_ = sshKeyPairBuilder_.build();
+        }
+      }
+      if (dataCase_ == 4) {
+        if (pgpKeyPairBuilder_ == null) {
+          result.data_ = data_;
+        } else {
+          result.data_ = pgpKeyPairBuilder_.build();
+        }
+      }
+      if (dataCase_ == 5) {
+        if (aesPasswordBuilder_ == null) {
+          result.data_ = data_;
+        } else {
+          result.data_ = aesPasswordBuilder_.build();
+        }
+      }
+      result.dataCase_ = dataCase_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.delivery.CredentialData result) {
-      int from_bitField0_ = bitField0_;
-    }
-
-    private void buildPartialOneofs(com.tcn.cloud.api.api.v1alpha1.delivery.CredentialData result) {
-      result.dataCase_ = dataCase_;
-      result.data_ = this.data_;
-      if (dataCase_ == 1 &&
-          userPasswordBuilder_ != null) {
-        result.data_ = userPasswordBuilder_.build();
-      }
-      if (dataCase_ == 2 &&
-          passwordBuilder_ != null) {
-        result.data_ = passwordBuilder_.build();
-      }
-      if (dataCase_ == 3 &&
-          sshKeyPairBuilder_ != null) {
-        result.data_ = sshKeyPairBuilder_.build();
-      }
-      if (dataCase_ == 4 &&
-          pgpKeyPairBuilder_ != null) {
-        result.data_ = pgpKeyPairBuilder_.build();
-      }
-      if (dataCase_ == 5 &&
-          aesPasswordBuilder_ != null) {
-        result.data_ = aesPasswordBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -652,7 +755,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -667,65 +770,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.delivery.CredentialData parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              input.readMessage(
-                  getUserPasswordFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              dataCase_ = 1;
-              break;
-            } // case 10
-            case 18: {
-              input.readMessage(
-                  getPasswordFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              dataCase_ = 2;
-              break;
-            } // case 18
-            case 26: {
-              input.readMessage(
-                  getSshKeyPairFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              dataCase_ = 3;
-              break;
-            } // case 26
-            case 34: {
-              input.readMessage(
-                  getPgpKeyPairFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              dataCase_ = 4;
-              break;
-            } // case 34
-            case 42: {
-              input.readMessage(
-                  getAesPasswordFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              dataCase_ = 5;
-              break;
-            } // case 42
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.delivery.CredentialData) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int dataCase_ = 0;
@@ -743,7 +798,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int bitField0_;
 
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.delivery.UserPassword, com.tcn.cloud.api.api.v1alpha1.delivery.UserPassword.Builder, com.tcn.cloud.api.api.v1alpha1.delivery.UserPasswordOrBuilder> userPasswordBuilder_;
@@ -819,9 +873,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (dataCase_ == 1) {
           userPasswordBuilder_.mergeFrom(value);
-        } else {
-          userPasswordBuilder_.setMessage(value);
         }
+        userPasswordBuilder_.setMessage(value);
       }
       dataCase_ = 1;
       return this;
@@ -883,7 +936,7 @@ private static final long serialVersionUID = 0L;
         data_ = null;
       }
       dataCase_ = 1;
-      onChanged();
+      onChanged();;
       return userPasswordBuilder_;
     }
 
@@ -961,9 +1014,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (dataCase_ == 2) {
           passwordBuilder_.mergeFrom(value);
-        } else {
-          passwordBuilder_.setMessage(value);
         }
+        passwordBuilder_.setMessage(value);
       }
       dataCase_ = 2;
       return this;
@@ -1025,7 +1077,7 @@ private static final long serialVersionUID = 0L;
         data_ = null;
       }
       dataCase_ = 2;
-      onChanged();
+      onChanged();;
       return passwordBuilder_;
     }
 
@@ -1103,9 +1155,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (dataCase_ == 3) {
           sshKeyPairBuilder_.mergeFrom(value);
-        } else {
-          sshKeyPairBuilder_.setMessage(value);
         }
+        sshKeyPairBuilder_.setMessage(value);
       }
       dataCase_ = 3;
       return this;
@@ -1167,7 +1218,7 @@ private static final long serialVersionUID = 0L;
         data_ = null;
       }
       dataCase_ = 3;
-      onChanged();
+      onChanged();;
       return sshKeyPairBuilder_;
     }
 
@@ -1245,9 +1296,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (dataCase_ == 4) {
           pgpKeyPairBuilder_.mergeFrom(value);
-        } else {
-          pgpKeyPairBuilder_.setMessage(value);
         }
+        pgpKeyPairBuilder_.setMessage(value);
       }
       dataCase_ = 4;
       return this;
@@ -1309,7 +1359,7 @@ private static final long serialVersionUID = 0L;
         data_ = null;
       }
       dataCase_ = 4;
-      onChanged();
+      onChanged();;
       return pgpKeyPairBuilder_;
     }
 
@@ -1387,9 +1437,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (dataCase_ == 5) {
           aesPasswordBuilder_.mergeFrom(value);
-        } else {
-          aesPasswordBuilder_.setMessage(value);
         }
+        aesPasswordBuilder_.setMessage(value);
       }
       dataCase_ = 5;
       return this;
@@ -1451,7 +1500,7 @@ private static final long serialVersionUID = 0L;
         data_ = null;
       }
       dataCase_ = 5;
-      onChanged();
+      onChanged();;
       return aesPasswordBuilder_;
     }
     @java.lang.Override
@@ -1487,18 +1536,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new CredentialData(input, extensionRegistry);
     }
   };
 

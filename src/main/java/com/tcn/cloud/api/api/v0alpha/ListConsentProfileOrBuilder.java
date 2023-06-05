@@ -49,8 +49,6 @@ public interface ListConsentProfileOrBuilder extends
    * </pre>
    *
    * <code>.api.commons.CommType channel = 5 [json_name = "channel", deprecated = true];</code>
-   * @deprecated api.v0alpha.ListConsentProfile.channel is deprecated.
-   *     See api/v0alpha/compliance.proto;l=1441
    * @return Whether the channel field is set.
    */
   @java.lang.Deprecated boolean hasChannel();
@@ -60,8 +58,6 @@ public interface ListConsentProfileOrBuilder extends
    * </pre>
    *
    * <code>.api.commons.CommType channel = 5 [json_name = "channel", deprecated = true];</code>
-   * @deprecated api.v0alpha.ListConsentProfile.channel is deprecated.
-   *     See api/v0alpha/compliance.proto;l=1441
    * @return The channel.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.CommType getChannel();

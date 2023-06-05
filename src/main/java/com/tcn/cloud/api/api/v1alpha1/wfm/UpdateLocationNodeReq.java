@@ -29,6 +29,61 @@ private static final long serialVersionUID = 0L;
     return new UpdateLocationNodeReq();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private UpdateLocationNodeReq(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            com.tcn.cloud.api.api.v1alpha1.wfm.LocationNode.Builder subBuilder = null;
+            if (locationNode_ != null) {
+              subBuilder = locationNode_.toBuilder();
+            }
+            locationNode_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.wfm.LocationNode.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(locationNode_);
+              locationNode_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_UpdateLocationNodeReq_descriptor;
@@ -77,7 +132,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.wfm.LocationNodeOrBuilder getLocationNodeOrBuilder() {
-    return locationNode_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.LocationNode.getDefaultInstance() : locationNode_;
+    return getLocationNode();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -97,7 +152,7 @@ private static final long serialVersionUID = 0L;
     if (locationNode_ != null) {
       output.writeMessage(1, getLocationNode());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -110,7 +165,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getLocationNode());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -130,7 +185,7 @@ private static final long serialVersionUID = 0L;
       if (!getLocationNode()
           .equals(other.getLocationNode())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -145,7 +200,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + LOCATION_NODE_FIELD_NUMBER;
       hash = (53 * hash) + getLocationNode().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -194,13 +249,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.wfm.UpdateLocationNodeReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.wfm.UpdateLocationNodeReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -268,21 +321,26 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.UpdateLocationNodeReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      locationNode_ = null;
-      if (locationNodeBuilder_ != null) {
-        locationNodeBuilder_.dispose();
+      if (locationNodeBuilder_ == null) {
+        locationNode_ = null;
+      } else {
+        locationNode_ = null;
         locationNodeBuilder_ = null;
       }
       return this;
@@ -311,18 +369,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateLocationNodeReq buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.UpdateLocationNodeReq result = new com.tcn.cloud.api.api.v1alpha1.wfm.UpdateLocationNodeReq(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      if (locationNodeBuilder_ == null) {
+        result.locationNode_ = locationNode_;
+      } else {
+        result.locationNode_ = locationNodeBuilder_.build();
+      }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateLocationNodeReq result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.locationNode_ = locationNodeBuilder_ == null
-            ? locationNode_
-            : locationNodeBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -372,7 +425,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasLocationNode()) {
         mergeLocationNode(other.getLocationNode());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -387,40 +440,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateLocationNodeReq parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              input.readMessage(
-                  getLocationNodeFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.UpdateLocationNodeReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private com.tcn.cloud.api.api.v1alpha1.wfm.LocationNode locationNode_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -434,7 +466,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the locationNode field is set.
      */
     public boolean hasLocationNode() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return locationNodeBuilder_ != null || locationNode_ != null;
     }
     /**
      * <pre>
@@ -464,11 +496,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         locationNode_ = value;
+        onChanged();
       } else {
         locationNodeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -482,11 +514,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.wfm.LocationNode.Builder builderForValue) {
       if (locationNodeBuilder_ == null) {
         locationNode_ = builderForValue.build();
+        onChanged();
       } else {
         locationNodeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -498,18 +530,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeLocationNode(com.tcn.cloud.api.api.v1alpha1.wfm.LocationNode value) {
       if (locationNodeBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          locationNode_ != null &&
-          locationNode_ != com.tcn.cloud.api.api.v1alpha1.wfm.LocationNode.getDefaultInstance()) {
-          getLocationNodeBuilder().mergeFrom(value);
+        if (locationNode_ != null) {
+          locationNode_ =
+            com.tcn.cloud.api.api.v1alpha1.wfm.LocationNode.newBuilder(locationNode_).mergeFrom(value).buildPartial();
         } else {
           locationNode_ = value;
         }
+        onChanged();
       } else {
         locationNodeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -520,13 +551,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.wfm.LocationNode location_node = 1 [json_name = "locationNode"];</code>
      */
     public Builder clearLocationNode() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      locationNode_ = null;
-      if (locationNodeBuilder_ != null) {
-        locationNodeBuilder_.dispose();
+      if (locationNodeBuilder_ == null) {
+        locationNode_ = null;
+        onChanged();
+      } else {
+        locationNode_ = null;
         locationNodeBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -537,7 +569,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.wfm.LocationNode location_node = 1 [json_name = "locationNode"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.LocationNode.Builder getLocationNodeBuilder() {
-      bitField0_ |= 0x00000001;
+      
       onChanged();
       return getLocationNodeFieldBuilder().getBuilder();
     }
@@ -609,18 +641,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new UpdateLocationNodeReq(input, extensionRegistry);
     }
   };
 

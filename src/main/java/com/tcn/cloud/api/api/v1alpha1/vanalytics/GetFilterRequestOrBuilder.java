@@ -40,15 +40,6 @@ public interface GetFilterRequestOrBuilder extends
    * </pre>
    *
    * <code>string name = 3 [json_name = "name"];</code>
-   * @return Whether the name field is set.
-   */
-  boolean hasName();
-  /**
-   * <pre>
-   * The name of the filter.
-   * </pre>
-   *
-   * <code>string name = 3 [json_name = "name"];</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -69,18 +60,9 @@ public interface GetFilterRequestOrBuilder extends
    * </pre>
    *
    * <code>int64 filter_sid = 4 [json_name = "filterSid"];</code>
-   * @return Whether the filterSid field is set.
-   */
-  boolean hasFilterSid();
-  /**
-   * <pre>
-   * The unique id of the filter.
-   * </pre>
-   *
-   * <code>int64 filter_sid = 4 [json_name = "filterSid"];</code>
    * @return The filterSid.
    */
   long getFilterSid();
 
-  com.tcn.cloud.api.api.v1alpha1.vanalytics.GetFilterRequest.WhereCase getWhereCase();
+  public com.tcn.cloud.api.api.v1alpha1.vanalytics.GetFilterRequest.WhereCase getWhereCase();
 }

@@ -72,5 +72,5 @@ public interface AgentStateChangeEventOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.agentsmith.EmptyStateOrBuilder getEmptyOrBuilder();
 
-  com.tcn.cloud.api.api.v1alpha1.agentsmith.AgentStateChangeEvent.StateDetailsCase getStateDetailsCase();
+  public com.tcn.cloud.api.api.v1alpha1.agentsmith.AgentStateChangeEvent.StateDetailsCase getStateDetailsCase();
 }

@@ -30,6 +30,80 @@ private static final long serialVersionUID = 0L;
     return new UpdateScorecardsPreferencesRequest();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private UpdateScorecardsPreferencesRequest(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            orgId_ = s;
+            break;
+          }
+          case 18: {
+            com.tcn.cloud.api.api.commons.org.ScorecardsPreferences.Builder subBuilder = null;
+            if (scorecardsPreferences_ != null) {
+              subBuilder = scorecardsPreferences_.toBuilder();
+            }
+            scorecardsPreferences_ = input.readMessage(com.tcn.cloud.api.api.commons.org.ScorecardsPreferences.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(scorecardsPreferences_);
+              scorecardsPreferences_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 26: {
+            com.google.protobuf.FieldMask.Builder subBuilder = null;
+            if (fieldMask_ != null) {
+              subBuilder = fieldMask_.toBuilder();
+            }
+            fieldMask_ = input.readMessage(com.google.protobuf.FieldMask.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(fieldMask_);
+              fieldMask_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.org.PreferencesProto.internal_static_api_v1alpha1_org_UpdateScorecardsPreferencesRequest_descriptor;
@@ -44,8 +118,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ORG_ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object orgId_ = "";
+  private volatile java.lang.Object orgId_;
   /**
    * <pre>
    * Org ID.
@@ -125,7 +198,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.ScorecardsPreferencesOrBuilder getScorecardsPreferencesOrBuilder() {
-    return scorecardsPreferences_ == null ? com.tcn.cloud.api.api.commons.org.ScorecardsPreferences.getDefaultInstance() : scorecardsPreferences_;
+    return getScorecardsPreferences();
   }
 
   public static final int FIELD_MASK_FIELD_NUMBER = 3;
@@ -163,7 +236,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder() {
-    return fieldMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : fieldMask_;
+    return getFieldMask();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -180,7 +253,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
+    if (!getOrgIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orgId_);
     }
     if (scorecardsPreferences_ != null) {
@@ -189,7 +262,7 @@ private static final long serialVersionUID = 0L;
     if (fieldMask_ != null) {
       output.writeMessage(3, getFieldMask());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -198,7 +271,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
+    if (!getOrgIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orgId_);
     }
     if (scorecardsPreferences_ != null) {
@@ -209,7 +282,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getFieldMask());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -236,7 +309,7 @@ private static final long serialVersionUID = 0L;
       if (!getFieldMask()
           .equals(other.getFieldMask())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -257,7 +330,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + FIELD_MASK_FIELD_NUMBER;
       hash = (53 * hash) + getFieldMask().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -306,13 +379,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.org.UpdateScorecardsPreferencesRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.org.UpdateScorecardsPreferencesRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -380,27 +451,34 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.UpdateScorecardsPreferencesRequest.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       orgId_ = "";
-      scorecardsPreferences_ = null;
-      if (scorecardsPreferencesBuilder_ != null) {
-        scorecardsPreferencesBuilder_.dispose();
+
+      if (scorecardsPreferencesBuilder_ == null) {
+        scorecardsPreferences_ = null;
+      } else {
+        scorecardsPreferences_ = null;
         scorecardsPreferencesBuilder_ = null;
       }
-      fieldMask_ = null;
-      if (fieldMaskBuilder_ != null) {
-        fieldMaskBuilder_.dispose();
+      if (fieldMaskBuilder_ == null) {
+        fieldMask_ = null;
+      } else {
+        fieldMask_ = null;
         fieldMaskBuilder_ = null;
       }
       return this;
@@ -429,26 +507,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.UpdateScorecardsPreferencesRequest buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.UpdateScorecardsPreferencesRequest result = new com.tcn.cloud.api.api.v1alpha1.org.UpdateScorecardsPreferencesRequest(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.orgId_ = orgId_;
+      if (scorecardsPreferencesBuilder_ == null) {
+        result.scorecardsPreferences_ = scorecardsPreferences_;
+      } else {
+        result.scorecardsPreferences_ = scorecardsPreferencesBuilder_.build();
+      }
+      if (fieldMaskBuilder_ == null) {
+        result.fieldMask_ = fieldMask_;
+      } else {
+        result.fieldMask_ = fieldMaskBuilder_.build();
+      }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.UpdateScorecardsPreferencesRequest result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.orgId_ = orgId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.scorecardsPreferences_ = scorecardsPreferencesBuilder_ == null
-            ? scorecardsPreferences_
-            : scorecardsPreferencesBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.fieldMask_ = fieldMaskBuilder_ == null
-            ? fieldMask_
-            : fieldMaskBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -497,7 +568,6 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v1alpha1.org.UpdateScorecardsPreferencesRequest.getDefaultInstance()) return this;
       if (!other.getOrgId().isEmpty()) {
         orgId_ = other.orgId_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasScorecardsPreferences()) {
@@ -506,7 +576,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasFieldMask()) {
         mergeFieldMask(other.getFieldMask());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -521,52 +591,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.org.UpdateScorecardsPreferencesRequest parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              orgId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              input.readMessage(
-                  getScorecardsPreferencesFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 26: {
-              input.readMessage(
-                  getFieldMaskFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.org.UpdateScorecardsPreferencesRequest) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private java.lang.Object orgId_ = "";
     /**
@@ -621,9 +658,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOrgId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       orgId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -636,8 +675,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOrgId() {
+      
       orgId_ = getDefaultInstance().getOrgId();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -652,10 +691,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOrgIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       orgId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -672,7 +713,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the scorecardsPreferences field is set.
      */
     public boolean hasScorecardsPreferences() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return scorecardsPreferencesBuilder_ != null || scorecardsPreferences_ != null;
     }
     /**
      * <pre>
@@ -702,11 +743,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         scorecardsPreferences_ = value;
+        onChanged();
       } else {
         scorecardsPreferencesBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -720,11 +761,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.ScorecardsPreferences.Builder builderForValue) {
       if (scorecardsPreferencesBuilder_ == null) {
         scorecardsPreferences_ = builderForValue.build();
+        onChanged();
       } else {
         scorecardsPreferencesBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -736,18 +777,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeScorecardsPreferences(com.tcn.cloud.api.api.commons.org.ScorecardsPreferences value) {
       if (scorecardsPreferencesBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
-          scorecardsPreferences_ != null &&
-          scorecardsPreferences_ != com.tcn.cloud.api.api.commons.org.ScorecardsPreferences.getDefaultInstance()) {
-          getScorecardsPreferencesBuilder().mergeFrom(value);
+        if (scorecardsPreferences_ != null) {
+          scorecardsPreferences_ =
+            com.tcn.cloud.api.api.commons.org.ScorecardsPreferences.newBuilder(scorecardsPreferences_).mergeFrom(value).buildPartial();
         } else {
           scorecardsPreferences_ = value;
         }
+        onChanged();
       } else {
         scorecardsPreferencesBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -758,13 +798,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.ScorecardsPreferences scorecards_preferences = 2 [json_name = "scorecardsPreferences"];</code>
      */
     public Builder clearScorecardsPreferences() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      scorecardsPreferences_ = null;
-      if (scorecardsPreferencesBuilder_ != null) {
-        scorecardsPreferencesBuilder_.dispose();
+      if (scorecardsPreferencesBuilder_ == null) {
+        scorecardsPreferences_ = null;
+        onChanged();
+      } else {
+        scorecardsPreferences_ = null;
         scorecardsPreferencesBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -775,7 +816,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.ScorecardsPreferences scorecards_preferences = 2 [json_name = "scorecardsPreferences"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.ScorecardsPreferences.Builder getScorecardsPreferencesBuilder() {
-      bitField0_ |= 0x00000002;
+      
       onChanged();
       return getScorecardsPreferencesFieldBuilder().getBuilder();
     }
@@ -827,7 +868,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the fieldMask field is set.
      */
     public boolean hasFieldMask() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return fieldMaskBuilder_ != null || fieldMask_ != null;
     }
     /**
      * <pre>
@@ -857,11 +898,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         fieldMask_ = value;
+        onChanged();
       } else {
         fieldMaskBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -875,11 +916,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.FieldMask.Builder builderForValue) {
       if (fieldMaskBuilder_ == null) {
         fieldMask_ = builderForValue.build();
+        onChanged();
       } else {
         fieldMaskBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -891,18 +932,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeFieldMask(com.google.protobuf.FieldMask value) {
       if (fieldMaskBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0) &&
-          fieldMask_ != null &&
-          fieldMask_ != com.google.protobuf.FieldMask.getDefaultInstance()) {
-          getFieldMaskBuilder().mergeFrom(value);
+        if (fieldMask_ != null) {
+          fieldMask_ =
+            com.google.protobuf.FieldMask.newBuilder(fieldMask_).mergeFrom(value).buildPartial();
         } else {
           fieldMask_ = value;
         }
+        onChanged();
       } else {
         fieldMaskBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -913,13 +953,14 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.FieldMask field_mask = 3 [json_name = "fieldMask"];</code>
      */
     public Builder clearFieldMask() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      fieldMask_ = null;
-      if (fieldMaskBuilder_ != null) {
-        fieldMaskBuilder_.dispose();
+      if (fieldMaskBuilder_ == null) {
+        fieldMask_ = null;
+        onChanged();
+      } else {
+        fieldMask_ = null;
         fieldMaskBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -930,7 +971,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.FieldMask field_mask = 3 [json_name = "fieldMask"];</code>
      */
     public com.google.protobuf.FieldMask.Builder getFieldMaskBuilder() {
-      bitField0_ |= 0x00000004;
+      
       onChanged();
       return getFieldMaskFieldBuilder().getBuilder();
     }
@@ -1002,18 +1043,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new UpdateScorecardsPreferencesRequest(input, extensionRegistry);
     }
   };
 

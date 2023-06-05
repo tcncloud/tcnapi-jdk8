@@ -29,6 +29,93 @@ private static final long serialVersionUID = 0L;
     return new Timestamp();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private Timestamp(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 24: {
+
+            year_ = input.readInt32();
+            break;
+          }
+          case 32: {
+
+            month_ = input.readInt32();
+            break;
+          }
+          case 40: {
+
+            week_ = input.readInt32();
+            break;
+          }
+          case 48: {
+
+            dayOfMonth_ = input.readInt32();
+            break;
+          }
+          case 56: {
+
+            dayOfWeek_ = input.readInt32();
+            break;
+          }
+          case 64: {
+
+            dayOfYear_ = input.readInt32();
+            break;
+          }
+          case 72: {
+
+            hour_ = input.readInt32();
+            break;
+          }
+          case 80: {
+
+            minute_ = input.readInt32();
+            break;
+          }
+          case 88: {
+
+            second_ = input.readInt32();
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.LmsProto.internal_static_api_v0alpha_Timestamp_descriptor;
@@ -43,7 +130,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int YEAR_FIELD_NUMBER = 3;
-  private int year_ = 0;
+  private int year_;
   /**
    * <code>int32 year = 3 [json_name = "year"];</code>
    * @return The year.
@@ -54,7 +141,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MONTH_FIELD_NUMBER = 4;
-  private int month_ = 0;
+  private int month_;
   /**
    * <pre>
    * januaury = 1, december = 12
@@ -69,7 +156,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WEEK_FIELD_NUMBER = 5;
-  private int week_ = 0;
+  private int week_;
   /**
    * <pre>
    * between 1-53
@@ -84,7 +171,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DAY_OF_MONTH_FIELD_NUMBER = 6;
-  private int dayOfMonth_ = 0;
+  private int dayOfMonth_;
   /**
    * <pre>
    * depending on the month 1-31
@@ -99,7 +186,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DAY_OF_WEEK_FIELD_NUMBER = 7;
-  private int dayOfWeek_ = 0;
+  private int dayOfWeek_;
   /**
    * <pre>
    * 0-6 sunday = 0
@@ -114,7 +201,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DAY_OF_YEAR_FIELD_NUMBER = 8;
-  private int dayOfYear_ = 0;
+  private int dayOfYear_;
   /**
    * <pre>
    * 1 - 366 (leap year)
@@ -129,7 +216,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HOUR_FIELD_NUMBER = 9;
-  private int hour_ = 0;
+  private int hour_;
   /**
    * <pre>
    * 0-23
@@ -144,7 +231,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MINUTE_FIELD_NUMBER = 10;
-  private int minute_ = 0;
+  private int minute_;
   /**
    * <pre>
    * 0-59
@@ -159,7 +246,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SECOND_FIELD_NUMBER = 11;
-  private int second_ = 0;
+  private int second_;
   /**
    * <pre>
    * 0-59
@@ -214,7 +301,7 @@ private static final long serialVersionUID = 0L;
     if (second_ != 0) {
       output.writeInt32(11, second_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -259,7 +346,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(11, second_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -292,7 +379,7 @@ private static final long serialVersionUID = 0L;
         != other.getMinute()) return false;
     if (getSecond()
         != other.getSecond()) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -321,7 +408,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getMinute();
     hash = (37 * hash) + SECOND_FIELD_NUMBER;
     hash = (53 * hash) + getSecond();
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -370,13 +457,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.Timestamp parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.Timestamp parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -444,27 +529,40 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.Timestamp.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       year_ = 0;
+
       month_ = 0;
+
       week_ = 0;
+
       dayOfMonth_ = 0;
+
       dayOfWeek_ = 0;
+
       dayOfYear_ = 0;
+
       hour_ = 0;
+
       minute_ = 0;
+
       second_ = 0;
+
       return this;
     }
 
@@ -491,40 +589,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.Timestamp buildPartial() {
       com.tcn.cloud.api.api.v0alpha.Timestamp result = new com.tcn.cloud.api.api.v0alpha.Timestamp(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.year_ = year_;
+      result.month_ = month_;
+      result.week_ = week_;
+      result.dayOfMonth_ = dayOfMonth_;
+      result.dayOfWeek_ = dayOfWeek_;
+      result.dayOfYear_ = dayOfYear_;
+      result.hour_ = hour_;
+      result.minute_ = minute_;
+      result.second_ = second_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.Timestamp result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.year_ = year_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.month_ = month_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.week_ = week_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.dayOfMonth_ = dayOfMonth_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.dayOfWeek_ = dayOfWeek_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.dayOfYear_ = dayOfYear_;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.hour_ = hour_;
-      }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.minute_ = minute_;
-      }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
-        result.second_ = second_;
-      }
     }
 
     @java.lang.Override
@@ -598,7 +673,7 @@ private static final long serialVersionUID = 0L;
       if (other.getSecond() != 0) {
         setSecond(other.getSecond());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -613,78 +688,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.Timestamp parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 24: {
-              year_ = input.readInt32();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 24
-            case 32: {
-              month_ = input.readInt32();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 32
-            case 40: {
-              week_ = input.readInt32();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 40
-            case 48: {
-              dayOfMonth_ = input.readInt32();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 48
-            case 56: {
-              dayOfWeek_ = input.readInt32();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 56
-            case 64: {
-              dayOfYear_ = input.readInt32();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 64
-            case 72: {
-              hour_ = input.readInt32();
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 72
-            case 80: {
-              minute_ = input.readInt32();
-              bitField0_ |= 0x00000080;
-              break;
-            } // case 80
-            case 88: {
-              second_ = input.readInt32();
-              bitField0_ |= 0x00000100;
-              break;
-            } // case 88
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.Timestamp) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private int year_ ;
     /**
@@ -701,9 +717,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setYear(int value) {
-
+      
       year_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -712,7 +727,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearYear() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       year_ = 0;
       onChanged();
       return this;
@@ -741,9 +756,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMonth(int value) {
-
+      
       month_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -756,7 +770,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMonth() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       month_ = 0;
       onChanged();
       return this;
@@ -785,9 +799,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWeek(int value) {
-
+      
       week_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -800,7 +813,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWeek() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       week_ = 0;
       onChanged();
       return this;
@@ -829,9 +842,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDayOfMonth(int value) {
-
+      
       dayOfMonth_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -844,7 +856,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDayOfMonth() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      
       dayOfMonth_ = 0;
       onChanged();
       return this;
@@ -873,9 +885,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDayOfWeek(int value) {
-
+      
       dayOfWeek_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -888,7 +899,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDayOfWeek() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      
       dayOfWeek_ = 0;
       onChanged();
       return this;
@@ -917,9 +928,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDayOfYear(int value) {
-
+      
       dayOfYear_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -932,7 +942,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDayOfYear() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      
       dayOfYear_ = 0;
       onChanged();
       return this;
@@ -961,9 +971,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHour(int value) {
-
+      
       hour_ = value;
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -976,7 +985,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHour() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      
       hour_ = 0;
       onChanged();
       return this;
@@ -1005,9 +1014,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMinute(int value) {
-
+      
       minute_ = value;
-      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1020,7 +1028,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMinute() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      
       minute_ = 0;
       onChanged();
       return this;
@@ -1049,9 +1057,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSecond(int value) {
-
+      
       second_ = value;
-      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1064,7 +1071,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSecond() {
-      bitField0_ = (bitField0_ & ~0x00000100);
+      
       second_ = 0;
       onChanged();
       return this;
@@ -1102,18 +1109,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new Timestamp(input, extensionRegistry);
     }
   };
 

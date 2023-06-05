@@ -22,8 +22,7 @@ private static final long serialVersionUID = 0L;
   private ListScheduledCallbacksWithDetailsReq() {
     phoneNumber_ = "";
     callerId_ = "";
-    skills_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    skills_ = com.google.protobuf.LazyStringArrayList.EMPTY;
   }
 
   @java.lang.Override
@@ -33,6 +32,99 @@ private static final long serialVersionUID = 0L;
     return new ListScheduledCallbacksWithDetailsReq();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private ListScheduledCallbacksWithDetailsReq(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            phoneNumber_ = s;
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            callerId_ = s;
+            break;
+          }
+          case 34: {
+            com.google.protobuf.Timestamp.Builder subBuilder = null;
+            if (fromStartTime_ != null) {
+              subBuilder = fromStartTime_.toBuilder();
+            }
+            fromStartTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(fromStartTime_);
+              fromStartTime_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 42: {
+            com.google.protobuf.Timestamp.Builder subBuilder = null;
+            if (toStartTime_ != null) {
+              subBuilder = toStartTime_.toBuilder();
+            }
+            toStartTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(toStartTime_);
+              toStartTime_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 50: {
+            java.lang.String s = input.readStringRequireUtf8();
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              skills_ = new com.google.protobuf.LazyStringArrayList();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            skills_.add(s);
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        skills_ = skills_.getUnmodifiableView();
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.CbsProto.internal_static_api_v0alpha_ListScheduledCallbacksWithDetailsReq_descriptor;
@@ -47,8 +139,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PHONE_NUMBER_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object phoneNumber_ = "";
+  private volatile java.lang.Object phoneNumber_;
   /**
    * <code>string phone_number = 2 [json_name = "phoneNumber"];</code>
    * @return The phoneNumber.
@@ -86,8 +177,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALLER_ID_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object callerId_ = "";
+  private volatile java.lang.Object callerId_;
   /**
    * <code>string caller_id = 3 [json_name = "callerId"];</code>
    * @return The callerId.
@@ -147,7 +237,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getFromStartTimeOrBuilder() {
-    return fromStartTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : fromStartTime_;
+    return getFromStartTime();
   }
 
   public static final int TO_START_TIME_FIELD_NUMBER = 5;
@@ -173,13 +263,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getToStartTimeOrBuilder() {
-    return toStartTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : toStartTime_;
+    return getToStartTime();
   }
 
   public static final int SKILLS_FIELD_NUMBER = 6;
-  @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList skills_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
+  private com.google.protobuf.LazyStringList skills_;
   /**
    * <code>repeated string skills = 6 [json_name = "skills"];</code>
    * @return A list containing the skills.
@@ -227,10 +315,10 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(phoneNumber_)) {
+    if (!getPhoneNumberBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, phoneNumber_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callerId_)) {
+    if (!getCallerIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, callerId_);
     }
     if (fromStartTime_ != null) {
@@ -242,7 +330,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < skills_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, skills_.getRaw(i));
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -251,10 +339,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(phoneNumber_)) {
+    if (!getPhoneNumberBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, phoneNumber_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callerId_)) {
+    if (!getCallerIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, callerId_);
     }
     if (fromStartTime_ != null) {
@@ -273,7 +361,7 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getSkillsList().size();
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -304,7 +392,7 @@ private static final long serialVersionUID = 0L;
     }
     if (!getSkillsList()
         .equals(other.getSkillsList())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -331,7 +419,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SKILLS_FIELD_NUMBER;
       hash = (53 * hash) + getSkillsList().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -380,13 +468,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -454,32 +540,40 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       phoneNumber_ = "";
+
       callerId_ = "";
-      fromStartTime_ = null;
-      if (fromStartTimeBuilder_ != null) {
-        fromStartTimeBuilder_.dispose();
+
+      if (fromStartTimeBuilder_ == null) {
+        fromStartTime_ = null;
+      } else {
+        fromStartTime_ = null;
         fromStartTimeBuilder_ = null;
       }
-      toStartTime_ = null;
-      if (toStartTimeBuilder_ != null) {
-        toStartTimeBuilder_.dispose();
+      if (toStartTimeBuilder_ == null) {
+        toStartTime_ = null;
+      } else {
+        toStartTime_ = null;
         toStartTimeBuilder_ = null;
       }
-      skills_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      skills_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -506,33 +600,26 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsReq buildPartial() {
       com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsReq result = new com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsReq(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      int from_bitField0_ = bitField0_;
+      result.phoneNumber_ = phoneNumber_;
+      result.callerId_ = callerId_;
+      if (fromStartTimeBuilder_ == null) {
+        result.fromStartTime_ = fromStartTime_;
+      } else {
+        result.fromStartTime_ = fromStartTimeBuilder_.build();
+      }
+      if (toStartTimeBuilder_ == null) {
+        result.toStartTime_ = toStartTime_;
+      } else {
+        result.toStartTime_ = toStartTimeBuilder_.build();
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        skills_ = skills_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000001);
+      }
+      result.skills_ = skills_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsReq result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.phoneNumber_ = phoneNumber_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.callerId_ = callerId_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.fromStartTime_ = fromStartTimeBuilder_ == null
-            ? fromStartTime_
-            : fromStartTimeBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.toStartTime_ = toStartTimeBuilder_ == null
-            ? toStartTime_
-            : toStartTimeBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        skills_.makeImmutable();
-        result.skills_ = skills_;
-      }
     }
 
     @java.lang.Override
@@ -581,12 +668,10 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsReq.getDefaultInstance()) return this;
       if (!other.getPhoneNumber().isEmpty()) {
         phoneNumber_ = other.phoneNumber_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getCallerId().isEmpty()) {
         callerId_ = other.callerId_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasFromStartTime()) {
@@ -598,14 +683,14 @@ private static final long serialVersionUID = 0L;
       if (!other.skills_.isEmpty()) {
         if (skills_.isEmpty()) {
           skills_ = other.skills_;
-          bitField0_ |= 0x00000010;
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensureSkillsIsMutable();
           skills_.addAll(other.skills_);
         }
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -620,60 +705,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsReq parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 18: {
-              phoneNumber_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 18
-            case 26: {
-              callerId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 26
-            case 34: {
-              input.readMessage(
-                  getFromStartTimeFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 34
-            case 42: {
-              input.readMessage(
-                  getToStartTimeFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 42
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensureSkillsIsMutable();
-              skills_.add(s);
-              break;
-            } // case 50
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -719,9 +761,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPhoneNumber(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       phoneNumber_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -730,8 +774,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPhoneNumber() {
+      
       phoneNumber_ = getDefaultInstance().getPhoneNumber();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -742,10 +786,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPhoneNumberBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       phoneNumber_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -791,9 +837,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallerId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       callerId_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -802,8 +850,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallerId() {
+      
       callerId_ = getDefaultInstance().getCallerId();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -814,10 +862,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallerIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       callerId_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -830,7 +880,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the fromStartTime field is set.
      */
     public boolean hasFromStartTime() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return fromStartTimeBuilder_ != null || fromStartTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp from_start_time = 4 [json_name = "fromStartTime"];</code>
@@ -852,11 +902,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         fromStartTime_ = value;
+        onChanged();
       } else {
         fromStartTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -866,11 +916,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (fromStartTimeBuilder_ == null) {
         fromStartTime_ = builderForValue.build();
+        onChanged();
       } else {
         fromStartTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -878,38 +928,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeFromStartTime(com.google.protobuf.Timestamp value) {
       if (fromStartTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0) &&
-          fromStartTime_ != null &&
-          fromStartTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getFromStartTimeBuilder().mergeFrom(value);
+        if (fromStartTime_ != null) {
+          fromStartTime_ =
+            com.google.protobuf.Timestamp.newBuilder(fromStartTime_).mergeFrom(value).buildPartial();
         } else {
           fromStartTime_ = value;
         }
+        onChanged();
       } else {
         fromStartTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp from_start_time = 4 [json_name = "fromStartTime"];</code>
      */
     public Builder clearFromStartTime() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      fromStartTime_ = null;
-      if (fromStartTimeBuilder_ != null) {
-        fromStartTimeBuilder_.dispose();
+      if (fromStartTimeBuilder_ == null) {
+        fromStartTime_ = null;
+        onChanged();
+      } else {
+        fromStartTime_ = null;
         fromStartTimeBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp from_start_time = 4 [json_name = "fromStartTime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getFromStartTimeBuilder() {
-      bitField0_ |= 0x00000004;
+      
       onChanged();
       return getFromStartTimeFieldBuilder().getBuilder();
     }
@@ -949,7 +999,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the toStartTime field is set.
      */
     public boolean hasToStartTime() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return toStartTimeBuilder_ != null || toStartTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp to_start_time = 5 [json_name = "toStartTime"];</code>
@@ -971,11 +1021,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         toStartTime_ = value;
+        onChanged();
       } else {
         toStartTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
@@ -985,11 +1035,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (toStartTimeBuilder_ == null) {
         toStartTime_ = builderForValue.build();
+        onChanged();
       } else {
         toStartTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
@@ -997,38 +1047,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeToStartTime(com.google.protobuf.Timestamp value) {
       if (toStartTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0) &&
-          toStartTime_ != null &&
-          toStartTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getToStartTimeBuilder().mergeFrom(value);
+        if (toStartTime_ != null) {
+          toStartTime_ =
+            com.google.protobuf.Timestamp.newBuilder(toStartTime_).mergeFrom(value).buildPartial();
         } else {
           toStartTime_ = value;
         }
+        onChanged();
       } else {
         toStartTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp to_start_time = 5 [json_name = "toStartTime"];</code>
      */
     public Builder clearToStartTime() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      toStartTime_ = null;
-      if (toStartTimeBuilder_ != null) {
-        toStartTimeBuilder_.dispose();
+      if (toStartTimeBuilder_ == null) {
+        toStartTime_ = null;
+        onChanged();
+      } else {
+        toStartTime_ = null;
         toStartTimeBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp to_start_time = 5 [json_name = "toStartTime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getToStartTimeBuilder() {
-      bitField0_ |= 0x00000008;
+      
       onChanged();
       return getToStartTimeFieldBuilder().getBuilder();
     }
@@ -1060,13 +1110,12 @@ private static final long serialVersionUID = 0L;
       return toStartTimeBuilder_;
     }
 
-    private com.google.protobuf.LazyStringArrayList skills_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.LazyStringList skills_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureSkillsIsMutable() {
-      if (!skills_.isModifiable()) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         skills_ = new com.google.protobuf.LazyStringArrayList(skills_);
-      }
-      bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000001;
+       }
     }
     /**
      * <code>repeated string skills = 6 [json_name = "skills"];</code>
@@ -1074,8 +1123,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getSkillsList() {
-      skills_.makeImmutable();
-      return skills_;
+      return skills_.getUnmodifiableView();
     }
     /**
      * <code>repeated string skills = 6 [json_name = "skills"];</code>
@@ -1109,10 +1157,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSkills(
         int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureSkillsIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSkillsIsMutable();
       skills_.set(index, value);
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1123,10 +1172,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addSkills(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureSkillsIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSkillsIsMutable();
       skills_.add(value);
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1140,7 +1190,6 @@ private static final long serialVersionUID = 0L;
       ensureSkillsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, skills_);
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1149,9 +1198,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSkills() {
-      skills_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000010);;
+      skills_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1162,11 +1210,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addSkillsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
       ensureSkillsIsMutable();
       skills_.add(value);
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1203,18 +1252,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new ListScheduledCallbacksWithDetailsReq(input, extensionRegistry);
     }
   };
 

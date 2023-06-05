@@ -25,6 +25,76 @@ private static final long serialVersionUID = 0L;
     return new AuditResponse();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private AuditResponse(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 9: {
+
+            audioTime_ = input.readDouble();
+            break;
+          }
+          case 17: {
+
+            billedAudioTime_ = input.readDouble();
+            break;
+          }
+          case 26: {
+            com.google.protobuf.Timestamp.Builder subBuilder = null;
+            if (lastUsage_ != null) {
+              subBuilder = lastUsage_.toBuilder();
+            }
+            lastUsage_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(lastUsage_);
+              lastUsage_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 32: {
+
+            billedTranscripts_ = input.readInt64();
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.vanalytics.ServiceProto.internal_static_api_v1alpha1_vanalytics_AuditResponse_descriptor;
@@ -39,7 +109,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AUDIO_TIME_FIELD_NUMBER = 1;
-  private double audioTime_ = 0D;
+  private double audioTime_;
   /**
    * <pre>
    * audio time in seconds within billing period
@@ -54,7 +124,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BILLED_AUDIO_TIME_FIELD_NUMBER = 2;
-  private double billedAudioTime_ = 0D;
+  private double billedAudioTime_;
   /**
    * <pre>
    * billed_audio time in seconds within billing period
@@ -106,11 +176,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getLastUsageOrBuilder() {
-    return lastUsage_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastUsage_;
+    return getLastUsage();
   }
 
   public static final int BILLED_TRANSCRIPTS_FIELD_NUMBER = 4;
-  private long billedTranscripts_ = 0L;
+  private long billedTranscripts_;
   /**
    * <pre>
    * billed_transcripts is the number of billed transcripts
@@ -139,10 +209,10 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (java.lang.Double.doubleToRawLongBits(audioTime_) != 0) {
+    if (audioTime_ != 0D) {
       output.writeDouble(1, audioTime_);
     }
-    if (java.lang.Double.doubleToRawLongBits(billedAudioTime_) != 0) {
+    if (billedAudioTime_ != 0D) {
       output.writeDouble(2, billedAudioTime_);
     }
     if (lastUsage_ != null) {
@@ -151,7 +221,7 @@ private static final long serialVersionUID = 0L;
     if (billedTranscripts_ != 0L) {
       output.writeInt64(4, billedTranscripts_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -160,11 +230,11 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (java.lang.Double.doubleToRawLongBits(audioTime_) != 0) {
+    if (audioTime_ != 0D) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(1, audioTime_);
     }
-    if (java.lang.Double.doubleToRawLongBits(billedAudioTime_) != 0) {
+    if (billedAudioTime_ != 0D) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(2, billedAudioTime_);
     }
@@ -176,7 +246,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(4, billedTranscripts_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -204,7 +274,7 @@ private static final long serialVersionUID = 0L;
     }
     if (getBilledTranscripts()
         != other.getBilledTranscripts()) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -228,7 +298,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + BILLED_TRANSCRIPTS_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getBilledTranscripts());
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -277,13 +347,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.vanalytics.AuditResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.vanalytics.AuditResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -347,26 +415,34 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.vanalytics.AuditResponse.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       audioTime_ = 0D;
+
       billedAudioTime_ = 0D;
-      lastUsage_ = null;
-      if (lastUsageBuilder_ != null) {
-        lastUsageBuilder_.dispose();
+
+      if (lastUsageBuilder_ == null) {
+        lastUsage_ = null;
+      } else {
+        lastUsage_ = null;
         lastUsageBuilder_ = null;
       }
       billedTranscripts_ = 0L;
+
       return this;
     }
 
@@ -393,27 +469,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.vanalytics.AuditResponse buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.vanalytics.AuditResponse result = new com.tcn.cloud.api.api.v1alpha1.vanalytics.AuditResponse(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.audioTime_ = audioTime_;
+      result.billedAudioTime_ = billedAudioTime_;
+      if (lastUsageBuilder_ == null) {
+        result.lastUsage_ = lastUsage_;
+      } else {
+        result.lastUsage_ = lastUsageBuilder_.build();
+      }
+      result.billedTranscripts_ = billedTranscripts_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.vanalytics.AuditResponse result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.audioTime_ = audioTime_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.billedAudioTime_ = billedAudioTime_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.lastUsage_ = lastUsageBuilder_ == null
-            ? lastUsage_
-            : lastUsageBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.billedTranscripts_ = billedTranscripts_;
-      }
     }
 
     @java.lang.Override
@@ -472,7 +537,7 @@ private static final long serialVersionUID = 0L;
       if (other.getBilledTranscripts() != 0L) {
         setBilledTranscripts(other.getBilledTranscripts());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -487,55 +552,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.AuditResponse parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 9: {
-              audioTime_ = input.readDouble();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 9
-            case 17: {
-              billedAudioTime_ = input.readDouble();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 17
-            case 26: {
-              input.readMessage(
-                  getLastUsageFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            case 32: {
-              billedTranscripts_ = input.readInt64();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 32
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.vanalytics.AuditResponse) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private double audioTime_ ;
     /**
@@ -560,9 +589,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAudioTime(double value) {
-
+      
       audioTime_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -575,7 +603,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAudioTime() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       audioTime_ = 0D;
       onChanged();
       return this;
@@ -604,9 +632,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBilledAudioTime(double value) {
-
+      
       billedAudioTime_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -619,7 +646,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBilledAudioTime() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       billedAudioTime_ = 0D;
       onChanged();
       return this;
@@ -638,7 +665,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the lastUsage field is set.
      */
     public boolean hasLastUsage() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return lastUsageBuilder_ != null || lastUsage_ != null;
     }
     /**
      * <pre>
@@ -670,11 +697,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         lastUsage_ = value;
+        onChanged();
       } else {
         lastUsageBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -689,11 +716,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (lastUsageBuilder_ == null) {
         lastUsage_ = builderForValue.build();
+        onChanged();
       } else {
         lastUsageBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -706,18 +733,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeLastUsage(com.google.protobuf.Timestamp value) {
       if (lastUsageBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0) &&
-          lastUsage_ != null &&
-          lastUsage_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getLastUsageBuilder().mergeFrom(value);
+        if (lastUsage_ != null) {
+          lastUsage_ =
+            com.google.protobuf.Timestamp.newBuilder(lastUsage_).mergeFrom(value).buildPartial();
         } else {
           lastUsage_ = value;
         }
+        onChanged();
       } else {
         lastUsageBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -729,13 +755,14 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp last_usage = 3 [json_name = "lastUsage"];</code>
      */
     public Builder clearLastUsage() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      lastUsage_ = null;
-      if (lastUsageBuilder_ != null) {
-        lastUsageBuilder_.dispose();
+      if (lastUsageBuilder_ == null) {
+        lastUsage_ = null;
+        onChanged();
+      } else {
+        lastUsage_ = null;
         lastUsageBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -747,7 +774,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp last_usage = 3 [json_name = "lastUsage"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getLastUsageBuilder() {
-      bitField0_ |= 0x00000004;
+      
       onChanged();
       return getLastUsageFieldBuilder().getBuilder();
     }
@@ -814,9 +841,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBilledTranscripts(long value) {
-
+      
       billedTranscripts_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -830,7 +856,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBilledTranscripts() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      
       billedTranscripts_ = 0L;
       onChanged();
       return this;
@@ -868,18 +894,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new AuditResponse(input, extensionRegistry);
     }
   };
 

@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.50.0)",
     comments = "Source: api/v1alpha1/asm/public_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class AsmGrpc {
@@ -464,7 +464,7 @@ public final class AsmGrpc {
 
   /**
    */
-  public interface AsyncService {
+  public static abstract class AsmImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
@@ -472,7 +472,7 @@ public final class AsmGrpc {
      * only the asm session sid filter is allowed
      * </pre>
      */
-    default void streamAgentState(com.tcn.cloud.api.api.v1alpha1.asm.StreamAgentStateReq request,
+    public void streamAgentState(com.tcn.cloud.api.api.v1alpha1.asm.StreamAgentStateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.StreamAgentStateRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStreamAgentStateMethod(), responseObserver);
     }
@@ -482,14 +482,14 @@ public final class AsmGrpc {
      * Streams back statuses for the desired filter
      * </pre>
      */
-    default void managerStreamAgentState(com.tcn.cloud.api.api.v1alpha1.asm.ManagerStreamAgentStateReq request,
+    public void managerStreamAgentState(com.tcn.cloud.api.api.v1alpha1.asm.ManagerStreamAgentStateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.ManagerStreamAgentStateRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getManagerStreamAgentStateMethod(), responseObserver);
     }
 
     /**
      */
-    default void pushEvents(com.tcn.cloud.api.api.v1alpha1.asm.PushEventsReq request,
+    public void pushEvents(com.tcn.cloud.api.api.v1alpha1.asm.PushEventsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.asm.PushEventsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPushEventsMethod(), responseObserver);
     }
@@ -499,7 +499,7 @@ public final class AsmGrpc {
      * Creates an agent session and enables the voice channel
      * </pre>
      */
-    default void createSession(com.tcn.cloud.api.api.v1alpha1.asm.CreateSessionReq request,
+    public void createSession(com.tcn.cloud.api.api.v1alpha1.asm.CreateSessionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.asm.CreateSessionRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateSessionMethod(), responseObserver);
     }
@@ -509,7 +509,7 @@ public final class AsmGrpc {
      * Closes an asm session and all sub sessions
      * </pre>
      */
-    default void endSession(com.tcn.cloud.api.api.v1alpha1.asm.EndSessionReq request,
+    public void endSession(com.tcn.cloud.api.api.v1alpha1.asm.EndSessionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.asm.EndSessionRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEndSessionMethod(), responseObserver);
     }
@@ -519,7 +519,7 @@ public final class AsmGrpc {
      * Gets an agent's current asm session
      * </pre>
      */
-    default void getCurrentSession(com.tcn.cloud.api.api.v1alpha1.asm.GetCurrentSessionReq request,
+    public void getCurrentSession(com.tcn.cloud.api.api.v1alpha1.asm.GetCurrentSessionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.asm.AsmSession> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCurrentSessionMethod(), responseObserver);
     }
@@ -529,14 +529,14 @@ public final class AsmGrpc {
      * Updates the currently active subsession
      * </pre>
      */
-    default void enableVoice(com.tcn.cloud.api.api.v1alpha1.asm.EnableVoiceReq request,
+    public void enableVoice(com.tcn.cloud.api.api.v1alpha1.asm.EnableVoiceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.asm.EnableVoiceRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEnableVoiceMethod(), responseObserver);
     }
 
     /**
      */
-    default void disableVoice(com.tcn.cloud.api.api.v1alpha1.asm.DisableVoiceReq request,
+    public void disableVoice(com.tcn.cloud.api.api.v1alpha1.asm.DisableVoiceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.asm.DisableVoiceRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDisableVoiceMethod(), responseObserver);
     }
@@ -546,7 +546,7 @@ public final class AsmGrpc {
      * Lists the conversations for an assigned agent
      * </pre>
      */
-    default void listConversations(com.tcn.cloud.api.api.v1alpha1.asm.ListConversationsReq request,
+    public void listConversations(com.tcn.cloud.api.api.v1alpha1.asm.ListConversationsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.asm.ListConversationsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListConversationsMethod(), responseObserver);
     }
@@ -556,7 +556,7 @@ public final class AsmGrpc {
      * Assign agent to matched conversation based on skills and channelTypes requested
      * </pre>
      */
-    default void assignNewConversation(com.tcn.cloud.api.api.v1alpha1.asm.AssignNewConversationReq request,
+    public void assignNewConversation(com.tcn.cloud.api.api.v1alpha1.asm.AssignNewConversationReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.asm.AssignNewConversationRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAssignNewConversationMethod(), responseObserver);
     }
@@ -566,7 +566,7 @@ public final class AsmGrpc {
      * List all agents for the given user. Contains statistical enrichments for each agent and their conversations.
      * </pre>
      */
-    default void listAgents(com.tcn.cloud.api.api.v1alpha1.asm.ListAgentsReq request,
+    public void listAgents(com.tcn.cloud.api.api.v1alpha1.asm.ListAgentsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.asm.ListAgentsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAgentsMethod(), responseObserver);
     }
@@ -576,7 +576,7 @@ public final class AsmGrpc {
      * Set collected data per conversation
      * </pre>
      */
-    default void setConversationCollectedData(com.tcn.cloud.api.api.v1alpha1.asm.SetConversationCollectedDataReq request,
+    public void setConversationCollectedData(com.tcn.cloud.api.api.v1alpha1.asm.SetConversationCollectedDataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.asm.SetConversationCollectedDataRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetConversationCollectedDataMethod(), responseObserver);
     }
@@ -586,28 +586,111 @@ public final class AsmGrpc {
      * Set queue details
      * </pre>
      */
-    default void getQueuesDetails(com.tcn.cloud.api.api.v1alpha1.asm.GetQueuesDetailsReq request,
+    public void getQueuesDetails(com.tcn.cloud.api.api.v1alpha1.asm.GetQueuesDetailsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.GetQueuesDetailsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetQueuesDetailsMethod(), responseObserver);
     }
-  }
-
-  /**
-   * Base class for the server implementation of the service Asm.
-   */
-  public static abstract class AsmImplBase
-      implements io.grpc.BindableService, AsyncService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return AsmGrpc.bindService(this);
+      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getStreamAgentStateMethod(),
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.asm.StreamAgentStateReq,
+                com.tcn.cloud.api.api.commons.StreamAgentStateRes>(
+                  this, METHODID_STREAM_AGENT_STATE)))
+          .addMethod(
+            getManagerStreamAgentStateMethod(),
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.asm.ManagerStreamAgentStateReq,
+                com.tcn.cloud.api.api.commons.ManagerStreamAgentStateRes>(
+                  this, METHODID_MANAGER_STREAM_AGENT_STATE)))
+          .addMethod(
+            getPushEventsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.asm.PushEventsReq,
+                com.tcn.cloud.api.api.v1alpha1.asm.PushEventsRes>(
+                  this, METHODID_PUSH_EVENTS)))
+          .addMethod(
+            getCreateSessionMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.asm.CreateSessionReq,
+                com.tcn.cloud.api.api.v1alpha1.asm.CreateSessionRes>(
+                  this, METHODID_CREATE_SESSION)))
+          .addMethod(
+            getEndSessionMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.asm.EndSessionReq,
+                com.tcn.cloud.api.api.v1alpha1.asm.EndSessionRes>(
+                  this, METHODID_END_SESSION)))
+          .addMethod(
+            getGetCurrentSessionMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.asm.GetCurrentSessionReq,
+                com.tcn.cloud.api.api.v1alpha1.asm.AsmSession>(
+                  this, METHODID_GET_CURRENT_SESSION)))
+          .addMethod(
+            getEnableVoiceMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.asm.EnableVoiceReq,
+                com.tcn.cloud.api.api.v1alpha1.asm.EnableVoiceRes>(
+                  this, METHODID_ENABLE_VOICE)))
+          .addMethod(
+            getDisableVoiceMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.asm.DisableVoiceReq,
+                com.tcn.cloud.api.api.v1alpha1.asm.DisableVoiceRes>(
+                  this, METHODID_DISABLE_VOICE)))
+          .addMethod(
+            getListConversationsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.asm.ListConversationsReq,
+                com.tcn.cloud.api.api.v1alpha1.asm.ListConversationsRes>(
+                  this, METHODID_LIST_CONVERSATIONS)))
+          .addMethod(
+            getAssignNewConversationMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.asm.AssignNewConversationReq,
+                com.tcn.cloud.api.api.v1alpha1.asm.AssignNewConversationRes>(
+                  this, METHODID_ASSIGN_NEW_CONVERSATION)))
+          .addMethod(
+            getListAgentsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.asm.ListAgentsReq,
+                com.tcn.cloud.api.api.v1alpha1.asm.ListAgentsRes>(
+                  this, METHODID_LIST_AGENTS)))
+          .addMethod(
+            getSetConversationCollectedDataMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.asm.SetConversationCollectedDataReq,
+                com.tcn.cloud.api.api.v1alpha1.asm.SetConversationCollectedDataRes>(
+                  this, METHODID_SET_CONVERSATION_COLLECTED_DATA)))
+          .addMethod(
+            getGetQueuesDetailsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.asm.GetQueuesDetailsReq,
+                com.tcn.cloud.api.api.commons.GetQueuesDetailsRes>(
+                  this, METHODID_GET_QUEUES_DETAILS)))
+          .build();
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service Asm.
    */
-  public static final class AsmStub
-      extends io.grpc.stub.AbstractAsyncStub<AsmStub> {
+  public static final class AsmStub extends io.grpc.stub.AbstractAsyncStub<AsmStub> {
     private AsmStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -759,10 +842,8 @@ public final class AsmGrpc {
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service Asm.
    */
-  public static final class AsmBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<AsmBlockingStub> {
+  public static final class AsmBlockingStub extends io.grpc.stub.AbstractBlockingStub<AsmBlockingStub> {
     private AsmBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -903,10 +984,8 @@ public final class AsmGrpc {
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service Asm.
    */
-  public static final class AsmFutureStub
-      extends io.grpc.stub.AbstractFutureStub<AsmFutureStub> {
+  public static final class AsmFutureStub extends io.grpc.stub.AbstractFutureStub<AsmFutureStub> {
     private AsmFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -1053,10 +1132,10 @@ public final class AsmGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AsyncService serviceImpl;
+    private final AsmImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AsyncService serviceImpl, int methodId) {
+    MethodHandlers(AsmImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -1131,102 +1210,6 @@ public final class AsmGrpc {
           throw new AssertionError();
       }
     }
-  }
-
-  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
-    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-        .addMethod(
-          getStreamAgentStateMethod(),
-          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.asm.StreamAgentStateReq,
-              com.tcn.cloud.api.api.commons.StreamAgentStateRes>(
-                service, METHODID_STREAM_AGENT_STATE)))
-        .addMethod(
-          getManagerStreamAgentStateMethod(),
-          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.asm.ManagerStreamAgentStateReq,
-              com.tcn.cloud.api.api.commons.ManagerStreamAgentStateRes>(
-                service, METHODID_MANAGER_STREAM_AGENT_STATE)))
-        .addMethod(
-          getPushEventsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.asm.PushEventsReq,
-              com.tcn.cloud.api.api.v1alpha1.asm.PushEventsRes>(
-                service, METHODID_PUSH_EVENTS)))
-        .addMethod(
-          getCreateSessionMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.asm.CreateSessionReq,
-              com.tcn.cloud.api.api.v1alpha1.asm.CreateSessionRes>(
-                service, METHODID_CREATE_SESSION)))
-        .addMethod(
-          getEndSessionMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.asm.EndSessionReq,
-              com.tcn.cloud.api.api.v1alpha1.asm.EndSessionRes>(
-                service, METHODID_END_SESSION)))
-        .addMethod(
-          getGetCurrentSessionMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.asm.GetCurrentSessionReq,
-              com.tcn.cloud.api.api.v1alpha1.asm.AsmSession>(
-                service, METHODID_GET_CURRENT_SESSION)))
-        .addMethod(
-          getEnableVoiceMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.asm.EnableVoiceReq,
-              com.tcn.cloud.api.api.v1alpha1.asm.EnableVoiceRes>(
-                service, METHODID_ENABLE_VOICE)))
-        .addMethod(
-          getDisableVoiceMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.asm.DisableVoiceReq,
-              com.tcn.cloud.api.api.v1alpha1.asm.DisableVoiceRes>(
-                service, METHODID_DISABLE_VOICE)))
-        .addMethod(
-          getListConversationsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.asm.ListConversationsReq,
-              com.tcn.cloud.api.api.v1alpha1.asm.ListConversationsRes>(
-                service, METHODID_LIST_CONVERSATIONS)))
-        .addMethod(
-          getAssignNewConversationMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.asm.AssignNewConversationReq,
-              com.tcn.cloud.api.api.v1alpha1.asm.AssignNewConversationRes>(
-                service, METHODID_ASSIGN_NEW_CONVERSATION)))
-        .addMethod(
-          getListAgentsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.asm.ListAgentsReq,
-              com.tcn.cloud.api.api.v1alpha1.asm.ListAgentsRes>(
-                service, METHODID_LIST_AGENTS)))
-        .addMethod(
-          getSetConversationCollectedDataMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.asm.SetConversationCollectedDataReq,
-              com.tcn.cloud.api.api.v1alpha1.asm.SetConversationCollectedDataRes>(
-                service, METHODID_SET_CONVERSATION_COLLECTED_DATA)))
-        .addMethod(
-          getGetQueuesDetailsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.asm.GetQueuesDetailsReq,
-              com.tcn.cloud.api.api.commons.GetQueuesDetailsRes>(
-                service, METHODID_GET_QUEUES_DETAILS)))
-        .build();
   }
 
   private static abstract class AsmBaseDescriptorSupplier

@@ -1831,123 +1831,123 @@ public final class AnaProto {
       "\006 \001(\tR\013description2\253%\n\003Ana\022\255\001\n\032GetSpecif" +
       "iedVisualizations\022*.api.v0alpha.GetSpeci" +
       "fiedVisualizationsReq\032\033.api.v0alpha.Visu" +
-      "alizations\"F\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0026\"1/api/v0alp" +
-      "ha/ana/admin/GetSpecifiedVisualizations:" +
-      "\001*\022\210\001\n\017RegisterAccount\022\037.api.v0alpha.Reg" +
+      "alizations\"F\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0026:\001*\"1/api/v0" +
+      "alpha/ana/admin/GetSpecifiedVisualizatio" +
+      "ns\022\210\001\n\017RegisterAccount\022\037.api.v0alpha.Reg" +
       "isterAccountReq\032\027.api.v0alpha.AnaAccount" +
-      "\";\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002+\"&/api/v0alpha/ana/adm" +
-      "in/RegisterAccount:\001*\022t\n\010SetWeeks\022\030.api." +
+      "\";\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002+:\001*\"&/api/v0alpha/ana/" +
+      "admin/RegisterAccount\022t\n\010SetWeeks\022\030.api." +
       "v0alpha.SetWeeksReq\032\030.api.v0alpha.SetWee" +
-      "ksRes\"4\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002$\"\037/api/v0alpha/an" +
-      "a/admin/SetWeeks:\001*\022\243\001\n\024SetDefaultTimeFi" +
+      "ksRes\"4\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002$:\001*\"\037/api/v0alpha" +
+      "/ana/admin/SetWeeks\022\243\001\n\024SetDefaultTimeFi" +
       "lter\022$.api.v0alpha.SetDefaultTimeFilterR" +
       "eq\032$.api.v0alpha.SetDefaultTimeFilterRes" +
-      "\"?\272\270\221\002\004\020\001\030\001\202\323\344\223\0020\"+/api/v0alpha/ana/admi" +
-      "n/SetDefaultTimeFilter:\001*\022\237\001\n\023SetDefault" +
+      "\"?\272\270\221\002\004\020\001\030\001\202\323\344\223\0020:\001*\"+/api/v0alpha/ana/a" +
+      "dmin/SetDefaultTimeFilter\022\237\001\n\023SetDefault" +
       "Dashboard\022#.api.v0alpha.SetDefaultDashbo" +
       "ardReq\032#.api.v0alpha.SetDefaultDashboard" +
-      "Res\">\272\270\221\002\004\020\001\030\001\202\323\344\223\002/\"*/api/v0alpha/ana/a" +
-      "dmin/SetDefaultDashboard:\001*\022x\n\nGetAccoun" +
+      "Res\">\272\270\221\002\004\020\001\030\001\202\323\344\223\002/:\001*\"*/api/v0alpha/an" +
+      "a/admin/SetDefaultDashboard\022x\n\nGetAccoun" +
       "t\022\032.api.v0alpha.GetAccountReq\032\027.api.v0al" +
-      "pha.AnaAccount\"5\272\270\221\002\004\n\002\010e\202\323\344\223\002&\"!/api/v0" +
-      "alpha/ana/admin/GetAccount:\001*\022\224\001\n\023GetSpe" +
+      "pha.AnaAccount\"5\272\270\221\002\004\n\002\010e\202\323\344\223\002&:\001*\"!/api" +
+      "/v0alpha/ana/admin/GetAccount\022\224\001\n\023GetSpe" +
       "cifiedAccount\022#.api.v0alpha.GetSpecified" +
       "AccountReq\032\027.api.v0alpha.AnaAccount\"?\272\270\221" +
-      "\002\005\n\003\010\310\001\202\323\344\223\002/\"*/api/v0alpha/ana/admin/Ge" +
-      "tSpecifiedAccount:\001*\022\274\001\n\032GetAuthorizedAn" +
+      "\002\005\n\003\010\310\001\202\323\344\223\002/:\001*\"*/api/v0alpha/ana/admin" +
+      "/GetSpecifiedAccount\022\274\001\n\032GetAuthorizedAn" +
       "alyticsLink\022*.api.v0alpha.GetAuthorizedA" +
       "nalyticsLinkReq\032*.api.v0alpha.GetAuthori" +
-      "zedAnalyticsLinkRes\"F\272\270\221\002\005\n\003\010\330\004\202\323\344\223\0026\"1/" +
-      "api/v0alpha/ana/admin/GetAuthorizedAnaly" +
-      "ticsLink:\001*\022\256\001\n\026GenerateMonthlyBilling\022&" +
+      "zedAnalyticsLinkRes\"F\272\270\221\002\005\n\003\010\330\004\202\323\344\223\0026:\001*" +
+      "\"1/api/v0alpha/ana/admin/GetAuthorizedAn" +
+      "alyticsLink\022\256\001\n\026GenerateMonthlyBilling\022&" +
       ".api.v0alpha.GenerateMonthlyBillingReq\032&" +
       ".api.v0alpha.GenerateMonthlyBillingRes\"D" +
-      "\272\270\221\002\005\n\003\010\360\001\202\323\344\223\0024\"//api/v0alpha/ana/billi" +
-      "ng/GenerateMonthlyBilling:\001*\022y\n\013GetTimeZ" +
+      "\272\270\221\002\005\n\003\010\360\001\202\323\344\223\0024:\001*\"//api/v0alpha/ana/bi" +
+      "lling/GenerateMonthlyBilling\022y\n\013GetTimeZ" +
       "one\022\033.api.v0alpha.GetTimeZoneReq\032\025.api.v" +
-      "0alpha.TimeZone\"6\272\270\221\002\004\n\002\010e\202\323\344\223\002\'\"\"/api/v" +
-      "0alpha/ana/admin/GetTimeZone:\001*\022\177\n\013SetTi" +
+      "0alpha.TimeZone\"6\272\270\221\002\004\n\002\010e\202\323\344\223\002\':\001*\"\"/ap" +
+      "i/v0alpha/ana/admin/GetTimeZone\022\177\n\013SetTi" +
       "meZone\022\033.api.v0alpha.SetTimeZoneReq\032\033.ap" +
       "i.v0alpha.SetTimeZoneRes\"6\272\270\221\002\004\n\002\010d\202\323\344\223\002" +
-      "\'\"\"/api/v0alpha/ana/admin/SetTimeZone:\001*" +
+      "\':\001*\"\"/api/v0alpha/ana/admin/SetTimeZone" +
       "\022\200\001\n\013CopyDashViz\022\033.api.v0alpha.CopyDashV" +
       "izReq\032\033.api.v0alpha.CopyDashVizRes\"7\272\270\221\002" +
-      "\005\n\003\010\310\001\202\323\344\223\002\'\"\"/api/v0alpha/ana/admin/Cop" +
-      "yDashViz:\001*\022\257\001\n\032GetSpecifiedBillingSumma" +
+      "\005\n\003\010\310\001\202\323\344\223\002\':\001*\"\"/api/v0alpha/ana/admin/" +
+      "CopyDashViz\022\257\001\n\032GetSpecifiedBillingSumma" +
       "ry\022*.api.v0alpha.GetSpecifiedBillingSumm" +
       "aryReq\032\033.api.v0alpha.BillingSummary\"H\272\270\221" +
-      "\002\005\n\003\010\310\001\202\323\344\223\0028\"3/api/v0alpha/ana/billing/" +
-      "GetSpecifiedBillingSummary:\001*\022\223\001\n\021GetBil" +
+      "\002\005\n\003\010\310\001\202\323\344\223\0028:\001*\"3/api/v0alpha/ana/billi" +
+      "ng/GetSpecifiedBillingSummary\022\223\001\n\021GetBil" +
       "lingSummary\022!.api.v0alpha.GetBillingSumm" +
       "aryReq\032\033.api.v0alpha.BillingSummary\">\272\270\221" +
-      "\002\004\n\002\010e\202\323\344\223\002/\"*/api/v0alpha/ana/billing/G" +
-      "etBillingSummary:\001*\022\247\001\n\023EnableCustomRepo" +
+      "\002\004\n\002\010e\202\323\344\223\002/:\001*\"*/api/v0alpha/ana/billin" +
+      "g/GetBillingSummary\022\247\001\n\023EnableCustomRepo" +
       "rts\022\'.api.v0alpha.SetCustomReportsEnable" +
       "dReq\032\'.api.v0alpha.SetCustomReportsEnabl" +
-      "edRes\">\272\270\221\002\004\n\002\010d\202\323\344\223\002/\"*/api/v0alpha/ana" +
-      "/admin/EnableCustomReports:\001*\022\251\001\n\024Disabl" +
+      "edRes\">\272\270\221\002\004\n\002\010d\202\323\344\223\002/:\001*\"*/api/v0alpha/" +
+      "ana/admin/EnableCustomReports\022\251\001\n\024Disabl" +
       "eCustomReports\022\'.api.v0alpha.SetCustomRe" +
       "portsEnabledReq\032\'.api.v0alpha.SetCustomR" +
-      "eportsEnabledRes\"?\272\270\221\002\004\n\002\010d\202\323\344\223\0020\"+/api/" +
-      "v0alpha/ana/admin/DisableCustomReports:\001" +
-      "*\022\207\001\n\rMakeAdoptable\022\035.api.v0alpha.MakeAd" +
+      "eportsEnabledRes\"?\272\270\221\002\004\n\002\010d\202\323\344\223\0020:\001*\"+/a" +
+      "pi/v0alpha/ana/admin/DisableCustomReport" +
+      "s\022\207\001\n\rMakeAdoptable\022\035.api.v0alpha.MakeAd" +
       "optableReq\032\035.api.v0alpha.MakeAdoptableRe" +
-      "s\"8\272\270\221\002\004\n\002\010d\202\323\344\223\002)\"$/api/v0alpha/ana/adm" +
-      "in/MakeAdoptable:\001*\022\213\001\n\017MakeUnadoptable\022" +
+      "s\"8\272\270\221\002\004\n\002\010d\202\323\344\223\002):\001*\"$/api/v0alpha/ana/" +
+      "admin/MakeAdoptable\022\213\001\n\017MakeUnadoptable\022" +
       "\035.api.v0alpha.MakeAdoptableReq\032\035.api.v0a" +
-      "lpha.MakeAdoptableRes\":\272\270\221\002\004\n\002\010d\202\323\344\223\002+\"&" +
-      "/api/v0alpha/ana/admin/MakeUnadoptable:\001" +
-      "*\022\234\001\n\017AdoptAnaAccount\022%.api.v0alpha.SetA" +
+      "lpha.MakeAdoptableRes\":\272\270\221\002\004\n\002\010d\202\323\344\223\002+:\001" +
+      "*\"&/api/v0alpha/ana/admin/MakeUnadoptabl" +
+      "e\022\234\001\n\017AdoptAnaAccount\022%.api.v0alpha.SetA" +
       "naAccountRelationReq\032%.api.v0alpha.SetAn" +
-      "aAccountRelationRes\";\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002+\"&/" +
-      "api/v0alpha/ana/admin/AdoptAnaAccount:\001*" +
+      "aAccountRelationRes\";\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002+:\001*" +
+      "\"&/api/v0alpha/ana/admin/AdoptAnaAccount" +
       "\022\236\001\n\020DisownAnaAccount\022%.api.v0alpha.SetA" +
       "naAccountRelationReq\032%.api.v0alpha.SetAn" +
-      "aAccountRelationRes\"<\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002,\"\'/" +
-      "api/v0alpha/ana/admin/DisownAnaAccount:\001" +
-      "*\022\234\001\n\024GetAccessibleClients\022$.api.v0alpha" +
+      "aAccountRelationRes\"<\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002,:\001*" +
+      "\"\'/api/v0alpha/ana/admin/DisownAnaAccoun" +
+      "t\022\234\001\n\024GetAccessibleClients\022$.api.v0alpha" +
       ".GetAccessibleClientsReq\032\034.api.v0alpha.S" +
-      "impleRelations\"@\272\270\221\002\005\n\003\010\330\004\202\323\344\223\0020\"+/api/v" +
-      "0alpha/ana/admin/GetAccessibleClients:\001*" +
+      "impleRelations\"@\272\270\221\002\005\n\003\010\330\004\202\323\344\223\0020:\001*\"+/ap" +
+      "i/v0alpha/ana/admin/GetAccessibleClients" +
       "\022r\n\tGetFamily\022\031.api.v0alpha.GetFamilyReq" +
-      "\032\023.api.v0alpha.Family\"5\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002%\"" +
-      " /api/v0alpha/ana/admin/GetFamily:\001*\022\234\001\n" +
+      "\032\023.api.v0alpha.Family\"5\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002%:" +
+      "\001*\" /api/v0alpha/ana/admin/GetFamily\022\234\001\n" +
       "\030GetAllowedDataVisibility\022\035.api.v0alpha." +
       "GetVisibilityReq\032\033.api.v0alpha.DataVisib" +
-      "ility\"D\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0024\"//api/v0alpha/an" +
-      "a/admin/GetAllowedDataVisibility:\001*\022\234\001\n\030" +
+      "ility\"D\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0024:\001*\"//api/v0alpha" +
+      "/ana/admin/GetAllowedDataVisibility\022\234\001\n\030" +
       "GetCurrentDataVisibility\022\035.api.v0alpha.G" +
       "etVisibilityReq\032\033.api.v0alpha.DataVisibi" +
-      "lity\"D\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0024\"//api/v0alpha/ana" +
-      "/admin/GetCurrentDataVisibility:\001*\022\227\001\n\024G" +
+      "lity\"D\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0024:\001*\"//api/v0alpha/" +
+      "ana/admin/GetCurrentDataVisibility\022\227\001\n\024G" +
       "etIndicesVisibility\022\035.api.v0alpha.GetVis" +
       "ibilityReq\032\036.api.v0alpha.IndicesVisibili" +
-      "ty\"@\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0020\"+/api/v0alpha/ana/a" +
-      "dmin/GetIndicesVisibility:\001*\022\240\001\n\032GetAudi" +
+      "ty\"@\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0020:\001*\"+/api/v0alpha/an" +
+      "a/admin/GetIndicesVisibility\022\240\001\n\032GetAudi" +
       "tableDataVisibility\022\035.api.v0alpha.GetVis" +
       "ibilityReq\032\033.api.v0alpha.DataVisibility\"" +
-      "F\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0026\"1/api/v0alpha/ana/admi" +
-      "n/GetAuditableDataVisibility:\001*\022\244\001\n\024GetO" +
+      "F\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0026:\001*\"1/api/v0alpha/ana/a" +
+      "dmin/GetAuditableDataVisibility\022\244\001\n\024GetO" +
       "rganizationNames\022$.api.v0alpha.GetOrgani" +
       "zationNamesReq\032$.api.v0alpha.GetOrganiza" +
-      "tionNamesRes\"@\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0020\"+/api/v0a" +
-      "lpha/ana/admin/GetOrganizationNames:\001*\022\240" +
+      "tionNamesRes\"@\272\270\221\002\005\n\003\010\310\001\202\323\344\223\0020:\001*\"+/api/" +
+      "v0alpha/ana/admin/GetOrganizationNames\022\240" +
       "\001\n\023GenerateVizDataById\022#.api.v0alpha.Gen" +
       "erateVizDataByIdReq\032#.api.v0alpha.Genera" +
-      "teVizDataByIdRes\"?\272\270\221\002\005\n\003\010\330\004\202\323\344\223\002/\"*/api" +
-      "/v0alpha/ana/admin/GenerateVizDataById:\001" +
-      "*\022\222\001\n\017GetClientStatus\022\037.api.v0alpha.GetC" +
+      "teVizDataByIdRes\"?\272\270\221\002\005\n\003\010\330\004\202\323\344\223\002/:\001*\"*/" +
+      "api/v0alpha/ana/admin/GenerateVizDataByI" +
+      "d\022\222\001\n\017GetClientStatus\022\037.api.v0alpha.GetC" +
       "lientStatusReq\032 .api.v0alpha.GetClientSt" +
-      "atusResp\"<\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002,\"\'/api/v0alpha" +
-      "/ana/census/GetClientStatus:\001*\022\226\001\n\020Reloa" +
+      "atusResp\"<\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002,:\001*\"\'/api/v0al" +
+      "pha/ana/census/GetClientStatus\022\226\001\n\020Reloa" +
       "dClientData\022 .api.v0alpha.ReloadClientDa" +
       "taReq\032!.api.v0alpha.ReloadClientDataResp" +
-      "\"=\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002-\"(/api/v0alpha/ana/cen" +
-      "sus/ReloadClientData:\001*\022\256\001\n\030ListVisualiz" +
+      "\"=\272\270\221\002\005\n\003\010\310\001\202\323\344\223\002-:\001*\"(/api/v0alpha/ana/" +
+      "census/ReloadClientData\022\256\001\n\030ListVisualiz" +
       "ationsLegacy\022(.api.v0alpha.ListVisualiza" +
       "tionsLegacyReq\032(.api.v0alpha.ListVisuali" +
-      "zationsLegacyRes\">\272\270\221\002\005\n\003\010\330\004\202\323\344\223\002.\")/api" +
-      "/v0alpha/ana/visualization/ListLegacy:\001*",
+      "zationsLegacyRes\">\272\270\221\002\005\n\003\010\330\004\202\323\344\223\002.:\001*\")/" +
+      "api/v0alpha/ana/visualization/ListLegacy",
       "Bv\n\035com.tcn.cloud.api.api.v0alphaB\010AnaPr" +
       "otoP\001\242\002\003AVX\252\002\013Api.V0alpha\312\002\013Api\\V0alpha\342" +
       "\002\027Api\\V0alpha\\GPBMetadata\352\002\014Api::V0alpha" +

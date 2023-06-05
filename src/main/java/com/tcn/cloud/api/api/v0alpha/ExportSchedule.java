@@ -25,6 +25,81 @@ private static final long serialVersionUID = 0L;
     return new ExportSchedule();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private ExportSchedule(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+
+            enabled_ = input.readBool();
+            break;
+          }
+          case 802: {
+            com.tcn.cloud.api.api.v0alpha.CampaignCompleteSchedule.Builder subBuilder = null;
+            if (scheduleTypeCase_ == 100) {
+              subBuilder = ((com.tcn.cloud.api.api.v0alpha.CampaignCompleteSchedule) scheduleType_).toBuilder();
+            }
+            scheduleType_ =
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.CampaignCompleteSchedule.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.CampaignCompleteSchedule) scheduleType_);
+              scheduleType_ = subBuilder.buildPartial();
+            }
+            scheduleTypeCase_ = 100;
+            break;
+          }
+          case 810: {
+            com.tcn.cloud.api.api.v0alpha.EndOfDaySchedule.Builder subBuilder = null;
+            if (scheduleTypeCase_ == 101) {
+              subBuilder = ((com.tcn.cloud.api.api.v0alpha.EndOfDaySchedule) scheduleType_).toBuilder();
+            }
+            scheduleType_ =
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.EndOfDaySchedule.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.EndOfDaySchedule) scheduleType_);
+              scheduleType_ = subBuilder.buildPartial();
+            }
+            scheduleTypeCase_ = 101;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.AnaProto.internal_static_api_v0alpha_ExportSchedule_descriptor;
@@ -39,7 +114,6 @@ private static final long serialVersionUID = 0L;
   }
 
   private int scheduleTypeCase_ = 0;
-  @SuppressWarnings("serial")
   private java.lang.Object scheduleType_;
   public enum ScheduleTypeCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -81,7 +155,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ENABLED_FIELD_NUMBER = 1;
-  private boolean enabled_ = false;
+  private boolean enabled_;
   /**
    * <code>bool enabled = 1 [json_name = "enabled"];</code>
    * @return The enabled.
@@ -176,7 +250,7 @@ private static final long serialVersionUID = 0L;
     if (scheduleTypeCase_ == 101) {
       output.writeMessage(101, (com.tcn.cloud.api.api.v0alpha.EndOfDaySchedule) scheduleType_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -197,7 +271,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(101, (com.tcn.cloud.api.api.v0alpha.EndOfDaySchedule) scheduleType_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -227,7 +301,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -253,7 +327,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -302,13 +376,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.ExportSchedule parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.ExportSchedule parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -372,25 +444,24 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ExportSchedule.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       enabled_ = false;
-      if (campaignCompleteBuilder_ != null) {
-        campaignCompleteBuilder_.clear();
-      }
-      if (endOfDayBuilder_ != null) {
-        endOfDayBuilder_.clear();
-      }
+
       scheduleTypeCase_ = 0;
       scheduleType_ = null;
       return this;
@@ -419,30 +490,24 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.ExportSchedule buildPartial() {
       com.tcn.cloud.api.api.v0alpha.ExportSchedule result = new com.tcn.cloud.api.api.v0alpha.ExportSchedule(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      buildPartialOneofs(result);
+      result.enabled_ = enabled_;
+      if (scheduleTypeCase_ == 100) {
+        if (campaignCompleteBuilder_ == null) {
+          result.scheduleType_ = scheduleType_;
+        } else {
+          result.scheduleType_ = campaignCompleteBuilder_.build();
+        }
+      }
+      if (scheduleTypeCase_ == 101) {
+        if (endOfDayBuilder_ == null) {
+          result.scheduleType_ = scheduleType_;
+        } else {
+          result.scheduleType_ = endOfDayBuilder_.build();
+        }
+      }
+      result.scheduleTypeCase_ = scheduleTypeCase_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ExportSchedule result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.enabled_ = enabled_;
-      }
-    }
-
-    private void buildPartialOneofs(com.tcn.cloud.api.api.v0alpha.ExportSchedule result) {
-      result.scheduleTypeCase_ = scheduleTypeCase_;
-      result.scheduleType_ = this.scheduleType_;
-      if (scheduleTypeCase_ == 100 &&
-          campaignCompleteBuilder_ != null) {
-        result.scheduleType_ = campaignCompleteBuilder_.build();
-      }
-      if (scheduleTypeCase_ == 101 &&
-          endOfDayBuilder_ != null) {
-        result.scheduleType_ = endOfDayBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -505,7 +570,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -520,49 +585,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.ExportSchedule parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              enabled_ = input.readBool();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 802: {
-              input.readMessage(
-                  getCampaignCompleteFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              scheduleTypeCase_ = 100;
-              break;
-            } // case 802
-            case 810: {
-              input.readMessage(
-                  getEndOfDayFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              scheduleTypeCase_ = 101;
-              break;
-            } // case 810
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.ExportSchedule) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int scheduleTypeCase_ = 0;
@@ -580,7 +613,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int bitField0_;
 
     private boolean enabled_ ;
     /**
@@ -597,9 +629,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEnabled(boolean value) {
-
+      
       enabled_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -608,7 +639,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnabled() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       enabled_ = false;
       onChanged();
       return this;
@@ -688,9 +719,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (scheduleTypeCase_ == 100) {
           campaignCompleteBuilder_.mergeFrom(value);
-        } else {
-          campaignCompleteBuilder_.setMessage(value);
         }
+        campaignCompleteBuilder_.setMessage(value);
       }
       scheduleTypeCase_ = 100;
       return this;
@@ -752,7 +782,7 @@ private static final long serialVersionUID = 0L;
         scheduleType_ = null;
       }
       scheduleTypeCase_ = 100;
-      onChanged();
+      onChanged();;
       return campaignCompleteBuilder_;
     }
 
@@ -830,9 +860,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (scheduleTypeCase_ == 101) {
           endOfDayBuilder_.mergeFrom(value);
-        } else {
-          endOfDayBuilder_.setMessage(value);
         }
+        endOfDayBuilder_.setMessage(value);
       }
       scheduleTypeCase_ = 101;
       return this;
@@ -894,7 +923,7 @@ private static final long serialVersionUID = 0L;
         scheduleType_ = null;
       }
       scheduleTypeCase_ = 101;
-      onChanged();
+      onChanged();;
       return endOfDayBuilder_;
     }
     @java.lang.Override
@@ -930,18 +959,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new ExportSchedule(input, extensionRegistry);
     }
   };
 

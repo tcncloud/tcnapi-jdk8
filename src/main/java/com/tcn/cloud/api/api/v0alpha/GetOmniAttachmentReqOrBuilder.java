@@ -44,5 +44,5 @@ public interface GetOmniAttachmentReqOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.GetOmniAttachmentReq.ByOmniAttachmentSidOrBuilder getByOmniAttachmentSidOrBuilder();
 
-  com.tcn.cloud.api.api.v0alpha.GetOmniAttachmentReq.FilterCase getFilterCase();
+  public com.tcn.cloud.api.api.v0alpha.GetOmniAttachmentReq.FilterCase getFilterCase();
 }

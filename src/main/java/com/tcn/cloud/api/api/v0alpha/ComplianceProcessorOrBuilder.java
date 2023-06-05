@@ -183,11 +183,10 @@ public interface ComplianceProcessorOrBuilder extends
    *
    * <code>map&lt;string, string&gt; call_metadata = 10 [json_name = "callMetadata"];</code>
    */
-  /* nullable */
-java.lang.String getCallMetadataOrDefault(
+
+  java.lang.String getCallMetadataOrDefault(
       java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue);
+      java.lang.String defaultValue);
   /**
    * <pre>
    * The Key is the metadata field name
@@ -197,6 +196,7 @@ java.lang.String defaultValue);
    *
    * <code>map&lt;string, string&gt; call_metadata = 10 [json_name = "callMetadata"];</code>
    */
+
   java.lang.String getCallMetadataOrThrow(
       java.lang.String key);
 

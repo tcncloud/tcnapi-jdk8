@@ -25,6 +25,75 @@ private static final long serialVersionUID = 0L;
     return new SubmitVerificationReq();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private SubmitVerificationReq(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkId.Builder subBuilder = null;
+            if (entity_ != null) {
+              subBuilder = entity_.toBuilder();
+            }
+            entity_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkId.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(entity_);
+              entity_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 18: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              verificationFields_ = com.google.protobuf.MapField.newMapField(
+                  VerificationFieldsDefaultEntryHolder.defaultEntry);
+              mutable_bitField0_ |= 0x00000001;
+            }
+            com.google.protobuf.MapEntry<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value>
+            verificationFields__ = input.readMessage(
+                VerificationFieldsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+            verificationFields_.getMutableMap().put(
+                verificationFields__.getKey(), verificationFields__.getValue());
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.integrationspublic.ServiceProto.internal_static_api_v1alpha1_integrationspublic_SubmitVerificationReq_descriptor;
@@ -73,7 +142,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkIdOrBuilder getEntityOrBuilder() {
-    return entity_ == null ? com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkId.getDefaultInstance() : entity_;
+    return getEntity();
   }
 
   public static final int VERIFICATION_FIELDS_FIELD_NUMBER = 2;
@@ -88,7 +157,6 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.MESSAGE,
                 com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value.getDefaultInstance());
   }
-  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value> verificationFields_;
   private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value>
@@ -99,6 +167,7 @@ private static final long serialVersionUID = 0L;
     }
     return verificationFields_;
   }
+
   public int getVerificationFieldsCount() {
     return internalGetVerificationFields().getMap().size();
   }
@@ -109,10 +178,11 @@ private static final long serialVersionUID = 0L;
    *
    * <code>map&lt;string, .api.v1alpha1.integrationspublic.Value&gt; verification_fields = 2 [json_name = "verificationFields"];</code>
    */
+
   @java.lang.Override
   public boolean containsVerificationFields(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     return internalGetVerificationFields().getMap().containsKey(key);
   }
   /**
@@ -131,6 +201,7 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, .api.v1alpha1.integrationspublic.Value&gt; verification_fields = 2 [json_name = "verificationFields"];</code>
    */
   @java.lang.Override
+
   public java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value> getVerificationFieldsMap() {
     return internalGetVerificationFields().getMap();
   }
@@ -142,12 +213,11 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, .api.v1alpha1.integrationspublic.Value&gt; verification_fields = 2 [json_name = "verificationFields"];</code>
    */
   @java.lang.Override
-  public /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value getVerificationFieldsOrDefault(
+
+  public com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value getVerificationFieldsOrDefault(
       java.lang.String key,
-      /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
-    if (key == null) { throw new NullPointerException("map key"); }
+      com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value> map =
         internalGetVerificationFields().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -160,9 +230,10 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
    * <code>map&lt;string, .api.v1alpha1.integrationspublic.Value&gt; verification_fields = 2 [json_name = "verificationFields"];</code>
    */
   @java.lang.Override
+
   public com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value getVerificationFieldsOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value> map =
         internalGetVerificationFields().getMap();
     if (!map.containsKey(key)) {
@@ -194,7 +265,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
         internalGetVerificationFields(),
         VerificationFieldsDefaultEntryHolder.defaultEntry,
         2);
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -217,7 +288,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, verificationFields__);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -239,7 +310,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
     }
     if (!internalGetVerificationFields().equals(
         other.internalGetVerificationFields())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -258,7 +329,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
       hash = (37 * hash) + VERIFICATION_FIELDS_FIELD_NUMBER;
       hash = (53 * hash) + internalGetVerificationFields().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -307,13 +378,11 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitVerificationReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitVerificationReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -399,21 +468,26 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitVerificationReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      entity_ = null;
-      if (entityBuilder_ != null) {
-        entityBuilder_.dispose();
+      if (entityBuilder_ == null) {
+        entity_ = null;
+      } else {
+        entity_ = null;
         entityBuilder_ = null;
       }
       internalGetMutableVerificationFields().clear();
@@ -443,22 +517,16 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitVerificationReq buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitVerificationReq result = new com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitVerificationReq(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      int from_bitField0_ = bitField0_;
+      if (entityBuilder_ == null) {
+        result.entity_ = entity_;
+      } else {
+        result.entity_ = entityBuilder_.build();
+      }
+      result.verificationFields_ = internalGetVerificationFields();
+      result.verificationFields_.makeImmutable();
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitVerificationReq result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.entity_ = entityBuilder_ == null
-            ? entity_
-            : entityBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.verificationFields_ = internalGetVerificationFields();
-        result.verificationFields_.makeImmutable();
-      }
     }
 
     @java.lang.Override
@@ -510,8 +578,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
       }
       internalGetMutableVerificationFields().mergeFrom(
           other.internalGetVerificationFields());
-      bitField0_ |= 0x00000002;
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -526,46 +593,17 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitVerificationReq parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              input.readMessage(
-                  getEntityFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              com.google.protobuf.MapEntry<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value>
-              verificationFields__ = input.readMessage(
-                  VerificationFieldsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              internalGetMutableVerificationFields().getMutableMap().put(
-                  verificationFields__.getKey(), verificationFields__.getValue());
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitVerificationReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -578,7 +616,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
      * @return Whether the entity field is set.
      */
     public boolean hasEntity() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return entityBuilder_ != null || entity_ != null;
     }
     /**
      * <code>.api.v1alpha1.integrationspublic.PortalLinkId entity = 1 [json_name = "entity"];</code>
@@ -600,11 +638,11 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
           throw new NullPointerException();
         }
         entity_ = value;
+        onChanged();
       } else {
         entityBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -614,11 +652,11 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
         com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkId.Builder builderForValue) {
       if (entityBuilder_ == null) {
         entity_ = builderForValue.build();
+        onChanged();
       } else {
         entityBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -626,38 +664,38 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
      */
     public Builder mergeEntity(com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkId value) {
       if (entityBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          entity_ != null &&
-          entity_ != com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkId.getDefaultInstance()) {
-          getEntityBuilder().mergeFrom(value);
+        if (entity_ != null) {
+          entity_ =
+            com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkId.newBuilder(entity_).mergeFrom(value).buildPartial();
         } else {
           entity_ = value;
         }
+        onChanged();
       } else {
         entityBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v1alpha1.integrationspublic.PortalLinkId entity = 1 [json_name = "entity"];</code>
      */
     public Builder clearEntity() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      entity_ = null;
-      if (entityBuilder_ != null) {
-        entityBuilder_.dispose();
+      if (entityBuilder_ == null) {
+        entity_ = null;
+        onChanged();
+      } else {
+        entity_ = null;
         entityBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v1alpha1.integrationspublic.PortalLinkId entity = 1 [json_name = "entity"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.integrationspublic.PortalLinkId.Builder getEntityBuilder() {
-      bitField0_ |= 0x00000001;
+      
       onChanged();
       return getEntityFieldBuilder().getBuilder();
     }
@@ -692,7 +730,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
     private com.google.protobuf.MapField<
         java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value> verificationFields_;
     private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value>
-        internalGetVerificationFields() {
+    internalGetVerificationFields() {
       if (verificationFields_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             VerificationFieldsDefaultEntryHolder.defaultEntry);
@@ -700,7 +738,8 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
       return verificationFields_;
     }
     private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value>
-        internalGetMutableVerificationFields() {
+    internalGetMutableVerificationFields() {
+      onChanged();;
       if (verificationFields_ == null) {
         verificationFields_ = com.google.protobuf.MapField.newMapField(
             VerificationFieldsDefaultEntryHolder.defaultEntry);
@@ -708,10 +747,9 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
       if (!verificationFields_.isMutable()) {
         verificationFields_ = verificationFields_.copy();
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
       return verificationFields_;
     }
+
     public int getVerificationFieldsCount() {
       return internalGetVerificationFields().getMap().size();
     }
@@ -722,10 +760,11 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
      *
      * <code>map&lt;string, .api.v1alpha1.integrationspublic.Value&gt; verification_fields = 2 [json_name = "verificationFields"];</code>
      */
+
     @java.lang.Override
     public boolean containsVerificationFields(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetVerificationFields().getMap().containsKey(key);
     }
     /**
@@ -744,6 +783,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
      * <code>map&lt;string, .api.v1alpha1.integrationspublic.Value&gt; verification_fields = 2 [json_name = "verificationFields"];</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value> getVerificationFieldsMap() {
       return internalGetVerificationFields().getMap();
     }
@@ -755,12 +795,11 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
      * <code>map&lt;string, .api.v1alpha1.integrationspublic.Value&gt; verification_fields = 2 [json_name = "verificationFields"];</code>
      */
     @java.lang.Override
-    public /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value getVerificationFieldsOrDefault(
+
+    public com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value getVerificationFieldsOrDefault(
         java.lang.String key,
-        /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+        com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value> map =
           internalGetVerificationFields().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -773,9 +812,10 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
      * <code>map&lt;string, .api.v1alpha1.integrationspublic.Value&gt; verification_fields = 2 [json_name = "verificationFields"];</code>
      */
     @java.lang.Override
+
     public com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value getVerificationFieldsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value> map =
           internalGetVerificationFields().getMap();
       if (!map.containsKey(key)) {
@@ -783,8 +823,8 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
       }
       return map.get(key);
     }
+
     public Builder clearVerificationFields() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       internalGetMutableVerificationFields().getMutableMap()
           .clear();
       return this;
@@ -796,9 +836,10 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
      *
      * <code>map&lt;string, .api.v1alpha1.integrationspublic.Value&gt; verification_fields = 2 [json_name = "verificationFields"];</code>
      */
+
     public Builder removeVerificationFields(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableVerificationFields().getMutableMap()
           .remove(key);
       return this;
@@ -808,8 +849,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value>
-        getMutableVerificationFields() {
-      bitField0_ |= 0x00000002;
+    getMutableVerificationFields() {
       return internalGetMutableVerificationFields().getMutableMap();
     }
     /**
@@ -822,11 +862,10 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
     public Builder putVerificationFields(
         java.lang.String key,
         com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value value) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      if (value == null) { throw new NullPointerException("map value"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (value == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableVerificationFields().getMutableMap()
           .put(key, value);
-      bitField0_ |= 0x00000002;
       return this;
     }
     /**
@@ -836,11 +875,11 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
      *
      * <code>map&lt;string, .api.v1alpha1.integrationspublic.Value&gt; verification_fields = 2 [json_name = "verificationFields"];</code>
      */
+
     public Builder putAllVerificationFields(
         java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value> values) {
       internalGetMutableVerificationFields().getMutableMap()
           .putAll(values);
-      bitField0_ |= 0x00000002;
       return this;
     }
     @java.lang.Override
@@ -876,18 +915,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new SubmitVerificationReq(input, extensionRegistry);
     }
   };
 

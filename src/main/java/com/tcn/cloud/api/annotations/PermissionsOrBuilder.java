@@ -63,8 +63,6 @@ public interface PermissionsOrBuilder extends
    * </pre>
    *
    * <code>optional bool wip = 2 [default = false, json_name = "wip", deprecated = true];</code>
-   * @deprecated annotations.Permissions.wip is deprecated.
-   *     See annotations/authz.proto;l=19
    * @return Whether the wip field is set.
    */
   @java.lang.Deprecated boolean hasWip();
@@ -75,8 +73,6 @@ public interface PermissionsOrBuilder extends
    * </pre>
    *
    * <code>optional bool wip = 2 [default = false, json_name = "wip", deprecated = true];</code>
-   * @deprecated annotations.Permissions.wip is deprecated.
-   *     See annotations/authz.proto;l=19
    * @return The wip.
    */
   @java.lang.Deprecated boolean getWip();

@@ -29,6 +29,91 @@ private static final long serialVersionUID = 0L;
     return new ShiftSegment();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private ShiftSegment(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+
+            shiftSegmentSid_ = input.readInt64();
+            break;
+          }
+          case 16: {
+
+            shiftInstanceSid_ = input.readInt64();
+            break;
+          }
+          case 24: {
+
+            orderInShiftInstance_ = input.readInt32();
+            break;
+          }
+          case 32: {
+
+            widthInMinutes_ = input.readInt32();
+            break;
+          }
+          case 40: {
+
+            startMinuteInShift_ = input.readInt32();
+            break;
+          }
+          case 56: {
+
+            schedulingActivitySid_ = input.readInt64();
+            break;
+          }
+          case 66: {
+            com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingActivity.Builder subBuilder = null;
+            if (schedulingActivity_ != null) {
+              subBuilder = schedulingActivity_.toBuilder();
+            }
+            schedulingActivity_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingActivity.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(schedulingActivity_);
+              schedulingActivity_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ShiftSegment_descriptor;
@@ -43,7 +128,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SHIFT_SEGMENT_SID_FIELD_NUMBER = 1;
-  private long shiftSegmentSid_ = 0L;
+  private long shiftSegmentSid_;
   /**
    * <pre>
    * ID of this shift segment.
@@ -58,7 +143,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SHIFT_INSTANCE_SID_FIELD_NUMBER = 2;
-  private long shiftInstanceSid_ = 0L;
+  private long shiftInstanceSid_;
   /**
    * <pre>
    * ID of the shift instance that this segment belongs to.
@@ -73,7 +158,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ORDER_IN_SHIFT_INSTANCE_FIELD_NUMBER = 3;
-  private int orderInShiftInstance_ = 0;
+  private int orderInShiftInstance_;
   /**
    * <pre>
    * Order that this segment has in it's parent shift instance.
@@ -88,7 +173,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WIDTH_IN_MINUTES_FIELD_NUMBER = 4;
-  private int widthInMinutes_ = 0;
+  private int widthInMinutes_;
   /**
    * <pre>
    * Width of this shift segment in minutes.
@@ -103,7 +188,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int START_MINUTE_IN_SHIFT_FIELD_NUMBER = 5;
-  private int startMinuteInShift_ = 0;
+  private int startMinuteInShift_;
   /**
    * <pre>
    * How long after the shift instance start time, the segment to begin.
@@ -118,7 +203,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SCHEDULING_ACTIVITY_SID_FIELD_NUMBER = 7;
-  private long schedulingActivitySid_ = 0L;
+  private long schedulingActivitySid_;
   /**
    * <pre>
    * Scheduling activity sid of this shift segment.
@@ -170,7 +255,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingActivityOrBuilder getSchedulingActivityOrBuilder() {
-    return schedulingActivity_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingActivity.getDefaultInstance() : schedulingActivity_;
+    return getSchedulingActivity();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -208,7 +293,7 @@ private static final long serialVersionUID = 0L;
     if (schedulingActivity_ != null) {
       output.writeMessage(8, getSchedulingActivity());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -245,7 +330,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getSchedulingActivity());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -277,7 +362,7 @@ private static final long serialVersionUID = 0L;
       if (!getSchedulingActivity()
           .equals(other.getSchedulingActivity())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -307,7 +392,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SCHEDULING_ACTIVITY_FIELD_NUMBER;
       hash = (53 * hash) + getSchedulingActivity().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -356,13 +441,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegment parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegment parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -430,27 +513,38 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegment.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       shiftSegmentSid_ = 0L;
+
       shiftInstanceSid_ = 0L;
+
       orderInShiftInstance_ = 0;
+
       widthInMinutes_ = 0;
+
       startMinuteInShift_ = 0;
+
       schedulingActivitySid_ = 0L;
-      schedulingActivity_ = null;
-      if (schedulingActivityBuilder_ != null) {
-        schedulingActivityBuilder_.dispose();
+
+      if (schedulingActivityBuilder_ == null) {
+        schedulingActivity_ = null;
+      } else {
+        schedulingActivity_ = null;
         schedulingActivityBuilder_ = null;
       }
       return this;
@@ -479,36 +573,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegment buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegment result = new com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegment(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.shiftSegmentSid_ = shiftSegmentSid_;
+      result.shiftInstanceSid_ = shiftInstanceSid_;
+      result.orderInShiftInstance_ = orderInShiftInstance_;
+      result.widthInMinutes_ = widthInMinutes_;
+      result.startMinuteInShift_ = startMinuteInShift_;
+      result.schedulingActivitySid_ = schedulingActivitySid_;
+      if (schedulingActivityBuilder_ == null) {
+        result.schedulingActivity_ = schedulingActivity_;
+      } else {
+        result.schedulingActivity_ = schedulingActivityBuilder_.build();
+      }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegment result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.shiftSegmentSid_ = shiftSegmentSid_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.shiftInstanceSid_ = shiftInstanceSid_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.orderInShiftInstance_ = orderInShiftInstance_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.widthInMinutes_ = widthInMinutes_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.startMinuteInShift_ = startMinuteInShift_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.schedulingActivitySid_ = schedulingActivitySid_;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.schedulingActivity_ = schedulingActivityBuilder_ == null
-            ? schedulingActivity_
-            : schedulingActivityBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -576,7 +653,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasSchedulingActivity()) {
         mergeSchedulingActivity(other.getSchedulingActivity());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -591,70 +668,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegment parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              shiftSegmentSid_ = input.readInt64();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 16: {
-              shiftInstanceSid_ = input.readInt64();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 16
-            case 24: {
-              orderInShiftInstance_ = input.readInt32();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 24
-            case 32: {
-              widthInMinutes_ = input.readInt32();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 32
-            case 40: {
-              startMinuteInShift_ = input.readInt32();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 40
-            case 56: {
-              schedulingActivitySid_ = input.readInt64();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 56
-            case 66: {
-              input.readMessage(
-                  getSchedulingActivityFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 66
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.ShiftSegment) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private long shiftSegmentSid_ ;
     /**
@@ -679,9 +705,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setShiftSegmentSid(long value) {
-
+      
       shiftSegmentSid_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -694,7 +719,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearShiftSegmentSid() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       shiftSegmentSid_ = 0L;
       onChanged();
       return this;
@@ -723,9 +748,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setShiftInstanceSid(long value) {
-
+      
       shiftInstanceSid_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -738,7 +762,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearShiftInstanceSid() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       shiftInstanceSid_ = 0L;
       onChanged();
       return this;
@@ -767,9 +791,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOrderInShiftInstance(int value) {
-
+      
       orderInShiftInstance_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -782,7 +805,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOrderInShiftInstance() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       orderInShiftInstance_ = 0;
       onChanged();
       return this;
@@ -811,9 +834,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWidthInMinutes(int value) {
-
+      
       widthInMinutes_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -826,7 +848,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWidthInMinutes() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      
       widthInMinutes_ = 0;
       onChanged();
       return this;
@@ -855,9 +877,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStartMinuteInShift(int value) {
-
+      
       startMinuteInShift_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -870,7 +891,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStartMinuteInShift() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      
       startMinuteInShift_ = 0;
       onChanged();
       return this;
@@ -899,9 +920,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSchedulingActivitySid(long value) {
-
+      
       schedulingActivitySid_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -914,7 +934,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSchedulingActivitySid() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      
       schedulingActivitySid_ = 0L;
       onChanged();
       return this;
@@ -933,7 +953,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the schedulingActivity field is set.
      */
     public boolean hasSchedulingActivity() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return schedulingActivityBuilder_ != null || schedulingActivity_ != null;
     }
     /**
      * <pre>
@@ -965,11 +985,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         schedulingActivity_ = value;
+        onChanged();
       } else {
         schedulingActivityBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+
       return this;
     }
     /**
@@ -984,11 +1004,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingActivity.Builder builderForValue) {
       if (schedulingActivityBuilder_ == null) {
         schedulingActivity_ = builderForValue.build();
+        onChanged();
       } else {
         schedulingActivityBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+
       return this;
     }
     /**
@@ -1001,18 +1021,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeSchedulingActivity(com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingActivity value) {
       if (schedulingActivityBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0) &&
-          schedulingActivity_ != null &&
-          schedulingActivity_ != com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingActivity.getDefaultInstance()) {
-          getSchedulingActivityBuilder().mergeFrom(value);
+        if (schedulingActivity_ != null) {
+          schedulingActivity_ =
+            com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingActivity.newBuilder(schedulingActivity_).mergeFrom(value).buildPartial();
         } else {
           schedulingActivity_ = value;
         }
+        onChanged();
       } else {
         schedulingActivityBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+
       return this;
     }
     /**
@@ -1024,13 +1043,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.wfm.SchedulingActivity scheduling_activity = 8 [json_name = "schedulingActivity"];</code>
      */
     public Builder clearSchedulingActivity() {
-      bitField0_ = (bitField0_ & ~0x00000040);
-      schedulingActivity_ = null;
-      if (schedulingActivityBuilder_ != null) {
-        schedulingActivityBuilder_.dispose();
+      if (schedulingActivityBuilder_ == null) {
+        schedulingActivity_ = null;
+        onChanged();
+      } else {
+        schedulingActivity_ = null;
         schedulingActivityBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -1042,7 +1062,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.wfm.SchedulingActivity scheduling_activity = 8 [json_name = "schedulingActivity"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.SchedulingActivity.Builder getSchedulingActivityBuilder() {
-      bitField0_ |= 0x00000040;
+      
       onChanged();
       return getSchedulingActivityFieldBuilder().getBuilder();
     }
@@ -1116,18 +1136,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new ShiftSegment(input, extensionRegistry);
     }
   };
 

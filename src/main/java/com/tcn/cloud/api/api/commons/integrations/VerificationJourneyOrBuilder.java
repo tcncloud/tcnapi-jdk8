@@ -14,8 +14,6 @@ public interface VerificationJourneyOrBuilder extends
    * </pre>
    *
    * <code>string date_of_birth_field = 1 [json_name = "dateOfBirthField", deprecated = true];</code>
-   * @deprecated api.commons.integrations.VerificationJourney.date_of_birth_field is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=787
    * @return The dateOfBirthField.
    */
   @java.lang.Deprecated java.lang.String getDateOfBirthField();
@@ -26,8 +24,6 @@ public interface VerificationJourneyOrBuilder extends
    * </pre>
    *
    * <code>string date_of_birth_field = 1 [json_name = "dateOfBirthField", deprecated = true];</code>
-   * @deprecated api.commons.integrations.VerificationJourney.date_of_birth_field is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=787
    * @return The bytes for dateOfBirthField.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -40,8 +36,6 @@ public interface VerificationJourneyOrBuilder extends
    * </pre>
    *
    * <code>string last_name_field = 2 [json_name = "lastNameField", deprecated = true];</code>
-   * @deprecated api.commons.integrations.VerificationJourney.last_name_field is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=790
    * @return The lastNameField.
    */
   @java.lang.Deprecated java.lang.String getLastNameField();
@@ -52,8 +46,6 @@ public interface VerificationJourneyOrBuilder extends
    * </pre>
    *
    * <code>string last_name_field = 2 [json_name = "lastNameField", deprecated = true];</code>
-   * @deprecated api.commons.integrations.VerificationJourney.last_name_field is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=790
    * @return The bytes for lastNameField.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -66,8 +58,6 @@ public interface VerificationJourneyOrBuilder extends
    * </pre>
    *
    * <code>string first_name_field = 3 [json_name = "firstNameField", deprecated = true];</code>
-   * @deprecated api.commons.integrations.VerificationJourney.first_name_field is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=793
    * @return The firstNameField.
    */
   @java.lang.Deprecated java.lang.String getFirstNameField();
@@ -78,8 +68,6 @@ public interface VerificationJourneyOrBuilder extends
    * </pre>
    *
    * <code>string first_name_field = 3 [json_name = "firstNameField", deprecated = true];</code>
-   * @deprecated api.commons.integrations.VerificationJourney.first_name_field is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=793
    * @return The bytes for firstNameField.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -92,8 +80,6 @@ public interface VerificationJourneyOrBuilder extends
    * </pre>
    *
    * <code>string zip_field = 4 [json_name = "zipField", deprecated = true];</code>
-   * @deprecated api.commons.integrations.VerificationJourney.zip_field is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=796
    * @return The zipField.
    */
   @java.lang.Deprecated java.lang.String getZipField();
@@ -104,8 +90,6 @@ public interface VerificationJourneyOrBuilder extends
    * </pre>
    *
    * <code>string zip_field = 4 [json_name = "zipField", deprecated = true];</code>
-   * @deprecated api.commons.integrations.VerificationJourney.zip_field is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=796
    * @return The bytes for zipField.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -118,8 +102,6 @@ public interface VerificationJourneyOrBuilder extends
    * </pre>
    *
    * <code>string last4_ssn = 5 [json_name = "last4Ssn", deprecated = true];</code>
-   * @deprecated api.commons.integrations.VerificationJourney.last4_ssn is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=799
    * @return The last4Ssn.
    */
   @java.lang.Deprecated java.lang.String getLast4Ssn();
@@ -130,8 +112,6 @@ public interface VerificationJourneyOrBuilder extends
    * </pre>
    *
    * <code>string last4_ssn = 5 [json_name = "last4Ssn", deprecated = true];</code>
-   * @deprecated api.commons.integrations.VerificationJourney.last4_ssn is deprecated.
-   *     See api/commons/integrations/integrations.proto;l=799
    * @return The bytes for last4Ssn.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString

@@ -22,5 +22,5 @@ public interface SentinelEventOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.LogEventOrBuilder getLogEventOrBuilder();
 
-  com.tcn.cloud.api.api.v0alpha.SentinelEvent.EventCase getEventCase();
+  public com.tcn.cloud.api.api.v0alpha.SentinelEvent.EventCase getEventCase();
 }

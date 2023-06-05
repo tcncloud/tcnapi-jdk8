@@ -37,5 +37,5 @@ public interface CFSExportReqOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.RecordProtoOrBuilder getRecordOrBuilder();
 
-  com.tcn.cloud.api.api.v0alpha.CFSExportReq.RequestCase getRequestCase();
+  public com.tcn.cloud.api.api.v0alpha.CFSExportReq.RequestCase getRequestCase();
 }

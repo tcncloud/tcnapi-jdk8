@@ -25,6 +25,79 @@ private static final long serialVersionUID = 0L;
     return new VoiceSession();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private VoiceSession(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+
+            voiceSessionSid_ = input.readInt64();
+            break;
+          }
+          case 18: {
+            com.google.protobuf.Timestamp.Builder subBuilder = null;
+            if (voiceSessionStart_ != null) {
+              subBuilder = voiceSessionStart_.toBuilder();
+            }
+            voiceSessionStart_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(voiceSessionStart_);
+              voiceSessionStart_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 26: {
+            com.google.protobuf.Timestamp.Builder subBuilder = null;
+            if (voiceSessionEnd_ != null) {
+              subBuilder = voiceSessionEnd_.toBuilder();
+            }
+            voiceSessionEnd_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(voiceSessionEnd_);
+              voiceSessionEnd_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.asm.ServiceProto.internal_static_api_v1alpha1_asm_VoiceSession_descriptor;
@@ -39,7 +112,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VOICE_SESSION_SID_FIELD_NUMBER = 1;
-  private long voiceSessionSid_ = 0L;
+  private long voiceSessionSid_;
   /**
    * <code>int64 voice_session_sid = 1 [json_name = "voiceSessionSid"];</code>
    * @return The voiceSessionSid.
@@ -72,7 +145,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getVoiceSessionStartOrBuilder() {
-    return voiceSessionStart_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : voiceSessionStart_;
+    return getVoiceSessionStart();
   }
 
   public static final int VOICE_SESSION_END_FIELD_NUMBER = 3;
@@ -98,7 +171,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getVoiceSessionEndOrBuilder() {
-    return voiceSessionEnd_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : voiceSessionEnd_;
+    return getVoiceSessionEnd();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -124,7 +197,7 @@ private static final long serialVersionUID = 0L;
     if (voiceSessionEnd_ != null) {
       output.writeMessage(3, getVoiceSessionEnd());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -145,7 +218,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getVoiceSessionEnd());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -172,7 +245,7 @@ private static final long serialVersionUID = 0L;
       if (!getVoiceSessionEnd()
           .equals(other.getVoiceSessionEnd())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -194,7 +267,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + VOICE_SESSION_END_FIELD_NUMBER;
       hash = (53 * hash) + getVoiceSessionEnd().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -243,13 +316,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.asm.VoiceSession parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.asm.VoiceSession parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -313,27 +384,34 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.asm.VoiceSession.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       voiceSessionSid_ = 0L;
-      voiceSessionStart_ = null;
-      if (voiceSessionStartBuilder_ != null) {
-        voiceSessionStartBuilder_.dispose();
+
+      if (voiceSessionStartBuilder_ == null) {
+        voiceSessionStart_ = null;
+      } else {
+        voiceSessionStart_ = null;
         voiceSessionStartBuilder_ = null;
       }
-      voiceSessionEnd_ = null;
-      if (voiceSessionEndBuilder_ != null) {
-        voiceSessionEndBuilder_.dispose();
+      if (voiceSessionEndBuilder_ == null) {
+        voiceSessionEnd_ = null;
+      } else {
+        voiceSessionEnd_ = null;
         voiceSessionEndBuilder_ = null;
       }
       return this;
@@ -362,26 +440,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.asm.VoiceSession buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.asm.VoiceSession result = new com.tcn.cloud.api.api.v1alpha1.asm.VoiceSession(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.voiceSessionSid_ = voiceSessionSid_;
+      if (voiceSessionStartBuilder_ == null) {
+        result.voiceSessionStart_ = voiceSessionStart_;
+      } else {
+        result.voiceSessionStart_ = voiceSessionStartBuilder_.build();
+      }
+      if (voiceSessionEndBuilder_ == null) {
+        result.voiceSessionEnd_ = voiceSessionEnd_;
+      } else {
+        result.voiceSessionEnd_ = voiceSessionEndBuilder_.build();
+      }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.asm.VoiceSession result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.voiceSessionSid_ = voiceSessionSid_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.voiceSessionStart_ = voiceSessionStartBuilder_ == null
-            ? voiceSessionStart_
-            : voiceSessionStartBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.voiceSessionEnd_ = voiceSessionEndBuilder_ == null
-            ? voiceSessionEnd_
-            : voiceSessionEndBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -437,7 +508,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasVoiceSessionEnd()) {
         mergeVoiceSessionEnd(other.getVoiceSessionEnd());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -452,52 +523,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.asm.VoiceSession parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              voiceSessionSid_ = input.readInt64();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 18: {
-              input.readMessage(
-                  getVoiceSessionStartFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 26: {
-              input.readMessage(
-                  getVoiceSessionEndFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.asm.VoiceSession) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private long voiceSessionSid_ ;
     /**
@@ -514,9 +552,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setVoiceSessionSid(long value) {
-
+      
       voiceSessionSid_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -525,7 +562,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVoiceSessionSid() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       voiceSessionSid_ = 0L;
       onChanged();
       return this;
@@ -539,7 +576,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the voiceSessionStart field is set.
      */
     public boolean hasVoiceSessionStart() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return voiceSessionStartBuilder_ != null || voiceSessionStart_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp voice_session_start = 2 [json_name = "voiceSessionStart"];</code>
@@ -561,11 +598,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         voiceSessionStart_ = value;
+        onChanged();
       } else {
         voiceSessionStartBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -575,11 +612,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (voiceSessionStartBuilder_ == null) {
         voiceSessionStart_ = builderForValue.build();
+        onChanged();
       } else {
         voiceSessionStartBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -587,38 +624,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeVoiceSessionStart(com.google.protobuf.Timestamp value) {
       if (voiceSessionStartBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
-          voiceSessionStart_ != null &&
-          voiceSessionStart_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getVoiceSessionStartBuilder().mergeFrom(value);
+        if (voiceSessionStart_ != null) {
+          voiceSessionStart_ =
+            com.google.protobuf.Timestamp.newBuilder(voiceSessionStart_).mergeFrom(value).buildPartial();
         } else {
           voiceSessionStart_ = value;
         }
+        onChanged();
       } else {
         voiceSessionStartBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp voice_session_start = 2 [json_name = "voiceSessionStart"];</code>
      */
     public Builder clearVoiceSessionStart() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      voiceSessionStart_ = null;
-      if (voiceSessionStartBuilder_ != null) {
-        voiceSessionStartBuilder_.dispose();
+      if (voiceSessionStartBuilder_ == null) {
+        voiceSessionStart_ = null;
+        onChanged();
+      } else {
+        voiceSessionStart_ = null;
         voiceSessionStartBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp voice_session_start = 2 [json_name = "voiceSessionStart"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getVoiceSessionStartBuilder() {
-      bitField0_ |= 0x00000002;
+      
       onChanged();
       return getVoiceSessionStartFieldBuilder().getBuilder();
     }
@@ -658,7 +695,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the voiceSessionEnd field is set.
      */
     public boolean hasVoiceSessionEnd() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return voiceSessionEndBuilder_ != null || voiceSessionEnd_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp voice_session_end = 3 [json_name = "voiceSessionEnd"];</code>
@@ -680,11 +717,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         voiceSessionEnd_ = value;
+        onChanged();
       } else {
         voiceSessionEndBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -694,11 +731,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (voiceSessionEndBuilder_ == null) {
         voiceSessionEnd_ = builderForValue.build();
+        onChanged();
       } else {
         voiceSessionEndBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -706,38 +743,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeVoiceSessionEnd(com.google.protobuf.Timestamp value) {
       if (voiceSessionEndBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0) &&
-          voiceSessionEnd_ != null &&
-          voiceSessionEnd_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getVoiceSessionEndBuilder().mergeFrom(value);
+        if (voiceSessionEnd_ != null) {
+          voiceSessionEnd_ =
+            com.google.protobuf.Timestamp.newBuilder(voiceSessionEnd_).mergeFrom(value).buildPartial();
         } else {
           voiceSessionEnd_ = value;
         }
+        onChanged();
       } else {
         voiceSessionEndBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp voice_session_end = 3 [json_name = "voiceSessionEnd"];</code>
      */
     public Builder clearVoiceSessionEnd() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      voiceSessionEnd_ = null;
-      if (voiceSessionEndBuilder_ != null) {
-        voiceSessionEndBuilder_.dispose();
+      if (voiceSessionEndBuilder_ == null) {
+        voiceSessionEnd_ = null;
+        onChanged();
+      } else {
+        voiceSessionEnd_ = null;
         voiceSessionEndBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp voice_session_end = 3 [json_name = "voiceSessionEnd"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getVoiceSessionEndBuilder() {
-      bitField0_ |= 0x00000004;
+      
       onChanged();
       return getVoiceSessionEndFieldBuilder().getBuilder();
     }
@@ -801,18 +838,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new VoiceSession(input, extensionRegistry);
     }
   };
 

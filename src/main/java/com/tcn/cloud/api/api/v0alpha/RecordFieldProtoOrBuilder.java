@@ -21,11 +21,6 @@ public interface RecordFieldProtoOrBuilder extends
 
   /**
    * <code>string string_value = 2 [json_name = "stringValue"];</code>
-   * @return Whether the stringValue field is set.
-   */
-  boolean hasStringValue();
-  /**
-   * <code>string string_value = 2 [json_name = "stringValue"];</code>
    * @return The stringValue.
    */
   java.lang.String getStringValue();
@@ -38,20 +33,10 @@ public interface RecordFieldProtoOrBuilder extends
 
   /**
    * <code>double number_value = 3 [json_name = "numberValue"];</code>
-   * @return Whether the numberValue field is set.
-   */
-  boolean hasNumberValue();
-  /**
-   * <code>double number_value = 3 [json_name = "numberValue"];</code>
    * @return The numberValue.
    */
   double getNumberValue();
 
-  /**
-   * <code>bool bool_value = 4 [json_name = "boolValue"];</code>
-   * @return Whether the boolValue field is set.
-   */
-  boolean hasBoolValue();
   /**
    * <code>bool bool_value = 4 [json_name = "boolValue"];</code>
    * @return The boolValue.
@@ -208,5 +193,5 @@ public interface RecordFieldProtoOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.EnrichedZipOrBuilder getEnrichedZipOrBuilder();
 
-  com.tcn.cloud.api.api.v0alpha.RecordFieldProto.PayloadCase getPayloadCase();
+  public com.tcn.cloud.api.api.v0alpha.RecordFieldProto.PayloadCase getPayloadCase();
 }

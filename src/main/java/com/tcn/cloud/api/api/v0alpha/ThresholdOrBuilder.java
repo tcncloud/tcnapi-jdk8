@@ -9,20 +9,10 @@ public interface ThresholdOrBuilder extends
 
   /**
    * <code>int64 static_threshold = 3 [json_name = "staticThreshold"];</code>
-   * @return Whether the staticThreshold field is set.
-   */
-  boolean hasStaticThreshold();
-  /**
-   * <code>int64 static_threshold = 3 [json_name = "staticThreshold"];</code>
    * @return The staticThreshold.
    */
   long getStaticThreshold();
 
-  /**
-   * <code>string data_point_threshold = 4 [json_name = "dataPointThreshold"];</code>
-   * @return Whether the dataPointThreshold field is set.
-   */
-  boolean hasDataPointThreshold();
   /**
    * <code>string data_point_threshold = 4 [json_name = "dataPointThreshold"];</code>
    * @return The dataPointThreshold.
@@ -35,5 +25,5 @@ public interface ThresholdOrBuilder extends
   com.google.protobuf.ByteString
       getDataPointThresholdBytes();
 
-  com.tcn.cloud.api.api.v0alpha.Threshold.ThresholdTypeCase getThresholdTypeCase();
+  public com.tcn.cloud.api.api.v0alpha.Threshold.ThresholdTypeCase getThresholdTypeCase();
 }

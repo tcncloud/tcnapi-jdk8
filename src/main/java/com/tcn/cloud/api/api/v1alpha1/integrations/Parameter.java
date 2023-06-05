@@ -35,6 +35,111 @@ private static final long serialVersionUID = 0L;
     return new Parameter();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private Parameter(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            name_ = s;
+            break;
+          }
+          case 16: {
+            int rawValue = input.readEnum();
+
+            paramType_ = rawValue;
+            break;
+          }
+          case 24: {
+
+            required_ = input.readBool();
+            break;
+          }
+          case 34: {
+            com.tcn.cloud.api.api.v1alpha1.integrations.Value.Builder subBuilder = null;
+            if (defaultValue_ != null) {
+              subBuilder = defaultValue_.toBuilder();
+            }
+            defaultValue_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.integrations.Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(defaultValue_);
+              defaultValue_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 42: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            displayName_ = s;
+            break;
+          }
+          case 48: {
+
+            sensitive_ = input.readBool();
+            break;
+          }
+          case 56: {
+
+            runtimeParam_ = input.readBool();
+            break;
+          }
+          case 66: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            helperText_ = s;
+            break;
+          }
+          case 72: {
+
+            templateLocked_ = input.readBool();
+            break;
+          }
+          case 80: {
+            int rawValue = input.readEnum();
+
+            validation_ = rawValue;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_Parameter_descriptor;
@@ -49,8 +154,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object name_ = "";
+  private volatile java.lang.Object name_;
   /**
    * <pre>
    * name of parameter. This will be the key of the field in the request payload
@@ -96,7 +200,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PARAM_TYPE_FIELD_NUMBER = 2;
-  private int paramType_ = 0;
+  private int paramType_;
   /**
    * <pre>
    * the type of the field. The value of the key value pair needs to be this type in the request payload
@@ -119,12 +223,13 @@ private static final long serialVersionUID = 0L;
    * @return The paramType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.ValueType getParamType() {
-    com.tcn.cloud.api.api.commons.integrations.ValueType result = com.tcn.cloud.api.api.commons.integrations.ValueType.forNumber(paramType_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.integrations.ValueType result = com.tcn.cloud.api.api.commons.integrations.ValueType.valueOf(paramType_);
     return result == null ? com.tcn.cloud.api.api.commons.integrations.ValueType.UNRECOGNIZED : result;
   }
 
   public static final int REQUIRED_FIELD_NUMBER = 3;
-  private boolean required_ = false;
+  private boolean required_;
   /**
    * <pre>
    * if the field must appear in the request payload or not
@@ -173,12 +278,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.integrations.ValueOrBuilder getDefaultValueOrBuilder() {
-    return defaultValue_ == null ? com.tcn.cloud.api.api.v1alpha1.integrations.Value.getDefaultInstance() : defaultValue_;
+    return getDefaultValue();
   }
 
   public static final int DISPLAY_NAME_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object displayName_ = "";
+  private volatile java.lang.Object displayName_;
   /**
    * <pre>
    * some names are really ugly, display names are what the user should be shown
@@ -224,7 +328,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SENSITIVE_FIELD_NUMBER = 6;
-  private boolean sensitive_ = false;
+  private boolean sensitive_;
   /**
    * <pre>
    * means we won't be storing in the database (and there is no way to override)
@@ -239,7 +343,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RUNTIME_PARAM_FIELD_NUMBER = 7;
-  private boolean runtimeParam_ = false;
+  private boolean runtimeParam_;
   /**
    * <pre>
    * whether this value can be stored in an integration config.
@@ -257,8 +361,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HELPER_TEXT_FIELD_NUMBER = 8;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object helperText_ = "";
+  private volatile java.lang.Object helperText_;
   /**
    * <pre>
    * tool tip info about the param
@@ -304,7 +407,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TEMPLATE_LOCKED_FIELD_NUMBER = 9;
-  private boolean templateLocked_ = false;
+  private boolean templateLocked_;
   /**
    * <pre>
    * means the parameter is not allowed to be editted in the template builder.
@@ -323,7 +426,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VALIDATION_FIELD_NUMBER = 10;
-  private int validation_ = 0;
+  private int validation_;
   /**
    * <pre>
    * what type of data value we accept
@@ -344,7 +447,8 @@ private static final long serialVersionUID = 0L;
    * @return The validation.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.Validation getValidation() {
-    com.tcn.cloud.api.api.commons.integrations.Validation result = com.tcn.cloud.api.api.commons.integrations.Validation.forNumber(validation_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.integrations.Validation result = com.tcn.cloud.api.api.commons.integrations.Validation.valueOf(validation_);
     return result == null ? com.tcn.cloud.api.api.commons.integrations.Validation.UNRECOGNIZED : result;
   }
 
@@ -362,7 +466,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+    if (!getNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
     }
     if (paramType_ != com.tcn.cloud.api.api.commons.integrations.ValueType.VALUE_TYPE_UNKNOWN.getNumber()) {
@@ -374,7 +478,7 @@ private static final long serialVersionUID = 0L;
     if (defaultValue_ != null) {
       output.writeMessage(4, getDefaultValue());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayName_)) {
+    if (!getDisplayNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, displayName_);
     }
     if (sensitive_ != false) {
@@ -383,7 +487,7 @@ private static final long serialVersionUID = 0L;
     if (runtimeParam_ != false) {
       output.writeBool(7, runtimeParam_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(helperText_)) {
+    if (!getHelperTextBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 8, helperText_);
     }
     if (templateLocked_ != false) {
@@ -392,7 +496,7 @@ private static final long serialVersionUID = 0L;
     if (validation_ != com.tcn.cloud.api.api.commons.integrations.Validation.VALIDATION_NONE.getNumber()) {
       output.writeEnum(10, validation_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -401,7 +505,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+    if (!getNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
     }
     if (paramType_ != com.tcn.cloud.api.api.commons.integrations.ValueType.VALUE_TYPE_UNKNOWN.getNumber()) {
@@ -416,7 +520,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getDefaultValue());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayName_)) {
+    if (!getDisplayNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, displayName_);
     }
     if (sensitive_ != false) {
@@ -427,7 +531,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(7, runtimeParam_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(helperText_)) {
+    if (!getHelperTextBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, helperText_);
     }
     if (templateLocked_ != false) {
@@ -438,7 +542,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(10, validation_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -474,7 +578,7 @@ private static final long serialVersionUID = 0L;
     if (getTemplateLocked()
         != other.getTemplateLocked()) return false;
     if (validation_ != other.validation_) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -511,7 +615,7 @@ private static final long serialVersionUID = 0L;
         getTemplateLocked());
     hash = (37 * hash) + VALIDATION_FIELD_NUMBER;
     hash = (53 * hash) + validation_;
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -560,13 +664,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.integrations.Parameter parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.integrations.Parameter parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -635,32 +737,46 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.Parameter.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       name_ = "";
+
       paramType_ = 0;
+
       required_ = false;
-      defaultValue_ = null;
-      if (defaultValueBuilder_ != null) {
-        defaultValueBuilder_.dispose();
+
+      if (defaultValueBuilder_ == null) {
+        defaultValue_ = null;
+      } else {
+        defaultValue_ = null;
         defaultValueBuilder_ = null;
       }
       displayName_ = "";
+
       sensitive_ = false;
+
       runtimeParam_ = false;
+
       helperText_ = "";
+
       templateLocked_ = false;
+
       validation_ = 0;
+
       return this;
     }
 
@@ -687,45 +803,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.integrations.Parameter buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.integrations.Parameter result = new com.tcn.cloud.api.api.v1alpha1.integrations.Parameter(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.name_ = name_;
+      result.paramType_ = paramType_;
+      result.required_ = required_;
+      if (defaultValueBuilder_ == null) {
+        result.defaultValue_ = defaultValue_;
+      } else {
+        result.defaultValue_ = defaultValueBuilder_.build();
+      }
+      result.displayName_ = displayName_;
+      result.sensitive_ = sensitive_;
+      result.runtimeParam_ = runtimeParam_;
+      result.helperText_ = helperText_;
+      result.templateLocked_ = templateLocked_;
+      result.validation_ = validation_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.Parameter result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.name_ = name_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.paramType_ = paramType_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.required_ = required_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.defaultValue_ = defaultValueBuilder_ == null
-            ? defaultValue_
-            : defaultValueBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.displayName_ = displayName_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.sensitive_ = sensitive_;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.runtimeParam_ = runtimeParam_;
-      }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.helperText_ = helperText_;
-      }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
-        result.templateLocked_ = templateLocked_;
-      }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
-        result.validation_ = validation_;
-      }
     }
 
     @java.lang.Override
@@ -774,7 +867,6 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v1alpha1.integrations.Parameter.getDefaultInstance()) return this;
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.paramType_ != 0) {
@@ -788,7 +880,6 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getDisplayName().isEmpty()) {
         displayName_ = other.displayName_;
-        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (other.getSensitive() != false) {
@@ -799,7 +890,6 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getHelperText().isEmpty()) {
         helperText_ = other.helperText_;
-        bitField0_ |= 0x00000080;
         onChanged();
       }
       if (other.getTemplateLocked() != false) {
@@ -808,7 +898,7 @@ private static final long serialVersionUID = 0L;
       if (other.validation_ != 0) {
         setValidationValue(other.getValidationValue());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -823,85 +913,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.integrations.Parameter parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              name_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 16: {
-              paramType_ = input.readEnum();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 16
-            case 24: {
-              required_ = input.readBool();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 24
-            case 34: {
-              input.readMessage(
-                  getDefaultValueFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
-            case 42: {
-              displayName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 42
-            case 48: {
-              sensitive_ = input.readBool();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 48
-            case 56: {
-              runtimeParam_ = input.readBool();
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 56
-            case 66: {
-              helperText_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000080;
-              break;
-            } // case 66
-            case 72: {
-              templateLocked_ = input.readBool();
-              bitField0_ |= 0x00000100;
-              break;
-            } // case 72
-            case 80: {
-              validation_ = input.readEnum();
-              bitField0_ |= 0x00000200;
-              break;
-            } // case 80
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.integrations.Parameter) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private java.lang.Object name_ = "";
     /**
@@ -956,9 +980,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       name_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -971,8 +997,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
+      
       name_ = getDefaultInstance().getName();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -987,10 +1013,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       name_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1019,8 +1047,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setParamTypeValue(int value) {
+      
       paramType_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1035,7 +1063,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.integrations.ValueType getParamType() {
-      com.tcn.cloud.api.api.commons.integrations.ValueType result = com.tcn.cloud.api.api.commons.integrations.ValueType.forNumber(paramType_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.integrations.ValueType result = com.tcn.cloud.api.api.commons.integrations.ValueType.valueOf(paramType_);
       return result == null ? com.tcn.cloud.api.api.commons.integrations.ValueType.UNRECOGNIZED : result;
     }
     /**
@@ -1052,7 +1081,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000002;
+      
       paramType_ = value.getNumber();
       onChanged();
       return this;
@@ -1067,7 +1096,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearParamType() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       paramType_ = 0;
       onChanged();
       return this;
@@ -1096,9 +1125,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRequired(boolean value) {
-
+      
       required_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1111,7 +1139,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRequired() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       required_ = false;
       onChanged();
       return this;
@@ -1129,7 +1157,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the defaultValue field is set.
      */
     public boolean hasDefaultValue() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return defaultValueBuilder_ != null || defaultValue_ != null;
     }
     /**
      * <pre>
@@ -1159,11 +1187,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         defaultValue_ = value;
+        onChanged();
       } else {
         defaultValueBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
@@ -1177,11 +1205,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.integrations.Value.Builder builderForValue) {
       if (defaultValueBuilder_ == null) {
         defaultValue_ = builderForValue.build();
+        onChanged();
       } else {
         defaultValueBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
@@ -1193,18 +1221,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDefaultValue(com.tcn.cloud.api.api.v1alpha1.integrations.Value value) {
       if (defaultValueBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0) &&
-          defaultValue_ != null &&
-          defaultValue_ != com.tcn.cloud.api.api.v1alpha1.integrations.Value.getDefaultInstance()) {
-          getDefaultValueBuilder().mergeFrom(value);
+        if (defaultValue_ != null) {
+          defaultValue_ =
+            com.tcn.cloud.api.api.v1alpha1.integrations.Value.newBuilder(defaultValue_).mergeFrom(value).buildPartial();
         } else {
           defaultValue_ = value;
         }
+        onChanged();
       } else {
         defaultValueBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
@@ -1215,13 +1242,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.integrations.Value default_value = 4 [json_name = "defaultValue"];</code>
      */
     public Builder clearDefaultValue() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      defaultValue_ = null;
-      if (defaultValueBuilder_ != null) {
-        defaultValueBuilder_.dispose();
+      if (defaultValueBuilder_ == null) {
+        defaultValue_ = null;
+        onChanged();
+      } else {
+        defaultValue_ = null;
         defaultValueBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -1232,7 +1260,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.integrations.Value default_value = 4 [json_name = "defaultValue"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.integrations.Value.Builder getDefaultValueBuilder() {
-      bitField0_ |= 0x00000008;
+      
       onChanged();
       return getDefaultValueFieldBuilder().getBuilder();
     }
@@ -1325,9 +1353,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDisplayName(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       displayName_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1340,8 +1370,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayName() {
+      
       displayName_ = getDefaultInstance().getDisplayName();
-      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1356,10 +1386,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDisplayNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       displayName_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1387,9 +1419,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSensitive(boolean value) {
-
+      
       sensitive_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1402,7 +1433,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSensitive() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      
       sensitive_ = false;
       onChanged();
       return this;
@@ -1437,9 +1468,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRuntimeParam(boolean value) {
-
+      
       runtimeParam_ = value;
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1455,7 +1485,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRuntimeParam() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      
       runtimeParam_ = false;
       onChanged();
       return this;
@@ -1514,9 +1544,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHelperText(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       helperText_ = value;
-      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1529,8 +1561,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHelperText() {
+      
       helperText_ = getDefaultInstance().getHelperText();
-      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -1545,10 +1577,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHelperTextBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       helperText_ = value;
-      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1584,9 +1618,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTemplateLocked(boolean value) {
-
+      
       templateLocked_ = value;
-      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1603,7 +1636,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTemplateLocked() {
-      bitField0_ = (bitField0_ & ~0x00000100);
+      
       templateLocked_ = false;
       onChanged();
       return this;
@@ -1631,8 +1664,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setValidationValue(int value) {
+      
       validation_ = value;
-      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1646,7 +1679,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.integrations.Validation getValidation() {
-      com.tcn.cloud.api.api.commons.integrations.Validation result = com.tcn.cloud.api.api.commons.integrations.Validation.forNumber(validation_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.integrations.Validation result = com.tcn.cloud.api.api.commons.integrations.Validation.valueOf(validation_);
       return result == null ? com.tcn.cloud.api.api.commons.integrations.Validation.UNRECOGNIZED : result;
     }
     /**
@@ -1662,7 +1696,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000200;
+      
       validation_ = value.getNumber();
       onChanged();
       return this;
@@ -1676,7 +1710,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValidation() {
-      bitField0_ = (bitField0_ & ~0x00000200);
+      
       validation_ = 0;
       onChanged();
       return this;
@@ -1714,18 +1748,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new Parameter(input, extensionRegistry);
     }
   };
 

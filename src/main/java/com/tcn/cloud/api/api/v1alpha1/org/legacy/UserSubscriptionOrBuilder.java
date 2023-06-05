@@ -32,7 +32,6 @@ public interface UserSubscriptionOrBuilder extends
   /**
    * <pre>
    * Required.
-   *
    * Used by matrix-notify.
    * It receives an event on an event type and
    * uses it to look up the targets for that event type.
@@ -46,7 +45,6 @@ public interface UserSubscriptionOrBuilder extends
   /**
    * <pre>
    * Required.
-   *
    * Used by matrix-notify.
    * It receives an event on an event type and
    * uses it to look up the targets for that event type.
@@ -164,5 +162,5 @@ public interface UserSubscriptionOrBuilder extends
   com.tcn.cloud.api.api.commons.FieldValueFilterOrBuilder getFiltersOrBuilder(
       int index);
 
-  com.tcn.cloud.api.api.v1alpha1.org.legacy.UserSubscription.DeliverMethodCase getDeliverMethodCase();
+  public com.tcn.cloud.api.api.v1alpha1.org.legacy.UserSubscription.DeliverMethodCase getDeliverMethodCase();
 }

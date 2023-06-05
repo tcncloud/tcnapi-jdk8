@@ -133,5 +133,5 @@ public interface InvoiceFlowOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.integrations.InvoiceTemplateOrBuilder getInvoiceTemplateOrBuilder();
 
-  com.tcn.cloud.api.api.commons.integrations.InvoiceFlow.ValueCase getValueCase();
+  public com.tcn.cloud.api.api.commons.integrations.InvoiceFlow.ValueCase getValueCase();
 }

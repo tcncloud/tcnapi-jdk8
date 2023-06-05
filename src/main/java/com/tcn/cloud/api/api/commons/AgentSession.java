@@ -32,6 +32,86 @@ private static final long serialVersionUID = 0L;
     return new AgentSession();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private AgentSession(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+
+            agentSid_ = input.readInt64();
+            break;
+          }
+          case 16: {
+
+            tenantSid_ = input.readInt64();
+            break;
+          }
+          case 24: {
+
+            sessionSid_ = input.readInt64();
+            break;
+          }
+          case 32: {
+
+            asmSessionSid_ = input.readInt64();
+            break;
+          }
+          case 42: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            orgId_ = s;
+            break;
+          }
+          case 50: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            regionId_ = s;
+            break;
+          }
+          case 66: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            userId_ = s;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.AcdProto.internal_static_api_commons_AgentSession_descriptor;
@@ -46,7 +126,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AGENT_SID_FIELD_NUMBER = 1;
-  private long agentSid_ = 0L;
+  private long agentSid_;
   /**
    * <pre>
    * the agent's sid
@@ -61,7 +141,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TENANT_SID_FIELD_NUMBER = 2;
-  private long tenantSid_ = 0L;
+  private long tenantSid_;
   /**
    * <pre>
    * the client's sid
@@ -76,7 +156,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SESSION_SID_FIELD_NUMBER = 3;
-  private long sessionSid_ = 0L;
+  private long sessionSid_;
   /**
    * <pre>
    * the voice session sid
@@ -91,7 +171,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ASM_SESSION_SID_FIELD_NUMBER = 4;
-  private long asmSessionSid_ = 0L;
+  private long asmSessionSid_;
   /**
    * <pre>
    * the asm session sid
@@ -106,8 +186,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ORG_ID_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object orgId_ = "";
+  private volatile java.lang.Object orgId_;
   /**
    * <pre>
    * the org id of the user/agent
@@ -153,8 +232,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int REGION_ID_FIELD_NUMBER = 6;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object regionId_ = "";
+  private volatile java.lang.Object regionId_;
   /**
    * <pre>
    * the region id of the user/agent
@@ -200,8 +278,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int USER_ID_FIELD_NUMBER = 8;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object userId_ = "";
+  private volatile java.lang.Object userId_;
   /**
    * <pre>
    * the user's id
@@ -272,16 +349,16 @@ private static final long serialVersionUID = 0L;
     if (asmSessionSid_ != 0L) {
       output.writeInt64(4, asmSessionSid_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
+    if (!getOrgIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, orgId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regionId_)) {
+    if (!getRegionIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, regionId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
+    if (!getUserIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 8, userId_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -306,16 +383,16 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(4, asmSessionSid_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
+    if (!getOrgIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, orgId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regionId_)) {
+    if (!getRegionIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, regionId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
+    if (!getUserIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, userId_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -344,7 +421,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getRegionId())) return false;
     if (!getUserId()
         .equals(other.getUserId())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -373,7 +450,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getRegionId().hashCode();
     hash = (37 * hash) + USER_ID_FIELD_NUMBER;
     hash = (53 * hash) + getUserId().hashCode();
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -422,13 +499,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.commons.AgentSession parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.commons.AgentSession parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -496,25 +571,36 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.AgentSession.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       agentSid_ = 0L;
+
       tenantSid_ = 0L;
+
       sessionSid_ = 0L;
+
       asmSessionSid_ = 0L;
+
       orgId_ = "";
+
       regionId_ = "";
+
       userId_ = "";
+
       return this;
     }
 
@@ -541,34 +627,15 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.AgentSession buildPartial() {
       com.tcn.cloud.api.api.commons.AgentSession result = new com.tcn.cloud.api.api.commons.AgentSession(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.agentSid_ = agentSid_;
+      result.tenantSid_ = tenantSid_;
+      result.sessionSid_ = sessionSid_;
+      result.asmSessionSid_ = asmSessionSid_;
+      result.orgId_ = orgId_;
+      result.regionId_ = regionId_;
+      result.userId_ = userId_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.commons.AgentSession result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.agentSid_ = agentSid_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.tenantSid_ = tenantSid_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.sessionSid_ = sessionSid_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.asmSessionSid_ = asmSessionSid_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.orgId_ = orgId_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.regionId_ = regionId_;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.userId_ = userId_;
-      }
     }
 
     @java.lang.Override
@@ -629,20 +696,17 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getOrgId().isEmpty()) {
         orgId_ = other.orgId_;
-        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (!other.getRegionId().isEmpty()) {
         regionId_ = other.regionId_;
-        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (!other.getUserId().isEmpty()) {
         userId_ = other.userId_;
-        bitField0_ |= 0x00000040;
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -657,68 +721,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.commons.AgentSession parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              agentSid_ = input.readInt64();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 16: {
-              tenantSid_ = input.readInt64();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 16
-            case 24: {
-              sessionSid_ = input.readInt64();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 24
-            case 32: {
-              asmSessionSid_ = input.readInt64();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 32
-            case 42: {
-              orgId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 42
-            case 50: {
-              regionId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 50
-            case 66: {
-              userId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 66
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.commons.AgentSession) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private long agentSid_ ;
     /**
@@ -743,9 +758,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAgentSid(long value) {
-
+      
       agentSid_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -758,7 +772,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAgentSid() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       agentSid_ = 0L;
       onChanged();
       return this;
@@ -787,9 +801,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTenantSid(long value) {
-
+      
       tenantSid_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -802,7 +815,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTenantSid() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       tenantSid_ = 0L;
       onChanged();
       return this;
@@ -831,9 +844,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSessionSid(long value) {
-
+      
       sessionSid_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -846,7 +858,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSessionSid() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       sessionSid_ = 0L;
       onChanged();
       return this;
@@ -875,9 +887,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAsmSessionSid(long value) {
-
+      
       asmSessionSid_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -890,7 +901,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAsmSessionSid() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      
       asmSessionSid_ = 0L;
       onChanged();
       return this;
@@ -949,9 +960,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOrgId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       orgId_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -964,8 +977,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOrgId() {
+      
       orgId_ = getDefaultInstance().getOrgId();
-      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -980,10 +993,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOrgIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       orgId_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1041,9 +1056,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRegionId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       regionId_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1056,8 +1073,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRegionId() {
+      
       regionId_ = getDefaultInstance().getRegionId();
-      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1072,10 +1089,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRegionIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       regionId_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1133,9 +1152,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUserId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       userId_ = value;
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1148,8 +1169,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUserId() {
+      
       userId_ = getDefaultInstance().getUserId();
-      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -1164,10 +1185,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUserIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       userId_ = value;
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1204,18 +1227,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new AgentSession(input, extensionRegistry);
     }
   };
 

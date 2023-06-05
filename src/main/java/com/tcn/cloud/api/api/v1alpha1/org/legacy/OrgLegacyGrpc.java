@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.50.0)",
     comments = "Source: api/v1alpha1/org/legacy/service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class OrgLegacyGrpc {
@@ -92,35 +92,34 @@ public final class OrgLegacyGrpc {
 
   /**
    */
-  public interface AsyncService {
+  public static abstract class OrgLegacyImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
      * Registers a new organization
      * </pre>
      */
-    default void registerOrganization(com.tcn.cloud.api.api.v1alpha1.org.legacy.RegisterOrganizationRequest request,
+    public void registerOrganization(com.tcn.cloud.api.api.v1alpha1.org.legacy.RegisterOrganizationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.org.legacy.RegisterOrganizationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRegisterOrganizationMethod(), responseObserver);
     }
-  }
-
-  /**
-   * Base class for the server implementation of the service OrgLegacy.
-   */
-  public static abstract class OrgLegacyImplBase
-      implements io.grpc.BindableService, AsyncService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return OrgLegacyGrpc.bindService(this);
+      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getRegisterOrganizationMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.org.legacy.RegisterOrganizationRequest,
+                com.tcn.cloud.api.api.v1alpha1.org.legacy.RegisterOrganizationResponse>(
+                  this, METHODID_REGISTER_ORGANIZATION)))
+          .build();
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service OrgLegacy.
    */
-  public static final class OrgLegacyStub
-      extends io.grpc.stub.AbstractAsyncStub<OrgLegacyStub> {
+  public static final class OrgLegacyStub extends io.grpc.stub.AbstractAsyncStub<OrgLegacyStub> {
     private OrgLegacyStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -145,10 +144,8 @@ public final class OrgLegacyGrpc {
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service OrgLegacy.
    */
-  public static final class OrgLegacyBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<OrgLegacyBlockingStub> {
+  public static final class OrgLegacyBlockingStub extends io.grpc.stub.AbstractBlockingStub<OrgLegacyBlockingStub> {
     private OrgLegacyBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -172,10 +169,8 @@ public final class OrgLegacyGrpc {
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service OrgLegacy.
    */
-  public static final class OrgLegacyFutureStub
-      extends io.grpc.stub.AbstractFutureStub<OrgLegacyFutureStub> {
+  public static final class OrgLegacyFutureStub extends io.grpc.stub.AbstractFutureStub<OrgLegacyFutureStub> {
     private OrgLegacyFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -206,10 +201,10 @@ public final class OrgLegacyGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AsyncService serviceImpl;
+    private final OrgLegacyImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AsyncService serviceImpl, int methodId) {
+    MethodHandlers(OrgLegacyImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -236,18 +231,6 @@ public final class OrgLegacyGrpc {
           throw new AssertionError();
       }
     }
-  }
-
-  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
-    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-        .addMethod(
-          getRegisterOrganizationMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.org.legacy.RegisterOrganizationRequest,
-              com.tcn.cloud.api.api.v1alpha1.org.legacy.RegisterOrganizationResponse>(
-                service, METHODID_REGISTER_ORGANIZATION)))
-        .build();
   }
 
   private static abstract class OrgLegacyBaseDescriptorSupplier

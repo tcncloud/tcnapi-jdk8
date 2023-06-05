@@ -2374,5 +2374,5 @@ public interface AuditEventOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.audit.ComplianceRndQueryEventOrBuilder getComplianceRndQueryCachedEventOrBuilder();
 
-  com.tcn.cloud.api.api.commons.audit.AuditEvent.EventCase getEventCase();
+  public com.tcn.cloud.api.api.commons.audit.AuditEvent.EventCase getEventCase();
 }

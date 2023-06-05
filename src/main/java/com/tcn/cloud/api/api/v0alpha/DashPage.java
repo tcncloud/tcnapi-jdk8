@@ -25,6 +25,90 @@ private static final long serialVersionUID = 0L;
     return new DashPage();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private DashPage(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            com.tcn.cloud.api.api.v0alpha.DashPageDashboard.Builder subBuilder = null;
+            if (dashPageTypeCase_ == 1) {
+              subBuilder = ((com.tcn.cloud.api.api.v0alpha.DashPageDashboard) dashPageType_).toBuilder();
+            }
+            dashPageType_ =
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.DashPageDashboard.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.DashPageDashboard) dashPageType_);
+              dashPageType_ = subBuilder.buildPartial();
+            }
+            dashPageTypeCase_ = 1;
+            break;
+          }
+          case 18: {
+            com.tcn.cloud.api.api.v0alpha.DashPageVisualizationLegacy.Builder subBuilder = null;
+            if (dashPageTypeCase_ == 2) {
+              subBuilder = ((com.tcn.cloud.api.api.v0alpha.DashPageVisualizationLegacy) dashPageType_).toBuilder();
+            }
+            dashPageType_ =
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.DashPageVisualizationLegacy.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.DashPageVisualizationLegacy) dashPageType_);
+              dashPageType_ = subBuilder.buildPartial();
+            }
+            dashPageTypeCase_ = 2;
+            break;
+          }
+          case 26: {
+            com.tcn.cloud.api.api.v0alpha.DashPageChart.Builder subBuilder = null;
+            if (dashPageTypeCase_ == 3) {
+              subBuilder = ((com.tcn.cloud.api.api.v0alpha.DashPageChart) dashPageType_).toBuilder();
+            }
+            dashPageType_ =
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.DashPageChart.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.DashPageChart) dashPageType_);
+              dashPageType_ = subBuilder.buildPartial();
+            }
+            dashPageTypeCase_ = 3;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.AnaProto.internal_static_api_v0alpha_DashPage_descriptor;
@@ -39,7 +123,6 @@ private static final long serialVersionUID = 0L;
   }
 
   private int dashPageTypeCase_ = 0;
-  @SuppressWarnings("serial")
   private java.lang.Object dashPageType_;
   public enum DashPageTypeCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -198,7 +281,7 @@ private static final long serialVersionUID = 0L;
     if (dashPageTypeCase_ == 3) {
       output.writeMessage(3, (com.tcn.cloud.api.api.v0alpha.DashPageChart) dashPageType_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -219,7 +302,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, (com.tcn.cloud.api.api.v0alpha.DashPageChart) dashPageType_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -251,7 +334,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -278,7 +361,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -327,13 +410,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.DashPage parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.DashPage parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -397,27 +478,22 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.DashPage.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      if (dashboardBuilder_ != null) {
-        dashboardBuilder_.clear();
-      }
-      if (visualizationLegacyBuilder_ != null) {
-        visualizationLegacyBuilder_.clear();
-      }
-      if (chartBuilder_ != null) {
-        chartBuilder_.clear();
-      }
       dashPageTypeCase_ = 0;
       dashPageType_ = null;
       return this;
@@ -446,31 +522,30 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.DashPage buildPartial() {
       com.tcn.cloud.api.api.v0alpha.DashPage result = new com.tcn.cloud.api.api.v0alpha.DashPage(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      buildPartialOneofs(result);
+      if (dashPageTypeCase_ == 1) {
+        if (dashboardBuilder_ == null) {
+          result.dashPageType_ = dashPageType_;
+        } else {
+          result.dashPageType_ = dashboardBuilder_.build();
+        }
+      }
+      if (dashPageTypeCase_ == 2) {
+        if (visualizationLegacyBuilder_ == null) {
+          result.dashPageType_ = dashPageType_;
+        } else {
+          result.dashPageType_ = visualizationLegacyBuilder_.build();
+        }
+      }
+      if (dashPageTypeCase_ == 3) {
+        if (chartBuilder_ == null) {
+          result.dashPageType_ = dashPageType_;
+        } else {
+          result.dashPageType_ = chartBuilder_.build();
+        }
+      }
+      result.dashPageTypeCase_ = dashPageTypeCase_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.DashPage result) {
-      int from_bitField0_ = bitField0_;
-    }
-
-    private void buildPartialOneofs(com.tcn.cloud.api.api.v0alpha.DashPage result) {
-      result.dashPageTypeCase_ = dashPageTypeCase_;
-      result.dashPageType_ = this.dashPageType_;
-      if (dashPageTypeCase_ == 1 &&
-          dashboardBuilder_ != null) {
-        result.dashPageType_ = dashboardBuilder_.build();
-      }
-      if (dashPageTypeCase_ == 2 &&
-          visualizationLegacyBuilder_ != null) {
-        result.dashPageType_ = visualizationLegacyBuilder_.build();
-      }
-      if (dashPageTypeCase_ == 3 &&
-          chartBuilder_ != null) {
-        result.dashPageType_ = chartBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -534,7 +609,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -549,51 +624,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.DashPage parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              input.readMessage(
-                  getDashboardFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              dashPageTypeCase_ = 1;
-              break;
-            } // case 10
-            case 18: {
-              input.readMessage(
-                  getVisualizationLegacyFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              dashPageTypeCase_ = 2;
-              break;
-            } // case 18
-            case 26: {
-              input.readMessage(
-                  getChartFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              dashPageTypeCase_ = 3;
-              break;
-            } // case 26
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.DashPage) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int dashPageTypeCase_ = 0;
@@ -611,7 +652,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int bitField0_;
 
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v0alpha.DashPageDashboard, com.tcn.cloud.api.api.v0alpha.DashPageDashboard.Builder, com.tcn.cloud.api.api.v0alpha.DashPageDashboardOrBuilder> dashboardBuilder_;
@@ -687,9 +727,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (dashPageTypeCase_ == 1) {
           dashboardBuilder_.mergeFrom(value);
-        } else {
-          dashboardBuilder_.setMessage(value);
         }
+        dashboardBuilder_.setMessage(value);
       }
       dashPageTypeCase_ = 1;
       return this;
@@ -751,7 +790,7 @@ private static final long serialVersionUID = 0L;
         dashPageType_ = null;
       }
       dashPageTypeCase_ = 1;
-      onChanged();
+      onChanged();;
       return dashboardBuilder_;
     }
 
@@ -829,9 +868,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (dashPageTypeCase_ == 2) {
           visualizationLegacyBuilder_.mergeFrom(value);
-        } else {
-          visualizationLegacyBuilder_.setMessage(value);
         }
+        visualizationLegacyBuilder_.setMessage(value);
       }
       dashPageTypeCase_ = 2;
       return this;
@@ -893,7 +931,7 @@ private static final long serialVersionUID = 0L;
         dashPageType_ = null;
       }
       dashPageTypeCase_ = 2;
-      onChanged();
+      onChanged();;
       return visualizationLegacyBuilder_;
     }
 
@@ -971,9 +1009,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (dashPageTypeCase_ == 3) {
           chartBuilder_.mergeFrom(value);
-        } else {
-          chartBuilder_.setMessage(value);
         }
+        chartBuilder_.setMessage(value);
       }
       dashPageTypeCase_ = 3;
       return this;
@@ -1035,7 +1072,7 @@ private static final long serialVersionUID = 0L;
         dashPageType_ = null;
       }
       dashPageTypeCase_ = 3;
-      onChanged();
+      onChanged();;
       return chartBuilder_;
     }
     @java.lang.Override
@@ -1071,18 +1108,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new DashPage(input, extensionRegistry);
     }
   };
 

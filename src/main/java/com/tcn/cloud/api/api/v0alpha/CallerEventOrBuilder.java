@@ -30,12 +30,14 @@ public interface CallerEventOrBuilder extends
   /**
    * <code>map&lt;string, bool&gt; skills = 19 [json_name = "skills"];</code>
    */
+
   boolean getSkillsOrDefault(
       java.lang.String key,
       boolean defaultValue);
   /**
    * <code>map&lt;string, bool&gt; skills = 19 [json_name = "skills"];</code>
    */
+
   boolean getSkillsOrThrow(
       java.lang.String key);
 
@@ -62,12 +64,14 @@ public interface CallerEventOrBuilder extends
   /**
    * <code>map&lt;string, bool&gt; allSkills = 20 [json_name = "allSkills"];</code>
    */
+
   boolean getAllSkillsOrDefault(
       java.lang.String key,
       boolean defaultValue);
   /**
    * <code>map&lt;string, bool&gt; allSkills = 20 [json_name = "allSkills"];</code>
    */
+
   boolean getAllSkillsOrThrow(
       java.lang.String key);
 }

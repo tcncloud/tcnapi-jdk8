@@ -20,8 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private TransferWarmToOutboundApproveRequest() {
-    memberIdentifiers_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    memberIdentifiers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
   }
 
   @java.lang.Override
@@ -31,6 +30,66 @@ private static final long serialVersionUID = 0L;
     return new TransferWarmToOutboundApproveRequest();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private TransferWarmToOutboundApproveRequest(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+
+            sessionSid_ = input.readInt64();
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              memberIdentifiers_ = new com.google.protobuf.LazyStringArrayList();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            memberIdentifiers_.add(s);
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        memberIdentifiers_ = memberIdentifiers_.getUnmodifiableView();
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.AcdProto.internal_static_api_v0alpha_TransferWarmToOutboundApproveRequest_descriptor;
@@ -45,7 +104,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SESSION_SID_FIELD_NUMBER = 1;
-  private long sessionSid_ = 0L;
+  private long sessionSid_;
   /**
    * <pre>
    * the session sid of the current agent
@@ -60,9 +119,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MEMBER_IDENTIFIERS_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList memberIdentifiers_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
+  private com.google.protobuf.LazyStringList memberIdentifiers_;
   /**
    * <pre>
    * the ids of the transfer member to want to be joined with the caller
@@ -140,7 +197,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < memberIdentifiers_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, memberIdentifiers_.getRaw(i));
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -161,7 +218,7 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getMemberIdentifiersList().size();
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -180,7 +237,7 @@ private static final long serialVersionUID = 0L;
         != other.getSessionSid()) return false;
     if (!getMemberIdentifiersList()
         .equals(other.getMemberIdentifiersList())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -198,7 +255,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + MEMBER_IDENTIFIERS_FIELD_NUMBER;
       hash = (53 * hash) + getMemberIdentifiersList().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -247,13 +304,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.TransferWarmToOutboundApproveRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.TransferWarmToOutboundApproveRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -321,21 +376,26 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.TransferWarmToOutboundApproveRequest.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       sessionSid_ = 0L;
-      memberIdentifiers_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+
+      memberIdentifiers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -362,20 +422,15 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.TransferWarmToOutboundApproveRequest buildPartial() {
       com.tcn.cloud.api.api.v0alpha.TransferWarmToOutboundApproveRequest result = new com.tcn.cloud.api.api.v0alpha.TransferWarmToOutboundApproveRequest(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      int from_bitField0_ = bitField0_;
+      result.sessionSid_ = sessionSid_;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        memberIdentifiers_ = memberIdentifiers_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000001);
+      }
+      result.memberIdentifiers_ = memberIdentifiers_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.TransferWarmToOutboundApproveRequest result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.sessionSid_ = sessionSid_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        memberIdentifiers_.makeImmutable();
-        result.memberIdentifiers_ = memberIdentifiers_;
-      }
     }
 
     @java.lang.Override
@@ -428,14 +483,14 @@ private static final long serialVersionUID = 0L;
       if (!other.memberIdentifiers_.isEmpty()) {
         if (memberIdentifiers_.isEmpty()) {
           memberIdentifiers_ = other.memberIdentifiers_;
-          bitField0_ |= 0x00000002;
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensureMemberIdentifiersIsMutable();
           memberIdentifiers_.addAll(other.memberIdentifiers_);
         }
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -450,41 +505,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.TransferWarmToOutboundApproveRequest parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              sessionSid_ = input.readInt64();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensureMemberIdentifiersIsMutable();
-              memberIdentifiers_.add(s);
-              break;
-            } // case 18
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.TransferWarmToOutboundApproveRequest) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -512,9 +543,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSessionSid(long value) {
-
+      
       sessionSid_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -527,19 +557,18 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSessionSid() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       sessionSid_ = 0L;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringArrayList memberIdentifiers_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.LazyStringList memberIdentifiers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureMemberIdentifiersIsMutable() {
-      if (!memberIdentifiers_.isModifiable()) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         memberIdentifiers_ = new com.google.protobuf.LazyStringArrayList(memberIdentifiers_);
-      }
-      bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
+       }
     }
     /**
      * <pre>
@@ -553,8 +582,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getMemberIdentifiersList() {
-      memberIdentifiers_.makeImmutable();
-      return memberIdentifiers_;
+      return memberIdentifiers_.getUnmodifiableView();
     }
     /**
      * <pre>
@@ -612,10 +640,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setMemberIdentifiers(
         int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureMemberIdentifiersIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureMemberIdentifiersIsMutable();
       memberIdentifiers_.set(index, value);
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -632,10 +661,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addMemberIdentifiers(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureMemberIdentifiersIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureMemberIdentifiersIsMutable();
       memberIdentifiers_.add(value);
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -655,7 +685,6 @@ private static final long serialVersionUID = 0L;
       ensureMemberIdentifiersIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, memberIdentifiers_);
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -670,9 +699,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMemberIdentifiers() {
-      memberIdentifiers_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000002);;
+      memberIdentifiers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -689,11 +717,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addMemberIdentifiersBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
       ensureMemberIdentifiersIsMutable();
       memberIdentifiers_.add(value);
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -730,18 +759,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new TransferWarmToOutboundApproveRequest(input, extensionRegistry);
     }
   };
 

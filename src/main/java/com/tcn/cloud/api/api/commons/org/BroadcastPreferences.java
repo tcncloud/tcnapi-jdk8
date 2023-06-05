@@ -31,6 +31,121 @@ private static final long serialVersionUID = 0L;
     return new BroadcastPreferences();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private BroadcastPreferences(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            orgId_ = s;
+            break;
+          }
+          case 80: {
+
+            displayListPenetrationStrategy_ = input.readBool();
+            break;
+          }
+          case 88: {
+
+            dialListPenetrationStrategy_ = input.readBool();
+            break;
+          }
+          case 96: {
+
+            displayFollowTheSun_ = input.readBool();
+            break;
+          }
+          case 104: {
+
+            followTheSun_ = input.readBool();
+            break;
+          }
+          case 112: {
+
+            sequenceTerminatorOverride_ = input.readBool();
+            break;
+          }
+          case 120: {
+            int rawValue = input.readEnum();
+
+            broadcastTemplateOrdering_ = rawValue;
+            break;
+          }
+          case 128: {
+
+            startTimeEnabled_ = input.readBool();
+            break;
+          }
+          case 138: {
+            com.tcn.cloud.api.api.commons.org.BroadcastTime.Builder subBuilder = null;
+            if (defaultStartTime_ != null) {
+              subBuilder = defaultStartTime_.toBuilder();
+            }
+            defaultStartTime_ = input.readMessage(com.tcn.cloud.api.api.commons.org.BroadcastTime.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(defaultStartTime_);
+              defaultStartTime_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 144: {
+
+            stopTimeEnabled_ = input.readBool();
+            break;
+          }
+          case 154: {
+            com.tcn.cloud.api.api.commons.org.BroadcastTime.Builder subBuilder = null;
+            if (defaultStopTime_ != null) {
+              subBuilder = defaultStopTime_.toBuilder();
+            }
+            defaultStopTime_ = input.readMessage(com.tcn.cloud.api.api.commons.org.BroadcastTime.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(defaultStopTime_);
+              defaultStopTime_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.org.PreferencesProto.internal_static_api_commons_org_BroadcastPreferences_descriptor;
@@ -45,8 +160,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ORG_ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object orgId_ = "";
+  private volatile java.lang.Object orgId_;
   /**
    * <pre>
    * Org ID.
@@ -92,7 +206,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DISPLAY_LIST_PENETRATION_STRATEGY_FIELD_NUMBER = 10;
-  private boolean displayListPenetrationStrategy_ = false;
+  private boolean displayListPenetrationStrategy_;
   /**
    * <pre>
    * Whether the 'Dial List Penetration Strategy' property in templates and
@@ -108,7 +222,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DIAL_LIST_PENETRATION_STRATEGY_FIELD_NUMBER = 11;
-  private boolean dialListPenetrationStrategy_ = false;
+  private boolean dialListPenetrationStrategy_;
   /**
    * <pre>
    * List penetration strategy to give priority to dialing each number in a
@@ -125,7 +239,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DISPLAY_FOLLOW_THE_SUN_FIELD_NUMBER = 12;
-  private boolean displayFollowTheSun_ = false;
+  private boolean displayFollowTheSun_;
   /**
    * <pre>
    * Display the 'Follow the Sun' property in templates and broadcasts.
@@ -140,7 +254,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FOLLOW_THE_SUN_FIELD_NUMBER = 13;
-  private boolean followTheSun_ = false;
+  private boolean followTheSun_;
   /**
    * <pre>
    * Whether broadcasts follow the sun (prioritized east to west).
@@ -155,7 +269,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SEQUENCE_TERMINATOR_OVERRIDE_FIELD_NUMBER = 14;
-  private boolean sequenceTerminatorOverride_ = false;
+  private boolean sequenceTerminatorOverride_;
   /**
    * <pre>
    * Whether to hide the terminator select menu in the standard template
@@ -172,7 +286,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BROADCAST_TEMPLATE_ORDERING_FIELD_NUMBER = 15;
-  private int broadcastTemplateOrdering_ = 0;
+  private int broadcastTemplateOrdering_;
   /**
    * <pre>
    * Broadcast scheduling template ordering default value.
@@ -193,12 +307,13 @@ private static final long serialVersionUID = 0L;
    * @return The broadcastTemplateOrdering.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.BroadcastTemplateOrdering getBroadcastTemplateOrdering() {
-    com.tcn.cloud.api.api.commons.BroadcastTemplateOrdering result = com.tcn.cloud.api.api.commons.BroadcastTemplateOrdering.forNumber(broadcastTemplateOrdering_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.BroadcastTemplateOrdering result = com.tcn.cloud.api.api.commons.BroadcastTemplateOrdering.valueOf(broadcastTemplateOrdering_);
     return result == null ? com.tcn.cloud.api.api.commons.BroadcastTemplateOrdering.UNRECOGNIZED : result;
   }
 
   public static final int START_TIME_ENABLED_FIELD_NUMBER = 16;
-  private boolean startTimeEnabled_ = false;
+  private boolean startTimeEnabled_;
   /**
    * <pre>
    * Whether the default broadcast start time is used.
@@ -247,11 +362,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.BroadcastTimeOrBuilder getDefaultStartTimeOrBuilder() {
-    return defaultStartTime_ == null ? com.tcn.cloud.api.api.commons.org.BroadcastTime.getDefaultInstance() : defaultStartTime_;
+    return getDefaultStartTime();
   }
 
   public static final int STOP_TIME_ENABLED_FIELD_NUMBER = 18;
-  private boolean stopTimeEnabled_ = false;
+  private boolean stopTimeEnabled_;
   /**
    * <pre>
    * Whether the default broadcast stop time is used.
@@ -300,7 +415,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.BroadcastTimeOrBuilder getDefaultStopTimeOrBuilder() {
-    return defaultStopTime_ == null ? com.tcn.cloud.api.api.commons.org.BroadcastTime.getDefaultInstance() : defaultStopTime_;
+    return getDefaultStopTime();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -317,7 +432,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
+    if (!getOrgIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orgId_);
     }
     if (displayListPenetrationStrategy_ != false) {
@@ -350,7 +465,7 @@ private static final long serialVersionUID = 0L;
     if (defaultStopTime_ != null) {
       output.writeMessage(19, getDefaultStopTime());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -359,7 +474,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
+    if (!getOrgIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orgId_);
     }
     if (displayListPenetrationStrategy_ != false) {
@@ -402,7 +517,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(19, getDefaultStopTime());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -444,7 +559,7 @@ private static final long serialVersionUID = 0L;
       if (!getDefaultStopTime()
           .equals(other.getDefaultStopTime())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -488,7 +603,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DEFAULT_STOP_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getDefaultStopTime().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -537,13 +652,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.commons.org.BroadcastPreferences parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.commons.org.BroadcastPreferences parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -611,35 +724,50 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.org.BroadcastPreferences.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       orgId_ = "";
+
       displayListPenetrationStrategy_ = false;
+
       dialListPenetrationStrategy_ = false;
+
       displayFollowTheSun_ = false;
+
       followTheSun_ = false;
+
       sequenceTerminatorOverride_ = false;
+
       broadcastTemplateOrdering_ = 0;
+
       startTimeEnabled_ = false;
-      defaultStartTime_ = null;
-      if (defaultStartTimeBuilder_ != null) {
-        defaultStartTimeBuilder_.dispose();
+
+      if (defaultStartTimeBuilder_ == null) {
+        defaultStartTime_ = null;
+      } else {
+        defaultStartTime_ = null;
         defaultStartTimeBuilder_ = null;
       }
       stopTimeEnabled_ = false;
-      defaultStopTime_ = null;
-      if (defaultStopTimeBuilder_ != null) {
-        defaultStopTimeBuilder_.dispose();
+
+      if (defaultStopTimeBuilder_ == null) {
+        defaultStopTime_ = null;
+      } else {
+        defaultStopTime_ = null;
         defaultStopTimeBuilder_ = null;
       }
       return this;
@@ -668,50 +796,27 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.org.BroadcastPreferences buildPartial() {
       com.tcn.cloud.api.api.commons.org.BroadcastPreferences result = new com.tcn.cloud.api.api.commons.org.BroadcastPreferences(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.orgId_ = orgId_;
+      result.displayListPenetrationStrategy_ = displayListPenetrationStrategy_;
+      result.dialListPenetrationStrategy_ = dialListPenetrationStrategy_;
+      result.displayFollowTheSun_ = displayFollowTheSun_;
+      result.followTheSun_ = followTheSun_;
+      result.sequenceTerminatorOverride_ = sequenceTerminatorOverride_;
+      result.broadcastTemplateOrdering_ = broadcastTemplateOrdering_;
+      result.startTimeEnabled_ = startTimeEnabled_;
+      if (defaultStartTimeBuilder_ == null) {
+        result.defaultStartTime_ = defaultStartTime_;
+      } else {
+        result.defaultStartTime_ = defaultStartTimeBuilder_.build();
+      }
+      result.stopTimeEnabled_ = stopTimeEnabled_;
+      if (defaultStopTimeBuilder_ == null) {
+        result.defaultStopTime_ = defaultStopTime_;
+      } else {
+        result.defaultStopTime_ = defaultStopTimeBuilder_.build();
+      }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.commons.org.BroadcastPreferences result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.orgId_ = orgId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.displayListPenetrationStrategy_ = displayListPenetrationStrategy_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.dialListPenetrationStrategy_ = dialListPenetrationStrategy_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.displayFollowTheSun_ = displayFollowTheSun_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.followTheSun_ = followTheSun_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.sequenceTerminatorOverride_ = sequenceTerminatorOverride_;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.broadcastTemplateOrdering_ = broadcastTemplateOrdering_;
-      }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.startTimeEnabled_ = startTimeEnabled_;
-      }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
-        result.defaultStartTime_ = defaultStartTimeBuilder_ == null
-            ? defaultStartTime_
-            : defaultStartTimeBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
-        result.stopTimeEnabled_ = stopTimeEnabled_;
-      }
-      if (((from_bitField0_ & 0x00000400) != 0)) {
-        result.defaultStopTime_ = defaultStopTimeBuilder_ == null
-            ? defaultStopTime_
-            : defaultStopTimeBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -760,7 +865,6 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.commons.org.BroadcastPreferences.getDefaultInstance()) return this;
       if (!other.getOrgId().isEmpty()) {
         orgId_ = other.orgId_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.getDisplayListPenetrationStrategy() != false) {
@@ -793,7 +897,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasDefaultStopTime()) {
         mergeDefaultStopTime(other.getDefaultStopTime());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -808,92 +912,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.commons.org.BroadcastPreferences parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              orgId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 80: {
-              displayListPenetrationStrategy_ = input.readBool();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 80
-            case 88: {
-              dialListPenetrationStrategy_ = input.readBool();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 88
-            case 96: {
-              displayFollowTheSun_ = input.readBool();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 96
-            case 104: {
-              followTheSun_ = input.readBool();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 104
-            case 112: {
-              sequenceTerminatorOverride_ = input.readBool();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 112
-            case 120: {
-              broadcastTemplateOrdering_ = input.readEnum();
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 120
-            case 128: {
-              startTimeEnabled_ = input.readBool();
-              bitField0_ |= 0x00000080;
-              break;
-            } // case 128
-            case 138: {
-              input.readMessage(
-                  getDefaultStartTimeFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000100;
-              break;
-            } // case 138
-            case 144: {
-              stopTimeEnabled_ = input.readBool();
-              bitField0_ |= 0x00000200;
-              break;
-            } // case 144
-            case 154: {
-              input.readMessage(
-                  getDefaultStopTimeFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000400;
-              break;
-            } // case 154
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.commons.org.BroadcastPreferences) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private java.lang.Object orgId_ = "";
     /**
@@ -948,9 +979,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOrgId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       orgId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -963,8 +996,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOrgId() {
+      
       orgId_ = getDefaultInstance().getOrgId();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -979,10 +1012,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOrgIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       orgId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1012,9 +1047,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDisplayListPenetrationStrategy(boolean value) {
-
+      
       displayListPenetrationStrategy_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1028,7 +1062,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayListPenetrationStrategy() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       displayListPenetrationStrategy_ = false;
       onChanged();
       return this;
@@ -1061,9 +1095,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDialListPenetrationStrategy(boolean value) {
-
+      
       dialListPenetrationStrategy_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1078,7 +1111,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDialListPenetrationStrategy() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       dialListPenetrationStrategy_ = false;
       onChanged();
       return this;
@@ -1107,9 +1140,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDisplayFollowTheSun(boolean value) {
-
+      
       displayFollowTheSun_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1122,7 +1154,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayFollowTheSun() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      
       displayFollowTheSun_ = false;
       onChanged();
       return this;
@@ -1151,9 +1183,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFollowTheSun(boolean value) {
-
+      
       followTheSun_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1166,7 +1197,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFollowTheSun() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      
       followTheSun_ = false;
       onChanged();
       return this;
@@ -1199,9 +1230,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSequenceTerminatorOverride(boolean value) {
-
+      
       sequenceTerminatorOverride_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1216,7 +1246,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSequenceTerminatorOverride() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      
       sequenceTerminatorOverride_ = false;
       onChanged();
       return this;
@@ -1244,8 +1274,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBroadcastTemplateOrderingValue(int value) {
+      
       broadcastTemplateOrdering_ = value;
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1259,7 +1289,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.BroadcastTemplateOrdering getBroadcastTemplateOrdering() {
-      com.tcn.cloud.api.api.commons.BroadcastTemplateOrdering result = com.tcn.cloud.api.api.commons.BroadcastTemplateOrdering.forNumber(broadcastTemplateOrdering_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.BroadcastTemplateOrdering result = com.tcn.cloud.api.api.commons.BroadcastTemplateOrdering.valueOf(broadcastTemplateOrdering_);
       return result == null ? com.tcn.cloud.api.api.commons.BroadcastTemplateOrdering.UNRECOGNIZED : result;
     }
     /**
@@ -1275,7 +1306,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000040;
+      
       broadcastTemplateOrdering_ = value.getNumber();
       onChanged();
       return this;
@@ -1289,7 +1320,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBroadcastTemplateOrdering() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      
       broadcastTemplateOrdering_ = 0;
       onChanged();
       return this;
@@ -1318,9 +1349,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStartTimeEnabled(boolean value) {
-
+      
       startTimeEnabled_ = value;
-      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1333,7 +1363,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStartTimeEnabled() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      
       startTimeEnabled_ = false;
       onChanged();
       return this;
@@ -1351,7 +1381,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the defaultStartTime field is set.
      */
     public boolean hasDefaultStartTime() {
-      return ((bitField0_ & 0x00000100) != 0);
+      return defaultStartTimeBuilder_ != null || defaultStartTime_ != null;
     }
     /**
      * <pre>
@@ -1381,11 +1411,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         defaultStartTime_ = value;
+        onChanged();
       } else {
         defaultStartTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000100;
-      onChanged();
+
       return this;
     }
     /**
@@ -1399,11 +1429,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.BroadcastTime.Builder builderForValue) {
       if (defaultStartTimeBuilder_ == null) {
         defaultStartTime_ = builderForValue.build();
+        onChanged();
       } else {
         defaultStartTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000100;
-      onChanged();
+
       return this;
     }
     /**
@@ -1415,18 +1445,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDefaultStartTime(com.tcn.cloud.api.api.commons.org.BroadcastTime value) {
       if (defaultStartTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000100) != 0) &&
-          defaultStartTime_ != null &&
-          defaultStartTime_ != com.tcn.cloud.api.api.commons.org.BroadcastTime.getDefaultInstance()) {
-          getDefaultStartTimeBuilder().mergeFrom(value);
+        if (defaultStartTime_ != null) {
+          defaultStartTime_ =
+            com.tcn.cloud.api.api.commons.org.BroadcastTime.newBuilder(defaultStartTime_).mergeFrom(value).buildPartial();
         } else {
           defaultStartTime_ = value;
         }
+        onChanged();
       } else {
         defaultStartTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000100;
-      onChanged();
+
       return this;
     }
     /**
@@ -1437,13 +1466,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.BroadcastTime default_start_time = 17 [json_name = "defaultStartTime"];</code>
      */
     public Builder clearDefaultStartTime() {
-      bitField0_ = (bitField0_ & ~0x00000100);
-      defaultStartTime_ = null;
-      if (defaultStartTimeBuilder_ != null) {
-        defaultStartTimeBuilder_.dispose();
+      if (defaultStartTimeBuilder_ == null) {
+        defaultStartTime_ = null;
+        onChanged();
+      } else {
+        defaultStartTime_ = null;
         defaultStartTimeBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -1454,7 +1484,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.BroadcastTime default_start_time = 17 [json_name = "defaultStartTime"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.BroadcastTime.Builder getDefaultStartTimeBuilder() {
-      bitField0_ |= 0x00000100;
+      
       onChanged();
       return getDefaultStartTimeFieldBuilder().getBuilder();
     }
@@ -1517,9 +1547,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStopTimeEnabled(boolean value) {
-
+      
       stopTimeEnabled_ = value;
-      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1532,7 +1561,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStopTimeEnabled() {
-      bitField0_ = (bitField0_ & ~0x00000200);
+      
       stopTimeEnabled_ = false;
       onChanged();
       return this;
@@ -1550,7 +1579,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the defaultStopTime field is set.
      */
     public boolean hasDefaultStopTime() {
-      return ((bitField0_ & 0x00000400) != 0);
+      return defaultStopTimeBuilder_ != null || defaultStopTime_ != null;
     }
     /**
      * <pre>
@@ -1580,11 +1609,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         defaultStopTime_ = value;
+        onChanged();
       } else {
         defaultStopTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000400;
-      onChanged();
+
       return this;
     }
     /**
@@ -1598,11 +1627,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.BroadcastTime.Builder builderForValue) {
       if (defaultStopTimeBuilder_ == null) {
         defaultStopTime_ = builderForValue.build();
+        onChanged();
       } else {
         defaultStopTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000400;
-      onChanged();
+
       return this;
     }
     /**
@@ -1614,18 +1643,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDefaultStopTime(com.tcn.cloud.api.api.commons.org.BroadcastTime value) {
       if (defaultStopTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000400) != 0) &&
-          defaultStopTime_ != null &&
-          defaultStopTime_ != com.tcn.cloud.api.api.commons.org.BroadcastTime.getDefaultInstance()) {
-          getDefaultStopTimeBuilder().mergeFrom(value);
+        if (defaultStopTime_ != null) {
+          defaultStopTime_ =
+            com.tcn.cloud.api.api.commons.org.BroadcastTime.newBuilder(defaultStopTime_).mergeFrom(value).buildPartial();
         } else {
           defaultStopTime_ = value;
         }
+        onChanged();
       } else {
         defaultStopTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000400;
-      onChanged();
+
       return this;
     }
     /**
@@ -1636,13 +1664,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.BroadcastTime default_stop_time = 19 [json_name = "defaultStopTime"];</code>
      */
     public Builder clearDefaultStopTime() {
-      bitField0_ = (bitField0_ & ~0x00000400);
-      defaultStopTime_ = null;
-      if (defaultStopTimeBuilder_ != null) {
-        defaultStopTimeBuilder_.dispose();
+      if (defaultStopTimeBuilder_ == null) {
+        defaultStopTime_ = null;
+        onChanged();
+      } else {
+        defaultStopTime_ = null;
         defaultStopTimeBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -1653,7 +1682,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.BroadcastTime default_stop_time = 19 [json_name = "defaultStopTime"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.BroadcastTime.Builder getDefaultStopTimeBuilder() {
-      bitField0_ |= 0x00000400;
+      
       onChanged();
       return getDefaultStopTimeFieldBuilder().getBuilder();
     }
@@ -1725,18 +1754,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new BroadcastPreferences(input, extensionRegistry);
     }
   };
 

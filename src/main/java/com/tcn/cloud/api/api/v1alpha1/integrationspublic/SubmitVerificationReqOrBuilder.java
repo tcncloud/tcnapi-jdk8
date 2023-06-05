@@ -61,11 +61,10 @@ public interface SubmitVerificationReqOrBuilder extends
    *
    * <code>map&lt;string, .api.v1alpha1.integrationspublic.Value&gt; verification_fields = 2 [json_name = "verificationFields"];</code>
    */
-  /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value getVerificationFieldsOrDefault(
+
+  com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value getVerificationFieldsOrDefault(
       java.lang.String key,
-      /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue);
+      com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue);
   /**
    * <pre>
    * values from the verification form
@@ -73,6 +72,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue);
    *
    * <code>map&lt;string, .api.v1alpha1.integrationspublic.Value&gt; verification_fields = 2 [json_name = "verificationFields"];</code>
    */
+
   com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value getVerificationFieldsOrThrow(
       java.lang.String key);
 }

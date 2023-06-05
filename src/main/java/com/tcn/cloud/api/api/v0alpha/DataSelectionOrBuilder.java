@@ -9,11 +9,6 @@ public interface DataSelectionOrBuilder extends
 
   /**
    * <code>string chart_id = 1 [json_name = "chartId"];</code>
-   * @return Whether the chartId field is set.
-   */
-  boolean hasChartId();
-  /**
-   * <code>string chart_id = 1 [json_name = "chartId"];</code>
    * @return The chartId.
    */
   java.lang.String getChartId();
@@ -24,11 +19,6 @@ public interface DataSelectionOrBuilder extends
   com.google.protobuf.ByteString
       getChartIdBytes();
 
-  /**
-   * <code>.api.commons.CustomDataSeleciton custom = 2 [json_name = "custom"];</code>
-   * @return Whether the custom field is set.
-   */
-  boolean hasCustom();
   /**
    * <code>.api.commons.CustomDataSeleciton custom = 2 [json_name = "custom"];</code>
    * @return The enum numeric value on the wire for custom.
@@ -80,5 +70,5 @@ public interface DataSelectionOrBuilder extends
   com.google.protobuf.ByteString
       getFilterIdsBytes(int index);
 
-  com.tcn.cloud.api.api.v0alpha.DataSelection.DataSelectionTypeCase getDataSelectionTypeCase();
+  public com.tcn.cloud.api.api.v0alpha.DataSelection.DataSelectionTypeCase getDataSelectionTypeCase();
 }

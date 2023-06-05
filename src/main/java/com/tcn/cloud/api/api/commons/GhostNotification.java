@@ -31,6 +31,152 @@ private static final long serialVersionUID = 0L;
     return new GhostNotification();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private GhostNotification(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            referenceId_ = s;
+            break;
+          }
+          case 18: {
+            com.google.protobuf.Any.Builder subBuilder = null;
+            if (payloadCase_ == 2) {
+              subBuilder = ((com.google.protobuf.Any) payload_).toBuilder();
+            }
+            payload_ =
+                input.readMessage(com.google.protobuf.Any.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.protobuf.Any) payload_);
+              payload_ = subBuilder.buildPartial();
+            }
+            payloadCase_ = 2;
+            break;
+          }
+          case 26: {
+            com.tcn.cloud.api.api.commons.Status.Builder subBuilder = null;
+            if (payloadCase_ == 3) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.Status) payload_).toBuilder();
+            }
+            payload_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.Status.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.Status) payload_);
+              payload_ = subBuilder.buildPartial();
+            }
+            payloadCase_ = 3;
+            break;
+          }
+          case 34: {
+            com.tcn.cloud.api.api.commons.OmniConversation.Builder subBuilder = null;
+            if (payloadCase_ == 4) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.OmniConversation) payload_).toBuilder();
+            }
+            payload_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.OmniConversation.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.OmniConversation) payload_);
+              payload_ = subBuilder.buildPartial();
+            }
+            payloadCase_ = 4;
+            break;
+          }
+          case 50: {
+            com.tcn.cloud.api.api.commons.AgentBackofficeMessageAlert.Builder subBuilder = null;
+            if (payloadCase_ == 6) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.AgentBackofficeMessageAlert) payload_).toBuilder();
+            }
+            payload_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.AgentBackofficeMessageAlert.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.AgentBackofficeMessageAlert) payload_);
+              payload_ = subBuilder.buildPartial();
+            }
+            payloadCase_ = 6;
+            break;
+          }
+          case 58: {
+            com.tcn.cloud.api.api.commons.AgentDirectedCallRingingAlert.Builder subBuilder = null;
+            if (payloadCase_ == 7) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.AgentDirectedCallRingingAlert) payload_).toBuilder();
+            }
+            payload_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.AgentDirectedCallRingingAlert.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.AgentDirectedCallRingingAlert) payload_);
+              payload_ = subBuilder.buildPartial();
+            }
+            payloadCase_ = 7;
+            break;
+          }
+          case 66: {
+            com.tcn.cloud.api.api.commons.AgentDirectedCallHangupAlert.Builder subBuilder = null;
+            if (payloadCase_ == 8) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.AgentDirectedCallHangupAlert) payload_).toBuilder();
+            }
+            payload_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.AgentDirectedCallHangupAlert.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.AgentDirectedCallHangupAlert) payload_);
+              payload_ = subBuilder.buildPartial();
+            }
+            payloadCase_ = 8;
+            break;
+          }
+          case 74: {
+            com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification.Builder subBuilder = null;
+            if (payloadCase_ == 9) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification) payload_).toBuilder();
+            }
+            payload_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification) payload_);
+              payload_ = subBuilder.buildPartial();
+            }
+            payloadCase_ = 9;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.GhostnotifierProto.internal_static_api_commons_GhostNotification_descriptor;
@@ -45,7 +191,6 @@ private static final long serialVersionUID = 0L;
   }
 
   private int payloadCase_ = 0;
-  @SuppressWarnings("serial")
   private java.lang.Object payload_;
   public enum PayloadCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -97,8 +242,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int REFERENCE_ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object referenceId_ = "";
+  private volatile java.lang.Object referenceId_;
   /**
    * <pre>
    * a structured id used to identify the given notification
@@ -458,7 +602,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(referenceId_)) {
+    if (!getReferenceIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, referenceId_);
     }
     if (payloadCase_ == 2) {
@@ -482,7 +626,7 @@ private static final long serialVersionUID = 0L;
     if (payloadCase_ == 9) {
       output.writeMessage(9, (com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification) payload_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -491,7 +635,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(referenceId_)) {
+    if (!getReferenceIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, referenceId_);
     }
     if (payloadCase_ == 2) {
@@ -522,7 +666,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, (com.tcn.cloud.api.api.commons.AgentQueuedCallsNotification) payload_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -572,7 +716,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -617,7 +761,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -666,13 +810,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.commons.GhostNotification parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.commons.GhostNotification parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -741,40 +883,24 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.GhostNotification.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       referenceId_ = "";
-      if (anyBuilder_ != null) {
-        anyBuilder_.clear();
-      }
-      if (statusBuilder_ != null) {
-        statusBuilder_.clear();
-      }
-      if (omniConversationBuilder_ != null) {
-        omniConversationBuilder_.clear();
-      }
-      if (backofficeMessageBuilder_ != null) {
-        backofficeMessageBuilder_.clear();
-      }
-      if (directedCallRingingBuilder_ != null) {
-        directedCallRingingBuilder_.clear();
-      }
-      if (directedCallHangupBuilder_ != null) {
-        directedCallHangupBuilder_.clear();
-      }
-      if (agentQueuedCallsNotificationBuilder_ != null) {
-        agentQueuedCallsNotificationBuilder_.clear();
-      }
+
       payloadCase_ = 0;
       payload_ = null;
       return this;
@@ -803,50 +929,59 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.GhostNotification buildPartial() {
       com.tcn.cloud.api.api.commons.GhostNotification result = new com.tcn.cloud.api.api.commons.GhostNotification(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      buildPartialOneofs(result);
+      result.referenceId_ = referenceId_;
+      if (payloadCase_ == 2) {
+        if (anyBuilder_ == null) {
+          result.payload_ = payload_;
+        } else {
+          result.payload_ = anyBuilder_.build();
+        }
+      }
+      if (payloadCase_ == 3) {
+        if (statusBuilder_ == null) {
+          result.payload_ = payload_;
+        } else {
+          result.payload_ = statusBuilder_.build();
+        }
+      }
+      if (payloadCase_ == 4) {
+        if (omniConversationBuilder_ == null) {
+          result.payload_ = payload_;
+        } else {
+          result.payload_ = omniConversationBuilder_.build();
+        }
+      }
+      if (payloadCase_ == 6) {
+        if (backofficeMessageBuilder_ == null) {
+          result.payload_ = payload_;
+        } else {
+          result.payload_ = backofficeMessageBuilder_.build();
+        }
+      }
+      if (payloadCase_ == 7) {
+        if (directedCallRingingBuilder_ == null) {
+          result.payload_ = payload_;
+        } else {
+          result.payload_ = directedCallRingingBuilder_.build();
+        }
+      }
+      if (payloadCase_ == 8) {
+        if (directedCallHangupBuilder_ == null) {
+          result.payload_ = payload_;
+        } else {
+          result.payload_ = directedCallHangupBuilder_.build();
+        }
+      }
+      if (payloadCase_ == 9) {
+        if (agentQueuedCallsNotificationBuilder_ == null) {
+          result.payload_ = payload_;
+        } else {
+          result.payload_ = agentQueuedCallsNotificationBuilder_.build();
+        }
+      }
+      result.payloadCase_ = payloadCase_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.commons.GhostNotification result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.referenceId_ = referenceId_;
-      }
-    }
-
-    private void buildPartialOneofs(com.tcn.cloud.api.api.commons.GhostNotification result) {
-      result.payloadCase_ = payloadCase_;
-      result.payload_ = this.payload_;
-      if (payloadCase_ == 2 &&
-          anyBuilder_ != null) {
-        result.payload_ = anyBuilder_.build();
-      }
-      if (payloadCase_ == 3 &&
-          statusBuilder_ != null) {
-        result.payload_ = statusBuilder_.build();
-      }
-      if (payloadCase_ == 4 &&
-          omniConversationBuilder_ != null) {
-        result.payload_ = omniConversationBuilder_.build();
-      }
-      if (payloadCase_ == 6 &&
-          backofficeMessageBuilder_ != null) {
-        result.payload_ = backofficeMessageBuilder_.build();
-      }
-      if (payloadCase_ == 7 &&
-          directedCallRingingBuilder_ != null) {
-        result.payload_ = directedCallRingingBuilder_.build();
-      }
-      if (payloadCase_ == 8 &&
-          directedCallHangupBuilder_ != null) {
-        result.payload_ = directedCallHangupBuilder_.build();
-      }
-      if (payloadCase_ == 9 &&
-          agentQueuedCallsNotificationBuilder_ != null) {
-        result.payload_ = agentQueuedCallsNotificationBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -895,7 +1030,6 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.commons.GhostNotification.getDefaultInstance()) return this;
       if (!other.getReferenceId().isEmpty()) {
         referenceId_ = other.referenceId_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       switch (other.getPayloadCase()) {
@@ -931,7 +1065,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -946,84 +1080,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.commons.GhostNotification parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              referenceId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              input.readMessage(
-                  getAnyFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              payloadCase_ = 2;
-              break;
-            } // case 18
-            case 26: {
-              input.readMessage(
-                  getStatusFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              payloadCase_ = 3;
-              break;
-            } // case 26
-            case 34: {
-              input.readMessage(
-                  getOmniConversationFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              payloadCase_ = 4;
-              break;
-            } // case 34
-            case 50: {
-              input.readMessage(
-                  getBackofficeMessageFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              payloadCase_ = 6;
-              break;
-            } // case 50
-            case 58: {
-              input.readMessage(
-                  getDirectedCallRingingFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              payloadCase_ = 7;
-              break;
-            } // case 58
-            case 66: {
-              input.readMessage(
-                  getDirectedCallHangupFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              payloadCase_ = 8;
-              break;
-            } // case 66
-            case 74: {
-              input.readMessage(
-                  getAgentQueuedCallsNotificationFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              payloadCase_ = 9;
-              break;
-            } // case 74
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.commons.GhostNotification) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int payloadCase_ = 0;
@@ -1041,7 +1108,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int bitField0_;
 
     private java.lang.Object referenceId_ = "";
     /**
@@ -1096,9 +1162,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setReferenceId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       referenceId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1111,8 +1179,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearReferenceId() {
+      
       referenceId_ = getDefaultInstance().getReferenceId();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1127,10 +1195,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setReferenceIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       referenceId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1229,9 +1299,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (payloadCase_ == 2) {
           anyBuilder_.mergeFrom(value);
-        } else {
-          anyBuilder_.setMessage(value);
         }
+        anyBuilder_.setMessage(value);
       }
       payloadCase_ = 2;
       return this;
@@ -1309,7 +1378,7 @@ private static final long serialVersionUID = 0L;
         payload_ = null;
       }
       payloadCase_ = 2;
-      onChanged();
+      onChanged();;
       return anyBuilder_;
     }
 
@@ -1407,9 +1476,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (payloadCase_ == 3) {
           statusBuilder_.mergeFrom(value);
-        } else {
-          statusBuilder_.setMessage(value);
         }
+        statusBuilder_.setMessage(value);
       }
       payloadCase_ = 3;
       return this;
@@ -1487,7 +1555,7 @@ private static final long serialVersionUID = 0L;
         payload_ = null;
       }
       payloadCase_ = 3;
-      onChanged();
+      onChanged();;
       return statusBuilder_;
     }
 
@@ -1585,9 +1653,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (payloadCase_ == 4) {
           omniConversationBuilder_.mergeFrom(value);
-        } else {
-          omniConversationBuilder_.setMessage(value);
         }
+        omniConversationBuilder_.setMessage(value);
       }
       payloadCase_ = 4;
       return this;
@@ -1665,7 +1732,7 @@ private static final long serialVersionUID = 0L;
         payload_ = null;
       }
       payloadCase_ = 4;
-      onChanged();
+      onChanged();;
       return omniConversationBuilder_;
     }
 
@@ -1763,9 +1830,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (payloadCase_ == 6) {
           backofficeMessageBuilder_.mergeFrom(value);
-        } else {
-          backofficeMessageBuilder_.setMessage(value);
         }
+        backofficeMessageBuilder_.setMessage(value);
       }
       payloadCase_ = 6;
       return this;
@@ -1843,7 +1909,7 @@ private static final long serialVersionUID = 0L;
         payload_ = null;
       }
       payloadCase_ = 6;
-      onChanged();
+      onChanged();;
       return backofficeMessageBuilder_;
     }
 
@@ -1941,9 +2007,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (payloadCase_ == 7) {
           directedCallRingingBuilder_.mergeFrom(value);
-        } else {
-          directedCallRingingBuilder_.setMessage(value);
         }
+        directedCallRingingBuilder_.setMessage(value);
       }
       payloadCase_ = 7;
       return this;
@@ -2021,7 +2086,7 @@ private static final long serialVersionUID = 0L;
         payload_ = null;
       }
       payloadCase_ = 7;
-      onChanged();
+      onChanged();;
       return directedCallRingingBuilder_;
     }
 
@@ -2119,9 +2184,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (payloadCase_ == 8) {
           directedCallHangupBuilder_.mergeFrom(value);
-        } else {
-          directedCallHangupBuilder_.setMessage(value);
         }
+        directedCallHangupBuilder_.setMessage(value);
       }
       payloadCase_ = 8;
       return this;
@@ -2199,7 +2263,7 @@ private static final long serialVersionUID = 0L;
         payload_ = null;
       }
       payloadCase_ = 8;
-      onChanged();
+      onChanged();;
       return directedCallHangupBuilder_;
     }
 
@@ -2297,9 +2361,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (payloadCase_ == 9) {
           agentQueuedCallsNotificationBuilder_.mergeFrom(value);
-        } else {
-          agentQueuedCallsNotificationBuilder_.setMessage(value);
         }
+        agentQueuedCallsNotificationBuilder_.setMessage(value);
       }
       payloadCase_ = 9;
       return this;
@@ -2377,7 +2440,7 @@ private static final long serialVersionUID = 0L;
         payload_ = null;
       }
       payloadCase_ = 9;
-      onChanged();
+      onChanged();;
       return agentQueuedCallsNotificationBuilder_;
     }
     @java.lang.Override
@@ -2413,18 +2476,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new GhostNotification(input, extensionRegistry);
     }
   };
 

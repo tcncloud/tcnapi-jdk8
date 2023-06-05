@@ -29,6 +29,74 @@ private static final long serialVersionUID = 0L;
     return new UpdateDashboardGeneralPreferencesRequest();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private UpdateDashboardGeneralPreferencesRequest(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 18: {
+            com.tcn.cloud.api.api.v1alpha1.org.legacy.DashboardPreferences.Builder subBuilder = null;
+            if (dashboardPreferences_ != null) {
+              subBuilder = dashboardPreferences_.toBuilder();
+            }
+            dashboardPreferences_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.org.legacy.DashboardPreferences.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(dashboardPreferences_);
+              dashboardPreferences_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 82: {
+            com.google.protobuf.FieldMask.Builder subBuilder = null;
+            if (fieldMask_ != null) {
+              subBuilder = fieldMask_.toBuilder();
+            }
+            fieldMask_ = input.readMessage(com.google.protobuf.FieldMask.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(fieldMask_);
+              fieldMask_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.org.legacy.EntitiesProto.internal_static_api_v1alpha1_org_legacy_UpdateDashboardGeneralPreferencesRequest_descriptor;
@@ -77,7 +145,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.org.legacy.DashboardPreferencesOrBuilder getDashboardPreferencesOrBuilder() {
-    return dashboardPreferences_ == null ? com.tcn.cloud.api.api.v1alpha1.org.legacy.DashboardPreferences.getDefaultInstance() : dashboardPreferences_;
+    return getDashboardPreferences();
   }
 
   public static final int FIELD_MASK_FIELD_NUMBER = 10;
@@ -115,7 +183,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder() {
-    return fieldMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : fieldMask_;
+    return getFieldMask();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -138,7 +206,7 @@ private static final long serialVersionUID = 0L;
     if (fieldMask_ != null) {
       output.writeMessage(10, getFieldMask());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -155,7 +223,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getFieldMask());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -180,7 +248,7 @@ private static final long serialVersionUID = 0L;
       if (!getFieldMask()
           .equals(other.getFieldMask())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -199,7 +267,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + FIELD_MASK_FIELD_NUMBER;
       hash = (53 * hash) + getFieldMask().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -248,13 +316,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.UpdateDashboardGeneralPreferencesRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.UpdateDashboardGeneralPreferencesRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -322,26 +388,32 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.legacy.UpdateDashboardGeneralPreferencesRequest.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      dashboardPreferences_ = null;
-      if (dashboardPreferencesBuilder_ != null) {
-        dashboardPreferencesBuilder_.dispose();
+      if (dashboardPreferencesBuilder_ == null) {
+        dashboardPreferences_ = null;
+      } else {
+        dashboardPreferences_ = null;
         dashboardPreferencesBuilder_ = null;
       }
-      fieldMask_ = null;
-      if (fieldMaskBuilder_ != null) {
-        fieldMaskBuilder_.dispose();
+      if (fieldMaskBuilder_ == null) {
+        fieldMask_ = null;
+      } else {
+        fieldMask_ = null;
         fieldMaskBuilder_ = null;
       }
       return this;
@@ -370,23 +442,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.legacy.UpdateDashboardGeneralPreferencesRequest buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.legacy.UpdateDashboardGeneralPreferencesRequest result = new com.tcn.cloud.api.api.v1alpha1.org.legacy.UpdateDashboardGeneralPreferencesRequest(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      if (dashboardPreferencesBuilder_ == null) {
+        result.dashboardPreferences_ = dashboardPreferences_;
+      } else {
+        result.dashboardPreferences_ = dashboardPreferencesBuilder_.build();
+      }
+      if (fieldMaskBuilder_ == null) {
+        result.fieldMask_ = fieldMask_;
+      } else {
+        result.fieldMask_ = fieldMaskBuilder_.build();
+      }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.legacy.UpdateDashboardGeneralPreferencesRequest result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.dashboardPreferences_ = dashboardPreferencesBuilder_ == null
-            ? dashboardPreferences_
-            : dashboardPreferencesBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.fieldMask_ = fieldMaskBuilder_ == null
-            ? fieldMask_
-            : fieldMaskBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -439,7 +506,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasFieldMask()) {
         mergeFieldMask(other.getFieldMask());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -454,47 +521,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.org.legacy.UpdateDashboardGeneralPreferencesRequest parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 18: {
-              input.readMessage(
-                  getDashboardPreferencesFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 18
-            case 82: {
-              input.readMessage(
-                  getFieldMaskFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 82
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.org.legacy.UpdateDashboardGeneralPreferencesRequest) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private com.tcn.cloud.api.api.v1alpha1.org.legacy.DashboardPreferences dashboardPreferences_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -508,7 +547,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dashboardPreferences field is set.
      */
     public boolean hasDashboardPreferences() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return dashboardPreferencesBuilder_ != null || dashboardPreferences_ != null;
     }
     /**
      * <pre>
@@ -538,11 +577,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dashboardPreferences_ = value;
+        onChanged();
       } else {
         dashboardPreferencesBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -556,11 +595,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.org.legacy.DashboardPreferences.Builder builderForValue) {
       if (dashboardPreferencesBuilder_ == null) {
         dashboardPreferences_ = builderForValue.build();
+        onChanged();
       } else {
         dashboardPreferencesBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -572,18 +611,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDashboardPreferences(com.tcn.cloud.api.api.v1alpha1.org.legacy.DashboardPreferences value) {
       if (dashboardPreferencesBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          dashboardPreferences_ != null &&
-          dashboardPreferences_ != com.tcn.cloud.api.api.v1alpha1.org.legacy.DashboardPreferences.getDefaultInstance()) {
-          getDashboardPreferencesBuilder().mergeFrom(value);
+        if (dashboardPreferences_ != null) {
+          dashboardPreferences_ =
+            com.tcn.cloud.api.api.v1alpha1.org.legacy.DashboardPreferences.newBuilder(dashboardPreferences_).mergeFrom(value).buildPartial();
         } else {
           dashboardPreferences_ = value;
         }
+        onChanged();
       } else {
         dashboardPreferencesBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -594,13 +632,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.org.legacy.DashboardPreferences dashboard_preferences = 2 [json_name = "dashboardPreferences"];</code>
      */
     public Builder clearDashboardPreferences() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      dashboardPreferences_ = null;
-      if (dashboardPreferencesBuilder_ != null) {
-        dashboardPreferencesBuilder_.dispose();
+      if (dashboardPreferencesBuilder_ == null) {
+        dashboardPreferences_ = null;
+        onChanged();
+      } else {
+        dashboardPreferences_ = null;
         dashboardPreferencesBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -611,7 +650,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.org.legacy.DashboardPreferences dashboard_preferences = 2 [json_name = "dashboardPreferences"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.legacy.DashboardPreferences.Builder getDashboardPreferencesBuilder() {
-      bitField0_ |= 0x00000001;
+      
       onChanged();
       return getDashboardPreferencesFieldBuilder().getBuilder();
     }
@@ -663,7 +702,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the fieldMask field is set.
      */
     public boolean hasFieldMask() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return fieldMaskBuilder_ != null || fieldMask_ != null;
     }
     /**
      * <pre>
@@ -693,11 +732,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         fieldMask_ = value;
+        onChanged();
       } else {
         fieldMaskBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -711,11 +750,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.FieldMask.Builder builderForValue) {
       if (fieldMaskBuilder_ == null) {
         fieldMask_ = builderForValue.build();
+        onChanged();
       } else {
         fieldMaskBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -727,18 +766,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeFieldMask(com.google.protobuf.FieldMask value) {
       if (fieldMaskBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
-          fieldMask_ != null &&
-          fieldMask_ != com.google.protobuf.FieldMask.getDefaultInstance()) {
-          getFieldMaskBuilder().mergeFrom(value);
+        if (fieldMask_ != null) {
+          fieldMask_ =
+            com.google.protobuf.FieldMask.newBuilder(fieldMask_).mergeFrom(value).buildPartial();
         } else {
           fieldMask_ = value;
         }
+        onChanged();
       } else {
         fieldMaskBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -749,13 +787,14 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.FieldMask field_mask = 10 [json_name = "fieldMask"];</code>
      */
     public Builder clearFieldMask() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      fieldMask_ = null;
-      if (fieldMaskBuilder_ != null) {
-        fieldMaskBuilder_.dispose();
+      if (fieldMaskBuilder_ == null) {
+        fieldMask_ = null;
+        onChanged();
+      } else {
+        fieldMask_ = null;
         fieldMaskBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -766,7 +805,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.FieldMask field_mask = 10 [json_name = "fieldMask"];</code>
      */
     public com.google.protobuf.FieldMask.Builder getFieldMaskBuilder() {
-      bitField0_ |= 0x00000002;
+      
       onChanged();
       return getFieldMaskFieldBuilder().getBuilder();
     }
@@ -838,18 +877,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new UpdateDashboardGeneralPreferencesRequest(input, extensionRegistry);
     }
   };
 

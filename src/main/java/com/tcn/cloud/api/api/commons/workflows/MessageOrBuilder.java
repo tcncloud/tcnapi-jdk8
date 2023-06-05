@@ -9,11 +9,6 @@ public interface MessageOrBuilder extends
 
   /**
    * <code>string text = 1 [json_name = "text"];</code>
-   * @return Whether the text field is set.
-   */
-  boolean hasText();
-  /**
-   * <code>string text = 1 [json_name = "text"];</code>
    * @return The text.
    */
   java.lang.String getText();
@@ -24,5 +19,5 @@ public interface MessageOrBuilder extends
   com.google.protobuf.ByteString
       getTextBytes();
 
-  com.tcn.cloud.api.api.commons.workflows.Message.PayloadCase getPayloadCase();
+  public com.tcn.cloud.api.api.commons.workflows.Message.PayloadCase getPayloadCase();
 }

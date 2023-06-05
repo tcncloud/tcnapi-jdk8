@@ -26,6 +26,86 @@ private static final long serialVersionUID = 0L;
     return new PortalLinkEnrichment();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private PortalLinkEnrichment(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              keyMap_ = com.google.protobuf.MapField.newMapField(
+                  KeyMapDefaultEntryHolder.defaultEntry);
+              mutable_bitField0_ |= 0x00000001;
+            }
+            com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+            keyMap__ = input.readMessage(
+                KeyMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+            keyMap_.getMutableMap().put(
+                keyMap__.getKey(), keyMap__.getValue());
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            portalId_ = s;
+            break;
+          }
+          case 50: {
+            com.tcn.cloud.api.api.v0alpha.Expiration.Builder subBuilder = null;
+            if (expiration_ != null) {
+              subBuilder = expiration_.toBuilder();
+            }
+            expiration_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.Expiration.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(expiration_);
+              expiration_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 56: {
+
+            demo_ = input.readBool();
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.LmsProto.internal_static_api_v0alpha_PortalLinkEnrichment_descriptor;
@@ -63,7 +143,6 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "");
   }
-  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, java.lang.String> keyMap_;
   private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -74,6 +153,7 @@ private static final long serialVersionUID = 0L;
     }
     return keyMap_;
   }
+
   public int getKeyMapCount() {
     return internalGetKeyMap().getMap().size();
   }
@@ -84,10 +164,11 @@ private static final long serialVersionUID = 0L;
    *
    * <code>map&lt;string, string&gt; key_map = 1 [json_name = "keyMap"];</code>
    */
+
   @java.lang.Override
   public boolean containsKeyMap(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     return internalGetKeyMap().getMap().containsKey(key);
   }
   /**
@@ -106,6 +187,7 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; key_map = 1 [json_name = "keyMap"];</code>
    */
   @java.lang.Override
+
   public java.util.Map<java.lang.String, java.lang.String> getKeyMapMap() {
     return internalGetKeyMap().getMap();
   }
@@ -117,12 +199,11 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; key_map = 1 [json_name = "keyMap"];</code>
    */
   @java.lang.Override
-  public /* nullable */
-java.lang.String getKeyMapOrDefault(
+
+  public java.lang.String getKeyMapOrDefault(
       java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue) {
-    if (key == null) { throw new NullPointerException("map key"); }
+      java.lang.String defaultValue) {
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetKeyMap().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -135,9 +216,10 @@ java.lang.String defaultValue) {
    * <code>map&lt;string, string&gt; key_map = 1 [json_name = "keyMap"];</code>
    */
   @java.lang.Override
+
   public java.lang.String getKeyMapOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetKeyMap().getMap();
     if (!map.containsKey(key)) {
@@ -147,8 +229,7 @@ java.lang.String defaultValue) {
   }
 
   public static final int PORTAL_ID_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object portalId_ = "";
+  private volatile java.lang.Object portalId_;
   /**
    * <pre>
    * the portal that these links will belong to.
@@ -228,11 +309,11 @@ java.lang.String defaultValue) {
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.ExpirationOrBuilder getExpirationOrBuilder() {
-    return expiration_ == null ? com.tcn.cloud.api.api.v0alpha.Expiration.getDefaultInstance() : expiration_;
+    return getExpiration();
   }
 
   public static final int DEMO_FIELD_NUMBER = 7;
-  private boolean demo_ = false;
+  private boolean demo_;
   /**
    * <pre>
    * if the payment will process or not
@@ -266,7 +347,7 @@ java.lang.String defaultValue) {
         internalGetKeyMap(),
         KeyMapDefaultEntryHolder.defaultEntry,
         1);
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(portalId_)) {
+    if (!getPortalIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, portalId_);
     }
     if (expiration_ != null) {
@@ -275,7 +356,7 @@ java.lang.String defaultValue) {
     if (demo_ != false) {
       output.writeBool(7, demo_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -294,7 +375,7 @@ java.lang.String defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, keyMap__);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(portalId_)) {
+    if (!getPortalIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, portalId_);
     }
     if (expiration_ != null) {
@@ -305,7 +386,7 @@ java.lang.String defaultValue) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(7, demo_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -331,7 +412,7 @@ java.lang.String defaultValue) {
     }
     if (getDemo()
         != other.getDemo()) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -355,7 +436,7 @@ java.lang.String defaultValue) {
     hash = (37 * hash) + DEMO_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getDemo());
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -404,13 +485,11 @@ java.lang.String defaultValue) {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.PortalLinkEnrichment parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.PortalLinkEnrichment parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -496,26 +575,33 @@ java.lang.String defaultValue) {
 
     // Construct using com.tcn.cloud.api.api.v0alpha.PortalLinkEnrichment.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       internalGetMutableKeyMap().clear();
       portalId_ = "";
-      expiration_ = null;
-      if (expirationBuilder_ != null) {
-        expirationBuilder_.dispose();
+
+      if (expirationBuilder_ == null) {
+        expiration_ = null;
+      } else {
+        expiration_ = null;
         expirationBuilder_ = null;
       }
       demo_ = false;
+
       return this;
     }
 
@@ -542,28 +628,18 @@ java.lang.String defaultValue) {
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.PortalLinkEnrichment buildPartial() {
       com.tcn.cloud.api.api.v0alpha.PortalLinkEnrichment result = new com.tcn.cloud.api.api.v0alpha.PortalLinkEnrichment(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      int from_bitField0_ = bitField0_;
+      result.keyMap_ = internalGetKeyMap();
+      result.keyMap_.makeImmutable();
+      result.portalId_ = portalId_;
+      if (expirationBuilder_ == null) {
+        result.expiration_ = expiration_;
+      } else {
+        result.expiration_ = expirationBuilder_.build();
+      }
+      result.demo_ = demo_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.PortalLinkEnrichment result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.keyMap_ = internalGetKeyMap();
-        result.keyMap_.makeImmutable();
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.portalId_ = portalId_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.expiration_ = expirationBuilder_ == null
-            ? expiration_
-            : expirationBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.demo_ = demo_;
-      }
     }
 
     @java.lang.Override
@@ -612,10 +688,8 @@ java.lang.String defaultValue) {
       if (other == com.tcn.cloud.api.api.v0alpha.PortalLinkEnrichment.getDefaultInstance()) return this;
       internalGetMutableKeyMap().mergeFrom(
           other.internalGetKeyMap());
-      bitField0_ |= 0x00000001;
       if (!other.getPortalId().isEmpty()) {
         portalId_ = other.portalId_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasExpiration()) {
@@ -624,7 +698,7 @@ java.lang.String defaultValue) {
       if (other.getDemo() != false) {
         setDemo(other.getDemo());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -639,56 +713,17 @@ java.lang.String defaultValue) {
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.PortalLinkEnrichment parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-              keyMap__ = input.readMessage(
-                  KeyMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              internalGetMutableKeyMap().getMutableMap().put(
-                  keyMap__.getKey(), keyMap__.getValue());
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              portalId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 50: {
-              input.readMessage(
-                  getExpirationFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 50
-            case 56: {
-              demo_ = input.readBool();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 56
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.PortalLinkEnrichment) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -696,7 +731,7 @@ java.lang.String defaultValue) {
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.String> keyMap_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetKeyMap() {
+    internalGetKeyMap() {
       if (keyMap_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             KeyMapDefaultEntryHolder.defaultEntry);
@@ -704,7 +739,8 @@ java.lang.String defaultValue) {
       return keyMap_;
     }
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetMutableKeyMap() {
+    internalGetMutableKeyMap() {
+      onChanged();;
       if (keyMap_ == null) {
         keyMap_ = com.google.protobuf.MapField.newMapField(
             KeyMapDefaultEntryHolder.defaultEntry);
@@ -712,10 +748,9 @@ java.lang.String defaultValue) {
       if (!keyMap_.isMutable()) {
         keyMap_ = keyMap_.copy();
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
       return keyMap_;
     }
+
     public int getKeyMapCount() {
       return internalGetKeyMap().getMap().size();
     }
@@ -726,10 +761,11 @@ java.lang.String defaultValue) {
      *
      * <code>map&lt;string, string&gt; key_map = 1 [json_name = "keyMap"];</code>
      */
+
     @java.lang.Override
     public boolean containsKeyMap(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetKeyMap().getMap().containsKey(key);
     }
     /**
@@ -748,6 +784,7 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, string&gt; key_map = 1 [json_name = "keyMap"];</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.String, java.lang.String> getKeyMapMap() {
       return internalGetKeyMap().getMap();
     }
@@ -759,12 +796,11 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, string&gt; key_map = 1 [json_name = "keyMap"];</code>
      */
     @java.lang.Override
-    public /* nullable */
-java.lang.String getKeyMapOrDefault(
+
+    public java.lang.String getKeyMapOrDefault(
         java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetKeyMap().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -777,9 +813,10 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, string&gt; key_map = 1 [json_name = "keyMap"];</code>
      */
     @java.lang.Override
+
     public java.lang.String getKeyMapOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetKeyMap().getMap();
       if (!map.containsKey(key)) {
@@ -787,8 +824,8 @@ java.lang.String defaultValue) {
       }
       return map.get(key);
     }
+
     public Builder clearKeyMap() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       internalGetMutableKeyMap().getMutableMap()
           .clear();
       return this;
@@ -800,9 +837,10 @@ java.lang.String defaultValue) {
      *
      * <code>map&lt;string, string&gt; key_map = 1 [json_name = "keyMap"];</code>
      */
+
     public Builder removeKeyMap(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableKeyMap().getMutableMap()
           .remove(key);
       return this;
@@ -812,8 +850,7 @@ java.lang.String defaultValue) {
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String>
-        getMutableKeyMap() {
-      bitField0_ |= 0x00000001;
+    getMutableKeyMap() {
       return internalGetMutableKeyMap().getMutableMap();
     }
     /**
@@ -826,11 +863,10 @@ java.lang.String defaultValue) {
     public Builder putKeyMap(
         java.lang.String key,
         java.lang.String value) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      if (value == null) { throw new NullPointerException("map value"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (value == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableKeyMap().getMutableMap()
           .put(key, value);
-      bitField0_ |= 0x00000001;
       return this;
     }
     /**
@@ -840,11 +876,11 @@ java.lang.String defaultValue) {
      *
      * <code>map&lt;string, string&gt; key_map = 1 [json_name = "keyMap"];</code>
      */
+
     public Builder putAllKeyMap(
         java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableKeyMap().getMutableMap()
           .putAll(values);
-      bitField0_ |= 0x00000001;
       return this;
     }
 
@@ -901,9 +937,11 @@ java.lang.String defaultValue) {
      */
     public Builder setPortalId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       portalId_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -916,8 +954,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearPortalId() {
+      
       portalId_ = getDefaultInstance().getPortalId();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -932,10 +970,12 @@ java.lang.String defaultValue) {
      */
     public Builder setPortalIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       portalId_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -952,7 +992,7 @@ java.lang.String defaultValue) {
      * @return Whether the expiration field is set.
      */
     public boolean hasExpiration() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return expirationBuilder_ != null || expiration_ != null;
     }
     /**
      * <pre>
@@ -982,11 +1022,11 @@ java.lang.String defaultValue) {
           throw new NullPointerException();
         }
         expiration_ = value;
+        onChanged();
       } else {
         expirationBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -1000,11 +1040,11 @@ java.lang.String defaultValue) {
         com.tcn.cloud.api.api.v0alpha.Expiration.Builder builderForValue) {
       if (expirationBuilder_ == null) {
         expiration_ = builderForValue.build();
+        onChanged();
       } else {
         expirationBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -1016,18 +1056,17 @@ java.lang.String defaultValue) {
      */
     public Builder mergeExpiration(com.tcn.cloud.api.api.v0alpha.Expiration value) {
       if (expirationBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0) &&
-          expiration_ != null &&
-          expiration_ != com.tcn.cloud.api.api.v0alpha.Expiration.getDefaultInstance()) {
-          getExpirationBuilder().mergeFrom(value);
+        if (expiration_ != null) {
+          expiration_ =
+            com.tcn.cloud.api.api.v0alpha.Expiration.newBuilder(expiration_).mergeFrom(value).buildPartial();
         } else {
           expiration_ = value;
         }
+        onChanged();
       } else {
         expirationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -1038,13 +1077,14 @@ java.lang.String defaultValue) {
      * <code>.api.v0alpha.Expiration expiration = 6 [json_name = "expiration"];</code>
      */
     public Builder clearExpiration() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      expiration_ = null;
-      if (expirationBuilder_ != null) {
-        expirationBuilder_.dispose();
+      if (expirationBuilder_ == null) {
+        expiration_ = null;
+        onChanged();
+      } else {
+        expiration_ = null;
         expirationBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -1055,7 +1095,7 @@ java.lang.String defaultValue) {
      * <code>.api.v0alpha.Expiration expiration = 6 [json_name = "expiration"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.Expiration.Builder getExpirationBuilder() {
-      bitField0_ |= 0x00000004;
+      
       onChanged();
       return getExpirationFieldBuilder().getBuilder();
     }
@@ -1118,9 +1158,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setDemo(boolean value) {
-
+      
       demo_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1133,7 +1172,7 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearDemo() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      
       demo_ = false;
       onChanged();
       return this;
@@ -1171,18 +1210,7 @@ java.lang.String defaultValue) {
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new PortalLinkEnrichment(input, extensionRegistry);
     }
   };
 

@@ -77,5 +77,5 @@ public interface ExportDeliveryOrBuilder extends
   com.google.protobuf.ByteString
       getFailureEmailAddresesBytes(int index);
 
-  com.tcn.cloud.api.api.v0alpha.ExportDelivery.DeliveryTypeCase getDeliveryTypeCase();
+  public com.tcn.cloud.api.api.v0alpha.ExportDelivery.DeliveryTypeCase getDeliveryTypeCase();
 }

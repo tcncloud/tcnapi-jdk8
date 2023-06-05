@@ -35,6 +35,122 @@ private static final long serialVersionUID = 0L;
     return new CannedMessage();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private CannedMessage(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            cannedMessageId_ = s;
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            name_ = s;
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            description_ = s;
+            break;
+          }
+          case 34: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            messageBody_ = s;
+            break;
+          }
+          case 42: {
+            com.google.protobuf.Timestamp.Builder subBuilder = null;
+            if (dateCreated_ != null) {
+              subBuilder = dateCreated_.toBuilder();
+            }
+            dateCreated_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(dateCreated_);
+              dateCreated_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 50: {
+            com.google.protobuf.Timestamp.Builder subBuilder = null;
+            if (lastUpdated_ != null) {
+              subBuilder = lastUpdated_.toBuilder();
+            }
+            lastUpdated_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(lastUpdated_);
+              lastUpdated_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 58: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            cannedMessageGroupId_ = s;
+            break;
+          }
+          case 64: {
+
+            allowsHtml_ = input.readBool();
+            break;
+          }
+          case 74: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              attachments_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.OmniAttachment>();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            attachments_.add(
+                input.readMessage(com.tcn.cloud.api.api.commons.OmniAttachment.parser(), extensionRegistry));
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        attachments_ = java.util.Collections.unmodifiableList(attachments_);
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_CannedMessage_descriptor;
@@ -49,8 +165,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CANNED_MESSAGE_ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object cannedMessageId_ = "";
+  private volatile java.lang.Object cannedMessageId_;
   /**
    * <pre>
    * result of generated canned_message_id
@@ -96,8 +211,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object name_ = "";
+  private volatile java.lang.Object name_;
   /**
    * <pre>
    *&#47; canned message name
@@ -143,8 +257,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTION_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object description_ = "";
+  private volatile java.lang.Object description_;
   /**
    * <pre>
    * description
@@ -190,8 +303,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MESSAGE_BODY_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object messageBody_ = "";
+  private volatile java.lang.Object messageBody_;
   /**
    * <pre>
    * message details
@@ -271,7 +383,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getDateCreatedOrBuilder() {
-    return dateCreated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dateCreated_;
+    return getDateCreated();
   }
 
   public static final int LAST_UPDATED_FIELD_NUMBER = 6;
@@ -309,12 +421,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getLastUpdatedOrBuilder() {
-    return lastUpdated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastUpdated_;
+    return getLastUpdated();
   }
 
   public static final int CANNED_MESSAGE_GROUP_ID_FIELD_NUMBER = 7;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object cannedMessageGroupId_ = "";
+  private volatile java.lang.Object cannedMessageGroupId_;
   /**
    * <pre>
    * canned message group id
@@ -360,7 +471,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ALLOWS_HTML_FIELD_NUMBER = 8;
-  private boolean allowsHtml_ = false;
+  private boolean allowsHtml_;
   /**
    * <pre>
    * allows html
@@ -375,7 +486,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ATTACHMENTS_FIELD_NUMBER = 9;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.OmniAttachment> attachments_;
   /**
    * <pre>
@@ -449,16 +559,16 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cannedMessageId_)) {
+    if (!getCannedMessageIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, cannedMessageId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+    if (!getNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+    if (!getDescriptionBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(messageBody_)) {
+    if (!getMessageBodyBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, messageBody_);
     }
     if (dateCreated_ != null) {
@@ -467,7 +577,7 @@ private static final long serialVersionUID = 0L;
     if (lastUpdated_ != null) {
       output.writeMessage(6, getLastUpdated());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cannedMessageGroupId_)) {
+    if (!getCannedMessageGroupIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, cannedMessageGroupId_);
     }
     if (allowsHtml_ != false) {
@@ -476,7 +586,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < attachments_.size(); i++) {
       output.writeMessage(9, attachments_.get(i));
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -485,16 +595,16 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cannedMessageId_)) {
+    if (!getCannedMessageIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, cannedMessageId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+    if (!getNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+    if (!getDescriptionBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(messageBody_)) {
+    if (!getMessageBodyBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, messageBody_);
     }
     if (dateCreated_ != null) {
@@ -505,7 +615,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getLastUpdated());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cannedMessageGroupId_)) {
+    if (!getCannedMessageGroupIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, cannedMessageGroupId_);
     }
     if (allowsHtml_ != false) {
@@ -516,7 +626,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, attachments_.get(i));
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -555,7 +665,7 @@ private static final long serialVersionUID = 0L;
         != other.getAllowsHtml()) return false;
     if (!getAttachmentsList()
         .equals(other.getAttachmentsList())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -591,7 +701,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + ATTACHMENTS_FIELD_NUMBER;
       hash = (53 * hash) + getAttachmentsList().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -640,13 +750,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.CannedMessage parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.CannedMessage parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -714,41 +822,53 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.CannedMessage.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getAttachmentsFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       cannedMessageId_ = "";
+
       name_ = "";
+
       description_ = "";
+
       messageBody_ = "";
-      dateCreated_ = null;
-      if (dateCreatedBuilder_ != null) {
-        dateCreatedBuilder_.dispose();
+
+      if (dateCreatedBuilder_ == null) {
+        dateCreated_ = null;
+      } else {
+        dateCreated_ = null;
         dateCreatedBuilder_ = null;
       }
-      lastUpdated_ = null;
-      if (lastUpdatedBuilder_ != null) {
-        lastUpdatedBuilder_.dispose();
+      if (lastUpdatedBuilder_ == null) {
+        lastUpdated_ = null;
+      } else {
+        lastUpdated_ = null;
         lastUpdatedBuilder_ = null;
       }
       cannedMessageGroupId_ = "";
+
       allowsHtml_ = false;
+
       if (attachmentsBuilder_ == null) {
         attachments_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
-        attachments_ = null;
         attachmentsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000100);
       return this;
     }
 
@@ -775,54 +895,34 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.CannedMessage buildPartial() {
       com.tcn.cloud.api.api.v0alpha.CannedMessage result = new com.tcn.cloud.api.api.v0alpha.CannedMessage(this);
-      buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      onBuilt();
-      return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.CannedMessage result) {
+      int from_bitField0_ = bitField0_;
+      result.cannedMessageId_ = cannedMessageId_;
+      result.name_ = name_;
+      result.description_ = description_;
+      result.messageBody_ = messageBody_;
+      if (dateCreatedBuilder_ == null) {
+        result.dateCreated_ = dateCreated_;
+      } else {
+        result.dateCreated_ = dateCreatedBuilder_.build();
+      }
+      if (lastUpdatedBuilder_ == null) {
+        result.lastUpdated_ = lastUpdated_;
+      } else {
+        result.lastUpdated_ = lastUpdatedBuilder_.build();
+      }
+      result.cannedMessageGroupId_ = cannedMessageGroupId_;
+      result.allowsHtml_ = allowsHtml_;
       if (attachmentsBuilder_ == null) {
-        if (((bitField0_ & 0x00000100) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           attachments_ = java.util.Collections.unmodifiableList(attachments_);
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.attachments_ = attachments_;
       } else {
         result.attachments_ = attachmentsBuilder_.build();
       }
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.CannedMessage result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.cannedMessageId_ = cannedMessageId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.name_ = name_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.description_ = description_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.messageBody_ = messageBody_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.dateCreated_ = dateCreatedBuilder_ == null
-            ? dateCreated_
-            : dateCreatedBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.lastUpdated_ = lastUpdatedBuilder_ == null
-            ? lastUpdated_
-            : lastUpdatedBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.cannedMessageGroupId_ = cannedMessageGroupId_;
-      }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.allowsHtml_ = allowsHtml_;
-      }
+      onBuilt();
+      return result;
     }
 
     @java.lang.Override
@@ -871,22 +971,18 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v0alpha.CannedMessage.getDefaultInstance()) return this;
       if (!other.getCannedMessageId().isEmpty()) {
         cannedMessageId_ = other.cannedMessageId_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getDescription().isEmpty()) {
         description_ = other.description_;
-        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getMessageBody().isEmpty()) {
         messageBody_ = other.messageBody_;
-        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.hasDateCreated()) {
@@ -897,7 +993,6 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getCannedMessageGroupId().isEmpty()) {
         cannedMessageGroupId_ = other.cannedMessageGroupId_;
-        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (other.getAllowsHtml() != false) {
@@ -907,7 +1002,7 @@ private static final long serialVersionUID = 0L;
         if (!other.attachments_.isEmpty()) {
           if (attachments_.isEmpty()) {
             attachments_ = other.attachments_;
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureAttachmentsIsMutable();
             attachments_.addAll(other.attachments_);
@@ -920,7 +1015,7 @@ private static final long serialVersionUID = 0L;
             attachmentsBuilder_.dispose();
             attachmentsBuilder_ = null;
             attachments_ = other.attachments_;
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000001);
             attachmentsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getAttachmentsFieldBuilder() : null;
@@ -929,7 +1024,7 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -944,87 +1039,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.CannedMessage parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              cannedMessageId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              name_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 26: {
-              description_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            case 34: {
-              messageBody_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
-            case 42: {
-              input.readMessage(
-                  getDateCreatedFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 42
-            case 50: {
-              input.readMessage(
-                  getLastUpdatedFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 50
-            case 58: {
-              cannedMessageGroupId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 58
-            case 64: {
-              allowsHtml_ = input.readBool();
-              bitField0_ |= 0x00000080;
-              break;
-            } // case 64
-            case 74: {
-              com.tcn.cloud.api.api.commons.OmniAttachment m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.commons.OmniAttachment.parser(),
-                      extensionRegistry);
-              if (attachmentsBuilder_ == null) {
-                ensureAttachmentsIsMutable();
-                attachments_.add(m);
-              } else {
-                attachmentsBuilder_.addMessage(m);
-              }
-              break;
-            } // case 74
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.CannedMessage) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -1082,9 +1107,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCannedMessageId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       cannedMessageId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1097,8 +1124,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCannedMessageId() {
+      
       cannedMessageId_ = getDefaultInstance().getCannedMessageId();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1113,10 +1140,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCannedMessageIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       cannedMessageId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1174,9 +1203,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       name_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1189,8 +1220,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
+      
       name_ = getDefaultInstance().getName();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1205,10 +1236,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       name_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1266,9 +1299,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       description_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1281,8 +1316,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
+      
       description_ = getDefaultInstance().getDescription();
-      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1297,10 +1332,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescriptionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       description_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1358,9 +1395,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setMessageBody(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       messageBody_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1373,8 +1412,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMessageBody() {
+      
       messageBody_ = getDefaultInstance().getMessageBody();
-      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1389,10 +1428,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setMessageBodyBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       messageBody_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1409,7 +1450,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dateCreated field is set.
      */
     public boolean hasDateCreated() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return dateCreatedBuilder_ != null || dateCreated_ != null;
     }
     /**
      * <pre>
@@ -1439,11 +1480,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dateCreated_ = value;
+        onChanged();
       } else {
         dateCreatedBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
@@ -1457,11 +1498,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (dateCreatedBuilder_ == null) {
         dateCreated_ = builderForValue.build();
+        onChanged();
       } else {
         dateCreatedBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
@@ -1473,18 +1514,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDateCreated(com.google.protobuf.Timestamp value) {
       if (dateCreatedBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0) &&
-          dateCreated_ != null &&
-          dateCreated_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getDateCreatedBuilder().mergeFrom(value);
+        if (dateCreated_ != null) {
+          dateCreated_ =
+            com.google.protobuf.Timestamp.newBuilder(dateCreated_).mergeFrom(value).buildPartial();
         } else {
           dateCreated_ = value;
         }
+        onChanged();
       } else {
         dateCreatedBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
@@ -1495,13 +1535,14 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp date_created = 5 [json_name = "dateCreated"];</code>
      */
     public Builder clearDateCreated() {
-      bitField0_ = (bitField0_ & ~0x00000010);
-      dateCreated_ = null;
-      if (dateCreatedBuilder_ != null) {
-        dateCreatedBuilder_.dispose();
+      if (dateCreatedBuilder_ == null) {
+        dateCreated_ = null;
+        onChanged();
+      } else {
+        dateCreated_ = null;
         dateCreatedBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -1512,7 +1553,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp date_created = 5 [json_name = "dateCreated"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getDateCreatedBuilder() {
-      bitField0_ |= 0x00000010;
+      
       onChanged();
       return getDateCreatedFieldBuilder().getBuilder();
     }
@@ -1564,7 +1605,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the lastUpdated field is set.
      */
     public boolean hasLastUpdated() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return lastUpdatedBuilder_ != null || lastUpdated_ != null;
     }
     /**
      * <pre>
@@ -1594,11 +1635,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         lastUpdated_ = value;
+        onChanged();
       } else {
         lastUpdatedBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+
       return this;
     }
     /**
@@ -1612,11 +1653,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (lastUpdatedBuilder_ == null) {
         lastUpdated_ = builderForValue.build();
+        onChanged();
       } else {
         lastUpdatedBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+
       return this;
     }
     /**
@@ -1628,18 +1669,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeLastUpdated(com.google.protobuf.Timestamp value) {
       if (lastUpdatedBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0) &&
-          lastUpdated_ != null &&
-          lastUpdated_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getLastUpdatedBuilder().mergeFrom(value);
+        if (lastUpdated_ != null) {
+          lastUpdated_ =
+            com.google.protobuf.Timestamp.newBuilder(lastUpdated_).mergeFrom(value).buildPartial();
         } else {
           lastUpdated_ = value;
         }
+        onChanged();
       } else {
         lastUpdatedBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+
       return this;
     }
     /**
@@ -1650,13 +1690,14 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp last_updated = 6 [json_name = "lastUpdated"];</code>
      */
     public Builder clearLastUpdated() {
-      bitField0_ = (bitField0_ & ~0x00000020);
-      lastUpdated_ = null;
-      if (lastUpdatedBuilder_ != null) {
-        lastUpdatedBuilder_.dispose();
+      if (lastUpdatedBuilder_ == null) {
+        lastUpdated_ = null;
+        onChanged();
+      } else {
+        lastUpdated_ = null;
         lastUpdatedBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -1667,7 +1708,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp last_updated = 6 [json_name = "lastUpdated"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getLastUpdatedBuilder() {
-      bitField0_ |= 0x00000020;
+      
       onChanged();
       return getLastUpdatedFieldBuilder().getBuilder();
     }
@@ -1760,9 +1801,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCannedMessageGroupId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       cannedMessageGroupId_ = value;
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1775,8 +1818,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCannedMessageGroupId() {
+      
       cannedMessageGroupId_ = getDefaultInstance().getCannedMessageGroupId();
-      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -1791,10 +1834,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCannedMessageGroupIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       cannedMessageGroupId_ = value;
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1822,9 +1867,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAllowsHtml(boolean value) {
-
+      
       allowsHtml_ = value;
-      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1837,7 +1881,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllowsHtml() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      
       allowsHtml_ = false;
       onChanged();
       return this;
@@ -1846,9 +1890,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.commons.OmniAttachment> attachments_ =
       java.util.Collections.emptyList();
     private void ensureAttachmentsIsMutable() {
-      if (!((bitField0_ & 0x00000100) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         attachments_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.OmniAttachment>(attachments_);
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -2042,7 +2086,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearAttachments() {
       if (attachmentsBuilder_ == null) {
         attachments_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         attachmentsBuilder_.clear();
@@ -2147,7 +2191,7 @@ private static final long serialVersionUID = 0L;
         attachmentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.OmniAttachment, com.tcn.cloud.api.api.commons.OmniAttachment.Builder, com.tcn.cloud.api.api.commons.OmniAttachmentOrBuilder>(
                 attachments_,
-                ((bitField0_ & 0x00000100) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         attachments_ = null;
@@ -2187,18 +2231,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new CannedMessage(input, extensionRegistry);
     }
   };
 

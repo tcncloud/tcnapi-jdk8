@@ -29,6 +29,74 @@ private static final long serialVersionUID = 0L;
     return new OrganizationDetails();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private OrganizationDetails(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            com.tcn.cloud.api.api.commons.org.Organization.Builder subBuilder = null;
+            if (organization_ != null) {
+              subBuilder = organization_.toBuilder();
+            }
+            organization_ = input.readMessage(com.tcn.cloud.api.api.commons.org.Organization.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(organization_);
+              organization_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 18: {
+            com.google.protobuf.Timestamp.Builder subBuilder = null;
+            if (lastScheduledDate_ != null) {
+              subBuilder = lastScheduledDate_.toBuilder();
+            }
+            lastScheduledDate_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(lastScheduledDate_);
+              lastScheduledDate_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.org.OrganizationProto.internal_static_api_v1alpha1_org_OrganizationDetails_descriptor;
@@ -77,7 +145,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.OrganizationOrBuilder getOrganizationOrBuilder() {
-    return organization_ == null ? com.tcn.cloud.api.api.commons.org.Organization.getDefaultInstance() : organization_;
+    return getOrganization();
   }
 
   public static final int LAST_SCHEDULED_DATE_FIELD_NUMBER = 2;
@@ -115,7 +183,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getLastScheduledDateOrBuilder() {
-    return lastScheduledDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastScheduledDate_;
+    return getLastScheduledDate();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -138,7 +206,7 @@ private static final long serialVersionUID = 0L;
     if (lastScheduledDate_ != null) {
       output.writeMessage(2, getLastScheduledDate());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -155,7 +223,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getLastScheduledDate());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -180,7 +248,7 @@ private static final long serialVersionUID = 0L;
       if (!getLastScheduledDate()
           .equals(other.getLastScheduledDate())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -199,7 +267,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + LAST_SCHEDULED_DATE_FIELD_NUMBER;
       hash = (53 * hash) + getLastScheduledDate().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -248,13 +316,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.org.OrganizationDetails parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.org.OrganizationDetails parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -322,26 +388,32 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.OrganizationDetails.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      organization_ = null;
-      if (organizationBuilder_ != null) {
-        organizationBuilder_.dispose();
+      if (organizationBuilder_ == null) {
+        organization_ = null;
+      } else {
+        organization_ = null;
         organizationBuilder_ = null;
       }
-      lastScheduledDate_ = null;
-      if (lastScheduledDateBuilder_ != null) {
-        lastScheduledDateBuilder_.dispose();
+      if (lastScheduledDateBuilder_ == null) {
+        lastScheduledDate_ = null;
+      } else {
+        lastScheduledDate_ = null;
         lastScheduledDateBuilder_ = null;
       }
       return this;
@@ -370,23 +442,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.OrganizationDetails buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.OrganizationDetails result = new com.tcn.cloud.api.api.v1alpha1.org.OrganizationDetails(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      if (organizationBuilder_ == null) {
+        result.organization_ = organization_;
+      } else {
+        result.organization_ = organizationBuilder_.build();
+      }
+      if (lastScheduledDateBuilder_ == null) {
+        result.lastScheduledDate_ = lastScheduledDate_;
+      } else {
+        result.lastScheduledDate_ = lastScheduledDateBuilder_.build();
+      }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.OrganizationDetails result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.organization_ = organizationBuilder_ == null
-            ? organization_
-            : organizationBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.lastScheduledDate_ = lastScheduledDateBuilder_ == null
-            ? lastScheduledDate_
-            : lastScheduledDateBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -439,7 +506,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasLastScheduledDate()) {
         mergeLastScheduledDate(other.getLastScheduledDate());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -454,47 +521,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.org.OrganizationDetails parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              input.readMessage(
-                  getOrganizationFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              input.readMessage(
-                  getLastScheduledDateFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.org.OrganizationDetails) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private com.tcn.cloud.api.api.commons.org.Organization organization_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -508,7 +547,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the organization field is set.
      */
     public boolean hasOrganization() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return organizationBuilder_ != null || organization_ != null;
     }
     /**
      * <pre>
@@ -538,11 +577,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         organization_ = value;
+        onChanged();
       } else {
         organizationBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -556,11 +595,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.Organization.Builder builderForValue) {
       if (organizationBuilder_ == null) {
         organization_ = builderForValue.build();
+        onChanged();
       } else {
         organizationBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -572,18 +611,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeOrganization(com.tcn.cloud.api.api.commons.org.Organization value) {
       if (organizationBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          organization_ != null &&
-          organization_ != com.tcn.cloud.api.api.commons.org.Organization.getDefaultInstance()) {
-          getOrganizationBuilder().mergeFrom(value);
+        if (organization_ != null) {
+          organization_ =
+            com.tcn.cloud.api.api.commons.org.Organization.newBuilder(organization_).mergeFrom(value).buildPartial();
         } else {
           organization_ = value;
         }
+        onChanged();
       } else {
         organizationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -594,13 +632,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.Organization organization = 1 [json_name = "organization"];</code>
      */
     public Builder clearOrganization() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      organization_ = null;
-      if (organizationBuilder_ != null) {
-        organizationBuilder_.dispose();
+      if (organizationBuilder_ == null) {
+        organization_ = null;
+        onChanged();
+      } else {
+        organization_ = null;
         organizationBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -611,7 +650,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.Organization organization = 1 [json_name = "organization"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.Organization.Builder getOrganizationBuilder() {
-      bitField0_ |= 0x00000001;
+      
       onChanged();
       return getOrganizationFieldBuilder().getBuilder();
     }
@@ -663,7 +702,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the lastScheduledDate field is set.
      */
     public boolean hasLastScheduledDate() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return lastScheduledDateBuilder_ != null || lastScheduledDate_ != null;
     }
     /**
      * <pre>
@@ -693,11 +732,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         lastScheduledDate_ = value;
+        onChanged();
       } else {
         lastScheduledDateBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -711,11 +750,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (lastScheduledDateBuilder_ == null) {
         lastScheduledDate_ = builderForValue.build();
+        onChanged();
       } else {
         lastScheduledDateBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -727,18 +766,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeLastScheduledDate(com.google.protobuf.Timestamp value) {
       if (lastScheduledDateBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
-          lastScheduledDate_ != null &&
-          lastScheduledDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getLastScheduledDateBuilder().mergeFrom(value);
+        if (lastScheduledDate_ != null) {
+          lastScheduledDate_ =
+            com.google.protobuf.Timestamp.newBuilder(lastScheduledDate_).mergeFrom(value).buildPartial();
         } else {
           lastScheduledDate_ = value;
         }
+        onChanged();
       } else {
         lastScheduledDateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -749,13 +787,14 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp last_scheduled_date = 2 [json_name = "lastScheduledDate"];</code>
      */
     public Builder clearLastScheduledDate() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      lastScheduledDate_ = null;
-      if (lastScheduledDateBuilder_ != null) {
-        lastScheduledDateBuilder_.dispose();
+      if (lastScheduledDateBuilder_ == null) {
+        lastScheduledDate_ = null;
+        onChanged();
+      } else {
+        lastScheduledDate_ = null;
         lastScheduledDateBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -766,7 +805,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp last_scheduled_date = 2 [json_name = "lastScheduledDate"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getLastScheduledDateBuilder() {
-      bitField0_ |= 0x00000002;
+      
       onChanged();
       return getLastScheduledDateFieldBuilder().getBuilder();
     }
@@ -838,18 +877,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new OrganizationDetails(input, extensionRegistry);
     }
   };
 

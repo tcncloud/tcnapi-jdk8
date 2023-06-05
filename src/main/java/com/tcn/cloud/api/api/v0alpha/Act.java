@@ -28,6 +28,100 @@ private static final long serialVersionUID = 0L;
     return new Act();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private Act(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              disposition_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.Disposition>();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            disposition_.add(
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.Disposition.parser(), extensionRegistry));
+            break;
+          }
+          case 18: {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              verbiage_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.Verbiage>();
+              mutable_bitField0_ |= 0x00000002;
+            }
+            verbiage_.add(
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.Verbiage.parser(), extensionRegistry));
+            break;
+          }
+          case 24: {
+
+            defaultConditionalNavigationTarget_ = input.readInt64();
+            break;
+          }
+          case 34: {
+            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+              conditionalNavigation_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.ConditionalNavigation>();
+              mutable_bitField0_ |= 0x00000004;
+            }
+            conditionalNavigation_.add(
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.ConditionalNavigation.parser(), extensionRegistry));
+            break;
+          }
+          case 40: {
+
+            pageArrivalRecordingControl_ = input.readInt64();
+            break;
+          }
+          case 48: {
+
+            pageExitRecordingControl_ = input.readInt64();
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        disposition_ = java.util.Collections.unmodifiableList(disposition_);
+      }
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        verbiage_ = java.util.Collections.unmodifiableList(verbiage_);
+      }
+      if (((mutable_bitField0_ & 0x00000004) != 0)) {
+        conditionalNavigation_ = java.util.Collections.unmodifiableList(conditionalNavigation_);
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.P3apiProto.internal_static_api_v0alpha_Act_descriptor;
@@ -42,7 +136,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DISPOSITION_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v0alpha.Disposition> disposition_;
   /**
    * <code>repeated .api.v0alpha.Disposition disposition = 1 [json_name = "disposition"];</code>
@@ -83,7 +176,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VERBIAGE_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v0alpha.Verbiage> verbiage_;
   /**
    * <code>repeated .api.v0alpha.Verbiage verbiage = 2 [json_name = "verbiage"];</code>
@@ -124,7 +216,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DEFAULT_CONDITIONAL_NAVIGATION_TARGET_FIELD_NUMBER = 3;
-  private long defaultConditionalNavigationTarget_ = 0L;
+  private long defaultConditionalNavigationTarget_;
   /**
    * <code>int64 default_conditional_navigation_target = 3 [json_name = "defaultConditionalNavigationTarget"];</code>
    * @return The defaultConditionalNavigationTarget.
@@ -135,7 +227,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONDITIONAL_NAVIGATION_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v0alpha.ConditionalNavigation> conditionalNavigation_;
   /**
    * <code>repeated .api.v0alpha.ConditionalNavigation conditional_navigation = 4 [json_name = "conditionalNavigation"];</code>
@@ -176,7 +267,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PAGE_ARRIVAL_RECORDING_CONTROL_FIELD_NUMBER = 5;
-  private long pageArrivalRecordingControl_ = 0L;
+  private long pageArrivalRecordingControl_;
   /**
    * <code>int64 page_arrival_recording_control = 5 [json_name = "pageArrivalRecordingControl"];</code>
    * @return The pageArrivalRecordingControl.
@@ -187,7 +278,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PAGE_EXIT_RECORDING_CONTROL_FIELD_NUMBER = 6;
-  private long pageExitRecordingControl_ = 0L;
+  private long pageExitRecordingControl_;
   /**
    * <code>int64 page_exit_recording_control = 6 [json_name = "pageExitRecordingControl"];</code>
    * @return The pageExitRecordingControl.
@@ -229,7 +320,7 @@ private static final long serialVersionUID = 0L;
     if (pageExitRecordingControl_ != 0L) {
       output.writeInt64(6, pageExitRecordingControl_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -262,7 +353,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(6, pageExitRecordingControl_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -289,7 +380,7 @@ private static final long serialVersionUID = 0L;
         != other.getPageArrivalRecordingControl()) return false;
     if (getPageExitRecordingControl()
         != other.getPageExitRecordingControl()) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -321,7 +412,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + PAGE_EXIT_RECORDING_CONTROL_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getPageExitRecordingControl());
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -370,13 +461,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.Act parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.Act parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -440,42 +529,49 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.Act.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getDispositionFieldBuilder();
+        getVerbiageFieldBuilder();
+        getConditionalNavigationFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       if (dispositionBuilder_ == null) {
         disposition_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
-        disposition_ = null;
         dispositionBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000001);
       if (verbiageBuilder_ == null) {
         verbiage_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
-        verbiage_ = null;
         verbiageBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000002);
       defaultConditionalNavigationTarget_ = 0L;
+
       if (conditionalNavigationBuilder_ == null) {
         conditionalNavigation_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
       } else {
-        conditionalNavigation_ = null;
         conditionalNavigationBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000008);
       pageArrivalRecordingControl_ = 0L;
+
       pageExitRecordingControl_ = 0L;
+
       return this;
     }
 
@@ -502,13 +598,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.Act buildPartial() {
       com.tcn.cloud.api.api.v0alpha.Act result = new com.tcn.cloud.api.api.v0alpha.Act(this);
-      buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      onBuilt();
-      return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.Act result) {
+      int from_bitField0_ = bitField0_;
       if (dispositionBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           disposition_ = java.util.Collections.unmodifiableList(disposition_);
@@ -527,28 +617,20 @@ private static final long serialVersionUID = 0L;
       } else {
         result.verbiage_ = verbiageBuilder_.build();
       }
+      result.defaultConditionalNavigationTarget_ = defaultConditionalNavigationTarget_;
       if (conditionalNavigationBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           conditionalNavigation_ = java.util.Collections.unmodifiableList(conditionalNavigation_);
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.conditionalNavigation_ = conditionalNavigation_;
       } else {
         result.conditionalNavigation_ = conditionalNavigationBuilder_.build();
       }
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.Act result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.defaultConditionalNavigationTarget_ = defaultConditionalNavigationTarget_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.pageArrivalRecordingControl_ = pageArrivalRecordingControl_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.pageExitRecordingControl_ = pageExitRecordingControl_;
-      }
+      result.pageArrivalRecordingControl_ = pageArrivalRecordingControl_;
+      result.pageExitRecordingControl_ = pageExitRecordingControl_;
+      onBuilt();
+      return result;
     }
 
     @java.lang.Override
@@ -654,7 +736,7 @@ private static final long serialVersionUID = 0L;
         if (!other.conditionalNavigation_.isEmpty()) {
           if (conditionalNavigation_.isEmpty()) {
             conditionalNavigation_ = other.conditionalNavigation_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureConditionalNavigationIsMutable();
             conditionalNavigation_.addAll(other.conditionalNavigation_);
@@ -667,7 +749,7 @@ private static final long serialVersionUID = 0L;
             conditionalNavigationBuilder_.dispose();
             conditionalNavigationBuilder_ = null;
             conditionalNavigation_ = other.conditionalNavigation_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000004);
             conditionalNavigationBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getConditionalNavigationFieldBuilder() : null;
@@ -682,7 +764,7 @@ private static final long serialVersionUID = 0L;
       if (other.getPageExitRecordingControl() != 0L) {
         setPageExitRecordingControl(other.getPageExitRecordingControl());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -697,84 +779,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.Act parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.tcn.cloud.api.api.v0alpha.Disposition m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v0alpha.Disposition.parser(),
-                      extensionRegistry);
-              if (dispositionBuilder_ == null) {
-                ensureDispositionIsMutable();
-                disposition_.add(m);
-              } else {
-                dispositionBuilder_.addMessage(m);
-              }
-              break;
-            } // case 10
-            case 18: {
-              com.tcn.cloud.api.api.v0alpha.Verbiage m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v0alpha.Verbiage.parser(),
-                      extensionRegistry);
-              if (verbiageBuilder_ == null) {
-                ensureVerbiageIsMutable();
-                verbiage_.add(m);
-              } else {
-                verbiageBuilder_.addMessage(m);
-              }
-              break;
-            } // case 18
-            case 24: {
-              defaultConditionalNavigationTarget_ = input.readInt64();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 24
-            case 34: {
-              com.tcn.cloud.api.api.v0alpha.ConditionalNavigation m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v0alpha.ConditionalNavigation.parser(),
-                      extensionRegistry);
-              if (conditionalNavigationBuilder_ == null) {
-                ensureConditionalNavigationIsMutable();
-                conditionalNavigation_.add(m);
-              } else {
-                conditionalNavigationBuilder_.addMessage(m);
-              }
-              break;
-            } // case 34
-            case 40: {
-              pageArrivalRecordingControl_ = input.readInt64();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 40
-            case 48: {
-              pageExitRecordingControl_ = input.readInt64();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 48
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.Act) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -1274,9 +1289,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDefaultConditionalNavigationTarget(long value) {
-
+      
       defaultConditionalNavigationTarget_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1285,7 +1299,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDefaultConditionalNavigationTarget() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       defaultConditionalNavigationTarget_ = 0L;
       onChanged();
       return this;
@@ -1294,9 +1308,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v0alpha.ConditionalNavigation> conditionalNavigation_ =
       java.util.Collections.emptyList();
     private void ensureConditionalNavigationIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         conditionalNavigation_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.ConditionalNavigation>(conditionalNavigation_);
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
        }
     }
 
@@ -1446,7 +1460,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearConditionalNavigation() {
       if (conditionalNavigationBuilder_ == null) {
         conditionalNavigation_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
       } else {
         conditionalNavigationBuilder_.clear();
@@ -1523,7 +1537,7 @@ private static final long serialVersionUID = 0L;
         conditionalNavigationBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v0alpha.ConditionalNavigation, com.tcn.cloud.api.api.v0alpha.ConditionalNavigation.Builder, com.tcn.cloud.api.api.v0alpha.ConditionalNavigationOrBuilder>(
                 conditionalNavigation_,
-                ((bitField0_ & 0x00000008) != 0),
+                ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
         conditionalNavigation_ = null;
@@ -1546,9 +1560,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPageArrivalRecordingControl(long value) {
-
+      
       pageArrivalRecordingControl_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1557,7 +1570,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPageArrivalRecordingControl() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      
       pageArrivalRecordingControl_ = 0L;
       onChanged();
       return this;
@@ -1578,9 +1591,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPageExitRecordingControl(long value) {
-
+      
       pageExitRecordingControl_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1589,7 +1601,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPageExitRecordingControl() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      
       pageExitRecordingControl_ = 0L;
       onChanged();
       return this;
@@ -1627,18 +1639,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new Act(input, extensionRegistry);
     }
   };
 

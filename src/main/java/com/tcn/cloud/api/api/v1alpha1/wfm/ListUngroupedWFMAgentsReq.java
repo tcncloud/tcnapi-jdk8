@@ -29,6 +29,71 @@ private static final long serialVersionUID = 0L;
     return new ListUngroupedWFMAgentsReq();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private ListUngroupedWFMAgentsReq(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+
+            scheduleScenarioSid_ = input.readInt64();
+            break;
+          }
+          case 18: {
+            com.google.protobuf.Timestamp.Builder subBuilder = null;
+            if (createdAfterDatetime_ != null) {
+              subBuilder = createdAfterDatetime_.toBuilder();
+            }
+            createdAfterDatetime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(createdAfterDatetime_);
+              createdAfterDatetime_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 24: {
+
+            includeSkillProficiencies_ = input.readBool();
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListUngroupedWFMAgentsReq_descriptor;
@@ -43,7 +108,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SCHEDULE_SCENARIO_SID_FIELD_NUMBER = 1;
-  private long scheduleScenarioSid_ = 0L;
+  private long scheduleScenarioSid_;
   /**
    * <pre>
    * Optional, ID of the schedule scenario of agent groups to check for unnasigned wfm agents.
@@ -93,11 +158,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getCreatedAfterDatetimeOrBuilder() {
-    return createdAfterDatetime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAfterDatetime_;
+    return getCreatedAfterDatetime();
   }
 
   public static final int INCLUDE_SKILL_PROFICIENCIES_FIELD_NUMBER = 3;
-  private boolean includeSkillProficiencies_ = false;
+  private boolean includeSkillProficiencies_;
   /**
    * <pre>
    * Indicates if the resulting WFM agents should include skill proficiencies.
@@ -134,7 +199,7 @@ private static final long serialVersionUID = 0L;
     if (includeSkillProficiencies_ != false) {
       output.writeBool(3, includeSkillProficiencies_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -155,7 +220,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(3, includeSkillProficiencies_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -179,7 +244,7 @@ private static final long serialVersionUID = 0L;
     }
     if (getIncludeSkillProficiencies()
         != other.getIncludeSkillProficiencies()) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -200,7 +265,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + INCLUDE_SKILL_PROFICIENCIES_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getIncludeSkillProficiencies());
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -249,13 +314,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -323,25 +386,32 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       scheduleScenarioSid_ = 0L;
-      createdAfterDatetime_ = null;
-      if (createdAfterDatetimeBuilder_ != null) {
-        createdAfterDatetimeBuilder_.dispose();
+
+      if (createdAfterDatetimeBuilder_ == null) {
+        createdAfterDatetime_ = null;
+      } else {
+        createdAfterDatetime_ = null;
         createdAfterDatetimeBuilder_ = null;
       }
       includeSkillProficiencies_ = false;
+
       return this;
     }
 
@@ -368,24 +438,15 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq result = new com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.scheduleScenarioSid_ = scheduleScenarioSid_;
+      if (createdAfterDatetimeBuilder_ == null) {
+        result.createdAfterDatetime_ = createdAfterDatetime_;
+      } else {
+        result.createdAfterDatetime_ = createdAfterDatetimeBuilder_.build();
+      }
+      result.includeSkillProficiencies_ = includeSkillProficiencies_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.scheduleScenarioSid_ = scheduleScenarioSid_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.createdAfterDatetime_ = createdAfterDatetimeBuilder_ == null
-            ? createdAfterDatetime_
-            : createdAfterDatetimeBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.includeSkillProficiencies_ = includeSkillProficiencies_;
-      }
     }
 
     @java.lang.Override
@@ -441,7 +502,7 @@ private static final long serialVersionUID = 0L;
       if (other.getIncludeSkillProficiencies() != false) {
         setIncludeSkillProficiencies(other.getIncludeSkillProficiencies());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -456,50 +517,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              scheduleScenarioSid_ = input.readInt64();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 18: {
-              input.readMessage(
-                  getCreatedAfterDatetimeFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 24: {
-              includeSkillProficiencies_ = input.readBool();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 24
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private long scheduleScenarioSid_ ;
     /**
@@ -526,9 +556,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setScheduleScenarioSid(long value) {
-
+      
       scheduleScenarioSid_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -542,7 +571,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearScheduleScenarioSid() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       scheduleScenarioSid_ = 0L;
       onChanged();
       return this;
@@ -560,7 +589,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the createdAfterDatetime field is set.
      */
     public boolean hasCreatedAfterDatetime() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return createdAfterDatetimeBuilder_ != null || createdAfterDatetime_ != null;
     }
     /**
      * <pre>
@@ -590,11 +619,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         createdAfterDatetime_ = value;
+        onChanged();
       } else {
         createdAfterDatetimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -608,11 +637,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (createdAfterDatetimeBuilder_ == null) {
         createdAfterDatetime_ = builderForValue.build();
+        onChanged();
       } else {
         createdAfterDatetimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -624,18 +653,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCreatedAfterDatetime(com.google.protobuf.Timestamp value) {
       if (createdAfterDatetimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
-          createdAfterDatetime_ != null &&
-          createdAfterDatetime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getCreatedAfterDatetimeBuilder().mergeFrom(value);
+        if (createdAfterDatetime_ != null) {
+          createdAfterDatetime_ =
+            com.google.protobuf.Timestamp.newBuilder(createdAfterDatetime_).mergeFrom(value).buildPartial();
         } else {
           createdAfterDatetime_ = value;
         }
+        onChanged();
       } else {
         createdAfterDatetimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -646,13 +674,14 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp created_after_datetime = 2 [json_name = "createdAfterDatetime"];</code>
      */
     public Builder clearCreatedAfterDatetime() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      createdAfterDatetime_ = null;
-      if (createdAfterDatetimeBuilder_ != null) {
-        createdAfterDatetimeBuilder_.dispose();
+      if (createdAfterDatetimeBuilder_ == null) {
+        createdAfterDatetime_ = null;
+        onChanged();
+      } else {
+        createdAfterDatetime_ = null;
         createdAfterDatetimeBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -663,7 +692,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp created_after_datetime = 2 [json_name = "createdAfterDatetime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getCreatedAfterDatetimeBuilder() {
-      bitField0_ |= 0x00000002;
+      
       onChanged();
       return getCreatedAfterDatetimeFieldBuilder().getBuilder();
     }
@@ -726,9 +755,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIncludeSkillProficiencies(boolean value) {
-
+      
       includeSkillProficiencies_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -741,7 +769,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIncludeSkillProficiencies() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       includeSkillProficiencies_ = false;
       onChanged();
       return this;
@@ -779,18 +807,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new ListUngroupedWFMAgentsReq(input, extensionRegistry);
     }
   };
 

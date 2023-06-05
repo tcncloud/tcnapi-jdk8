@@ -106,11 +106,10 @@ public interface ProcessOutboundCallReqOrBuilder extends
    *
    * <code>map&lt;string, string&gt; call_metadata = 4 [json_name = "callMetadata"];</code>
    */
-  /* nullable */
-java.lang.String getCallMetadataOrDefault(
+
+  java.lang.String getCallMetadataOrDefault(
       java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue);
+      java.lang.String defaultValue);
   /**
    * <pre>
    * Extra compliance metadata
@@ -118,6 +117,7 @@ java.lang.String defaultValue);
    *
    * <code>map&lt;string, string&gt; call_metadata = 4 [json_name = "callMetadata"];</code>
    */
+
   java.lang.String getCallMetadataOrThrow(
       java.lang.String key);
 

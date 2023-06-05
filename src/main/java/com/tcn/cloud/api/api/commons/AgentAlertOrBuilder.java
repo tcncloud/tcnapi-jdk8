@@ -88,5 +88,5 @@ public interface AgentAlertOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.AgentDirectedCallHangupAlertOrBuilder getDirectedCallHangupOrBuilder();
 
-  com.tcn.cloud.api.api.commons.AgentAlert.AlertCase getAlertCase();
+  public com.tcn.cloud.api.api.commons.AgentAlert.AlertCase getAlertCase();
 }

@@ -29,6 +29,61 @@ private static final long serialVersionUID = 0L;
     return new CreateSlaRes();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private CreateSlaRes(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            com.tcn.cloud.api.api.commons.TicketSla.Builder subBuilder = null;
+            if (sla_ != null) {
+              subBuilder = sla_.toBuilder();
+            }
+            sla_ = input.readMessage(com.tcn.cloud.api.api.commons.TicketSla.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(sla_);
+              sla_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.tickets.TicketProto.internal_static_api_v1alpha1_tickets_CreateSlaRes_descriptor;
@@ -77,7 +132,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.TicketSlaOrBuilder getSlaOrBuilder() {
-    return sla_ == null ? com.tcn.cloud.api.api.commons.TicketSla.getDefaultInstance() : sla_;
+    return getSla();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -97,7 +152,7 @@ private static final long serialVersionUID = 0L;
     if (sla_ != null) {
       output.writeMessage(1, getSla());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -110,7 +165,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getSla());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -130,7 +185,7 @@ private static final long serialVersionUID = 0L;
       if (!getSla()
           .equals(other.getSla())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -145,7 +200,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SLA_FIELD_NUMBER;
       hash = (53 * hash) + getSla().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -194,13 +249,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.tickets.CreateSlaRes parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.tickets.CreateSlaRes parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -268,21 +321,26 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.tickets.CreateSlaRes.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      sla_ = null;
-      if (slaBuilder_ != null) {
-        slaBuilder_.dispose();
+      if (slaBuilder_ == null) {
+        sla_ = null;
+      } else {
+        sla_ = null;
         slaBuilder_ = null;
       }
       return this;
@@ -311,18 +369,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.tickets.CreateSlaRes buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.tickets.CreateSlaRes result = new com.tcn.cloud.api.api.v1alpha1.tickets.CreateSlaRes(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      if (slaBuilder_ == null) {
+        result.sla_ = sla_;
+      } else {
+        result.sla_ = slaBuilder_.build();
+      }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.tickets.CreateSlaRes result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.sla_ = slaBuilder_ == null
-            ? sla_
-            : slaBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -372,7 +425,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasSla()) {
         mergeSla(other.getSla());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -387,40 +440,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.tickets.CreateSlaRes parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              input.readMessage(
-                  getSlaFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.tickets.CreateSlaRes) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private com.tcn.cloud.api.api.commons.TicketSla sla_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -434,7 +466,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the sla field is set.
      */
     public boolean hasSla() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return slaBuilder_ != null || sla_ != null;
     }
     /**
      * <pre>
@@ -464,11 +496,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         sla_ = value;
+        onChanged();
       } else {
         slaBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -482,11 +514,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.TicketSla.Builder builderForValue) {
       if (slaBuilder_ == null) {
         sla_ = builderForValue.build();
+        onChanged();
       } else {
         slaBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -498,18 +530,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeSla(com.tcn.cloud.api.api.commons.TicketSla value) {
       if (slaBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          sla_ != null &&
-          sla_ != com.tcn.cloud.api.api.commons.TicketSla.getDefaultInstance()) {
-          getSlaBuilder().mergeFrom(value);
+        if (sla_ != null) {
+          sla_ =
+            com.tcn.cloud.api.api.commons.TicketSla.newBuilder(sla_).mergeFrom(value).buildPartial();
         } else {
           sla_ = value;
         }
+        onChanged();
       } else {
         slaBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -520,13 +551,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.TicketSla sla = 1 [json_name = "sla"];</code>
      */
     public Builder clearSla() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      sla_ = null;
-      if (slaBuilder_ != null) {
-        slaBuilder_.dispose();
+      if (slaBuilder_ == null) {
+        sla_ = null;
+        onChanged();
+      } else {
+        sla_ = null;
         slaBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -537,7 +569,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.TicketSla sla = 1 [json_name = "sla"];</code>
      */
     public com.tcn.cloud.api.api.commons.TicketSla.Builder getSlaBuilder() {
-      bitField0_ |= 0x00000001;
+      
       onChanged();
       return getSlaFieldBuilder().getBuilder();
     }
@@ -609,18 +641,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new CreateSlaRes(input, extensionRegistry);
     }
   };
 

@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.50.0)",
     comments = "Source: api/v1alpha1/srec/service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class SrecGrpc {
@@ -154,14 +154,14 @@ public final class SrecGrpc {
 
   /**
    */
-  public interface AsyncService {
+  public static abstract class SrecImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
      * ListScreenRecordings returns screen recordings.
      * </pre>
      */
-    default void listScreenRecordings(com.tcn.cloud.api.api.v1alpha1.srec.ListScreenRecordingsRequest request,
+    public void listScreenRecordings(com.tcn.cloud.api.api.v1alpha1.srec.ListScreenRecordingsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.srec.ListScreenRecordingsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListScreenRecordingsMethod(), responseObserver);
     }
@@ -171,7 +171,7 @@ public final class SrecGrpc {
      * GetScreenRecordingURL returns the screen recording url.
      * </pre>
      */
-    default void getScreenRecordingURL(com.tcn.cloud.api.api.v1alpha1.srec.GetScreenRecordingURLRequest request,
+    public void getScreenRecordingURL(com.tcn.cloud.api.api.v1alpha1.srec.GetScreenRecordingURLRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.srec.GetScreenRecordingURLResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetScreenRecordingURLMethod(), responseObserver);
     }
@@ -181,28 +181,41 @@ public final class SrecGrpc {
      * DeleteScreenRecording deletes a screen recording.
      * </pre>
      */
-    default void deleteScreenRecording(com.tcn.cloud.api.api.v1alpha1.srec.DeleteScreenRecordingRequest request,
+    public void deleteScreenRecording(com.tcn.cloud.api.api.v1alpha1.srec.DeleteScreenRecordingRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.srec.DeleteScreenRecordingResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteScreenRecordingMethod(), responseObserver);
     }
-  }
-
-  /**
-   * Base class for the server implementation of the service Srec.
-   */
-  public static abstract class SrecImplBase
-      implements io.grpc.BindableService, AsyncService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return SrecGrpc.bindService(this);
+      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getListScreenRecordingsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.srec.ListScreenRecordingsRequest,
+                com.tcn.cloud.api.api.v1alpha1.srec.ListScreenRecordingsResponse>(
+                  this, METHODID_LIST_SCREEN_RECORDINGS)))
+          .addMethod(
+            getGetScreenRecordingURLMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.srec.GetScreenRecordingURLRequest,
+                com.tcn.cloud.api.api.v1alpha1.srec.GetScreenRecordingURLResponse>(
+                  this, METHODID_GET_SCREEN_RECORDING_URL)))
+          .addMethod(
+            getDeleteScreenRecordingMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.srec.DeleteScreenRecordingRequest,
+                com.tcn.cloud.api.api.v1alpha1.srec.DeleteScreenRecordingResponse>(
+                  this, METHODID_DELETE_SCREEN_RECORDING)))
+          .build();
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service Srec.
    */
-  public static final class SrecStub
-      extends io.grpc.stub.AbstractAsyncStub<SrecStub> {
+  public static final class SrecStub extends io.grpc.stub.AbstractAsyncStub<SrecStub> {
     private SrecStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -249,10 +262,8 @@ public final class SrecGrpc {
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service Srec.
    */
-  public static final class SrecBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<SrecBlockingStub> {
+  public static final class SrecBlockingStub extends io.grpc.stub.AbstractBlockingStub<SrecBlockingStub> {
     private SrecBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -296,10 +307,8 @@ public final class SrecGrpc {
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service Srec.
    */
-  public static final class SrecFutureStub
-      extends io.grpc.stub.AbstractFutureStub<SrecFutureStub> {
+  public static final class SrecFutureStub extends io.grpc.stub.AbstractFutureStub<SrecFutureStub> {
     private SrecFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -354,10 +363,10 @@ public final class SrecGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AsyncService serviceImpl;
+    private final SrecImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AsyncService serviceImpl, int methodId) {
+    MethodHandlers(SrecImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -392,32 +401,6 @@ public final class SrecGrpc {
           throw new AssertionError();
       }
     }
-  }
-
-  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
-    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-        .addMethod(
-          getListScreenRecordingsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.srec.ListScreenRecordingsRequest,
-              com.tcn.cloud.api.api.v1alpha1.srec.ListScreenRecordingsResponse>(
-                service, METHODID_LIST_SCREEN_RECORDINGS)))
-        .addMethod(
-          getGetScreenRecordingURLMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.srec.GetScreenRecordingURLRequest,
-              com.tcn.cloud.api.api.v1alpha1.srec.GetScreenRecordingURLResponse>(
-                service, METHODID_GET_SCREEN_RECORDING_URL)))
-        .addMethod(
-          getDeleteScreenRecordingMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.srec.DeleteScreenRecordingRequest,
-              com.tcn.cloud.api.api.v1alpha1.srec.DeleteScreenRecordingResponse>(
-                service, METHODID_DELETE_SCREEN_RECORDING)))
-        .build();
   }
 
   private static abstract class SrecBaseDescriptorSupplier

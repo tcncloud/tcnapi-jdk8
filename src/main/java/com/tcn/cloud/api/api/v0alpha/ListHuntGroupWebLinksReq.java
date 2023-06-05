@@ -28,6 +28,86 @@ private static final long serialVersionUID = 0L;
     return new ListHuntGroupWebLinksReq();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private ListHuntGroupWebLinksReq(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+
+            huntGroupSid_ = input.readInt64();
+            break;
+          }
+          case 32: {
+
+            callSid_ = input.readInt64();
+            break;
+          }
+          case 40: {
+            int rawValue = input.readEnum();
+
+            callType_ = rawValue;
+            break;
+          }
+          case 58: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            serviceId_ = s;
+            break;
+          }
+          case 66: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            scheduledCallbackId_ = s;
+            break;
+          }
+          case 72: {
+
+            sessionSid_ = input.readInt64();
+            break;
+          }
+          case 80: {
+
+            isInitialPreview_ = input.readBool();
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.P3apiProto.internal_static_api_v0alpha_ListHuntGroupWebLinksReq_descriptor;
@@ -42,7 +122,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HUNT_GROUP_SID_FIELD_NUMBER = 1;
-  private long huntGroupSid_ = 0L;
+  private long huntGroupSid_;
   /**
    * <code>int64 hunt_group_sid = 1 [json_name = "huntGroupSid"];</code>
    * @return The huntGroupSid.
@@ -53,7 +133,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALL_SID_FIELD_NUMBER = 4;
-  private long callSid_ = 0L;
+  private long callSid_;
   /**
    * <code>int64 call_sid = 4 [json_name = "callSid"];</code>
    * @return The callSid.
@@ -64,7 +144,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALL_TYPE_FIELD_NUMBER = 5;
-  private int callType_ = 0;
+  private int callType_;
   /**
    * <code>.api.commons.CallType.Enum call_type = 5 [json_name = "callType"];</code>
    * @return The enum numeric value on the wire for callType.
@@ -77,13 +157,13 @@ private static final long serialVersionUID = 0L;
    * @return The callType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.CallType.Enum getCallType() {
-    com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.forNumber(callType_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.valueOf(callType_);
     return result == null ? com.tcn.cloud.api.api.commons.CallType.Enum.UNRECOGNIZED : result;
   }
 
   public static final int SERVICE_ID_FIELD_NUMBER = 7;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object serviceId_ = "";
+  private volatile java.lang.Object serviceId_;
   /**
    * <pre>
    * the following fields should only be set when the call_sid from the request is from a retrieved scheduled callback.
@@ -131,8 +211,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SCHEDULED_CALLBACK_ID_FIELD_NUMBER = 8;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object scheduledCallbackId_ = "";
+  private volatile java.lang.Object scheduledCallbackId_;
   /**
    * <code>string scheduled_callback_id = 8 [json_name = "scheduledCallbackId"];</code>
    * @return The scheduledCallbackId.
@@ -170,7 +249,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SESSION_SID_FIELD_NUMBER = 9;
-  private long sessionSid_ = 0L;
+  private long sessionSid_;
   /**
    * <pre>
    * current session
@@ -185,7 +264,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ISINITIALPREVIEW_FIELD_NUMBER = 10;
-  private boolean isInitialPreview_ = false;
+  private boolean isInitialPreview_;
   /**
    * <pre>
    * this field should only be set on the request when the ui is in a "preview call" state when dealing with
@@ -223,10 +302,10 @@ private static final long serialVersionUID = 0L;
     if (callType_ != com.tcn.cloud.api.api.commons.CallType.Enum.INBOUND.getNumber()) {
       output.writeEnum(5, callType_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceId_)) {
+    if (!getServiceIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, serviceId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scheduledCallbackId_)) {
+    if (!getScheduledCallbackIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 8, scheduledCallbackId_);
     }
     if (sessionSid_ != 0L) {
@@ -235,7 +314,7 @@ private static final long serialVersionUID = 0L;
     if (isInitialPreview_ != false) {
       output.writeBool(10, isInitialPreview_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -256,10 +335,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(5, callType_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceId_)) {
+    if (!getServiceIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, serviceId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(scheduledCallbackId_)) {
+    if (!getScheduledCallbackIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, scheduledCallbackId_);
     }
     if (sessionSid_ != 0L) {
@@ -270,7 +349,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(10, isInitialPreview_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -298,7 +377,7 @@ private static final long serialVersionUID = 0L;
         != other.getSessionSid()) return false;
     if (getIsInitialPreview()
         != other.getIsInitialPreview()) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -327,7 +406,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ISINITIALPREVIEW_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getIsInitialPreview());
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -376,13 +455,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.ListHuntGroupWebLinksReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.ListHuntGroupWebLinksReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -446,25 +523,36 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ListHuntGroupWebLinksReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       huntGroupSid_ = 0L;
+
       callSid_ = 0L;
+
       callType_ = 0;
+
       serviceId_ = "";
+
       scheduledCallbackId_ = "";
+
       sessionSid_ = 0L;
+
       isInitialPreview_ = false;
+
       return this;
     }
 
@@ -491,34 +579,15 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.ListHuntGroupWebLinksReq buildPartial() {
       com.tcn.cloud.api.api.v0alpha.ListHuntGroupWebLinksReq result = new com.tcn.cloud.api.api.v0alpha.ListHuntGroupWebLinksReq(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.huntGroupSid_ = huntGroupSid_;
+      result.callSid_ = callSid_;
+      result.callType_ = callType_;
+      result.serviceId_ = serviceId_;
+      result.scheduledCallbackId_ = scheduledCallbackId_;
+      result.sessionSid_ = sessionSid_;
+      result.isInitialPreview_ = isInitialPreview_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ListHuntGroupWebLinksReq result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.huntGroupSid_ = huntGroupSid_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.callSid_ = callSid_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.callType_ = callType_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.serviceId_ = serviceId_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.scheduledCallbackId_ = scheduledCallbackId_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.sessionSid_ = sessionSid_;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.isInitialPreview_ = isInitialPreview_;
-      }
     }
 
     @java.lang.Override
@@ -576,12 +645,10 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getServiceId().isEmpty()) {
         serviceId_ = other.serviceId_;
-        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.getScheduledCallbackId().isEmpty()) {
         scheduledCallbackId_ = other.scheduledCallbackId_;
-        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (other.getSessionSid() != 0L) {
@@ -590,7 +657,7 @@ private static final long serialVersionUID = 0L;
       if (other.getIsInitialPreview() != false) {
         setIsInitialPreview(other.getIsInitialPreview());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -605,68 +672,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.ListHuntGroupWebLinksReq parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              huntGroupSid_ = input.readInt64();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 32: {
-              callSid_ = input.readInt64();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 32
-            case 40: {
-              callType_ = input.readEnum();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 40
-            case 58: {
-              serviceId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 58
-            case 66: {
-              scheduledCallbackId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 66
-            case 72: {
-              sessionSid_ = input.readInt64();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 72
-            case 80: {
-              isInitialPreview_ = input.readBool();
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 80
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.ListHuntGroupWebLinksReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private long huntGroupSid_ ;
     /**
@@ -683,9 +701,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHuntGroupSid(long value) {
-
+      
       huntGroupSid_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -694,7 +711,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHuntGroupSid() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       huntGroupSid_ = 0L;
       onChanged();
       return this;
@@ -715,9 +732,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCallSid(long value) {
-
+      
       callSid_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -726,7 +742,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallSid() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       callSid_ = 0L;
       onChanged();
       return this;
@@ -746,8 +762,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCallTypeValue(int value) {
+      
       callType_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -757,7 +773,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.CallType.Enum getCallType() {
-      com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.forNumber(callType_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.valueOf(callType_);
       return result == null ? com.tcn.cloud.api.api.commons.CallType.Enum.UNRECOGNIZED : result;
     }
     /**
@@ -769,7 +786,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000004;
+      
       callType_ = value.getNumber();
       onChanged();
       return this;
@@ -779,7 +796,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallType() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       callType_ = 0;
       onChanged();
       return this;
@@ -841,9 +858,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setServiceId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       serviceId_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -857,8 +876,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearServiceId() {
+      
       serviceId_ = getDefaultInstance().getServiceId();
-      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -874,10 +893,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setServiceIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       serviceId_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -923,9 +944,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setScheduledCallbackId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       scheduledCallbackId_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -934,8 +957,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearScheduledCallbackId() {
+      
       scheduledCallbackId_ = getDefaultInstance().getScheduledCallbackId();
-      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -946,10 +969,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setScheduledCallbackIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       scheduledCallbackId_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -977,9 +1002,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSessionSid(long value) {
-
+      
       sessionSid_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -992,7 +1016,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSessionSid() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      
       sessionSid_ = 0L;
       onChanged();
       return this;
@@ -1023,9 +1047,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIsInitialPreview(boolean value) {
-
+      
       isInitialPreview_ = value;
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1039,7 +1062,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIsInitialPreview() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      
       isInitialPreview_ = false;
       onChanged();
       return this;
@@ -1077,18 +1100,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new ListHuntGroupWebLinksReq(input, extensionRegistry);
     }
   };
 

@@ -40,15 +40,6 @@ public interface ImportFormatOrBuilder extends
    * </pre>
    *
    * <code>.api.commons.StandardImportFormat standard = 2 [json_name = "standard"];</code>
-   * @return Whether the standard field is set.
-   */
-  boolean hasStandard();
-  /**
-   * <pre>
-   * Standard import format enum
-   * </pre>
-   *
-   * <code>.api.commons.StandardImportFormat standard = 2 [json_name = "standard"];</code>
    * @return The enum numeric value on the wire for standard.
    */
   int getStandardValue();
@@ -62,5 +53,5 @@ public interface ImportFormatOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.StandardImportFormat getStandard();
 
-  com.tcn.cloud.api.api.v0alpha.ImportFormat.FormatCase getFormatCase();
+  public com.tcn.cloud.api.api.v0alpha.ImportFormat.FormatCase getFormatCase();
 }

@@ -30,6 +30,104 @@ private static final long serialVersionUID = 0L;
     return new ListExtendedCallHistoryReq();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private ListExtendedCallHistoryReq(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 32: {
+            int rawValue = input.readEnum();
+
+            searchType_ = rawValue;
+            break;
+          }
+          case 40: {
+            int rawValue = input.readEnum();
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              callTypes_ = new java.util.ArrayList<java.lang.Integer>();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            callTypes_.add(rawValue);
+            break;
+          }
+          case 42: {
+            int length = input.readRawVarint32();
+            int oldLimit = input.pushLimit(length);
+            while(input.getBytesUntilLimit() > 0) {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                callTypes_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              callTypes_.add(rawValue);
+            }
+            input.popLimit(oldLimit);
+            break;
+          }
+          case 50: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            customerNumber_ = s;
+            break;
+          }
+          case 56: {
+            int rawValue = input.readEnum();
+
+            searchScope_ = rawValue;
+            break;
+          }
+          case 64: {
+
+            callSid_ = input.readInt64();
+            break;
+          }
+          case 74: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            callerId_ = s;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        callTypes_ = java.util.Collections.unmodifiableList(callTypes_);
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.P3apiProto.internal_static_api_v0alpha_ListExtendedCallHistoryReq_descriptor;
@@ -44,7 +142,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SEARCH_TYPE_FIELD_NUMBER = 4;
-  private int searchType_ = 0;
+  private int searchType_;
   /**
    * <code>.api.commons.CallHistorySearchType.Enum search_type = 4 [json_name = "searchType"];</code>
    * @return The enum numeric value on the wire for searchType.
@@ -57,19 +155,20 @@ private static final long serialVersionUID = 0L;
    * @return The searchType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.CallHistorySearchType.Enum getSearchType() {
-    com.tcn.cloud.api.api.commons.CallHistorySearchType.Enum result = com.tcn.cloud.api.api.commons.CallHistorySearchType.Enum.forNumber(searchType_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.CallHistorySearchType.Enum result = com.tcn.cloud.api.api.commons.CallHistorySearchType.Enum.valueOf(searchType_);
     return result == null ? com.tcn.cloud.api.api.commons.CallHistorySearchType.Enum.UNRECOGNIZED : result;
   }
 
   public static final int CALL_TYPES_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> callTypes_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, com.tcn.cloud.api.api.commons.CallType.Enum> callTypes_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.tcn.cloud.api.api.commons.CallType.Enum>() {
             public com.tcn.cloud.api.api.commons.CallType.Enum convert(java.lang.Integer from) {
-              com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.forNumber(from);
+              @SuppressWarnings("deprecation")
+              com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.valueOf(from);
               return result == null ? com.tcn.cloud.api.api.commons.CallType.Enum.UNRECOGNIZED : result;
             }
           };
@@ -120,8 +219,7 @@ private static final long serialVersionUID = 0L;
   private int callTypesMemoizedSerializedSize;
 
   public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 6;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object customerNumber_ = "";
+  private volatile java.lang.Object customerNumber_;
   /**
    * <code>string customer_number = 6 [json_name = "customerNumber"];</code>
    * @return The customerNumber.
@@ -159,7 +257,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SEARCH_SCOPE_FIELD_NUMBER = 7;
-  private int searchScope_ = 0;
+  private int searchScope_;
   /**
    * <code>.api.commons.CallHistorySearchScope.Enum search_scope = 7 [json_name = "searchScope"];</code>
    * @return The enum numeric value on the wire for searchScope.
@@ -172,12 +270,13 @@ private static final long serialVersionUID = 0L;
    * @return The searchScope.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.CallHistorySearchScope.Enum getSearchScope() {
-    com.tcn.cloud.api.api.commons.CallHistorySearchScope.Enum result = com.tcn.cloud.api.api.commons.CallHistorySearchScope.Enum.forNumber(searchScope_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.CallHistorySearchScope.Enum result = com.tcn.cloud.api.api.commons.CallHistorySearchScope.Enum.valueOf(searchScope_);
     return result == null ? com.tcn.cloud.api.api.commons.CallHistorySearchScope.Enum.UNRECOGNIZED : result;
   }
 
   public static final int CALL_SID_FIELD_NUMBER = 8;
-  private long callSid_ = 0L;
+  private long callSid_;
   /**
    * <code>int64 call_sid = 8 [json_name = "callSid"];</code>
    * @return The callSid.
@@ -188,8 +287,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALLER_ID_FIELD_NUMBER = 9;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object callerId_ = "";
+  private volatile java.lang.Object callerId_;
   /**
    * <code>string caller_id = 9 [json_name = "callerId"];</code>
    * @return The callerId.
@@ -251,7 +349,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < callTypes_.size(); i++) {
       output.writeEnumNoTag(callTypes_.get(i));
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customerNumber_)) {
+    if (!getCustomerNumberBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, customerNumber_);
     }
     if (searchScope_ != com.tcn.cloud.api.api.commons.CallHistorySearchScope.Enum.ALL.getNumber()) {
@@ -260,10 +358,10 @@ private static final long serialVersionUID = 0L;
     if (callSid_ != 0L) {
       output.writeInt64(8, callSid_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callerId_)) {
+    if (!getCallerIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 9, callerId_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -288,7 +386,7 @@ private static final long serialVersionUID = 0L;
           .computeUInt32SizeNoTag(dataSize);
       }callTypesMemoizedSerializedSize = dataSize;
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customerNumber_)) {
+    if (!getCustomerNumberBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, customerNumber_);
     }
     if (searchScope_ != com.tcn.cloud.api.api.commons.CallHistorySearchScope.Enum.ALL.getNumber()) {
@@ -299,10 +397,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(8, callSid_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callerId_)) {
+    if (!getCallerIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, callerId_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -326,7 +424,7 @@ private static final long serialVersionUID = 0L;
         != other.getCallSid()) return false;
     if (!getCallerId()
         .equals(other.getCallerId())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -352,7 +450,7 @@ private static final long serialVersionUID = 0L;
         getCallSid());
     hash = (37 * hash) + CALLER_ID_FIELD_NUMBER;
     hash = (53 * hash) + getCallerId().hashCode();
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -401,13 +499,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.ListExtendedCallHistoryReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.ListExtendedCallHistoryReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -471,25 +567,34 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ListExtendedCallHistoryReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       searchType_ = 0;
+
       callTypes_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000001);
       customerNumber_ = "";
+
       searchScope_ = 0;
+
       callSid_ = 0L;
+
       callerId_ = "";
+
       return this;
     }
 
@@ -516,37 +621,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.ListExtendedCallHistoryReq buildPartial() {
       com.tcn.cloud.api.api.v0alpha.ListExtendedCallHistoryReq result = new com.tcn.cloud.api.api.v0alpha.ListExtendedCallHistoryReq(this);
-      buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      onBuilt();
-      return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.ListExtendedCallHistoryReq result) {
-      if (((bitField0_ & 0x00000002) != 0)) {
+      int from_bitField0_ = bitField0_;
+      result.searchType_ = searchType_;
+      if (((bitField0_ & 0x00000001) != 0)) {
         callTypes_ = java.util.Collections.unmodifiableList(callTypes_);
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.callTypes_ = callTypes_;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ListExtendedCallHistoryReq result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.searchType_ = searchType_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.customerNumber_ = customerNumber_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.searchScope_ = searchScope_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.callSid_ = callSid_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.callerId_ = callerId_;
-      }
+      result.customerNumber_ = customerNumber_;
+      result.searchScope_ = searchScope_;
+      result.callSid_ = callSid_;
+      result.callerId_ = callerId_;
+      onBuilt();
+      return result;
     }
 
     @java.lang.Override
@@ -599,7 +686,7 @@ private static final long serialVersionUID = 0L;
       if (!other.callTypes_.isEmpty()) {
         if (callTypes_.isEmpty()) {
           callTypes_ = other.callTypes_;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensureCallTypesIsMutable();
           callTypes_.addAll(other.callTypes_);
@@ -608,7 +695,6 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getCustomerNumber().isEmpty()) {
         customerNumber_ = other.customerNumber_;
-        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.searchScope_ != 0) {
@@ -619,10 +705,9 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getCallerId().isEmpty()) {
         callerId_ = other.callerId_;
-        bitField0_ |= 0x00000020;
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -637,72 +722,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.ListExtendedCallHistoryReq parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 32: {
-              searchType_ = input.readEnum();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 32
-            case 40: {
-              int tmpRaw = input.readEnum();
-              ensureCallTypesIsMutable();
-              callTypes_.add(tmpRaw);
-              break;
-            } // case 40
-            case 42: {
-              int length = input.readRawVarint32();
-              int oldLimit = input.pushLimit(length);
-              while(input.getBytesUntilLimit() > 0) {
-                int tmpRaw = input.readEnum();
-                ensureCallTypesIsMutable();
-                callTypes_.add(tmpRaw);
-              }
-              input.popLimit(oldLimit);
-              break;
-            } // case 42
-            case 50: {
-              customerNumber_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 50
-            case 56: {
-              searchScope_ = input.readEnum();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 56
-            case 64: {
-              callSid_ = input.readInt64();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 64
-            case 74: {
-              callerId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 74
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.ListExtendedCallHistoryReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -721,8 +751,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSearchTypeValue(int value) {
+      
       searchType_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -732,7 +762,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.CallHistorySearchType.Enum getSearchType() {
-      com.tcn.cloud.api.api.commons.CallHistorySearchType.Enum result = com.tcn.cloud.api.api.commons.CallHistorySearchType.Enum.forNumber(searchType_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.CallHistorySearchType.Enum result = com.tcn.cloud.api.api.commons.CallHistorySearchType.Enum.valueOf(searchType_);
       return result == null ? com.tcn.cloud.api.api.commons.CallHistorySearchType.Enum.UNRECOGNIZED : result;
     }
     /**
@@ -744,7 +775,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000001;
+      
       searchType_ = value.getNumber();
       onChanged();
       return this;
@@ -754,7 +785,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSearchType() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       searchType_ = 0;
       onChanged();
       return this;
@@ -763,9 +794,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> callTypes_ =
       java.util.Collections.emptyList();
     private void ensureCallTypesIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         callTypes_ = new java.util.ArrayList<java.lang.Integer>(callTypes_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
       }
     }
     /**
@@ -841,7 +872,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearCallTypes() {
       callTypes_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -863,8 +894,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <code>repeated .api.commons.CallType.Enum call_types = 5 [json_name = "callTypes"];</code>
-     * @param index The index to set the value at.
-     * @param value The enum numeric value on the wire for callTypes to set.
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of callTypes at the given index.
      * @return This builder for chaining.
      */
     public Builder setCallTypesValue(
@@ -941,9 +972,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerNumber(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       customerNumber_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -952,8 +985,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCustomerNumber() {
+      
       customerNumber_ = getDefaultInstance().getCustomerNumber();
-      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -964,10 +997,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerNumberBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       customerNumber_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -986,8 +1021,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSearchScopeValue(int value) {
+      
       searchScope_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -997,7 +1032,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.CallHistorySearchScope.Enum getSearchScope() {
-      com.tcn.cloud.api.api.commons.CallHistorySearchScope.Enum result = com.tcn.cloud.api.api.commons.CallHistorySearchScope.Enum.forNumber(searchScope_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.CallHistorySearchScope.Enum result = com.tcn.cloud.api.api.commons.CallHistorySearchScope.Enum.valueOf(searchScope_);
       return result == null ? com.tcn.cloud.api.api.commons.CallHistorySearchScope.Enum.UNRECOGNIZED : result;
     }
     /**
@@ -1009,7 +1045,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000008;
+      
       searchScope_ = value.getNumber();
       onChanged();
       return this;
@@ -1019,7 +1055,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSearchScope() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      
       searchScope_ = 0;
       onChanged();
       return this;
@@ -1040,9 +1076,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCallSid(long value) {
-
+      
       callSid_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1051,7 +1086,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallSid() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      
       callSid_ = 0L;
       onChanged();
       return this;
@@ -1098,9 +1133,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallerId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       callerId_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1109,8 +1146,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallerId() {
+      
       callerId_ = getDefaultInstance().getCallerId();
-      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1121,10 +1158,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallerIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       callerId_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1161,18 +1200,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new ListExtendedCallHistoryReq(input, extensionRegistry);
     }
   };
 

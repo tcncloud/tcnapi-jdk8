@@ -9,11 +9,6 @@ public interface GroupingOrBuilder extends
 
   /**
    * <code>string datapoint_id = 1 [json_name = "datapointId"];</code>
-   * @return Whether the datapointId field is set.
-   */
-  boolean hasDatapointId();
-  /**
-   * <code>string datapoint_id = 1 [json_name = "datapointId"];</code>
    * @return The datapointId.
    */
   java.lang.String getDatapointId();
@@ -26,11 +21,6 @@ public interface GroupingOrBuilder extends
 
   /**
    * <code>.api.commons.TimeScope time_scope = 2 [json_name = "timeScope"];</code>
-   * @return Whether the timeScope field is set.
-   */
-  boolean hasTimeScope();
-  /**
-   * <code>.api.commons.TimeScope time_scope = 2 [json_name = "timeScope"];</code>
    * @return The enum numeric value on the wire for timeScope.
    */
   int getTimeScopeValue();
@@ -40,5 +30,5 @@ public interface GroupingOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.TimeScope getTimeScope();
 
-  com.tcn.cloud.api.api.v0alpha.Grouping.FormatCase getFormatCase();
+  public com.tcn.cloud.api.api.v0alpha.Grouping.FormatCase getFormatCase();
 }

@@ -82,5 +82,5 @@ public interface DestinationOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.delivery.SftpDestinationOrBuilder getSftpOrBuilder();
 
-  com.tcn.cloud.api.api.v1alpha1.delivery.Destination.ValueCase getValueCase();
+  public com.tcn.cloud.api.api.v1alpha1.delivery.Destination.ValueCase getValueCase();
 }

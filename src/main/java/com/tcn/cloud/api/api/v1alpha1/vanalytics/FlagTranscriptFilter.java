@@ -29,6 +29,74 @@ private static final long serialVersionUID = 0L;
     return new FlagTranscriptFilter();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private FlagTranscriptFilter(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.Builder subBuilder = null;
+            if (flagSnapshot_ != null) {
+              subBuilder = flagSnapshot_.toBuilder();
+            }
+            flagSnapshot_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(flagSnapshot_);
+              flagSnapshot_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 18: {
+            com.tcn.cloud.api.api.v1alpha1.vanalytics.FilterSnapshot.Builder subBuilder = null;
+            if (filterSnapshot_ != null) {
+              subBuilder = filterSnapshot_.toBuilder();
+            }
+            filterSnapshot_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.vanalytics.FilterSnapshot.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(filterSnapshot_);
+              filterSnapshot_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagTranscriptFilterProto.internal_static_api_v1alpha1_vanalytics_FlagTranscriptFilter_descriptor;
@@ -77,7 +145,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshotOrBuilder getFlagSnapshotOrBuilder() {
-    return flagSnapshot_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.getDefaultInstance() : flagSnapshot_;
+    return getFlagSnapshot();
   }
 
   public static final int FILTER_SNAPSHOT_FIELD_NUMBER = 2;
@@ -115,7 +183,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.vanalytics.FilterSnapshotOrBuilder getFilterSnapshotOrBuilder() {
-    return filterSnapshot_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.FilterSnapshot.getDefaultInstance() : filterSnapshot_;
+    return getFilterSnapshot();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -138,7 +206,7 @@ private static final long serialVersionUID = 0L;
     if (filterSnapshot_ != null) {
       output.writeMessage(2, getFilterSnapshot());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -155,7 +223,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getFilterSnapshot());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -180,7 +248,7 @@ private static final long serialVersionUID = 0L;
       if (!getFilterSnapshot()
           .equals(other.getFilterSnapshot())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -199,7 +267,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + FILTER_SNAPSHOT_FIELD_NUMBER;
       hash = (53 * hash) + getFilterSnapshot().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -248,13 +316,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagTranscriptFilter parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagTranscriptFilter parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -322,26 +388,32 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagTranscriptFilter.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      flagSnapshot_ = null;
-      if (flagSnapshotBuilder_ != null) {
-        flagSnapshotBuilder_.dispose();
+      if (flagSnapshotBuilder_ == null) {
+        flagSnapshot_ = null;
+      } else {
+        flagSnapshot_ = null;
         flagSnapshotBuilder_ = null;
       }
-      filterSnapshot_ = null;
-      if (filterSnapshotBuilder_ != null) {
-        filterSnapshotBuilder_.dispose();
+      if (filterSnapshotBuilder_ == null) {
+        filterSnapshot_ = null;
+      } else {
+        filterSnapshot_ = null;
         filterSnapshotBuilder_ = null;
       }
       return this;
@@ -370,23 +442,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagTranscriptFilter buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagTranscriptFilter result = new com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagTranscriptFilter(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      if (flagSnapshotBuilder_ == null) {
+        result.flagSnapshot_ = flagSnapshot_;
+      } else {
+        result.flagSnapshot_ = flagSnapshotBuilder_.build();
+      }
+      if (filterSnapshotBuilder_ == null) {
+        result.filterSnapshot_ = filterSnapshot_;
+      } else {
+        result.filterSnapshot_ = filterSnapshotBuilder_.build();
+      }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagTranscriptFilter result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.flagSnapshot_ = flagSnapshotBuilder_ == null
-            ? flagSnapshot_
-            : flagSnapshotBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.filterSnapshot_ = filterSnapshotBuilder_ == null
-            ? filterSnapshot_
-            : filterSnapshotBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -439,7 +506,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasFilterSnapshot()) {
         mergeFilterSnapshot(other.getFilterSnapshot());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -454,47 +521,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagTranscriptFilter parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              input.readMessage(
-                  getFlagSnapshotFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              input.readMessage(
-                  getFilterSnapshotFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagTranscriptFilter) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot flagSnapshot_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -508,7 +547,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the flagSnapshot field is set.
      */
     public boolean hasFlagSnapshot() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return flagSnapshotBuilder_ != null || flagSnapshot_ != null;
     }
     /**
      * <pre>
@@ -538,11 +577,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         flagSnapshot_ = value;
+        onChanged();
       } else {
         flagSnapshotBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -556,11 +595,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.Builder builderForValue) {
       if (flagSnapshotBuilder_ == null) {
         flagSnapshot_ = builderForValue.build();
+        onChanged();
       } else {
         flagSnapshotBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -572,18 +611,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeFlagSnapshot(com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot value) {
       if (flagSnapshotBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          flagSnapshot_ != null &&
-          flagSnapshot_ != com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.getDefaultInstance()) {
-          getFlagSnapshotBuilder().mergeFrom(value);
+        if (flagSnapshot_ != null) {
+          flagSnapshot_ =
+            com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.newBuilder(flagSnapshot_).mergeFrom(value).buildPartial();
         } else {
           flagSnapshot_ = value;
         }
+        onChanged();
       } else {
         flagSnapshotBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -594,13 +632,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.vanalytics.FlagSnapshot flag_snapshot = 1 [json_name = "flagSnapshot"];</code>
      */
     public Builder clearFlagSnapshot() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      flagSnapshot_ = null;
-      if (flagSnapshotBuilder_ != null) {
-        flagSnapshotBuilder_.dispose();
+      if (flagSnapshotBuilder_ == null) {
+        flagSnapshot_ = null;
+        onChanged();
+      } else {
+        flagSnapshot_ = null;
         flagSnapshotBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -611,7 +650,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.vanalytics.FlagSnapshot flag_snapshot = 1 [json_name = "flagSnapshot"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSnapshot.Builder getFlagSnapshotBuilder() {
-      bitField0_ |= 0x00000001;
+      
       onChanged();
       return getFlagSnapshotFieldBuilder().getBuilder();
     }
@@ -663,7 +702,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the filterSnapshot field is set.
      */
     public boolean hasFilterSnapshot() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return filterSnapshotBuilder_ != null || filterSnapshot_ != null;
     }
     /**
      * <pre>
@@ -693,11 +732,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         filterSnapshot_ = value;
+        onChanged();
       } else {
         filterSnapshotBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -711,11 +750,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.vanalytics.FilterSnapshot.Builder builderForValue) {
       if (filterSnapshotBuilder_ == null) {
         filterSnapshot_ = builderForValue.build();
+        onChanged();
       } else {
         filterSnapshotBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -727,18 +766,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeFilterSnapshot(com.tcn.cloud.api.api.v1alpha1.vanalytics.FilterSnapshot value) {
       if (filterSnapshotBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
-          filterSnapshot_ != null &&
-          filterSnapshot_ != com.tcn.cloud.api.api.v1alpha1.vanalytics.FilterSnapshot.getDefaultInstance()) {
-          getFilterSnapshotBuilder().mergeFrom(value);
+        if (filterSnapshot_ != null) {
+          filterSnapshot_ =
+            com.tcn.cloud.api.api.v1alpha1.vanalytics.FilterSnapshot.newBuilder(filterSnapshot_).mergeFrom(value).buildPartial();
         } else {
           filterSnapshot_ = value;
         }
+        onChanged();
       } else {
         filterSnapshotBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -749,13 +787,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.vanalytics.FilterSnapshot filter_snapshot = 2 [json_name = "filterSnapshot"];</code>
      */
     public Builder clearFilterSnapshot() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      filterSnapshot_ = null;
-      if (filterSnapshotBuilder_ != null) {
-        filterSnapshotBuilder_.dispose();
+      if (filterSnapshotBuilder_ == null) {
+        filterSnapshot_ = null;
+        onChanged();
+      } else {
+        filterSnapshot_ = null;
         filterSnapshotBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -766,7 +805,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.vanalytics.FilterSnapshot filter_snapshot = 2 [json_name = "filterSnapshot"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.vanalytics.FilterSnapshot.Builder getFilterSnapshotBuilder() {
-      bitField0_ |= 0x00000002;
+      
       onChanged();
       return getFilterSnapshotFieldBuilder().getBuilder();
     }
@@ -838,18 +877,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new FlagTranscriptFilter(input, extensionRegistry);
     }
   };
 

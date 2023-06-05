@@ -8,7 +8,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.50.0)",
     comments = "Source: api/v1alpha1/billing/service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class BillingGrpc {
@@ -222,7 +222,7 @@ public final class BillingGrpc {
    * Billing service for handling billing requests.
    * </pre>
    */
-  public interface AsyncService {
+  public static abstract class BillingImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
@@ -231,7 +231,7 @@ public final class BillingGrpc {
      * one billing detail with a specific config type and event type.
      * </pre>
      */
-    default void createBillingPlan(com.tcn.cloud.api.api.v1alpha1.billing.CreateBillingPlanReq request,
+    public void createBillingPlan(com.tcn.cloud.api.api.v1alpha1.billing.CreateBillingPlanReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.billing.CreateBillingPlanRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateBillingPlanMethod(), responseObserver);
     }
@@ -241,7 +241,7 @@ public final class BillingGrpc {
      * GetBillingPlan - returns the billing plan for the provided organization.
      * </pre>
      */
-    default void getBillingPlan(com.tcn.cloud.api.api.v1alpha1.billing.GetBillingPlanReq request,
+    public void getBillingPlan(com.tcn.cloud.api.api.v1alpha1.billing.GetBillingPlanReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.billing.GetBillingPlanRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetBillingPlanMethod(), responseObserver);
     }
@@ -257,7 +257,7 @@ public final class BillingGrpc {
      * is malformed and will result in potentially unexpected behavior.
      * </pre>
      */
-    default void updateBillingPlan(com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq request,
+    public void updateBillingPlan(com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateBillingPlanMethod(), responseObserver);
     }
@@ -268,7 +268,7 @@ public final class BillingGrpc {
      * details do not exist, this won't do anything.
      * </pre>
      */
-    default void deleteBillingDetails(com.tcn.cloud.api.api.v1alpha1.billing.DeleteBillingDetailsReq request,
+    public void deleteBillingDetails(com.tcn.cloud.api.api.v1alpha1.billing.DeleteBillingDetailsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.billing.DeleteBillingDetailsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteBillingDetailsMethod(), responseObserver);
     }
@@ -282,34 +282,58 @@ public final class BillingGrpc {
      * stands for the current billing cycle.
      * </pre>
      */
-    default void getInvoice(com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceReq request,
+    public void getInvoice(com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetInvoiceMethod(), responseObserver);
     }
-  }
-
-  /**
-   * Base class for the server implementation of the service Billing.
-   * <pre>
-   * Billing service for handling billing requests.
-   * </pre>
-   */
-  public static abstract class BillingImplBase
-      implements io.grpc.BindableService, AsyncService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return BillingGrpc.bindService(this);
+      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getCreateBillingPlanMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.billing.CreateBillingPlanReq,
+                com.tcn.cloud.api.api.v1alpha1.billing.CreateBillingPlanRes>(
+                  this, METHODID_CREATE_BILLING_PLAN)))
+          .addMethod(
+            getGetBillingPlanMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.billing.GetBillingPlanReq,
+                com.tcn.cloud.api.api.v1alpha1.billing.GetBillingPlanRes>(
+                  this, METHODID_GET_BILLING_PLAN)))
+          .addMethod(
+            getUpdateBillingPlanMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq,
+                com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanRes>(
+                  this, METHODID_UPDATE_BILLING_PLAN)))
+          .addMethod(
+            getDeleteBillingDetailsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.billing.DeleteBillingDetailsReq,
+                com.tcn.cloud.api.api.v1alpha1.billing.DeleteBillingDetailsRes>(
+                  this, METHODID_DELETE_BILLING_DETAILS)))
+          .addMethod(
+            getGetInvoiceMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceReq,
+                com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceRes>(
+                  this, METHODID_GET_INVOICE)))
+          .build();
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service Billing.
    * <pre>
    * Billing service for handling billing requests.
    * </pre>
    */
-  public static final class BillingStub
-      extends io.grpc.stub.AbstractAsyncStub<BillingStub> {
+  public static final class BillingStub extends io.grpc.stub.AbstractAsyncStub<BillingStub> {
     private BillingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -391,13 +415,11 @@ public final class BillingGrpc {
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service Billing.
    * <pre>
    * Billing service for handling billing requests.
    * </pre>
    */
-  public static final class BillingBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<BillingBlockingStub> {
+  public static final class BillingBlockingStub extends io.grpc.stub.AbstractBlockingStub<BillingBlockingStub> {
     private BillingBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -474,13 +496,11 @@ public final class BillingGrpc {
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service Billing.
    * <pre>
    * Billing service for handling billing requests.
    * </pre>
    */
-  public static final class BillingFutureStub
-      extends io.grpc.stub.AbstractFutureStub<BillingFutureStub> {
+  public static final class BillingFutureStub extends io.grpc.stub.AbstractFutureStub<BillingFutureStub> {
     private BillingFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -572,10 +592,10 @@ public final class BillingGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AsyncService serviceImpl;
+    private final BillingImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AsyncService serviceImpl, int methodId) {
+    MethodHandlers(BillingImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -618,46 +638,6 @@ public final class BillingGrpc {
           throw new AssertionError();
       }
     }
-  }
-
-  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
-    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-        .addMethod(
-          getCreateBillingPlanMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.billing.CreateBillingPlanReq,
-              com.tcn.cloud.api.api.v1alpha1.billing.CreateBillingPlanRes>(
-                service, METHODID_CREATE_BILLING_PLAN)))
-        .addMethod(
-          getGetBillingPlanMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.billing.GetBillingPlanReq,
-              com.tcn.cloud.api.api.v1alpha1.billing.GetBillingPlanRes>(
-                service, METHODID_GET_BILLING_PLAN)))
-        .addMethod(
-          getUpdateBillingPlanMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq,
-              com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanRes>(
-                service, METHODID_UPDATE_BILLING_PLAN)))
-        .addMethod(
-          getDeleteBillingDetailsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.billing.DeleteBillingDetailsReq,
-              com.tcn.cloud.api.api.v1alpha1.billing.DeleteBillingDetailsRes>(
-                service, METHODID_DELETE_BILLING_DETAILS)))
-        .addMethod(
-          getGetInvoiceMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceReq,
-              com.tcn.cloud.api.api.v1alpha1.billing.GetInvoiceRes>(
-                service, METHODID_GET_INVOICE)))
-        .build();
   }
 
   private static abstract class BillingBaseDescriptorSupplier

@@ -29,6 +29,61 @@ private static final long serialVersionUID = 0L;
     return new GetLabelResponse();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private GetLabelResponse(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            com.tcn.cloud.api.api.v1alpha1.org.Label.Builder subBuilder = null;
+            if (label_ != null) {
+              subBuilder = label_.toBuilder();
+            }
+            label_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.org.Label.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(label_);
+              label_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.org.LabelsProto.internal_static_api_v1alpha1_org_GetLabelResponse_descriptor;
@@ -65,7 +120,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.org.LabelOrBuilder getLabelOrBuilder() {
-    return label_ == null ? com.tcn.cloud.api.api.v1alpha1.org.Label.getDefaultInstance() : label_;
+    return getLabel();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -85,7 +140,7 @@ private static final long serialVersionUID = 0L;
     if (label_ != null) {
       output.writeMessage(1, getLabel());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -98,7 +153,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getLabel());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -118,7 +173,7 @@ private static final long serialVersionUID = 0L;
       if (!getLabel()
           .equals(other.getLabel())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -133,7 +188,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + LABEL_FIELD_NUMBER;
       hash = (53 * hash) + getLabel().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -182,13 +237,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.org.GetLabelResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.org.GetLabelResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -256,21 +309,26 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.GetLabelResponse.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      label_ = null;
-      if (labelBuilder_ != null) {
-        labelBuilder_.dispose();
+      if (labelBuilder_ == null) {
+        label_ = null;
+      } else {
+        label_ = null;
         labelBuilder_ = null;
       }
       return this;
@@ -299,18 +357,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.GetLabelResponse buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.GetLabelResponse result = new com.tcn.cloud.api.api.v1alpha1.org.GetLabelResponse(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      if (labelBuilder_ == null) {
+        result.label_ = label_;
+      } else {
+        result.label_ = labelBuilder_.build();
+      }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.GetLabelResponse result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.label_ = labelBuilder_ == null
-            ? label_
-            : labelBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -360,7 +413,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasLabel()) {
         mergeLabel(other.getLabel());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -375,40 +428,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.org.GetLabelResponse parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              input.readMessage(
-                  getLabelFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.org.GetLabelResponse) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private com.tcn.cloud.api.api.v1alpha1.org.Label label_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -418,7 +450,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the label field is set.
      */
     public boolean hasLabel() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return labelBuilder_ != null || label_ != null;
     }
     /**
      * <code>.api.v1alpha1.org.Label label = 1 [json_name = "label"];</code>
@@ -440,11 +472,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         label_ = value;
+        onChanged();
       } else {
         labelBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -454,11 +486,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.org.Label.Builder builderForValue) {
       if (labelBuilder_ == null) {
         label_ = builderForValue.build();
+        onChanged();
       } else {
         labelBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -466,38 +498,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeLabel(com.tcn.cloud.api.api.v1alpha1.org.Label value) {
       if (labelBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          label_ != null &&
-          label_ != com.tcn.cloud.api.api.v1alpha1.org.Label.getDefaultInstance()) {
-          getLabelBuilder().mergeFrom(value);
+        if (label_ != null) {
+          label_ =
+            com.tcn.cloud.api.api.v1alpha1.org.Label.newBuilder(label_).mergeFrom(value).buildPartial();
         } else {
           label_ = value;
         }
+        onChanged();
       } else {
         labelBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v1alpha1.org.Label label = 1 [json_name = "label"];</code>
      */
     public Builder clearLabel() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      label_ = null;
-      if (labelBuilder_ != null) {
-        labelBuilder_.dispose();
+      if (labelBuilder_ == null) {
+        label_ = null;
+        onChanged();
+      } else {
+        label_ = null;
         labelBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v1alpha1.org.Label label = 1 [json_name = "label"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.Label.Builder getLabelBuilder() {
-      bitField0_ |= 0x00000001;
+      
       onChanged();
       return getLabelFieldBuilder().getBuilder();
     }
@@ -561,18 +593,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new GetLabelResponse(input, extensionRegistry);
     }
   };
 

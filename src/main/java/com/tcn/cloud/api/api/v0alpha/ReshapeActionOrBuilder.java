@@ -33,8 +33,6 @@ public interface ReshapeActionOrBuilder extends
    * </pre>
    *
    * <code>.api.commons.RecordType matching_type = 20 [json_name = "matchingType", deprecated = true];</code>
-   * @deprecated api.v0alpha.ReshapeAction.matching_type is deprecated.
-   *     See api/v0alpha/lms.proto;l=1861
    * @return The enum numeric value on the wire for matchingType.
    */
   @java.lang.Deprecated int getMatchingTypeValue();
@@ -44,8 +42,6 @@ public interface ReshapeActionOrBuilder extends
    * </pre>
    *
    * <code>.api.commons.RecordType matching_type = 20 [json_name = "matchingType", deprecated = true];</code>
-   * @deprecated api.v0alpha.ReshapeAction.matching_type is deprecated.
-   *     See api/v0alpha/lms.proto;l=1861
    * @return The matchingType.
    */
   @java.lang.Deprecated com.tcn.cloud.api.api.commons.RecordType getMatchingType();
@@ -320,5 +316,5 @@ public interface ReshapeActionOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.ReshapeAction.ExtractOrBuilder getExtractOrBuilder();
 
-  com.tcn.cloud.api.api.v0alpha.ReshapeAction.ActionCase getActionCase();
+  public com.tcn.cloud.api.api.v0alpha.ReshapeAction.ActionCase getActionCase();
 }

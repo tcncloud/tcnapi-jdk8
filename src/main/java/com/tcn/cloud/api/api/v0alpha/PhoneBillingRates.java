@@ -25,6 +25,110 @@ private static final long serialVersionUID = 0L;
     return new PhoneBillingRates();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private PhoneBillingRates(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+
+            billingIncrementSeconds_ = input.readInt64();
+            break;
+          }
+          case 50: {
+            com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.Seconds.Builder subBuilder = null;
+            if (unitsCase_ == 6) {
+              subBuilder = ((com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.Seconds) units_).toBuilder();
+            }
+            units_ =
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.Seconds.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.Seconds) units_);
+              units_ = subBuilder.buildPartial();
+            }
+            unitsCase_ = 6;
+            break;
+          }
+          case 58: {
+            com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.Attempts.Builder subBuilder = null;
+            if (unitsCase_ == 7) {
+              subBuilder = ((com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.Attempts) units_).toBuilder();
+            }
+            units_ =
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.Attempts.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.Attempts) units_);
+              units_ = subBuilder.buildPartial();
+            }
+            unitsCase_ = 7;
+            break;
+          }
+          case 66: {
+            com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.ConnectedCalls.Builder subBuilder = null;
+            if (unitsCase_ == 8) {
+              subBuilder = ((com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.ConnectedCalls) units_).toBuilder();
+            }
+            units_ =
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.ConnectedCalls.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.ConnectedCalls) units_);
+              units_ = subBuilder.buildPartial();
+            }
+            unitsCase_ = 8;
+            break;
+          }
+          case 113: {
+
+            inboundPpi_ = input.readDouble();
+            break;
+          }
+          case 121: {
+
+            smsPricePerAttempt_ = input.readDouble();
+            break;
+          }
+          case 129: {
+
+            vocalDirectPricePerMessage_ = input.readDouble();
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_PhoneBillingRates_descriptor;
@@ -159,6 +263,125 @@ private static final long serialVersionUID = 0L;
       return new Seconds();
     }
 
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Seconds(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 32: {
+
+              minimumBilledIncrements_ = input.readInt64();
+              break;
+            }
+            case 42: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maximumBilledIncrements_ != null) {
+                subBuilder = maximumBilledIncrements_.toBuilder();
+              }
+              maximumBilledIncrements_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maximumBilledIncrements_);
+                maximumBilledIncrements_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 48: {
+
+              minimumLinkbackBilledIncrements_ = input.readInt64();
+              break;
+            }
+            case 58: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maximumLinkbackBilledIncrements_ != null) {
+                subBuilder = maximumLinkbackBilledIncrements_.toBuilder();
+              }
+              maximumLinkbackBilledIncrements_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maximumLinkbackBilledIncrements_);
+                maximumLinkbackBilledIncrements_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 66: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (machineHangupIncrementsBilled_ != null) {
+                subBuilder = machineHangupIncrementsBilled_.toBuilder();
+              }
+              machineHangupIncrementsBilled_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(machineHangupIncrementsBilled_);
+                machineHangupIncrementsBilled_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 74: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (humanHangupIncrementsBilled_ != null) {
+                subBuilder = humanHangupIncrementsBilled_.toBuilder();
+              }
+              humanHangupIncrementsBilled_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(humanHangupIncrementsBilled_);
+                humanHangupIncrementsBilled_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 81: {
+
+              ppi_ = input.readDouble();
+              break;
+            }
+            case 89: {
+
+              linkbackPpi_ = input.readDouble();
+              break;
+            }
+            case 97: {
+
+              agentLinkcallPpi_ = input.readDouble();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_PhoneBillingRates_Seconds_descriptor;
@@ -173,7 +396,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int PPI_FIELD_NUMBER = 10;
-    private double ppi_ = 0D;
+    private double ppi_;
     /**
      * <pre>
      * all billed_increment fields must be greater than 0.
@@ -189,7 +412,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int LINKBACK_PPI_FIELD_NUMBER = 11;
-    private double linkbackPpi_ = 0D;
+    private double linkbackPpi_;
     /**
      * <code>double linkback_ppi = 11 [json_name = "linkbackPpi"];</code>
      * @return The linkbackPpi.
@@ -200,7 +423,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int AGENT_LINKCALL_PPI_FIELD_NUMBER = 12;
-    private double agentLinkcallPpi_ = 0D;
+    private double agentLinkcallPpi_;
     /**
      * <code>double agent_linkcall_ppi = 12 [json_name = "agentLinkcallPpi"];</code>
      * @return The agentLinkcallPpi.
@@ -211,7 +434,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int MINIMUM_BILLED_INCREMENTS_FIELD_NUMBER = 4;
-    private long minimumBilledIncrements_ = 0L;
+    private long minimumBilledIncrements_;
     /**
      * <code>int64 minimum_billed_increments = 4 [json_name = "minimumBilledIncrements"];</code>
      * @return The minimumBilledIncrements.
@@ -244,11 +467,11 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaximumBilledIncrementsOrBuilder() {
-      return maximumBilledIncrements_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maximumBilledIncrements_;
+      return getMaximumBilledIncrements();
     }
 
     public static final int MINIMUM_LINKBACK_BILLED_INCREMENTS_FIELD_NUMBER = 6;
-    private long minimumLinkbackBilledIncrements_ = 0L;
+    private long minimumLinkbackBilledIncrements_;
     /**
      * <code>int64 minimum_linkback_billed_increments = 6 [json_name = "minimumLinkbackBilledIncrements"];</code>
      * @return The minimumLinkbackBilledIncrements.
@@ -281,7 +504,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMaximumLinkbackBilledIncrementsOrBuilder() {
-      return maximumLinkbackBilledIncrements_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maximumLinkbackBilledIncrements_;
+      return getMaximumLinkbackBilledIncrements();
     }
 
     public static final int MACHINE_HANGUP_INCREMENTS_BILLED_FIELD_NUMBER = 8;
@@ -307,7 +530,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getMachineHangupIncrementsBilledOrBuilder() {
-      return machineHangupIncrementsBilled_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : machineHangupIncrementsBilled_;
+      return getMachineHangupIncrementsBilled();
     }
 
     public static final int HUMAN_HANGUP_INCREMENTS_BILLED_FIELD_NUMBER = 9;
@@ -333,7 +556,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getHumanHangupIncrementsBilledOrBuilder() {
-      return humanHangupIncrementsBilled_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : humanHangupIncrementsBilled_;
+      return getHumanHangupIncrementsBilled();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -368,16 +591,16 @@ private static final long serialVersionUID = 0L;
       if (humanHangupIncrementsBilled_ != null) {
         output.writeMessage(9, getHumanHangupIncrementsBilled());
       }
-      if (java.lang.Double.doubleToRawLongBits(ppi_) != 0) {
+      if (ppi_ != 0D) {
         output.writeDouble(10, ppi_);
       }
-      if (java.lang.Double.doubleToRawLongBits(linkbackPpi_) != 0) {
+      if (linkbackPpi_ != 0D) {
         output.writeDouble(11, linkbackPpi_);
       }
-      if (java.lang.Double.doubleToRawLongBits(agentLinkcallPpi_) != 0) {
+      if (agentLinkcallPpi_ != 0D) {
         output.writeDouble(12, agentLinkcallPpi_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -410,19 +633,19 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getHumanHangupIncrementsBilled());
       }
-      if (java.lang.Double.doubleToRawLongBits(ppi_) != 0) {
+      if (ppi_ != 0D) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(10, ppi_);
       }
-      if (java.lang.Double.doubleToRawLongBits(linkbackPpi_) != 0) {
+      if (linkbackPpi_ != 0D) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(11, linkbackPpi_);
       }
-      if (java.lang.Double.doubleToRawLongBits(agentLinkcallPpi_) != 0) {
+      if (agentLinkcallPpi_ != 0D) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(12, agentLinkcallPpi_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -470,7 +693,7 @@ private static final long serialVersionUID = 0L;
         if (!getHumanHangupIncrementsBilled()
             .equals(other.getHumanHangupIncrementsBilled())) return false;
       }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -512,7 +735,7 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + HUMAN_HANGUP_INCREMENTS_BILLED_FIELD_NUMBER;
         hash = (53 * hash) + getHumanHangupIncrementsBilled().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -561,13 +784,11 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-
     public static com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.Seconds parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-
     public static com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.Seconds parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -631,41 +852,54 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.Seconds.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         ppi_ = 0D;
+
         linkbackPpi_ = 0D;
+
         agentLinkcallPpi_ = 0D;
+
         minimumBilledIncrements_ = 0L;
-        maximumBilledIncrements_ = null;
-        if (maximumBilledIncrementsBuilder_ != null) {
-          maximumBilledIncrementsBuilder_.dispose();
+
+        if (maximumBilledIncrementsBuilder_ == null) {
+          maximumBilledIncrements_ = null;
+        } else {
+          maximumBilledIncrements_ = null;
           maximumBilledIncrementsBuilder_ = null;
         }
         minimumLinkbackBilledIncrements_ = 0L;
-        maximumLinkbackBilledIncrements_ = null;
-        if (maximumLinkbackBilledIncrementsBuilder_ != null) {
-          maximumLinkbackBilledIncrementsBuilder_.dispose();
+
+        if (maximumLinkbackBilledIncrementsBuilder_ == null) {
+          maximumLinkbackBilledIncrements_ = null;
+        } else {
+          maximumLinkbackBilledIncrements_ = null;
           maximumLinkbackBilledIncrementsBuilder_ = null;
         }
-        machineHangupIncrementsBilled_ = null;
-        if (machineHangupIncrementsBilledBuilder_ != null) {
-          machineHangupIncrementsBilledBuilder_.dispose();
+        if (machineHangupIncrementsBilledBuilder_ == null) {
+          machineHangupIncrementsBilled_ = null;
+        } else {
+          machineHangupIncrementsBilled_ = null;
           machineHangupIncrementsBilledBuilder_ = null;
         }
-        humanHangupIncrementsBilled_ = null;
-        if (humanHangupIncrementsBilledBuilder_ != null) {
-          humanHangupIncrementsBilledBuilder_.dispose();
+        if (humanHangupIncrementsBilledBuilder_ == null) {
+          humanHangupIncrementsBilled_ = null;
+        } else {
+          humanHangupIncrementsBilled_ = null;
           humanHangupIncrementsBilledBuilder_ = null;
         }
         return this;
@@ -694,48 +928,33 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.Seconds buildPartial() {
         com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.Seconds result = new com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.Seconds(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        result.ppi_ = ppi_;
+        result.linkbackPpi_ = linkbackPpi_;
+        result.agentLinkcallPpi_ = agentLinkcallPpi_;
+        result.minimumBilledIncrements_ = minimumBilledIncrements_;
+        if (maximumBilledIncrementsBuilder_ == null) {
+          result.maximumBilledIncrements_ = maximumBilledIncrements_;
+        } else {
+          result.maximumBilledIncrements_ = maximumBilledIncrementsBuilder_.build();
+        }
+        result.minimumLinkbackBilledIncrements_ = minimumLinkbackBilledIncrements_;
+        if (maximumLinkbackBilledIncrementsBuilder_ == null) {
+          result.maximumLinkbackBilledIncrements_ = maximumLinkbackBilledIncrements_;
+        } else {
+          result.maximumLinkbackBilledIncrements_ = maximumLinkbackBilledIncrementsBuilder_.build();
+        }
+        if (machineHangupIncrementsBilledBuilder_ == null) {
+          result.machineHangupIncrementsBilled_ = machineHangupIncrementsBilled_;
+        } else {
+          result.machineHangupIncrementsBilled_ = machineHangupIncrementsBilledBuilder_.build();
+        }
+        if (humanHangupIncrementsBilledBuilder_ == null) {
+          result.humanHangupIncrementsBilled_ = humanHangupIncrementsBilled_;
+        } else {
+          result.humanHangupIncrementsBilled_ = humanHangupIncrementsBilledBuilder_.build();
+        }
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.Seconds result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.ppi_ = ppi_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.linkbackPpi_ = linkbackPpi_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.agentLinkcallPpi_ = agentLinkcallPpi_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.minimumBilledIncrements_ = minimumBilledIncrements_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.maximumBilledIncrements_ = maximumBilledIncrementsBuilder_ == null
-              ? maximumBilledIncrements_
-              : maximumBilledIncrementsBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.minimumLinkbackBilledIncrements_ = minimumLinkbackBilledIncrements_;
-        }
-        if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.maximumLinkbackBilledIncrements_ = maximumLinkbackBilledIncrementsBuilder_ == null
-              ? maximumLinkbackBilledIncrements_
-              : maximumLinkbackBilledIncrementsBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000080) != 0)) {
-          result.machineHangupIncrementsBilled_ = machineHangupIncrementsBilledBuilder_ == null
-              ? machineHangupIncrementsBilled_
-              : machineHangupIncrementsBilledBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000100) != 0)) {
-          result.humanHangupIncrementsBilled_ = humanHangupIncrementsBilledBuilder_ == null
-              ? humanHangupIncrementsBilled_
-              : humanHangupIncrementsBilledBuilder_.build();
-        }
       }
 
       @java.lang.Override
@@ -809,7 +1028,7 @@ private static final long serialVersionUID = 0L;
         if (other.hasHumanHangupIncrementsBilled()) {
           mergeHumanHangupIncrementsBilled(other.getHumanHangupIncrementsBilled());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -824,86 +1043,19 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.Seconds parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 32: {
-                minimumBilledIncrements_ = input.readInt64();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 32
-              case 42: {
-                input.readMessage(
-                    getMaximumBilledIncrementsFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 42
-              case 48: {
-                minimumLinkbackBilledIncrements_ = input.readInt64();
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 48
-              case 58: {
-                input.readMessage(
-                    getMaximumLinkbackBilledIncrementsFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000040;
-                break;
-              } // case 58
-              case 66: {
-                input.readMessage(
-                    getMachineHangupIncrementsBilledFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000080;
-                break;
-              } // case 66
-              case 74: {
-                input.readMessage(
-                    getHumanHangupIncrementsBilledFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000100;
-                break;
-              } // case 74
-              case 81: {
-                ppi_ = input.readDouble();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 81
-              case 89: {
-                linkbackPpi_ = input.readDouble();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 89
-              case 97: {
-                agentLinkcallPpi_ = input.readDouble();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 97
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.Seconds) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
-      private int bitField0_;
 
       private double ppi_ ;
       /**
@@ -930,9 +1082,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setPpi(double value) {
-
+        
         ppi_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -946,7 +1097,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearPpi() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         ppi_ = 0D;
         onChanged();
         return this;
@@ -967,9 +1118,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setLinkbackPpi(double value) {
-
+        
         linkbackPpi_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -978,7 +1128,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearLinkbackPpi() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         linkbackPpi_ = 0D;
         onChanged();
         return this;
@@ -999,9 +1149,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setAgentLinkcallPpi(double value) {
-
+        
         agentLinkcallPpi_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1010,7 +1159,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearAgentLinkcallPpi() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         agentLinkcallPpi_ = 0D;
         onChanged();
         return this;
@@ -1031,9 +1180,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setMinimumBilledIncrements(long value) {
-
+        
         minimumBilledIncrements_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1042,7 +1190,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearMinimumBilledIncrements() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        
         minimumBilledIncrements_ = 0L;
         onChanged();
         return this;
@@ -1056,7 +1204,7 @@ private static final long serialVersionUID = 0L;
        * @return Whether the maximumBilledIncrements field is set.
        */
       public boolean hasMaximumBilledIncrements() {
-        return ((bitField0_ & 0x00000010) != 0);
+        return maximumBilledIncrementsBuilder_ != null || maximumBilledIncrements_ != null;
       }
       /**
        * <code>.google.protobuf.Int64Value maximum_billed_increments = 5 [json_name = "maximumBilledIncrements"];</code>
@@ -1078,11 +1226,11 @@ private static final long serialVersionUID = 0L;
             throw new NullPointerException();
           }
           maximumBilledIncrements_ = value;
+          onChanged();
         } else {
           maximumBilledIncrementsBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+
         return this;
       }
       /**
@@ -1092,11 +1240,11 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.Int64Value.Builder builderForValue) {
         if (maximumBilledIncrementsBuilder_ == null) {
           maximumBilledIncrements_ = builderForValue.build();
+          onChanged();
         } else {
           maximumBilledIncrementsBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+
         return this;
       }
       /**
@@ -1104,38 +1252,38 @@ private static final long serialVersionUID = 0L;
        */
       public Builder mergeMaximumBilledIncrements(com.google.protobuf.Int64Value value) {
         if (maximumBilledIncrementsBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) != 0) &&
-            maximumBilledIncrements_ != null &&
-            maximumBilledIncrements_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
-            getMaximumBilledIncrementsBuilder().mergeFrom(value);
+          if (maximumBilledIncrements_ != null) {
+            maximumBilledIncrements_ =
+              com.google.protobuf.Int64Value.newBuilder(maximumBilledIncrements_).mergeFrom(value).buildPartial();
           } else {
             maximumBilledIncrements_ = value;
           }
+          onChanged();
         } else {
           maximumBilledIncrementsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+
         return this;
       }
       /**
        * <code>.google.protobuf.Int64Value maximum_billed_increments = 5 [json_name = "maximumBilledIncrements"];</code>
        */
       public Builder clearMaximumBilledIncrements() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        maximumBilledIncrements_ = null;
-        if (maximumBilledIncrementsBuilder_ != null) {
-          maximumBilledIncrementsBuilder_.dispose();
+        if (maximumBilledIncrementsBuilder_ == null) {
+          maximumBilledIncrements_ = null;
+          onChanged();
+        } else {
+          maximumBilledIncrements_ = null;
           maximumBilledIncrementsBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
        * <code>.google.protobuf.Int64Value maximum_billed_increments = 5 [json_name = "maximumBilledIncrements"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getMaximumBilledIncrementsBuilder() {
-        bitField0_ |= 0x00000010;
+        
         onChanged();
         return getMaximumBilledIncrementsFieldBuilder().getBuilder();
       }
@@ -1182,9 +1330,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setMinimumLinkbackBilledIncrements(long value) {
-
+        
         minimumLinkbackBilledIncrements_ = value;
-        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -1193,7 +1340,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearMinimumLinkbackBilledIncrements() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        
         minimumLinkbackBilledIncrements_ = 0L;
         onChanged();
         return this;
@@ -1207,7 +1354,7 @@ private static final long serialVersionUID = 0L;
        * @return Whether the maximumLinkbackBilledIncrements field is set.
        */
       public boolean hasMaximumLinkbackBilledIncrements() {
-        return ((bitField0_ & 0x00000040) != 0);
+        return maximumLinkbackBilledIncrementsBuilder_ != null || maximumLinkbackBilledIncrements_ != null;
       }
       /**
        * <code>.google.protobuf.Int64Value maximum_linkback_billed_increments = 7 [json_name = "maximumLinkbackBilledIncrements"];</code>
@@ -1229,11 +1376,11 @@ private static final long serialVersionUID = 0L;
             throw new NullPointerException();
           }
           maximumLinkbackBilledIncrements_ = value;
+          onChanged();
         } else {
           maximumLinkbackBilledIncrementsBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000040;
-        onChanged();
+
         return this;
       }
       /**
@@ -1243,11 +1390,11 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.Int64Value.Builder builderForValue) {
         if (maximumLinkbackBilledIncrementsBuilder_ == null) {
           maximumLinkbackBilledIncrements_ = builderForValue.build();
+          onChanged();
         } else {
           maximumLinkbackBilledIncrementsBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000040;
-        onChanged();
+
         return this;
       }
       /**
@@ -1255,38 +1402,38 @@ private static final long serialVersionUID = 0L;
        */
       public Builder mergeMaximumLinkbackBilledIncrements(com.google.protobuf.Int64Value value) {
         if (maximumLinkbackBilledIncrementsBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) != 0) &&
-            maximumLinkbackBilledIncrements_ != null &&
-            maximumLinkbackBilledIncrements_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
-            getMaximumLinkbackBilledIncrementsBuilder().mergeFrom(value);
+          if (maximumLinkbackBilledIncrements_ != null) {
+            maximumLinkbackBilledIncrements_ =
+              com.google.protobuf.Int64Value.newBuilder(maximumLinkbackBilledIncrements_).mergeFrom(value).buildPartial();
           } else {
             maximumLinkbackBilledIncrements_ = value;
           }
+          onChanged();
         } else {
           maximumLinkbackBilledIncrementsBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000040;
-        onChanged();
+
         return this;
       }
       /**
        * <code>.google.protobuf.Int64Value maximum_linkback_billed_increments = 7 [json_name = "maximumLinkbackBilledIncrements"];</code>
        */
       public Builder clearMaximumLinkbackBilledIncrements() {
-        bitField0_ = (bitField0_ & ~0x00000040);
-        maximumLinkbackBilledIncrements_ = null;
-        if (maximumLinkbackBilledIncrementsBuilder_ != null) {
-          maximumLinkbackBilledIncrementsBuilder_.dispose();
+        if (maximumLinkbackBilledIncrementsBuilder_ == null) {
+          maximumLinkbackBilledIncrements_ = null;
+          onChanged();
+        } else {
+          maximumLinkbackBilledIncrements_ = null;
           maximumLinkbackBilledIncrementsBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
        * <code>.google.protobuf.Int64Value maximum_linkback_billed_increments = 7 [json_name = "maximumLinkbackBilledIncrements"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getMaximumLinkbackBilledIncrementsBuilder() {
-        bitField0_ |= 0x00000040;
+        
         onChanged();
         return getMaximumLinkbackBilledIncrementsFieldBuilder().getBuilder();
       }
@@ -1326,7 +1473,7 @@ private static final long serialVersionUID = 0L;
        * @return Whether the machineHangupIncrementsBilled field is set.
        */
       public boolean hasMachineHangupIncrementsBilled() {
-        return ((bitField0_ & 0x00000080) != 0);
+        return machineHangupIncrementsBilledBuilder_ != null || machineHangupIncrementsBilled_ != null;
       }
       /**
        * <code>.google.protobuf.Int64Value machine_hangup_increments_billed = 8 [json_name = "machineHangupIncrementsBilled"];</code>
@@ -1348,11 +1495,11 @@ private static final long serialVersionUID = 0L;
             throw new NullPointerException();
           }
           machineHangupIncrementsBilled_ = value;
+          onChanged();
         } else {
           machineHangupIncrementsBilledBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000080;
-        onChanged();
+
         return this;
       }
       /**
@@ -1362,11 +1509,11 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.Int64Value.Builder builderForValue) {
         if (machineHangupIncrementsBilledBuilder_ == null) {
           machineHangupIncrementsBilled_ = builderForValue.build();
+          onChanged();
         } else {
           machineHangupIncrementsBilledBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000080;
-        onChanged();
+
         return this;
       }
       /**
@@ -1374,38 +1521,38 @@ private static final long serialVersionUID = 0L;
        */
       public Builder mergeMachineHangupIncrementsBilled(com.google.protobuf.Int64Value value) {
         if (machineHangupIncrementsBilledBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) != 0) &&
-            machineHangupIncrementsBilled_ != null &&
-            machineHangupIncrementsBilled_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
-            getMachineHangupIncrementsBilledBuilder().mergeFrom(value);
+          if (machineHangupIncrementsBilled_ != null) {
+            machineHangupIncrementsBilled_ =
+              com.google.protobuf.Int64Value.newBuilder(machineHangupIncrementsBilled_).mergeFrom(value).buildPartial();
           } else {
             machineHangupIncrementsBilled_ = value;
           }
+          onChanged();
         } else {
           machineHangupIncrementsBilledBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000080;
-        onChanged();
+
         return this;
       }
       /**
        * <code>.google.protobuf.Int64Value machine_hangup_increments_billed = 8 [json_name = "machineHangupIncrementsBilled"];</code>
        */
       public Builder clearMachineHangupIncrementsBilled() {
-        bitField0_ = (bitField0_ & ~0x00000080);
-        machineHangupIncrementsBilled_ = null;
-        if (machineHangupIncrementsBilledBuilder_ != null) {
-          machineHangupIncrementsBilledBuilder_.dispose();
+        if (machineHangupIncrementsBilledBuilder_ == null) {
+          machineHangupIncrementsBilled_ = null;
+          onChanged();
+        } else {
+          machineHangupIncrementsBilled_ = null;
           machineHangupIncrementsBilledBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
        * <code>.google.protobuf.Int64Value machine_hangup_increments_billed = 8 [json_name = "machineHangupIncrementsBilled"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getMachineHangupIncrementsBilledBuilder() {
-        bitField0_ |= 0x00000080;
+        
         onChanged();
         return getMachineHangupIncrementsBilledFieldBuilder().getBuilder();
       }
@@ -1445,7 +1592,7 @@ private static final long serialVersionUID = 0L;
        * @return Whether the humanHangupIncrementsBilled field is set.
        */
       public boolean hasHumanHangupIncrementsBilled() {
-        return ((bitField0_ & 0x00000100) != 0);
+        return humanHangupIncrementsBilledBuilder_ != null || humanHangupIncrementsBilled_ != null;
       }
       /**
        * <code>.google.protobuf.Int64Value human_hangup_increments_billed = 9 [json_name = "humanHangupIncrementsBilled"];</code>
@@ -1467,11 +1614,11 @@ private static final long serialVersionUID = 0L;
             throw new NullPointerException();
           }
           humanHangupIncrementsBilled_ = value;
+          onChanged();
         } else {
           humanHangupIncrementsBilledBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000100;
-        onChanged();
+
         return this;
       }
       /**
@@ -1481,11 +1628,11 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.Int64Value.Builder builderForValue) {
         if (humanHangupIncrementsBilledBuilder_ == null) {
           humanHangupIncrementsBilled_ = builderForValue.build();
+          onChanged();
         } else {
           humanHangupIncrementsBilledBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000100;
-        onChanged();
+
         return this;
       }
       /**
@@ -1493,38 +1640,38 @@ private static final long serialVersionUID = 0L;
        */
       public Builder mergeHumanHangupIncrementsBilled(com.google.protobuf.Int64Value value) {
         if (humanHangupIncrementsBilledBuilder_ == null) {
-          if (((bitField0_ & 0x00000100) != 0) &&
-            humanHangupIncrementsBilled_ != null &&
-            humanHangupIncrementsBilled_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
-            getHumanHangupIncrementsBilledBuilder().mergeFrom(value);
+          if (humanHangupIncrementsBilled_ != null) {
+            humanHangupIncrementsBilled_ =
+              com.google.protobuf.Int64Value.newBuilder(humanHangupIncrementsBilled_).mergeFrom(value).buildPartial();
           } else {
             humanHangupIncrementsBilled_ = value;
           }
+          onChanged();
         } else {
           humanHangupIncrementsBilledBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000100;
-        onChanged();
+
         return this;
       }
       /**
        * <code>.google.protobuf.Int64Value human_hangup_increments_billed = 9 [json_name = "humanHangupIncrementsBilled"];</code>
        */
       public Builder clearHumanHangupIncrementsBilled() {
-        bitField0_ = (bitField0_ & ~0x00000100);
-        humanHangupIncrementsBilled_ = null;
-        if (humanHangupIncrementsBilledBuilder_ != null) {
-          humanHangupIncrementsBilledBuilder_.dispose();
+        if (humanHangupIncrementsBilledBuilder_ == null) {
+          humanHangupIncrementsBilled_ = null;
+          onChanged();
+        } else {
+          humanHangupIncrementsBilled_ = null;
           humanHangupIncrementsBilledBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
        * <code>.google.protobuf.Int64Value human_hangup_increments_billed = 9 [json_name = "humanHangupIncrementsBilled"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getHumanHangupIncrementsBilledBuilder() {
-        bitField0_ |= 0x00000100;
+        
         onChanged();
         return getHumanHangupIncrementsBilledFieldBuilder().getBuilder();
       }
@@ -1588,18 +1735,7 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new Seconds(input, extensionRegistry);
       }
     };
 
@@ -1667,6 +1803,63 @@ private static final long serialVersionUID = 0L;
       return new Attempts();
     }
 
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Attempts(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 33: {
+
+              ppa_ = input.readDouble();
+              break;
+            }
+            case 41: {
+
+              linkbackPpa_ = input.readDouble();
+              break;
+            }
+            case 49: {
+
+              agentLinkcallPpa_ = input.readDouble();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_PhoneBillingRates_Attempts_descriptor;
@@ -1681,7 +1874,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int PPA_FIELD_NUMBER = 4;
-    private double ppa_ = 0D;
+    private double ppa_;
     /**
      * <pre>
      * ppa = price per attempt
@@ -1696,7 +1889,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int LINKBACK_PPA_FIELD_NUMBER = 5;
-    private double linkbackPpa_ = 0D;
+    private double linkbackPpa_;
     /**
      * <code>double linkback_ppa = 5 [json_name = "linkbackPpa"];</code>
      * @return The linkbackPpa.
@@ -1707,7 +1900,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int AGENT_LINKCALL_PPA_FIELD_NUMBER = 6;
-    private double agentLinkcallPpa_ = 0D;
+    private double agentLinkcallPpa_;
     /**
      * <code>double agent_linkcall_ppa = 6 [json_name = "agentLinkcallPpa"];</code>
      * @return The agentLinkcallPpa.
@@ -1731,16 +1924,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (java.lang.Double.doubleToRawLongBits(ppa_) != 0) {
+      if (ppa_ != 0D) {
         output.writeDouble(4, ppa_);
       }
-      if (java.lang.Double.doubleToRawLongBits(linkbackPpa_) != 0) {
+      if (linkbackPpa_ != 0D) {
         output.writeDouble(5, linkbackPpa_);
       }
-      if (java.lang.Double.doubleToRawLongBits(agentLinkcallPpa_) != 0) {
+      if (agentLinkcallPpa_ != 0D) {
         output.writeDouble(6, agentLinkcallPpa_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -1749,19 +1942,19 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (java.lang.Double.doubleToRawLongBits(ppa_) != 0) {
+      if (ppa_ != 0D) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(4, ppa_);
       }
-      if (java.lang.Double.doubleToRawLongBits(linkbackPpa_) != 0) {
+      if (linkbackPpa_ != 0D) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(5, linkbackPpa_);
       }
-      if (java.lang.Double.doubleToRawLongBits(agentLinkcallPpa_) != 0) {
+      if (agentLinkcallPpa_ != 0D) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(6, agentLinkcallPpa_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1785,7 +1978,7 @@ private static final long serialVersionUID = 0L;
       if (java.lang.Double.doubleToLongBits(getAgentLinkcallPpa())
           != java.lang.Double.doubleToLongBits(
               other.getAgentLinkcallPpa())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -1805,7 +1998,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + AGENT_LINKCALL_PPA_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           java.lang.Double.doubleToLongBits(getAgentLinkcallPpa()));
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1854,13 +2047,11 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-
     public static com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.Attempts parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-
     public static com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.Attempts parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1924,21 +2115,28 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.Attempts.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         ppa_ = 0D;
+
         linkbackPpa_ = 0D;
+
         agentLinkcallPpa_ = 0D;
+
         return this;
       }
 
@@ -1965,22 +2163,11 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.Attempts buildPartial() {
         com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.Attempts result = new com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.Attempts(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        result.ppa_ = ppa_;
+        result.linkbackPpa_ = linkbackPpa_;
+        result.agentLinkcallPpa_ = agentLinkcallPpa_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.Attempts result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.ppa_ = ppa_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.linkbackPpa_ = linkbackPpa_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.agentLinkcallPpa_ = agentLinkcallPpa_;
-        }
       }
 
       @java.lang.Override
@@ -2036,7 +2223,7 @@ private static final long serialVersionUID = 0L;
         if (other.getAgentLinkcallPpa() != 0D) {
           setAgentLinkcallPpa(other.getAgentLinkcallPpa());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -2051,48 +2238,19 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.Attempts parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 33: {
-                ppa_ = input.readDouble();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 33
-              case 41: {
-                linkbackPpa_ = input.readDouble();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 41
-              case 49: {
-                agentLinkcallPpa_ = input.readDouble();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 49
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.Attempts) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
-      private int bitField0_;
 
       private double ppa_ ;
       /**
@@ -2117,9 +2275,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setPpa(double value) {
-
+        
         ppa_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2132,7 +2289,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearPpa() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         ppa_ = 0D;
         onChanged();
         return this;
@@ -2153,9 +2310,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setLinkbackPpa(double value) {
-
+        
         linkbackPpa_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2164,7 +2320,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearLinkbackPpa() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         linkbackPpa_ = 0D;
         onChanged();
         return this;
@@ -2185,9 +2341,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setAgentLinkcallPpa(double value) {
-
+        
         agentLinkcallPpa_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2196,7 +2351,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearAgentLinkcallPpa() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         agentLinkcallPpa_ = 0D;
         onChanged();
         return this;
@@ -2234,18 +2389,7 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new Attempts(input, extensionRegistry);
       }
     };
 
@@ -2313,6 +2457,63 @@ private static final long serialVersionUID = 0L;
       return new ConnectedCalls();
     }
 
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ConnectedCalls(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 33: {
+
+              ppc_ = input.readDouble();
+              break;
+            }
+            case 41: {
+
+              linkbackPpc_ = input.readDouble();
+              break;
+            }
+            case 49: {
+
+              agentLinkcallPpc_ = input.readDouble();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_PhoneBillingRates_ConnectedCalls_descriptor;
@@ -2327,7 +2528,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int PPC_FIELD_NUMBER = 4;
-    private double ppc_ = 0D;
+    private double ppc_;
     /**
      * <pre>
      * ppc = price per connect
@@ -2342,7 +2543,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int LINKBACK_PPC_FIELD_NUMBER = 5;
-    private double linkbackPpc_ = 0D;
+    private double linkbackPpc_;
     /**
      * <code>double linkback_ppc = 5 [json_name = "linkbackPpc"];</code>
      * @return The linkbackPpc.
@@ -2353,7 +2554,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int AGENT_LINKCALL_PPC_FIELD_NUMBER = 6;
-    private double agentLinkcallPpc_ = 0D;
+    private double agentLinkcallPpc_;
     /**
      * <code>double agent_linkcall_ppc = 6 [json_name = "agentLinkcallPpc"];</code>
      * @return The agentLinkcallPpc.
@@ -2377,16 +2578,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (java.lang.Double.doubleToRawLongBits(ppc_) != 0) {
+      if (ppc_ != 0D) {
         output.writeDouble(4, ppc_);
       }
-      if (java.lang.Double.doubleToRawLongBits(linkbackPpc_) != 0) {
+      if (linkbackPpc_ != 0D) {
         output.writeDouble(5, linkbackPpc_);
       }
-      if (java.lang.Double.doubleToRawLongBits(agentLinkcallPpc_) != 0) {
+      if (agentLinkcallPpc_ != 0D) {
         output.writeDouble(6, agentLinkcallPpc_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -2395,19 +2596,19 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (java.lang.Double.doubleToRawLongBits(ppc_) != 0) {
+      if (ppc_ != 0D) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(4, ppc_);
       }
-      if (java.lang.Double.doubleToRawLongBits(linkbackPpc_) != 0) {
+      if (linkbackPpc_ != 0D) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(5, linkbackPpc_);
       }
-      if (java.lang.Double.doubleToRawLongBits(agentLinkcallPpc_) != 0) {
+      if (agentLinkcallPpc_ != 0D) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(6, agentLinkcallPpc_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2431,7 +2632,7 @@ private static final long serialVersionUID = 0L;
       if (java.lang.Double.doubleToLongBits(getAgentLinkcallPpc())
           != java.lang.Double.doubleToLongBits(
               other.getAgentLinkcallPpc())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -2451,7 +2652,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + AGENT_LINKCALL_PPC_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           java.lang.Double.doubleToLongBits(getAgentLinkcallPpc()));
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2500,13 +2701,11 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-
     public static com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.ConnectedCalls parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-
     public static com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.ConnectedCalls parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2570,21 +2769,28 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.ConnectedCalls.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         ppc_ = 0D;
+
         linkbackPpc_ = 0D;
+
         agentLinkcallPpc_ = 0D;
+
         return this;
       }
 
@@ -2611,22 +2817,11 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.ConnectedCalls buildPartial() {
         com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.ConnectedCalls result = new com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.ConnectedCalls(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        result.ppc_ = ppc_;
+        result.linkbackPpc_ = linkbackPpc_;
+        result.agentLinkcallPpc_ = agentLinkcallPpc_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.ConnectedCalls result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.ppc_ = ppc_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.linkbackPpc_ = linkbackPpc_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.agentLinkcallPpc_ = agentLinkcallPpc_;
-        }
       }
 
       @java.lang.Override
@@ -2682,7 +2877,7 @@ private static final long serialVersionUID = 0L;
         if (other.getAgentLinkcallPpc() != 0D) {
           setAgentLinkcallPpc(other.getAgentLinkcallPpc());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -2697,48 +2892,19 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.ConnectedCalls parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 33: {
-                ppc_ = input.readDouble();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 33
-              case 41: {
-                linkbackPpc_ = input.readDouble();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 41
-              case 49: {
-                agentLinkcallPpc_ = input.readDouble();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 49
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.ConnectedCalls) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
-      private int bitField0_;
 
       private double ppc_ ;
       /**
@@ -2763,9 +2929,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setPpc(double value) {
-
+        
         ppc_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2778,7 +2943,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearPpc() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         ppc_ = 0D;
         onChanged();
         return this;
@@ -2799,9 +2964,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setLinkbackPpc(double value) {
-
+        
         linkbackPpc_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2810,7 +2974,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearLinkbackPpc() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         linkbackPpc_ = 0D;
         onChanged();
         return this;
@@ -2831,9 +2995,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setAgentLinkcallPpc(double value) {
-
+        
         agentLinkcallPpc_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2842,7 +3005,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearAgentLinkcallPpc() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         agentLinkcallPpc_ = 0D;
         onChanged();
         return this;
@@ -2880,18 +3043,7 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new ConnectedCalls(input, extensionRegistry);
       }
     };
 
@@ -2912,7 +3064,6 @@ private static final long serialVersionUID = 0L;
   }
 
   private int unitsCase_ = 0;
-  @SuppressWarnings("serial")
   private java.lang.Object units_;
   public enum UnitsCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -2956,7 +3107,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BILLING_INCREMENT_SECONDS_FIELD_NUMBER = 1;
-  private long billingIncrementSeconds_ = 0L;
+  private long billingIncrementSeconds_;
   /**
    * <pre>
    * ppi = price per increment
@@ -2971,7 +3122,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INBOUND_PPI_FIELD_NUMBER = 14;
-  private double inboundPpi_ = 0D;
+  private double inboundPpi_;
   /**
    * <code>double inbound_ppi = 14 [json_name = "inboundPpi"];</code>
    * @return The inboundPpi.
@@ -2982,7 +3133,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SMS_PRICE_PER_ATTEMPT_FIELD_NUMBER = 15;
-  private double smsPricePerAttempt_ = 0D;
+  private double smsPricePerAttempt_;
   /**
    * <code>double sms_price_per_attempt = 15 [json_name = "smsPricePerAttempt"];</code>
    * @return The smsPricePerAttempt.
@@ -2993,7 +3144,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VOCAL_DIRECT_PRICE_PER_MESSAGE_FIELD_NUMBER = 16;
-  private double vocalDirectPricePerMessage_ = 0D;
+  private double vocalDirectPricePerMessage_;
   /**
    * <code>double vocal_direct_price_per_message = 16 [json_name = "vocalDirectPricePerMessage"];</code>
    * @return The vocalDirectPricePerMessage.
@@ -3122,16 +3273,16 @@ private static final long serialVersionUID = 0L;
     if (unitsCase_ == 8) {
       output.writeMessage(8, (com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.ConnectedCalls) units_);
     }
-    if (java.lang.Double.doubleToRawLongBits(inboundPpi_) != 0) {
+    if (inboundPpi_ != 0D) {
       output.writeDouble(14, inboundPpi_);
     }
-    if (java.lang.Double.doubleToRawLongBits(smsPricePerAttempt_) != 0) {
+    if (smsPricePerAttempt_ != 0D) {
       output.writeDouble(15, smsPricePerAttempt_);
     }
-    if (java.lang.Double.doubleToRawLongBits(vocalDirectPricePerMessage_) != 0) {
+    if (vocalDirectPricePerMessage_ != 0D) {
       output.writeDouble(16, vocalDirectPricePerMessage_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -3156,19 +3307,19 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, (com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.ConnectedCalls) units_);
     }
-    if (java.lang.Double.doubleToRawLongBits(inboundPpi_) != 0) {
+    if (inboundPpi_ != 0D) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(14, inboundPpi_);
     }
-    if (java.lang.Double.doubleToRawLongBits(smsPricePerAttempt_) != 0) {
+    if (smsPricePerAttempt_ != 0D) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(15, smsPricePerAttempt_);
     }
-    if (java.lang.Double.doubleToRawLongBits(vocalDirectPricePerMessage_) != 0) {
+    if (vocalDirectPricePerMessage_ != 0D) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(16, vocalDirectPricePerMessage_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -3211,7 +3362,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -3250,7 +3401,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -3299,13 +3450,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.PhoneBillingRates parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.PhoneBillingRates parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3369,31 +3518,30 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       billingIncrementSeconds_ = 0L;
+
       inboundPpi_ = 0D;
+
       smsPricePerAttempt_ = 0D;
+
       vocalDirectPricePerMessage_ = 0D;
-      if (secondsBuilder_ != null) {
-        secondsBuilder_.clear();
-      }
-      if (attemptsBuilder_ != null) {
-        attemptsBuilder_.clear();
-      }
-      if (connectedCallsBuilder_ != null) {
-        connectedCallsBuilder_.clear();
-      }
+
       unitsCase_ = 0;
       units_ = null;
       return this;
@@ -3422,43 +3570,34 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.PhoneBillingRates buildPartial() {
       com.tcn.cloud.api.api.v0alpha.PhoneBillingRates result = new com.tcn.cloud.api.api.v0alpha.PhoneBillingRates(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      buildPartialOneofs(result);
+      result.billingIncrementSeconds_ = billingIncrementSeconds_;
+      result.inboundPpi_ = inboundPpi_;
+      result.smsPricePerAttempt_ = smsPricePerAttempt_;
+      result.vocalDirectPricePerMessage_ = vocalDirectPricePerMessage_;
+      if (unitsCase_ == 6) {
+        if (secondsBuilder_ == null) {
+          result.units_ = units_;
+        } else {
+          result.units_ = secondsBuilder_.build();
+        }
+      }
+      if (unitsCase_ == 7) {
+        if (attemptsBuilder_ == null) {
+          result.units_ = units_;
+        } else {
+          result.units_ = attemptsBuilder_.build();
+        }
+      }
+      if (unitsCase_ == 8) {
+        if (connectedCallsBuilder_ == null) {
+          result.units_ = units_;
+        } else {
+          result.units_ = connectedCallsBuilder_.build();
+        }
+      }
+      result.unitsCase_ = unitsCase_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.PhoneBillingRates result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.billingIncrementSeconds_ = billingIncrementSeconds_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.inboundPpi_ = inboundPpi_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.smsPricePerAttempt_ = smsPricePerAttempt_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.vocalDirectPricePerMessage_ = vocalDirectPricePerMessage_;
-      }
-    }
-
-    private void buildPartialOneofs(com.tcn.cloud.api.api.v0alpha.PhoneBillingRates result) {
-      result.unitsCase_ = unitsCase_;
-      result.units_ = this.units_;
-      if (unitsCase_ == 6 &&
-          secondsBuilder_ != null) {
-        result.units_ = secondsBuilder_.build();
-      }
-      if (unitsCase_ == 7 &&
-          attemptsBuilder_ != null) {
-        result.units_ = attemptsBuilder_.build();
-      }
-      if (unitsCase_ == 8 &&
-          connectedCallsBuilder_ != null) {
-        result.units_ = connectedCallsBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -3534,7 +3673,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -3549,71 +3688,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.PhoneBillingRates parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              billingIncrementSeconds_ = input.readInt64();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 50: {
-              input.readMessage(
-                  getSecondsFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              unitsCase_ = 6;
-              break;
-            } // case 50
-            case 58: {
-              input.readMessage(
-                  getAttemptsFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              unitsCase_ = 7;
-              break;
-            } // case 58
-            case 66: {
-              input.readMessage(
-                  getConnectedCallsFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              unitsCase_ = 8;
-              break;
-            } // case 66
-            case 113: {
-              inboundPpi_ = input.readDouble();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 113
-            case 121: {
-              smsPricePerAttempt_ = input.readDouble();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 121
-            case 129: {
-              vocalDirectPricePerMessage_ = input.readDouble();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 129
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.PhoneBillingRates) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int unitsCase_ = 0;
@@ -3631,7 +3716,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int bitField0_;
 
     private long billingIncrementSeconds_ ;
     /**
@@ -3656,9 +3740,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBillingIncrementSeconds(long value) {
-
+      
       billingIncrementSeconds_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -3671,7 +3754,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBillingIncrementSeconds() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       billingIncrementSeconds_ = 0L;
       onChanged();
       return this;
@@ -3692,9 +3775,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setInboundPpi(double value) {
-
+      
       inboundPpi_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -3703,7 +3785,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearInboundPpi() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       inboundPpi_ = 0D;
       onChanged();
       return this;
@@ -3724,9 +3806,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSmsPricePerAttempt(double value) {
-
+      
       smsPricePerAttempt_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -3735,7 +3816,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSmsPricePerAttempt() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       smsPricePerAttempt_ = 0D;
       onChanged();
       return this;
@@ -3756,9 +3837,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setVocalDirectPricePerMessage(double value) {
-
+      
       vocalDirectPricePerMessage_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -3767,7 +3847,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVocalDirectPricePerMessage() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      
       vocalDirectPricePerMessage_ = 0D;
       onChanged();
       return this;
@@ -3847,9 +3927,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (unitsCase_ == 6) {
           secondsBuilder_.mergeFrom(value);
-        } else {
-          secondsBuilder_.setMessage(value);
         }
+        secondsBuilder_.setMessage(value);
       }
       unitsCase_ = 6;
       return this;
@@ -3911,7 +3990,7 @@ private static final long serialVersionUID = 0L;
         units_ = null;
       }
       unitsCase_ = 6;
-      onChanged();
+      onChanged();;
       return secondsBuilder_;
     }
 
@@ -3989,9 +4068,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (unitsCase_ == 7) {
           attemptsBuilder_.mergeFrom(value);
-        } else {
-          attemptsBuilder_.setMessage(value);
         }
+        attemptsBuilder_.setMessage(value);
       }
       unitsCase_ = 7;
       return this;
@@ -4053,7 +4131,7 @@ private static final long serialVersionUID = 0L;
         units_ = null;
       }
       unitsCase_ = 7;
-      onChanged();
+      onChanged();;
       return attemptsBuilder_;
     }
 
@@ -4131,9 +4209,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (unitsCase_ == 8) {
           connectedCallsBuilder_.mergeFrom(value);
-        } else {
-          connectedCallsBuilder_.setMessage(value);
         }
+        connectedCallsBuilder_.setMessage(value);
       }
       unitsCase_ = 8;
       return this;
@@ -4195,7 +4272,7 @@ private static final long serialVersionUID = 0L;
         units_ = null;
       }
       unitsCase_ = 8;
-      onChanged();
+      onChanged();;
       return connectedCallsBuilder_;
     }
     @java.lang.Override
@@ -4231,18 +4308,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new PhoneBillingRates(input, extensionRegistry);
     }
   };
 

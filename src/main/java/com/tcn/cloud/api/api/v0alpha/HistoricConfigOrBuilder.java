@@ -9,11 +9,6 @@ public interface HistoricConfigOrBuilder extends
 
   /**
    * <code>.api.v0alpha.TimeSpan.Interval time_span_simple = 1 [json_name = "timeSpanSimple"];</code>
-   * @return Whether the timeSpanSimple field is set.
-   */
-  boolean hasTimeSpanSimple();
-  /**
-   * <code>.api.v0alpha.TimeSpan.Interval time_span_simple = 1 [json_name = "timeSpanSimple"];</code>
    * @return The enum numeric value on the wire for timeSpanSimple.
    */
   int getTimeSpanSimpleValue();
@@ -57,5 +52,5 @@ public interface HistoricConfigOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.TimeZone getTimeZone();
 
-  com.tcn.cloud.api.api.v0alpha.HistoricConfig.TimeSpanCase getTimeSpanCase();
+  public com.tcn.cloud.api.api.v0alpha.HistoricConfig.TimeSpanCase getTimeSpanCase();
 }

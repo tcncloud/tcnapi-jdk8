@@ -26,6 +26,129 @@ private static final long serialVersionUID = 0L;
     return new BillingSummary();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private BillingSummary(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+
+            clientSid_ = input.readInt64();
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            clientName_ = s;
+            break;
+          }
+          case 24: {
+
+            proStatus_ = input.readBool();
+            break;
+          }
+          case 34: {
+            com.tcn.cloud.api.api.v0alpha.WeeksSummary.Builder subBuilder = null;
+            if (weeks_ != null) {
+              subBuilder = weeks_.toBuilder();
+            }
+            weeks_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.WeeksSummary.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(weeks_);
+              weeks_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 42: {
+            com.tcn.cloud.api.api.v0alpha.CustomReportsSummary.Builder subBuilder = null;
+            if (customReports_ != null) {
+              subBuilder = customReports_.toBuilder();
+            }
+            customReports_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.CustomReportsSummary.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(customReports_);
+              customReports_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 50: {
+            com.tcn.cloud.api.api.v0alpha.ActiveReportJobsSummary.Builder subBuilder = null;
+            if (reportJobs_ != null) {
+              subBuilder = reportJobs_.toBuilder();
+            }
+            reportJobs_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.ActiveReportJobsSummary.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(reportJobs_);
+              reportJobs_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 58: {
+            com.tcn.cloud.api.api.v0alpha.ActiveWatchersSummary.Builder subBuilder = null;
+            if (watchers_ != null) {
+              subBuilder = watchers_.toBuilder();
+            }
+            watchers_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.ActiveWatchersSummary.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(watchers_);
+              watchers_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 66: {
+            com.tcn.cloud.api.api.v0alpha.MultiClientSummary.Builder subBuilder = null;
+            if (multiClient_ != null) {
+              subBuilder = multiClient_.toBuilder();
+            }
+            multiClient_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.MultiClientSummary.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(multiClient_);
+              multiClient_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.AnaProto.internal_static_api_v0alpha_BillingSummary_descriptor;
@@ -40,7 +163,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CLIENT_SID_FIELD_NUMBER = 1;
-  private long clientSid_ = 0L;
+  private long clientSid_;
   /**
    * <code>int64 client_sid = 1 [json_name = "clientSid"];</code>
    * @return The clientSid.
@@ -51,8 +174,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CLIENT_NAME_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object clientName_ = "";
+  private volatile java.lang.Object clientName_;
   /**
    * <code>string client_name = 2 [json_name = "clientName"];</code>
    * @return The clientName.
@@ -90,7 +212,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PRO_STATUS_FIELD_NUMBER = 3;
-  private boolean proStatus_ = false;
+  private boolean proStatus_;
   /**
    * <code>bool pro_status = 3 [json_name = "proStatus"];</code>
    * @return The proStatus.
@@ -123,7 +245,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.WeeksSummaryOrBuilder getWeeksOrBuilder() {
-    return weeks_ == null ? com.tcn.cloud.api.api.v0alpha.WeeksSummary.getDefaultInstance() : weeks_;
+    return getWeeks();
   }
 
   public static final int CUSTOM_REPORTS_FIELD_NUMBER = 5;
@@ -149,7 +271,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.CustomReportsSummaryOrBuilder getCustomReportsOrBuilder() {
-    return customReports_ == null ? com.tcn.cloud.api.api.v0alpha.CustomReportsSummary.getDefaultInstance() : customReports_;
+    return getCustomReports();
   }
 
   public static final int REPORT_JOBS_FIELD_NUMBER = 6;
@@ -175,7 +297,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.ActiveReportJobsSummaryOrBuilder getReportJobsOrBuilder() {
-    return reportJobs_ == null ? com.tcn.cloud.api.api.v0alpha.ActiveReportJobsSummary.getDefaultInstance() : reportJobs_;
+    return getReportJobs();
   }
 
   public static final int WATCHERS_FIELD_NUMBER = 7;
@@ -201,7 +323,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.ActiveWatchersSummaryOrBuilder getWatchersOrBuilder() {
-    return watchers_ == null ? com.tcn.cloud.api.api.v0alpha.ActiveWatchersSummary.getDefaultInstance() : watchers_;
+    return getWatchers();
   }
 
   public static final int MULTI_CLIENT_FIELD_NUMBER = 8;
@@ -227,7 +349,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.MultiClientSummaryOrBuilder getMultiClientOrBuilder() {
-    return multiClient_ == null ? com.tcn.cloud.api.api.v0alpha.MultiClientSummary.getDefaultInstance() : multiClient_;
+    return getMultiClient();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -247,7 +369,7 @@ private static final long serialVersionUID = 0L;
     if (clientSid_ != 0L) {
       output.writeInt64(1, clientSid_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientName_)) {
+    if (!getClientNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, clientName_);
     }
     if (proStatus_ != false) {
@@ -268,7 +390,7 @@ private static final long serialVersionUID = 0L;
     if (multiClient_ != null) {
       output.writeMessage(8, getMultiClient());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -281,7 +403,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, clientSid_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientName_)) {
+    if (!getClientNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, clientName_);
     }
     if (proStatus_ != false) {
@@ -308,7 +430,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getMultiClient());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -354,7 +476,7 @@ private static final long serialVersionUID = 0L;
       if (!getMultiClient()
           .equals(other.getMultiClient())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -393,7 +515,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + MULTI_CLIENT_FIELD_NUMBER;
       hash = (53 * hash) + getMultiClient().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -442,13 +564,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.BillingSummary parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.BillingSummary parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -512,44 +632,56 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.BillingSummary.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       clientSid_ = 0L;
+
       clientName_ = "";
+
       proStatus_ = false;
-      weeks_ = null;
-      if (weeksBuilder_ != null) {
-        weeksBuilder_.dispose();
+
+      if (weeksBuilder_ == null) {
+        weeks_ = null;
+      } else {
+        weeks_ = null;
         weeksBuilder_ = null;
       }
-      customReports_ = null;
-      if (customReportsBuilder_ != null) {
-        customReportsBuilder_.dispose();
+      if (customReportsBuilder_ == null) {
+        customReports_ = null;
+      } else {
+        customReports_ = null;
         customReportsBuilder_ = null;
       }
-      reportJobs_ = null;
-      if (reportJobsBuilder_ != null) {
-        reportJobsBuilder_.dispose();
+      if (reportJobsBuilder_ == null) {
+        reportJobs_ = null;
+      } else {
+        reportJobs_ = null;
         reportJobsBuilder_ = null;
       }
-      watchers_ = null;
-      if (watchersBuilder_ != null) {
-        watchersBuilder_.dispose();
+      if (watchersBuilder_ == null) {
+        watchers_ = null;
+      } else {
+        watchers_ = null;
         watchersBuilder_ = null;
       }
-      multiClient_ = null;
-      if (multiClientBuilder_ != null) {
-        multiClientBuilder_.dispose();
+      if (multiClientBuilder_ == null) {
+        multiClient_ = null;
+      } else {
+        multiClient_ = null;
         multiClientBuilder_ = null;
       }
       return this;
@@ -578,47 +710,36 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.BillingSummary buildPartial() {
       com.tcn.cloud.api.api.v0alpha.BillingSummary result = new com.tcn.cloud.api.api.v0alpha.BillingSummary(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.clientSid_ = clientSid_;
+      result.clientName_ = clientName_;
+      result.proStatus_ = proStatus_;
+      if (weeksBuilder_ == null) {
+        result.weeks_ = weeks_;
+      } else {
+        result.weeks_ = weeksBuilder_.build();
+      }
+      if (customReportsBuilder_ == null) {
+        result.customReports_ = customReports_;
+      } else {
+        result.customReports_ = customReportsBuilder_.build();
+      }
+      if (reportJobsBuilder_ == null) {
+        result.reportJobs_ = reportJobs_;
+      } else {
+        result.reportJobs_ = reportJobsBuilder_.build();
+      }
+      if (watchersBuilder_ == null) {
+        result.watchers_ = watchers_;
+      } else {
+        result.watchers_ = watchersBuilder_.build();
+      }
+      if (multiClientBuilder_ == null) {
+        result.multiClient_ = multiClient_;
+      } else {
+        result.multiClient_ = multiClientBuilder_.build();
+      }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.BillingSummary result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.clientSid_ = clientSid_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.clientName_ = clientName_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.proStatus_ = proStatus_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.weeks_ = weeksBuilder_ == null
-            ? weeks_
-            : weeksBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.customReports_ = customReportsBuilder_ == null
-            ? customReports_
-            : customReportsBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.reportJobs_ = reportJobsBuilder_ == null
-            ? reportJobs_
-            : reportJobsBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.watchers_ = watchersBuilder_ == null
-            ? watchers_
-            : watchersBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.multiClient_ = multiClientBuilder_ == null
-            ? multiClient_
-            : multiClientBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -670,7 +791,6 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getClientName().isEmpty()) {
         clientName_ = other.clientName_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.getProStatus() != false) {
@@ -691,7 +811,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasMultiClient()) {
         mergeMultiClient(other.getMultiClient());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -706,83 +826,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.BillingSummary parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              clientSid_ = input.readInt64();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 18: {
-              clientName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 24: {
-              proStatus_ = input.readBool();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 24
-            case 34: {
-              input.readMessage(
-                  getWeeksFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
-            case 42: {
-              input.readMessage(
-                  getCustomReportsFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 42
-            case 50: {
-              input.readMessage(
-                  getReportJobsFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 50
-            case 58: {
-              input.readMessage(
-                  getWatchersFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 58
-            case 66: {
-              input.readMessage(
-                  getMultiClientFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000080;
-              break;
-            } // case 66
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.BillingSummary) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private long clientSid_ ;
     /**
@@ -799,9 +855,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setClientSid(long value) {
-
+      
       clientSid_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -810,7 +865,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearClientSid() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       clientSid_ = 0L;
       onChanged();
       return this;
@@ -857,9 +912,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setClientName(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       clientName_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -868,8 +925,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearClientName() {
+      
       clientName_ = getDefaultInstance().getClientName();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -880,10 +937,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setClientNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       clientName_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -903,9 +962,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setProStatus(boolean value) {
-
+      
       proStatus_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -914,7 +972,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearProStatus() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       proStatus_ = false;
       onChanged();
       return this;
@@ -928,7 +986,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the weeks field is set.
      */
     public boolean hasWeeks() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return weeksBuilder_ != null || weeks_ != null;
     }
     /**
      * <code>.api.v0alpha.WeeksSummary weeks = 4 [json_name = "weeks"];</code>
@@ -950,11 +1008,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         weeks_ = value;
+        onChanged();
       } else {
         weeksBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
@@ -964,11 +1022,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.WeeksSummary.Builder builderForValue) {
       if (weeksBuilder_ == null) {
         weeks_ = builderForValue.build();
+        onChanged();
       } else {
         weeksBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
@@ -976,38 +1034,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeWeeks(com.tcn.cloud.api.api.v0alpha.WeeksSummary value) {
       if (weeksBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0) &&
-          weeks_ != null &&
-          weeks_ != com.tcn.cloud.api.api.v0alpha.WeeksSummary.getDefaultInstance()) {
-          getWeeksBuilder().mergeFrom(value);
+        if (weeks_ != null) {
+          weeks_ =
+            com.tcn.cloud.api.api.v0alpha.WeeksSummary.newBuilder(weeks_).mergeFrom(value).buildPartial();
         } else {
           weeks_ = value;
         }
+        onChanged();
       } else {
         weeksBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.WeeksSummary weeks = 4 [json_name = "weeks"];</code>
      */
     public Builder clearWeeks() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      weeks_ = null;
-      if (weeksBuilder_ != null) {
-        weeksBuilder_.dispose();
+      if (weeksBuilder_ == null) {
+        weeks_ = null;
+        onChanged();
+      } else {
+        weeks_ = null;
         weeksBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.WeeksSummary weeks = 4 [json_name = "weeks"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.WeeksSummary.Builder getWeeksBuilder() {
-      bitField0_ |= 0x00000008;
+      
       onChanged();
       return getWeeksFieldBuilder().getBuilder();
     }
@@ -1047,7 +1105,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the customReports field is set.
      */
     public boolean hasCustomReports() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return customReportsBuilder_ != null || customReports_ != null;
     }
     /**
      * <code>.api.v0alpha.CustomReportsSummary custom_reports = 5 [json_name = "customReports"];</code>
@@ -1069,11 +1127,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         customReports_ = value;
+        onChanged();
       } else {
         customReportsBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
@@ -1083,11 +1141,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.CustomReportsSummary.Builder builderForValue) {
       if (customReportsBuilder_ == null) {
         customReports_ = builderForValue.build();
+        onChanged();
       } else {
         customReportsBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
@@ -1095,38 +1153,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCustomReports(com.tcn.cloud.api.api.v0alpha.CustomReportsSummary value) {
       if (customReportsBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0) &&
-          customReports_ != null &&
-          customReports_ != com.tcn.cloud.api.api.v0alpha.CustomReportsSummary.getDefaultInstance()) {
-          getCustomReportsBuilder().mergeFrom(value);
+        if (customReports_ != null) {
+          customReports_ =
+            com.tcn.cloud.api.api.v0alpha.CustomReportsSummary.newBuilder(customReports_).mergeFrom(value).buildPartial();
         } else {
           customReports_ = value;
         }
+        onChanged();
       } else {
         customReportsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.CustomReportsSummary custom_reports = 5 [json_name = "customReports"];</code>
      */
     public Builder clearCustomReports() {
-      bitField0_ = (bitField0_ & ~0x00000010);
-      customReports_ = null;
-      if (customReportsBuilder_ != null) {
-        customReportsBuilder_.dispose();
+      if (customReportsBuilder_ == null) {
+        customReports_ = null;
+        onChanged();
+      } else {
+        customReports_ = null;
         customReportsBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.CustomReportsSummary custom_reports = 5 [json_name = "customReports"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.CustomReportsSummary.Builder getCustomReportsBuilder() {
-      bitField0_ |= 0x00000010;
+      
       onChanged();
       return getCustomReportsFieldBuilder().getBuilder();
     }
@@ -1166,7 +1224,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the reportJobs field is set.
      */
     public boolean hasReportJobs() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return reportJobsBuilder_ != null || reportJobs_ != null;
     }
     /**
      * <code>.api.v0alpha.ActiveReportJobsSummary report_jobs = 6 [json_name = "reportJobs"];</code>
@@ -1188,11 +1246,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         reportJobs_ = value;
+        onChanged();
       } else {
         reportJobsBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+
       return this;
     }
     /**
@@ -1202,11 +1260,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.ActiveReportJobsSummary.Builder builderForValue) {
       if (reportJobsBuilder_ == null) {
         reportJobs_ = builderForValue.build();
+        onChanged();
       } else {
         reportJobsBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+
       return this;
     }
     /**
@@ -1214,38 +1272,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeReportJobs(com.tcn.cloud.api.api.v0alpha.ActiveReportJobsSummary value) {
       if (reportJobsBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0) &&
-          reportJobs_ != null &&
-          reportJobs_ != com.tcn.cloud.api.api.v0alpha.ActiveReportJobsSummary.getDefaultInstance()) {
-          getReportJobsBuilder().mergeFrom(value);
+        if (reportJobs_ != null) {
+          reportJobs_ =
+            com.tcn.cloud.api.api.v0alpha.ActiveReportJobsSummary.newBuilder(reportJobs_).mergeFrom(value).buildPartial();
         } else {
           reportJobs_ = value;
         }
+        onChanged();
       } else {
         reportJobsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.ActiveReportJobsSummary report_jobs = 6 [json_name = "reportJobs"];</code>
      */
     public Builder clearReportJobs() {
-      bitField0_ = (bitField0_ & ~0x00000020);
-      reportJobs_ = null;
-      if (reportJobsBuilder_ != null) {
-        reportJobsBuilder_.dispose();
+      if (reportJobsBuilder_ == null) {
+        reportJobs_ = null;
+        onChanged();
+      } else {
+        reportJobs_ = null;
         reportJobsBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.ActiveReportJobsSummary report_jobs = 6 [json_name = "reportJobs"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.ActiveReportJobsSummary.Builder getReportJobsBuilder() {
-      bitField0_ |= 0x00000020;
+      
       onChanged();
       return getReportJobsFieldBuilder().getBuilder();
     }
@@ -1285,7 +1343,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the watchers field is set.
      */
     public boolean hasWatchers() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return watchersBuilder_ != null || watchers_ != null;
     }
     /**
      * <code>.api.v0alpha.ActiveWatchersSummary watchers = 7 [json_name = "watchers"];</code>
@@ -1307,11 +1365,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         watchers_ = value;
+        onChanged();
       } else {
         watchersBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+
       return this;
     }
     /**
@@ -1321,11 +1379,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.ActiveWatchersSummary.Builder builderForValue) {
       if (watchersBuilder_ == null) {
         watchers_ = builderForValue.build();
+        onChanged();
       } else {
         watchersBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+
       return this;
     }
     /**
@@ -1333,38 +1391,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeWatchers(com.tcn.cloud.api.api.v0alpha.ActiveWatchersSummary value) {
       if (watchersBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0) &&
-          watchers_ != null &&
-          watchers_ != com.tcn.cloud.api.api.v0alpha.ActiveWatchersSummary.getDefaultInstance()) {
-          getWatchersBuilder().mergeFrom(value);
+        if (watchers_ != null) {
+          watchers_ =
+            com.tcn.cloud.api.api.v0alpha.ActiveWatchersSummary.newBuilder(watchers_).mergeFrom(value).buildPartial();
         } else {
           watchers_ = value;
         }
+        onChanged();
       } else {
         watchersBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.ActiveWatchersSummary watchers = 7 [json_name = "watchers"];</code>
      */
     public Builder clearWatchers() {
-      bitField0_ = (bitField0_ & ~0x00000040);
-      watchers_ = null;
-      if (watchersBuilder_ != null) {
-        watchersBuilder_.dispose();
+      if (watchersBuilder_ == null) {
+        watchers_ = null;
+        onChanged();
+      } else {
+        watchers_ = null;
         watchersBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.ActiveWatchersSummary watchers = 7 [json_name = "watchers"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.ActiveWatchersSummary.Builder getWatchersBuilder() {
-      bitField0_ |= 0x00000040;
+      
       onChanged();
       return getWatchersFieldBuilder().getBuilder();
     }
@@ -1404,7 +1462,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the multiClient field is set.
      */
     public boolean hasMultiClient() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return multiClientBuilder_ != null || multiClient_ != null;
     }
     /**
      * <code>.api.v0alpha.MultiClientSummary multi_client = 8 [json_name = "multiClient"];</code>
@@ -1426,11 +1484,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         multiClient_ = value;
+        onChanged();
       } else {
         multiClientBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000080;
-      onChanged();
+
       return this;
     }
     /**
@@ -1440,11 +1498,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.MultiClientSummary.Builder builderForValue) {
       if (multiClientBuilder_ == null) {
         multiClient_ = builderForValue.build();
+        onChanged();
       } else {
         multiClientBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000080;
-      onChanged();
+
       return this;
     }
     /**
@@ -1452,38 +1510,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeMultiClient(com.tcn.cloud.api.api.v0alpha.MultiClientSummary value) {
       if (multiClientBuilder_ == null) {
-        if (((bitField0_ & 0x00000080) != 0) &&
-          multiClient_ != null &&
-          multiClient_ != com.tcn.cloud.api.api.v0alpha.MultiClientSummary.getDefaultInstance()) {
-          getMultiClientBuilder().mergeFrom(value);
+        if (multiClient_ != null) {
+          multiClient_ =
+            com.tcn.cloud.api.api.v0alpha.MultiClientSummary.newBuilder(multiClient_).mergeFrom(value).buildPartial();
         } else {
           multiClient_ = value;
         }
+        onChanged();
       } else {
         multiClientBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000080;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.MultiClientSummary multi_client = 8 [json_name = "multiClient"];</code>
      */
     public Builder clearMultiClient() {
-      bitField0_ = (bitField0_ & ~0x00000080);
-      multiClient_ = null;
-      if (multiClientBuilder_ != null) {
-        multiClientBuilder_.dispose();
+      if (multiClientBuilder_ == null) {
+        multiClient_ = null;
+        onChanged();
+      } else {
+        multiClient_ = null;
         multiClientBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.MultiClientSummary multi_client = 8 [json_name = "multiClient"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.MultiClientSummary.Builder getMultiClientBuilder() {
-      bitField0_ |= 0x00000080;
+      
       onChanged();
       return getMultiClientFieldBuilder().getBuilder();
     }
@@ -1547,18 +1605,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new BillingSummary(input, extensionRegistry);
     }
   };
 

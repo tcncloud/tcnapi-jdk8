@@ -19,8 +19,7 @@ private static final long serialVersionUID = 0L;
     displayName_ = "";
     description_ = "";
     linkUrl_ = "";
-    tooltipMissingFields_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    tooltipMissingFields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
   }
 
   @java.lang.Override
@@ -30,6 +29,89 @@ private static final long serialVersionUID = 0L;
     return new WebLink();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private WebLink(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            displayName_ = s;
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            description_ = s;
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            linkUrl_ = s;
+            break;
+          }
+          case 32: {
+
+            isJsLink_ = input.readBool();
+            break;
+          }
+          case 50: {
+            java.lang.String s = input.readStringRequireUtf8();
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              tooltipMissingFields_ = new com.google.protobuf.LazyStringArrayList();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            tooltipMissingFields_.add(s);
+            break;
+          }
+          case 56: {
+
+            huntGroupParameterSid_ = input.readInt64();
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        tooltipMissingFields_ = tooltipMissingFields_.getUnmodifiableView();
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.P3apiProto.internal_static_api_v0alpha_WebLink_descriptor;
@@ -44,8 +126,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DISPLAY_NAME_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object displayName_ = "";
+  private volatile java.lang.Object displayName_;
   /**
    * <code>string display_name = 1 [json_name = "displayName"];</code>
    * @return The displayName.
@@ -83,8 +164,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTION_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object description_ = "";
+  private volatile java.lang.Object description_;
   /**
    * <code>string description = 2 [json_name = "description"];</code>
    * @return The description.
@@ -122,8 +202,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LINK_URL_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object linkUrl_ = "";
+  private volatile java.lang.Object linkUrl_;
   /**
    * <code>string link_url = 3 [json_name = "linkUrl"];</code>
    * @return The linkUrl.
@@ -161,7 +240,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int IS_JS_LINK_FIELD_NUMBER = 4;
-  private boolean isJsLink_ = false;
+  private boolean isJsLink_;
   /**
    * <code>bool is_js_link = 4 [json_name = "isJsLink"];</code>
    * @return The isJsLink.
@@ -172,9 +251,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOOLTIP_MISSING_FIELDS_FIELD_NUMBER = 6;
-  @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList tooltipMissingFields_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
+  private com.google.protobuf.LazyStringList tooltipMissingFields_;
   /**
    * <code>repeated string tooltip_missing_fields = 6 [json_name = "tooltipMissingFields"];</code>
    * @return A list containing the tooltipMissingFields.
@@ -209,7 +286,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HUNT_GROUP_PARAMETER_SID_FIELD_NUMBER = 7;
-  private long huntGroupParameterSid_ = 0L;
+  private long huntGroupParameterSid_;
   /**
    * <code>int64 hunt_group_parameter_sid = 7 [json_name = "huntGroupParameterSid"];</code>
    * @return The huntGroupParameterSid.
@@ -233,13 +310,13 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayName_)) {
+    if (!getDisplayNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, displayName_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+    if (!getDescriptionBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(linkUrl_)) {
+    if (!getLinkUrlBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, linkUrl_);
     }
     if (isJsLink_ != false) {
@@ -251,7 +328,7 @@ private static final long serialVersionUID = 0L;
     if (huntGroupParameterSid_ != 0L) {
       output.writeInt64(7, huntGroupParameterSid_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -260,13 +337,13 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayName_)) {
+    if (!getDisplayNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, displayName_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+    if (!getDescriptionBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(linkUrl_)) {
+    if (!getLinkUrlBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, linkUrl_);
     }
     if (isJsLink_ != false) {
@@ -285,7 +362,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(7, huntGroupParameterSid_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -312,7 +389,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getTooltipMissingFieldsList())) return false;
     if (getHuntGroupParameterSid()
         != other.getHuntGroupParameterSid()) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -339,7 +416,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + HUNT_GROUP_PARAMETER_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getHuntGroupParameterSid());
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -388,13 +465,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.WebLink parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.WebLink parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -458,25 +533,34 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.WebLink.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       displayName_ = "";
+
       description_ = "";
+
       linkUrl_ = "";
+
       isJsLink_ = false;
-      tooltipMissingFields_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+
+      tooltipMissingFields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000001);
       huntGroupParameterSid_ = 0L;
+
       return this;
     }
 
@@ -503,32 +587,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.WebLink buildPartial() {
       com.tcn.cloud.api.api.v0alpha.WebLink result = new com.tcn.cloud.api.api.v0alpha.WebLink(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      int from_bitField0_ = bitField0_;
+      result.displayName_ = displayName_;
+      result.description_ = description_;
+      result.linkUrl_ = linkUrl_;
+      result.isJsLink_ = isJsLink_;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        tooltipMissingFields_ = tooltipMissingFields_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000001);
+      }
+      result.tooltipMissingFields_ = tooltipMissingFields_;
+      result.huntGroupParameterSid_ = huntGroupParameterSid_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.WebLink result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.displayName_ = displayName_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.description_ = description_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.linkUrl_ = linkUrl_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.isJsLink_ = isJsLink_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        tooltipMissingFields_.makeImmutable();
-        result.tooltipMissingFields_ = tooltipMissingFields_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.huntGroupParameterSid_ = huntGroupParameterSid_;
-      }
     }
 
     @java.lang.Override
@@ -577,17 +648,14 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v0alpha.WebLink.getDefaultInstance()) return this;
       if (!other.getDisplayName().isEmpty()) {
         displayName_ = other.displayName_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getDescription().isEmpty()) {
         description_ = other.description_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getLinkUrl().isEmpty()) {
         linkUrl_ = other.linkUrl_;
-        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.getIsJsLink() != false) {
@@ -596,7 +664,7 @@ private static final long serialVersionUID = 0L;
       if (!other.tooltipMissingFields_.isEmpty()) {
         if (tooltipMissingFields_.isEmpty()) {
           tooltipMissingFields_ = other.tooltipMissingFields_;
-          bitField0_ |= 0x00000010;
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensureTooltipMissingFieldsIsMutable();
           tooltipMissingFields_.addAll(other.tooltipMissingFields_);
@@ -606,7 +674,7 @@ private static final long serialVersionUID = 0L;
       if (other.getHuntGroupParameterSid() != 0L) {
         setHuntGroupParameterSid(other.getHuntGroupParameterSid());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -621,61 +689,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.WebLink parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              displayName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              description_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 26: {
-              linkUrl_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            case 32: {
-              isJsLink_ = input.readBool();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 32
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensureTooltipMissingFieldsIsMutable();
-              tooltipMissingFields_.add(s);
-              break;
-            } // case 50
-            case 56: {
-              huntGroupParameterSid_ = input.readInt64();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 56
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.WebLink) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -721,9 +745,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDisplayName(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       displayName_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -732,8 +758,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayName() {
+      
       displayName_ = getDefaultInstance().getDisplayName();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -744,10 +770,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDisplayNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       displayName_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -793,9 +821,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       description_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -804,8 +834,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
+      
       description_ = getDefaultInstance().getDescription();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -816,10 +846,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescriptionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       description_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -865,9 +897,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLinkUrl(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       linkUrl_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -876,8 +910,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLinkUrl() {
+      
       linkUrl_ = getDefaultInstance().getLinkUrl();
-      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -888,10 +922,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLinkUrlBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       linkUrl_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -911,9 +947,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIsJsLink(boolean value) {
-
+      
       isJsLink_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -922,19 +957,18 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIsJsLink() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      
       isJsLink_ = false;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringArrayList tooltipMissingFields_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.LazyStringList tooltipMissingFields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureTooltipMissingFieldsIsMutable() {
-      if (!tooltipMissingFields_.isModifiable()) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         tooltipMissingFields_ = new com.google.protobuf.LazyStringArrayList(tooltipMissingFields_);
-      }
-      bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000001;
+       }
     }
     /**
      * <code>repeated string tooltip_missing_fields = 6 [json_name = "tooltipMissingFields"];</code>
@@ -942,8 +976,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getTooltipMissingFieldsList() {
-      tooltipMissingFields_.makeImmutable();
-      return tooltipMissingFields_;
+      return tooltipMissingFields_.getUnmodifiableView();
     }
     /**
      * <code>repeated string tooltip_missing_fields = 6 [json_name = "tooltipMissingFields"];</code>
@@ -977,10 +1010,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTooltipMissingFields(
         int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureTooltipMissingFieldsIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTooltipMissingFieldsIsMutable();
       tooltipMissingFields_.set(index, value);
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -991,10 +1025,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addTooltipMissingFields(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureTooltipMissingFieldsIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTooltipMissingFieldsIsMutable();
       tooltipMissingFields_.add(value);
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1008,7 +1043,6 @@ private static final long serialVersionUID = 0L;
       ensureTooltipMissingFieldsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, tooltipMissingFields_);
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1017,9 +1051,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTooltipMissingFields() {
-      tooltipMissingFields_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000010);;
+      tooltipMissingFields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1030,11 +1063,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addTooltipMissingFieldsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
       ensureTooltipMissingFieldsIsMutable();
       tooltipMissingFields_.add(value);
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1054,9 +1088,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHuntGroupParameterSid(long value) {
-
+      
       huntGroupParameterSid_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1065,7 +1098,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHuntGroupParameterSid() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      
       huntGroupParameterSid_ = 0L;
       onChanged();
       return this;
@@ -1103,18 +1136,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new WebLink(input, extensionRegistry);
     }
   };
 

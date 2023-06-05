@@ -137,5 +137,5 @@ public interface ManagerListMessagesReqOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.ManagerListMessagesReq.ByTaskSidOrBuilder getByTaskSidOrBuilder();
 
-  com.tcn.cloud.api.api.v0alpha.ManagerListMessagesReq.FilterCase getFilterCase();
+  public com.tcn.cloud.api.api.v0alpha.ManagerListMessagesReq.FilterCase getFilterCase();
 }

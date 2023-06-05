@@ -337,5 +337,5 @@ public interface ChartDetailsOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.SunburstChartOrBuilder getSunburstChartOrBuilder();
 
-  com.tcn.cloud.api.api.v0alpha.ChartDetails.DetailsCase getDetailsCase();
+  public com.tcn.cloud.api.api.v0alpha.ChartDetails.DetailsCase getDetailsCase();
 }

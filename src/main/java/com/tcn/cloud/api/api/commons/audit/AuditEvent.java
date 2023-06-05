@@ -34,6 +34,1281 @@ private static final long serialVersionUID = 0L;
     return new AuditEvent();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private AuditEvent(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            orgId_ = s;
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            regionId_ = s;
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            clusterId_ = s;
+            break;
+          }
+          case 34: {
+            com.google.protobuf.Timestamp.Builder subBuilder = null;
+            if (eventTime_ != null) {
+              subBuilder = eventTime_.toBuilder();
+            }
+            eventTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(eventTime_);
+              eventTime_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 42: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            auditId_ = s;
+            break;
+          }
+          case 80: {
+            int rawValue = input.readEnum();
+
+            eventType_ = rawValue;
+            break;
+          }
+          case 802: {
+            com.tcn.cloud.api.api.commons.audit.DummyEvent.Builder subBuilder = null;
+            if (eventCase_ == 100) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.DummyEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.DummyEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.DummyEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 100;
+            break;
+          }
+          case 1602: {
+            com.tcn.cloud.api.api.commons.audit.VanaFlagEvent.Builder subBuilder = null;
+            if (eventCase_ == 200) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.VanaFlagEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.VanaFlagEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.VanaFlagEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 200;
+            break;
+          }
+          case 1610: {
+            com.tcn.cloud.api.api.commons.audit.VanaFlagReviewEvent.Builder subBuilder = null;
+            if (eventCase_ == 201) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.VanaFlagReviewEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.VanaFlagReviewEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.VanaFlagReviewEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 201;
+            break;
+          }
+          case 1618: {
+            com.tcn.cloud.api.api.commons.audit.VanaBillingReportEvent.Builder subBuilder = null;
+            if (eventCase_ == 202) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.VanaBillingReportEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.VanaBillingReportEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.VanaBillingReportEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 202;
+            break;
+          }
+          case 1626: {
+            com.tcn.cloud.api.api.commons.audit.VanaFlagSummaryEvent.Builder subBuilder = null;
+            if (eventCase_ == 203) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.VanaFlagSummaryEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.VanaFlagSummaryEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.VanaFlagSummaryEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 203;
+            break;
+          }
+          case 2402: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelCreateProjectEvent.Builder subBuilder = null;
+            if (eventCase_ == 300) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelCreateProjectEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelCreateProjectEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelCreateProjectEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 300;
+            break;
+          }
+          case 2410: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelCreateCampaignEvent.Builder subBuilder = null;
+            if (eventCase_ == 301) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelCreateCampaignEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelCreateCampaignEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelCreateCampaignEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 301;
+            break;
+          }
+          case 2418: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelDailyProjectReportEvent.Builder subBuilder = null;
+            if (eventCase_ == 302) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelDailyProjectReportEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelDailyProjectReportEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelDailyProjectReportEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 302;
+            break;
+          }
+          case 2426: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelDailyConversationReportEvent.Builder subBuilder = null;
+            if (eventCase_ == 303) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelDailyConversationReportEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelDailyConversationReportEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelDailyConversationReportEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 303;
+            break;
+          }
+          case 2442: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelAgentAssignConversationEvent.Builder subBuilder = null;
+            if (eventCase_ == 305) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelAgentAssignConversationEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelAgentAssignConversationEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelAgentAssignConversationEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 305;
+            break;
+          }
+          case 2450: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelAgentUnassignConversationEvent.Builder subBuilder = null;
+            if (eventCase_ == 306) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelAgentUnassignConversationEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelAgentUnassignConversationEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelAgentUnassignConversationEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 306;
+            break;
+          }
+          case 2458: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelAgentReassignConversationEvent.Builder subBuilder = null;
+            if (eventCase_ == 307) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelAgentReassignConversationEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelAgentReassignConversationEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelAgentReassignConversationEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 307;
+            break;
+          }
+          case 2466: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelT10Event.Builder subBuilder = null;
+            if (eventCase_ == 308) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelT10Event) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelT10Event.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelT10Event) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 308;
+            break;
+          }
+          case 2474: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerTextMessageEvent.Builder subBuilder = null;
+            if (eventCase_ == 309) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerTextMessageEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerTextMessageEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerTextMessageEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 309;
+            break;
+          }
+          case 2482: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelAgentTextMessageEvent.Builder subBuilder = null;
+            if (eventCase_ == 310) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelAgentTextMessageEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelAgentTextMessageEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelAgentTextMessageEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 310;
+            break;
+          }
+          case 2490: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelFinishWrapUpEvent.Builder subBuilder = null;
+            if (eventCase_ == 311) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelFinishWrapUpEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelFinishWrapUpEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelFinishWrapUpEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 311;
+            break;
+          }
+          case 2498: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelBeginWrapUpEvent.Builder subBuilder = null;
+            if (eventCase_ == 312) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelBeginWrapUpEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelBeginWrapUpEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelBeginWrapUpEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 312;
+            break;
+          }
+          case 2506: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelT11Event.Builder subBuilder = null;
+            if (eventCase_ == 313) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelT11Event) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelT11Event.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelT11Event) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 313;
+            break;
+          }
+          case 2514: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelCreateConversationEvent.Builder subBuilder = null;
+            if (eventCase_ == 314) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelCreateConversationEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelCreateConversationEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelCreateConversationEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 314;
+            break;
+          }
+          case 2522: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelAgentSuspendEvent.Builder subBuilder = null;
+            if (eventCase_ == 315) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelAgentSuspendEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelAgentSuspendEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelAgentSuspendEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 315;
+            break;
+          }
+          case 2578: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelCloseConversationEvent.Builder subBuilder = null;
+            if (eventCase_ == 322) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelCloseConversationEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelCloseConversationEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelCloseConversationEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 322;
+            break;
+          }
+          case 2642: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelUpdateCampaignEvent.Builder subBuilder = null;
+            if (eventCase_ == 330) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelUpdateCampaignEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelUpdateCampaignEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelUpdateCampaignEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 330;
+            break;
+          }
+          case 2650: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelSetConversationCollectedDataEvent.Builder subBuilder = null;
+            if (eventCase_ == 331) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelSetConversationCollectedDataEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelSetConversationCollectedDataEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelSetConversationCollectedDataEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 331;
+            break;
+          }
+          case 2658: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelManagerTextMessageEvent.Builder subBuilder = null;
+            if (eventCase_ == 332) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelManagerTextMessageEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelManagerTextMessageEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelManagerTextMessageEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 332;
+            break;
+          }
+          case 2666: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelArchiveCampaignEvent.Builder subBuilder = null;
+            if (eventCase_ == 333) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelArchiveCampaignEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelArchiveCampaignEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelArchiveCampaignEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 333;
+            break;
+          }
+          case 2674: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelPauseCampaignEvent.Builder subBuilder = null;
+            if (eventCase_ == 334) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelPauseCampaignEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelPauseCampaignEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelPauseCampaignEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 334;
+            break;
+          }
+          case 2682: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelResumeCampaignEvent.Builder subBuilder = null;
+            if (eventCase_ == 335) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelResumeCampaignEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelResumeCampaignEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelResumeCampaignEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 335;
+            break;
+          }
+          case 2690: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelStartCampaignEvent.Builder subBuilder = null;
+            if (eventCase_ == 336) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelStartCampaignEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelStartCampaignEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelStartCampaignEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 336;
+            break;
+          }
+          case 2698: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelScheduleModuleEvent.Builder subBuilder = null;
+            if (eventCase_ == 337) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelScheduleModuleEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelScheduleModuleEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelScheduleModuleEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 337;
+            break;
+          }
+          case 2706: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelStartModuleEvent.Builder subBuilder = null;
+            if (eventCase_ == 338) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelStartModuleEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelStartModuleEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelStartModuleEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 338;
+            break;
+          }
+          case 2714: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelPauseModuleEvent.Builder subBuilder = null;
+            if (eventCase_ == 339) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelPauseModuleEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelPauseModuleEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelPauseModuleEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 339;
+            break;
+          }
+          case 2722: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelResumeModuleEvent.Builder subBuilder = null;
+            if (eventCase_ == 340) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelResumeModuleEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelResumeModuleEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelResumeModuleEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 340;
+            break;
+          }
+          case 2730: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelErrorModuleEvent.Builder subBuilder = null;
+            if (eventCase_ == 341) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelErrorModuleEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelErrorModuleEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelErrorModuleEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 341;
+            break;
+          }
+          case 2738: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelSuccessModuleEvent.Builder subBuilder = null;
+            if (eventCase_ == 342) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelSuccessModuleEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelSuccessModuleEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelSuccessModuleEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 342;
+            break;
+          }
+          case 2746: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelFailModuleEvent.Builder subBuilder = null;
+            if (eventCase_ == 343) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelFailModuleEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelFailModuleEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelFailModuleEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 343;
+            break;
+          }
+          case 2754: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelCompleteModuleEvent.Builder subBuilder = null;
+            if (eventCase_ == 344) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelCompleteModuleEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelCompleteModuleEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelCompleteModuleEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 344;
+            break;
+          }
+          case 2762: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelArchiveModuleEvent.Builder subBuilder = null;
+            if (eventCase_ == 345) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelArchiveModuleEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelArchiveModuleEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelArchiveModuleEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 345;
+            break;
+          }
+          case 2770: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelUpdateModuleEvent.Builder subBuilder = null;
+            if (eventCase_ == 346) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelUpdateModuleEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelUpdateModuleEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelUpdateModuleEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 346;
+            break;
+          }
+          case 2778: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelSmsMessageSentModuleEvent.Builder subBuilder = null;
+            if (eventCase_ == 347) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelSmsMessageSentModuleEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelSmsMessageSentModuleEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelSmsMessageSentModuleEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 347;
+            break;
+          }
+          case 2786: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelCompleteCampaignEvent.Builder subBuilder = null;
+            if (eventCase_ == 348) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelCompleteCampaignEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelCompleteCampaignEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelCompleteCampaignEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 348;
+            break;
+          }
+          case 2794: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelModuleInitialReplyEvent.Builder subBuilder = null;
+            if (eventCase_ == 349) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelModuleInitialReplyEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelModuleInitialReplyEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelModuleInitialReplyEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 349;
+            break;
+          }
+          case 2802: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelTaskMessageSentEvent.Builder subBuilder = null;
+            if (eventCase_ == 350) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelTaskMessageSentEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelTaskMessageSentEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelTaskMessageSentEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 350;
+            break;
+          }
+          case 2810: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelConnectedInboxPollEvent.Builder subBuilder = null;
+            if (eventCase_ == 351) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelConnectedInboxPollEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelConnectedInboxPollEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelConnectedInboxPollEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 351;
+            break;
+          }
+          case 2818: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelConnectedInboxCreatedEvent.Builder subBuilder = null;
+            if (eventCase_ == 352) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelConnectedInboxCreatedEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelConnectedInboxCreatedEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelConnectedInboxCreatedEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 352;
+            break;
+          }
+          case 2826: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelAgentMessageUnitsEvent.Builder subBuilder = null;
+            if (eventCase_ == 353) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelAgentMessageUnitsEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelAgentMessageUnitsEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelAgentMessageUnitsEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 353;
+            break;
+          }
+          case 2834: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelManagerMessageUnitsEvent.Builder subBuilder = null;
+            if (eventCase_ == 354) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelManagerMessageUnitsEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelManagerMessageUnitsEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelManagerMessageUnitsEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 354;
+            break;
+          }
+          case 2842: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerMessageUnitsEvent.Builder subBuilder = null;
+            if (eventCase_ == 355) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerMessageUnitsEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerMessageUnitsEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelCustomerMessageUnitsEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 355;
+            break;
+          }
+          case 2850: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelSystemMessageUnitsEvent.Builder subBuilder = null;
+            if (eventCase_ == 356) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelSystemMessageUnitsEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelSystemMessageUnitsEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelSystemMessageUnitsEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 356;
+            break;
+          }
+          case 2858: {
+            com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent.Builder subBuilder = null;
+            if (eventCase_ == 357) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.OmnichannelPaymentLinkSentEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 357;
+            break;
+          }
+          case 3202: {
+            com.tcn.cloud.api.api.commons.audit.AsmAgentLoginEvent.Builder subBuilder = null;
+            if (eventCase_ == 400) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.AsmAgentLoginEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.AsmAgentLoginEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.AsmAgentLoginEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 400;
+            break;
+          }
+          case 3210: {
+            com.tcn.cloud.api.api.commons.audit.AsmOpenVoiceEvent.Builder subBuilder = null;
+            if (eventCase_ == 401) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.AsmOpenVoiceEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.AsmOpenVoiceEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.AsmOpenVoiceEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 401;
+            break;
+          }
+          case 3218: {
+            com.tcn.cloud.api.api.commons.audit.AsmOpenOmniAgentEvent.Builder subBuilder = null;
+            if (eventCase_ == 402) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.AsmOpenOmniAgentEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.AsmOpenOmniAgentEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.AsmOpenOmniAgentEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 402;
+            break;
+          }
+          case 3226: {
+            com.tcn.cloud.api.api.commons.audit.AsmActivateConversationEvent.Builder subBuilder = null;
+            if (eventCase_ == 403) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.AsmActivateConversationEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.AsmActivateConversationEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.AsmActivateConversationEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 403;
+            break;
+          }
+          case 3234: {
+            com.tcn.cloud.api.api.commons.audit.AsmDeactivateConversationEvent.Builder subBuilder = null;
+            if (eventCase_ == 404) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.AsmDeactivateConversationEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.AsmDeactivateConversationEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.AsmDeactivateConversationEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 404;
+            break;
+          }
+          case 3242: {
+            com.tcn.cloud.api.api.commons.audit.AsmAgentStateChangedEvent.Builder subBuilder = null;
+            if (eventCase_ == 405) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.AsmAgentStateChangedEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.AsmAgentStateChangedEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.AsmAgentStateChangedEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 405;
+            break;
+          }
+          case 3250: {
+            com.tcn.cloud.api.api.commons.audit.AsmAgentLogoutEvent.Builder subBuilder = null;
+            if (eventCase_ == 406) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.AsmAgentLogoutEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.AsmAgentLogoutEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.AsmAgentLogoutEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 406;
+            break;
+          }
+          case 3258: {
+            com.tcn.cloud.api.api.commons.audit.AsmPauseEvent.Builder subBuilder = null;
+            if (eventCase_ == 407) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.AsmPauseEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.AsmPauseEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.AsmPauseEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 407;
+            break;
+          }
+          case 3266: {
+            com.tcn.cloud.api.api.commons.audit.AsmResumeEvent.Builder subBuilder = null;
+            if (eventCase_ == 408) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.AsmResumeEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.AsmResumeEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.AsmResumeEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 408;
+            break;
+          }
+          case 3274: {
+            com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEvent.Builder subBuilder = null;
+            if (eventCase_ == 409) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.AsmConversationPulledEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 409;
+            break;
+          }
+          case 4002: {
+            com.tcn.cloud.api.api.commons.audit.ScorecardsCreateQuestionEvent.Builder subBuilder = null;
+            if (eventCase_ == 500) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.ScorecardsCreateQuestionEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.ScorecardsCreateQuestionEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.ScorecardsCreateQuestionEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 500;
+            break;
+          }
+          case 4010: {
+            com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateQuestionEvent.Builder subBuilder = null;
+            if (eventCase_ == 501) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateQuestionEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateQuestionEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateQuestionEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 501;
+            break;
+          }
+          case 4018: {
+            com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteQuestionEvent.Builder subBuilder = null;
+            if (eventCase_ == 502) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteQuestionEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteQuestionEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteQuestionEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 502;
+            break;
+          }
+          case 4026: {
+            com.tcn.cloud.api.api.commons.audit.ScorecardsCreateScorecardEvent.Builder subBuilder = null;
+            if (eventCase_ == 503) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.ScorecardsCreateScorecardEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.ScorecardsCreateScorecardEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.ScorecardsCreateScorecardEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 503;
+            break;
+          }
+          case 4034: {
+            com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateScorecardEvent.Builder subBuilder = null;
+            if (eventCase_ == 504) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateScorecardEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateScorecardEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateScorecardEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 504;
+            break;
+          }
+          case 4042: {
+            com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteScorecardEvent.Builder subBuilder = null;
+            if (eventCase_ == 505) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteScorecardEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteScorecardEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteScorecardEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 505;
+            break;
+          }
+          case 4050: {
+            com.tcn.cloud.api.api.commons.audit.ScorecardsCloneScorecardEvent.Builder subBuilder = null;
+            if (eventCase_ == 506) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.ScorecardsCloneScorecardEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.ScorecardsCloneScorecardEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.ScorecardsCloneScorecardEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 506;
+            break;
+          }
+          case 4058: {
+            com.tcn.cloud.api.api.commons.audit.ScorecardsCreateEvaluationEvent.Builder subBuilder = null;
+            if (eventCase_ == 507) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.ScorecardsCreateEvaluationEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.ScorecardsCreateEvaluationEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.ScorecardsCreateEvaluationEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 507;
+            break;
+          }
+          case 4066: {
+            com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteEvaluationEvent.Builder subBuilder = null;
+            if (eventCase_ == 508) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteEvaluationEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteEvaluationEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteEvaluationEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 508;
+            break;
+          }
+          case 4074: {
+            com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSectionEvent.Builder subBuilder = null;
+            if (eventCase_ == 509) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSectionEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSectionEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.ScorecardsCreateSectionEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 509;
+            break;
+          }
+          case 4082: {
+            com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateSectionEvent.Builder subBuilder = null;
+            if (eventCase_ == 510) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateSectionEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateSectionEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateSectionEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 510;
+            break;
+          }
+          case 4090: {
+            com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteSectionEvent.Builder subBuilder = null;
+            if (eventCase_ == 511) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteSectionEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteSectionEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteSectionEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 511;
+            break;
+          }
+          case 4098: {
+            com.tcn.cloud.api.api.commons.audit.ScorecardsCreateCategoryEvent.Builder subBuilder = null;
+            if (eventCase_ == 512) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.ScorecardsCreateCategoryEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.ScorecardsCreateCategoryEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.ScorecardsCreateCategoryEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 512;
+            break;
+          }
+          case 4106: {
+            com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateCategoryEvent.Builder subBuilder = null;
+            if (eventCase_ == 513) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateCategoryEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateCategoryEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateCategoryEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 513;
+            break;
+          }
+          case 4114: {
+            com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteCategoryEvent.Builder subBuilder = null;
+            if (eventCase_ == 514) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteCategoryEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteCategoryEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteCategoryEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 514;
+            break;
+          }
+          case 4122: {
+            com.tcn.cloud.api.api.commons.audit.ScorecardsCreateEvaluationQuestionEvent.Builder subBuilder = null;
+            if (eventCase_ == 515) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.ScorecardsCreateEvaluationQuestionEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.ScorecardsCreateEvaluationQuestionEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.ScorecardsCreateEvaluationQuestionEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 515;
+            break;
+          }
+          case 4130: {
+            com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationQuestionEvent.Builder subBuilder = null;
+            if (eventCase_ == 516) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationQuestionEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationQuestionEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationQuestionEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 516;
+            break;
+          }
+          case 4138: {
+            com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteEvaluationQuestionEvent.Builder subBuilder = null;
+            if (eventCase_ == 517) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteEvaluationQuestionEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteEvaluationQuestionEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteEvaluationQuestionEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 517;
+            break;
+          }
+          case 4146: {
+            com.tcn.cloud.api.api.commons.audit.ScorecardsCreateScorecardQuestionEvent.Builder subBuilder = null;
+            if (eventCase_ == 518) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.ScorecardsCreateScorecardQuestionEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.ScorecardsCreateScorecardQuestionEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.ScorecardsCreateScorecardQuestionEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 518;
+            break;
+          }
+          case 4154: {
+            com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateScorecardQuestionEvent.Builder subBuilder = null;
+            if (eventCase_ == 519) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateScorecardQuestionEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateScorecardQuestionEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateScorecardQuestionEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 519;
+            break;
+          }
+          case 4162: {
+            com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteScorecardQuestionEvent.Builder subBuilder = null;
+            if (eventCase_ == 520) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteScorecardQuestionEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteScorecardQuestionEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteScorecardQuestionEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 520;
+            break;
+          }
+          case 4170: {
+            com.tcn.cloud.api.api.commons.audit.ScorecardsCreateAutoEvaluationEvent.Builder subBuilder = null;
+            if (eventCase_ == 521) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.ScorecardsCreateAutoEvaluationEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.ScorecardsCreateAutoEvaluationEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.ScorecardsCreateAutoEvaluationEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 521;
+            break;
+          }
+          case 4178: {
+            com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEvent.Builder subBuilder = null;
+            if (eventCase_ == 522) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.ScorecardsUpdateEvaluationEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 522;
+            break;
+          }
+          case 4810: {
+            com.tcn.cloud.api.api.commons.audit.TicketEvent.Builder subBuilder = null;
+            if (eventCase_ == 601) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.TicketEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.TicketEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.TicketEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 601;
+            break;
+          }
+          case 5602: {
+            com.tcn.cloud.api.api.commons.audit.ComplianceRndQueryEvent.Builder subBuilder = null;
+            if (eventCase_ == 700) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.ComplianceRndQueryEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.ComplianceRndQueryEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.ComplianceRndQueryEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 700;
+            break;
+          }
+          case 5610: {
+            com.tcn.cloud.api.api.commons.audit.ComplianceRndQueryEvent.Builder subBuilder = null;
+            if (eventCase_ == 701) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.audit.ComplianceRndQueryEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.audit.ComplianceRndQueryEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.audit.ComplianceRndQueryEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 701;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.audit.AuditProto.internal_static_api_commons_audit_AuditEvent_descriptor;
@@ -48,7 +1323,6 @@ private static final long serialVersionUID = 0L;
   }
 
   private int eventCase_ = 0;
-  @SuppressWarnings("serial")
   private java.lang.Object event_;
   public enum EventCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -256,8 +1530,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ORG_ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object orgId_ = "";
+  private volatile java.lang.Object orgId_;
   /**
    * <pre>
    * Org ID
@@ -303,8 +1576,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int REGION_ID_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object regionId_ = "";
+  private volatile java.lang.Object regionId_;
   /**
    * <pre>
    * Region ID
@@ -350,8 +1622,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CLUSTER_ID_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object clusterId_ = "";
+  private volatile java.lang.Object clusterId_;
   /**
    * <pre>
    * Cluster ID
@@ -431,12 +1702,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getEventTimeOrBuilder() {
-    return eventTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : eventTime_;
+    return getEventTime();
   }
 
   public static final int AUDIT_ID_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object auditId_ = "";
+  private volatile java.lang.Object auditId_;
   /**
    * <pre>
    * this is an UUID so we can deduplicate at consumer side
@@ -482,7 +1752,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EVENT_TYPE_FIELD_NUMBER = 10;
-  private int eventType_ = 0;
+  private int eventType_;
   /**
    * <pre>
    * Application-specific identifier.
@@ -509,7 +1779,8 @@ private static final long serialVersionUID = 0L;
    * @return The eventType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.audit.EventType getEventType() {
-    com.tcn.cloud.api.api.commons.audit.EventType result = com.tcn.cloud.api.api.commons.audit.EventType.forNumber(eventType_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.audit.EventType result = com.tcn.cloud.api.api.commons.audit.EventType.valueOf(eventType_);
     return result == null ? com.tcn.cloud.api.api.commons.audit.EventType.UNRECOGNIZED : result;
   }
 
@@ -4122,19 +5393,19 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
+    if (!getOrgIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orgId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regionId_)) {
+    if (!getRegionIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, regionId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
+    if (!getClusterIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, clusterId_);
     }
     if (eventTime_ != null) {
       output.writeMessage(4, getEventTime());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(auditId_)) {
+    if (!getAuditIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, auditId_);
     }
     if (eventType_ != com.tcn.cloud.api.api.commons.audit.EventType.DUMMY_APPLICATION.getNumber()) {
@@ -4395,7 +5666,7 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 701) {
       output.writeMessage(701, (com.tcn.cloud.api.api.commons.audit.ComplianceRndQueryEvent) event_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -4404,20 +5675,20 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
+    if (!getOrgIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orgId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regionId_)) {
+    if (!getRegionIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, regionId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
+    if (!getClusterIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, clusterId_);
     }
     if (eventTime_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getEventTime());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(auditId_)) {
+    if (!getAuditIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, auditId_);
     }
     if (eventType_ != com.tcn.cloud.api.api.commons.audit.EventType.DUMMY_APPLICATION.getNumber()) {
@@ -4764,7 +6035,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(701, (com.tcn.cloud.api.api.commons.audit.ComplianceRndQueryEvent) event_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -5138,7 +6409,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -5507,7 +6778,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -5556,13 +6827,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.commons.audit.AuditEvent parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.commons.audit.AuditEvent parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5630,285 +6899,38 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.audit.AuditEvent.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      bitField1_ = 0;
-      bitField2_ = 0;
       orgId_ = "";
+
       regionId_ = "";
+
       clusterId_ = "";
-      eventTime_ = null;
-      if (eventTimeBuilder_ != null) {
-        eventTimeBuilder_.dispose();
+
+      if (eventTimeBuilder_ == null) {
+        eventTime_ = null;
+      } else {
+        eventTime_ = null;
         eventTimeBuilder_ = null;
       }
       auditId_ = "";
+
       eventType_ = 0;
-      if (DummyEventBuilder_ != null) {
-        DummyEventBuilder_.clear();
-      }
-      if (vanaFlagEventBuilder_ != null) {
-        vanaFlagEventBuilder_.clear();
-      }
-      if (vanaFlagReviewEventBuilder_ != null) {
-        vanaFlagReviewEventBuilder_.clear();
-      }
-      if (vanaBillingReportEventBuilder_ != null) {
-        vanaBillingReportEventBuilder_.clear();
-      }
-      if (vanaFlagSummaryEventBuilder_ != null) {
-        vanaFlagSummaryEventBuilder_.clear();
-      }
-      if (omnichannelCreateProjectEventBuilder_ != null) {
-        omnichannelCreateProjectEventBuilder_.clear();
-      }
-      if (omnichannelCreateCampaignEventBuilder_ != null) {
-        omnichannelCreateCampaignEventBuilder_.clear();
-      }
-      if (omnichannelDailyProjectReportEventBuilder_ != null) {
-        omnichannelDailyProjectReportEventBuilder_.clear();
-      }
-      if (omnichannelDailyConversationReportEventBuilder_ != null) {
-        omnichannelDailyConversationReportEventBuilder_.clear();
-      }
-      if (omnichannelAgentAssignConversationEventBuilder_ != null) {
-        omnichannelAgentAssignConversationEventBuilder_.clear();
-      }
-      if (omnichannelAgentUnassignConversationEventBuilder_ != null) {
-        omnichannelAgentUnassignConversationEventBuilder_.clear();
-      }
-      if (omnichannelAgentReassignConversationEventBuilder_ != null) {
-        omnichannelAgentReassignConversationEventBuilder_.clear();
-      }
-      if (omnichannelT10EventBuilder_ != null) {
-        omnichannelT10EventBuilder_.clear();
-      }
-      if (omnichannelCustomerTextMessageEventBuilder_ != null) {
-        omnichannelCustomerTextMessageEventBuilder_.clear();
-      }
-      if (omnichannelAgentTextMessageEventBuilder_ != null) {
-        omnichannelAgentTextMessageEventBuilder_.clear();
-      }
-      if (omnichannelFinishWrapUpEventBuilder_ != null) {
-        omnichannelFinishWrapUpEventBuilder_.clear();
-      }
-      if (omnichannelBeginWrapUpEventBuilder_ != null) {
-        omnichannelBeginWrapUpEventBuilder_.clear();
-      }
-      if (omnichannelT11EventBuilder_ != null) {
-        omnichannelT11EventBuilder_.clear();
-      }
-      if (omnichannelCreateConversationEventBuilder_ != null) {
-        omnichannelCreateConversationEventBuilder_.clear();
-      }
-      if (omnichannelAgentSuspendEventBuilder_ != null) {
-        omnichannelAgentSuspendEventBuilder_.clear();
-      }
-      if (omnichannelCloseConversationEventBuilder_ != null) {
-        omnichannelCloseConversationEventBuilder_.clear();
-      }
-      if (omnichannelManagerTextMessageEventBuilder_ != null) {
-        omnichannelManagerTextMessageEventBuilder_.clear();
-      }
-      if (omnichannelUpdateCampaignEventBuilder_ != null) {
-        omnichannelUpdateCampaignEventBuilder_.clear();
-      }
-      if (omnichannelSetConversationCollectedDataEventBuilder_ != null) {
-        omnichannelSetConversationCollectedDataEventBuilder_.clear();
-      }
-      if (omnichannelCompleteCampaignEventBuilder_ != null) {
-        omnichannelCompleteCampaignEventBuilder_.clear();
-      }
-      if (omnichannelArchiveCampaignEventBuilder_ != null) {
-        omnichannelArchiveCampaignEventBuilder_.clear();
-      }
-      if (omnichannelPauseCampaignEventBuilder_ != null) {
-        omnichannelPauseCampaignEventBuilder_.clear();
-      }
-      if (omnichannelResumeCampaignEventBuilder_ != null) {
-        omnichannelResumeCampaignEventBuilder_.clear();
-      }
-      if (omnichannelStartCampaignEventBuilder_ != null) {
-        omnichannelStartCampaignEventBuilder_.clear();
-      }
-      if (omnichannelScheduleModuleEventBuilder_ != null) {
-        omnichannelScheduleModuleEventBuilder_.clear();
-      }
-      if (omnichannelStartModuleEventBuilder_ != null) {
-        omnichannelStartModuleEventBuilder_.clear();
-      }
-      if (omnichannelPauseModuleEventBuilder_ != null) {
-        omnichannelPauseModuleEventBuilder_.clear();
-      }
-      if (omnichannelResumeModuleEventBuilder_ != null) {
-        omnichannelResumeModuleEventBuilder_.clear();
-      }
-      if (omnichannelErrorModuleEventBuilder_ != null) {
-        omnichannelErrorModuleEventBuilder_.clear();
-      }
-      if (omnichannelSuccessModuleEventBuilder_ != null) {
-        omnichannelSuccessModuleEventBuilder_.clear();
-      }
-      if (omnichannelFailModuleEventBuilder_ != null) {
-        omnichannelFailModuleEventBuilder_.clear();
-      }
-      if (omnichannelCompleteModuleEventBuilder_ != null) {
-        omnichannelCompleteModuleEventBuilder_.clear();
-      }
-      if (omnichannelArchiveModuleEventBuilder_ != null) {
-        omnichannelArchiveModuleEventBuilder_.clear();
-      }
-      if (omnichannelUpdateModuleEventBuilder_ != null) {
-        omnichannelUpdateModuleEventBuilder_.clear();
-      }
-      if (omnichannelAddSmsMessageSentModuleEventBuilder_ != null) {
-        omnichannelAddSmsMessageSentModuleEventBuilder_.clear();
-      }
-      if (omnichannelModuleInitialReplyEventBuilder_ != null) {
-        omnichannelModuleInitialReplyEventBuilder_.clear();
-      }
-      if (omnichannelTaskMessageSentEventBuilder_ != null) {
-        omnichannelTaskMessageSentEventBuilder_.clear();
-      }
-      if (omnichannelConnectedInboxPollEventBuilder_ != null) {
-        omnichannelConnectedInboxPollEventBuilder_.clear();
-      }
-      if (omnichannelConnectedInboxCreatedEventBuilder_ != null) {
-        omnichannelConnectedInboxCreatedEventBuilder_.clear();
-      }
-      if (omnichannelAgentMessageUnitsEventBuilder_ != null) {
-        omnichannelAgentMessageUnitsEventBuilder_.clear();
-      }
-      if (omnichannelManagerMessageUnitsEventBuilder_ != null) {
-        omnichannelManagerMessageUnitsEventBuilder_.clear();
-      }
-      if (omnichannelCustomerMessageUnitsEventBuilder_ != null) {
-        omnichannelCustomerMessageUnitsEventBuilder_.clear();
-      }
-      if (omnichannelSystemMessageUnitsEventBuilder_ != null) {
-        omnichannelSystemMessageUnitsEventBuilder_.clear();
-      }
-      if (omnichannelPaymentLinkSentEventBuilder_ != null) {
-        omnichannelPaymentLinkSentEventBuilder_.clear();
-      }
-      if (asmAgentLoginEventBuilder_ != null) {
-        asmAgentLoginEventBuilder_.clear();
-      }
-      if (asmOpenVoiceEventBuilder_ != null) {
-        asmOpenVoiceEventBuilder_.clear();
-      }
-      if (asmOpenOmniAgentEventBuilder_ != null) {
-        asmOpenOmniAgentEventBuilder_.clear();
-      }
-      if (asmActivateConversationEventBuilder_ != null) {
-        asmActivateConversationEventBuilder_.clear();
-      }
-      if (asmDeactivateConversationEventBuilder_ != null) {
-        asmDeactivateConversationEventBuilder_.clear();
-      }
-      if (asmAgentStateChangedEventBuilder_ != null) {
-        asmAgentStateChangedEventBuilder_.clear();
-      }
-      if (asmAgentLogoutEventBuilder_ != null) {
-        asmAgentLogoutEventBuilder_.clear();
-      }
-      if (asmPauseEventBuilder_ != null) {
-        asmPauseEventBuilder_.clear();
-      }
-      if (asmResumeEventBuilder_ != null) {
-        asmResumeEventBuilder_.clear();
-      }
-      if (asmConversationPulledEventBuilder_ != null) {
-        asmConversationPulledEventBuilder_.clear();
-      }
-      if (scorecardsCreateQuestionEventBuilder_ != null) {
-        scorecardsCreateQuestionEventBuilder_.clear();
-      }
-      if (scorecardsUpdateQuestionEventBuilder_ != null) {
-        scorecardsUpdateQuestionEventBuilder_.clear();
-      }
-      if (scorecardsDeleteQuestionEventBuilder_ != null) {
-        scorecardsDeleteQuestionEventBuilder_.clear();
-      }
-      if (scorecardsCreateScorecardEventBuilder_ != null) {
-        scorecardsCreateScorecardEventBuilder_.clear();
-      }
-      if (scorecardsUpdateScorecardEventBuilder_ != null) {
-        scorecardsUpdateScorecardEventBuilder_.clear();
-      }
-      if (scorecardsDeleteScorecardEventBuilder_ != null) {
-        scorecardsDeleteScorecardEventBuilder_.clear();
-      }
-      if (scorecardsCloneScorecardEventBuilder_ != null) {
-        scorecardsCloneScorecardEventBuilder_.clear();
-      }
-      if (scorecardsCreateEvaluationEventBuilder_ != null) {
-        scorecardsCreateEvaluationEventBuilder_.clear();
-      }
-      if (scorecardsDeleteEvaluationEventBuilder_ != null) {
-        scorecardsDeleteEvaluationEventBuilder_.clear();
-      }
-      if (scorecardsCreateSectionEventBuilder_ != null) {
-        scorecardsCreateSectionEventBuilder_.clear();
-      }
-      if (scorecardsUpdateSectionEventBuilder_ != null) {
-        scorecardsUpdateSectionEventBuilder_.clear();
-      }
-      if (scorecardsDeleteSectionEventBuilder_ != null) {
-        scorecardsDeleteSectionEventBuilder_.clear();
-      }
-      if (scorecardsCreateCategoryEventBuilder_ != null) {
-        scorecardsCreateCategoryEventBuilder_.clear();
-      }
-      if (scorecardsUpdateCategoryEventBuilder_ != null) {
-        scorecardsUpdateCategoryEventBuilder_.clear();
-      }
-      if (scorecardsDeleteCategoryEventBuilder_ != null) {
-        scorecardsDeleteCategoryEventBuilder_.clear();
-      }
-      if (scorecardsCreateEvaluationQuestionEventBuilder_ != null) {
-        scorecardsCreateEvaluationQuestionEventBuilder_.clear();
-      }
-      if (scorecardsUpdateEvaluationQuestionEventBuilder_ != null) {
-        scorecardsUpdateEvaluationQuestionEventBuilder_.clear();
-      }
-      if (scorecardsDeleteEvaluationQuestionEventBuilder_ != null) {
-        scorecardsDeleteEvaluationQuestionEventBuilder_.clear();
-      }
-      if (scorecardsCreateScorecardQuestionEventBuilder_ != null) {
-        scorecardsCreateScorecardQuestionEventBuilder_.clear();
-      }
-      if (scorecardsUpdateScorecardQuestionEventBuilder_ != null) {
-        scorecardsUpdateScorecardQuestionEventBuilder_.clear();
-      }
-      if (scorecardsDeleteScorecardQuestionEventBuilder_ != null) {
-        scorecardsDeleteScorecardQuestionEventBuilder_.clear();
-      }
-      if (scorecardsCreateAutoEvaluationEventBuilder_ != null) {
-        scorecardsCreateAutoEvaluationEventBuilder_.clear();
-      }
-      if (scorecardsUpdateEvaluationEventBuilder_ != null) {
-        scorecardsUpdateEvaluationEventBuilder_.clear();
-      }
-      if (ticketEventBuilder_ != null) {
-        ticketEventBuilder_.clear();
-      }
-      if (complianceRndQueryEventBuilder_ != null) {
-        complianceRndQueryEventBuilder_.clear();
-      }
-      if (complianceRndQueryCachedEventBuilder_ != null) {
-        complianceRndQueryCachedEventBuilder_.clear();
-      }
+
       eventCase_ = 0;
       event_ = null;
       return this;
@@ -5937,389 +6959,614 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.audit.AuditEvent buildPartial() {
       com.tcn.cloud.api.api.commons.audit.AuditEvent result = new com.tcn.cloud.api.api.commons.audit.AuditEvent(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      if (bitField1_ != 0) { buildPartial1(result); }
-      if (bitField2_ != 0) { buildPartial2(result); }
-      buildPartialOneofs(result);
+      result.orgId_ = orgId_;
+      result.regionId_ = regionId_;
+      result.clusterId_ = clusterId_;
+      if (eventTimeBuilder_ == null) {
+        result.eventTime_ = eventTime_;
+      } else {
+        result.eventTime_ = eventTimeBuilder_.build();
+      }
+      result.auditId_ = auditId_;
+      result.eventType_ = eventType_;
+      if (eventCase_ == 100) {
+        if (DummyEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = DummyEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 200) {
+        if (vanaFlagEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = vanaFlagEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 201) {
+        if (vanaFlagReviewEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = vanaFlagReviewEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 202) {
+        if (vanaBillingReportEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = vanaBillingReportEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 203) {
+        if (vanaFlagSummaryEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = vanaFlagSummaryEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 300) {
+        if (omnichannelCreateProjectEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelCreateProjectEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 301) {
+        if (omnichannelCreateCampaignEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelCreateCampaignEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 302) {
+        if (omnichannelDailyProjectReportEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelDailyProjectReportEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 303) {
+        if (omnichannelDailyConversationReportEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelDailyConversationReportEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 305) {
+        if (omnichannelAgentAssignConversationEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelAgentAssignConversationEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 306) {
+        if (omnichannelAgentUnassignConversationEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelAgentUnassignConversationEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 307) {
+        if (omnichannelAgentReassignConversationEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelAgentReassignConversationEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 308) {
+        if (omnichannelT10EventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelT10EventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 309) {
+        if (omnichannelCustomerTextMessageEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelCustomerTextMessageEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 310) {
+        if (omnichannelAgentTextMessageEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelAgentTextMessageEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 311) {
+        if (omnichannelFinishWrapUpEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelFinishWrapUpEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 312) {
+        if (omnichannelBeginWrapUpEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelBeginWrapUpEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 313) {
+        if (omnichannelT11EventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelT11EventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 314) {
+        if (omnichannelCreateConversationEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelCreateConversationEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 315) {
+        if (omnichannelAgentSuspendEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelAgentSuspendEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 322) {
+        if (omnichannelCloseConversationEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelCloseConversationEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 332) {
+        if (omnichannelManagerTextMessageEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelManagerTextMessageEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 330) {
+        if (omnichannelUpdateCampaignEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelUpdateCampaignEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 331) {
+        if (omnichannelSetConversationCollectedDataEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelSetConversationCollectedDataEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 348) {
+        if (omnichannelCompleteCampaignEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelCompleteCampaignEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 333) {
+        if (omnichannelArchiveCampaignEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelArchiveCampaignEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 334) {
+        if (omnichannelPauseCampaignEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelPauseCampaignEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 335) {
+        if (omnichannelResumeCampaignEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelResumeCampaignEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 336) {
+        if (omnichannelStartCampaignEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelStartCampaignEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 337) {
+        if (omnichannelScheduleModuleEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelScheduleModuleEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 338) {
+        if (omnichannelStartModuleEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelStartModuleEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 339) {
+        if (omnichannelPauseModuleEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelPauseModuleEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 340) {
+        if (omnichannelResumeModuleEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelResumeModuleEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 341) {
+        if (omnichannelErrorModuleEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelErrorModuleEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 342) {
+        if (omnichannelSuccessModuleEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelSuccessModuleEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 343) {
+        if (omnichannelFailModuleEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelFailModuleEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 344) {
+        if (omnichannelCompleteModuleEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelCompleteModuleEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 345) {
+        if (omnichannelArchiveModuleEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelArchiveModuleEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 346) {
+        if (omnichannelUpdateModuleEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelUpdateModuleEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 347) {
+        if (omnichannelAddSmsMessageSentModuleEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelAddSmsMessageSentModuleEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 349) {
+        if (omnichannelModuleInitialReplyEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelModuleInitialReplyEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 350) {
+        if (omnichannelTaskMessageSentEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelTaskMessageSentEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 351) {
+        if (omnichannelConnectedInboxPollEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelConnectedInboxPollEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 352) {
+        if (omnichannelConnectedInboxCreatedEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelConnectedInboxCreatedEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 353) {
+        if (omnichannelAgentMessageUnitsEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelAgentMessageUnitsEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 354) {
+        if (omnichannelManagerMessageUnitsEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelManagerMessageUnitsEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 355) {
+        if (omnichannelCustomerMessageUnitsEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelCustomerMessageUnitsEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 356) {
+        if (omnichannelSystemMessageUnitsEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelSystemMessageUnitsEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 357) {
+        if (omnichannelPaymentLinkSentEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = omnichannelPaymentLinkSentEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 400) {
+        if (asmAgentLoginEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = asmAgentLoginEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 401) {
+        if (asmOpenVoiceEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = asmOpenVoiceEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 402) {
+        if (asmOpenOmniAgentEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = asmOpenOmniAgentEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 403) {
+        if (asmActivateConversationEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = asmActivateConversationEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 404) {
+        if (asmDeactivateConversationEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = asmDeactivateConversationEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 405) {
+        if (asmAgentStateChangedEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = asmAgentStateChangedEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 406) {
+        if (asmAgentLogoutEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = asmAgentLogoutEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 407) {
+        if (asmPauseEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = asmPauseEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 408) {
+        if (asmResumeEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = asmResumeEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 409) {
+        if (asmConversationPulledEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = asmConversationPulledEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 500) {
+        if (scorecardsCreateQuestionEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = scorecardsCreateQuestionEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 501) {
+        if (scorecardsUpdateQuestionEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = scorecardsUpdateQuestionEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 502) {
+        if (scorecardsDeleteQuestionEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = scorecardsDeleteQuestionEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 503) {
+        if (scorecardsCreateScorecardEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = scorecardsCreateScorecardEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 504) {
+        if (scorecardsUpdateScorecardEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = scorecardsUpdateScorecardEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 505) {
+        if (scorecardsDeleteScorecardEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = scorecardsDeleteScorecardEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 506) {
+        if (scorecardsCloneScorecardEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = scorecardsCloneScorecardEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 507) {
+        if (scorecardsCreateEvaluationEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = scorecardsCreateEvaluationEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 508) {
+        if (scorecardsDeleteEvaluationEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = scorecardsDeleteEvaluationEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 509) {
+        if (scorecardsCreateSectionEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = scorecardsCreateSectionEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 510) {
+        if (scorecardsUpdateSectionEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = scorecardsUpdateSectionEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 511) {
+        if (scorecardsDeleteSectionEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = scorecardsDeleteSectionEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 512) {
+        if (scorecardsCreateCategoryEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = scorecardsCreateCategoryEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 513) {
+        if (scorecardsUpdateCategoryEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = scorecardsUpdateCategoryEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 514) {
+        if (scorecardsDeleteCategoryEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = scorecardsDeleteCategoryEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 515) {
+        if (scorecardsCreateEvaluationQuestionEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = scorecardsCreateEvaluationQuestionEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 516) {
+        if (scorecardsUpdateEvaluationQuestionEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = scorecardsUpdateEvaluationQuestionEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 517) {
+        if (scorecardsDeleteEvaluationQuestionEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = scorecardsDeleteEvaluationQuestionEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 518) {
+        if (scorecardsCreateScorecardQuestionEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = scorecardsCreateScorecardQuestionEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 519) {
+        if (scorecardsUpdateScorecardQuestionEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = scorecardsUpdateScorecardQuestionEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 520) {
+        if (scorecardsDeleteScorecardQuestionEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = scorecardsDeleteScorecardQuestionEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 521) {
+        if (scorecardsCreateAutoEvaluationEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = scorecardsCreateAutoEvaluationEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 522) {
+        if (scorecardsUpdateEvaluationEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = scorecardsUpdateEvaluationEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 601) {
+        if (ticketEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = ticketEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 700) {
+        if (complianceRndQueryEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = complianceRndQueryEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 701) {
+        if (complianceRndQueryCachedEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = complianceRndQueryCachedEventBuilder_.build();
+        }
+      }
+      result.eventCase_ = eventCase_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.commons.audit.AuditEvent result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.orgId_ = orgId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.regionId_ = regionId_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.clusterId_ = clusterId_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.eventTime_ = eventTimeBuilder_ == null
-            ? eventTime_
-            : eventTimeBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.auditId_ = auditId_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.eventType_ = eventType_;
-      }
-    }
-
-    private void buildPartial1(com.tcn.cloud.api.api.commons.audit.AuditEvent result) {
-      int from_bitField1_ = bitField1_;
-    }
-
-    private void buildPartial2(com.tcn.cloud.api.api.commons.audit.AuditEvent result) {
-      int from_bitField2_ = bitField2_;
-    }
-
-    private void buildPartialOneofs(com.tcn.cloud.api.api.commons.audit.AuditEvent result) {
-      result.eventCase_ = eventCase_;
-      result.event_ = this.event_;
-      if (eventCase_ == 100 &&
-          DummyEventBuilder_ != null) {
-        result.event_ = DummyEventBuilder_.build();
-      }
-      if (eventCase_ == 200 &&
-          vanaFlagEventBuilder_ != null) {
-        result.event_ = vanaFlagEventBuilder_.build();
-      }
-      if (eventCase_ == 201 &&
-          vanaFlagReviewEventBuilder_ != null) {
-        result.event_ = vanaFlagReviewEventBuilder_.build();
-      }
-      if (eventCase_ == 202 &&
-          vanaBillingReportEventBuilder_ != null) {
-        result.event_ = vanaBillingReportEventBuilder_.build();
-      }
-      if (eventCase_ == 203 &&
-          vanaFlagSummaryEventBuilder_ != null) {
-        result.event_ = vanaFlagSummaryEventBuilder_.build();
-      }
-      if (eventCase_ == 300 &&
-          omnichannelCreateProjectEventBuilder_ != null) {
-        result.event_ = omnichannelCreateProjectEventBuilder_.build();
-      }
-      if (eventCase_ == 301 &&
-          omnichannelCreateCampaignEventBuilder_ != null) {
-        result.event_ = omnichannelCreateCampaignEventBuilder_.build();
-      }
-      if (eventCase_ == 302 &&
-          omnichannelDailyProjectReportEventBuilder_ != null) {
-        result.event_ = omnichannelDailyProjectReportEventBuilder_.build();
-      }
-      if (eventCase_ == 303 &&
-          omnichannelDailyConversationReportEventBuilder_ != null) {
-        result.event_ = omnichannelDailyConversationReportEventBuilder_.build();
-      }
-      if (eventCase_ == 305 &&
-          omnichannelAgentAssignConversationEventBuilder_ != null) {
-        result.event_ = omnichannelAgentAssignConversationEventBuilder_.build();
-      }
-      if (eventCase_ == 306 &&
-          omnichannelAgentUnassignConversationEventBuilder_ != null) {
-        result.event_ = omnichannelAgentUnassignConversationEventBuilder_.build();
-      }
-      if (eventCase_ == 307 &&
-          omnichannelAgentReassignConversationEventBuilder_ != null) {
-        result.event_ = omnichannelAgentReassignConversationEventBuilder_.build();
-      }
-      if (eventCase_ == 308 &&
-          omnichannelT10EventBuilder_ != null) {
-        result.event_ = omnichannelT10EventBuilder_.build();
-      }
-      if (eventCase_ == 309 &&
-          omnichannelCustomerTextMessageEventBuilder_ != null) {
-        result.event_ = omnichannelCustomerTextMessageEventBuilder_.build();
-      }
-      if (eventCase_ == 310 &&
-          omnichannelAgentTextMessageEventBuilder_ != null) {
-        result.event_ = omnichannelAgentTextMessageEventBuilder_.build();
-      }
-      if (eventCase_ == 311 &&
-          omnichannelFinishWrapUpEventBuilder_ != null) {
-        result.event_ = omnichannelFinishWrapUpEventBuilder_.build();
-      }
-      if (eventCase_ == 312 &&
-          omnichannelBeginWrapUpEventBuilder_ != null) {
-        result.event_ = omnichannelBeginWrapUpEventBuilder_.build();
-      }
-      if (eventCase_ == 313 &&
-          omnichannelT11EventBuilder_ != null) {
-        result.event_ = omnichannelT11EventBuilder_.build();
-      }
-      if (eventCase_ == 314 &&
-          omnichannelCreateConversationEventBuilder_ != null) {
-        result.event_ = omnichannelCreateConversationEventBuilder_.build();
-      }
-      if (eventCase_ == 315 &&
-          omnichannelAgentSuspendEventBuilder_ != null) {
-        result.event_ = omnichannelAgentSuspendEventBuilder_.build();
-      }
-      if (eventCase_ == 322 &&
-          omnichannelCloseConversationEventBuilder_ != null) {
-        result.event_ = omnichannelCloseConversationEventBuilder_.build();
-      }
-      if (eventCase_ == 332 &&
-          omnichannelManagerTextMessageEventBuilder_ != null) {
-        result.event_ = omnichannelManagerTextMessageEventBuilder_.build();
-      }
-      if (eventCase_ == 330 &&
-          omnichannelUpdateCampaignEventBuilder_ != null) {
-        result.event_ = omnichannelUpdateCampaignEventBuilder_.build();
-      }
-      if (eventCase_ == 331 &&
-          omnichannelSetConversationCollectedDataEventBuilder_ != null) {
-        result.event_ = omnichannelSetConversationCollectedDataEventBuilder_.build();
-      }
-      if (eventCase_ == 348 &&
-          omnichannelCompleteCampaignEventBuilder_ != null) {
-        result.event_ = omnichannelCompleteCampaignEventBuilder_.build();
-      }
-      if (eventCase_ == 333 &&
-          omnichannelArchiveCampaignEventBuilder_ != null) {
-        result.event_ = omnichannelArchiveCampaignEventBuilder_.build();
-      }
-      if (eventCase_ == 334 &&
-          omnichannelPauseCampaignEventBuilder_ != null) {
-        result.event_ = omnichannelPauseCampaignEventBuilder_.build();
-      }
-      if (eventCase_ == 335 &&
-          omnichannelResumeCampaignEventBuilder_ != null) {
-        result.event_ = omnichannelResumeCampaignEventBuilder_.build();
-      }
-      if (eventCase_ == 336 &&
-          omnichannelStartCampaignEventBuilder_ != null) {
-        result.event_ = omnichannelStartCampaignEventBuilder_.build();
-      }
-      if (eventCase_ == 337 &&
-          omnichannelScheduleModuleEventBuilder_ != null) {
-        result.event_ = omnichannelScheduleModuleEventBuilder_.build();
-      }
-      if (eventCase_ == 338 &&
-          omnichannelStartModuleEventBuilder_ != null) {
-        result.event_ = omnichannelStartModuleEventBuilder_.build();
-      }
-      if (eventCase_ == 339 &&
-          omnichannelPauseModuleEventBuilder_ != null) {
-        result.event_ = omnichannelPauseModuleEventBuilder_.build();
-      }
-      if (eventCase_ == 340 &&
-          omnichannelResumeModuleEventBuilder_ != null) {
-        result.event_ = omnichannelResumeModuleEventBuilder_.build();
-      }
-      if (eventCase_ == 341 &&
-          omnichannelErrorModuleEventBuilder_ != null) {
-        result.event_ = omnichannelErrorModuleEventBuilder_.build();
-      }
-      if (eventCase_ == 342 &&
-          omnichannelSuccessModuleEventBuilder_ != null) {
-        result.event_ = omnichannelSuccessModuleEventBuilder_.build();
-      }
-      if (eventCase_ == 343 &&
-          omnichannelFailModuleEventBuilder_ != null) {
-        result.event_ = omnichannelFailModuleEventBuilder_.build();
-      }
-      if (eventCase_ == 344 &&
-          omnichannelCompleteModuleEventBuilder_ != null) {
-        result.event_ = omnichannelCompleteModuleEventBuilder_.build();
-      }
-      if (eventCase_ == 345 &&
-          omnichannelArchiveModuleEventBuilder_ != null) {
-        result.event_ = omnichannelArchiveModuleEventBuilder_.build();
-      }
-      if (eventCase_ == 346 &&
-          omnichannelUpdateModuleEventBuilder_ != null) {
-        result.event_ = omnichannelUpdateModuleEventBuilder_.build();
-      }
-      if (eventCase_ == 347 &&
-          omnichannelAddSmsMessageSentModuleEventBuilder_ != null) {
-        result.event_ = omnichannelAddSmsMessageSentModuleEventBuilder_.build();
-      }
-      if (eventCase_ == 349 &&
-          omnichannelModuleInitialReplyEventBuilder_ != null) {
-        result.event_ = omnichannelModuleInitialReplyEventBuilder_.build();
-      }
-      if (eventCase_ == 350 &&
-          omnichannelTaskMessageSentEventBuilder_ != null) {
-        result.event_ = omnichannelTaskMessageSentEventBuilder_.build();
-      }
-      if (eventCase_ == 351 &&
-          omnichannelConnectedInboxPollEventBuilder_ != null) {
-        result.event_ = omnichannelConnectedInboxPollEventBuilder_.build();
-      }
-      if (eventCase_ == 352 &&
-          omnichannelConnectedInboxCreatedEventBuilder_ != null) {
-        result.event_ = omnichannelConnectedInboxCreatedEventBuilder_.build();
-      }
-      if (eventCase_ == 353 &&
-          omnichannelAgentMessageUnitsEventBuilder_ != null) {
-        result.event_ = omnichannelAgentMessageUnitsEventBuilder_.build();
-      }
-      if (eventCase_ == 354 &&
-          omnichannelManagerMessageUnitsEventBuilder_ != null) {
-        result.event_ = omnichannelManagerMessageUnitsEventBuilder_.build();
-      }
-      if (eventCase_ == 355 &&
-          omnichannelCustomerMessageUnitsEventBuilder_ != null) {
-        result.event_ = omnichannelCustomerMessageUnitsEventBuilder_.build();
-      }
-      if (eventCase_ == 356 &&
-          omnichannelSystemMessageUnitsEventBuilder_ != null) {
-        result.event_ = omnichannelSystemMessageUnitsEventBuilder_.build();
-      }
-      if (eventCase_ == 357 &&
-          omnichannelPaymentLinkSentEventBuilder_ != null) {
-        result.event_ = omnichannelPaymentLinkSentEventBuilder_.build();
-      }
-      if (eventCase_ == 400 &&
-          asmAgentLoginEventBuilder_ != null) {
-        result.event_ = asmAgentLoginEventBuilder_.build();
-      }
-      if (eventCase_ == 401 &&
-          asmOpenVoiceEventBuilder_ != null) {
-        result.event_ = asmOpenVoiceEventBuilder_.build();
-      }
-      if (eventCase_ == 402 &&
-          asmOpenOmniAgentEventBuilder_ != null) {
-        result.event_ = asmOpenOmniAgentEventBuilder_.build();
-      }
-      if (eventCase_ == 403 &&
-          asmActivateConversationEventBuilder_ != null) {
-        result.event_ = asmActivateConversationEventBuilder_.build();
-      }
-      if (eventCase_ == 404 &&
-          asmDeactivateConversationEventBuilder_ != null) {
-        result.event_ = asmDeactivateConversationEventBuilder_.build();
-      }
-      if (eventCase_ == 405 &&
-          asmAgentStateChangedEventBuilder_ != null) {
-        result.event_ = asmAgentStateChangedEventBuilder_.build();
-      }
-      if (eventCase_ == 406 &&
-          asmAgentLogoutEventBuilder_ != null) {
-        result.event_ = asmAgentLogoutEventBuilder_.build();
-      }
-      if (eventCase_ == 407 &&
-          asmPauseEventBuilder_ != null) {
-        result.event_ = asmPauseEventBuilder_.build();
-      }
-      if (eventCase_ == 408 &&
-          asmResumeEventBuilder_ != null) {
-        result.event_ = asmResumeEventBuilder_.build();
-      }
-      if (eventCase_ == 409 &&
-          asmConversationPulledEventBuilder_ != null) {
-        result.event_ = asmConversationPulledEventBuilder_.build();
-      }
-      if (eventCase_ == 500 &&
-          scorecardsCreateQuestionEventBuilder_ != null) {
-        result.event_ = scorecardsCreateQuestionEventBuilder_.build();
-      }
-      if (eventCase_ == 501 &&
-          scorecardsUpdateQuestionEventBuilder_ != null) {
-        result.event_ = scorecardsUpdateQuestionEventBuilder_.build();
-      }
-      if (eventCase_ == 502 &&
-          scorecardsDeleteQuestionEventBuilder_ != null) {
-        result.event_ = scorecardsDeleteQuestionEventBuilder_.build();
-      }
-      if (eventCase_ == 503 &&
-          scorecardsCreateScorecardEventBuilder_ != null) {
-        result.event_ = scorecardsCreateScorecardEventBuilder_.build();
-      }
-      if (eventCase_ == 504 &&
-          scorecardsUpdateScorecardEventBuilder_ != null) {
-        result.event_ = scorecardsUpdateScorecardEventBuilder_.build();
-      }
-      if (eventCase_ == 505 &&
-          scorecardsDeleteScorecardEventBuilder_ != null) {
-        result.event_ = scorecardsDeleteScorecardEventBuilder_.build();
-      }
-      if (eventCase_ == 506 &&
-          scorecardsCloneScorecardEventBuilder_ != null) {
-        result.event_ = scorecardsCloneScorecardEventBuilder_.build();
-      }
-      if (eventCase_ == 507 &&
-          scorecardsCreateEvaluationEventBuilder_ != null) {
-        result.event_ = scorecardsCreateEvaluationEventBuilder_.build();
-      }
-      if (eventCase_ == 508 &&
-          scorecardsDeleteEvaluationEventBuilder_ != null) {
-        result.event_ = scorecardsDeleteEvaluationEventBuilder_.build();
-      }
-      if (eventCase_ == 509 &&
-          scorecardsCreateSectionEventBuilder_ != null) {
-        result.event_ = scorecardsCreateSectionEventBuilder_.build();
-      }
-      if (eventCase_ == 510 &&
-          scorecardsUpdateSectionEventBuilder_ != null) {
-        result.event_ = scorecardsUpdateSectionEventBuilder_.build();
-      }
-      if (eventCase_ == 511 &&
-          scorecardsDeleteSectionEventBuilder_ != null) {
-        result.event_ = scorecardsDeleteSectionEventBuilder_.build();
-      }
-      if (eventCase_ == 512 &&
-          scorecardsCreateCategoryEventBuilder_ != null) {
-        result.event_ = scorecardsCreateCategoryEventBuilder_.build();
-      }
-      if (eventCase_ == 513 &&
-          scorecardsUpdateCategoryEventBuilder_ != null) {
-        result.event_ = scorecardsUpdateCategoryEventBuilder_.build();
-      }
-      if (eventCase_ == 514 &&
-          scorecardsDeleteCategoryEventBuilder_ != null) {
-        result.event_ = scorecardsDeleteCategoryEventBuilder_.build();
-      }
-      if (eventCase_ == 515 &&
-          scorecardsCreateEvaluationQuestionEventBuilder_ != null) {
-        result.event_ = scorecardsCreateEvaluationQuestionEventBuilder_.build();
-      }
-      if (eventCase_ == 516 &&
-          scorecardsUpdateEvaluationQuestionEventBuilder_ != null) {
-        result.event_ = scorecardsUpdateEvaluationQuestionEventBuilder_.build();
-      }
-      if (eventCase_ == 517 &&
-          scorecardsDeleteEvaluationQuestionEventBuilder_ != null) {
-        result.event_ = scorecardsDeleteEvaluationQuestionEventBuilder_.build();
-      }
-      if (eventCase_ == 518 &&
-          scorecardsCreateScorecardQuestionEventBuilder_ != null) {
-        result.event_ = scorecardsCreateScorecardQuestionEventBuilder_.build();
-      }
-      if (eventCase_ == 519 &&
-          scorecardsUpdateScorecardQuestionEventBuilder_ != null) {
-        result.event_ = scorecardsUpdateScorecardQuestionEventBuilder_.build();
-      }
-      if (eventCase_ == 520 &&
-          scorecardsDeleteScorecardQuestionEventBuilder_ != null) {
-        result.event_ = scorecardsDeleteScorecardQuestionEventBuilder_.build();
-      }
-      if (eventCase_ == 521 &&
-          scorecardsCreateAutoEvaluationEventBuilder_ != null) {
-        result.event_ = scorecardsCreateAutoEvaluationEventBuilder_.build();
-      }
-      if (eventCase_ == 522 &&
-          scorecardsUpdateEvaluationEventBuilder_ != null) {
-        result.event_ = scorecardsUpdateEvaluationEventBuilder_.build();
-      }
-      if (eventCase_ == 601 &&
-          ticketEventBuilder_ != null) {
-        result.event_ = ticketEventBuilder_.build();
-      }
-      if (eventCase_ == 700 &&
-          complianceRndQueryEventBuilder_ != null) {
-        result.event_ = complianceRndQueryEventBuilder_.build();
-      }
-      if (eventCase_ == 701 &&
-          complianceRndQueryCachedEventBuilder_ != null) {
-        result.event_ = complianceRndQueryCachedEventBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -6368,17 +7615,14 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.commons.audit.AuditEvent.getDefaultInstance()) return this;
       if (!other.getOrgId().isEmpty()) {
         orgId_ = other.orgId_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getRegionId().isEmpty()) {
         regionId_ = other.regionId_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getClusterId().isEmpty()) {
         clusterId_ = other.clusterId_;
-        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.hasEventTime()) {
@@ -6386,7 +7630,6 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getAuditId().isEmpty()) {
         auditId_ = other.auditId_;
-        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (other.eventType_ != 0) {
@@ -6737,7 +7980,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -6752,657 +7995,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.commons.audit.AuditEvent parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              orgId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              regionId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 26: {
-              clusterId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            case 34: {
-              input.readMessage(
-                  getEventTimeFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
-            case 42: {
-              auditId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 42
-            case 80: {
-              eventType_ = input.readEnum();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 80
-            case 802: {
-              input.readMessage(
-                  getDummyEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 100;
-              break;
-            } // case 802
-            case 1602: {
-              input.readMessage(
-                  getVanaFlagEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 200;
-              break;
-            } // case 1602
-            case 1610: {
-              input.readMessage(
-                  getVanaFlagReviewEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 201;
-              break;
-            } // case 1610
-            case 1618: {
-              input.readMessage(
-                  getVanaBillingReportEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 202;
-              break;
-            } // case 1618
-            case 1626: {
-              input.readMessage(
-                  getVanaFlagSummaryEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 203;
-              break;
-            } // case 1626
-            case 2402: {
-              input.readMessage(
-                  getOmnichannelCreateProjectEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 300;
-              break;
-            } // case 2402
-            case 2410: {
-              input.readMessage(
-                  getOmnichannelCreateCampaignEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 301;
-              break;
-            } // case 2410
-            case 2418: {
-              input.readMessage(
-                  getOmnichannelDailyProjectReportEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 302;
-              break;
-            } // case 2418
-            case 2426: {
-              input.readMessage(
-                  getOmnichannelDailyConversationReportEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 303;
-              break;
-            } // case 2426
-            case 2442: {
-              input.readMessage(
-                  getOmnichannelAgentAssignConversationEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 305;
-              break;
-            } // case 2442
-            case 2450: {
-              input.readMessage(
-                  getOmnichannelAgentUnassignConversationEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 306;
-              break;
-            } // case 2450
-            case 2458: {
-              input.readMessage(
-                  getOmnichannelAgentReassignConversationEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 307;
-              break;
-            } // case 2458
-            case 2466: {
-              input.readMessage(
-                  getOmnichannelT10EventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 308;
-              break;
-            } // case 2466
-            case 2474: {
-              input.readMessage(
-                  getOmnichannelCustomerTextMessageEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 309;
-              break;
-            } // case 2474
-            case 2482: {
-              input.readMessage(
-                  getOmnichannelAgentTextMessageEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 310;
-              break;
-            } // case 2482
-            case 2490: {
-              input.readMessage(
-                  getOmnichannelFinishWrapUpEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 311;
-              break;
-            } // case 2490
-            case 2498: {
-              input.readMessage(
-                  getOmnichannelBeginWrapUpEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 312;
-              break;
-            } // case 2498
-            case 2506: {
-              input.readMessage(
-                  getOmnichannelT11EventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 313;
-              break;
-            } // case 2506
-            case 2514: {
-              input.readMessage(
-                  getOmnichannelCreateConversationEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 314;
-              break;
-            } // case 2514
-            case 2522: {
-              input.readMessage(
-                  getOmnichannelAgentSuspendEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 315;
-              break;
-            } // case 2522
-            case 2578: {
-              input.readMessage(
-                  getOmnichannelCloseConversationEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 322;
-              break;
-            } // case 2578
-            case 2642: {
-              input.readMessage(
-                  getOmnichannelUpdateCampaignEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 330;
-              break;
-            } // case 2642
-            case 2650: {
-              input.readMessage(
-                  getOmnichannelSetConversationCollectedDataEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 331;
-              break;
-            } // case 2650
-            case 2658: {
-              input.readMessage(
-                  getOmnichannelManagerTextMessageEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 332;
-              break;
-            } // case 2658
-            case 2666: {
-              input.readMessage(
-                  getOmnichannelArchiveCampaignEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 333;
-              break;
-            } // case 2666
-            case 2674: {
-              input.readMessage(
-                  getOmnichannelPauseCampaignEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 334;
-              break;
-            } // case 2674
-            case 2682: {
-              input.readMessage(
-                  getOmnichannelResumeCampaignEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 335;
-              break;
-            } // case 2682
-            case 2690: {
-              input.readMessage(
-                  getOmnichannelStartCampaignEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 336;
-              break;
-            } // case 2690
-            case 2698: {
-              input.readMessage(
-                  getOmnichannelScheduleModuleEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 337;
-              break;
-            } // case 2698
-            case 2706: {
-              input.readMessage(
-                  getOmnichannelStartModuleEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 338;
-              break;
-            } // case 2706
-            case 2714: {
-              input.readMessage(
-                  getOmnichannelPauseModuleEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 339;
-              break;
-            } // case 2714
-            case 2722: {
-              input.readMessage(
-                  getOmnichannelResumeModuleEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 340;
-              break;
-            } // case 2722
-            case 2730: {
-              input.readMessage(
-                  getOmnichannelErrorModuleEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 341;
-              break;
-            } // case 2730
-            case 2738: {
-              input.readMessage(
-                  getOmnichannelSuccessModuleEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 342;
-              break;
-            } // case 2738
-            case 2746: {
-              input.readMessage(
-                  getOmnichannelFailModuleEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 343;
-              break;
-            } // case 2746
-            case 2754: {
-              input.readMessage(
-                  getOmnichannelCompleteModuleEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 344;
-              break;
-            } // case 2754
-            case 2762: {
-              input.readMessage(
-                  getOmnichannelArchiveModuleEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 345;
-              break;
-            } // case 2762
-            case 2770: {
-              input.readMessage(
-                  getOmnichannelUpdateModuleEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 346;
-              break;
-            } // case 2770
-            case 2778: {
-              input.readMessage(
-                  getOmnichannelAddSmsMessageSentModuleEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 347;
-              break;
-            } // case 2778
-            case 2786: {
-              input.readMessage(
-                  getOmnichannelCompleteCampaignEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 348;
-              break;
-            } // case 2786
-            case 2794: {
-              input.readMessage(
-                  getOmnichannelModuleInitialReplyEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 349;
-              break;
-            } // case 2794
-            case 2802: {
-              input.readMessage(
-                  getOmnichannelTaskMessageSentEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 350;
-              break;
-            } // case 2802
-            case 2810: {
-              input.readMessage(
-                  getOmnichannelConnectedInboxPollEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 351;
-              break;
-            } // case 2810
-            case 2818: {
-              input.readMessage(
-                  getOmnichannelConnectedInboxCreatedEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 352;
-              break;
-            } // case 2818
-            case 2826: {
-              input.readMessage(
-                  getOmnichannelAgentMessageUnitsEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 353;
-              break;
-            } // case 2826
-            case 2834: {
-              input.readMessage(
-                  getOmnichannelManagerMessageUnitsEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 354;
-              break;
-            } // case 2834
-            case 2842: {
-              input.readMessage(
-                  getOmnichannelCustomerMessageUnitsEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 355;
-              break;
-            } // case 2842
-            case 2850: {
-              input.readMessage(
-                  getOmnichannelSystemMessageUnitsEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 356;
-              break;
-            } // case 2850
-            case 2858: {
-              input.readMessage(
-                  getOmnichannelPaymentLinkSentEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 357;
-              break;
-            } // case 2858
-            case 3202: {
-              input.readMessage(
-                  getAsmAgentLoginEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 400;
-              break;
-            } // case 3202
-            case 3210: {
-              input.readMessage(
-                  getAsmOpenVoiceEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 401;
-              break;
-            } // case 3210
-            case 3218: {
-              input.readMessage(
-                  getAsmOpenOmniAgentEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 402;
-              break;
-            } // case 3218
-            case 3226: {
-              input.readMessage(
-                  getAsmActivateConversationEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 403;
-              break;
-            } // case 3226
-            case 3234: {
-              input.readMessage(
-                  getAsmDeactivateConversationEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 404;
-              break;
-            } // case 3234
-            case 3242: {
-              input.readMessage(
-                  getAsmAgentStateChangedEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 405;
-              break;
-            } // case 3242
-            case 3250: {
-              input.readMessage(
-                  getAsmAgentLogoutEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 406;
-              break;
-            } // case 3250
-            case 3258: {
-              input.readMessage(
-                  getAsmPauseEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 407;
-              break;
-            } // case 3258
-            case 3266: {
-              input.readMessage(
-                  getAsmResumeEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 408;
-              break;
-            } // case 3266
-            case 3274: {
-              input.readMessage(
-                  getAsmConversationPulledEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 409;
-              break;
-            } // case 3274
-            case 4002: {
-              input.readMessage(
-                  getScorecardsCreateQuestionEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 500;
-              break;
-            } // case 4002
-            case 4010: {
-              input.readMessage(
-                  getScorecardsUpdateQuestionEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 501;
-              break;
-            } // case 4010
-            case 4018: {
-              input.readMessage(
-                  getScorecardsDeleteQuestionEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 502;
-              break;
-            } // case 4018
-            case 4026: {
-              input.readMessage(
-                  getScorecardsCreateScorecardEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 503;
-              break;
-            } // case 4026
-            case 4034: {
-              input.readMessage(
-                  getScorecardsUpdateScorecardEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 504;
-              break;
-            } // case 4034
-            case 4042: {
-              input.readMessage(
-                  getScorecardsDeleteScorecardEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 505;
-              break;
-            } // case 4042
-            case 4050: {
-              input.readMessage(
-                  getScorecardsCloneScorecardEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 506;
-              break;
-            } // case 4050
-            case 4058: {
-              input.readMessage(
-                  getScorecardsCreateEvaluationEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 507;
-              break;
-            } // case 4058
-            case 4066: {
-              input.readMessage(
-                  getScorecardsDeleteEvaluationEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 508;
-              break;
-            } // case 4066
-            case 4074: {
-              input.readMessage(
-                  getScorecardsCreateSectionEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 509;
-              break;
-            } // case 4074
-            case 4082: {
-              input.readMessage(
-                  getScorecardsUpdateSectionEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 510;
-              break;
-            } // case 4082
-            case 4090: {
-              input.readMessage(
-                  getScorecardsDeleteSectionEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 511;
-              break;
-            } // case 4090
-            case 4098: {
-              input.readMessage(
-                  getScorecardsCreateCategoryEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 512;
-              break;
-            } // case 4098
-            case 4106: {
-              input.readMessage(
-                  getScorecardsUpdateCategoryEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 513;
-              break;
-            } // case 4106
-            case 4114: {
-              input.readMessage(
-                  getScorecardsDeleteCategoryEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 514;
-              break;
-            } // case 4114
-            case 4122: {
-              input.readMessage(
-                  getScorecardsCreateEvaluationQuestionEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 515;
-              break;
-            } // case 4122
-            case 4130: {
-              input.readMessage(
-                  getScorecardsUpdateEvaluationQuestionEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 516;
-              break;
-            } // case 4130
-            case 4138: {
-              input.readMessage(
-                  getScorecardsDeleteEvaluationQuestionEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 517;
-              break;
-            } // case 4138
-            case 4146: {
-              input.readMessage(
-                  getScorecardsCreateScorecardQuestionEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 518;
-              break;
-            } // case 4146
-            case 4154: {
-              input.readMessage(
-                  getScorecardsUpdateScorecardQuestionEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 519;
-              break;
-            } // case 4154
-            case 4162: {
-              input.readMessage(
-                  getScorecardsDeleteScorecardQuestionEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 520;
-              break;
-            } // case 4162
-            case 4170: {
-              input.readMessage(
-                  getScorecardsCreateAutoEvaluationEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 521;
-              break;
-            } // case 4170
-            case 4178: {
-              input.readMessage(
-                  getScorecardsUpdateEvaluationEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 522;
-              break;
-            } // case 4178
-            case 4810: {
-              input.readMessage(
-                  getTicketEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 601;
-              break;
-            } // case 4810
-            case 5602: {
-              input.readMessage(
-                  getComplianceRndQueryEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 700;
-              break;
-            } // case 5602
-            case 5610: {
-              input.readMessage(
-                  getComplianceRndQueryCachedEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 701;
-              break;
-            } // case 5610
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.commons.audit.AuditEvent) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int eventCase_ = 0;
@@ -7420,9 +8023,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int bitField0_;
-    private int bitField1_;
-    private int bitField2_;
 
     private java.lang.Object orgId_ = "";
     /**
@@ -7477,9 +8077,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOrgId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       orgId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -7492,8 +8094,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOrgId() {
+      
       orgId_ = getDefaultInstance().getOrgId();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -7508,10 +8110,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOrgIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       orgId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -7569,9 +8173,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRegionId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       regionId_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -7584,8 +8190,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRegionId() {
+      
       regionId_ = getDefaultInstance().getRegionId();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -7600,10 +8206,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRegionIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       regionId_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -7661,9 +8269,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setClusterId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       clusterId_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -7676,8 +8286,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearClusterId() {
+      
       clusterId_ = getDefaultInstance().getClusterId();
-      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -7692,10 +8302,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setClusterIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       clusterId_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -7712,7 +8324,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the eventTime field is set.
      */
     public boolean hasEventTime() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return eventTimeBuilder_ != null || eventTime_ != null;
     }
     /**
      * <pre>
@@ -7742,11 +8354,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         eventTime_ = value;
+        onChanged();
       } else {
         eventTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
@@ -7760,11 +8372,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (eventTimeBuilder_ == null) {
         eventTime_ = builderForValue.build();
+        onChanged();
       } else {
         eventTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
@@ -7776,18 +8388,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeEventTime(com.google.protobuf.Timestamp value) {
       if (eventTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0) &&
-          eventTime_ != null &&
-          eventTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getEventTimeBuilder().mergeFrom(value);
+        if (eventTime_ != null) {
+          eventTime_ =
+            com.google.protobuf.Timestamp.newBuilder(eventTime_).mergeFrom(value).buildPartial();
         } else {
           eventTime_ = value;
         }
+        onChanged();
       } else {
         eventTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
@@ -7798,13 +8409,14 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp event_time = 4 [json_name = "eventTime"];</code>
      */
     public Builder clearEventTime() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      eventTime_ = null;
-      if (eventTimeBuilder_ != null) {
-        eventTimeBuilder_.dispose();
+      if (eventTimeBuilder_ == null) {
+        eventTime_ = null;
+        onChanged();
+      } else {
+        eventTime_ = null;
         eventTimeBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -7815,7 +8427,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp event_time = 4 [json_name = "eventTime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getEventTimeBuilder() {
-      bitField0_ |= 0x00000008;
+      
       onChanged();
       return getEventTimeFieldBuilder().getBuilder();
     }
@@ -7908,9 +8520,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAuditId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       auditId_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -7923,8 +8537,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAuditId() {
+      
       auditId_ = getDefaultInstance().getAuditId();
-      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -7939,10 +8553,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAuditIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       auditId_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -7975,8 +8591,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEventTypeValue(int value) {
+      
       eventType_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -7993,7 +8609,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.audit.EventType getEventType() {
-      com.tcn.cloud.api.api.commons.audit.EventType result = com.tcn.cloud.api.api.commons.audit.EventType.forNumber(eventType_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.audit.EventType result = com.tcn.cloud.api.api.commons.audit.EventType.valueOf(eventType_);
       return result == null ? com.tcn.cloud.api.api.commons.audit.EventType.UNRECOGNIZED : result;
     }
     /**
@@ -8012,7 +8629,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000020;
+      
       eventType_ = value.getNumber();
       onChanged();
       return this;
@@ -8029,7 +8646,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEventType() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      
       eventType_ = 0;
       onChanged();
       return this;
@@ -8129,9 +8746,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 100) {
           DummyEventBuilder_.mergeFrom(value);
-        } else {
-          DummyEventBuilder_.setMessage(value);
         }
+        DummyEventBuilder_.setMessage(value);
       }
       eventCase_ = 100;
       return this;
@@ -8209,7 +8825,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 100;
-      onChanged();
+      onChanged();;
       return DummyEventBuilder_;
     }
 
@@ -8307,9 +8923,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 200) {
           vanaFlagEventBuilder_.mergeFrom(value);
-        } else {
-          vanaFlagEventBuilder_.setMessage(value);
         }
+        vanaFlagEventBuilder_.setMessage(value);
       }
       eventCase_ = 200;
       return this;
@@ -8387,7 +9002,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 200;
-      onChanged();
+      onChanged();;
       return vanaFlagEventBuilder_;
     }
 
@@ -8465,9 +9080,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 201) {
           vanaFlagReviewEventBuilder_.mergeFrom(value);
-        } else {
-          vanaFlagReviewEventBuilder_.setMessage(value);
         }
+        vanaFlagReviewEventBuilder_.setMessage(value);
       }
       eventCase_ = 201;
       return this;
@@ -8529,7 +9143,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 201;
-      onChanged();
+      onChanged();;
       return vanaFlagReviewEventBuilder_;
     }
 
@@ -8607,9 +9221,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 202) {
           vanaBillingReportEventBuilder_.mergeFrom(value);
-        } else {
-          vanaBillingReportEventBuilder_.setMessage(value);
         }
+        vanaBillingReportEventBuilder_.setMessage(value);
       }
       eventCase_ = 202;
       return this;
@@ -8671,7 +9284,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 202;
-      onChanged();
+      onChanged();;
       return vanaBillingReportEventBuilder_;
     }
 
@@ -8749,9 +9362,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 203) {
           vanaFlagSummaryEventBuilder_.mergeFrom(value);
-        } else {
-          vanaFlagSummaryEventBuilder_.setMessage(value);
         }
+        vanaFlagSummaryEventBuilder_.setMessage(value);
       }
       eventCase_ = 203;
       return this;
@@ -8813,7 +9425,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 203;
-      onChanged();
+      onChanged();;
       return vanaFlagSummaryEventBuilder_;
     }
 
@@ -8911,9 +9523,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 300) {
           omnichannelCreateProjectEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelCreateProjectEventBuilder_.setMessage(value);
         }
+        omnichannelCreateProjectEventBuilder_.setMessage(value);
       }
       eventCase_ = 300;
       return this;
@@ -8991,7 +9602,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 300;
-      onChanged();
+      onChanged();;
       return omnichannelCreateProjectEventBuilder_;
     }
 
@@ -9069,9 +9680,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 301) {
           omnichannelCreateCampaignEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelCreateCampaignEventBuilder_.setMessage(value);
         }
+        omnichannelCreateCampaignEventBuilder_.setMessage(value);
       }
       eventCase_ = 301;
       return this;
@@ -9133,7 +9743,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 301;
-      onChanged();
+      onChanged();;
       return omnichannelCreateCampaignEventBuilder_;
     }
 
@@ -9211,9 +9821,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 302) {
           omnichannelDailyProjectReportEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelDailyProjectReportEventBuilder_.setMessage(value);
         }
+        omnichannelDailyProjectReportEventBuilder_.setMessage(value);
       }
       eventCase_ = 302;
       return this;
@@ -9275,7 +9884,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 302;
-      onChanged();
+      onChanged();;
       return omnichannelDailyProjectReportEventBuilder_;
     }
 
@@ -9353,9 +9962,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 303) {
           omnichannelDailyConversationReportEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelDailyConversationReportEventBuilder_.setMessage(value);
         }
+        omnichannelDailyConversationReportEventBuilder_.setMessage(value);
       }
       eventCase_ = 303;
       return this;
@@ -9417,7 +10025,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 303;
-      onChanged();
+      onChanged();;
       return omnichannelDailyConversationReportEventBuilder_;
     }
 
@@ -9515,9 +10123,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 305) {
           omnichannelAgentAssignConversationEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelAgentAssignConversationEventBuilder_.setMessage(value);
         }
+        omnichannelAgentAssignConversationEventBuilder_.setMessage(value);
       }
       eventCase_ = 305;
       return this;
@@ -9595,7 +10202,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 305;
-      onChanged();
+      onChanged();;
       return omnichannelAgentAssignConversationEventBuilder_;
     }
 
@@ -9693,9 +10300,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 306) {
           omnichannelAgentUnassignConversationEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelAgentUnassignConversationEventBuilder_.setMessage(value);
         }
+        omnichannelAgentUnassignConversationEventBuilder_.setMessage(value);
       }
       eventCase_ = 306;
       return this;
@@ -9773,7 +10379,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 306;
-      onChanged();
+      onChanged();;
       return omnichannelAgentUnassignConversationEventBuilder_;
     }
 
@@ -9871,9 +10477,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 307) {
           omnichannelAgentReassignConversationEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelAgentReassignConversationEventBuilder_.setMessage(value);
         }
+        omnichannelAgentReassignConversationEventBuilder_.setMessage(value);
       }
       eventCase_ = 307;
       return this;
@@ -9951,7 +10556,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 307;
-      onChanged();
+      onChanged();;
       return omnichannelAgentReassignConversationEventBuilder_;
     }
 
@@ -10049,9 +10654,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 308) {
           omnichannelT10EventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelT10EventBuilder_.setMessage(value);
         }
+        omnichannelT10EventBuilder_.setMessage(value);
       }
       eventCase_ = 308;
       return this;
@@ -10129,7 +10733,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 308;
-      onChanged();
+      onChanged();;
       return omnichannelT10EventBuilder_;
     }
 
@@ -10227,9 +10831,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 309) {
           omnichannelCustomerTextMessageEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelCustomerTextMessageEventBuilder_.setMessage(value);
         }
+        omnichannelCustomerTextMessageEventBuilder_.setMessage(value);
       }
       eventCase_ = 309;
       return this;
@@ -10307,7 +10910,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 309;
-      onChanged();
+      onChanged();;
       return omnichannelCustomerTextMessageEventBuilder_;
     }
 
@@ -10405,9 +11008,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 310) {
           omnichannelAgentTextMessageEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelAgentTextMessageEventBuilder_.setMessage(value);
         }
+        omnichannelAgentTextMessageEventBuilder_.setMessage(value);
       }
       eventCase_ = 310;
       return this;
@@ -10485,7 +11087,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 310;
-      onChanged();
+      onChanged();;
       return omnichannelAgentTextMessageEventBuilder_;
     }
 
@@ -10583,9 +11185,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 311) {
           omnichannelFinishWrapUpEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelFinishWrapUpEventBuilder_.setMessage(value);
         }
+        omnichannelFinishWrapUpEventBuilder_.setMessage(value);
       }
       eventCase_ = 311;
       return this;
@@ -10663,7 +11264,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 311;
-      onChanged();
+      onChanged();;
       return omnichannelFinishWrapUpEventBuilder_;
     }
 
@@ -10761,9 +11362,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 312) {
           omnichannelBeginWrapUpEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelBeginWrapUpEventBuilder_.setMessage(value);
         }
+        omnichannelBeginWrapUpEventBuilder_.setMessage(value);
       }
       eventCase_ = 312;
       return this;
@@ -10841,7 +11441,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 312;
-      onChanged();
+      onChanged();;
       return omnichannelBeginWrapUpEventBuilder_;
     }
 
@@ -10939,9 +11539,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 313) {
           omnichannelT11EventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelT11EventBuilder_.setMessage(value);
         }
+        omnichannelT11EventBuilder_.setMessage(value);
       }
       eventCase_ = 313;
       return this;
@@ -11019,7 +11618,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 313;
-      onChanged();
+      onChanged();;
       return omnichannelT11EventBuilder_;
     }
 
@@ -11117,9 +11716,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 314) {
           omnichannelCreateConversationEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelCreateConversationEventBuilder_.setMessage(value);
         }
+        omnichannelCreateConversationEventBuilder_.setMessage(value);
       }
       eventCase_ = 314;
       return this;
@@ -11197,7 +11795,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 314;
-      onChanged();
+      onChanged();;
       return omnichannelCreateConversationEventBuilder_;
     }
 
@@ -11295,9 +11893,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 315) {
           omnichannelAgentSuspendEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelAgentSuspendEventBuilder_.setMessage(value);
         }
+        omnichannelAgentSuspendEventBuilder_.setMessage(value);
       }
       eventCase_ = 315;
       return this;
@@ -11375,7 +11972,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 315;
-      onChanged();
+      onChanged();;
       return omnichannelAgentSuspendEventBuilder_;
     }
 
@@ -11473,9 +12070,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 322) {
           omnichannelCloseConversationEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelCloseConversationEventBuilder_.setMessage(value);
         }
+        omnichannelCloseConversationEventBuilder_.setMessage(value);
       }
       eventCase_ = 322;
       return this;
@@ -11553,7 +12149,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 322;
-      onChanged();
+      onChanged();;
       return omnichannelCloseConversationEventBuilder_;
     }
 
@@ -11651,9 +12247,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 332) {
           omnichannelManagerTextMessageEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelManagerTextMessageEventBuilder_.setMessage(value);
         }
+        omnichannelManagerTextMessageEventBuilder_.setMessage(value);
       }
       eventCase_ = 332;
       return this;
@@ -11731,7 +12326,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 332;
-      onChanged();
+      onChanged();;
       return omnichannelManagerTextMessageEventBuilder_;
     }
 
@@ -11829,9 +12424,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 330) {
           omnichannelUpdateCampaignEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelUpdateCampaignEventBuilder_.setMessage(value);
         }
+        omnichannelUpdateCampaignEventBuilder_.setMessage(value);
       }
       eventCase_ = 330;
       return this;
@@ -11909,7 +12503,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 330;
-      onChanged();
+      onChanged();;
       return omnichannelUpdateCampaignEventBuilder_;
     }
 
@@ -12007,9 +12601,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 331) {
           omnichannelSetConversationCollectedDataEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelSetConversationCollectedDataEventBuilder_.setMessage(value);
         }
+        omnichannelSetConversationCollectedDataEventBuilder_.setMessage(value);
       }
       eventCase_ = 331;
       return this;
@@ -12087,7 +12680,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 331;
-      onChanged();
+      onChanged();;
       return omnichannelSetConversationCollectedDataEventBuilder_;
     }
 
@@ -12185,9 +12778,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 348) {
           omnichannelCompleteCampaignEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelCompleteCampaignEventBuilder_.setMessage(value);
         }
+        omnichannelCompleteCampaignEventBuilder_.setMessage(value);
       }
       eventCase_ = 348;
       return this;
@@ -12265,7 +12857,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 348;
-      onChanged();
+      onChanged();;
       return omnichannelCompleteCampaignEventBuilder_;
     }
 
@@ -12363,9 +12955,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 333) {
           omnichannelArchiveCampaignEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelArchiveCampaignEventBuilder_.setMessage(value);
         }
+        omnichannelArchiveCampaignEventBuilder_.setMessage(value);
       }
       eventCase_ = 333;
       return this;
@@ -12443,7 +13034,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 333;
-      onChanged();
+      onChanged();;
       return omnichannelArchiveCampaignEventBuilder_;
     }
 
@@ -12541,9 +13132,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 334) {
           omnichannelPauseCampaignEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelPauseCampaignEventBuilder_.setMessage(value);
         }
+        omnichannelPauseCampaignEventBuilder_.setMessage(value);
       }
       eventCase_ = 334;
       return this;
@@ -12621,7 +13211,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 334;
-      onChanged();
+      onChanged();;
       return omnichannelPauseCampaignEventBuilder_;
     }
 
@@ -12719,9 +13309,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 335) {
           omnichannelResumeCampaignEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelResumeCampaignEventBuilder_.setMessage(value);
         }
+        omnichannelResumeCampaignEventBuilder_.setMessage(value);
       }
       eventCase_ = 335;
       return this;
@@ -12799,7 +13388,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 335;
-      onChanged();
+      onChanged();;
       return omnichannelResumeCampaignEventBuilder_;
     }
 
@@ -12897,9 +13486,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 336) {
           omnichannelStartCampaignEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelStartCampaignEventBuilder_.setMessage(value);
         }
+        omnichannelStartCampaignEventBuilder_.setMessage(value);
       }
       eventCase_ = 336;
       return this;
@@ -12977,7 +13565,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 336;
-      onChanged();
+      onChanged();;
       return omnichannelStartCampaignEventBuilder_;
     }
 
@@ -13075,9 +13663,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 337) {
           omnichannelScheduleModuleEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelScheduleModuleEventBuilder_.setMessage(value);
         }
+        omnichannelScheduleModuleEventBuilder_.setMessage(value);
       }
       eventCase_ = 337;
       return this;
@@ -13155,7 +13742,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 337;
-      onChanged();
+      onChanged();;
       return omnichannelScheduleModuleEventBuilder_;
     }
 
@@ -13253,9 +13840,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 338) {
           omnichannelStartModuleEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelStartModuleEventBuilder_.setMessage(value);
         }
+        omnichannelStartModuleEventBuilder_.setMessage(value);
       }
       eventCase_ = 338;
       return this;
@@ -13333,7 +13919,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 338;
-      onChanged();
+      onChanged();;
       return omnichannelStartModuleEventBuilder_;
     }
 
@@ -13431,9 +14017,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 339) {
           omnichannelPauseModuleEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelPauseModuleEventBuilder_.setMessage(value);
         }
+        omnichannelPauseModuleEventBuilder_.setMessage(value);
       }
       eventCase_ = 339;
       return this;
@@ -13511,7 +14096,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 339;
-      onChanged();
+      onChanged();;
       return omnichannelPauseModuleEventBuilder_;
     }
 
@@ -13609,9 +14194,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 340) {
           omnichannelResumeModuleEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelResumeModuleEventBuilder_.setMessage(value);
         }
+        omnichannelResumeModuleEventBuilder_.setMessage(value);
       }
       eventCase_ = 340;
       return this;
@@ -13689,7 +14273,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 340;
-      onChanged();
+      onChanged();;
       return omnichannelResumeModuleEventBuilder_;
     }
 
@@ -13787,9 +14371,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 341) {
           omnichannelErrorModuleEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelErrorModuleEventBuilder_.setMessage(value);
         }
+        omnichannelErrorModuleEventBuilder_.setMessage(value);
       }
       eventCase_ = 341;
       return this;
@@ -13867,7 +14450,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 341;
-      onChanged();
+      onChanged();;
       return omnichannelErrorModuleEventBuilder_;
     }
 
@@ -13965,9 +14548,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 342) {
           omnichannelSuccessModuleEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelSuccessModuleEventBuilder_.setMessage(value);
         }
+        omnichannelSuccessModuleEventBuilder_.setMessage(value);
       }
       eventCase_ = 342;
       return this;
@@ -14045,7 +14627,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 342;
-      onChanged();
+      onChanged();;
       return omnichannelSuccessModuleEventBuilder_;
     }
 
@@ -14143,9 +14725,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 343) {
           omnichannelFailModuleEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelFailModuleEventBuilder_.setMessage(value);
         }
+        omnichannelFailModuleEventBuilder_.setMessage(value);
       }
       eventCase_ = 343;
       return this;
@@ -14223,7 +14804,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 343;
-      onChanged();
+      onChanged();;
       return omnichannelFailModuleEventBuilder_;
     }
 
@@ -14321,9 +14902,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 344) {
           omnichannelCompleteModuleEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelCompleteModuleEventBuilder_.setMessage(value);
         }
+        omnichannelCompleteModuleEventBuilder_.setMessage(value);
       }
       eventCase_ = 344;
       return this;
@@ -14401,7 +14981,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 344;
-      onChanged();
+      onChanged();;
       return omnichannelCompleteModuleEventBuilder_;
     }
 
@@ -14499,9 +15079,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 345) {
           omnichannelArchiveModuleEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelArchiveModuleEventBuilder_.setMessage(value);
         }
+        omnichannelArchiveModuleEventBuilder_.setMessage(value);
       }
       eventCase_ = 345;
       return this;
@@ -14579,7 +15158,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 345;
-      onChanged();
+      onChanged();;
       return omnichannelArchiveModuleEventBuilder_;
     }
 
@@ -14677,9 +15256,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 346) {
           omnichannelUpdateModuleEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelUpdateModuleEventBuilder_.setMessage(value);
         }
+        omnichannelUpdateModuleEventBuilder_.setMessage(value);
       }
       eventCase_ = 346;
       return this;
@@ -14757,7 +15335,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 346;
-      onChanged();
+      onChanged();;
       return omnichannelUpdateModuleEventBuilder_;
     }
 
@@ -14855,9 +15433,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 347) {
           omnichannelAddSmsMessageSentModuleEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelAddSmsMessageSentModuleEventBuilder_.setMessage(value);
         }
+        omnichannelAddSmsMessageSentModuleEventBuilder_.setMessage(value);
       }
       eventCase_ = 347;
       return this;
@@ -14935,7 +15512,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 347;
-      onChanged();
+      onChanged();;
       return omnichannelAddSmsMessageSentModuleEventBuilder_;
     }
 
@@ -15033,9 +15610,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 349) {
           omnichannelModuleInitialReplyEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelModuleInitialReplyEventBuilder_.setMessage(value);
         }
+        omnichannelModuleInitialReplyEventBuilder_.setMessage(value);
       }
       eventCase_ = 349;
       return this;
@@ -15113,7 +15689,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 349;
-      onChanged();
+      onChanged();;
       return omnichannelModuleInitialReplyEventBuilder_;
     }
 
@@ -15211,9 +15787,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 350) {
           omnichannelTaskMessageSentEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelTaskMessageSentEventBuilder_.setMessage(value);
         }
+        omnichannelTaskMessageSentEventBuilder_.setMessage(value);
       }
       eventCase_ = 350;
       return this;
@@ -15291,7 +15866,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 350;
-      onChanged();
+      onChanged();;
       return omnichannelTaskMessageSentEventBuilder_;
     }
 
@@ -15389,9 +15964,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 351) {
           omnichannelConnectedInboxPollEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelConnectedInboxPollEventBuilder_.setMessage(value);
         }
+        omnichannelConnectedInboxPollEventBuilder_.setMessage(value);
       }
       eventCase_ = 351;
       return this;
@@ -15469,7 +16043,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 351;
-      onChanged();
+      onChanged();;
       return omnichannelConnectedInboxPollEventBuilder_;
     }
 
@@ -15567,9 +16141,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 352) {
           omnichannelConnectedInboxCreatedEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelConnectedInboxCreatedEventBuilder_.setMessage(value);
         }
+        omnichannelConnectedInboxCreatedEventBuilder_.setMessage(value);
       }
       eventCase_ = 352;
       return this;
@@ -15647,7 +16220,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 352;
-      onChanged();
+      onChanged();;
       return omnichannelConnectedInboxCreatedEventBuilder_;
     }
 
@@ -15745,9 +16318,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 353) {
           omnichannelAgentMessageUnitsEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelAgentMessageUnitsEventBuilder_.setMessage(value);
         }
+        omnichannelAgentMessageUnitsEventBuilder_.setMessage(value);
       }
       eventCase_ = 353;
       return this;
@@ -15825,7 +16397,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 353;
-      onChanged();
+      onChanged();;
       return omnichannelAgentMessageUnitsEventBuilder_;
     }
 
@@ -15923,9 +16495,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 354) {
           omnichannelManagerMessageUnitsEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelManagerMessageUnitsEventBuilder_.setMessage(value);
         }
+        omnichannelManagerMessageUnitsEventBuilder_.setMessage(value);
       }
       eventCase_ = 354;
       return this;
@@ -16003,7 +16574,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 354;
-      onChanged();
+      onChanged();;
       return omnichannelManagerMessageUnitsEventBuilder_;
     }
 
@@ -16101,9 +16672,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 355) {
           omnichannelCustomerMessageUnitsEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelCustomerMessageUnitsEventBuilder_.setMessage(value);
         }
+        omnichannelCustomerMessageUnitsEventBuilder_.setMessage(value);
       }
       eventCase_ = 355;
       return this;
@@ -16181,7 +16751,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 355;
-      onChanged();
+      onChanged();;
       return omnichannelCustomerMessageUnitsEventBuilder_;
     }
 
@@ -16279,9 +16849,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 356) {
           omnichannelSystemMessageUnitsEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelSystemMessageUnitsEventBuilder_.setMessage(value);
         }
+        omnichannelSystemMessageUnitsEventBuilder_.setMessage(value);
       }
       eventCase_ = 356;
       return this;
@@ -16359,7 +16928,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 356;
-      onChanged();
+      onChanged();;
       return omnichannelSystemMessageUnitsEventBuilder_;
     }
 
@@ -16457,9 +17026,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 357) {
           omnichannelPaymentLinkSentEventBuilder_.mergeFrom(value);
-        } else {
-          omnichannelPaymentLinkSentEventBuilder_.setMessage(value);
         }
+        omnichannelPaymentLinkSentEventBuilder_.setMessage(value);
       }
       eventCase_ = 357;
       return this;
@@ -16537,7 +17105,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 357;
-      onChanged();
+      onChanged();;
       return omnichannelPaymentLinkSentEventBuilder_;
     }
 
@@ -16640,9 +17208,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 400) {
           asmAgentLoginEventBuilder_.mergeFrom(value);
-        } else {
-          asmAgentLoginEventBuilder_.setMessage(value);
         }
+        asmAgentLoginEventBuilder_.setMessage(value);
       }
       eventCase_ = 400;
       return this;
@@ -16724,7 +17291,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 400;
-      onChanged();
+      onChanged();;
       return asmAgentLoginEventBuilder_;
     }
 
@@ -16822,9 +17389,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 401) {
           asmOpenVoiceEventBuilder_.mergeFrom(value);
-        } else {
-          asmOpenVoiceEventBuilder_.setMessage(value);
         }
+        asmOpenVoiceEventBuilder_.setMessage(value);
       }
       eventCase_ = 401;
       return this;
@@ -16902,7 +17468,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 401;
-      onChanged();
+      onChanged();;
       return asmOpenVoiceEventBuilder_;
     }
 
@@ -17000,9 +17566,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 402) {
           asmOpenOmniAgentEventBuilder_.mergeFrom(value);
-        } else {
-          asmOpenOmniAgentEventBuilder_.setMessage(value);
         }
+        asmOpenOmniAgentEventBuilder_.setMessage(value);
       }
       eventCase_ = 402;
       return this;
@@ -17080,7 +17645,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 402;
-      onChanged();
+      onChanged();;
       return asmOpenOmniAgentEventBuilder_;
     }
 
@@ -17178,9 +17743,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 403) {
           asmActivateConversationEventBuilder_.mergeFrom(value);
-        } else {
-          asmActivateConversationEventBuilder_.setMessage(value);
         }
+        asmActivateConversationEventBuilder_.setMessage(value);
       }
       eventCase_ = 403;
       return this;
@@ -17258,7 +17822,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 403;
-      onChanged();
+      onChanged();;
       return asmActivateConversationEventBuilder_;
     }
 
@@ -17356,9 +17920,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 404) {
           asmDeactivateConversationEventBuilder_.mergeFrom(value);
-        } else {
-          asmDeactivateConversationEventBuilder_.setMessage(value);
         }
+        asmDeactivateConversationEventBuilder_.setMessage(value);
       }
       eventCase_ = 404;
       return this;
@@ -17436,7 +17999,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 404;
-      onChanged();
+      onChanged();;
       return asmDeactivateConversationEventBuilder_;
     }
 
@@ -17534,9 +18097,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 405) {
           asmAgentStateChangedEventBuilder_.mergeFrom(value);
-        } else {
-          asmAgentStateChangedEventBuilder_.setMessage(value);
         }
+        asmAgentStateChangedEventBuilder_.setMessage(value);
       }
       eventCase_ = 405;
       return this;
@@ -17614,7 +18176,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 405;
-      onChanged();
+      onChanged();;
       return asmAgentStateChangedEventBuilder_;
     }
 
@@ -17712,9 +18274,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 406) {
           asmAgentLogoutEventBuilder_.mergeFrom(value);
-        } else {
-          asmAgentLogoutEventBuilder_.setMessage(value);
         }
+        asmAgentLogoutEventBuilder_.setMessage(value);
       }
       eventCase_ = 406;
       return this;
@@ -17792,7 +18353,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 406;
-      onChanged();
+      onChanged();;
       return asmAgentLogoutEventBuilder_;
     }
 
@@ -17890,9 +18451,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 407) {
           asmPauseEventBuilder_.mergeFrom(value);
-        } else {
-          asmPauseEventBuilder_.setMessage(value);
         }
+        asmPauseEventBuilder_.setMessage(value);
       }
       eventCase_ = 407;
       return this;
@@ -17970,7 +18530,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 407;
-      onChanged();
+      onChanged();;
       return asmPauseEventBuilder_;
     }
 
@@ -18068,9 +18628,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 408) {
           asmResumeEventBuilder_.mergeFrom(value);
-        } else {
-          asmResumeEventBuilder_.setMessage(value);
         }
+        asmResumeEventBuilder_.setMessage(value);
       }
       eventCase_ = 408;
       return this;
@@ -18148,7 +18707,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 408;
-      onChanged();
+      onChanged();;
       return asmResumeEventBuilder_;
     }
 
@@ -18246,9 +18805,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 409) {
           asmConversationPulledEventBuilder_.mergeFrom(value);
-        } else {
-          asmConversationPulledEventBuilder_.setMessage(value);
         }
+        asmConversationPulledEventBuilder_.setMessage(value);
       }
       eventCase_ = 409;
       return this;
@@ -18326,7 +18884,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 409;
-      onChanged();
+      onChanged();;
       return asmConversationPulledEventBuilder_;
     }
 
@@ -18429,9 +18987,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 500) {
           scorecardsCreateQuestionEventBuilder_.mergeFrom(value);
-        } else {
-          scorecardsCreateQuestionEventBuilder_.setMessage(value);
         }
+        scorecardsCreateQuestionEventBuilder_.setMessage(value);
       }
       eventCase_ = 500;
       return this;
@@ -18513,7 +19070,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 500;
-      onChanged();
+      onChanged();;
       return scorecardsCreateQuestionEventBuilder_;
     }
 
@@ -18611,9 +19168,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 501) {
           scorecardsUpdateQuestionEventBuilder_.mergeFrom(value);
-        } else {
-          scorecardsUpdateQuestionEventBuilder_.setMessage(value);
         }
+        scorecardsUpdateQuestionEventBuilder_.setMessage(value);
       }
       eventCase_ = 501;
       return this;
@@ -18691,7 +19247,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 501;
-      onChanged();
+      onChanged();;
       return scorecardsUpdateQuestionEventBuilder_;
     }
 
@@ -18789,9 +19345,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 502) {
           scorecardsDeleteQuestionEventBuilder_.mergeFrom(value);
-        } else {
-          scorecardsDeleteQuestionEventBuilder_.setMessage(value);
         }
+        scorecardsDeleteQuestionEventBuilder_.setMessage(value);
       }
       eventCase_ = 502;
       return this;
@@ -18869,7 +19424,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 502;
-      onChanged();
+      onChanged();;
       return scorecardsDeleteQuestionEventBuilder_;
     }
 
@@ -18967,9 +19522,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 503) {
           scorecardsCreateScorecardEventBuilder_.mergeFrom(value);
-        } else {
-          scorecardsCreateScorecardEventBuilder_.setMessage(value);
         }
+        scorecardsCreateScorecardEventBuilder_.setMessage(value);
       }
       eventCase_ = 503;
       return this;
@@ -19047,7 +19601,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 503;
-      onChanged();
+      onChanged();;
       return scorecardsCreateScorecardEventBuilder_;
     }
 
@@ -19145,9 +19699,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 504) {
           scorecardsUpdateScorecardEventBuilder_.mergeFrom(value);
-        } else {
-          scorecardsUpdateScorecardEventBuilder_.setMessage(value);
         }
+        scorecardsUpdateScorecardEventBuilder_.setMessage(value);
       }
       eventCase_ = 504;
       return this;
@@ -19225,7 +19778,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 504;
-      onChanged();
+      onChanged();;
       return scorecardsUpdateScorecardEventBuilder_;
     }
 
@@ -19323,9 +19876,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 505) {
           scorecardsDeleteScorecardEventBuilder_.mergeFrom(value);
-        } else {
-          scorecardsDeleteScorecardEventBuilder_.setMessage(value);
         }
+        scorecardsDeleteScorecardEventBuilder_.setMessage(value);
       }
       eventCase_ = 505;
       return this;
@@ -19403,7 +19955,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 505;
-      onChanged();
+      onChanged();;
       return scorecardsDeleteScorecardEventBuilder_;
     }
 
@@ -19501,9 +20053,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 506) {
           scorecardsCloneScorecardEventBuilder_.mergeFrom(value);
-        } else {
-          scorecardsCloneScorecardEventBuilder_.setMessage(value);
         }
+        scorecardsCloneScorecardEventBuilder_.setMessage(value);
       }
       eventCase_ = 506;
       return this;
@@ -19581,7 +20132,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 506;
-      onChanged();
+      onChanged();;
       return scorecardsCloneScorecardEventBuilder_;
     }
 
@@ -19679,9 +20230,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 507) {
           scorecardsCreateEvaluationEventBuilder_.mergeFrom(value);
-        } else {
-          scorecardsCreateEvaluationEventBuilder_.setMessage(value);
         }
+        scorecardsCreateEvaluationEventBuilder_.setMessage(value);
       }
       eventCase_ = 507;
       return this;
@@ -19759,7 +20309,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 507;
-      onChanged();
+      onChanged();;
       return scorecardsCreateEvaluationEventBuilder_;
     }
 
@@ -19857,9 +20407,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 508) {
           scorecardsDeleteEvaluationEventBuilder_.mergeFrom(value);
-        } else {
-          scorecardsDeleteEvaluationEventBuilder_.setMessage(value);
         }
+        scorecardsDeleteEvaluationEventBuilder_.setMessage(value);
       }
       eventCase_ = 508;
       return this;
@@ -19937,7 +20486,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 508;
-      onChanged();
+      onChanged();;
       return scorecardsDeleteEvaluationEventBuilder_;
     }
 
@@ -20035,9 +20584,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 509) {
           scorecardsCreateSectionEventBuilder_.mergeFrom(value);
-        } else {
-          scorecardsCreateSectionEventBuilder_.setMessage(value);
         }
+        scorecardsCreateSectionEventBuilder_.setMessage(value);
       }
       eventCase_ = 509;
       return this;
@@ -20115,7 +20663,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 509;
-      onChanged();
+      onChanged();;
       return scorecardsCreateSectionEventBuilder_;
     }
 
@@ -20213,9 +20761,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 510) {
           scorecardsUpdateSectionEventBuilder_.mergeFrom(value);
-        } else {
-          scorecardsUpdateSectionEventBuilder_.setMessage(value);
         }
+        scorecardsUpdateSectionEventBuilder_.setMessage(value);
       }
       eventCase_ = 510;
       return this;
@@ -20293,7 +20840,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 510;
-      onChanged();
+      onChanged();;
       return scorecardsUpdateSectionEventBuilder_;
     }
 
@@ -20391,9 +20938,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 511) {
           scorecardsDeleteSectionEventBuilder_.mergeFrom(value);
-        } else {
-          scorecardsDeleteSectionEventBuilder_.setMessage(value);
         }
+        scorecardsDeleteSectionEventBuilder_.setMessage(value);
       }
       eventCase_ = 511;
       return this;
@@ -20471,7 +21017,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 511;
-      onChanged();
+      onChanged();;
       return scorecardsDeleteSectionEventBuilder_;
     }
 
@@ -20569,9 +21115,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 512) {
           scorecardsCreateCategoryEventBuilder_.mergeFrom(value);
-        } else {
-          scorecardsCreateCategoryEventBuilder_.setMessage(value);
         }
+        scorecardsCreateCategoryEventBuilder_.setMessage(value);
       }
       eventCase_ = 512;
       return this;
@@ -20649,7 +21194,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 512;
-      onChanged();
+      onChanged();;
       return scorecardsCreateCategoryEventBuilder_;
     }
 
@@ -20747,9 +21292,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 513) {
           scorecardsUpdateCategoryEventBuilder_.mergeFrom(value);
-        } else {
-          scorecardsUpdateCategoryEventBuilder_.setMessage(value);
         }
+        scorecardsUpdateCategoryEventBuilder_.setMessage(value);
       }
       eventCase_ = 513;
       return this;
@@ -20827,7 +21371,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 513;
-      onChanged();
+      onChanged();;
       return scorecardsUpdateCategoryEventBuilder_;
     }
 
@@ -20925,9 +21469,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 514) {
           scorecardsDeleteCategoryEventBuilder_.mergeFrom(value);
-        } else {
-          scorecardsDeleteCategoryEventBuilder_.setMessage(value);
         }
+        scorecardsDeleteCategoryEventBuilder_.setMessage(value);
       }
       eventCase_ = 514;
       return this;
@@ -21005,7 +21548,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 514;
-      onChanged();
+      onChanged();;
       return scorecardsDeleteCategoryEventBuilder_;
     }
 
@@ -21103,9 +21646,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 515) {
           scorecardsCreateEvaluationQuestionEventBuilder_.mergeFrom(value);
-        } else {
-          scorecardsCreateEvaluationQuestionEventBuilder_.setMessage(value);
         }
+        scorecardsCreateEvaluationQuestionEventBuilder_.setMessage(value);
       }
       eventCase_ = 515;
       return this;
@@ -21183,7 +21725,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 515;
-      onChanged();
+      onChanged();;
       return scorecardsCreateEvaluationQuestionEventBuilder_;
     }
 
@@ -21281,9 +21823,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 516) {
           scorecardsUpdateEvaluationQuestionEventBuilder_.mergeFrom(value);
-        } else {
-          scorecardsUpdateEvaluationQuestionEventBuilder_.setMessage(value);
         }
+        scorecardsUpdateEvaluationQuestionEventBuilder_.setMessage(value);
       }
       eventCase_ = 516;
       return this;
@@ -21361,7 +21902,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 516;
-      onChanged();
+      onChanged();;
       return scorecardsUpdateEvaluationQuestionEventBuilder_;
     }
 
@@ -21459,9 +22000,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 517) {
           scorecardsDeleteEvaluationQuestionEventBuilder_.mergeFrom(value);
-        } else {
-          scorecardsDeleteEvaluationQuestionEventBuilder_.setMessage(value);
         }
+        scorecardsDeleteEvaluationQuestionEventBuilder_.setMessage(value);
       }
       eventCase_ = 517;
       return this;
@@ -21539,7 +22079,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 517;
-      onChanged();
+      onChanged();;
       return scorecardsDeleteEvaluationQuestionEventBuilder_;
     }
 
@@ -21637,9 +22177,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 518) {
           scorecardsCreateScorecardQuestionEventBuilder_.mergeFrom(value);
-        } else {
-          scorecardsCreateScorecardQuestionEventBuilder_.setMessage(value);
         }
+        scorecardsCreateScorecardQuestionEventBuilder_.setMessage(value);
       }
       eventCase_ = 518;
       return this;
@@ -21717,7 +22256,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 518;
-      onChanged();
+      onChanged();;
       return scorecardsCreateScorecardQuestionEventBuilder_;
     }
 
@@ -21815,9 +22354,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 519) {
           scorecardsUpdateScorecardQuestionEventBuilder_.mergeFrom(value);
-        } else {
-          scorecardsUpdateScorecardQuestionEventBuilder_.setMessage(value);
         }
+        scorecardsUpdateScorecardQuestionEventBuilder_.setMessage(value);
       }
       eventCase_ = 519;
       return this;
@@ -21895,7 +22433,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 519;
-      onChanged();
+      onChanged();;
       return scorecardsUpdateScorecardQuestionEventBuilder_;
     }
 
@@ -21993,9 +22531,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 520) {
           scorecardsDeleteScorecardQuestionEventBuilder_.mergeFrom(value);
-        } else {
-          scorecardsDeleteScorecardQuestionEventBuilder_.setMessage(value);
         }
+        scorecardsDeleteScorecardQuestionEventBuilder_.setMessage(value);
       }
       eventCase_ = 520;
       return this;
@@ -22073,7 +22610,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 520;
-      onChanged();
+      onChanged();;
       return scorecardsDeleteScorecardQuestionEventBuilder_;
     }
 
@@ -22171,9 +22708,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 521) {
           scorecardsCreateAutoEvaluationEventBuilder_.mergeFrom(value);
-        } else {
-          scorecardsCreateAutoEvaluationEventBuilder_.setMessage(value);
         }
+        scorecardsCreateAutoEvaluationEventBuilder_.setMessage(value);
       }
       eventCase_ = 521;
       return this;
@@ -22251,7 +22787,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 521;
-      onChanged();
+      onChanged();;
       return scorecardsCreateAutoEvaluationEventBuilder_;
     }
 
@@ -22349,9 +22885,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 522) {
           scorecardsUpdateEvaluationEventBuilder_.mergeFrom(value);
-        } else {
-          scorecardsUpdateEvaluationEventBuilder_.setMessage(value);
         }
+        scorecardsUpdateEvaluationEventBuilder_.setMessage(value);
       }
       eventCase_ = 522;
       return this;
@@ -22429,7 +22964,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 522;
-      onChanged();
+      onChanged();;
       return scorecardsUpdateEvaluationEventBuilder_;
     }
 
@@ -22532,9 +23067,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 601) {
           ticketEventBuilder_.mergeFrom(value);
-        } else {
-          ticketEventBuilder_.setMessage(value);
         }
+        ticketEventBuilder_.setMessage(value);
       }
       eventCase_ = 601;
       return this;
@@ -22616,7 +23150,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 601;
-      onChanged();
+      onChanged();;
       return ticketEventBuilder_;
     }
 
@@ -22719,9 +23253,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 700) {
           complianceRndQueryEventBuilder_.mergeFrom(value);
-        } else {
-          complianceRndQueryEventBuilder_.setMessage(value);
         }
+        complianceRndQueryEventBuilder_.setMessage(value);
       }
       eventCase_ = 700;
       return this;
@@ -22803,7 +23336,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 700;
-      onChanged();
+      onChanged();;
       return complianceRndQueryEventBuilder_;
     }
 
@@ -22901,9 +23434,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 701) {
           complianceRndQueryCachedEventBuilder_.mergeFrom(value);
-        } else {
-          complianceRndQueryCachedEventBuilder_.setMessage(value);
         }
+        complianceRndQueryCachedEventBuilder_.setMessage(value);
       }
       eventCase_ = 701;
       return this;
@@ -22981,7 +23513,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 701;
-      onChanged();
+      onChanged();;
       return complianceRndQueryCachedEventBuilder_;
     }
     @java.lang.Override
@@ -23017,18 +23549,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new AuditEvent(input, extensionRegistry);
     }
   };
 

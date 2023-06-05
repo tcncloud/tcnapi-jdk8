@@ -26,6 +26,106 @@ private static final long serialVersionUID = 0L;
     return new InboundEmailTemplate();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private InboundEmailTemplate(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (inboundEmailTemplateId_ != null) {
+              subBuilder = inboundEmailTemplateId_.toBuilder();
+            }
+            inboundEmailTemplateId_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(inboundEmailTemplateId_);
+              inboundEmailTemplateId_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 18: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (connectedInboxId_ != null) {
+              subBuilder = connectedInboxId_.toBuilder();
+            }
+            connectedInboxId_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(connectedInboxId_);
+              connectedInboxId_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 42: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            name_ = s;
+            break;
+          }
+          case 58: {
+            com.google.protobuf.Timestamp.Builder subBuilder = null;
+            if (lastUpdated_ != null) {
+              subBuilder = lastUpdated_.toBuilder();
+            }
+            lastUpdated_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(lastUpdated_);
+              lastUpdated_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 66: {
+            com.tcn.cloud.api.api.v0alpha.EmailConversationSkills.Builder subBuilder = null;
+            if (skills_ != null) {
+              subBuilder = skills_.toBuilder();
+            }
+            skills_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.EmailConversationSkills.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(skills_);
+              skills_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.EmailapiProto.internal_static_api_v0alpha_InboundEmailTemplate_descriptor;
@@ -62,7 +162,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getInboundEmailTemplateIdOrBuilder() {
-    return inboundEmailTemplateId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : inboundEmailTemplateId_;
+    return getInboundEmailTemplateId();
   }
 
   public static final int CONNECTED_INBOX_ID_FIELD_NUMBER = 2;
@@ -88,12 +188,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getConnectedInboxIdOrBuilder() {
-    return connectedInboxId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : connectedInboxId_;
+    return getConnectedInboxId();
   }
 
   public static final int NAME_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object name_ = "";
+  private volatile java.lang.Object name_;
   /**
    * <code>string name = 5 [json_name = "name"];</code>
    * @return The name.
@@ -153,7 +252,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getLastUpdatedOrBuilder() {
-    return lastUpdated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastUpdated_;
+    return getLastUpdated();
   }
 
   public static final int SKILLS_FIELD_NUMBER = 8;
@@ -179,7 +278,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.EmailConversationSkillsOrBuilder getSkillsOrBuilder() {
-    return skills_ == null ? com.tcn.cloud.api.api.v0alpha.EmailConversationSkills.getDefaultInstance() : skills_;
+    return getSkills();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -202,7 +301,7 @@ private static final long serialVersionUID = 0L;
     if (connectedInboxId_ != null) {
       output.writeMessage(2, getConnectedInboxId());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+    if (!getNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, name_);
     }
     if (lastUpdated_ != null) {
@@ -211,7 +310,7 @@ private static final long serialVersionUID = 0L;
     if (skills_ != null) {
       output.writeMessage(8, getSkills());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -228,7 +327,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getConnectedInboxId());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+    if (!getNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, name_);
     }
     if (lastUpdated_ != null) {
@@ -239,7 +338,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getSkills());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -276,7 +375,7 @@ private static final long serialVersionUID = 0L;
       if (!getSkills()
           .equals(other.getSkills())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -305,7 +404,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SKILLS_FIELD_NUMBER;
       hash = (53 * hash) + getSkills().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -354,13 +453,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.InboundEmailTemplate parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.InboundEmailTemplate parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -424,37 +521,46 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.InboundEmailTemplate.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      inboundEmailTemplateId_ = null;
-      if (inboundEmailTemplateIdBuilder_ != null) {
-        inboundEmailTemplateIdBuilder_.dispose();
+      if (inboundEmailTemplateIdBuilder_ == null) {
+        inboundEmailTemplateId_ = null;
+      } else {
+        inboundEmailTemplateId_ = null;
         inboundEmailTemplateIdBuilder_ = null;
       }
-      connectedInboxId_ = null;
-      if (connectedInboxIdBuilder_ != null) {
-        connectedInboxIdBuilder_.dispose();
+      if (connectedInboxIdBuilder_ == null) {
+        connectedInboxId_ = null;
+      } else {
+        connectedInboxId_ = null;
         connectedInboxIdBuilder_ = null;
       }
       name_ = "";
-      lastUpdated_ = null;
-      if (lastUpdatedBuilder_ != null) {
-        lastUpdatedBuilder_.dispose();
+
+      if (lastUpdatedBuilder_ == null) {
+        lastUpdated_ = null;
+      } else {
+        lastUpdated_ = null;
         lastUpdatedBuilder_ = null;
       }
-      skills_ = null;
-      if (skillsBuilder_ != null) {
-        skillsBuilder_.dispose();
+      if (skillsBuilder_ == null) {
+        skills_ = null;
+      } else {
+        skills_ = null;
         skillsBuilder_ = null;
       }
       return this;
@@ -483,36 +589,29 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.InboundEmailTemplate buildPartial() {
       com.tcn.cloud.api.api.v0alpha.InboundEmailTemplate result = new com.tcn.cloud.api.api.v0alpha.InboundEmailTemplate(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      if (inboundEmailTemplateIdBuilder_ == null) {
+        result.inboundEmailTemplateId_ = inboundEmailTemplateId_;
+      } else {
+        result.inboundEmailTemplateId_ = inboundEmailTemplateIdBuilder_.build();
+      }
+      if (connectedInboxIdBuilder_ == null) {
+        result.connectedInboxId_ = connectedInboxId_;
+      } else {
+        result.connectedInboxId_ = connectedInboxIdBuilder_.build();
+      }
+      result.name_ = name_;
+      if (lastUpdatedBuilder_ == null) {
+        result.lastUpdated_ = lastUpdated_;
+      } else {
+        result.lastUpdated_ = lastUpdatedBuilder_.build();
+      }
+      if (skillsBuilder_ == null) {
+        result.skills_ = skills_;
+      } else {
+        result.skills_ = skillsBuilder_.build();
+      }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.InboundEmailTemplate result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.inboundEmailTemplateId_ = inboundEmailTemplateIdBuilder_ == null
-            ? inboundEmailTemplateId_
-            : inboundEmailTemplateIdBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.connectedInboxId_ = connectedInboxIdBuilder_ == null
-            ? connectedInboxId_
-            : connectedInboxIdBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.name_ = name_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.lastUpdated_ = lastUpdatedBuilder_ == null
-            ? lastUpdated_
-            : lastUpdatedBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.skills_ = skillsBuilder_ == null
-            ? skills_
-            : skillsBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -567,7 +666,6 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
-        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.hasLastUpdated()) {
@@ -576,7 +674,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasSkills()) {
         mergeSkills(other.getSkills());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -591,66 +689,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.InboundEmailTemplate parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              input.readMessage(
-                  getInboundEmailTemplateIdFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              input.readMessage(
-                  getConnectedInboxIdFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 42: {
-              name_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 42
-            case 58: {
-              input.readMessage(
-                  getLastUpdatedFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 58
-            case 66: {
-              input.readMessage(
-                  getSkillsFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 66
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.InboundEmailTemplate) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private com.google.protobuf.StringValue inboundEmailTemplateId_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -660,7 +711,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the inboundEmailTemplateId field is set.
      */
     public boolean hasInboundEmailTemplateId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return inboundEmailTemplateIdBuilder_ != null || inboundEmailTemplateId_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue inbound_email_template_id = 1 [json_name = "inboundEmailTemplateId"];</code>
@@ -682,11 +733,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         inboundEmailTemplateId_ = value;
+        onChanged();
       } else {
         inboundEmailTemplateIdBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -696,11 +747,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue.Builder builderForValue) {
       if (inboundEmailTemplateIdBuilder_ == null) {
         inboundEmailTemplateId_ = builderForValue.build();
+        onChanged();
       } else {
         inboundEmailTemplateIdBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -708,38 +759,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeInboundEmailTemplateId(com.google.protobuf.StringValue value) {
       if (inboundEmailTemplateIdBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          inboundEmailTemplateId_ != null &&
-          inboundEmailTemplateId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
-          getInboundEmailTemplateIdBuilder().mergeFrom(value);
+        if (inboundEmailTemplateId_ != null) {
+          inboundEmailTemplateId_ =
+            com.google.protobuf.StringValue.newBuilder(inboundEmailTemplateId_).mergeFrom(value).buildPartial();
         } else {
           inboundEmailTemplateId_ = value;
         }
+        onChanged();
       } else {
         inboundEmailTemplateIdBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.StringValue inbound_email_template_id = 1 [json_name = "inboundEmailTemplateId"];</code>
      */
     public Builder clearInboundEmailTemplateId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      inboundEmailTemplateId_ = null;
-      if (inboundEmailTemplateIdBuilder_ != null) {
-        inboundEmailTemplateIdBuilder_.dispose();
+      if (inboundEmailTemplateIdBuilder_ == null) {
+        inboundEmailTemplateId_ = null;
+        onChanged();
+      } else {
+        inboundEmailTemplateId_ = null;
         inboundEmailTemplateIdBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.StringValue inbound_email_template_id = 1 [json_name = "inboundEmailTemplateId"];</code>
      */
     public com.google.protobuf.StringValue.Builder getInboundEmailTemplateIdBuilder() {
-      bitField0_ |= 0x00000001;
+      
       onChanged();
       return getInboundEmailTemplateIdFieldBuilder().getBuilder();
     }
@@ -779,7 +830,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the connectedInboxId field is set.
      */
     public boolean hasConnectedInboxId() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return connectedInboxIdBuilder_ != null || connectedInboxId_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue connected_inbox_id = 2 [json_name = "connectedInboxId"];</code>
@@ -801,11 +852,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         connectedInboxId_ = value;
+        onChanged();
       } else {
         connectedInboxIdBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -815,11 +866,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue.Builder builderForValue) {
       if (connectedInboxIdBuilder_ == null) {
         connectedInboxId_ = builderForValue.build();
+        onChanged();
       } else {
         connectedInboxIdBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -827,38 +878,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeConnectedInboxId(com.google.protobuf.StringValue value) {
       if (connectedInboxIdBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
-          connectedInboxId_ != null &&
-          connectedInboxId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
-          getConnectedInboxIdBuilder().mergeFrom(value);
+        if (connectedInboxId_ != null) {
+          connectedInboxId_ =
+            com.google.protobuf.StringValue.newBuilder(connectedInboxId_).mergeFrom(value).buildPartial();
         } else {
           connectedInboxId_ = value;
         }
+        onChanged();
       } else {
         connectedInboxIdBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.StringValue connected_inbox_id = 2 [json_name = "connectedInboxId"];</code>
      */
     public Builder clearConnectedInboxId() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      connectedInboxId_ = null;
-      if (connectedInboxIdBuilder_ != null) {
-        connectedInboxIdBuilder_.dispose();
+      if (connectedInboxIdBuilder_ == null) {
+        connectedInboxId_ = null;
+        onChanged();
+      } else {
+        connectedInboxId_ = null;
         connectedInboxIdBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.StringValue connected_inbox_id = 2 [json_name = "connectedInboxId"];</code>
      */
     public com.google.protobuf.StringValue.Builder getConnectedInboxIdBuilder() {
-      bitField0_ |= 0x00000002;
+      
       onChanged();
       return getConnectedInboxIdFieldBuilder().getBuilder();
     }
@@ -931,9 +982,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       name_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -942,8 +995,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
+      
       name_ = getDefaultInstance().getName();
-      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -954,10 +1007,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       name_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -970,7 +1025,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the lastUpdated field is set.
      */
     public boolean hasLastUpdated() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return lastUpdatedBuilder_ != null || lastUpdated_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp last_updated = 7 [json_name = "lastUpdated"];</code>
@@ -992,11 +1047,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         lastUpdated_ = value;
+        onChanged();
       } else {
         lastUpdatedBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
@@ -1006,11 +1061,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (lastUpdatedBuilder_ == null) {
         lastUpdated_ = builderForValue.build();
+        onChanged();
       } else {
         lastUpdatedBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
@@ -1018,38 +1073,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeLastUpdated(com.google.protobuf.Timestamp value) {
       if (lastUpdatedBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0) &&
-          lastUpdated_ != null &&
-          lastUpdated_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getLastUpdatedBuilder().mergeFrom(value);
+        if (lastUpdated_ != null) {
+          lastUpdated_ =
+            com.google.protobuf.Timestamp.newBuilder(lastUpdated_).mergeFrom(value).buildPartial();
         } else {
           lastUpdated_ = value;
         }
+        onChanged();
       } else {
         lastUpdatedBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp last_updated = 7 [json_name = "lastUpdated"];</code>
      */
     public Builder clearLastUpdated() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      lastUpdated_ = null;
-      if (lastUpdatedBuilder_ != null) {
-        lastUpdatedBuilder_.dispose();
+      if (lastUpdatedBuilder_ == null) {
+        lastUpdated_ = null;
+        onChanged();
+      } else {
+        lastUpdated_ = null;
         lastUpdatedBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp last_updated = 7 [json_name = "lastUpdated"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getLastUpdatedBuilder() {
-      bitField0_ |= 0x00000008;
+      
       onChanged();
       return getLastUpdatedFieldBuilder().getBuilder();
     }
@@ -1089,7 +1144,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the skills field is set.
      */
     public boolean hasSkills() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return skillsBuilder_ != null || skills_ != null;
     }
     /**
      * <code>.api.v0alpha.EmailConversationSkills skills = 8 [json_name = "skills"];</code>
@@ -1111,11 +1166,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         skills_ = value;
+        onChanged();
       } else {
         skillsBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
@@ -1125,11 +1180,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.EmailConversationSkills.Builder builderForValue) {
       if (skillsBuilder_ == null) {
         skills_ = builderForValue.build();
+        onChanged();
       } else {
         skillsBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
@@ -1137,38 +1192,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeSkills(com.tcn.cloud.api.api.v0alpha.EmailConversationSkills value) {
       if (skillsBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0) &&
-          skills_ != null &&
-          skills_ != com.tcn.cloud.api.api.v0alpha.EmailConversationSkills.getDefaultInstance()) {
-          getSkillsBuilder().mergeFrom(value);
+        if (skills_ != null) {
+          skills_ =
+            com.tcn.cloud.api.api.v0alpha.EmailConversationSkills.newBuilder(skills_).mergeFrom(value).buildPartial();
         } else {
           skills_ = value;
         }
+        onChanged();
       } else {
         skillsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.EmailConversationSkills skills = 8 [json_name = "skills"];</code>
      */
     public Builder clearSkills() {
-      bitField0_ = (bitField0_ & ~0x00000010);
-      skills_ = null;
-      if (skillsBuilder_ != null) {
-        skillsBuilder_.dispose();
+      if (skillsBuilder_ == null) {
+        skills_ = null;
+        onChanged();
+      } else {
+        skills_ = null;
         skillsBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.EmailConversationSkills skills = 8 [json_name = "skills"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.EmailConversationSkills.Builder getSkillsBuilder() {
-      bitField0_ |= 0x00000010;
+      
       onChanged();
       return getSkillsFieldBuilder().getBuilder();
     }
@@ -1232,18 +1287,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new InboundEmailTemplate(input, extensionRegistry);
     }
   };
 

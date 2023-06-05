@@ -25,6 +25,202 @@ private static final long serialVersionUID = 0L;
     return new Selector();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private Selector(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            com.tcn.cloud.api.api.commons.TimeExp.Builder subBuilder = null;
+            if (selectionRuleCase_ == 1) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.TimeExp) selectionRule_).toBuilder();
+            }
+            selectionRule_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.TimeExp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.TimeExp) selectionRule_);
+              selectionRule_ = subBuilder.buildPartial();
+            }
+            selectionRuleCase_ = 1;
+            break;
+          }
+          case 18: {
+            com.tcn.cloud.api.api.commons.WeekdayExp.Builder subBuilder = null;
+            if (selectionRuleCase_ == 2) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.WeekdayExp) selectionRule_).toBuilder();
+            }
+            selectionRule_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.WeekdayExp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.WeekdayExp) selectionRule_);
+              selectionRule_ = subBuilder.buildPartial();
+            }
+            selectionRuleCase_ = 2;
+            break;
+          }
+          case 26: {
+            com.tcn.cloud.api.api.commons.DnclExp.Builder subBuilder = null;
+            if (selectionRuleCase_ == 3) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.DnclExp) selectionRule_).toBuilder();
+            }
+            selectionRule_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.DnclExp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.DnclExp) selectionRule_);
+              selectionRule_ = subBuilder.buildPartial();
+            }
+            selectionRuleCase_ = 3;
+            break;
+          }
+          case 34: {
+            com.tcn.cloud.api.api.commons.FrequencyExp.Builder subBuilder = null;
+            if (selectionRuleCase_ == 4) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.FrequencyExp) selectionRule_).toBuilder();
+            }
+            selectionRule_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.FrequencyExp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.FrequencyExp) selectionRule_);
+              selectionRule_ = subBuilder.buildPartial();
+            }
+            selectionRuleCase_ = 4;
+            break;
+          }
+          case 42: {
+            com.tcn.cloud.api.api.commons.LocationExp.Builder subBuilder = null;
+            if (selectionRuleCase_ == 5) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.LocationExp) selectionRule_).toBuilder();
+            }
+            selectionRule_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.LocationExp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.LocationExp) selectionRule_);
+              selectionRule_ = subBuilder.buildPartial();
+            }
+            selectionRuleCase_ = 5;
+            break;
+          }
+          case 50: {
+            com.tcn.cloud.api.api.commons.PhoneTypeExp.Builder subBuilder = null;
+            if (selectionRuleCase_ == 6) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.PhoneTypeExp) selectionRule_).toBuilder();
+            }
+            selectionRule_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.PhoneTypeExp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.PhoneTypeExp) selectionRule_);
+              selectionRule_ = subBuilder.buildPartial();
+            }
+            selectionRuleCase_ = 6;
+            break;
+          }
+          case 58: {
+            com.tcn.cloud.api.api.commons.MonthExp.Builder subBuilder = null;
+            if (selectionRuleCase_ == 7) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.MonthExp) selectionRule_).toBuilder();
+            }
+            selectionRule_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.MonthExp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.MonthExp) selectionRule_);
+              selectionRule_ = subBuilder.buildPartial();
+            }
+            selectionRuleCase_ = 7;
+            break;
+          }
+          case 66: {
+            com.tcn.cloud.api.api.commons.DateExp.Builder subBuilder = null;
+            if (selectionRuleCase_ == 8) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.DateExp) selectionRule_).toBuilder();
+            }
+            selectionRule_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.DateExp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.DateExp) selectionRule_);
+              selectionRule_ = subBuilder.buildPartial();
+            }
+            selectionRuleCase_ = 8;
+            break;
+          }
+          case 74: {
+            com.tcn.cloud.api.api.commons.HolidayExp.Builder subBuilder = null;
+            if (selectionRuleCase_ == 9) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.HolidayExp) selectionRule_).toBuilder();
+            }
+            selectionRule_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.HolidayExp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.HolidayExp) selectionRule_);
+              selectionRule_ = subBuilder.buildPartial();
+            }
+            selectionRuleCase_ = 9;
+            break;
+          }
+          case 82: {
+            com.tcn.cloud.api.api.commons.MetaFieldExp.Builder subBuilder = null;
+            if (selectionRuleCase_ == 10) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.MetaFieldExp) selectionRule_).toBuilder();
+            }
+            selectionRule_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.MetaFieldExp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.MetaFieldExp) selectionRule_);
+              selectionRule_ = subBuilder.buildPartial();
+            }
+            selectionRuleCase_ = 10;
+            break;
+          }
+          case 90: {
+            com.tcn.cloud.api.api.commons.PluginExp.Builder subBuilder = null;
+            if (selectionRuleCase_ == 11) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.PluginExp) selectionRule_).toBuilder();
+            }
+            selectionRule_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.PluginExp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.PluginExp) selectionRule_);
+              selectionRule_ = subBuilder.buildPartial();
+            }
+            selectionRuleCase_ = 11;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.ComplianceProto.internal_static_api_commons_Selector_descriptor;
@@ -39,7 +235,6 @@ private static final long serialVersionUID = 0L;
   }
 
   private int selectionRuleCase_ = 0;
-  @SuppressWarnings("serial")
   private java.lang.Object selectionRule_;
   public enum SelectionRuleCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -486,7 +681,7 @@ private static final long serialVersionUID = 0L;
     if (selectionRuleCase_ == 11) {
       output.writeMessage(11, (com.tcn.cloud.api.api.commons.PluginExp) selectionRule_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -539,7 +734,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, (com.tcn.cloud.api.api.commons.PluginExp) selectionRule_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -603,7 +798,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -662,7 +857,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -711,13 +906,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.commons.Selector parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.commons.Selector parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -781,51 +974,22 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.Selector.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      if (timeBuilder_ != null) {
-        timeBuilder_.clear();
-      }
-      if (weekBuilder_ != null) {
-        weekBuilder_.clear();
-      }
-      if (dnclBuilder_ != null) {
-        dnclBuilder_.clear();
-      }
-      if (frequencyBuilder_ != null) {
-        frequencyBuilder_.clear();
-      }
-      if (locationBuilder_ != null) {
-        locationBuilder_.clear();
-      }
-      if (phoneTypeBuilder_ != null) {
-        phoneTypeBuilder_.clear();
-      }
-      if (monthBuilder_ != null) {
-        monthBuilder_.clear();
-      }
-      if (dateBuilder_ != null) {
-        dateBuilder_.clear();
-      }
-      if (holidayBuilder_ != null) {
-        holidayBuilder_.clear();
-      }
-      if (metaBuilder_ != null) {
-        metaBuilder_.clear();
-      }
-      if (pluginBuilder_ != null) {
-        pluginBuilder_.clear();
-      }
       selectionRuleCase_ = 0;
       selectionRule_ = null;
       return this;
@@ -854,63 +1018,86 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.Selector buildPartial() {
       com.tcn.cloud.api.api.commons.Selector result = new com.tcn.cloud.api.api.commons.Selector(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      buildPartialOneofs(result);
+      if (selectionRuleCase_ == 1) {
+        if (timeBuilder_ == null) {
+          result.selectionRule_ = selectionRule_;
+        } else {
+          result.selectionRule_ = timeBuilder_.build();
+        }
+      }
+      if (selectionRuleCase_ == 2) {
+        if (weekBuilder_ == null) {
+          result.selectionRule_ = selectionRule_;
+        } else {
+          result.selectionRule_ = weekBuilder_.build();
+        }
+      }
+      if (selectionRuleCase_ == 3) {
+        if (dnclBuilder_ == null) {
+          result.selectionRule_ = selectionRule_;
+        } else {
+          result.selectionRule_ = dnclBuilder_.build();
+        }
+      }
+      if (selectionRuleCase_ == 4) {
+        if (frequencyBuilder_ == null) {
+          result.selectionRule_ = selectionRule_;
+        } else {
+          result.selectionRule_ = frequencyBuilder_.build();
+        }
+      }
+      if (selectionRuleCase_ == 5) {
+        if (locationBuilder_ == null) {
+          result.selectionRule_ = selectionRule_;
+        } else {
+          result.selectionRule_ = locationBuilder_.build();
+        }
+      }
+      if (selectionRuleCase_ == 6) {
+        if (phoneTypeBuilder_ == null) {
+          result.selectionRule_ = selectionRule_;
+        } else {
+          result.selectionRule_ = phoneTypeBuilder_.build();
+        }
+      }
+      if (selectionRuleCase_ == 7) {
+        if (monthBuilder_ == null) {
+          result.selectionRule_ = selectionRule_;
+        } else {
+          result.selectionRule_ = monthBuilder_.build();
+        }
+      }
+      if (selectionRuleCase_ == 8) {
+        if (dateBuilder_ == null) {
+          result.selectionRule_ = selectionRule_;
+        } else {
+          result.selectionRule_ = dateBuilder_.build();
+        }
+      }
+      if (selectionRuleCase_ == 9) {
+        if (holidayBuilder_ == null) {
+          result.selectionRule_ = selectionRule_;
+        } else {
+          result.selectionRule_ = holidayBuilder_.build();
+        }
+      }
+      if (selectionRuleCase_ == 10) {
+        if (metaBuilder_ == null) {
+          result.selectionRule_ = selectionRule_;
+        } else {
+          result.selectionRule_ = metaBuilder_.build();
+        }
+      }
+      if (selectionRuleCase_ == 11) {
+        if (pluginBuilder_ == null) {
+          result.selectionRule_ = selectionRule_;
+        } else {
+          result.selectionRule_ = pluginBuilder_.build();
+        }
+      }
+      result.selectionRuleCase_ = selectionRuleCase_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.commons.Selector result) {
-      int from_bitField0_ = bitField0_;
-    }
-
-    private void buildPartialOneofs(com.tcn.cloud.api.api.commons.Selector result) {
-      result.selectionRuleCase_ = selectionRuleCase_;
-      result.selectionRule_ = this.selectionRule_;
-      if (selectionRuleCase_ == 1 &&
-          timeBuilder_ != null) {
-        result.selectionRule_ = timeBuilder_.build();
-      }
-      if (selectionRuleCase_ == 2 &&
-          weekBuilder_ != null) {
-        result.selectionRule_ = weekBuilder_.build();
-      }
-      if (selectionRuleCase_ == 3 &&
-          dnclBuilder_ != null) {
-        result.selectionRule_ = dnclBuilder_.build();
-      }
-      if (selectionRuleCase_ == 4 &&
-          frequencyBuilder_ != null) {
-        result.selectionRule_ = frequencyBuilder_.build();
-      }
-      if (selectionRuleCase_ == 5 &&
-          locationBuilder_ != null) {
-        result.selectionRule_ = locationBuilder_.build();
-      }
-      if (selectionRuleCase_ == 6 &&
-          phoneTypeBuilder_ != null) {
-        result.selectionRule_ = phoneTypeBuilder_.build();
-      }
-      if (selectionRuleCase_ == 7 &&
-          monthBuilder_ != null) {
-        result.selectionRule_ = monthBuilder_.build();
-      }
-      if (selectionRuleCase_ == 8 &&
-          dateBuilder_ != null) {
-        result.selectionRule_ = dateBuilder_.build();
-      }
-      if (selectionRuleCase_ == 9 &&
-          holidayBuilder_ != null) {
-        result.selectionRule_ = holidayBuilder_.build();
-      }
-      if (selectionRuleCase_ == 10 &&
-          metaBuilder_ != null) {
-        result.selectionRule_ = metaBuilder_.build();
-      }
-      if (selectionRuleCase_ == 11 &&
-          pluginBuilder_ != null) {
-        result.selectionRule_ = pluginBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -1006,7 +1193,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -1021,107 +1208,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.commons.Selector parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              input.readMessage(
-                  getTimeFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              selectionRuleCase_ = 1;
-              break;
-            } // case 10
-            case 18: {
-              input.readMessage(
-                  getWeekFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              selectionRuleCase_ = 2;
-              break;
-            } // case 18
-            case 26: {
-              input.readMessage(
-                  getDnclFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              selectionRuleCase_ = 3;
-              break;
-            } // case 26
-            case 34: {
-              input.readMessage(
-                  getFrequencyFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              selectionRuleCase_ = 4;
-              break;
-            } // case 34
-            case 42: {
-              input.readMessage(
-                  getLocationFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              selectionRuleCase_ = 5;
-              break;
-            } // case 42
-            case 50: {
-              input.readMessage(
-                  getPhoneTypeFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              selectionRuleCase_ = 6;
-              break;
-            } // case 50
-            case 58: {
-              input.readMessage(
-                  getMonthFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              selectionRuleCase_ = 7;
-              break;
-            } // case 58
-            case 66: {
-              input.readMessage(
-                  getDateFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              selectionRuleCase_ = 8;
-              break;
-            } // case 66
-            case 74: {
-              input.readMessage(
-                  getHolidayFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              selectionRuleCase_ = 9;
-              break;
-            } // case 74
-            case 82: {
-              input.readMessage(
-                  getMetaFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              selectionRuleCase_ = 10;
-              break;
-            } // case 82
-            case 90: {
-              input.readMessage(
-                  getPluginFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              selectionRuleCase_ = 11;
-              break;
-            } // case 90
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.commons.Selector) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int selectionRuleCase_ = 0;
@@ -1139,7 +1236,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int bitField0_;
 
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.commons.TimeExp, com.tcn.cloud.api.api.commons.TimeExp.Builder, com.tcn.cloud.api.api.commons.TimeExpOrBuilder> timeBuilder_;
@@ -1215,9 +1311,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (selectionRuleCase_ == 1) {
           timeBuilder_.mergeFrom(value);
-        } else {
-          timeBuilder_.setMessage(value);
         }
+        timeBuilder_.setMessage(value);
       }
       selectionRuleCase_ = 1;
       return this;
@@ -1279,7 +1374,7 @@ private static final long serialVersionUID = 0L;
         selectionRule_ = null;
       }
       selectionRuleCase_ = 1;
-      onChanged();
+      onChanged();;
       return timeBuilder_;
     }
 
@@ -1357,9 +1452,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (selectionRuleCase_ == 2) {
           weekBuilder_.mergeFrom(value);
-        } else {
-          weekBuilder_.setMessage(value);
         }
+        weekBuilder_.setMessage(value);
       }
       selectionRuleCase_ = 2;
       return this;
@@ -1421,7 +1515,7 @@ private static final long serialVersionUID = 0L;
         selectionRule_ = null;
       }
       selectionRuleCase_ = 2;
-      onChanged();
+      onChanged();;
       return weekBuilder_;
     }
 
@@ -1499,9 +1593,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (selectionRuleCase_ == 3) {
           dnclBuilder_.mergeFrom(value);
-        } else {
-          dnclBuilder_.setMessage(value);
         }
+        dnclBuilder_.setMessage(value);
       }
       selectionRuleCase_ = 3;
       return this;
@@ -1563,7 +1656,7 @@ private static final long serialVersionUID = 0L;
         selectionRule_ = null;
       }
       selectionRuleCase_ = 3;
-      onChanged();
+      onChanged();;
       return dnclBuilder_;
     }
 
@@ -1641,9 +1734,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (selectionRuleCase_ == 4) {
           frequencyBuilder_.mergeFrom(value);
-        } else {
-          frequencyBuilder_.setMessage(value);
         }
+        frequencyBuilder_.setMessage(value);
       }
       selectionRuleCase_ = 4;
       return this;
@@ -1705,7 +1797,7 @@ private static final long serialVersionUID = 0L;
         selectionRule_ = null;
       }
       selectionRuleCase_ = 4;
-      onChanged();
+      onChanged();;
       return frequencyBuilder_;
     }
 
@@ -1783,9 +1875,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (selectionRuleCase_ == 5) {
           locationBuilder_.mergeFrom(value);
-        } else {
-          locationBuilder_.setMessage(value);
         }
+        locationBuilder_.setMessage(value);
       }
       selectionRuleCase_ = 5;
       return this;
@@ -1847,7 +1938,7 @@ private static final long serialVersionUID = 0L;
         selectionRule_ = null;
       }
       selectionRuleCase_ = 5;
-      onChanged();
+      onChanged();;
       return locationBuilder_;
     }
 
@@ -1925,9 +2016,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (selectionRuleCase_ == 6) {
           phoneTypeBuilder_.mergeFrom(value);
-        } else {
-          phoneTypeBuilder_.setMessage(value);
         }
+        phoneTypeBuilder_.setMessage(value);
       }
       selectionRuleCase_ = 6;
       return this;
@@ -1989,7 +2079,7 @@ private static final long serialVersionUID = 0L;
         selectionRule_ = null;
       }
       selectionRuleCase_ = 6;
-      onChanged();
+      onChanged();;
       return phoneTypeBuilder_;
     }
 
@@ -2067,9 +2157,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (selectionRuleCase_ == 7) {
           monthBuilder_.mergeFrom(value);
-        } else {
-          monthBuilder_.setMessage(value);
         }
+        monthBuilder_.setMessage(value);
       }
       selectionRuleCase_ = 7;
       return this;
@@ -2131,7 +2220,7 @@ private static final long serialVersionUID = 0L;
         selectionRule_ = null;
       }
       selectionRuleCase_ = 7;
-      onChanged();
+      onChanged();;
       return monthBuilder_;
     }
 
@@ -2209,9 +2298,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (selectionRuleCase_ == 8) {
           dateBuilder_.mergeFrom(value);
-        } else {
-          dateBuilder_.setMessage(value);
         }
+        dateBuilder_.setMessage(value);
       }
       selectionRuleCase_ = 8;
       return this;
@@ -2273,7 +2361,7 @@ private static final long serialVersionUID = 0L;
         selectionRule_ = null;
       }
       selectionRuleCase_ = 8;
-      onChanged();
+      onChanged();;
       return dateBuilder_;
     }
 
@@ -2351,9 +2439,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (selectionRuleCase_ == 9) {
           holidayBuilder_.mergeFrom(value);
-        } else {
-          holidayBuilder_.setMessage(value);
         }
+        holidayBuilder_.setMessage(value);
       }
       selectionRuleCase_ = 9;
       return this;
@@ -2415,7 +2502,7 @@ private static final long serialVersionUID = 0L;
         selectionRule_ = null;
       }
       selectionRuleCase_ = 9;
-      onChanged();
+      onChanged();;
       return holidayBuilder_;
     }
 
@@ -2493,9 +2580,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (selectionRuleCase_ == 10) {
           metaBuilder_.mergeFrom(value);
-        } else {
-          metaBuilder_.setMessage(value);
         }
+        metaBuilder_.setMessage(value);
       }
       selectionRuleCase_ = 10;
       return this;
@@ -2557,7 +2643,7 @@ private static final long serialVersionUID = 0L;
         selectionRule_ = null;
       }
       selectionRuleCase_ = 10;
-      onChanged();
+      onChanged();;
       return metaBuilder_;
     }
 
@@ -2635,9 +2721,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (selectionRuleCase_ == 11) {
           pluginBuilder_.mergeFrom(value);
-        } else {
-          pluginBuilder_.setMessage(value);
         }
+        pluginBuilder_.setMessage(value);
       }
       selectionRuleCase_ = 11;
       return this;
@@ -2699,7 +2784,7 @@ private static final long serialVersionUID = 0L;
         selectionRule_ = null;
       }
       selectionRuleCase_ = 11;
-      onChanged();
+      onChanged();;
       return pluginBuilder_;
     }
     @java.lang.Override
@@ -2735,18 +2820,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new Selector(input, extensionRegistry);
     }
   };
 

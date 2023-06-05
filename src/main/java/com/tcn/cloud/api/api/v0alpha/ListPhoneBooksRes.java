@@ -32,6 +32,85 @@ private static final long serialVersionUID = 0L;
     return new ListPhoneBooksRes();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private ListPhoneBooksRes(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              callerIdPhoneBooks_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.PhoneBook>();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            callerIdPhoneBooks_.add(
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.PhoneBook.parser(), extensionRegistry));
+            break;
+          }
+          case 18: {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              outboundPhoneBooks_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.PhoneBook>();
+              mutable_bitField0_ |= 0x00000002;
+            }
+            outboundPhoneBooks_.add(
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.PhoneBook.parser(), extensionRegistry));
+            break;
+          }
+          case 26: {
+            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+              transferPhoneBooks_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.PhoneBook>();
+              mutable_bitField0_ |= 0x00000004;
+            }
+            transferPhoneBooks_.add(
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.PhoneBook.parser(), extensionRegistry));
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        callerIdPhoneBooks_ = java.util.Collections.unmodifiableList(callerIdPhoneBooks_);
+      }
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        outboundPhoneBooks_ = java.util.Collections.unmodifiableList(outboundPhoneBooks_);
+      }
+      if (((mutable_bitField0_ & 0x00000004) != 0)) {
+        transferPhoneBooks_ = java.util.Collections.unmodifiableList(transferPhoneBooks_);
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.P3apiProto.internal_static_api_v0alpha_ListPhoneBooksRes_descriptor;
@@ -46,7 +125,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALLER_ID_PHONE_BOOKS_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v0alpha.PhoneBook> callerIdPhoneBooks_;
   /**
    * <pre>
@@ -107,7 +185,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int OUTBOUND_PHONE_BOOKS_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v0alpha.PhoneBook> outboundPhoneBooks_;
   /**
    * <pre>
@@ -168,7 +245,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TRANSFER_PHONE_BOOKS_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v0alpha.PhoneBook> transferPhoneBooks_;
   /**
    * <pre>
@@ -251,7 +327,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < transferPhoneBooks_.size(); i++) {
       output.writeMessage(3, transferPhoneBooks_.get(i));
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -272,7 +348,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, transferPhoneBooks_.get(i));
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -293,7 +369,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getOutboundPhoneBooksList())) return false;
     if (!getTransferPhoneBooksList()
         .equals(other.getTransferPhoneBooksList())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -316,7 +392,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TRANSFER_PHONE_BOOKS_FIELD_NUMBER;
       hash = (53 * hash) + getTransferPhoneBooksList().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -365,13 +441,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.ListPhoneBooksRes parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.ListPhoneBooksRes parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -439,39 +513,43 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ListPhoneBooksRes.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getCallerIdPhoneBooksFieldBuilder();
+        getOutboundPhoneBooksFieldBuilder();
+        getTransferPhoneBooksFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       if (callerIdPhoneBooksBuilder_ == null) {
         callerIdPhoneBooks_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
-        callerIdPhoneBooks_ = null;
         callerIdPhoneBooksBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000001);
       if (outboundPhoneBooksBuilder_ == null) {
         outboundPhoneBooks_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
-        outboundPhoneBooks_ = null;
         outboundPhoneBooksBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000002);
       if (transferPhoneBooksBuilder_ == null) {
         transferPhoneBooks_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
       } else {
-        transferPhoneBooks_ = null;
         transferPhoneBooksBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -498,13 +576,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.ListPhoneBooksRes buildPartial() {
       com.tcn.cloud.api.api.v0alpha.ListPhoneBooksRes result = new com.tcn.cloud.api.api.v0alpha.ListPhoneBooksRes(this);
-      buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      onBuilt();
-      return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.ListPhoneBooksRes result) {
+      int from_bitField0_ = bitField0_;
       if (callerIdPhoneBooksBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           callerIdPhoneBooks_ = java.util.Collections.unmodifiableList(callerIdPhoneBooks_);
@@ -532,10 +604,8 @@ private static final long serialVersionUID = 0L;
       } else {
         result.transferPhoneBooks_ = transferPhoneBooksBuilder_.build();
       }
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ListPhoneBooksRes result) {
-      int from_bitField0_ = bitField0_;
+      onBuilt();
+      return result;
     }
 
     @java.lang.Override
@@ -660,7 +730,7 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -675,69 +745,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.ListPhoneBooksRes parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.tcn.cloud.api.api.v0alpha.PhoneBook m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v0alpha.PhoneBook.parser(),
-                      extensionRegistry);
-              if (callerIdPhoneBooksBuilder_ == null) {
-                ensureCallerIdPhoneBooksIsMutable();
-                callerIdPhoneBooks_.add(m);
-              } else {
-                callerIdPhoneBooksBuilder_.addMessage(m);
-              }
-              break;
-            } // case 10
-            case 18: {
-              com.tcn.cloud.api.api.v0alpha.PhoneBook m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v0alpha.PhoneBook.parser(),
-                      extensionRegistry);
-              if (outboundPhoneBooksBuilder_ == null) {
-                ensureOutboundPhoneBooksIsMutable();
-                outboundPhoneBooks_.add(m);
-              } else {
-                outboundPhoneBooksBuilder_.addMessage(m);
-              }
-              break;
-            } // case 18
-            case 26: {
-              com.tcn.cloud.api.api.v0alpha.PhoneBook m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v0alpha.PhoneBook.parser(),
-                      extensionRegistry);
-              if (transferPhoneBooksBuilder_ == null) {
-                ensureTransferPhoneBooksIsMutable();
-                transferPhoneBooks_.add(m);
-              } else {
-                transferPhoneBooksBuilder_.addMessage(m);
-              }
-              break;
-            } // case 26
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.ListPhoneBooksRes) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -1710,18 +1728,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new ListPhoneBooksRes(input, extensionRegistry);
     }
   };
 

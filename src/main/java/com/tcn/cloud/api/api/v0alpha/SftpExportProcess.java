@@ -35,6 +35,172 @@ private static final long serialVersionUID = 0L;
     return new SftpExportProcess();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private SftpExportProcess(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            destFilepath_ = s;
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            password_ = s;
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            address_ = s;
+            break;
+          }
+          case 34: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            username_ = s;
+            break;
+          }
+          case 40: {
+
+            port_ = input.readInt32();
+            break;
+          }
+          case 56: {
+            int rawValue = input.readEnum();
+
+            fileformat_ = rawValue;
+            break;
+          }
+          case 64: {
+
+            prependHeaders_ = input.readBool();
+            break;
+          }
+          case 74: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            fieldDelimiter_ = s;
+            break;
+          }
+          case 82: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            recordDelimiter_ = s;
+            break;
+          }
+          case 90: {
+            com.tcn.cloud.api.api.commons.FilePattern.Builder subBuilder = null;
+            if (filePattern_ != null) {
+              subBuilder = filePattern_.toBuilder();
+            }
+            filePattern_ = input.readMessage(com.tcn.cloud.api.api.commons.FilePattern.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(filePattern_);
+              filePattern_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 96: {
+            int rawValue = input.readEnum();
+
+            runType_ = rawValue;
+            break;
+          }
+          case 106: {
+            com.tcn.cloud.api.api.v0alpha.ExportHeader.Builder subBuilder = null;
+            if (header_ != null) {
+              subBuilder = header_.toBuilder();
+            }
+            header_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.ExportHeader.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(header_);
+              header_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 112: {
+
+            quoteFields_ = input.readBool();
+            break;
+          }
+          case 120: {
+
+            useCustomDateFormat_ = input.readBool();
+            break;
+          }
+          case 130: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            directory_ = s;
+            break;
+          }
+          case 138: {
+            com.tcn.cloud.api.api.commons.ConstructedFilename.Builder subBuilder = null;
+            if (filename_ != null) {
+              subBuilder = filename_.toBuilder();
+            }
+            filename_ = input.readMessage(com.tcn.cloud.api.api.commons.ConstructedFilename.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(filename_);
+              filename_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 144: {
+
+            shiftPhoneFields_ = input.readBool();
+            break;
+          }
+          case 154: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            transferConfigName_ = s;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.LmsProto.internal_static_api_v0alpha_SftpExportProcess_descriptor;
@@ -49,8 +215,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DEST_FILEPATH_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object destFilepath_ = "";
+  private volatile java.lang.Object destFilepath_;
   /**
    * <pre>
    * where we try and write the data to on the destination filesystem
@@ -96,8 +261,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PASSWORD_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object password_ = "";
+  private volatile java.lang.Object password_;
   /**
    * <pre>
    * if left "", the service will attempt to use a public key instead
@@ -143,8 +307,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ADDRESS_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object address_ = "";
+  private volatile java.lang.Object address_;
   /**
    * <pre>
    * where we are trying to connect to.
@@ -190,8 +353,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int USERNAME_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object username_ = "";
+  private volatile java.lang.Object username_;
   /**
    * <pre>
    * username for sftp connection
@@ -237,7 +399,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PORT_FIELD_NUMBER = 5;
-  private int port_ = 0;
+  private int port_;
   /**
    * <pre>
    * port we will attempt to establish a connection with
@@ -252,7 +414,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FILEFORMAT_FIELD_NUMBER = 7;
-  private int fileformat_ = 0;
+  private int fileformat_;
   /**
    * <pre>
    * File format to use (CSV, CUSTOM, TSV, etc.)
@@ -277,12 +439,13 @@ private static final long serialVersionUID = 0L;
    * @return The fileformat.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.FileFormat getFileformat() {
-    com.tcn.cloud.api.api.commons.FileFormat result = com.tcn.cloud.api.api.commons.FileFormat.forNumber(fileformat_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.FileFormat result = com.tcn.cloud.api.api.commons.FileFormat.valueOf(fileformat_);
     return result == null ? com.tcn.cloud.api.api.commons.FileFormat.UNRECOGNIZED : result;
   }
 
   public static final int PREPEND_HEADERS_FIELD_NUMBER = 8;
-  private boolean prependHeaders_ = false;
+  private boolean prependHeaders_;
   /**
    * <pre>
    * Specifies whether to use headers in the
@@ -298,8 +461,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FIELD_DELIMITER_FIELD_NUMBER = 9;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object fieldDelimiter_ = "";
+  private volatile java.lang.Object fieldDelimiter_;
   /**
    * <pre>
    * Specifies custom field delimiter (default `,`)
@@ -345,8 +507,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RECORD_DELIMITER_FIELD_NUMBER = 10;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object recordDelimiter_ = "";
+  private volatile java.lang.Object recordDelimiter_;
   /**
    * <pre>
    * Specifies custom record delimiter (default `&#92;n`)
@@ -399,8 +560,6 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.api.commons.FilePattern file_pattern = 11 [json_name = "filePattern", deprecated = true];</code>
-   * @deprecated api.v0alpha.SftpExportProcess.file_pattern is deprecated.
-   *     See api/v0alpha/lms.proto;l=1465
    * @return Whether the filePattern field is set.
    */
   @java.lang.Override
@@ -413,8 +572,6 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>.api.commons.FilePattern file_pattern = 11 [json_name = "filePattern", deprecated = true];</code>
-   * @deprecated api.v0alpha.SftpExportProcess.file_pattern is deprecated.
-   *     See api/v0alpha/lms.proto;l=1465
    * @return The filePattern.
    */
   @java.lang.Override
@@ -430,11 +587,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   @java.lang.Deprecated public com.tcn.cloud.api.api.commons.FilePatternOrBuilder getFilePatternOrBuilder() {
-    return filePattern_ == null ? com.tcn.cloud.api.api.commons.FilePattern.getDefaultInstance() : filePattern_;
+    return getFilePattern();
   }
 
   public static final int RUN_TYPE_FIELD_NUMBER = 12;
-  private int runType_ = 0;
+  private int runType_;
   /**
    * <pre>
    * Run type can be RUN (default), TEST, or DISABLED
@@ -455,7 +612,8 @@ private static final long serialVersionUID = 0L;
    * @return The runType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.RunType getRunType() {
-    com.tcn.cloud.api.api.commons.RunType result = com.tcn.cloud.api.api.commons.RunType.forNumber(runType_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.RunType result = com.tcn.cloud.api.api.commons.RunType.valueOf(runType_);
     return result == null ? com.tcn.cloud.api.api.commons.RunType.UNRECOGNIZED : result;
   }
 
@@ -494,11 +652,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.ExportHeaderOrBuilder getHeaderOrBuilder() {
-    return header_ == null ? com.tcn.cloud.api.api.v0alpha.ExportHeader.getDefaultInstance() : header_;
+    return getHeader();
   }
 
   public static final int QUOTE_FIELDS_FIELD_NUMBER = 14;
-  private boolean quoteFields_ = false;
+  private boolean quoteFields_;
   /**
    * <pre>
    * Wrap fields with `"`
@@ -513,7 +671,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int USE_CUSTOM_DATE_FORMAT_FIELD_NUMBER = 15;
-  private boolean useCustomDateFormat_ = false;
+  private boolean useCustomDateFormat_;
   /**
    * <pre>
    * Specifies whether to export using the date
@@ -530,8 +688,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DIRECTORY_FIELD_NUMBER = 16;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object directory_ = "";
+  private volatile java.lang.Object directory_;
   /**
    * <pre>
    * directory to put the file in
@@ -611,11 +768,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.ConstructedFilenameOrBuilder getFilenameOrBuilder() {
-    return filename_ == null ? com.tcn.cloud.api.api.commons.ConstructedFilename.getDefaultInstance() : filename_;
+    return getFilename();
   }
 
   public static final int SHIFT_PHONE_FIELDS_FIELD_NUMBER = 18;
-  private boolean shiftPhoneFields_ = false;
+  private boolean shiftPhoneFields_;
   /**
    * <pre>
    * If true, it will try to bunch all phone number
@@ -631,8 +788,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TRANSFER_CONFIG_NAME_FIELD_NUMBER = 19;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object transferConfigName_ = "";
+  private volatile java.lang.Object transferConfigName_;
   /**
    * <pre>
    * transfer configs will be unique by name, transfer configs store credential data
@@ -691,16 +847,16 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destFilepath_)) {
+    if (!getDestFilepathBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, destFilepath_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
+    if (!getPasswordBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, password_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+    if (!getAddressBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, address_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
+    if (!getUsernameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, username_);
     }
     if (port_ != 0) {
@@ -712,10 +868,10 @@ private static final long serialVersionUID = 0L;
     if (prependHeaders_ != false) {
       output.writeBool(8, prependHeaders_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fieldDelimiter_)) {
+    if (!getFieldDelimiterBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 9, fieldDelimiter_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordDelimiter_)) {
+    if (!getRecordDelimiterBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 10, recordDelimiter_);
     }
     if (filePattern_ != null) {
@@ -733,7 +889,7 @@ private static final long serialVersionUID = 0L;
     if (useCustomDateFormat_ != false) {
       output.writeBool(15, useCustomDateFormat_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(directory_)) {
+    if (!getDirectoryBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 16, directory_);
     }
     if (filename_ != null) {
@@ -742,10 +898,10 @@ private static final long serialVersionUID = 0L;
     if (shiftPhoneFields_ != false) {
       output.writeBool(18, shiftPhoneFields_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferConfigName_)) {
+    if (!getTransferConfigNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 19, transferConfigName_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -754,16 +910,16 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destFilepath_)) {
+    if (!getDestFilepathBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, destFilepath_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
+    if (!getPasswordBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, password_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+    if (!getAddressBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, address_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
+    if (!getUsernameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, username_);
     }
     if (port_ != 0) {
@@ -778,10 +934,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(8, prependHeaders_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fieldDelimiter_)) {
+    if (!getFieldDelimiterBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, fieldDelimiter_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordDelimiter_)) {
+    if (!getRecordDelimiterBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, recordDelimiter_);
     }
     if (filePattern_ != null) {
@@ -804,7 +960,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(15, useCustomDateFormat_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(directory_)) {
+    if (!getDirectoryBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, directory_);
     }
     if (filename_ != null) {
@@ -815,10 +971,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(18, shiftPhoneFields_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferConfigName_)) {
+    if (!getTransferConfigNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(19, transferConfigName_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -876,7 +1032,7 @@ private static final long serialVersionUID = 0L;
         != other.getShiftPhoneFields()) return false;
     if (!getTransferConfigName()
         .equals(other.getTransferConfigName())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -933,7 +1089,7 @@ private static final long serialVersionUID = 0L;
         getShiftPhoneFields());
     hash = (37 * hash) + TRANSFER_CONFIG_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getTransferConfigName().hashCode();
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -982,13 +1138,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.SftpExportProcess parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.SftpExportProcess parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1052,48 +1206,70 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.SftpExportProcess.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       destFilepath_ = "";
+
       password_ = "";
+
       address_ = "";
+
       username_ = "";
+
       port_ = 0;
+
       fileformat_ = 0;
+
       prependHeaders_ = false;
+
       fieldDelimiter_ = "";
+
       recordDelimiter_ = "";
-      filePattern_ = null;
-      if (filePatternBuilder_ != null) {
-        filePatternBuilder_.dispose();
+
+      if (filePatternBuilder_ == null) {
+        filePattern_ = null;
+      } else {
+        filePattern_ = null;
         filePatternBuilder_ = null;
       }
       runType_ = 0;
-      header_ = null;
-      if (headerBuilder_ != null) {
-        headerBuilder_.dispose();
+
+      if (headerBuilder_ == null) {
+        header_ = null;
+      } else {
+        header_ = null;
         headerBuilder_ = null;
       }
       quoteFields_ = false;
+
       useCustomDateFormat_ = false;
+
       directory_ = "";
-      filename_ = null;
-      if (filenameBuilder_ != null) {
-        filenameBuilder_.dispose();
+
+      if (filenameBuilder_ == null) {
+        filename_ = null;
+      } else {
+        filename_ = null;
         filenameBuilder_ = null;
       }
       shiftPhoneFields_ = false;
+
       transferConfigName_ = "";
+
       return this;
     }
 
@@ -1120,73 +1296,38 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.SftpExportProcess buildPartial() {
       com.tcn.cloud.api.api.v0alpha.SftpExportProcess result = new com.tcn.cloud.api.api.v0alpha.SftpExportProcess(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.destFilepath_ = destFilepath_;
+      result.password_ = password_;
+      result.address_ = address_;
+      result.username_ = username_;
+      result.port_ = port_;
+      result.fileformat_ = fileformat_;
+      result.prependHeaders_ = prependHeaders_;
+      result.fieldDelimiter_ = fieldDelimiter_;
+      result.recordDelimiter_ = recordDelimiter_;
+      if (filePatternBuilder_ == null) {
+        result.filePattern_ = filePattern_;
+      } else {
+        result.filePattern_ = filePatternBuilder_.build();
+      }
+      result.runType_ = runType_;
+      if (headerBuilder_ == null) {
+        result.header_ = header_;
+      } else {
+        result.header_ = headerBuilder_.build();
+      }
+      result.quoteFields_ = quoteFields_;
+      result.useCustomDateFormat_ = useCustomDateFormat_;
+      result.directory_ = directory_;
+      if (filenameBuilder_ == null) {
+        result.filename_ = filename_;
+      } else {
+        result.filename_ = filenameBuilder_.build();
+      }
+      result.shiftPhoneFields_ = shiftPhoneFields_;
+      result.transferConfigName_ = transferConfigName_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.SftpExportProcess result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.destFilepath_ = destFilepath_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.password_ = password_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.address_ = address_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.username_ = username_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.port_ = port_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.fileformat_ = fileformat_;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.prependHeaders_ = prependHeaders_;
-      }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.fieldDelimiter_ = fieldDelimiter_;
-      }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
-        result.recordDelimiter_ = recordDelimiter_;
-      }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
-        result.filePattern_ = filePatternBuilder_ == null
-            ? filePattern_
-            : filePatternBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000400) != 0)) {
-        result.runType_ = runType_;
-      }
-      if (((from_bitField0_ & 0x00000800) != 0)) {
-        result.header_ = headerBuilder_ == null
-            ? header_
-            : headerBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00001000) != 0)) {
-        result.quoteFields_ = quoteFields_;
-      }
-      if (((from_bitField0_ & 0x00002000) != 0)) {
-        result.useCustomDateFormat_ = useCustomDateFormat_;
-      }
-      if (((from_bitField0_ & 0x00004000) != 0)) {
-        result.directory_ = directory_;
-      }
-      if (((from_bitField0_ & 0x00008000) != 0)) {
-        result.filename_ = filenameBuilder_ == null
-            ? filename_
-            : filenameBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00010000) != 0)) {
-        result.shiftPhoneFields_ = shiftPhoneFields_;
-      }
-      if (((from_bitField0_ & 0x00020000) != 0)) {
-        result.transferConfigName_ = transferConfigName_;
-      }
     }
 
     @java.lang.Override
@@ -1235,22 +1376,18 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v0alpha.SftpExportProcess.getDefaultInstance()) return this;
       if (!other.getDestFilepath().isEmpty()) {
         destFilepath_ = other.destFilepath_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getPassword().isEmpty()) {
         password_ = other.password_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getAddress().isEmpty()) {
         address_ = other.address_;
-        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getUsername().isEmpty()) {
         username_ = other.username_;
-        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.getPort() != 0) {
@@ -1264,12 +1401,10 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getFieldDelimiter().isEmpty()) {
         fieldDelimiter_ = other.fieldDelimiter_;
-        bitField0_ |= 0x00000080;
         onChanged();
       }
       if (!other.getRecordDelimiter().isEmpty()) {
         recordDelimiter_ = other.recordDelimiter_;
-        bitField0_ |= 0x00000100;
         onChanged();
       }
       if (other.hasFilePattern()) {
@@ -1289,7 +1424,6 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getDirectory().isEmpty()) {
         directory_ = other.directory_;
-        bitField0_ |= 0x00004000;
         onChanged();
       }
       if (other.hasFilename()) {
@@ -1300,10 +1434,9 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getTransferConfigName().isEmpty()) {
         transferConfigName_ = other.transferConfigName_;
-        bitField0_ |= 0x00020000;
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -1318,129 +1451,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.SftpExportProcess parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              destFilepath_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              password_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 26: {
-              address_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            case 34: {
-              username_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
-            case 40: {
-              port_ = input.readInt32();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 40
-            case 56: {
-              fileformat_ = input.readEnum();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 56
-            case 64: {
-              prependHeaders_ = input.readBool();
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 64
-            case 74: {
-              fieldDelimiter_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000080;
-              break;
-            } // case 74
-            case 82: {
-              recordDelimiter_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000100;
-              break;
-            } // case 82
-            case 90: {
-              input.readMessage(
-                  getFilePatternFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000200;
-              break;
-            } // case 90
-            case 96: {
-              runType_ = input.readEnum();
-              bitField0_ |= 0x00000400;
-              break;
-            } // case 96
-            case 106: {
-              input.readMessage(
-                  getHeaderFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000800;
-              break;
-            } // case 106
-            case 112: {
-              quoteFields_ = input.readBool();
-              bitField0_ |= 0x00001000;
-              break;
-            } // case 112
-            case 120: {
-              useCustomDateFormat_ = input.readBool();
-              bitField0_ |= 0x00002000;
-              break;
-            } // case 120
-            case 130: {
-              directory_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00004000;
-              break;
-            } // case 130
-            case 138: {
-              input.readMessage(
-                  getFilenameFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00008000;
-              break;
-            } // case 138
-            case 144: {
-              shiftPhoneFields_ = input.readBool();
-              bitField0_ |= 0x00010000;
-              break;
-            } // case 144
-            case 154: {
-              transferConfigName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00020000;
-              break;
-            } // case 154
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.SftpExportProcess) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private java.lang.Object destFilepath_ = "";
     /**
@@ -1495,9 +1518,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDestFilepath(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       destFilepath_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1510,8 +1535,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDestFilepath() {
+      
       destFilepath_ = getDefaultInstance().getDestFilepath();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1526,10 +1551,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDestFilepathBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       destFilepath_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1587,9 +1614,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPassword(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       password_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1602,8 +1631,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPassword() {
+      
       password_ = getDefaultInstance().getPassword();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1618,10 +1647,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPasswordBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       password_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1679,9 +1710,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAddress(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       address_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1694,8 +1727,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAddress() {
+      
       address_ = getDefaultInstance().getAddress();
-      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1710,10 +1743,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAddressBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       address_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1771,9 +1806,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUsername(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       username_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1786,8 +1823,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUsername() {
+      
       username_ = getDefaultInstance().getUsername();
-      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1802,10 +1839,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUsernameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       username_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1833,9 +1872,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPort(int value) {
-
+      
       port_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1848,7 +1886,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPort() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      
       port_ = 0;
       onChanged();
       return this;
@@ -1880,8 +1918,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFileformatValue(int value) {
+      
       fileformat_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1897,7 +1935,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.FileFormat getFileformat() {
-      com.tcn.cloud.api.api.commons.FileFormat result = com.tcn.cloud.api.api.commons.FileFormat.forNumber(fileformat_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.FileFormat result = com.tcn.cloud.api.api.commons.FileFormat.valueOf(fileformat_);
       return result == null ? com.tcn.cloud.api.api.commons.FileFormat.UNRECOGNIZED : result;
     }
     /**
@@ -1915,7 +1954,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000020;
+      
       fileformat_ = value.getNumber();
       onChanged();
       return this;
@@ -1931,7 +1970,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFileformat() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      
       fileformat_ = 0;
       onChanged();
       return this;
@@ -1962,9 +2001,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPrependHeaders(boolean value) {
-
+      
       prependHeaders_ = value;
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1978,7 +2016,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPrependHeaders() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      
       prependHeaders_ = false;
       onChanged();
       return this;
@@ -2037,9 +2075,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFieldDelimiter(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       fieldDelimiter_ = value;
-      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2052,8 +2092,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFieldDelimiter() {
+      
       fieldDelimiter_ = getDefaultInstance().getFieldDelimiter();
-      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -2068,10 +2108,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFieldDelimiterBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       fieldDelimiter_ = value;
-      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2129,9 +2171,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRecordDelimiter(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       recordDelimiter_ = value;
-      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2144,8 +2188,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRecordDelimiter() {
+      
       recordDelimiter_ = getDefaultInstance().getRecordDelimiter();
-      bitField0_ = (bitField0_ & ~0x00000100);
       onChanged();
       return this;
     }
@@ -2160,10 +2204,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRecordDelimiterBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       recordDelimiter_ = value;
-      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2177,12 +2223,10 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.api.commons.FilePattern file_pattern = 11 [json_name = "filePattern", deprecated = true];</code>
-     * @deprecated api.v0alpha.SftpExportProcess.file_pattern is deprecated.
-     *     See api/v0alpha/lms.proto;l=1465
      * @return Whether the filePattern field is set.
      */
     @java.lang.Deprecated public boolean hasFilePattern() {
-      return ((bitField0_ & 0x00000200) != 0);
+      return filePatternBuilder_ != null || filePattern_ != null;
     }
     /**
      * <pre>
@@ -2190,8 +2234,6 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>.api.commons.FilePattern file_pattern = 11 [json_name = "filePattern", deprecated = true];</code>
-     * @deprecated api.v0alpha.SftpExportProcess.file_pattern is deprecated.
-     *     See api/v0alpha/lms.proto;l=1465
      * @return The filePattern.
      */
     @java.lang.Deprecated public com.tcn.cloud.api.api.commons.FilePattern getFilePattern() {
@@ -2214,11 +2256,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         filePattern_ = value;
+        onChanged();
       } else {
         filePatternBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000200;
-      onChanged();
+
       return this;
     }
     /**
@@ -2232,11 +2274,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.FilePattern.Builder builderForValue) {
       if (filePatternBuilder_ == null) {
         filePattern_ = builderForValue.build();
+        onChanged();
       } else {
         filePatternBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000200;
-      onChanged();
+
       return this;
     }
     /**
@@ -2248,18 +2290,17 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Deprecated public Builder mergeFilePattern(com.tcn.cloud.api.api.commons.FilePattern value) {
       if (filePatternBuilder_ == null) {
-        if (((bitField0_ & 0x00000200) != 0) &&
-          filePattern_ != null &&
-          filePattern_ != com.tcn.cloud.api.api.commons.FilePattern.getDefaultInstance()) {
-          getFilePatternBuilder().mergeFrom(value);
+        if (filePattern_ != null) {
+          filePattern_ =
+            com.tcn.cloud.api.api.commons.FilePattern.newBuilder(filePattern_).mergeFrom(value).buildPartial();
         } else {
           filePattern_ = value;
         }
+        onChanged();
       } else {
         filePatternBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000200;
-      onChanged();
+
       return this;
     }
     /**
@@ -2270,13 +2311,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.FilePattern file_pattern = 11 [json_name = "filePattern", deprecated = true];</code>
      */
     @java.lang.Deprecated public Builder clearFilePattern() {
-      bitField0_ = (bitField0_ & ~0x00000200);
-      filePattern_ = null;
-      if (filePatternBuilder_ != null) {
-        filePatternBuilder_.dispose();
+      if (filePatternBuilder_ == null) {
+        filePattern_ = null;
+        onChanged();
+      } else {
+        filePattern_ = null;
         filePatternBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -2287,7 +2329,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.FilePattern file_pattern = 11 [json_name = "filePattern", deprecated = true];</code>
      */
     @java.lang.Deprecated public com.tcn.cloud.api.api.commons.FilePattern.Builder getFilePatternBuilder() {
-      bitField0_ |= 0x00000200;
+      
       onChanged();
       return getFilePatternFieldBuilder().getBuilder();
     }
@@ -2349,8 +2391,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRunTypeValue(int value) {
+      
       runType_ = value;
-      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2364,7 +2406,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.RunType getRunType() {
-      com.tcn.cloud.api.api.commons.RunType result = com.tcn.cloud.api.api.commons.RunType.forNumber(runType_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.RunType result = com.tcn.cloud.api.api.commons.RunType.valueOf(runType_);
       return result == null ? com.tcn.cloud.api.api.commons.RunType.UNRECOGNIZED : result;
     }
     /**
@@ -2380,7 +2423,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000400;
+      
       runType_ = value.getNumber();
       onChanged();
       return this;
@@ -2394,7 +2437,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRunType() {
-      bitField0_ = (bitField0_ & ~0x00000400);
+      
       runType_ = 0;
       onChanged();
       return this;
@@ -2412,7 +2455,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the header field is set.
      */
     public boolean hasHeader() {
-      return ((bitField0_ & 0x00000800) != 0);
+      return headerBuilder_ != null || header_ != null;
     }
     /**
      * <pre>
@@ -2442,11 +2485,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         header_ = value;
+        onChanged();
       } else {
         headerBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000800;
-      onChanged();
+
       return this;
     }
     /**
@@ -2460,11 +2503,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.ExportHeader.Builder builderForValue) {
       if (headerBuilder_ == null) {
         header_ = builderForValue.build();
+        onChanged();
       } else {
         headerBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000800;
-      onChanged();
+
       return this;
     }
     /**
@@ -2476,18 +2519,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeHeader(com.tcn.cloud.api.api.v0alpha.ExportHeader value) {
       if (headerBuilder_ == null) {
-        if (((bitField0_ & 0x00000800) != 0) &&
-          header_ != null &&
-          header_ != com.tcn.cloud.api.api.v0alpha.ExportHeader.getDefaultInstance()) {
-          getHeaderBuilder().mergeFrom(value);
+        if (header_ != null) {
+          header_ =
+            com.tcn.cloud.api.api.v0alpha.ExportHeader.newBuilder(header_).mergeFrom(value).buildPartial();
         } else {
           header_ = value;
         }
+        onChanged();
       } else {
         headerBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000800;
-      onChanged();
+
       return this;
     }
     /**
@@ -2498,13 +2540,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v0alpha.ExportHeader header = 13 [json_name = "header"];</code>
      */
     public Builder clearHeader() {
-      bitField0_ = (bitField0_ & ~0x00000800);
-      header_ = null;
-      if (headerBuilder_ != null) {
-        headerBuilder_.dispose();
+      if (headerBuilder_ == null) {
+        header_ = null;
+        onChanged();
+      } else {
+        header_ = null;
         headerBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -2515,7 +2558,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v0alpha.ExportHeader header = 13 [json_name = "header"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.ExportHeader.Builder getHeaderBuilder() {
-      bitField0_ |= 0x00000800;
+      
       onChanged();
       return getHeaderFieldBuilder().getBuilder();
     }
@@ -2578,9 +2621,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setQuoteFields(boolean value) {
-
+      
       quoteFields_ = value;
-      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -2593,7 +2635,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearQuoteFields() {
-      bitField0_ = (bitField0_ & ~0x00001000);
+      
       quoteFields_ = false;
       onChanged();
       return this;
@@ -2626,9 +2668,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setUseCustomDateFormat(boolean value) {
-
+      
       useCustomDateFormat_ = value;
-      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -2643,7 +2684,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUseCustomDateFormat() {
-      bitField0_ = (bitField0_ & ~0x00002000);
+      
       useCustomDateFormat_ = false;
       onChanged();
       return this;
@@ -2702,9 +2743,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDirectory(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       directory_ = value;
-      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -2717,8 +2760,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDirectory() {
+      
       directory_ = getDefaultInstance().getDirectory();
-      bitField0_ = (bitField0_ & ~0x00004000);
       onChanged();
       return this;
     }
@@ -2733,10 +2776,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDirectoryBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       directory_ = value;
-      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -2753,7 +2798,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the filename field is set.
      */
     public boolean hasFilename() {
-      return ((bitField0_ & 0x00008000) != 0);
+      return filenameBuilder_ != null || filename_ != null;
     }
     /**
      * <pre>
@@ -2783,11 +2828,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         filename_ = value;
+        onChanged();
       } else {
         filenameBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00008000;
-      onChanged();
+
       return this;
     }
     /**
@@ -2801,11 +2846,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.ConstructedFilename.Builder builderForValue) {
       if (filenameBuilder_ == null) {
         filename_ = builderForValue.build();
+        onChanged();
       } else {
         filenameBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00008000;
-      onChanged();
+
       return this;
     }
     /**
@@ -2817,18 +2862,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeFilename(com.tcn.cloud.api.api.commons.ConstructedFilename value) {
       if (filenameBuilder_ == null) {
-        if (((bitField0_ & 0x00008000) != 0) &&
-          filename_ != null &&
-          filename_ != com.tcn.cloud.api.api.commons.ConstructedFilename.getDefaultInstance()) {
-          getFilenameBuilder().mergeFrom(value);
+        if (filename_ != null) {
+          filename_ =
+            com.tcn.cloud.api.api.commons.ConstructedFilename.newBuilder(filename_).mergeFrom(value).buildPartial();
         } else {
           filename_ = value;
         }
+        onChanged();
       } else {
         filenameBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00008000;
-      onChanged();
+
       return this;
     }
     /**
@@ -2839,13 +2883,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.ConstructedFilename filename = 17 [json_name = "filename"];</code>
      */
     public Builder clearFilename() {
-      bitField0_ = (bitField0_ & ~0x00008000);
-      filename_ = null;
-      if (filenameBuilder_ != null) {
-        filenameBuilder_.dispose();
+      if (filenameBuilder_ == null) {
+        filename_ = null;
+        onChanged();
+      } else {
+        filename_ = null;
         filenameBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -2856,7 +2901,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.ConstructedFilename filename = 17 [json_name = "filename"];</code>
      */
     public com.tcn.cloud.api.api.commons.ConstructedFilename.Builder getFilenameBuilder() {
-      bitField0_ |= 0x00008000;
+      
       onChanged();
       return getFilenameFieldBuilder().getBuilder();
     }
@@ -2921,9 +2966,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setShiftPhoneFields(boolean value) {
-
+      
       shiftPhoneFields_ = value;
-      bitField0_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -2937,7 +2981,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearShiftPhoneFields() {
-      bitField0_ = (bitField0_ & ~0x00010000);
+      
       shiftPhoneFields_ = false;
       onChanged();
       return this;
@@ -2996,9 +3040,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTransferConfigName(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       transferConfigName_ = value;
-      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -3011,8 +3057,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTransferConfigName() {
+      
       transferConfigName_ = getDefaultInstance().getTransferConfigName();
-      bitField0_ = (bitField0_ & ~0x00020000);
       onChanged();
       return this;
     }
@@ -3027,10 +3073,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTransferConfigNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       transferConfigName_ = value;
-      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -3067,18 +3115,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new SftpExportProcess(input, extensionRegistry);
     }
   };
 

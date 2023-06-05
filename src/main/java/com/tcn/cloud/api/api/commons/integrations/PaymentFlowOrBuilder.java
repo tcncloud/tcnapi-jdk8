@@ -183,5 +183,5 @@ public interface PaymentFlowOrBuilder extends
   com.tcn.cloud.api.api.commons.integrations.FieldDefinitionOrBuilder getPaymentFieldsOrBuilder(
       int index);
 
-  com.tcn.cloud.api.api.commons.integrations.PaymentFlow.ValueCase getValueCase();
+  public com.tcn.cloud.api.api.commons.integrations.PaymentFlow.ValueCase getValueCase();
 }

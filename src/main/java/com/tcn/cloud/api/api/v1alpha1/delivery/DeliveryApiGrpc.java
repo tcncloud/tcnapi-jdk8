@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.50.0)",
     comments = "Source: api/v1alpha1/delivery/service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class DeliveryApiGrpc {
@@ -495,123 +495,213 @@ public final class DeliveryApiGrpc {
 
   /**
    */
-  public interface AsyncService {
+  public static abstract class DeliveryApiImplBase implements io.grpc.BindableService {
 
     /**
      */
-    default void createTransferConfig(com.tcn.cloud.api.api.v1alpha1.delivery.CreateTransferConfigReq request,
+    public void createTransferConfig(com.tcn.cloud.api.api.v1alpha1.delivery.CreateTransferConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.CreateTransferConfigRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateTransferConfigMethod(), responseObserver);
     }
 
     /**
      */
-    default void listTransferConfigs(com.tcn.cloud.api.api.v1alpha1.delivery.ListTransferConfigsReq request,
+    public void listTransferConfigs(com.tcn.cloud.api.api.v1alpha1.delivery.ListTransferConfigsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.ListTransferConfigsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListTransferConfigsMethod(), responseObserver);
     }
 
     /**
      */
-    default void listTransferConfigsByCredentialID(com.tcn.cloud.api.api.v1alpha1.delivery.ListTransferConfigsByCredentialIDReq request,
+    public void listTransferConfigsByCredentialID(com.tcn.cloud.api.api.v1alpha1.delivery.ListTransferConfigsByCredentialIDReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.ListTransferConfigsByCredentialIDRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListTransferConfigsByCredentialIDMethod(), responseObserver);
     }
 
     /**
      */
-    default void updateTransferConfig(com.tcn.cloud.api.api.v1alpha1.delivery.UpdateTransferConfigReq request,
+    public void updateTransferConfig(com.tcn.cloud.api.api.v1alpha1.delivery.UpdateTransferConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.UpdateTransferConfigRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateTransferConfigMethod(), responseObserver);
     }
 
     /**
      */
-    default void deleteTransferConfig(com.tcn.cloud.api.api.v1alpha1.delivery.DeleteTransferConfigReq request,
+    public void deleteTransferConfig(com.tcn.cloud.api.api.v1alpha1.delivery.DeleteTransferConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.DeleteTransferConfigRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteTransferConfigMethod(), responseObserver);
     }
 
     /**
      */
-    default void getTransferConfig(com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigReq request,
+    public void getTransferConfig(com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTransferConfigMethod(), responseObserver);
     }
 
     /**
      */
-    default void getTransferConfigByName(com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq request,
+    public void getTransferConfigByName(com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTransferConfigByNameMethod(), responseObserver);
     }
 
     /**
      */
-    default void listHistory(com.tcn.cloud.api.api.v1alpha1.delivery.ListHistoryReq request,
+    public void listHistory(com.tcn.cloud.api.api.v1alpha1.delivery.ListHistoryReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.ListHistoryRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListHistoryMethod(), responseObserver);
     }
 
     /**
      */
-    default void listHistoryByTransferConfig(com.tcn.cloud.api.api.v1alpha1.delivery.ListHistoryByTransferConfigReq request,
+    public void listHistoryByTransferConfig(com.tcn.cloud.api.api.v1alpha1.delivery.ListHistoryByTransferConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.ListHistoryByTransferConfigRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListHistoryByTransferConfigMethod(), responseObserver);
     }
 
     /**
      */
-    default void listCredentials(com.tcn.cloud.api.api.v1alpha1.delivery.ListCredentialsReq request,
+    public void listCredentials(com.tcn.cloud.api.api.v1alpha1.delivery.ListCredentialsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.ListCredentialsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCredentialsMethod(), responseObserver);
     }
 
     /**
      */
-    default void getCredential(com.tcn.cloud.api.api.v1alpha1.delivery.GetCredentialReq request,
+    public void getCredential(com.tcn.cloud.api.api.v1alpha1.delivery.GetCredentialReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.GetCredentialRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCredentialMethod(), responseObserver);
     }
 
     /**
      */
-    default void createCredential(com.tcn.cloud.api.api.v1alpha1.delivery.CreateCredentialReq request,
+    public void createCredential(com.tcn.cloud.api.api.v1alpha1.delivery.CreateCredentialReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.CreateCredentialRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateCredentialMethod(), responseObserver);
     }
 
     /**
      */
-    default void deleteCredential(com.tcn.cloud.api.api.v1alpha1.delivery.DeleteCredentialReq request,
+    public void deleteCredential(com.tcn.cloud.api.api.v1alpha1.delivery.DeleteCredentialReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.DeleteCredentialRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteCredentialMethod(), responseObserver);
     }
 
     /**
      */
-    default void updateCredential(com.tcn.cloud.api.api.v1alpha1.delivery.UpdateCredentialReq request,
+    public void updateCredential(com.tcn.cloud.api.api.v1alpha1.delivery.UpdateCredentialReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.delivery.UpdateCredentialRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateCredentialMethod(), responseObserver);
     }
-  }
-
-  /**
-   * Base class for the server implementation of the service DeliveryApi.
-   */
-  public static abstract class DeliveryApiImplBase
-      implements io.grpc.BindableService, AsyncService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return DeliveryApiGrpc.bindService(this);
+      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getCreateTransferConfigMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.delivery.CreateTransferConfigReq,
+                com.tcn.cloud.api.api.v1alpha1.delivery.CreateTransferConfigRes>(
+                  this, METHODID_CREATE_TRANSFER_CONFIG)))
+          .addMethod(
+            getListTransferConfigsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.delivery.ListTransferConfigsReq,
+                com.tcn.cloud.api.api.v1alpha1.delivery.ListTransferConfigsRes>(
+                  this, METHODID_LIST_TRANSFER_CONFIGS)))
+          .addMethod(
+            getListTransferConfigsByCredentialIDMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.delivery.ListTransferConfigsByCredentialIDReq,
+                com.tcn.cloud.api.api.v1alpha1.delivery.ListTransferConfigsByCredentialIDRes>(
+                  this, METHODID_LIST_TRANSFER_CONFIGS_BY_CREDENTIAL_ID)))
+          .addMethod(
+            getUpdateTransferConfigMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.delivery.UpdateTransferConfigReq,
+                com.tcn.cloud.api.api.v1alpha1.delivery.UpdateTransferConfigRes>(
+                  this, METHODID_UPDATE_TRANSFER_CONFIG)))
+          .addMethod(
+            getDeleteTransferConfigMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.delivery.DeleteTransferConfigReq,
+                com.tcn.cloud.api.api.v1alpha1.delivery.DeleteTransferConfigRes>(
+                  this, METHODID_DELETE_TRANSFER_CONFIG)))
+          .addMethod(
+            getGetTransferConfigMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigReq,
+                com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigRes>(
+                  this, METHODID_GET_TRANSFER_CONFIG)))
+          .addMethod(
+            getGetTransferConfigByNameMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq,
+                com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameRes>(
+                  this, METHODID_GET_TRANSFER_CONFIG_BY_NAME)))
+          .addMethod(
+            getListHistoryMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.delivery.ListHistoryReq,
+                com.tcn.cloud.api.api.v1alpha1.delivery.ListHistoryRes>(
+                  this, METHODID_LIST_HISTORY)))
+          .addMethod(
+            getListHistoryByTransferConfigMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.delivery.ListHistoryByTransferConfigReq,
+                com.tcn.cloud.api.api.v1alpha1.delivery.ListHistoryByTransferConfigRes>(
+                  this, METHODID_LIST_HISTORY_BY_TRANSFER_CONFIG)))
+          .addMethod(
+            getListCredentialsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.delivery.ListCredentialsReq,
+                com.tcn.cloud.api.api.v1alpha1.delivery.ListCredentialsRes>(
+                  this, METHODID_LIST_CREDENTIALS)))
+          .addMethod(
+            getGetCredentialMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.delivery.GetCredentialReq,
+                com.tcn.cloud.api.api.v1alpha1.delivery.GetCredentialRes>(
+                  this, METHODID_GET_CREDENTIAL)))
+          .addMethod(
+            getCreateCredentialMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.delivery.CreateCredentialReq,
+                com.tcn.cloud.api.api.v1alpha1.delivery.CreateCredentialRes>(
+                  this, METHODID_CREATE_CREDENTIAL)))
+          .addMethod(
+            getDeleteCredentialMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.delivery.DeleteCredentialReq,
+                com.tcn.cloud.api.api.v1alpha1.delivery.DeleteCredentialRes>(
+                  this, METHODID_DELETE_CREDENTIAL)))
+          .addMethod(
+            getUpdateCredentialMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.delivery.UpdateCredentialReq,
+                com.tcn.cloud.api.api.v1alpha1.delivery.UpdateCredentialRes>(
+                  this, METHODID_UPDATE_CREDENTIAL)))
+          .build();
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service DeliveryApi.
    */
-  public static final class DeliveryApiStub
-      extends io.grpc.stub.AbstractAsyncStub<DeliveryApiStub> {
+  public static final class DeliveryApiStub extends io.grpc.stub.AbstractAsyncStub<DeliveryApiStub> {
     private DeliveryApiStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -737,10 +827,8 @@ public final class DeliveryApiGrpc {
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service DeliveryApi.
    */
-  public static final class DeliveryApiBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<DeliveryApiBlockingStub> {
+  public static final class DeliveryApiBlockingStub extends io.grpc.stub.AbstractBlockingStub<DeliveryApiBlockingStub> {
     private DeliveryApiBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -852,10 +940,8 @@ public final class DeliveryApiGrpc {
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service DeliveryApi.
    */
-  public static final class DeliveryApiFutureStub
-      extends io.grpc.stub.AbstractFutureStub<DeliveryApiFutureStub> {
+  public static final class DeliveryApiFutureStub extends io.grpc.stub.AbstractFutureStub<DeliveryApiFutureStub> {
     private DeliveryApiFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -1000,10 +1086,10 @@ public final class DeliveryApiGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AsyncService serviceImpl;
+    private final DeliveryApiImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AsyncService serviceImpl, int methodId) {
+    MethodHandlers(DeliveryApiImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -1082,109 +1168,6 @@ public final class DeliveryApiGrpc {
           throw new AssertionError();
       }
     }
-  }
-
-  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
-    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-        .addMethod(
-          getCreateTransferConfigMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.delivery.CreateTransferConfigReq,
-              com.tcn.cloud.api.api.v1alpha1.delivery.CreateTransferConfigRes>(
-                service, METHODID_CREATE_TRANSFER_CONFIG)))
-        .addMethod(
-          getListTransferConfigsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.delivery.ListTransferConfigsReq,
-              com.tcn.cloud.api.api.v1alpha1.delivery.ListTransferConfigsRes>(
-                service, METHODID_LIST_TRANSFER_CONFIGS)))
-        .addMethod(
-          getListTransferConfigsByCredentialIDMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.delivery.ListTransferConfigsByCredentialIDReq,
-              com.tcn.cloud.api.api.v1alpha1.delivery.ListTransferConfigsByCredentialIDRes>(
-                service, METHODID_LIST_TRANSFER_CONFIGS_BY_CREDENTIAL_ID)))
-        .addMethod(
-          getUpdateTransferConfigMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.delivery.UpdateTransferConfigReq,
-              com.tcn.cloud.api.api.v1alpha1.delivery.UpdateTransferConfigRes>(
-                service, METHODID_UPDATE_TRANSFER_CONFIG)))
-        .addMethod(
-          getDeleteTransferConfigMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.delivery.DeleteTransferConfigReq,
-              com.tcn.cloud.api.api.v1alpha1.delivery.DeleteTransferConfigRes>(
-                service, METHODID_DELETE_TRANSFER_CONFIG)))
-        .addMethod(
-          getGetTransferConfigMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigReq,
-              com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigRes>(
-                service, METHODID_GET_TRANSFER_CONFIG)))
-        .addMethod(
-          getGetTransferConfigByNameMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameReq,
-              com.tcn.cloud.api.api.v1alpha1.delivery.GetTransferConfigByNameRes>(
-                service, METHODID_GET_TRANSFER_CONFIG_BY_NAME)))
-        .addMethod(
-          getListHistoryMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.delivery.ListHistoryReq,
-              com.tcn.cloud.api.api.v1alpha1.delivery.ListHistoryRes>(
-                service, METHODID_LIST_HISTORY)))
-        .addMethod(
-          getListHistoryByTransferConfigMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.delivery.ListHistoryByTransferConfigReq,
-              com.tcn.cloud.api.api.v1alpha1.delivery.ListHistoryByTransferConfigRes>(
-                service, METHODID_LIST_HISTORY_BY_TRANSFER_CONFIG)))
-        .addMethod(
-          getListCredentialsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.delivery.ListCredentialsReq,
-              com.tcn.cloud.api.api.v1alpha1.delivery.ListCredentialsRes>(
-                service, METHODID_LIST_CREDENTIALS)))
-        .addMethod(
-          getGetCredentialMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.delivery.GetCredentialReq,
-              com.tcn.cloud.api.api.v1alpha1.delivery.GetCredentialRes>(
-                service, METHODID_GET_CREDENTIAL)))
-        .addMethod(
-          getCreateCredentialMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.delivery.CreateCredentialReq,
-              com.tcn.cloud.api.api.v1alpha1.delivery.CreateCredentialRes>(
-                service, METHODID_CREATE_CREDENTIAL)))
-        .addMethod(
-          getDeleteCredentialMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.delivery.DeleteCredentialReq,
-              com.tcn.cloud.api.api.v1alpha1.delivery.DeleteCredentialRes>(
-                service, METHODID_DELETE_CREDENTIAL)))
-        .addMethod(
-          getUpdateCredentialMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.delivery.UpdateCredentialReq,
-              com.tcn.cloud.api.api.v1alpha1.delivery.UpdateCredentialRes>(
-                service, METHODID_UPDATE_CREDENTIAL)))
-        .build();
   }
 
   private static abstract class DeliveryApiBaseDescriptorSupplier

@@ -200,11 +200,10 @@ public interface UserOrBuilder extends
    *
    * <code>map&lt;string, .api.commons.org.User.RegionSids&gt; region_sid_map = 15 [json_name = "regionSidMap"];</code>
    */
-  /* nullable */
-com.tcn.cloud.api.api.commons.org.User.RegionSids getRegionSidMapOrDefault(
+
+  com.tcn.cloud.api.api.commons.org.User.RegionSids getRegionSidMapOrDefault(
       java.lang.String key,
-      /* nullable */
-com.tcn.cloud.api.api.commons.org.User.RegionSids defaultValue);
+      com.tcn.cloud.api.api.commons.org.User.RegionSids defaultValue);
   /**
    * <pre>
    * The user's regional sids. The key of the map is a region id.
@@ -212,6 +211,7 @@ com.tcn.cloud.api.api.commons.org.User.RegionSids defaultValue);
    *
    * <code>map&lt;string, .api.commons.org.User.RegionSids&gt; region_sid_map = 15 [json_name = "regionSidMap"];</code>
    */
+
   com.tcn.cloud.api.api.commons.org.User.RegionSids getRegionSidMapOrThrow(
       java.lang.String key);
 

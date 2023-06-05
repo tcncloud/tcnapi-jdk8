@@ -26,6 +26,74 @@ private static final long serialVersionUID = 0L;
     return new GetInboundSmsTemplateByIdRes();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private GetInboundSmsTemplateByIdRes(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            com.tcn.cloud.api.api.v0alpha.InboundSmsTemplate.Builder subBuilder = null;
+            if (inboundSmsTemplate_ != null) {
+              subBuilder = inboundSmsTemplate_.toBuilder();
+            }
+            inboundSmsTemplate_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.InboundSmsTemplate.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(inboundSmsTemplate_);
+              inboundSmsTemplate_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 18: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              smsIntentTemplates_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate>();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            smsIntentTemplates_.add(
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate.parser(), extensionRegistry));
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        smsIntentTemplates_ = java.util.Collections.unmodifiableList(smsIntentTemplates_);
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.SmsapiProto.internal_static_api_v0alpha_GetInboundSmsTemplateByIdRes_descriptor;
@@ -62,11 +130,10 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.InboundSmsTemplateOrBuilder getInboundSmsTemplateOrBuilder() {
-    return inboundSmsTemplate_ == null ? com.tcn.cloud.api.api.v0alpha.InboundSmsTemplate.getDefaultInstance() : inboundSmsTemplate_;
+    return getInboundSmsTemplate();
   }
 
   public static final int SMS_INTENT_TEMPLATES_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate> smsIntentTemplates_;
   /**
    * <code>repeated .api.v0alpha.SmsIntentTemplate sms_intent_templates = 2 [json_name = "smsIntentTemplates"];</code>
@@ -126,7 +193,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < smsIntentTemplates_.size(); i++) {
       output.writeMessage(2, smsIntentTemplates_.get(i));
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -143,7 +210,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, smsIntentTemplates_.get(i));
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -165,7 +232,7 @@ private static final long serialVersionUID = 0L;
     }
     if (!getSmsIntentTemplatesList()
         .equals(other.getSmsIntentTemplatesList())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -184,7 +251,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SMS_INTENT_TEMPLATES_FIELD_NUMBER;
       hash = (53 * hash) + getSmsIntentTemplatesList().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -233,13 +300,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.GetInboundSmsTemplateByIdRes parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.GetInboundSmsTemplateByIdRes parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -303,30 +368,35 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.GetInboundSmsTemplateByIdRes.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getSmsIntentTemplatesFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      inboundSmsTemplate_ = null;
-      if (inboundSmsTemplateBuilder_ != null) {
-        inboundSmsTemplateBuilder_.dispose();
+      if (inboundSmsTemplateBuilder_ == null) {
+        inboundSmsTemplate_ = null;
+      } else {
+        inboundSmsTemplate_ = null;
         inboundSmsTemplateBuilder_ = null;
       }
       if (smsIntentTemplatesBuilder_ == null) {
         smsIntentTemplates_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
-        smsIntentTemplates_ = null;
         smsIntentTemplatesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -353,31 +423,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.GetInboundSmsTemplateByIdRes buildPartial() {
       com.tcn.cloud.api.api.v0alpha.GetInboundSmsTemplateByIdRes result = new com.tcn.cloud.api.api.v0alpha.GetInboundSmsTemplateByIdRes(this);
-      buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      onBuilt();
-      return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.GetInboundSmsTemplateByIdRes result) {
+      int from_bitField0_ = bitField0_;
+      if (inboundSmsTemplateBuilder_ == null) {
+        result.inboundSmsTemplate_ = inboundSmsTemplate_;
+      } else {
+        result.inboundSmsTemplate_ = inboundSmsTemplateBuilder_.build();
+      }
       if (smsIntentTemplatesBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           smsIntentTemplates_ = java.util.Collections.unmodifiableList(smsIntentTemplates_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.smsIntentTemplates_ = smsIntentTemplates_;
       } else {
         result.smsIntentTemplates_ = smsIntentTemplatesBuilder_.build();
       }
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.GetInboundSmsTemplateByIdRes result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.inboundSmsTemplate_ = inboundSmsTemplateBuilder_ == null
-            ? inboundSmsTemplate_
-            : inboundSmsTemplateBuilder_.build();
-      }
+      onBuilt();
+      return result;
     }
 
     @java.lang.Override
@@ -431,7 +493,7 @@ private static final long serialVersionUID = 0L;
         if (!other.smsIntentTemplates_.isEmpty()) {
           if (smsIntentTemplates_.isEmpty()) {
             smsIntentTemplates_ = other.smsIntentTemplates_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureSmsIntentTemplatesIsMutable();
             smsIntentTemplates_.addAll(other.smsIntentTemplates_);
@@ -444,7 +506,7 @@ private static final long serialVersionUID = 0L;
             smsIntentTemplatesBuilder_.dispose();
             smsIntentTemplatesBuilder_ = null;
             smsIntentTemplates_ = other.smsIntentTemplates_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
             smsIntentTemplatesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getSmsIntentTemplatesFieldBuilder() : null;
@@ -453,7 +515,7 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -468,50 +530,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.GetInboundSmsTemplateByIdRes parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              input.readMessage(
-                  getInboundSmsTemplateFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate.parser(),
-                      extensionRegistry);
-              if (smsIntentTemplatesBuilder_ == null) {
-                ensureSmsIntentTemplatesIsMutable();
-                smsIntentTemplates_.add(m);
-              } else {
-                smsIntentTemplatesBuilder_.addMessage(m);
-              }
-              break;
-            } // case 18
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.GetInboundSmsTemplateByIdRes) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -524,7 +553,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the inboundSmsTemplate field is set.
      */
     public boolean hasInboundSmsTemplate() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return inboundSmsTemplateBuilder_ != null || inboundSmsTemplate_ != null;
     }
     /**
      * <code>.api.v0alpha.InboundSmsTemplate inbound_sms_template = 1 [json_name = "inboundSmsTemplate"];</code>
@@ -546,11 +575,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         inboundSmsTemplate_ = value;
+        onChanged();
       } else {
         inboundSmsTemplateBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -560,11 +589,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.InboundSmsTemplate.Builder builderForValue) {
       if (inboundSmsTemplateBuilder_ == null) {
         inboundSmsTemplate_ = builderForValue.build();
+        onChanged();
       } else {
         inboundSmsTemplateBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -572,38 +601,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeInboundSmsTemplate(com.tcn.cloud.api.api.v0alpha.InboundSmsTemplate value) {
       if (inboundSmsTemplateBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          inboundSmsTemplate_ != null &&
-          inboundSmsTemplate_ != com.tcn.cloud.api.api.v0alpha.InboundSmsTemplate.getDefaultInstance()) {
-          getInboundSmsTemplateBuilder().mergeFrom(value);
+        if (inboundSmsTemplate_ != null) {
+          inboundSmsTemplate_ =
+            com.tcn.cloud.api.api.v0alpha.InboundSmsTemplate.newBuilder(inboundSmsTemplate_).mergeFrom(value).buildPartial();
         } else {
           inboundSmsTemplate_ = value;
         }
+        onChanged();
       } else {
         inboundSmsTemplateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.InboundSmsTemplate inbound_sms_template = 1 [json_name = "inboundSmsTemplate"];</code>
      */
     public Builder clearInboundSmsTemplate() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      inboundSmsTemplate_ = null;
-      if (inboundSmsTemplateBuilder_ != null) {
-        inboundSmsTemplateBuilder_.dispose();
+      if (inboundSmsTemplateBuilder_ == null) {
+        inboundSmsTemplate_ = null;
+        onChanged();
+      } else {
+        inboundSmsTemplate_ = null;
         inboundSmsTemplateBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.InboundSmsTemplate inbound_sms_template = 1 [json_name = "inboundSmsTemplate"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.InboundSmsTemplate.Builder getInboundSmsTemplateBuilder() {
-      bitField0_ |= 0x00000001;
+      
       onChanged();
       return getInboundSmsTemplateFieldBuilder().getBuilder();
     }
@@ -638,9 +667,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate> smsIntentTemplates_ =
       java.util.Collections.emptyList();
     private void ensureSmsIntentTemplatesIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         smsIntentTemplates_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate>(smsIntentTemplates_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -790,7 +819,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearSmsIntentTemplates() {
       if (smsIntentTemplatesBuilder_ == null) {
         smsIntentTemplates_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         smsIntentTemplatesBuilder_.clear();
@@ -867,7 +896,7 @@ private static final long serialVersionUID = 0L;
         smsIntentTemplatesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate, com.tcn.cloud.api.api.v0alpha.SmsIntentTemplate.Builder, com.tcn.cloud.api.api.v0alpha.SmsIntentTemplateOrBuilder>(
                 smsIntentTemplates_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         smsIntentTemplates_ = null;
@@ -907,18 +936,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new GetInboundSmsTemplateByIdRes(input, extensionRegistry);
     }
   };
 

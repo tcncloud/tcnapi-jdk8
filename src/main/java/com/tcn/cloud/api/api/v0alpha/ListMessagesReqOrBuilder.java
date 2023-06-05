@@ -90,5 +90,5 @@ public interface ListMessagesReqOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.ListMessagesReq.ByConversationSidOrBuilder getByConversationSidOrBuilder();
 
-  com.tcn.cloud.api.api.v0alpha.ListMessagesReq.FilterCase getFilterCase();
+  public com.tcn.cloud.api.api.v0alpha.ListMessagesReq.FilterCase getFilterCase();
 }

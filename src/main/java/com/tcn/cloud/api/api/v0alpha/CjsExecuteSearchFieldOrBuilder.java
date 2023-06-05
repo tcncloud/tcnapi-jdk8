@@ -9,11 +9,6 @@ public interface CjsExecuteSearchFieldOrBuilder extends
 
   /**
    * <code>string field_name = 1 [json_name = "fieldName"];</code>
-   * @return Whether the fieldName field is set.
-   */
-  boolean hasFieldName();
-  /**
-   * <code>string field_name = 1 [json_name = "fieldName"];</code>
    * @return The fieldName.
    */
   java.lang.String getFieldName();
@@ -24,11 +19,6 @@ public interface CjsExecuteSearchFieldOrBuilder extends
   com.google.protobuf.ByteString
       getFieldNameBytes();
 
-  /**
-   * <code>.api.commons.FieldType field_type = 2 [json_name = "fieldType"];</code>
-   * @return Whether the fieldType field is set.
-   */
-  boolean hasFieldType();
   /**
    * <code>.api.commons.FieldType field_type = 2 [json_name = "fieldType"];</code>
    * @return The enum numeric value on the wire for fieldType.
@@ -52,5 +42,5 @@ public interface CjsExecuteSearchFieldOrBuilder extends
   com.google.protobuf.ByteString
       getFieldValueBytes();
 
-  com.tcn.cloud.api.api.v0alpha.CjsExecuteSearchField.FieldCase getFieldCase();
+  public com.tcn.cloud.api.api.v0alpha.CjsExecuteSearchField.FieldCase getFieldCase();
 }

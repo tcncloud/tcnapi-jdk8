@@ -30,14 +30,14 @@ public interface GetOrganizationNamesResOrBuilder extends
   /**
    * <code>map&lt;int64, string&gt; names = 1 [json_name = "names"];</code>
    */
-  /* nullable */
-java.lang.String getNamesOrDefault(
+
+  java.lang.String getNamesOrDefault(
       long key,
-      /* nullable */
-java.lang.String defaultValue);
+      java.lang.String defaultValue);
   /**
    * <code>map&lt;int64, string&gt; names = 1 [json_name = "names"];</code>
    */
+
   java.lang.String getNamesOrThrow(
       long key);
 }

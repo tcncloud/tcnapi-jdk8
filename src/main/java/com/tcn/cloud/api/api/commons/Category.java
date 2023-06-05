@@ -37,6 +37,138 @@ private static final long serialVersionUID = 0L;
     return new Category();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private Category(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+
+            categoryId_ = input.readInt64();
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            authorId_ = s;
+            break;
+          }
+          case 34: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            title_ = s;
+            break;
+          }
+          case 42: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            description_ = s;
+            break;
+          }
+          case 48: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              skillProfiles_ = newLongList();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            skillProfiles_.addLong(input.readInt64());
+            break;
+          }
+          case 50: {
+            int length = input.readRawVarint32();
+            int limit = input.pushLimit(length);
+            if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+              skillProfiles_ = newLongList();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            while (input.getBytesUntilLimit() > 0) {
+              skillProfiles_.addLong(input.readInt64());
+            }
+            input.popLimit(limit);
+            break;
+          }
+          case 56: {
+
+            version_ = input.readInt32();
+            break;
+          }
+          case 80: {
+            int rawValue = input.readEnum();
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              callTypes_ = new java.util.ArrayList<java.lang.Integer>();
+              mutable_bitField0_ |= 0x00000002;
+            }
+            callTypes_.add(rawValue);
+            break;
+          }
+          case 82: {
+            int length = input.readRawVarint32();
+            int oldLimit = input.pushLimit(length);
+            while(input.getBytesUntilLimit() > 0) {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                callTypes_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              callTypes_.add(rawValue);
+            }
+            input.popLimit(oldLimit);
+            break;
+          }
+          case 88: {
+
+            isSystem_ = input.readBool();
+            break;
+          }
+          case 96: {
+            int rawValue = input.readEnum();
+
+            categoryType_ = rawValue;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        skillProfiles_.makeImmutable(); // C
+      }
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        callTypes_ = java.util.Collections.unmodifiableList(callTypes_);
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.ScorecardsProto.internal_static_api_commons_Category_descriptor;
@@ -51,7 +183,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CATEGORY_ID_FIELD_NUMBER = 1;
-  private long categoryId_ = 0L;
+  private long categoryId_;
   /**
    * <pre>
    * unique id of the category
@@ -66,8 +198,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AUTHOR_ID_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object authorId_ = "";
+  private volatile java.lang.Object authorId_;
   /**
    * <pre>
    * user who created the category
@@ -113,8 +244,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TITLE_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object title_ = "";
+  private volatile java.lang.Object title_;
   /**
    * <pre>
    * title, or name, of the category
@@ -160,8 +290,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTION_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object description_ = "";
+  private volatile java.lang.Object description_;
   /**
    * <pre>
    * description of category (i.e. purpose and use)
@@ -207,7 +336,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SKILL_PROFILES_FIELD_NUMBER = 6;
-  @SuppressWarnings("serial")
   private com.google.protobuf.Internal.LongList skillProfiles_;
   /**
    * <pre>
@@ -248,7 +376,7 @@ private static final long serialVersionUID = 0L;
   private int skillProfilesMemoizedSerializedSize = -1;
 
   public static final int VERSION_FIELD_NUMBER = 7;
-  private int version_ = 0;
+  private int version_;
   /**
    * <pre>
    * current version of the category
@@ -263,14 +391,14 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALL_TYPES_FIELD_NUMBER = 10;
-  @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> callTypes_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, com.tcn.cloud.api.api.commons.CallType.Enum> callTypes_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.tcn.cloud.api.api.commons.CallType.Enum>() {
             public com.tcn.cloud.api.api.commons.CallType.Enum convert(java.lang.Integer from) {
-              com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.forNumber(from);
+              @SuppressWarnings("deprecation")
+              com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.valueOf(from);
               return result == null ? com.tcn.cloud.api.api.commons.CallType.Enum.UNRECOGNIZED : result;
             }
           };
@@ -341,7 +469,7 @@ private static final long serialVersionUID = 0L;
   private int callTypesMemoizedSerializedSize;
 
   public static final int IS_SYSTEM_FIELD_NUMBER = 11;
-  private boolean isSystem_ = false;
+  private boolean isSystem_;
   /**
    * <pre>
    * whether a category is a system category (read only)
@@ -356,7 +484,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CATEGORY_TYPE_FIELD_NUMBER = 12;
-  private int categoryType_ = 0;
+  private int categoryType_;
   /**
    * <pre>
    * Type of category, (skill calls or manual calls)
@@ -377,7 +505,8 @@ private static final long serialVersionUID = 0L;
    * @return The categoryType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.CategoryType getCategoryType() {
-    com.tcn.cloud.api.api.commons.CategoryType result = com.tcn.cloud.api.api.commons.CategoryType.forNumber(categoryType_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.CategoryType result = com.tcn.cloud.api.api.commons.CategoryType.valueOf(categoryType_);
     return result == null ? com.tcn.cloud.api.api.commons.CategoryType.UNRECOGNIZED : result;
   }
 
@@ -399,13 +528,13 @@ private static final long serialVersionUID = 0L;
     if (categoryId_ != 0L) {
       output.writeInt64(1, categoryId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authorId_)) {
+    if (!getAuthorIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, authorId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+    if (!getTitleBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, title_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+    if (!getDescriptionBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, description_);
     }
     if (getSkillProfilesList().size() > 0) {
@@ -431,7 +560,7 @@ private static final long serialVersionUID = 0L;
     if (categoryType_ != com.tcn.cloud.api.api.commons.CategoryType.INVALID.getNumber()) {
       output.writeEnum(12, categoryType_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -444,13 +573,13 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, categoryId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authorId_)) {
+    if (!getAuthorIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, authorId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+    if (!getTitleBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, title_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+    if (!getDescriptionBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, description_);
     }
     {
@@ -491,7 +620,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(12, categoryType_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -522,7 +651,7 @@ private static final long serialVersionUID = 0L;
     if (getIsSystem()
         != other.getIsSystem()) return false;
     if (categoryType_ != other.categoryType_) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -557,7 +686,7 @@ private static final long serialVersionUID = 0L;
         getIsSystem());
     hash = (37 * hash) + CATEGORY_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + categoryType_;
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -606,13 +735,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.commons.Category parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.commons.Category parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -682,28 +809,40 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.Category.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       categoryId_ = 0L;
+
       authorId_ = "";
+
       title_ = "";
+
       description_ = "";
+
       skillProfiles_ = emptyLongList();
+      bitField0_ = (bitField0_ & ~0x00000001);
       version_ = 0;
+
       callTypes_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000002);
       isSystem_ = false;
+
       categoryType_ = 0;
+
       return this;
     }
 
@@ -730,48 +869,26 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.Category buildPartial() {
       com.tcn.cloud.api.api.commons.Category result = new com.tcn.cloud.api.api.commons.Category(this);
-      buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      onBuilt();
-      return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.Category result) {
-      if (((bitField0_ & 0x00000010) != 0)) {
+      int from_bitField0_ = bitField0_;
+      result.categoryId_ = categoryId_;
+      result.authorId_ = authorId_;
+      result.title_ = title_;
+      result.description_ = description_;
+      if (((bitField0_ & 0x00000001) != 0)) {
         skillProfiles_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.skillProfiles_ = skillProfiles_;
-      if (((bitField0_ & 0x00000040) != 0)) {
+      result.version_ = version_;
+      if (((bitField0_ & 0x00000002) != 0)) {
         callTypes_ = java.util.Collections.unmodifiableList(callTypes_);
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000002);
       }
       result.callTypes_ = callTypes_;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.commons.Category result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.categoryId_ = categoryId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.authorId_ = authorId_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.title_ = title_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.description_ = description_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.version_ = version_;
-      }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.isSystem_ = isSystem_;
-      }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
-        result.categoryType_ = categoryType_;
-      }
+      result.isSystem_ = isSystem_;
+      result.categoryType_ = categoryType_;
+      onBuilt();
+      return result;
     }
 
     @java.lang.Override
@@ -823,23 +940,20 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getAuthorId().isEmpty()) {
         authorId_ = other.authorId_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getTitle().isEmpty()) {
         title_ = other.title_;
-        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getDescription().isEmpty()) {
         description_ = other.description_;
-        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.skillProfiles_.isEmpty()) {
         if (skillProfiles_.isEmpty()) {
           skillProfiles_ = other.skillProfiles_;
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensureSkillProfilesIsMutable();
           skillProfiles_.addAll(other.skillProfiles_);
@@ -852,7 +966,7 @@ private static final long serialVersionUID = 0L;
       if (!other.callTypes_.isEmpty()) {
         if (callTypes_.isEmpty()) {
           callTypes_ = other.callTypes_;
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           ensureCallTypesIsMutable();
           callTypes_.addAll(other.callTypes_);
@@ -865,7 +979,7 @@ private static final long serialVersionUID = 0L;
       if (other.categoryType_ != 0) {
         setCategoryTypeValue(other.getCategoryTypeValue());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -880,98 +994,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.commons.Category parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              categoryId_ = input.readInt64();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 26: {
-              authorId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 26
-            case 34: {
-              title_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 34
-            case 42: {
-              description_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 42
-            case 48: {
-              long v = input.readInt64();
-              ensureSkillProfilesIsMutable();
-              skillProfiles_.addLong(v);
-              break;
-            } // case 48
-            case 50: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              ensureSkillProfilesIsMutable();
-              while (input.getBytesUntilLimit() > 0) {
-                skillProfiles_.addLong(input.readInt64());
-              }
-              input.popLimit(limit);
-              break;
-            } // case 50
-            case 56: {
-              version_ = input.readInt32();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 56
-            case 80: {
-              int tmpRaw = input.readEnum();
-              ensureCallTypesIsMutable();
-              callTypes_.add(tmpRaw);
-              break;
-            } // case 80
-            case 82: {
-              int length = input.readRawVarint32();
-              int oldLimit = input.pushLimit(length);
-              while(input.getBytesUntilLimit() > 0) {
-                int tmpRaw = input.readEnum();
-                ensureCallTypesIsMutable();
-                callTypes_.add(tmpRaw);
-              }
-              input.popLimit(oldLimit);
-              break;
-            } // case 82
-            case 88: {
-              isSystem_ = input.readBool();
-              bitField0_ |= 0x00000080;
-              break;
-            } // case 88
-            case 96: {
-              categoryType_ = input.readEnum();
-              bitField0_ |= 0x00000100;
-              break;
-            } // case 96
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.commons.Category) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -999,9 +1032,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCategoryId(long value) {
-
+      
       categoryId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1014,7 +1046,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCategoryId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       categoryId_ = 0L;
       onChanged();
       return this;
@@ -1073,9 +1105,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAuthorId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       authorId_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1088,8 +1122,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAuthorId() {
+      
       authorId_ = getDefaultInstance().getAuthorId();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1104,10 +1138,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAuthorIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       authorId_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1165,9 +1201,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTitle(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       title_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1180,8 +1218,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTitle() {
+      
       title_ = getDefaultInstance().getTitle();
-      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1196,10 +1234,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTitleBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       title_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1257,9 +1297,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       description_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1272,8 +1314,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
+      
       description_ = getDefaultInstance().getDescription();
-      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1288,20 +1330,22 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescriptionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       description_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
 
     private com.google.protobuf.Internal.LongList skillProfiles_ = emptyLongList();
     private void ensureSkillProfilesIsMutable() {
-      if (!((bitField0_ & 0x00000010) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         skillProfiles_ = mutableCopy(skillProfiles_);
-        bitField0_ |= 0x00000010;
-      }
+        bitField0_ |= 0x00000001;
+       }
     }
     /**
      * <pre>
@@ -1313,7 +1357,7 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getSkillProfilesList() {
-      return ((bitField0_ & 0x00000010) != 0) ?
+      return ((bitField0_ & 0x00000001) != 0) ?
                java.util.Collections.unmodifiableList(skillProfiles_) : skillProfiles_;
     }
     /**
@@ -1351,7 +1395,6 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSkillProfiles(
         int index, long value) {
-
       ensureSkillProfilesIsMutable();
       skillProfiles_.setLong(index, value);
       onChanged();
@@ -1367,7 +1410,6 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder addSkillProfiles(long value) {
-
       ensureSkillProfilesIsMutable();
       skillProfiles_.addLong(value);
       onChanged();
@@ -1400,7 +1442,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearSkillProfiles() {
       skillProfiles_ = emptyLongList();
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1428,9 +1470,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setVersion(int value) {
-
+      
       version_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1443,7 +1484,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVersion() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      
       version_ = 0;
       onChanged();
       return this;
@@ -1452,9 +1493,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> callTypes_ =
       java.util.Collections.emptyList();
     private void ensureCallTypesIsMutable() {
-      if (!((bitField0_ & 0x00000040) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         callTypes_ = new java.util.ArrayList<java.lang.Integer>(callTypes_);
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000002;
       }
     }
     /**
@@ -1558,7 +1599,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearCallTypes() {
       callTypes_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1592,8 +1633,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .api.commons.CallType.Enum call_types = 10 [json_name = "callTypes"];</code>
-     * @param index The index to set the value at.
-     * @param value The enum numeric value on the wire for callTypes to set.
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of callTypes at the given index.
      * @return This builder for chaining.
      */
     public Builder setCallTypesValue(
@@ -1660,9 +1701,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIsSystem(boolean value) {
-
+      
       isSystem_ = value;
-      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1675,7 +1715,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIsSystem() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      
       isSystem_ = false;
       onChanged();
       return this;
@@ -1703,8 +1743,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCategoryTypeValue(int value) {
+      
       categoryType_ = value;
-      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1718,7 +1758,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.CategoryType getCategoryType() {
-      com.tcn.cloud.api.api.commons.CategoryType result = com.tcn.cloud.api.api.commons.CategoryType.forNumber(categoryType_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.CategoryType result = com.tcn.cloud.api.api.commons.CategoryType.valueOf(categoryType_);
       return result == null ? com.tcn.cloud.api.api.commons.CategoryType.UNRECOGNIZED : result;
     }
     /**
@@ -1734,7 +1775,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000100;
+      
       categoryType_ = value.getNumber();
       onChanged();
       return this;
@@ -1748,7 +1789,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCategoryType() {
-      bitField0_ = (bitField0_ & ~0x00000100);
+      
       categoryType_ = 0;
       onChanged();
       return this;
@@ -1786,18 +1827,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new Category(input, extensionRegistry);
     }
   };
 

@@ -20,15 +20,12 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private AdminClientPreferences() {
-    reservedCarriers_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    reservedCarriers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     emailKey_ = "";
     emailId_ = "";
     emailName_ = "";
-    whitelistIps_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-    whitelistDomains_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    whitelistIps_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    whitelistDomains_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     callbacksServiceId_ = "";
     allowedCountries_ = java.util.Collections.emptyList();
   }
@@ -40,6 +37,145 @@ private static final long serialVersionUID = 0L;
     return new AdminClientPreferences();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private AdminClientPreferences(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+
+            useReservedCarrier_ = input.readBool();
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            emailKey_ = s;
+            break;
+          }
+          case 34: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            emailId_ = s;
+            break;
+          }
+          case 42: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            emailName_ = s;
+            break;
+          }
+          case 50: {
+            java.lang.String s = input.readStringRequireUtf8();
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              whitelistIps_ = new com.google.protobuf.LazyStringArrayList();
+              mutable_bitField0_ |= 0x00000002;
+            }
+            whitelistIps_.add(s);
+            break;
+          }
+          case 58: {
+            java.lang.String s = input.readStringRequireUtf8();
+            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+              whitelistDomains_ = new com.google.protobuf.LazyStringArrayList();
+              mutable_bitField0_ |= 0x00000004;
+            }
+            whitelistDomains_.add(s);
+            break;
+          }
+          case 66: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            callbacksServiceId_ = s;
+            break;
+          }
+          case 72: {
+
+            agentScreenRecording_ = input.readBool();
+            break;
+          }
+          case 82: {
+            java.lang.String s = input.readStringRequireUtf8();
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              reservedCarriers_ = new com.google.protobuf.LazyStringArrayList();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            reservedCarriers_.add(s);
+            break;
+          }
+          case 88: {
+            int rawValue = input.readEnum();
+            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+              allowedCountries_ = new java.util.ArrayList<java.lang.Integer>();
+              mutable_bitField0_ |= 0x00000008;
+            }
+            allowedCountries_.add(rawValue);
+            break;
+          }
+          case 90: {
+            int length = input.readRawVarint32();
+            int oldLimit = input.pushLimit(length);
+            while(input.getBytesUntilLimit() > 0) {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                allowedCountries_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              allowedCountries_.add(rawValue);
+            }
+            input.popLimit(oldLimit);
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        whitelistIps_ = whitelistIps_.getUnmodifiableView();
+      }
+      if (((mutable_bitField0_ & 0x00000004) != 0)) {
+        whitelistDomains_ = whitelistDomains_.getUnmodifiableView();
+      }
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        reservedCarriers_ = reservedCarriers_.getUnmodifiableView();
+      }
+      if (((mutable_bitField0_ & 0x00000008) != 0)) {
+        allowedCountries_ = java.util.Collections.unmodifiableList(allowedCountries_);
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.org.legacy.EntitiesProto.internal_static_api_v1alpha1_org_legacy_AdminClientPreferences_descriptor;
@@ -54,7 +190,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int USE_RESERVED_CARRIER_FIELD_NUMBER = 1;
-  private boolean useReservedCarrier_ = false;
+  private boolean useReservedCarrier_;
   /**
    * <pre>
    * Use reservered carrier preferences
@@ -69,9 +205,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESERVED_CARRIERS_FIELD_NUMBER = 10;
-  @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList reservedCarriers_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
+  private com.google.protobuf.LazyStringList reservedCarriers_;
   /**
    * <pre>
    * List of reserved carrier
@@ -122,8 +256,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EMAIL_KEY_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object emailKey_ = "";
+  private volatile java.lang.Object emailKey_;
   /**
    * <pre>
    * Email Sendgrid API key
@@ -169,8 +302,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EMAIL_ID_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object emailId_ = "";
+  private volatile java.lang.Object emailId_;
   /**
    * <pre>
    * Email Sendgrid API key ID
@@ -216,8 +348,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EMAIL_NAME_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object emailName_ = "";
+  private volatile java.lang.Object emailName_;
   /**
    * <pre>
    * Email Sendgrid API key name
@@ -263,9 +394,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WHITELIST_IPS_FIELD_NUMBER = 6;
-  @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList whitelistIps_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
+  private com.google.protobuf.LazyStringList whitelistIps_;
   /**
    * <pre>
    * List of whitelisted IPs
@@ -316,9 +445,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WHITELIST_DOMAINS_FIELD_NUMBER = 7;
-  @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList whitelistDomains_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
+  private com.google.protobuf.LazyStringList whitelistDomains_;
   /**
    * <pre>
    * List of whitelisted domains
@@ -369,8 +496,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALLBACKS_SERVICE_ID_FIELD_NUMBER = 8;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object callbacksServiceId_ = "";
+  private volatile java.lang.Object callbacksServiceId_;
   /**
    * <pre>
    * Scheduled callbacks service ID
@@ -416,7 +542,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AGENT_SCREEN_RECORDING_FIELD_NUMBER = 9;
-  private boolean agentScreenRecording_ = false;
+  private boolean agentScreenRecording_;
   /**
    * <pre>
    * Agent screen recording enabled
@@ -431,14 +557,14 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ALLOWED_COUNTRIES_FIELD_NUMBER = 11;
-  @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> allowedCountries_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, com.tcn.cloud.api.api.commons.Country> allowedCountries_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.tcn.cloud.api.api.commons.Country>() {
             public com.tcn.cloud.api.api.commons.Country convert(java.lang.Integer from) {
-              com.tcn.cloud.api.api.commons.Country result = com.tcn.cloud.api.api.commons.Country.forNumber(from);
+              @SuppressWarnings("deprecation")
+              com.tcn.cloud.api.api.commons.Country result = com.tcn.cloud.api.api.commons.Country.valueOf(from);
               return result == null ? com.tcn.cloud.api.api.commons.Country.UNRECOGNIZED : result;
             }
           };
@@ -526,13 +652,13 @@ private static final long serialVersionUID = 0L;
     if (useReservedCarrier_ != false) {
       output.writeBool(1, useReservedCarrier_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emailKey_)) {
+    if (!getEmailKeyBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, emailKey_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emailId_)) {
+    if (!getEmailIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, emailId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emailName_)) {
+    if (!getEmailNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, emailName_);
     }
     for (int i = 0; i < whitelistIps_.size(); i++) {
@@ -541,7 +667,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < whitelistDomains_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, whitelistDomains_.getRaw(i));
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callbacksServiceId_)) {
+    if (!getCallbacksServiceIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 8, callbacksServiceId_);
     }
     if (agentScreenRecording_ != false) {
@@ -557,7 +683,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < allowedCountries_.size(); i++) {
       output.writeEnumNoTag(allowedCountries_.get(i));
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -570,13 +696,13 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(1, useReservedCarrier_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emailKey_)) {
+    if (!getEmailKeyBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, emailKey_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emailId_)) {
+    if (!getEmailIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, emailId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emailName_)) {
+    if (!getEmailNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, emailName_);
     }
     {
@@ -595,7 +721,7 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getWhitelistDomainsList().size();
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callbacksServiceId_)) {
+    if (!getCallbacksServiceIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, callbacksServiceId_);
     }
     if (agentScreenRecording_ != false) {
@@ -622,7 +748,7 @@ private static final long serialVersionUID = 0L;
           .computeUInt32SizeNoTag(dataSize);
       }allowedCountriesMemoizedSerializedSize = dataSize;
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -656,7 +782,7 @@ private static final long serialVersionUID = 0L;
     if (getAgentScreenRecording()
         != other.getAgentScreenRecording()) return false;
     if (!allowedCountries_.equals(other.allowedCountries_)) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -697,7 +823,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + ALLOWED_COUNTRIES_FIELD_NUMBER;
       hash = (53 * hash) + allowedCountries_.hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -746,13 +872,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.AdminClientPreferences parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.AdminClientPreferences parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -820,32 +944,42 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.legacy.AdminClientPreferences.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       useReservedCarrier_ = false;
-      reservedCarriers_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+
+      reservedCarriers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000001);
       emailKey_ = "";
+
       emailId_ = "";
+
       emailName_ = "";
-      whitelistIps_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      whitelistDomains_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+
+      whitelistIps_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      whitelistDomains_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000004);
       callbacksServiceId_ = "";
+
       agentScreenRecording_ = false;
+
       allowedCountries_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000008);
       return this;
     }
 
@@ -872,52 +1006,35 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.legacy.AdminClientPreferences buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.legacy.AdminClientPreferences result = new com.tcn.cloud.api.api.v1alpha1.org.legacy.AdminClientPreferences(this);
-      buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      onBuilt();
-      return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.org.legacy.AdminClientPreferences result) {
-      if (((bitField0_ & 0x00000200) != 0)) {
+      int from_bitField0_ = bitField0_;
+      result.useReservedCarrier_ = useReservedCarrier_;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        reservedCarriers_ = reservedCarriers_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000001);
+      }
+      result.reservedCarriers_ = reservedCarriers_;
+      result.emailKey_ = emailKey_;
+      result.emailId_ = emailId_;
+      result.emailName_ = emailName_;
+      if (((bitField0_ & 0x00000002) != 0)) {
+        whitelistIps_ = whitelistIps_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000002);
+      }
+      result.whitelistIps_ = whitelistIps_;
+      if (((bitField0_ & 0x00000004) != 0)) {
+        whitelistDomains_ = whitelistDomains_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000004);
+      }
+      result.whitelistDomains_ = whitelistDomains_;
+      result.callbacksServiceId_ = callbacksServiceId_;
+      result.agentScreenRecording_ = agentScreenRecording_;
+      if (((bitField0_ & 0x00000008) != 0)) {
         allowedCountries_ = java.util.Collections.unmodifiableList(allowedCountries_);
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000008);
       }
       result.allowedCountries_ = allowedCountries_;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.legacy.AdminClientPreferences result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.useReservedCarrier_ = useReservedCarrier_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        reservedCarriers_.makeImmutable();
-        result.reservedCarriers_ = reservedCarriers_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.emailKey_ = emailKey_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.emailId_ = emailId_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.emailName_ = emailName_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        whitelistIps_.makeImmutable();
-        result.whitelistIps_ = whitelistIps_;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        whitelistDomains_.makeImmutable();
-        result.whitelistDomains_ = whitelistDomains_;
-      }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.callbacksServiceId_ = callbacksServiceId_;
-      }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
-        result.agentScreenRecording_ = agentScreenRecording_;
-      }
+      onBuilt();
+      return result;
     }
 
     @java.lang.Override
@@ -970,7 +1087,7 @@ private static final long serialVersionUID = 0L;
       if (!other.reservedCarriers_.isEmpty()) {
         if (reservedCarriers_.isEmpty()) {
           reservedCarriers_ = other.reservedCarriers_;
-          bitField0_ |= 0x00000002;
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensureReservedCarriersIsMutable();
           reservedCarriers_.addAll(other.reservedCarriers_);
@@ -979,23 +1096,20 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getEmailKey().isEmpty()) {
         emailKey_ = other.emailKey_;
-        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getEmailId().isEmpty()) {
         emailId_ = other.emailId_;
-        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.getEmailName().isEmpty()) {
         emailName_ = other.emailName_;
-        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (!other.whitelistIps_.isEmpty()) {
         if (whitelistIps_.isEmpty()) {
           whitelistIps_ = other.whitelistIps_;
-          bitField0_ |= 0x00000020;
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           ensureWhitelistIpsIsMutable();
           whitelistIps_.addAll(other.whitelistIps_);
@@ -1005,7 +1119,7 @@ private static final long serialVersionUID = 0L;
       if (!other.whitelistDomains_.isEmpty()) {
         if (whitelistDomains_.isEmpty()) {
           whitelistDomains_ = other.whitelistDomains_;
-          bitField0_ |= 0x00000040;
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
           ensureWhitelistDomainsIsMutable();
           whitelistDomains_.addAll(other.whitelistDomains_);
@@ -1014,7 +1128,6 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getCallbacksServiceId().isEmpty()) {
         callbacksServiceId_ = other.callbacksServiceId_;
-        bitField0_ |= 0x00000080;
         onChanged();
       }
       if (other.getAgentScreenRecording() != false) {
@@ -1023,14 +1136,14 @@ private static final long serialVersionUID = 0L;
       if (!other.allowedCountries_.isEmpty()) {
         if (allowedCountries_.isEmpty()) {
           allowedCountries_ = other.allowedCountries_;
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
           ensureAllowedCountriesIsMutable();
           allowedCountries_.addAll(other.allowedCountries_);
         }
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -1045,95 +1158,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.org.legacy.AdminClientPreferences parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              useReservedCarrier_ = input.readBool();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 26: {
-              emailKey_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            case 34: {
-              emailId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
-            case 42: {
-              emailName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 42
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensureWhitelistIpsIsMutable();
-              whitelistIps_.add(s);
-              break;
-            } // case 50
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensureWhitelistDomainsIsMutable();
-              whitelistDomains_.add(s);
-              break;
-            } // case 58
-            case 66: {
-              callbacksServiceId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000080;
-              break;
-            } // case 66
-            case 72: {
-              agentScreenRecording_ = input.readBool();
-              bitField0_ |= 0x00000100;
-              break;
-            } // case 72
-            case 82: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensureReservedCarriersIsMutable();
-              reservedCarriers_.add(s);
-              break;
-            } // case 82
-            case 88: {
-              int tmpRaw = input.readEnum();
-              ensureAllowedCountriesIsMutable();
-              allowedCountries_.add(tmpRaw);
-              break;
-            } // case 88
-            case 90: {
-              int length = input.readRawVarint32();
-              int oldLimit = input.pushLimit(length);
-              while(input.getBytesUntilLimit() > 0) {
-                int tmpRaw = input.readEnum();
-                ensureAllowedCountriesIsMutable();
-                allowedCountries_.add(tmpRaw);
-              }
-              input.popLimit(oldLimit);
-              break;
-            } // case 90
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.org.legacy.AdminClientPreferences) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -1161,9 +1196,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setUseReservedCarrier(boolean value) {
-
+      
       useReservedCarrier_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1176,19 +1210,18 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUseReservedCarrier() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       useReservedCarrier_ = false;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringArrayList reservedCarriers_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.LazyStringList reservedCarriers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureReservedCarriersIsMutable() {
-      if (!reservedCarriers_.isModifiable()) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         reservedCarriers_ = new com.google.protobuf.LazyStringArrayList(reservedCarriers_);
-      }
-      bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
+       }
     }
     /**
      * <pre>
@@ -1200,8 +1233,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getReservedCarriersList() {
-      reservedCarriers_.makeImmutable();
-      return reservedCarriers_;
+      return reservedCarriers_.getUnmodifiableView();
     }
     /**
      * <pre>
@@ -1251,10 +1283,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setReservedCarriers(
         int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureReservedCarriersIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureReservedCarriersIsMutable();
       reservedCarriers_.set(index, value);
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1269,10 +1302,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addReservedCarriers(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureReservedCarriersIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureReservedCarriersIsMutable();
       reservedCarriers_.add(value);
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1290,7 +1324,6 @@ private static final long serialVersionUID = 0L;
       ensureReservedCarriersIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, reservedCarriers_);
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1303,9 +1336,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearReservedCarriers() {
-      reservedCarriers_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000002);;
+      reservedCarriers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1320,11 +1352,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addReservedCarriersBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
       ensureReservedCarriersIsMutable();
       reservedCarriers_.add(value);
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1382,9 +1415,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEmailKey(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       emailKey_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1397,8 +1432,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEmailKey() {
+      
       emailKey_ = getDefaultInstance().getEmailKey();
-      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1413,10 +1448,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEmailKeyBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       emailKey_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1474,9 +1511,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEmailId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       emailId_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1489,8 +1528,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEmailId() {
+      
       emailId_ = getDefaultInstance().getEmailId();
-      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1505,10 +1544,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEmailIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       emailId_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1566,9 +1607,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEmailName(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       emailName_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1581,8 +1624,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEmailName() {
+      
       emailName_ = getDefaultInstance().getEmailName();
-      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1597,21 +1640,22 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEmailNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       emailName_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringArrayList whitelistIps_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.LazyStringList whitelistIps_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureWhitelistIpsIsMutable() {
-      if (!whitelistIps_.isModifiable()) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         whitelistIps_ = new com.google.protobuf.LazyStringArrayList(whitelistIps_);
-      }
-      bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000002;
+       }
     }
     /**
      * <pre>
@@ -1623,8 +1667,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getWhitelistIpsList() {
-      whitelistIps_.makeImmutable();
-      return whitelistIps_;
+      return whitelistIps_.getUnmodifiableView();
     }
     /**
      * <pre>
@@ -1674,10 +1717,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setWhitelistIps(
         int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureWhitelistIpsIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureWhitelistIpsIsMutable();
       whitelistIps_.set(index, value);
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1692,10 +1736,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addWhitelistIps(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureWhitelistIpsIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureWhitelistIpsIsMutable();
       whitelistIps_.add(value);
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1713,7 +1758,6 @@ private static final long serialVersionUID = 0L;
       ensureWhitelistIpsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, whitelistIps_);
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1726,9 +1770,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWhitelistIps() {
-      whitelistIps_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000020);;
+      whitelistIps_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1743,22 +1786,22 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addWhitelistIpsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
       ensureWhitelistIpsIsMutable();
       whitelistIps_.add(value);
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringArrayList whitelistDomains_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.LazyStringList whitelistDomains_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureWhitelistDomainsIsMutable() {
-      if (!whitelistDomains_.isModifiable()) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         whitelistDomains_ = new com.google.protobuf.LazyStringArrayList(whitelistDomains_);
-      }
-      bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000004;
+       }
     }
     /**
      * <pre>
@@ -1770,8 +1813,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getWhitelistDomainsList() {
-      whitelistDomains_.makeImmutable();
-      return whitelistDomains_;
+      return whitelistDomains_.getUnmodifiableView();
     }
     /**
      * <pre>
@@ -1821,10 +1863,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setWhitelistDomains(
         int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureWhitelistDomainsIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureWhitelistDomainsIsMutable();
       whitelistDomains_.set(index, value);
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1839,10 +1882,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addWhitelistDomains(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureWhitelistDomainsIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureWhitelistDomainsIsMutable();
       whitelistDomains_.add(value);
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1860,7 +1904,6 @@ private static final long serialVersionUID = 0L;
       ensureWhitelistDomainsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, whitelistDomains_);
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1873,9 +1916,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWhitelistDomains() {
-      whitelistDomains_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000040);;
+      whitelistDomains_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1890,11 +1932,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addWhitelistDomainsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
       ensureWhitelistDomainsIsMutable();
       whitelistDomains_.add(value);
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1952,9 +1995,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallbacksServiceId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       callbacksServiceId_ = value;
-      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1967,8 +2012,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallbacksServiceId() {
+      
       callbacksServiceId_ = getDefaultInstance().getCallbacksServiceId();
-      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -1983,10 +2028,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallbacksServiceIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       callbacksServiceId_ = value;
-      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2014,9 +2061,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAgentScreenRecording(boolean value) {
-
+      
       agentScreenRecording_ = value;
-      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2029,7 +2075,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAgentScreenRecording() {
-      bitField0_ = (bitField0_ & ~0x00000100);
+      
       agentScreenRecording_ = false;
       onChanged();
       return this;
@@ -2038,9 +2084,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> allowedCountries_ =
       java.util.Collections.emptyList();
     private void ensureAllowedCountriesIsMutable() {
-      if (!((bitField0_ & 0x00000200) != 0)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         allowedCountries_ = new java.util.ArrayList<java.lang.Integer>(allowedCountries_);
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000008;
       }
     }
     /**
@@ -2144,7 +2190,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearAllowedCountries() {
       allowedCountries_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -2178,8 +2224,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .api.commons.Country allowed_countries = 11 [json_name = "allowedCountries"];</code>
-     * @param index The index to set the value at.
-     * @param value The enum numeric value on the wire for allowedCountries to set.
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of allowedCountries at the given index.
      * @return This builder for chaining.
      */
     public Builder setAllowedCountriesValue(
@@ -2255,18 +2301,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new AdminClientPreferences(input, extensionRegistry);
     }
   };
 

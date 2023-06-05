@@ -26,6 +26,87 @@ private static final long serialVersionUID = 0L;
     return new SmsGroupWithIntents();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private SmsGroupWithIntents(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            com.tcn.cloud.api.api.v0alpha.SmsGroupInfo.Builder subBuilder = null;
+            if (smsGroupInfoRes_ != null) {
+              subBuilder = smsGroupInfoRes_.toBuilder();
+            }
+            smsGroupInfoRes_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.SmsGroupInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(smsGroupInfoRes_);
+              smsGroupInfoRes_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 18: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              smsIntentGroups_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.SmsIntentGroup>();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            smsIntentGroups_.add(
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.SmsIntentGroup.parser(), extensionRegistry));
+            break;
+          }
+          case 26: {
+            com.tcn.cloud.api.api.v0alpha.SmsMamSettings.Builder subBuilder = null;
+            if (smsMamSettings_ != null) {
+              subBuilder = smsMamSettings_.toBuilder();
+            }
+            smsMamSettings_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.SmsMamSettings.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(smsMamSettings_);
+              smsMamSettings_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        smsIntentGroups_ = java.util.Collections.unmodifiableList(smsIntentGroups_);
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.SmsapiProto.internal_static_api_v0alpha_SmsGroupWithIntents_descriptor;
@@ -62,11 +143,10 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.SmsGroupInfoOrBuilder getSmsGroupInfoResOrBuilder() {
-    return smsGroupInfoRes_ == null ? com.tcn.cloud.api.api.v0alpha.SmsGroupInfo.getDefaultInstance() : smsGroupInfoRes_;
+    return getSmsGroupInfoRes();
   }
 
   public static final int SMS_INTENT_GROUPS_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v0alpha.SmsIntentGroup> smsIntentGroups_;
   /**
    * <code>repeated .api.v0alpha.SmsIntentGroup sms_intent_groups = 2 [json_name = "smsIntentGroups"];</code>
@@ -129,7 +209,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.SmsMamSettingsOrBuilder getSmsMamSettingsOrBuilder() {
-    return smsMamSettings_ == null ? com.tcn.cloud.api.api.v0alpha.SmsMamSettings.getDefaultInstance() : smsMamSettings_;
+    return getSmsMamSettings();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -155,7 +235,7 @@ private static final long serialVersionUID = 0L;
     if (smsMamSettings_ != null) {
       output.writeMessage(3, getSmsMamSettings());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -176,7 +256,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getSmsMamSettings());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -203,7 +283,7 @@ private static final long serialVersionUID = 0L;
       if (!getSmsMamSettings()
           .equals(other.getSmsMamSettings())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -226,7 +306,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SMS_MAM_SETTINGS_FIELD_NUMBER;
       hash = (53 * hash) + getSmsMamSettings().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -275,13 +355,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.SmsGroupWithIntents parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.SmsGroupWithIntents parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -345,33 +423,39 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.SmsGroupWithIntents.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getSmsIntentGroupsFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      smsGroupInfoRes_ = null;
-      if (smsGroupInfoResBuilder_ != null) {
-        smsGroupInfoResBuilder_.dispose();
+      if (smsGroupInfoResBuilder_ == null) {
+        smsGroupInfoRes_ = null;
+      } else {
+        smsGroupInfoRes_ = null;
         smsGroupInfoResBuilder_ = null;
       }
       if (smsIntentGroupsBuilder_ == null) {
         smsIntentGroups_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
-        smsIntentGroups_ = null;
         smsIntentGroupsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000002);
-      smsMamSettings_ = null;
-      if (smsMamSettingsBuilder_ != null) {
-        smsMamSettingsBuilder_.dispose();
+      if (smsMamSettingsBuilder_ == null) {
+        smsMamSettings_ = null;
+      } else {
+        smsMamSettings_ = null;
         smsMamSettingsBuilder_ = null;
       }
       return this;
@@ -400,36 +484,28 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.SmsGroupWithIntents buildPartial() {
       com.tcn.cloud.api.api.v0alpha.SmsGroupWithIntents result = new com.tcn.cloud.api.api.v0alpha.SmsGroupWithIntents(this);
-      buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      onBuilt();
-      return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.SmsGroupWithIntents result) {
+      int from_bitField0_ = bitField0_;
+      if (smsGroupInfoResBuilder_ == null) {
+        result.smsGroupInfoRes_ = smsGroupInfoRes_;
+      } else {
+        result.smsGroupInfoRes_ = smsGroupInfoResBuilder_.build();
+      }
       if (smsIntentGroupsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           smsIntentGroups_ = java.util.Collections.unmodifiableList(smsIntentGroups_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.smsIntentGroups_ = smsIntentGroups_;
       } else {
         result.smsIntentGroups_ = smsIntentGroupsBuilder_.build();
       }
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.SmsGroupWithIntents result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.smsGroupInfoRes_ = smsGroupInfoResBuilder_ == null
-            ? smsGroupInfoRes_
-            : smsGroupInfoResBuilder_.build();
+      if (smsMamSettingsBuilder_ == null) {
+        result.smsMamSettings_ = smsMamSettings_;
+      } else {
+        result.smsMamSettings_ = smsMamSettingsBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.smsMamSettings_ = smsMamSettingsBuilder_ == null
-            ? smsMamSettings_
-            : smsMamSettingsBuilder_.build();
-      }
+      onBuilt();
+      return result;
     }
 
     @java.lang.Override
@@ -483,7 +559,7 @@ private static final long serialVersionUID = 0L;
         if (!other.smsIntentGroups_.isEmpty()) {
           if (smsIntentGroups_.isEmpty()) {
             smsIntentGroups_ = other.smsIntentGroups_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureSmsIntentGroupsIsMutable();
             smsIntentGroups_.addAll(other.smsIntentGroups_);
@@ -496,7 +572,7 @@ private static final long serialVersionUID = 0L;
             smsIntentGroupsBuilder_.dispose();
             smsIntentGroupsBuilder_ = null;
             smsIntentGroups_ = other.smsIntentGroups_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
             smsIntentGroupsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getSmsIntentGroupsFieldBuilder() : null;
@@ -508,7 +584,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasSmsMamSettings()) {
         mergeSmsMamSettings(other.getSmsMamSettings());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -523,57 +599,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.SmsGroupWithIntents parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              input.readMessage(
-                  getSmsGroupInfoResFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              com.tcn.cloud.api.api.v0alpha.SmsIntentGroup m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v0alpha.SmsIntentGroup.parser(),
-                      extensionRegistry);
-              if (smsIntentGroupsBuilder_ == null) {
-                ensureSmsIntentGroupsIsMutable();
-                smsIntentGroups_.add(m);
-              } else {
-                smsIntentGroupsBuilder_.addMessage(m);
-              }
-              break;
-            } // case 18
-            case 26: {
-              input.readMessage(
-                  getSmsMamSettingsFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.SmsGroupWithIntents) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -586,7 +622,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the smsGroupInfoRes field is set.
      */
     public boolean hasSmsGroupInfoRes() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return smsGroupInfoResBuilder_ != null || smsGroupInfoRes_ != null;
     }
     /**
      * <code>.api.v0alpha.SmsGroupInfo sms_group_info_res = 1 [json_name = "smsGroupInfoRes"];</code>
@@ -608,11 +644,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         smsGroupInfoRes_ = value;
+        onChanged();
       } else {
         smsGroupInfoResBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -622,11 +658,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.SmsGroupInfo.Builder builderForValue) {
       if (smsGroupInfoResBuilder_ == null) {
         smsGroupInfoRes_ = builderForValue.build();
+        onChanged();
       } else {
         smsGroupInfoResBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -634,38 +670,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeSmsGroupInfoRes(com.tcn.cloud.api.api.v0alpha.SmsGroupInfo value) {
       if (smsGroupInfoResBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          smsGroupInfoRes_ != null &&
-          smsGroupInfoRes_ != com.tcn.cloud.api.api.v0alpha.SmsGroupInfo.getDefaultInstance()) {
-          getSmsGroupInfoResBuilder().mergeFrom(value);
+        if (smsGroupInfoRes_ != null) {
+          smsGroupInfoRes_ =
+            com.tcn.cloud.api.api.v0alpha.SmsGroupInfo.newBuilder(smsGroupInfoRes_).mergeFrom(value).buildPartial();
         } else {
           smsGroupInfoRes_ = value;
         }
+        onChanged();
       } else {
         smsGroupInfoResBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.SmsGroupInfo sms_group_info_res = 1 [json_name = "smsGroupInfoRes"];</code>
      */
     public Builder clearSmsGroupInfoRes() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      smsGroupInfoRes_ = null;
-      if (smsGroupInfoResBuilder_ != null) {
-        smsGroupInfoResBuilder_.dispose();
+      if (smsGroupInfoResBuilder_ == null) {
+        smsGroupInfoRes_ = null;
+        onChanged();
+      } else {
+        smsGroupInfoRes_ = null;
         smsGroupInfoResBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.SmsGroupInfo sms_group_info_res = 1 [json_name = "smsGroupInfoRes"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.SmsGroupInfo.Builder getSmsGroupInfoResBuilder() {
-      bitField0_ |= 0x00000001;
+      
       onChanged();
       return getSmsGroupInfoResFieldBuilder().getBuilder();
     }
@@ -700,9 +736,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v0alpha.SmsIntentGroup> smsIntentGroups_ =
       java.util.Collections.emptyList();
     private void ensureSmsIntentGroupsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         smsIntentGroups_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.SmsIntentGroup>(smsIntentGroups_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -852,7 +888,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearSmsIntentGroups() {
       if (smsIntentGroupsBuilder_ == null) {
         smsIntentGroups_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         smsIntentGroupsBuilder_.clear();
@@ -929,7 +965,7 @@ private static final long serialVersionUID = 0L;
         smsIntentGroupsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v0alpha.SmsIntentGroup, com.tcn.cloud.api.api.v0alpha.SmsIntentGroup.Builder, com.tcn.cloud.api.api.v0alpha.SmsIntentGroupOrBuilder>(
                 smsIntentGroups_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         smsIntentGroups_ = null;
@@ -945,7 +981,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the smsMamSettings field is set.
      */
     public boolean hasSmsMamSettings() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return smsMamSettingsBuilder_ != null || smsMamSettings_ != null;
     }
     /**
      * <code>.api.v0alpha.SmsMamSettings sms_mam_settings = 3 [json_name = "smsMamSettings"];</code>
@@ -967,11 +1003,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         smsMamSettings_ = value;
+        onChanged();
       } else {
         smsMamSettingsBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -981,11 +1017,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.SmsMamSettings.Builder builderForValue) {
       if (smsMamSettingsBuilder_ == null) {
         smsMamSettings_ = builderForValue.build();
+        onChanged();
       } else {
         smsMamSettingsBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -993,38 +1029,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeSmsMamSettings(com.tcn.cloud.api.api.v0alpha.SmsMamSettings value) {
       if (smsMamSettingsBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0) &&
-          smsMamSettings_ != null &&
-          smsMamSettings_ != com.tcn.cloud.api.api.v0alpha.SmsMamSettings.getDefaultInstance()) {
-          getSmsMamSettingsBuilder().mergeFrom(value);
+        if (smsMamSettings_ != null) {
+          smsMamSettings_ =
+            com.tcn.cloud.api.api.v0alpha.SmsMamSettings.newBuilder(smsMamSettings_).mergeFrom(value).buildPartial();
         } else {
           smsMamSettings_ = value;
         }
+        onChanged();
       } else {
         smsMamSettingsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.SmsMamSettings sms_mam_settings = 3 [json_name = "smsMamSettings"];</code>
      */
     public Builder clearSmsMamSettings() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      smsMamSettings_ = null;
-      if (smsMamSettingsBuilder_ != null) {
-        smsMamSettingsBuilder_.dispose();
+      if (smsMamSettingsBuilder_ == null) {
+        smsMamSettings_ = null;
+        onChanged();
+      } else {
+        smsMamSettings_ = null;
         smsMamSettingsBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.SmsMamSettings sms_mam_settings = 3 [json_name = "smsMamSettings"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.SmsMamSettings.Builder getSmsMamSettingsBuilder() {
-      bitField0_ |= 0x00000004;
+      
       onChanged();
       return getSmsMamSettingsFieldBuilder().getBuilder();
     }
@@ -1088,18 +1124,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new SmsGroupWithIntents(input, extensionRegistry);
     }
   };
 

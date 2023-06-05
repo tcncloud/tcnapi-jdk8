@@ -30,25 +30,25 @@ public final class ServiceProto {
       "ng\022\254\001\n\021CreateBillingPlan\022*.api.v1alpha1." +
       "billing.CreateBillingPlanReq\032*.api.v1alp" +
       "ha1.billing.CreateBillingPlanRes\"?\272\270\221\002\010\n" +
-      "\006\010\310\001\010\334\001\202\323\344\223\002,\"\'/api/v1alpha1/billing/cre" +
-      "atebillingplan:\001*\022\240\001\n\016GetBillingPlan\022\'.a" +
+      "\006\010\310\001\010\334\001\202\323\344\223\002,:\001*\"\'/api/v1alpha1/billing/" +
+      "createbillingplan\022\240\001\n\016GetBillingPlan\022\'.a" +
       "pi.v1alpha1.billing.GetBillingPlanReq\032\'." +
       "api.v1alpha1.billing.GetBillingPlanRes\"<" +
-      "\272\270\221\002\010\n\006\010\310\001\010\334\001\202\323\344\223\002)\"$/api/v1alpha1/billi" +
-      "ng/getbillingplan:\001*\022\254\001\n\021UpdateBillingPl" +
+      "\272\270\221\002\010\n\006\010\310\001\010\334\001\202\323\344\223\002):\001*\"$/api/v1alpha1/bi" +
+      "lling/getbillingplan\022\254\001\n\021UpdateBillingPl" +
       "an\022*.api.v1alpha1.billing.UpdateBillingP" +
       "lanReq\032*.api.v1alpha1.billing.UpdateBill" +
-      "ingPlanRes\"?\272\270\221\002\010\n\006\010\310\001\010\334\001\202\323\344\223\002,\"\'/api/v1" +
-      "alpha1/billing/updatebillingplan:\001*\022\270\001\n\024" +
+      "ingPlanRes\"?\272\270\221\002\010\n\006\010\310\001\010\334\001\202\323\344\223\002,:\001*\"\'/api" +
+      "/v1alpha1/billing/updatebillingplan\022\270\001\n\024" +
       "DeleteBillingDetails\022-.api.v1alpha1.bill" +
       "ing.DeleteBillingDetailsReq\032-.api.v1alph" +
       "a1.billing.DeleteBillingDetailsRes\"B\272\270\221\002" +
-      "\010\n\006\010\310\001\010\334\001\202\323\344\223\002/\"*/api/v1alpha1/billing/d" +
-      "eletebillingdetails:\001*\022\220\001\n\nGetInvoice\022#." +
+      "\010\n\006\010\310\001\010\334\001\202\323\344\223\002/:\001*\"*/api/v1alpha1/billin" +
+      "g/deletebillingdetails\022\220\001\n\nGetInvoice\022#." +
       "api.v1alpha1.billing.GetInvoiceReq\032#.api" +
       ".v1alpha1.billing.GetInvoiceRes\"8\272\270\221\002\010\n\006" +
-      "\010\310\001\010\360\001\202\323\344\223\002%\" /api/v1alpha1/billing/geti" +
-      "nvoice:\001*B\250\001\n&com.tcn.cloud.api.api.v1al" +
+      "\010\310\001\010\360\001\202\323\344\223\002%:\001*\" /api/v1alpha1/billing/g" +
+      "etinvoiceB\250\001\n&com.tcn.cloud.api.api.v1al" +
       "pha1.billingB\014ServiceProtoP\001\242\002\003AVB\252\002\024Api" +
       ".V1alpha1.Billing\312\002\024Api\\V1alpha1\\Billing" +
       "\342\002 Api\\V1alpha1\\Billing\\GPBMetadata\352\002\026Ap" +

@@ -30,14 +30,14 @@ public interface MapStringOrBuilder extends
   /**
    * <code>map&lt;string, string&gt; values = 1 [json_name = "values"];</code>
    */
-  /* nullable */
-java.lang.String getValuesOrDefault(
+
+  java.lang.String getValuesOrDefault(
       java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue);
+      java.lang.String defaultValue);
   /**
    * <code>map&lt;string, string&gt; values = 1 [json_name = "values"];</code>
    */
+
   java.lang.String getValuesOrThrow(
       java.lang.String key);
 }

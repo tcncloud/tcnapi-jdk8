@@ -27,6 +27,73 @@ private static final long serialVersionUID = 0L;
     return new GetRecommendedTimeFiltersReq();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private GetRecommendedTimeFiltersReq(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            dashPageId_ = s;
+            break;
+          }
+          case 18: {
+            com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReq.Builder subBuilder = null;
+            if (dashPageType_ != null) {
+              subBuilder = dashPageType_.toBuilder();
+            }
+            dashPageType_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReq.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(dashPageType_);
+              dashPageType_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            currentFilter_ = s;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.AnaProto.internal_static_api_v0alpha_GetRecommendedTimeFiltersReq_descriptor;
@@ -41,8 +108,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DASH_PAGE_ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object dashPageId_ = "";
+  private volatile java.lang.Object dashPageId_;
   /**
    * <code>string dash_page_id = 1 [json_name = "dashPageId"];</code>
    * @return The dashPageId.
@@ -102,12 +168,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReqOrBuilder getDashPageTypeOrBuilder() {
-    return dashPageType_ == null ? com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReq.getDefaultInstance() : dashPageType_;
+    return getDashPageType();
   }
 
   public static final int CURRENT_FILTER_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object currentFilter_ = "";
+  private volatile java.lang.Object currentFilter_;
   /**
    * <code>string current_filter = 3 [json_name = "currentFilter"];</code>
    * @return The currentFilter.
@@ -158,16 +223,16 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dashPageId_)) {
+    if (!getDashPageIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dashPageId_);
     }
     if (dashPageType_ != null) {
       output.writeMessage(2, getDashPageType());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currentFilter_)) {
+    if (!getCurrentFilterBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, currentFilter_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -176,17 +241,17 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dashPageId_)) {
+    if (!getDashPageIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dashPageId_);
     }
     if (dashPageType_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getDashPageType());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currentFilter_)) {
+    if (!getCurrentFilterBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, currentFilter_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -210,7 +275,7 @@ private static final long serialVersionUID = 0L;
     }
     if (!getCurrentFilter()
         .equals(other.getCurrentFilter())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -229,7 +294,7 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + CURRENT_FILTER_FIELD_NUMBER;
     hash = (53 * hash) + getCurrentFilter().hashCode();
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -278,13 +343,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.GetRecommendedTimeFiltersReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.GetRecommendedTimeFiltersReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -348,25 +411,32 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.GetRecommendedTimeFiltersReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       dashPageId_ = "";
-      dashPageType_ = null;
-      if (dashPageTypeBuilder_ != null) {
-        dashPageTypeBuilder_.dispose();
+
+      if (dashPageTypeBuilder_ == null) {
+        dashPageType_ = null;
+      } else {
+        dashPageType_ = null;
         dashPageTypeBuilder_ = null;
       }
       currentFilter_ = "";
+
       return this;
     }
 
@@ -393,24 +463,15 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.GetRecommendedTimeFiltersReq buildPartial() {
       com.tcn.cloud.api.api.v0alpha.GetRecommendedTimeFiltersReq result = new com.tcn.cloud.api.api.v0alpha.GetRecommendedTimeFiltersReq(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.dashPageId_ = dashPageId_;
+      if (dashPageTypeBuilder_ == null) {
+        result.dashPageType_ = dashPageType_;
+      } else {
+        result.dashPageType_ = dashPageTypeBuilder_.build();
+      }
+      result.currentFilter_ = currentFilter_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.GetRecommendedTimeFiltersReq result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.dashPageId_ = dashPageId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.dashPageType_ = dashPageTypeBuilder_ == null
-            ? dashPageType_
-            : dashPageTypeBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.currentFilter_ = currentFilter_;
-      }
     }
 
     @java.lang.Override
@@ -459,7 +520,6 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v0alpha.GetRecommendedTimeFiltersReq.getDefaultInstance()) return this;
       if (!other.getDashPageId().isEmpty()) {
         dashPageId_ = other.dashPageId_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasDashPageType()) {
@@ -467,10 +527,9 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getCurrentFilter().isEmpty()) {
         currentFilter_ = other.currentFilter_;
-        bitField0_ |= 0x00000004;
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -485,50 +544,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.GetRecommendedTimeFiltersReq parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              dashPageId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              input.readMessage(
-                  getDashPageTypeFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 26: {
-              currentFilter_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.GetRecommendedTimeFiltersReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private java.lang.Object dashPageId_ = "";
     /**
@@ -571,9 +599,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDashPageId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       dashPageId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -582,8 +612,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDashPageId() {
+      
       dashPageId_ = getDefaultInstance().getDashPageId();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -594,10 +624,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDashPageIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       dashPageId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -610,7 +642,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dashPageType field is set.
      */
     public boolean hasDashPageType() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return dashPageTypeBuilder_ != null || dashPageType_ != null;
     }
     /**
      * <code>.api.v0alpha.RecommendedDashPageReq dash_page_type = 2 [json_name = "dashPageType"];</code>
@@ -632,11 +664,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dashPageType_ = value;
+        onChanged();
       } else {
         dashPageTypeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -646,11 +678,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReq.Builder builderForValue) {
       if (dashPageTypeBuilder_ == null) {
         dashPageType_ = builderForValue.build();
+        onChanged();
       } else {
         dashPageTypeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -658,38 +690,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDashPageType(com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReq value) {
       if (dashPageTypeBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
-          dashPageType_ != null &&
-          dashPageType_ != com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReq.getDefaultInstance()) {
-          getDashPageTypeBuilder().mergeFrom(value);
+        if (dashPageType_ != null) {
+          dashPageType_ =
+            com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReq.newBuilder(dashPageType_).mergeFrom(value).buildPartial();
         } else {
           dashPageType_ = value;
         }
+        onChanged();
       } else {
         dashPageTypeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.RecommendedDashPageReq dash_page_type = 2 [json_name = "dashPageType"];</code>
      */
     public Builder clearDashPageType() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      dashPageType_ = null;
-      if (dashPageTypeBuilder_ != null) {
-        dashPageTypeBuilder_.dispose();
+      if (dashPageTypeBuilder_ == null) {
+        dashPageType_ = null;
+        onChanged();
+      } else {
+        dashPageType_ = null;
         dashPageTypeBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.RecommendedDashPageReq dash_page_type = 2 [json_name = "dashPageType"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReq.Builder getDashPageTypeBuilder() {
-      bitField0_ |= 0x00000002;
+      
       onChanged();
       return getDashPageTypeFieldBuilder().getBuilder();
     }
@@ -762,9 +794,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCurrentFilter(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       currentFilter_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -773,8 +807,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCurrentFilter() {
+      
       currentFilter_ = getDefaultInstance().getCurrentFilter();
-      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -785,10 +819,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCurrentFilterBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       currentFilter_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -825,18 +861,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new GetRecommendedTimeFiltersReq(input, extensionRegistry);
     }
   };
 

@@ -26,6 +26,77 @@ private static final long serialVersionUID = 0L;
     return new ContactFieldDescription();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private ContactFieldDescription(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+
+            contactFieldDescriptionSid_ = input.readInt32();
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            fieldName_ = s;
+            break;
+          }
+          case 32: {
+
+            isPhone_ = input.readBool();
+            break;
+          }
+          case 42: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (displayFormatString_ != null) {
+              subBuilder = displayFormatString_.toBuilder();
+            }
+            displayFormatString_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(displayFormatString_);
+              displayFormatString_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.P3apiProto.internal_static_api_v0alpha_ContactFieldDescription_descriptor;
@@ -40,7 +111,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONTACT_FIELD_DESCRIPTION_SID_FIELD_NUMBER = 1;
-  private int contactFieldDescriptionSid_ = 0;
+  private int contactFieldDescriptionSid_;
   /**
    * <code>int32 contact_field_description_sid = 1 [json_name = "contactFieldDescriptionSid"];</code>
    * @return The contactFieldDescriptionSid.
@@ -51,8 +122,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FIELD_NAME_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object fieldName_ = "";
+  private volatile java.lang.Object fieldName_;
   /**
    * <code>string field_name = 3 [json_name = "fieldName"];</code>
    * @return The fieldName.
@@ -90,7 +160,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int IS_PHONE_FIELD_NUMBER = 4;
-  private boolean isPhone_ = false;
+  private boolean isPhone_;
   /**
    * <code>bool is_phone = 4 [json_name = "isPhone"];</code>
    * @return The isPhone.
@@ -123,7 +193,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getDisplayFormatStringOrBuilder() {
-    return displayFormatString_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : displayFormatString_;
+    return getDisplayFormatString();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -143,7 +213,7 @@ private static final long serialVersionUID = 0L;
     if (contactFieldDescriptionSid_ != 0) {
       output.writeInt32(1, contactFieldDescriptionSid_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fieldName_)) {
+    if (!getFieldNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, fieldName_);
     }
     if (isPhone_ != false) {
@@ -152,7 +222,7 @@ private static final long serialVersionUID = 0L;
     if (displayFormatString_ != null) {
       output.writeMessage(5, getDisplayFormatString());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -165,7 +235,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(1, contactFieldDescriptionSid_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fieldName_)) {
+    if (!getFieldNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, fieldName_);
     }
     if (isPhone_ != false) {
@@ -176,7 +246,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getDisplayFormatString());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -202,7 +272,7 @@ private static final long serialVersionUID = 0L;
       if (!getDisplayFormatString()
           .equals(other.getDisplayFormatString())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -224,7 +294,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DISPLAY_FORMAT_STRING_FIELD_NUMBER;
       hash = (53 * hash) + getDisplayFormatString().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -273,13 +343,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.ContactFieldDescription parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.ContactFieldDescription parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -343,24 +411,32 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ContactFieldDescription.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       contactFieldDescriptionSid_ = 0;
+
       fieldName_ = "";
+
       isPhone_ = false;
-      displayFormatString_ = null;
-      if (displayFormatStringBuilder_ != null) {
-        displayFormatStringBuilder_.dispose();
+
+      if (displayFormatStringBuilder_ == null) {
+        displayFormatString_ = null;
+      } else {
+        displayFormatString_ = null;
         displayFormatStringBuilder_ = null;
       }
       return this;
@@ -389,27 +465,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.ContactFieldDescription buildPartial() {
       com.tcn.cloud.api.api.v0alpha.ContactFieldDescription result = new com.tcn.cloud.api.api.v0alpha.ContactFieldDescription(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.contactFieldDescriptionSid_ = contactFieldDescriptionSid_;
+      result.fieldName_ = fieldName_;
+      result.isPhone_ = isPhone_;
+      if (displayFormatStringBuilder_ == null) {
+        result.displayFormatString_ = displayFormatString_;
+      } else {
+        result.displayFormatString_ = displayFormatStringBuilder_.build();
+      }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ContactFieldDescription result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.contactFieldDescriptionSid_ = contactFieldDescriptionSid_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.fieldName_ = fieldName_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.isPhone_ = isPhone_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.displayFormatString_ = displayFormatStringBuilder_ == null
-            ? displayFormatString_
-            : displayFormatStringBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -461,7 +526,6 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getFieldName().isEmpty()) {
         fieldName_ = other.fieldName_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.getIsPhone() != false) {
@@ -470,7 +534,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasDisplayFormatString()) {
         mergeDisplayFormatString(other.getDisplayFormatString());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -485,55 +549,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.ContactFieldDescription parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              contactFieldDescriptionSid_ = input.readInt32();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 26: {
-              fieldName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 26
-            case 32: {
-              isPhone_ = input.readBool();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 32
-            case 42: {
-              input.readMessage(
-                  getDisplayFormatStringFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 42
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.ContactFieldDescription) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private int contactFieldDescriptionSid_ ;
     /**
@@ -550,9 +578,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setContactFieldDescriptionSid(int value) {
-
+      
       contactFieldDescriptionSid_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -561,7 +588,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearContactFieldDescriptionSid() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       contactFieldDescriptionSid_ = 0;
       onChanged();
       return this;
@@ -608,9 +635,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFieldName(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       fieldName_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -619,8 +648,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFieldName() {
+      
       fieldName_ = getDefaultInstance().getFieldName();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -631,10 +660,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFieldNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       fieldName_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -654,9 +685,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIsPhone(boolean value) {
-
+      
       isPhone_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -665,7 +695,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIsPhone() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       isPhone_ = false;
       onChanged();
       return this;
@@ -679,7 +709,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the displayFormatString field is set.
      */
     public boolean hasDisplayFormatString() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return displayFormatStringBuilder_ != null || displayFormatString_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue display_format_string = 5 [json_name = "displayFormatString"];</code>
@@ -701,11 +731,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         displayFormatString_ = value;
+        onChanged();
       } else {
         displayFormatStringBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
@@ -715,11 +745,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue.Builder builderForValue) {
       if (displayFormatStringBuilder_ == null) {
         displayFormatString_ = builderForValue.build();
+        onChanged();
       } else {
         displayFormatStringBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
@@ -727,38 +757,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDisplayFormatString(com.google.protobuf.StringValue value) {
       if (displayFormatStringBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0) &&
-          displayFormatString_ != null &&
-          displayFormatString_ != com.google.protobuf.StringValue.getDefaultInstance()) {
-          getDisplayFormatStringBuilder().mergeFrom(value);
+        if (displayFormatString_ != null) {
+          displayFormatString_ =
+            com.google.protobuf.StringValue.newBuilder(displayFormatString_).mergeFrom(value).buildPartial();
         } else {
           displayFormatString_ = value;
         }
+        onChanged();
       } else {
         displayFormatStringBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.StringValue display_format_string = 5 [json_name = "displayFormatString"];</code>
      */
     public Builder clearDisplayFormatString() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      displayFormatString_ = null;
-      if (displayFormatStringBuilder_ != null) {
-        displayFormatStringBuilder_.dispose();
+      if (displayFormatStringBuilder_ == null) {
+        displayFormatString_ = null;
+        onChanged();
+      } else {
+        displayFormatString_ = null;
         displayFormatStringBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.StringValue display_format_string = 5 [json_name = "displayFormatString"];</code>
      */
     public com.google.protobuf.StringValue.Builder getDisplayFormatStringBuilder() {
-      bitField0_ |= 0x00000008;
+      
       onChanged();
       return getDisplayFormatStringFieldBuilder().getBuilder();
     }
@@ -822,18 +852,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new ContactFieldDescription(input, extensionRegistry);
     }
   };
 

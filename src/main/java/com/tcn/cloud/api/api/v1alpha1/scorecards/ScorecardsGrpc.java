@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.50.0)",
     comments = "Source: api/v1alpha1/scorecards/service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ScorecardsGrpc {
@@ -1425,14 +1425,14 @@ public final class ScorecardsGrpc {
 
   /**
    */
-  public interface AsyncService {
+  public static abstract class ScorecardsImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
      * CreateScorecard creates a new scorecard
      * </pre>
      */
-    default void createScorecard(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardRequest request,
+    public void createScorecard(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateScorecardMethod(), responseObserver);
     }
@@ -1442,7 +1442,7 @@ public final class ScorecardsGrpc {
      * ListScorecards lists scorecards
      * </pre>
      */
-    default void listScorecards(com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsRequest request,
+    public void listScorecards(com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListScorecardsMethod(), responseObserver);
     }
@@ -1452,7 +1452,7 @@ public final class ScorecardsGrpc {
      * UpdateScorecard updates an existing scorecard
      * </pre>
      */
-    default void updateScorecard(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardRequest request,
+    public void updateScorecard(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateScorecardMethod(), responseObserver);
     }
@@ -1462,7 +1462,7 @@ public final class ScorecardsGrpc {
      * DeleteScorecard deletes a scorecard
      * </pre>
      */
-    default void deleteScorecard(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardRequest request,
+    public void deleteScorecard(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteScorecardMethod(), responseObserver);
     }
@@ -1472,7 +1472,7 @@ public final class ScorecardsGrpc {
      * GetScorecard gets a scorecard by ID
      * </pre>
      */
-    default void getScorecard(com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardRequest request,
+    public void getScorecard(com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetScorecardMethod(), responseObserver);
     }
@@ -1482,7 +1482,7 @@ public final class ScorecardsGrpc {
      * CreateQuestion creates a new library question
      * </pre>
      */
-    default void createQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionRequest request,
+    public void createQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateQuestionMethod(), responseObserver);
     }
@@ -1492,7 +1492,7 @@ public final class ScorecardsGrpc {
      * ListQuestions lists library questions
      * </pre>
      */
-    default void listQuestions(com.tcn.cloud.api.api.v1alpha1.scorecards.ListQuestionsRequest request,
+    public void listQuestions(com.tcn.cloud.api.api.v1alpha1.scorecards.ListQuestionsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.ListQuestionsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListQuestionsMethod(), responseObserver);
     }
@@ -1502,7 +1502,7 @@ public final class ScorecardsGrpc {
      * UpdateQuestion updates a library question
      * </pre>
      */
-    default void updateQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateQuestionRequest request,
+    public void updateQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateQuestionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateQuestionMethod(), responseObserver);
     }
@@ -1512,7 +1512,7 @@ public final class ScorecardsGrpc {
      * DeleteQuestion deletes a library question
      * </pre>
      */
-    default void deleteQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionRequest request,
+    public void deleteQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteQuestionMethod(), responseObserver);
     }
@@ -1522,7 +1522,7 @@ public final class ScorecardsGrpc {
      * GetQuestion gets a library question
      * </pre>
      */
-    default void getQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.GetQuestionRequest request,
+    public void getQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.GetQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.GetQuestionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetQuestionMethod(), responseObserver);
     }
@@ -1532,7 +1532,7 @@ public final class ScorecardsGrpc {
      * BulkCreateQuestions creates library questions by a scorecard id
      * </pre>
      */
-    default void bulkCreateQuestions(com.tcn.cloud.api.api.v1alpha1.scorecards.BulkCreateQuestionsRequest request,
+    public void bulkCreateQuestions(com.tcn.cloud.api.api.v1alpha1.scorecards.BulkCreateQuestionsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.BulkCreateQuestionsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBulkCreateQuestionsMethod(), responseObserver);
     }
@@ -1542,7 +1542,7 @@ public final class ScorecardsGrpc {
      * CreateCategory creates a new scorecards category
      * </pre>
      */
-    default void createCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateCategoryRequest request,
+    public void createCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateCategoryRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateCategoryResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateCategoryMethod(), responseObserver);
     }
@@ -1552,7 +1552,7 @@ public final class ScorecardsGrpc {
      * ListCategories lists scorecards categories
      * </pre>
      */
-    default void listCategories(com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesRequest request,
+    public void listCategories(com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCategoriesMethod(), responseObserver);
     }
@@ -1562,7 +1562,7 @@ public final class ScorecardsGrpc {
      * UpdateCategory updates a scorecard category
      * </pre>
      */
-    default void updateCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateCategoryRequest request,
+    public void updateCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateCategoryRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateCategoryResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateCategoryMethod(), responseObserver);
     }
@@ -1572,7 +1572,7 @@ public final class ScorecardsGrpc {
      * DeleteCategory deletes a scorecard category
      * </pre>
      */
-    default void deleteCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteCategoryRequest request,
+    public void deleteCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteCategoryRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteCategoryResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteCategoryMethod(), responseObserver);
     }
@@ -1582,7 +1582,7 @@ public final class ScorecardsGrpc {
      * GetCategory gets a scorecard category
      * </pre>
      */
-    default void getCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.GetCategoryRequest request,
+    public void getCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.GetCategoryRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.GetCategoryResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCategoryMethod(), responseObserver);
     }
@@ -1592,7 +1592,7 @@ public final class ScorecardsGrpc {
      * CreateScorecardQuestion creates a scorecard scorecard question
      * </pre>
      */
-    default void createScorecardQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardQuestionRequest request,
+    public void createScorecardQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardQuestionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateScorecardQuestionMethod(), responseObserver);
     }
@@ -1602,7 +1602,7 @@ public final class ScorecardsGrpc {
      * UpdateScorecardQuestion updates a scorecard question
      * </pre>
      */
-    default void updateScorecardQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardQuestionRequest request,
+    public void updateScorecardQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardQuestionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateScorecardQuestionMethod(), responseObserver);
     }
@@ -1612,7 +1612,7 @@ public final class ScorecardsGrpc {
      * DeleteScorecardQuestion deletes a scorecard question
      * </pre>
      */
-    default void deleteScorecardQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardQuestionRequest request,
+    public void deleteScorecardQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardQuestionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteScorecardQuestionMethod(), responseObserver);
     }
@@ -1622,7 +1622,7 @@ public final class ScorecardsGrpc {
      * GetScorecardQuestion gets a scorecard question
      * </pre>
      */
-    default void getScorecardQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardQuestionRequest request,
+    public void getScorecardQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardQuestionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetScorecardQuestionMethod(), responseObserver);
     }
@@ -1632,7 +1632,7 @@ public final class ScorecardsGrpc {
      * CreateSection creates a new scorecards section
      * </pre>
      */
-    default void createSection(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSectionRequest request,
+    public void createSection(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSectionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSectionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateSectionMethod(), responseObserver);
     }
@@ -1642,7 +1642,7 @@ public final class ScorecardsGrpc {
      * ListSections lists scorecards sections
      * </pre>
      */
-    default void listSections(com.tcn.cloud.api.api.v1alpha1.scorecards.ListSectionsRequest request,
+    public void listSections(com.tcn.cloud.api.api.v1alpha1.scorecards.ListSectionsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.ListSectionsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSectionsMethod(), responseObserver);
     }
@@ -1652,7 +1652,7 @@ public final class ScorecardsGrpc {
      * UpdateSection updates a scorecard section
      * </pre>
      */
-    default void updateSection(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateSectionRequest request,
+    public void updateSection(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateSectionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateSectionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateSectionMethod(), responseObserver);
     }
@@ -1662,7 +1662,7 @@ public final class ScorecardsGrpc {
      * GetSection gets a scorecard section
      * </pre>
      */
-    default void getSection(com.tcn.cloud.api.api.v1alpha1.scorecards.GetSectionRequest request,
+    public void getSection(com.tcn.cloud.api.api.v1alpha1.scorecards.GetSectionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.GetSectionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSectionMethod(), responseObserver);
     }
@@ -1672,7 +1672,7 @@ public final class ScorecardsGrpc {
      * DeleteSection deletes a scorecard section
      * </pre>
      */
-    default void deleteSection(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSectionRequest request,
+    public void deleteSection(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSectionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSectionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteSectionMethod(), responseObserver);
     }
@@ -1682,7 +1682,7 @@ public final class ScorecardsGrpc {
      * CreateQuestionCategory links a scorecard question and category
      * </pre>
      */
-    default void createQuestionCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionCategoryRequest request,
+    public void createQuestionCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionCategoryRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionCategoryResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateQuestionCategoryMethod(), responseObserver);
     }
@@ -1692,7 +1692,7 @@ public final class ScorecardsGrpc {
      * DeleteQuestionCategory deletes link between a scorecard question and category
      * </pre>
      */
-    default void deleteQuestionCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionCategoryRequest request,
+    public void deleteQuestionCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionCategoryRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionCategoryResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteQuestionCategoryMethod(), responseObserver);
     }
@@ -1702,7 +1702,7 @@ public final class ScorecardsGrpc {
      * CreateEvaluation creates a new evaluation
      * </pre>
      */
-    default void createEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationRequest request,
+    public void createEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateEvaluationMethod(), responseObserver);
     }
@@ -1712,7 +1712,7 @@ public final class ScorecardsGrpc {
      * DeleteEvaluation gets an evaluation
      * </pre>
      */
-    default void deleteEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationRequest request,
+    public void deleteEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteEvaluationMethod(), responseObserver);
     }
@@ -1722,7 +1722,7 @@ public final class ScorecardsGrpc {
      * GetEvaluation gets an evaluation
      * </pre>
      */
-    default void scoreEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationRequest request,
+    public void scoreEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getScoreEvaluationMethod(), responseObserver);
     }
@@ -1732,7 +1732,7 @@ public final class ScorecardsGrpc {
      * UpdateEvaluation updates an evaluation
      * </pre>
      */
-    default void updateEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationRequest request,
+    public void updateEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateEvaluationMethod(), responseObserver);
     }
@@ -1742,7 +1742,7 @@ public final class ScorecardsGrpc {
      * GetEvaluation gets an evaluation
      * </pre>
      */
-    default void getEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.GetEvaluationRequest request,
+    public void getEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.GetEvaluationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.GetEvaluationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetEvaluationMethod(), responseObserver);
     }
@@ -1752,7 +1752,7 @@ public final class ScorecardsGrpc {
      * ListEvaluations gets a list of evaluations
      * </pre>
      */
-    default void listEvaluations(com.tcn.cloud.api.api.v1alpha1.scorecards.ListEvaluationsRequest request,
+    public void listEvaluations(com.tcn.cloud.api.api.v1alpha1.scorecards.ListEvaluationsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.ListEvaluationsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListEvaluationsMethod(), responseObserver);
     }
@@ -1763,7 +1763,7 @@ public final class ScorecardsGrpc {
      * </pre>
      */
     @java.lang.Deprecated
-    default void createEvaluationQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationQuestionRequest request,
+    public void createEvaluationQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationQuestionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateEvaluationQuestionMethod(), responseObserver);
     }
@@ -1773,7 +1773,7 @@ public final class ScorecardsGrpc {
      * UpdateEvaluationQuestion updates an existing evaluation question
      * </pre>
      */
-    default void updateEvaluationQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationQuestionRequest request,
+    public void updateEvaluationQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationQuestionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateEvaluationQuestionMethod(), responseObserver);
     }
@@ -1783,7 +1783,7 @@ public final class ScorecardsGrpc {
      * DeleteEvaluationQuestion creates an evaluation question
      * </pre>
      */
-    default void deleteEvaluationQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationQuestionRequest request,
+    public void deleteEvaluationQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationQuestionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteEvaluationQuestionMethod(), responseObserver);
     }
@@ -1793,7 +1793,7 @@ public final class ScorecardsGrpc {
      * SampleCallsByCategory
      * </pre>
      */
-    default void sampleCallsByCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.SampleCallsByCategoryRequest request,
+    public void sampleCallsByCategory(com.tcn.cloud.api.api.v1alpha1.scorecards.SampleCallsByCategoryRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.SampleCallsByCategoryResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSampleCallsByCategoryMethod(), responseObserver);
     }
@@ -1803,7 +1803,7 @@ public final class ScorecardsGrpc {
      * CreateAutoQuestion creates an auto question
      * </pre>
      */
-    default void createAutoQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateAutoQuestionRequest request,
+    public void createAutoQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.CreateAutoQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.CreateAutoQuestionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateAutoQuestionMethod(), responseObserver);
     }
@@ -1813,7 +1813,7 @@ public final class ScorecardsGrpc {
      * UpdateAutoQuestion updates an auto question
      * </pre>
      */
-    default void updateAutoQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateAutoQuestionRequest request,
+    public void updateAutoQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateAutoQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateAutoQuestionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAutoQuestionMethod(), responseObserver);
     }
@@ -1823,7 +1823,7 @@ public final class ScorecardsGrpc {
      * DeleteAutoQuestion deletes an auto question
      * </pre>
      */
-    default void deleteAutoQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoQuestionRequest request,
+    public void deleteAutoQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoQuestionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteAutoQuestionMethod(), responseObserver);
     }
@@ -1833,7 +1833,7 @@ public final class ScorecardsGrpc {
      * GetAutoQuestion gets an auto question
      * </pre>
      */
-    default void getAutoQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoQuestionRequest request,
+    public void getAutoQuestion(com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoQuestionRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoQuestionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAutoQuestionMethod(), responseObserver);
     }
@@ -1843,7 +1843,7 @@ public final class ScorecardsGrpc {
      * GetAutoEvaluation gets an auto evaluation
      * </pre>
      */
-    default void getAutoEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoEvaluationRequest request,
+    public void getAutoEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoEvaluationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoEvaluationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAutoEvaluationMethod(), responseObserver);
     }
@@ -1853,7 +1853,7 @@ public final class ScorecardsGrpc {
      * ListAutoEvaluations gets a list of auto evaluations
      * </pre>
      */
-    default void listAutoEvaluations(com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsRequest request,
+    public void listAutoEvaluations(com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAutoEvaluationsMethod(), responseObserver);
     }
@@ -1863,28 +1863,328 @@ public final class ScorecardsGrpc {
      * DeleteAutoEvaluation deletes an auto evaluations
      * </pre>
      */
-    default void deleteAutoEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationRequest request,
+    public void deleteAutoEvaluation(com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteAutoEvaluationMethod(), responseObserver);
     }
-  }
-
-  /**
-   * Base class for the server implementation of the service Scorecards.
-   */
-  public static abstract class ScorecardsImplBase
-      implements io.grpc.BindableService, AsyncService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return ScorecardsGrpc.bindService(this);
+      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getCreateScorecardMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardResponse>(
+                  this, METHODID_CREATE_SCORECARD)))
+          .addMethod(
+            getListScorecardsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsResponse>(
+                  this, METHODID_LIST_SCORECARDS)))
+          .addMethod(
+            getUpdateScorecardMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardResponse>(
+                  this, METHODID_UPDATE_SCORECARD)))
+          .addMethod(
+            getDeleteScorecardMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardResponse>(
+                  this, METHODID_DELETE_SCORECARD)))
+          .addMethod(
+            getGetScorecardMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardResponse>(
+                  this, METHODID_GET_SCORECARD)))
+          .addMethod(
+            getCreateQuestionMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionResponse>(
+                  this, METHODID_CREATE_QUESTION)))
+          .addMethod(
+            getListQuestionsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.ListQuestionsRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.ListQuestionsResponse>(
+                  this, METHODID_LIST_QUESTIONS)))
+          .addMethod(
+            getUpdateQuestionMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateQuestionRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateQuestionResponse>(
+                  this, METHODID_UPDATE_QUESTION)))
+          .addMethod(
+            getDeleteQuestionMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionResponse>(
+                  this, METHODID_DELETE_QUESTION)))
+          .addMethod(
+            getGetQuestionMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.GetQuestionRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.GetQuestionResponse>(
+                  this, METHODID_GET_QUESTION)))
+          .addMethod(
+            getBulkCreateQuestionsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.BulkCreateQuestionsRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.BulkCreateQuestionsResponse>(
+                  this, METHODID_BULK_CREATE_QUESTIONS)))
+          .addMethod(
+            getCreateCategoryMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateCategoryRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateCategoryResponse>(
+                  this, METHODID_CREATE_CATEGORY)))
+          .addMethod(
+            getListCategoriesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesResponse>(
+                  this, METHODID_LIST_CATEGORIES)))
+          .addMethod(
+            getUpdateCategoryMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateCategoryRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateCategoryResponse>(
+                  this, METHODID_UPDATE_CATEGORY)))
+          .addMethod(
+            getDeleteCategoryMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteCategoryRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteCategoryResponse>(
+                  this, METHODID_DELETE_CATEGORY)))
+          .addMethod(
+            getGetCategoryMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.GetCategoryRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.GetCategoryResponse>(
+                  this, METHODID_GET_CATEGORY)))
+          .addMethod(
+            getCreateScorecardQuestionMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardQuestionRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardQuestionResponse>(
+                  this, METHODID_CREATE_SCORECARD_QUESTION)))
+          .addMethod(
+            getUpdateScorecardQuestionMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardQuestionRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardQuestionResponse>(
+                  this, METHODID_UPDATE_SCORECARD_QUESTION)))
+          .addMethod(
+            getDeleteScorecardQuestionMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardQuestionRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardQuestionResponse>(
+                  this, METHODID_DELETE_SCORECARD_QUESTION)))
+          .addMethod(
+            getGetScorecardQuestionMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardQuestionRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardQuestionResponse>(
+                  this, METHODID_GET_SCORECARD_QUESTION)))
+          .addMethod(
+            getCreateSectionMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSectionRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSectionResponse>(
+                  this, METHODID_CREATE_SECTION)))
+          .addMethod(
+            getListSectionsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.ListSectionsRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.ListSectionsResponse>(
+                  this, METHODID_LIST_SECTIONS)))
+          .addMethod(
+            getUpdateSectionMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateSectionRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateSectionResponse>(
+                  this, METHODID_UPDATE_SECTION)))
+          .addMethod(
+            getGetSectionMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.GetSectionRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.GetSectionResponse>(
+                  this, METHODID_GET_SECTION)))
+          .addMethod(
+            getDeleteSectionMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSectionRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSectionResponse>(
+                  this, METHODID_DELETE_SECTION)))
+          .addMethod(
+            getCreateQuestionCategoryMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionCategoryRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionCategoryResponse>(
+                  this, METHODID_CREATE_QUESTION_CATEGORY)))
+          .addMethod(
+            getDeleteQuestionCategoryMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionCategoryRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionCategoryResponse>(
+                  this, METHODID_DELETE_QUESTION_CATEGORY)))
+          .addMethod(
+            getCreateEvaluationMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationResponse>(
+                  this, METHODID_CREATE_EVALUATION)))
+          .addMethod(
+            getDeleteEvaluationMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationResponse>(
+                  this, METHODID_DELETE_EVALUATION)))
+          .addMethod(
+            getScoreEvaluationMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationResponse>(
+                  this, METHODID_SCORE_EVALUATION)))
+          .addMethod(
+            getUpdateEvaluationMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationResponse>(
+                  this, METHODID_UPDATE_EVALUATION)))
+          .addMethod(
+            getGetEvaluationMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.GetEvaluationRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.GetEvaluationResponse>(
+                  this, METHODID_GET_EVALUATION)))
+          .addMethod(
+            getListEvaluationsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.ListEvaluationsRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.ListEvaluationsResponse>(
+                  this, METHODID_LIST_EVALUATIONS)))
+          .addMethod(
+            getCreateEvaluationQuestionMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationQuestionRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationQuestionResponse>(
+                  this, METHODID_CREATE_EVALUATION_QUESTION)))
+          .addMethod(
+            getUpdateEvaluationQuestionMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationQuestionRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationQuestionResponse>(
+                  this, METHODID_UPDATE_EVALUATION_QUESTION)))
+          .addMethod(
+            getDeleteEvaluationQuestionMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationQuestionRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationQuestionResponse>(
+                  this, METHODID_DELETE_EVALUATION_QUESTION)))
+          .addMethod(
+            getSampleCallsByCategoryMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.SampleCallsByCategoryRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.SampleCallsByCategoryResponse>(
+                  this, METHODID_SAMPLE_CALLS_BY_CATEGORY)))
+          .addMethod(
+            getCreateAutoQuestionMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateAutoQuestionRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.CreateAutoQuestionResponse>(
+                  this, METHODID_CREATE_AUTO_QUESTION)))
+          .addMethod(
+            getUpdateAutoQuestionMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateAutoQuestionRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateAutoQuestionResponse>(
+                  this, METHODID_UPDATE_AUTO_QUESTION)))
+          .addMethod(
+            getDeleteAutoQuestionMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoQuestionRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoQuestionResponse>(
+                  this, METHODID_DELETE_AUTO_QUESTION)))
+          .addMethod(
+            getGetAutoQuestionMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoQuestionRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoQuestionResponse>(
+                  this, METHODID_GET_AUTO_QUESTION)))
+          .addMethod(
+            getGetAutoEvaluationMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoEvaluationRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoEvaluationResponse>(
+                  this, METHODID_GET_AUTO_EVALUATION)))
+          .addMethod(
+            getListAutoEvaluationsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsResponse>(
+                  this, METHODID_LIST_AUTO_EVALUATIONS)))
+          .addMethod(
+            getDeleteAutoEvaluationMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationRequest,
+                com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationResponse>(
+                  this, METHODID_DELETE_AUTO_EVALUATION)))
+          .build();
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service Scorecards.
    */
-  public static final class ScorecardsStub
-      extends io.grpc.stub.AbstractAsyncStub<ScorecardsStub> {
+  public static final class ScorecardsStub extends io.grpc.stub.AbstractAsyncStub<ScorecardsStub> {
     private ScorecardsStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -2383,10 +2683,8 @@ public final class ScorecardsGrpc {
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service Scorecards.
    */
-  public static final class ScorecardsBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<ScorecardsBlockingStub> {
+  public static final class ScorecardsBlockingStub extends io.grpc.stub.AbstractBlockingStub<ScorecardsBlockingStub> {
     private ScorecardsBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -2841,10 +3139,8 @@ public final class ScorecardsGrpc {
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service Scorecards.
    */
-  public static final class ScorecardsFutureStub
-      extends io.grpc.stub.AbstractFutureStub<ScorecardsFutureStub> {
+  public static final class ScorecardsFutureStub extends io.grpc.stub.AbstractFutureStub<ScorecardsFutureStub> {
     private ScorecardsFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -3392,10 +3688,10 @@ public final class ScorecardsGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AsyncService serviceImpl;
+    private final ScorecardsImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AsyncService serviceImpl, int methodId) {
+    MethodHandlers(ScorecardsImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -3594,319 +3890,6 @@ public final class ScorecardsGrpc {
           throw new AssertionError();
       }
     }
-  }
-
-  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
-    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-        .addMethod(
-          getCreateScorecardMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardResponse>(
-                service, METHODID_CREATE_SCORECARD)))
-        .addMethod(
-          getListScorecardsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsResponse>(
-                service, METHODID_LIST_SCORECARDS)))
-        .addMethod(
-          getUpdateScorecardMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardResponse>(
-                service, METHODID_UPDATE_SCORECARD)))
-        .addMethod(
-          getDeleteScorecardMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardResponse>(
-                service, METHODID_DELETE_SCORECARD)))
-        .addMethod(
-          getGetScorecardMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardResponse>(
-                service, METHODID_GET_SCORECARD)))
-        .addMethod(
-          getCreateQuestionMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionResponse>(
-                service, METHODID_CREATE_QUESTION)))
-        .addMethod(
-          getListQuestionsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.ListQuestionsRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.ListQuestionsResponse>(
-                service, METHODID_LIST_QUESTIONS)))
-        .addMethod(
-          getUpdateQuestionMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateQuestionRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateQuestionResponse>(
-                service, METHODID_UPDATE_QUESTION)))
-        .addMethod(
-          getDeleteQuestionMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionResponse>(
-                service, METHODID_DELETE_QUESTION)))
-        .addMethod(
-          getGetQuestionMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.GetQuestionRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.GetQuestionResponse>(
-                service, METHODID_GET_QUESTION)))
-        .addMethod(
-          getBulkCreateQuestionsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.BulkCreateQuestionsRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.BulkCreateQuestionsResponse>(
-                service, METHODID_BULK_CREATE_QUESTIONS)))
-        .addMethod(
-          getCreateCategoryMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateCategoryRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateCategoryResponse>(
-                service, METHODID_CREATE_CATEGORY)))
-        .addMethod(
-          getListCategoriesMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.ListCategoriesResponse>(
-                service, METHODID_LIST_CATEGORIES)))
-        .addMethod(
-          getUpdateCategoryMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateCategoryRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateCategoryResponse>(
-                service, METHODID_UPDATE_CATEGORY)))
-        .addMethod(
-          getDeleteCategoryMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteCategoryRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteCategoryResponse>(
-                service, METHODID_DELETE_CATEGORY)))
-        .addMethod(
-          getGetCategoryMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.GetCategoryRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.GetCategoryResponse>(
-                service, METHODID_GET_CATEGORY)))
-        .addMethod(
-          getCreateScorecardQuestionMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardQuestionRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateScorecardQuestionResponse>(
-                service, METHODID_CREATE_SCORECARD_QUESTION)))
-        .addMethod(
-          getUpdateScorecardQuestionMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardQuestionRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateScorecardQuestionResponse>(
-                service, METHODID_UPDATE_SCORECARD_QUESTION)))
-        .addMethod(
-          getDeleteScorecardQuestionMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardQuestionRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteScorecardQuestionResponse>(
-                service, METHODID_DELETE_SCORECARD_QUESTION)))
-        .addMethod(
-          getGetScorecardQuestionMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardQuestionRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.GetScorecardQuestionResponse>(
-                service, METHODID_GET_SCORECARD_QUESTION)))
-        .addMethod(
-          getCreateSectionMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSectionRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateSectionResponse>(
-                service, METHODID_CREATE_SECTION)))
-        .addMethod(
-          getListSectionsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.ListSectionsRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.ListSectionsResponse>(
-                service, METHODID_LIST_SECTIONS)))
-        .addMethod(
-          getUpdateSectionMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateSectionRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateSectionResponse>(
-                service, METHODID_UPDATE_SECTION)))
-        .addMethod(
-          getGetSectionMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.GetSectionRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.GetSectionResponse>(
-                service, METHODID_GET_SECTION)))
-        .addMethod(
-          getDeleteSectionMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSectionRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteSectionResponse>(
-                service, METHODID_DELETE_SECTION)))
-        .addMethod(
-          getCreateQuestionCategoryMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionCategoryRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateQuestionCategoryResponse>(
-                service, METHODID_CREATE_QUESTION_CATEGORY)))
-        .addMethod(
-          getDeleteQuestionCategoryMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionCategoryRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteQuestionCategoryResponse>(
-                service, METHODID_DELETE_QUESTION_CATEGORY)))
-        .addMethod(
-          getCreateEvaluationMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationResponse>(
-                service, METHODID_CREATE_EVALUATION)))
-        .addMethod(
-          getDeleteEvaluationMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationResponse>(
-                service, METHODID_DELETE_EVALUATION)))
-        .addMethod(
-          getScoreEvaluationMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.ScoreEvaluationResponse>(
-                service, METHODID_SCORE_EVALUATION)))
-        .addMethod(
-          getUpdateEvaluationMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationResponse>(
-                service, METHODID_UPDATE_EVALUATION)))
-        .addMethod(
-          getGetEvaluationMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.GetEvaluationRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.GetEvaluationResponse>(
-                service, METHODID_GET_EVALUATION)))
-        .addMethod(
-          getListEvaluationsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.ListEvaluationsRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.ListEvaluationsResponse>(
-                service, METHODID_LIST_EVALUATIONS)))
-        .addMethod(
-          getCreateEvaluationQuestionMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationQuestionRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateEvaluationQuestionResponse>(
-                service, METHODID_CREATE_EVALUATION_QUESTION)))
-        .addMethod(
-          getUpdateEvaluationQuestionMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationQuestionRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateEvaluationQuestionResponse>(
-                service, METHODID_UPDATE_EVALUATION_QUESTION)))
-        .addMethod(
-          getDeleteEvaluationQuestionMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationQuestionRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteEvaluationQuestionResponse>(
-                service, METHODID_DELETE_EVALUATION_QUESTION)))
-        .addMethod(
-          getSampleCallsByCategoryMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.SampleCallsByCategoryRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.SampleCallsByCategoryResponse>(
-                service, METHODID_SAMPLE_CALLS_BY_CATEGORY)))
-        .addMethod(
-          getCreateAutoQuestionMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateAutoQuestionRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.CreateAutoQuestionResponse>(
-                service, METHODID_CREATE_AUTO_QUESTION)))
-        .addMethod(
-          getUpdateAutoQuestionMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateAutoQuestionRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.UpdateAutoQuestionResponse>(
-                service, METHODID_UPDATE_AUTO_QUESTION)))
-        .addMethod(
-          getDeleteAutoQuestionMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoQuestionRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoQuestionResponse>(
-                service, METHODID_DELETE_AUTO_QUESTION)))
-        .addMethod(
-          getGetAutoQuestionMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoQuestionRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoQuestionResponse>(
-                service, METHODID_GET_AUTO_QUESTION)))
-        .addMethod(
-          getGetAutoEvaluationMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoEvaluationRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.GetAutoEvaluationResponse>(
-                service, METHODID_GET_AUTO_EVALUATION)))
-        .addMethod(
-          getListAutoEvaluationsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.ListAutoEvaluationsResponse>(
-                service, METHODID_LIST_AUTO_EVALUATIONS)))
-        .addMethod(
-          getDeleteAutoEvaluationMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationRequest,
-              com.tcn.cloud.api.api.v1alpha1.scorecards.DeleteAutoEvaluationResponse>(
-                service, METHODID_DELETE_AUTO_EVALUATION)))
-        .build();
   }
 
   private static abstract class ScorecardsBaseDescriptorSupplier

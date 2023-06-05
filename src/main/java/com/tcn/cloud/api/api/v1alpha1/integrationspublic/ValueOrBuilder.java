@@ -9,11 +9,6 @@ public interface ValueOrBuilder extends
 
   /**
    * <code>string str_val = 1 [json_name = "strVal"];</code>
-   * @return Whether the strVal field is set.
-   */
-  boolean hasStrVal();
-  /**
-   * <code>string str_val = 1 [json_name = "strVal"];</code>
    * @return The strVal.
    */
   java.lang.String getStrVal();
@@ -26,20 +21,10 @@ public interface ValueOrBuilder extends
 
   /**
    * <code>double num_val = 2 [json_name = "numVal"];</code>
-   * @return Whether the numVal field is set.
-   */
-  boolean hasNumVal();
-  /**
-   * <code>double num_val = 2 [json_name = "numVal"];</code>
    * @return The numVal.
    */
   double getNumVal();
 
-  /**
-   * <code>bool bool_val = 3 [json_name = "boolVal"];</code>
-   * @return Whether the boolVal field is set.
-   */
-  boolean hasBoolVal();
   /**
    * <code>bool bool_val = 3 [json_name = "boolVal"];</code>
    * @return The boolVal.
@@ -76,11 +61,6 @@ public interface ValueOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.integrationspublic.CompositeValOrBuilder getCompValOrBuilder();
 
-  /**
-   * <code>int64 int_val = 7 [json_name = "intVal"];</code>
-   * @return Whether the intVal field is set.
-   */
-  boolean hasIntVal();
   /**
    * <code>int64 int_val = 7 [json_name = "intVal"];</code>
    * @return The intVal.
@@ -120,5 +100,5 @@ public interface ValueOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.integrations.Validation getValidation();
 
-  com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value.ValCase getValCase();
+  public com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value.ValCase getValCase();
 }

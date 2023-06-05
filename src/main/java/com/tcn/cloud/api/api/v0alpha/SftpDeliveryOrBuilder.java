@@ -9,11 +9,6 @@ public interface SftpDeliveryOrBuilder extends
 
   /**
    * <code>string password = 1 [json_name = "password"];</code>
-   * @return Whether the password field is set.
-   */
-  boolean hasPassword();
-  /**
-   * <code>string password = 1 [json_name = "password"];</code>
    * @return The password.
    */
   java.lang.String getPassword();
@@ -24,11 +19,6 @@ public interface SftpDeliveryOrBuilder extends
   com.google.protobuf.ByteString
       getPasswordBytes();
 
-  /**
-   * <code>string private_key = 2 [json_name = "privateKey"];</code>
-   * @return Whether the privateKey field is set.
-   */
-  boolean hasPrivateKey();
   /**
    * <code>string private_key = 2 [json_name = "privateKey"];</code>
    * @return The privateKey.
@@ -77,5 +67,5 @@ public interface SftpDeliveryOrBuilder extends
   com.google.protobuf.ByteString
       getPathBytes();
 
-  com.tcn.cloud.api.api.v0alpha.SftpDelivery.AuthTypeCase getAuthTypeCase();
+  public com.tcn.cloud.api.api.v0alpha.SftpDelivery.AuthTypeCase getAuthTypeCase();
 }

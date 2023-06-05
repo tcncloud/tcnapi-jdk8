@@ -30,6 +30,118 @@ private static final long serialVersionUID = 0L;
     return new PortalLink();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private PortalLink(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            id_ = s;
+            break;
+          }
+          case 34: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            portalId_ = s;
+            break;
+          }
+          case 42: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            pluginInstanceId_ = s;
+            break;
+          }
+          case 50: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            portalConfigId_ = s;
+            break;
+          }
+          case 58: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            taskId_ = s;
+            break;
+          }
+          case 66: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              data_ = com.google.protobuf.MapField.newMapField(
+                  DataDefaultEntryHolder.defaultEntry);
+              mutable_bitField0_ |= 0x00000001;
+            }
+            com.google.protobuf.MapEntry<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value>
+            data__ = input.readMessage(
+                DataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+            data_.getMutableMap().put(
+                data__.getKey(), data__.getValue());
+            break;
+          }
+          case 74: {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              metadata_ = com.google.protobuf.MapField.newMapField(
+                  MetadataDefaultEntryHolder.defaultEntry);
+              mutable_bitField0_ |= 0x00000002;
+            }
+            com.google.protobuf.MapEntry<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value>
+            metadata__ = input.readMessage(
+                MetadataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+            metadata_.getMutableMap().put(
+                metadata__.getKey(), metadata__.getValue());
+            break;
+          }
+          case 82: {
+            com.google.protobuf.Timestamp.Builder subBuilder = null;
+            if (lastEdited_ != null) {
+              subBuilder = lastEdited_.toBuilder();
+            }
+            lastEdited_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(lastEdited_);
+              lastEdited_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_PortalLink_descriptor;
@@ -58,8 +170,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object id_ = "";
+  private volatile java.lang.Object id_;
   /**
    * <code>string id = 3 [json_name = "id"];</code>
    * @return The id.
@@ -97,8 +208,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PORTAL_ID_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object portalId_ = "";
+  private volatile java.lang.Object portalId_;
   /**
    * <code>string portal_id = 4 [json_name = "portalId"];</code>
    * @return The portalId.
@@ -136,16 +246,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PLUGIN_INSTANCE_ID_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object pluginInstanceId_ = "";
+  private volatile java.lang.Object pluginInstanceId_;
   /**
    * <pre>
    * DONT USE
    * </pre>
    *
    * <code>string plugin_instance_id = 5 [json_name = "pluginInstanceId", deprecated = true];</code>
-   * @deprecated api.v1alpha1.integrations.PortalLink.plugin_instance_id is deprecated.
-   *     See api/v1alpha1/integrations/service.proto;l=906
    * @return The pluginInstanceId.
    */
   @java.lang.Override
@@ -167,8 +274,6 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>string plugin_instance_id = 5 [json_name = "pluginInstanceId", deprecated = true];</code>
-   * @deprecated api.v1alpha1.integrations.PortalLink.plugin_instance_id is deprecated.
-   *     See api/v1alpha1/integrations/service.proto;l=906
    * @return The bytes for pluginInstanceId.
    */
   @java.lang.Override
@@ -187,8 +292,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PORTAL_CONFIG_ID_FIELD_NUMBER = 6;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object portalConfigId_ = "";
+  private volatile java.lang.Object portalConfigId_;
   /**
    * <code>string portal_config_id = 6 [json_name = "portalConfigId"];</code>
    * @return The portalConfigId.
@@ -226,8 +330,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TASK_ID_FIELD_NUMBER = 7;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object taskId_ = "";
+  private volatile java.lang.Object taskId_;
   /**
    * <code>string task_id = 7 [json_name = "taskId"];</code>
    * @return The taskId.
@@ -276,7 +379,6 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.MESSAGE,
                 com.tcn.cloud.api.api.v1alpha1.integrations.Value.getDefaultInstance());
   }
-  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> data_;
   private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value>
@@ -287,16 +389,18 @@ private static final long serialVersionUID = 0L;
     }
     return data_;
   }
+
   public int getDataCount() {
     return internalGetData().getMap().size();
   }
   /**
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; data = 8 [json_name = "data"];</code>
    */
+
   @java.lang.Override
   public boolean containsData(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     return internalGetData().getMap().containsKey(key);
   }
   /**
@@ -311,6 +415,7 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; data = 8 [json_name = "data"];</code>
    */
   @java.lang.Override
+
   public java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> getDataMap() {
     return internalGetData().getMap();
   }
@@ -318,12 +423,11 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; data = 8 [json_name = "data"];</code>
    */
   @java.lang.Override
-  public /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrations.Value getDataOrDefault(
+
+  public com.tcn.cloud.api.api.v1alpha1.integrations.Value getDataOrDefault(
       java.lang.String key,
-      /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
-    if (key == null) { throw new NullPointerException("map key"); }
+      com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> map =
         internalGetData().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -332,9 +436,10 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; data = 8 [json_name = "data"];</code>
    */
   @java.lang.Override
+
   public com.tcn.cloud.api.api.v1alpha1.integrations.Value getDataOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> map =
         internalGetData().getMap();
     if (!map.containsKey(key)) {
@@ -355,7 +460,6 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
                 com.google.protobuf.WireFormat.FieldType.MESSAGE,
                 com.tcn.cloud.api.api.v1alpha1.integrations.Value.getDefaultInstance());
   }
-  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> metadata_;
   private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value>
@@ -366,16 +470,18 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     }
     return metadata_;
   }
+
   public int getMetadataCount() {
     return internalGetMetadata().getMap().size();
   }
   /**
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; metadata = 9 [json_name = "metadata"];</code>
    */
+
   @java.lang.Override
   public boolean containsMetadata(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     return internalGetMetadata().getMap().containsKey(key);
   }
   /**
@@ -390,6 +496,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; metadata = 9 [json_name = "metadata"];</code>
    */
   @java.lang.Override
+
   public java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> getMetadataMap() {
     return internalGetMetadata().getMap();
   }
@@ -397,12 +504,11 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; metadata = 9 [json_name = "metadata"];</code>
    */
   @java.lang.Override
-  public /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrations.Value getMetadataOrDefault(
+
+  public com.tcn.cloud.api.api.v1alpha1.integrations.Value getMetadataOrDefault(
       java.lang.String key,
-      /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
-    if (key == null) { throw new NullPointerException("map key"); }
+      com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> map =
         internalGetMetadata().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -411,9 +517,10 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; metadata = 9 [json_name = "metadata"];</code>
    */
   @java.lang.Override
+
   public com.tcn.cloud.api.api.v1alpha1.integrations.Value getMetadataOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> map =
         internalGetMetadata().getMap();
     if (!map.containsKey(key)) {
@@ -445,7 +552,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getLastEditedOrBuilder() {
-    return lastEdited_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastEdited_;
+    return getLastEdited();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -462,19 +569,19 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+    if (!getIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, id_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(portalId_)) {
+    if (!getPortalIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, portalId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pluginInstanceId_)) {
+    if (!getPluginInstanceIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, pluginInstanceId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(portalConfigId_)) {
+    if (!getPortalConfigIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, portalConfigId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(taskId_)) {
+    if (!getTaskIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, taskId_);
     }
     com.google.protobuf.GeneratedMessageV3
@@ -492,7 +599,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     if (lastEdited_ != null) {
       output.writeMessage(10, getLastEdited());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -501,19 +608,19 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+    if (!getIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, id_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(portalId_)) {
+    if (!getPortalIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, portalId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pluginInstanceId_)) {
+    if (!getPluginInstanceIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, pluginInstanceId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(portalConfigId_)) {
+    if (!getPortalConfigIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, portalConfigId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(taskId_)) {
+    if (!getTaskIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, taskId_);
     }
     for (java.util.Map.Entry<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> entry
@@ -540,7 +647,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getLastEdited());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -574,7 +681,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       if (!getLastEdited()
           .equals(other.getLastEdited())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -607,7 +714,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       hash = (37 * hash) + LAST_EDITED_FIELD_NUMBER;
       hash = (53 * hash) + getLastEdited().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -656,13 +763,11 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.integrations.PortalLink parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.integrations.PortalLink parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -752,28 +857,38 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.PortalLink.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       id_ = "";
+
       portalId_ = "";
+
       pluginInstanceId_ = "";
+
       portalConfigId_ = "";
+
       taskId_ = "";
+
       internalGetMutableData().clear();
       internalGetMutableMetadata().clear();
-      lastEdited_ = null;
-      if (lastEditedBuilder_ != null) {
-        lastEditedBuilder_.dispose();
+      if (lastEditedBuilder_ == null) {
+        lastEdited_ = null;
+      } else {
+        lastEdited_ = null;
         lastEditedBuilder_ = null;
       }
       return this;
@@ -802,41 +917,23 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.integrations.PortalLink buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.integrations.PortalLink result = new com.tcn.cloud.api.api.v1alpha1.integrations.PortalLink(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      int from_bitField0_ = bitField0_;
+      result.id_ = id_;
+      result.portalId_ = portalId_;
+      result.pluginInstanceId_ = pluginInstanceId_;
+      result.portalConfigId_ = portalConfigId_;
+      result.taskId_ = taskId_;
+      result.data_ = internalGetData();
+      result.data_.makeImmutable();
+      result.metadata_ = internalGetMetadata();
+      result.metadata_.makeImmutable();
+      if (lastEditedBuilder_ == null) {
+        result.lastEdited_ = lastEdited_;
+      } else {
+        result.lastEdited_ = lastEditedBuilder_.build();
+      }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.PortalLink result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.id_ = id_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.portalId_ = portalId_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.pluginInstanceId_ = pluginInstanceId_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.portalConfigId_ = portalConfigId_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.taskId_ = taskId_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.data_ = internalGetData();
-        result.data_.makeImmutable();
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.metadata_ = internalGetMetadata();
-        result.metadata_.makeImmutable();
-      }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.lastEdited_ = lastEditedBuilder_ == null
-            ? lastEdited_
-            : lastEditedBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -885,39 +982,32 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       if (other == com.tcn.cloud.api.api.v1alpha1.integrations.PortalLink.getDefaultInstance()) return this;
       if (!other.getId().isEmpty()) {
         id_ = other.id_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getPortalId().isEmpty()) {
         portalId_ = other.portalId_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getPluginInstanceId().isEmpty()) {
         pluginInstanceId_ = other.pluginInstanceId_;
-        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getPortalConfigId().isEmpty()) {
         portalConfigId_ = other.portalConfigId_;
-        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.getTaskId().isEmpty()) {
         taskId_ = other.taskId_;
-        bitField0_ |= 0x00000010;
         onChanged();
       }
       internalGetMutableData().mergeFrom(
           other.internalGetData());
-      bitField0_ |= 0x00000020;
       internalGetMutableMetadata().mergeFrom(
           other.internalGetMetadata());
-      bitField0_ |= 0x00000040;
       if (other.hasLastEdited()) {
         mergeLastEdited(other.getLastEdited());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -932,80 +1022,17 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.integrations.PortalLink parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 26: {
-              id_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 26
-            case 34: {
-              portalId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 34
-            case 42: {
-              pluginInstanceId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 42
-            case 50: {
-              portalConfigId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 50
-            case 58: {
-              taskId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 58
-            case 66: {
-              com.google.protobuf.MapEntry<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value>
-              data__ = input.readMessage(
-                  DataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              internalGetMutableData().getMutableMap().put(
-                  data__.getKey(), data__.getValue());
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 66
-            case 74: {
-              com.google.protobuf.MapEntry<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value>
-              metadata__ = input.readMessage(
-                  MetadataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              internalGetMutableMetadata().getMutableMap().put(
-                  metadata__.getKey(), metadata__.getValue());
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 74
-            case 82: {
-              input.readMessage(
-                  getLastEditedFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000080;
-              break;
-            } // case 82
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.integrations.PortalLink) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -1051,9 +1078,11 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      */
     public Builder setId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       id_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1062,8 +1091,8 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearId() {
+      
       id_ = getDefaultInstance().getId();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1074,10 +1103,12 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      */
     public Builder setIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       id_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1123,9 +1154,11 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      */
     public Builder setPortalId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       portalId_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1134,8 +1167,8 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearPortalId() {
+      
       portalId_ = getDefaultInstance().getPortalId();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1146,10 +1179,12 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      */
     public Builder setPortalIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       portalId_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1161,8 +1196,6 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * </pre>
      *
      * <code>string plugin_instance_id = 5 [json_name = "pluginInstanceId", deprecated = true];</code>
-     * @deprecated api.v1alpha1.integrations.PortalLink.plugin_instance_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=906
      * @return The pluginInstanceId.
      */
     @java.lang.Deprecated public java.lang.String getPluginInstanceId() {
@@ -1183,8 +1216,6 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * </pre>
      *
      * <code>string plugin_instance_id = 5 [json_name = "pluginInstanceId", deprecated = true];</code>
-     * @deprecated api.v1alpha1.integrations.PortalLink.plugin_instance_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=906
      * @return The bytes for pluginInstanceId.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -1206,16 +1237,16 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * </pre>
      *
      * <code>string plugin_instance_id = 5 [json_name = "pluginInstanceId", deprecated = true];</code>
-     * @deprecated api.v1alpha1.integrations.PortalLink.plugin_instance_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=906
      * @param value The pluginInstanceId to set.
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder setPluginInstanceId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       pluginInstanceId_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1225,13 +1256,11 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * </pre>
      *
      * <code>string plugin_instance_id = 5 [json_name = "pluginInstanceId", deprecated = true];</code>
-     * @deprecated api.v1alpha1.integrations.PortalLink.plugin_instance_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=906
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearPluginInstanceId() {
+      
       pluginInstanceId_ = getDefaultInstance().getPluginInstanceId();
-      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1241,17 +1270,17 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * </pre>
      *
      * <code>string plugin_instance_id = 5 [json_name = "pluginInstanceId", deprecated = true];</code>
-     * @deprecated api.v1alpha1.integrations.PortalLink.plugin_instance_id is deprecated.
-     *     See api/v1alpha1/integrations/service.proto;l=906
      * @param value The bytes for pluginInstanceId to set.
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder setPluginInstanceIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       pluginInstanceId_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1297,9 +1326,11 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      */
     public Builder setPortalConfigId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       portalConfigId_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1308,8 +1339,8 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearPortalConfigId() {
+      
       portalConfigId_ = getDefaultInstance().getPortalConfigId();
-      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1320,10 +1351,12 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      */
     public Builder setPortalConfigIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       portalConfigId_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1369,9 +1402,11 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      */
     public Builder setTaskId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       taskId_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1380,8 +1415,8 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearTaskId() {
+      
       taskId_ = getDefaultInstance().getTaskId();
-      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1392,10 +1427,12 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      */
     public Builder setTaskIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       taskId_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1403,7 +1440,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     private com.google.protobuf.MapField<
         java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> data_;
     private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value>
-        internalGetData() {
+    internalGetData() {
       if (data_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             DataDefaultEntryHolder.defaultEntry);
@@ -1411,7 +1448,8 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       return data_;
     }
     private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value>
-        internalGetMutableData() {
+    internalGetMutableData() {
+      onChanged();;
       if (data_ == null) {
         data_ = com.google.protobuf.MapField.newMapField(
             DataDefaultEntryHolder.defaultEntry);
@@ -1419,20 +1457,20 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       if (!data_.isMutable()) {
         data_ = data_.copy();
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
       return data_;
     }
+
     public int getDataCount() {
       return internalGetData().getMap().size();
     }
     /**
      * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; data = 8 [json_name = "data"];</code>
      */
+
     @java.lang.Override
     public boolean containsData(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetData().getMap().containsKey(key);
     }
     /**
@@ -1447,6 +1485,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; data = 8 [json_name = "data"];</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> getDataMap() {
       return internalGetData().getMap();
     }
@@ -1454,12 +1493,11 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; data = 8 [json_name = "data"];</code>
      */
     @java.lang.Override
-    public /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrations.Value getDataOrDefault(
+
+    public com.tcn.cloud.api.api.v1alpha1.integrations.Value getDataOrDefault(
         java.lang.String key,
-        /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+        com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> map =
           internalGetData().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1468,9 +1506,10 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; data = 8 [json_name = "data"];</code>
      */
     @java.lang.Override
+
     public com.tcn.cloud.api.api.v1alpha1.integrations.Value getDataOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> map =
           internalGetData().getMap();
       if (!map.containsKey(key)) {
@@ -1478,8 +1517,8 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       }
       return map.get(key);
     }
+
     public Builder clearData() {
-      bitField0_ = (bitField0_ & ~0x00000020);
       internalGetMutableData().getMutableMap()
           .clear();
       return this;
@@ -1487,9 +1526,10 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     /**
      * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; data = 8 [json_name = "data"];</code>
      */
+
     public Builder removeData(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableData().getMutableMap()
           .remove(key);
       return this;
@@ -1499,8 +1539,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value>
-        getMutableData() {
-      bitField0_ |= 0x00000020;
+    getMutableData() {
       return internalGetMutableData().getMutableMap();
     }
     /**
@@ -1509,28 +1548,27 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     public Builder putData(
         java.lang.String key,
         com.tcn.cloud.api.api.v1alpha1.integrations.Value value) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      if (value == null) { throw new NullPointerException("map value"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (value == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableData().getMutableMap()
           .put(key, value);
-      bitField0_ |= 0x00000020;
       return this;
     }
     /**
      * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; data = 8 [json_name = "data"];</code>
      */
+
     public Builder putAllData(
         java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> values) {
       internalGetMutableData().getMutableMap()
           .putAll(values);
-      bitField0_ |= 0x00000020;
       return this;
     }
 
     private com.google.protobuf.MapField<
         java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> metadata_;
     private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value>
-        internalGetMetadata() {
+    internalGetMetadata() {
       if (metadata_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             MetadataDefaultEntryHolder.defaultEntry);
@@ -1538,7 +1576,8 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       return metadata_;
     }
     private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value>
-        internalGetMutableMetadata() {
+    internalGetMutableMetadata() {
+      onChanged();;
       if (metadata_ == null) {
         metadata_ = com.google.protobuf.MapField.newMapField(
             MetadataDefaultEntryHolder.defaultEntry);
@@ -1546,20 +1585,20 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       if (!metadata_.isMutable()) {
         metadata_ = metadata_.copy();
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
       return metadata_;
     }
+
     public int getMetadataCount() {
       return internalGetMetadata().getMap().size();
     }
     /**
      * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; metadata = 9 [json_name = "metadata"];</code>
      */
+
     @java.lang.Override
     public boolean containsMetadata(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetMetadata().getMap().containsKey(key);
     }
     /**
@@ -1574,6 +1613,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; metadata = 9 [json_name = "metadata"];</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> getMetadataMap() {
       return internalGetMetadata().getMap();
     }
@@ -1581,12 +1621,11 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; metadata = 9 [json_name = "metadata"];</code>
      */
     @java.lang.Override
-    public /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrations.Value getMetadataOrDefault(
+
+    public com.tcn.cloud.api.api.v1alpha1.integrations.Value getMetadataOrDefault(
         java.lang.String key,
-        /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+        com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> map =
           internalGetMetadata().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1595,9 +1634,10 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; metadata = 9 [json_name = "metadata"];</code>
      */
     @java.lang.Override
+
     public com.tcn.cloud.api.api.v1alpha1.integrations.Value getMetadataOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> map =
           internalGetMetadata().getMap();
       if (!map.containsKey(key)) {
@@ -1605,8 +1645,8 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       }
       return map.get(key);
     }
+
     public Builder clearMetadata() {
-      bitField0_ = (bitField0_ & ~0x00000040);
       internalGetMutableMetadata().getMutableMap()
           .clear();
       return this;
@@ -1614,9 +1654,10 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     /**
      * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; metadata = 9 [json_name = "metadata"];</code>
      */
+
     public Builder removeMetadata(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableMetadata().getMutableMap()
           .remove(key);
       return this;
@@ -1626,8 +1667,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value>
-        getMutableMetadata() {
-      bitField0_ |= 0x00000040;
+    getMutableMetadata() {
       return internalGetMutableMetadata().getMutableMap();
     }
     /**
@@ -1636,21 +1676,20 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     public Builder putMetadata(
         java.lang.String key,
         com.tcn.cloud.api.api.v1alpha1.integrations.Value value) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      if (value == null) { throw new NullPointerException("map value"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (value == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableMetadata().getMutableMap()
           .put(key, value);
-      bitField0_ |= 0x00000040;
       return this;
     }
     /**
      * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; metadata = 9 [json_name = "metadata"];</code>
      */
+
     public Builder putAllMetadata(
         java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> values) {
       internalGetMutableMetadata().getMutableMap()
           .putAll(values);
-      bitField0_ |= 0x00000040;
       return this;
     }
 
@@ -1662,7 +1701,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * @return Whether the lastEdited field is set.
      */
     public boolean hasLastEdited() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return lastEditedBuilder_ != null || lastEdited_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp last_edited = 10 [json_name = "lastEdited"];</code>
@@ -1684,11 +1723,11 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
           throw new NullPointerException();
         }
         lastEdited_ = value;
+        onChanged();
       } else {
         lastEditedBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000080;
-      onChanged();
+
       return this;
     }
     /**
@@ -1698,11 +1737,11 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (lastEditedBuilder_ == null) {
         lastEdited_ = builderForValue.build();
+        onChanged();
       } else {
         lastEditedBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000080;
-      onChanged();
+
       return this;
     }
     /**
@@ -1710,38 +1749,38 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      */
     public Builder mergeLastEdited(com.google.protobuf.Timestamp value) {
       if (lastEditedBuilder_ == null) {
-        if (((bitField0_ & 0x00000080) != 0) &&
-          lastEdited_ != null &&
-          lastEdited_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getLastEditedBuilder().mergeFrom(value);
+        if (lastEdited_ != null) {
+          lastEdited_ =
+            com.google.protobuf.Timestamp.newBuilder(lastEdited_).mergeFrom(value).buildPartial();
         } else {
           lastEdited_ = value;
         }
+        onChanged();
       } else {
         lastEditedBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000080;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp last_edited = 10 [json_name = "lastEdited"];</code>
      */
     public Builder clearLastEdited() {
-      bitField0_ = (bitField0_ & ~0x00000080);
-      lastEdited_ = null;
-      if (lastEditedBuilder_ != null) {
-        lastEditedBuilder_.dispose();
+      if (lastEditedBuilder_ == null) {
+        lastEdited_ = null;
+        onChanged();
+      } else {
+        lastEdited_ = null;
         lastEditedBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp last_edited = 10 [json_name = "lastEdited"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getLastEditedBuilder() {
-      bitField0_ |= 0x00000080;
+      
       onChanged();
       return getLastEditedFieldBuilder().getBuilder();
     }
@@ -1805,18 +1844,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new PortalLink(input, extensionRegistry);
     }
   };
 

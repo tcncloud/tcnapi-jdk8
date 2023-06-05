@@ -184,11 +184,10 @@ public interface IntegrationTransactionReportRowOrBuilder extends
    *
    * <code>map&lt;string, string&gt; group_by_values = 23 [json_name = "groupByValues"];</code>
    */
-  /* nullable */
-java.lang.String getGroupByValuesOrDefault(
+
+  java.lang.String getGroupByValuesOrDefault(
       java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue);
+      java.lang.String defaultValue);
   /**
    * <pre>
    * the key value pairs for the 'group_by_fields' passed to the request
@@ -196,6 +195,7 @@ java.lang.String defaultValue);
    *
    * <code>map&lt;string, string&gt; group_by_values = 23 [json_name = "groupByValues"];</code>
    */
+
   java.lang.String getGroupByValuesOrThrow(
       java.lang.String key);
 
@@ -256,6 +256,7 @@ java.lang.String defaultValue);
    *
    * <code>map&lt;string, double&gt; revenue_subtotals = 19 [json_name = "revenueSubtotals"];</code>
    */
+
   double getRevenueSubtotalsOrDefault(
       java.lang.String key,
       double defaultValue);
@@ -268,6 +269,7 @@ java.lang.String defaultValue);
    *
    * <code>map&lt;string, double&gt; revenue_subtotals = 19 [json_name = "revenueSubtotals"];</code>
    */
+
   double getRevenueSubtotalsOrThrow(
       java.lang.String key);
 
@@ -368,6 +370,7 @@ java.lang.String defaultValue);
    *
    * <code>map&lt;string, int64&gt; count_metrics = 24 [json_name = "countMetrics"];</code>
    */
+
   long getCountMetricsOrDefault(
       java.lang.String key,
       long defaultValue);
@@ -378,6 +381,7 @@ java.lang.String defaultValue);
    *
    * <code>map&lt;string, int64&gt; count_metrics = 24 [json_name = "countMetrics"];</code>
    */
+
   long getCountMetricsOrThrow(
       java.lang.String key);
 

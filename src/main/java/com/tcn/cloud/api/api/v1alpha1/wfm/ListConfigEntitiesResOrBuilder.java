@@ -439,5 +439,5 @@ public interface ListConfigEntitiesResOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesRes.ScheduleScenarioEntitiesOrBuilder getScheduleScenariosOrBuilder();
 
-  com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesRes.EntitiesCase getEntitiesCase();
+  public com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesRes.EntitiesCase getEntitiesCase();
 }

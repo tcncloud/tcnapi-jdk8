@@ -26,6 +26,78 @@ private static final long serialVersionUID = 0L;
     return new SwitchSubsessionReq();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private SwitchSubsessionReq(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+
+            asmSessionSid_ = input.readInt64();
+            break;
+          }
+          case 16: {
+
+            huntGroupSid_ = input.readInt64();
+            break;
+          }
+          case 26: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              skills_ = com.google.protobuf.MapField.newMapField(
+                  SkillsDefaultEntryHolder.defaultEntry);
+              mutable_bitField0_ |= 0x00000001;
+            }
+            com.google.protobuf.MapEntry<java.lang.String, java.lang.Long>
+            skills__ = input.readMessage(
+                SkillsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+            skills_.getMutableMap().put(
+                skills__.getKey(), skills__.getValue());
+            break;
+          }
+          case 32: {
+            int rawValue = input.readEnum();
+
+            channelType_ = rawValue;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.asm.ServiceProto.internal_static_api_v1alpha1_asm_SwitchSubsessionReq_descriptor;
@@ -52,7 +124,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ASM_SESSION_SID_FIELD_NUMBER = 1;
-  private long asmSessionSid_ = 0L;
+  private long asmSessionSid_;
   /**
    * <code>int64 asm_session_sid = 1 [json_name = "asmSessionSid"];</code>
    * @return The asmSessionSid.
@@ -63,7 +135,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HUNT_GROUP_SID_FIELD_NUMBER = 2;
-  private long huntGroupSid_ = 0L;
+  private long huntGroupSid_;
   /**
    * <code>int64 hunt_group_sid = 2 [json_name = "huntGroupSid"];</code>
    * @return The huntGroupSid.
@@ -85,7 +157,6 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.INT64,
                 0L);
   }
-  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, java.lang.Long> skills_;
   private com.google.protobuf.MapField<java.lang.String, java.lang.Long>
@@ -96,16 +167,18 @@ private static final long serialVersionUID = 0L;
     }
     return skills_;
   }
+
   public int getSkillsCount() {
     return internalGetSkills().getMap().size();
   }
   /**
    * <code>map&lt;string, int64&gt; skills = 3 [json_name = "skills"];</code>
    */
+
   @java.lang.Override
   public boolean containsSkills(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     return internalGetSkills().getMap().containsKey(key);
   }
   /**
@@ -120,6 +193,7 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, int64&gt; skills = 3 [json_name = "skills"];</code>
    */
   @java.lang.Override
+
   public java.util.Map<java.lang.String, java.lang.Long> getSkillsMap() {
     return internalGetSkills().getMap();
   }
@@ -127,10 +201,11 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, int64&gt; skills = 3 [json_name = "skills"];</code>
    */
   @java.lang.Override
+
   public long getSkillsOrDefault(
       java.lang.String key,
       long defaultValue) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, java.lang.Long> map =
         internalGetSkills().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -139,9 +214,10 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, int64&gt; skills = 3 [json_name = "skills"];</code>
    */
   @java.lang.Override
+
   public long getSkillsOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, java.lang.Long> map =
         internalGetSkills().getMap();
     if (!map.containsKey(key)) {
@@ -151,7 +227,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CHANNEL_TYPE_FIELD_NUMBER = 4;
-  private int channelType_ = 0;
+  private int channelType_;
   /**
    * <code>.api.commons.AsmSubsessionType channel_type = 4 [json_name = "channelType"];</code>
    * @return The enum numeric value on the wire for channelType.
@@ -164,7 +240,8 @@ private static final long serialVersionUID = 0L;
    * @return The channelType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.AsmSubsessionType getChannelType() {
-    com.tcn.cloud.api.api.commons.AsmSubsessionType result = com.tcn.cloud.api.api.commons.AsmSubsessionType.forNumber(channelType_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.AsmSubsessionType result = com.tcn.cloud.api.api.commons.AsmSubsessionType.valueOf(channelType_);
     return result == null ? com.tcn.cloud.api.api.commons.AsmSubsessionType.UNRECOGNIZED : result;
   }
 
@@ -197,7 +274,7 @@ private static final long serialVersionUID = 0L;
     if (channelType_ != com.tcn.cloud.api.api.commons.AsmSubsessionType.VOICE.getNumber()) {
       output.writeEnum(4, channelType_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -228,7 +305,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(4, channelType_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -250,7 +327,7 @@ private static final long serialVersionUID = 0L;
     if (!internalGetSkills().equals(
         other.internalGetSkills())) return false;
     if (channelType_ != other.channelType_) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -273,7 +350,7 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + CHANNEL_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + channelType_;
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -322,13 +399,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.asm.SwitchSubsessionReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.asm.SwitchSubsessionReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -414,22 +489,29 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.asm.SwitchSubsessionReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       asmSessionSid_ = 0L;
+
       huntGroupSid_ = 0L;
+
       internalGetMutableSkills().clear();
       channelType_ = 0;
+
       return this;
     }
 
@@ -456,26 +538,14 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.asm.SwitchSubsessionReq buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.asm.SwitchSubsessionReq result = new com.tcn.cloud.api.api.v1alpha1.asm.SwitchSubsessionReq(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      int from_bitField0_ = bitField0_;
+      result.asmSessionSid_ = asmSessionSid_;
+      result.huntGroupSid_ = huntGroupSid_;
+      result.skills_ = internalGetSkills();
+      result.skills_.makeImmutable();
+      result.channelType_ = channelType_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.asm.SwitchSubsessionReq result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.asmSessionSid_ = asmSessionSid_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.huntGroupSid_ = huntGroupSid_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.skills_ = internalGetSkills();
-        result.skills_.makeImmutable();
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.channelType_ = channelType_;
-      }
     }
 
     @java.lang.Override
@@ -530,11 +600,10 @@ private static final long serialVersionUID = 0L;
       }
       internalGetMutableSkills().mergeFrom(
           other.internalGetSkills());
-      bitField0_ |= 0x00000004;
       if (other.channelType_ != 0) {
         setChannelTypeValue(other.getChannelTypeValue());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -549,54 +618,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.asm.SwitchSubsessionReq parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              asmSessionSid_ = input.readInt64();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 16: {
-              huntGroupSid_ = input.readInt64();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 16
-            case 26: {
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.Long>
-              skills__ = input.readMessage(
-                  SkillsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              internalGetMutableSkills().getMutableMap().put(
-                  skills__.getKey(), skills__.getValue());
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            case 32: {
-              channelType_ = input.readEnum();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 32
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.asm.SwitchSubsessionReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -616,9 +648,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAsmSessionSid(long value) {
-
+      
       asmSessionSid_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -627,7 +658,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAsmSessionSid() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       asmSessionSid_ = 0L;
       onChanged();
       return this;
@@ -648,9 +679,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHuntGroupSid(long value) {
-
+      
       huntGroupSid_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -659,7 +689,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHuntGroupSid() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       huntGroupSid_ = 0L;
       onChanged();
       return this;
@@ -668,7 +698,7 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.Long> skills_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.Long>
-        internalGetSkills() {
+    internalGetSkills() {
       if (skills_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             SkillsDefaultEntryHolder.defaultEntry);
@@ -676,7 +706,8 @@ private static final long serialVersionUID = 0L;
       return skills_;
     }
     private com.google.protobuf.MapField<java.lang.String, java.lang.Long>
-        internalGetMutableSkills() {
+    internalGetMutableSkills() {
+      onChanged();;
       if (skills_ == null) {
         skills_ = com.google.protobuf.MapField.newMapField(
             SkillsDefaultEntryHolder.defaultEntry);
@@ -684,20 +715,20 @@ private static final long serialVersionUID = 0L;
       if (!skills_.isMutable()) {
         skills_ = skills_.copy();
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
       return skills_;
     }
+
     public int getSkillsCount() {
       return internalGetSkills().getMap().size();
     }
     /**
      * <code>map&lt;string, int64&gt; skills = 3 [json_name = "skills"];</code>
      */
+
     @java.lang.Override
     public boolean containsSkills(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetSkills().getMap().containsKey(key);
     }
     /**
@@ -712,6 +743,7 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, int64&gt; skills = 3 [json_name = "skills"];</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.String, java.lang.Long> getSkillsMap() {
       return internalGetSkills().getMap();
     }
@@ -719,10 +751,11 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, int64&gt; skills = 3 [json_name = "skills"];</code>
      */
     @java.lang.Override
+
     public long getSkillsOrDefault(
         java.lang.String key,
         long defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.Long> map =
           internalGetSkills().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -731,9 +764,10 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, int64&gt; skills = 3 [json_name = "skills"];</code>
      */
     @java.lang.Override
+
     public long getSkillsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.Long> map =
           internalGetSkills().getMap();
       if (!map.containsKey(key)) {
@@ -741,8 +775,8 @@ private static final long serialVersionUID = 0L;
       }
       return map.get(key);
     }
+
     public Builder clearSkills() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       internalGetMutableSkills().getMutableMap()
           .clear();
       return this;
@@ -750,9 +784,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>map&lt;string, int64&gt; skills = 3 [json_name = "skills"];</code>
      */
+
     public Builder removeSkills(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableSkills().getMutableMap()
           .remove(key);
       return this;
@@ -762,8 +797,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.Long>
-        getMutableSkills() {
-      bitField0_ |= 0x00000004;
+    getMutableSkills() {
       return internalGetMutableSkills().getMutableMap();
     }
     /**
@@ -772,21 +806,20 @@ private static final long serialVersionUID = 0L;
     public Builder putSkills(
         java.lang.String key,
         long value) {
-      if (key == null) { throw new NullPointerException("map key"); }
-
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      
       internalGetMutableSkills().getMutableMap()
           .put(key, value);
-      bitField0_ |= 0x00000004;
       return this;
     }
     /**
      * <code>map&lt;string, int64&gt; skills = 3 [json_name = "skills"];</code>
      */
+
     public Builder putAllSkills(
         java.util.Map<java.lang.String, java.lang.Long> values) {
       internalGetMutableSkills().getMutableMap()
           .putAll(values);
-      bitField0_ |= 0x00000004;
       return this;
     }
 
@@ -804,8 +837,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setChannelTypeValue(int value) {
+      
       channelType_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -815,7 +848,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.AsmSubsessionType getChannelType() {
-      com.tcn.cloud.api.api.commons.AsmSubsessionType result = com.tcn.cloud.api.api.commons.AsmSubsessionType.forNumber(channelType_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.AsmSubsessionType result = com.tcn.cloud.api.api.commons.AsmSubsessionType.valueOf(channelType_);
       return result == null ? com.tcn.cloud.api.api.commons.AsmSubsessionType.UNRECOGNIZED : result;
     }
     /**
@@ -827,7 +861,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000008;
+      
       channelType_ = value.getNumber();
       onChanged();
       return this;
@@ -837,7 +871,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearChannelType() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      
       channelType_ = 0;
       onChanged();
       return this;
@@ -875,18 +909,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new SwitchSubsessionReq(input, extensionRegistry);
     }
   };
 

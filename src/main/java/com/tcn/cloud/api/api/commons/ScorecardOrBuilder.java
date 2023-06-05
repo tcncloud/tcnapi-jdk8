@@ -251,8 +251,6 @@ public interface ScorecardOrBuilder extends
    * </pre>
    *
    * <code>bool is_ad_hoc = 16 [json_name = "isAdHoc", deprecated = true];</code>
-   * @deprecated api.commons.Scorecard.is_ad_hoc is deprecated.
-   *     See api/commons/scorecards.proto;l=289
    * @return The isAdHoc.
    */
   @java.lang.Deprecated boolean getIsAdHoc();

@@ -25,6 +25,62 @@ private static final long serialVersionUID = 0L;
     return new MapString();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private MapString(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              values_ = com.google.protobuf.MapField.newMapField(
+                  ValuesDefaultEntryHolder.defaultEntry);
+              mutable_bitField0_ |= 0x00000001;
+            }
+            com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+            values__ = input.readMessage(
+                ValuesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+            values_.getMutableMap().put(
+                values__.getKey(), values__.getValue());
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_MapString_descriptor;
@@ -62,7 +118,6 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "");
   }
-  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, java.lang.String> values_;
   private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -73,16 +128,18 @@ private static final long serialVersionUID = 0L;
     }
     return values_;
   }
+
   public int getValuesCount() {
     return internalGetValues().getMap().size();
   }
   /**
    * <code>map&lt;string, string&gt; values = 1 [json_name = "values"];</code>
    */
+
   @java.lang.Override
   public boolean containsValues(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     return internalGetValues().getMap().containsKey(key);
   }
   /**
@@ -97,6 +154,7 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; values = 1 [json_name = "values"];</code>
    */
   @java.lang.Override
+
   public java.util.Map<java.lang.String, java.lang.String> getValuesMap() {
     return internalGetValues().getMap();
   }
@@ -104,12 +162,11 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; values = 1 [json_name = "values"];</code>
    */
   @java.lang.Override
-  public /* nullable */
-java.lang.String getValuesOrDefault(
+
+  public java.lang.String getValuesOrDefault(
       java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue) {
-    if (key == null) { throw new NullPointerException("map key"); }
+      java.lang.String defaultValue) {
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetValues().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -118,9 +175,10 @@ java.lang.String defaultValue) {
    * <code>map&lt;string, string&gt; values = 1 [json_name = "values"];</code>
    */
   @java.lang.Override
+
   public java.lang.String getValuesOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetValues().getMap();
     if (!map.containsKey(key)) {
@@ -149,7 +207,7 @@ java.lang.String defaultValue) {
         internalGetValues(),
         ValuesDefaultEntryHolder.defaultEntry,
         1);
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -168,7 +226,7 @@ java.lang.String defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, values__);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -185,7 +243,7 @@ java.lang.String defaultValue) {
 
     if (!internalGetValues().equals(
         other.internalGetValues())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -200,7 +258,7 @@ java.lang.String defaultValue) {
       hash = (37 * hash) + VALUES_FIELD_NUMBER;
       hash = (53 * hash) + internalGetValues().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -249,13 +307,11 @@ java.lang.String defaultValue) {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.integrations.MapString parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.integrations.MapString parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -341,18 +397,22 @@ java.lang.String defaultValue) {
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.MapString.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       internalGetMutableValues().clear();
       return this;
     }
@@ -380,17 +440,11 @@ java.lang.String defaultValue) {
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.integrations.MapString buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.integrations.MapString result = new com.tcn.cloud.api.api.v1alpha1.integrations.MapString(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      int from_bitField0_ = bitField0_;
+      result.values_ = internalGetValues();
+      result.values_.makeImmutable();
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.MapString result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.values_ = internalGetValues();
-        result.values_.makeImmutable();
-      }
     }
 
     @java.lang.Override
@@ -439,8 +493,7 @@ java.lang.String defaultValue) {
       if (other == com.tcn.cloud.api.api.v1alpha1.integrations.MapString.getDefaultInstance()) return this;
       internalGetMutableValues().mergeFrom(
           other.internalGetValues());
-      bitField0_ |= 0x00000001;
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -455,39 +508,17 @@ java.lang.String defaultValue) {
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.integrations.MapString parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-              values__ = input.readMessage(
-                  ValuesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              internalGetMutableValues().getMutableMap().put(
-                  values__.getKey(), values__.getValue());
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.integrations.MapString) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -495,7 +526,7 @@ java.lang.String defaultValue) {
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.String> values_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetValues() {
+    internalGetValues() {
       if (values_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             ValuesDefaultEntryHolder.defaultEntry);
@@ -503,7 +534,8 @@ java.lang.String defaultValue) {
       return values_;
     }
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetMutableValues() {
+    internalGetMutableValues() {
+      onChanged();;
       if (values_ == null) {
         values_ = com.google.protobuf.MapField.newMapField(
             ValuesDefaultEntryHolder.defaultEntry);
@@ -511,20 +543,20 @@ java.lang.String defaultValue) {
       if (!values_.isMutable()) {
         values_ = values_.copy();
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
       return values_;
     }
+
     public int getValuesCount() {
       return internalGetValues().getMap().size();
     }
     /**
      * <code>map&lt;string, string&gt; values = 1 [json_name = "values"];</code>
      */
+
     @java.lang.Override
     public boolean containsValues(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetValues().getMap().containsKey(key);
     }
     /**
@@ -539,6 +571,7 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, string&gt; values = 1 [json_name = "values"];</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.String, java.lang.String> getValuesMap() {
       return internalGetValues().getMap();
     }
@@ -546,12 +579,11 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, string&gt; values = 1 [json_name = "values"];</code>
      */
     @java.lang.Override
-    public /* nullable */
-java.lang.String getValuesOrDefault(
+
+    public java.lang.String getValuesOrDefault(
         java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetValues().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -560,9 +592,10 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, string&gt; values = 1 [json_name = "values"];</code>
      */
     @java.lang.Override
+
     public java.lang.String getValuesOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetValues().getMap();
       if (!map.containsKey(key)) {
@@ -570,8 +603,8 @@ java.lang.String defaultValue) {
       }
       return map.get(key);
     }
+
     public Builder clearValues() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       internalGetMutableValues().getMutableMap()
           .clear();
       return this;
@@ -579,9 +612,10 @@ java.lang.String defaultValue) {
     /**
      * <code>map&lt;string, string&gt; values = 1 [json_name = "values"];</code>
      */
+
     public Builder removeValues(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableValues().getMutableMap()
           .remove(key);
       return this;
@@ -591,8 +625,7 @@ java.lang.String defaultValue) {
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String>
-        getMutableValues() {
-      bitField0_ |= 0x00000001;
+    getMutableValues() {
       return internalGetMutableValues().getMutableMap();
     }
     /**
@@ -601,21 +634,20 @@ java.lang.String defaultValue) {
     public Builder putValues(
         java.lang.String key,
         java.lang.String value) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      if (value == null) { throw new NullPointerException("map value"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (value == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableValues().getMutableMap()
           .put(key, value);
-      bitField0_ |= 0x00000001;
       return this;
     }
     /**
      * <code>map&lt;string, string&gt; values = 1 [json_name = "values"];</code>
      */
+
     public Builder putAllValues(
         java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableValues().getMutableMap()
           .putAll(values);
-      bitField0_ |= 0x00000001;
       return this;
     }
     @java.lang.Override
@@ -651,18 +683,7 @@ java.lang.String defaultValue) {
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new MapString(input, extensionRegistry);
     }
   };
 

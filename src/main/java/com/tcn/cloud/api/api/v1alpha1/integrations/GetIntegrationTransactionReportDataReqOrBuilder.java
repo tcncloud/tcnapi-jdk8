@@ -76,11 +76,10 @@ public interface GetIntegrationTransactionReportDataReqOrBuilder extends
    *
    * <code>map&lt;string, string&gt; group_by = 5 [json_name = "groupBy"];</code>
    */
-  /* nullable */
-java.lang.String getGroupByOrDefault(
+
+  java.lang.String getGroupByOrDefault(
       java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue);
+      java.lang.String defaultValue);
   /**
    * <pre>
    * which field_names:value we want to see that was in the last request's group_by
@@ -88,6 +87,7 @@ java.lang.String defaultValue);
    *
    * <code>map&lt;string, string&gt; group_by = 5 [json_name = "groupBy"];</code>
    */
+
   java.lang.String getGroupByOrThrow(
       java.lang.String key);
 

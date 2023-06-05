@@ -31,6 +31,220 @@ private static final long serialVersionUID = 0L;
     return new Transcript();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private Transcript(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+
+            transcriptSid_ = input.readInt64();
+            break;
+          }
+          case 24: {
+
+            callSid_ = input.readInt64();
+            break;
+          }
+          case 32: {
+            int rawValue = input.readEnum();
+
+            callType_ = rawValue;
+            break;
+          }
+          case 42: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              results_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.vanalytics.Result>();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            results_.add(
+                input.readMessage(com.tcn.cloud.api.api.v1alpha1.vanalytics.Result.parser(), extensionRegistry));
+            break;
+          }
+          case 50: {
+            com.tcn.cloud.api.api.v1alpha1.vanalytics.Silence.Builder subBuilder = null;
+            if (silence_ != null) {
+              subBuilder = silence_.toBuilder();
+            }
+            silence_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.vanalytics.Silence.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(silence_);
+              silence_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 56: {
+
+            talkTime_ = input.readUInt32();
+            break;
+          }
+          case 74: {
+            com.google.protobuf.Timestamp.Builder subBuilder = null;
+            if (createTime_ != null) {
+              subBuilder = createTime_.toBuilder();
+            }
+            createTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(createTime_);
+              createTime_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 82: {
+            com.google.protobuf.Timestamp.Builder subBuilder = null;
+            if (callStartTime_ != null) {
+              subBuilder = callStartTime_.toBuilder();
+            }
+            callStartTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(callStartTime_);
+              callStartTime_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 90: {
+            com.tcn.cloud.api.api.v1alpha1.vanalytics.TalkOver.Builder subBuilder = null;
+            if (talkOver_ != null) {
+              subBuilder = talkOver_.toBuilder();
+            }
+            talkOver_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.vanalytics.TalkOver.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(talkOver_);
+              talkOver_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 98: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            callerId_ = s;
+            break;
+          }
+          case 106: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            phoneNumber_ = s;
+            break;
+          }
+          case 112: {
+
+            audioTime_ = input.readUInt32();
+            break;
+          }
+          case 120: {
+
+            audioBytes_ = input.readInt64();
+            break;
+          }
+          case 138: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            groupName_ = s;
+            break;
+          }
+          case 146: {
+            com.tcn.cloud.api.api.v1alpha1.vanalytics.aclpb.AgentCallLog.Builder subBuilder = null;
+            if (agentCallLog_ != null) {
+              subBuilder = agentCallLog_.toBuilder();
+            }
+            agentCallLog_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.vanalytics.aclpb.AgentCallLog.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(agentCallLog_);
+              agentCallLog_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 154: {
+            com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSummary.Builder subBuilder = null;
+            if (flagSummary_ != null) {
+              subBuilder = flagSummary_.toBuilder();
+            }
+            flagSummary_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSummary.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(flagSummary_);
+              flagSummary_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 162: {
+            com.google.protobuf.Timestamp.Builder subBuilder = null;
+            if (deleteTime_ != null) {
+              subBuilder = deleteTime_.toBuilder();
+            }
+            deleteTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(deleteTime_);
+              deleteTime_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 170: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            numberFormat_ = s;
+            break;
+          }
+          case 178: {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              agentResponse_ = com.google.protobuf.MapField.newMapField(
+                  AgentResponseDefaultEntryHolder.defaultEntry);
+              mutable_bitField0_ |= 0x00000002;
+            }
+            com.google.protobuf.MapEntry<java.lang.String, com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse>
+            agentResponse__ = input.readMessage(
+                AgentResponseDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+            agentResponse_.getMutableMap().put(
+                agentResponse__.getKey(), agentResponse__.getValue());
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        results_ = java.util.Collections.unmodifiableList(results_);
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.vanalytics.TranscriptProto.internal_static_api_v1alpha1_vanalytics_Transcript_descriptor;
@@ -57,7 +271,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TRANSCRIPT_SID_FIELD_NUMBER = 1;
-  private long transcriptSid_ = 0L;
+  private long transcriptSid_;
   /**
    * <code>int64 transcript_sid = 1 [json_name = "transcriptSid"];</code>
    * @return The transcriptSid.
@@ -68,7 +282,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALL_SID_FIELD_NUMBER = 3;
-  private long callSid_ = 0L;
+  private long callSid_;
   /**
    * <code>int64 call_sid = 3 [json_name = "callSid"];</code>
    * @return The callSid.
@@ -79,7 +293,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALL_TYPE_FIELD_NUMBER = 4;
-  private int callType_ = 0;
+  private int callType_;
   /**
    * <code>.api.commons.CallType.Enum call_type = 4 [json_name = "callType"];</code>
    * @return The enum numeric value on the wire for callType.
@@ -92,12 +306,12 @@ private static final long serialVersionUID = 0L;
    * @return The callType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.CallType.Enum getCallType() {
-    com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.forNumber(callType_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.valueOf(callType_);
     return result == null ? com.tcn.cloud.api.api.commons.CallType.Enum.UNRECOGNIZED : result;
   }
 
   public static final int RESULTS_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.vanalytics.Result> results_;
   /**
    * <code>repeated .api.v1alpha1.vanalytics.Result results = 5 [json_name = "results"];</code>
@@ -160,11 +374,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.vanalytics.SilenceOrBuilder getSilenceOrBuilder() {
-    return silence_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.Silence.getDefaultInstance() : silence_;
+    return getSilence();
   }
 
   public static final int TALK_TIME_FIELD_NUMBER = 7;
-  private int talkTime_ = 0;
+  private int talkTime_;
   /**
    * <pre>
    * talk time in milliseconds
@@ -201,7 +415,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder() {
-    return createTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
+    return getCreateTime();
   }
 
   public static final int CALL_START_TIME_FIELD_NUMBER = 10;
@@ -227,7 +441,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getCallStartTimeOrBuilder() {
-    return callStartTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : callStartTime_;
+    return getCallStartTime();
   }
 
   public static final int TALK_OVER_FIELD_NUMBER = 11;
@@ -253,12 +467,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.vanalytics.TalkOverOrBuilder getTalkOverOrBuilder() {
-    return talkOver_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.TalkOver.getDefaultInstance() : talkOver_;
+    return getTalkOver();
   }
 
   public static final int CALLER_ID_FIELD_NUMBER = 12;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object callerId_ = "";
+  private volatile java.lang.Object callerId_;
   /**
    * <code>string caller_id = 12 [json_name = "callerId"];</code>
    * @return The callerId.
@@ -296,8 +509,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PHONE_NUMBER_FIELD_NUMBER = 13;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object phoneNumber_ = "";
+  private volatile java.lang.Object phoneNumber_;
   /**
    * <code>string phone_number = 13 [json_name = "phoneNumber"];</code>
    * @return The phoneNumber.
@@ -335,7 +547,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AUDIO_TIME_FIELD_NUMBER = 14;
-  private int audioTime_ = 0;
+  private int audioTime_;
   /**
    * <pre>
    * audio time in milliseconds
@@ -350,7 +562,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AUDIO_BYTES_FIELD_NUMBER = 15;
-  private long audioBytes_ = 0L;
+  private long audioBytes_;
   /**
    * <code>int64 audio_bytes = 15 [json_name = "audioBytes"];</code>
    * @return The audioBytes.
@@ -361,8 +573,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GROUP_NAME_FIELD_NUMBER = 17;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object groupName_ = "";
+  private volatile java.lang.Object groupName_;
   /**
    * <code>string group_name = 17 [json_name = "groupName"];</code>
    * @return The groupName.
@@ -422,7 +633,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.vanalytics.aclpb.AgentCallLogOrBuilder getAgentCallLogOrBuilder() {
-    return agentCallLog_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.aclpb.AgentCallLog.getDefaultInstance() : agentCallLog_;
+    return getAgentCallLog();
   }
 
   public static final int FLAG_SUMMARY_FIELD_NUMBER = 19;
@@ -448,7 +659,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSummaryOrBuilder getFlagSummaryOrBuilder() {
-    return flagSummary_ == null ? com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSummary.getDefaultInstance() : flagSummary_;
+    return getFlagSummary();
   }
 
   public static final int DELETE_TIME_FIELD_NUMBER = 20;
@@ -486,12 +697,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getDeleteTimeOrBuilder() {
-    return deleteTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deleteTime_;
+    return getDeleteTime();
   }
 
   public static final int NUMBER_FORMAT_FIELD_NUMBER = 21;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object numberFormat_ = "";
+  private volatile java.lang.Object numberFormat_;
   /**
    * <code>string number_format = 21 [json_name = "numberFormat"];</code>
    * @return The numberFormat.
@@ -540,7 +750,6 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.MESSAGE,
                 com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse.getDefaultInstance());
   }
-  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse> agentResponse_;
   private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse>
@@ -551,16 +760,18 @@ private static final long serialVersionUID = 0L;
     }
     return agentResponse_;
   }
+
   public int getAgentResponseCount() {
     return internalGetAgentResponse().getMap().size();
   }
   /**
    * <code>map&lt;string, .api.v1alpha1.vanalytics.AgentResponse&gt; agent_response = 22 [json_name = "agentResponse"];</code>
    */
+
   @java.lang.Override
   public boolean containsAgentResponse(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     return internalGetAgentResponse().getMap().containsKey(key);
   }
   /**
@@ -575,6 +786,7 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, .api.v1alpha1.vanalytics.AgentResponse&gt; agent_response = 22 [json_name = "agentResponse"];</code>
    */
   @java.lang.Override
+
   public java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse> getAgentResponseMap() {
     return internalGetAgentResponse().getMap();
   }
@@ -582,12 +794,11 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, .api.v1alpha1.vanalytics.AgentResponse&gt; agent_response = 22 [json_name = "agentResponse"];</code>
    */
   @java.lang.Override
-  public /* nullable */
-com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse getAgentResponseOrDefault(
+
+  public com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse getAgentResponseOrDefault(
       java.lang.String key,
-      /* nullable */
-com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
-    if (key == null) { throw new NullPointerException("map key"); }
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse> map =
         internalGetAgentResponse().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -596,9 +807,10 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
    * <code>map&lt;string, .api.v1alpha1.vanalytics.AgentResponse&gt; agent_response = 22 [json_name = "agentResponse"];</code>
    */
   @java.lang.Override
+
   public com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse getAgentResponseOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse> map =
         internalGetAgentResponse().getMap();
     if (!map.containsKey(key)) {
@@ -648,10 +860,10 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
     if (talkOver_ != null) {
       output.writeMessage(11, getTalkOver());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callerId_)) {
+    if (!getCallerIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 12, callerId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(phoneNumber_)) {
+    if (!getPhoneNumberBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 13, phoneNumber_);
     }
     if (audioTime_ != 0) {
@@ -660,7 +872,7 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
     if (audioBytes_ != 0L) {
       output.writeInt64(15, audioBytes_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupName_)) {
+    if (!getGroupNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 17, groupName_);
     }
     if (agentCallLog_ != null) {
@@ -672,7 +884,7 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
     if (deleteTime_ != null) {
       output.writeMessage(20, getDeleteTime());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(numberFormat_)) {
+    if (!getNumberFormatBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 21, numberFormat_);
     }
     com.google.protobuf.GeneratedMessageV3
@@ -681,7 +893,7 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
         internalGetAgentResponse(),
         AgentResponseDefaultEntryHolder.defaultEntry,
         22);
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -726,10 +938,10 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, getTalkOver());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callerId_)) {
+    if (!getCallerIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, callerId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(phoneNumber_)) {
+    if (!getPhoneNumberBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, phoneNumber_);
     }
     if (audioTime_ != 0) {
@@ -740,7 +952,7 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(15, audioBytes_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupName_)) {
+    if (!getGroupNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, groupName_);
     }
     if (agentCallLog_ != null) {
@@ -755,7 +967,7 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(20, getDeleteTime());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(numberFormat_)) {
+    if (!getNumberFormatBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(21, numberFormat_);
     }
     for (java.util.Map.Entry<java.lang.String, com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse> entry
@@ -768,7 +980,7 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(22, agentResponse__);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -841,7 +1053,7 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
         .equals(other.getNumberFormat())) return false;
     if (!internalGetAgentResponse().equals(
         other.internalGetAgentResponse())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -911,7 +1123,7 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
       hash = (37 * hash) + AGENT_RESPONSE_FIELD_NUMBER;
       hash = (53 * hash) + internalGetAgentResponse().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -960,13 +1172,11 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.vanalytics.Transcript parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.vanalytics.Transcript parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1052,70 +1262,91 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.vanalytics.Transcript.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getResultsFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       transcriptSid_ = 0L;
+
       callSid_ = 0L;
+
       callType_ = 0;
+
       if (resultsBuilder_ == null) {
         results_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
-        results_ = null;
         resultsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000008);
-      silence_ = null;
-      if (silenceBuilder_ != null) {
-        silenceBuilder_.dispose();
+      if (silenceBuilder_ == null) {
+        silence_ = null;
+      } else {
+        silence_ = null;
         silenceBuilder_ = null;
       }
       talkTime_ = 0;
-      createTime_ = null;
-      if (createTimeBuilder_ != null) {
-        createTimeBuilder_.dispose();
+
+      if (createTimeBuilder_ == null) {
+        createTime_ = null;
+      } else {
+        createTime_ = null;
         createTimeBuilder_ = null;
       }
-      callStartTime_ = null;
-      if (callStartTimeBuilder_ != null) {
-        callStartTimeBuilder_.dispose();
+      if (callStartTimeBuilder_ == null) {
+        callStartTime_ = null;
+      } else {
+        callStartTime_ = null;
         callStartTimeBuilder_ = null;
       }
-      talkOver_ = null;
-      if (talkOverBuilder_ != null) {
-        talkOverBuilder_.dispose();
+      if (talkOverBuilder_ == null) {
+        talkOver_ = null;
+      } else {
+        talkOver_ = null;
         talkOverBuilder_ = null;
       }
       callerId_ = "";
+
       phoneNumber_ = "";
+
       audioTime_ = 0;
+
       audioBytes_ = 0L;
+
       groupName_ = "";
-      agentCallLog_ = null;
-      if (agentCallLogBuilder_ != null) {
-        agentCallLogBuilder_.dispose();
+
+      if (agentCallLogBuilder_ == null) {
+        agentCallLog_ = null;
+      } else {
+        agentCallLog_ = null;
         agentCallLogBuilder_ = null;
       }
-      flagSummary_ = null;
-      if (flagSummaryBuilder_ != null) {
-        flagSummaryBuilder_.dispose();
+      if (flagSummaryBuilder_ == null) {
+        flagSummary_ = null;
+      } else {
+        flagSummary_ = null;
         flagSummaryBuilder_ = null;
       }
-      deleteTime_ = null;
-      if (deleteTimeBuilder_ != null) {
-        deleteTimeBuilder_.dispose();
+      if (deleteTimeBuilder_ == null) {
+        deleteTime_ = null;
+      } else {
+        deleteTime_ = null;
         deleteTimeBuilder_ = null;
       }
       numberFormat_ = "";
+
       internalGetMutableAgentResponse().clear();
       return this;
     }
@@ -1143,95 +1374,65 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.vanalytics.Transcript buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.vanalytics.Transcript result = new com.tcn.cloud.api.api.v1alpha1.vanalytics.Transcript(this);
-      buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      onBuilt();
-      return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.vanalytics.Transcript result) {
+      int from_bitField0_ = bitField0_;
+      result.transcriptSid_ = transcriptSid_;
+      result.callSid_ = callSid_;
+      result.callType_ = callType_;
       if (resultsBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           results_ = java.util.Collections.unmodifiableList(results_);
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.results_ = results_;
       } else {
         result.results_ = resultsBuilder_.build();
       }
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.vanalytics.Transcript result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.transcriptSid_ = transcriptSid_;
+      if (silenceBuilder_ == null) {
+        result.silence_ = silence_;
+      } else {
+        result.silence_ = silenceBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.callSid_ = callSid_;
+      result.talkTime_ = talkTime_;
+      if (createTimeBuilder_ == null) {
+        result.createTime_ = createTime_;
+      } else {
+        result.createTime_ = createTimeBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.callType_ = callType_;
+      if (callStartTimeBuilder_ == null) {
+        result.callStartTime_ = callStartTime_;
+      } else {
+        result.callStartTime_ = callStartTimeBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.silence_ = silenceBuilder_ == null
-            ? silence_
-            : silenceBuilder_.build();
+      if (talkOverBuilder_ == null) {
+        result.talkOver_ = talkOver_;
+      } else {
+        result.talkOver_ = talkOverBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.talkTime_ = talkTime_;
+      result.callerId_ = callerId_;
+      result.phoneNumber_ = phoneNumber_;
+      result.audioTime_ = audioTime_;
+      result.audioBytes_ = audioBytes_;
+      result.groupName_ = groupName_;
+      if (agentCallLogBuilder_ == null) {
+        result.agentCallLog_ = agentCallLog_;
+      } else {
+        result.agentCallLog_ = agentCallLogBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.createTime_ = createTimeBuilder_ == null
-            ? createTime_
-            : createTimeBuilder_.build();
+      if (flagSummaryBuilder_ == null) {
+        result.flagSummary_ = flagSummary_;
+      } else {
+        result.flagSummary_ = flagSummaryBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.callStartTime_ = callStartTimeBuilder_ == null
-            ? callStartTime_
-            : callStartTimeBuilder_.build();
+      if (deleteTimeBuilder_ == null) {
+        result.deleteTime_ = deleteTime_;
+      } else {
+        result.deleteTime_ = deleteTimeBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
-        result.talkOver_ = talkOverBuilder_ == null
-            ? talkOver_
-            : talkOverBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
-        result.callerId_ = callerId_;
-      }
-      if (((from_bitField0_ & 0x00000400) != 0)) {
-        result.phoneNumber_ = phoneNumber_;
-      }
-      if (((from_bitField0_ & 0x00000800) != 0)) {
-        result.audioTime_ = audioTime_;
-      }
-      if (((from_bitField0_ & 0x00001000) != 0)) {
-        result.audioBytes_ = audioBytes_;
-      }
-      if (((from_bitField0_ & 0x00002000) != 0)) {
-        result.groupName_ = groupName_;
-      }
-      if (((from_bitField0_ & 0x00004000) != 0)) {
-        result.agentCallLog_ = agentCallLogBuilder_ == null
-            ? agentCallLog_
-            : agentCallLogBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00008000) != 0)) {
-        result.flagSummary_ = flagSummaryBuilder_ == null
-            ? flagSummary_
-            : flagSummaryBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00010000) != 0)) {
-        result.deleteTime_ = deleteTimeBuilder_ == null
-            ? deleteTime_
-            : deleteTimeBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00020000) != 0)) {
-        result.numberFormat_ = numberFormat_;
-      }
-      if (((from_bitField0_ & 0x00040000) != 0)) {
-        result.agentResponse_ = internalGetAgentResponse();
-        result.agentResponse_.makeImmutable();
-      }
+      result.numberFormat_ = numberFormat_;
+      result.agentResponse_ = internalGetAgentResponse();
+      result.agentResponse_.makeImmutable();
+      onBuilt();
+      return result;
     }
 
     @java.lang.Override
@@ -1291,7 +1492,7 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
         if (!other.results_.isEmpty()) {
           if (results_.isEmpty()) {
             results_ = other.results_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureResultsIsMutable();
             results_.addAll(other.results_);
@@ -1304,7 +1505,7 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
             resultsBuilder_.dispose();
             resultsBuilder_ = null;
             results_ = other.results_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000001);
             resultsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getResultsFieldBuilder() : null;
@@ -1330,12 +1531,10 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
       }
       if (!other.getCallerId().isEmpty()) {
         callerId_ = other.callerId_;
-        bitField0_ |= 0x00000200;
         onChanged();
       }
       if (!other.getPhoneNumber().isEmpty()) {
         phoneNumber_ = other.phoneNumber_;
-        bitField0_ |= 0x00000400;
         onChanged();
       }
       if (other.getAudioTime() != 0) {
@@ -1346,7 +1545,6 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
       }
       if (!other.getGroupName().isEmpty()) {
         groupName_ = other.groupName_;
-        bitField0_ |= 0x00002000;
         onChanged();
       }
       if (other.hasAgentCallLog()) {
@@ -1360,13 +1558,11 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
       }
       if (!other.getNumberFormat().isEmpty()) {
         numberFormat_ = other.numberFormat_;
-        bitField0_ |= 0x00020000;
         onChanged();
       }
       internalGetMutableAgentResponse().mergeFrom(
           other.internalGetAgentResponse());
-      bitField0_ |= 0x00040000;
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -1381,151 +1577,17 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.vanalytics.Transcript parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              transcriptSid_ = input.readInt64();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 24: {
-              callSid_ = input.readInt64();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 24
-            case 32: {
-              callType_ = input.readEnum();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 32
-            case 42: {
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.Result m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v1alpha1.vanalytics.Result.parser(),
-                      extensionRegistry);
-              if (resultsBuilder_ == null) {
-                ensureResultsIsMutable();
-                results_.add(m);
-              } else {
-                resultsBuilder_.addMessage(m);
-              }
-              break;
-            } // case 42
-            case 50: {
-              input.readMessage(
-                  getSilenceFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 50
-            case 56: {
-              talkTime_ = input.readUInt32();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 56
-            case 74: {
-              input.readMessage(
-                  getCreateTimeFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 74
-            case 82: {
-              input.readMessage(
-                  getCallStartTimeFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000080;
-              break;
-            } // case 82
-            case 90: {
-              input.readMessage(
-                  getTalkOverFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000100;
-              break;
-            } // case 90
-            case 98: {
-              callerId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000200;
-              break;
-            } // case 98
-            case 106: {
-              phoneNumber_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000400;
-              break;
-            } // case 106
-            case 112: {
-              audioTime_ = input.readUInt32();
-              bitField0_ |= 0x00000800;
-              break;
-            } // case 112
-            case 120: {
-              audioBytes_ = input.readInt64();
-              bitField0_ |= 0x00001000;
-              break;
-            } // case 120
-            case 138: {
-              groupName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00002000;
-              break;
-            } // case 138
-            case 146: {
-              input.readMessage(
-                  getAgentCallLogFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00004000;
-              break;
-            } // case 146
-            case 154: {
-              input.readMessage(
-                  getFlagSummaryFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00008000;
-              break;
-            } // case 154
-            case 162: {
-              input.readMessage(
-                  getDeleteTimeFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00010000;
-              break;
-            } // case 162
-            case 170: {
-              numberFormat_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00020000;
-              break;
-            } // case 170
-            case 178: {
-              com.google.protobuf.MapEntry<java.lang.String, com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse>
-              agentResponse__ = input.readMessage(
-                  AgentResponseDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              internalGetMutableAgentResponse().getMutableMap().put(
-                  agentResponse__.getKey(), agentResponse__.getValue());
-              bitField0_ |= 0x00040000;
-              break;
-            } // case 178
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.vanalytics.Transcript) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -1545,9 +1607,8 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setTranscriptSid(long value) {
-
+      
       transcriptSid_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1556,7 +1617,7 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearTranscriptSid() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       transcriptSid_ = 0L;
       onChanged();
       return this;
@@ -1577,9 +1638,8 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setCallSid(long value) {
-
+      
       callSid_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1588,7 +1648,7 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearCallSid() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       callSid_ = 0L;
       onChanged();
       return this;
@@ -1608,8 +1668,8 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setCallTypeValue(int value) {
+      
       callType_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1619,7 +1679,8 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.CallType.Enum getCallType() {
-      com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.forNumber(callType_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.valueOf(callType_);
       return result == null ? com.tcn.cloud.api.api.commons.CallType.Enum.UNRECOGNIZED : result;
     }
     /**
@@ -1631,7 +1692,7 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000004;
+      
       callType_ = value.getNumber();
       onChanged();
       return this;
@@ -1641,7 +1702,7 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearCallType() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       callType_ = 0;
       onChanged();
       return this;
@@ -1650,9 +1711,9 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
     private java.util.List<com.tcn.cloud.api.api.v1alpha1.vanalytics.Result> results_ =
       java.util.Collections.emptyList();
     private void ensureResultsIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         results_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.vanalytics.Result>(results_);
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -1802,7 +1863,7 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
     public Builder clearResults() {
       if (resultsBuilder_ == null) {
         results_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         resultsBuilder_.clear();
@@ -1879,7 +1940,7 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
         resultsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.vanalytics.Result, com.tcn.cloud.api.api.v1alpha1.vanalytics.Result.Builder, com.tcn.cloud.api.api.v1alpha1.vanalytics.ResultOrBuilder>(
                 results_,
-                ((bitField0_ & 0x00000008) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         results_ = null;
@@ -1895,7 +1956,7 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      * @return Whether the silence field is set.
      */
     public boolean hasSilence() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return silenceBuilder_ != null || silence_ != null;
     }
     /**
      * <code>.api.v1alpha1.vanalytics.Silence silence = 6 [json_name = "silence"];</code>
@@ -1917,11 +1978,11 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
           throw new NullPointerException();
         }
         silence_ = value;
+        onChanged();
       } else {
         silenceBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
@@ -1931,11 +1992,11 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
         com.tcn.cloud.api.api.v1alpha1.vanalytics.Silence.Builder builderForValue) {
       if (silenceBuilder_ == null) {
         silence_ = builderForValue.build();
+        onChanged();
       } else {
         silenceBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
@@ -1943,38 +2004,38 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      */
     public Builder mergeSilence(com.tcn.cloud.api.api.v1alpha1.vanalytics.Silence value) {
       if (silenceBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0) &&
-          silence_ != null &&
-          silence_ != com.tcn.cloud.api.api.v1alpha1.vanalytics.Silence.getDefaultInstance()) {
-          getSilenceBuilder().mergeFrom(value);
+        if (silence_ != null) {
+          silence_ =
+            com.tcn.cloud.api.api.v1alpha1.vanalytics.Silence.newBuilder(silence_).mergeFrom(value).buildPartial();
         } else {
           silence_ = value;
         }
+        onChanged();
       } else {
         silenceBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v1alpha1.vanalytics.Silence silence = 6 [json_name = "silence"];</code>
      */
     public Builder clearSilence() {
-      bitField0_ = (bitField0_ & ~0x00000010);
-      silence_ = null;
-      if (silenceBuilder_ != null) {
-        silenceBuilder_.dispose();
+      if (silenceBuilder_ == null) {
+        silence_ = null;
+        onChanged();
+      } else {
+        silence_ = null;
         silenceBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v1alpha1.vanalytics.Silence silence = 6 [json_name = "silence"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.vanalytics.Silence.Builder getSilenceBuilder() {
-      bitField0_ |= 0x00000010;
+      
       onChanged();
       return getSilenceFieldBuilder().getBuilder();
     }
@@ -2029,9 +2090,8 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setTalkTime(int value) {
-
+      
       talkTime_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -2044,7 +2104,7 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearTalkTime() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      
       talkTime_ = 0;
       onChanged();
       return this;
@@ -2058,7 +2118,7 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      * @return Whether the createTime field is set.
      */
     public boolean hasCreateTime() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return createTimeBuilder_ != null || createTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp create_time = 9 [json_name = "createTime"];</code>
@@ -2080,11 +2140,11 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
           throw new NullPointerException();
         }
         createTime_ = value;
+        onChanged();
       } else {
         createTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+
       return this;
     }
     /**
@@ -2094,11 +2154,11 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (createTimeBuilder_ == null) {
         createTime_ = builderForValue.build();
+        onChanged();
       } else {
         createTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+
       return this;
     }
     /**
@@ -2106,38 +2166,38 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      */
     public Builder mergeCreateTime(com.google.protobuf.Timestamp value) {
       if (createTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0) &&
-          createTime_ != null &&
-          createTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getCreateTimeBuilder().mergeFrom(value);
+        if (createTime_ != null) {
+          createTime_ =
+            com.google.protobuf.Timestamp.newBuilder(createTime_).mergeFrom(value).buildPartial();
         } else {
           createTime_ = value;
         }
+        onChanged();
       } else {
         createTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp create_time = 9 [json_name = "createTime"];</code>
      */
     public Builder clearCreateTime() {
-      bitField0_ = (bitField0_ & ~0x00000040);
-      createTime_ = null;
-      if (createTimeBuilder_ != null) {
-        createTimeBuilder_.dispose();
+      if (createTimeBuilder_ == null) {
+        createTime_ = null;
+        onChanged();
+      } else {
+        createTime_ = null;
         createTimeBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp create_time = 9 [json_name = "createTime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getCreateTimeBuilder() {
-      bitField0_ |= 0x00000040;
+      
       onChanged();
       return getCreateTimeFieldBuilder().getBuilder();
     }
@@ -2177,7 +2237,7 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      * @return Whether the callStartTime field is set.
      */
     public boolean hasCallStartTime() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return callStartTimeBuilder_ != null || callStartTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp call_start_time = 10 [json_name = "callStartTime"];</code>
@@ -2199,11 +2259,11 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
           throw new NullPointerException();
         }
         callStartTime_ = value;
+        onChanged();
       } else {
         callStartTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000080;
-      onChanged();
+
       return this;
     }
     /**
@@ -2213,11 +2273,11 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (callStartTimeBuilder_ == null) {
         callStartTime_ = builderForValue.build();
+        onChanged();
       } else {
         callStartTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000080;
-      onChanged();
+
       return this;
     }
     /**
@@ -2225,38 +2285,38 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      */
     public Builder mergeCallStartTime(com.google.protobuf.Timestamp value) {
       if (callStartTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000080) != 0) &&
-          callStartTime_ != null &&
-          callStartTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getCallStartTimeBuilder().mergeFrom(value);
+        if (callStartTime_ != null) {
+          callStartTime_ =
+            com.google.protobuf.Timestamp.newBuilder(callStartTime_).mergeFrom(value).buildPartial();
         } else {
           callStartTime_ = value;
         }
+        onChanged();
       } else {
         callStartTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000080;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp call_start_time = 10 [json_name = "callStartTime"];</code>
      */
     public Builder clearCallStartTime() {
-      bitField0_ = (bitField0_ & ~0x00000080);
-      callStartTime_ = null;
-      if (callStartTimeBuilder_ != null) {
-        callStartTimeBuilder_.dispose();
+      if (callStartTimeBuilder_ == null) {
+        callStartTime_ = null;
+        onChanged();
+      } else {
+        callStartTime_ = null;
         callStartTimeBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp call_start_time = 10 [json_name = "callStartTime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getCallStartTimeBuilder() {
-      bitField0_ |= 0x00000080;
+      
       onChanged();
       return getCallStartTimeFieldBuilder().getBuilder();
     }
@@ -2296,7 +2356,7 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      * @return Whether the talkOver field is set.
      */
     public boolean hasTalkOver() {
-      return ((bitField0_ & 0x00000100) != 0);
+      return talkOverBuilder_ != null || talkOver_ != null;
     }
     /**
      * <code>.api.v1alpha1.vanalytics.TalkOver talk_over = 11 [json_name = "talkOver"];</code>
@@ -2318,11 +2378,11 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
           throw new NullPointerException();
         }
         talkOver_ = value;
+        onChanged();
       } else {
         talkOverBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000100;
-      onChanged();
+
       return this;
     }
     /**
@@ -2332,11 +2392,11 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
         com.tcn.cloud.api.api.v1alpha1.vanalytics.TalkOver.Builder builderForValue) {
       if (talkOverBuilder_ == null) {
         talkOver_ = builderForValue.build();
+        onChanged();
       } else {
         talkOverBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000100;
-      onChanged();
+
       return this;
     }
     /**
@@ -2344,38 +2404,38 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      */
     public Builder mergeTalkOver(com.tcn.cloud.api.api.v1alpha1.vanalytics.TalkOver value) {
       if (talkOverBuilder_ == null) {
-        if (((bitField0_ & 0x00000100) != 0) &&
-          talkOver_ != null &&
-          talkOver_ != com.tcn.cloud.api.api.v1alpha1.vanalytics.TalkOver.getDefaultInstance()) {
-          getTalkOverBuilder().mergeFrom(value);
+        if (talkOver_ != null) {
+          talkOver_ =
+            com.tcn.cloud.api.api.v1alpha1.vanalytics.TalkOver.newBuilder(talkOver_).mergeFrom(value).buildPartial();
         } else {
           talkOver_ = value;
         }
+        onChanged();
       } else {
         talkOverBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000100;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v1alpha1.vanalytics.TalkOver talk_over = 11 [json_name = "talkOver"];</code>
      */
     public Builder clearTalkOver() {
-      bitField0_ = (bitField0_ & ~0x00000100);
-      talkOver_ = null;
-      if (talkOverBuilder_ != null) {
-        talkOverBuilder_.dispose();
+      if (talkOverBuilder_ == null) {
+        talkOver_ = null;
+        onChanged();
+      } else {
+        talkOver_ = null;
         talkOverBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v1alpha1.vanalytics.TalkOver talk_over = 11 [json_name = "talkOver"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.vanalytics.TalkOver.Builder getTalkOverBuilder() {
-      bitField0_ |= 0x00000100;
+      
       onChanged();
       return getTalkOverFieldBuilder().getBuilder();
     }
@@ -2448,9 +2508,11 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      */
     public Builder setCallerId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       callerId_ = value;
-      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2459,8 +2521,8 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearCallerId() {
+      
       callerId_ = getDefaultInstance().getCallerId();
-      bitField0_ = (bitField0_ & ~0x00000200);
       onChanged();
       return this;
     }
@@ -2471,10 +2533,12 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      */
     public Builder setCallerIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       callerId_ = value;
-      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2520,9 +2584,11 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      */
     public Builder setPhoneNumber(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       phoneNumber_ = value;
-      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2531,8 +2597,8 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearPhoneNumber() {
+      
       phoneNumber_ = getDefaultInstance().getPhoneNumber();
-      bitField0_ = (bitField0_ & ~0x00000400);
       onChanged();
       return this;
     }
@@ -2543,10 +2609,12 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      */
     public Builder setPhoneNumberBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       phoneNumber_ = value;
-      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2574,9 +2642,8 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setAudioTime(int value) {
-
+      
       audioTime_ = value;
-      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -2589,7 +2656,7 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearAudioTime() {
-      bitField0_ = (bitField0_ & ~0x00000800);
+      
       audioTime_ = 0;
       onChanged();
       return this;
@@ -2610,9 +2677,8 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setAudioBytes(long value) {
-
+      
       audioBytes_ = value;
-      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -2621,7 +2687,7 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearAudioBytes() {
-      bitField0_ = (bitField0_ & ~0x00001000);
+      
       audioBytes_ = 0L;
       onChanged();
       return this;
@@ -2668,9 +2734,11 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      */
     public Builder setGroupName(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       groupName_ = value;
-      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -2679,8 +2747,8 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearGroupName() {
+      
       groupName_ = getDefaultInstance().getGroupName();
-      bitField0_ = (bitField0_ & ~0x00002000);
       onChanged();
       return this;
     }
@@ -2691,10 +2759,12 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      */
     public Builder setGroupNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       groupName_ = value;
-      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -2707,7 +2777,7 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      * @return Whether the agentCallLog field is set.
      */
     public boolean hasAgentCallLog() {
-      return ((bitField0_ & 0x00004000) != 0);
+      return agentCallLogBuilder_ != null || agentCallLog_ != null;
     }
     /**
      * <code>.api.v1alpha1.vanalytics.aclpb.AgentCallLog agent_call_log = 18 [json_name = "agentCallLog"];</code>
@@ -2729,11 +2799,11 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
           throw new NullPointerException();
         }
         agentCallLog_ = value;
+        onChanged();
       } else {
         agentCallLogBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00004000;
-      onChanged();
+
       return this;
     }
     /**
@@ -2743,11 +2813,11 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
         com.tcn.cloud.api.api.v1alpha1.vanalytics.aclpb.AgentCallLog.Builder builderForValue) {
       if (agentCallLogBuilder_ == null) {
         agentCallLog_ = builderForValue.build();
+        onChanged();
       } else {
         agentCallLogBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00004000;
-      onChanged();
+
       return this;
     }
     /**
@@ -2755,38 +2825,38 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      */
     public Builder mergeAgentCallLog(com.tcn.cloud.api.api.v1alpha1.vanalytics.aclpb.AgentCallLog value) {
       if (agentCallLogBuilder_ == null) {
-        if (((bitField0_ & 0x00004000) != 0) &&
-          agentCallLog_ != null &&
-          agentCallLog_ != com.tcn.cloud.api.api.v1alpha1.vanalytics.aclpb.AgentCallLog.getDefaultInstance()) {
-          getAgentCallLogBuilder().mergeFrom(value);
+        if (agentCallLog_ != null) {
+          agentCallLog_ =
+            com.tcn.cloud.api.api.v1alpha1.vanalytics.aclpb.AgentCallLog.newBuilder(agentCallLog_).mergeFrom(value).buildPartial();
         } else {
           agentCallLog_ = value;
         }
+        onChanged();
       } else {
         agentCallLogBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00004000;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v1alpha1.vanalytics.aclpb.AgentCallLog agent_call_log = 18 [json_name = "agentCallLog"];</code>
      */
     public Builder clearAgentCallLog() {
-      bitField0_ = (bitField0_ & ~0x00004000);
-      agentCallLog_ = null;
-      if (agentCallLogBuilder_ != null) {
-        agentCallLogBuilder_.dispose();
+      if (agentCallLogBuilder_ == null) {
+        agentCallLog_ = null;
+        onChanged();
+      } else {
+        agentCallLog_ = null;
         agentCallLogBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v1alpha1.vanalytics.aclpb.AgentCallLog agent_call_log = 18 [json_name = "agentCallLog"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.vanalytics.aclpb.AgentCallLog.Builder getAgentCallLogBuilder() {
-      bitField0_ |= 0x00004000;
+      
       onChanged();
       return getAgentCallLogFieldBuilder().getBuilder();
     }
@@ -2826,7 +2896,7 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      * @return Whether the flagSummary field is set.
      */
     public boolean hasFlagSummary() {
-      return ((bitField0_ & 0x00008000) != 0);
+      return flagSummaryBuilder_ != null || flagSummary_ != null;
     }
     /**
      * <code>.api.v1alpha1.vanalytics.FlagSummary flag_summary = 19 [json_name = "flagSummary"];</code>
@@ -2848,11 +2918,11 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
           throw new NullPointerException();
         }
         flagSummary_ = value;
+        onChanged();
       } else {
         flagSummaryBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00008000;
-      onChanged();
+
       return this;
     }
     /**
@@ -2862,11 +2932,11 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
         com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSummary.Builder builderForValue) {
       if (flagSummaryBuilder_ == null) {
         flagSummary_ = builderForValue.build();
+        onChanged();
       } else {
         flagSummaryBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00008000;
-      onChanged();
+
       return this;
     }
     /**
@@ -2874,38 +2944,38 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      */
     public Builder mergeFlagSummary(com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSummary value) {
       if (flagSummaryBuilder_ == null) {
-        if (((bitField0_ & 0x00008000) != 0) &&
-          flagSummary_ != null &&
-          flagSummary_ != com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSummary.getDefaultInstance()) {
-          getFlagSummaryBuilder().mergeFrom(value);
+        if (flagSummary_ != null) {
+          flagSummary_ =
+            com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSummary.newBuilder(flagSummary_).mergeFrom(value).buildPartial();
         } else {
           flagSummary_ = value;
         }
+        onChanged();
       } else {
         flagSummaryBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00008000;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v1alpha1.vanalytics.FlagSummary flag_summary = 19 [json_name = "flagSummary"];</code>
      */
     public Builder clearFlagSummary() {
-      bitField0_ = (bitField0_ & ~0x00008000);
-      flagSummary_ = null;
-      if (flagSummaryBuilder_ != null) {
-        flagSummaryBuilder_.dispose();
+      if (flagSummaryBuilder_ == null) {
+        flagSummary_ = null;
+        onChanged();
+      } else {
+        flagSummary_ = null;
         flagSummaryBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v1alpha1.vanalytics.FlagSummary flag_summary = 19 [json_name = "flagSummary"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagSummary.Builder getFlagSummaryBuilder() {
-      bitField0_ |= 0x00008000;
+      
       onChanged();
       return getFlagSummaryFieldBuilder().getBuilder();
     }
@@ -2949,7 +3019,7 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      * @return Whether the deleteTime field is set.
      */
     public boolean hasDeleteTime() {
-      return ((bitField0_ & 0x00010000) != 0);
+      return deleteTimeBuilder_ != null || deleteTime_ != null;
     }
     /**
      * <pre>
@@ -2979,11 +3049,11 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
           throw new NullPointerException();
         }
         deleteTime_ = value;
+        onChanged();
       } else {
         deleteTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00010000;
-      onChanged();
+
       return this;
     }
     /**
@@ -2997,11 +3067,11 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (deleteTimeBuilder_ == null) {
         deleteTime_ = builderForValue.build();
+        onChanged();
       } else {
         deleteTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00010000;
-      onChanged();
+
       return this;
     }
     /**
@@ -3013,18 +3083,17 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      */
     public Builder mergeDeleteTime(com.google.protobuf.Timestamp value) {
       if (deleteTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00010000) != 0) &&
-          deleteTime_ != null &&
-          deleteTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getDeleteTimeBuilder().mergeFrom(value);
+        if (deleteTime_ != null) {
+          deleteTime_ =
+            com.google.protobuf.Timestamp.newBuilder(deleteTime_).mergeFrom(value).buildPartial();
         } else {
           deleteTime_ = value;
         }
+        onChanged();
       } else {
         deleteTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00010000;
-      onChanged();
+
       return this;
     }
     /**
@@ -3035,13 +3104,14 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      * <code>.google.protobuf.Timestamp delete_time = 20 [json_name = "deleteTime"];</code>
      */
     public Builder clearDeleteTime() {
-      bitField0_ = (bitField0_ & ~0x00010000);
-      deleteTime_ = null;
-      if (deleteTimeBuilder_ != null) {
-        deleteTimeBuilder_.dispose();
+      if (deleteTimeBuilder_ == null) {
+        deleteTime_ = null;
+        onChanged();
+      } else {
+        deleteTime_ = null;
         deleteTimeBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -3052,7 +3122,7 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      * <code>.google.protobuf.Timestamp delete_time = 20 [json_name = "deleteTime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getDeleteTimeBuilder() {
-      bitField0_ |= 0x00010000;
+      
       onChanged();
       return getDeleteTimeFieldBuilder().getBuilder();
     }
@@ -3133,9 +3203,11 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      */
     public Builder setNumberFormat(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       numberFormat_ = value;
-      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -3144,8 +3216,8 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearNumberFormat() {
+      
       numberFormat_ = getDefaultInstance().getNumberFormat();
-      bitField0_ = (bitField0_ & ~0x00020000);
       onChanged();
       return this;
     }
@@ -3156,10 +3228,12 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      */
     public Builder setNumberFormatBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       numberFormat_ = value;
-      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -3167,7 +3241,7 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
     private com.google.protobuf.MapField<
         java.lang.String, com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse> agentResponse_;
     private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse>
-        internalGetAgentResponse() {
+    internalGetAgentResponse() {
       if (agentResponse_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             AgentResponseDefaultEntryHolder.defaultEntry);
@@ -3175,7 +3249,8 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
       return agentResponse_;
     }
     private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse>
-        internalGetMutableAgentResponse() {
+    internalGetMutableAgentResponse() {
+      onChanged();;
       if (agentResponse_ == null) {
         agentResponse_ = com.google.protobuf.MapField.newMapField(
             AgentResponseDefaultEntryHolder.defaultEntry);
@@ -3183,20 +3258,20 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
       if (!agentResponse_.isMutable()) {
         agentResponse_ = agentResponse_.copy();
       }
-      bitField0_ |= 0x00040000;
-      onChanged();
       return agentResponse_;
     }
+
     public int getAgentResponseCount() {
       return internalGetAgentResponse().getMap().size();
     }
     /**
      * <code>map&lt;string, .api.v1alpha1.vanalytics.AgentResponse&gt; agent_response = 22 [json_name = "agentResponse"];</code>
      */
+
     @java.lang.Override
     public boolean containsAgentResponse(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetAgentResponse().getMap().containsKey(key);
     }
     /**
@@ -3211,6 +3286,7 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      * <code>map&lt;string, .api.v1alpha1.vanalytics.AgentResponse&gt; agent_response = 22 [json_name = "agentResponse"];</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse> getAgentResponseMap() {
       return internalGetAgentResponse().getMap();
     }
@@ -3218,12 +3294,11 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      * <code>map&lt;string, .api.v1alpha1.vanalytics.AgentResponse&gt; agent_response = 22 [json_name = "agentResponse"];</code>
      */
     @java.lang.Override
-    public /* nullable */
-com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse getAgentResponseOrDefault(
+
+    public com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse getAgentResponseOrDefault(
         java.lang.String key,
-        /* nullable */
-com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+        com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse> map =
           internalGetAgentResponse().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -3232,9 +3307,10 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      * <code>map&lt;string, .api.v1alpha1.vanalytics.AgentResponse&gt; agent_response = 22 [json_name = "agentResponse"];</code>
      */
     @java.lang.Override
+
     public com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse getAgentResponseOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse> map =
           internalGetAgentResponse().getMap();
       if (!map.containsKey(key)) {
@@ -3242,8 +3318,8 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
       }
       return map.get(key);
     }
+
     public Builder clearAgentResponse() {
-      bitField0_ = (bitField0_ & ~0x00040000);
       internalGetMutableAgentResponse().getMutableMap()
           .clear();
       return this;
@@ -3251,9 +3327,10 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
     /**
      * <code>map&lt;string, .api.v1alpha1.vanalytics.AgentResponse&gt; agent_response = 22 [json_name = "agentResponse"];</code>
      */
+
     public Builder removeAgentResponse(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableAgentResponse().getMutableMap()
           .remove(key);
       return this;
@@ -3263,8 +3340,7 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse>
-        getMutableAgentResponse() {
-      bitField0_ |= 0x00040000;
+    getMutableAgentResponse() {
       return internalGetMutableAgentResponse().getMutableMap();
     }
     /**
@@ -3273,21 +3349,20 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
     public Builder putAgentResponse(
         java.lang.String key,
         com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse value) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      if (value == null) { throw new NullPointerException("map value"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (value == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableAgentResponse().getMutableMap()
           .put(key, value);
-      bitField0_ |= 0x00040000;
       return this;
     }
     /**
      * <code>map&lt;string, .api.v1alpha1.vanalytics.AgentResponse&gt; agent_response = 22 [json_name = "agentResponse"];</code>
      */
+
     public Builder putAllAgentResponse(
         java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse> values) {
       internalGetMutableAgentResponse().getMutableMap()
           .putAll(values);
-      bitField0_ |= 0x00040000;
       return this;
     }
     @java.lang.Override
@@ -3323,18 +3398,7 @@ com.tcn.cloud.api.api.v1alpha1.vanalytics.AgentResponse defaultValue) {
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new Transcript(input, extensionRegistry);
     }
   };
 

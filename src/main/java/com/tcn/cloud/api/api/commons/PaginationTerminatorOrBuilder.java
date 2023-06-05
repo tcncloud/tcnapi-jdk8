@@ -45,29 +45,10 @@ public interface PaginationTerminatorOrBuilder extends
    * </pre>
    *
    * <code>bool exists_check = 3 [json_name = "existsCheck"];</code>
-   * @return Whether the existsCheck field is set.
-   */
-  boolean hasExistsCheck();
-  /**
-   * <pre>
-   * if true terminate if the key exists.
-   * if false terminate if the key does not exist.
-   * </pre>
-   *
-   * <code>bool exists_check = 3 [json_name = "existsCheck"];</code>
    * @return The existsCheck.
    */
   boolean getExistsCheck();
 
-  /**
-   * <pre>
-   * terminate if the number value the key points to is greater than this
-   * </pre>
-   *
-   * <code>double num_greater_than = 4 [json_name = "numGreaterThan"];</code>
-   * @return Whether the numGreaterThan field is set.
-   */
-  boolean hasNumGreaterThan();
   /**
    * <pre>
    * terminate if the number value the key points to is greater than this
@@ -84,28 +65,10 @@ public interface PaginationTerminatorOrBuilder extends
    * </pre>
    *
    * <code>double num_less_than = 5 [json_name = "numLessThan"];</code>
-   * @return Whether the numLessThan field is set.
-   */
-  boolean hasNumLessThan();
-  /**
-   * <pre>
-   * terminate if the number value the key points to is less than this
-   * </pre>
-   *
-   * <code>double num_less_than = 5 [json_name = "numLessThan"];</code>
    * @return The numLessThan.
    */
   double getNumLessThan();
 
-  /**
-   * <pre>
-   * terminate if the number value the key points to is equal to this
-   * </pre>
-   *
-   * <code>double num_equals = 6 [json_name = "numEquals"];</code>
-   * @return Whether the numEquals field is set.
-   */
-  boolean hasNumEquals();
   /**
    * <pre>
    * terminate if the number value the key points to is equal to this
@@ -123,29 +86,10 @@ public interface PaginationTerminatorOrBuilder extends
    * </pre>
    *
    * <code>int64 count_less_than = 7 [json_name = "countLessThan"];</code>
-   * @return Whether the countLessThan field is set.
-   */
-  boolean hasCountLessThan();
-  /**
-   * <pre>
-   * terminate if the number of records in the array key points is less than this.
-   * if key points to a non array, it has a count of 0
-   * </pre>
-   *
-   * <code>int64 count_less_than = 7 [json_name = "countLessThan"];</code>
    * @return The countLessThan.
    */
   long getCountLessThan();
 
-  /**
-   * <pre>
-   * terminate if the str value the key points to equals this
-   * </pre>
-   *
-   * <code>string str_equals = 8 [json_name = "strEquals"];</code>
-   * @return Whether the strEquals field is set.
-   */
-  boolean hasStrEquals();
   /**
    * <pre>
    * terminate if the str value the key points to equals this
@@ -172,15 +116,6 @@ public interface PaginationTerminatorOrBuilder extends
    * </pre>
    *
    * <code>string str_contains = 9 [json_name = "strContains"];</code>
-   * @return Whether the strContains field is set.
-   */
-  boolean hasStrContains();
-  /**
-   * <pre>
-   * terminate if the str value the key points to contains this
-   * </pre>
-   *
-   * <code>string str_contains = 9 [json_name = "strContains"];</code>
    * @return The strContains.
    */
   java.lang.String getStrContains();
@@ -201,18 +136,9 @@ public interface PaginationTerminatorOrBuilder extends
    * </pre>
    *
    * <code>bool bool_equals = 10 [json_name = "boolEquals"];</code>
-   * @return Whether the boolEquals field is set.
-   */
-  boolean hasBoolEquals();
-  /**
-   * <pre>
-   * termintae if the bool value key points equals this
-   * </pre>
-   *
-   * <code>bool bool_equals = 10 [json_name = "boolEquals"];</code>
    * @return The boolEquals.
    */
   boolean getBoolEquals();
 
-  com.tcn.cloud.api.api.commons.PaginationTerminator.OpCase getOpCase();
+  public com.tcn.cloud.api.api.commons.PaginationTerminator.OpCase getOpCase();
 }

@@ -36,6 +36,88 @@ private static final long serialVersionUID = 0L;
     return new Insight();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private Insight(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 16: {
+
+            insightId_ = input.readInt64();
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            name_ = s;
+            break;
+          }
+          case 34: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            description_ = s;
+            break;
+          }
+          case 40: {
+            int rawValue = input.readEnum();
+
+            insightType_ = rawValue;
+            break;
+          }
+          case 48: {
+
+            insightVersion_ = input.readUInt32();
+            break;
+          }
+          case 58: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            body_ = s;
+            break;
+          }
+          case 64: {
+            int rawValue = input.readEnum();
+
+            insightPermissionType_ = rawValue;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.insights.InsightProto.internal_static_api_v1alpha1_insights_Insight_descriptor;
@@ -50,7 +132,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INSIGHT_ID_FIELD_NUMBER = 2;
-  private long insightId_ = 0L;
+  private long insightId_;
   /**
    * <pre>
    * Required - unique insight snowflake id
@@ -65,8 +147,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object name_ = "";
+  private volatile java.lang.Object name_;
   /**
    * <pre>
    * Required - name of the insight
@@ -112,8 +193,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTION_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object description_ = "";
+  private volatile java.lang.Object description_;
   /**
    * <pre>
    * Required - description of the insight
@@ -159,7 +239,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INSIGHT_TYPE_FIELD_NUMBER = 5;
-  private int insightType_ = 0;
+  private int insightType_;
   /**
    * <pre>
    * Required - enum type used to deserialize body
@@ -180,12 +260,13 @@ private static final long serialVersionUID = 0L;
    * @return The insightType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.InsightType getInsightType() {
-    com.tcn.cloud.api.api.commons.InsightType result = com.tcn.cloud.api.api.commons.InsightType.forNumber(insightType_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.InsightType result = com.tcn.cloud.api.api.commons.InsightType.valueOf(insightType_);
     return result == null ? com.tcn.cloud.api.api.commons.InsightType.UNRECOGNIZED : result;
   }
 
   public static final int INSIGHT_VERSION_FIELD_NUMBER = 6;
-  private int insightVersion_ = 0;
+  private int insightVersion_;
   /**
    * <pre>
    * Required - version of the insight
@@ -200,8 +281,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BODY_FIELD_NUMBER = 7;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object body_ = "";
+  private volatile java.lang.Object body_;
   /**
    * <pre>
    * Required - serialized json of the insight body
@@ -247,7 +327,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INSIGHT_PERMISSION_TYPE_FIELD_NUMBER = 8;
-  private int insightPermissionType_ = 0;
+  private int insightPermissionType_;
   /**
    * <pre>
    * Required - enum type used to deserialize body
@@ -268,7 +348,8 @@ private static final long serialVersionUID = 0L;
    * @return The insightPermissionType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.InsightPermissionType getInsightPermissionType() {
-    com.tcn.cloud.api.api.commons.InsightPermissionType result = com.tcn.cloud.api.api.commons.InsightPermissionType.forNumber(insightPermissionType_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.InsightPermissionType result = com.tcn.cloud.api.api.commons.InsightPermissionType.valueOf(insightPermissionType_);
     return result == null ? com.tcn.cloud.api.api.commons.InsightPermissionType.UNRECOGNIZED : result;
   }
 
@@ -289,10 +370,10 @@ private static final long serialVersionUID = 0L;
     if (insightId_ != 0L) {
       output.writeInt64(2, insightId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+    if (!getNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+    if (!getDescriptionBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
     }
     if (insightType_ != com.tcn.cloud.api.api.commons.InsightType.INSIGHT_TYPE_TABLE_VIEW.getNumber()) {
@@ -301,13 +382,13 @@ private static final long serialVersionUID = 0L;
     if (insightVersion_ != 0) {
       output.writeUInt32(6, insightVersion_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(body_)) {
+    if (!getBodyBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, body_);
     }
     if (insightPermissionType_ != com.tcn.cloud.api.api.commons.InsightPermissionType.INSIGHT_PERMISSION_TYPE_COMMON_LIBRARY.getNumber()) {
       output.writeEnum(8, insightPermissionType_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -320,10 +401,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, insightId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+    if (!getNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+    if (!getDescriptionBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
     }
     if (insightType_ != com.tcn.cloud.api.api.commons.InsightType.INSIGHT_TYPE_TABLE_VIEW.getNumber()) {
@@ -334,14 +415,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeUInt32Size(6, insightVersion_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(body_)) {
+    if (!getBodyBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, body_);
     }
     if (insightPermissionType_ != com.tcn.cloud.api.api.commons.InsightPermissionType.INSIGHT_PERMISSION_TYPE_COMMON_LIBRARY.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(8, insightPermissionType_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -368,7 +449,7 @@ private static final long serialVersionUID = 0L;
     if (!getBody()
         .equals(other.getBody())) return false;
     if (insightPermissionType_ != other.insightPermissionType_) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -394,7 +475,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getBody().hashCode();
     hash = (37 * hash) + INSIGHT_PERMISSION_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + insightPermissionType_;
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -443,13 +524,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.insights.Insight parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.insights.Insight parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -519,25 +598,36 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.insights.Insight.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       insightId_ = 0L;
+
       name_ = "";
+
       description_ = "";
+
       insightType_ = 0;
+
       insightVersion_ = 0;
+
       body_ = "";
+
       insightPermissionType_ = 0;
+
       return this;
     }
 
@@ -564,34 +654,15 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.insights.Insight buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.insights.Insight result = new com.tcn.cloud.api.api.v1alpha1.insights.Insight(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.insightId_ = insightId_;
+      result.name_ = name_;
+      result.description_ = description_;
+      result.insightType_ = insightType_;
+      result.insightVersion_ = insightVersion_;
+      result.body_ = body_;
+      result.insightPermissionType_ = insightPermissionType_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.insights.Insight result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.insightId_ = insightId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.name_ = name_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.description_ = description_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.insightType_ = insightType_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.insightVersion_ = insightVersion_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.body_ = body_;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.insightPermissionType_ = insightPermissionType_;
-      }
     }
 
     @java.lang.Override
@@ -643,12 +714,10 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getDescription().isEmpty()) {
         description_ = other.description_;
-        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.insightType_ != 0) {
@@ -659,13 +728,12 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getBody().isEmpty()) {
         body_ = other.body_;
-        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (other.insightPermissionType_ != 0) {
         setInsightPermissionTypeValue(other.getInsightPermissionTypeValue());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -680,68 +748,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.insights.Insight parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 16: {
-              insightId_ = input.readInt64();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 16
-            case 26: {
-              name_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 26
-            case 34: {
-              description_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 34
-            case 40: {
-              insightType_ = input.readEnum();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 40
-            case 48: {
-              insightVersion_ = input.readUInt32();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 48
-            case 58: {
-              body_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 58
-            case 64: {
-              insightPermissionType_ = input.readEnum();
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 64
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.insights.Insight) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private long insightId_ ;
     /**
@@ -766,9 +785,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setInsightId(long value) {
-
+      
       insightId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -781,7 +799,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearInsightId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       insightId_ = 0L;
       onChanged();
       return this;
@@ -840,9 +858,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       name_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -855,8 +875,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
+      
       name_ = getDefaultInstance().getName();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -871,10 +891,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       name_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -932,9 +954,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       description_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -947,8 +971,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
+      
       description_ = getDefaultInstance().getDescription();
-      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -963,10 +987,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescriptionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       description_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -993,8 +1019,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setInsightTypeValue(int value) {
+      
       insightType_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1008,7 +1034,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.InsightType getInsightType() {
-      com.tcn.cloud.api.api.commons.InsightType result = com.tcn.cloud.api.api.commons.InsightType.forNumber(insightType_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.InsightType result = com.tcn.cloud.api.api.commons.InsightType.valueOf(insightType_);
       return result == null ? com.tcn.cloud.api.api.commons.InsightType.UNRECOGNIZED : result;
     }
     /**
@@ -1024,7 +1051,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000008;
+      
       insightType_ = value.getNumber();
       onChanged();
       return this;
@@ -1038,7 +1065,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearInsightType() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      
       insightType_ = 0;
       onChanged();
       return this;
@@ -1067,9 +1094,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setInsightVersion(int value) {
-
+      
       insightVersion_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1082,7 +1108,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearInsightVersion() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      
       insightVersion_ = 0;
       onChanged();
       return this;
@@ -1141,9 +1167,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBody(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       body_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1156,8 +1184,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBody() {
+      
       body_ = getDefaultInstance().getBody();
-      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1172,10 +1200,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBodyBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       body_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1202,8 +1232,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setInsightPermissionTypeValue(int value) {
+      
       insightPermissionType_ = value;
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1217,7 +1247,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.InsightPermissionType getInsightPermissionType() {
-      com.tcn.cloud.api.api.commons.InsightPermissionType result = com.tcn.cloud.api.api.commons.InsightPermissionType.forNumber(insightPermissionType_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.InsightPermissionType result = com.tcn.cloud.api.api.commons.InsightPermissionType.valueOf(insightPermissionType_);
       return result == null ? com.tcn.cloud.api.api.commons.InsightPermissionType.UNRECOGNIZED : result;
     }
     /**
@@ -1233,7 +1264,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000040;
+      
       insightPermissionType_ = value.getNumber();
       onChanged();
       return this;
@@ -1247,7 +1278,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearInsightPermissionType() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      
       insightPermissionType_ = 0;
       onChanged();
       return this;
@@ -1285,18 +1316,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new Insight(input, extensionRegistry);
     }
   };
 

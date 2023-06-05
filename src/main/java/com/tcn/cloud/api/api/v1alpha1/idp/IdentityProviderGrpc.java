@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.50.0)",
     comments = "Source: api/v1alpha1/idp/service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class IdentityProviderGrpc {
@@ -61,25 +61,17 @@ public final class IdentityProviderGrpc {
 
   /**
    */
-  public interface AsyncService {
-  }
-
-  /**
-   * Base class for the server implementation of the service IdentityProvider.
-   */
-  public static abstract class IdentityProviderImplBase
-      implements io.grpc.BindableService, AsyncService {
+  public static abstract class IdentityProviderImplBase implements io.grpc.BindableService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return IdentityProviderGrpc.bindService(this);
+      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .build();
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service IdentityProvider.
    */
-  public static final class IdentityProviderStub
-      extends io.grpc.stub.AbstractAsyncStub<IdentityProviderStub> {
+  public static final class IdentityProviderStub extends io.grpc.stub.AbstractAsyncStub<IdentityProviderStub> {
     private IdentityProviderStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -93,10 +85,8 @@ public final class IdentityProviderGrpc {
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service IdentityProvider.
    */
-  public static final class IdentityProviderBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<IdentityProviderBlockingStub> {
+  public static final class IdentityProviderBlockingStub extends io.grpc.stub.AbstractBlockingStub<IdentityProviderBlockingStub> {
     private IdentityProviderBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -110,10 +100,8 @@ public final class IdentityProviderGrpc {
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service IdentityProvider.
    */
-  public static final class IdentityProviderFutureStub
-      extends io.grpc.stub.AbstractFutureStub<IdentityProviderFutureStub> {
+  public static final class IdentityProviderFutureStub extends io.grpc.stub.AbstractFutureStub<IdentityProviderFutureStub> {
     private IdentityProviderFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -132,10 +120,10 @@ public final class IdentityProviderGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AsyncService serviceImpl;
+    private final IdentityProviderImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AsyncService serviceImpl, int methodId) {
+    MethodHandlers(IdentityProviderImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -158,11 +146,6 @@ public final class IdentityProviderGrpc {
           throw new AssertionError();
       }
     }
-  }
-
-  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
-    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-        .build();
   }
 
   private static abstract class IdentityProviderBaseDescriptorSupplier

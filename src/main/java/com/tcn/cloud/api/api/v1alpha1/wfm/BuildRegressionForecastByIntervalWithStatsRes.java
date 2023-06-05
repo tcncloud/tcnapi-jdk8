@@ -29,6 +29,76 @@ private static final long serialVersionUID = 0L;
     return new BuildRegressionForecastByIntervalWithStatsRes();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private BuildRegressionForecastByIntervalWithStatsRes(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval.Builder subBuilder = null;
+            if (resultOneofCase_ == 1) {
+              subBuilder = ((com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval) resultOneof_).toBuilder();
+            }
+            resultOneof_ =
+                input.readMessage(com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval) resultOneof_);
+              resultOneof_ = subBuilder.buildPartial();
+            }
+            resultOneofCase_ = 1;
+            break;
+          }
+          case 18: {
+            com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastStatisticsRes.Builder subBuilder = null;
+            if (resultOneofCase_ == 2) {
+              subBuilder = ((com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastStatisticsRes) resultOneof_).toBuilder();
+            }
+            resultOneof_ =
+                input.readMessage(com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastStatisticsRes.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastStatisticsRes) resultOneof_);
+              resultOneof_ = subBuilder.buildPartial();
+            }
+            resultOneofCase_ = 2;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_BuildRegressionForecastByIntervalWithStatsRes_descriptor;
@@ -43,7 +113,6 @@ private static final long serialVersionUID = 0L;
   }
 
   private int resultOneofCase_ = 0;
-  @SuppressWarnings("serial")
   private java.lang.Object resultOneof_;
   public enum ResultOneofCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -193,7 +262,7 @@ private static final long serialVersionUID = 0L;
     if (resultOneofCase_ == 2) {
       output.writeMessage(2, (com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastStatisticsRes) resultOneof_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -210,7 +279,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, (com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastStatisticsRes) resultOneof_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -238,7 +307,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -261,7 +330,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -310,13 +379,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsRes parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsRes parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -384,24 +451,22 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsRes.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      if (callDataBuilder_ != null) {
-        callDataBuilder_.clear();
-      }
-      if (forecastStatsBuilder_ != null) {
-        forecastStatsBuilder_.clear();
-      }
       resultOneofCase_ = 0;
       resultOneof_ = null;
       return this;
@@ -430,27 +495,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsRes buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsRes result = new com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsRes(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      buildPartialOneofs(result);
+      if (resultOneofCase_ == 1) {
+        if (callDataBuilder_ == null) {
+          result.resultOneof_ = resultOneof_;
+        } else {
+          result.resultOneof_ = callDataBuilder_.build();
+        }
+      }
+      if (resultOneofCase_ == 2) {
+        if (forecastStatsBuilder_ == null) {
+          result.resultOneof_ = resultOneof_;
+        } else {
+          result.resultOneof_ = forecastStatsBuilder_.build();
+        }
+      }
+      result.resultOneofCase_ = resultOneofCase_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsRes result) {
-      int from_bitField0_ = bitField0_;
-    }
-
-    private void buildPartialOneofs(com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsRes result) {
-      result.resultOneofCase_ = resultOneofCase_;
-      result.resultOneof_ = this.resultOneof_;
-      if (resultOneofCase_ == 1 &&
-          callDataBuilder_ != null) {
-        result.resultOneof_ = callDataBuilder_.build();
-      }
-      if (resultOneofCase_ == 2 &&
-          forecastStatsBuilder_ != null) {
-        result.resultOneof_ = forecastStatsBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -510,7 +571,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -525,44 +586,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsRes parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              input.readMessage(
-                  getCallDataFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              resultOneofCase_ = 1;
-              break;
-            } // case 10
-            case 18: {
-              input.readMessage(
-                  getForecastStatsFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              resultOneofCase_ = 2;
-              break;
-            } // case 18
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsRes) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int resultOneofCase_ = 0;
@@ -580,7 +614,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int bitField0_;
 
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval, com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByIntervalOrBuilder> callDataBuilder_;
@@ -676,9 +709,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (resultOneofCase_ == 1) {
           callDataBuilder_.mergeFrom(value);
-        } else {
-          callDataBuilder_.setMessage(value);
         }
+        callDataBuilder_.setMessage(value);
       }
       resultOneofCase_ = 1;
       return this;
@@ -756,7 +788,7 @@ private static final long serialVersionUID = 0L;
         resultOneof_ = null;
       }
       resultOneofCase_ = 1;
-      onChanged();
+      onChanged();;
       return callDataBuilder_;
     }
 
@@ -859,9 +891,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (resultOneofCase_ == 2) {
           forecastStatsBuilder_.mergeFrom(value);
-        } else {
-          forecastStatsBuilder_.setMessage(value);
         }
+        forecastStatsBuilder_.setMessage(value);
       }
       resultOneofCase_ = 2;
       return this;
@@ -943,7 +974,7 @@ private static final long serialVersionUID = 0L;
         resultOneof_ = null;
       }
       resultOneofCase_ = 2;
-      onChanged();
+      onChanged();;
       return forecastStatsBuilder_;
     }
     @java.lang.Override
@@ -979,18 +1010,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new BuildRegressionForecastByIntervalWithStatsRes(input, extensionRegistry);
     }
   };
 

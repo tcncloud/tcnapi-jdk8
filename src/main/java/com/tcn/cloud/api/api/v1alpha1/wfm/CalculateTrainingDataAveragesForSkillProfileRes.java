@@ -29,6 +29,68 @@ private static final long serialVersionUID = 0L;
     return new CalculateTrainingDataAveragesForSkillProfileRes();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private CalculateTrainingDataAveragesForSkillProfileRes(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 13: {
+
+            averageSpeedOfAnswerInSeconds_ = input.readFloat();
+            break;
+          }
+          case 21: {
+
+            averageHandleTimeInSeconds_ = input.readFloat();
+            break;
+          }
+          case 29: {
+
+            averageAfterCallWorkInSeconds_ = input.readFloat();
+            break;
+          }
+          case 37: {
+
+            averageTimeToAbortInSeconds_ = input.readFloat();
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_CalculateTrainingDataAveragesForSkillProfileRes_descriptor;
@@ -43,7 +105,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AVERAGE_SPEED_OF_ANSWER_IN_SECONDS_FIELD_NUMBER = 1;
-  private float averageSpeedOfAnswerInSeconds_ = 0F;
+  private float averageSpeedOfAnswerInSeconds_;
   /**
    * <pre>
    * averages found in the training data set.
@@ -58,7 +120,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AVERAGE_HANDLE_TIME_IN_SECONDS_FIELD_NUMBER = 2;
-  private float averageHandleTimeInSeconds_ = 0F;
+  private float averageHandleTimeInSeconds_;
   /**
    * <code>float average_handle_time_in_seconds = 2 [json_name = "averageHandleTimeInSeconds"];</code>
    * @return The averageHandleTimeInSeconds.
@@ -69,7 +131,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AVERAGE_AFTER_CALL_WORK_IN_SECONDS_FIELD_NUMBER = 3;
-  private float averageAfterCallWorkInSeconds_ = 0F;
+  private float averageAfterCallWorkInSeconds_;
   /**
    * <code>float average_after_call_work_in_seconds = 3 [json_name = "averageAfterCallWorkInSeconds"];</code>
    * @return The averageAfterCallWorkInSeconds.
@@ -80,7 +142,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AVERAGE_TIME_TO_ABORT_IN_SECONDS_FIELD_NUMBER = 4;
-  private float averageTimeToAbortInSeconds_ = 0F;
+  private float averageTimeToAbortInSeconds_;
   /**
    * <code>float average_time_to_abort_in_seconds = 4 [json_name = "averageTimeToAbortInSeconds"];</code>
    * @return The averageTimeToAbortInSeconds.
@@ -104,19 +166,19 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (java.lang.Float.floatToRawIntBits(averageSpeedOfAnswerInSeconds_) != 0) {
+    if (averageSpeedOfAnswerInSeconds_ != 0F) {
       output.writeFloat(1, averageSpeedOfAnswerInSeconds_);
     }
-    if (java.lang.Float.floatToRawIntBits(averageHandleTimeInSeconds_) != 0) {
+    if (averageHandleTimeInSeconds_ != 0F) {
       output.writeFloat(2, averageHandleTimeInSeconds_);
     }
-    if (java.lang.Float.floatToRawIntBits(averageAfterCallWorkInSeconds_) != 0) {
+    if (averageAfterCallWorkInSeconds_ != 0F) {
       output.writeFloat(3, averageAfterCallWorkInSeconds_);
     }
-    if (java.lang.Float.floatToRawIntBits(averageTimeToAbortInSeconds_) != 0) {
+    if (averageTimeToAbortInSeconds_ != 0F) {
       output.writeFloat(4, averageTimeToAbortInSeconds_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -125,23 +187,23 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (java.lang.Float.floatToRawIntBits(averageSpeedOfAnswerInSeconds_) != 0) {
+    if (averageSpeedOfAnswerInSeconds_ != 0F) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(1, averageSpeedOfAnswerInSeconds_);
     }
-    if (java.lang.Float.floatToRawIntBits(averageHandleTimeInSeconds_) != 0) {
+    if (averageHandleTimeInSeconds_ != 0F) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(2, averageHandleTimeInSeconds_);
     }
-    if (java.lang.Float.floatToRawIntBits(averageAfterCallWorkInSeconds_) != 0) {
+    if (averageAfterCallWorkInSeconds_ != 0F) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(3, averageAfterCallWorkInSeconds_);
     }
-    if (java.lang.Float.floatToRawIntBits(averageTimeToAbortInSeconds_) != 0) {
+    if (averageTimeToAbortInSeconds_ != 0F) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(4, averageTimeToAbortInSeconds_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -168,7 +230,7 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Float.floatToIntBits(getAverageTimeToAbortInSeconds())
         != java.lang.Float.floatToIntBits(
             other.getAverageTimeToAbortInSeconds())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -191,7 +253,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + AVERAGE_TIME_TO_ABORT_IN_SECONDS_FIELD_NUMBER;
     hash = (53 * hash) + java.lang.Float.floatToIntBits(
         getAverageTimeToAbortInSeconds());
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -240,13 +302,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.wfm.CalculateTrainingDataAveragesForSkillProfileRes parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.wfm.CalculateTrainingDataAveragesForSkillProfileRes parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -314,22 +374,30 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.CalculateTrainingDataAveragesForSkillProfileRes.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       averageSpeedOfAnswerInSeconds_ = 0F;
+
       averageHandleTimeInSeconds_ = 0F;
+
       averageAfterCallWorkInSeconds_ = 0F;
+
       averageTimeToAbortInSeconds_ = 0F;
+
       return this;
     }
 
@@ -356,25 +424,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.CalculateTrainingDataAveragesForSkillProfileRes buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.CalculateTrainingDataAveragesForSkillProfileRes result = new com.tcn.cloud.api.api.v1alpha1.wfm.CalculateTrainingDataAveragesForSkillProfileRes(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.averageSpeedOfAnswerInSeconds_ = averageSpeedOfAnswerInSeconds_;
+      result.averageHandleTimeInSeconds_ = averageHandleTimeInSeconds_;
+      result.averageAfterCallWorkInSeconds_ = averageAfterCallWorkInSeconds_;
+      result.averageTimeToAbortInSeconds_ = averageTimeToAbortInSeconds_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.CalculateTrainingDataAveragesForSkillProfileRes result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.averageSpeedOfAnswerInSeconds_ = averageSpeedOfAnswerInSeconds_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.averageHandleTimeInSeconds_ = averageHandleTimeInSeconds_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.averageAfterCallWorkInSeconds_ = averageAfterCallWorkInSeconds_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.averageTimeToAbortInSeconds_ = averageTimeToAbortInSeconds_;
-      }
     }
 
     @java.lang.Override
@@ -433,7 +488,7 @@ private static final long serialVersionUID = 0L;
       if (other.getAverageTimeToAbortInSeconds() != 0F) {
         setAverageTimeToAbortInSeconds(other.getAverageTimeToAbortInSeconds());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -448,53 +503,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.wfm.CalculateTrainingDataAveragesForSkillProfileRes parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 13: {
-              averageSpeedOfAnswerInSeconds_ = input.readFloat();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 13
-            case 21: {
-              averageHandleTimeInSeconds_ = input.readFloat();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 21
-            case 29: {
-              averageAfterCallWorkInSeconds_ = input.readFloat();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 29
-            case 37: {
-              averageTimeToAbortInSeconds_ = input.readFloat();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 37
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.CalculateTrainingDataAveragesForSkillProfileRes) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private float averageSpeedOfAnswerInSeconds_ ;
     /**
@@ -519,9 +540,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAverageSpeedOfAnswerInSeconds(float value) {
-
+      
       averageSpeedOfAnswerInSeconds_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -534,7 +554,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAverageSpeedOfAnswerInSeconds() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       averageSpeedOfAnswerInSeconds_ = 0F;
       onChanged();
       return this;
@@ -555,9 +575,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAverageHandleTimeInSeconds(float value) {
-
+      
       averageHandleTimeInSeconds_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -566,7 +585,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAverageHandleTimeInSeconds() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       averageHandleTimeInSeconds_ = 0F;
       onChanged();
       return this;
@@ -587,9 +606,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAverageAfterCallWorkInSeconds(float value) {
-
+      
       averageAfterCallWorkInSeconds_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -598,7 +616,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAverageAfterCallWorkInSeconds() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       averageAfterCallWorkInSeconds_ = 0F;
       onChanged();
       return this;
@@ -619,9 +637,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAverageTimeToAbortInSeconds(float value) {
-
+      
       averageTimeToAbortInSeconds_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -630,7 +647,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAverageTimeToAbortInSeconds() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      
       averageTimeToAbortInSeconds_ = 0F;
       onChanged();
       return this;
@@ -668,18 +685,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new CalculateTrainingDataAveragesForSkillProfileRes(input, extensionRegistry);
     }
   };
 

@@ -31,6 +31,105 @@ private static final long serialVersionUID = 0L;
     return new CallbackSettings();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private CallbackSettings(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+
+            enableCallbackScheduling_ = input.readBool();
+            break;
+          }
+          case 18: {
+            com.tcn.cloud.api.api.commons.org.CallbackSettings.DefaultRouting.Builder subBuilder = null;
+            if (defaultCallbackRouting_ != null) {
+              subBuilder = defaultCallbackRouting_.toBuilder();
+            }
+            defaultCallbackRouting_ = input.readMessage(com.tcn.cloud.api.api.commons.org.CallbackSettings.DefaultRouting.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(defaultCallbackRouting_);
+              defaultCallbackRouting_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 24: {
+
+            enableCallbackCalling_ = input.readBool();
+            break;
+          }
+          case 32: {
+
+            enableAutomaticRetrieval_ = input.readBool();
+            break;
+          }
+          case 42: {
+            com.tcn.cloud.api.api.commons.org.CallbackSettings.CallbackRoutingDisallowed.Builder subBuilder = null;
+            if (callbackRoutingDisallowed_ != null) {
+              subBuilder = callbackRoutingDisallowed_.toBuilder();
+            }
+            callbackRoutingDisallowed_ = input.readMessage(com.tcn.cloud.api.api.commons.org.CallbackSettings.CallbackRoutingDisallowed.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(callbackRoutingDisallowed_);
+              callbackRoutingDisallowed_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 48: {
+
+            enableCustomizableCallerId_ = input.readBool();
+            break;
+          }
+          case 58: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            defaultCallerId_ = s;
+            break;
+          }
+          case 64: {
+
+            enableCallbackCalendar_ = input.readBool();
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.org.HuntgroupProto.internal_static_api_commons_org_CallbackSettings_descriptor;
@@ -164,6 +263,108 @@ private static final long serialVersionUID = 0L;
       return new DefaultRouting();
     }
 
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DefaultRouting(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              routingMode_ = rawValue;
+              break;
+            }
+            case 16: {
+
+              agentSid_ = input.readInt64();
+              break;
+            }
+            case 24: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                agentSkillsets_ = newLongList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              agentSkillsets_.addLong(input.readInt64());
+              break;
+            }
+            case 26: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                agentSkillsets_ = newLongList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                agentSkillsets_.addLong(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 32: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                huntGroupSids_ = newLongList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              huntGroupSids_.addLong(input.readInt64());
+              break;
+            }
+            case 34: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+                huntGroupSids_ = newLongList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                huntGroupSids_.addLong(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          agentSkillsets_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          huntGroupSids_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.tcn.cloud.api.api.commons.org.HuntgroupProto.internal_static_api_commons_org_CallbackSettings_DefaultRouting_descriptor;
@@ -178,7 +379,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int ROUTING_MODE_FIELD_NUMBER = 1;
-    private int routingMode_ = 0;
+    private int routingMode_;
     /**
      * <pre>
      * Default callback routing option (agent, skill set, none).
@@ -199,12 +400,13 @@ private static final long serialVersionUID = 0L;
      * @return The routingMode.
      */
     @java.lang.Override public com.tcn.cloud.api.api.commons.DefaultCallbackRouting getRoutingMode() {
-      com.tcn.cloud.api.api.commons.DefaultCallbackRouting result = com.tcn.cloud.api.api.commons.DefaultCallbackRouting.forNumber(routingMode_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.DefaultCallbackRouting result = com.tcn.cloud.api.api.commons.DefaultCallbackRouting.valueOf(routingMode_);
       return result == null ? com.tcn.cloud.api.api.commons.DefaultCallbackRouting.UNRECOGNIZED : result;
     }
 
     public static final int AGENT_SID_FIELD_NUMBER = 2;
-    private long agentSid_ = 0L;
+    private long agentSid_;
     /**
      * <pre>
      * Agent to callback to.
@@ -219,7 +421,6 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int AGENT_SKILLSETS_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.LongList agentSkillsets_;
     /**
      * <pre>
@@ -260,7 +461,6 @@ private static final long serialVersionUID = 0L;
     private int agentSkillsetsMemoizedSerializedSize = -1;
 
     public static final int HUNT_GROUP_SIDS_FIELD_NUMBER = 4;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.LongList huntGroupSids_;
     /**
      * <pre>
@@ -335,7 +535,7 @@ private static final long serialVersionUID = 0L;
       for (int i = 0; i < huntGroupSids_.size(); i++) {
         output.writeInt64NoTag(huntGroupSids_.getLong(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -380,7 +580,7 @@ private static final long serialVersionUID = 0L;
         }
         huntGroupSidsMemoizedSerializedSize = dataSize;
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -402,7 +602,7 @@ private static final long serialVersionUID = 0L;
           .equals(other.getAgentSkillsetsList())) return false;
       if (!getHuntGroupSidsList()
           .equals(other.getHuntGroupSidsList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -426,7 +626,7 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + HUNT_GROUP_SIDS_FIELD_NUMBER;
         hash = (53 * hash) + getHuntGroupSidsList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -475,13 +675,11 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-
     public static com.tcn.cloud.api.api.commons.org.CallbackSettings.DefaultRouting parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-
     public static com.tcn.cloud.api.api.commons.org.CallbackSettings.DefaultRouting parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -549,22 +747,30 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.commons.org.CallbackSettings.DefaultRouting.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         routingMode_ = 0;
+
         agentSid_ = 0L;
+
         agentSkillsets_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000001);
         huntGroupSids_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -591,33 +797,21 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.tcn.cloud.api.api.commons.org.CallbackSettings.DefaultRouting buildPartial() {
         com.tcn.cloud.api.api.commons.org.CallbackSettings.DefaultRouting result = new com.tcn.cloud.api.api.commons.org.CallbackSettings.DefaultRouting(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.org.CallbackSettings.DefaultRouting result) {
-        if (((bitField0_ & 0x00000004) != 0)) {
+        int from_bitField0_ = bitField0_;
+        result.routingMode_ = routingMode_;
+        result.agentSid_ = agentSid_;
+        if (((bitField0_ & 0x00000001) != 0)) {
           agentSkillsets_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.agentSkillsets_ = agentSkillsets_;
-        if (((bitField0_ & 0x00000008) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           huntGroupSids_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.huntGroupSids_ = huntGroupSids_;
-      }
-
-      private void buildPartial0(com.tcn.cloud.api.api.commons.org.CallbackSettings.DefaultRouting result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.routingMode_ = routingMode_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.agentSid_ = agentSid_;
-        }
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -673,7 +867,7 @@ private static final long serialVersionUID = 0L;
         if (!other.agentSkillsets_.isEmpty()) {
           if (agentSkillsets_.isEmpty()) {
             agentSkillsets_ = other.agentSkillsets_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureAgentSkillsetsIsMutable();
             agentSkillsets_.addAll(other.agentSkillsets_);
@@ -683,14 +877,14 @@ private static final long serialVersionUID = 0L;
         if (!other.huntGroupSids_.isEmpty()) {
           if (huntGroupSids_.isEmpty()) {
             huntGroupSids_ = other.huntGroupSids_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureHuntGroupSidsIsMutable();
             huntGroupSids_.addAll(other.huntGroupSids_);
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -705,72 +899,17 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        com.tcn.cloud.api.api.commons.org.CallbackSettings.DefaultRouting parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                routingMode_ = input.readEnum();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              case 16: {
-                agentSid_ = input.readInt64();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
-              case 24: {
-                long v = input.readInt64();
-                ensureAgentSkillsetsIsMutable();
-                agentSkillsets_.addLong(v);
-                break;
-              } // case 24
-              case 26: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureAgentSkillsetsIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  agentSkillsets_.addLong(input.readInt64());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 26
-              case 32: {
-                long v = input.readInt64();
-                ensureHuntGroupSidsIsMutable();
-                huntGroupSids_.addLong(v);
-                break;
-              } // case 32
-              case 34: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureHuntGroupSidsIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  huntGroupSids_.addLong(input.readInt64());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 34
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.tcn.cloud.api.api.commons.org.CallbackSettings.DefaultRouting) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -797,8 +936,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setRoutingModeValue(int value) {
+        
         routingMode_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -812,7 +951,8 @@ private static final long serialVersionUID = 0L;
        */
       @java.lang.Override
       public com.tcn.cloud.api.api.commons.DefaultCallbackRouting getRoutingMode() {
-        com.tcn.cloud.api.api.commons.DefaultCallbackRouting result = com.tcn.cloud.api.api.commons.DefaultCallbackRouting.forNumber(routingMode_);
+        @SuppressWarnings("deprecation")
+        com.tcn.cloud.api.api.commons.DefaultCallbackRouting result = com.tcn.cloud.api.api.commons.DefaultCallbackRouting.valueOf(routingMode_);
         return result == null ? com.tcn.cloud.api.api.commons.DefaultCallbackRouting.UNRECOGNIZED : result;
       }
       /**
@@ -828,7 +968,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00000001;
+        
         routingMode_ = value.getNumber();
         onChanged();
         return this;
@@ -842,7 +982,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearRoutingMode() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         routingMode_ = 0;
         onChanged();
         return this;
@@ -871,9 +1011,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setAgentSid(long value) {
-
+        
         agentSid_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -886,7 +1025,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearAgentSid() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         agentSid_ = 0L;
         onChanged();
         return this;
@@ -894,10 +1033,10 @@ private static final long serialVersionUID = 0L;
 
       private com.google.protobuf.Internal.LongList agentSkillsets_ = emptyLongList();
       private void ensureAgentSkillsetsIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           agentSkillsets_ = mutableCopy(agentSkillsets_);
-          bitField0_ |= 0x00000004;
-        }
+          bitField0_ |= 0x00000001;
+         }
       }
       /**
        * <pre>
@@ -909,7 +1048,7 @@ private static final long serialVersionUID = 0L;
        */
       public java.util.List<java.lang.Long>
           getAgentSkillsetsList() {
-        return ((bitField0_ & 0x00000004) != 0) ?
+        return ((bitField0_ & 0x00000001) != 0) ?
                  java.util.Collections.unmodifiableList(agentSkillsets_) : agentSkillsets_;
       }
       /**
@@ -947,7 +1086,6 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setAgentSkillsets(
           int index, long value) {
-
         ensureAgentSkillsetsIsMutable();
         agentSkillsets_.setLong(index, value);
         onChanged();
@@ -963,7 +1101,6 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder addAgentSkillsets(long value) {
-
         ensureAgentSkillsetsIsMutable();
         agentSkillsets_.addLong(value);
         onChanged();
@@ -996,17 +1133,17 @@ private static final long serialVersionUID = 0L;
        */
       public Builder clearAgentSkillsets() {
         agentSkillsets_ = emptyLongList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
 
       private com.google.protobuf.Internal.LongList huntGroupSids_ = emptyLongList();
       private void ensureHuntGroupSidsIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           huntGroupSids_ = mutableCopy(huntGroupSids_);
-          bitField0_ |= 0x00000008;
-        }
+          bitField0_ |= 0x00000002;
+         }
       }
       /**
        * <pre>
@@ -1018,7 +1155,7 @@ private static final long serialVersionUID = 0L;
        */
       public java.util.List<java.lang.Long>
           getHuntGroupSidsList() {
-        return ((bitField0_ & 0x00000008) != 0) ?
+        return ((bitField0_ & 0x00000002) != 0) ?
                  java.util.Collections.unmodifiableList(huntGroupSids_) : huntGroupSids_;
       }
       /**
@@ -1056,7 +1193,6 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setHuntGroupSids(
           int index, long value) {
-
         ensureHuntGroupSidsIsMutable();
         huntGroupSids_.setLong(index, value);
         onChanged();
@@ -1072,7 +1208,6 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder addHuntGroupSids(long value) {
-
         ensureHuntGroupSidsIsMutable();
         huntGroupSids_.addLong(value);
         onChanged();
@@ -1105,7 +1240,7 @@ private static final long serialVersionUID = 0L;
        */
       public Builder clearHuntGroupSids() {
         huntGroupSids_ = emptyLongList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -1142,18 +1277,7 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new DefaultRouting(input, extensionRegistry);
       }
     };
 
@@ -1303,6 +1427,126 @@ private static final long serialVersionUID = 0L;
       return new CallbackRoutingDisallowed();
     }
 
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CallbackRoutingDisallowed(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              useRoutingLimiting_ = input.readBool();
+              break;
+            }
+            case 16: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                agentSids_ = newLongList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              agentSids_.addLong(input.readInt64());
+              break;
+            }
+            case 18: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                agentSids_ = newLongList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                agentSids_.addLong(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 24: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                huntGroupSids_ = newLongList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              huntGroupSids_.addLong(input.readInt64());
+              break;
+            }
+            case 26: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+                huntGroupSids_ = newLongList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                huntGroupSids_.addLong(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 32: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                agentSkillSids_ = newLongList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              agentSkillSids_.addLong(input.readInt64());
+              break;
+            }
+            case 34: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000004) != 0) && input.getBytesUntilLimit() > 0) {
+                agentSkillSids_ = newLongList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                agentSkillSids_.addLong(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          agentSids_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          huntGroupSids_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          agentSkillSids_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.tcn.cloud.api.api.commons.org.HuntgroupProto.internal_static_api_commons_org_CallbackSettings_CallbackRoutingDisallowed_descriptor;
@@ -1317,7 +1561,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int USE_ROUTING_LIMITING_FIELD_NUMBER = 1;
-    private boolean useRoutingLimiting_ = false;
+    private boolean useRoutingLimiting_;
     /**
      * <pre>
      * Indicates whether callback routing should be limited.
@@ -1332,7 +1576,6 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int AGENT_SIDS_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.LongList agentSids_;
     /**
      * <pre>
@@ -1373,7 +1616,6 @@ private static final long serialVersionUID = 0L;
     private int agentSidsMemoizedSerializedSize = -1;
 
     public static final int HUNT_GROUP_SIDS_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.LongList huntGroupSids_;
     /**
      * <pre>
@@ -1414,7 +1656,6 @@ private static final long serialVersionUID = 0L;
     private int huntGroupSidsMemoizedSerializedSize = -1;
 
     public static final int AGENT_SKILL_SIDS_FIELD_NUMBER = 4;
-    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.LongList agentSkillSids_;
     /**
      * <pre>
@@ -1493,7 +1734,7 @@ private static final long serialVersionUID = 0L;
       for (int i = 0; i < agentSkillSids_.size(); i++) {
         output.writeInt64NoTag(agentSkillSids_.getLong(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -1548,7 +1789,7 @@ private static final long serialVersionUID = 0L;
         }
         agentSkillSidsMemoizedSerializedSize = dataSize;
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1571,7 +1812,7 @@ private static final long serialVersionUID = 0L;
           .equals(other.getHuntGroupSidsList())) return false;
       if (!getAgentSkillSidsList()
           .equals(other.getAgentSkillSidsList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -1597,7 +1838,7 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + AGENT_SKILL_SIDS_FIELD_NUMBER;
         hash = (53 * hash) + getAgentSkillSidsList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1646,13 +1887,11 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-
     public static com.tcn.cloud.api.api.commons.org.CallbackSettings.CallbackRoutingDisallowed parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-
     public static com.tcn.cloud.api.api.commons.org.CallbackSettings.CallbackRoutingDisallowed parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1720,22 +1959,30 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.commons.org.CallbackSettings.CallbackRoutingDisallowed.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         useRoutingLimiting_ = false;
+
         agentSids_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000001);
         huntGroupSids_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000002);
         agentSkillSids_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -1762,35 +2009,25 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.tcn.cloud.api.api.commons.org.CallbackSettings.CallbackRoutingDisallowed buildPartial() {
         com.tcn.cloud.api.api.commons.org.CallbackSettings.CallbackRoutingDisallowed result = new com.tcn.cloud.api.api.commons.org.CallbackSettings.CallbackRoutingDisallowed(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.org.CallbackSettings.CallbackRoutingDisallowed result) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        int from_bitField0_ = bitField0_;
+        result.useRoutingLimiting_ = useRoutingLimiting_;
+        if (((bitField0_ & 0x00000001) != 0)) {
           agentSids_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.agentSids_ = agentSids_;
-        if (((bitField0_ & 0x00000004) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           huntGroupSids_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.huntGroupSids_ = huntGroupSids_;
-        if (((bitField0_ & 0x00000008) != 0)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           agentSkillSids_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.agentSkillSids_ = agentSkillSids_;
-      }
-
-      private void buildPartial0(com.tcn.cloud.api.api.commons.org.CallbackSettings.CallbackRoutingDisallowed result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.useRoutingLimiting_ = useRoutingLimiting_;
-        }
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -1843,7 +2080,7 @@ private static final long serialVersionUID = 0L;
         if (!other.agentSids_.isEmpty()) {
           if (agentSids_.isEmpty()) {
             agentSids_ = other.agentSids_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureAgentSidsIsMutable();
             agentSids_.addAll(other.agentSids_);
@@ -1853,7 +2090,7 @@ private static final long serialVersionUID = 0L;
         if (!other.huntGroupSids_.isEmpty()) {
           if (huntGroupSids_.isEmpty()) {
             huntGroupSids_ = other.huntGroupSids_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureHuntGroupSidsIsMutable();
             huntGroupSids_.addAll(other.huntGroupSids_);
@@ -1863,14 +2100,14 @@ private static final long serialVersionUID = 0L;
         if (!other.agentSkillSids_.isEmpty()) {
           if (agentSkillSids_.isEmpty()) {
             agentSkillSids_ = other.agentSkillSids_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureAgentSkillSidsIsMutable();
             agentSkillSids_.addAll(other.agentSkillSids_);
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -1885,83 +2122,17 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        com.tcn.cloud.api.api.commons.org.CallbackSettings.CallbackRoutingDisallowed parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                useRoutingLimiting_ = input.readBool();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              case 16: {
-                long v = input.readInt64();
-                ensureAgentSidsIsMutable();
-                agentSids_.addLong(v);
-                break;
-              } // case 16
-              case 18: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureAgentSidsIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  agentSids_.addLong(input.readInt64());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 18
-              case 24: {
-                long v = input.readInt64();
-                ensureHuntGroupSidsIsMutable();
-                huntGroupSids_.addLong(v);
-                break;
-              } // case 24
-              case 26: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureHuntGroupSidsIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  huntGroupSids_.addLong(input.readInt64());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 26
-              case 32: {
-                long v = input.readInt64();
-                ensureAgentSkillSidsIsMutable();
-                agentSkillSids_.addLong(v);
-                break;
-              } // case 32
-              case 34: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                ensureAgentSkillSidsIsMutable();
-                while (input.getBytesUntilLimit() > 0) {
-                  agentSkillSids_.addLong(input.readInt64());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 34
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.tcn.cloud.api.api.commons.org.CallbackSettings.CallbackRoutingDisallowed) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -1989,9 +2160,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setUseRoutingLimiting(boolean value) {
-
+        
         useRoutingLimiting_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2004,7 +2174,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearUseRoutingLimiting() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        
         useRoutingLimiting_ = false;
         onChanged();
         return this;
@@ -2012,10 +2182,10 @@ private static final long serialVersionUID = 0L;
 
       private com.google.protobuf.Internal.LongList agentSids_ = emptyLongList();
       private void ensureAgentSidsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           agentSids_ = mutableCopy(agentSids_);
-          bitField0_ |= 0x00000002;
-        }
+          bitField0_ |= 0x00000001;
+         }
       }
       /**
        * <pre>
@@ -2027,7 +2197,7 @@ private static final long serialVersionUID = 0L;
        */
       public java.util.List<java.lang.Long>
           getAgentSidsList() {
-        return ((bitField0_ & 0x00000002) != 0) ?
+        return ((bitField0_ & 0x00000001) != 0) ?
                  java.util.Collections.unmodifiableList(agentSids_) : agentSids_;
       }
       /**
@@ -2065,7 +2235,6 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setAgentSids(
           int index, long value) {
-
         ensureAgentSidsIsMutable();
         agentSids_.setLong(index, value);
         onChanged();
@@ -2081,7 +2250,6 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder addAgentSids(long value) {
-
         ensureAgentSidsIsMutable();
         agentSids_.addLong(value);
         onChanged();
@@ -2114,17 +2282,17 @@ private static final long serialVersionUID = 0L;
        */
       public Builder clearAgentSids() {
         agentSids_ = emptyLongList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
 
       private com.google.protobuf.Internal.LongList huntGroupSids_ = emptyLongList();
       private void ensureHuntGroupSidsIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           huntGroupSids_ = mutableCopy(huntGroupSids_);
-          bitField0_ |= 0x00000004;
-        }
+          bitField0_ |= 0x00000002;
+         }
       }
       /**
        * <pre>
@@ -2136,7 +2304,7 @@ private static final long serialVersionUID = 0L;
        */
       public java.util.List<java.lang.Long>
           getHuntGroupSidsList() {
-        return ((bitField0_ & 0x00000004) != 0) ?
+        return ((bitField0_ & 0x00000002) != 0) ?
                  java.util.Collections.unmodifiableList(huntGroupSids_) : huntGroupSids_;
       }
       /**
@@ -2174,7 +2342,6 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setHuntGroupSids(
           int index, long value) {
-
         ensureHuntGroupSidsIsMutable();
         huntGroupSids_.setLong(index, value);
         onChanged();
@@ -2190,7 +2357,6 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder addHuntGroupSids(long value) {
-
         ensureHuntGroupSidsIsMutable();
         huntGroupSids_.addLong(value);
         onChanged();
@@ -2223,17 +2389,17 @@ private static final long serialVersionUID = 0L;
        */
       public Builder clearHuntGroupSids() {
         huntGroupSids_ = emptyLongList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
 
       private com.google.protobuf.Internal.LongList agentSkillSids_ = emptyLongList();
       private void ensureAgentSkillSidsIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           agentSkillSids_ = mutableCopy(agentSkillSids_);
-          bitField0_ |= 0x00000008;
-        }
+          bitField0_ |= 0x00000004;
+         }
       }
       /**
        * <pre>
@@ -2245,7 +2411,7 @@ private static final long serialVersionUID = 0L;
        */
       public java.util.List<java.lang.Long>
           getAgentSkillSidsList() {
-        return ((bitField0_ & 0x00000008) != 0) ?
+        return ((bitField0_ & 0x00000004) != 0) ?
                  java.util.Collections.unmodifiableList(agentSkillSids_) : agentSkillSids_;
       }
       /**
@@ -2283,7 +2449,6 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setAgentSkillSids(
           int index, long value) {
-
         ensureAgentSkillSidsIsMutable();
         agentSkillSids_.setLong(index, value);
         onChanged();
@@ -2299,7 +2464,6 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder addAgentSkillSids(long value) {
-
         ensureAgentSkillSidsIsMutable();
         agentSkillSids_.addLong(value);
         onChanged();
@@ -2332,7 +2496,7 @@ private static final long serialVersionUID = 0L;
        */
       public Builder clearAgentSkillSids() {
         agentSkillSids_ = emptyLongList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -2369,18 +2533,7 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new CallbackRoutingDisallowed(input, extensionRegistry);
       }
     };
 
@@ -2401,7 +2554,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ENABLE_CALLBACK_SCHEDULING_FIELD_NUMBER = 1;
-  private boolean enableCallbackScheduling_ = false;
+  private boolean enableCallbackScheduling_;
   /**
    * <pre>
    * Enable callback scheduling. `Allow Callback Scheduling`
@@ -2450,11 +2603,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.CallbackSettings.DefaultRoutingOrBuilder getDefaultCallbackRoutingOrBuilder() {
-    return defaultCallbackRouting_ == null ? com.tcn.cloud.api.api.commons.org.CallbackSettings.DefaultRouting.getDefaultInstance() : defaultCallbackRouting_;
+    return getDefaultCallbackRouting();
   }
 
   public static final int ENABLE_CALLBACK_CALLING_FIELD_NUMBER = 3;
-  private boolean enableCallbackCalling_ = false;
+  private boolean enableCallbackCalling_;
   /**
    * <pre>
    * Enable callback calling ` Allow Scheduled Callback Calling`
@@ -2469,7 +2622,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ENABLE_AUTOMATIC_RETRIEVAL_FIELD_NUMBER = 4;
-  private boolean enableAutomaticRetrieval_ = false;
+  private boolean enableAutomaticRetrieval_;
   /**
    * <pre>
    * Enable automatic callback retrieval `Callbacks Retrieval Mode`
@@ -2521,11 +2674,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.org.CallbackSettings.CallbackRoutingDisallowedOrBuilder getCallbackRoutingDisallowedOrBuilder() {
-    return callbackRoutingDisallowed_ == null ? com.tcn.cloud.api.api.commons.org.CallbackSettings.CallbackRoutingDisallowed.getDefaultInstance() : callbackRoutingDisallowed_;
+    return getCallbackRoutingDisallowed();
   }
 
   public static final int ENABLE_CUSTOMIZABLE_CALLER_ID_FIELD_NUMBER = 6;
-  private boolean enableCustomizableCallerId_ = false;
+  private boolean enableCustomizableCallerId_;
   /**
    * <pre>
    * Enable caller ID customization. 'Scheduled Callback Editable Caller ID'
@@ -2540,8 +2693,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DEFAULT_CALLER_ID_FIELD_NUMBER = 7;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object defaultCallerId_ = "";
+  private volatile java.lang.Object defaultCallerId_;
   /**
    * <pre>
    * Default scheduled callback caller ID.
@@ -2589,7 +2741,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ENABLE_CALLBACK_CALENDAR_FIELD_NUMBER = 8;
-  private boolean enableCallbackCalendar_ = false;
+  private boolean enableCallbackCalendar_;
   /**
    * <pre>
    * Enable viewing the Scheduled Callback calendar.
@@ -2636,13 +2788,13 @@ private static final long serialVersionUID = 0L;
     if (enableCustomizableCallerId_ != false) {
       output.writeBool(6, enableCustomizableCallerId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultCallerId_)) {
+    if (!getDefaultCallerIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, defaultCallerId_);
     }
     if (enableCallbackCalendar_ != false) {
       output.writeBool(8, enableCallbackCalendar_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -2675,14 +2827,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(6, enableCustomizableCallerId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultCallerId_)) {
+    if (!getDefaultCallerIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, defaultCallerId_);
     }
     if (enableCallbackCalendar_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(8, enableCallbackCalendar_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -2719,7 +2871,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getDefaultCallerId())) return false;
     if (getEnableCallbackCalendar()
         != other.getEnableCallbackCalendar()) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -2755,7 +2907,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ENABLE_CALLBACK_CALENDAR_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getEnableCallbackCalendar());
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -2804,13 +2956,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.commons.org.CallbackSettings parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.commons.org.CallbackSettings parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2879,34 +3029,46 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.org.CallbackSettings.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       enableCallbackScheduling_ = false;
-      defaultCallbackRouting_ = null;
-      if (defaultCallbackRoutingBuilder_ != null) {
-        defaultCallbackRoutingBuilder_.dispose();
+
+      if (defaultCallbackRoutingBuilder_ == null) {
+        defaultCallbackRouting_ = null;
+      } else {
+        defaultCallbackRouting_ = null;
         defaultCallbackRoutingBuilder_ = null;
       }
       enableCallbackCalling_ = false;
+
       enableAutomaticRetrieval_ = false;
-      callbackRoutingDisallowed_ = null;
-      if (callbackRoutingDisallowedBuilder_ != null) {
-        callbackRoutingDisallowedBuilder_.dispose();
+
+      if (callbackRoutingDisallowedBuilder_ == null) {
+        callbackRoutingDisallowed_ = null;
+      } else {
+        callbackRoutingDisallowed_ = null;
         callbackRoutingDisallowedBuilder_ = null;
       }
       enableCustomizableCallerId_ = false;
+
       defaultCallerId_ = "";
+
       enableCallbackCalendar_ = false;
+
       return this;
     }
 
@@ -2933,41 +3095,24 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.org.CallbackSettings buildPartial() {
       com.tcn.cloud.api.api.commons.org.CallbackSettings result = new com.tcn.cloud.api.api.commons.org.CallbackSettings(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.enableCallbackScheduling_ = enableCallbackScheduling_;
+      if (defaultCallbackRoutingBuilder_ == null) {
+        result.defaultCallbackRouting_ = defaultCallbackRouting_;
+      } else {
+        result.defaultCallbackRouting_ = defaultCallbackRoutingBuilder_.build();
+      }
+      result.enableCallbackCalling_ = enableCallbackCalling_;
+      result.enableAutomaticRetrieval_ = enableAutomaticRetrieval_;
+      if (callbackRoutingDisallowedBuilder_ == null) {
+        result.callbackRoutingDisallowed_ = callbackRoutingDisallowed_;
+      } else {
+        result.callbackRoutingDisallowed_ = callbackRoutingDisallowedBuilder_.build();
+      }
+      result.enableCustomizableCallerId_ = enableCustomizableCallerId_;
+      result.defaultCallerId_ = defaultCallerId_;
+      result.enableCallbackCalendar_ = enableCallbackCalendar_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.commons.org.CallbackSettings result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.enableCallbackScheduling_ = enableCallbackScheduling_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.defaultCallbackRouting_ = defaultCallbackRoutingBuilder_ == null
-            ? defaultCallbackRouting_
-            : defaultCallbackRoutingBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.enableCallbackCalling_ = enableCallbackCalling_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.enableAutomaticRetrieval_ = enableAutomaticRetrieval_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.callbackRoutingDisallowed_ = callbackRoutingDisallowedBuilder_ == null
-            ? callbackRoutingDisallowed_
-            : callbackRoutingDisallowedBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.enableCustomizableCallerId_ = enableCustomizableCallerId_;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.defaultCallerId_ = defaultCallerId_;
-      }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.enableCallbackCalendar_ = enableCallbackCalendar_;
-      }
     }
 
     @java.lang.Override
@@ -3034,13 +3179,12 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getDefaultCallerId().isEmpty()) {
         defaultCallerId_ = other.defaultCallerId_;
-        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (other.getEnableCallbackCalendar() != false) {
         setEnableCallbackCalendar(other.getEnableCallbackCalendar());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -3055,77 +3199,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.commons.org.CallbackSettings parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              enableCallbackScheduling_ = input.readBool();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 18: {
-              input.readMessage(
-                  getDefaultCallbackRoutingFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 24: {
-              enableCallbackCalling_ = input.readBool();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 24
-            case 32: {
-              enableAutomaticRetrieval_ = input.readBool();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 32
-            case 42: {
-              input.readMessage(
-                  getCallbackRoutingDisallowedFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 42
-            case 48: {
-              enableCustomizableCallerId_ = input.readBool();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 48
-            case 58: {
-              defaultCallerId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 58
-            case 64: {
-              enableCallbackCalendar_ = input.readBool();
-              bitField0_ |= 0x00000080;
-              break;
-            } // case 64
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.commons.org.CallbackSettings) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private boolean enableCallbackScheduling_ ;
     /**
@@ -3150,9 +3236,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEnableCallbackScheduling(boolean value) {
-
+      
       enableCallbackScheduling_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -3165,7 +3250,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnableCallbackScheduling() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       enableCallbackScheduling_ = false;
       onChanged();
       return this;
@@ -3183,7 +3268,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the defaultCallbackRouting field is set.
      */
     public boolean hasDefaultCallbackRouting() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return defaultCallbackRoutingBuilder_ != null || defaultCallbackRouting_ != null;
     }
     /**
      * <pre>
@@ -3213,11 +3298,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         defaultCallbackRouting_ = value;
+        onChanged();
       } else {
         defaultCallbackRoutingBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -3231,11 +3316,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.CallbackSettings.DefaultRouting.Builder builderForValue) {
       if (defaultCallbackRoutingBuilder_ == null) {
         defaultCallbackRouting_ = builderForValue.build();
+        onChanged();
       } else {
         defaultCallbackRoutingBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -3247,18 +3332,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDefaultCallbackRouting(com.tcn.cloud.api.api.commons.org.CallbackSettings.DefaultRouting value) {
       if (defaultCallbackRoutingBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
-          defaultCallbackRouting_ != null &&
-          defaultCallbackRouting_ != com.tcn.cloud.api.api.commons.org.CallbackSettings.DefaultRouting.getDefaultInstance()) {
-          getDefaultCallbackRoutingBuilder().mergeFrom(value);
+        if (defaultCallbackRouting_ != null) {
+          defaultCallbackRouting_ =
+            com.tcn.cloud.api.api.commons.org.CallbackSettings.DefaultRouting.newBuilder(defaultCallbackRouting_).mergeFrom(value).buildPartial();
         } else {
           defaultCallbackRouting_ = value;
         }
+        onChanged();
       } else {
         defaultCallbackRoutingBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -3269,13 +3353,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.CallbackSettings.DefaultRouting default_callback_routing = 2 [json_name = "defaultCallbackRouting"];</code>
      */
     public Builder clearDefaultCallbackRouting() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      defaultCallbackRouting_ = null;
-      if (defaultCallbackRoutingBuilder_ != null) {
-        defaultCallbackRoutingBuilder_.dispose();
+      if (defaultCallbackRoutingBuilder_ == null) {
+        defaultCallbackRouting_ = null;
+        onChanged();
+      } else {
+        defaultCallbackRouting_ = null;
         defaultCallbackRoutingBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -3286,7 +3371,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.CallbackSettings.DefaultRouting default_callback_routing = 2 [json_name = "defaultCallbackRouting"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.CallbackSettings.DefaultRouting.Builder getDefaultCallbackRoutingBuilder() {
-      bitField0_ |= 0x00000002;
+      
       onChanged();
       return getDefaultCallbackRoutingFieldBuilder().getBuilder();
     }
@@ -3349,9 +3434,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEnableCallbackCalling(boolean value) {
-
+      
       enableCallbackCalling_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -3364,7 +3448,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnableCallbackCalling() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       enableCallbackCalling_ = false;
       onChanged();
       return this;
@@ -3393,9 +3477,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEnableAutomaticRetrieval(boolean value) {
-
+      
       enableAutomaticRetrieval_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -3408,7 +3491,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnableAutomaticRetrieval() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      
       enableAutomaticRetrieval_ = false;
       onChanged();
       return this;
@@ -3427,7 +3510,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the callbackRoutingDisallowed field is set.
      */
     public boolean hasCallbackRoutingDisallowed() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return callbackRoutingDisallowedBuilder_ != null || callbackRoutingDisallowed_ != null;
     }
     /**
      * <pre>
@@ -3459,11 +3542,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         callbackRoutingDisallowed_ = value;
+        onChanged();
       } else {
         callbackRoutingDisallowedBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
@@ -3478,11 +3561,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.org.CallbackSettings.CallbackRoutingDisallowed.Builder builderForValue) {
       if (callbackRoutingDisallowedBuilder_ == null) {
         callbackRoutingDisallowed_ = builderForValue.build();
+        onChanged();
       } else {
         callbackRoutingDisallowedBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
@@ -3495,18 +3578,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCallbackRoutingDisallowed(com.tcn.cloud.api.api.commons.org.CallbackSettings.CallbackRoutingDisallowed value) {
       if (callbackRoutingDisallowedBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0) &&
-          callbackRoutingDisallowed_ != null &&
-          callbackRoutingDisallowed_ != com.tcn.cloud.api.api.commons.org.CallbackSettings.CallbackRoutingDisallowed.getDefaultInstance()) {
-          getCallbackRoutingDisallowedBuilder().mergeFrom(value);
+        if (callbackRoutingDisallowed_ != null) {
+          callbackRoutingDisallowed_ =
+            com.tcn.cloud.api.api.commons.org.CallbackSettings.CallbackRoutingDisallowed.newBuilder(callbackRoutingDisallowed_).mergeFrom(value).buildPartial();
         } else {
           callbackRoutingDisallowed_ = value;
         }
+        onChanged();
       } else {
         callbackRoutingDisallowedBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
@@ -3518,13 +3600,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.CallbackSettings.CallbackRoutingDisallowed callback_routing_disallowed = 5 [json_name = "callbackRoutingDisallowed"];</code>
      */
     public Builder clearCallbackRoutingDisallowed() {
-      bitField0_ = (bitField0_ & ~0x00000010);
-      callbackRoutingDisallowed_ = null;
-      if (callbackRoutingDisallowedBuilder_ != null) {
-        callbackRoutingDisallowedBuilder_.dispose();
+      if (callbackRoutingDisallowedBuilder_ == null) {
+        callbackRoutingDisallowed_ = null;
+        onChanged();
+      } else {
+        callbackRoutingDisallowed_ = null;
         callbackRoutingDisallowedBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -3536,7 +3619,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.org.CallbackSettings.CallbackRoutingDisallowed callback_routing_disallowed = 5 [json_name = "callbackRoutingDisallowed"];</code>
      */
     public com.tcn.cloud.api.api.commons.org.CallbackSettings.CallbackRoutingDisallowed.Builder getCallbackRoutingDisallowedBuilder() {
-      bitField0_ |= 0x00000010;
+      
       onChanged();
       return getCallbackRoutingDisallowedFieldBuilder().getBuilder();
     }
@@ -3601,9 +3684,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEnableCustomizableCallerId(boolean value) {
-
+      
       enableCustomizableCallerId_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -3616,7 +3698,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnableCustomizableCallerId() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      
       enableCustomizableCallerId_ = false;
       onChanged();
       return this;
@@ -3678,9 +3760,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDefaultCallerId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       defaultCallerId_ = value;
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -3694,8 +3778,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDefaultCallerId() {
+      
       defaultCallerId_ = getDefaultInstance().getDefaultCallerId();
-      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -3711,10 +3795,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDefaultCallerIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       defaultCallerId_ = value;
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -3744,9 +3830,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEnableCallbackCalendar(boolean value) {
-
+      
       enableCallbackCalendar_ = value;
-      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -3760,7 +3845,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnableCallbackCalendar() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      
       enableCallbackCalendar_ = false;
       onChanged();
       return this;
@@ -3798,18 +3883,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new CallbackSettings(input, extensionRegistry);
     }
   };
 

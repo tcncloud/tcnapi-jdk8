@@ -29,6 +29,61 @@ private static final long serialVersionUID = 0L;
     return new ListAvailableVerificationFieldsReq();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private ListAvailableVerificationFieldsReq(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            com.tcn.cloud.api.api.commons.integrations.VerificationFlow.Builder subBuilder = null;
+            if (verification_ != null) {
+              subBuilder = verification_.toBuilder();
+            }
+            verification_ = input.readMessage(com.tcn.cloud.api.api.commons.integrations.VerificationFlow.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(verification_);
+              verification_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.integrations.PortalsProto.internal_static_api_v1alpha1_integrations_ListAvailableVerificationFieldsReq_descriptor;
@@ -65,7 +120,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.integrations.VerificationFlowOrBuilder getVerificationOrBuilder() {
-    return verification_ == null ? com.tcn.cloud.api.api.commons.integrations.VerificationFlow.getDefaultInstance() : verification_;
+    return getVerification();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -85,7 +140,7 @@ private static final long serialVersionUID = 0L;
     if (verification_ != null) {
       output.writeMessage(1, getVerification());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -98,7 +153,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getVerification());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -118,7 +173,7 @@ private static final long serialVersionUID = 0L;
       if (!getVerification()
           .equals(other.getVerification())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -133,7 +188,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + VERIFICATION_FIELD_NUMBER;
       hash = (53 * hash) + getVerification().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -182,13 +237,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailableVerificationFieldsReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailableVerificationFieldsReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -256,21 +309,26 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailableVerificationFieldsReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      verification_ = null;
-      if (verificationBuilder_ != null) {
-        verificationBuilder_.dispose();
+      if (verificationBuilder_ == null) {
+        verification_ = null;
+      } else {
+        verification_ = null;
         verificationBuilder_ = null;
       }
       return this;
@@ -299,18 +357,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailableVerificationFieldsReq buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailableVerificationFieldsReq result = new com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailableVerificationFieldsReq(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      if (verificationBuilder_ == null) {
+        result.verification_ = verification_;
+      } else {
+        result.verification_ = verificationBuilder_.build();
+      }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailableVerificationFieldsReq result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.verification_ = verificationBuilder_ == null
-            ? verification_
-            : verificationBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -360,7 +413,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasVerification()) {
         mergeVerification(other.getVerification());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -375,40 +428,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailableVerificationFieldsReq parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              input.readMessage(
-                  getVerificationFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.integrations.ListAvailableVerificationFieldsReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private com.tcn.cloud.api.api.commons.integrations.VerificationFlow verification_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -418,7 +450,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the verification field is set.
      */
     public boolean hasVerification() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return verificationBuilder_ != null || verification_ != null;
     }
     /**
      * <code>.api.commons.integrations.VerificationFlow verification = 1 [json_name = "verification"];</code>
@@ -440,11 +472,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         verification_ = value;
+        onChanged();
       } else {
         verificationBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -454,11 +486,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.integrations.VerificationFlow.Builder builderForValue) {
       if (verificationBuilder_ == null) {
         verification_ = builderForValue.build();
+        onChanged();
       } else {
         verificationBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -466,38 +498,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeVerification(com.tcn.cloud.api.api.commons.integrations.VerificationFlow value) {
       if (verificationBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          verification_ != null &&
-          verification_ != com.tcn.cloud.api.api.commons.integrations.VerificationFlow.getDefaultInstance()) {
-          getVerificationBuilder().mergeFrom(value);
+        if (verification_ != null) {
+          verification_ =
+            com.tcn.cloud.api.api.commons.integrations.VerificationFlow.newBuilder(verification_).mergeFrom(value).buildPartial();
         } else {
           verification_ = value;
         }
+        onChanged();
       } else {
         verificationBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.commons.integrations.VerificationFlow verification = 1 [json_name = "verification"];</code>
      */
     public Builder clearVerification() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      verification_ = null;
-      if (verificationBuilder_ != null) {
-        verificationBuilder_.dispose();
+      if (verificationBuilder_ == null) {
+        verification_ = null;
+        onChanged();
+      } else {
+        verification_ = null;
         verificationBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.commons.integrations.VerificationFlow verification = 1 [json_name = "verification"];</code>
      */
     public com.tcn.cloud.api.api.commons.integrations.VerificationFlow.Builder getVerificationBuilder() {
-      bitField0_ |= 0x00000001;
+      
       onChanged();
       return getVerificationFieldBuilder().getBuilder();
     }
@@ -561,18 +593,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new ListAvailableVerificationFieldsReq(input, extensionRegistry);
     }
   };
 

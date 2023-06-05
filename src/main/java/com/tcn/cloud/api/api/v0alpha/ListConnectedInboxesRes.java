@@ -30,6 +30,61 @@ private static final long serialVersionUID = 0L;
     return new ListConnectedInboxesRes();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private ListConnectedInboxesRes(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              connectedInboxes_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesRes.ListConnectedInbox>();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            connectedInboxes_.add(
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesRes.ListConnectedInbox.parser(), extensionRegistry));
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        connectedInboxes_ = java.util.Collections.unmodifiableList(connectedInboxes_);
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_ListConnectedInboxesRes_descriptor;
@@ -145,6 +200,74 @@ private static final long serialVersionUID = 0L;
       return new ListConnectedInbox();
     }
 
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListConnectedInbox(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.tcn.cloud.api.api.commons.ConnectedInbox.Builder subBuilder = null;
+              if (connectedInbox_ != null) {
+                subBuilder = connectedInbox_.toBuilder();
+              }
+              connectedInbox_ = input.readMessage(com.tcn.cloud.api.api.commons.ConnectedInbox.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(connectedInbox_);
+                connectedInbox_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                campaigns_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.OmniCampaign>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              campaigns_.add(
+                  input.readMessage(com.tcn.cloud.api.api.commons.OmniCampaign.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          campaigns_ = java.util.Collections.unmodifiableList(campaigns_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_ListConnectedInboxesRes_ListConnectedInbox_descriptor;
@@ -193,11 +316,10 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.ConnectedInboxOrBuilder getConnectedInboxOrBuilder() {
-      return connectedInbox_ == null ? com.tcn.cloud.api.api.commons.ConnectedInbox.getDefaultInstance() : connectedInbox_;
+      return getConnectedInbox();
     }
 
     public static final int CAMPAIGNS_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
     private java.util.List<com.tcn.cloud.api.api.commons.OmniCampaign> campaigns_;
     /**
      * <pre>
@@ -277,7 +399,7 @@ private static final long serialVersionUID = 0L;
       for (int i = 0; i < campaigns_.size(); i++) {
         output.writeMessage(2, campaigns_.get(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -294,7 +416,7 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, campaigns_.get(i));
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -316,7 +438,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!getCampaignsList()
           .equals(other.getCampaignsList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -335,7 +457,7 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + CAMPAIGNS_FIELD_NUMBER;
         hash = (53 * hash) + getCampaignsList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -384,13 +506,11 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-
     public static com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesRes.ListConnectedInbox parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-
     public static com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesRes.ListConnectedInbox parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -458,30 +578,35 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesRes.ListConnectedInbox.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCampaignsFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
-        connectedInbox_ = null;
-        if (connectedInboxBuilder_ != null) {
-          connectedInboxBuilder_.dispose();
+        if (connectedInboxBuilder_ == null) {
+          connectedInbox_ = null;
+        } else {
+          connectedInbox_ = null;
           connectedInboxBuilder_ = null;
         }
         if (campaignsBuilder_ == null) {
           campaigns_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          campaigns_ = null;
           campaignsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -508,31 +633,23 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesRes.ListConnectedInbox buildPartial() {
         com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesRes.ListConnectedInbox result = new com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesRes.ListConnectedInbox(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesRes.ListConnectedInbox result) {
+        int from_bitField0_ = bitField0_;
+        if (connectedInboxBuilder_ == null) {
+          result.connectedInbox_ = connectedInbox_;
+        } else {
+          result.connectedInbox_ = connectedInboxBuilder_.build();
+        }
         if (campaignsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             campaigns_ = java.util.Collections.unmodifiableList(campaigns_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.campaigns_ = campaigns_;
         } else {
           result.campaigns_ = campaignsBuilder_.build();
         }
-      }
-
-      private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesRes.ListConnectedInbox result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.connectedInbox_ = connectedInboxBuilder_ == null
-              ? connectedInbox_
-              : connectedInboxBuilder_.build();
-        }
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -586,7 +703,7 @@ private static final long serialVersionUID = 0L;
           if (!other.campaigns_.isEmpty()) {
             if (campaigns_.isEmpty()) {
               campaigns_ = other.campaigns_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureCampaignsIsMutable();
               campaigns_.addAll(other.campaigns_);
@@ -599,7 +716,7 @@ private static final long serialVersionUID = 0L;
               campaignsBuilder_.dispose();
               campaignsBuilder_ = null;
               campaigns_ = other.campaigns_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000001);
               campaignsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getCampaignsFieldBuilder() : null;
@@ -608,7 +725,7 @@ private static final long serialVersionUID = 0L;
             }
           }
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -623,50 +740,17 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesRes.ListConnectedInbox parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getConnectedInboxFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                com.tcn.cloud.api.api.commons.OmniCampaign m =
-                    input.readMessage(
-                        com.tcn.cloud.api.api.commons.OmniCampaign.parser(),
-                        extensionRegistry);
-                if (campaignsBuilder_ == null) {
-                  ensureCampaignsIsMutable();
-                  campaigns_.add(m);
-                } else {
-                  campaignsBuilder_.addMessage(m);
-                }
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesRes.ListConnectedInbox) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -683,7 +767,7 @@ private static final long serialVersionUID = 0L;
        * @return Whether the connectedInbox field is set.
        */
       public boolean hasConnectedInbox() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return connectedInboxBuilder_ != null || connectedInbox_ != null;
       }
       /**
        * <pre>
@@ -713,11 +797,11 @@ private static final long serialVersionUID = 0L;
             throw new NullPointerException();
           }
           connectedInbox_ = value;
+          onChanged();
         } else {
           connectedInboxBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+
         return this;
       }
       /**
@@ -731,11 +815,11 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.api.commons.ConnectedInbox.Builder builderForValue) {
         if (connectedInboxBuilder_ == null) {
           connectedInbox_ = builderForValue.build();
+          onChanged();
         } else {
           connectedInboxBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+
         return this;
       }
       /**
@@ -747,18 +831,17 @@ private static final long serialVersionUID = 0L;
        */
       public Builder mergeConnectedInbox(com.tcn.cloud.api.api.commons.ConnectedInbox value) {
         if (connectedInboxBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            connectedInbox_ != null &&
-            connectedInbox_ != com.tcn.cloud.api.api.commons.ConnectedInbox.getDefaultInstance()) {
-            getConnectedInboxBuilder().mergeFrom(value);
+          if (connectedInbox_ != null) {
+            connectedInbox_ =
+              com.tcn.cloud.api.api.commons.ConnectedInbox.newBuilder(connectedInbox_).mergeFrom(value).buildPartial();
           } else {
             connectedInbox_ = value;
           }
+          onChanged();
         } else {
           connectedInboxBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+
         return this;
       }
       /**
@@ -769,13 +852,14 @@ private static final long serialVersionUID = 0L;
        * <code>.api.commons.ConnectedInbox connected_inbox = 1 [json_name = "connectedInbox"];</code>
        */
       public Builder clearConnectedInbox() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        connectedInbox_ = null;
-        if (connectedInboxBuilder_ != null) {
-          connectedInboxBuilder_.dispose();
+        if (connectedInboxBuilder_ == null) {
+          connectedInbox_ = null;
+          onChanged();
+        } else {
+          connectedInbox_ = null;
           connectedInboxBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
@@ -786,7 +870,7 @@ private static final long serialVersionUID = 0L;
        * <code>.api.commons.ConnectedInbox connected_inbox = 1 [json_name = "connectedInbox"];</code>
        */
       public com.tcn.cloud.api.api.commons.ConnectedInbox.Builder getConnectedInboxBuilder() {
-        bitField0_ |= 0x00000001;
+        
         onChanged();
         return getConnectedInboxFieldBuilder().getBuilder();
       }
@@ -829,9 +913,9 @@ private static final long serialVersionUID = 0L;
       private java.util.List<com.tcn.cloud.api.api.commons.OmniCampaign> campaigns_ =
         java.util.Collections.emptyList();
       private void ensureCampaignsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           campaigns_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.OmniCampaign>(campaigns_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -1025,7 +1109,7 @@ private static final long serialVersionUID = 0L;
       public Builder clearCampaigns() {
         if (campaignsBuilder_ == null) {
           campaigns_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           campaignsBuilder_.clear();
@@ -1130,7 +1214,7 @@ private static final long serialVersionUID = 0L;
           campaignsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.tcn.cloud.api.api.commons.OmniCampaign, com.tcn.cloud.api.api.commons.OmniCampaign.Builder, com.tcn.cloud.api.api.commons.OmniCampaignOrBuilder>(
                   campaigns_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           campaigns_ = null;
@@ -1170,18 +1254,7 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new ListConnectedInbox(input, extensionRegistry);
       }
     };
 
@@ -1202,7 +1275,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONNECTED_INBOXES_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesRes.ListConnectedInbox> connectedInboxes_;
   /**
    * <pre>
@@ -1279,7 +1351,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < connectedInboxes_.size(); i++) {
       output.writeMessage(1, connectedInboxes_.get(i));
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -1292,7 +1364,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, connectedInboxes_.get(i));
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -1309,7 +1381,7 @@ private static final long serialVersionUID = 0L;
 
     if (!getConnectedInboxesList()
         .equals(other.getConnectedInboxesList())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -1324,7 +1396,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CONNECTED_INBOXES_FIELD_NUMBER;
       hash = (53 * hash) + getConnectedInboxesList().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1373,13 +1445,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesRes parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesRes parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1447,25 +1517,29 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesRes.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getConnectedInboxesFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       if (connectedInboxesBuilder_ == null) {
         connectedInboxes_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
-        connectedInboxes_ = null;
         connectedInboxesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -1492,13 +1566,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesRes buildPartial() {
       com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesRes result = new com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesRes(this);
-      buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      onBuilt();
-      return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesRes result) {
+      int from_bitField0_ = bitField0_;
       if (connectedInboxesBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           connectedInboxes_ = java.util.Collections.unmodifiableList(connectedInboxes_);
@@ -1508,10 +1576,8 @@ private static final long serialVersionUID = 0L;
       } else {
         result.connectedInboxes_ = connectedInboxesBuilder_.build();
       }
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesRes result) {
-      int from_bitField0_ = bitField0_;
+      onBuilt();
+      return result;
     }
 
     @java.lang.Override
@@ -1584,7 +1650,7 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -1599,43 +1665,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesRes parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesRes.ListConnectedInbox m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesRes.ListConnectedInbox.parser(),
-                      extensionRegistry);
-              if (connectedInboxesBuilder_ == null) {
-                ensureConnectedInboxesIsMutable();
-                connectedInboxes_.add(m);
-              } else {
-                connectedInboxesBuilder_.addMessage(m);
-              }
-              break;
-            } // case 10
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.ListConnectedInboxesRes) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -1984,18 +2024,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new ListConnectedInboxesRes(input, extensionRegistry);
     }
   };
 

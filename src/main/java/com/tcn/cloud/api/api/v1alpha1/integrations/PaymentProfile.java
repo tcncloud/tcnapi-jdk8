@@ -22,8 +22,7 @@ private static final long serialVersionUID = 0L;
   private PaymentProfile() {
     verification_ = "";
     invoice_ = "";
-    payments_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    payments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
   }
 
   @java.lang.Override
@@ -33,6 +32,73 @@ private static final long serialVersionUID = 0L;
     return new PaymentProfile();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private PaymentProfile(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 66: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            verification_ = s;
+            break;
+          }
+          case 74: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            invoice_ = s;
+            break;
+          }
+          case 82: {
+            java.lang.String s = input.readStringRequireUtf8();
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              payments_ = new com.google.protobuf.LazyStringArrayList();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            payments_.add(s);
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        payments_ = payments_.getUnmodifiableView();
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_PaymentProfile_descriptor;
@@ -47,8 +113,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VERIFICATION_FIELD_NUMBER = 8;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object verification_ = "";
+  private volatile java.lang.Object verification_;
   /**
    * <code>string verification = 8 [json_name = "verification"];</code>
    * @return The verification.
@@ -86,8 +151,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INVOICE_FIELD_NUMBER = 9;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object invoice_ = "";
+  private volatile java.lang.Object invoice_;
   /**
    * <code>string invoice = 9 [json_name = "invoice"];</code>
    * @return The invoice.
@@ -125,9 +189,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PAYMENTS_FIELD_NUMBER = 10;
-  @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList payments_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
+  private com.google.protobuf.LazyStringList payments_;
   /**
    * <code>repeated string payments = 10 [json_name = "payments"];</code>
    * @return A list containing the payments.
@@ -175,16 +237,16 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(verification_)) {
+    if (!getVerificationBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 8, verification_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(invoice_)) {
+    if (!getInvoiceBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 9, invoice_);
     }
     for (int i = 0; i < payments_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 10, payments_.getRaw(i));
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -193,10 +255,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(verification_)) {
+    if (!getVerificationBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, verification_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(invoice_)) {
+    if (!getInvoiceBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, invoice_);
     }
     {
@@ -207,7 +269,7 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getPaymentsList().size();
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -228,7 +290,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getInvoice())) return false;
     if (!getPaymentsList()
         .equals(other.getPaymentsList())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -247,7 +309,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + PAYMENTS_FIELD_NUMBER;
       hash = (53 * hash) + getPaymentsList().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -296,13 +358,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.integrations.PaymentProfile parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.integrations.PaymentProfile parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -370,22 +430,28 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.PaymentProfile.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       verification_ = "";
+
       invoice_ = "";
-      payments_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+
+      payments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -412,23 +478,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.integrations.PaymentProfile buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.integrations.PaymentProfile result = new com.tcn.cloud.api.api.v1alpha1.integrations.PaymentProfile(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      int from_bitField0_ = bitField0_;
+      result.verification_ = verification_;
+      result.invoice_ = invoice_;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        payments_ = payments_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000001);
+      }
+      result.payments_ = payments_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.PaymentProfile result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.verification_ = verification_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.invoice_ = invoice_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        payments_.makeImmutable();
-        result.payments_ = payments_;
-      }
     }
 
     @java.lang.Override
@@ -477,25 +536,23 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v1alpha1.integrations.PaymentProfile.getDefaultInstance()) return this;
       if (!other.getVerification().isEmpty()) {
         verification_ = other.verification_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getInvoice().isEmpty()) {
         invoice_ = other.invoice_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.payments_.isEmpty()) {
         if (payments_.isEmpty()) {
           payments_ = other.payments_;
-          bitField0_ |= 0x00000004;
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensurePaymentsIsMutable();
           payments_.addAll(other.payments_);
         }
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -510,46 +567,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.integrations.PaymentProfile parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 66: {
-              verification_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 66
-            case 74: {
-              invoice_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 74
-            case 82: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensurePaymentsIsMutable();
-              payments_.add(s);
-              break;
-            } // case 82
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.integrations.PaymentProfile) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -595,9 +623,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setVerification(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       verification_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -606,8 +636,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVerification() {
+      
       verification_ = getDefaultInstance().getVerification();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -618,10 +648,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setVerificationBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       verification_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -667,9 +699,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setInvoice(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       invoice_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -678,8 +712,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearInvoice() {
+      
       invoice_ = getDefaultInstance().getInvoice();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -690,21 +724,22 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setInvoiceBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       invoice_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringArrayList payments_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.LazyStringList payments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensurePaymentsIsMutable() {
-      if (!payments_.isModifiable()) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         payments_ = new com.google.protobuf.LazyStringArrayList(payments_);
-      }
-      bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000001;
+       }
     }
     /**
      * <code>repeated string payments = 10 [json_name = "payments"];</code>
@@ -712,8 +747,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getPaymentsList() {
-      payments_.makeImmutable();
-      return payments_;
+      return payments_.getUnmodifiableView();
     }
     /**
      * <code>repeated string payments = 10 [json_name = "payments"];</code>
@@ -747,10 +781,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPayments(
         int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensurePaymentsIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensurePaymentsIsMutable();
       payments_.set(index, value);
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -761,10 +796,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addPayments(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensurePaymentsIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensurePaymentsIsMutable();
       payments_.add(value);
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -778,7 +814,6 @@ private static final long serialVersionUID = 0L;
       ensurePaymentsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, payments_);
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -787,9 +822,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPayments() {
-      payments_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000004);;
+      payments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -800,11 +834,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addPaymentsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
       ensurePaymentsIsMutable();
       payments_.add(value);
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -841,18 +876,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new PaymentProfile(input, extensionRegistry);
     }
   };
 

@@ -37,6 +37,217 @@ private static final long serialVersionUID = 0L;
     return new ProfileTOD();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private ProfileTOD(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 13: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              sunday_ = newFloatList();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            sunday_.addFloat(input.readFloat());
+            break;
+          }
+          case 10: {
+            int length = input.readRawVarint32();
+            int limit = input.pushLimit(length);
+            if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+              sunday_ = newFloatList();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            while (input.getBytesUntilLimit() > 0) {
+              sunday_.addFloat(input.readFloat());
+            }
+            input.popLimit(limit);
+            break;
+          }
+          case 21: {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              monday_ = newFloatList();
+              mutable_bitField0_ |= 0x00000002;
+            }
+            monday_.addFloat(input.readFloat());
+            break;
+          }
+          case 18: {
+            int length = input.readRawVarint32();
+            int limit = input.pushLimit(length);
+            if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+              monday_ = newFloatList();
+              mutable_bitField0_ |= 0x00000002;
+            }
+            while (input.getBytesUntilLimit() > 0) {
+              monday_.addFloat(input.readFloat());
+            }
+            input.popLimit(limit);
+            break;
+          }
+          case 29: {
+            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+              tuesday_ = newFloatList();
+              mutable_bitField0_ |= 0x00000004;
+            }
+            tuesday_.addFloat(input.readFloat());
+            break;
+          }
+          case 26: {
+            int length = input.readRawVarint32();
+            int limit = input.pushLimit(length);
+            if (!((mutable_bitField0_ & 0x00000004) != 0) && input.getBytesUntilLimit() > 0) {
+              tuesday_ = newFloatList();
+              mutable_bitField0_ |= 0x00000004;
+            }
+            while (input.getBytesUntilLimit() > 0) {
+              tuesday_.addFloat(input.readFloat());
+            }
+            input.popLimit(limit);
+            break;
+          }
+          case 37: {
+            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+              wednesday_ = newFloatList();
+              mutable_bitField0_ |= 0x00000008;
+            }
+            wednesday_.addFloat(input.readFloat());
+            break;
+          }
+          case 34: {
+            int length = input.readRawVarint32();
+            int limit = input.pushLimit(length);
+            if (!((mutable_bitField0_ & 0x00000008) != 0) && input.getBytesUntilLimit() > 0) {
+              wednesday_ = newFloatList();
+              mutable_bitField0_ |= 0x00000008;
+            }
+            while (input.getBytesUntilLimit() > 0) {
+              wednesday_.addFloat(input.readFloat());
+            }
+            input.popLimit(limit);
+            break;
+          }
+          case 45: {
+            if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+              thursday_ = newFloatList();
+              mutable_bitField0_ |= 0x00000010;
+            }
+            thursday_.addFloat(input.readFloat());
+            break;
+          }
+          case 42: {
+            int length = input.readRawVarint32();
+            int limit = input.pushLimit(length);
+            if (!((mutable_bitField0_ & 0x00000010) != 0) && input.getBytesUntilLimit() > 0) {
+              thursday_ = newFloatList();
+              mutable_bitField0_ |= 0x00000010;
+            }
+            while (input.getBytesUntilLimit() > 0) {
+              thursday_.addFloat(input.readFloat());
+            }
+            input.popLimit(limit);
+            break;
+          }
+          case 53: {
+            if (!((mutable_bitField0_ & 0x00000020) != 0)) {
+              friday_ = newFloatList();
+              mutable_bitField0_ |= 0x00000020;
+            }
+            friday_.addFloat(input.readFloat());
+            break;
+          }
+          case 50: {
+            int length = input.readRawVarint32();
+            int limit = input.pushLimit(length);
+            if (!((mutable_bitField0_ & 0x00000020) != 0) && input.getBytesUntilLimit() > 0) {
+              friday_ = newFloatList();
+              mutable_bitField0_ |= 0x00000020;
+            }
+            while (input.getBytesUntilLimit() > 0) {
+              friday_.addFloat(input.readFloat());
+            }
+            input.popLimit(limit);
+            break;
+          }
+          case 61: {
+            if (!((mutable_bitField0_ & 0x00000040) != 0)) {
+              saturday_ = newFloatList();
+              mutable_bitField0_ |= 0x00000040;
+            }
+            saturday_.addFloat(input.readFloat());
+            break;
+          }
+          case 58: {
+            int length = input.readRawVarint32();
+            int limit = input.pushLimit(length);
+            if (!((mutable_bitField0_ & 0x00000040) != 0) && input.getBytesUntilLimit() > 0) {
+              saturday_ = newFloatList();
+              mutable_bitField0_ |= 0x00000040;
+            }
+            while (input.getBytesUntilLimit() > 0) {
+              saturday_.addFloat(input.readFloat());
+            }
+            input.popLimit(limit);
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        sunday_.makeImmutable(); // C
+      }
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        monday_.makeImmutable(); // C
+      }
+      if (((mutable_bitField0_ & 0x00000004) != 0)) {
+        tuesday_.makeImmutable(); // C
+      }
+      if (((mutable_bitField0_ & 0x00000008) != 0)) {
+        wednesday_.makeImmutable(); // C
+      }
+      if (((mutable_bitField0_ & 0x00000010) != 0)) {
+        thursday_.makeImmutable(); // C
+      }
+      if (((mutable_bitField0_ & 0x00000020) != 0)) {
+        friday_.makeImmutable(); // C
+      }
+      if (((mutable_bitField0_ & 0x00000040) != 0)) {
+        saturday_.makeImmutable(); // C
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.WfmProto.internal_static_api_commons_ProfileTOD_descriptor;
@@ -51,7 +262,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SUNDAY_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
   private com.google.protobuf.Internal.FloatList sunday_;
   /**
    * <code>repeated float sunday = 1 [json_name = "sunday"];</code>
@@ -80,7 +290,6 @@ private static final long serialVersionUID = 0L;
   private int sundayMemoizedSerializedSize = -1;
 
   public static final int MONDAY_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
   private com.google.protobuf.Internal.FloatList monday_;
   /**
    * <code>repeated float monday = 2 [json_name = "monday"];</code>
@@ -109,7 +318,6 @@ private static final long serialVersionUID = 0L;
   private int mondayMemoizedSerializedSize = -1;
 
   public static final int TUESDAY_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
   private com.google.protobuf.Internal.FloatList tuesday_;
   /**
    * <code>repeated float tuesday = 3 [json_name = "tuesday"];</code>
@@ -138,7 +346,6 @@ private static final long serialVersionUID = 0L;
   private int tuesdayMemoizedSerializedSize = -1;
 
   public static final int WEDNESDAY_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
   private com.google.protobuf.Internal.FloatList wednesday_;
   /**
    * <code>repeated float wednesday = 4 [json_name = "wednesday"];</code>
@@ -167,7 +374,6 @@ private static final long serialVersionUID = 0L;
   private int wednesdayMemoizedSerializedSize = -1;
 
   public static final int THURSDAY_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
   private com.google.protobuf.Internal.FloatList thursday_;
   /**
    * <code>repeated float thursday = 5 [json_name = "thursday"];</code>
@@ -196,7 +402,6 @@ private static final long serialVersionUID = 0L;
   private int thursdayMemoizedSerializedSize = -1;
 
   public static final int FRIDAY_FIELD_NUMBER = 6;
-  @SuppressWarnings("serial")
   private com.google.protobuf.Internal.FloatList friday_;
   /**
    * <code>repeated float friday = 6 [json_name = "friday"];</code>
@@ -225,7 +430,6 @@ private static final long serialVersionUID = 0L;
   private int fridayMemoizedSerializedSize = -1;
 
   public static final int SATURDAY_FIELD_NUMBER = 7;
-  @SuppressWarnings("serial")
   private com.google.protobuf.Internal.FloatList saturday_;
   /**
    * <code>repeated float saturday = 7 [json_name = "saturday"];</code>
@@ -317,7 +521,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < saturday_.size(); i++) {
       output.writeFloatNoTag(saturday_.getFloat(i));
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -403,7 +607,7 @@ private static final long serialVersionUID = 0L;
       }
       saturdayMemoizedSerializedSize = dataSize;
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -432,7 +636,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getFridayList())) return false;
     if (!getSaturdayList()
         .equals(other.getSaturdayList())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -471,7 +675,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SATURDAY_FIELD_NUMBER;
       hash = (53 * hash) + getSaturdayList().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -520,13 +724,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.commons.ProfileTOD parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.commons.ProfileTOD parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -595,25 +797,36 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.ProfileTOD.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       sunday_ = emptyFloatList();
+      bitField0_ = (bitField0_ & ~0x00000001);
       monday_ = emptyFloatList();
+      bitField0_ = (bitField0_ & ~0x00000002);
       tuesday_ = emptyFloatList();
+      bitField0_ = (bitField0_ & ~0x00000004);
       wednesday_ = emptyFloatList();
+      bitField0_ = (bitField0_ & ~0x00000008);
       thursday_ = emptyFloatList();
+      bitField0_ = (bitField0_ & ~0x00000010);
       friday_ = emptyFloatList();
+      bitField0_ = (bitField0_ & ~0x00000020);
       saturday_ = emptyFloatList();
+      bitField0_ = (bitField0_ & ~0x00000040);
       return this;
     }
 
@@ -640,13 +853,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.ProfileTOD buildPartial() {
       com.tcn.cloud.api.api.commons.ProfileTOD result = new com.tcn.cloud.api.api.commons.ProfileTOD(this);
-      buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      onBuilt();
-      return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.ProfileTOD result) {
+      int from_bitField0_ = bitField0_;
       if (((bitField0_ & 0x00000001) != 0)) {
         sunday_.makeImmutable();
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -682,10 +889,8 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000040);
       }
       result.saturday_ = saturday_;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.commons.ProfileTOD result) {
-      int from_bitField0_ = bitField0_;
+      onBuilt();
+      return result;
     }
 
     @java.lang.Override
@@ -802,7 +1007,7 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -817,142 +1022,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.commons.ProfileTOD parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 13: {
-              float v = input.readFloat();
-              ensureSundayIsMutable();
-              sunday_.addFloat(v);
-              break;
-            } // case 13
-            case 10: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              ensureSundayIsMutable();
-              while (input.getBytesUntilLimit() > 0) {
-                sunday_.addFloat(input.readFloat());
-              }
-              input.popLimit(limit);
-              break;
-            } // case 10
-            case 21: {
-              float v = input.readFloat();
-              ensureMondayIsMutable();
-              monday_.addFloat(v);
-              break;
-            } // case 21
-            case 18: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              ensureMondayIsMutable();
-              while (input.getBytesUntilLimit() > 0) {
-                monday_.addFloat(input.readFloat());
-              }
-              input.popLimit(limit);
-              break;
-            } // case 18
-            case 29: {
-              float v = input.readFloat();
-              ensureTuesdayIsMutable();
-              tuesday_.addFloat(v);
-              break;
-            } // case 29
-            case 26: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              ensureTuesdayIsMutable();
-              while (input.getBytesUntilLimit() > 0) {
-                tuesday_.addFloat(input.readFloat());
-              }
-              input.popLimit(limit);
-              break;
-            } // case 26
-            case 37: {
-              float v = input.readFloat();
-              ensureWednesdayIsMutable();
-              wednesday_.addFloat(v);
-              break;
-            } // case 37
-            case 34: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              ensureWednesdayIsMutable();
-              while (input.getBytesUntilLimit() > 0) {
-                wednesday_.addFloat(input.readFloat());
-              }
-              input.popLimit(limit);
-              break;
-            } // case 34
-            case 45: {
-              float v = input.readFloat();
-              ensureThursdayIsMutable();
-              thursday_.addFloat(v);
-              break;
-            } // case 45
-            case 42: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              ensureThursdayIsMutable();
-              while (input.getBytesUntilLimit() > 0) {
-                thursday_.addFloat(input.readFloat());
-              }
-              input.popLimit(limit);
-              break;
-            } // case 42
-            case 53: {
-              float v = input.readFloat();
-              ensureFridayIsMutable();
-              friday_.addFloat(v);
-              break;
-            } // case 53
-            case 50: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              ensureFridayIsMutable();
-              while (input.getBytesUntilLimit() > 0) {
-                friday_.addFloat(input.readFloat());
-              }
-              input.popLimit(limit);
-              break;
-            } // case 50
-            case 61: {
-              float v = input.readFloat();
-              ensureSaturdayIsMutable();
-              saturday_.addFloat(v);
-              break;
-            } // case 61
-            case 58: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              ensureSaturdayIsMutable();
-              while (input.getBytesUntilLimit() > 0) {
-                saturday_.addFloat(input.readFloat());
-              }
-              input.popLimit(limit);
-              break;
-            } // case 58
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.commons.ProfileTOD) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -962,7 +1042,7 @@ private static final long serialVersionUID = 0L;
       if (!((bitField0_ & 0x00000001) != 0)) {
         sunday_ = mutableCopy(sunday_);
         bitField0_ |= 0x00000001;
-      }
+       }
     }
     /**
      * <code>repeated float sunday = 1 [json_name = "sunday"];</code>
@@ -996,7 +1076,6 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSunday(
         int index, float value) {
-
       ensureSundayIsMutable();
       sunday_.setFloat(index, value);
       onChanged();
@@ -1008,7 +1087,6 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder addSunday(float value) {
-
       ensureSundayIsMutable();
       sunday_.addFloat(value);
       onChanged();
@@ -1043,7 +1121,7 @@ private static final long serialVersionUID = 0L;
       if (!((bitField0_ & 0x00000002) != 0)) {
         monday_ = mutableCopy(monday_);
         bitField0_ |= 0x00000002;
-      }
+       }
     }
     /**
      * <code>repeated float monday = 2 [json_name = "monday"];</code>
@@ -1077,7 +1155,6 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setMonday(
         int index, float value) {
-
       ensureMondayIsMutable();
       monday_.setFloat(index, value);
       onChanged();
@@ -1089,7 +1166,6 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder addMonday(float value) {
-
       ensureMondayIsMutable();
       monday_.addFloat(value);
       onChanged();
@@ -1124,7 +1200,7 @@ private static final long serialVersionUID = 0L;
       if (!((bitField0_ & 0x00000004) != 0)) {
         tuesday_ = mutableCopy(tuesday_);
         bitField0_ |= 0x00000004;
-      }
+       }
     }
     /**
      * <code>repeated float tuesday = 3 [json_name = "tuesday"];</code>
@@ -1158,7 +1234,6 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTuesday(
         int index, float value) {
-
       ensureTuesdayIsMutable();
       tuesday_.setFloat(index, value);
       onChanged();
@@ -1170,7 +1245,6 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder addTuesday(float value) {
-
       ensureTuesdayIsMutable();
       tuesday_.addFloat(value);
       onChanged();
@@ -1205,7 +1279,7 @@ private static final long serialVersionUID = 0L;
       if (!((bitField0_ & 0x00000008) != 0)) {
         wednesday_ = mutableCopy(wednesday_);
         bitField0_ |= 0x00000008;
-      }
+       }
     }
     /**
      * <code>repeated float wednesday = 4 [json_name = "wednesday"];</code>
@@ -1239,7 +1313,6 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setWednesday(
         int index, float value) {
-
       ensureWednesdayIsMutable();
       wednesday_.setFloat(index, value);
       onChanged();
@@ -1251,7 +1324,6 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder addWednesday(float value) {
-
       ensureWednesdayIsMutable();
       wednesday_.addFloat(value);
       onChanged();
@@ -1286,7 +1358,7 @@ private static final long serialVersionUID = 0L;
       if (!((bitField0_ & 0x00000010) != 0)) {
         thursday_ = mutableCopy(thursday_);
         bitField0_ |= 0x00000010;
-      }
+       }
     }
     /**
      * <code>repeated float thursday = 5 [json_name = "thursday"];</code>
@@ -1320,7 +1392,6 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setThursday(
         int index, float value) {
-
       ensureThursdayIsMutable();
       thursday_.setFloat(index, value);
       onChanged();
@@ -1332,7 +1403,6 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder addThursday(float value) {
-
       ensureThursdayIsMutable();
       thursday_.addFloat(value);
       onChanged();
@@ -1367,7 +1437,7 @@ private static final long serialVersionUID = 0L;
       if (!((bitField0_ & 0x00000020) != 0)) {
         friday_ = mutableCopy(friday_);
         bitField0_ |= 0x00000020;
-      }
+       }
     }
     /**
      * <code>repeated float friday = 6 [json_name = "friday"];</code>
@@ -1401,7 +1471,6 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFriday(
         int index, float value) {
-
       ensureFridayIsMutable();
       friday_.setFloat(index, value);
       onChanged();
@@ -1413,7 +1482,6 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder addFriday(float value) {
-
       ensureFridayIsMutable();
       friday_.addFloat(value);
       onChanged();
@@ -1448,7 +1516,7 @@ private static final long serialVersionUID = 0L;
       if (!((bitField0_ & 0x00000040) != 0)) {
         saturday_ = mutableCopy(saturday_);
         bitField0_ |= 0x00000040;
-      }
+       }
     }
     /**
      * <code>repeated float saturday = 7 [json_name = "saturday"];</code>
@@ -1482,7 +1550,6 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSaturday(
         int index, float value) {
-
       ensureSaturdayIsMutable();
       saturday_.setFloat(index, value);
       onChanged();
@@ -1494,7 +1561,6 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder addSaturday(float value) {
-
       ensureSaturdayIsMutable();
       saturday_.addFloat(value);
       onChanged();
@@ -1556,18 +1622,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new ProfileTOD(input, extensionRegistry);
     }
   };
 

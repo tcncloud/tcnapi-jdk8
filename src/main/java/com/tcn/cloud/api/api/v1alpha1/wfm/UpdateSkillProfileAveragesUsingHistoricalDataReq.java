@@ -30,6 +30,91 @@ private static final long serialVersionUID = 0L;
     return new UpdateSkillProfileAveragesUsingHistoricalDataReq();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private UpdateSkillProfileAveragesUsingHistoricalDataReq(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              skillProfileSids_ = newLongList();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            skillProfileSids_.addLong(input.readInt64());
+            break;
+          }
+          case 10: {
+            int length = input.readRawVarint32();
+            int limit = input.pushLimit(length);
+            if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+              skillProfileSids_ = newLongList();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            while (input.getBytesUntilLimit() > 0) {
+              skillProfileSids_.addLong(input.readInt64());
+            }
+            input.popLimit(limit);
+            break;
+          }
+          case 18: {
+            com.tcn.cloud.api.api.commons.DatetimeRange.Builder subBuilder = null;
+            if (datetimeRange_ != null) {
+              subBuilder = datetimeRange_.toBuilder();
+            }
+            datetimeRange_ = input.readMessage(com.tcn.cloud.api.api.commons.DatetimeRange.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(datetimeRange_);
+              datetimeRange_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 24: {
+
+            excludeSkillProfilesWithManualAverages_ = input.readBool();
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        skillProfileSids_.makeImmutable(); // C
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_UpdateSkillProfileAveragesUsingHistoricalDataReq_descriptor;
@@ -44,7 +129,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SKILL_PROFILE_SIDS_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
   private com.google.protobuf.Internal.LongList skillProfileSids_;
   /**
    * <pre>
@@ -125,11 +209,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder getDatetimeRangeOrBuilder() {
-    return datetimeRange_ == null ? com.tcn.cloud.api.api.commons.DatetimeRange.getDefaultInstance() : datetimeRange_;
+    return getDatetimeRange();
   }
 
   public static final int EXCLUDE_SKILL_PROFILES_WITH_MANUAL_AVERAGES_FIELD_NUMBER = 3;
-  private boolean excludeSkillProfilesWithManualAverages_ = false;
+  private boolean excludeSkillProfilesWithManualAverages_;
   /**
    * <pre>
    * If true, it will exclude skill profiles that have manual averages in them from the calculation (even if those skill profiles are in &#64;skill_profile_sids).
@@ -172,7 +256,7 @@ private static final long serialVersionUID = 0L;
     if (excludeSkillProfilesWithManualAverages_ != false) {
       output.writeBool(3, excludeSkillProfilesWithManualAverages_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -203,7 +287,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(3, excludeSkillProfilesWithManualAverages_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -227,7 +311,7 @@ private static final long serialVersionUID = 0L;
     }
     if (getExcludeSkillProfilesWithManualAverages()
         != other.getExcludeSkillProfilesWithManualAverages()) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -249,7 +333,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + EXCLUDE_SKILL_PROFILES_WITH_MANUAL_AVERAGES_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getExcludeSkillProfilesWithManualAverages());
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -298,13 +382,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -372,25 +454,32 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       skillProfileSids_ = emptyLongList();
-      datetimeRange_ = null;
-      if (datetimeRangeBuilder_ != null) {
-        datetimeRangeBuilder_.dispose();
+      bitField0_ = (bitField0_ & ~0x00000001);
+      if (datetimeRangeBuilder_ == null) {
+        datetimeRange_ = null;
+      } else {
+        datetimeRange_ = null;
         datetimeRangeBuilder_ = null;
       }
       excludeSkillProfilesWithManualAverages_ = false;
+
       return this;
     }
 
@@ -417,30 +506,20 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataReq buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataReq result = new com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataReq(this);
-      buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      onBuilt();
-      return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataReq result) {
+      int from_bitField0_ = bitField0_;
       if (((bitField0_ & 0x00000001) != 0)) {
         skillProfileSids_.makeImmutable();
         bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.skillProfileSids_ = skillProfileSids_;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataReq result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.datetimeRange_ = datetimeRangeBuilder_ == null
-            ? datetimeRange_
-            : datetimeRangeBuilder_.build();
+      if (datetimeRangeBuilder_ == null) {
+        result.datetimeRange_ = datetimeRange_;
+      } else {
+        result.datetimeRange_ = datetimeRangeBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.excludeSkillProfilesWithManualAverages_ = excludeSkillProfilesWithManualAverages_;
-      }
+      result.excludeSkillProfilesWithManualAverages_ = excludeSkillProfilesWithManualAverages_;
+      onBuilt();
+      return result;
     }
 
     @java.lang.Override
@@ -503,7 +582,7 @@ private static final long serialVersionUID = 0L;
       if (other.getExcludeSkillProfilesWithManualAverages() != false) {
         setExcludeSkillProfilesWithManualAverages(other.getExcludeSkillProfilesWithManualAverages());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -518,58 +597,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataReq parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              long v = input.readInt64();
-              ensureSkillProfileSidsIsMutable();
-              skillProfileSids_.addLong(v);
-              break;
-            } // case 8
-            case 10: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              ensureSkillProfileSidsIsMutable();
-              while (input.getBytesUntilLimit() > 0) {
-                skillProfileSids_.addLong(input.readInt64());
-              }
-              input.popLimit(limit);
-              break;
-            } // case 10
-            case 18: {
-              input.readMessage(
-                  getDatetimeRangeFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 24: {
-              excludeSkillProfilesWithManualAverages_ = input.readBool();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 24
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -579,7 +617,7 @@ private static final long serialVersionUID = 0L;
       if (!((bitField0_ & 0x00000001) != 0)) {
         skillProfileSids_ = mutableCopy(skillProfileSids_);
         bitField0_ |= 0x00000001;
-      }
+       }
     }
     /**
      * <pre>
@@ -629,7 +667,6 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSkillProfileSids(
         int index, long value) {
-
       ensureSkillProfileSidsIsMutable();
       skillProfileSids_.setLong(index, value);
       onChanged();
@@ -645,7 +682,6 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder addSkillProfileSids(long value) {
-
       ensureSkillProfileSidsIsMutable();
       skillProfileSids_.addLong(value);
       onChanged();
@@ -697,7 +733,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the datetimeRange field is set.
      */
     public boolean hasDatetimeRange() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return datetimeRangeBuilder_ != null || datetimeRange_ != null;
     }
     /**
      * <pre>
@@ -731,11 +767,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         datetimeRange_ = value;
+        onChanged();
       } else {
         datetimeRangeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -751,11 +787,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.DatetimeRange.Builder builderForValue) {
       if (datetimeRangeBuilder_ == null) {
         datetimeRange_ = builderForValue.build();
+        onChanged();
       } else {
         datetimeRangeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -769,18 +805,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDatetimeRange(com.tcn.cloud.api.api.commons.DatetimeRange value) {
       if (datetimeRangeBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
-          datetimeRange_ != null &&
-          datetimeRange_ != com.tcn.cloud.api.api.commons.DatetimeRange.getDefaultInstance()) {
-          getDatetimeRangeBuilder().mergeFrom(value);
+        if (datetimeRange_ != null) {
+          datetimeRange_ =
+            com.tcn.cloud.api.api.commons.DatetimeRange.newBuilder(datetimeRange_).mergeFrom(value).buildPartial();
         } else {
           datetimeRange_ = value;
         }
+        onChanged();
       } else {
         datetimeRangeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -793,13 +828,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.DatetimeRange datetime_range = 2 [json_name = "datetimeRange"];</code>
      */
     public Builder clearDatetimeRange() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      datetimeRange_ = null;
-      if (datetimeRangeBuilder_ != null) {
-        datetimeRangeBuilder_.dispose();
+      if (datetimeRangeBuilder_ == null) {
+        datetimeRange_ = null;
+        onChanged();
+      } else {
+        datetimeRange_ = null;
         datetimeRangeBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -812,7 +848,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.DatetimeRange datetime_range = 2 [json_name = "datetimeRange"];</code>
      */
     public com.tcn.cloud.api.api.commons.DatetimeRange.Builder getDatetimeRangeBuilder() {
-      bitField0_ |= 0x00000002;
+      
       onChanged();
       return getDatetimeRangeFieldBuilder().getBuilder();
     }
@@ -881,9 +917,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setExcludeSkillProfilesWithManualAverages(boolean value) {
-
+      
       excludeSkillProfilesWithManualAverages_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -897,7 +932,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearExcludeSkillProfilesWithManualAverages() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       excludeSkillProfilesWithManualAverages_ = false;
       onChanged();
       return this;
@@ -935,18 +970,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new UpdateSkillProfileAveragesUsingHistoricalDataReq(input, extensionRegistry);
     }
   };
 

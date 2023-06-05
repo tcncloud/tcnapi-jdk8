@@ -37,5 +37,5 @@ public interface SourceOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.delivery.SftpSourceOrBuilder getSftpOrBuilder();
 
-  com.tcn.cloud.api.api.v1alpha1.delivery.Source.ValueCase getValueCase();
+  public com.tcn.cloud.api.api.v1alpha1.delivery.Source.ValueCase getValueCase();
 }

@@ -29,8 +29,8 @@ public final class ServiceProto {
       "oto\032\034google/api/annotations.proto2\232\001\n\010Se" +
       "ntinel\022\215\001\n\nSendEvents\022$.api.v1alpha1.sen" +
       "tinel.SendEventsReq\032$.api.v1alpha1.senti" +
-      "nel.SendEventsRes\"3\272\270\221\002\002\030\001\202\323\344\223\002&\"!/api/v" +
-      "1alpha1/sentinel/sendevents:\001*B\255\001\n\'com.t" +
+      "nel.SendEventsRes\"3\272\270\221\002\002\030\001\202\323\344\223\002&:\001*\"!/ap" +
+      "i/v1alpha1/sentinel/sendeventsB\255\001\n\'com.t" +
       "cn.cloud.api.api.v1alpha1.sentinelB\014Serv" +
       "iceProtoP\001\242\002\003AVS\252\002\025Api.V1alpha1.Sentinel" +
       "\312\002\025Api\\V1alpha1\\Sentinel\342\002!Api\\V1alpha1\\" +

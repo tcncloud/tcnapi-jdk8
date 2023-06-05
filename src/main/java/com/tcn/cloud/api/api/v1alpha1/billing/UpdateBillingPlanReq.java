@@ -30,6 +30,61 @@ private static final long serialVersionUID = 0L;
     return new UpdateBillingPlanReq();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private UpdateBillingPlanReq(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              updates_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq.UpdateReq>();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            updates_.add(
+                input.readMessage(com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq.UpdateReq.parser(), extensionRegistry));
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        updates_ = java.util.Collections.unmodifiableList(updates_);
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.billing.EntitiesProto.internal_static_api_v1alpha1_billing_UpdateBillingPlanReq_descriptor;
@@ -132,8 +187,7 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private UpdateReq() {
-      fields_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      fields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -143,6 +197,74 @@ private static final long serialVersionUID = 0L;
       return new UpdateReq();
     }
 
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateReq(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.tcn.cloud.api.api.commons.billing.Detail.Builder subBuilder = null;
+              if (billingDetail_ != null) {
+                subBuilder = billingDetail_.toBuilder();
+              }
+              billingDetail_ = input.readMessage(com.tcn.cloud.api.api.commons.billing.Detail.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(billingDetail_);
+                billingDetail_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                fields_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              fields_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          fields_ = fields_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.tcn.cloud.api.api.v1alpha1.billing.EntitiesProto.internal_static_api_v1alpha1_billing_UpdateBillingPlanReq_UpdateReq_descriptor;
@@ -191,13 +313,11 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.billing.DetailOrBuilder getBillingDetailOrBuilder() {
-      return billingDetail_ == null ? com.tcn.cloud.api.api.commons.billing.Detail.getDefaultInstance() : billingDetail_;
+      return getBillingDetail();
     }
 
     public static final int FIELDS_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList fields_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.LazyStringList fields_;
     /**
      * <pre>
      * Required. the mask of fields to update for the billing detail
@@ -267,7 +387,7 @@ private static final long serialVersionUID = 0L;
       for (int i = 0; i < fields_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, fields_.getRaw(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -288,7 +408,7 @@ private static final long serialVersionUID = 0L;
         size += dataSize;
         size += 1 * getFieldsList().size();
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -310,7 +430,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!getFieldsList()
           .equals(other.getFieldsList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -329,7 +449,7 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + FIELDS_FIELD_NUMBER;
         hash = (53 * hash) + getFieldsList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -378,13 +498,11 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-
     public static com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq.UpdateReq parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-
     public static com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq.UpdateReq parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -452,25 +570,30 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq.UpdateReq.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
-        billingDetail_ = null;
-        if (billingDetailBuilder_ != null) {
-          billingDetailBuilder_.dispose();
+        if (billingDetailBuilder_ == null) {
+          billingDetail_ = null;
+        } else {
+          billingDetail_ = null;
           billingDetailBuilder_ = null;
         }
-        fields_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
+        fields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -497,22 +620,19 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq.UpdateReq buildPartial() {
         com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq.UpdateReq result = new com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq.UpdateReq(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        int from_bitField0_ = bitField0_;
+        if (billingDetailBuilder_ == null) {
+          result.billingDetail_ = billingDetail_;
+        } else {
+          result.billingDetail_ = billingDetailBuilder_.build();
+        }
+        if (((bitField0_ & 0x00000001) != 0)) {
+          fields_ = fields_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.fields_ = fields_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq.UpdateReq result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.billingDetail_ = billingDetailBuilder_ == null
-              ? billingDetail_
-              : billingDetailBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          fields_.makeImmutable();
-          result.fields_ = fields_;
-        }
       }
 
       @java.lang.Override
@@ -565,14 +685,14 @@ private static final long serialVersionUID = 0L;
         if (!other.fields_.isEmpty()) {
           if (fields_.isEmpty()) {
             fields_ = other.fields_;
-            bitField0_ |= 0x00000002;
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureFieldsIsMutable();
             fields_.addAll(other.fields_);
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -587,43 +707,17 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq.UpdateReq parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getBillingDetailFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                java.lang.String s = input.readStringRequireUtf8();
-                ensureFieldsIsMutable();
-                fields_.add(s);
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq.UpdateReq) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -640,7 +734,7 @@ private static final long serialVersionUID = 0L;
        * @return Whether the billingDetail field is set.
        */
       public boolean hasBillingDetail() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return billingDetailBuilder_ != null || billingDetail_ != null;
       }
       /**
        * <pre>
@@ -670,11 +764,11 @@ private static final long serialVersionUID = 0L;
             throw new NullPointerException();
           }
           billingDetail_ = value;
+          onChanged();
         } else {
           billingDetailBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+
         return this;
       }
       /**
@@ -688,11 +782,11 @@ private static final long serialVersionUID = 0L;
           com.tcn.cloud.api.api.commons.billing.Detail.Builder builderForValue) {
         if (billingDetailBuilder_ == null) {
           billingDetail_ = builderForValue.build();
+          onChanged();
         } else {
           billingDetailBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+
         return this;
       }
       /**
@@ -704,18 +798,17 @@ private static final long serialVersionUID = 0L;
        */
       public Builder mergeBillingDetail(com.tcn.cloud.api.api.commons.billing.Detail value) {
         if (billingDetailBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            billingDetail_ != null &&
-            billingDetail_ != com.tcn.cloud.api.api.commons.billing.Detail.getDefaultInstance()) {
-            getBillingDetailBuilder().mergeFrom(value);
+          if (billingDetail_ != null) {
+            billingDetail_ =
+              com.tcn.cloud.api.api.commons.billing.Detail.newBuilder(billingDetail_).mergeFrom(value).buildPartial();
           } else {
             billingDetail_ = value;
           }
+          onChanged();
         } else {
           billingDetailBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+
         return this;
       }
       /**
@@ -726,13 +819,14 @@ private static final long serialVersionUID = 0L;
        * <code>.api.commons.billing.Detail billing_detail = 1 [json_name = "billingDetail"];</code>
        */
       public Builder clearBillingDetail() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        billingDetail_ = null;
-        if (billingDetailBuilder_ != null) {
-          billingDetailBuilder_.dispose();
+        if (billingDetailBuilder_ == null) {
+          billingDetail_ = null;
+          onChanged();
+        } else {
+          billingDetail_ = null;
           billingDetailBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
@@ -743,7 +837,7 @@ private static final long serialVersionUID = 0L;
        * <code>.api.commons.billing.Detail billing_detail = 1 [json_name = "billingDetail"];</code>
        */
       public com.tcn.cloud.api.api.commons.billing.Detail.Builder getBillingDetailBuilder() {
-        bitField0_ |= 0x00000001;
+        
         onChanged();
         return getBillingDetailFieldBuilder().getBuilder();
       }
@@ -783,13 +877,12 @@ private static final long serialVersionUID = 0L;
         return billingDetailBuilder_;
       }
 
-      private com.google.protobuf.LazyStringArrayList fields_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      private com.google.protobuf.LazyStringList fields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureFieldsIsMutable() {
-        if (!fields_.isModifiable()) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           fields_ = new com.google.protobuf.LazyStringArrayList(fields_);
-        }
-        bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
+         }
       }
       /**
        * <pre>
@@ -801,8 +894,7 @@ private static final long serialVersionUID = 0L;
        */
       public com.google.protobuf.ProtocolStringList
           getFieldsList() {
-        fields_.makeImmutable();
-        return fields_;
+        return fields_.getUnmodifiableView();
       }
       /**
        * <pre>
@@ -852,10 +944,11 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setFields(
           int index, java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureFieldsIsMutable();
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureFieldsIsMutable();
         fields_.set(index, value);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -870,10 +963,11 @@ private static final long serialVersionUID = 0L;
        */
       public Builder addFields(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureFieldsIsMutable();
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureFieldsIsMutable();
         fields_.add(value);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -891,7 +985,6 @@ private static final long serialVersionUID = 0L;
         ensureFieldsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, fields_);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -904,9 +997,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearFields() {
-        fields_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);;
+        fields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -921,11 +1013,12 @@ private static final long serialVersionUID = 0L;
        */
       public Builder addFieldsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
         ensureFieldsIsMutable();
         fields_.add(value);
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -962,18 +1055,7 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new UpdateReq(input, extensionRegistry);
       }
     };
 
@@ -994,7 +1076,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int UPDATES_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq.UpdateReq> updates_;
   /**
    * <pre>
@@ -1071,7 +1152,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < updates_.size(); i++) {
       output.writeMessage(1, updates_.get(i));
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -1084,7 +1165,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, updates_.get(i));
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -1101,7 +1182,7 @@ private static final long serialVersionUID = 0L;
 
     if (!getUpdatesList()
         .equals(other.getUpdatesList())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -1116,7 +1197,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + UPDATES_FIELD_NUMBER;
       hash = (53 * hash) + getUpdatesList().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1165,13 +1246,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1239,25 +1318,29 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getUpdatesFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       if (updatesBuilder_ == null) {
         updates_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
-        updates_ = null;
         updatesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -1284,13 +1367,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq result = new com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq(this);
-      buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      onBuilt();
-      return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq result) {
+      int from_bitField0_ = bitField0_;
       if (updatesBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           updates_ = java.util.Collections.unmodifiableList(updates_);
@@ -1300,10 +1377,8 @@ private static final long serialVersionUID = 0L;
       } else {
         result.updates_ = updatesBuilder_.build();
       }
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq result) {
-      int from_bitField0_ = bitField0_;
+      onBuilt();
+      return result;
     }
 
     @java.lang.Override
@@ -1376,7 +1451,7 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -1391,43 +1466,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq.UpdateReq m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq.UpdateReq.parser(),
-                      extensionRegistry);
-              if (updatesBuilder_ == null) {
-                ensureUpdatesIsMutable();
-                updates_.add(m);
-              } else {
-                updatesBuilder_.addMessage(m);
-              }
-              break;
-            } // case 10
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.billing.UpdateBillingPlanReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -1776,18 +1825,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new UpdateBillingPlanReq(input, extensionRegistry);
     }
   };
 

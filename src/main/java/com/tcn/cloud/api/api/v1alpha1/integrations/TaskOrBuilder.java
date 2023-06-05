@@ -46,11 +46,10 @@ public interface TaskOrBuilder extends
    *
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; values = 1 [json_name = "values"];</code>
    */
-  /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrations.Value getValuesOrDefault(
+
+  com.tcn.cloud.api.api.v1alpha1.integrations.Value getValuesOrDefault(
       java.lang.String key,
-      /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue);
+      com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue);
   /**
    * <pre>
    * the data used to fetch info about this task when the user clicks on a link
@@ -58,6 +57,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue);
    *
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; values = 1 [json_name = "values"];</code>
    */
+
   com.tcn.cloud.api.api.v1alpha1.integrations.Value getValuesOrThrow(
       java.lang.String key);
 

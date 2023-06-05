@@ -16,8 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private PaymentLinkEnrichment() {
-    fields_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    fields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     paymentLinkConfigId_ = "";
     portalId_ = "";
   }
@@ -29,6 +28,91 @@ private static final long serialVersionUID = 0L;
     return new PaymentLinkEnrichment();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private PaymentLinkEnrichment(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              fields_ = new com.google.protobuf.LazyStringArrayList();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            fields_.add(s);
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            paymentLinkConfigId_ = s;
+            break;
+          }
+          case 24: {
+
+            discardOnMissingFields_ = input.readBool();
+            break;
+          }
+          case 34: {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              keyMap_ = com.google.protobuf.MapField.newMapField(
+                  KeyMapDefaultEntryHolder.defaultEntry);
+              mutable_bitField0_ |= 0x00000002;
+            }
+            com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+            keyMap__ = input.readMessage(
+                KeyMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+            keyMap_.getMutableMap().put(
+                keyMap__.getKey(), keyMap__.getValue());
+            break;
+          }
+          case 42: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            portalId_ = s;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        fields_ = fields_.getUnmodifiableView();
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.LmsProto.internal_static_api_v0alpha_PaymentLinkEnrichment_descriptor;
@@ -55,13 +139,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FIELDS_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList fields_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
+  private com.google.protobuf.LazyStringList fields_;
   /**
    * <code>repeated string fields = 1 [json_name = "fields", deprecated = true];</code>
-   * @deprecated api.v0alpha.PaymentLinkEnrichment.fields is deprecated.
-   *     See api/v0alpha/lms.proto;l=758
    * @return A list containing the fields.
    */
   @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
@@ -70,8 +150,6 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <code>repeated string fields = 1 [json_name = "fields", deprecated = true];</code>
-   * @deprecated api.v0alpha.PaymentLinkEnrichment.fields is deprecated.
-   *     See api/v0alpha/lms.proto;l=758
    * @return The count of fields.
    */
   @java.lang.Deprecated public int getFieldsCount() {
@@ -79,8 +157,6 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <code>repeated string fields = 1 [json_name = "fields", deprecated = true];</code>
-   * @deprecated api.v0alpha.PaymentLinkEnrichment.fields is deprecated.
-   *     See api/v0alpha/lms.proto;l=758
    * @param index The index of the element to return.
    * @return The fields at the given index.
    */
@@ -89,8 +165,6 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <code>repeated string fields = 1 [json_name = "fields", deprecated = true];</code>
-   * @deprecated api.v0alpha.PaymentLinkEnrichment.fields is deprecated.
-   *     See api/v0alpha/lms.proto;l=758
    * @param index The index of the value to return.
    * @return The bytes of the fields at the given index.
    */
@@ -100,12 +174,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PAYMENT_LINK_CONFIG_ID_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object paymentLinkConfigId_ = "";
+  private volatile java.lang.Object paymentLinkConfigId_;
   /**
    * <code>string payment_link_config_id = 2 [json_name = "paymentLinkConfigId", deprecated = true];</code>
-   * @deprecated api.v0alpha.PaymentLinkEnrichment.payment_link_config_id is deprecated.
-   *     See api/v0alpha/lms.proto;l=759
    * @return The paymentLinkConfigId.
    */
   @java.lang.Override
@@ -123,8 +194,6 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <code>string payment_link_config_id = 2 [json_name = "paymentLinkConfigId", deprecated = true];</code>
-   * @deprecated api.v0alpha.PaymentLinkEnrichment.payment_link_config_id is deprecated.
-   *     See api/v0alpha/lms.proto;l=759
    * @return The bytes for paymentLinkConfigId.
    */
   @java.lang.Override
@@ -143,7 +212,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DISCARD_ON_MISSING_FIELDS_FIELD_NUMBER = 3;
-  private boolean discardOnMissingFields_ = false;
+  private boolean discardOnMissingFields_;
   /**
    * <pre>
    * if true, we will not generate a link for lms records that to not contain *all* of the fields.
@@ -151,8 +220,6 @@ private static final long serialVersionUID = 0L;
    * </pre>
    *
    * <code>bool discard_on_missing_fields = 3 [json_name = "discardOnMissingFields", deprecated = true];</code>
-   * @deprecated api.v0alpha.PaymentLinkEnrichment.discard_on_missing_fields is deprecated.
-   *     See api/v0alpha/lms.proto;l=762
    * @return The discardOnMissingFields.
    */
   @java.lang.Override
@@ -172,7 +239,6 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "");
   }
-  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, java.lang.String> keyMap_;
   private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -183,6 +249,7 @@ private static final long serialVersionUID = 0L;
     }
     return keyMap_;
   }
+
   public int getKeyMapCount() {
     return internalGetKeyMap().getMap().size();
   }
@@ -193,10 +260,11 @@ private static final long serialVersionUID = 0L;
    *
    * <code>map&lt;string, string&gt; key_map = 4 [json_name = "keyMap"];</code>
    */
+
   @java.lang.Override
   public boolean containsKeyMap(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     return internalGetKeyMap().getMap().containsKey(key);
   }
   /**
@@ -215,6 +283,7 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; key_map = 4 [json_name = "keyMap"];</code>
    */
   @java.lang.Override
+
   public java.util.Map<java.lang.String, java.lang.String> getKeyMapMap() {
     return internalGetKeyMap().getMap();
   }
@@ -226,12 +295,11 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; key_map = 4 [json_name = "keyMap"];</code>
    */
   @java.lang.Override
-  public /* nullable */
-java.lang.String getKeyMapOrDefault(
+
+  public java.lang.String getKeyMapOrDefault(
       java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue) {
-    if (key == null) { throw new NullPointerException("map key"); }
+      java.lang.String defaultValue) {
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetKeyMap().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -244,9 +312,10 @@ java.lang.String defaultValue) {
    * <code>map&lt;string, string&gt; key_map = 4 [json_name = "keyMap"];</code>
    */
   @java.lang.Override
+
   public java.lang.String getKeyMapOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetKeyMap().getMap();
     if (!map.containsKey(key)) {
@@ -256,8 +325,7 @@ java.lang.String defaultValue) {
   }
 
   public static final int PORTAL_ID_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object portalId_ = "";
+  private volatile java.lang.Object portalId_;
   /**
    * <pre>
    * the portal that these links will belong to.
@@ -319,7 +387,7 @@ java.lang.String defaultValue) {
     for (int i = 0; i < fields_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, fields_.getRaw(i));
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(paymentLinkConfigId_)) {
+    if (!getPaymentLinkConfigIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, paymentLinkConfigId_);
     }
     if (discardOnMissingFields_ != false) {
@@ -331,10 +399,10 @@ java.lang.String defaultValue) {
         internalGetKeyMap(),
         KeyMapDefaultEntryHolder.defaultEntry,
         4);
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(portalId_)) {
+    if (!getPortalIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, portalId_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -351,7 +419,7 @@ java.lang.String defaultValue) {
       size += dataSize;
       size += 1 * getFieldsList().size();
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(paymentLinkConfigId_)) {
+    if (!getPaymentLinkConfigIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, paymentLinkConfigId_);
     }
     if (discardOnMissingFields_ != false) {
@@ -368,10 +436,10 @@ java.lang.String defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, keyMap__);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(portalId_)) {
+    if (!getPortalIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, portalId_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -396,7 +464,7 @@ java.lang.String defaultValue) {
         other.internalGetKeyMap())) return false;
     if (!getPortalId()
         .equals(other.getPortalId())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -422,7 +490,7 @@ java.lang.String defaultValue) {
     }
     hash = (37 * hash) + PORTAL_ID_FIELD_NUMBER;
     hash = (53 * hash) + getPortalId().hashCode();
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -471,13 +539,11 @@ java.lang.String defaultValue) {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.PaymentLinkEnrichment parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.PaymentLinkEnrichment parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -563,24 +629,31 @@ java.lang.String defaultValue) {
 
     // Construct using com.tcn.cloud.api.api.v0alpha.PaymentLinkEnrichment.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      fields_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      fields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000001);
       paymentLinkConfigId_ = "";
+
       discardOnMissingFields_ = false;
+
       internalGetMutableKeyMap().clear();
       portalId_ = "";
+
       return this;
     }
 
@@ -607,30 +680,19 @@ java.lang.String defaultValue) {
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.PaymentLinkEnrichment buildPartial() {
       com.tcn.cloud.api.api.v0alpha.PaymentLinkEnrichment result = new com.tcn.cloud.api.api.v0alpha.PaymentLinkEnrichment(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      int from_bitField0_ = bitField0_;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        fields_ = fields_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000001);
+      }
+      result.fields_ = fields_;
+      result.paymentLinkConfigId_ = paymentLinkConfigId_;
+      result.discardOnMissingFields_ = discardOnMissingFields_;
+      result.keyMap_ = internalGetKeyMap();
+      result.keyMap_.makeImmutable();
+      result.portalId_ = portalId_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.PaymentLinkEnrichment result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        fields_.makeImmutable();
-        result.fields_ = fields_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.paymentLinkConfigId_ = paymentLinkConfigId_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.discardOnMissingFields_ = discardOnMissingFields_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.keyMap_ = internalGetKeyMap();
-        result.keyMap_.makeImmutable();
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.portalId_ = portalId_;
-      }
     }
 
     @java.lang.Override
@@ -680,7 +742,7 @@ java.lang.String defaultValue) {
       if (!other.fields_.isEmpty()) {
         if (fields_.isEmpty()) {
           fields_ = other.fields_;
-          bitField0_ |= 0x00000001;
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensureFieldsIsMutable();
           fields_.addAll(other.fields_);
@@ -689,7 +751,6 @@ java.lang.String defaultValue) {
       }
       if (!other.getPaymentLinkConfigId().isEmpty()) {
         paymentLinkConfigId_ = other.paymentLinkConfigId_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.getDiscardOnMissingFields() != false) {
@@ -697,13 +758,11 @@ java.lang.String defaultValue) {
       }
       internalGetMutableKeyMap().mergeFrom(
           other.internalGetKeyMap());
-      bitField0_ |= 0x00000008;
       if (!other.getPortalId().isEmpty()) {
         portalId_ = other.portalId_;
-        bitField0_ |= 0x00000010;
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -718,87 +777,38 @@ java.lang.String defaultValue) {
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.PaymentLinkEnrichment parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensureFieldsIsMutable();
-              fields_.add(s);
-              break;
-            } // case 10
-            case 18: {
-              paymentLinkConfigId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 24: {
-              discardOnMissingFields_ = input.readBool();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 24
-            case 34: {
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-              keyMap__ = input.readMessage(
-                  KeyMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              internalGetMutableKeyMap().getMutableMap().put(
-                  keyMap__.getKey(), keyMap__.getValue());
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
-            case 42: {
-              portalId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 42
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.PaymentLinkEnrichment) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
 
-    private com.google.protobuf.LazyStringArrayList fields_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.LazyStringList fields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureFieldsIsMutable() {
-      if (!fields_.isModifiable()) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         fields_ = new com.google.protobuf.LazyStringArrayList(fields_);
-      }
-      bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000001;
+       }
     }
     /**
      * <code>repeated string fields = 1 [json_name = "fields", deprecated = true];</code>
-     * @deprecated api.v0alpha.PaymentLinkEnrichment.fields is deprecated.
-     *     See api/v0alpha/lms.proto;l=758
      * @return A list containing the fields.
      */
     @java.lang.Deprecated public com.google.protobuf.ProtocolStringList
         getFieldsList() {
-      fields_.makeImmutable();
-      return fields_;
+      return fields_.getUnmodifiableView();
     }
     /**
      * <code>repeated string fields = 1 [json_name = "fields", deprecated = true];</code>
-     * @deprecated api.v0alpha.PaymentLinkEnrichment.fields is deprecated.
-     *     See api/v0alpha/lms.proto;l=758
      * @return The count of fields.
      */
     @java.lang.Deprecated public int getFieldsCount() {
@@ -806,8 +816,6 @@ java.lang.String defaultValue) {
     }
     /**
      * <code>repeated string fields = 1 [json_name = "fields", deprecated = true];</code>
-     * @deprecated api.v0alpha.PaymentLinkEnrichment.fields is deprecated.
-     *     See api/v0alpha/lms.proto;l=758
      * @param index The index of the element to return.
      * @return The fields at the given index.
      */
@@ -816,8 +824,6 @@ java.lang.String defaultValue) {
     }
     /**
      * <code>repeated string fields = 1 [json_name = "fields", deprecated = true];</code>
-     * @deprecated api.v0alpha.PaymentLinkEnrichment.fields is deprecated.
-     *     See api/v0alpha/lms.proto;l=758
      * @param index The index of the value to return.
      * @return The bytes of the fields at the given index.
      */
@@ -827,41 +833,37 @@ java.lang.String defaultValue) {
     }
     /**
      * <code>repeated string fields = 1 [json_name = "fields", deprecated = true];</code>
-     * @deprecated api.v0alpha.PaymentLinkEnrichment.fields is deprecated.
-     *     See api/v0alpha/lms.proto;l=758
      * @param index The index to set the value at.
      * @param value The fields to set.
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder setFields(
         int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureFieldsIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureFieldsIsMutable();
       fields_.set(index, value);
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <code>repeated string fields = 1 [json_name = "fields", deprecated = true];</code>
-     * @deprecated api.v0alpha.PaymentLinkEnrichment.fields is deprecated.
-     *     See api/v0alpha/lms.proto;l=758
      * @param value The fields to add.
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder addFields(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureFieldsIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureFieldsIsMutable();
       fields_.add(value);
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <code>repeated string fields = 1 [json_name = "fields", deprecated = true];</code>
-     * @deprecated api.v0alpha.PaymentLinkEnrichment.fields is deprecated.
-     *     See api/v0alpha/lms.proto;l=758
      * @param values The fields to add.
      * @return This builder for chaining.
      */
@@ -870,37 +872,32 @@ java.lang.String defaultValue) {
       ensureFieldsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, fields_);
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <code>repeated string fields = 1 [json_name = "fields", deprecated = true];</code>
-     * @deprecated api.v0alpha.PaymentLinkEnrichment.fields is deprecated.
-     *     See api/v0alpha/lms.proto;l=758
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearFields() {
-      fields_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000001);;
+      fields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
      * <code>repeated string fields = 1 [json_name = "fields", deprecated = true];</code>
-     * @deprecated api.v0alpha.PaymentLinkEnrichment.fields is deprecated.
-     *     See api/v0alpha/lms.proto;l=758
      * @param value The bytes of the fields to add.
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder addFieldsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
       ensureFieldsIsMutable();
       fields_.add(value);
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -908,8 +905,6 @@ java.lang.String defaultValue) {
     private java.lang.Object paymentLinkConfigId_ = "";
     /**
      * <code>string payment_link_config_id = 2 [json_name = "paymentLinkConfigId", deprecated = true];</code>
-     * @deprecated api.v0alpha.PaymentLinkEnrichment.payment_link_config_id is deprecated.
-     *     See api/v0alpha/lms.proto;l=759
      * @return The paymentLinkConfigId.
      */
     @java.lang.Deprecated public java.lang.String getPaymentLinkConfigId() {
@@ -926,8 +921,6 @@ java.lang.String defaultValue) {
     }
     /**
      * <code>string payment_link_config_id = 2 [json_name = "paymentLinkConfigId", deprecated = true];</code>
-     * @deprecated api.v0alpha.PaymentLinkEnrichment.payment_link_config_id is deprecated.
-     *     See api/v0alpha/lms.proto;l=759
      * @return The bytes for paymentLinkConfigId.
      */
     @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -945,44 +938,42 @@ java.lang.String defaultValue) {
     }
     /**
      * <code>string payment_link_config_id = 2 [json_name = "paymentLinkConfigId", deprecated = true];</code>
-     * @deprecated api.v0alpha.PaymentLinkEnrichment.payment_link_config_id is deprecated.
-     *     See api/v0alpha/lms.proto;l=759
      * @param value The paymentLinkConfigId to set.
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder setPaymentLinkConfigId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       paymentLinkConfigId_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
      * <code>string payment_link_config_id = 2 [json_name = "paymentLinkConfigId", deprecated = true];</code>
-     * @deprecated api.v0alpha.PaymentLinkEnrichment.payment_link_config_id is deprecated.
-     *     See api/v0alpha/lms.proto;l=759
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearPaymentLinkConfigId() {
+      
       paymentLinkConfigId_ = getDefaultInstance().getPaymentLinkConfigId();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
      * <code>string payment_link_config_id = 2 [json_name = "paymentLinkConfigId", deprecated = true];</code>
-     * @deprecated api.v0alpha.PaymentLinkEnrichment.payment_link_config_id is deprecated.
-     *     See api/v0alpha/lms.proto;l=759
      * @param value The bytes for paymentLinkConfigId to set.
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder setPaymentLinkConfigIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       paymentLinkConfigId_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -995,8 +986,6 @@ java.lang.String defaultValue) {
      * </pre>
      *
      * <code>bool discard_on_missing_fields = 3 [json_name = "discardOnMissingFields", deprecated = true];</code>
-     * @deprecated api.v0alpha.PaymentLinkEnrichment.discard_on_missing_fields is deprecated.
-     *     See api/v0alpha/lms.proto;l=762
      * @return The discardOnMissingFields.
      */
     @java.lang.Override
@@ -1010,15 +999,12 @@ java.lang.String defaultValue) {
      * </pre>
      *
      * <code>bool discard_on_missing_fields = 3 [json_name = "discardOnMissingFields", deprecated = true];</code>
-     * @deprecated api.v0alpha.PaymentLinkEnrichment.discard_on_missing_fields is deprecated.
-     *     See api/v0alpha/lms.proto;l=762
      * @param value The discardOnMissingFields to set.
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder setDiscardOnMissingFields(boolean value) {
-
+      
       discardOnMissingFields_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1029,12 +1015,10 @@ java.lang.String defaultValue) {
      * </pre>
      *
      * <code>bool discard_on_missing_fields = 3 [json_name = "discardOnMissingFields", deprecated = true];</code>
-     * @deprecated api.v0alpha.PaymentLinkEnrichment.discard_on_missing_fields is deprecated.
-     *     See api/v0alpha/lms.proto;l=762
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearDiscardOnMissingFields() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       discardOnMissingFields_ = false;
       onChanged();
       return this;
@@ -1043,7 +1027,7 @@ java.lang.String defaultValue) {
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.String> keyMap_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetKeyMap() {
+    internalGetKeyMap() {
       if (keyMap_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             KeyMapDefaultEntryHolder.defaultEntry);
@@ -1051,7 +1035,8 @@ java.lang.String defaultValue) {
       return keyMap_;
     }
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetMutableKeyMap() {
+    internalGetMutableKeyMap() {
+      onChanged();;
       if (keyMap_ == null) {
         keyMap_ = com.google.protobuf.MapField.newMapField(
             KeyMapDefaultEntryHolder.defaultEntry);
@@ -1059,10 +1044,9 @@ java.lang.String defaultValue) {
       if (!keyMap_.isMutable()) {
         keyMap_ = keyMap_.copy();
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
       return keyMap_;
     }
+
     public int getKeyMapCount() {
       return internalGetKeyMap().getMap().size();
     }
@@ -1073,10 +1057,11 @@ java.lang.String defaultValue) {
      *
      * <code>map&lt;string, string&gt; key_map = 4 [json_name = "keyMap"];</code>
      */
+
     @java.lang.Override
     public boolean containsKeyMap(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetKeyMap().getMap().containsKey(key);
     }
     /**
@@ -1095,6 +1080,7 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, string&gt; key_map = 4 [json_name = "keyMap"];</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.String, java.lang.String> getKeyMapMap() {
       return internalGetKeyMap().getMap();
     }
@@ -1106,12 +1092,11 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, string&gt; key_map = 4 [json_name = "keyMap"];</code>
      */
     @java.lang.Override
-    public /* nullable */
-java.lang.String getKeyMapOrDefault(
+
+    public java.lang.String getKeyMapOrDefault(
         java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetKeyMap().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1124,9 +1109,10 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, string&gt; key_map = 4 [json_name = "keyMap"];</code>
      */
     @java.lang.Override
+
     public java.lang.String getKeyMapOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetKeyMap().getMap();
       if (!map.containsKey(key)) {
@@ -1134,8 +1120,8 @@ java.lang.String defaultValue) {
       }
       return map.get(key);
     }
+
     public Builder clearKeyMap() {
-      bitField0_ = (bitField0_ & ~0x00000008);
       internalGetMutableKeyMap().getMutableMap()
           .clear();
       return this;
@@ -1147,9 +1133,10 @@ java.lang.String defaultValue) {
      *
      * <code>map&lt;string, string&gt; key_map = 4 [json_name = "keyMap"];</code>
      */
+
     public Builder removeKeyMap(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableKeyMap().getMutableMap()
           .remove(key);
       return this;
@@ -1159,8 +1146,7 @@ java.lang.String defaultValue) {
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String>
-        getMutableKeyMap() {
-      bitField0_ |= 0x00000008;
+    getMutableKeyMap() {
       return internalGetMutableKeyMap().getMutableMap();
     }
     /**
@@ -1173,11 +1159,10 @@ java.lang.String defaultValue) {
     public Builder putKeyMap(
         java.lang.String key,
         java.lang.String value) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      if (value == null) { throw new NullPointerException("map value"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (value == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableKeyMap().getMutableMap()
           .put(key, value);
-      bitField0_ |= 0x00000008;
       return this;
     }
     /**
@@ -1187,11 +1172,11 @@ java.lang.String defaultValue) {
      *
      * <code>map&lt;string, string&gt; key_map = 4 [json_name = "keyMap"];</code>
      */
+
     public Builder putAllKeyMap(
         java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableKeyMap().getMutableMap()
           .putAll(values);
-      bitField0_ |= 0x00000008;
       return this;
     }
 
@@ -1248,9 +1233,11 @@ java.lang.String defaultValue) {
      */
     public Builder setPortalId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       portalId_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1263,8 +1250,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearPortalId() {
+      
       portalId_ = getDefaultInstance().getPortalId();
-      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1279,10 +1266,12 @@ java.lang.String defaultValue) {
      */
     public Builder setPortalIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       portalId_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1319,18 +1308,7 @@ java.lang.String defaultValue) {
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new PaymentLinkEnrichment(input, extensionRegistry);
     }
   };
 

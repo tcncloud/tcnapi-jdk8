@@ -37,8 +37,6 @@ public interface PortalLinkOrBuilder extends
    * </pre>
    *
    * <code>string plugin_instance_id = 5 [json_name = "pluginInstanceId", deprecated = true];</code>
-   * @deprecated api.v1alpha1.integrations.PortalLink.plugin_instance_id is deprecated.
-   *     See api/v1alpha1/integrations/service.proto;l=906
    * @return The pluginInstanceId.
    */
   @java.lang.Deprecated java.lang.String getPluginInstanceId();
@@ -48,8 +46,6 @@ public interface PortalLinkOrBuilder extends
    * </pre>
    *
    * <code>string plugin_instance_id = 5 [json_name = "pluginInstanceId", deprecated = true];</code>
-   * @deprecated api.v1alpha1.integrations.PortalLink.plugin_instance_id is deprecated.
-   *     See api/v1alpha1/integrations/service.proto;l=906
    * @return The bytes for pluginInstanceId.
    */
   @java.lang.Deprecated com.google.protobuf.ByteString
@@ -102,14 +98,14 @@ public interface PortalLinkOrBuilder extends
   /**
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; data = 8 [json_name = "data"];</code>
    */
-  /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrations.Value getDataOrDefault(
+
+  com.tcn.cloud.api.api.v1alpha1.integrations.Value getDataOrDefault(
       java.lang.String key,
-      /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue);
+      com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue);
   /**
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; data = 8 [json_name = "data"];</code>
    */
+
   com.tcn.cloud.api.api.v1alpha1.integrations.Value getDataOrThrow(
       java.lang.String key);
 
@@ -136,14 +132,14 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue);
   /**
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; metadata = 9 [json_name = "metadata"];</code>
    */
-  /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrations.Value getMetadataOrDefault(
+
+  com.tcn.cloud.api.api.v1alpha1.integrations.Value getMetadataOrDefault(
       java.lang.String key,
-      /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue);
+      com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue);
   /**
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; metadata = 9 [json_name = "metadata"];</code>
    */
+
   com.tcn.cloud.api.api.v1alpha1.integrations.Value getMetadataOrThrow(
       java.lang.String key);
 

@@ -27,6 +27,74 @@ private static final long serialVersionUID = 0L;
     return new Task();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private Task(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              values_ = com.google.protobuf.MapField.newMapField(
+                  ValuesDefaultEntryHolder.defaultEntry);
+              mutable_bitField0_ |= 0x00000001;
+            }
+            com.google.protobuf.MapEntry<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value>
+            values__ = input.readMessage(
+                ValuesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+            values_.getMutableMap().put(
+                values__.getKey(), values__.getValue());
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            taskId_ = s;
+            break;
+          }
+          case 24: {
+            int rawValue = input.readEnum();
+
+            src_ = rawValue;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_Task_descriptor;
@@ -64,7 +132,6 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.MESSAGE,
                 com.tcn.cloud.api.api.v1alpha1.integrations.Value.getDefaultInstance());
   }
-  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> values_;
   private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value>
@@ -75,6 +142,7 @@ private static final long serialVersionUID = 0L;
     }
     return values_;
   }
+
   public int getValuesCount() {
     return internalGetValues().getMap().size();
   }
@@ -85,10 +153,11 @@ private static final long serialVersionUID = 0L;
    *
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; values = 1 [json_name = "values"];</code>
    */
+
   @java.lang.Override
   public boolean containsValues(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     return internalGetValues().getMap().containsKey(key);
   }
   /**
@@ -107,6 +176,7 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; values = 1 [json_name = "values"];</code>
    */
   @java.lang.Override
+
   public java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> getValuesMap() {
     return internalGetValues().getMap();
   }
@@ -118,12 +188,11 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; values = 1 [json_name = "values"];</code>
    */
   @java.lang.Override
-  public /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrations.Value getValuesOrDefault(
+
+  public com.tcn.cloud.api.api.v1alpha1.integrations.Value getValuesOrDefault(
       java.lang.String key,
-      /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
-    if (key == null) { throw new NullPointerException("map key"); }
+      com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> map =
         internalGetValues().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -136,9 +205,10 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; values = 1 [json_name = "values"];</code>
    */
   @java.lang.Override
+
   public com.tcn.cloud.api.api.v1alpha1.integrations.Value getValuesOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> map =
         internalGetValues().getMap();
     if (!map.containsKey(key)) {
@@ -148,8 +218,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
   }
 
   public static final int TASK_ID_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object taskId_ = "";
+  private volatile java.lang.Object taskId_;
   /**
    * <pre>
    * the sms_id, email_id, etc that can be used to identify what generated this link
@@ -195,7 +264,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
   }
 
   public static final int SRC_FIELD_NUMBER = 3;
-  private int src_ = 0;
+  private int src_;
   /**
    * <pre>
    * the type of the source for this link. ex: Email, Sms, Chat
@@ -216,7 +285,8 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
    * @return The src.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.RequestSource getSrc() {
-    com.tcn.cloud.api.api.commons.integrations.RequestSource result = com.tcn.cloud.api.api.commons.integrations.RequestSource.forNumber(src_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.integrations.RequestSource result = com.tcn.cloud.api.api.commons.integrations.RequestSource.valueOf(src_);
     return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestSource.UNRECOGNIZED : result;
   }
 
@@ -240,13 +310,13 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
         internalGetValues(),
         ValuesDefaultEntryHolder.defaultEntry,
         1);
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(taskId_)) {
+    if (!getTaskIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, taskId_);
     }
     if (src_ != com.tcn.cloud.api.api.commons.integrations.RequestSource.REQUEST_SOURCE_IVR.getNumber()) {
       output.writeEnum(3, src_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -265,14 +335,14 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, values__);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(taskId_)) {
+    if (!getTaskIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, taskId_);
     }
     if (src_ != com.tcn.cloud.api.api.commons.integrations.RequestSource.REQUEST_SOURCE_IVR.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, src_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -292,7 +362,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     if (!getTaskId()
         .equals(other.getTaskId())) return false;
     if (src_ != other.src_) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -311,7 +381,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     hash = (53 * hash) + getTaskId().hashCode();
     hash = (37 * hash) + SRC_FIELD_NUMBER;
     hash = (53 * hash) + src_;
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -360,13 +430,11 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.integrations.Task parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.integrations.Task parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -452,21 +520,27 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.Task.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       internalGetMutableValues().clear();
       taskId_ = "";
+
       src_ = 0;
+
       return this;
     }
 
@@ -493,23 +567,13 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.integrations.Task buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.integrations.Task result = new com.tcn.cloud.api.api.v1alpha1.integrations.Task(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      int from_bitField0_ = bitField0_;
+      result.values_ = internalGetValues();
+      result.values_.makeImmutable();
+      result.taskId_ = taskId_;
+      result.src_ = src_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.Task result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.values_ = internalGetValues();
-        result.values_.makeImmutable();
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.taskId_ = taskId_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.src_ = src_;
-      }
     }
 
     @java.lang.Override
@@ -558,16 +622,14 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       if (other == com.tcn.cloud.api.api.v1alpha1.integrations.Task.getDefaultInstance()) return this;
       internalGetMutableValues().mergeFrom(
           other.internalGetValues());
-      bitField0_ |= 0x00000001;
       if (!other.getTaskId().isEmpty()) {
         taskId_ = other.taskId_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.src_ != 0) {
         setSrcValue(other.getSrcValue());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -582,49 +644,17 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.integrations.Task parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.google.protobuf.MapEntry<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value>
-              values__ = input.readMessage(
-                  ValuesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              internalGetMutableValues().getMutableMap().put(
-                  values__.getKey(), values__.getValue());
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              taskId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 24: {
-              src_ = input.readEnum();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 24
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.integrations.Task) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -632,7 +662,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     private com.google.protobuf.MapField<
         java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> values_;
     private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value>
-        internalGetValues() {
+    internalGetValues() {
       if (values_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             ValuesDefaultEntryHolder.defaultEntry);
@@ -640,7 +670,8 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       return values_;
     }
     private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value>
-        internalGetMutableValues() {
+    internalGetMutableValues() {
+      onChanged();;
       if (values_ == null) {
         values_ = com.google.protobuf.MapField.newMapField(
             ValuesDefaultEntryHolder.defaultEntry);
@@ -648,10 +679,9 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       if (!values_.isMutable()) {
         values_ = values_.copy();
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
       return values_;
     }
+
     public int getValuesCount() {
       return internalGetValues().getMap().size();
     }
@@ -662,10 +692,11 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      *
      * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; values = 1 [json_name = "values"];</code>
      */
+
     @java.lang.Override
     public boolean containsValues(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetValues().getMap().containsKey(key);
     }
     /**
@@ -684,6 +715,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; values = 1 [json_name = "values"];</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> getValuesMap() {
       return internalGetValues().getMap();
     }
@@ -695,12 +727,11 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; values = 1 [json_name = "values"];</code>
      */
     @java.lang.Override
-    public /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrations.Value getValuesOrDefault(
+
+    public com.tcn.cloud.api.api.v1alpha1.integrations.Value getValuesOrDefault(
         java.lang.String key,
-        /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+        com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> map =
           internalGetValues().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -713,9 +744,10 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; values = 1 [json_name = "values"];</code>
      */
     @java.lang.Override
+
     public com.tcn.cloud.api.api.v1alpha1.integrations.Value getValuesOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> map =
           internalGetValues().getMap();
       if (!map.containsKey(key)) {
@@ -723,8 +755,8 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       }
       return map.get(key);
     }
+
     public Builder clearValues() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       internalGetMutableValues().getMutableMap()
           .clear();
       return this;
@@ -736,9 +768,10 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      *
      * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; values = 1 [json_name = "values"];</code>
      */
+
     public Builder removeValues(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableValues().getMutableMap()
           .remove(key);
       return this;
@@ -748,8 +781,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value>
-        getMutableValues() {
-      bitField0_ |= 0x00000001;
+    getMutableValues() {
       return internalGetMutableValues().getMutableMap();
     }
     /**
@@ -762,11 +794,10 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
     public Builder putValues(
         java.lang.String key,
         com.tcn.cloud.api.api.v1alpha1.integrations.Value value) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      if (value == null) { throw new NullPointerException("map value"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (value == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableValues().getMutableMap()
           .put(key, value);
-      bitField0_ |= 0x00000001;
       return this;
     }
     /**
@@ -776,11 +807,11 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      *
      * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; values = 1 [json_name = "values"];</code>
      */
+
     public Builder putAllValues(
         java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrations.Value> values) {
       internalGetMutableValues().getMutableMap()
           .putAll(values);
-      bitField0_ |= 0x00000001;
       return this;
     }
 
@@ -837,9 +868,11 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      */
     public Builder setTaskId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       taskId_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -852,8 +885,8 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearTaskId() {
+      
       taskId_ = getDefaultInstance().getTaskId();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -868,10 +901,12 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      */
     public Builder setTaskIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       taskId_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -898,8 +933,8 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setSrcValue(int value) {
+      
       src_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -913,7 +948,8 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.integrations.RequestSource getSrc() {
-      com.tcn.cloud.api.api.commons.integrations.RequestSource result = com.tcn.cloud.api.api.commons.integrations.RequestSource.forNumber(src_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.integrations.RequestSource result = com.tcn.cloud.api.api.commons.integrations.RequestSource.valueOf(src_);
       return result == null ? com.tcn.cloud.api.api.commons.integrations.RequestSource.UNRECOGNIZED : result;
     }
     /**
@@ -929,7 +965,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000004;
+      
       src_ = value.getNumber();
       onChanged();
       return this;
@@ -943,7 +979,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearSrc() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       src_ = 0;
       onChanged();
       return this;
@@ -981,18 +1017,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue) {
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new Task(input, extensionRegistry);
     }
   };
 

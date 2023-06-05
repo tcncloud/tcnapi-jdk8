@@ -29,6 +29,92 @@ private static final long serialVersionUID = 0L;
     return new ScheduleRule();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private ScheduleRule(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+
+            scheduleRuleSid_ = input.readInt64();
+            break;
+          }
+          case 18: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (clientSid_ != null) {
+              subBuilder = clientSid_.toBuilder();
+            }
+            clientSid_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(clientSid_);
+              clientSid_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 26: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (name_ != null) {
+              subBuilder = name_.toBuilder();
+            }
+            name_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(name_);
+              name_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 34: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (ruleTimeZone_ != null) {
+              subBuilder = ruleTimeZone_.toBuilder();
+            }
+            ruleTimeZone_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(ruleTimeZone_);
+              ruleTimeZone_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.P3apiProto.internal_static_api_v0alpha_ScheduleRule_descriptor;
@@ -43,7 +129,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SCHEDULE_RULE_SID_FIELD_NUMBER = 1;
-  private long scheduleRuleSid_ = 0L;
+  private long scheduleRuleSid_;
   /**
    * <pre>
    * The 'sid' for the rule in the Skunk table.
@@ -92,7 +178,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getClientSidOrBuilder() {
-    return clientSid_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : clientSid_;
+    return getClientSid();
   }
 
   public static final int NAME_FIELD_NUMBER = 3;
@@ -130,7 +216,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
-    return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
+    return getName();
   }
 
   public static final int RULE_TIME_ZONE_FIELD_NUMBER = 4;
@@ -168,7 +254,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getRuleTimeZoneOrBuilder() {
-    return ruleTimeZone_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ruleTimeZone_;
+    return getRuleTimeZone();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -197,7 +283,7 @@ private static final long serialVersionUID = 0L;
     if (ruleTimeZone_ != null) {
       output.writeMessage(4, getRuleTimeZone());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -222,7 +308,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getRuleTimeZone());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -254,7 +340,7 @@ private static final long serialVersionUID = 0L;
       if (!getRuleTimeZone()
           .equals(other.getRuleTimeZone())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -280,7 +366,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + RULE_TIME_ZONE_FIELD_NUMBER;
       hash = (53 * hash) + getRuleTimeZone().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -329,13 +415,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.ScheduleRule parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.ScheduleRule parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -403,32 +487,40 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ScheduleRule.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       scheduleRuleSid_ = 0L;
-      clientSid_ = null;
-      if (clientSidBuilder_ != null) {
-        clientSidBuilder_.dispose();
+
+      if (clientSidBuilder_ == null) {
+        clientSid_ = null;
+      } else {
+        clientSid_ = null;
         clientSidBuilder_ = null;
       }
-      name_ = null;
-      if (nameBuilder_ != null) {
-        nameBuilder_.dispose();
+      if (nameBuilder_ == null) {
+        name_ = null;
+      } else {
+        name_ = null;
         nameBuilder_ = null;
       }
-      ruleTimeZone_ = null;
-      if (ruleTimeZoneBuilder_ != null) {
-        ruleTimeZoneBuilder_.dispose();
+      if (ruleTimeZoneBuilder_ == null) {
+        ruleTimeZone_ = null;
+      } else {
+        ruleTimeZone_ = null;
         ruleTimeZoneBuilder_ = null;
       }
       return this;
@@ -457,31 +549,24 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.ScheduleRule buildPartial() {
       com.tcn.cloud.api.api.v0alpha.ScheduleRule result = new com.tcn.cloud.api.api.v0alpha.ScheduleRule(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.scheduleRuleSid_ = scheduleRuleSid_;
+      if (clientSidBuilder_ == null) {
+        result.clientSid_ = clientSid_;
+      } else {
+        result.clientSid_ = clientSidBuilder_.build();
+      }
+      if (nameBuilder_ == null) {
+        result.name_ = name_;
+      } else {
+        result.name_ = nameBuilder_.build();
+      }
+      if (ruleTimeZoneBuilder_ == null) {
+        result.ruleTimeZone_ = ruleTimeZone_;
+      } else {
+        result.ruleTimeZone_ = ruleTimeZoneBuilder_.build();
+      }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ScheduleRule result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.scheduleRuleSid_ = scheduleRuleSid_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.clientSid_ = clientSidBuilder_ == null
-            ? clientSid_
-            : clientSidBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.name_ = nameBuilder_ == null
-            ? name_
-            : nameBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.ruleTimeZone_ = ruleTimeZoneBuilder_ == null
-            ? ruleTimeZone_
-            : ruleTimeZoneBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -540,7 +625,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasRuleTimeZone()) {
         mergeRuleTimeZone(other.getRuleTimeZone());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -555,59 +640,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.ScheduleRule parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              scheduleRuleSid_ = input.readInt64();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 18: {
-              input.readMessage(
-                  getClientSidFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 26: {
-              input.readMessage(
-                  getNameFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            case 34: {
-              input.readMessage(
-                  getRuleTimeZoneFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.ScheduleRule) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private long scheduleRuleSid_ ;
     /**
@@ -632,9 +677,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setScheduleRuleSid(long value) {
-
+      
       scheduleRuleSid_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -647,7 +691,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearScheduleRuleSid() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       scheduleRuleSid_ = 0L;
       onChanged();
       return this;
@@ -665,7 +709,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the clientSid field is set.
      */
     public boolean hasClientSid() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return clientSidBuilder_ != null || clientSid_ != null;
     }
     /**
      * <pre>
@@ -695,11 +739,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         clientSid_ = value;
+        onChanged();
       } else {
         clientSidBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -713,11 +757,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value.Builder builderForValue) {
       if (clientSidBuilder_ == null) {
         clientSid_ = builderForValue.build();
+        onChanged();
       } else {
         clientSidBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -729,18 +773,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeClientSid(com.google.protobuf.Int64Value value) {
       if (clientSidBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
-          clientSid_ != null &&
-          clientSid_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
-          getClientSidBuilder().mergeFrom(value);
+        if (clientSid_ != null) {
+          clientSid_ =
+            com.google.protobuf.Int64Value.newBuilder(clientSid_).mergeFrom(value).buildPartial();
         } else {
           clientSid_ = value;
         }
+        onChanged();
       } else {
         clientSidBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -751,13 +794,14 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Int64Value client_sid = 2 [json_name = "clientSid"];</code>
      */
     public Builder clearClientSid() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      clientSid_ = null;
-      if (clientSidBuilder_ != null) {
-        clientSidBuilder_.dispose();
+      if (clientSidBuilder_ == null) {
+        clientSid_ = null;
+        onChanged();
+      } else {
+        clientSid_ = null;
         clientSidBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -768,7 +812,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Int64Value client_sid = 2 [json_name = "clientSid"];</code>
      */
     public com.google.protobuf.Int64Value.Builder getClientSidBuilder() {
-      bitField0_ |= 0x00000002;
+      
       onChanged();
       return getClientSidFieldBuilder().getBuilder();
     }
@@ -820,7 +864,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the name field is set.
      */
     public boolean hasName() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return nameBuilder_ != null || name_ != null;
     }
     /**
      * <pre>
@@ -850,11 +894,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         name_ = value;
+        onChanged();
       } else {
         nameBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -868,11 +912,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue.Builder builderForValue) {
       if (nameBuilder_ == null) {
         name_ = builderForValue.build();
+        onChanged();
       } else {
         nameBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -884,18 +928,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeName(com.google.protobuf.StringValue value) {
       if (nameBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0) &&
-          name_ != null &&
-          name_ != com.google.protobuf.StringValue.getDefaultInstance()) {
-          getNameBuilder().mergeFrom(value);
+        if (name_ != null) {
+          name_ =
+            com.google.protobuf.StringValue.newBuilder(name_).mergeFrom(value).buildPartial();
         } else {
           name_ = value;
         }
+        onChanged();
       } else {
         nameBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -906,13 +949,14 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue name = 3 [json_name = "name"];</code>
      */
     public Builder clearName() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      name_ = null;
-      if (nameBuilder_ != null) {
-        nameBuilder_.dispose();
+      if (nameBuilder_ == null) {
+        name_ = null;
+        onChanged();
+      } else {
+        name_ = null;
         nameBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -923,7 +967,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue name = 3 [json_name = "name"];</code>
      */
     public com.google.protobuf.StringValue.Builder getNameBuilder() {
-      bitField0_ |= 0x00000004;
+      
       onChanged();
       return getNameFieldBuilder().getBuilder();
     }
@@ -975,7 +1019,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the ruleTimeZone field is set.
      */
     public boolean hasRuleTimeZone() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ruleTimeZoneBuilder_ != null || ruleTimeZone_ != null;
     }
     /**
      * <pre>
@@ -1005,11 +1049,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         ruleTimeZone_ = value;
+        onChanged();
       } else {
         ruleTimeZoneBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
@@ -1023,11 +1067,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue.Builder builderForValue) {
       if (ruleTimeZoneBuilder_ == null) {
         ruleTimeZone_ = builderForValue.build();
+        onChanged();
       } else {
         ruleTimeZoneBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
@@ -1039,18 +1083,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeRuleTimeZone(com.google.protobuf.StringValue value) {
       if (ruleTimeZoneBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0) &&
-          ruleTimeZone_ != null &&
-          ruleTimeZone_ != com.google.protobuf.StringValue.getDefaultInstance()) {
-          getRuleTimeZoneBuilder().mergeFrom(value);
+        if (ruleTimeZone_ != null) {
+          ruleTimeZone_ =
+            com.google.protobuf.StringValue.newBuilder(ruleTimeZone_).mergeFrom(value).buildPartial();
         } else {
           ruleTimeZone_ = value;
         }
+        onChanged();
       } else {
         ruleTimeZoneBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
@@ -1061,13 +1104,14 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue rule_time_zone = 4 [json_name = "ruleTimeZone"];</code>
      */
     public Builder clearRuleTimeZone() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      ruleTimeZone_ = null;
-      if (ruleTimeZoneBuilder_ != null) {
-        ruleTimeZoneBuilder_.dispose();
+      if (ruleTimeZoneBuilder_ == null) {
+        ruleTimeZone_ = null;
+        onChanged();
+      } else {
+        ruleTimeZone_ = null;
         ruleTimeZoneBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -1078,7 +1122,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue rule_time_zone = 4 [json_name = "ruleTimeZone"];</code>
      */
     public com.google.protobuf.StringValue.Builder getRuleTimeZoneBuilder() {
-      bitField0_ |= 0x00000008;
+      
       onChanged();
       return getRuleTimeZoneFieldBuilder().getBuilder();
     }
@@ -1150,18 +1194,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new ScheduleRule(input, extensionRegistry);
     }
   };
 

@@ -80,5 +80,5 @@ public interface PhoneBillingRatesOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.ConnectedCallsOrBuilder getConnectedCallsOrBuilder();
 
-  com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.UnitsCase getUnitsCase();
+  public com.tcn.cloud.api.api.v0alpha.PhoneBillingRates.UnitsCase getUnitsCase();
 }

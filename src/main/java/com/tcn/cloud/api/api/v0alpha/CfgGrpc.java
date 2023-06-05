@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.50.0)",
     comments = "Source: api/v0alpha/cfg.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class CfgGrpc {
@@ -92,32 +92,31 @@ public final class CfgGrpc {
 
   /**
    */
-  public interface AsyncService {
+  public static abstract class CfgImplBase implements io.grpc.BindableService {
 
     /**
      */
-    default void getWebAgentConfig(com.tcn.cloud.api.api.v0alpha.GetConfigReq request,
+    public void getWebAgentConfig(com.tcn.cloud.api.api.v0alpha.GetConfigReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.WebAgent> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetWebAgentConfigMethod(), responseObserver);
     }
-  }
-
-  /**
-   * Base class for the server implementation of the service Cfg.
-   */
-  public static abstract class CfgImplBase
-      implements io.grpc.BindableService, AsyncService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return CfgGrpc.bindService(this);
+      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getGetWebAgentConfigMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.GetConfigReq,
+                com.tcn.cloud.api.api.v0alpha.WebAgent>(
+                  this, METHODID_GET_WEB_AGENT_CONFIG)))
+          .build();
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service Cfg.
    */
-  public static final class CfgStub
-      extends io.grpc.stub.AbstractAsyncStub<CfgStub> {
+  public static final class CfgStub extends io.grpc.stub.AbstractAsyncStub<CfgStub> {
     private CfgStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -139,10 +138,8 @@ public final class CfgGrpc {
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service Cfg.
    */
-  public static final class CfgBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<CfgBlockingStub> {
+  public static final class CfgBlockingStub extends io.grpc.stub.AbstractBlockingStub<CfgBlockingStub> {
     private CfgBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -163,10 +160,8 @@ public final class CfgGrpc {
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service Cfg.
    */
-  public static final class CfgFutureStub
-      extends io.grpc.stub.AbstractFutureStub<CfgFutureStub> {
+  public static final class CfgFutureStub extends io.grpc.stub.AbstractFutureStub<CfgFutureStub> {
     private CfgFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -194,10 +189,10 @@ public final class CfgGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AsyncService serviceImpl;
+    private final CfgImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AsyncService serviceImpl, int methodId) {
+    MethodHandlers(CfgImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -224,18 +219,6 @@ public final class CfgGrpc {
           throw new AssertionError();
       }
     }
-  }
-
-  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
-    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-        .addMethod(
-          getGetWebAgentConfigMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.GetConfigReq,
-              com.tcn.cloud.api.api.v0alpha.WebAgent>(
-                service, METHODID_GET_WEB_AGENT_CONFIG)))
-        .build();
   }
 
   private static abstract class CfgBaseDescriptorSupplier

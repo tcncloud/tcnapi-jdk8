@@ -38,6 +38,144 @@ private static final long serialVersionUID = 0L;
     return new Organization();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private Organization(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            orgId_ = s;
+            break;
+          }
+          case 18: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              enabledRegions_ = com.google.protobuf.MapField.newMapField(
+                  EnabledRegionsDefaultEntryHolder.defaultEntry);
+              mutable_bitField0_ |= 0x00000001;
+            }
+            com.google.protobuf.MapEntry<java.lang.String, java.lang.Long>
+            enabledRegions__ = input.readMessage(
+                EnabledRegionsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+            enabledRegions_.getMutableMap().put(
+                enabledRegions__.getKey(), enabledRegions__.getValue());
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            regionId_ = s;
+            break;
+          }
+          case 34: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            billingId_ = s;
+            break;
+          }
+          case 40: {
+
+            clientSid_ = input.readInt64();
+            break;
+          }
+          case 50: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            name_ = s;
+            break;
+          }
+          case 58: {
+            com.google.protobuf.Timestamp.Builder subBuilder = null;
+            if (addDate_ != null) {
+              subBuilder = addDate_.toBuilder();
+            }
+            addDate_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(addDate_);
+              addDate_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 64: {
+
+            isManualOnlyAccount_ = input.readBool();
+            break;
+          }
+          case 72: {
+            int rawValue = input.readEnum();
+
+            backofficeTheme_ = rawValue;
+            break;
+          }
+          case 80: {
+
+            archived_ = input.readBool();
+            break;
+          }
+          case 90: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            crmId_ = s;
+            break;
+          }
+          case 96: {
+            int rawValue = input.readEnum();
+
+            timeZone_ = rawValue;
+            break;
+          }
+          case 106: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            callbacksServiceId_ = s;
+            break;
+          }
+          case 114: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            p3OwnerId_ = s;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.org.OrganizationProto.internal_static_api_commons_org_Organization_descriptor;
@@ -64,8 +202,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ORG_ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object orgId_ = "";
+  private volatile java.lang.Object orgId_;
   /**
    * <pre>
    * An organization's globally unique identifier.
@@ -122,7 +259,6 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.INT64,
                 0L);
   }
-  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, java.lang.Long> enabledRegions_;
   private com.google.protobuf.MapField<java.lang.String, java.lang.Long>
@@ -133,6 +269,7 @@ private static final long serialVersionUID = 0L;
     }
     return enabledRegions_;
   }
+
   public int getEnabledRegionsCount() {
     return internalGetEnabledRegions().getMap().size();
   }
@@ -143,10 +280,11 @@ private static final long serialVersionUID = 0L;
    *
    * <code>map&lt;string, int64&gt; enabled_regions = 2 [json_name = "enabledRegions"];</code>
    */
+
   @java.lang.Override
   public boolean containsEnabledRegions(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     return internalGetEnabledRegions().getMap().containsKey(key);
   }
   /**
@@ -165,6 +303,7 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, int64&gt; enabled_regions = 2 [json_name = "enabledRegions"];</code>
    */
   @java.lang.Override
+
   public java.util.Map<java.lang.String, java.lang.Long> getEnabledRegionsMap() {
     return internalGetEnabledRegions().getMap();
   }
@@ -176,10 +315,11 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, int64&gt; enabled_regions = 2 [json_name = "enabledRegions"];</code>
    */
   @java.lang.Override
+
   public long getEnabledRegionsOrDefault(
       java.lang.String key,
       long defaultValue) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, java.lang.Long> map =
         internalGetEnabledRegions().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -192,9 +332,10 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, int64&gt; enabled_regions = 2 [json_name = "enabledRegions"];</code>
    */
   @java.lang.Override
+
   public long getEnabledRegionsOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, java.lang.Long> map =
         internalGetEnabledRegions().getMap();
     if (!map.containsKey(key)) {
@@ -204,8 +345,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int REGION_ID_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object regionId_ = "";
+  private volatile java.lang.Object regionId_;
   /**
    * <pre>
    * Default region org was first enbabled for.
@@ -251,8 +391,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BILLING_ID_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object billingId_ = "";
+  private volatile java.lang.Object billingId_;
   /**
    * <pre>
    * Billing_prefix + clientSid. Used for integrations and billing.
@@ -298,7 +437,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CLIENT_SID_FIELD_NUMBER = 5;
-  private long clientSid_ = 0L;
+  private long clientSid_;
   /**
    * <pre>
    * First enabled region's clientSid; will be deprecated for
@@ -314,8 +453,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 6;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object name_ = "";
+  private volatile java.lang.Object name_;
   /**
    * <pre>
    * The organization name.
@@ -395,11 +533,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getAddDateOrBuilder() {
-    return addDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : addDate_;
+    return getAddDate();
   }
 
   public static final int IS_MANUAL_ONLY_ACCOUNT_FIELD_NUMBER = 8;
-  private boolean isManualOnlyAccount_ = false;
+  private boolean isManualOnlyAccount_;
   /**
    * <pre>
    * Whether account is manual only.
@@ -414,7 +552,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BACKOFFICE_THEME_FIELD_NUMBER = 9;
-  private int backofficeTheme_ = 0;
+  private int backofficeTheme_;
   /**
    * <pre>
    * Backoffice UI theme/skin.
@@ -435,12 +573,13 @@ private static final long serialVersionUID = 0L;
    * @return The backofficeTheme.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.ClientSkin getBackofficeTheme() {
-    com.tcn.cloud.api.api.commons.ClientSkin result = com.tcn.cloud.api.api.commons.ClientSkin.forNumber(backofficeTheme_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.ClientSkin result = com.tcn.cloud.api.api.commons.ClientSkin.valueOf(backofficeTheme_);
     return result == null ? com.tcn.cloud.api.api.commons.ClientSkin.UNRECOGNIZED : result;
   }
 
   public static final int ARCHIVED_FIELD_NUMBER = 10;
-  private boolean archived_ = false;
+  private boolean archived_;
   /**
    * <pre>
    * Archived specifies this organization as no longer active.
@@ -455,8 +594,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CRM_ID_FIELD_NUMBER = 11;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object crmId_ = "";
+  private volatile java.lang.Object crmId_;
   /**
    * <pre>
    * Salesforce ID used for integrations.
@@ -502,7 +640,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TIME_ZONE_FIELD_NUMBER = 12;
-  private int timeZone_ = 0;
+  private int timeZone_;
   /**
    * <pre>
    * Organization's time zone.
@@ -523,13 +661,13 @@ private static final long serialVersionUID = 0L;
    * @return The timeZone.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.TimeZone getTimeZone() {
-    com.tcn.cloud.api.api.commons.TimeZone result = com.tcn.cloud.api.api.commons.TimeZone.forNumber(timeZone_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.TimeZone result = com.tcn.cloud.api.api.commons.TimeZone.valueOf(timeZone_);
     return result == null ? com.tcn.cloud.api.api.commons.TimeZone.UNRECOGNIZED : result;
   }
 
   public static final int CALLBACKS_SERVICE_ID_FIELD_NUMBER = 13;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object callbacksServiceId_ = "";
+  private volatile java.lang.Object callbacksServiceId_;
   /**
    * <pre>
    * Organization callbacks service ID.
@@ -575,8 +713,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int P3_OWNER_ID_FIELD_NUMBER = 14;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object p3OwnerId_ = "";
+  private volatile java.lang.Object p3OwnerId_;
   /**
    * <pre>
    * Organization that is the parent.
@@ -635,7 +772,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
+    if (!getOrgIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orgId_);
     }
     com.google.protobuf.GeneratedMessageV3
@@ -644,16 +781,16 @@ private static final long serialVersionUID = 0L;
         internalGetEnabledRegions(),
         EnabledRegionsDefaultEntryHolder.defaultEntry,
         2);
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regionId_)) {
+    if (!getRegionIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, regionId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(billingId_)) {
+    if (!getBillingIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, billingId_);
     }
     if (clientSid_ != 0L) {
       output.writeInt64(5, clientSid_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+    if (!getNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, name_);
     }
     if (addDate_ != null) {
@@ -668,19 +805,19 @@ private static final long serialVersionUID = 0L;
     if (archived_ != false) {
       output.writeBool(10, archived_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(crmId_)) {
+    if (!getCrmIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 11, crmId_);
     }
     if (timeZone_ != com.tcn.cloud.api.api.commons.TimeZone.TIME_ZONE_AMERICA_PUERTO_RICO.getNumber()) {
       output.writeEnum(12, timeZone_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callbacksServiceId_)) {
+    if (!getCallbacksServiceIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 13, callbacksServiceId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(p3OwnerId_)) {
+    if (!getP3OwnerIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 14, p3OwnerId_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -689,7 +826,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
+    if (!getOrgIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orgId_);
     }
     for (java.util.Map.Entry<java.lang.String, java.lang.Long> entry
@@ -702,17 +839,17 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, enabledRegions__);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regionId_)) {
+    if (!getRegionIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, regionId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(billingId_)) {
+    if (!getBillingIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, billingId_);
     }
     if (clientSid_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(5, clientSid_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+    if (!getNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, name_);
     }
     if (addDate_ != null) {
@@ -731,20 +868,20 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(10, archived_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(crmId_)) {
+    if (!getCrmIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, crmId_);
     }
     if (timeZone_ != com.tcn.cloud.api.api.commons.TimeZone.TIME_ZONE_AMERICA_PUERTO_RICO.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(12, timeZone_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callbacksServiceId_)) {
+    if (!getCallbacksServiceIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, callbacksServiceId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(p3OwnerId_)) {
+    if (!getP3OwnerIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, p3OwnerId_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -788,7 +925,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getCallbacksServiceId())) return false;
     if (!getP3OwnerId()
         .equals(other.getP3OwnerId())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -834,7 +971,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getCallbacksServiceId().hashCode();
     hash = (37 * hash) + P3_OWNER_ID_FIELD_NUMBER;
     hash = (53 * hash) + getP3OwnerId().hashCode();
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -883,13 +1020,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.commons.org.Organization parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.commons.org.Organization parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -979,36 +1114,53 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.org.Organization.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       orgId_ = "";
+
       internalGetMutableEnabledRegions().clear();
       regionId_ = "";
+
       billingId_ = "";
+
       clientSid_ = 0L;
+
       name_ = "";
-      addDate_ = null;
-      if (addDateBuilder_ != null) {
-        addDateBuilder_.dispose();
+
+      if (addDateBuilder_ == null) {
+        addDate_ = null;
+      } else {
+        addDate_ = null;
         addDateBuilder_ = null;
       }
       isManualOnlyAccount_ = false;
+
       backofficeTheme_ = 0;
+
       archived_ = false;
+
       crmId_ = "";
+
       timeZone_ = 0;
+
       callbacksServiceId_ = "";
+
       p3OwnerId_ = "";
+
       return this;
     }
 
@@ -1035,58 +1187,28 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.org.Organization buildPartial() {
       com.tcn.cloud.api.api.commons.org.Organization result = new com.tcn.cloud.api.api.commons.org.Organization(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      int from_bitField0_ = bitField0_;
+      result.orgId_ = orgId_;
+      result.enabledRegions_ = internalGetEnabledRegions();
+      result.enabledRegions_.makeImmutable();
+      result.regionId_ = regionId_;
+      result.billingId_ = billingId_;
+      result.clientSid_ = clientSid_;
+      result.name_ = name_;
+      if (addDateBuilder_ == null) {
+        result.addDate_ = addDate_;
+      } else {
+        result.addDate_ = addDateBuilder_.build();
+      }
+      result.isManualOnlyAccount_ = isManualOnlyAccount_;
+      result.backofficeTheme_ = backofficeTheme_;
+      result.archived_ = archived_;
+      result.crmId_ = crmId_;
+      result.timeZone_ = timeZone_;
+      result.callbacksServiceId_ = callbacksServiceId_;
+      result.p3OwnerId_ = p3OwnerId_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.commons.org.Organization result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.orgId_ = orgId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.enabledRegions_ = internalGetEnabledRegions();
-        result.enabledRegions_.makeImmutable();
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.regionId_ = regionId_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.billingId_ = billingId_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.clientSid_ = clientSid_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.name_ = name_;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.addDate_ = addDateBuilder_ == null
-            ? addDate_
-            : addDateBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.isManualOnlyAccount_ = isManualOnlyAccount_;
-      }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
-        result.backofficeTheme_ = backofficeTheme_;
-      }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
-        result.archived_ = archived_;
-      }
-      if (((from_bitField0_ & 0x00000400) != 0)) {
-        result.crmId_ = crmId_;
-      }
-      if (((from_bitField0_ & 0x00000800) != 0)) {
-        result.timeZone_ = timeZone_;
-      }
-      if (((from_bitField0_ & 0x00001000) != 0)) {
-        result.callbacksServiceId_ = callbacksServiceId_;
-      }
-      if (((from_bitField0_ & 0x00002000) != 0)) {
-        result.p3OwnerId_ = p3OwnerId_;
-      }
     }
 
     @java.lang.Override
@@ -1135,20 +1257,16 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.commons.org.Organization.getDefaultInstance()) return this;
       if (!other.getOrgId().isEmpty()) {
         orgId_ = other.orgId_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       internalGetMutableEnabledRegions().mergeFrom(
           other.internalGetEnabledRegions());
-      bitField0_ |= 0x00000002;
       if (!other.getRegionId().isEmpty()) {
         regionId_ = other.regionId_;
-        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getBillingId().isEmpty()) {
         billingId_ = other.billingId_;
-        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.getClientSid() != 0L) {
@@ -1156,7 +1274,6 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
-        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (other.hasAddDate()) {
@@ -1173,7 +1290,6 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getCrmId().isEmpty()) {
         crmId_ = other.crmId_;
-        bitField0_ |= 0x00000400;
         onChanged();
       }
       if (other.timeZone_ != 0) {
@@ -1181,15 +1297,13 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getCallbacksServiceId().isEmpty()) {
         callbacksServiceId_ = other.callbacksServiceId_;
-        bitField0_ |= 0x00001000;
         onChanged();
       }
       if (!other.getP3OwnerId().isEmpty()) {
         p3OwnerId_ = other.p3OwnerId_;
-        bitField0_ |= 0x00002000;
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -1204,106 +1318,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.commons.org.Organization parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              orgId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.Long>
-              enabledRegions__ = input.readMessage(
-                  EnabledRegionsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              internalGetMutableEnabledRegions().getMutableMap().put(
-                  enabledRegions__.getKey(), enabledRegions__.getValue());
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 26: {
-              regionId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            case 34: {
-              billingId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
-            case 40: {
-              clientSid_ = input.readInt64();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 40
-            case 50: {
-              name_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 50
-            case 58: {
-              input.readMessage(
-                  getAddDateFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 58
-            case 64: {
-              isManualOnlyAccount_ = input.readBool();
-              bitField0_ |= 0x00000080;
-              break;
-            } // case 64
-            case 72: {
-              backofficeTheme_ = input.readEnum();
-              bitField0_ |= 0x00000100;
-              break;
-            } // case 72
-            case 80: {
-              archived_ = input.readBool();
-              bitField0_ |= 0x00000200;
-              break;
-            } // case 80
-            case 90: {
-              crmId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000400;
-              break;
-            } // case 90
-            case 96: {
-              timeZone_ = input.readEnum();
-              bitField0_ |= 0x00000800;
-              break;
-            } // case 96
-            case 106: {
-              callbacksServiceId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00001000;
-              break;
-            } // case 106
-            case 114: {
-              p3OwnerId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00002000;
-              break;
-            } // case 114
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.commons.org.Organization) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -1361,9 +1386,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOrgId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       orgId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1376,8 +1403,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOrgId() {
+      
       orgId_ = getDefaultInstance().getOrgId();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1392,10 +1419,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOrgIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       orgId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1403,7 +1432,7 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.Long> enabledRegions_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.Long>
-        internalGetEnabledRegions() {
+    internalGetEnabledRegions() {
       if (enabledRegions_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             EnabledRegionsDefaultEntryHolder.defaultEntry);
@@ -1411,7 +1440,8 @@ private static final long serialVersionUID = 0L;
       return enabledRegions_;
     }
     private com.google.protobuf.MapField<java.lang.String, java.lang.Long>
-        internalGetMutableEnabledRegions() {
+    internalGetMutableEnabledRegions() {
+      onChanged();;
       if (enabledRegions_ == null) {
         enabledRegions_ = com.google.protobuf.MapField.newMapField(
             EnabledRegionsDefaultEntryHolder.defaultEntry);
@@ -1419,10 +1449,9 @@ private static final long serialVersionUID = 0L;
       if (!enabledRegions_.isMutable()) {
         enabledRegions_ = enabledRegions_.copy();
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
       return enabledRegions_;
     }
+
     public int getEnabledRegionsCount() {
       return internalGetEnabledRegions().getMap().size();
     }
@@ -1433,10 +1462,11 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, int64&gt; enabled_regions = 2 [json_name = "enabledRegions"];</code>
      */
+
     @java.lang.Override
     public boolean containsEnabledRegions(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetEnabledRegions().getMap().containsKey(key);
     }
     /**
@@ -1455,6 +1485,7 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, int64&gt; enabled_regions = 2 [json_name = "enabledRegions"];</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.String, java.lang.Long> getEnabledRegionsMap() {
       return internalGetEnabledRegions().getMap();
     }
@@ -1466,10 +1497,11 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, int64&gt; enabled_regions = 2 [json_name = "enabledRegions"];</code>
      */
     @java.lang.Override
+
     public long getEnabledRegionsOrDefault(
         java.lang.String key,
         long defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.Long> map =
           internalGetEnabledRegions().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1482,9 +1514,10 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, int64&gt; enabled_regions = 2 [json_name = "enabledRegions"];</code>
      */
     @java.lang.Override
+
     public long getEnabledRegionsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.Long> map =
           internalGetEnabledRegions().getMap();
       if (!map.containsKey(key)) {
@@ -1492,8 +1525,8 @@ private static final long serialVersionUID = 0L;
       }
       return map.get(key);
     }
+
     public Builder clearEnabledRegions() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       internalGetMutableEnabledRegions().getMutableMap()
           .clear();
       return this;
@@ -1505,9 +1538,10 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, int64&gt; enabled_regions = 2 [json_name = "enabledRegions"];</code>
      */
+
     public Builder removeEnabledRegions(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableEnabledRegions().getMutableMap()
           .remove(key);
       return this;
@@ -1517,8 +1551,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.Long>
-        getMutableEnabledRegions() {
-      bitField0_ |= 0x00000002;
+    getMutableEnabledRegions() {
       return internalGetMutableEnabledRegions().getMutableMap();
     }
     /**
@@ -1531,11 +1564,10 @@ private static final long serialVersionUID = 0L;
     public Builder putEnabledRegions(
         java.lang.String key,
         long value) {
-      if (key == null) { throw new NullPointerException("map key"); }
-
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      
       internalGetMutableEnabledRegions().getMutableMap()
           .put(key, value);
-      bitField0_ |= 0x00000002;
       return this;
     }
     /**
@@ -1545,11 +1577,11 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, int64&gt; enabled_regions = 2 [json_name = "enabledRegions"];</code>
      */
+
     public Builder putAllEnabledRegions(
         java.util.Map<java.lang.String, java.lang.Long> values) {
       internalGetMutableEnabledRegions().getMutableMap()
           .putAll(values);
-      bitField0_ |= 0x00000002;
       return this;
     }
 
@@ -1606,9 +1638,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRegionId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       regionId_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1621,8 +1655,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRegionId() {
+      
       regionId_ = getDefaultInstance().getRegionId();
-      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1637,10 +1671,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRegionIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       regionId_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1698,9 +1734,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBillingId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       billingId_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1713,8 +1751,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBillingId() {
+      
       billingId_ = getDefaultInstance().getBillingId();
-      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1729,10 +1767,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBillingIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       billingId_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1762,9 +1802,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setClientSid(long value) {
-
+      
       clientSid_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1778,7 +1817,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearClientSid() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      
       clientSid_ = 0L;
       onChanged();
       return this;
@@ -1837,9 +1876,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       name_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1852,8 +1893,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
+      
       name_ = getDefaultInstance().getName();
-      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1868,10 +1909,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       name_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1888,7 +1931,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the addDate field is set.
      */
     public boolean hasAddDate() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return addDateBuilder_ != null || addDate_ != null;
     }
     /**
      * <pre>
@@ -1918,11 +1961,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         addDate_ = value;
+        onChanged();
       } else {
         addDateBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+
       return this;
     }
     /**
@@ -1936,11 +1979,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (addDateBuilder_ == null) {
         addDate_ = builderForValue.build();
+        onChanged();
       } else {
         addDateBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+
       return this;
     }
     /**
@@ -1952,18 +1995,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAddDate(com.google.protobuf.Timestamp value) {
       if (addDateBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0) &&
-          addDate_ != null &&
-          addDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getAddDateBuilder().mergeFrom(value);
+        if (addDate_ != null) {
+          addDate_ =
+            com.google.protobuf.Timestamp.newBuilder(addDate_).mergeFrom(value).buildPartial();
         } else {
           addDate_ = value;
         }
+        onChanged();
       } else {
         addDateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+
       return this;
     }
     /**
@@ -1974,13 +2016,14 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp add_date = 7 [json_name = "addDate"];</code>
      */
     public Builder clearAddDate() {
-      bitField0_ = (bitField0_ & ~0x00000040);
-      addDate_ = null;
-      if (addDateBuilder_ != null) {
-        addDateBuilder_.dispose();
+      if (addDateBuilder_ == null) {
+        addDate_ = null;
+        onChanged();
+      } else {
+        addDate_ = null;
         addDateBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -1991,7 +2034,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp add_date = 7 [json_name = "addDate"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getAddDateBuilder() {
-      bitField0_ |= 0x00000040;
+      
       onChanged();
       return getAddDateFieldBuilder().getBuilder();
     }
@@ -2054,9 +2097,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIsManualOnlyAccount(boolean value) {
-
+      
       isManualOnlyAccount_ = value;
-      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2069,7 +2111,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIsManualOnlyAccount() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      
       isManualOnlyAccount_ = false;
       onChanged();
       return this;
@@ -2097,8 +2139,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBackofficeThemeValue(int value) {
+      
       backofficeTheme_ = value;
-      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2112,7 +2154,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.ClientSkin getBackofficeTheme() {
-      com.tcn.cloud.api.api.commons.ClientSkin result = com.tcn.cloud.api.api.commons.ClientSkin.forNumber(backofficeTheme_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.ClientSkin result = com.tcn.cloud.api.api.commons.ClientSkin.valueOf(backofficeTheme_);
       return result == null ? com.tcn.cloud.api.api.commons.ClientSkin.UNRECOGNIZED : result;
     }
     /**
@@ -2128,7 +2171,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000100;
+      
       backofficeTheme_ = value.getNumber();
       onChanged();
       return this;
@@ -2142,7 +2185,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBackofficeTheme() {
-      bitField0_ = (bitField0_ & ~0x00000100);
+      
       backofficeTheme_ = 0;
       onChanged();
       return this;
@@ -2171,9 +2214,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setArchived(boolean value) {
-
+      
       archived_ = value;
-      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2186,7 +2228,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearArchived() {
-      bitField0_ = (bitField0_ & ~0x00000200);
+      
       archived_ = false;
       onChanged();
       return this;
@@ -2245,9 +2287,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCrmId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       crmId_ = value;
-      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2260,8 +2304,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCrmId() {
+      
       crmId_ = getDefaultInstance().getCrmId();
-      bitField0_ = (bitField0_ & ~0x00000400);
       onChanged();
       return this;
     }
@@ -2276,10 +2320,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCrmIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       crmId_ = value;
-      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2306,8 +2352,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTimeZoneValue(int value) {
+      
       timeZone_ = value;
-      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -2321,7 +2367,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.TimeZone getTimeZone() {
-      com.tcn.cloud.api.api.commons.TimeZone result = com.tcn.cloud.api.api.commons.TimeZone.forNumber(timeZone_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.TimeZone result = com.tcn.cloud.api.api.commons.TimeZone.valueOf(timeZone_);
       return result == null ? com.tcn.cloud.api.api.commons.TimeZone.UNRECOGNIZED : result;
     }
     /**
@@ -2337,7 +2384,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000800;
+      
       timeZone_ = value.getNumber();
       onChanged();
       return this;
@@ -2351,7 +2398,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTimeZone() {
-      bitField0_ = (bitField0_ & ~0x00000800);
+      
       timeZone_ = 0;
       onChanged();
       return this;
@@ -2410,9 +2457,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallbacksServiceId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       callbacksServiceId_ = value;
-      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -2425,8 +2474,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallbacksServiceId() {
+      
       callbacksServiceId_ = getDefaultInstance().getCallbacksServiceId();
-      bitField0_ = (bitField0_ & ~0x00001000);
       onChanged();
       return this;
     }
@@ -2441,10 +2490,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallbacksServiceIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       callbacksServiceId_ = value;
-      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -2502,9 +2553,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setP3OwnerId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       p3OwnerId_ = value;
-      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -2517,8 +2570,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearP3OwnerId() {
+      
       p3OwnerId_ = getDefaultInstance().getP3OwnerId();
-      bitField0_ = (bitField0_ & ~0x00002000);
       onChanged();
       return this;
     }
@@ -2533,10 +2586,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setP3OwnerIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       p3OwnerId_ = value;
-      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -2573,18 +2628,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new Organization(input, extensionRegistry);
     }
   };
 

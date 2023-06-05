@@ -30,25 +30,25 @@ public final class ServiceProto {
       "\344\006\n\nSoundboard\022\256\001\n\021GetSoundboardFile\022-.a" +
       "pi.v1alpha1.soundboard.GetSoundboardFile" +
       "Req\032-.api.v1alpha1.soundboard.GetSoundbo" +
-      "ardFileRes\"9\272\270\221\002\005\n\003\010\244\r\202\323\344\223\002)\"$/api/v1alp" +
-      "ha1/org/soundboard/getfile:\001*0\001\022\250\001\n\020Crea" +
+      "ardFileRes\"9\272\270\221\002\005\n\003\010\244\r\202\323\344\223\002):\001*\"$/api/v1" +
+      "alpha1/org/soundboard/getfile0\001\022\250\001\n\020Crea" +
       "teSoundboard\022,.api.v1alpha1.soundboard.C" +
       "reateSoundboardReq\032,.api.v1alpha1.soundb" +
       "oard.CreateSoundboardRes\"8\272\270\221\002\005\n\003\010\245\r\202\323\344\223" +
-      "\002(\"#/api/v1alpha1/org/soundboard/create:" +
-      "\001*\022\243\001\n\017ListSoundboards\022+.api.v1alpha1.so" +
+      "\002(:\001*\"#/api/v1alpha1/org/soundboard/crea" +
+      "te\022\243\001\n\017ListSoundboards\022+.api.v1alpha1.so" +
       "undboard.ListSoundboardsReq\032+.api.v1alph" +
       "a1.soundboard.ListSoundboardsRes\"6\272\270\221\002\005\n" +
-      "\003\010\244\r\202\323\344\223\002&\"!/api/v1alpha1/org/soundboard" +
-      "/list:\001*\022\250\001\n\020UpdateSoundboard\022,.api.v1al" +
+      "\003\010\244\r\202\323\344\223\002&:\001*\"!/api/v1alpha1/org/soundbo" +
+      "ard/list\022\250\001\n\020UpdateSoundboard\022,.api.v1al" +
       "pha1.soundboard.UpdateSoundboardReq\032,.ap" +
       "i.v1alpha1.soundboard.UpdateSoundboardRe" +
-      "s\"8\272\270\221\002\005\n\003\010\245\r\202\323\344\223\002(\"#/api/v1alpha1/org/s" +
-      "oundboard/update:\001*\022\250\001\n\020DeleteSoundboard" +
+      "s\"8\272\270\221\002\005\n\003\010\245\r\202\323\344\223\002(:\001*\"#/api/v1alpha1/or" +
+      "g/soundboard/update\022\250\001\n\020DeleteSoundboard" +
       "\022,.api.v1alpha1.soundboard.DeleteSoundbo" +
       "ardReq\032,.api.v1alpha1.soundboard.DeleteS" +
-      "oundboardRes\"8\272\270\221\002\005\n\003\010\245\r\202\323\344\223\002(\"#/api/v1a" +
-      "lpha1/org/soundboard/delete:\001*B\267\001\n)com.t" +
+      "oundboardRes\"8\272\270\221\002\005\n\003\010\245\r\202\323\344\223\002(:\001*\"#/api/" +
+      "v1alpha1/org/soundboard/deleteB\267\001\n)com.t" +
       "cn.cloud.api.api.v1alpha1.soundboardB\014Se" +
       "rviceProtoP\001\242\002\003AVS\252\002\027Api.V1alpha1.Soundb" +
       "oard\312\002\027Api\\V1alpha1\\Soundboard\342\002#Api\\V1a" +

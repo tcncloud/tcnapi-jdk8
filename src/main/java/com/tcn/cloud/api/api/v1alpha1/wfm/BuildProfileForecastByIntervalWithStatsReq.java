@@ -29,6 +29,71 @@ private static final long serialVersionUID = 0L;
     return new BuildProfileForecastByIntervalWithStatsReq();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private BuildProfileForecastByIntervalWithStatsReq(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            com.tcn.cloud.api.api.v1alpha1.wfm.CallProfileTemplate.Builder subBuilder = null;
+            if (callProfileTemplate_ != null) {
+              subBuilder = callProfileTemplate_.toBuilder();
+            }
+            callProfileTemplate_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.wfm.CallProfileTemplate.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(callProfileTemplate_);
+              callProfileTemplate_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 16: {
+
+            fixedAveragesForecast_ = input.readBool();
+            break;
+          }
+          case 24: {
+
+            skillProfileSid_ = input.readInt64();
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_BuildProfileForecastByIntervalWithStatsReq_descriptor;
@@ -77,11 +142,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.wfm.CallProfileTemplateOrBuilder getCallProfileTemplateOrBuilder() {
-    return callProfileTemplate_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.CallProfileTemplate.getDefaultInstance() : callProfileTemplate_;
+    return getCallProfileTemplate();
   }
 
   public static final int FIXED_AVERAGES_FORECAST_FIELD_NUMBER = 2;
-  private boolean fixedAveragesForecast_ = false;
+  private boolean fixedAveragesForecast_;
   /**
    * <pre>
    * If &#64;fixed_averages_forecast is set to true it will do a fixed averages forecast,
@@ -98,7 +163,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SKILL_PROFILE_SID_FIELD_NUMBER = 3;
-  private long skillProfileSid_ = 0L;
+  private long skillProfileSid_;
   /**
    * <pre>
    * ID of the skill profile to use the training data for stats.
@@ -135,7 +200,7 @@ private static final long serialVersionUID = 0L;
     if (skillProfileSid_ != 0L) {
       output.writeInt64(3, skillProfileSid_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -156,7 +221,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(3, skillProfileSid_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -180,7 +245,7 @@ private static final long serialVersionUID = 0L;
         != other.getFixedAveragesForecast()) return false;
     if (getSkillProfileSid()
         != other.getSkillProfileSid()) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -201,7 +266,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + SKILL_PROFILE_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getSkillProfileSid());
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -250,13 +315,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalWithStatsReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalWithStatsReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -324,25 +387,32 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalWithStatsReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      callProfileTemplate_ = null;
-      if (callProfileTemplateBuilder_ != null) {
-        callProfileTemplateBuilder_.dispose();
+      if (callProfileTemplateBuilder_ == null) {
+        callProfileTemplate_ = null;
+      } else {
+        callProfileTemplate_ = null;
         callProfileTemplateBuilder_ = null;
       }
       fixedAveragesForecast_ = false;
+
       skillProfileSid_ = 0L;
+
       return this;
     }
 
@@ -369,24 +439,15 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalWithStatsReq buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalWithStatsReq result = new com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalWithStatsReq(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      if (callProfileTemplateBuilder_ == null) {
+        result.callProfileTemplate_ = callProfileTemplate_;
+      } else {
+        result.callProfileTemplate_ = callProfileTemplateBuilder_.build();
+      }
+      result.fixedAveragesForecast_ = fixedAveragesForecast_;
+      result.skillProfileSid_ = skillProfileSid_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalWithStatsReq result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.callProfileTemplate_ = callProfileTemplateBuilder_ == null
-            ? callProfileTemplate_
-            : callProfileTemplateBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.fixedAveragesForecast_ = fixedAveragesForecast_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.skillProfileSid_ = skillProfileSid_;
-      }
     }
 
     @java.lang.Override
@@ -442,7 +503,7 @@ private static final long serialVersionUID = 0L;
       if (other.getSkillProfileSid() != 0L) {
         setSkillProfileSid(other.getSkillProfileSid());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -457,50 +518,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalWithStatsReq parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              input.readMessage(
-                  getCallProfileTemplateFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 16: {
-              fixedAveragesForecast_ = input.readBool();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 16
-            case 24: {
-              skillProfileSid_ = input.readInt64();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 24
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalWithStatsReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private com.tcn.cloud.api.api.v1alpha1.wfm.CallProfileTemplate callProfileTemplate_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -514,7 +544,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the callProfileTemplate field is set.
      */
     public boolean hasCallProfileTemplate() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return callProfileTemplateBuilder_ != null || callProfileTemplate_ != null;
     }
     /**
      * <pre>
@@ -544,11 +574,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         callProfileTemplate_ = value;
+        onChanged();
       } else {
         callProfileTemplateBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -562,11 +592,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.wfm.CallProfileTemplate.Builder builderForValue) {
       if (callProfileTemplateBuilder_ == null) {
         callProfileTemplate_ = builderForValue.build();
+        onChanged();
       } else {
         callProfileTemplateBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -578,18 +608,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCallProfileTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.CallProfileTemplate value) {
       if (callProfileTemplateBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          callProfileTemplate_ != null &&
-          callProfileTemplate_ != com.tcn.cloud.api.api.v1alpha1.wfm.CallProfileTemplate.getDefaultInstance()) {
-          getCallProfileTemplateBuilder().mergeFrom(value);
+        if (callProfileTemplate_ != null) {
+          callProfileTemplate_ =
+            com.tcn.cloud.api.api.v1alpha1.wfm.CallProfileTemplate.newBuilder(callProfileTemplate_).mergeFrom(value).buildPartial();
         } else {
           callProfileTemplate_ = value;
         }
+        onChanged();
       } else {
         callProfileTemplateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -600,13 +629,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.wfm.CallProfileTemplate call_profile_template = 1 [json_name = "callProfileTemplate"];</code>
      */
     public Builder clearCallProfileTemplate() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      callProfileTemplate_ = null;
-      if (callProfileTemplateBuilder_ != null) {
-        callProfileTemplateBuilder_.dispose();
+      if (callProfileTemplateBuilder_ == null) {
+        callProfileTemplate_ = null;
+        onChanged();
+      } else {
+        callProfileTemplate_ = null;
         callProfileTemplateBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -617,7 +647,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.wfm.CallProfileTemplate call_profile_template = 1 [json_name = "callProfileTemplate"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.CallProfileTemplate.Builder getCallProfileTemplateBuilder() {
-      bitField0_ |= 0x00000001;
+      
       onChanged();
       return getCallProfileTemplateFieldBuilder().getBuilder();
     }
@@ -684,9 +714,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFixedAveragesForecast(boolean value) {
-
+      
       fixedAveragesForecast_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -701,7 +730,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFixedAveragesForecast() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       fixedAveragesForecast_ = false;
       onChanged();
       return this;
@@ -730,9 +759,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSkillProfileSid(long value) {
-
+      
       skillProfileSid_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -745,7 +773,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSkillProfileSid() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       skillProfileSid_ = 0L;
       onChanged();
       return this;
@@ -783,18 +811,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new BuildProfileForecastByIntervalWithStatsReq(input, extensionRegistry);
     }
   };
 

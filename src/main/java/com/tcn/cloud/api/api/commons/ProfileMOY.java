@@ -29,6 +29,108 @@ private static final long serialVersionUID = 0L;
     return new ProfileMOY();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private ProfileMOY(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 13: {
+
+            january_ = input.readFloat();
+            break;
+          }
+          case 21: {
+
+            february_ = input.readFloat();
+            break;
+          }
+          case 29: {
+
+            march_ = input.readFloat();
+            break;
+          }
+          case 37: {
+
+            april_ = input.readFloat();
+            break;
+          }
+          case 45: {
+
+            may_ = input.readFloat();
+            break;
+          }
+          case 53: {
+
+            june_ = input.readFloat();
+            break;
+          }
+          case 61: {
+
+            july_ = input.readFloat();
+            break;
+          }
+          case 69: {
+
+            august_ = input.readFloat();
+            break;
+          }
+          case 77: {
+
+            september_ = input.readFloat();
+            break;
+          }
+          case 85: {
+
+            october_ = input.readFloat();
+            break;
+          }
+          case 93: {
+
+            november_ = input.readFloat();
+            break;
+          }
+          case 101: {
+
+            december_ = input.readFloat();
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.WfmProto.internal_static_api_commons_ProfileMOY_descriptor;
@@ -43,7 +145,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int JANUARY_FIELD_NUMBER = 1;
-  private float january_ = 0F;
+  private float january_;
   /**
    * <code>float january = 1 [json_name = "january"];</code>
    * @return The january.
@@ -54,7 +156,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FEBRUARY_FIELD_NUMBER = 2;
-  private float february_ = 0F;
+  private float february_;
   /**
    * <code>float february = 2 [json_name = "february"];</code>
    * @return The february.
@@ -65,7 +167,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MARCH_FIELD_NUMBER = 3;
-  private float march_ = 0F;
+  private float march_;
   /**
    * <code>float march = 3 [json_name = "march"];</code>
    * @return The march.
@@ -76,7 +178,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int APRIL_FIELD_NUMBER = 4;
-  private float april_ = 0F;
+  private float april_;
   /**
    * <code>float april = 4 [json_name = "april"];</code>
    * @return The april.
@@ -87,7 +189,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MAY_FIELD_NUMBER = 5;
-  private float may_ = 0F;
+  private float may_;
   /**
    * <code>float may = 5 [json_name = "may"];</code>
    * @return The may.
@@ -98,7 +200,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int JUNE_FIELD_NUMBER = 6;
-  private float june_ = 0F;
+  private float june_;
   /**
    * <code>float june = 6 [json_name = "june"];</code>
    * @return The june.
@@ -109,7 +211,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int JULY_FIELD_NUMBER = 7;
-  private float july_ = 0F;
+  private float july_;
   /**
    * <code>float july = 7 [json_name = "july"];</code>
    * @return The july.
@@ -120,7 +222,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AUGUST_FIELD_NUMBER = 8;
-  private float august_ = 0F;
+  private float august_;
   /**
    * <code>float august = 8 [json_name = "august"];</code>
    * @return The august.
@@ -131,7 +233,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SEPTEMBER_FIELD_NUMBER = 9;
-  private float september_ = 0F;
+  private float september_;
   /**
    * <code>float september = 9 [json_name = "september"];</code>
    * @return The september.
@@ -142,7 +244,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int OCTOBER_FIELD_NUMBER = 10;
-  private float october_ = 0F;
+  private float october_;
   /**
    * <code>float october = 10 [json_name = "october"];</code>
    * @return The october.
@@ -153,7 +255,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NOVEMBER_FIELD_NUMBER = 11;
-  private float november_ = 0F;
+  private float november_;
   /**
    * <code>float november = 11 [json_name = "november"];</code>
    * @return The november.
@@ -164,7 +266,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DECEMBER_FIELD_NUMBER = 12;
-  private float december_ = 0F;
+  private float december_;
   /**
    * <code>float december = 12 [json_name = "december"];</code>
    * @return The december.
@@ -188,43 +290,43 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (java.lang.Float.floatToRawIntBits(january_) != 0) {
+    if (january_ != 0F) {
       output.writeFloat(1, january_);
     }
-    if (java.lang.Float.floatToRawIntBits(february_) != 0) {
+    if (february_ != 0F) {
       output.writeFloat(2, february_);
     }
-    if (java.lang.Float.floatToRawIntBits(march_) != 0) {
+    if (march_ != 0F) {
       output.writeFloat(3, march_);
     }
-    if (java.lang.Float.floatToRawIntBits(april_) != 0) {
+    if (april_ != 0F) {
       output.writeFloat(4, april_);
     }
-    if (java.lang.Float.floatToRawIntBits(may_) != 0) {
+    if (may_ != 0F) {
       output.writeFloat(5, may_);
     }
-    if (java.lang.Float.floatToRawIntBits(june_) != 0) {
+    if (june_ != 0F) {
       output.writeFloat(6, june_);
     }
-    if (java.lang.Float.floatToRawIntBits(july_) != 0) {
+    if (july_ != 0F) {
       output.writeFloat(7, july_);
     }
-    if (java.lang.Float.floatToRawIntBits(august_) != 0) {
+    if (august_ != 0F) {
       output.writeFloat(8, august_);
     }
-    if (java.lang.Float.floatToRawIntBits(september_) != 0) {
+    if (september_ != 0F) {
       output.writeFloat(9, september_);
     }
-    if (java.lang.Float.floatToRawIntBits(october_) != 0) {
+    if (october_ != 0F) {
       output.writeFloat(10, october_);
     }
-    if (java.lang.Float.floatToRawIntBits(november_) != 0) {
+    if (november_ != 0F) {
       output.writeFloat(11, november_);
     }
-    if (java.lang.Float.floatToRawIntBits(december_) != 0) {
+    if (december_ != 0F) {
       output.writeFloat(12, december_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -233,55 +335,55 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (java.lang.Float.floatToRawIntBits(january_) != 0) {
+    if (january_ != 0F) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(1, january_);
     }
-    if (java.lang.Float.floatToRawIntBits(february_) != 0) {
+    if (february_ != 0F) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(2, february_);
     }
-    if (java.lang.Float.floatToRawIntBits(march_) != 0) {
+    if (march_ != 0F) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(3, march_);
     }
-    if (java.lang.Float.floatToRawIntBits(april_) != 0) {
+    if (april_ != 0F) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(4, april_);
     }
-    if (java.lang.Float.floatToRawIntBits(may_) != 0) {
+    if (may_ != 0F) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(5, may_);
     }
-    if (java.lang.Float.floatToRawIntBits(june_) != 0) {
+    if (june_ != 0F) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(6, june_);
     }
-    if (java.lang.Float.floatToRawIntBits(july_) != 0) {
+    if (july_ != 0F) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(7, july_);
     }
-    if (java.lang.Float.floatToRawIntBits(august_) != 0) {
+    if (august_ != 0F) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(8, august_);
     }
-    if (java.lang.Float.floatToRawIntBits(september_) != 0) {
+    if (september_ != 0F) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(9, september_);
     }
-    if (java.lang.Float.floatToRawIntBits(october_) != 0) {
+    if (october_ != 0F) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(10, october_);
     }
-    if (java.lang.Float.floatToRawIntBits(november_) != 0) {
+    if (november_ != 0F) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(11, november_);
     }
-    if (java.lang.Float.floatToRawIntBits(december_) != 0) {
+    if (december_ != 0F) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(12, december_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -332,7 +434,7 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Float.floatToIntBits(getDecember())
         != java.lang.Float.floatToIntBits(
             other.getDecember())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -379,7 +481,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + DECEMBER_FIELD_NUMBER;
     hash = (53 * hash) + java.lang.Float.floatToIntBits(
         getDecember());
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -428,13 +530,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.commons.ProfileMOY parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.commons.ProfileMOY parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -502,30 +602,46 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.ProfileMOY.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       january_ = 0F;
+
       february_ = 0F;
+
       march_ = 0F;
+
       april_ = 0F;
+
       may_ = 0F;
+
       june_ = 0F;
+
       july_ = 0F;
+
       august_ = 0F;
+
       september_ = 0F;
+
       october_ = 0F;
+
       november_ = 0F;
+
       december_ = 0F;
+
       return this;
     }
 
@@ -552,49 +668,20 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.ProfileMOY buildPartial() {
       com.tcn.cloud.api.api.commons.ProfileMOY result = new com.tcn.cloud.api.api.commons.ProfileMOY(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.january_ = january_;
+      result.february_ = february_;
+      result.march_ = march_;
+      result.april_ = april_;
+      result.may_ = may_;
+      result.june_ = june_;
+      result.july_ = july_;
+      result.august_ = august_;
+      result.september_ = september_;
+      result.october_ = october_;
+      result.november_ = november_;
+      result.december_ = december_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.commons.ProfileMOY result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.january_ = january_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.february_ = february_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.march_ = march_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.april_ = april_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.may_ = may_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.june_ = june_;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.july_ = july_;
-      }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.august_ = august_;
-      }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
-        result.september_ = september_;
-      }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
-        result.october_ = october_;
-      }
-      if (((from_bitField0_ & 0x00000400) != 0)) {
-        result.november_ = november_;
-      }
-      if (((from_bitField0_ & 0x00000800) != 0)) {
-        result.december_ = december_;
-      }
     }
 
     @java.lang.Override
@@ -677,7 +764,7 @@ private static final long serialVersionUID = 0L;
       if (other.getDecember() != 0F) {
         setDecember(other.getDecember());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -692,93 +779,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.commons.ProfileMOY parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 13: {
-              january_ = input.readFloat();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 13
-            case 21: {
-              february_ = input.readFloat();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 21
-            case 29: {
-              march_ = input.readFloat();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 29
-            case 37: {
-              april_ = input.readFloat();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 37
-            case 45: {
-              may_ = input.readFloat();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 45
-            case 53: {
-              june_ = input.readFloat();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 53
-            case 61: {
-              july_ = input.readFloat();
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 61
-            case 69: {
-              august_ = input.readFloat();
-              bitField0_ |= 0x00000080;
-              break;
-            } // case 69
-            case 77: {
-              september_ = input.readFloat();
-              bitField0_ |= 0x00000100;
-              break;
-            } // case 77
-            case 85: {
-              october_ = input.readFloat();
-              bitField0_ |= 0x00000200;
-              break;
-            } // case 85
-            case 93: {
-              november_ = input.readFloat();
-              bitField0_ |= 0x00000400;
-              break;
-            } // case 93
-            case 101: {
-              december_ = input.readFloat();
-              bitField0_ |= 0x00000800;
-              break;
-            } // case 101
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.commons.ProfileMOY) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private float january_ ;
     /**
@@ -795,9 +808,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setJanuary(float value) {
-
+      
       january_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -806,7 +818,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearJanuary() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       january_ = 0F;
       onChanged();
       return this;
@@ -827,9 +839,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFebruary(float value) {
-
+      
       february_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -838,7 +849,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFebruary() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       february_ = 0F;
       onChanged();
       return this;
@@ -859,9 +870,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMarch(float value) {
-
+      
       march_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -870,7 +880,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMarch() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       march_ = 0F;
       onChanged();
       return this;
@@ -891,9 +901,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setApril(float value) {
-
+      
       april_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -902,7 +911,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearApril() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      
       april_ = 0F;
       onChanged();
       return this;
@@ -923,9 +932,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMay(float value) {
-
+      
       may_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -934,7 +942,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMay() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      
       may_ = 0F;
       onChanged();
       return this;
@@ -955,9 +963,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setJune(float value) {
-
+      
       june_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -966,7 +973,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearJune() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      
       june_ = 0F;
       onChanged();
       return this;
@@ -987,9 +994,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setJuly(float value) {
-
+      
       july_ = value;
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -998,7 +1004,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearJuly() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      
       july_ = 0F;
       onChanged();
       return this;
@@ -1019,9 +1025,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAugust(float value) {
-
+      
       august_ = value;
-      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1030,7 +1035,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAugust() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      
       august_ = 0F;
       onChanged();
       return this;
@@ -1051,9 +1056,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSeptember(float value) {
-
+      
       september_ = value;
-      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1062,7 +1066,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSeptember() {
-      bitField0_ = (bitField0_ & ~0x00000100);
+      
       september_ = 0F;
       onChanged();
       return this;
@@ -1083,9 +1087,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOctober(float value) {
-
+      
       october_ = value;
-      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1094,7 +1097,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOctober() {
-      bitField0_ = (bitField0_ & ~0x00000200);
+      
       october_ = 0F;
       onChanged();
       return this;
@@ -1115,9 +1118,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setNovember(float value) {
-
+      
       november_ = value;
-      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -1126,7 +1128,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearNovember() {
-      bitField0_ = (bitField0_ & ~0x00000400);
+      
       november_ = 0F;
       onChanged();
       return this;
@@ -1147,9 +1149,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDecember(float value) {
-
+      
       december_ = value;
-      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -1158,7 +1159,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDecember() {
-      bitField0_ = (bitField0_ & ~0x00000800);
+      
       december_ = 0F;
       onChanged();
       return this;
@@ -1196,18 +1197,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new ProfileMOY(input, extensionRegistry);
     }
   };
 

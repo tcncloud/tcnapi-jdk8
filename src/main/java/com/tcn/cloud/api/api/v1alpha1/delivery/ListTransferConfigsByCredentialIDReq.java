@@ -25,6 +25,100 @@ private static final long serialVersionUID = 0L;
     return new ListTransferConfigsByCredentialIDReq();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private ListTransferConfigsByCredentialIDReq(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig.Builder subBuilder = null;
+            if (entity_ != null) {
+              subBuilder = entity_.toBuilder();
+            }
+            entity_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(entity_);
+              entity_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 18: {
+            com.google.protobuf.FieldMask.Builder subBuilder = null;
+            if (mask_ != null) {
+              subBuilder = mask_.toBuilder();
+            }
+            mask_ = input.readMessage(com.google.protobuf.FieldMask.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(mask_);
+              mask_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 26: {
+            com.tcn.cloud.api.api.v1alpha1.delivery.ID.Builder subBuilder = null;
+            if (credentialSid_ != null) {
+              subBuilder = credentialSid_.toBuilder();
+            }
+            credentialSid_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.delivery.ID.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(credentialSid_);
+              credentialSid_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 34: {
+            com.tcn.cloud.api.api.v1alpha1.delivery.ListReq.Builder subBuilder = null;
+            if (listReq_ != null) {
+              subBuilder = listReq_.toBuilder();
+            }
+            listReq_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.delivery.ListReq.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(listReq_);
+              listReq_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.delivery.ServiceProto.internal_static_api_v1alpha1_delivery_ListTransferConfigsByCredentialIDReq_descriptor;
@@ -61,7 +155,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfigOrBuilder getEntityOrBuilder() {
-    return entity_ == null ? com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig.getDefaultInstance() : entity_;
+    return getEntity();
   }
 
   public static final int MASK_FIELD_NUMBER = 2;
@@ -87,7 +181,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.FieldMaskOrBuilder getMaskOrBuilder() {
-    return mask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : mask_;
+    return getMask();
   }
 
   public static final int CREDENTIAL_SID_FIELD_NUMBER = 3;
@@ -113,7 +207,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.delivery.IDOrBuilder getCredentialSidOrBuilder() {
-    return credentialSid_ == null ? com.tcn.cloud.api.api.v1alpha1.delivery.ID.getDefaultInstance() : credentialSid_;
+    return getCredentialSid();
   }
 
   public static final int LIST_REQ_FIELD_NUMBER = 4;
@@ -139,7 +233,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.delivery.ListReqOrBuilder getListReqOrBuilder() {
-    return listReq_ == null ? com.tcn.cloud.api.api.v1alpha1.delivery.ListReq.getDefaultInstance() : listReq_;
+    return getListReq();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -168,7 +262,7 @@ private static final long serialVersionUID = 0L;
     if (listReq_ != null) {
       output.writeMessage(4, getListReq());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -193,7 +287,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getListReq());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -228,7 +322,7 @@ private static final long serialVersionUID = 0L;
       if (!getListReq()
           .equals(other.getListReq())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -255,7 +349,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + LIST_REQ_FIELD_NUMBER;
       hash = (53 * hash) + getListReq().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -304,13 +398,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.delivery.ListTransferConfigsByCredentialIDReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.delivery.ListTransferConfigsByCredentialIDReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -374,36 +466,44 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.delivery.ListTransferConfigsByCredentialIDReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      entity_ = null;
-      if (entityBuilder_ != null) {
-        entityBuilder_.dispose();
+      if (entityBuilder_ == null) {
+        entity_ = null;
+      } else {
+        entity_ = null;
         entityBuilder_ = null;
       }
-      mask_ = null;
-      if (maskBuilder_ != null) {
-        maskBuilder_.dispose();
+      if (maskBuilder_ == null) {
+        mask_ = null;
+      } else {
+        mask_ = null;
         maskBuilder_ = null;
       }
-      credentialSid_ = null;
-      if (credentialSidBuilder_ != null) {
-        credentialSidBuilder_.dispose();
+      if (credentialSidBuilder_ == null) {
+        credentialSid_ = null;
+      } else {
+        credentialSid_ = null;
         credentialSidBuilder_ = null;
       }
-      listReq_ = null;
-      if (listReqBuilder_ != null) {
-        listReqBuilder_.dispose();
+      if (listReqBuilder_ == null) {
+        listReq_ = null;
+      } else {
+        listReq_ = null;
         listReqBuilder_ = null;
       }
       return this;
@@ -432,33 +532,28 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.delivery.ListTransferConfigsByCredentialIDReq buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.delivery.ListTransferConfigsByCredentialIDReq result = new com.tcn.cloud.api.api.v1alpha1.delivery.ListTransferConfigsByCredentialIDReq(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      if (entityBuilder_ == null) {
+        result.entity_ = entity_;
+      } else {
+        result.entity_ = entityBuilder_.build();
+      }
+      if (maskBuilder_ == null) {
+        result.mask_ = mask_;
+      } else {
+        result.mask_ = maskBuilder_.build();
+      }
+      if (credentialSidBuilder_ == null) {
+        result.credentialSid_ = credentialSid_;
+      } else {
+        result.credentialSid_ = credentialSidBuilder_.build();
+      }
+      if (listReqBuilder_ == null) {
+        result.listReq_ = listReq_;
+      } else {
+        result.listReq_ = listReqBuilder_.build();
+      }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.delivery.ListTransferConfigsByCredentialIDReq result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.entity_ = entityBuilder_ == null
-            ? entity_
-            : entityBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.mask_ = maskBuilder_ == null
-            ? mask_
-            : maskBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.credentialSid_ = credentialSidBuilder_ == null
-            ? credentialSid_
-            : credentialSidBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.listReq_ = listReqBuilder_ == null
-            ? listReq_
-            : listReqBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -517,7 +612,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasListReq()) {
         mergeListReq(other.getListReq());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -532,61 +627,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.delivery.ListTransferConfigsByCredentialIDReq parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              input.readMessage(
-                  getEntityFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              input.readMessage(
-                  getMaskFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 26: {
-              input.readMessage(
-                  getCredentialSidFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            case 34: {
-              input.readMessage(
-                  getListReqFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.delivery.ListTransferConfigsByCredentialIDReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig entity_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -596,7 +649,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the entity field is set.
      */
     public boolean hasEntity() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return entityBuilder_ != null || entity_ != null;
     }
     /**
      * <code>.api.v1alpha1.delivery.TransferConfig entity = 1 [json_name = "entity"];</code>
@@ -618,11 +671,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         entity_ = value;
+        onChanged();
       } else {
         entityBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -632,11 +685,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig.Builder builderForValue) {
       if (entityBuilder_ == null) {
         entity_ = builderForValue.build();
+        onChanged();
       } else {
         entityBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -644,38 +697,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeEntity(com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig value) {
       if (entityBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          entity_ != null &&
-          entity_ != com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig.getDefaultInstance()) {
-          getEntityBuilder().mergeFrom(value);
+        if (entity_ != null) {
+          entity_ =
+            com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig.newBuilder(entity_).mergeFrom(value).buildPartial();
         } else {
           entity_ = value;
         }
+        onChanged();
       } else {
         entityBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v1alpha1.delivery.TransferConfig entity = 1 [json_name = "entity"];</code>
      */
     public Builder clearEntity() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      entity_ = null;
-      if (entityBuilder_ != null) {
-        entityBuilder_.dispose();
+      if (entityBuilder_ == null) {
+        entity_ = null;
+        onChanged();
+      } else {
+        entity_ = null;
         entityBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v1alpha1.delivery.TransferConfig entity = 1 [json_name = "entity"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.delivery.TransferConfig.Builder getEntityBuilder() {
-      bitField0_ |= 0x00000001;
+      
       onChanged();
       return getEntityFieldBuilder().getBuilder();
     }
@@ -715,7 +768,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the mask field is set.
      */
     public boolean hasMask() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return maskBuilder_ != null || mask_ != null;
     }
     /**
      * <code>.google.protobuf.FieldMask mask = 2 [json_name = "mask"];</code>
@@ -737,11 +790,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         mask_ = value;
+        onChanged();
       } else {
         maskBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -751,11 +804,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.FieldMask.Builder builderForValue) {
       if (maskBuilder_ == null) {
         mask_ = builderForValue.build();
+        onChanged();
       } else {
         maskBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -763,38 +816,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeMask(com.google.protobuf.FieldMask value) {
       if (maskBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
-          mask_ != null &&
-          mask_ != com.google.protobuf.FieldMask.getDefaultInstance()) {
-          getMaskBuilder().mergeFrom(value);
+        if (mask_ != null) {
+          mask_ =
+            com.google.protobuf.FieldMask.newBuilder(mask_).mergeFrom(value).buildPartial();
         } else {
           mask_ = value;
         }
+        onChanged();
       } else {
         maskBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.FieldMask mask = 2 [json_name = "mask"];</code>
      */
     public Builder clearMask() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      mask_ = null;
-      if (maskBuilder_ != null) {
-        maskBuilder_.dispose();
+      if (maskBuilder_ == null) {
+        mask_ = null;
+        onChanged();
+      } else {
+        mask_ = null;
         maskBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.FieldMask mask = 2 [json_name = "mask"];</code>
      */
     public com.google.protobuf.FieldMask.Builder getMaskBuilder() {
-      bitField0_ |= 0x00000002;
+      
       onChanged();
       return getMaskFieldBuilder().getBuilder();
     }
@@ -834,7 +887,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the credentialSid field is set.
      */
     public boolean hasCredentialSid() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return credentialSidBuilder_ != null || credentialSid_ != null;
     }
     /**
      * <code>.api.v1alpha1.delivery.ID credential_sid = 3 [json_name = "credentialSid"];</code>
@@ -856,11 +909,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         credentialSid_ = value;
+        onChanged();
       } else {
         credentialSidBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -870,11 +923,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.delivery.ID.Builder builderForValue) {
       if (credentialSidBuilder_ == null) {
         credentialSid_ = builderForValue.build();
+        onChanged();
       } else {
         credentialSidBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -882,38 +935,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCredentialSid(com.tcn.cloud.api.api.v1alpha1.delivery.ID value) {
       if (credentialSidBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0) &&
-          credentialSid_ != null &&
-          credentialSid_ != com.tcn.cloud.api.api.v1alpha1.delivery.ID.getDefaultInstance()) {
-          getCredentialSidBuilder().mergeFrom(value);
+        if (credentialSid_ != null) {
+          credentialSid_ =
+            com.tcn.cloud.api.api.v1alpha1.delivery.ID.newBuilder(credentialSid_).mergeFrom(value).buildPartial();
         } else {
           credentialSid_ = value;
         }
+        onChanged();
       } else {
         credentialSidBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v1alpha1.delivery.ID credential_sid = 3 [json_name = "credentialSid"];</code>
      */
     public Builder clearCredentialSid() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      credentialSid_ = null;
-      if (credentialSidBuilder_ != null) {
-        credentialSidBuilder_.dispose();
+      if (credentialSidBuilder_ == null) {
+        credentialSid_ = null;
+        onChanged();
+      } else {
+        credentialSid_ = null;
         credentialSidBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v1alpha1.delivery.ID credential_sid = 3 [json_name = "credentialSid"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.delivery.ID.Builder getCredentialSidBuilder() {
-      bitField0_ |= 0x00000004;
+      
       onChanged();
       return getCredentialSidFieldBuilder().getBuilder();
     }
@@ -953,7 +1006,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the listReq field is set.
      */
     public boolean hasListReq() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return listReqBuilder_ != null || listReq_ != null;
     }
     /**
      * <code>.api.v1alpha1.delivery.ListReq list_req = 4 [json_name = "listReq"];</code>
@@ -975,11 +1028,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         listReq_ = value;
+        onChanged();
       } else {
         listReqBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
@@ -989,11 +1042,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.delivery.ListReq.Builder builderForValue) {
       if (listReqBuilder_ == null) {
         listReq_ = builderForValue.build();
+        onChanged();
       } else {
         listReqBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
@@ -1001,38 +1054,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeListReq(com.tcn.cloud.api.api.v1alpha1.delivery.ListReq value) {
       if (listReqBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0) &&
-          listReq_ != null &&
-          listReq_ != com.tcn.cloud.api.api.v1alpha1.delivery.ListReq.getDefaultInstance()) {
-          getListReqBuilder().mergeFrom(value);
+        if (listReq_ != null) {
+          listReq_ =
+            com.tcn.cloud.api.api.v1alpha1.delivery.ListReq.newBuilder(listReq_).mergeFrom(value).buildPartial();
         } else {
           listReq_ = value;
         }
+        onChanged();
       } else {
         listReqBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v1alpha1.delivery.ListReq list_req = 4 [json_name = "listReq"];</code>
      */
     public Builder clearListReq() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      listReq_ = null;
-      if (listReqBuilder_ != null) {
-        listReqBuilder_.dispose();
+      if (listReqBuilder_ == null) {
+        listReq_ = null;
+        onChanged();
+      } else {
+        listReq_ = null;
         listReqBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v1alpha1.delivery.ListReq list_req = 4 [json_name = "listReq"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.delivery.ListReq.Builder getListReqBuilder() {
-      bitField0_ |= 0x00000008;
+      
       onChanged();
       return getListReqFieldBuilder().getBuilder();
     }
@@ -1096,18 +1149,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new ListTransferConfigsByCredentialIDReq(input, extensionRegistry);
     }
   };
 

@@ -28,6 +28,66 @@ private static final long serialVersionUID = 0L;
     return new CreateEmailMessageAgentReplyAttachmentRes();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private CreateEmailMessageAgentReplyAttachmentRes(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            emailMessageReplyAttachmentId_ = s;
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            urlPath_ = s;
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            gsPath_ = s;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.EmailapiProto.internal_static_api_v0alpha_CreateEmailMessageAgentReplyAttachmentRes_descriptor;
@@ -42,8 +102,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EMAIL_MESSAGE_REPLY_ATTACHMENT_ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object emailMessageReplyAttachmentId_ = "";
+  private volatile java.lang.Object emailMessageReplyAttachmentId_;
   /**
    * <code>string email_message_reply_attachment_id = 1 [json_name = "emailMessageReplyAttachmentId"];</code>
    * @return The emailMessageReplyAttachmentId.
@@ -81,8 +140,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int URL_PATH_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object urlPath_ = "";
+  private volatile java.lang.Object urlPath_;
   /**
    * <code>string url_path = 2 [json_name = "urlPath"];</code>
    * @return The urlPath.
@@ -120,8 +178,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GS_PATH_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object gsPath_ = "";
+  private volatile java.lang.Object gsPath_;
   /**
    * <code>string gs_path = 3 [json_name = "gsPath"];</code>
    * @return The gsPath.
@@ -172,16 +229,16 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emailMessageReplyAttachmentId_)) {
+    if (!getEmailMessageReplyAttachmentIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, emailMessageReplyAttachmentId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(urlPath_)) {
+    if (!getUrlPathBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, urlPath_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gsPath_)) {
+    if (!getGsPathBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, gsPath_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -190,16 +247,16 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emailMessageReplyAttachmentId_)) {
+    if (!getEmailMessageReplyAttachmentIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, emailMessageReplyAttachmentId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(urlPath_)) {
+    if (!getUrlPathBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, urlPath_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gsPath_)) {
+    if (!getGsPathBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, gsPath_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -220,7 +277,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getUrlPath())) return false;
     if (!getGsPath()
         .equals(other.getGsPath())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -237,7 +294,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getUrlPath().hashCode();
     hash = (37 * hash) + GS_PATH_FIELD_NUMBER;
     hash = (53 * hash) + getGsPath().hashCode();
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -286,13 +343,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAgentReplyAttachmentRes parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAgentReplyAttachmentRes parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -356,21 +411,28 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAgentReplyAttachmentRes.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       emailMessageReplyAttachmentId_ = "";
+
       urlPath_ = "";
+
       gsPath_ = "";
+
       return this;
     }
 
@@ -397,22 +459,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAgentReplyAttachmentRes buildPartial() {
       com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAgentReplyAttachmentRes result = new com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAgentReplyAttachmentRes(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.emailMessageReplyAttachmentId_ = emailMessageReplyAttachmentId_;
+      result.urlPath_ = urlPath_;
+      result.gsPath_ = gsPath_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAgentReplyAttachmentRes result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.emailMessageReplyAttachmentId_ = emailMessageReplyAttachmentId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.urlPath_ = urlPath_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.gsPath_ = gsPath_;
-      }
     }
 
     @java.lang.Override
@@ -461,20 +512,17 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAgentReplyAttachmentRes.getDefaultInstance()) return this;
       if (!other.getEmailMessageReplyAttachmentId().isEmpty()) {
         emailMessageReplyAttachmentId_ = other.emailMessageReplyAttachmentId_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getUrlPath().isEmpty()) {
         urlPath_ = other.urlPath_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getGsPath().isEmpty()) {
         gsPath_ = other.gsPath_;
-        bitField0_ |= 0x00000004;
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -489,48 +537,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAgentReplyAttachmentRes parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              emailMessageReplyAttachmentId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              urlPath_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 26: {
-              gsPath_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.CreateEmailMessageAgentReplyAttachmentRes) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private java.lang.Object emailMessageReplyAttachmentId_ = "";
     /**
@@ -573,9 +592,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEmailMessageReplyAttachmentId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       emailMessageReplyAttachmentId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -584,8 +605,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEmailMessageReplyAttachmentId() {
+      
       emailMessageReplyAttachmentId_ = getDefaultInstance().getEmailMessageReplyAttachmentId();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -596,10 +617,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEmailMessageReplyAttachmentIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       emailMessageReplyAttachmentId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -645,9 +668,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUrlPath(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       urlPath_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -656,8 +681,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUrlPath() {
+      
       urlPath_ = getDefaultInstance().getUrlPath();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -668,10 +693,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUrlPathBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       urlPath_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -717,9 +744,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setGsPath(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       gsPath_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -728,8 +757,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGsPath() {
+      
       gsPath_ = getDefaultInstance().getGsPath();
-      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -740,10 +769,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setGsPathBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       gsPath_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -780,18 +811,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new CreateEmailMessageAgentReplyAttachmentRes(input, extensionRegistry);
     }
   };
 

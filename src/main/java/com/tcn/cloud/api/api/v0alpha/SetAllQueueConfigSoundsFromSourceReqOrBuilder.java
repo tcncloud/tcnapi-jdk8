@@ -49,5 +49,5 @@ public interface SetAllQueueConfigSoundsFromSourceReqOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.SetAllQueueConfigSoundsFromSourceReq.DefaultProfileOrBuilder getDefaultProfileOrBuilder();
 
-  com.tcn.cloud.api.api.v0alpha.SetAllQueueConfigSoundsFromSourceReq.FromCase getFromCase();
+  public com.tcn.cloud.api.api.v0alpha.SetAllQueueConfigSoundsFromSourceReq.FromCase getFromCase();
 }

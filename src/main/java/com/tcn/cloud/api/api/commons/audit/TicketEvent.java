@@ -26,6 +26,67 @@ private static final long serialVersionUID = 0L;
     return new TicketEvent();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private TicketEvent(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            com.tcn.cloud.api.api.commons.EditTicket.Builder subBuilder = null;
+            if (editticket_ != null) {
+              subBuilder = editticket_.toBuilder();
+            }
+            editticket_ = input.readMessage(com.tcn.cloud.api.api.commons.EditTicket.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(editticket_);
+              editticket_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            createdById_ = s;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.audit.TicketsEventsProto.internal_static_api_commons_audit_TicketEvent_descriptor;
@@ -74,12 +135,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.EditTicketOrBuilder getEditticketOrBuilder() {
-    return editticket_ == null ? com.tcn.cloud.api.api.commons.EditTicket.getDefaultInstance() : editticket_;
+    return getEditticket();
   }
 
   public static final int CREATED_BY_ID_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object createdById_ = "";
+  private volatile java.lang.Object createdById_;
   /**
    * <code>string created_by_id = 2 [json_name = "createdById"];</code>
    * @return The createdById.
@@ -133,10 +193,10 @@ private static final long serialVersionUID = 0L;
     if (editticket_ != null) {
       output.writeMessage(1, getEditticket());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdById_)) {
+    if (!getCreatedByIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, createdById_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -149,10 +209,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getEditticket());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdById_)) {
+    if (!getCreatedByIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, createdById_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -174,7 +234,7 @@ private static final long serialVersionUID = 0L;
     }
     if (!getCreatedById()
         .equals(other.getCreatedById())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -191,7 +251,7 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + CREATED_BY_ID_FIELD_NUMBER;
     hash = (53 * hash) + getCreatedById().hashCode();
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -240,13 +300,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.commons.audit.TicketEvent parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.commons.audit.TicketEvent parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -310,24 +368,30 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.audit.TicketEvent.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      editticket_ = null;
-      if (editticketBuilder_ != null) {
-        editticketBuilder_.dispose();
+      if (editticketBuilder_ == null) {
+        editticket_ = null;
+      } else {
+        editticket_ = null;
         editticketBuilder_ = null;
       }
       createdById_ = "";
+
       return this;
     }
 
@@ -354,21 +418,14 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.audit.TicketEvent buildPartial() {
       com.tcn.cloud.api.api.commons.audit.TicketEvent result = new com.tcn.cloud.api.api.commons.audit.TicketEvent(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      if (editticketBuilder_ == null) {
+        result.editticket_ = editticket_;
+      } else {
+        result.editticket_ = editticketBuilder_.build();
+      }
+      result.createdById_ = createdById_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.commons.audit.TicketEvent result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.editticket_ = editticketBuilder_ == null
-            ? editticket_
-            : editticketBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.createdById_ = createdById_;
-      }
     }
 
     @java.lang.Override
@@ -420,10 +477,9 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getCreatedById().isEmpty()) {
         createdById_ = other.createdById_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -438,45 +494,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.commons.audit.TicketEvent parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              input.readMessage(
-                  getEditticketFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              createdById_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.commons.audit.TicketEvent) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private com.tcn.cloud.api.api.commons.EditTicket editticket_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -490,7 +520,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the editticket field is set.
      */
     public boolean hasEditticket() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return editticketBuilder_ != null || editticket_ != null;
     }
     /**
      * <pre>
@@ -520,11 +550,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         editticket_ = value;
+        onChanged();
       } else {
         editticketBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -538,11 +568,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.EditTicket.Builder builderForValue) {
       if (editticketBuilder_ == null) {
         editticket_ = builderForValue.build();
+        onChanged();
       } else {
         editticketBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -554,18 +584,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeEditticket(com.tcn.cloud.api.api.commons.EditTicket value) {
       if (editticketBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          editticket_ != null &&
-          editticket_ != com.tcn.cloud.api.api.commons.EditTicket.getDefaultInstance()) {
-          getEditticketBuilder().mergeFrom(value);
+        if (editticket_ != null) {
+          editticket_ =
+            com.tcn.cloud.api.api.commons.EditTicket.newBuilder(editticket_).mergeFrom(value).buildPartial();
         } else {
           editticket_ = value;
         }
+        onChanged();
       } else {
         editticketBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -576,13 +605,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.EditTicket editticket = 1 [json_name = "editticket"];</code>
      */
     public Builder clearEditticket() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      editticket_ = null;
-      if (editticketBuilder_ != null) {
-        editticketBuilder_.dispose();
+      if (editticketBuilder_ == null) {
+        editticket_ = null;
+        onChanged();
+      } else {
+        editticket_ = null;
         editticketBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -593,7 +623,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.EditTicket editticket = 1 [json_name = "editticket"];</code>
      */
     public com.tcn.cloud.api.api.commons.EditTicket.Builder getEditticketBuilder() {
-      bitField0_ |= 0x00000001;
+      
       onChanged();
       return getEditticketFieldBuilder().getBuilder();
     }
@@ -674,9 +704,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCreatedById(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       createdById_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -685,8 +717,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCreatedById() {
+      
       createdById_ = getDefaultInstance().getCreatedById();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -697,10 +729,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCreatedByIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       createdById_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -737,18 +771,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new TicketEvent(input, extensionRegistry);
     }
   };
 

@@ -29,6 +29,97 @@ private static final long serialVersionUID = 0L;
     return new ClientInfoDisplayTemplate();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private ClientInfoDisplayTemplate(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            name_ = s;
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            description_ = s;
+            break;
+          }
+          case 24: {
+
+            displayAllFields_ = input.readBool();
+            break;
+          }
+          case 34: {
+            com.tcn.cloud.api.api.v1alpha1.org.legacy.DialedNumberFieldStyle.Builder subBuilder = null;
+            if (dialedNumberFieldStyle_ != null) {
+              subBuilder = dialedNumberFieldStyle_.toBuilder();
+            }
+            dialedNumberFieldStyle_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.org.legacy.DialedNumberFieldStyle.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(dialedNumberFieldStyle_);
+              dialedNumberFieldStyle_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 42: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              contactFieldStyles_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactFieldStyle>();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            contactFieldStyles_.add(
+                input.readMessage(com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactFieldStyle.parser(), extensionRegistry));
+            break;
+          }
+          case 58: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            id_ = s;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        contactFieldStyles_ = java.util.Collections.unmodifiableList(contactFieldStyles_);
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.org.legacy.EntitiesProto.internal_static_api_v1alpha1_org_legacy_ClientInfoDisplayTemplate_descriptor;
@@ -43,8 +134,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object name_ = "";
+  private volatile java.lang.Object name_;
   /**
    * <code>string name = 1 [json_name = "name"];</code>
    * @return The name.
@@ -82,8 +172,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTION_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object description_ = "";
+  private volatile java.lang.Object description_;
   /**
    * <code>string description = 2 [json_name = "description"];</code>
    * @return The description.
@@ -121,7 +210,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DISPLAY_ALL_FIELDS_FIELD_NUMBER = 3;
-  private boolean displayAllFields_ = false;
+  private boolean displayAllFields_;
   /**
    * <code>bool display_all_fields = 3 [json_name = "displayAllFields"];</code>
    * @return The displayAllFields.
@@ -154,11 +243,10 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.org.legacy.DialedNumberFieldStyleOrBuilder getDialedNumberFieldStyleOrBuilder() {
-    return dialedNumberFieldStyle_ == null ? com.tcn.cloud.api.api.v1alpha1.org.legacy.DialedNumberFieldStyle.getDefaultInstance() : dialedNumberFieldStyle_;
+    return getDialedNumberFieldStyle();
   }
 
   public static final int CONTACT_FIELD_STYLES_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactFieldStyle> contactFieldStyles_;
   /**
    * <code>repeated .api.v1alpha1.org.legacy.ContactFieldStyle contact_field_styles = 5 [json_name = "contactFieldStyles"];</code>
@@ -199,8 +287,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 7;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object id_ = "";
+  private volatile java.lang.Object id_;
   /**
    * <code>string id = 7 [json_name = "id"];</code>
    * @return The id.
@@ -251,10 +338,10 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+    if (!getNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+    if (!getDescriptionBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
     }
     if (displayAllFields_ != false) {
@@ -266,10 +353,10 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < contactFieldStyles_.size(); i++) {
       output.writeMessage(5, contactFieldStyles_.get(i));
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+    if (!getIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, id_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -278,10 +365,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+    if (!getNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+    if (!getDescriptionBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
     }
     if (displayAllFields_ != false) {
@@ -296,10 +383,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, contactFieldStyles_.get(i));
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+    if (!getIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, id_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -329,7 +416,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getContactFieldStylesList())) return false;
     if (!getId()
         .equals(other.getId())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -357,7 +444,7 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + ID_FIELD_NUMBER;
     hash = (53 * hash) + getId().hashCode();
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -406,13 +493,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.ClientInfoDisplayTemplate parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.ClientInfoDisplayTemplate parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -476,34 +561,43 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.legacy.ClientInfoDisplayTemplate.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getContactFieldStylesFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       name_ = "";
+
       description_ = "";
+
       displayAllFields_ = false;
-      dialedNumberFieldStyle_ = null;
-      if (dialedNumberFieldStyleBuilder_ != null) {
-        dialedNumberFieldStyleBuilder_.dispose();
+
+      if (dialedNumberFieldStyleBuilder_ == null) {
+        dialedNumberFieldStyle_ = null;
+      } else {
+        dialedNumberFieldStyle_ = null;
         dialedNumberFieldStyleBuilder_ = null;
       }
       if (contactFieldStylesBuilder_ == null) {
         contactFieldStyles_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
-        contactFieldStyles_ = null;
         contactFieldStylesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000010);
       id_ = "";
+
       return this;
     }
 
@@ -530,43 +624,27 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.legacy.ClientInfoDisplayTemplate buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.legacy.ClientInfoDisplayTemplate result = new com.tcn.cloud.api.api.v1alpha1.org.legacy.ClientInfoDisplayTemplate(this);
-      buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      onBuilt();
-      return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.org.legacy.ClientInfoDisplayTemplate result) {
+      int from_bitField0_ = bitField0_;
+      result.name_ = name_;
+      result.description_ = description_;
+      result.displayAllFields_ = displayAllFields_;
+      if (dialedNumberFieldStyleBuilder_ == null) {
+        result.dialedNumberFieldStyle_ = dialedNumberFieldStyle_;
+      } else {
+        result.dialedNumberFieldStyle_ = dialedNumberFieldStyleBuilder_.build();
+      }
       if (contactFieldStylesBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           contactFieldStyles_ = java.util.Collections.unmodifiableList(contactFieldStyles_);
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.contactFieldStyles_ = contactFieldStyles_;
       } else {
         result.contactFieldStyles_ = contactFieldStylesBuilder_.build();
       }
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.legacy.ClientInfoDisplayTemplate result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.name_ = name_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.description_ = description_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.displayAllFields_ = displayAllFields_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.dialedNumberFieldStyle_ = dialedNumberFieldStyleBuilder_ == null
-            ? dialedNumberFieldStyle_
-            : dialedNumberFieldStyleBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.id_ = id_;
-      }
+      result.id_ = id_;
+      onBuilt();
+      return result;
     }
 
     @java.lang.Override
@@ -615,12 +693,10 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v1alpha1.org.legacy.ClientInfoDisplayTemplate.getDefaultInstance()) return this;
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getDescription().isEmpty()) {
         description_ = other.description_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.getDisplayAllFields() != false) {
@@ -633,7 +709,7 @@ private static final long serialVersionUID = 0L;
         if (!other.contactFieldStyles_.isEmpty()) {
           if (contactFieldStyles_.isEmpty()) {
             contactFieldStyles_ = other.contactFieldStyles_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureContactFieldStylesIsMutable();
             contactFieldStyles_.addAll(other.contactFieldStyles_);
@@ -646,7 +722,7 @@ private static final long serialVersionUID = 0L;
             contactFieldStylesBuilder_.dispose();
             contactFieldStylesBuilder_ = null;
             contactFieldStyles_ = other.contactFieldStyles_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000001);
             contactFieldStylesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getContactFieldStylesFieldBuilder() : null;
@@ -657,10 +733,9 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getId().isEmpty()) {
         id_ = other.id_;
-        bitField0_ |= 0x00000020;
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -675,70 +750,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.org.legacy.ClientInfoDisplayTemplate parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              name_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              description_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 24: {
-              displayAllFields_ = input.readBool();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 24
-            case 34: {
-              input.readMessage(
-                  getDialedNumberFieldStyleFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
-            case 42: {
-              com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactFieldStyle m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactFieldStyle.parser(),
-                      extensionRegistry);
-              if (contactFieldStylesBuilder_ == null) {
-                ensureContactFieldStylesIsMutable();
-                contactFieldStyles_.add(m);
-              } else {
-                contactFieldStylesBuilder_.addMessage(m);
-              }
-              break;
-            } // case 42
-            case 58: {
-              id_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 58
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.org.legacy.ClientInfoDisplayTemplate) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -784,9 +806,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       name_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -795,8 +819,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
+      
       name_ = getDefaultInstance().getName();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -807,10 +831,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       name_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -856,9 +882,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       description_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -867,8 +895,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
+      
       description_ = getDefaultInstance().getDescription();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -879,10 +907,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescriptionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       description_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -902,9 +932,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDisplayAllFields(boolean value) {
-
+      
       displayAllFields_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -913,7 +942,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayAllFields() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       displayAllFields_ = false;
       onChanged();
       return this;
@@ -927,7 +956,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dialedNumberFieldStyle field is set.
      */
     public boolean hasDialedNumberFieldStyle() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return dialedNumberFieldStyleBuilder_ != null || dialedNumberFieldStyle_ != null;
     }
     /**
      * <code>.api.v1alpha1.org.legacy.DialedNumberFieldStyle dialed_number_field_style = 4 [json_name = "dialedNumberFieldStyle"];</code>
@@ -949,11 +978,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dialedNumberFieldStyle_ = value;
+        onChanged();
       } else {
         dialedNumberFieldStyleBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
@@ -963,11 +992,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.org.legacy.DialedNumberFieldStyle.Builder builderForValue) {
       if (dialedNumberFieldStyleBuilder_ == null) {
         dialedNumberFieldStyle_ = builderForValue.build();
+        onChanged();
       } else {
         dialedNumberFieldStyleBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
@@ -975,38 +1004,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDialedNumberFieldStyle(com.tcn.cloud.api.api.v1alpha1.org.legacy.DialedNumberFieldStyle value) {
       if (dialedNumberFieldStyleBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0) &&
-          dialedNumberFieldStyle_ != null &&
-          dialedNumberFieldStyle_ != com.tcn.cloud.api.api.v1alpha1.org.legacy.DialedNumberFieldStyle.getDefaultInstance()) {
-          getDialedNumberFieldStyleBuilder().mergeFrom(value);
+        if (dialedNumberFieldStyle_ != null) {
+          dialedNumberFieldStyle_ =
+            com.tcn.cloud.api.api.v1alpha1.org.legacy.DialedNumberFieldStyle.newBuilder(dialedNumberFieldStyle_).mergeFrom(value).buildPartial();
         } else {
           dialedNumberFieldStyle_ = value;
         }
+        onChanged();
       } else {
         dialedNumberFieldStyleBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v1alpha1.org.legacy.DialedNumberFieldStyle dialed_number_field_style = 4 [json_name = "dialedNumberFieldStyle"];</code>
      */
     public Builder clearDialedNumberFieldStyle() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      dialedNumberFieldStyle_ = null;
-      if (dialedNumberFieldStyleBuilder_ != null) {
-        dialedNumberFieldStyleBuilder_.dispose();
+      if (dialedNumberFieldStyleBuilder_ == null) {
+        dialedNumberFieldStyle_ = null;
+        onChanged();
+      } else {
+        dialedNumberFieldStyle_ = null;
         dialedNumberFieldStyleBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v1alpha1.org.legacy.DialedNumberFieldStyle dialed_number_field_style = 4 [json_name = "dialedNumberFieldStyle"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.org.legacy.DialedNumberFieldStyle.Builder getDialedNumberFieldStyleBuilder() {
-      bitField0_ |= 0x00000008;
+      
       onChanged();
       return getDialedNumberFieldStyleFieldBuilder().getBuilder();
     }
@@ -1041,9 +1070,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactFieldStyle> contactFieldStyles_ =
       java.util.Collections.emptyList();
     private void ensureContactFieldStylesIsMutable() {
-      if (!((bitField0_ & 0x00000010) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         contactFieldStyles_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactFieldStyle>(contactFieldStyles_);
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -1193,7 +1222,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearContactFieldStyles() {
       if (contactFieldStylesBuilder_ == null) {
         contactFieldStyles_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         contactFieldStylesBuilder_.clear();
@@ -1270,7 +1299,7 @@ private static final long serialVersionUID = 0L;
         contactFieldStylesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactFieldStyle, com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactFieldStyle.Builder, com.tcn.cloud.api.api.v1alpha1.org.legacy.ContactFieldStyleOrBuilder>(
                 contactFieldStyles_,
-                ((bitField0_ & 0x00000010) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         contactFieldStyles_ = null;
@@ -1319,9 +1348,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       id_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1330,8 +1361,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearId() {
+      
       id_ = getDefaultInstance().getId();
-      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1342,10 +1373,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       id_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1382,18 +1415,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new ClientInfoDisplayTemplate(input, extensionRegistry);
     }
   };
 

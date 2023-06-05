@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.50.0)",
     comments = "Source: api/v0alpha/vmds.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class VmdsGrpc {
@@ -495,123 +495,213 @@ public final class VmdsGrpc {
 
   /**
    */
-  public interface AsyncService {
+  public static abstract class VmdsImplBase implements io.grpc.BindableService {
 
     /**
      */
-    default void getVoicemailMetadata(com.tcn.cloud.api.api.v0alpha.GetVoicemailMetadataReq request,
+    public void getVoicemailMetadata(com.tcn.cloud.api.api.v0alpha.GetVoicemailMetadataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetVoicemailMetadataRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetVoicemailMetadataMethod(), responseObserver);
     }
 
     /**
      */
-    default void getVoicemailMessageCount(com.tcn.cloud.api.api.v0alpha.GetVoicemailCountReq request,
+    public void getVoicemailMessageCount(com.tcn.cloud.api.api.v0alpha.GetVoicemailCountReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetVoicemailCountRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetVoicemailMessageCountMethod(), responseObserver);
     }
 
     /**
      */
-    default void deleteVoicemail(com.tcn.cloud.api.api.v0alpha.DeleteVoicemailReq request,
+    public void deleteVoicemail(com.tcn.cloud.api.api.v0alpha.DeleteVoicemailReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteVoicemailRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteVoicemailMethod(), responseObserver);
     }
 
     /**
      */
-    default void deleteGreeting(com.tcn.cloud.api.api.v0alpha.DeleteGreetingReq request,
+    public void deleteGreeting(com.tcn.cloud.api.api.v0alpha.DeleteGreetingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DeleteGreetingRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteGreetingMethod(), responseObserver);
     }
 
     /**
      */
-    default void updateUploadName(com.tcn.cloud.api.api.v0alpha.UpdateUploadNameReq request,
+    public void updateUploadName(com.tcn.cloud.api.api.v0alpha.UpdateUploadNameReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateUploadNameRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateUploadNameMethod(), responseObserver);
     }
 
     /**
      */
-    default void updateVoicemailFlagRead(com.tcn.cloud.api.api.v0alpha.UpdateVoicemailFlagReadReq request,
+    public void updateVoicemailFlagRead(com.tcn.cloud.api.api.v0alpha.UpdateVoicemailFlagReadReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateVoicemailFlagReadRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateVoicemailFlagReadMethod(), responseObserver);
     }
 
     /**
      */
-    default void downloadMessage(com.tcn.cloud.api.api.v0alpha.DownloadMessageReq request,
+    public void downloadMessage(com.tcn.cloud.api.api.v0alpha.DownloadMessageReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DownloadMessageRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDownloadMessageMethod(), responseObserver);
     }
 
     /**
      */
-    default void downloadMessages(com.tcn.cloud.api.api.v0alpha.DownloadMessagesReq request,
+    public void downloadMessages(com.tcn.cloud.api.api.v0alpha.DownloadMessagesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DownloadMessagesRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDownloadMessagesMethod(), responseObserver);
     }
 
     /**
      */
-    default void downloadGreetingForExtension(com.tcn.cloud.api.api.v0alpha.DownloadGreetingForExtensionReq request,
+    public void downloadGreetingForExtension(com.tcn.cloud.api.api.v0alpha.DownloadGreetingForExtensionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DownloadGreetingForExtensionRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDownloadGreetingForExtensionMethod(), responseObserver);
     }
 
     /**
      */
-    default void downloadGreeting(com.tcn.cloud.api.api.v0alpha.DownloadGreetingReq request,
+    public void downloadGreeting(com.tcn.cloud.api.api.v0alpha.DownloadGreetingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DownloadGreetingRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDownloadGreetingMethod(), responseObserver);
     }
 
     /**
      */
-    default void getUploadGreetingUrl(com.tcn.cloud.api.api.v0alpha.GetUploadGreetingUrlReq request,
+    public void getUploadGreetingUrl(com.tcn.cloud.api.api.v0alpha.GetUploadGreetingUrlReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetUploadGreetingUrlRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetUploadGreetingUrlMethod(), responseObserver);
     }
 
     /**
      */
-    default void processGreetingUpload(com.tcn.cloud.api.api.v0alpha.ProcessGreetingUploadReq request,
+    public void processGreetingUpload(com.tcn.cloud.api.api.v0alpha.ProcessGreetingUploadReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ProcessGreetingUploadRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getProcessGreetingUploadMethod(), responseObserver);
     }
 
     /**
      */
-    default void updateGreetingForExtension(com.tcn.cloud.api.api.v0alpha.UpdateGreetingForExtensionReq request,
+    public void updateGreetingForExtension(com.tcn.cloud.api.api.v0alpha.UpdateGreetingForExtensionReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateGreetingForExtensionRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateGreetingForExtensionMethod(), responseObserver);
     }
 
     /**
      */
-    default void listAvailableGreetings(com.tcn.cloud.api.api.v0alpha.ListAvailableGreetingsReq request,
+    public void listAvailableGreetings(com.tcn.cloud.api.api.v0alpha.ListAvailableGreetingsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListAvailableGreetingsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAvailableGreetingsMethod(), responseObserver);
     }
-  }
-
-  /**
-   * Base class for the server implementation of the service Vmds.
-   */
-  public static abstract class VmdsImplBase
-      implements io.grpc.BindableService, AsyncService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return VmdsGrpc.bindService(this);
+      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getGetVoicemailMetadataMethod(),
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.GetVoicemailMetadataReq,
+                com.tcn.cloud.api.api.v0alpha.GetVoicemailMetadataRes>(
+                  this, METHODID_GET_VOICEMAIL_METADATA)))
+          .addMethod(
+            getGetVoicemailMessageCountMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.GetVoicemailCountReq,
+                com.tcn.cloud.api.api.v0alpha.GetVoicemailCountRes>(
+                  this, METHODID_GET_VOICEMAIL_MESSAGE_COUNT)))
+          .addMethod(
+            getDeleteVoicemailMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.DeleteVoicemailReq,
+                com.tcn.cloud.api.api.v0alpha.DeleteVoicemailRes>(
+                  this, METHODID_DELETE_VOICEMAIL)))
+          .addMethod(
+            getDeleteGreetingMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.DeleteGreetingReq,
+                com.tcn.cloud.api.api.v0alpha.DeleteGreetingRes>(
+                  this, METHODID_DELETE_GREETING)))
+          .addMethod(
+            getUpdateUploadNameMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.UpdateUploadNameReq,
+                com.tcn.cloud.api.api.v0alpha.UpdateUploadNameRes>(
+                  this, METHODID_UPDATE_UPLOAD_NAME)))
+          .addMethod(
+            getUpdateVoicemailFlagReadMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.UpdateVoicemailFlagReadReq,
+                com.tcn.cloud.api.api.v0alpha.UpdateVoicemailFlagReadRes>(
+                  this, METHODID_UPDATE_VOICEMAIL_FLAG_READ)))
+          .addMethod(
+            getDownloadMessageMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.DownloadMessageReq,
+                com.tcn.cloud.api.api.v0alpha.DownloadMessageRes>(
+                  this, METHODID_DOWNLOAD_MESSAGE)))
+          .addMethod(
+            getDownloadMessagesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.DownloadMessagesReq,
+                com.tcn.cloud.api.api.v0alpha.DownloadMessagesRes>(
+                  this, METHODID_DOWNLOAD_MESSAGES)))
+          .addMethod(
+            getDownloadGreetingForExtensionMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.DownloadGreetingForExtensionReq,
+                com.tcn.cloud.api.api.v0alpha.DownloadGreetingForExtensionRes>(
+                  this, METHODID_DOWNLOAD_GREETING_FOR_EXTENSION)))
+          .addMethod(
+            getDownloadGreetingMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.DownloadGreetingReq,
+                com.tcn.cloud.api.api.v0alpha.DownloadGreetingRes>(
+                  this, METHODID_DOWNLOAD_GREETING)))
+          .addMethod(
+            getGetUploadGreetingUrlMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.GetUploadGreetingUrlReq,
+                com.tcn.cloud.api.api.v0alpha.GetUploadGreetingUrlRes>(
+                  this, METHODID_GET_UPLOAD_GREETING_URL)))
+          .addMethod(
+            getProcessGreetingUploadMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.ProcessGreetingUploadReq,
+                com.tcn.cloud.api.api.v0alpha.ProcessGreetingUploadRes>(
+                  this, METHODID_PROCESS_GREETING_UPLOAD)))
+          .addMethod(
+            getUpdateGreetingForExtensionMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.UpdateGreetingForExtensionReq,
+                com.tcn.cloud.api.api.v0alpha.UpdateGreetingForExtensionRes>(
+                  this, METHODID_UPDATE_GREETING_FOR_EXTENSION)))
+          .addMethod(
+            getListAvailableGreetingsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.ListAvailableGreetingsReq,
+                com.tcn.cloud.api.api.v0alpha.ListAvailableGreetingsRes>(
+                  this, METHODID_LIST_AVAILABLE_GREETINGS)))
+          .build();
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service Vmds.
    */
-  public static final class VmdsStub
-      extends io.grpc.stub.AbstractAsyncStub<VmdsStub> {
+  public static final class VmdsStub extends io.grpc.stub.AbstractAsyncStub<VmdsStub> {
     private VmdsStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -737,10 +827,8 @@ public final class VmdsGrpc {
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service Vmds.
    */
-  public static final class VmdsBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<VmdsBlockingStub> {
+  public static final class VmdsBlockingStub extends io.grpc.stub.AbstractBlockingStub<VmdsBlockingStub> {
     private VmdsBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -853,10 +941,8 @@ public final class VmdsGrpc {
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service Vmds.
    */
-  public static final class VmdsFutureStub
-      extends io.grpc.stub.AbstractFutureStub<VmdsFutureStub> {
+  public static final class VmdsFutureStub extends io.grpc.stub.AbstractFutureStub<VmdsFutureStub> {
     private VmdsFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -993,10 +1079,10 @@ public final class VmdsGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AsyncService serviceImpl;
+    private final VmdsImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AsyncService serviceImpl, int methodId) {
+    MethodHandlers(VmdsImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -1075,109 +1161,6 @@ public final class VmdsGrpc {
           throw new AssertionError();
       }
     }
-  }
-
-  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
-    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-        .addMethod(
-          getGetVoicemailMetadataMethod(),
-          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.GetVoicemailMetadataReq,
-              com.tcn.cloud.api.api.v0alpha.GetVoicemailMetadataRes>(
-                service, METHODID_GET_VOICEMAIL_METADATA)))
-        .addMethod(
-          getGetVoicemailMessageCountMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.GetVoicemailCountReq,
-              com.tcn.cloud.api.api.v0alpha.GetVoicemailCountRes>(
-                service, METHODID_GET_VOICEMAIL_MESSAGE_COUNT)))
-        .addMethod(
-          getDeleteVoicemailMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.DeleteVoicemailReq,
-              com.tcn.cloud.api.api.v0alpha.DeleteVoicemailRes>(
-                service, METHODID_DELETE_VOICEMAIL)))
-        .addMethod(
-          getDeleteGreetingMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.DeleteGreetingReq,
-              com.tcn.cloud.api.api.v0alpha.DeleteGreetingRes>(
-                service, METHODID_DELETE_GREETING)))
-        .addMethod(
-          getUpdateUploadNameMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.UpdateUploadNameReq,
-              com.tcn.cloud.api.api.v0alpha.UpdateUploadNameRes>(
-                service, METHODID_UPDATE_UPLOAD_NAME)))
-        .addMethod(
-          getUpdateVoicemailFlagReadMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.UpdateVoicemailFlagReadReq,
-              com.tcn.cloud.api.api.v0alpha.UpdateVoicemailFlagReadRes>(
-                service, METHODID_UPDATE_VOICEMAIL_FLAG_READ)))
-        .addMethod(
-          getDownloadMessageMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.DownloadMessageReq,
-              com.tcn.cloud.api.api.v0alpha.DownloadMessageRes>(
-                service, METHODID_DOWNLOAD_MESSAGE)))
-        .addMethod(
-          getDownloadMessagesMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.DownloadMessagesReq,
-              com.tcn.cloud.api.api.v0alpha.DownloadMessagesRes>(
-                service, METHODID_DOWNLOAD_MESSAGES)))
-        .addMethod(
-          getDownloadGreetingForExtensionMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.DownloadGreetingForExtensionReq,
-              com.tcn.cloud.api.api.v0alpha.DownloadGreetingForExtensionRes>(
-                service, METHODID_DOWNLOAD_GREETING_FOR_EXTENSION)))
-        .addMethod(
-          getDownloadGreetingMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.DownloadGreetingReq,
-              com.tcn.cloud.api.api.v0alpha.DownloadGreetingRes>(
-                service, METHODID_DOWNLOAD_GREETING)))
-        .addMethod(
-          getGetUploadGreetingUrlMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.GetUploadGreetingUrlReq,
-              com.tcn.cloud.api.api.v0alpha.GetUploadGreetingUrlRes>(
-                service, METHODID_GET_UPLOAD_GREETING_URL)))
-        .addMethod(
-          getProcessGreetingUploadMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.ProcessGreetingUploadReq,
-              com.tcn.cloud.api.api.v0alpha.ProcessGreetingUploadRes>(
-                service, METHODID_PROCESS_GREETING_UPLOAD)))
-        .addMethod(
-          getUpdateGreetingForExtensionMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.UpdateGreetingForExtensionReq,
-              com.tcn.cloud.api.api.v0alpha.UpdateGreetingForExtensionRes>(
-                service, METHODID_UPDATE_GREETING_FOR_EXTENSION)))
-        .addMethod(
-          getListAvailableGreetingsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.ListAvailableGreetingsReq,
-              com.tcn.cloud.api.api.v0alpha.ListAvailableGreetingsRes>(
-                service, METHODID_LIST_AVAILABLE_GREETINGS)))
-        .build();
   }
 
   private static abstract class VmdsBaseDescriptorSupplier

@@ -30,6 +30,157 @@ private static final long serialVersionUID = 0L;
     return new AsmEvent();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private AsmEvent(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+            int rawValue = input.readEnum();
+
+            state_ = rawValue;
+            break;
+          }
+          case 16: {
+
+            eventTime_ = input.readInt64();
+            break;
+          }
+          case 42: {
+            com.tcn.cloud.api.api.commons.ActivatedConversationAsmEvent.Builder subBuilder = null;
+            if (eventCase_ == 5) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.ActivatedConversationAsmEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.ActivatedConversationAsmEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.ActivatedConversationAsmEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 5;
+            break;
+          }
+          case 50: {
+            com.tcn.cloud.api.api.commons.DeactivatedConversationAsmEvent.Builder subBuilder = null;
+            if (eventCase_ == 6) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.DeactivatedConversationAsmEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.DeactivatedConversationAsmEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.DeactivatedConversationAsmEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 6;
+            break;
+          }
+          case 58: {
+            com.tcn.cloud.api.api.commons.SentMessageAsmEvent.Builder subBuilder = null;
+            if (eventCase_ == 7) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.SentMessageAsmEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.SentMessageAsmEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.SentMessageAsmEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 7;
+            break;
+          }
+          case 66: {
+            com.tcn.cloud.api.api.commons.SendStatusAsmEvent.Builder subBuilder = null;
+            if (eventCase_ == 8) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.SendStatusAsmEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.SendStatusAsmEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.SendStatusAsmEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 8;
+            break;
+          }
+          case 74: {
+            com.tcn.cloud.api.api.commons.PauseEvent.Builder subBuilder = null;
+            if (eventCase_ == 9) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.PauseEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.PauseEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.PauseEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 9;
+            break;
+          }
+          case 82: {
+            com.tcn.cloud.api.api.commons.ResumeEvent.Builder subBuilder = null;
+            if (eventCase_ == 10) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.ResumeEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.ResumeEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.ResumeEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 10;
+            break;
+          }
+          case 90: {
+            com.tcn.cloud.api.api.commons.ConversationPulledEvent.Builder subBuilder = null;
+            if (eventCase_ == 11) {
+              subBuilder = ((com.tcn.cloud.api.api.commons.ConversationPulledEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.commons.ConversationPulledEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.commons.ConversationPulledEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 11;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.EventProto.internal_static_api_commons_AsmEvent_descriptor;
@@ -44,7 +195,6 @@ private static final long serialVersionUID = 0L;
   }
 
   private int eventCase_ = 0;
-  @SuppressWarnings("serial")
   private java.lang.Object event_;
   public enum EventCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -96,7 +246,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STATE_FIELD_NUMBER = 1;
-  private int state_ = 0;
+  private int state_;
   /**
    * <code>.api.commons.StatusState state = 1 [json_name = "state"];</code>
    * @return The enum numeric value on the wire for state.
@@ -109,12 +259,13 @@ private static final long serialVersionUID = 0L;
    * @return The state.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.StatusState getState() {
-    com.tcn.cloud.api.api.commons.StatusState result = com.tcn.cloud.api.api.commons.StatusState.forNumber(state_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.StatusState result = com.tcn.cloud.api.api.commons.StatusState.valueOf(state_);
     return result == null ? com.tcn.cloud.api.api.commons.StatusState.UNRECOGNIZED : result;
   }
 
   public static final int EVENT_TIME_FIELD_NUMBER = 2;
-  private long eventTime_ = 0L;
+  private long eventTime_;
   /**
    * <code>int64 event_time = 2 [json_name = "eventTime"];</code>
    * @return The eventTime.
@@ -394,7 +545,7 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 11) {
       output.writeMessage(11, (com.tcn.cloud.api.api.commons.ConversationPulledEvent) event_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -439,7 +590,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, (com.tcn.cloud.api.api.commons.ConversationPulledEvent) event_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -490,7 +641,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -538,7 +689,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -587,13 +738,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.commons.AsmEvent parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.commons.AsmEvent parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -661,41 +810,26 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.AsmEvent.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       state_ = 0;
+
       eventTime_ = 0L;
-      if (activatedConversationAsmEventBuilder_ != null) {
-        activatedConversationAsmEventBuilder_.clear();
-      }
-      if (deactivatedConversationAsmEventBuilder_ != null) {
-        deactivatedConversationAsmEventBuilder_.clear();
-      }
-      if (sentMessageAsmEventBuilder_ != null) {
-        sentMessageAsmEventBuilder_.clear();
-      }
-      if (sendStatusAsmEventBuilder_ != null) {
-        sendStatusAsmEventBuilder_.clear();
-      }
-      if (pauseEventBuilder_ != null) {
-        pauseEventBuilder_.clear();
-      }
-      if (resumeEventBuilder_ != null) {
-        resumeEventBuilder_.clear();
-      }
-      if (conversationPulledEventBuilder_ != null) {
-        conversationPulledEventBuilder_.clear();
-      }
+
       eventCase_ = 0;
       event_ = null;
       return this;
@@ -724,53 +858,60 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.AsmEvent buildPartial() {
       com.tcn.cloud.api.api.commons.AsmEvent result = new com.tcn.cloud.api.api.commons.AsmEvent(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      buildPartialOneofs(result);
+      result.state_ = state_;
+      result.eventTime_ = eventTime_;
+      if (eventCase_ == 5) {
+        if (activatedConversationAsmEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = activatedConversationAsmEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 6) {
+        if (deactivatedConversationAsmEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = deactivatedConversationAsmEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 7) {
+        if (sentMessageAsmEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = sentMessageAsmEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 8) {
+        if (sendStatusAsmEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = sendStatusAsmEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 9) {
+        if (pauseEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = pauseEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 10) {
+        if (resumeEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = resumeEventBuilder_.build();
+        }
+      }
+      if (eventCase_ == 11) {
+        if (conversationPulledEventBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = conversationPulledEventBuilder_.build();
+        }
+      }
+      result.eventCase_ = eventCase_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.commons.AsmEvent result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.state_ = state_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.eventTime_ = eventTime_;
-      }
-    }
-
-    private void buildPartialOneofs(com.tcn.cloud.api.api.commons.AsmEvent result) {
-      result.eventCase_ = eventCase_;
-      result.event_ = this.event_;
-      if (eventCase_ == 5 &&
-          activatedConversationAsmEventBuilder_ != null) {
-        result.event_ = activatedConversationAsmEventBuilder_.build();
-      }
-      if (eventCase_ == 6 &&
-          deactivatedConversationAsmEventBuilder_ != null) {
-        result.event_ = deactivatedConversationAsmEventBuilder_.build();
-      }
-      if (eventCase_ == 7 &&
-          sentMessageAsmEventBuilder_ != null) {
-        result.event_ = sentMessageAsmEventBuilder_.build();
-      }
-      if (eventCase_ == 8 &&
-          sendStatusAsmEventBuilder_ != null) {
-        result.event_ = sendStatusAsmEventBuilder_.build();
-      }
-      if (eventCase_ == 9 &&
-          pauseEventBuilder_ != null) {
-        result.event_ = pauseEventBuilder_.build();
-      }
-      if (eventCase_ == 10 &&
-          resumeEventBuilder_ != null) {
-        result.event_ = resumeEventBuilder_.build();
-      }
-      if (eventCase_ == 11 &&
-          conversationPulledEventBuilder_ != null) {
-        result.event_ = conversationPulledEventBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -856,7 +997,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -871,89 +1012,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.commons.AsmEvent parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              state_ = input.readEnum();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 16: {
-              eventTime_ = input.readInt64();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 16
-            case 42: {
-              input.readMessage(
-                  getActivatedConversationAsmEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 5;
-              break;
-            } // case 42
-            case 50: {
-              input.readMessage(
-                  getDeactivatedConversationAsmEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 6;
-              break;
-            } // case 50
-            case 58: {
-              input.readMessage(
-                  getSentMessageAsmEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 7;
-              break;
-            } // case 58
-            case 66: {
-              input.readMessage(
-                  getSendStatusAsmEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 8;
-              break;
-            } // case 66
-            case 74: {
-              input.readMessage(
-                  getPauseEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 9;
-              break;
-            } // case 74
-            case 82: {
-              input.readMessage(
-                  getResumeEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 10;
-              break;
-            } // case 82
-            case 90: {
-              input.readMessage(
-                  getConversationPulledEventFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 11;
-              break;
-            } // case 90
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.commons.AsmEvent) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int eventCase_ = 0;
@@ -971,7 +1040,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int bitField0_;
 
     private int state_ = 0;
     /**
@@ -987,8 +1055,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStateValue(int value) {
+      
       state_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -998,7 +1066,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.StatusState getState() {
-      com.tcn.cloud.api.api.commons.StatusState result = com.tcn.cloud.api.api.commons.StatusState.forNumber(state_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.StatusState result = com.tcn.cloud.api.api.commons.StatusState.valueOf(state_);
       return result == null ? com.tcn.cloud.api.api.commons.StatusState.UNRECOGNIZED : result;
     }
     /**
@@ -1010,7 +1079,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000001;
+      
       state_ = value.getNumber();
       onChanged();
       return this;
@@ -1020,7 +1089,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearState() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       state_ = 0;
       onChanged();
       return this;
@@ -1041,9 +1110,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEventTime(long value) {
-
+      
       eventTime_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1052,7 +1120,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEventTime() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       eventTime_ = 0L;
       onChanged();
       return this;
@@ -1132,9 +1200,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 5) {
           activatedConversationAsmEventBuilder_.mergeFrom(value);
-        } else {
-          activatedConversationAsmEventBuilder_.setMessage(value);
         }
+        activatedConversationAsmEventBuilder_.setMessage(value);
       }
       eventCase_ = 5;
       return this;
@@ -1196,7 +1263,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 5;
-      onChanged();
+      onChanged();;
       return activatedConversationAsmEventBuilder_;
     }
 
@@ -1274,9 +1341,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 6) {
           deactivatedConversationAsmEventBuilder_.mergeFrom(value);
-        } else {
-          deactivatedConversationAsmEventBuilder_.setMessage(value);
         }
+        deactivatedConversationAsmEventBuilder_.setMessage(value);
       }
       eventCase_ = 6;
       return this;
@@ -1338,7 +1404,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 6;
-      onChanged();
+      onChanged();;
       return deactivatedConversationAsmEventBuilder_;
     }
 
@@ -1416,9 +1482,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 7) {
           sentMessageAsmEventBuilder_.mergeFrom(value);
-        } else {
-          sentMessageAsmEventBuilder_.setMessage(value);
         }
+        sentMessageAsmEventBuilder_.setMessage(value);
       }
       eventCase_ = 7;
       return this;
@@ -1480,7 +1545,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 7;
-      onChanged();
+      onChanged();;
       return sentMessageAsmEventBuilder_;
     }
 
@@ -1578,9 +1643,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 8) {
           sendStatusAsmEventBuilder_.mergeFrom(value);
-        } else {
-          sendStatusAsmEventBuilder_.setMessage(value);
         }
+        sendStatusAsmEventBuilder_.setMessage(value);
       }
       eventCase_ = 8;
       return this;
@@ -1658,7 +1722,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 8;
-      onChanged();
+      onChanged();;
       return sendStatusAsmEventBuilder_;
     }
 
@@ -1736,9 +1800,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 9) {
           pauseEventBuilder_.mergeFrom(value);
-        } else {
-          pauseEventBuilder_.setMessage(value);
         }
+        pauseEventBuilder_.setMessage(value);
       }
       eventCase_ = 9;
       return this;
@@ -1800,7 +1863,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 9;
-      onChanged();
+      onChanged();;
       return pauseEventBuilder_;
     }
 
@@ -1878,9 +1941,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 10) {
           resumeEventBuilder_.mergeFrom(value);
-        } else {
-          resumeEventBuilder_.setMessage(value);
         }
+        resumeEventBuilder_.setMessage(value);
       }
       eventCase_ = 10;
       return this;
@@ -1942,7 +2004,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 10;
-      onChanged();
+      onChanged();;
       return resumeEventBuilder_;
     }
 
@@ -2020,9 +2082,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 11) {
           conversationPulledEventBuilder_.mergeFrom(value);
-        } else {
-          conversationPulledEventBuilder_.setMessage(value);
         }
+        conversationPulledEventBuilder_.setMessage(value);
       }
       eventCase_ = 11;
       return this;
@@ -2084,7 +2145,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 11;
-      onChanged();
+      onChanged();;
       return conversationPulledEventBuilder_;
     }
     @java.lang.Override
@@ -2120,18 +2181,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new AsmEvent(input, extensionRegistry);
     }
   };
 

@@ -13,15 +13,6 @@ public interface OptionTypesOrBuilder extends
    * </pre>
    *
    * <code>.api.commons.OpenTimesOption open_times_option = 1 [json_name = "openTimesOption"];</code>
-   * @return Whether the openTimesOption field is set.
-   */
-  boolean hasOpenTimesOption();
-  /**
-   * <pre>
-   * Option used by OpenTime
-   * </pre>
-   *
-   * <code>.api.commons.OpenTimesOption open_times_option = 1 [json_name = "openTimesOption"];</code>
    * @return The enum numeric value on the wire for openTimesOption.
    */
   int getOpenTimesOptionValue();
@@ -41,15 +32,6 @@ public interface OptionTypesOrBuilder extends
    * </pre>
    *
    * <code>.api.commons.AvailabilityOption availability_option = 2 [json_name = "availabilityOption"];</code>
-   * @return Whether the availabilityOption field is set.
-   */
-  boolean hasAvailabilityOption();
-  /**
-   * <pre>
-   * Option used by Agent Availability
-   * </pre>
-   *
-   * <code>.api.commons.AvailabilityOption availability_option = 2 [json_name = "availabilityOption"];</code>
    * @return The enum numeric value on the wire for availabilityOption.
    */
   int getAvailabilityOptionValue();
@@ -63,5 +45,5 @@ public interface OptionTypesOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.AvailabilityOption getAvailabilityOption();
 
-  com.tcn.cloud.api.api.commons.OptionTypes.DesiredOptionCase getDesiredOptionCase();
+  public com.tcn.cloud.api.api.commons.OptionTypes.DesiredOptionCase getDesiredOptionCase();
 }

@@ -38,6 +38,130 @@ private static final long serialVersionUID = 0L;
     return new SftpImport();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private SftpImport(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 34: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            user_ = s;
+            break;
+          }
+          case 42: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            password_ = s;
+            break;
+          }
+          case 50: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            privateKey_ = s;
+            break;
+          }
+          case 58: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            address_ = s;
+            break;
+          }
+          case 66: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            port_ = s;
+            break;
+          }
+          case 106: {
+            com.tcn.cloud.api.api.commons.FilePattern.Builder subBuilder = null;
+            if (filePattern_ != null) {
+              subBuilder = filePattern_.toBuilder();
+            }
+            filePattern_ = input.readMessage(com.tcn.cloud.api.api.commons.FilePattern.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(filePattern_);
+              filePattern_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 120: {
+
+            enabled_ = input.readBool();
+            break;
+          }
+          case 130: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            fileTemplateId_ = s;
+            break;
+          }
+          case 136: {
+
+            incremental_ = input.readBool();
+            break;
+          }
+          case 144: {
+
+            encrypted_ = input.readBool();
+            break;
+          }
+          case 154: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            cron_ = s;
+            break;
+          }
+          case 162: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            timezone_ = s;
+            break;
+          }
+          case 170: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            transferConfigName_ = s;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.LmsProto.internal_static_api_v0alpha_SftpImport_descriptor;
@@ -52,8 +176,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int USER_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object user_ = "";
+  private volatile java.lang.Object user_;
   /**
    * <pre>
    * SFTP credentials. `password` will
@@ -103,8 +226,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PASSWORD_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object password_ = "";
+  private volatile java.lang.Object password_;
   /**
    * <code>string password = 5 [json_name = "password"];</code>
    * @return The password.
@@ -142,8 +264,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PRIVATE_KEY_FIELD_NUMBER = 6;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object privateKey_ = "";
+  private volatile java.lang.Object privateKey_;
   /**
    * <code>string private_key = 6 [json_name = "privateKey"];</code>
    * @return The privateKey.
@@ -181,8 +302,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ADDRESS_FIELD_NUMBER = 7;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object address_ = "";
+  private volatile java.lang.Object address_;
   /**
    * <code>string address = 7 [json_name = "address"];</code>
    * @return The address.
@@ -220,8 +340,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PORT_FIELD_NUMBER = 8;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object port_ = "";
+  private volatile java.lang.Object port_;
   /**
    * <code>string port = 8 [json_name = "port"];</code>
    * @return The port.
@@ -281,11 +400,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.FilePatternOrBuilder getFilePatternOrBuilder() {
-    return filePattern_ == null ? com.tcn.cloud.api.api.commons.FilePattern.getDefaultInstance() : filePattern_;
+    return getFilePattern();
   }
 
   public static final int ENABLED_FIELD_NUMBER = 15;
-  private boolean enabled_ = false;
+  private boolean enabled_;
   /**
    * <pre>
    * We will only process if enabled
@@ -300,8 +419,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FILE_TEMPLATE_ID_FIELD_NUMBER = 16;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object fileTemplateId_ = "";
+  private volatile java.lang.Object fileTemplateId_;
   /**
    * <pre>
    * prefered/default template
@@ -347,7 +465,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INCREMENTAL_FIELD_NUMBER = 17;
-  private boolean incremental_ = false;
+  private boolean incremental_;
   /**
    * <code>bool incremental = 17 [json_name = "incremental"];</code>
    * @return The incremental.
@@ -358,7 +476,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ENCRYPTED_FIELD_NUMBER = 18;
-  private boolean encrypted_ = false;
+  private boolean encrypted_;
   /**
    * <pre>
    * Specifies whether the files to be imported
@@ -374,8 +492,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CRON_FIELD_NUMBER = 19;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object cron_ = "";
+  private volatile java.lang.Object cron_;
   /**
    * <pre>
    * Should be a valid Cron expression
@@ -423,8 +540,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TIMEZONE_FIELD_NUMBER = 20;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object timezone_ = "";
+  private volatile java.lang.Object timezone_;
   /**
    * <pre>
    * Timezone to be used with the cron,
@@ -480,8 +596,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TRANSFER_CONFIG_NAME_FIELD_NUMBER = 21;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object transferConfigName_ = "";
+  private volatile java.lang.Object transferConfigName_;
   /**
    * <pre>
    * Name of the transfer_config, used to find sftp configuration
@@ -540,19 +655,19 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(user_)) {
+    if (!getUserBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, user_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
+    if (!getPasswordBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, password_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateKey_)) {
+    if (!getPrivateKeyBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, privateKey_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+    if (!getAddressBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, address_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(port_)) {
+    if (!getPortBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 8, port_);
     }
     if (filePattern_ != null) {
@@ -561,7 +676,7 @@ private static final long serialVersionUID = 0L;
     if (enabled_ != false) {
       output.writeBool(15, enabled_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fileTemplateId_)) {
+    if (!getFileTemplateIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 16, fileTemplateId_);
     }
     if (incremental_ != false) {
@@ -570,16 +685,16 @@ private static final long serialVersionUID = 0L;
     if (encrypted_ != false) {
       output.writeBool(18, encrypted_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cron_)) {
+    if (!getCronBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 19, cron_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timezone_)) {
+    if (!getTimezoneBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 20, timezone_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferConfigName_)) {
+    if (!getTransferConfigNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 21, transferConfigName_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -588,19 +703,19 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(user_)) {
+    if (!getUserBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, user_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
+    if (!getPasswordBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, password_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateKey_)) {
+    if (!getPrivateKeyBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, privateKey_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+    if (!getAddressBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, address_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(port_)) {
+    if (!getPortBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, port_);
     }
     if (filePattern_ != null) {
@@ -611,7 +726,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(15, enabled_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fileTemplateId_)) {
+    if (!getFileTemplateIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, fileTemplateId_);
     }
     if (incremental_ != false) {
@@ -622,16 +737,16 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(18, encrypted_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cron_)) {
+    if (!getCronBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(19, cron_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timezone_)) {
+    if (!getTimezoneBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, timezone_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferConfigName_)) {
+    if (!getTransferConfigNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(21, transferConfigName_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -675,7 +790,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getTimezone())) return false;
     if (!getTransferConfigName()
         .equals(other.getTransferConfigName())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -717,7 +832,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getTimezone().hashCode();
     hash = (37 * hash) + TRANSFER_CONFIG_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getTransferConfigName().hashCode();
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -766,13 +881,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.SftpImport parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.SftpImport parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -840,35 +953,52 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.SftpImport.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       user_ = "";
+
       password_ = "";
+
       privateKey_ = "";
+
       address_ = "";
+
       port_ = "";
-      filePattern_ = null;
-      if (filePatternBuilder_ != null) {
-        filePatternBuilder_.dispose();
+
+      if (filePatternBuilder_ == null) {
+        filePattern_ = null;
+      } else {
+        filePattern_ = null;
         filePatternBuilder_ = null;
       }
       enabled_ = false;
+
       fileTemplateId_ = "";
+
       incremental_ = false;
+
       encrypted_ = false;
+
       cron_ = "";
+
       timezone_ = "";
+
       transferConfigName_ = "";
+
       return this;
     }
 
@@ -895,54 +1025,25 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.SftpImport buildPartial() {
       com.tcn.cloud.api.api.v0alpha.SftpImport result = new com.tcn.cloud.api.api.v0alpha.SftpImport(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.user_ = user_;
+      result.password_ = password_;
+      result.privateKey_ = privateKey_;
+      result.address_ = address_;
+      result.port_ = port_;
+      if (filePatternBuilder_ == null) {
+        result.filePattern_ = filePattern_;
+      } else {
+        result.filePattern_ = filePatternBuilder_.build();
+      }
+      result.enabled_ = enabled_;
+      result.fileTemplateId_ = fileTemplateId_;
+      result.incremental_ = incremental_;
+      result.encrypted_ = encrypted_;
+      result.cron_ = cron_;
+      result.timezone_ = timezone_;
+      result.transferConfigName_ = transferConfigName_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.SftpImport result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.user_ = user_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.password_ = password_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.privateKey_ = privateKey_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.address_ = address_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.port_ = port_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.filePattern_ = filePatternBuilder_ == null
-            ? filePattern_
-            : filePatternBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.enabled_ = enabled_;
-      }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.fileTemplateId_ = fileTemplateId_;
-      }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
-        result.incremental_ = incremental_;
-      }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
-        result.encrypted_ = encrypted_;
-      }
-      if (((from_bitField0_ & 0x00000400) != 0)) {
-        result.cron_ = cron_;
-      }
-      if (((from_bitField0_ & 0x00000800) != 0)) {
-        result.timezone_ = timezone_;
-      }
-      if (((from_bitField0_ & 0x00001000) != 0)) {
-        result.transferConfigName_ = transferConfigName_;
-      }
     }
 
     @java.lang.Override
@@ -991,27 +1092,22 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v0alpha.SftpImport.getDefaultInstance()) return this;
       if (!other.getUser().isEmpty()) {
         user_ = other.user_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getPassword().isEmpty()) {
         password_ = other.password_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getPrivateKey().isEmpty()) {
         privateKey_ = other.privateKey_;
-        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getAddress().isEmpty()) {
         address_ = other.address_;
-        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.getPort().isEmpty()) {
         port_ = other.port_;
-        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (other.hasFilePattern()) {
@@ -1022,7 +1118,6 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getFileTemplateId().isEmpty()) {
         fileTemplateId_ = other.fileTemplateId_;
-        bitField0_ |= 0x00000080;
         onChanged();
       }
       if (other.getIncremental() != false) {
@@ -1033,20 +1128,17 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getCron().isEmpty()) {
         cron_ = other.cron_;
-        bitField0_ |= 0x00000400;
         onChanged();
       }
       if (!other.getTimezone().isEmpty()) {
         timezone_ = other.timezone_;
-        bitField0_ |= 0x00000800;
         onChanged();
       }
       if (!other.getTransferConfigName().isEmpty()) {
         transferConfigName_ = other.transferConfigName_;
-        bitField0_ |= 0x00001000;
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -1061,100 +1153,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.SftpImport parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 34: {
-              user_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 34
-            case 42: {
-              password_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 42
-            case 50: {
-              privateKey_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 50
-            case 58: {
-              address_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 58
-            case 66: {
-              port_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 66
-            case 106: {
-              input.readMessage(
-                  getFilePatternFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 106
-            case 120: {
-              enabled_ = input.readBool();
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 120
-            case 130: {
-              fileTemplateId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000080;
-              break;
-            } // case 130
-            case 136: {
-              incremental_ = input.readBool();
-              bitField0_ |= 0x00000100;
-              break;
-            } // case 136
-            case 144: {
-              encrypted_ = input.readBool();
-              bitField0_ |= 0x00000200;
-              break;
-            } // case 144
-            case 154: {
-              cron_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000400;
-              break;
-            } // case 154
-            case 162: {
-              timezone_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000800;
-              break;
-            } // case 162
-            case 170: {
-              transferConfigName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00001000;
-              break;
-            } // case 170
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.SftpImport) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private java.lang.Object user_ = "";
     /**
@@ -1215,9 +1226,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUser(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       user_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1232,8 +1245,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUser() {
+      
       user_ = getDefaultInstance().getUser();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1250,10 +1263,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUserBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       user_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1299,9 +1314,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPassword(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       password_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1310,8 +1327,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPassword() {
+      
       password_ = getDefaultInstance().getPassword();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1322,10 +1339,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPasswordBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       password_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1371,9 +1390,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPrivateKey(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       privateKey_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1382,8 +1403,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPrivateKey() {
+      
       privateKey_ = getDefaultInstance().getPrivateKey();
-      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1394,10 +1415,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPrivateKeyBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       privateKey_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1443,9 +1466,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAddress(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       address_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1454,8 +1479,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAddress() {
+      
       address_ = getDefaultInstance().getAddress();
-      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1466,10 +1491,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAddressBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       address_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1515,9 +1542,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPort(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       port_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1526,8 +1555,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPort() {
+      
       port_ = getDefaultInstance().getPort();
-      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1538,10 +1567,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPortBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       port_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1554,7 +1585,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the filePattern field is set.
      */
     public boolean hasFilePattern() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return filePatternBuilder_ != null || filePattern_ != null;
     }
     /**
      * <code>.api.commons.FilePattern file_pattern = 13 [json_name = "filePattern"];</code>
@@ -1576,11 +1607,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         filePattern_ = value;
+        onChanged();
       } else {
         filePatternBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+
       return this;
     }
     /**
@@ -1590,11 +1621,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.FilePattern.Builder builderForValue) {
       if (filePatternBuilder_ == null) {
         filePattern_ = builderForValue.build();
+        onChanged();
       } else {
         filePatternBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+
       return this;
     }
     /**
@@ -1602,38 +1633,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeFilePattern(com.tcn.cloud.api.api.commons.FilePattern value) {
       if (filePatternBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0) &&
-          filePattern_ != null &&
-          filePattern_ != com.tcn.cloud.api.api.commons.FilePattern.getDefaultInstance()) {
-          getFilePatternBuilder().mergeFrom(value);
+        if (filePattern_ != null) {
+          filePattern_ =
+            com.tcn.cloud.api.api.commons.FilePattern.newBuilder(filePattern_).mergeFrom(value).buildPartial();
         } else {
           filePattern_ = value;
         }
+        onChanged();
       } else {
         filePatternBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.commons.FilePattern file_pattern = 13 [json_name = "filePattern"];</code>
      */
     public Builder clearFilePattern() {
-      bitField0_ = (bitField0_ & ~0x00000020);
-      filePattern_ = null;
-      if (filePatternBuilder_ != null) {
-        filePatternBuilder_.dispose();
+      if (filePatternBuilder_ == null) {
+        filePattern_ = null;
+        onChanged();
+      } else {
+        filePattern_ = null;
         filePatternBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.commons.FilePattern file_pattern = 13 [json_name = "filePattern"];</code>
      */
     public com.tcn.cloud.api.api.commons.FilePattern.Builder getFilePatternBuilder() {
-      bitField0_ |= 0x00000020;
+      
       onChanged();
       return getFilePatternFieldBuilder().getBuilder();
     }
@@ -1688,9 +1719,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEnabled(boolean value) {
-
+      
       enabled_ = value;
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1703,7 +1733,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnabled() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      
       enabled_ = false;
       onChanged();
       return this;
@@ -1762,9 +1792,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFileTemplateId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       fileTemplateId_ = value;
-      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1777,8 +1809,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFileTemplateId() {
+      
       fileTemplateId_ = getDefaultInstance().getFileTemplateId();
-      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -1793,10 +1825,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFileTemplateIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       fileTemplateId_ = value;
-      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1816,9 +1850,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIncremental(boolean value) {
-
+      
       incremental_ = value;
-      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1827,7 +1860,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIncremental() {
-      bitField0_ = (bitField0_ & ~0x00000100);
+      
       incremental_ = false;
       onChanged();
       return this;
@@ -1858,9 +1891,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEncrypted(boolean value) {
-
+      
       encrypted_ = value;
-      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1874,7 +1906,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEncrypted() {
-      bitField0_ = (bitField0_ & ~0x00000200);
+      
       encrypted_ = false;
       onChanged();
       return this;
@@ -1936,9 +1968,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCron(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       cron_ = value;
-      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -1952,8 +1986,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCron() {
+      
       cron_ = getDefaultInstance().getCron();
-      bitField0_ = (bitField0_ & ~0x00000400);
       onChanged();
       return this;
     }
@@ -1969,10 +2003,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCronBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       cron_ = value;
-      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2045,9 +2081,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTimezone(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       timezone_ = value;
-      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -2065,8 +2103,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTimezone() {
+      
       timezone_ = getDefaultInstance().getTimezone();
-      bitField0_ = (bitField0_ & ~0x00000800);
       onChanged();
       return this;
     }
@@ -2086,10 +2124,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTimezoneBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       timezone_ = value;
-      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -2147,9 +2187,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTransferConfigName(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       transferConfigName_ = value;
-      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -2162,8 +2204,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTransferConfigName() {
+      
       transferConfigName_ = getDefaultInstance().getTransferConfigName();
-      bitField0_ = (bitField0_ & ~0x00001000);
       onChanged();
       return this;
     }
@@ -2178,10 +2220,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTransferConfigNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       transferConfigName_ = value;
-      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -2218,18 +2262,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new SftpImport(input, extensionRegistry);
     }
   };
 

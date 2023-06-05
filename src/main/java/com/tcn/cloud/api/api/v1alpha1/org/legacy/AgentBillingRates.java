@@ -25,6 +25,63 @@ private static final long serialVersionUID = 0L;
     return new AgentBillingRates();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private AgentBillingRates(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 33: {
+
+            agentTollFreePpi_ = input.readDouble();
+            break;
+          }
+          case 41: {
+
+            agentSoftphonePpi_ = input.readDouble();
+            break;
+          }
+          case 49: {
+
+            agentLocalPpi_ = input.readDouble();
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.org.legacy.EntitiesProto.internal_static_api_v1alpha1_org_legacy_AgentBillingRates_descriptor;
@@ -39,7 +96,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AGENT_TOLL_FREE_PPI_FIELD_NUMBER = 4;
-  private double agentTollFreePpi_ = 0D;
+  private double agentTollFreePpi_;
   /**
    * <code>double agent_toll_free_ppi = 4 [json_name = "agentTollFreePpi"];</code>
    * @return The agentTollFreePpi.
@@ -50,7 +107,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AGENT_SOFTPHONE_PPI_FIELD_NUMBER = 5;
-  private double agentSoftphonePpi_ = 0D;
+  private double agentSoftphonePpi_;
   /**
    * <code>double agent_softphone_ppi = 5 [json_name = "agentSoftphonePpi"];</code>
    * @return The agentSoftphonePpi.
@@ -61,7 +118,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AGENT_LOCAL_PPI_FIELD_NUMBER = 6;
-  private double agentLocalPpi_ = 0D;
+  private double agentLocalPpi_;
   /**
    * <code>double agent_local_ppi = 6 [json_name = "agentLocalPpi"];</code>
    * @return The agentLocalPpi.
@@ -85,16 +142,16 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (java.lang.Double.doubleToRawLongBits(agentTollFreePpi_) != 0) {
+    if (agentTollFreePpi_ != 0D) {
       output.writeDouble(4, agentTollFreePpi_);
     }
-    if (java.lang.Double.doubleToRawLongBits(agentSoftphonePpi_) != 0) {
+    if (agentSoftphonePpi_ != 0D) {
       output.writeDouble(5, agentSoftphonePpi_);
     }
-    if (java.lang.Double.doubleToRawLongBits(agentLocalPpi_) != 0) {
+    if (agentLocalPpi_ != 0D) {
       output.writeDouble(6, agentLocalPpi_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -103,19 +160,19 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (java.lang.Double.doubleToRawLongBits(agentTollFreePpi_) != 0) {
+    if (agentTollFreePpi_ != 0D) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(4, agentTollFreePpi_);
     }
-    if (java.lang.Double.doubleToRawLongBits(agentSoftphonePpi_) != 0) {
+    if (agentSoftphonePpi_ != 0D) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(5, agentSoftphonePpi_);
     }
-    if (java.lang.Double.doubleToRawLongBits(agentLocalPpi_) != 0) {
+    if (agentLocalPpi_ != 0D) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(6, agentLocalPpi_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -139,7 +196,7 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Double.doubleToLongBits(getAgentLocalPpi())
         != java.lang.Double.doubleToLongBits(
             other.getAgentLocalPpi())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -159,7 +216,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + AGENT_LOCAL_PPI_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         java.lang.Double.doubleToLongBits(getAgentLocalPpi()));
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -208,13 +265,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentBillingRates parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentBillingRates parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -278,21 +333,28 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentBillingRates.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       agentTollFreePpi_ = 0D;
+
       agentSoftphonePpi_ = 0D;
+
       agentLocalPpi_ = 0D;
+
       return this;
     }
 
@@ -319,22 +381,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentBillingRates buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentBillingRates result = new com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentBillingRates(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.agentTollFreePpi_ = agentTollFreePpi_;
+      result.agentSoftphonePpi_ = agentSoftphonePpi_;
+      result.agentLocalPpi_ = agentLocalPpi_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentBillingRates result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.agentTollFreePpi_ = agentTollFreePpi_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.agentSoftphonePpi_ = agentSoftphonePpi_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.agentLocalPpi_ = agentLocalPpi_;
-      }
     }
 
     @java.lang.Override
@@ -390,7 +441,7 @@ private static final long serialVersionUID = 0L;
       if (other.getAgentLocalPpi() != 0D) {
         setAgentLocalPpi(other.getAgentLocalPpi());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -405,48 +456,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentBillingRates parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 33: {
-              agentTollFreePpi_ = input.readDouble();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 33
-            case 41: {
-              agentSoftphonePpi_ = input.readDouble();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 41
-            case 49: {
-              agentLocalPpi_ = input.readDouble();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 49
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentBillingRates) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private double agentTollFreePpi_ ;
     /**
@@ -463,9 +485,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAgentTollFreePpi(double value) {
-
+      
       agentTollFreePpi_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -474,7 +495,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAgentTollFreePpi() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       agentTollFreePpi_ = 0D;
       onChanged();
       return this;
@@ -495,9 +516,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAgentSoftphonePpi(double value) {
-
+      
       agentSoftphonePpi_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -506,7 +526,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAgentSoftphonePpi() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       agentSoftphonePpi_ = 0D;
       onChanged();
       return this;
@@ -527,9 +547,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAgentLocalPpi(double value) {
-
+      
       agentLocalPpi_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -538,7 +557,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAgentLocalPpi() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       agentLocalPpi_ = 0D;
       onChanged();
       return this;
@@ -576,18 +595,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new AgentBillingRates(input, extensionRegistry);
     }
   };
 

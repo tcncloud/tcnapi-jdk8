@@ -238,5 +238,5 @@ public interface NodeDefinitionOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.workflows.OmniNodeErrorOrBuilder getOmniErrorOrBuilder();
 
-  com.tcn.cloud.api.api.commons.workflows.NodeDefinition.DefinitionCase getDefinitionCase();
+  public com.tcn.cloud.api.api.commons.workflows.NodeDefinition.DefinitionCase getDefinitionCase();
 }

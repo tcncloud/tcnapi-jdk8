@@ -31,6 +31,65 @@ private static final long serialVersionUID = 0L;
     return new WebhookPreferences();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private WebhookPreferences(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+
+            pushUrlsEnabled_ = input.readBool();
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            callResultPushUrl_ = s;
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            agentResponsePushUrl_ = s;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.org.legacy.EntitiesProto.internal_static_api_v1alpha1_org_legacy_WebhookPreferences_descriptor;
@@ -45,7 +104,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PUSH_URLS_ENABLED_FIELD_NUMBER = 1;
-  private boolean pushUrlsEnabled_ = false;
+  private boolean pushUrlsEnabled_;
   /**
    * <pre>
    * Web hook push URLs enabled
@@ -60,8 +119,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALL_RESULT_PUSH_URL_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object callResultPushUrl_ = "";
+  private volatile java.lang.Object callResultPushUrl_;
   /**
    * <pre>
    * Call result from push URL
@@ -107,8 +165,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AGENT_RESPONSE_PUSH_URL_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object agentResponsePushUrl_ = "";
+  private volatile java.lang.Object agentResponsePushUrl_;
   /**
    * <pre>
    * Agent response from push URL
@@ -170,13 +227,13 @@ private static final long serialVersionUID = 0L;
     if (pushUrlsEnabled_ != false) {
       output.writeBool(1, pushUrlsEnabled_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callResultPushUrl_)) {
+    if (!getCallResultPushUrlBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, callResultPushUrl_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentResponsePushUrl_)) {
+    if (!getAgentResponsePushUrlBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, agentResponsePushUrl_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -189,13 +246,13 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(1, pushUrlsEnabled_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callResultPushUrl_)) {
+    if (!getCallResultPushUrlBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, callResultPushUrl_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentResponsePushUrl_)) {
+    if (!getAgentResponsePushUrlBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, agentResponsePushUrl_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -216,7 +273,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getCallResultPushUrl())) return false;
     if (!getAgentResponsePushUrl()
         .equals(other.getAgentResponsePushUrl())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -234,7 +291,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getCallResultPushUrl().hashCode();
     hash = (37 * hash) + AGENT_RESPONSE_PUSH_URL_FIELD_NUMBER;
     hash = (53 * hash) + getAgentResponsePushUrl().hashCode();
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -283,13 +340,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.WebhookPreferences parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.WebhookPreferences parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -357,21 +412,28 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.legacy.WebhookPreferences.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       pushUrlsEnabled_ = false;
+
       callResultPushUrl_ = "";
+
       agentResponsePushUrl_ = "";
+
       return this;
     }
 
@@ -398,22 +460,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.legacy.WebhookPreferences buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.legacy.WebhookPreferences result = new com.tcn.cloud.api.api.v1alpha1.org.legacy.WebhookPreferences(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.pushUrlsEnabled_ = pushUrlsEnabled_;
+      result.callResultPushUrl_ = callResultPushUrl_;
+      result.agentResponsePushUrl_ = agentResponsePushUrl_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.legacy.WebhookPreferences result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.pushUrlsEnabled_ = pushUrlsEnabled_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.callResultPushUrl_ = callResultPushUrl_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.agentResponsePushUrl_ = agentResponsePushUrl_;
-      }
     }
 
     @java.lang.Override
@@ -465,15 +516,13 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getCallResultPushUrl().isEmpty()) {
         callResultPushUrl_ = other.callResultPushUrl_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getAgentResponsePushUrl().isEmpty()) {
         agentResponsePushUrl_ = other.agentResponsePushUrl_;
-        bitField0_ |= 0x00000004;
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -488,48 +537,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.org.legacy.WebhookPreferences parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              pushUrlsEnabled_ = input.readBool();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 18: {
-              callResultPushUrl_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 26: {
-              agentResponsePushUrl_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.org.legacy.WebhookPreferences) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private boolean pushUrlsEnabled_ ;
     /**
@@ -554,9 +574,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPushUrlsEnabled(boolean value) {
-
+      
       pushUrlsEnabled_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -569,7 +588,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPushUrlsEnabled() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       pushUrlsEnabled_ = false;
       onChanged();
       return this;
@@ -628,9 +647,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallResultPushUrl(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       callResultPushUrl_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -643,8 +664,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallResultPushUrl() {
+      
       callResultPushUrl_ = getDefaultInstance().getCallResultPushUrl();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -659,10 +680,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallResultPushUrlBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       callResultPushUrl_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -720,9 +743,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAgentResponsePushUrl(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       agentResponsePushUrl_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -735,8 +760,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAgentResponsePushUrl() {
+      
       agentResponsePushUrl_ = getDefaultInstance().getAgentResponsePushUrl();
-      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -751,10 +776,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAgentResponsePushUrlBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       agentResponsePushUrl_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -791,18 +818,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new WebhookPreferences(input, extensionRegistry);
     }
   };
 

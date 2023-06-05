@@ -25,6 +25,87 @@ private static final long serialVersionUID = 0L;
     return new FlowState();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private FlowState(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            com.tcn.cloud.api.api.commons.workflows.Envelope.Builder subBuilder = null;
+            if (envelope_ != null) {
+              subBuilder = envelope_.toBuilder();
+            }
+            envelope_ = input.readMessage(com.tcn.cloud.api.api.commons.workflows.Envelope.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(envelope_);
+              envelope_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 18: {
+            com.tcn.cloud.api.api.commons.workflows.State.Builder subBuilder = null;
+            if (state_ != null) {
+              subBuilder = state_.toBuilder();
+            }
+            state_ = input.readMessage(com.tcn.cloud.api.api.commons.workflows.State.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(state_);
+              state_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 802: {
+            com.tcn.cloud.api.api.commons.workflows.Payload.Builder subBuilder = null;
+            if (payload_ != null) {
+              subBuilder = payload_.toBuilder();
+            }
+            payload_ = input.readMessage(com.tcn.cloud.api.api.commons.workflows.Payload.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(payload_);
+              payload_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.workflows.FlowsProto.internal_static_api_commons_workflows_FlowState_descriptor;
@@ -61,7 +142,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.workflows.EnvelopeOrBuilder getEnvelopeOrBuilder() {
-    return envelope_ == null ? com.tcn.cloud.api.api.commons.workflows.Envelope.getDefaultInstance() : envelope_;
+    return getEnvelope();
   }
 
   public static final int STATE_FIELD_NUMBER = 2;
@@ -87,7 +168,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.workflows.StateOrBuilder getStateOrBuilder() {
-    return state_ == null ? com.tcn.cloud.api.api.commons.workflows.State.getDefaultInstance() : state_;
+    return getState();
   }
 
   public static final int PAYLOAD_FIELD_NUMBER = 100;
@@ -113,7 +194,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.workflows.PayloadOrBuilder getPayloadOrBuilder() {
-    return payload_ == null ? com.tcn.cloud.api.api.commons.workflows.Payload.getDefaultInstance() : payload_;
+    return getPayload();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -139,7 +220,7 @@ private static final long serialVersionUID = 0L;
     if (payload_ != null) {
       output.writeMessage(100, getPayload());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -160,7 +241,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(100, getPayload());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -190,7 +271,7 @@ private static final long serialVersionUID = 0L;
       if (!getPayload()
           .equals(other.getPayload())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -213,7 +294,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + PAYLOAD_FIELD_NUMBER;
       hash = (53 * hash) + getPayload().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -262,13 +343,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.commons.workflows.FlowState parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.commons.workflows.FlowState parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -332,31 +411,38 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.workflows.FlowState.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      envelope_ = null;
-      if (envelopeBuilder_ != null) {
-        envelopeBuilder_.dispose();
+      if (envelopeBuilder_ == null) {
+        envelope_ = null;
+      } else {
+        envelope_ = null;
         envelopeBuilder_ = null;
       }
-      state_ = null;
-      if (stateBuilder_ != null) {
-        stateBuilder_.dispose();
+      if (stateBuilder_ == null) {
+        state_ = null;
+      } else {
+        state_ = null;
         stateBuilder_ = null;
       }
-      payload_ = null;
-      if (payloadBuilder_ != null) {
-        payloadBuilder_.dispose();
+      if (payloadBuilder_ == null) {
+        payload_ = null;
+      } else {
+        payload_ = null;
         payloadBuilder_ = null;
       }
       return this;
@@ -385,28 +471,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.workflows.FlowState buildPartial() {
       com.tcn.cloud.api.api.commons.workflows.FlowState result = new com.tcn.cloud.api.api.commons.workflows.FlowState(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      if (envelopeBuilder_ == null) {
+        result.envelope_ = envelope_;
+      } else {
+        result.envelope_ = envelopeBuilder_.build();
+      }
+      if (stateBuilder_ == null) {
+        result.state_ = state_;
+      } else {
+        result.state_ = stateBuilder_.build();
+      }
+      if (payloadBuilder_ == null) {
+        result.payload_ = payload_;
+      } else {
+        result.payload_ = payloadBuilder_.build();
+      }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.commons.workflows.FlowState result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.envelope_ = envelopeBuilder_ == null
-            ? envelope_
-            : envelopeBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.state_ = stateBuilder_ == null
-            ? state_
-            : stateBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.payload_ = payloadBuilder_ == null
-            ? payload_
-            : payloadBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -462,7 +543,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasPayload()) {
         mergePayload(other.getPayload());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -477,54 +558,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.commons.workflows.FlowState parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              input.readMessage(
-                  getEnvelopeFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              input.readMessage(
-                  getStateFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 802: {
-              input.readMessage(
-                  getPayloadFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 802
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.commons.workflows.FlowState) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private com.tcn.cloud.api.api.commons.workflows.Envelope envelope_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -534,7 +580,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the envelope field is set.
      */
     public boolean hasEnvelope() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return envelopeBuilder_ != null || envelope_ != null;
     }
     /**
      * <code>.api.commons.workflows.Envelope envelope = 1 [json_name = "envelope"];</code>
@@ -556,11 +602,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         envelope_ = value;
+        onChanged();
       } else {
         envelopeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -570,11 +616,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.workflows.Envelope.Builder builderForValue) {
       if (envelopeBuilder_ == null) {
         envelope_ = builderForValue.build();
+        onChanged();
       } else {
         envelopeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -582,38 +628,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeEnvelope(com.tcn.cloud.api.api.commons.workflows.Envelope value) {
       if (envelopeBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          envelope_ != null &&
-          envelope_ != com.tcn.cloud.api.api.commons.workflows.Envelope.getDefaultInstance()) {
-          getEnvelopeBuilder().mergeFrom(value);
+        if (envelope_ != null) {
+          envelope_ =
+            com.tcn.cloud.api.api.commons.workflows.Envelope.newBuilder(envelope_).mergeFrom(value).buildPartial();
         } else {
           envelope_ = value;
         }
+        onChanged();
       } else {
         envelopeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.commons.workflows.Envelope envelope = 1 [json_name = "envelope"];</code>
      */
     public Builder clearEnvelope() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      envelope_ = null;
-      if (envelopeBuilder_ != null) {
-        envelopeBuilder_.dispose();
+      if (envelopeBuilder_ == null) {
+        envelope_ = null;
+        onChanged();
+      } else {
+        envelope_ = null;
         envelopeBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.commons.workflows.Envelope envelope = 1 [json_name = "envelope"];</code>
      */
     public com.tcn.cloud.api.api.commons.workflows.Envelope.Builder getEnvelopeBuilder() {
-      bitField0_ |= 0x00000001;
+      
       onChanged();
       return getEnvelopeFieldBuilder().getBuilder();
     }
@@ -653,7 +699,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the state field is set.
      */
     public boolean hasState() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return stateBuilder_ != null || state_ != null;
     }
     /**
      * <code>.api.commons.workflows.State state = 2 [json_name = "state"];</code>
@@ -675,11 +721,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         state_ = value;
+        onChanged();
       } else {
         stateBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -689,11 +735,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.workflows.State.Builder builderForValue) {
       if (stateBuilder_ == null) {
         state_ = builderForValue.build();
+        onChanged();
       } else {
         stateBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -701,38 +747,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeState(com.tcn.cloud.api.api.commons.workflows.State value) {
       if (stateBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
-          state_ != null &&
-          state_ != com.tcn.cloud.api.api.commons.workflows.State.getDefaultInstance()) {
-          getStateBuilder().mergeFrom(value);
+        if (state_ != null) {
+          state_ =
+            com.tcn.cloud.api.api.commons.workflows.State.newBuilder(state_).mergeFrom(value).buildPartial();
         } else {
           state_ = value;
         }
+        onChanged();
       } else {
         stateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.commons.workflows.State state = 2 [json_name = "state"];</code>
      */
     public Builder clearState() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      state_ = null;
-      if (stateBuilder_ != null) {
-        stateBuilder_.dispose();
+      if (stateBuilder_ == null) {
+        state_ = null;
+        onChanged();
+      } else {
+        state_ = null;
         stateBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.commons.workflows.State state = 2 [json_name = "state"];</code>
      */
     public com.tcn.cloud.api.api.commons.workflows.State.Builder getStateBuilder() {
-      bitField0_ |= 0x00000002;
+      
       onChanged();
       return getStateFieldBuilder().getBuilder();
     }
@@ -772,7 +818,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the payload field is set.
      */
     public boolean hasPayload() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return payloadBuilder_ != null || payload_ != null;
     }
     /**
      * <code>.api.commons.workflows.Payload payload = 100 [json_name = "payload"];</code>
@@ -794,11 +840,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         payload_ = value;
+        onChanged();
       } else {
         payloadBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -808,11 +854,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.workflows.Payload.Builder builderForValue) {
       if (payloadBuilder_ == null) {
         payload_ = builderForValue.build();
+        onChanged();
       } else {
         payloadBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -820,38 +866,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergePayload(com.tcn.cloud.api.api.commons.workflows.Payload value) {
       if (payloadBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0) &&
-          payload_ != null &&
-          payload_ != com.tcn.cloud.api.api.commons.workflows.Payload.getDefaultInstance()) {
-          getPayloadBuilder().mergeFrom(value);
+        if (payload_ != null) {
+          payload_ =
+            com.tcn.cloud.api.api.commons.workflows.Payload.newBuilder(payload_).mergeFrom(value).buildPartial();
         } else {
           payload_ = value;
         }
+        onChanged();
       } else {
         payloadBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.commons.workflows.Payload payload = 100 [json_name = "payload"];</code>
      */
     public Builder clearPayload() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      payload_ = null;
-      if (payloadBuilder_ != null) {
-        payloadBuilder_.dispose();
+      if (payloadBuilder_ == null) {
+        payload_ = null;
+        onChanged();
+      } else {
+        payload_ = null;
         payloadBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.commons.workflows.Payload payload = 100 [json_name = "payload"];</code>
      */
     public com.tcn.cloud.api.api.commons.workflows.Payload.Builder getPayloadBuilder() {
-      bitField0_ |= 0x00000004;
+      
       onChanged();
       return getPayloadFieldBuilder().getBuilder();
     }
@@ -915,18 +961,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new FlowState(input, extensionRegistry);
     }
   };
 

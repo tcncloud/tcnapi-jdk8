@@ -32,90 +32,90 @@ public final class ServiceProto {
       "roto2\202\033\n\nRoom303API\022\225\001\n\rAddRoomMember\022*." +
       "api.v1alpha1.room303.AddRoomMemberReques" +
       "t\032\023.api.commons.Member\"C\272\270\221\002\005\n\003\010\274\005\202\323\344\223\0023" +
-      "\"./api/v1alpha1/room303/room303api/addro" +
-      "ommember:\001*\022\271\001\n\020RemoveRoomMember\022-.api.v" +
+      ":\001*\"./api/v1alpha1/room303/room303api/ad" +
+      "droommember\022\271\001\n\020RemoveRoomMember\022-.api.v" +
       "1alpha1.room303.RemoveRoomMemberRequest\032" +
       "..api.v1alpha1.room303.RemoveRoomMemberR" +
-      "esponse\"F\272\270\221\002\005\n\003\010\274\005\202\323\344\223\0026\"1/api/v1alpha1" +
-      "/room303/room303api/removeroommember:\001*\022" +
+      "esponse\"F\272\270\221\002\005\n\003\010\274\005\202\323\344\223\0026:\001*\"1/api/v1alp" +
+      "ha1/room303/room303api/removeroommember\022" +
       "\265\001\n\017ListRoomMembers\022,.api.v1alpha1.room3" +
       "03.ListRoomMembersRequest\032-.api.v1alpha1" +
       ".room303.ListRoomMembersResponse\"E\272\270\221\002\005\n" +
-      "\003\010\274\005\202\323\344\223\0025\"0/api/v1alpha1/room303/room30" +
-      "3api/listroommembers:\001*\022\315\001\n\025SetAdminForR" +
+      "\003\010\274\005\202\323\344\223\0025:\001*\"0/api/v1alpha1/room303/roo" +
+      "m303api/listroommembers\022\315\001\n\025SetAdminForR" +
       "oomMember\0222.api.v1alpha1.room303.SetAdmi" +
       "nForRoomMemberRequest\0323.api.v1alpha1.roo" +
       "m303.SetAdminForRoomMemberResponse\"K\272\270\221\002" +
-      "\005\n\003\010\274\005\202\323\344\223\002;\"6/api/v1alpha1/room303/room" +
-      "303api/setadminforroommember:\001*\022\204\001\n\010Join" +
+      "\005\n\003\010\274\005\202\323\344\223\002;:\001*\"6/api/v1alpha1/room303/r" +
+      "oom303api/setadminforroommember\022\204\001\n\010Join" +
       "Room\022%.api.v1alpha1.room303.JoinRoomRequ" +
       "est\032\021.api.commons.Room\">\272\270\221\002\005\n\003\010\274\005\202\323\344\223\002." +
-      "\")/api/v1alpha1/room303/room303api/joinr" +
-      "oom:\001*\022\225\001\n\rGetRoomMember\022*.api.v1alpha1." +
+      ":\001*\")/api/v1alpha1/room303/room303api/jo" +
+      "inroom\022\225\001\n\rGetRoomMember\022*.api.v1alpha1." +
       "room303.GetRoomMemberRequest\032\023.api.commo" +
-      "ns.Member\"C\272\270\221\002\005\n\003\010\274\005\202\323\344\223\0023\"./api/v1alph" +
-      "a1/room303/room303api/getroommember:\001*\022\255" +
+      "ns.Member\"C\272\270\221\002\005\n\003\010\274\005\202\323\344\223\0023:\001*\"./api/v1a" +
+      "lpha1/room303/room303api/getroommember\022\255" +
       "\001\n\rCreateMessage\022*.api.v1alpha1.room303." +
       "CreateMessageRequest\032+.api.v1alpha1.room" +
       "303.CreateMessageResponse\"C\272\270\221\002\005\n\003\010\274\005\202\323\344" +
-      "\223\0023\"./api/v1alpha1/room303/room303api/cr" +
-      "eatemessage:\001*\022\245\001\n\013EditMessage\022(.api.v1a" +
+      "\223\0023:\001*\"./api/v1alpha1/room303/room303api" +
+      "/createmessage\022\245\001\n\013EditMessage\022(.api.v1a" +
       "lpha1.room303.EditMessageRequest\032).api.v" +
       "1alpha1.room303.EditMessageResponse\"A\272\270\221" +
-      "\002\005\n\003\010\274\005\202\323\344\223\0021\",/api/v1alpha1/room303/roo" +
-      "m303api/editmessage:\001*\022\255\001\n\rDeleteMessage" +
+      "\002\005\n\003\010\274\005\202\323\344\223\0021:\001*\",/api/v1alpha1/room303/" +
+      "room303api/editmessage\022\255\001\n\rDeleteMessage" +
       "\022*.api.v1alpha1.room303.DeleteMessageReq" +
       "uest\032+.api.v1alpha1.room303.DeleteMessag" +
-      "eResponse\"C\272\270\221\002\005\n\003\010\274\005\202\323\344\223\0023\"./api/v1alph" +
-      "a1/room303/room303api/deletemessage:\001*\022\245" +
+      "eResponse\"C\272\270\221\002\005\n\003\010\274\005\202\323\344\223\0023:\001*\"./api/v1a" +
+      "lpha1/room303/room303api/deletemessage\022\245" +
       "\001\n\013GetMessages\022(.api.v1alpha1.room303.Ge" +
       "tMessagesRequest\032).api.v1alpha1.room303." +
-      "GetMessagesResponse\"A\272\270\221\002\005\n\003\010\274\005\202\323\344\223\0021\",/" +
-      "api/v1alpha1/room303/room303api/getmessa" +
-      "ges:\001*\022\313\001\n\024StreamMessageUpdates\0221.api.v1" +
+      "GetMessagesResponse\"A\272\270\221\002\005\n\003\010\274\005\202\323\344\223\0021:\001*" +
+      "\",/api/v1alpha1/room303/room303api/getme" +
+      "ssages\022\313\001\n\024StreamMessageUpdates\0221.api.v1" +
       "alpha1.room303.StreamMessageUpdatesReque" +
       "st\0322.api.v1alpha1.room303.StreamMessageU" +
-      "pdatesResponse\"J\272\270\221\002\005\n\003\010\274\005\202\323\344\223\002:\"5/api/v" +
-      "1alpha1/room303/room303api/streammessage" +
-      "updates:\001*0\001\022\261\001\n\016GetUnreadStats\022+.api.v1" +
+      "pdatesResponse\"J\272\270\221\002\005\n\003\010\274\005\202\323\344\223\002::\001*\"5/ap" +
+      "i/v1alpha1/room303/room303api/streammess" +
+      "ageupdates0\001\022\261\001\n\016GetUnreadStats\022+.api.v1" +
       "alpha1.room303.GetUnreadStatsRequest\032,.a" +
       "pi.v1alpha1.room303.GetUnreadStatsRespon" +
-      "se\"D\272\270\221\002\005\n\003\010\274\005\202\323\344\223\0024\"//api/v1alpha1/room" +
-      "303/room303api/getunreadstats:\001*\022\265\001\n\017Mar" +
+      "se\"D\272\270\221\002\005\n\003\010\274\005\202\323\344\223\0024:\001*\"//api/v1alpha1/r" +
+      "oom303/room303api/getunreadstats\022\265\001\n\017Mar" +
       "kMessageRead\022,.api.v1alpha1.room303.Mark" +
       "MessageReadRequest\032-.api.v1alpha1.room30" +
       "3.MarkMessageReadResponse\"E\272\270\221\002\005\n\003\010\274\005\202\323\344" +
-      "\223\0025\"0/api/v1alpha1/room303/room303api/ma" +
-      "rkmessageread:\001*\022\305\001\n\023MarkAllMessagesRead" +
+      "\223\0025:\001*\"0/api/v1alpha1/room303/room303api" +
+      "/markmessageread\022\305\001\n\023MarkAllMessagesRead" +
       "\0220.api.v1alpha1.room303.MarkAllMessagesR" +
       "eadRequest\0321.api.v1alpha1.room303.MarkAl" +
-      "lMessagesReadResponse\"I\272\270\221\002\005\n\003\010\274\005\202\323\344\223\0029\"" +
-      "4/api/v1alpha1/room303/room303api/markal" +
-      "lmessagesread:\001*\022\305\001\n\023BulkMarkMessageRead" +
+      "lMessagesReadResponse\"I\272\270\221\002\005\n\003\010\274\005\202\323\344\223\0029:" +
+      "\001*\"4/api/v1alpha1/room303/room303api/mar" +
+      "kallmessagesread\022\305\001\n\023BulkMarkMessageRead" +
       "\0220.api.v1alpha1.room303.BulkMarkMessageR" +
       "eadRequest\0321.api.v1alpha1.room303.BulkMa" +
-      "rkMessageReadResponse\"I\272\270\221\002\005\n\003\010\274\005\202\323\344\223\0029\"" +
-      "4/api/v1alpha1/room303/room303api/bulkma" +
-      "rkmessageread:\001*\022\212\001\n\nCreateRoom\022\'.api.v1" +
+      "rkMessageReadResponse\"I\272\270\221\002\005\n\003\010\274\005\202\323\344\223\0029:" +
+      "\001*\"4/api/v1alpha1/room303/room303api/bul" +
+      "kmarkmessageread\022\212\001\n\nCreateRoom\022\'.api.v1" +
       "alpha1.room303.CreateRoomRequest\032\021.api.c" +
-      "ommons.Room\"@\272\270\221\002\005\n\003\010\274\005\202\323\344\223\0020\"+/api/v1al" +
-      "pha1/room303/room303api/createroom:\001*\022\201\001" +
+      "ommons.Room\"@\272\270\221\002\005\n\003\010\274\005\202\323\344\223\0020:\001*\"+/api/v" +
+      "1alpha1/room303/room303api/createroom\022\201\001" +
       "\n\007GetRoom\022$.api.v1alpha1.room303.GetRoom" +
       "Request\032\021.api.commons.Room\"=\272\270\221\002\005\n\003\010\274\005\202\323" +
-      "\344\223\002-\"(/api/v1alpha1/room303/room303api/g" +
-      "etroom:\001*\022\246\001\n\014ListAllRooms\022).api.v1alpha" +
+      "\344\223\002-:\001*\"(/api/v1alpha1/room303/room303ap" +
+      "i/getroom\022\246\001\n\014ListAllRooms\022).api.v1alpha" +
       "1.room303.ListAllRoomsRequest\032\'.api.v1al" +
       "pha1.room303.ListRoomsResponse\"B\272\270\221\002\005\n\003\010" +
-      "\274\005\202\323\344\223\0022\"-/api/v1alpha1/room303/room303a" +
-      "pi/listallrooms:\001*\022\270\001\n\022ListRoomsForMembe" +
+      "\274\005\202\323\344\223\0022:\001*\"-/api/v1alpha1/room303/room3" +
+      "03api/listallrooms\022\270\001\n\022ListRoomsForMembe" +
       "r\022/.api.v1alpha1.room303.ListRoomsForMem" +
       "berRequest\032\'.api.v1alpha1.room303.ListRo" +
-      "omsResponse\"H\272\270\221\002\005\n\003\010\274\005\202\323\344\223\0028\"3/api/v1al" +
-      "pha1/room303/room303api/listroomsformemb" +
-      "er:\001*\022\211\001\n\013ArchiveRoom\022(.api.v1alpha1.roo" +
+      "omsResponse\"H\272\270\221\002\005\n\003\010\274\005\202\323\344\223\0028:\001*\"3/api/v" +
+      "1alpha1/room303/room303api/listroomsform" +
+      "ember\022\211\001\n\013ArchiveRoom\022(.api.v1alpha1.roo" +
       "m303.ArchiveRoomRequest\032\021.api.commons.Ro" +
-      "om\"=\272\270\221\002\005\n\003\010\274\005\202\323\344\223\002-\"(/api/v1alpha1/room" +
-      "303/room303api/archive:\001*B\250\001\n&com.tcn.cl" +
+      "om\"=\272\270\221\002\005\n\003\010\274\005\202\323\344\223\002-:\001*\"(/api/v1alpha1/r" +
+      "oom303/room303api/archiveB\250\001\n&com.tcn.cl" +
       "oud.api.api.v1alpha1.room303B\014ServicePro" +
       "toP\001\242\002\003AVR\252\002\024Api.V1alpha1.Room303\312\002\024Api\\" +
       "V1alpha1\\Room303\342\002 Api\\V1alpha1\\Room303\\" +

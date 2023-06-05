@@ -21,10 +21,8 @@ private static final long serialVersionUID = 0L;
     county_ = "";
     city_ = "";
     province_ = "";
-    postalCodes_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-    areaCodes_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    postalCodes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    areaCodes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
   }
 
   @java.lang.Override
@@ -34,6 +32,103 @@ private static final long serialVersionUID = 0L;
     return new LocationExp();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private LocationExp(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            country_ = s;
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            state_ = s;
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            county_ = s;
+            break;
+          }
+          case 34: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            city_ = s;
+            break;
+          }
+          case 42: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            province_ = s;
+            break;
+          }
+          case 50: {
+            java.lang.String s = input.readStringRequireUtf8();
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              postalCodes_ = new com.google.protobuf.LazyStringArrayList();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            postalCodes_.add(s);
+            break;
+          }
+          case 58: {
+            java.lang.String s = input.readStringRequireUtf8();
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              areaCodes_ = new com.google.protobuf.LazyStringArrayList();
+              mutable_bitField0_ |= 0x00000002;
+            }
+            areaCodes_.add(s);
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        postalCodes_ = postalCodes_.getUnmodifiableView();
+      }
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        areaCodes_ = areaCodes_.getUnmodifiableView();
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.ComplianceProto.internal_static_api_commons_LocationExp_descriptor;
@@ -48,8 +143,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COUNTRY_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object country_ = "";
+  private volatile java.lang.Object country_;
   /**
    * <code>string country = 1 [json_name = "country"];</code>
    * @return The country.
@@ -87,8 +181,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STATE_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object state_ = "";
+  private volatile java.lang.Object state_;
   /**
    * <code>string state = 2 [json_name = "state"];</code>
    * @return The state.
@@ -126,8 +219,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COUNTY_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object county_ = "";
+  private volatile java.lang.Object county_;
   /**
    * <code>string county = 3 [json_name = "county"];</code>
    * @return The county.
@@ -165,8 +257,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CITY_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object city_ = "";
+  private volatile java.lang.Object city_;
   /**
    * <code>string city = 4 [json_name = "city"];</code>
    * @return The city.
@@ -204,8 +295,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PROVINCE_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object province_ = "";
+  private volatile java.lang.Object province_;
   /**
    * <code>string province = 5 [json_name = "province"];</code>
    * @return The province.
@@ -243,9 +333,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int POSTAL_CODES_FIELD_NUMBER = 6;
-  @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList postalCodes_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
+  private com.google.protobuf.LazyStringList postalCodes_;
   /**
    * <code>repeated string postal_codes = 6 [json_name = "postalCodes"];</code>
    * @return A list containing the postalCodes.
@@ -280,9 +368,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AREA_CODES_FIELD_NUMBER = 7;
-  @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList areaCodes_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
+  private com.google.protobuf.LazyStringList areaCodes_;
   /**
    * <code>repeated string area_codes = 7 [json_name = "areaCodes"];</code>
    * @return A list containing the areaCodes.
@@ -330,19 +416,19 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(country_)) {
+    if (!getCountryBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, country_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(state_)) {
+    if (!getStateBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, state_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(county_)) {
+    if (!getCountyBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, county_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(city_)) {
+    if (!getCityBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, city_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(province_)) {
+    if (!getProvinceBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, province_);
     }
     for (int i = 0; i < postalCodes_.size(); i++) {
@@ -351,7 +437,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < areaCodes_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, areaCodes_.getRaw(i));
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -360,19 +446,19 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(country_)) {
+    if (!getCountryBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, country_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(state_)) {
+    if (!getStateBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, state_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(county_)) {
+    if (!getCountyBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, county_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(city_)) {
+    if (!getCityBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, city_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(province_)) {
+    if (!getProvinceBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, province_);
     }
     {
@@ -391,7 +477,7 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getAreaCodesList().size();
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -420,7 +506,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getPostalCodesList())) return false;
     if (!getAreaCodesList()
         .equals(other.getAreaCodesList())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -449,7 +535,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + AREA_CODES_FIELD_NUMBER;
       hash = (53 * hash) + getAreaCodesList().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -498,13 +584,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.commons.LocationExp parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.commons.LocationExp parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -568,27 +652,36 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.LocationExp.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       country_ = "";
+
       state_ = "";
+
       county_ = "";
+
       city_ = "";
+
       province_ = "";
-      postalCodes_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      areaCodes_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+
+      postalCodes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      areaCodes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -615,36 +708,24 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.LocationExp buildPartial() {
       com.tcn.cloud.api.api.commons.LocationExp result = new com.tcn.cloud.api.api.commons.LocationExp(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      int from_bitField0_ = bitField0_;
+      result.country_ = country_;
+      result.state_ = state_;
+      result.county_ = county_;
+      result.city_ = city_;
+      result.province_ = province_;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        postalCodes_ = postalCodes_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000001);
+      }
+      result.postalCodes_ = postalCodes_;
+      if (((bitField0_ & 0x00000002) != 0)) {
+        areaCodes_ = areaCodes_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000002);
+      }
+      result.areaCodes_ = areaCodes_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.commons.LocationExp result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.country_ = country_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.state_ = state_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.county_ = county_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.city_ = city_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.province_ = province_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        postalCodes_.makeImmutable();
-        result.postalCodes_ = postalCodes_;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        areaCodes_.makeImmutable();
-        result.areaCodes_ = areaCodes_;
-      }
     }
 
     @java.lang.Override
@@ -693,33 +774,28 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.commons.LocationExp.getDefaultInstance()) return this;
       if (!other.getCountry().isEmpty()) {
         country_ = other.country_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getState().isEmpty()) {
         state_ = other.state_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getCounty().isEmpty()) {
         county_ = other.county_;
-        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getCity().isEmpty()) {
         city_ = other.city_;
-        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.getProvince().isEmpty()) {
         province_ = other.province_;
-        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (!other.postalCodes_.isEmpty()) {
         if (postalCodes_.isEmpty()) {
           postalCodes_ = other.postalCodes_;
-          bitField0_ |= 0x00000020;
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensurePostalCodesIsMutable();
           postalCodes_.addAll(other.postalCodes_);
@@ -729,14 +805,14 @@ private static final long serialVersionUID = 0L;
       if (!other.areaCodes_.isEmpty()) {
         if (areaCodes_.isEmpty()) {
           areaCodes_ = other.areaCodes_;
-          bitField0_ |= 0x00000040;
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           ensureAreaCodesIsMutable();
           areaCodes_.addAll(other.areaCodes_);
         }
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -751,67 +827,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.commons.LocationExp parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              country_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              state_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 26: {
-              county_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            case 34: {
-              city_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
-            case 42: {
-              province_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 42
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensurePostalCodesIsMutable();
-              postalCodes_.add(s);
-              break;
-            } // case 50
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensureAreaCodesIsMutable();
-              areaCodes_.add(s);
-              break;
-            } // case 58
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.commons.LocationExp) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -857,9 +883,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCountry(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       country_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -868,8 +896,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCountry() {
+      
       country_ = getDefaultInstance().getCountry();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -880,10 +908,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCountryBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       country_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -929,9 +959,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setState(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       state_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -940,8 +972,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearState() {
+      
       state_ = getDefaultInstance().getState();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -952,10 +984,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStateBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       state_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1001,9 +1035,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCounty(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       county_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1012,8 +1048,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCounty() {
+      
       county_ = getDefaultInstance().getCounty();
-      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1024,10 +1060,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCountyBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       county_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1073,9 +1111,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCity(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       city_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1084,8 +1124,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCity() {
+      
       city_ = getDefaultInstance().getCity();
-      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1096,10 +1136,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCityBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       city_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1145,9 +1187,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setProvince(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       province_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1156,8 +1200,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearProvince() {
+      
       province_ = getDefaultInstance().getProvince();
-      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1168,21 +1212,22 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setProvinceBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       province_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringArrayList postalCodes_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.LazyStringList postalCodes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensurePostalCodesIsMutable() {
-      if (!postalCodes_.isModifiable()) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         postalCodes_ = new com.google.protobuf.LazyStringArrayList(postalCodes_);
-      }
-      bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000001;
+       }
     }
     /**
      * <code>repeated string postal_codes = 6 [json_name = "postalCodes"];</code>
@@ -1190,8 +1235,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getPostalCodesList() {
-      postalCodes_.makeImmutable();
-      return postalCodes_;
+      return postalCodes_.getUnmodifiableView();
     }
     /**
      * <code>repeated string postal_codes = 6 [json_name = "postalCodes"];</code>
@@ -1225,10 +1269,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPostalCodes(
         int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensurePostalCodesIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensurePostalCodesIsMutable();
       postalCodes_.set(index, value);
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1239,10 +1284,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addPostalCodes(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensurePostalCodesIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensurePostalCodesIsMutable();
       postalCodes_.add(value);
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1256,7 +1302,6 @@ private static final long serialVersionUID = 0L;
       ensurePostalCodesIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, postalCodes_);
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1265,9 +1310,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPostalCodes() {
-      postalCodes_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000020);;
+      postalCodes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1278,22 +1322,22 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addPostalCodesBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
       ensurePostalCodesIsMutable();
       postalCodes_.add(value);
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringArrayList areaCodes_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.LazyStringList areaCodes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureAreaCodesIsMutable() {
-      if (!areaCodes_.isModifiable()) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         areaCodes_ = new com.google.protobuf.LazyStringArrayList(areaCodes_);
-      }
-      bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000002;
+       }
     }
     /**
      * <code>repeated string area_codes = 7 [json_name = "areaCodes"];</code>
@@ -1301,8 +1345,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getAreaCodesList() {
-      areaCodes_.makeImmutable();
-      return areaCodes_;
+      return areaCodes_.getUnmodifiableView();
     }
     /**
      * <code>repeated string area_codes = 7 [json_name = "areaCodes"];</code>
@@ -1336,10 +1379,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAreaCodes(
         int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureAreaCodesIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureAreaCodesIsMutable();
       areaCodes_.set(index, value);
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1350,10 +1394,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addAreaCodes(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureAreaCodesIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureAreaCodesIsMutable();
       areaCodes_.add(value);
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1367,7 +1412,6 @@ private static final long serialVersionUID = 0L;
       ensureAreaCodesIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, areaCodes_);
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1376,9 +1420,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAreaCodes() {
-      areaCodes_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000040);;
+      areaCodes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1389,11 +1432,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addAreaCodesBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
       ensureAreaCodesIsMutable();
       areaCodes_.add(value);
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1430,18 +1474,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new LocationExp(input, extensionRegistry);
     }
   };
 

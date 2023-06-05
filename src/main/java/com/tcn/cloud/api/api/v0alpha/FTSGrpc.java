@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.50.0)",
     comments = "Source: api/v0alpha/fts.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class FTSGrpc {
@@ -92,32 +92,31 @@ public final class FTSGrpc {
 
   /**
    */
-  public interface AsyncService {
+  public static abstract class FTSImplBase implements io.grpc.BindableService {
 
     /**
      */
-    default void getUploadFileUrl(com.tcn.cloud.api.api.v0alpha.GetUploadFileUrlReq request,
+    public void getUploadFileUrl(com.tcn.cloud.api.api.v0alpha.GetUploadFileUrlReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetUploadFileUrlRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetUploadFileUrlMethod(), responseObserver);
     }
-  }
-
-  /**
-   * Base class for the server implementation of the service FTS.
-   */
-  public static abstract class FTSImplBase
-      implements io.grpc.BindableService, AsyncService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return FTSGrpc.bindService(this);
+      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getGetUploadFileUrlMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.GetUploadFileUrlReq,
+                com.tcn.cloud.api.api.v0alpha.GetUploadFileUrlRes>(
+                  this, METHODID_GET_UPLOAD_FILE_URL)))
+          .build();
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service FTS.
    */
-  public static final class FTSStub
-      extends io.grpc.stub.AbstractAsyncStub<FTSStub> {
+  public static final class FTSStub extends io.grpc.stub.AbstractAsyncStub<FTSStub> {
     private FTSStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -139,10 +138,8 @@ public final class FTSGrpc {
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service FTS.
    */
-  public static final class FTSBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<FTSBlockingStub> {
+  public static final class FTSBlockingStub extends io.grpc.stub.AbstractBlockingStub<FTSBlockingStub> {
     private FTSBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -163,10 +160,8 @@ public final class FTSGrpc {
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service FTS.
    */
-  public static final class FTSFutureStub
-      extends io.grpc.stub.AbstractFutureStub<FTSFutureStub> {
+  public static final class FTSFutureStub extends io.grpc.stub.AbstractFutureStub<FTSFutureStub> {
     private FTSFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -194,10 +189,10 @@ public final class FTSGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AsyncService serviceImpl;
+    private final FTSImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AsyncService serviceImpl, int methodId) {
+    MethodHandlers(FTSImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -224,18 +219,6 @@ public final class FTSGrpc {
           throw new AssertionError();
       }
     }
-  }
-
-  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
-    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-        .addMethod(
-          getGetUploadFileUrlMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.GetUploadFileUrlReq,
-              com.tcn.cloud.api.api.v0alpha.GetUploadFileUrlRes>(
-                service, METHODID_GET_UPLOAD_FILE_URL)))
-        .build();
   }
 
   private static abstract class FTSBaseDescriptorSupplier

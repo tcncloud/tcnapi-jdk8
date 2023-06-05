@@ -126,5 +126,5 @@ public interface EventOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.ResumeEventOrBuilder getResumeEventOrBuilder();
 
-  com.tcn.cloud.api.api.commons.Event.EventCase getEventCase();
+  public com.tcn.cloud.api.api.commons.Event.EventCase getEventCase();
 }

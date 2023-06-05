@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.50.0)",
     comments = "Source: api/v1alpha1/room303/service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class Room303APIGrpc {
@@ -681,7 +681,7 @@ public final class Room303APIGrpc {
 
   /**
    */
-  public interface AsyncService {
+  public static abstract class Room303APIImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
@@ -689,7 +689,7 @@ public final class Room303APIGrpc {
      * Add a new member to a room, you must be a room admin in order to do that
      * </pre>
      */
-    default void addRoomMember(com.tcn.cloud.api.api.v1alpha1.room303.AddRoomMemberRequest request,
+    public void addRoomMember(com.tcn.cloud.api.api.v1alpha1.room303.AddRoomMemberRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Member> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddRoomMemberMethod(), responseObserver);
     }
@@ -699,7 +699,7 @@ public final class Room303APIGrpc {
      * Remove room member (kick), the room member will not receive notifications from that room
      * </pre>
      */
-    default void removeRoomMember(com.tcn.cloud.api.api.v1alpha1.room303.RemoveRoomMemberRequest request,
+    public void removeRoomMember(com.tcn.cloud.api.api.v1alpha1.room303.RemoveRoomMemberRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.RemoveRoomMemberResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveRoomMemberMethod(), responseObserver);
     }
@@ -709,7 +709,7 @@ public final class Room303APIGrpc {
      * List the members of this room
      * </pre>
      */
-    default void listRoomMembers(com.tcn.cloud.api.api.v1alpha1.room303.ListRoomMembersRequest request,
+    public void listRoomMembers(com.tcn.cloud.api.api.v1alpha1.room303.ListRoomMembersRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.ListRoomMembersResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListRoomMembersMethod(), responseObserver);
     }
@@ -719,7 +719,7 @@ public final class Room303APIGrpc {
      * Set a room member as admin, you must be a room admin in order to do this.
      * </pre>
      */
-    default void setAdminForRoomMember(com.tcn.cloud.api.api.v1alpha1.room303.SetAdminForRoomMemberRequest request,
+    public void setAdminForRoomMember(com.tcn.cloud.api.api.v1alpha1.room303.SetAdminForRoomMemberRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.SetAdminForRoomMemberResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetAdminForRoomMemberMethod(), responseObserver);
     }
@@ -729,7 +729,7 @@ public final class Room303APIGrpc {
      * adds new member to a room and does not require the member to be admin
      * </pre>
      */
-    default void joinRoom(com.tcn.cloud.api.api.v1alpha1.room303.JoinRoomRequest request,
+    public void joinRoom(com.tcn.cloud.api.api.v1alpha1.room303.JoinRoomRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Room> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getJoinRoomMethod(), responseObserver);
     }
@@ -739,7 +739,7 @@ public final class Room303APIGrpc {
      * gets the member entity from the provided room if it exists
      * </pre>
      */
-    default void getRoomMember(com.tcn.cloud.api.api.v1alpha1.room303.GetRoomMemberRequest request,
+    public void getRoomMember(com.tcn.cloud.api.api.v1alpha1.room303.GetRoomMemberRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Member> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetRoomMemberMethod(), responseObserver);
     }
@@ -749,63 +749,63 @@ public final class Room303APIGrpc {
      * Message
      * </pre>
      */
-    default void createMessage(com.tcn.cloud.api.api.v1alpha1.room303.CreateMessageRequest request,
+    public void createMessage(com.tcn.cloud.api.api.v1alpha1.room303.CreateMessageRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.CreateMessageResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMessageMethod(), responseObserver);
     }
 
     /**
      */
-    default void editMessage(com.tcn.cloud.api.api.v1alpha1.room303.EditMessageRequest request,
+    public void editMessage(com.tcn.cloud.api.api.v1alpha1.room303.EditMessageRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.EditMessageResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEditMessageMethod(), responseObserver);
     }
 
     /**
      */
-    default void deleteMessage(com.tcn.cloud.api.api.v1alpha1.room303.DeleteMessageRequest request,
+    public void deleteMessage(com.tcn.cloud.api.api.v1alpha1.room303.DeleteMessageRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.DeleteMessageResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMessageMethod(), responseObserver);
     }
 
     /**
      */
-    default void getMessages(com.tcn.cloud.api.api.v1alpha1.room303.GetMessagesRequest request,
+    public void getMessages(com.tcn.cloud.api.api.v1alpha1.room303.GetMessagesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.GetMessagesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMessagesMethod(), responseObserver);
     }
 
     /**
      */
-    default void streamMessageUpdates(com.tcn.cloud.api.api.v1alpha1.room303.StreamMessageUpdatesRequest request,
+    public void streamMessageUpdates(com.tcn.cloud.api.api.v1alpha1.room303.StreamMessageUpdatesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.StreamMessageUpdatesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStreamMessageUpdatesMethod(), responseObserver);
     }
 
     /**
      */
-    default void getUnreadStats(com.tcn.cloud.api.api.v1alpha1.room303.GetUnreadStatsRequest request,
+    public void getUnreadStats(com.tcn.cloud.api.api.v1alpha1.room303.GetUnreadStatsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.GetUnreadStatsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetUnreadStatsMethod(), responseObserver);
     }
 
     /**
      */
-    default void markMessageRead(com.tcn.cloud.api.api.v1alpha1.room303.MarkMessageReadRequest request,
+    public void markMessageRead(com.tcn.cloud.api.api.v1alpha1.room303.MarkMessageReadRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.MarkMessageReadResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMarkMessageReadMethod(), responseObserver);
     }
 
     /**
      */
-    default void markAllMessagesRead(com.tcn.cloud.api.api.v1alpha1.room303.MarkAllMessagesReadRequest request,
+    public void markAllMessagesRead(com.tcn.cloud.api.api.v1alpha1.room303.MarkAllMessagesReadRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.MarkAllMessagesReadResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMarkAllMessagesReadMethod(), responseObserver);
     }
 
     /**
      */
-    default void bulkMarkMessageRead(com.tcn.cloud.api.api.v1alpha1.room303.BulkMarkMessageReadRequest request,
+    public void bulkMarkMessageRead(com.tcn.cloud.api.api.v1alpha1.room303.BulkMarkMessageReadRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.BulkMarkMessageReadResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBulkMarkMessageReadMethod(), responseObserver);
     }
@@ -815,56 +815,188 @@ public final class Room303APIGrpc {
      * Room
      * </pre>
      */
-    default void createRoom(com.tcn.cloud.api.api.v1alpha1.room303.CreateRoomRequest request,
+    public void createRoom(com.tcn.cloud.api.api.v1alpha1.room303.CreateRoomRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Room> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateRoomMethod(), responseObserver);
     }
 
     /**
      */
-    default void getRoom(com.tcn.cloud.api.api.v1alpha1.room303.GetRoomRequest request,
+    public void getRoom(com.tcn.cloud.api.api.v1alpha1.room303.GetRoomRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Room> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetRoomMethod(), responseObserver);
     }
 
     /**
      */
-    default void listAllRooms(com.tcn.cloud.api.api.v1alpha1.room303.ListAllRoomsRequest request,
+    public void listAllRooms(com.tcn.cloud.api.api.v1alpha1.room303.ListAllRoomsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.ListRoomsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAllRoomsMethod(), responseObserver);
     }
 
     /**
      */
-    default void listRoomsForMember(com.tcn.cloud.api.api.v1alpha1.room303.ListRoomsForMemberRequest request,
+    public void listRoomsForMember(com.tcn.cloud.api.api.v1alpha1.room303.ListRoomsForMemberRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.room303.ListRoomsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListRoomsForMemberMethod(), responseObserver);
     }
 
     /**
      */
-    default void archiveRoom(com.tcn.cloud.api.api.v1alpha1.room303.ArchiveRoomRequest request,
+    public void archiveRoom(com.tcn.cloud.api.api.v1alpha1.room303.ArchiveRoomRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.commons.Room> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getArchiveRoomMethod(), responseObserver);
     }
-  }
-
-  /**
-   * Base class for the server implementation of the service Room303API.
-   */
-  public static abstract class Room303APIImplBase
-      implements io.grpc.BindableService, AsyncService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return Room303APIGrpc.bindService(this);
+      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getAddRoomMemberMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.room303.AddRoomMemberRequest,
+                com.tcn.cloud.api.api.commons.Member>(
+                  this, METHODID_ADD_ROOM_MEMBER)))
+          .addMethod(
+            getRemoveRoomMemberMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.room303.RemoveRoomMemberRequest,
+                com.tcn.cloud.api.api.v1alpha1.room303.RemoveRoomMemberResponse>(
+                  this, METHODID_REMOVE_ROOM_MEMBER)))
+          .addMethod(
+            getListRoomMembersMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.room303.ListRoomMembersRequest,
+                com.tcn.cloud.api.api.v1alpha1.room303.ListRoomMembersResponse>(
+                  this, METHODID_LIST_ROOM_MEMBERS)))
+          .addMethod(
+            getSetAdminForRoomMemberMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.room303.SetAdminForRoomMemberRequest,
+                com.tcn.cloud.api.api.v1alpha1.room303.SetAdminForRoomMemberResponse>(
+                  this, METHODID_SET_ADMIN_FOR_ROOM_MEMBER)))
+          .addMethod(
+            getJoinRoomMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.room303.JoinRoomRequest,
+                com.tcn.cloud.api.api.commons.Room>(
+                  this, METHODID_JOIN_ROOM)))
+          .addMethod(
+            getGetRoomMemberMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.room303.GetRoomMemberRequest,
+                com.tcn.cloud.api.api.commons.Member>(
+                  this, METHODID_GET_ROOM_MEMBER)))
+          .addMethod(
+            getCreateMessageMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.room303.CreateMessageRequest,
+                com.tcn.cloud.api.api.v1alpha1.room303.CreateMessageResponse>(
+                  this, METHODID_CREATE_MESSAGE)))
+          .addMethod(
+            getEditMessageMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.room303.EditMessageRequest,
+                com.tcn.cloud.api.api.v1alpha1.room303.EditMessageResponse>(
+                  this, METHODID_EDIT_MESSAGE)))
+          .addMethod(
+            getDeleteMessageMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.room303.DeleteMessageRequest,
+                com.tcn.cloud.api.api.v1alpha1.room303.DeleteMessageResponse>(
+                  this, METHODID_DELETE_MESSAGE)))
+          .addMethod(
+            getGetMessagesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.room303.GetMessagesRequest,
+                com.tcn.cloud.api.api.v1alpha1.room303.GetMessagesResponse>(
+                  this, METHODID_GET_MESSAGES)))
+          .addMethod(
+            getStreamMessageUpdatesMethod(),
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.room303.StreamMessageUpdatesRequest,
+                com.tcn.cloud.api.api.v1alpha1.room303.StreamMessageUpdatesResponse>(
+                  this, METHODID_STREAM_MESSAGE_UPDATES)))
+          .addMethod(
+            getGetUnreadStatsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.room303.GetUnreadStatsRequest,
+                com.tcn.cloud.api.api.v1alpha1.room303.GetUnreadStatsResponse>(
+                  this, METHODID_GET_UNREAD_STATS)))
+          .addMethod(
+            getMarkMessageReadMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.room303.MarkMessageReadRequest,
+                com.tcn.cloud.api.api.v1alpha1.room303.MarkMessageReadResponse>(
+                  this, METHODID_MARK_MESSAGE_READ)))
+          .addMethod(
+            getMarkAllMessagesReadMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.room303.MarkAllMessagesReadRequest,
+                com.tcn.cloud.api.api.v1alpha1.room303.MarkAllMessagesReadResponse>(
+                  this, METHODID_MARK_ALL_MESSAGES_READ)))
+          .addMethod(
+            getBulkMarkMessageReadMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.room303.BulkMarkMessageReadRequest,
+                com.tcn.cloud.api.api.v1alpha1.room303.BulkMarkMessageReadResponse>(
+                  this, METHODID_BULK_MARK_MESSAGE_READ)))
+          .addMethod(
+            getCreateRoomMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.room303.CreateRoomRequest,
+                com.tcn.cloud.api.api.commons.Room>(
+                  this, METHODID_CREATE_ROOM)))
+          .addMethod(
+            getGetRoomMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.room303.GetRoomRequest,
+                com.tcn.cloud.api.api.commons.Room>(
+                  this, METHODID_GET_ROOM)))
+          .addMethod(
+            getListAllRoomsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.room303.ListAllRoomsRequest,
+                com.tcn.cloud.api.api.v1alpha1.room303.ListRoomsResponse>(
+                  this, METHODID_LIST_ALL_ROOMS)))
+          .addMethod(
+            getListRoomsForMemberMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.room303.ListRoomsForMemberRequest,
+                com.tcn.cloud.api.api.v1alpha1.room303.ListRoomsResponse>(
+                  this, METHODID_LIST_ROOMS_FOR_MEMBER)))
+          .addMethod(
+            getArchiveRoomMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.room303.ArchiveRoomRequest,
+                com.tcn.cloud.api.api.commons.Room>(
+                  this, METHODID_ARCHIVE_ROOM)))
+          .build();
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service Room303API.
    */
-  public static final class Room303APIStub
-      extends io.grpc.stub.AbstractAsyncStub<Room303APIStub> {
+  public static final class Room303APIStub extends io.grpc.stub.AbstractAsyncStub<Room303APIStub> {
     private Room303APIStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -1063,10 +1195,8 @@ public final class Room303APIGrpc {
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service Room303API.
    */
-  public static final class Room303APIBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<Room303APIBlockingStub> {
+  public static final class Room303APIBlockingStub extends io.grpc.stub.AbstractBlockingStub<Room303APIBlockingStub> {
     private Room303APIBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -1246,10 +1376,8 @@ public final class Room303APIGrpc {
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service Room303API.
    */
-  public static final class Room303APIFutureStub
-      extends io.grpc.stub.AbstractFutureStub<Room303APIFutureStub> {
+  public static final class Room303APIFutureStub extends io.grpc.stub.AbstractFutureStub<Room303APIFutureStub> {
     private Room303APIFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -1465,10 +1593,10 @@ public final class Room303APIGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AsyncService serviceImpl;
+    private final Room303APIImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AsyncService serviceImpl, int methodId) {
+    MethodHandlers(Room303APIImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -1571,151 +1699,6 @@ public final class Room303APIGrpc {
           throw new AssertionError();
       }
     }
-  }
-
-  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
-    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-        .addMethod(
-          getAddRoomMemberMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.room303.AddRoomMemberRequest,
-              com.tcn.cloud.api.api.commons.Member>(
-                service, METHODID_ADD_ROOM_MEMBER)))
-        .addMethod(
-          getRemoveRoomMemberMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.room303.RemoveRoomMemberRequest,
-              com.tcn.cloud.api.api.v1alpha1.room303.RemoveRoomMemberResponse>(
-                service, METHODID_REMOVE_ROOM_MEMBER)))
-        .addMethod(
-          getListRoomMembersMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.room303.ListRoomMembersRequest,
-              com.tcn.cloud.api.api.v1alpha1.room303.ListRoomMembersResponse>(
-                service, METHODID_LIST_ROOM_MEMBERS)))
-        .addMethod(
-          getSetAdminForRoomMemberMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.room303.SetAdminForRoomMemberRequest,
-              com.tcn.cloud.api.api.v1alpha1.room303.SetAdminForRoomMemberResponse>(
-                service, METHODID_SET_ADMIN_FOR_ROOM_MEMBER)))
-        .addMethod(
-          getJoinRoomMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.room303.JoinRoomRequest,
-              com.tcn.cloud.api.api.commons.Room>(
-                service, METHODID_JOIN_ROOM)))
-        .addMethod(
-          getGetRoomMemberMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.room303.GetRoomMemberRequest,
-              com.tcn.cloud.api.api.commons.Member>(
-                service, METHODID_GET_ROOM_MEMBER)))
-        .addMethod(
-          getCreateMessageMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.room303.CreateMessageRequest,
-              com.tcn.cloud.api.api.v1alpha1.room303.CreateMessageResponse>(
-                service, METHODID_CREATE_MESSAGE)))
-        .addMethod(
-          getEditMessageMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.room303.EditMessageRequest,
-              com.tcn.cloud.api.api.v1alpha1.room303.EditMessageResponse>(
-                service, METHODID_EDIT_MESSAGE)))
-        .addMethod(
-          getDeleteMessageMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.room303.DeleteMessageRequest,
-              com.tcn.cloud.api.api.v1alpha1.room303.DeleteMessageResponse>(
-                service, METHODID_DELETE_MESSAGE)))
-        .addMethod(
-          getGetMessagesMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.room303.GetMessagesRequest,
-              com.tcn.cloud.api.api.v1alpha1.room303.GetMessagesResponse>(
-                service, METHODID_GET_MESSAGES)))
-        .addMethod(
-          getStreamMessageUpdatesMethod(),
-          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.room303.StreamMessageUpdatesRequest,
-              com.tcn.cloud.api.api.v1alpha1.room303.StreamMessageUpdatesResponse>(
-                service, METHODID_STREAM_MESSAGE_UPDATES)))
-        .addMethod(
-          getGetUnreadStatsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.room303.GetUnreadStatsRequest,
-              com.tcn.cloud.api.api.v1alpha1.room303.GetUnreadStatsResponse>(
-                service, METHODID_GET_UNREAD_STATS)))
-        .addMethod(
-          getMarkMessageReadMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.room303.MarkMessageReadRequest,
-              com.tcn.cloud.api.api.v1alpha1.room303.MarkMessageReadResponse>(
-                service, METHODID_MARK_MESSAGE_READ)))
-        .addMethod(
-          getMarkAllMessagesReadMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.room303.MarkAllMessagesReadRequest,
-              com.tcn.cloud.api.api.v1alpha1.room303.MarkAllMessagesReadResponse>(
-                service, METHODID_MARK_ALL_MESSAGES_READ)))
-        .addMethod(
-          getBulkMarkMessageReadMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.room303.BulkMarkMessageReadRequest,
-              com.tcn.cloud.api.api.v1alpha1.room303.BulkMarkMessageReadResponse>(
-                service, METHODID_BULK_MARK_MESSAGE_READ)))
-        .addMethod(
-          getCreateRoomMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.room303.CreateRoomRequest,
-              com.tcn.cloud.api.api.commons.Room>(
-                service, METHODID_CREATE_ROOM)))
-        .addMethod(
-          getGetRoomMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.room303.GetRoomRequest,
-              com.tcn.cloud.api.api.commons.Room>(
-                service, METHODID_GET_ROOM)))
-        .addMethod(
-          getListAllRoomsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.room303.ListAllRoomsRequest,
-              com.tcn.cloud.api.api.v1alpha1.room303.ListRoomsResponse>(
-                service, METHODID_LIST_ALL_ROOMS)))
-        .addMethod(
-          getListRoomsForMemberMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.room303.ListRoomsForMemberRequest,
-              com.tcn.cloud.api.api.v1alpha1.room303.ListRoomsResponse>(
-                service, METHODID_LIST_ROOMS_FOR_MEMBER)))
-        .addMethod(
-          getArchiveRoomMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.room303.ArchiveRoomRequest,
-              com.tcn.cloud.api.api.commons.Room>(
-                service, METHODID_ARCHIVE_ROOM)))
-        .build();
   }
 
   private static abstract class Room303APIBaseDescriptorSupplier

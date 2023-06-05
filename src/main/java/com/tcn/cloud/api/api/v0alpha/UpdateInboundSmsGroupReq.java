@@ -29,6 +29,121 @@ private static final long serialVersionUID = 0L;
     return new UpdateInboundSmsGroupReq();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private UpdateInboundSmsGroupReq(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            inboundSmsGroupId_ = s;
+            break;
+          }
+          case 16: {
+
+            smsNumberSid_ = input.readInt64();
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            name_ = s;
+            break;
+          }
+          case 48: {
+            int rawValue = input.readEnum();
+
+            status_ = rawValue;
+            break;
+          }
+          case 58: {
+            com.google.protobuf.Timestamp.Builder subBuilder = null;
+            if (startTime_ != null) {
+              subBuilder = startTime_.toBuilder();
+            }
+            startTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(startTime_);
+              startTime_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 66: {
+            com.google.protobuf.Timestamp.Builder subBuilder = null;
+            if (stopTime_ != null) {
+              subBuilder = stopTime_.toBuilder();
+            }
+            stopTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(stopTime_);
+              stopTime_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 73: {
+
+            totalCost_ = input.readDouble();
+            break;
+          }
+          case 82: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            inboundSmsTemplateId_ = s;
+            break;
+          }
+          case 90: {
+            com.tcn.cloud.api.api.v0alpha.ReportSettings.Builder subBuilder = null;
+            if (reportSettings_ != null) {
+              subBuilder = reportSettings_.toBuilder();
+            }
+            reportSettings_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.ReportSettings.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(reportSettings_);
+              reportSettings_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.SmsapiProto.internal_static_api_v0alpha_UpdateInboundSmsGroupReq_descriptor;
@@ -43,8 +158,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INBOUND_SMS_GROUP_ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object inboundSmsGroupId_ = "";
+  private volatile java.lang.Object inboundSmsGroupId_;
   /**
    * <code>string inbound_sms_group_id = 1 [json_name = "inboundSmsGroupId"];</code>
    * @return The inboundSmsGroupId.
@@ -82,7 +196,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SMS_NUMBER_SID_FIELD_NUMBER = 2;
-  private long smsNumberSid_ = 0L;
+  private long smsNumberSid_;
   /**
    * <code>int64 sms_number_sid = 2 [json_name = "smsNumberSid"];</code>
    * @return The smsNumberSid.
@@ -93,8 +207,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object name_ = "";
+  private volatile java.lang.Object name_;
   /**
    * <code>string name = 3 [json_name = "name"];</code>
    * @return The name.
@@ -132,7 +245,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STATUS_FIELD_NUMBER = 6;
-  private int status_ = 0;
+  private int status_;
   /**
    * <code>.api.commons.SMSIBGroupStatus status = 6 [json_name = "status"];</code>
    * @return The enum numeric value on the wire for status.
@@ -145,7 +258,8 @@ private static final long serialVersionUID = 0L;
    * @return The status.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.SMSIBGroupStatus getStatus() {
-    com.tcn.cloud.api.api.commons.SMSIBGroupStatus result = com.tcn.cloud.api.api.commons.SMSIBGroupStatus.forNumber(status_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.SMSIBGroupStatus result = com.tcn.cloud.api.api.commons.SMSIBGroupStatus.valueOf(status_);
     return result == null ? com.tcn.cloud.api.api.commons.SMSIBGroupStatus.UNRECOGNIZED : result;
   }
 
@@ -172,7 +286,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
-    return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    return getStartTime();
   }
 
   public static final int STOP_TIME_FIELD_NUMBER = 8;
@@ -198,11 +312,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getStopTimeOrBuilder() {
-    return stopTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : stopTime_;
+    return getStopTime();
   }
 
   public static final int TOTAL_COST_FIELD_NUMBER = 9;
-  private double totalCost_ = 0D;
+  private double totalCost_;
   /**
    * <code>double total_cost = 9 [json_name = "totalCost"];</code>
    * @return The totalCost.
@@ -213,8 +327,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INBOUND_SMS_TEMPLATE_ID_FIELD_NUMBER = 10;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object inboundSmsTemplateId_ = "";
+  private volatile java.lang.Object inboundSmsTemplateId_;
   /**
    * <code>string inbound_sms_template_id = 10 [json_name = "inboundSmsTemplateId"];</code>
    * @return The inboundSmsTemplateId.
@@ -274,7 +387,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.ReportSettingsOrBuilder getReportSettingsOrBuilder() {
-    return reportSettings_ == null ? com.tcn.cloud.api.api.v0alpha.ReportSettings.getDefaultInstance() : reportSettings_;
+    return getReportSettings();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -291,13 +404,13 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(inboundSmsGroupId_)) {
+    if (!getInboundSmsGroupIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, inboundSmsGroupId_);
     }
     if (smsNumberSid_ != 0L) {
       output.writeInt64(2, smsNumberSid_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+    if (!getNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
     }
     if (status_ != com.tcn.cloud.api.api.commons.SMSIBGroupStatus.IB_SMS_GROUP_UNKNOWN.getNumber()) {
@@ -309,16 +422,16 @@ private static final long serialVersionUID = 0L;
     if (stopTime_ != null) {
       output.writeMessage(8, getStopTime());
     }
-    if (java.lang.Double.doubleToRawLongBits(totalCost_) != 0) {
+    if (totalCost_ != 0D) {
       output.writeDouble(9, totalCost_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(inboundSmsTemplateId_)) {
+    if (!getInboundSmsTemplateIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 10, inboundSmsTemplateId_);
     }
     if (reportSettings_ != null) {
       output.writeMessage(11, getReportSettings());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -327,14 +440,14 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(inboundSmsGroupId_)) {
+    if (!getInboundSmsGroupIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, inboundSmsGroupId_);
     }
     if (smsNumberSid_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, smsNumberSid_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+    if (!getNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
     }
     if (status_ != com.tcn.cloud.api.api.commons.SMSIBGroupStatus.IB_SMS_GROUP_UNKNOWN.getNumber()) {
@@ -349,18 +462,18 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getStopTime());
     }
-    if (java.lang.Double.doubleToRawLongBits(totalCost_) != 0) {
+    if (totalCost_ != 0D) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(9, totalCost_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(inboundSmsTemplateId_)) {
+    if (!getInboundSmsTemplateIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, inboundSmsTemplateId_);
     }
     if (reportSettings_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, getReportSettings());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -402,7 +515,7 @@ private static final long serialVersionUID = 0L;
       if (!getReportSettings()
           .equals(other.getReportSettings())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -439,7 +552,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + REPORT_SETTINGS_FIELD_NUMBER;
       hash = (53 * hash) + getReportSettings().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -488,13 +601,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsGroupReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsGroupReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -558,37 +669,50 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsGroupReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       inboundSmsGroupId_ = "";
+
       smsNumberSid_ = 0L;
+
       name_ = "";
+
       status_ = 0;
-      startTime_ = null;
-      if (startTimeBuilder_ != null) {
-        startTimeBuilder_.dispose();
+
+      if (startTimeBuilder_ == null) {
+        startTime_ = null;
+      } else {
+        startTime_ = null;
         startTimeBuilder_ = null;
       }
-      stopTime_ = null;
-      if (stopTimeBuilder_ != null) {
-        stopTimeBuilder_.dispose();
+      if (stopTimeBuilder_ == null) {
+        stopTime_ = null;
+      } else {
+        stopTime_ = null;
         stopTimeBuilder_ = null;
       }
       totalCost_ = 0D;
+
       inboundSmsTemplateId_ = "";
-      reportSettings_ = null;
-      if (reportSettingsBuilder_ != null) {
-        reportSettingsBuilder_.dispose();
+
+      if (reportSettingsBuilder_ == null) {
+        reportSettings_ = null;
+      } else {
+        reportSettings_ = null;
         reportSettingsBuilder_ = null;
       }
       return this;
@@ -617,46 +741,29 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsGroupReq buildPartial() {
       com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsGroupReq result = new com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsGroupReq(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.inboundSmsGroupId_ = inboundSmsGroupId_;
+      result.smsNumberSid_ = smsNumberSid_;
+      result.name_ = name_;
+      result.status_ = status_;
+      if (startTimeBuilder_ == null) {
+        result.startTime_ = startTime_;
+      } else {
+        result.startTime_ = startTimeBuilder_.build();
+      }
+      if (stopTimeBuilder_ == null) {
+        result.stopTime_ = stopTime_;
+      } else {
+        result.stopTime_ = stopTimeBuilder_.build();
+      }
+      result.totalCost_ = totalCost_;
+      result.inboundSmsTemplateId_ = inboundSmsTemplateId_;
+      if (reportSettingsBuilder_ == null) {
+        result.reportSettings_ = reportSettings_;
+      } else {
+        result.reportSettings_ = reportSettingsBuilder_.build();
+      }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsGroupReq result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.inboundSmsGroupId_ = inboundSmsGroupId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.smsNumberSid_ = smsNumberSid_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.name_ = name_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.status_ = status_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.startTime_ = startTimeBuilder_ == null
-            ? startTime_
-            : startTimeBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.stopTime_ = stopTimeBuilder_ == null
-            ? stopTime_
-            : stopTimeBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.totalCost_ = totalCost_;
-      }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.inboundSmsTemplateId_ = inboundSmsTemplateId_;
-      }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
-        result.reportSettings_ = reportSettingsBuilder_ == null
-            ? reportSettings_
-            : reportSettingsBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -705,7 +812,6 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsGroupReq.getDefaultInstance()) return this;
       if (!other.getInboundSmsGroupId().isEmpty()) {
         inboundSmsGroupId_ = other.inboundSmsGroupId_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.getSmsNumberSid() != 0L) {
@@ -713,7 +819,6 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
-        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.status_ != 0) {
@@ -730,13 +835,12 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getInboundSmsTemplateId().isEmpty()) {
         inboundSmsTemplateId_ = other.inboundSmsTemplateId_;
-        bitField0_ |= 0x00000080;
         onChanged();
       }
       if (other.hasReportSettings()) {
         mergeReportSettings(other.getReportSettings());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -751,84 +855,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsGroupReq parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              inboundSmsGroupId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 16: {
-              smsNumberSid_ = input.readInt64();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 16
-            case 26: {
-              name_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            case 48: {
-              status_ = input.readEnum();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 48
-            case 58: {
-              input.readMessage(
-                  getStartTimeFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 58
-            case 66: {
-              input.readMessage(
-                  getStopTimeFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 66
-            case 73: {
-              totalCost_ = input.readDouble();
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 73
-            case 82: {
-              inboundSmsTemplateId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000080;
-              break;
-            } // case 82
-            case 90: {
-              input.readMessage(
-                  getReportSettingsFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000100;
-              break;
-            } // case 90
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.UpdateInboundSmsGroupReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private java.lang.Object inboundSmsGroupId_ = "";
     /**
@@ -871,9 +910,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setInboundSmsGroupId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       inboundSmsGroupId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -882,8 +923,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearInboundSmsGroupId() {
+      
       inboundSmsGroupId_ = getDefaultInstance().getInboundSmsGroupId();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -894,10 +935,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setInboundSmsGroupIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       inboundSmsGroupId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -917,9 +960,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSmsNumberSid(long value) {
-
+      
       smsNumberSid_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -928,7 +970,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSmsNumberSid() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       smsNumberSid_ = 0L;
       onChanged();
       return this;
@@ -975,9 +1017,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       name_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -986,8 +1030,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
+      
       name_ = getDefaultInstance().getName();
-      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -998,10 +1042,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       name_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1020,8 +1066,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
+      
       status_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1031,7 +1077,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.SMSIBGroupStatus getStatus() {
-      com.tcn.cloud.api.api.commons.SMSIBGroupStatus result = com.tcn.cloud.api.api.commons.SMSIBGroupStatus.forNumber(status_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.SMSIBGroupStatus result = com.tcn.cloud.api.api.commons.SMSIBGroupStatus.valueOf(status_);
       return result == null ? com.tcn.cloud.api.api.commons.SMSIBGroupStatus.UNRECOGNIZED : result;
     }
     /**
@@ -1043,7 +1090,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000008;
+      
       status_ = value.getNumber();
       onChanged();
       return this;
@@ -1053,7 +1100,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStatus() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      
       status_ = 0;
       onChanged();
       return this;
@@ -1067,7 +1114,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the startTime field is set.
      */
     public boolean hasStartTime() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return startTimeBuilder_ != null || startTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp start_time = 7 [json_name = "startTime"];</code>
@@ -1089,11 +1136,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         startTime_ = value;
+        onChanged();
       } else {
         startTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
@@ -1103,11 +1150,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (startTimeBuilder_ == null) {
         startTime_ = builderForValue.build();
+        onChanged();
       } else {
         startTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
@@ -1115,38 +1162,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
       if (startTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0) &&
-          startTime_ != null &&
-          startTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getStartTimeBuilder().mergeFrom(value);
+        if (startTime_ != null) {
+          startTime_ =
+            com.google.protobuf.Timestamp.newBuilder(startTime_).mergeFrom(value).buildPartial();
         } else {
           startTime_ = value;
         }
+        onChanged();
       } else {
         startTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp start_time = 7 [json_name = "startTime"];</code>
      */
     public Builder clearStartTime() {
-      bitField0_ = (bitField0_ & ~0x00000010);
-      startTime_ = null;
-      if (startTimeBuilder_ != null) {
-        startTimeBuilder_.dispose();
+      if (startTimeBuilder_ == null) {
+        startTime_ = null;
+        onChanged();
+      } else {
+        startTime_ = null;
         startTimeBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp start_time = 7 [json_name = "startTime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
-      bitField0_ |= 0x00000010;
+      
       onChanged();
       return getStartTimeFieldBuilder().getBuilder();
     }
@@ -1186,7 +1233,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the stopTime field is set.
      */
     public boolean hasStopTime() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return stopTimeBuilder_ != null || stopTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp stop_time = 8 [json_name = "stopTime"];</code>
@@ -1208,11 +1255,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         stopTime_ = value;
+        onChanged();
       } else {
         stopTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+
       return this;
     }
     /**
@@ -1222,11 +1269,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (stopTimeBuilder_ == null) {
         stopTime_ = builderForValue.build();
+        onChanged();
       } else {
         stopTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+
       return this;
     }
     /**
@@ -1234,38 +1281,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeStopTime(com.google.protobuf.Timestamp value) {
       if (stopTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0) &&
-          stopTime_ != null &&
-          stopTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getStopTimeBuilder().mergeFrom(value);
+        if (stopTime_ != null) {
+          stopTime_ =
+            com.google.protobuf.Timestamp.newBuilder(stopTime_).mergeFrom(value).buildPartial();
         } else {
           stopTime_ = value;
         }
+        onChanged();
       } else {
         stopTimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp stop_time = 8 [json_name = "stopTime"];</code>
      */
     public Builder clearStopTime() {
-      bitField0_ = (bitField0_ & ~0x00000020);
-      stopTime_ = null;
-      if (stopTimeBuilder_ != null) {
-        stopTimeBuilder_.dispose();
+      if (stopTimeBuilder_ == null) {
+        stopTime_ = null;
+        onChanged();
+      } else {
+        stopTime_ = null;
         stopTimeBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp stop_time = 8 [json_name = "stopTime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getStopTimeBuilder() {
-      bitField0_ |= 0x00000020;
+      
       onChanged();
       return getStopTimeFieldBuilder().getBuilder();
     }
@@ -1312,9 +1359,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalCost(double value) {
-
+      
       totalCost_ = value;
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1323,7 +1369,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalCost() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      
       totalCost_ = 0D;
       onChanged();
       return this;
@@ -1370,9 +1416,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setInboundSmsTemplateId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       inboundSmsTemplateId_ = value;
-      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1381,8 +1429,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearInboundSmsTemplateId() {
+      
       inboundSmsTemplateId_ = getDefaultInstance().getInboundSmsTemplateId();
-      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -1393,10 +1441,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setInboundSmsTemplateIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       inboundSmsTemplateId_ = value;
-      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1409,7 +1459,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the reportSettings field is set.
      */
     public boolean hasReportSettings() {
-      return ((bitField0_ & 0x00000100) != 0);
+      return reportSettingsBuilder_ != null || reportSettings_ != null;
     }
     /**
      * <code>.api.v0alpha.ReportSettings report_settings = 11 [json_name = "reportSettings"];</code>
@@ -1431,11 +1481,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         reportSettings_ = value;
+        onChanged();
       } else {
         reportSettingsBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000100;
-      onChanged();
+
       return this;
     }
     /**
@@ -1445,11 +1495,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.ReportSettings.Builder builderForValue) {
       if (reportSettingsBuilder_ == null) {
         reportSettings_ = builderForValue.build();
+        onChanged();
       } else {
         reportSettingsBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000100;
-      onChanged();
+
       return this;
     }
     /**
@@ -1457,38 +1507,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeReportSettings(com.tcn.cloud.api.api.v0alpha.ReportSettings value) {
       if (reportSettingsBuilder_ == null) {
-        if (((bitField0_ & 0x00000100) != 0) &&
-          reportSettings_ != null &&
-          reportSettings_ != com.tcn.cloud.api.api.v0alpha.ReportSettings.getDefaultInstance()) {
-          getReportSettingsBuilder().mergeFrom(value);
+        if (reportSettings_ != null) {
+          reportSettings_ =
+            com.tcn.cloud.api.api.v0alpha.ReportSettings.newBuilder(reportSettings_).mergeFrom(value).buildPartial();
         } else {
           reportSettings_ = value;
         }
+        onChanged();
       } else {
         reportSettingsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000100;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.ReportSettings report_settings = 11 [json_name = "reportSettings"];</code>
      */
     public Builder clearReportSettings() {
-      bitField0_ = (bitField0_ & ~0x00000100);
-      reportSettings_ = null;
-      if (reportSettingsBuilder_ != null) {
-        reportSettingsBuilder_.dispose();
+      if (reportSettingsBuilder_ == null) {
+        reportSettings_ = null;
+        onChanged();
+      } else {
+        reportSettings_ = null;
         reportSettingsBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.ReportSettings report_settings = 11 [json_name = "reportSettings"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.ReportSettings.Builder getReportSettingsBuilder() {
-      bitField0_ |= 0x00000100;
+      
       onChanged();
       return getReportSettingsFieldBuilder().getBuilder();
     }
@@ -1552,18 +1602,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new UpdateInboundSmsGroupReq(input, extensionRegistry);
     }
   };
 

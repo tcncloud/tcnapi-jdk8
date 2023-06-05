@@ -40,18 +40,9 @@ public interface ContactAreaCodeOrBuilder extends
    * </pre>
    *
    * <code>int32 custom = 2 [json_name = "custom"];</code>
-   * @return Whether the custom field is set.
-   */
-  boolean hasCustom();
-  /**
-   * <pre>
-   * Client-defined area code number.
-   * </pre>
-   *
-   * <code>int32 custom = 2 [json_name = "custom"];</code>
    * @return The custom.
    */
   int getCustom();
 
-  com.tcn.cloud.api.api.commons.org.ContactAreaCode.AreaCodeCase getAreaCodeCase();
+  public com.tcn.cloud.api.api.commons.org.ContactAreaCode.AreaCodeCase getAreaCodeCase();
 }

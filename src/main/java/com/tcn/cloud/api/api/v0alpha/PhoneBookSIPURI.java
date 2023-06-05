@@ -32,6 +32,87 @@ private static final long serialVersionUID = 0L;
     return new PhoneBookSIPURI();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private PhoneBookSIPURI(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            sipUriLeft_ = s;
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            sipUriRight_ = s;
+            break;
+          }
+          case 24: {
+            int rawValue = input.readEnum();
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              sipTypes_ = new java.util.ArrayList<java.lang.Integer>();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            sipTypes_.add(rawValue);
+            break;
+          }
+          case 26: {
+            int length = input.readRawVarint32();
+            int oldLimit = input.pushLimit(length);
+            while(input.getBytesUntilLimit() > 0) {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                sipTypes_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              sipTypes_.add(rawValue);
+            }
+            input.popLimit(oldLimit);
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        sipTypes_ = java.util.Collections.unmodifiableList(sipTypes_);
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.P3apiProto.internal_static_api_v0alpha_PhoneBookSIPURI_descriptor;
@@ -46,8 +127,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SIP_URI_LEFT_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object sipUriLeft_ = "";
+  private volatile java.lang.Object sipUriLeft_;
   /**
    * <pre>
    * The part of the SIP URI before the &#64; symbol
@@ -93,8 +173,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SIP_URI_RIGHT_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object sipUriRight_ = "";
+  private volatile java.lang.Object sipUriRight_;
   /**
    * <pre>
    * The part of the SIP URI after the &#64; symbol
@@ -140,14 +219,14 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SIP_TYPES_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> sipTypes_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, com.tcn.cloud.api.api.commons.PhoneBookSIPType> sipTypes_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.tcn.cloud.api.api.commons.PhoneBookSIPType>() {
             public com.tcn.cloud.api.api.commons.PhoneBookSIPType convert(java.lang.Integer from) {
-              com.tcn.cloud.api.api.commons.PhoneBookSIPType result = com.tcn.cloud.api.api.commons.PhoneBookSIPType.forNumber(from);
+              @SuppressWarnings("deprecation")
+              com.tcn.cloud.api.api.commons.PhoneBookSIPType result = com.tcn.cloud.api.api.commons.PhoneBookSIPType.valueOf(from);
               return result == null ? com.tcn.cloud.api.api.commons.PhoneBookSIPType.UNRECOGNIZED : result;
             }
           };
@@ -242,10 +321,10 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     getSerializedSize();
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sipUriLeft_)) {
+    if (!getSipUriLeftBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sipUriLeft_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sipUriRight_)) {
+    if (!getSipUriRightBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, sipUriRight_);
     }
     if (getSipTypesList().size() > 0) {
@@ -255,7 +334,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < sipTypes_.size(); i++) {
       output.writeEnumNoTag(sipTypes_.get(i));
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -264,10 +343,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sipUriLeft_)) {
+    if (!getSipUriLeftBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sipUriLeft_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sipUriRight_)) {
+    if (!getSipUriRightBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, sipUriRight_);
     }
     {
@@ -282,7 +361,7 @@ private static final long serialVersionUID = 0L;
           .computeUInt32SizeNoTag(dataSize);
       }sipTypesMemoizedSerializedSize = dataSize;
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -302,7 +381,7 @@ private static final long serialVersionUID = 0L;
     if (!getSipUriRight()
         .equals(other.getSipUriRight())) return false;
     if (!sipTypes_.equals(other.sipTypes_)) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -321,7 +400,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SIP_TYPES_FIELD_NUMBER;
       hash = (53 * hash) + sipTypes_.hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -370,13 +449,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.PhoneBookSIPURI parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.PhoneBookSIPURI parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -444,22 +521,28 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.PhoneBookSIPURI.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       sipUriLeft_ = "";
+
       sipUriRight_ = "";
+
       sipTypes_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -486,28 +569,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.PhoneBookSIPURI buildPartial() {
       com.tcn.cloud.api.api.v0alpha.PhoneBookSIPURI result = new com.tcn.cloud.api.api.v0alpha.PhoneBookSIPURI(this);
-      buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      onBuilt();
-      return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.PhoneBookSIPURI result) {
-      if (((bitField0_ & 0x00000004) != 0)) {
+      int from_bitField0_ = bitField0_;
+      result.sipUriLeft_ = sipUriLeft_;
+      result.sipUriRight_ = sipUriRight_;
+      if (((bitField0_ & 0x00000001) != 0)) {
         sipTypes_ = java.util.Collections.unmodifiableList(sipTypes_);
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.sipTypes_ = sipTypes_;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.PhoneBookSIPURI result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.sipUriLeft_ = sipUriLeft_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.sipUriRight_ = sipUriRight_;
-      }
+      onBuilt();
+      return result;
     }
 
     @java.lang.Override
@@ -556,25 +627,23 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v0alpha.PhoneBookSIPURI.getDefaultInstance()) return this;
       if (!other.getSipUriLeft().isEmpty()) {
         sipUriLeft_ = other.sipUriLeft_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getSipUriRight().isEmpty()) {
         sipUriRight_ = other.sipUriRight_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.sipTypes_.isEmpty()) {
         if (sipTypes_.isEmpty()) {
           sipTypes_ = other.sipTypes_;
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensureSipTypesIsMutable();
           sipTypes_.addAll(other.sipTypes_);
         }
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -589,57 +658,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.PhoneBookSIPURI parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              sipUriLeft_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              sipUriRight_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 24: {
-              int tmpRaw = input.readEnum();
-              ensureSipTypesIsMutable();
-              sipTypes_.add(tmpRaw);
-              break;
-            } // case 24
-            case 26: {
-              int length = input.readRawVarint32();
-              int oldLimit = input.pushLimit(length);
-              while(input.getBytesUntilLimit() > 0) {
-                int tmpRaw = input.readEnum();
-                ensureSipTypesIsMutable();
-                sipTypes_.add(tmpRaw);
-              }
-              input.popLimit(oldLimit);
-              break;
-            } // case 26
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.PhoneBookSIPURI) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -697,9 +726,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSipUriLeft(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       sipUriLeft_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -712,8 +743,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSipUriLeft() {
+      
       sipUriLeft_ = getDefaultInstance().getSipUriLeft();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -728,10 +759,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSipUriLeftBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       sipUriLeft_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -789,9 +822,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSipUriRight(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       sipUriRight_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -804,8 +839,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSipUriRight() {
+      
       sipUriRight_ = getDefaultInstance().getSipUriRight();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -820,10 +855,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSipUriRightBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       sipUriRight_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -831,9 +868,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> sipTypes_ =
       java.util.Collections.emptyList();
     private void ensureSipTypesIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         sipTypes_ = new java.util.ArrayList<java.lang.Integer>(sipTypes_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000001;
       }
     }
     /**
@@ -951,7 +988,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearSipTypes() {
       sipTypes_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -991,8 +1028,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .api.commons.PhoneBookSIPType sip_types = 3 [json_name = "sipTypes"];</code>
-     * @param index The index to set the value at.
-     * @param value The enum numeric value on the wire for sipTypes to set.
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of sipTypes at the given index.
      * @return This builder for chaining.
      */
     public Builder setSipTypesValue(
@@ -1072,18 +1109,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new PhoneBookSIPURI(input, extensionRegistry);
     }
   };
 

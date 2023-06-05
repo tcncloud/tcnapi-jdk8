@@ -25,6 +25,79 @@ private static final long serialVersionUID = 0L;
     return new AssignedScenario();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private AssignedScenario(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            com.tcn.cloud.api.api.v0alpha.Scenario.Builder subBuilder = null;
+            if (scenario_ != null) {
+              subBuilder = scenario_.toBuilder();
+            }
+            scenario_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.Scenario.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(scenario_);
+              scenario_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 16: {
+
+            enabled_ = input.readBool();
+            break;
+          }
+          case 26: {
+            com.tcn.cloud.api.api.commons.ScenarioResult.Builder subBuilder = null;
+            if (lastExecutionResult_ != null) {
+              subBuilder = lastExecutionResult_.toBuilder();
+            }
+            lastExecutionResult_ = input.readMessage(com.tcn.cloud.api.api.commons.ScenarioResult.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(lastExecutionResult_);
+              lastExecutionResult_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.ComplianceProto.internal_static_api_v0alpha_AssignedScenario_descriptor;
@@ -61,11 +134,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.ScenarioOrBuilder getScenarioOrBuilder() {
-    return scenario_ == null ? com.tcn.cloud.api.api.v0alpha.Scenario.getDefaultInstance() : scenario_;
+    return getScenario();
   }
 
   public static final int ENABLED_FIELD_NUMBER = 2;
-  private boolean enabled_ = false;
+  private boolean enabled_;
   /**
    * <code>bool enabled = 2 [json_name = "enabled"];</code>
    * @return The enabled.
@@ -98,7 +171,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.ScenarioResultOrBuilder getLastExecutionResultOrBuilder() {
-    return lastExecutionResult_ == null ? com.tcn.cloud.api.api.commons.ScenarioResult.getDefaultInstance() : lastExecutionResult_;
+    return getLastExecutionResult();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -124,7 +197,7 @@ private static final long serialVersionUID = 0L;
     if (lastExecutionResult_ != null) {
       output.writeMessage(3, getLastExecutionResult());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -145,7 +218,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getLastExecutionResult());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -172,7 +245,7 @@ private static final long serialVersionUID = 0L;
       if (!getLastExecutionResult()
           .equals(other.getLastExecutionResult())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -194,7 +267,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + LAST_EXECUTION_RESULT_FIELD_NUMBER;
       hash = (53 * hash) + getLastExecutionResult().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -243,13 +316,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.AssignedScenario parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.AssignedScenario parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -313,27 +384,34 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.AssignedScenario.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      scenario_ = null;
-      if (scenarioBuilder_ != null) {
-        scenarioBuilder_.dispose();
+      if (scenarioBuilder_ == null) {
+        scenario_ = null;
+      } else {
+        scenario_ = null;
         scenarioBuilder_ = null;
       }
       enabled_ = false;
-      lastExecutionResult_ = null;
-      if (lastExecutionResultBuilder_ != null) {
-        lastExecutionResultBuilder_.dispose();
+
+      if (lastExecutionResultBuilder_ == null) {
+        lastExecutionResult_ = null;
+      } else {
+        lastExecutionResult_ = null;
         lastExecutionResultBuilder_ = null;
       }
       return this;
@@ -362,26 +440,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.AssignedScenario buildPartial() {
       com.tcn.cloud.api.api.v0alpha.AssignedScenario result = new com.tcn.cloud.api.api.v0alpha.AssignedScenario(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      if (scenarioBuilder_ == null) {
+        result.scenario_ = scenario_;
+      } else {
+        result.scenario_ = scenarioBuilder_.build();
+      }
+      result.enabled_ = enabled_;
+      if (lastExecutionResultBuilder_ == null) {
+        result.lastExecutionResult_ = lastExecutionResult_;
+      } else {
+        result.lastExecutionResult_ = lastExecutionResultBuilder_.build();
+      }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.AssignedScenario result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.scenario_ = scenarioBuilder_ == null
-            ? scenario_
-            : scenarioBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.enabled_ = enabled_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.lastExecutionResult_ = lastExecutionResultBuilder_ == null
-            ? lastExecutionResult_
-            : lastExecutionResultBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -437,7 +508,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasLastExecutionResult()) {
         mergeLastExecutionResult(other.getLastExecutionResult());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -452,52 +523,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.AssignedScenario parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              input.readMessage(
-                  getScenarioFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 16: {
-              enabled_ = input.readBool();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 16
-            case 26: {
-              input.readMessage(
-                  getLastExecutionResultFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.AssignedScenario) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private com.tcn.cloud.api.api.v0alpha.Scenario scenario_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -507,7 +545,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the scenario field is set.
      */
     public boolean hasScenario() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return scenarioBuilder_ != null || scenario_ != null;
     }
     /**
      * <code>.api.v0alpha.Scenario scenario = 1 [json_name = "scenario"];</code>
@@ -529,11 +567,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         scenario_ = value;
+        onChanged();
       } else {
         scenarioBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -543,11 +581,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.Scenario.Builder builderForValue) {
       if (scenarioBuilder_ == null) {
         scenario_ = builderForValue.build();
+        onChanged();
       } else {
         scenarioBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -555,38 +593,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeScenario(com.tcn.cloud.api.api.v0alpha.Scenario value) {
       if (scenarioBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          scenario_ != null &&
-          scenario_ != com.tcn.cloud.api.api.v0alpha.Scenario.getDefaultInstance()) {
-          getScenarioBuilder().mergeFrom(value);
+        if (scenario_ != null) {
+          scenario_ =
+            com.tcn.cloud.api.api.v0alpha.Scenario.newBuilder(scenario_).mergeFrom(value).buildPartial();
         } else {
           scenario_ = value;
         }
+        onChanged();
       } else {
         scenarioBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.Scenario scenario = 1 [json_name = "scenario"];</code>
      */
     public Builder clearScenario() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      scenario_ = null;
-      if (scenarioBuilder_ != null) {
-        scenarioBuilder_.dispose();
+      if (scenarioBuilder_ == null) {
+        scenario_ = null;
+        onChanged();
+      } else {
+        scenario_ = null;
         scenarioBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.Scenario scenario = 1 [json_name = "scenario"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.Scenario.Builder getScenarioBuilder() {
-      bitField0_ |= 0x00000001;
+      
       onChanged();
       return getScenarioFieldBuilder().getBuilder();
     }
@@ -633,9 +671,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEnabled(boolean value) {
-
+      
       enabled_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -644,7 +681,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnabled() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       enabled_ = false;
       onChanged();
       return this;
@@ -658,7 +695,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the lastExecutionResult field is set.
      */
     public boolean hasLastExecutionResult() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return lastExecutionResultBuilder_ != null || lastExecutionResult_ != null;
     }
     /**
      * <code>.api.commons.ScenarioResult last_execution_result = 3 [json_name = "lastExecutionResult"];</code>
@@ -680,11 +717,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         lastExecutionResult_ = value;
+        onChanged();
       } else {
         lastExecutionResultBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -694,11 +731,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.ScenarioResult.Builder builderForValue) {
       if (lastExecutionResultBuilder_ == null) {
         lastExecutionResult_ = builderForValue.build();
+        onChanged();
       } else {
         lastExecutionResultBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -706,38 +743,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeLastExecutionResult(com.tcn.cloud.api.api.commons.ScenarioResult value) {
       if (lastExecutionResultBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0) &&
-          lastExecutionResult_ != null &&
-          lastExecutionResult_ != com.tcn.cloud.api.api.commons.ScenarioResult.getDefaultInstance()) {
-          getLastExecutionResultBuilder().mergeFrom(value);
+        if (lastExecutionResult_ != null) {
+          lastExecutionResult_ =
+            com.tcn.cloud.api.api.commons.ScenarioResult.newBuilder(lastExecutionResult_).mergeFrom(value).buildPartial();
         } else {
           lastExecutionResult_ = value;
         }
+        onChanged();
       } else {
         lastExecutionResultBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.commons.ScenarioResult last_execution_result = 3 [json_name = "lastExecutionResult"];</code>
      */
     public Builder clearLastExecutionResult() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      lastExecutionResult_ = null;
-      if (lastExecutionResultBuilder_ != null) {
-        lastExecutionResultBuilder_.dispose();
+      if (lastExecutionResultBuilder_ == null) {
+        lastExecutionResult_ = null;
+        onChanged();
+      } else {
+        lastExecutionResult_ = null;
         lastExecutionResultBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.commons.ScenarioResult last_execution_result = 3 [json_name = "lastExecutionResult"];</code>
      */
     public com.tcn.cloud.api.api.commons.ScenarioResult.Builder getLastExecutionResultBuilder() {
-      bitField0_ |= 0x00000004;
+      
       onChanged();
       return getLastExecutionResultFieldBuilder().getBuilder();
     }
@@ -801,18 +838,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new AssignedScenario(input, extensionRegistry);
     }
   };
 

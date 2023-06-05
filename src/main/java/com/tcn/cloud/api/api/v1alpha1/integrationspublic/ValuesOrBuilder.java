@@ -30,14 +30,14 @@ public interface ValuesOrBuilder extends
   /**
    * <code>map&lt;string, .api.v1alpha1.integrationspublic.Value&gt; values = 1 [json_name = "values"];</code>
    */
-  /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value getValuesOrDefault(
+
+  com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value getValuesOrDefault(
       java.lang.String key,
-      /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue);
+      com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue);
   /**
    * <code>map&lt;string, .api.v1alpha1.integrationspublic.Value&gt; values = 1 [json_name = "values"];</code>
    */
+
   com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value getValuesOrThrow(
       java.lang.String key);
 }

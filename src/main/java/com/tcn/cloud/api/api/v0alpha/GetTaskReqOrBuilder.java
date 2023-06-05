@@ -49,5 +49,5 @@ public interface GetTaskReqOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.GetTaskReq.ByConversationOrBuilder getByConversationOrBuilder();
 
-  com.tcn.cloud.api.api.v0alpha.GetTaskReq.FilterCase getFilterCase();
+  public com.tcn.cloud.api.api.v0alpha.GetTaskReq.FilterCase getFilterCase();
 }

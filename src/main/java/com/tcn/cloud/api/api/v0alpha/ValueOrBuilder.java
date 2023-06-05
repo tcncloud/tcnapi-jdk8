@@ -9,11 +9,6 @@ public interface ValueOrBuilder extends
 
   /**
    * <code>string string_value = 1 [json_name = "stringValue"];</code>
-   * @return Whether the stringValue field is set.
-   */
-  boolean hasStringValue();
-  /**
-   * <code>string string_value = 1 [json_name = "stringValue"];</code>
    * @return The stringValue.
    */
   java.lang.String getStringValue();
@@ -24,11 +19,6 @@ public interface ValueOrBuilder extends
   com.google.protobuf.ByteString
       getStringValueBytes();
 
-  /**
-   * <code>double float_value = 2 [json_name = "floatValue"];</code>
-   * @return Whether the floatValue field is set.
-   */
-  boolean hasFloatValue();
   /**
    * <code>double float_value = 2 [json_name = "floatValue"];</code>
    * @return The floatValue.
@@ -67,14 +57,9 @@ public interface ValueOrBuilder extends
 
   /**
    * <code>bool bool_value = 5 [json_name = "boolValue"];</code>
-   * @return Whether the boolValue field is set.
-   */
-  boolean hasBoolValue();
-  /**
-   * <code>bool bool_value = 5 [json_name = "boolValue"];</code>
    * @return The boolValue.
    */
   boolean getBoolValue();
 
-  com.tcn.cloud.api.api.v0alpha.Value.DataTypeCase getDataTypeCase();
+  public com.tcn.cloud.api.api.v0alpha.Value.DataTypeCase getDataTypeCase();
 }

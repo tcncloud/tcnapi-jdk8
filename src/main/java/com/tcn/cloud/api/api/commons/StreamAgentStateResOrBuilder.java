@@ -67,5 +67,5 @@ public interface StreamAgentStateResOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.QueueCallRemoveOrBuilder getCallQueueRemoveOrBuilder();
 
-  com.tcn.cloud.api.api.commons.StreamAgentStateRes.AgentStateCase getAgentStateCase();
+  public com.tcn.cloud.api.api.commons.StreamAgentStateRes.AgentStateCase getAgentStateCase();
 }

@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.50.0)",
     comments = "Source: api/v1alpha1/soundboard/service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class SoundboardGrpc {
@@ -216,7 +216,7 @@ public final class SoundboardGrpc {
 
   /**
    */
-  public interface AsyncService {
+  public static abstract class SoundboardImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
@@ -224,7 +224,7 @@ public final class SoundboardGrpc {
      * corresponding to the provided soundboard id and org id.
      * </pre>
      */
-    default void getSoundboardFile(com.tcn.cloud.api.api.v1alpha1.soundboard.GetSoundboardFileReq request,
+    public void getSoundboardFile(com.tcn.cloud.api.api.v1alpha1.soundboard.GetSoundboardFileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.soundboard.GetSoundboardFileRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSoundboardFileMethod(), responseObserver);
     }
@@ -237,7 +237,7 @@ public final class SoundboardGrpc {
      * into rec. The generated soundboard id is returned.
      * </pre>
      */
-    default void createSoundboard(com.tcn.cloud.api.api.v1alpha1.soundboard.CreateSoundboardReq request,
+    public void createSoundboard(com.tcn.cloud.api.api.v1alpha1.soundboard.CreateSoundboardReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.soundboard.CreateSoundboardRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateSoundboardMethod(), responseObserver);
     }
@@ -248,7 +248,7 @@ public final class SoundboardGrpc {
      * corresponding to a given org id.
      * </pre>
      */
-    default void listSoundboards(com.tcn.cloud.api.api.v1alpha1.soundboard.ListSoundboardsReq request,
+    public void listSoundboards(com.tcn.cloud.api.api.v1alpha1.soundboard.ListSoundboardsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.soundboard.ListSoundboardsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSoundboardsMethod(), responseObserver);
     }
@@ -258,7 +258,7 @@ public final class SoundboardGrpc {
      * UpdateSondboard updates a soundboard's metadata in the soundboard table.
      * </pre>
      */
-    default void updateSoundboard(com.tcn.cloud.api.api.v1alpha1.soundboard.UpdateSoundboardReq request,
+    public void updateSoundboard(com.tcn.cloud.api.api.v1alpha1.soundboard.UpdateSoundboardReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.soundboard.UpdateSoundboardRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateSoundboardMethod(), responseObserver);
     }
@@ -268,28 +268,55 @@ public final class SoundboardGrpc {
      * DeleteSondboard deletes a soundboard's metadata from the soundboard table.
      * </pre>
      */
-    default void deleteSoundboard(com.tcn.cloud.api.api.v1alpha1.soundboard.DeleteSoundboardReq request,
+    public void deleteSoundboard(com.tcn.cloud.api.api.v1alpha1.soundboard.DeleteSoundboardReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.soundboard.DeleteSoundboardRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteSoundboardMethod(), responseObserver);
     }
-  }
-
-  /**
-   * Base class for the server implementation of the service Soundboard.
-   */
-  public static abstract class SoundboardImplBase
-      implements io.grpc.BindableService, AsyncService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return SoundboardGrpc.bindService(this);
+      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getGetSoundboardFileMethod(),
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.soundboard.GetSoundboardFileReq,
+                com.tcn.cloud.api.api.v1alpha1.soundboard.GetSoundboardFileRes>(
+                  this, METHODID_GET_SOUNDBOARD_FILE)))
+          .addMethod(
+            getCreateSoundboardMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.soundboard.CreateSoundboardReq,
+                com.tcn.cloud.api.api.v1alpha1.soundboard.CreateSoundboardRes>(
+                  this, METHODID_CREATE_SOUNDBOARD)))
+          .addMethod(
+            getListSoundboardsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.soundboard.ListSoundboardsReq,
+                com.tcn.cloud.api.api.v1alpha1.soundboard.ListSoundboardsRes>(
+                  this, METHODID_LIST_SOUNDBOARDS)))
+          .addMethod(
+            getUpdateSoundboardMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.soundboard.UpdateSoundboardReq,
+                com.tcn.cloud.api.api.v1alpha1.soundboard.UpdateSoundboardRes>(
+                  this, METHODID_UPDATE_SOUNDBOARD)))
+          .addMethod(
+            getDeleteSoundboardMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.soundboard.DeleteSoundboardReq,
+                com.tcn.cloud.api.api.v1alpha1.soundboard.DeleteSoundboardRes>(
+                  this, METHODID_DELETE_SOUNDBOARD)))
+          .build();
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service Soundboard.
    */
-  public static final class SoundboardStub
-      extends io.grpc.stub.AbstractAsyncStub<SoundboardStub> {
+  public static final class SoundboardStub extends io.grpc.stub.AbstractAsyncStub<SoundboardStub> {
     private SoundboardStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -363,10 +390,8 @@ public final class SoundboardGrpc {
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service Soundboard.
    */
-  public static final class SoundboardBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<SoundboardBlockingStub> {
+  public static final class SoundboardBlockingStub extends io.grpc.stub.AbstractBlockingStub<SoundboardBlockingStub> {
     private SoundboardBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -436,10 +461,8 @@ public final class SoundboardGrpc {
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service Soundboard.
    */
-  public static final class SoundboardFutureStub
-      extends io.grpc.stub.AbstractFutureStub<SoundboardFutureStub> {
+  public static final class SoundboardFutureStub extends io.grpc.stub.AbstractFutureStub<SoundboardFutureStub> {
     private SoundboardFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -511,10 +534,10 @@ public final class SoundboardGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AsyncService serviceImpl;
+    private final SoundboardImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AsyncService serviceImpl, int methodId) {
+    MethodHandlers(SoundboardImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -557,46 +580,6 @@ public final class SoundboardGrpc {
           throw new AssertionError();
       }
     }
-  }
-
-  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
-    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-        .addMethod(
-          getGetSoundboardFileMethod(),
-          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.soundboard.GetSoundboardFileReq,
-              com.tcn.cloud.api.api.v1alpha1.soundboard.GetSoundboardFileRes>(
-                service, METHODID_GET_SOUNDBOARD_FILE)))
-        .addMethod(
-          getCreateSoundboardMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.soundboard.CreateSoundboardReq,
-              com.tcn.cloud.api.api.v1alpha1.soundboard.CreateSoundboardRes>(
-                service, METHODID_CREATE_SOUNDBOARD)))
-        .addMethod(
-          getListSoundboardsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.soundboard.ListSoundboardsReq,
-              com.tcn.cloud.api.api.v1alpha1.soundboard.ListSoundboardsRes>(
-                service, METHODID_LIST_SOUNDBOARDS)))
-        .addMethod(
-          getUpdateSoundboardMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.soundboard.UpdateSoundboardReq,
-              com.tcn.cloud.api.api.v1alpha1.soundboard.UpdateSoundboardRes>(
-                service, METHODID_UPDATE_SOUNDBOARD)))
-        .addMethod(
-          getDeleteSoundboardMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.soundboard.DeleteSoundboardReq,
-              com.tcn.cloud.api.api.v1alpha1.soundboard.DeleteSoundboardRes>(
-                service, METHODID_DELETE_SOUNDBOARD)))
-        .build();
   }
 
   private static abstract class SoundboardBaseDescriptorSupplier

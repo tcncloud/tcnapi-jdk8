@@ -28,6 +28,85 @@ private static final long serialVersionUID = 0L;
     return new GetCallDetailsRes();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private GetCallDetailsRes(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              contactFieldData_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.ContactFieldDataRow>();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            contactFieldData_.add(
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.ContactFieldDataRow.parser(), extensionRegistry));
+            break;
+          }
+          case 18: {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              agentCallActivityDetails_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.AgentCallActivityDetails>();
+              mutable_bitField0_ |= 0x00000002;
+            }
+            agentCallActivityDetails_.add(
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.AgentCallActivityDetails.parser(), extensionRegistry));
+            break;
+          }
+          case 26: {
+            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+              agentCallResponses_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.AgentCallResponse>();
+              mutable_bitField0_ |= 0x00000004;
+            }
+            agentCallResponses_.add(
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.AgentCallResponse.parser(), extensionRegistry));
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        contactFieldData_ = java.util.Collections.unmodifiableList(contactFieldData_);
+      }
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        agentCallActivityDetails_ = java.util.Collections.unmodifiableList(agentCallActivityDetails_);
+      }
+      if (((mutable_bitField0_ & 0x00000004) != 0)) {
+        agentCallResponses_ = java.util.Collections.unmodifiableList(agentCallResponses_);
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.P3apiProto.internal_static_api_v0alpha_GetCallDetailsRes_descriptor;
@@ -42,7 +121,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONTACT_FIELD_DATA_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v0alpha.ContactFieldDataRow> contactFieldData_;
   /**
    * <code>repeated .api.v0alpha.ContactFieldDataRow contact_field_data = 1 [json_name = "contactFieldData"];</code>
@@ -83,7 +161,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AGENT_CALL_ACTIVITY_DETAILS_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v0alpha.AgentCallActivityDetails> agentCallActivityDetails_;
   /**
    * <code>repeated .api.v0alpha.AgentCallActivityDetails agent_call_activity_details = 2 [json_name = "agentCallActivityDetails"];</code>
@@ -124,7 +201,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AGENT_CALL_RESPONSES_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v0alpha.AgentCallResponse> agentCallResponses_;
   /**
    * <code>repeated .api.v0alpha.AgentCallResponse agent_call_responses = 3 [json_name = "agentCallResponses"];</code>
@@ -187,7 +263,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < agentCallResponses_.size(); i++) {
       output.writeMessage(3, agentCallResponses_.get(i));
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -208,7 +284,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, agentCallResponses_.get(i));
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -229,7 +305,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getAgentCallActivityDetailsList())) return false;
     if (!getAgentCallResponsesList()
         .equals(other.getAgentCallResponsesList())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -252,7 +328,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + AGENT_CALL_RESPONSES_FIELD_NUMBER;
       hash = (53 * hash) + getAgentCallResponsesList().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -301,13 +377,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.GetCallDetailsRes parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.GetCallDetailsRes parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -371,39 +445,43 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.GetCallDetailsRes.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getContactFieldDataFieldBuilder();
+        getAgentCallActivityDetailsFieldBuilder();
+        getAgentCallResponsesFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       if (contactFieldDataBuilder_ == null) {
         contactFieldData_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
-        contactFieldData_ = null;
         contactFieldDataBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000001);
       if (agentCallActivityDetailsBuilder_ == null) {
         agentCallActivityDetails_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
-        agentCallActivityDetails_ = null;
         agentCallActivityDetailsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000002);
       if (agentCallResponsesBuilder_ == null) {
         agentCallResponses_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
       } else {
-        agentCallResponses_ = null;
         agentCallResponsesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -430,13 +508,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.GetCallDetailsRes buildPartial() {
       com.tcn.cloud.api.api.v0alpha.GetCallDetailsRes result = new com.tcn.cloud.api.api.v0alpha.GetCallDetailsRes(this);
-      buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      onBuilt();
-      return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.GetCallDetailsRes result) {
+      int from_bitField0_ = bitField0_;
       if (contactFieldDataBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           contactFieldData_ = java.util.Collections.unmodifiableList(contactFieldData_);
@@ -464,10 +536,8 @@ private static final long serialVersionUID = 0L;
       } else {
         result.agentCallResponses_ = agentCallResponsesBuilder_.build();
       }
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.GetCallDetailsRes result) {
-      int from_bitField0_ = bitField0_;
+      onBuilt();
+      return result;
     }
 
     @java.lang.Override
@@ -592,7 +662,7 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -607,69 +677,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.GetCallDetailsRes parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.tcn.cloud.api.api.v0alpha.ContactFieldDataRow m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v0alpha.ContactFieldDataRow.parser(),
-                      extensionRegistry);
-              if (contactFieldDataBuilder_ == null) {
-                ensureContactFieldDataIsMutable();
-                contactFieldData_.add(m);
-              } else {
-                contactFieldDataBuilder_.addMessage(m);
-              }
-              break;
-            } // case 10
-            case 18: {
-              com.tcn.cloud.api.api.v0alpha.AgentCallActivityDetails m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v0alpha.AgentCallActivityDetails.parser(),
-                      extensionRegistry);
-              if (agentCallActivityDetailsBuilder_ == null) {
-                ensureAgentCallActivityDetailsIsMutable();
-                agentCallActivityDetails_.add(m);
-              } else {
-                agentCallActivityDetailsBuilder_.addMessage(m);
-              }
-              break;
-            } // case 18
-            case 26: {
-              com.tcn.cloud.api.api.v0alpha.AgentCallResponse m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v0alpha.AgentCallResponse.parser(),
-                      extensionRegistry);
-              if (agentCallResponsesBuilder_ == null) {
-                ensureAgentCallResponsesIsMutable();
-                agentCallResponses_.add(m);
-              } else {
-                agentCallResponsesBuilder_.addMessage(m);
-              }
-              break;
-            } // case 26
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.GetCallDetailsRes) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -1426,18 +1444,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new GetCallDetailsRes(input, extensionRegistry);
     }
   };
 

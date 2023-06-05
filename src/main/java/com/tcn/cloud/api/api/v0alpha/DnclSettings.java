@@ -16,11 +16,9 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private DnclSettings() {
-    huntGroupComplianceScrubLists_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    huntGroupComplianceScrubLists_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     scrubListsAutoAddOptions_ = java.util.Collections.emptyList();
-    huntGroupComplianceScrubListsRemovalAllowed_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    huntGroupComplianceScrubListsRemovalAllowed_ = com.google.protobuf.LazyStringArrayList.EMPTY;
   }
 
   @java.lang.Override
@@ -30,6 +28,153 @@ private static final long serialVersionUID = 0L;
     return new DnclSettings();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private DnclSettings(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+
+            allowDnclAdd_ = input.readBool();
+            break;
+          }
+          case 16: {
+
+            manualDialAutoDnclAdd_ = input.readBool();
+            break;
+          }
+          case 24: {
+
+            previewDialAutoDnclAdd_ = input.readBool();
+            break;
+          }
+          case 32: {
+
+            agentResponsesAutoDnclAdd_ = input.readBool();
+            break;
+          }
+          case 48: {
+
+            defaultManualDnclExpireHours_ = input.readInt64();
+            break;
+          }
+          case 56: {
+
+            defaultPreviewDnclExpireHours_ = input.readInt64();
+            break;
+          }
+          case 64: {
+
+            defaultDnclCountry_ = input.readInt64();
+            break;
+          }
+          case 72: {
+
+            defaultOutboundDnclExpireHours_ = input.readInt64();
+            break;
+          }
+          case 80: {
+
+            defaultInboundDnclExpireHours_ = input.readInt64();
+            break;
+          }
+          case 90: {
+            java.lang.String s = input.readStringRequireUtf8();
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              huntGroupComplianceScrubLists_ = new com.google.protobuf.LazyStringArrayList();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            huntGroupComplianceScrubLists_.add(s);
+            break;
+          }
+          case 98: {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              scrubListsAutoAddOptions_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.ScrubListsAutoAdd>();
+              mutable_bitField0_ |= 0x00000002;
+            }
+            scrubListsAutoAddOptions_.add(
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.ScrubListsAutoAdd.parser(), extensionRegistry));
+            break;
+          }
+          case 104: {
+
+            displayDnclOptionsInWrapup_ = input.readBool();
+            break;
+          }
+          case 112: {
+
+            allowDnclRemove_ = input.readBool();
+            break;
+          }
+          case 122: {
+            java.lang.String s = input.readStringRequireUtf8();
+            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+              huntGroupComplianceScrubListsRemovalAllowed_ = new com.google.protobuf.LazyStringArrayList();
+              mutable_bitField0_ |= 0x00000004;
+            }
+            huntGroupComplianceScrubListsRemovalAllowed_.add(s);
+            break;
+          }
+          case 130: {
+            com.tcn.cloud.api.api.v0alpha.ScrubListsExpirationLimits.Builder subBuilder = null;
+            if (scrubListsExpirationLimits_ != null) {
+              subBuilder = scrubListsExpirationLimits_.toBuilder();
+            }
+            scrubListsExpirationLimits_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.ScrubListsExpirationLimits.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(scrubListsExpirationLimits_);
+              scrubListsExpirationLimits_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        huntGroupComplianceScrubLists_ = huntGroupComplianceScrubLists_.getUnmodifiableView();
+      }
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        scrubListsAutoAddOptions_ = java.util.Collections.unmodifiableList(scrubListsAutoAddOptions_);
+      }
+      if (((mutable_bitField0_ & 0x00000004) != 0)) {
+        huntGroupComplianceScrubListsRemovalAllowed_ = huntGroupComplianceScrubListsRemovalAllowed_.getUnmodifiableView();
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.P3apiProto.internal_static_api_v0alpha_DnclSettings_descriptor;
@@ -44,7 +189,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ALLOW_DNCL_ADD_FIELD_NUMBER = 1;
-  private boolean allowDnclAdd_ = false;
+  private boolean allowDnclAdd_;
   /**
    * <code>bool allow_dncl_add = 1 [json_name = "allowDnclAdd"];</code>
    * @return The allowDnclAdd.
@@ -55,7 +200,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MANUAL_DIAL_AUTO_DNCL_ADD_FIELD_NUMBER = 2;
-  private boolean manualDialAutoDnclAdd_ = false;
+  private boolean manualDialAutoDnclAdd_;
   /**
    * <code>bool manual_dial_auto_dncl_add = 2 [json_name = "manualDialAutoDnclAdd"];</code>
    * @return The manualDialAutoDnclAdd.
@@ -66,7 +211,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PREVIEW_DIAL_AUTO_DNCL_ADD_FIELD_NUMBER = 3;
-  private boolean previewDialAutoDnclAdd_ = false;
+  private boolean previewDialAutoDnclAdd_;
   /**
    * <code>bool preview_dial_auto_dncl_add = 3 [json_name = "previewDialAutoDnclAdd"];</code>
    * @return The previewDialAutoDnclAdd.
@@ -77,7 +222,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AGENT_RESPONSES_AUTO_DNCL_ADD_FIELD_NUMBER = 4;
-  private boolean agentResponsesAutoDnclAdd_ = false;
+  private boolean agentResponsesAutoDnclAdd_;
   /**
    * <code>bool agent_responses_auto_dncl_add = 4 [json_name = "agentResponsesAutoDnclAdd"];</code>
    * @return The agentResponsesAutoDnclAdd.
@@ -88,7 +233,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DEFAULT_MANUAL_DNCL_EXPIRE_HOURS_FIELD_NUMBER = 6;
-  private long defaultManualDnclExpireHours_ = 0L;
+  private long defaultManualDnclExpireHours_;
   /**
    * <code>int64 default_manual_dncl_expire_hours = 6 [json_name = "defaultManualDnclExpireHours"];</code>
    * @return The defaultManualDnclExpireHours.
@@ -99,7 +244,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DEFAULT_PREVIEW_DNCL_EXPIRE_HOURS_FIELD_NUMBER = 7;
-  private long defaultPreviewDnclExpireHours_ = 0L;
+  private long defaultPreviewDnclExpireHours_;
   /**
    * <code>int64 default_preview_dncl_expire_hours = 7 [json_name = "defaultPreviewDnclExpireHours"];</code>
    * @return The defaultPreviewDnclExpireHours.
@@ -110,7 +255,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DEFAULT_DNCL_COUNTRY_FIELD_NUMBER = 8;
-  private long defaultDnclCountry_ = 0L;
+  private long defaultDnclCountry_;
   /**
    * <code>int64 default_dncl_country = 8 [json_name = "defaultDnclCountry"];</code>
    * @return The defaultDnclCountry.
@@ -121,7 +266,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DEFAULT_OUTBOUND_DNCL_EXPIRE_HOURS_FIELD_NUMBER = 9;
-  private long defaultOutboundDnclExpireHours_ = 0L;
+  private long defaultOutboundDnclExpireHours_;
   /**
    * <code>int64 default_outbound_dncl_expire_hours = 9 [json_name = "defaultOutboundDnclExpireHours"];</code>
    * @return The defaultOutboundDnclExpireHours.
@@ -132,7 +277,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DEFAULT_INBOUND_DNCL_EXPIRE_HOURS_FIELD_NUMBER = 10;
-  private long defaultInboundDnclExpireHours_ = 0L;
+  private long defaultInboundDnclExpireHours_;
   /**
    * <code>int64 default_inbound_dncl_expire_hours = 10 [json_name = "defaultInboundDnclExpireHours"];</code>
    * @return The defaultInboundDnclExpireHours.
@@ -143,9 +288,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HUNT_GROUP_COMPLIANCE_SCRUB_LISTS_FIELD_NUMBER = 11;
-  @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList huntGroupComplianceScrubLists_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
+  private com.google.protobuf.LazyStringList huntGroupComplianceScrubLists_;
   /**
    * <pre>
    * list of scrub lists to add dncls to
@@ -196,7 +339,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SCRUB_LISTS_AUTO_ADD_OPTIONS_FIELD_NUMBER = 12;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v0alpha.ScrubListsAutoAdd> scrubListsAutoAddOptions_;
   /**
    * <pre>
@@ -257,7 +399,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DISPLAY_DNCL_OPTIONS_IN_WRAPUP_FIELD_NUMBER = 13;
-  private boolean displayDnclOptionsInWrapup_ = false;
+  private boolean displayDnclOptionsInWrapup_;
   /**
    * <pre>
    * Should Show DNCL Options in Agent Voice Wrapup state
@@ -272,7 +414,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ALLOW_DNCL_REMOVE_FIELD_NUMBER = 14;
-  private boolean allowDnclRemove_ = false;
+  private boolean allowDnclRemove_;
   /**
    * <pre>
    * allows agent to remove scrub list entries
@@ -287,9 +429,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HUNT_GROUP_COMPLIANCE_SCRUB_LISTS_REMOVAL_ALLOWED_FIELD_NUMBER = 15;
-  @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList huntGroupComplianceScrubListsRemovalAllowed_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
+  private com.google.protobuf.LazyStringList huntGroupComplianceScrubListsRemovalAllowed_;
   /**
    * <pre>
    * scrub list ids used in lookup for allowed entry removal
@@ -374,7 +514,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.ScrubListsExpirationLimitsOrBuilder getScrubListsExpirationLimitsOrBuilder() {
-    return scrubListsExpirationLimits_ == null ? com.tcn.cloud.api.api.v0alpha.ScrubListsExpirationLimits.getDefaultInstance() : scrubListsExpirationLimits_;
+    return getScrubListsExpirationLimits();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -436,7 +576,7 @@ private static final long serialVersionUID = 0L;
     if (scrubListsExpirationLimits_ != null) {
       output.writeMessage(16, getScrubListsExpirationLimits());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -513,7 +653,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(16, getScrubListsExpirationLimits());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -561,7 +701,7 @@ private static final long serialVersionUID = 0L;
       if (!getScrubListsExpirationLimits()
           .equals(other.getScrubListsExpirationLimits())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -621,7 +761,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SCRUB_LISTS_EXPIRATION_LIMITS_FIELD_NUMBER;
       hash = (53 * hash) + getScrubListsExpirationLimits().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -670,13 +810,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.DnclSettings parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.DnclSettings parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -740,43 +878,59 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.DnclSettings.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getScrubListsAutoAddOptionsFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       allowDnclAdd_ = false;
+
       manualDialAutoDnclAdd_ = false;
+
       previewDialAutoDnclAdd_ = false;
+
       agentResponsesAutoDnclAdd_ = false;
+
       defaultManualDnclExpireHours_ = 0L;
+
       defaultPreviewDnclExpireHours_ = 0L;
+
       defaultDnclCountry_ = 0L;
+
       defaultOutboundDnclExpireHours_ = 0L;
+
       defaultInboundDnclExpireHours_ = 0L;
-      huntGroupComplianceScrubLists_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+
+      huntGroupComplianceScrubLists_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000001);
       if (scrubListsAutoAddOptionsBuilder_ == null) {
         scrubListsAutoAddOptions_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
-        scrubListsAutoAddOptions_ = null;
         scrubListsAutoAddOptionsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000400);
       displayDnclOptionsInWrapup_ = false;
+
       allowDnclRemove_ = false;
-      huntGroupComplianceScrubListsRemovalAllowed_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      scrubListsExpirationLimits_ = null;
-      if (scrubListsExpirationLimitsBuilder_ != null) {
-        scrubListsExpirationLimitsBuilder_.dispose();
+
+      huntGroupComplianceScrubListsRemovalAllowed_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      if (scrubListsExpirationLimitsBuilder_ == null) {
+        scrubListsExpirationLimits_ = null;
+      } else {
+        scrubListsExpirationLimits_ = null;
         scrubListsExpirationLimitsBuilder_ = null;
       }
       return this;
@@ -805,72 +959,44 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.DnclSettings buildPartial() {
       com.tcn.cloud.api.api.v0alpha.DnclSettings result = new com.tcn.cloud.api.api.v0alpha.DnclSettings(this);
-      buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      onBuilt();
-      return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.DnclSettings result) {
+      int from_bitField0_ = bitField0_;
+      result.allowDnclAdd_ = allowDnclAdd_;
+      result.manualDialAutoDnclAdd_ = manualDialAutoDnclAdd_;
+      result.previewDialAutoDnclAdd_ = previewDialAutoDnclAdd_;
+      result.agentResponsesAutoDnclAdd_ = agentResponsesAutoDnclAdd_;
+      result.defaultManualDnclExpireHours_ = defaultManualDnclExpireHours_;
+      result.defaultPreviewDnclExpireHours_ = defaultPreviewDnclExpireHours_;
+      result.defaultDnclCountry_ = defaultDnclCountry_;
+      result.defaultOutboundDnclExpireHours_ = defaultOutboundDnclExpireHours_;
+      result.defaultInboundDnclExpireHours_ = defaultInboundDnclExpireHours_;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        huntGroupComplianceScrubLists_ = huntGroupComplianceScrubLists_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000001);
+      }
+      result.huntGroupComplianceScrubLists_ = huntGroupComplianceScrubLists_;
       if (scrubListsAutoAddOptionsBuilder_ == null) {
-        if (((bitField0_ & 0x00000400) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           scrubListsAutoAddOptions_ = java.util.Collections.unmodifiableList(scrubListsAutoAddOptions_);
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.scrubListsAutoAddOptions_ = scrubListsAutoAddOptions_;
       } else {
         result.scrubListsAutoAddOptions_ = scrubListsAutoAddOptionsBuilder_.build();
       }
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.DnclSettings result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.allowDnclAdd_ = allowDnclAdd_;
+      result.displayDnclOptionsInWrapup_ = displayDnclOptionsInWrapup_;
+      result.allowDnclRemove_ = allowDnclRemove_;
+      if (((bitField0_ & 0x00000004) != 0)) {
+        huntGroupComplianceScrubListsRemovalAllowed_ = huntGroupComplianceScrubListsRemovalAllowed_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000004);
       }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.manualDialAutoDnclAdd_ = manualDialAutoDnclAdd_;
+      result.huntGroupComplianceScrubListsRemovalAllowed_ = huntGroupComplianceScrubListsRemovalAllowed_;
+      if (scrubListsExpirationLimitsBuilder_ == null) {
+        result.scrubListsExpirationLimits_ = scrubListsExpirationLimits_;
+      } else {
+        result.scrubListsExpirationLimits_ = scrubListsExpirationLimitsBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.previewDialAutoDnclAdd_ = previewDialAutoDnclAdd_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.agentResponsesAutoDnclAdd_ = agentResponsesAutoDnclAdd_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.defaultManualDnclExpireHours_ = defaultManualDnclExpireHours_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.defaultPreviewDnclExpireHours_ = defaultPreviewDnclExpireHours_;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.defaultDnclCountry_ = defaultDnclCountry_;
-      }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.defaultOutboundDnclExpireHours_ = defaultOutboundDnclExpireHours_;
-      }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
-        result.defaultInboundDnclExpireHours_ = defaultInboundDnclExpireHours_;
-      }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
-        huntGroupComplianceScrubLists_.makeImmutable();
-        result.huntGroupComplianceScrubLists_ = huntGroupComplianceScrubLists_;
-      }
-      if (((from_bitField0_ & 0x00000800) != 0)) {
-        result.displayDnclOptionsInWrapup_ = displayDnclOptionsInWrapup_;
-      }
-      if (((from_bitField0_ & 0x00001000) != 0)) {
-        result.allowDnclRemove_ = allowDnclRemove_;
-      }
-      if (((from_bitField0_ & 0x00002000) != 0)) {
-        huntGroupComplianceScrubListsRemovalAllowed_.makeImmutable();
-        result.huntGroupComplianceScrubListsRemovalAllowed_ = huntGroupComplianceScrubListsRemovalAllowed_;
-      }
-      if (((from_bitField0_ & 0x00004000) != 0)) {
-        result.scrubListsExpirationLimits_ = scrubListsExpirationLimitsBuilder_ == null
-            ? scrubListsExpirationLimits_
-            : scrubListsExpirationLimitsBuilder_.build();
-      }
+      onBuilt();
+      return result;
     }
 
     @java.lang.Override
@@ -947,7 +1073,7 @@ private static final long serialVersionUID = 0L;
       if (!other.huntGroupComplianceScrubLists_.isEmpty()) {
         if (huntGroupComplianceScrubLists_.isEmpty()) {
           huntGroupComplianceScrubLists_ = other.huntGroupComplianceScrubLists_;
-          bitField0_ |= 0x00000200;
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensureHuntGroupComplianceScrubListsIsMutable();
           huntGroupComplianceScrubLists_.addAll(other.huntGroupComplianceScrubLists_);
@@ -958,7 +1084,7 @@ private static final long serialVersionUID = 0L;
         if (!other.scrubListsAutoAddOptions_.isEmpty()) {
           if (scrubListsAutoAddOptions_.isEmpty()) {
             scrubListsAutoAddOptions_ = other.scrubListsAutoAddOptions_;
-            bitField0_ = (bitField0_ & ~0x00000400);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureScrubListsAutoAddOptionsIsMutable();
             scrubListsAutoAddOptions_.addAll(other.scrubListsAutoAddOptions_);
@@ -971,7 +1097,7 @@ private static final long serialVersionUID = 0L;
             scrubListsAutoAddOptionsBuilder_.dispose();
             scrubListsAutoAddOptionsBuilder_ = null;
             scrubListsAutoAddOptions_ = other.scrubListsAutoAddOptions_;
-            bitField0_ = (bitField0_ & ~0x00000400);
+            bitField0_ = (bitField0_ & ~0x00000002);
             scrubListsAutoAddOptionsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getScrubListsAutoAddOptionsFieldBuilder() : null;
@@ -989,7 +1115,7 @@ private static final long serialVersionUID = 0L;
       if (!other.huntGroupComplianceScrubListsRemovalAllowed_.isEmpty()) {
         if (huntGroupComplianceScrubListsRemovalAllowed_.isEmpty()) {
           huntGroupComplianceScrubListsRemovalAllowed_ = other.huntGroupComplianceScrubListsRemovalAllowed_;
-          bitField0_ |= 0x00002000;
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
           ensureHuntGroupComplianceScrubListsRemovalAllowedIsMutable();
           huntGroupComplianceScrubListsRemovalAllowed_.addAll(other.huntGroupComplianceScrubListsRemovalAllowed_);
@@ -999,7 +1125,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasScrubListsExpirationLimits()) {
         mergeScrubListsExpirationLimits(other.getScrubListsExpirationLimits());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -1014,117 +1140,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.DnclSettings parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              allowDnclAdd_ = input.readBool();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 16: {
-              manualDialAutoDnclAdd_ = input.readBool();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 16
-            case 24: {
-              previewDialAutoDnclAdd_ = input.readBool();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 24
-            case 32: {
-              agentResponsesAutoDnclAdd_ = input.readBool();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 32
-            case 48: {
-              defaultManualDnclExpireHours_ = input.readInt64();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 48
-            case 56: {
-              defaultPreviewDnclExpireHours_ = input.readInt64();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 56
-            case 64: {
-              defaultDnclCountry_ = input.readInt64();
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 64
-            case 72: {
-              defaultOutboundDnclExpireHours_ = input.readInt64();
-              bitField0_ |= 0x00000080;
-              break;
-            } // case 72
-            case 80: {
-              defaultInboundDnclExpireHours_ = input.readInt64();
-              bitField0_ |= 0x00000100;
-              break;
-            } // case 80
-            case 90: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensureHuntGroupComplianceScrubListsIsMutable();
-              huntGroupComplianceScrubLists_.add(s);
-              break;
-            } // case 90
-            case 98: {
-              com.tcn.cloud.api.api.v0alpha.ScrubListsAutoAdd m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v0alpha.ScrubListsAutoAdd.parser(),
-                      extensionRegistry);
-              if (scrubListsAutoAddOptionsBuilder_ == null) {
-                ensureScrubListsAutoAddOptionsIsMutable();
-                scrubListsAutoAddOptions_.add(m);
-              } else {
-                scrubListsAutoAddOptionsBuilder_.addMessage(m);
-              }
-              break;
-            } // case 98
-            case 104: {
-              displayDnclOptionsInWrapup_ = input.readBool();
-              bitField0_ |= 0x00000800;
-              break;
-            } // case 104
-            case 112: {
-              allowDnclRemove_ = input.readBool();
-              bitField0_ |= 0x00001000;
-              break;
-            } // case 112
-            case 122: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensureHuntGroupComplianceScrubListsRemovalAllowedIsMutable();
-              huntGroupComplianceScrubListsRemovalAllowed_.add(s);
-              break;
-            } // case 122
-            case 130: {
-              input.readMessage(
-                  getScrubListsExpirationLimitsFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00004000;
-              break;
-            } // case 130
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.DnclSettings) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -1144,9 +1170,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAllowDnclAdd(boolean value) {
-
+      
       allowDnclAdd_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1155,7 +1180,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllowDnclAdd() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       allowDnclAdd_ = false;
       onChanged();
       return this;
@@ -1176,9 +1201,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setManualDialAutoDnclAdd(boolean value) {
-
+      
       manualDialAutoDnclAdd_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1187,7 +1211,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearManualDialAutoDnclAdd() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       manualDialAutoDnclAdd_ = false;
       onChanged();
       return this;
@@ -1208,9 +1232,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPreviewDialAutoDnclAdd(boolean value) {
-
+      
       previewDialAutoDnclAdd_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1219,7 +1242,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPreviewDialAutoDnclAdd() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       previewDialAutoDnclAdd_ = false;
       onChanged();
       return this;
@@ -1240,9 +1263,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAgentResponsesAutoDnclAdd(boolean value) {
-
+      
       agentResponsesAutoDnclAdd_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1251,7 +1273,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAgentResponsesAutoDnclAdd() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      
       agentResponsesAutoDnclAdd_ = false;
       onChanged();
       return this;
@@ -1272,9 +1294,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDefaultManualDnclExpireHours(long value) {
-
+      
       defaultManualDnclExpireHours_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1283,7 +1304,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDefaultManualDnclExpireHours() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      
       defaultManualDnclExpireHours_ = 0L;
       onChanged();
       return this;
@@ -1304,9 +1325,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDefaultPreviewDnclExpireHours(long value) {
-
+      
       defaultPreviewDnclExpireHours_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1315,7 +1335,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDefaultPreviewDnclExpireHours() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      
       defaultPreviewDnclExpireHours_ = 0L;
       onChanged();
       return this;
@@ -1336,9 +1356,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDefaultDnclCountry(long value) {
-
+      
       defaultDnclCountry_ = value;
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1347,7 +1366,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDefaultDnclCountry() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      
       defaultDnclCountry_ = 0L;
       onChanged();
       return this;
@@ -1368,9 +1387,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDefaultOutboundDnclExpireHours(long value) {
-
+      
       defaultOutboundDnclExpireHours_ = value;
-      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1379,7 +1397,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDefaultOutboundDnclExpireHours() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      
       defaultOutboundDnclExpireHours_ = 0L;
       onChanged();
       return this;
@@ -1400,9 +1418,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDefaultInboundDnclExpireHours(long value) {
-
+      
       defaultInboundDnclExpireHours_ = value;
-      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1411,19 +1428,18 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDefaultInboundDnclExpireHours() {
-      bitField0_ = (bitField0_ & ~0x00000100);
+      
       defaultInboundDnclExpireHours_ = 0L;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringArrayList huntGroupComplianceScrubLists_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.LazyStringList huntGroupComplianceScrubLists_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureHuntGroupComplianceScrubListsIsMutable() {
-      if (!huntGroupComplianceScrubLists_.isModifiable()) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         huntGroupComplianceScrubLists_ = new com.google.protobuf.LazyStringArrayList(huntGroupComplianceScrubLists_);
-      }
-      bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000001;
+       }
     }
     /**
      * <pre>
@@ -1435,8 +1451,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getHuntGroupComplianceScrubListsList() {
-      huntGroupComplianceScrubLists_.makeImmutable();
-      return huntGroupComplianceScrubLists_;
+      return huntGroupComplianceScrubLists_.getUnmodifiableView();
     }
     /**
      * <pre>
@@ -1486,10 +1501,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHuntGroupComplianceScrubLists(
         int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureHuntGroupComplianceScrubListsIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureHuntGroupComplianceScrubListsIsMutable();
       huntGroupComplianceScrubLists_.set(index, value);
-      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1504,10 +1520,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addHuntGroupComplianceScrubLists(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureHuntGroupComplianceScrubListsIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureHuntGroupComplianceScrubListsIsMutable();
       huntGroupComplianceScrubLists_.add(value);
-      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1525,7 +1542,6 @@ private static final long serialVersionUID = 0L;
       ensureHuntGroupComplianceScrubListsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, huntGroupComplianceScrubLists_);
-      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1538,9 +1554,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHuntGroupComplianceScrubLists() {
-      huntGroupComplianceScrubLists_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000200);;
+      huntGroupComplianceScrubLists_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1555,11 +1570,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addHuntGroupComplianceScrubListsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
       ensureHuntGroupComplianceScrubListsIsMutable();
       huntGroupComplianceScrubLists_.add(value);
-      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1567,9 +1583,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v0alpha.ScrubListsAutoAdd> scrubListsAutoAddOptions_ =
       java.util.Collections.emptyList();
     private void ensureScrubListsAutoAddOptionsIsMutable() {
-      if (!((bitField0_ & 0x00000400) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         scrubListsAutoAddOptions_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.ScrubListsAutoAdd>(scrubListsAutoAddOptions_);
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -1763,7 +1779,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearScrubListsAutoAddOptions() {
       if (scrubListsAutoAddOptionsBuilder_ == null) {
         scrubListsAutoAddOptions_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         scrubListsAutoAddOptionsBuilder_.clear();
@@ -1868,7 +1884,7 @@ private static final long serialVersionUID = 0L;
         scrubListsAutoAddOptionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v0alpha.ScrubListsAutoAdd, com.tcn.cloud.api.api.v0alpha.ScrubListsAutoAdd.Builder, com.tcn.cloud.api.api.v0alpha.ScrubListsAutoAddOrBuilder>(
                 scrubListsAutoAddOptions_,
-                ((bitField0_ & 0x00000400) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         scrubListsAutoAddOptions_ = null;
@@ -1899,9 +1915,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDisplayDnclOptionsInWrapup(boolean value) {
-
+      
       displayDnclOptionsInWrapup_ = value;
-      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -1914,7 +1929,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayDnclOptionsInWrapup() {
-      bitField0_ = (bitField0_ & ~0x00000800);
+      
       displayDnclOptionsInWrapup_ = false;
       onChanged();
       return this;
@@ -1943,9 +1958,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAllowDnclRemove(boolean value) {
-
+      
       allowDnclRemove_ = value;
-      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -1958,19 +1972,18 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllowDnclRemove() {
-      bitField0_ = (bitField0_ & ~0x00001000);
+      
       allowDnclRemove_ = false;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringArrayList huntGroupComplianceScrubListsRemovalAllowed_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.LazyStringList huntGroupComplianceScrubListsRemovalAllowed_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureHuntGroupComplianceScrubListsRemovalAllowedIsMutable() {
-      if (!huntGroupComplianceScrubListsRemovalAllowed_.isModifiable()) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         huntGroupComplianceScrubListsRemovalAllowed_ = new com.google.protobuf.LazyStringArrayList(huntGroupComplianceScrubListsRemovalAllowed_);
-      }
-      bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00000004;
+       }
     }
     /**
      * <pre>
@@ -1982,8 +1995,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getHuntGroupComplianceScrubListsRemovalAllowedList() {
-      huntGroupComplianceScrubListsRemovalAllowed_.makeImmutable();
-      return huntGroupComplianceScrubListsRemovalAllowed_;
+      return huntGroupComplianceScrubListsRemovalAllowed_.getUnmodifiableView();
     }
     /**
      * <pre>
@@ -2033,10 +2045,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHuntGroupComplianceScrubListsRemovalAllowed(
         int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureHuntGroupComplianceScrubListsRemovalAllowedIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureHuntGroupComplianceScrubListsRemovalAllowedIsMutable();
       huntGroupComplianceScrubListsRemovalAllowed_.set(index, value);
-      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -2051,10 +2064,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addHuntGroupComplianceScrubListsRemovalAllowed(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureHuntGroupComplianceScrubListsRemovalAllowedIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureHuntGroupComplianceScrubListsRemovalAllowedIsMutable();
       huntGroupComplianceScrubListsRemovalAllowed_.add(value);
-      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -2072,7 +2086,6 @@ private static final long serialVersionUID = 0L;
       ensureHuntGroupComplianceScrubListsRemovalAllowedIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, huntGroupComplianceScrubListsRemovalAllowed_);
-      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -2085,9 +2098,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHuntGroupComplianceScrubListsRemovalAllowed() {
-      huntGroupComplianceScrubListsRemovalAllowed_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00002000);;
+      huntGroupComplianceScrubListsRemovalAllowed_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -2102,11 +2114,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addHuntGroupComplianceScrubListsRemovalAllowedBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
       ensureHuntGroupComplianceScrubListsRemovalAllowedIsMutable();
       huntGroupComplianceScrubListsRemovalAllowed_.add(value);
-      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -2123,7 +2136,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the scrubListsExpirationLimits field is set.
      */
     public boolean hasScrubListsExpirationLimits() {
-      return ((bitField0_ & 0x00004000) != 0);
+      return scrubListsExpirationLimitsBuilder_ != null || scrubListsExpirationLimits_ != null;
     }
     /**
      * <pre>
@@ -2153,11 +2166,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         scrubListsExpirationLimits_ = value;
+        onChanged();
       } else {
         scrubListsExpirationLimitsBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00004000;
-      onChanged();
+
       return this;
     }
     /**
@@ -2171,11 +2184,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.ScrubListsExpirationLimits.Builder builderForValue) {
       if (scrubListsExpirationLimitsBuilder_ == null) {
         scrubListsExpirationLimits_ = builderForValue.build();
+        onChanged();
       } else {
         scrubListsExpirationLimitsBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00004000;
-      onChanged();
+
       return this;
     }
     /**
@@ -2187,18 +2200,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeScrubListsExpirationLimits(com.tcn.cloud.api.api.v0alpha.ScrubListsExpirationLimits value) {
       if (scrubListsExpirationLimitsBuilder_ == null) {
-        if (((bitField0_ & 0x00004000) != 0) &&
-          scrubListsExpirationLimits_ != null &&
-          scrubListsExpirationLimits_ != com.tcn.cloud.api.api.v0alpha.ScrubListsExpirationLimits.getDefaultInstance()) {
-          getScrubListsExpirationLimitsBuilder().mergeFrom(value);
+        if (scrubListsExpirationLimits_ != null) {
+          scrubListsExpirationLimits_ =
+            com.tcn.cloud.api.api.v0alpha.ScrubListsExpirationLimits.newBuilder(scrubListsExpirationLimits_).mergeFrom(value).buildPartial();
         } else {
           scrubListsExpirationLimits_ = value;
         }
+        onChanged();
       } else {
         scrubListsExpirationLimitsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00004000;
-      onChanged();
+
       return this;
     }
     /**
@@ -2209,13 +2221,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v0alpha.ScrubListsExpirationLimits scrub_lists_expiration_limits = 16 [json_name = "scrubListsExpirationLimits"];</code>
      */
     public Builder clearScrubListsExpirationLimits() {
-      bitField0_ = (bitField0_ & ~0x00004000);
-      scrubListsExpirationLimits_ = null;
-      if (scrubListsExpirationLimitsBuilder_ != null) {
-        scrubListsExpirationLimitsBuilder_.dispose();
+      if (scrubListsExpirationLimitsBuilder_ == null) {
+        scrubListsExpirationLimits_ = null;
+        onChanged();
+      } else {
+        scrubListsExpirationLimits_ = null;
         scrubListsExpirationLimitsBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -2226,7 +2239,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v0alpha.ScrubListsExpirationLimits scrub_lists_expiration_limits = 16 [json_name = "scrubListsExpirationLimits"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.ScrubListsExpirationLimits.Builder getScrubListsExpirationLimitsBuilder() {
-      bitField0_ |= 0x00004000;
+      
       onChanged();
       return getScrubListsExpirationLimitsFieldBuilder().getBuilder();
     }
@@ -2298,18 +2311,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new DnclSettings(input, extensionRegistry);
     }
   };
 

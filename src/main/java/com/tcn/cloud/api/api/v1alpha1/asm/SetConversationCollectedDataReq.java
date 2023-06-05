@@ -30,6 +30,73 @@ private static final long serialVersionUID = 0L;
     return new SetConversationCollectedDataReq();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private SetConversationCollectedDataReq(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+
+            conversationSid_ = input.readInt64();
+            break;
+          }
+          case 16: {
+            int rawValue = input.readEnum();
+
+            channelType_ = rawValue;
+            break;
+          }
+          case 26: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              collectedData_ = com.google.protobuf.MapField.newMapField(
+                  CollectedDataDefaultEntryHolder.defaultEntry);
+              mutable_bitField0_ |= 0x00000001;
+            }
+            com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+            collectedData__ = input.readMessage(
+                CollectedDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+            collectedData_.getMutableMap().put(
+                collectedData__.getKey(), collectedData__.getValue());
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.asm.ServiceProto.internal_static_api_v1alpha1_asm_SetConversationCollectedDataReq_descriptor;
@@ -56,7 +123,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONVERSATION_SID_FIELD_NUMBER = 1;
-  private long conversationSid_ = 0L;
+  private long conversationSid_;
   /**
    * <pre>
    * conversation_id
@@ -71,7 +138,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CHANNEL_TYPE_FIELD_NUMBER = 2;
-  private int channelType_ = 0;
+  private int channelType_;
   /**
    * <pre>
    * channel type - email|sms|chat|voice
@@ -92,7 +159,8 @@ private static final long serialVersionUID = 0L;
    * @return The channelType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.ChannelType getChannelType() {
-    com.tcn.cloud.api.api.commons.ChannelType result = com.tcn.cloud.api.api.commons.ChannelType.forNumber(channelType_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.ChannelType result = com.tcn.cloud.api.api.commons.ChannelType.valueOf(channelType_);
     return result == null ? com.tcn.cloud.api.api.commons.ChannelType.UNRECOGNIZED : result;
   }
 
@@ -108,7 +176,6 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "");
   }
-  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, java.lang.String> collectedData_;
   private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -119,6 +186,7 @@ private static final long serialVersionUID = 0L;
     }
     return collectedData_;
   }
+
   public int getCollectedDataCount() {
     return internalGetCollectedData().getMap().size();
   }
@@ -129,10 +197,11 @@ private static final long serialVersionUID = 0L;
    *
    * <code>map&lt;string, string&gt; collected_data = 3 [json_name = "collectedData"];</code>
    */
+
   @java.lang.Override
   public boolean containsCollectedData(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     return internalGetCollectedData().getMap().containsKey(key);
   }
   /**
@@ -151,6 +220,7 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; collected_data = 3 [json_name = "collectedData"];</code>
    */
   @java.lang.Override
+
   public java.util.Map<java.lang.String, java.lang.String> getCollectedDataMap() {
     return internalGetCollectedData().getMap();
   }
@@ -162,12 +232,11 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; collected_data = 3 [json_name = "collectedData"];</code>
    */
   @java.lang.Override
-  public /* nullable */
-java.lang.String getCollectedDataOrDefault(
+
+  public java.lang.String getCollectedDataOrDefault(
       java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue) {
-    if (key == null) { throw new NullPointerException("map key"); }
+      java.lang.String defaultValue) {
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetCollectedData().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -180,9 +249,10 @@ java.lang.String defaultValue) {
    * <code>map&lt;string, string&gt; collected_data = 3 [json_name = "collectedData"];</code>
    */
   @java.lang.Override
+
   public java.lang.String getCollectedDataOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetCollectedData().getMap();
     if (!map.containsKey(key)) {
@@ -217,7 +287,7 @@ java.lang.String defaultValue) {
         internalGetCollectedData(),
         CollectedDataDefaultEntryHolder.defaultEntry,
         3);
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -244,7 +314,7 @@ java.lang.String defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, collectedData__);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -264,7 +334,7 @@ java.lang.String defaultValue) {
     if (channelType_ != other.channelType_) return false;
     if (!internalGetCollectedData().equals(
         other.internalGetCollectedData())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -284,7 +354,7 @@ java.lang.String defaultValue) {
       hash = (37 * hash) + COLLECTED_DATA_FIELD_NUMBER;
       hash = (53 * hash) + internalGetCollectedData().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -333,13 +403,11 @@ java.lang.String defaultValue) {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.asm.SetConversationCollectedDataReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.asm.SetConversationCollectedDataReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -429,20 +497,26 @@ java.lang.String defaultValue) {
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.asm.SetConversationCollectedDataReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       conversationSid_ = 0L;
+
       channelType_ = 0;
+
       internalGetMutableCollectedData().clear();
       return this;
     }
@@ -470,23 +544,13 @@ java.lang.String defaultValue) {
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.asm.SetConversationCollectedDataReq buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.asm.SetConversationCollectedDataReq result = new com.tcn.cloud.api.api.v1alpha1.asm.SetConversationCollectedDataReq(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      int from_bitField0_ = bitField0_;
+      result.conversationSid_ = conversationSid_;
+      result.channelType_ = channelType_;
+      result.collectedData_ = internalGetCollectedData();
+      result.collectedData_.makeImmutable();
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.asm.SetConversationCollectedDataReq result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.conversationSid_ = conversationSid_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.channelType_ = channelType_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.collectedData_ = internalGetCollectedData();
-        result.collectedData_.makeImmutable();
-      }
     }
 
     @java.lang.Override
@@ -541,8 +605,7 @@ java.lang.String defaultValue) {
       }
       internalGetMutableCollectedData().mergeFrom(
           other.internalGetCollectedData());
-      bitField0_ |= 0x00000004;
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -557,49 +620,17 @@ java.lang.String defaultValue) {
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.asm.SetConversationCollectedDataReq parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              conversationSid_ = input.readInt64();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 16: {
-              channelType_ = input.readEnum();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 16
-            case 26: {
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-              collectedData__ = input.readMessage(
-                  CollectedDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              internalGetMutableCollectedData().getMutableMap().put(
-                  collectedData__.getKey(), collectedData__.getValue());
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.asm.SetConversationCollectedDataReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -627,9 +658,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setConversationSid(long value) {
-
+      
       conversationSid_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -642,7 +672,7 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearConversationSid() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       conversationSid_ = 0L;
       onChanged();
       return this;
@@ -670,8 +700,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setChannelTypeValue(int value) {
+      
       channelType_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -685,7 +715,8 @@ java.lang.String defaultValue) {
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.ChannelType getChannelType() {
-      com.tcn.cloud.api.api.commons.ChannelType result = com.tcn.cloud.api.api.commons.ChannelType.forNumber(channelType_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.ChannelType result = com.tcn.cloud.api.api.commons.ChannelType.valueOf(channelType_);
       return result == null ? com.tcn.cloud.api.api.commons.ChannelType.UNRECOGNIZED : result;
     }
     /**
@@ -701,7 +732,7 @@ java.lang.String defaultValue) {
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000002;
+      
       channelType_ = value.getNumber();
       onChanged();
       return this;
@@ -715,7 +746,7 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearChannelType() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       channelType_ = 0;
       onChanged();
       return this;
@@ -724,7 +755,7 @@ java.lang.String defaultValue) {
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.String> collectedData_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetCollectedData() {
+    internalGetCollectedData() {
       if (collectedData_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             CollectedDataDefaultEntryHolder.defaultEntry);
@@ -732,7 +763,8 @@ java.lang.String defaultValue) {
       return collectedData_;
     }
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetMutableCollectedData() {
+    internalGetMutableCollectedData() {
+      onChanged();;
       if (collectedData_ == null) {
         collectedData_ = com.google.protobuf.MapField.newMapField(
             CollectedDataDefaultEntryHolder.defaultEntry);
@@ -740,10 +772,9 @@ java.lang.String defaultValue) {
       if (!collectedData_.isMutable()) {
         collectedData_ = collectedData_.copy();
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
       return collectedData_;
     }
+
     public int getCollectedDataCount() {
       return internalGetCollectedData().getMap().size();
     }
@@ -754,10 +785,11 @@ java.lang.String defaultValue) {
      *
      * <code>map&lt;string, string&gt; collected_data = 3 [json_name = "collectedData"];</code>
      */
+
     @java.lang.Override
     public boolean containsCollectedData(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetCollectedData().getMap().containsKey(key);
     }
     /**
@@ -776,6 +808,7 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, string&gt; collected_data = 3 [json_name = "collectedData"];</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.String, java.lang.String> getCollectedDataMap() {
       return internalGetCollectedData().getMap();
     }
@@ -787,12 +820,11 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, string&gt; collected_data = 3 [json_name = "collectedData"];</code>
      */
     @java.lang.Override
-    public /* nullable */
-java.lang.String getCollectedDataOrDefault(
+
+    public java.lang.String getCollectedDataOrDefault(
         java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetCollectedData().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -805,9 +837,10 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, string&gt; collected_data = 3 [json_name = "collectedData"];</code>
      */
     @java.lang.Override
+
     public java.lang.String getCollectedDataOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetCollectedData().getMap();
       if (!map.containsKey(key)) {
@@ -815,8 +848,8 @@ java.lang.String defaultValue) {
       }
       return map.get(key);
     }
+
     public Builder clearCollectedData() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       internalGetMutableCollectedData().getMutableMap()
           .clear();
       return this;
@@ -828,9 +861,10 @@ java.lang.String defaultValue) {
      *
      * <code>map&lt;string, string&gt; collected_data = 3 [json_name = "collectedData"];</code>
      */
+
     public Builder removeCollectedData(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableCollectedData().getMutableMap()
           .remove(key);
       return this;
@@ -840,8 +874,7 @@ java.lang.String defaultValue) {
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String>
-        getMutableCollectedData() {
-      bitField0_ |= 0x00000004;
+    getMutableCollectedData() {
       return internalGetMutableCollectedData().getMutableMap();
     }
     /**
@@ -854,11 +887,10 @@ java.lang.String defaultValue) {
     public Builder putCollectedData(
         java.lang.String key,
         java.lang.String value) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      if (value == null) { throw new NullPointerException("map value"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (value == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableCollectedData().getMutableMap()
           .put(key, value);
-      bitField0_ |= 0x00000004;
       return this;
     }
     /**
@@ -868,11 +900,11 @@ java.lang.String defaultValue) {
      *
      * <code>map&lt;string, string&gt; collected_data = 3 [json_name = "collectedData"];</code>
      */
+
     public Builder putAllCollectedData(
         java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableCollectedData().getMutableMap()
           .putAll(values);
-      bitField0_ |= 0x00000004;
       return this;
     }
     @java.lang.Override
@@ -908,18 +940,7 @@ java.lang.String defaultValue) {
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new SetConversationCollectedDataReq(input, extensionRegistry);
     }
   };
 

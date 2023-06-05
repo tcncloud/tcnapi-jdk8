@@ -20,8 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ListScorecardsRequest() {
-    authorIds_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    authorIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     categoryIds_ = emptyLongList();
     states_ = java.util.Collections.emptyList();
     evaluationTypes_ = java.util.Collections.emptyList();
@@ -35,6 +34,163 @@ private static final long serialVersionUID = 0L;
     return new ListScorecardsRequest();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private ListScorecardsRequest(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              authorIds_ = new com.google.protobuf.LazyStringArrayList();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            authorIds_.add(s);
+            break;
+          }
+          case 24: {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              categoryIds_ = newLongList();
+              mutable_bitField0_ |= 0x00000002;
+            }
+            categoryIds_.addLong(input.readInt64());
+            break;
+          }
+          case 26: {
+            int length = input.readRawVarint32();
+            int limit = input.pushLimit(length);
+            if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+              categoryIds_ = newLongList();
+              mutable_bitField0_ |= 0x00000002;
+            }
+            while (input.getBytesUntilLimit() > 0) {
+              categoryIds_.addLong(input.readInt64());
+            }
+            input.popLimit(limit);
+            break;
+          }
+          case 32: {
+            int rawValue = input.readEnum();
+            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+              states_ = new java.util.ArrayList<java.lang.Integer>();
+              mutable_bitField0_ |= 0x00000004;
+            }
+            states_.add(rawValue);
+            break;
+          }
+          case 34: {
+            int length = input.readRawVarint32();
+            int oldLimit = input.pushLimit(length);
+            while(input.getBytesUntilLimit() > 0) {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                states_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              states_.add(rawValue);
+            }
+            input.popLimit(oldLimit);
+            break;
+          }
+          case 40: {
+            int rawValue = input.readEnum();
+            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+              evaluationTypes_ = new java.util.ArrayList<java.lang.Integer>();
+              mutable_bitField0_ |= 0x00000008;
+            }
+            evaluationTypes_.add(rawValue);
+            break;
+          }
+          case 42: {
+            int length = input.readRawVarint32();
+            int oldLimit = input.pushLimit(length);
+            while(input.getBytesUntilLimit() > 0) {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                evaluationTypes_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              evaluationTypes_.add(rawValue);
+            }
+            input.popLimit(oldLimit);
+            break;
+          }
+          case 48: {
+            int rawValue = input.readEnum();
+            if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+              callTypes_ = new java.util.ArrayList<java.lang.Integer>();
+              mutable_bitField0_ |= 0x00000010;
+            }
+            callTypes_.add(rawValue);
+            break;
+          }
+          case 50: {
+            int length = input.readRawVarint32();
+            int oldLimit = input.pushLimit(length);
+            while(input.getBytesUntilLimit() > 0) {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+                callTypes_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              callTypes_.add(rawValue);
+            }
+            input.popLimit(oldLimit);
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        authorIds_ = authorIds_.getUnmodifiableView();
+      }
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        categoryIds_.makeImmutable(); // C
+      }
+      if (((mutable_bitField0_ & 0x00000004) != 0)) {
+        states_ = java.util.Collections.unmodifiableList(states_);
+      }
+      if (((mutable_bitField0_ & 0x00000008) != 0)) {
+        evaluationTypes_ = java.util.Collections.unmodifiableList(evaluationTypes_);
+      }
+      if (((mutable_bitField0_ & 0x00000010) != 0)) {
+        callTypes_ = java.util.Collections.unmodifiableList(callTypes_);
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.scorecards.ScorecardProto.internal_static_api_v1alpha1_scorecards_ListScorecardsRequest_descriptor;
@@ -49,9 +205,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AUTHOR_IDS_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList authorIds_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
+  private com.google.protobuf.LazyStringList authorIds_;
   /**
    * <pre>
    * Optional. Results include any of the authors
@@ -102,7 +256,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CATEGORY_IDS_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
   private com.google.protobuf.Internal.LongList categoryIds_;
   /**
    * <pre>
@@ -143,14 +296,14 @@ private static final long serialVersionUID = 0L;
   private int categoryIdsMemoizedSerializedSize = -1;
 
   public static final int STATES_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> states_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, com.tcn.cloud.api.api.commons.ScorecardState> states_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.tcn.cloud.api.api.commons.ScorecardState>() {
             public com.tcn.cloud.api.api.commons.ScorecardState convert(java.lang.Integer from) {
-              com.tcn.cloud.api.api.commons.ScorecardState result = com.tcn.cloud.api.api.commons.ScorecardState.forNumber(from);
+              @SuppressWarnings("deprecation")
+              com.tcn.cloud.api.api.commons.ScorecardState result = com.tcn.cloud.api.api.commons.ScorecardState.valueOf(from);
               return result == null ? com.tcn.cloud.api.api.commons.ScorecardState.UNRECOGNIZED : result;
             }
           };
@@ -221,14 +374,14 @@ private static final long serialVersionUID = 0L;
   private int statesMemoizedSerializedSize;
 
   public static final int EVALUATION_TYPES_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> evaluationTypes_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, com.tcn.cloud.api.api.commons.EvaluationType> evaluationTypes_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.tcn.cloud.api.api.commons.EvaluationType>() {
             public com.tcn.cloud.api.api.commons.EvaluationType convert(java.lang.Integer from) {
-              com.tcn.cloud.api.api.commons.EvaluationType result = com.tcn.cloud.api.api.commons.EvaluationType.forNumber(from);
+              @SuppressWarnings("deprecation")
+              com.tcn.cloud.api.api.commons.EvaluationType result = com.tcn.cloud.api.api.commons.EvaluationType.valueOf(from);
               return result == null ? com.tcn.cloud.api.api.commons.EvaluationType.UNRECOGNIZED : result;
             }
           };
@@ -299,14 +452,14 @@ private static final long serialVersionUID = 0L;
   private int evaluationTypesMemoizedSerializedSize;
 
   public static final int CALL_TYPES_FIELD_NUMBER = 6;
-  @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> callTypes_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, com.tcn.cloud.api.api.commons.CallType.Enum> callTypes_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.tcn.cloud.api.api.commons.CallType.Enum>() {
             public com.tcn.cloud.api.api.commons.CallType.Enum convert(java.lang.Integer from) {
-              com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.forNumber(from);
+              @SuppressWarnings("deprecation")
+              com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.valueOf(from);
               return result == null ? com.tcn.cloud.api.api.commons.CallType.Enum.UNRECOGNIZED : result;
             }
           };
@@ -422,7 +575,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < callTypes_.size(); i++) {
       output.writeEnumNoTag(callTypes_.get(i));
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -489,7 +642,7 @@ private static final long serialVersionUID = 0L;
           .computeUInt32SizeNoTag(dataSize);
       }callTypesMemoizedSerializedSize = dataSize;
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -511,7 +664,7 @@ private static final long serialVersionUID = 0L;
     if (!states_.equals(other.states_)) return false;
     if (!evaluationTypes_.equals(other.evaluationTypes_)) return false;
     if (!callTypes_.equals(other.callTypes_)) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -542,7 +695,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CALL_TYPES_FIELD_NUMBER;
       hash = (53 * hash) + callTypes_.hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -591,13 +744,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -665,21 +816,26 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsRequest.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      authorIds_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      authorIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000001);
       categoryIds_ = emptyLongList();
+      bitField0_ = (bitField0_ & ~0x00000002);
       states_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000004);
       evaluationTypes_ = java.util.Collections.emptyList();
@@ -712,13 +868,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsRequest buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsRequest result = new com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsRequest(this);
-      buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      onBuilt();
-      return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        authorIds_ = authorIds_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000001);
+      }
+      result.authorIds_ = authorIds_;
       if (((bitField0_ & 0x00000002) != 0)) {
         categoryIds_.makeImmutable();
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -739,14 +894,8 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000010);
       }
       result.callTypes_ = callTypes_;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsRequest result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        authorIds_.makeImmutable();
-        result.authorIds_ = authorIds_;
-      }
+      onBuilt();
+      return result;
     }
 
     @java.lang.Override
@@ -796,7 +945,7 @@ private static final long serialVersionUID = 0L;
       if (!other.authorIds_.isEmpty()) {
         if (authorIds_.isEmpty()) {
           authorIds_ = other.authorIds_;
-          bitField0_ |= 0x00000001;
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensureAuthorIdsIsMutable();
           authorIds_.addAll(other.authorIds_);
@@ -843,7 +992,7 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -858,114 +1007,27 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsRequest parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensureAuthorIdsIsMutable();
-              authorIds_.add(s);
-              break;
-            } // case 18
-            case 24: {
-              long v = input.readInt64();
-              ensureCategoryIdsIsMutable();
-              categoryIds_.addLong(v);
-              break;
-            } // case 24
-            case 26: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              ensureCategoryIdsIsMutable();
-              while (input.getBytesUntilLimit() > 0) {
-                categoryIds_.addLong(input.readInt64());
-              }
-              input.popLimit(limit);
-              break;
-            } // case 26
-            case 32: {
-              int tmpRaw = input.readEnum();
-              ensureStatesIsMutable();
-              states_.add(tmpRaw);
-              break;
-            } // case 32
-            case 34: {
-              int length = input.readRawVarint32();
-              int oldLimit = input.pushLimit(length);
-              while(input.getBytesUntilLimit() > 0) {
-                int tmpRaw = input.readEnum();
-                ensureStatesIsMutable();
-                states_.add(tmpRaw);
-              }
-              input.popLimit(oldLimit);
-              break;
-            } // case 34
-            case 40: {
-              int tmpRaw = input.readEnum();
-              ensureEvaluationTypesIsMutable();
-              evaluationTypes_.add(tmpRaw);
-              break;
-            } // case 40
-            case 42: {
-              int length = input.readRawVarint32();
-              int oldLimit = input.pushLimit(length);
-              while(input.getBytesUntilLimit() > 0) {
-                int tmpRaw = input.readEnum();
-                ensureEvaluationTypesIsMutable();
-                evaluationTypes_.add(tmpRaw);
-              }
-              input.popLimit(oldLimit);
-              break;
-            } // case 42
-            case 48: {
-              int tmpRaw = input.readEnum();
-              ensureCallTypesIsMutable();
-              callTypes_.add(tmpRaw);
-              break;
-            } // case 48
-            case 50: {
-              int length = input.readRawVarint32();
-              int oldLimit = input.pushLimit(length);
-              while(input.getBytesUntilLimit() > 0) {
-                int tmpRaw = input.readEnum();
-                ensureCallTypesIsMutable();
-                callTypes_.add(tmpRaw);
-              }
-              input.popLimit(oldLimit);
-              break;
-            } // case 50
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.scorecards.ListScorecardsRequest) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
 
-    private com.google.protobuf.LazyStringArrayList authorIds_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.LazyStringList authorIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureAuthorIdsIsMutable() {
-      if (!authorIds_.isModifiable()) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         authorIds_ = new com.google.protobuf.LazyStringArrayList(authorIds_);
-      }
-      bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000001;
+       }
     }
     /**
      * <pre>
@@ -977,8 +1039,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getAuthorIdsList() {
-      authorIds_.makeImmutable();
-      return authorIds_;
+      return authorIds_.getUnmodifiableView();
     }
     /**
      * <pre>
@@ -1028,10 +1089,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAuthorIds(
         int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureAuthorIdsIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureAuthorIdsIsMutable();
       authorIds_.set(index, value);
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1046,10 +1108,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addAuthorIds(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureAuthorIdsIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureAuthorIdsIsMutable();
       authorIds_.add(value);
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1067,7 +1130,6 @@ private static final long serialVersionUID = 0L;
       ensureAuthorIdsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, authorIds_);
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1080,9 +1142,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAuthorIds() {
-      authorIds_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000001);;
+      authorIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1097,11 +1158,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addAuthorIdsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
       ensureAuthorIdsIsMutable();
       authorIds_.add(value);
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1111,7 +1173,7 @@ private static final long serialVersionUID = 0L;
       if (!((bitField0_ & 0x00000002) != 0)) {
         categoryIds_ = mutableCopy(categoryIds_);
         bitField0_ |= 0x00000002;
-      }
+       }
     }
     /**
      * <pre>
@@ -1161,7 +1223,6 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCategoryIds(
         int index, long value) {
-
       ensureCategoryIdsIsMutable();
       categoryIds_.setLong(index, value);
       onChanged();
@@ -1177,7 +1238,6 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder addCategoryIds(long value) {
-
       ensureCategoryIdsIsMutable();
       categoryIds_.addLong(value);
       onChanged();
@@ -1358,8 +1418,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .api.commons.ScorecardState states = 4 [json_name = "states"];</code>
-     * @param index The index to set the value at.
-     * @param value The enum numeric value on the wire for states to set.
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of states at the given index.
      * @return This builder for chaining.
      */
     public Builder setStatesValue(
@@ -1546,8 +1606,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .api.commons.EvaluationType evaluation_types = 5 [json_name = "evaluationTypes"];</code>
-     * @param index The index to set the value at.
-     * @param value The enum numeric value on the wire for evaluationTypes to set.
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of evaluationTypes at the given index.
      * @return This builder for chaining.
      */
     public Builder setEvaluationTypesValue(
@@ -1734,8 +1794,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .api.commons.CallType.Enum call_types = 6 [json_name = "callTypes"];</code>
-     * @param index The index to set the value at.
-     * @param value The enum numeric value on the wire for callTypes to set.
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of callTypes at the given index.
      * @return This builder for chaining.
      */
     public Builder setCallTypesValue(
@@ -1811,18 +1871,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new ListScorecardsRequest(input, extensionRegistry);
     }
   };
 

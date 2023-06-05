@@ -25,6 +25,356 @@ private static final long serialVersionUID = 0L;
     return new ChartDetails();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private ChartDetails(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            com.tcn.cloud.api.api.v0alpha.SingleValueChart.Builder subBuilder = null;
+            if (detailsCase_ == 1) {
+              subBuilder = ((com.tcn.cloud.api.api.v0alpha.SingleValueChart) details_).toBuilder();
+            }
+            details_ =
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.SingleValueChart.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.SingleValueChart) details_);
+              details_ = subBuilder.buildPartial();
+            }
+            detailsCase_ = 1;
+            break;
+          }
+          case 18: {
+            com.tcn.cloud.api.api.v0alpha.PieChart.Builder subBuilder = null;
+            if (detailsCase_ == 2) {
+              subBuilder = ((com.tcn.cloud.api.api.v0alpha.PieChart) details_).toBuilder();
+            }
+            details_ =
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.PieChart.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.PieChart) details_);
+              details_ = subBuilder.buildPartial();
+            }
+            detailsCase_ = 2;
+            break;
+          }
+          case 26: {
+            com.tcn.cloud.api.api.v0alpha.RadarFixedChart.Builder subBuilder = null;
+            if (detailsCase_ == 3) {
+              subBuilder = ((com.tcn.cloud.api.api.v0alpha.RadarFixedChart) details_).toBuilder();
+            }
+            details_ =
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.RadarFixedChart.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.RadarFixedChart) details_);
+              details_ = subBuilder.buildPartial();
+            }
+            detailsCase_ = 3;
+            break;
+          }
+          case 34: {
+            com.tcn.cloud.api.api.v0alpha.BarChart.Builder subBuilder = null;
+            if (detailsCase_ == 4) {
+              subBuilder = ((com.tcn.cloud.api.api.v0alpha.BarChart) details_).toBuilder();
+            }
+            details_ =
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.BarChart.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.BarChart) details_);
+              details_ = subBuilder.buildPartial();
+            }
+            detailsCase_ = 4;
+            break;
+          }
+          case 42: {
+            com.tcn.cloud.api.api.v0alpha.BulletChart.Builder subBuilder = null;
+            if (detailsCase_ == 5) {
+              subBuilder = ((com.tcn.cloud.api.api.v0alpha.BulletChart) details_).toBuilder();
+            }
+            details_ =
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.BulletChart.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.BulletChart) details_);
+              details_ = subBuilder.buildPartial();
+            }
+            detailsCase_ = 5;
+            break;
+          }
+          case 50: {
+            com.tcn.cloud.api.api.v0alpha.MultiValueChart.Builder subBuilder = null;
+            if (detailsCase_ == 6) {
+              subBuilder = ((com.tcn.cloud.api.api.v0alpha.MultiValueChart) details_).toBuilder();
+            }
+            details_ =
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.MultiValueChart.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.MultiValueChart) details_);
+              details_ = subBuilder.buildPartial();
+            }
+            detailsCase_ = 6;
+            break;
+          }
+          case 58: {
+            com.tcn.cloud.api.api.v0alpha.TreeMapChart.Builder subBuilder = null;
+            if (detailsCase_ == 7) {
+              subBuilder = ((com.tcn.cloud.api.api.v0alpha.TreeMapChart) details_).toBuilder();
+            }
+            details_ =
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.TreeMapChart.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.TreeMapChart) details_);
+              details_ = subBuilder.buildPartial();
+            }
+            detailsCase_ = 7;
+            break;
+          }
+          case 66: {
+            com.tcn.cloud.api.api.v0alpha.ActivityGaugeChart.Builder subBuilder = null;
+            if (detailsCase_ == 8) {
+              subBuilder = ((com.tcn.cloud.api.api.v0alpha.ActivityGaugeChart) details_).toBuilder();
+            }
+            details_ =
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.ActivityGaugeChart.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.ActivityGaugeChart) details_);
+              details_ = subBuilder.buildPartial();
+            }
+            detailsCase_ = 8;
+            break;
+          }
+          case 74: {
+            com.tcn.cloud.api.api.v0alpha.ArcChart.Builder subBuilder = null;
+            if (detailsCase_ == 9) {
+              subBuilder = ((com.tcn.cloud.api.api.v0alpha.ArcChart) details_).toBuilder();
+            }
+            details_ =
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.ArcChart.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.ArcChart) details_);
+              details_ = subBuilder.buildPartial();
+            }
+            detailsCase_ = 9;
+            break;
+          }
+          case 82: {
+            com.tcn.cloud.api.api.v0alpha.ScatterChart.Builder subBuilder = null;
+            if (detailsCase_ == 10) {
+              subBuilder = ((com.tcn.cloud.api.api.v0alpha.ScatterChart) details_).toBuilder();
+            }
+            details_ =
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.ScatterChart.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.ScatterChart) details_);
+              details_ = subBuilder.buildPartial();
+            }
+            detailsCase_ = 10;
+            break;
+          }
+          case 90: {
+            com.tcn.cloud.api.api.v0alpha.TimeHistogramChart.Builder subBuilder = null;
+            if (detailsCase_ == 11) {
+              subBuilder = ((com.tcn.cloud.api.api.v0alpha.TimeHistogramChart) details_).toBuilder();
+            }
+            details_ =
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.TimeHistogramChart.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.TimeHistogramChart) details_);
+              details_ = subBuilder.buildPartial();
+            }
+            detailsCase_ = 11;
+            break;
+          }
+          case 98: {
+            com.tcn.cloud.api.api.v0alpha.TreeTableChart.Builder subBuilder = null;
+            if (detailsCase_ == 12) {
+              subBuilder = ((com.tcn.cloud.api.api.v0alpha.TreeTableChart) details_).toBuilder();
+            }
+            details_ =
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.TreeTableChart.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.TreeTableChart) details_);
+              details_ = subBuilder.buildPartial();
+            }
+            detailsCase_ = 12;
+            break;
+          }
+          case 106: {
+            com.tcn.cloud.api.api.v0alpha.InfoPanelChart.Builder subBuilder = null;
+            if (detailsCase_ == 13) {
+              subBuilder = ((com.tcn.cloud.api.api.v0alpha.InfoPanelChart) details_).toBuilder();
+            }
+            details_ =
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.InfoPanelChart.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.InfoPanelChart) details_);
+              details_ = subBuilder.buildPartial();
+            }
+            detailsCase_ = 13;
+            break;
+          }
+          case 114: {
+            com.tcn.cloud.api.api.v0alpha.RankedListChart.Builder subBuilder = null;
+            if (detailsCase_ == 14) {
+              subBuilder = ((com.tcn.cloud.api.api.v0alpha.RankedListChart) details_).toBuilder();
+            }
+            details_ =
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.RankedListChart.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.RankedListChart) details_);
+              details_ = subBuilder.buildPartial();
+            }
+            detailsCase_ = 14;
+            break;
+          }
+          case 122: {
+            com.tcn.cloud.api.api.v0alpha.SpeedometerChart.Builder subBuilder = null;
+            if (detailsCase_ == 15) {
+              subBuilder = ((com.tcn.cloud.api.api.v0alpha.SpeedometerChart) details_).toBuilder();
+            }
+            details_ =
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.SpeedometerChart.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.SpeedometerChart) details_);
+              details_ = subBuilder.buildPartial();
+            }
+            detailsCase_ = 15;
+            break;
+          }
+          case 130: {
+            com.tcn.cloud.api.api.v0alpha.LineChart.Builder subBuilder = null;
+            if (detailsCase_ == 16) {
+              subBuilder = ((com.tcn.cloud.api.api.v0alpha.LineChart) details_).toBuilder();
+            }
+            details_ =
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.LineChart.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.LineChart) details_);
+              details_ = subBuilder.buildPartial();
+            }
+            detailsCase_ = 16;
+            break;
+          }
+          case 138: {
+            com.tcn.cloud.api.api.v0alpha.SplineChart.Builder subBuilder = null;
+            if (detailsCase_ == 17) {
+              subBuilder = ((com.tcn.cloud.api.api.v0alpha.SplineChart) details_).toBuilder();
+            }
+            details_ =
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.SplineChart.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.SplineChart) details_);
+              details_ = subBuilder.buildPartial();
+            }
+            detailsCase_ = 17;
+            break;
+          }
+          case 146: {
+            com.tcn.cloud.api.api.v0alpha.AreaChart.Builder subBuilder = null;
+            if (detailsCase_ == 18) {
+              subBuilder = ((com.tcn.cloud.api.api.v0alpha.AreaChart) details_).toBuilder();
+            }
+            details_ =
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.AreaChart.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.AreaChart) details_);
+              details_ = subBuilder.buildPartial();
+            }
+            detailsCase_ = 18;
+            break;
+          }
+          case 154: {
+            com.tcn.cloud.api.api.v0alpha.TableChart.Builder subBuilder = null;
+            if (detailsCase_ == 19) {
+              subBuilder = ((com.tcn.cloud.api.api.v0alpha.TableChart) details_).toBuilder();
+            }
+            details_ =
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.TableChart.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.TableChart) details_);
+              details_ = subBuilder.buildPartial();
+            }
+            detailsCase_ = 19;
+            break;
+          }
+          case 162: {
+            com.tcn.cloud.api.api.v0alpha.BubbleChart.Builder subBuilder = null;
+            if (detailsCase_ == 20) {
+              subBuilder = ((com.tcn.cloud.api.api.v0alpha.BubbleChart) details_).toBuilder();
+            }
+            details_ =
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.BubbleChart.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.BubbleChart) details_);
+              details_ = subBuilder.buildPartial();
+            }
+            detailsCase_ = 20;
+            break;
+          }
+          case 170: {
+            com.tcn.cloud.api.api.v0alpha.PackedBubbleChart.Builder subBuilder = null;
+            if (detailsCase_ == 21) {
+              subBuilder = ((com.tcn.cloud.api.api.v0alpha.PackedBubbleChart) details_).toBuilder();
+            }
+            details_ =
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.PackedBubbleChart.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.PackedBubbleChart) details_);
+              details_ = subBuilder.buildPartial();
+            }
+            detailsCase_ = 21;
+            break;
+          }
+          case 178: {
+            com.tcn.cloud.api.api.v0alpha.SunburstChart.Builder subBuilder = null;
+            if (detailsCase_ == 22) {
+              subBuilder = ((com.tcn.cloud.api.api.v0alpha.SunburstChart) details_).toBuilder();
+            }
+            details_ =
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.SunburstChart.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v0alpha.SunburstChart) details_);
+              details_ = subBuilder.buildPartial();
+            }
+            detailsCase_ = 22;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.AnaProto.internal_static_api_v0alpha_ChartDetails_descriptor;
@@ -39,7 +389,6 @@ private static final long serialVersionUID = 0L;
   }
 
   private int detailsCase_ = 0;
-  @SuppressWarnings("serial")
   private java.lang.Object details_;
   public enum DetailsCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -882,7 +1231,7 @@ private static final long serialVersionUID = 0L;
     if (detailsCase_ == 22) {
       output.writeMessage(22, (com.tcn.cloud.api.api.v0alpha.SunburstChart) details_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -979,7 +1328,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(22, (com.tcn.cloud.api.api.v0alpha.SunburstChart) details_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -1087,7 +1436,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -1190,7 +1539,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1239,13 +1588,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.ChartDetails parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.ChartDetails parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1309,84 +1656,22 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.ChartDetails.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      if (singleValueChartBuilder_ != null) {
-        singleValueChartBuilder_.clear();
-      }
-      if (pieChartBuilder_ != null) {
-        pieChartBuilder_.clear();
-      }
-      if (radarFixedChartBuilder_ != null) {
-        radarFixedChartBuilder_.clear();
-      }
-      if (barChartBuilder_ != null) {
-        barChartBuilder_.clear();
-      }
-      if (bulletChartBuilder_ != null) {
-        bulletChartBuilder_.clear();
-      }
-      if (multiValueChartBuilder_ != null) {
-        multiValueChartBuilder_.clear();
-      }
-      if (treeMapChartBuilder_ != null) {
-        treeMapChartBuilder_.clear();
-      }
-      if (activityGaugeChartBuilder_ != null) {
-        activityGaugeChartBuilder_.clear();
-      }
-      if (arcChartBuilder_ != null) {
-        arcChartBuilder_.clear();
-      }
-      if (scatterChartBuilder_ != null) {
-        scatterChartBuilder_.clear();
-      }
-      if (timeHistogramChartBuilder_ != null) {
-        timeHistogramChartBuilder_.clear();
-      }
-      if (treeTableChartBuilder_ != null) {
-        treeTableChartBuilder_.clear();
-      }
-      if (infoPanelChartBuilder_ != null) {
-        infoPanelChartBuilder_.clear();
-      }
-      if (rankedListChartBuilder_ != null) {
-        rankedListChartBuilder_.clear();
-      }
-      if (speedometerChartBuilder_ != null) {
-        speedometerChartBuilder_.clear();
-      }
-      if (lineChartBuilder_ != null) {
-        lineChartBuilder_.clear();
-      }
-      if (splineChartBuilder_ != null) {
-        splineChartBuilder_.clear();
-      }
-      if (areaChartBuilder_ != null) {
-        areaChartBuilder_.clear();
-      }
-      if (tableChartBuilder_ != null) {
-        tableChartBuilder_.clear();
-      }
-      if (bubbleChartBuilder_ != null) {
-        bubbleChartBuilder_.clear();
-      }
-      if (packedBubbleChartBuilder_ != null) {
-        packedBubbleChartBuilder_.clear();
-      }
-      if (sunburstChartBuilder_ != null) {
-        sunburstChartBuilder_.clear();
-      }
       detailsCase_ = 0;
       details_ = null;
       return this;
@@ -1415,107 +1700,163 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.ChartDetails buildPartial() {
       com.tcn.cloud.api.api.v0alpha.ChartDetails result = new com.tcn.cloud.api.api.v0alpha.ChartDetails(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      buildPartialOneofs(result);
+      if (detailsCase_ == 1) {
+        if (singleValueChartBuilder_ == null) {
+          result.details_ = details_;
+        } else {
+          result.details_ = singleValueChartBuilder_.build();
+        }
+      }
+      if (detailsCase_ == 2) {
+        if (pieChartBuilder_ == null) {
+          result.details_ = details_;
+        } else {
+          result.details_ = pieChartBuilder_.build();
+        }
+      }
+      if (detailsCase_ == 3) {
+        if (radarFixedChartBuilder_ == null) {
+          result.details_ = details_;
+        } else {
+          result.details_ = radarFixedChartBuilder_.build();
+        }
+      }
+      if (detailsCase_ == 4) {
+        if (barChartBuilder_ == null) {
+          result.details_ = details_;
+        } else {
+          result.details_ = barChartBuilder_.build();
+        }
+      }
+      if (detailsCase_ == 5) {
+        if (bulletChartBuilder_ == null) {
+          result.details_ = details_;
+        } else {
+          result.details_ = bulletChartBuilder_.build();
+        }
+      }
+      if (detailsCase_ == 6) {
+        if (multiValueChartBuilder_ == null) {
+          result.details_ = details_;
+        } else {
+          result.details_ = multiValueChartBuilder_.build();
+        }
+      }
+      if (detailsCase_ == 7) {
+        if (treeMapChartBuilder_ == null) {
+          result.details_ = details_;
+        } else {
+          result.details_ = treeMapChartBuilder_.build();
+        }
+      }
+      if (detailsCase_ == 8) {
+        if (activityGaugeChartBuilder_ == null) {
+          result.details_ = details_;
+        } else {
+          result.details_ = activityGaugeChartBuilder_.build();
+        }
+      }
+      if (detailsCase_ == 9) {
+        if (arcChartBuilder_ == null) {
+          result.details_ = details_;
+        } else {
+          result.details_ = arcChartBuilder_.build();
+        }
+      }
+      if (detailsCase_ == 10) {
+        if (scatterChartBuilder_ == null) {
+          result.details_ = details_;
+        } else {
+          result.details_ = scatterChartBuilder_.build();
+        }
+      }
+      if (detailsCase_ == 11) {
+        if (timeHistogramChartBuilder_ == null) {
+          result.details_ = details_;
+        } else {
+          result.details_ = timeHistogramChartBuilder_.build();
+        }
+      }
+      if (detailsCase_ == 12) {
+        if (treeTableChartBuilder_ == null) {
+          result.details_ = details_;
+        } else {
+          result.details_ = treeTableChartBuilder_.build();
+        }
+      }
+      if (detailsCase_ == 13) {
+        if (infoPanelChartBuilder_ == null) {
+          result.details_ = details_;
+        } else {
+          result.details_ = infoPanelChartBuilder_.build();
+        }
+      }
+      if (detailsCase_ == 14) {
+        if (rankedListChartBuilder_ == null) {
+          result.details_ = details_;
+        } else {
+          result.details_ = rankedListChartBuilder_.build();
+        }
+      }
+      if (detailsCase_ == 15) {
+        if (speedometerChartBuilder_ == null) {
+          result.details_ = details_;
+        } else {
+          result.details_ = speedometerChartBuilder_.build();
+        }
+      }
+      if (detailsCase_ == 16) {
+        if (lineChartBuilder_ == null) {
+          result.details_ = details_;
+        } else {
+          result.details_ = lineChartBuilder_.build();
+        }
+      }
+      if (detailsCase_ == 17) {
+        if (splineChartBuilder_ == null) {
+          result.details_ = details_;
+        } else {
+          result.details_ = splineChartBuilder_.build();
+        }
+      }
+      if (detailsCase_ == 18) {
+        if (areaChartBuilder_ == null) {
+          result.details_ = details_;
+        } else {
+          result.details_ = areaChartBuilder_.build();
+        }
+      }
+      if (detailsCase_ == 19) {
+        if (tableChartBuilder_ == null) {
+          result.details_ = details_;
+        } else {
+          result.details_ = tableChartBuilder_.build();
+        }
+      }
+      if (detailsCase_ == 20) {
+        if (bubbleChartBuilder_ == null) {
+          result.details_ = details_;
+        } else {
+          result.details_ = bubbleChartBuilder_.build();
+        }
+      }
+      if (detailsCase_ == 21) {
+        if (packedBubbleChartBuilder_ == null) {
+          result.details_ = details_;
+        } else {
+          result.details_ = packedBubbleChartBuilder_.build();
+        }
+      }
+      if (detailsCase_ == 22) {
+        if (sunburstChartBuilder_ == null) {
+          result.details_ = details_;
+        } else {
+          result.details_ = sunburstChartBuilder_.build();
+        }
+      }
+      result.detailsCase_ = detailsCase_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.ChartDetails result) {
-      int from_bitField0_ = bitField0_;
-    }
-
-    private void buildPartialOneofs(com.tcn.cloud.api.api.v0alpha.ChartDetails result) {
-      result.detailsCase_ = detailsCase_;
-      result.details_ = this.details_;
-      if (detailsCase_ == 1 &&
-          singleValueChartBuilder_ != null) {
-        result.details_ = singleValueChartBuilder_.build();
-      }
-      if (detailsCase_ == 2 &&
-          pieChartBuilder_ != null) {
-        result.details_ = pieChartBuilder_.build();
-      }
-      if (detailsCase_ == 3 &&
-          radarFixedChartBuilder_ != null) {
-        result.details_ = radarFixedChartBuilder_.build();
-      }
-      if (detailsCase_ == 4 &&
-          barChartBuilder_ != null) {
-        result.details_ = barChartBuilder_.build();
-      }
-      if (detailsCase_ == 5 &&
-          bulletChartBuilder_ != null) {
-        result.details_ = bulletChartBuilder_.build();
-      }
-      if (detailsCase_ == 6 &&
-          multiValueChartBuilder_ != null) {
-        result.details_ = multiValueChartBuilder_.build();
-      }
-      if (detailsCase_ == 7 &&
-          treeMapChartBuilder_ != null) {
-        result.details_ = treeMapChartBuilder_.build();
-      }
-      if (detailsCase_ == 8 &&
-          activityGaugeChartBuilder_ != null) {
-        result.details_ = activityGaugeChartBuilder_.build();
-      }
-      if (detailsCase_ == 9 &&
-          arcChartBuilder_ != null) {
-        result.details_ = arcChartBuilder_.build();
-      }
-      if (detailsCase_ == 10 &&
-          scatterChartBuilder_ != null) {
-        result.details_ = scatterChartBuilder_.build();
-      }
-      if (detailsCase_ == 11 &&
-          timeHistogramChartBuilder_ != null) {
-        result.details_ = timeHistogramChartBuilder_.build();
-      }
-      if (detailsCase_ == 12 &&
-          treeTableChartBuilder_ != null) {
-        result.details_ = treeTableChartBuilder_.build();
-      }
-      if (detailsCase_ == 13 &&
-          infoPanelChartBuilder_ != null) {
-        result.details_ = infoPanelChartBuilder_.build();
-      }
-      if (detailsCase_ == 14 &&
-          rankedListChartBuilder_ != null) {
-        result.details_ = rankedListChartBuilder_.build();
-      }
-      if (detailsCase_ == 15 &&
-          speedometerChartBuilder_ != null) {
-        result.details_ = speedometerChartBuilder_.build();
-      }
-      if (detailsCase_ == 16 &&
-          lineChartBuilder_ != null) {
-        result.details_ = lineChartBuilder_.build();
-      }
-      if (detailsCase_ == 17 &&
-          splineChartBuilder_ != null) {
-        result.details_ = splineChartBuilder_.build();
-      }
-      if (detailsCase_ == 18 &&
-          areaChartBuilder_ != null) {
-        result.details_ = areaChartBuilder_.build();
-      }
-      if (detailsCase_ == 19 &&
-          tableChartBuilder_ != null) {
-        result.details_ = tableChartBuilder_.build();
-      }
-      if (detailsCase_ == 20 &&
-          bubbleChartBuilder_ != null) {
-        result.details_ = bubbleChartBuilder_.build();
-      }
-      if (detailsCase_ == 21 &&
-          packedBubbleChartBuilder_ != null) {
-        result.details_ = packedBubbleChartBuilder_.build();
-      }
-      if (detailsCase_ == 22 &&
-          sunburstChartBuilder_ != null) {
-        result.details_ = sunburstChartBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -1655,7 +1996,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -1670,184 +2011,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.ChartDetails parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              input.readMessage(
-                  getSingleValueChartFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              detailsCase_ = 1;
-              break;
-            } // case 10
-            case 18: {
-              input.readMessage(
-                  getPieChartFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              detailsCase_ = 2;
-              break;
-            } // case 18
-            case 26: {
-              input.readMessage(
-                  getRadarFixedChartFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              detailsCase_ = 3;
-              break;
-            } // case 26
-            case 34: {
-              input.readMessage(
-                  getBarChartFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              detailsCase_ = 4;
-              break;
-            } // case 34
-            case 42: {
-              input.readMessage(
-                  getBulletChartFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              detailsCase_ = 5;
-              break;
-            } // case 42
-            case 50: {
-              input.readMessage(
-                  getMultiValueChartFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              detailsCase_ = 6;
-              break;
-            } // case 50
-            case 58: {
-              input.readMessage(
-                  getTreeMapChartFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              detailsCase_ = 7;
-              break;
-            } // case 58
-            case 66: {
-              input.readMessage(
-                  getActivityGaugeChartFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              detailsCase_ = 8;
-              break;
-            } // case 66
-            case 74: {
-              input.readMessage(
-                  getArcChartFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              detailsCase_ = 9;
-              break;
-            } // case 74
-            case 82: {
-              input.readMessage(
-                  getScatterChartFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              detailsCase_ = 10;
-              break;
-            } // case 82
-            case 90: {
-              input.readMessage(
-                  getTimeHistogramChartFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              detailsCase_ = 11;
-              break;
-            } // case 90
-            case 98: {
-              input.readMessage(
-                  getTreeTableChartFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              detailsCase_ = 12;
-              break;
-            } // case 98
-            case 106: {
-              input.readMessage(
-                  getInfoPanelChartFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              detailsCase_ = 13;
-              break;
-            } // case 106
-            case 114: {
-              input.readMessage(
-                  getRankedListChartFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              detailsCase_ = 14;
-              break;
-            } // case 114
-            case 122: {
-              input.readMessage(
-                  getSpeedometerChartFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              detailsCase_ = 15;
-              break;
-            } // case 122
-            case 130: {
-              input.readMessage(
-                  getLineChartFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              detailsCase_ = 16;
-              break;
-            } // case 130
-            case 138: {
-              input.readMessage(
-                  getSplineChartFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              detailsCase_ = 17;
-              break;
-            } // case 138
-            case 146: {
-              input.readMessage(
-                  getAreaChartFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              detailsCase_ = 18;
-              break;
-            } // case 146
-            case 154: {
-              input.readMessage(
-                  getTableChartFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              detailsCase_ = 19;
-              break;
-            } // case 154
-            case 162: {
-              input.readMessage(
-                  getBubbleChartFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              detailsCase_ = 20;
-              break;
-            } // case 162
-            case 170: {
-              input.readMessage(
-                  getPackedBubbleChartFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              detailsCase_ = 21;
-              break;
-            } // case 170
-            case 178: {
-              input.readMessage(
-                  getSunburstChartFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              detailsCase_ = 22;
-              break;
-            } // case 178
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.ChartDetails) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int detailsCase_ = 0;
@@ -1865,7 +2039,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int bitField0_;
 
     private com.google.protobuf.SingleFieldBuilderV3<
         com.tcn.cloud.api.api.v0alpha.SingleValueChart, com.tcn.cloud.api.api.v0alpha.SingleValueChart.Builder, com.tcn.cloud.api.api.v0alpha.SingleValueChartOrBuilder> singleValueChartBuilder_;
@@ -1941,9 +2114,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (detailsCase_ == 1) {
           singleValueChartBuilder_.mergeFrom(value);
-        } else {
-          singleValueChartBuilder_.setMessage(value);
         }
+        singleValueChartBuilder_.setMessage(value);
       }
       detailsCase_ = 1;
       return this;
@@ -2005,7 +2177,7 @@ private static final long serialVersionUID = 0L;
         details_ = null;
       }
       detailsCase_ = 1;
-      onChanged();
+      onChanged();;
       return singleValueChartBuilder_;
     }
 
@@ -2083,9 +2255,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (detailsCase_ == 2) {
           pieChartBuilder_.mergeFrom(value);
-        } else {
-          pieChartBuilder_.setMessage(value);
         }
+        pieChartBuilder_.setMessage(value);
       }
       detailsCase_ = 2;
       return this;
@@ -2147,7 +2318,7 @@ private static final long serialVersionUID = 0L;
         details_ = null;
       }
       detailsCase_ = 2;
-      onChanged();
+      onChanged();;
       return pieChartBuilder_;
     }
 
@@ -2225,9 +2396,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (detailsCase_ == 3) {
           radarFixedChartBuilder_.mergeFrom(value);
-        } else {
-          radarFixedChartBuilder_.setMessage(value);
         }
+        radarFixedChartBuilder_.setMessage(value);
       }
       detailsCase_ = 3;
       return this;
@@ -2289,7 +2459,7 @@ private static final long serialVersionUID = 0L;
         details_ = null;
       }
       detailsCase_ = 3;
-      onChanged();
+      onChanged();;
       return radarFixedChartBuilder_;
     }
 
@@ -2367,9 +2537,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (detailsCase_ == 4) {
           barChartBuilder_.mergeFrom(value);
-        } else {
-          barChartBuilder_.setMessage(value);
         }
+        barChartBuilder_.setMessage(value);
       }
       detailsCase_ = 4;
       return this;
@@ -2431,7 +2600,7 @@ private static final long serialVersionUID = 0L;
         details_ = null;
       }
       detailsCase_ = 4;
-      onChanged();
+      onChanged();;
       return barChartBuilder_;
     }
 
@@ -2509,9 +2678,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (detailsCase_ == 5) {
           bulletChartBuilder_.mergeFrom(value);
-        } else {
-          bulletChartBuilder_.setMessage(value);
         }
+        bulletChartBuilder_.setMessage(value);
       }
       detailsCase_ = 5;
       return this;
@@ -2573,7 +2741,7 @@ private static final long serialVersionUID = 0L;
         details_ = null;
       }
       detailsCase_ = 5;
-      onChanged();
+      onChanged();;
       return bulletChartBuilder_;
     }
 
@@ -2651,9 +2819,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (detailsCase_ == 6) {
           multiValueChartBuilder_.mergeFrom(value);
-        } else {
-          multiValueChartBuilder_.setMessage(value);
         }
+        multiValueChartBuilder_.setMessage(value);
       }
       detailsCase_ = 6;
       return this;
@@ -2715,7 +2882,7 @@ private static final long serialVersionUID = 0L;
         details_ = null;
       }
       detailsCase_ = 6;
-      onChanged();
+      onChanged();;
       return multiValueChartBuilder_;
     }
 
@@ -2793,9 +2960,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (detailsCase_ == 7) {
           treeMapChartBuilder_.mergeFrom(value);
-        } else {
-          treeMapChartBuilder_.setMessage(value);
         }
+        treeMapChartBuilder_.setMessage(value);
       }
       detailsCase_ = 7;
       return this;
@@ -2857,7 +3023,7 @@ private static final long serialVersionUID = 0L;
         details_ = null;
       }
       detailsCase_ = 7;
-      onChanged();
+      onChanged();;
       return treeMapChartBuilder_;
     }
 
@@ -2935,9 +3101,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (detailsCase_ == 8) {
           activityGaugeChartBuilder_.mergeFrom(value);
-        } else {
-          activityGaugeChartBuilder_.setMessage(value);
         }
+        activityGaugeChartBuilder_.setMessage(value);
       }
       detailsCase_ = 8;
       return this;
@@ -2999,7 +3164,7 @@ private static final long serialVersionUID = 0L;
         details_ = null;
       }
       detailsCase_ = 8;
-      onChanged();
+      onChanged();;
       return activityGaugeChartBuilder_;
     }
 
@@ -3077,9 +3242,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (detailsCase_ == 9) {
           arcChartBuilder_.mergeFrom(value);
-        } else {
-          arcChartBuilder_.setMessage(value);
         }
+        arcChartBuilder_.setMessage(value);
       }
       detailsCase_ = 9;
       return this;
@@ -3141,7 +3305,7 @@ private static final long serialVersionUID = 0L;
         details_ = null;
       }
       detailsCase_ = 9;
-      onChanged();
+      onChanged();;
       return arcChartBuilder_;
     }
 
@@ -3219,9 +3383,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (detailsCase_ == 10) {
           scatterChartBuilder_.mergeFrom(value);
-        } else {
-          scatterChartBuilder_.setMessage(value);
         }
+        scatterChartBuilder_.setMessage(value);
       }
       detailsCase_ = 10;
       return this;
@@ -3283,7 +3446,7 @@ private static final long serialVersionUID = 0L;
         details_ = null;
       }
       detailsCase_ = 10;
-      onChanged();
+      onChanged();;
       return scatterChartBuilder_;
     }
 
@@ -3361,9 +3524,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (detailsCase_ == 11) {
           timeHistogramChartBuilder_.mergeFrom(value);
-        } else {
-          timeHistogramChartBuilder_.setMessage(value);
         }
+        timeHistogramChartBuilder_.setMessage(value);
       }
       detailsCase_ = 11;
       return this;
@@ -3425,7 +3587,7 @@ private static final long serialVersionUID = 0L;
         details_ = null;
       }
       detailsCase_ = 11;
-      onChanged();
+      onChanged();;
       return timeHistogramChartBuilder_;
     }
 
@@ -3503,9 +3665,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (detailsCase_ == 12) {
           treeTableChartBuilder_.mergeFrom(value);
-        } else {
-          treeTableChartBuilder_.setMessage(value);
         }
+        treeTableChartBuilder_.setMessage(value);
       }
       detailsCase_ = 12;
       return this;
@@ -3567,7 +3728,7 @@ private static final long serialVersionUID = 0L;
         details_ = null;
       }
       detailsCase_ = 12;
-      onChanged();
+      onChanged();;
       return treeTableChartBuilder_;
     }
 
@@ -3645,9 +3806,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (detailsCase_ == 13) {
           infoPanelChartBuilder_.mergeFrom(value);
-        } else {
-          infoPanelChartBuilder_.setMessage(value);
         }
+        infoPanelChartBuilder_.setMessage(value);
       }
       detailsCase_ = 13;
       return this;
@@ -3709,7 +3869,7 @@ private static final long serialVersionUID = 0L;
         details_ = null;
       }
       detailsCase_ = 13;
-      onChanged();
+      onChanged();;
       return infoPanelChartBuilder_;
     }
 
@@ -3787,9 +3947,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (detailsCase_ == 14) {
           rankedListChartBuilder_.mergeFrom(value);
-        } else {
-          rankedListChartBuilder_.setMessage(value);
         }
+        rankedListChartBuilder_.setMessage(value);
       }
       detailsCase_ = 14;
       return this;
@@ -3851,7 +4010,7 @@ private static final long serialVersionUID = 0L;
         details_ = null;
       }
       detailsCase_ = 14;
-      onChanged();
+      onChanged();;
       return rankedListChartBuilder_;
     }
 
@@ -3929,9 +4088,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (detailsCase_ == 15) {
           speedometerChartBuilder_.mergeFrom(value);
-        } else {
-          speedometerChartBuilder_.setMessage(value);
         }
+        speedometerChartBuilder_.setMessage(value);
       }
       detailsCase_ = 15;
       return this;
@@ -3993,7 +4151,7 @@ private static final long serialVersionUID = 0L;
         details_ = null;
       }
       detailsCase_ = 15;
-      onChanged();
+      onChanged();;
       return speedometerChartBuilder_;
     }
 
@@ -4071,9 +4229,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (detailsCase_ == 16) {
           lineChartBuilder_.mergeFrom(value);
-        } else {
-          lineChartBuilder_.setMessage(value);
         }
+        lineChartBuilder_.setMessage(value);
       }
       detailsCase_ = 16;
       return this;
@@ -4135,7 +4292,7 @@ private static final long serialVersionUID = 0L;
         details_ = null;
       }
       detailsCase_ = 16;
-      onChanged();
+      onChanged();;
       return lineChartBuilder_;
     }
 
@@ -4213,9 +4370,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (detailsCase_ == 17) {
           splineChartBuilder_.mergeFrom(value);
-        } else {
-          splineChartBuilder_.setMessage(value);
         }
+        splineChartBuilder_.setMessage(value);
       }
       detailsCase_ = 17;
       return this;
@@ -4277,7 +4433,7 @@ private static final long serialVersionUID = 0L;
         details_ = null;
       }
       detailsCase_ = 17;
-      onChanged();
+      onChanged();;
       return splineChartBuilder_;
     }
 
@@ -4355,9 +4511,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (detailsCase_ == 18) {
           areaChartBuilder_.mergeFrom(value);
-        } else {
-          areaChartBuilder_.setMessage(value);
         }
+        areaChartBuilder_.setMessage(value);
       }
       detailsCase_ = 18;
       return this;
@@ -4419,7 +4574,7 @@ private static final long serialVersionUID = 0L;
         details_ = null;
       }
       detailsCase_ = 18;
-      onChanged();
+      onChanged();;
       return areaChartBuilder_;
     }
 
@@ -4497,9 +4652,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (detailsCase_ == 19) {
           tableChartBuilder_.mergeFrom(value);
-        } else {
-          tableChartBuilder_.setMessage(value);
         }
+        tableChartBuilder_.setMessage(value);
       }
       detailsCase_ = 19;
       return this;
@@ -4561,7 +4715,7 @@ private static final long serialVersionUID = 0L;
         details_ = null;
       }
       detailsCase_ = 19;
-      onChanged();
+      onChanged();;
       return tableChartBuilder_;
     }
 
@@ -4639,9 +4793,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (detailsCase_ == 20) {
           bubbleChartBuilder_.mergeFrom(value);
-        } else {
-          bubbleChartBuilder_.setMessage(value);
         }
+        bubbleChartBuilder_.setMessage(value);
       }
       detailsCase_ = 20;
       return this;
@@ -4703,7 +4856,7 @@ private static final long serialVersionUID = 0L;
         details_ = null;
       }
       detailsCase_ = 20;
-      onChanged();
+      onChanged();;
       return bubbleChartBuilder_;
     }
 
@@ -4781,9 +4934,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (detailsCase_ == 21) {
           packedBubbleChartBuilder_.mergeFrom(value);
-        } else {
-          packedBubbleChartBuilder_.setMessage(value);
         }
+        packedBubbleChartBuilder_.setMessage(value);
       }
       detailsCase_ = 21;
       return this;
@@ -4845,7 +4997,7 @@ private static final long serialVersionUID = 0L;
         details_ = null;
       }
       detailsCase_ = 21;
-      onChanged();
+      onChanged();;
       return packedBubbleChartBuilder_;
     }
 
@@ -4923,9 +5075,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (detailsCase_ == 22) {
           sunburstChartBuilder_.mergeFrom(value);
-        } else {
-          sunburstChartBuilder_.setMessage(value);
         }
+        sunburstChartBuilder_.setMessage(value);
       }
       detailsCase_ = 22;
       return this;
@@ -4987,7 +5138,7 @@ private static final long serialVersionUID = 0L;
         details_ = null;
       }
       detailsCase_ = 22;
-      onChanged();
+      onChanged();;
       return sunburstChartBuilder_;
     }
     @java.lang.Override
@@ -5023,18 +5174,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new ChartDetails(input, extensionRegistry);
     }
   };
 

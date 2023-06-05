@@ -30,6 +30,74 @@ private static final long serialVersionUID = 0L;
     return new UpdateShiftInstanceRes();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private UpdateShiftInstanceRes(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.Builder subBuilder = null;
+            if (shiftInstance_ != null) {
+              subBuilder = shiftInstance_.toBuilder();
+            }
+            shiftInstance_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(shiftInstance_);
+              shiftInstance_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 18: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              performanceMetrics_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric>();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            performanceMetrics_.add(
+                input.readMessage(com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.parser(), extensionRegistry));
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        performanceMetrics_ = java.util.Collections.unmodifiableList(performanceMetrics_);
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_UpdateShiftInstanceRes_descriptor;
@@ -78,11 +146,10 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstanceOrBuilder getShiftInstanceOrBuilder() {
-    return shiftInstance_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.getDefaultInstance() : shiftInstance_;
+    return getShiftInstance();
   }
 
   public static final int PERFORMANCE_METRICS_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric> performanceMetrics_;
   /**
    * <pre>
@@ -162,7 +229,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < performanceMetrics_.size(); i++) {
       output.writeMessage(2, performanceMetrics_.get(i));
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -179,7 +246,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, performanceMetrics_.get(i));
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -201,7 +268,7 @@ private static final long serialVersionUID = 0L;
     }
     if (!getPerformanceMetricsList()
         .equals(other.getPerformanceMetricsList())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -220,7 +287,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + PERFORMANCE_METRICS_FIELD_NUMBER;
       hash = (53 * hash) + getPerformanceMetricsList().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -269,13 +336,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceRes parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceRes parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -343,30 +408,35 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceRes.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getPerformanceMetricsFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      shiftInstance_ = null;
-      if (shiftInstanceBuilder_ != null) {
-        shiftInstanceBuilder_.dispose();
+      if (shiftInstanceBuilder_ == null) {
+        shiftInstance_ = null;
+      } else {
+        shiftInstance_ = null;
         shiftInstanceBuilder_ = null;
       }
       if (performanceMetricsBuilder_ == null) {
         performanceMetrics_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
-        performanceMetrics_ = null;
         performanceMetricsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -393,31 +463,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceRes buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceRes result = new com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceRes(this);
-      buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      onBuilt();
-      return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceRes result) {
+      int from_bitField0_ = bitField0_;
+      if (shiftInstanceBuilder_ == null) {
+        result.shiftInstance_ = shiftInstance_;
+      } else {
+        result.shiftInstance_ = shiftInstanceBuilder_.build();
+      }
       if (performanceMetricsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           performanceMetrics_ = java.util.Collections.unmodifiableList(performanceMetrics_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.performanceMetrics_ = performanceMetrics_;
       } else {
         result.performanceMetrics_ = performanceMetricsBuilder_.build();
       }
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceRes result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.shiftInstance_ = shiftInstanceBuilder_ == null
-            ? shiftInstance_
-            : shiftInstanceBuilder_.build();
-      }
+      onBuilt();
+      return result;
     }
 
     @java.lang.Override
@@ -471,7 +533,7 @@ private static final long serialVersionUID = 0L;
         if (!other.performanceMetrics_.isEmpty()) {
           if (performanceMetrics_.isEmpty()) {
             performanceMetrics_ = other.performanceMetrics_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensurePerformanceMetricsIsMutable();
             performanceMetrics_.addAll(other.performanceMetrics_);
@@ -484,7 +546,7 @@ private static final long serialVersionUID = 0L;
             performanceMetricsBuilder_.dispose();
             performanceMetricsBuilder_ = null;
             performanceMetrics_ = other.performanceMetrics_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
             performanceMetricsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getPerformanceMetricsFieldBuilder() : null;
@@ -493,7 +555,7 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -508,50 +570,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceRes parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              input.readMessage(
-                  getShiftInstanceFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.parser(),
-                      extensionRegistry);
-              if (performanceMetricsBuilder_ == null) {
-                ensurePerformanceMetricsIsMutable();
-                performanceMetrics_.add(m);
-              } else {
-                performanceMetricsBuilder_.addMessage(m);
-              }
-              break;
-            } // case 18
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceRes) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -568,7 +597,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the shiftInstance field is set.
      */
     public boolean hasShiftInstance() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return shiftInstanceBuilder_ != null || shiftInstance_ != null;
     }
     /**
      * <pre>
@@ -598,11 +627,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         shiftInstance_ = value;
+        onChanged();
       } else {
         shiftInstanceBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -616,11 +645,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.Builder builderForValue) {
       if (shiftInstanceBuilder_ == null) {
         shiftInstance_ = builderForValue.build();
+        onChanged();
       } else {
         shiftInstanceBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -632,18 +661,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeShiftInstance(com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance value) {
       if (shiftInstanceBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          shiftInstance_ != null &&
-          shiftInstance_ != com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.getDefaultInstance()) {
-          getShiftInstanceBuilder().mergeFrom(value);
+        if (shiftInstance_ != null) {
+          shiftInstance_ =
+            com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.newBuilder(shiftInstance_).mergeFrom(value).buildPartial();
         } else {
           shiftInstance_ = value;
         }
+        onChanged();
       } else {
         shiftInstanceBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -654,13 +682,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
      */
     public Builder clearShiftInstance() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      shiftInstance_ = null;
-      if (shiftInstanceBuilder_ != null) {
-        shiftInstanceBuilder_.dispose();
+      if (shiftInstanceBuilder_ == null) {
+        shiftInstance_ = null;
+        onChanged();
+      } else {
+        shiftInstance_ = null;
         shiftInstanceBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -671,7 +700,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.wfm.ShiftInstance shift_instance = 1 [json_name = "shiftInstance"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ShiftInstance.Builder getShiftInstanceBuilder() {
-      bitField0_ |= 0x00000001;
+      
       onChanged();
       return getShiftInstanceFieldBuilder().getBuilder();
     }
@@ -714,9 +743,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric> performanceMetrics_ =
       java.util.Collections.emptyList();
     private void ensurePerformanceMetricsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         performanceMetrics_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric>(performanceMetrics_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -910,7 +939,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearPerformanceMetrics() {
       if (performanceMetricsBuilder_ == null) {
         performanceMetrics_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         performanceMetricsBuilder_.clear();
@@ -1015,7 +1044,7 @@ private static final long serialVersionUID = 0L;
         performanceMetricsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetric.Builder, com.tcn.cloud.api.api.v1alpha1.wfm.PerformanceMetricOrBuilder>(
                 performanceMetrics_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         performanceMetrics_ = null;
@@ -1055,18 +1084,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new UpdateShiftInstanceRes(input, extensionRegistry);
     }
   };
 

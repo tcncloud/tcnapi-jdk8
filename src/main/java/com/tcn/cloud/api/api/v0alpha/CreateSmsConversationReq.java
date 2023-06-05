@@ -26,6 +26,67 @@ private static final long serialVersionUID = 0L;
     return new CreateSmsConversationReq();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private CreateSmsConversationReq(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            inboundSmsGroupId_ = s;
+            break;
+          }
+          case 18: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (smsTaskParent_ != null) {
+              subBuilder = smsTaskParent_.toBuilder();
+            }
+            smsTaskParent_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(smsTaskParent_);
+              smsTaskParent_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.SmsapiProto.internal_static_api_v0alpha_CreateSmsConversationReq_descriptor;
@@ -40,8 +101,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INBOUND_SMS_GROUP_ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object inboundSmsGroupId_ = "";
+  private volatile java.lang.Object inboundSmsGroupId_;
   /**
    * <code>string inbound_sms_group_id = 1 [json_name = "inboundSmsGroupId"];</code>
    * @return The inboundSmsGroupId.
@@ -101,7 +161,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getSmsTaskParentOrBuilder() {
-    return smsTaskParent_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : smsTaskParent_;
+    return getSmsTaskParent();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -118,13 +178,13 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(inboundSmsGroupId_)) {
+    if (!getInboundSmsGroupIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, inboundSmsGroupId_);
     }
     if (smsTaskParent_ != null) {
       output.writeMessage(2, getSmsTaskParent());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -133,14 +193,14 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(inboundSmsGroupId_)) {
+    if (!getInboundSmsGroupIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, inboundSmsGroupId_);
     }
     if (smsTaskParent_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getSmsTaskParent());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -162,7 +222,7 @@ private static final long serialVersionUID = 0L;
       if (!getSmsTaskParent()
           .equals(other.getSmsTaskParent())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -179,7 +239,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SMS_TASK_PARENT_FIELD_NUMBER;
       hash = (53 * hash) + getSmsTaskParent().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -228,13 +288,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.CreateSmsConversationReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.CreateSmsConversationReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -298,22 +356,28 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.CreateSmsConversationReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       inboundSmsGroupId_ = "";
-      smsTaskParent_ = null;
-      if (smsTaskParentBuilder_ != null) {
-        smsTaskParentBuilder_.dispose();
+
+      if (smsTaskParentBuilder_ == null) {
+        smsTaskParent_ = null;
+      } else {
+        smsTaskParent_ = null;
         smsTaskParentBuilder_ = null;
       }
       return this;
@@ -342,21 +406,14 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.CreateSmsConversationReq buildPartial() {
       com.tcn.cloud.api.api.v0alpha.CreateSmsConversationReq result = new com.tcn.cloud.api.api.v0alpha.CreateSmsConversationReq(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.inboundSmsGroupId_ = inboundSmsGroupId_;
+      if (smsTaskParentBuilder_ == null) {
+        result.smsTaskParent_ = smsTaskParent_;
+      } else {
+        result.smsTaskParent_ = smsTaskParentBuilder_.build();
+      }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.CreateSmsConversationReq result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.inboundSmsGroupId_ = inboundSmsGroupId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.smsTaskParent_ = smsTaskParentBuilder_ == null
-            ? smsTaskParent_
-            : smsTaskParentBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -405,13 +462,12 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v0alpha.CreateSmsConversationReq.getDefaultInstance()) return this;
       if (!other.getInboundSmsGroupId().isEmpty()) {
         inboundSmsGroupId_ = other.inboundSmsGroupId_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasSmsTaskParent()) {
         mergeSmsTaskParent(other.getSmsTaskParent());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -426,45 +482,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.CreateSmsConversationReq parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              inboundSmsGroupId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              input.readMessage(
-                  getSmsTaskParentFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.CreateSmsConversationReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private java.lang.Object inboundSmsGroupId_ = "";
     /**
@@ -507,9 +537,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setInboundSmsGroupId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       inboundSmsGroupId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -518,8 +550,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearInboundSmsGroupId() {
+      
       inboundSmsGroupId_ = getDefaultInstance().getInboundSmsGroupId();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -530,10 +562,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setInboundSmsGroupIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       inboundSmsGroupId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -546,7 +580,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the smsTaskParent field is set.
      */
     public boolean hasSmsTaskParent() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return smsTaskParentBuilder_ != null || smsTaskParent_ != null;
     }
     /**
      * <code>.google.protobuf.Int64Value sms_task_parent = 2 [json_name = "smsTaskParent"];</code>
@@ -568,11 +602,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         smsTaskParent_ = value;
+        onChanged();
       } else {
         smsTaskParentBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -582,11 +616,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value.Builder builderForValue) {
       if (smsTaskParentBuilder_ == null) {
         smsTaskParent_ = builderForValue.build();
+        onChanged();
       } else {
         smsTaskParentBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -594,38 +628,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeSmsTaskParent(com.google.protobuf.Int64Value value) {
       if (smsTaskParentBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
-          smsTaskParent_ != null &&
-          smsTaskParent_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
-          getSmsTaskParentBuilder().mergeFrom(value);
+        if (smsTaskParent_ != null) {
+          smsTaskParent_ =
+            com.google.protobuf.Int64Value.newBuilder(smsTaskParent_).mergeFrom(value).buildPartial();
         } else {
           smsTaskParent_ = value;
         }
+        onChanged();
       } else {
         smsTaskParentBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.Int64Value sms_task_parent = 2 [json_name = "smsTaskParent"];</code>
      */
     public Builder clearSmsTaskParent() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      smsTaskParent_ = null;
-      if (smsTaskParentBuilder_ != null) {
-        smsTaskParentBuilder_.dispose();
+      if (smsTaskParentBuilder_ == null) {
+        smsTaskParent_ = null;
+        onChanged();
+      } else {
+        smsTaskParent_ = null;
         smsTaskParentBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.Int64Value sms_task_parent = 2 [json_name = "smsTaskParent"];</code>
      */
     public com.google.protobuf.Int64Value.Builder getSmsTaskParentBuilder() {
-      bitField0_ |= 0x00000002;
+      
       onChanged();
       return getSmsTaskParentFieldBuilder().getBuilder();
     }
@@ -689,18 +723,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new CreateSmsConversationReq(input, extensionRegistry);
     }
   };
 

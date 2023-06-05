@@ -17,11 +17,9 @@ private static final long serialVersionUID = 0L;
   }
   private HuntGroupAgentSettings() {
     keypadDelimiter_ = "";
-    phoneZipMetadataKeys_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    phoneZipMetadataKeys_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     inboundComplianceMetadata_ = java.util.Collections.emptyList();
-    limitJourneyRetrievedData_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    limitJourneyRetrievedData_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     interruptPeering_ = java.util.Collections.emptyList();
   }
 
@@ -32,6 +30,351 @@ private static final long serialVersionUID = 0L;
     return new HuntGroupAgentSettings();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private HuntGroupAgentSettings(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+
+            keypadEnabled_ = input.readBool();
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            keypadDelimiter_ = s;
+            break;
+          }
+          case 26: {
+            com.tcn.cloud.api.api.v0alpha.AgentStatisticsSettings.Builder subBuilder = null;
+            if (statistics_ != null) {
+              subBuilder = statistics_.toBuilder();
+            }
+            statistics_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.AgentStatisticsSettings.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(statistics_);
+              statistics_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 40: {
+
+            endCallConfirmation_ = input.readBool();
+            break;
+          }
+          case 50: {
+            com.tcn.cloud.api.api.v0alpha.PauseSettings.Builder subBuilder = null;
+            if (pause_ != null) {
+              subBuilder = pause_.toBuilder();
+            }
+            pause_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.PauseSettings.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(pause_);
+              pause_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 58: {
+            com.tcn.cloud.api.api.v0alpha.HoldQueueMonitorSettings.Builder subBuilder = null;
+            if (hqm_ != null) {
+              subBuilder = hqm_.toBuilder();
+            }
+            hqm_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.HoldQueueMonitorSettings.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(hqm_);
+              hqm_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 66: {
+            com.tcn.cloud.api.api.v0alpha.ManualDialSettings.Builder subBuilder = null;
+            if (manualDial_ != null) {
+              subBuilder = manualDial_.toBuilder();
+            }
+            manualDial_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.ManualDialSettings.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(manualDial_);
+              manualDial_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 74: {
+            com.tcn.cloud.api.api.v0alpha.TransferSettings.Builder subBuilder = null;
+            if (transfer_ != null) {
+              subBuilder = transfer_.toBuilder();
+            }
+            transfer_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.TransferSettings.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(transfer_);
+              transfer_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 82: {
+            com.tcn.cloud.api.api.v0alpha.PreviewDialSettings.Builder subBuilder = null;
+            if (previewDial_ != null) {
+              subBuilder = previewDial_.toBuilder();
+            }
+            previewDial_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.PreviewDialSettings.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(previewDial_);
+              previewDial_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 90: {
+            com.tcn.cloud.api.api.v0alpha.PhoneNumberActivitySettings.Builder subBuilder = null;
+            if (phoneNumberActivity_ != null) {
+              subBuilder = phoneNumberActivity_.toBuilder();
+            }
+            phoneNumberActivity_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.PhoneNumberActivitySettings.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(phoneNumberActivity_);
+              phoneNumberActivity_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 98: {
+            com.tcn.cloud.api.api.v0alpha.DnclSettings.Builder subBuilder = null;
+            if (dncl_ != null) {
+              subBuilder = dncl_.toBuilder();
+            }
+            dncl_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.DnclSettings.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(dncl_);
+              dncl_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 106: {
+            com.tcn.cloud.api.api.v0alpha.AgentHoldSettings.Builder subBuilder = null;
+            if (hold_ != null) {
+              subBuilder = hold_.toBuilder();
+            }
+            hold_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.AgentHoldSettings.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(hold_);
+              hold_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 114: {
+            com.tcn.cloud.api.api.v0alpha.ManualApprovalSettings.Builder subBuilder = null;
+            if (manualApproval_ != null) {
+              subBuilder = manualApproval_.toBuilder();
+            }
+            manualApproval_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.ManualApprovalSettings.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(manualApproval_);
+              manualApproval_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 120: {
+
+            displayLinkbackHuntgroup_ = input.readBool();
+            break;
+          }
+          case 130: {
+            com.tcn.cloud.api.api.v0alpha.ScheduleCallBackSettings.Builder subBuilder = null;
+            if (scheduleCallback_ != null) {
+              subBuilder = scheduleCallback_.toBuilder();
+            }
+            scheduleCallback_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.ScheduleCallBackSettings.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(scheduleCallback_);
+              scheduleCallback_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 146: {
+            com.tcn.cloud.api.api.v0alpha.RecordingSettings.Builder subBuilder = null;
+            if (recording_ != null) {
+              subBuilder = recording_.toBuilder();
+            }
+            recording_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.RecordingSettings.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(recording_);
+              recording_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 152: {
+
+            displayPhoneZipMetadata_ = input.readBool();
+            break;
+          }
+          case 162: {
+            java.lang.String s = input.readStringRequireUtf8();
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              phoneZipMetadataKeys_ = new com.google.protobuf.LazyStringArrayList();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            phoneZipMetadataKeys_.add(s);
+            break;
+          }
+          case 168: {
+
+            displayMachineDeliver_ = input.readBool();
+            break;
+          }
+          case 176: {
+
+            allowAgentIntercom_ = input.readBool();
+            break;
+          }
+          case 186: {
+            com.tcn.cloud.api.api.v0alpha.DisplayDataSettings.Builder subBuilder = null;
+            if (displayDataSettings_ != null) {
+              subBuilder = displayDataSettings_.toBuilder();
+            }
+            displayDataSettings_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.DisplayDataSettings.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(displayDataSettings_);
+              displayDataSettings_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 192: {
+
+            allowChangeHuntGroup_ = input.readBool();
+            break;
+          }
+          case 200: {
+
+            agentScreenRecording_ = input.readBool();
+            break;
+          }
+          case 210: {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              inboundComplianceMetadata_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.ComplianceMetadata>();
+              mutable_bitField0_ |= 0x00000002;
+            }
+            inboundComplianceMetadata_.add(
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.ComplianceMetadata.parser(), extensionRegistry));
+            break;
+          }
+          case 216: {
+
+            notifyQueuedCalls_ = input.readBool();
+            break;
+          }
+          case 224: {
+
+            displayJourneyRetrievedData_ = input.readBool();
+            break;
+          }
+          case 234: {
+            java.lang.String s = input.readStringRequireUtf8();
+            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+              limitJourneyRetrievedData_ = new com.google.protobuf.LazyStringArrayList();
+              mutable_bitField0_ |= 0x00000004;
+            }
+            limitJourneyRetrievedData_.add(s);
+            break;
+          }
+          case 240: {
+
+            initialAgentStatus_ = input.readInt64();
+            break;
+          }
+          case 248: {
+
+            displayWebLinks_ = input.readBool();
+            break;
+          }
+          case 256: {
+
+            displaySkills_ = input.readBool();
+            break;
+          }
+          case 264: {
+            int rawValue = input.readEnum();
+            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+              interruptPeering_ = new java.util.ArrayList<java.lang.Integer>();
+              mutable_bitField0_ |= 0x00000008;
+            }
+            interruptPeering_.add(rawValue);
+            break;
+          }
+          case 266: {
+            int length = input.readRawVarint32();
+            int oldLimit = input.pushLimit(length);
+            while(input.getBytesUntilLimit() > 0) {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                interruptPeering_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              interruptPeering_.add(rawValue);
+            }
+            input.popLimit(oldLimit);
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        phoneZipMetadataKeys_ = phoneZipMetadataKeys_.getUnmodifiableView();
+      }
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        inboundComplianceMetadata_ = java.util.Collections.unmodifiableList(inboundComplianceMetadata_);
+      }
+      if (((mutable_bitField0_ & 0x00000004) != 0)) {
+        limitJourneyRetrievedData_ = limitJourneyRetrievedData_.getUnmodifiableView();
+      }
+      if (((mutable_bitField0_ & 0x00000008) != 0)) {
+        interruptPeering_ = java.util.Collections.unmodifiableList(interruptPeering_);
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.P3apiProto.internal_static_api_v0alpha_HuntGroupAgentSettings_descriptor;
@@ -46,7 +389,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int KEYPAD_ENABLED_FIELD_NUMBER = 1;
-  private boolean keypadEnabled_ = false;
+  private boolean keypadEnabled_;
   /**
    * <code>bool keypad_enabled = 1 [json_name = "keypadEnabled"];</code>
    * @return The keypadEnabled.
@@ -57,8 +400,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int KEYPAD_DELIMITER_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object keypadDelimiter_ = "";
+  private volatile java.lang.Object keypadDelimiter_;
   /**
    * <code>string keypad_delimiter = 2 [json_name = "keypadDelimiter"];</code>
    * @return The keypadDelimiter.
@@ -118,11 +460,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.AgentStatisticsSettingsOrBuilder getStatisticsOrBuilder() {
-    return statistics_ == null ? com.tcn.cloud.api.api.v0alpha.AgentStatisticsSettings.getDefaultInstance() : statistics_;
+    return getStatistics();
   }
 
   public static final int END_CALL_CONFIRMATION_FIELD_NUMBER = 5;
-  private boolean endCallConfirmation_ = false;
+  private boolean endCallConfirmation_;
   /**
    * <code>bool end_call_confirmation = 5 [json_name = "endCallConfirmation"];</code>
    * @return The endCallConfirmation.
@@ -155,7 +497,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.PauseSettingsOrBuilder getPauseOrBuilder() {
-    return pause_ == null ? com.tcn.cloud.api.api.v0alpha.PauseSettings.getDefaultInstance() : pause_;
+    return getPause();
   }
 
   public static final int HQM_FIELD_NUMBER = 7;
@@ -181,7 +523,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.HoldQueueMonitorSettingsOrBuilder getHqmOrBuilder() {
-    return hqm_ == null ? com.tcn.cloud.api.api.v0alpha.HoldQueueMonitorSettings.getDefaultInstance() : hqm_;
+    return getHqm();
   }
 
   public static final int MANUAL_DIAL_FIELD_NUMBER = 8;
@@ -207,7 +549,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.ManualDialSettingsOrBuilder getManualDialOrBuilder() {
-    return manualDial_ == null ? com.tcn.cloud.api.api.v0alpha.ManualDialSettings.getDefaultInstance() : manualDial_;
+    return getManualDial();
   }
 
   public static final int TRANSFER_FIELD_NUMBER = 9;
@@ -233,7 +575,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.TransferSettingsOrBuilder getTransferOrBuilder() {
-    return transfer_ == null ? com.tcn.cloud.api.api.v0alpha.TransferSettings.getDefaultInstance() : transfer_;
+    return getTransfer();
   }
 
   public static final int PREVIEW_DIAL_FIELD_NUMBER = 10;
@@ -259,7 +601,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.PreviewDialSettingsOrBuilder getPreviewDialOrBuilder() {
-    return previewDial_ == null ? com.tcn.cloud.api.api.v0alpha.PreviewDialSettings.getDefaultInstance() : previewDial_;
+    return getPreviewDial();
   }
 
   public static final int PHONE_NUMBER_ACTIVITY_FIELD_NUMBER = 11;
@@ -285,7 +627,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.PhoneNumberActivitySettingsOrBuilder getPhoneNumberActivityOrBuilder() {
-    return phoneNumberActivity_ == null ? com.tcn.cloud.api.api.v0alpha.PhoneNumberActivitySettings.getDefaultInstance() : phoneNumberActivity_;
+    return getPhoneNumberActivity();
   }
 
   public static final int DNCL_FIELD_NUMBER = 12;
@@ -311,7 +653,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.DnclSettingsOrBuilder getDnclOrBuilder() {
-    return dncl_ == null ? com.tcn.cloud.api.api.v0alpha.DnclSettings.getDefaultInstance() : dncl_;
+    return getDncl();
   }
 
   public static final int HOLD_FIELD_NUMBER = 13;
@@ -337,7 +679,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.AgentHoldSettingsOrBuilder getHoldOrBuilder() {
-    return hold_ == null ? com.tcn.cloud.api.api.v0alpha.AgentHoldSettings.getDefaultInstance() : hold_;
+    return getHold();
   }
 
   public static final int MANUAL_APPROVAL_FIELD_NUMBER = 14;
@@ -363,11 +705,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.ManualApprovalSettingsOrBuilder getManualApprovalOrBuilder() {
-    return manualApproval_ == null ? com.tcn.cloud.api.api.v0alpha.ManualApprovalSettings.getDefaultInstance() : manualApproval_;
+    return getManualApproval();
   }
 
   public static final int DISPLAY_LINKBACK_HUNTGROUP_FIELD_NUMBER = 15;
-  private boolean displayLinkbackHuntgroup_ = false;
+  private boolean displayLinkbackHuntgroup_;
   /**
    * <code>bool display_linkback_huntgroup = 15 [json_name = "displayLinkbackHuntgroup"];</code>
    * @return The displayLinkbackHuntgroup.
@@ -400,7 +742,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.ScheduleCallBackSettingsOrBuilder getScheduleCallbackOrBuilder() {
-    return scheduleCallback_ == null ? com.tcn.cloud.api.api.v0alpha.ScheduleCallBackSettings.getDefaultInstance() : scheduleCallback_;
+    return getScheduleCallback();
   }
 
   public static final int RECORDING_FIELD_NUMBER = 18;
@@ -426,11 +768,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.RecordingSettingsOrBuilder getRecordingOrBuilder() {
-    return recording_ == null ? com.tcn.cloud.api.api.v0alpha.RecordingSettings.getDefaultInstance() : recording_;
+    return getRecording();
   }
 
   public static final int DISPLAY_PHONE_ZIP_METADATA_FIELD_NUMBER = 19;
-  private boolean displayPhoneZipMetadata_ = false;
+  private boolean displayPhoneZipMetadata_;
   /**
    * <code>bool display_phone_zip_metadata = 19 [json_name = "displayPhoneZipMetadata"];</code>
    * @return The displayPhoneZipMetadata.
@@ -441,9 +783,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PHONE_ZIP_METADATA_KEYS_FIELD_NUMBER = 20;
-  @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList phoneZipMetadataKeys_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
+  private com.google.protobuf.LazyStringList phoneZipMetadataKeys_;
   /**
    * <code>repeated string phone_zip_metadata_keys = 20 [json_name = "phoneZipMetadataKeys"];</code>
    * @return A list containing the phoneZipMetadataKeys.
@@ -478,7 +818,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DISPLAY_MACHINE_DELIVER_FIELD_NUMBER = 21;
-  private boolean displayMachineDeliver_ = false;
+  private boolean displayMachineDeliver_;
   /**
    * <code>bool display_machine_deliver = 21 [json_name = "displayMachineDeliver"];</code>
    * @return The displayMachineDeliver.
@@ -489,7 +829,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ALLOW_AGENT_INTERCOM_FIELD_NUMBER = 22;
-  private boolean allowAgentIntercom_ = false;
+  private boolean allowAgentIntercom_;
   /**
    * <code>bool allow_agent_intercom = 22 [json_name = "allowAgentIntercom"];</code>
    * @return The allowAgentIntercom.
@@ -522,11 +862,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.DisplayDataSettingsOrBuilder getDisplayDataSettingsOrBuilder() {
-    return displayDataSettings_ == null ? com.tcn.cloud.api.api.v0alpha.DisplayDataSettings.getDefaultInstance() : displayDataSettings_;
+    return getDisplayDataSettings();
   }
 
   public static final int ALLOW_CHANGE_HUNT_GROUP_FIELD_NUMBER = 24;
-  private boolean allowChangeHuntGroup_ = false;
+  private boolean allowChangeHuntGroup_;
   /**
    * <code>bool allow_change_hunt_group = 24 [json_name = "allowChangeHuntGroup"];</code>
    * @return The allowChangeHuntGroup.
@@ -537,7 +877,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AGENT_SCREEN_RECORDING_FIELD_NUMBER = 25;
-  private boolean agentScreenRecording_ = false;
+  private boolean agentScreenRecording_;
   /**
    * <code>bool agent_screen_recording = 25 [json_name = "agentScreenRecording"];</code>
    * @return The agentScreenRecording.
@@ -548,7 +888,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INBOUND_COMPLIANCE_METADATA_FIELD_NUMBER = 26;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v0alpha.ComplianceMetadata> inboundComplianceMetadata_;
   /**
    * <code>repeated .api.v0alpha.ComplianceMetadata inbound_compliance_metadata = 26 [json_name = "inboundComplianceMetadata"];</code>
@@ -589,7 +928,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NOTIFY_QUEUED_CALLS_FIELD_NUMBER = 27;
-  private boolean notifyQueuedCalls_ = false;
+  private boolean notifyQueuedCalls_;
   /**
    * <code>bool notify_queued_calls = 27 [json_name = "notifyQueuedCalls"];</code>
    * @return The notifyQueuedCalls.
@@ -600,7 +939,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DISPLAY_JOURNEY_RETRIEVED_DATA_FIELD_NUMBER = 28;
-  private boolean displayJourneyRetrievedData_ = false;
+  private boolean displayJourneyRetrievedData_;
   /**
    * <code>bool display_journey_retrieved_data = 28 [json_name = "displayJourneyRetrievedData"];</code>
    * @return The displayJourneyRetrievedData.
@@ -611,9 +950,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LIMIT_JOURNEY_RETRIEVED_DATA_FIELD_NUMBER = 29;
-  @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList limitJourneyRetrievedData_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
+  private com.google.protobuf.LazyStringList limitJourneyRetrievedData_;
   /**
    * <code>repeated string limit_journey_retrieved_data = 29 [json_name = "limitJourneyRetrievedData"];</code>
    * @return A list containing the limitJourneyRetrievedData.
@@ -648,7 +985,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INITIAL_AGENT_STATUS_FIELD_NUMBER = 30;
-  private long initialAgentStatus_ = 0L;
+  private long initialAgentStatus_;
   /**
    * <pre>
    * initial agent status
@@ -663,7 +1000,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DISPLAY_WEB_LINKS_FIELD_NUMBER = 31;
-  private boolean displayWebLinks_ = false;
+  private boolean displayWebLinks_;
   /**
    * <pre>
    * determines if agent can see web links
@@ -678,7 +1015,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DISPLAY_SKILLS_FIELD_NUMBER = 32;
-  private boolean displaySkills_ = false;
+  private boolean displaySkills_;
   /**
    * <pre>
    * determines if agent can see skills
@@ -693,14 +1030,14 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INTERRUPT_PEERING_FIELD_NUMBER = 33;
-  @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> interruptPeering_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, com.tcn.cloud.api.api.commons.InterruptedPeeringStatus> interruptPeering_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.tcn.cloud.api.api.commons.InterruptedPeeringStatus>() {
             public com.tcn.cloud.api.api.commons.InterruptedPeeringStatus convert(java.lang.Integer from) {
-              com.tcn.cloud.api.api.commons.InterruptedPeeringStatus result = com.tcn.cloud.api.api.commons.InterruptedPeeringStatus.forNumber(from);
+              @SuppressWarnings("deprecation")
+              com.tcn.cloud.api.api.commons.InterruptedPeeringStatus result = com.tcn.cloud.api.api.commons.InterruptedPeeringStatus.valueOf(from);
               return result == null ? com.tcn.cloud.api.api.commons.InterruptedPeeringStatus.UNRECOGNIZED : result;
             }
           };
@@ -788,7 +1125,7 @@ private static final long serialVersionUID = 0L;
     if (keypadEnabled_ != false) {
       output.writeBool(1, keypadEnabled_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keypadDelimiter_)) {
+    if (!getKeypadDelimiterBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, keypadDelimiter_);
     }
     if (statistics_ != null) {
@@ -882,7 +1219,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < interruptPeering_.size(); i++) {
       output.writeEnumNoTag(interruptPeering_.get(i));
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -895,7 +1232,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(1, keypadEnabled_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keypadDelimiter_)) {
+    if (!getKeypadDelimiterBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, keypadDelimiter_);
     }
     if (statistics_ != null) {
@@ -1030,7 +1367,7 @@ private static final long serialVersionUID = 0L;
           .computeUInt32SizeNoTag(dataSize);
       }interruptPeeringMemoizedSerializedSize = dataSize;
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -1145,7 +1482,7 @@ private static final long serialVersionUID = 0L;
     if (getDisplaySkills()
         != other.getDisplaySkills()) return false;
     if (!interruptPeering_.equals(other.interruptPeering_)) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -1265,7 +1602,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + INTERRUPT_PEERING_FIELD_NUMBER;
       hash = (53 * hash) + interruptPeering_.hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1314,13 +1651,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.HuntGroupAgentSettings parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.HuntGroupAgentSettings parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1384,110 +1719,141 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.HuntGroupAgentSettings.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getInboundComplianceMetadataFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       keypadEnabled_ = false;
+
       keypadDelimiter_ = "";
-      statistics_ = null;
-      if (statisticsBuilder_ != null) {
-        statisticsBuilder_.dispose();
+
+      if (statisticsBuilder_ == null) {
+        statistics_ = null;
+      } else {
+        statistics_ = null;
         statisticsBuilder_ = null;
       }
       endCallConfirmation_ = false;
-      pause_ = null;
-      if (pauseBuilder_ != null) {
-        pauseBuilder_.dispose();
+
+      if (pauseBuilder_ == null) {
+        pause_ = null;
+      } else {
+        pause_ = null;
         pauseBuilder_ = null;
       }
-      hqm_ = null;
-      if (hqmBuilder_ != null) {
-        hqmBuilder_.dispose();
+      if (hqmBuilder_ == null) {
+        hqm_ = null;
+      } else {
+        hqm_ = null;
         hqmBuilder_ = null;
       }
-      manualDial_ = null;
-      if (manualDialBuilder_ != null) {
-        manualDialBuilder_.dispose();
+      if (manualDialBuilder_ == null) {
+        manualDial_ = null;
+      } else {
+        manualDial_ = null;
         manualDialBuilder_ = null;
       }
-      transfer_ = null;
-      if (transferBuilder_ != null) {
-        transferBuilder_.dispose();
+      if (transferBuilder_ == null) {
+        transfer_ = null;
+      } else {
+        transfer_ = null;
         transferBuilder_ = null;
       }
-      previewDial_ = null;
-      if (previewDialBuilder_ != null) {
-        previewDialBuilder_.dispose();
+      if (previewDialBuilder_ == null) {
+        previewDial_ = null;
+      } else {
+        previewDial_ = null;
         previewDialBuilder_ = null;
       }
-      phoneNumberActivity_ = null;
-      if (phoneNumberActivityBuilder_ != null) {
-        phoneNumberActivityBuilder_.dispose();
+      if (phoneNumberActivityBuilder_ == null) {
+        phoneNumberActivity_ = null;
+      } else {
+        phoneNumberActivity_ = null;
         phoneNumberActivityBuilder_ = null;
       }
-      dncl_ = null;
-      if (dnclBuilder_ != null) {
-        dnclBuilder_.dispose();
+      if (dnclBuilder_ == null) {
+        dncl_ = null;
+      } else {
+        dncl_ = null;
         dnclBuilder_ = null;
       }
-      hold_ = null;
-      if (holdBuilder_ != null) {
-        holdBuilder_.dispose();
+      if (holdBuilder_ == null) {
+        hold_ = null;
+      } else {
+        hold_ = null;
         holdBuilder_ = null;
       }
-      manualApproval_ = null;
-      if (manualApprovalBuilder_ != null) {
-        manualApprovalBuilder_.dispose();
+      if (manualApprovalBuilder_ == null) {
+        manualApproval_ = null;
+      } else {
+        manualApproval_ = null;
         manualApprovalBuilder_ = null;
       }
       displayLinkbackHuntgroup_ = false;
-      scheduleCallback_ = null;
-      if (scheduleCallbackBuilder_ != null) {
-        scheduleCallbackBuilder_.dispose();
+
+      if (scheduleCallbackBuilder_ == null) {
+        scheduleCallback_ = null;
+      } else {
+        scheduleCallback_ = null;
         scheduleCallbackBuilder_ = null;
       }
-      recording_ = null;
-      if (recordingBuilder_ != null) {
-        recordingBuilder_.dispose();
+      if (recordingBuilder_ == null) {
+        recording_ = null;
+      } else {
+        recording_ = null;
         recordingBuilder_ = null;
       }
       displayPhoneZipMetadata_ = false;
-      phoneZipMetadataKeys_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+
+      phoneZipMetadataKeys_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000001);
       displayMachineDeliver_ = false;
+
       allowAgentIntercom_ = false;
-      displayDataSettings_ = null;
-      if (displayDataSettingsBuilder_ != null) {
-        displayDataSettingsBuilder_.dispose();
+
+      if (displayDataSettingsBuilder_ == null) {
+        displayDataSettings_ = null;
+      } else {
+        displayDataSettings_ = null;
         displayDataSettingsBuilder_ = null;
       }
       allowChangeHuntGroup_ = false;
+
       agentScreenRecording_ = false;
+
       if (inboundComplianceMetadataBuilder_ == null) {
         inboundComplianceMetadata_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
-        inboundComplianceMetadata_ = null;
         inboundComplianceMetadataBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00800000);
       notifyQueuedCalls_ = false;
+
       displayJourneyRetrievedData_ = false;
-      limitJourneyRetrievedData_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+
+      limitJourneyRetrievedData_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000004);
       initialAgentStatus_ = 0L;
+
       displayWebLinks_ = false;
+
       displaySkills_ = false;
+
       interruptPeering_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x40000000);
+      bitField0_ = (bitField0_ & ~0x00000008);
       return this;
     }
 
@@ -1514,146 +1880,112 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.HuntGroupAgentSettings buildPartial() {
       com.tcn.cloud.api.api.v0alpha.HuntGroupAgentSettings result = new com.tcn.cloud.api.api.v0alpha.HuntGroupAgentSettings(this);
-      buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      onBuilt();
-      return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.HuntGroupAgentSettings result) {
+      int from_bitField0_ = bitField0_;
+      result.keypadEnabled_ = keypadEnabled_;
+      result.keypadDelimiter_ = keypadDelimiter_;
+      if (statisticsBuilder_ == null) {
+        result.statistics_ = statistics_;
+      } else {
+        result.statistics_ = statisticsBuilder_.build();
+      }
+      result.endCallConfirmation_ = endCallConfirmation_;
+      if (pauseBuilder_ == null) {
+        result.pause_ = pause_;
+      } else {
+        result.pause_ = pauseBuilder_.build();
+      }
+      if (hqmBuilder_ == null) {
+        result.hqm_ = hqm_;
+      } else {
+        result.hqm_ = hqmBuilder_.build();
+      }
+      if (manualDialBuilder_ == null) {
+        result.manualDial_ = manualDial_;
+      } else {
+        result.manualDial_ = manualDialBuilder_.build();
+      }
+      if (transferBuilder_ == null) {
+        result.transfer_ = transfer_;
+      } else {
+        result.transfer_ = transferBuilder_.build();
+      }
+      if (previewDialBuilder_ == null) {
+        result.previewDial_ = previewDial_;
+      } else {
+        result.previewDial_ = previewDialBuilder_.build();
+      }
+      if (phoneNumberActivityBuilder_ == null) {
+        result.phoneNumberActivity_ = phoneNumberActivity_;
+      } else {
+        result.phoneNumberActivity_ = phoneNumberActivityBuilder_.build();
+      }
+      if (dnclBuilder_ == null) {
+        result.dncl_ = dncl_;
+      } else {
+        result.dncl_ = dnclBuilder_.build();
+      }
+      if (holdBuilder_ == null) {
+        result.hold_ = hold_;
+      } else {
+        result.hold_ = holdBuilder_.build();
+      }
+      if (manualApprovalBuilder_ == null) {
+        result.manualApproval_ = manualApproval_;
+      } else {
+        result.manualApproval_ = manualApprovalBuilder_.build();
+      }
+      result.displayLinkbackHuntgroup_ = displayLinkbackHuntgroup_;
+      if (scheduleCallbackBuilder_ == null) {
+        result.scheduleCallback_ = scheduleCallback_;
+      } else {
+        result.scheduleCallback_ = scheduleCallbackBuilder_.build();
+      }
+      if (recordingBuilder_ == null) {
+        result.recording_ = recording_;
+      } else {
+        result.recording_ = recordingBuilder_.build();
+      }
+      result.displayPhoneZipMetadata_ = displayPhoneZipMetadata_;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        phoneZipMetadataKeys_ = phoneZipMetadataKeys_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000001);
+      }
+      result.phoneZipMetadataKeys_ = phoneZipMetadataKeys_;
+      result.displayMachineDeliver_ = displayMachineDeliver_;
+      result.allowAgentIntercom_ = allowAgentIntercom_;
+      if (displayDataSettingsBuilder_ == null) {
+        result.displayDataSettings_ = displayDataSettings_;
+      } else {
+        result.displayDataSettings_ = displayDataSettingsBuilder_.build();
+      }
+      result.allowChangeHuntGroup_ = allowChangeHuntGroup_;
+      result.agentScreenRecording_ = agentScreenRecording_;
       if (inboundComplianceMetadataBuilder_ == null) {
-        if (((bitField0_ & 0x00800000) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           inboundComplianceMetadata_ = java.util.Collections.unmodifiableList(inboundComplianceMetadata_);
-          bitField0_ = (bitField0_ & ~0x00800000);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.inboundComplianceMetadata_ = inboundComplianceMetadata_;
       } else {
         result.inboundComplianceMetadata_ = inboundComplianceMetadataBuilder_.build();
       }
-      if (((bitField0_ & 0x40000000) != 0)) {
+      result.notifyQueuedCalls_ = notifyQueuedCalls_;
+      result.displayJourneyRetrievedData_ = displayJourneyRetrievedData_;
+      if (((bitField0_ & 0x00000004) != 0)) {
+        limitJourneyRetrievedData_ = limitJourneyRetrievedData_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000004);
+      }
+      result.limitJourneyRetrievedData_ = limitJourneyRetrievedData_;
+      result.initialAgentStatus_ = initialAgentStatus_;
+      result.displayWebLinks_ = displayWebLinks_;
+      result.displaySkills_ = displaySkills_;
+      if (((bitField0_ & 0x00000008) != 0)) {
         interruptPeering_ = java.util.Collections.unmodifiableList(interruptPeering_);
-        bitField0_ = (bitField0_ & ~0x40000000);
+        bitField0_ = (bitField0_ & ~0x00000008);
       }
       result.interruptPeering_ = interruptPeering_;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.HuntGroupAgentSettings result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.keypadEnabled_ = keypadEnabled_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.keypadDelimiter_ = keypadDelimiter_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.statistics_ = statisticsBuilder_ == null
-            ? statistics_
-            : statisticsBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.endCallConfirmation_ = endCallConfirmation_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.pause_ = pauseBuilder_ == null
-            ? pause_
-            : pauseBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.hqm_ = hqmBuilder_ == null
-            ? hqm_
-            : hqmBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.manualDial_ = manualDialBuilder_ == null
-            ? manualDial_
-            : manualDialBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.transfer_ = transferBuilder_ == null
-            ? transfer_
-            : transferBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
-        result.previewDial_ = previewDialBuilder_ == null
-            ? previewDial_
-            : previewDialBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
-        result.phoneNumberActivity_ = phoneNumberActivityBuilder_ == null
-            ? phoneNumberActivity_
-            : phoneNumberActivityBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000400) != 0)) {
-        result.dncl_ = dnclBuilder_ == null
-            ? dncl_
-            : dnclBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000800) != 0)) {
-        result.hold_ = holdBuilder_ == null
-            ? hold_
-            : holdBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00001000) != 0)) {
-        result.manualApproval_ = manualApprovalBuilder_ == null
-            ? manualApproval_
-            : manualApprovalBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00002000) != 0)) {
-        result.displayLinkbackHuntgroup_ = displayLinkbackHuntgroup_;
-      }
-      if (((from_bitField0_ & 0x00004000) != 0)) {
-        result.scheduleCallback_ = scheduleCallbackBuilder_ == null
-            ? scheduleCallback_
-            : scheduleCallbackBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00008000) != 0)) {
-        result.recording_ = recordingBuilder_ == null
-            ? recording_
-            : recordingBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00010000) != 0)) {
-        result.displayPhoneZipMetadata_ = displayPhoneZipMetadata_;
-      }
-      if (((from_bitField0_ & 0x00020000) != 0)) {
-        phoneZipMetadataKeys_.makeImmutable();
-        result.phoneZipMetadataKeys_ = phoneZipMetadataKeys_;
-      }
-      if (((from_bitField0_ & 0x00040000) != 0)) {
-        result.displayMachineDeliver_ = displayMachineDeliver_;
-      }
-      if (((from_bitField0_ & 0x00080000) != 0)) {
-        result.allowAgentIntercom_ = allowAgentIntercom_;
-      }
-      if (((from_bitField0_ & 0x00100000) != 0)) {
-        result.displayDataSettings_ = displayDataSettingsBuilder_ == null
-            ? displayDataSettings_
-            : displayDataSettingsBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00200000) != 0)) {
-        result.allowChangeHuntGroup_ = allowChangeHuntGroup_;
-      }
-      if (((from_bitField0_ & 0x00400000) != 0)) {
-        result.agentScreenRecording_ = agentScreenRecording_;
-      }
-      if (((from_bitField0_ & 0x01000000) != 0)) {
-        result.notifyQueuedCalls_ = notifyQueuedCalls_;
-      }
-      if (((from_bitField0_ & 0x02000000) != 0)) {
-        result.displayJourneyRetrievedData_ = displayJourneyRetrievedData_;
-      }
-      if (((from_bitField0_ & 0x04000000) != 0)) {
-        limitJourneyRetrievedData_.makeImmutable();
-        result.limitJourneyRetrievedData_ = limitJourneyRetrievedData_;
-      }
-      if (((from_bitField0_ & 0x08000000) != 0)) {
-        result.initialAgentStatus_ = initialAgentStatus_;
-      }
-      if (((from_bitField0_ & 0x10000000) != 0)) {
-        result.displayWebLinks_ = displayWebLinks_;
-      }
-      if (((from_bitField0_ & 0x20000000) != 0)) {
-        result.displaySkills_ = displaySkills_;
-      }
+      onBuilt();
+      return result;
     }
 
     @java.lang.Override
@@ -1705,7 +2037,6 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getKeypadDelimiter().isEmpty()) {
         keypadDelimiter_ = other.keypadDelimiter_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasStatistics()) {
@@ -1756,7 +2087,7 @@ private static final long serialVersionUID = 0L;
       if (!other.phoneZipMetadataKeys_.isEmpty()) {
         if (phoneZipMetadataKeys_.isEmpty()) {
           phoneZipMetadataKeys_ = other.phoneZipMetadataKeys_;
-          bitField0_ |= 0x00020000;
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensurePhoneZipMetadataKeysIsMutable();
           phoneZipMetadataKeys_.addAll(other.phoneZipMetadataKeys_);
@@ -1782,7 +2113,7 @@ private static final long serialVersionUID = 0L;
         if (!other.inboundComplianceMetadata_.isEmpty()) {
           if (inboundComplianceMetadata_.isEmpty()) {
             inboundComplianceMetadata_ = other.inboundComplianceMetadata_;
-            bitField0_ = (bitField0_ & ~0x00800000);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureInboundComplianceMetadataIsMutable();
             inboundComplianceMetadata_.addAll(other.inboundComplianceMetadata_);
@@ -1795,7 +2126,7 @@ private static final long serialVersionUID = 0L;
             inboundComplianceMetadataBuilder_.dispose();
             inboundComplianceMetadataBuilder_ = null;
             inboundComplianceMetadata_ = other.inboundComplianceMetadata_;
-            bitField0_ = (bitField0_ & ~0x00800000);
+            bitField0_ = (bitField0_ & ~0x00000002);
             inboundComplianceMetadataBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getInboundComplianceMetadataFieldBuilder() : null;
@@ -1813,7 +2144,7 @@ private static final long serialVersionUID = 0L;
       if (!other.limitJourneyRetrievedData_.isEmpty()) {
         if (limitJourneyRetrievedData_.isEmpty()) {
           limitJourneyRetrievedData_ = other.limitJourneyRetrievedData_;
-          bitField0_ |= 0x04000000;
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
           ensureLimitJourneyRetrievedDataIsMutable();
           limitJourneyRetrievedData_.addAll(other.limitJourneyRetrievedData_);
@@ -1832,14 +2163,14 @@ private static final long serialVersionUID = 0L;
       if (!other.interruptPeering_.isEmpty()) {
         if (interruptPeering_.isEmpty()) {
           interruptPeering_ = other.interruptPeering_;
-          bitField0_ = (bitField0_ & ~0x40000000);
+          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
           ensureInterruptPeeringIsMutable();
           interruptPeering_.addAll(other.interruptPeering_);
         }
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -1854,233 +2185,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.HuntGroupAgentSettings parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              keypadEnabled_ = input.readBool();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 18: {
-              keypadDelimiter_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 26: {
-              input.readMessage(
-                  getStatisticsFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            case 40: {
-              endCallConfirmation_ = input.readBool();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 40
-            case 50: {
-              input.readMessage(
-                  getPauseFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 50
-            case 58: {
-              input.readMessage(
-                  getHqmFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 58
-            case 66: {
-              input.readMessage(
-                  getManualDialFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 66
-            case 74: {
-              input.readMessage(
-                  getTransferFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000080;
-              break;
-            } // case 74
-            case 82: {
-              input.readMessage(
-                  getPreviewDialFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000100;
-              break;
-            } // case 82
-            case 90: {
-              input.readMessage(
-                  getPhoneNumberActivityFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000200;
-              break;
-            } // case 90
-            case 98: {
-              input.readMessage(
-                  getDnclFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000400;
-              break;
-            } // case 98
-            case 106: {
-              input.readMessage(
-                  getHoldFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000800;
-              break;
-            } // case 106
-            case 114: {
-              input.readMessage(
-                  getManualApprovalFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00001000;
-              break;
-            } // case 114
-            case 120: {
-              displayLinkbackHuntgroup_ = input.readBool();
-              bitField0_ |= 0x00002000;
-              break;
-            } // case 120
-            case 130: {
-              input.readMessage(
-                  getScheduleCallbackFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00004000;
-              break;
-            } // case 130
-            case 146: {
-              input.readMessage(
-                  getRecordingFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00008000;
-              break;
-            } // case 146
-            case 152: {
-              displayPhoneZipMetadata_ = input.readBool();
-              bitField0_ |= 0x00010000;
-              break;
-            } // case 152
-            case 162: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensurePhoneZipMetadataKeysIsMutable();
-              phoneZipMetadataKeys_.add(s);
-              break;
-            } // case 162
-            case 168: {
-              displayMachineDeliver_ = input.readBool();
-              bitField0_ |= 0x00040000;
-              break;
-            } // case 168
-            case 176: {
-              allowAgentIntercom_ = input.readBool();
-              bitField0_ |= 0x00080000;
-              break;
-            } // case 176
-            case 186: {
-              input.readMessage(
-                  getDisplayDataSettingsFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00100000;
-              break;
-            } // case 186
-            case 192: {
-              allowChangeHuntGroup_ = input.readBool();
-              bitField0_ |= 0x00200000;
-              break;
-            } // case 192
-            case 200: {
-              agentScreenRecording_ = input.readBool();
-              bitField0_ |= 0x00400000;
-              break;
-            } // case 200
-            case 210: {
-              com.tcn.cloud.api.api.v0alpha.ComplianceMetadata m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v0alpha.ComplianceMetadata.parser(),
-                      extensionRegistry);
-              if (inboundComplianceMetadataBuilder_ == null) {
-                ensureInboundComplianceMetadataIsMutable();
-                inboundComplianceMetadata_.add(m);
-              } else {
-                inboundComplianceMetadataBuilder_.addMessage(m);
-              }
-              break;
-            } // case 210
-            case 216: {
-              notifyQueuedCalls_ = input.readBool();
-              bitField0_ |= 0x01000000;
-              break;
-            } // case 216
-            case 224: {
-              displayJourneyRetrievedData_ = input.readBool();
-              bitField0_ |= 0x02000000;
-              break;
-            } // case 224
-            case 234: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensureLimitJourneyRetrievedDataIsMutable();
-              limitJourneyRetrievedData_.add(s);
-              break;
-            } // case 234
-            case 240: {
-              initialAgentStatus_ = input.readInt64();
-              bitField0_ |= 0x08000000;
-              break;
-            } // case 240
-            case 248: {
-              displayWebLinks_ = input.readBool();
-              bitField0_ |= 0x10000000;
-              break;
-            } // case 248
-            case 256: {
-              displaySkills_ = input.readBool();
-              bitField0_ |= 0x20000000;
-              break;
-            } // case 256
-            case 264: {
-              int tmpRaw = input.readEnum();
-              ensureInterruptPeeringIsMutable();
-              interruptPeering_.add(tmpRaw);
-              break;
-            } // case 264
-            case 266: {
-              int length = input.readRawVarint32();
-              int oldLimit = input.pushLimit(length);
-              while(input.getBytesUntilLimit() > 0) {
-                int tmpRaw = input.readEnum();
-                ensureInterruptPeeringIsMutable();
-                interruptPeering_.add(tmpRaw);
-              }
-              input.popLimit(oldLimit);
-              break;
-            } // case 266
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.HuntGroupAgentSettings) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -2100,9 +2215,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setKeypadEnabled(boolean value) {
-
+      
       keypadEnabled_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -2111,7 +2225,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearKeypadEnabled() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       keypadEnabled_ = false;
       onChanged();
       return this;
@@ -2158,9 +2272,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKeypadDelimiter(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       keypadDelimiter_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -2169,8 +2285,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearKeypadDelimiter() {
+      
       keypadDelimiter_ = getDefaultInstance().getKeypadDelimiter();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -2181,10 +2297,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKeypadDelimiterBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       keypadDelimiter_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -2197,7 +2315,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the statistics field is set.
      */
     public boolean hasStatistics() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return statisticsBuilder_ != null || statistics_ != null;
     }
     /**
      * <code>.api.v0alpha.AgentStatisticsSettings statistics = 3 [json_name = "statistics"];</code>
@@ -2219,11 +2337,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         statistics_ = value;
+        onChanged();
       } else {
         statisticsBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -2233,11 +2351,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.AgentStatisticsSettings.Builder builderForValue) {
       if (statisticsBuilder_ == null) {
         statistics_ = builderForValue.build();
+        onChanged();
       } else {
         statisticsBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -2245,38 +2363,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeStatistics(com.tcn.cloud.api.api.v0alpha.AgentStatisticsSettings value) {
       if (statisticsBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0) &&
-          statistics_ != null &&
-          statistics_ != com.tcn.cloud.api.api.v0alpha.AgentStatisticsSettings.getDefaultInstance()) {
-          getStatisticsBuilder().mergeFrom(value);
+        if (statistics_ != null) {
+          statistics_ =
+            com.tcn.cloud.api.api.v0alpha.AgentStatisticsSettings.newBuilder(statistics_).mergeFrom(value).buildPartial();
         } else {
           statistics_ = value;
         }
+        onChanged();
       } else {
         statisticsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.AgentStatisticsSettings statistics = 3 [json_name = "statistics"];</code>
      */
     public Builder clearStatistics() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      statistics_ = null;
-      if (statisticsBuilder_ != null) {
-        statisticsBuilder_.dispose();
+      if (statisticsBuilder_ == null) {
+        statistics_ = null;
+        onChanged();
+      } else {
+        statistics_ = null;
         statisticsBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.AgentStatisticsSettings statistics = 3 [json_name = "statistics"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.AgentStatisticsSettings.Builder getStatisticsBuilder() {
-      bitField0_ |= 0x00000004;
+      
       onChanged();
       return getStatisticsFieldBuilder().getBuilder();
     }
@@ -2323,9 +2441,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEndCallConfirmation(boolean value) {
-
+      
       endCallConfirmation_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -2334,7 +2451,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEndCallConfirmation() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      
       endCallConfirmation_ = false;
       onChanged();
       return this;
@@ -2348,7 +2465,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the pause field is set.
      */
     public boolean hasPause() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return pauseBuilder_ != null || pause_ != null;
     }
     /**
      * <code>.api.v0alpha.PauseSettings pause = 6 [json_name = "pause"];</code>
@@ -2370,11 +2487,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         pause_ = value;
+        onChanged();
       } else {
         pauseBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
@@ -2384,11 +2501,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.PauseSettings.Builder builderForValue) {
       if (pauseBuilder_ == null) {
         pause_ = builderForValue.build();
+        onChanged();
       } else {
         pauseBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
@@ -2396,38 +2513,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergePause(com.tcn.cloud.api.api.v0alpha.PauseSettings value) {
       if (pauseBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0) &&
-          pause_ != null &&
-          pause_ != com.tcn.cloud.api.api.v0alpha.PauseSettings.getDefaultInstance()) {
-          getPauseBuilder().mergeFrom(value);
+        if (pause_ != null) {
+          pause_ =
+            com.tcn.cloud.api.api.v0alpha.PauseSettings.newBuilder(pause_).mergeFrom(value).buildPartial();
         } else {
           pause_ = value;
         }
+        onChanged();
       } else {
         pauseBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.PauseSettings pause = 6 [json_name = "pause"];</code>
      */
     public Builder clearPause() {
-      bitField0_ = (bitField0_ & ~0x00000010);
-      pause_ = null;
-      if (pauseBuilder_ != null) {
-        pauseBuilder_.dispose();
+      if (pauseBuilder_ == null) {
+        pause_ = null;
+        onChanged();
+      } else {
+        pause_ = null;
         pauseBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.PauseSettings pause = 6 [json_name = "pause"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.PauseSettings.Builder getPauseBuilder() {
-      bitField0_ |= 0x00000010;
+      
       onChanged();
       return getPauseFieldBuilder().getBuilder();
     }
@@ -2467,7 +2584,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the hqm field is set.
      */
     public boolean hasHqm() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return hqmBuilder_ != null || hqm_ != null;
     }
     /**
      * <code>.api.v0alpha.HoldQueueMonitorSettings hqm = 7 [json_name = "hqm"];</code>
@@ -2489,11 +2606,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         hqm_ = value;
+        onChanged();
       } else {
         hqmBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+
       return this;
     }
     /**
@@ -2503,11 +2620,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.HoldQueueMonitorSettings.Builder builderForValue) {
       if (hqmBuilder_ == null) {
         hqm_ = builderForValue.build();
+        onChanged();
       } else {
         hqmBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+
       return this;
     }
     /**
@@ -2515,38 +2632,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeHqm(com.tcn.cloud.api.api.v0alpha.HoldQueueMonitorSettings value) {
       if (hqmBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0) &&
-          hqm_ != null &&
-          hqm_ != com.tcn.cloud.api.api.v0alpha.HoldQueueMonitorSettings.getDefaultInstance()) {
-          getHqmBuilder().mergeFrom(value);
+        if (hqm_ != null) {
+          hqm_ =
+            com.tcn.cloud.api.api.v0alpha.HoldQueueMonitorSettings.newBuilder(hqm_).mergeFrom(value).buildPartial();
         } else {
           hqm_ = value;
         }
+        onChanged();
       } else {
         hqmBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.HoldQueueMonitorSettings hqm = 7 [json_name = "hqm"];</code>
      */
     public Builder clearHqm() {
-      bitField0_ = (bitField0_ & ~0x00000020);
-      hqm_ = null;
-      if (hqmBuilder_ != null) {
-        hqmBuilder_.dispose();
+      if (hqmBuilder_ == null) {
+        hqm_ = null;
+        onChanged();
+      } else {
+        hqm_ = null;
         hqmBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.HoldQueueMonitorSettings hqm = 7 [json_name = "hqm"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.HoldQueueMonitorSettings.Builder getHqmBuilder() {
-      bitField0_ |= 0x00000020;
+      
       onChanged();
       return getHqmFieldBuilder().getBuilder();
     }
@@ -2586,7 +2703,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the manualDial field is set.
      */
     public boolean hasManualDial() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return manualDialBuilder_ != null || manualDial_ != null;
     }
     /**
      * <code>.api.v0alpha.ManualDialSettings manual_dial = 8 [json_name = "manualDial"];</code>
@@ -2608,11 +2725,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         manualDial_ = value;
+        onChanged();
       } else {
         manualDialBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+
       return this;
     }
     /**
@@ -2622,11 +2739,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.ManualDialSettings.Builder builderForValue) {
       if (manualDialBuilder_ == null) {
         manualDial_ = builderForValue.build();
+        onChanged();
       } else {
         manualDialBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+
       return this;
     }
     /**
@@ -2634,38 +2751,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeManualDial(com.tcn.cloud.api.api.v0alpha.ManualDialSettings value) {
       if (manualDialBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0) &&
-          manualDial_ != null &&
-          manualDial_ != com.tcn.cloud.api.api.v0alpha.ManualDialSettings.getDefaultInstance()) {
-          getManualDialBuilder().mergeFrom(value);
+        if (manualDial_ != null) {
+          manualDial_ =
+            com.tcn.cloud.api.api.v0alpha.ManualDialSettings.newBuilder(manualDial_).mergeFrom(value).buildPartial();
         } else {
           manualDial_ = value;
         }
+        onChanged();
       } else {
         manualDialBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.ManualDialSettings manual_dial = 8 [json_name = "manualDial"];</code>
      */
     public Builder clearManualDial() {
-      bitField0_ = (bitField0_ & ~0x00000040);
-      manualDial_ = null;
-      if (manualDialBuilder_ != null) {
-        manualDialBuilder_.dispose();
+      if (manualDialBuilder_ == null) {
+        manualDial_ = null;
+        onChanged();
+      } else {
+        manualDial_ = null;
         manualDialBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.ManualDialSettings manual_dial = 8 [json_name = "manualDial"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.ManualDialSettings.Builder getManualDialBuilder() {
-      bitField0_ |= 0x00000040;
+      
       onChanged();
       return getManualDialFieldBuilder().getBuilder();
     }
@@ -2705,7 +2822,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the transfer field is set.
      */
     public boolean hasTransfer() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return transferBuilder_ != null || transfer_ != null;
     }
     /**
      * <code>.api.v0alpha.TransferSettings transfer = 9 [json_name = "transfer"];</code>
@@ -2727,11 +2844,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         transfer_ = value;
+        onChanged();
       } else {
         transferBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000080;
-      onChanged();
+
       return this;
     }
     /**
@@ -2741,11 +2858,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.TransferSettings.Builder builderForValue) {
       if (transferBuilder_ == null) {
         transfer_ = builderForValue.build();
+        onChanged();
       } else {
         transferBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000080;
-      onChanged();
+
       return this;
     }
     /**
@@ -2753,38 +2870,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeTransfer(com.tcn.cloud.api.api.v0alpha.TransferSettings value) {
       if (transferBuilder_ == null) {
-        if (((bitField0_ & 0x00000080) != 0) &&
-          transfer_ != null &&
-          transfer_ != com.tcn.cloud.api.api.v0alpha.TransferSettings.getDefaultInstance()) {
-          getTransferBuilder().mergeFrom(value);
+        if (transfer_ != null) {
+          transfer_ =
+            com.tcn.cloud.api.api.v0alpha.TransferSettings.newBuilder(transfer_).mergeFrom(value).buildPartial();
         } else {
           transfer_ = value;
         }
+        onChanged();
       } else {
         transferBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000080;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.TransferSettings transfer = 9 [json_name = "transfer"];</code>
      */
     public Builder clearTransfer() {
-      bitField0_ = (bitField0_ & ~0x00000080);
-      transfer_ = null;
-      if (transferBuilder_ != null) {
-        transferBuilder_.dispose();
+      if (transferBuilder_ == null) {
+        transfer_ = null;
+        onChanged();
+      } else {
+        transfer_ = null;
         transferBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.TransferSettings transfer = 9 [json_name = "transfer"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.TransferSettings.Builder getTransferBuilder() {
-      bitField0_ |= 0x00000080;
+      
       onChanged();
       return getTransferFieldBuilder().getBuilder();
     }
@@ -2824,7 +2941,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the previewDial field is set.
      */
     public boolean hasPreviewDial() {
-      return ((bitField0_ & 0x00000100) != 0);
+      return previewDialBuilder_ != null || previewDial_ != null;
     }
     /**
      * <code>.api.v0alpha.PreviewDialSettings preview_dial = 10 [json_name = "previewDial"];</code>
@@ -2846,11 +2963,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         previewDial_ = value;
+        onChanged();
       } else {
         previewDialBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000100;
-      onChanged();
+
       return this;
     }
     /**
@@ -2860,11 +2977,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.PreviewDialSettings.Builder builderForValue) {
       if (previewDialBuilder_ == null) {
         previewDial_ = builderForValue.build();
+        onChanged();
       } else {
         previewDialBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000100;
-      onChanged();
+
       return this;
     }
     /**
@@ -2872,38 +2989,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergePreviewDial(com.tcn.cloud.api.api.v0alpha.PreviewDialSettings value) {
       if (previewDialBuilder_ == null) {
-        if (((bitField0_ & 0x00000100) != 0) &&
-          previewDial_ != null &&
-          previewDial_ != com.tcn.cloud.api.api.v0alpha.PreviewDialSettings.getDefaultInstance()) {
-          getPreviewDialBuilder().mergeFrom(value);
+        if (previewDial_ != null) {
+          previewDial_ =
+            com.tcn.cloud.api.api.v0alpha.PreviewDialSettings.newBuilder(previewDial_).mergeFrom(value).buildPartial();
         } else {
           previewDial_ = value;
         }
+        onChanged();
       } else {
         previewDialBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000100;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.PreviewDialSettings preview_dial = 10 [json_name = "previewDial"];</code>
      */
     public Builder clearPreviewDial() {
-      bitField0_ = (bitField0_ & ~0x00000100);
-      previewDial_ = null;
-      if (previewDialBuilder_ != null) {
-        previewDialBuilder_.dispose();
+      if (previewDialBuilder_ == null) {
+        previewDial_ = null;
+        onChanged();
+      } else {
+        previewDial_ = null;
         previewDialBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.PreviewDialSettings preview_dial = 10 [json_name = "previewDial"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.PreviewDialSettings.Builder getPreviewDialBuilder() {
-      bitField0_ |= 0x00000100;
+      
       onChanged();
       return getPreviewDialFieldBuilder().getBuilder();
     }
@@ -2943,7 +3060,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the phoneNumberActivity field is set.
      */
     public boolean hasPhoneNumberActivity() {
-      return ((bitField0_ & 0x00000200) != 0);
+      return phoneNumberActivityBuilder_ != null || phoneNumberActivity_ != null;
     }
     /**
      * <code>.api.v0alpha.PhoneNumberActivitySettings phone_number_activity = 11 [json_name = "phoneNumberActivity"];</code>
@@ -2965,11 +3082,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         phoneNumberActivity_ = value;
+        onChanged();
       } else {
         phoneNumberActivityBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000200;
-      onChanged();
+
       return this;
     }
     /**
@@ -2979,11 +3096,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.PhoneNumberActivitySettings.Builder builderForValue) {
       if (phoneNumberActivityBuilder_ == null) {
         phoneNumberActivity_ = builderForValue.build();
+        onChanged();
       } else {
         phoneNumberActivityBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000200;
-      onChanged();
+
       return this;
     }
     /**
@@ -2991,38 +3108,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergePhoneNumberActivity(com.tcn.cloud.api.api.v0alpha.PhoneNumberActivitySettings value) {
       if (phoneNumberActivityBuilder_ == null) {
-        if (((bitField0_ & 0x00000200) != 0) &&
-          phoneNumberActivity_ != null &&
-          phoneNumberActivity_ != com.tcn.cloud.api.api.v0alpha.PhoneNumberActivitySettings.getDefaultInstance()) {
-          getPhoneNumberActivityBuilder().mergeFrom(value);
+        if (phoneNumberActivity_ != null) {
+          phoneNumberActivity_ =
+            com.tcn.cloud.api.api.v0alpha.PhoneNumberActivitySettings.newBuilder(phoneNumberActivity_).mergeFrom(value).buildPartial();
         } else {
           phoneNumberActivity_ = value;
         }
+        onChanged();
       } else {
         phoneNumberActivityBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000200;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.PhoneNumberActivitySettings phone_number_activity = 11 [json_name = "phoneNumberActivity"];</code>
      */
     public Builder clearPhoneNumberActivity() {
-      bitField0_ = (bitField0_ & ~0x00000200);
-      phoneNumberActivity_ = null;
-      if (phoneNumberActivityBuilder_ != null) {
-        phoneNumberActivityBuilder_.dispose();
+      if (phoneNumberActivityBuilder_ == null) {
+        phoneNumberActivity_ = null;
+        onChanged();
+      } else {
+        phoneNumberActivity_ = null;
         phoneNumberActivityBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.PhoneNumberActivitySettings phone_number_activity = 11 [json_name = "phoneNumberActivity"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.PhoneNumberActivitySettings.Builder getPhoneNumberActivityBuilder() {
-      bitField0_ |= 0x00000200;
+      
       onChanged();
       return getPhoneNumberActivityFieldBuilder().getBuilder();
     }
@@ -3062,7 +3179,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dncl field is set.
      */
     public boolean hasDncl() {
-      return ((bitField0_ & 0x00000400) != 0);
+      return dnclBuilder_ != null || dncl_ != null;
     }
     /**
      * <code>.api.v0alpha.DnclSettings dncl = 12 [json_name = "dncl"];</code>
@@ -3084,11 +3201,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dncl_ = value;
+        onChanged();
       } else {
         dnclBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000400;
-      onChanged();
+
       return this;
     }
     /**
@@ -3098,11 +3215,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.DnclSettings.Builder builderForValue) {
       if (dnclBuilder_ == null) {
         dncl_ = builderForValue.build();
+        onChanged();
       } else {
         dnclBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000400;
-      onChanged();
+
       return this;
     }
     /**
@@ -3110,38 +3227,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDncl(com.tcn.cloud.api.api.v0alpha.DnclSettings value) {
       if (dnclBuilder_ == null) {
-        if (((bitField0_ & 0x00000400) != 0) &&
-          dncl_ != null &&
-          dncl_ != com.tcn.cloud.api.api.v0alpha.DnclSettings.getDefaultInstance()) {
-          getDnclBuilder().mergeFrom(value);
+        if (dncl_ != null) {
+          dncl_ =
+            com.tcn.cloud.api.api.v0alpha.DnclSettings.newBuilder(dncl_).mergeFrom(value).buildPartial();
         } else {
           dncl_ = value;
         }
+        onChanged();
       } else {
         dnclBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000400;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.DnclSettings dncl = 12 [json_name = "dncl"];</code>
      */
     public Builder clearDncl() {
-      bitField0_ = (bitField0_ & ~0x00000400);
-      dncl_ = null;
-      if (dnclBuilder_ != null) {
-        dnclBuilder_.dispose();
+      if (dnclBuilder_ == null) {
+        dncl_ = null;
+        onChanged();
+      } else {
+        dncl_ = null;
         dnclBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.DnclSettings dncl = 12 [json_name = "dncl"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.DnclSettings.Builder getDnclBuilder() {
-      bitField0_ |= 0x00000400;
+      
       onChanged();
       return getDnclFieldBuilder().getBuilder();
     }
@@ -3181,7 +3298,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the hold field is set.
      */
     public boolean hasHold() {
-      return ((bitField0_ & 0x00000800) != 0);
+      return holdBuilder_ != null || hold_ != null;
     }
     /**
      * <code>.api.v0alpha.AgentHoldSettings hold = 13 [json_name = "hold"];</code>
@@ -3203,11 +3320,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         hold_ = value;
+        onChanged();
       } else {
         holdBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000800;
-      onChanged();
+
       return this;
     }
     /**
@@ -3217,11 +3334,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.AgentHoldSettings.Builder builderForValue) {
       if (holdBuilder_ == null) {
         hold_ = builderForValue.build();
+        onChanged();
       } else {
         holdBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000800;
-      onChanged();
+
       return this;
     }
     /**
@@ -3229,38 +3346,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeHold(com.tcn.cloud.api.api.v0alpha.AgentHoldSettings value) {
       if (holdBuilder_ == null) {
-        if (((bitField0_ & 0x00000800) != 0) &&
-          hold_ != null &&
-          hold_ != com.tcn.cloud.api.api.v0alpha.AgentHoldSettings.getDefaultInstance()) {
-          getHoldBuilder().mergeFrom(value);
+        if (hold_ != null) {
+          hold_ =
+            com.tcn.cloud.api.api.v0alpha.AgentHoldSettings.newBuilder(hold_).mergeFrom(value).buildPartial();
         } else {
           hold_ = value;
         }
+        onChanged();
       } else {
         holdBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000800;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.AgentHoldSettings hold = 13 [json_name = "hold"];</code>
      */
     public Builder clearHold() {
-      bitField0_ = (bitField0_ & ~0x00000800);
-      hold_ = null;
-      if (holdBuilder_ != null) {
-        holdBuilder_.dispose();
+      if (holdBuilder_ == null) {
+        hold_ = null;
+        onChanged();
+      } else {
+        hold_ = null;
         holdBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.AgentHoldSettings hold = 13 [json_name = "hold"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.AgentHoldSettings.Builder getHoldBuilder() {
-      bitField0_ |= 0x00000800;
+      
       onChanged();
       return getHoldFieldBuilder().getBuilder();
     }
@@ -3300,7 +3417,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the manualApproval field is set.
      */
     public boolean hasManualApproval() {
-      return ((bitField0_ & 0x00001000) != 0);
+      return manualApprovalBuilder_ != null || manualApproval_ != null;
     }
     /**
      * <code>.api.v0alpha.ManualApprovalSettings manual_approval = 14 [json_name = "manualApproval"];</code>
@@ -3322,11 +3439,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         manualApproval_ = value;
+        onChanged();
       } else {
         manualApprovalBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00001000;
-      onChanged();
+
       return this;
     }
     /**
@@ -3336,11 +3453,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.ManualApprovalSettings.Builder builderForValue) {
       if (manualApprovalBuilder_ == null) {
         manualApproval_ = builderForValue.build();
+        onChanged();
       } else {
         manualApprovalBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00001000;
-      onChanged();
+
       return this;
     }
     /**
@@ -3348,38 +3465,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeManualApproval(com.tcn.cloud.api.api.v0alpha.ManualApprovalSettings value) {
       if (manualApprovalBuilder_ == null) {
-        if (((bitField0_ & 0x00001000) != 0) &&
-          manualApproval_ != null &&
-          manualApproval_ != com.tcn.cloud.api.api.v0alpha.ManualApprovalSettings.getDefaultInstance()) {
-          getManualApprovalBuilder().mergeFrom(value);
+        if (manualApproval_ != null) {
+          manualApproval_ =
+            com.tcn.cloud.api.api.v0alpha.ManualApprovalSettings.newBuilder(manualApproval_).mergeFrom(value).buildPartial();
         } else {
           manualApproval_ = value;
         }
+        onChanged();
       } else {
         manualApprovalBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00001000;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.ManualApprovalSettings manual_approval = 14 [json_name = "manualApproval"];</code>
      */
     public Builder clearManualApproval() {
-      bitField0_ = (bitField0_ & ~0x00001000);
-      manualApproval_ = null;
-      if (manualApprovalBuilder_ != null) {
-        manualApprovalBuilder_.dispose();
+      if (manualApprovalBuilder_ == null) {
+        manualApproval_ = null;
+        onChanged();
+      } else {
+        manualApproval_ = null;
         manualApprovalBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.ManualApprovalSettings manual_approval = 14 [json_name = "manualApproval"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.ManualApprovalSettings.Builder getManualApprovalBuilder() {
-      bitField0_ |= 0x00001000;
+      
       onChanged();
       return getManualApprovalFieldBuilder().getBuilder();
     }
@@ -3426,9 +3543,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDisplayLinkbackHuntgroup(boolean value) {
-
+      
       displayLinkbackHuntgroup_ = value;
-      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -3437,7 +3553,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayLinkbackHuntgroup() {
-      bitField0_ = (bitField0_ & ~0x00002000);
+      
       displayLinkbackHuntgroup_ = false;
       onChanged();
       return this;
@@ -3451,7 +3567,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the scheduleCallback field is set.
      */
     public boolean hasScheduleCallback() {
-      return ((bitField0_ & 0x00004000) != 0);
+      return scheduleCallbackBuilder_ != null || scheduleCallback_ != null;
     }
     /**
      * <code>.api.v0alpha.ScheduleCallBackSettings schedule_callback = 16 [json_name = "scheduleCallback"];</code>
@@ -3473,11 +3589,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         scheduleCallback_ = value;
+        onChanged();
       } else {
         scheduleCallbackBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00004000;
-      onChanged();
+
       return this;
     }
     /**
@@ -3487,11 +3603,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.ScheduleCallBackSettings.Builder builderForValue) {
       if (scheduleCallbackBuilder_ == null) {
         scheduleCallback_ = builderForValue.build();
+        onChanged();
       } else {
         scheduleCallbackBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00004000;
-      onChanged();
+
       return this;
     }
     /**
@@ -3499,38 +3615,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeScheduleCallback(com.tcn.cloud.api.api.v0alpha.ScheduleCallBackSettings value) {
       if (scheduleCallbackBuilder_ == null) {
-        if (((bitField0_ & 0x00004000) != 0) &&
-          scheduleCallback_ != null &&
-          scheduleCallback_ != com.tcn.cloud.api.api.v0alpha.ScheduleCallBackSettings.getDefaultInstance()) {
-          getScheduleCallbackBuilder().mergeFrom(value);
+        if (scheduleCallback_ != null) {
+          scheduleCallback_ =
+            com.tcn.cloud.api.api.v0alpha.ScheduleCallBackSettings.newBuilder(scheduleCallback_).mergeFrom(value).buildPartial();
         } else {
           scheduleCallback_ = value;
         }
+        onChanged();
       } else {
         scheduleCallbackBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00004000;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.ScheduleCallBackSettings schedule_callback = 16 [json_name = "scheduleCallback"];</code>
      */
     public Builder clearScheduleCallback() {
-      bitField0_ = (bitField0_ & ~0x00004000);
-      scheduleCallback_ = null;
-      if (scheduleCallbackBuilder_ != null) {
-        scheduleCallbackBuilder_.dispose();
+      if (scheduleCallbackBuilder_ == null) {
+        scheduleCallback_ = null;
+        onChanged();
+      } else {
+        scheduleCallback_ = null;
         scheduleCallbackBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.ScheduleCallBackSettings schedule_callback = 16 [json_name = "scheduleCallback"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.ScheduleCallBackSettings.Builder getScheduleCallbackBuilder() {
-      bitField0_ |= 0x00004000;
+      
       onChanged();
       return getScheduleCallbackFieldBuilder().getBuilder();
     }
@@ -3570,7 +3686,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the recording field is set.
      */
     public boolean hasRecording() {
-      return ((bitField0_ & 0x00008000) != 0);
+      return recordingBuilder_ != null || recording_ != null;
     }
     /**
      * <code>.api.v0alpha.RecordingSettings recording = 18 [json_name = "recording"];</code>
@@ -3592,11 +3708,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         recording_ = value;
+        onChanged();
       } else {
         recordingBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00008000;
-      onChanged();
+
       return this;
     }
     /**
@@ -3606,11 +3722,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.RecordingSettings.Builder builderForValue) {
       if (recordingBuilder_ == null) {
         recording_ = builderForValue.build();
+        onChanged();
       } else {
         recordingBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00008000;
-      onChanged();
+
       return this;
     }
     /**
@@ -3618,38 +3734,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeRecording(com.tcn.cloud.api.api.v0alpha.RecordingSettings value) {
       if (recordingBuilder_ == null) {
-        if (((bitField0_ & 0x00008000) != 0) &&
-          recording_ != null &&
-          recording_ != com.tcn.cloud.api.api.v0alpha.RecordingSettings.getDefaultInstance()) {
-          getRecordingBuilder().mergeFrom(value);
+        if (recording_ != null) {
+          recording_ =
+            com.tcn.cloud.api.api.v0alpha.RecordingSettings.newBuilder(recording_).mergeFrom(value).buildPartial();
         } else {
           recording_ = value;
         }
+        onChanged();
       } else {
         recordingBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00008000;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.RecordingSettings recording = 18 [json_name = "recording"];</code>
      */
     public Builder clearRecording() {
-      bitField0_ = (bitField0_ & ~0x00008000);
-      recording_ = null;
-      if (recordingBuilder_ != null) {
-        recordingBuilder_.dispose();
+      if (recordingBuilder_ == null) {
+        recording_ = null;
+        onChanged();
+      } else {
+        recording_ = null;
         recordingBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.RecordingSettings recording = 18 [json_name = "recording"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.RecordingSettings.Builder getRecordingBuilder() {
-      bitField0_ |= 0x00008000;
+      
       onChanged();
       return getRecordingFieldBuilder().getBuilder();
     }
@@ -3696,9 +3812,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDisplayPhoneZipMetadata(boolean value) {
-
+      
       displayPhoneZipMetadata_ = value;
-      bitField0_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -3707,19 +3822,18 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayPhoneZipMetadata() {
-      bitField0_ = (bitField0_ & ~0x00010000);
+      
       displayPhoneZipMetadata_ = false;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringArrayList phoneZipMetadataKeys_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.LazyStringList phoneZipMetadataKeys_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensurePhoneZipMetadataKeysIsMutable() {
-      if (!phoneZipMetadataKeys_.isModifiable()) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         phoneZipMetadataKeys_ = new com.google.protobuf.LazyStringArrayList(phoneZipMetadataKeys_);
-      }
-      bitField0_ |= 0x00020000;
+        bitField0_ |= 0x00000001;
+       }
     }
     /**
      * <code>repeated string phone_zip_metadata_keys = 20 [json_name = "phoneZipMetadataKeys"];</code>
@@ -3727,8 +3841,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getPhoneZipMetadataKeysList() {
-      phoneZipMetadataKeys_.makeImmutable();
-      return phoneZipMetadataKeys_;
+      return phoneZipMetadataKeys_.getUnmodifiableView();
     }
     /**
      * <code>repeated string phone_zip_metadata_keys = 20 [json_name = "phoneZipMetadataKeys"];</code>
@@ -3762,10 +3875,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPhoneZipMetadataKeys(
         int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensurePhoneZipMetadataKeysIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensurePhoneZipMetadataKeysIsMutable();
       phoneZipMetadataKeys_.set(index, value);
-      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -3776,10 +3890,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addPhoneZipMetadataKeys(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensurePhoneZipMetadataKeysIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensurePhoneZipMetadataKeysIsMutable();
       phoneZipMetadataKeys_.add(value);
-      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -3793,7 +3908,6 @@ private static final long serialVersionUID = 0L;
       ensurePhoneZipMetadataKeysIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, phoneZipMetadataKeys_);
-      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -3802,9 +3916,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPhoneZipMetadataKeys() {
-      phoneZipMetadataKeys_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00020000);;
+      phoneZipMetadataKeys_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -3815,11 +3928,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addPhoneZipMetadataKeysBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
       ensurePhoneZipMetadataKeysIsMutable();
       phoneZipMetadataKeys_.add(value);
-      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -3839,9 +3953,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDisplayMachineDeliver(boolean value) {
-
+      
       displayMachineDeliver_ = value;
-      bitField0_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -3850,7 +3963,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayMachineDeliver() {
-      bitField0_ = (bitField0_ & ~0x00040000);
+      
       displayMachineDeliver_ = false;
       onChanged();
       return this;
@@ -3871,9 +3984,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAllowAgentIntercom(boolean value) {
-
+      
       allowAgentIntercom_ = value;
-      bitField0_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -3882,7 +3994,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllowAgentIntercom() {
-      bitField0_ = (bitField0_ & ~0x00080000);
+      
       allowAgentIntercom_ = false;
       onChanged();
       return this;
@@ -3896,7 +4008,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the displayDataSettings field is set.
      */
     public boolean hasDisplayDataSettings() {
-      return ((bitField0_ & 0x00100000) != 0);
+      return displayDataSettingsBuilder_ != null || displayDataSettings_ != null;
     }
     /**
      * <code>.api.v0alpha.DisplayDataSettings display_data_settings = 23 [json_name = "displayDataSettings"];</code>
@@ -3918,11 +4030,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         displayDataSettings_ = value;
+        onChanged();
       } else {
         displayDataSettingsBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00100000;
-      onChanged();
+
       return this;
     }
     /**
@@ -3932,11 +4044,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.DisplayDataSettings.Builder builderForValue) {
       if (displayDataSettingsBuilder_ == null) {
         displayDataSettings_ = builderForValue.build();
+        onChanged();
       } else {
         displayDataSettingsBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00100000;
-      onChanged();
+
       return this;
     }
     /**
@@ -3944,38 +4056,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDisplayDataSettings(com.tcn.cloud.api.api.v0alpha.DisplayDataSettings value) {
       if (displayDataSettingsBuilder_ == null) {
-        if (((bitField0_ & 0x00100000) != 0) &&
-          displayDataSettings_ != null &&
-          displayDataSettings_ != com.tcn.cloud.api.api.v0alpha.DisplayDataSettings.getDefaultInstance()) {
-          getDisplayDataSettingsBuilder().mergeFrom(value);
+        if (displayDataSettings_ != null) {
+          displayDataSettings_ =
+            com.tcn.cloud.api.api.v0alpha.DisplayDataSettings.newBuilder(displayDataSettings_).mergeFrom(value).buildPartial();
         } else {
           displayDataSettings_ = value;
         }
+        onChanged();
       } else {
         displayDataSettingsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00100000;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.DisplayDataSettings display_data_settings = 23 [json_name = "displayDataSettings"];</code>
      */
     public Builder clearDisplayDataSettings() {
-      bitField0_ = (bitField0_ & ~0x00100000);
-      displayDataSettings_ = null;
-      if (displayDataSettingsBuilder_ != null) {
-        displayDataSettingsBuilder_.dispose();
+      if (displayDataSettingsBuilder_ == null) {
+        displayDataSettings_ = null;
+        onChanged();
+      } else {
+        displayDataSettings_ = null;
         displayDataSettingsBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.DisplayDataSettings display_data_settings = 23 [json_name = "displayDataSettings"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.DisplayDataSettings.Builder getDisplayDataSettingsBuilder() {
-      bitField0_ |= 0x00100000;
+      
       onChanged();
       return getDisplayDataSettingsFieldBuilder().getBuilder();
     }
@@ -4022,9 +4134,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAllowChangeHuntGroup(boolean value) {
-
+      
       allowChangeHuntGroup_ = value;
-      bitField0_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -4033,7 +4144,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllowChangeHuntGroup() {
-      bitField0_ = (bitField0_ & ~0x00200000);
+      
       allowChangeHuntGroup_ = false;
       onChanged();
       return this;
@@ -4054,9 +4165,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAgentScreenRecording(boolean value) {
-
+      
       agentScreenRecording_ = value;
-      bitField0_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -4065,7 +4175,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAgentScreenRecording() {
-      bitField0_ = (bitField0_ & ~0x00400000);
+      
       agentScreenRecording_ = false;
       onChanged();
       return this;
@@ -4074,9 +4184,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v0alpha.ComplianceMetadata> inboundComplianceMetadata_ =
       java.util.Collections.emptyList();
     private void ensureInboundComplianceMetadataIsMutable() {
-      if (!((bitField0_ & 0x00800000) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         inboundComplianceMetadata_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.ComplianceMetadata>(inboundComplianceMetadata_);
-        bitField0_ |= 0x00800000;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -4226,7 +4336,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearInboundComplianceMetadata() {
       if (inboundComplianceMetadataBuilder_ == null) {
         inboundComplianceMetadata_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00800000);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         inboundComplianceMetadataBuilder_.clear();
@@ -4303,7 +4413,7 @@ private static final long serialVersionUID = 0L;
         inboundComplianceMetadataBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v0alpha.ComplianceMetadata, com.tcn.cloud.api.api.v0alpha.ComplianceMetadata.Builder, com.tcn.cloud.api.api.v0alpha.ComplianceMetadataOrBuilder>(
                 inboundComplianceMetadata_,
-                ((bitField0_ & 0x00800000) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         inboundComplianceMetadata_ = null;
@@ -4326,9 +4436,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setNotifyQueuedCalls(boolean value) {
-
+      
       notifyQueuedCalls_ = value;
-      bitField0_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -4337,7 +4446,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearNotifyQueuedCalls() {
-      bitField0_ = (bitField0_ & ~0x01000000);
+      
       notifyQueuedCalls_ = false;
       onChanged();
       return this;
@@ -4358,9 +4467,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDisplayJourneyRetrievedData(boolean value) {
-
+      
       displayJourneyRetrievedData_ = value;
-      bitField0_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -4369,19 +4477,18 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayJourneyRetrievedData() {
-      bitField0_ = (bitField0_ & ~0x02000000);
+      
       displayJourneyRetrievedData_ = false;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringArrayList limitJourneyRetrievedData_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.LazyStringList limitJourneyRetrievedData_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureLimitJourneyRetrievedDataIsMutable() {
-      if (!limitJourneyRetrievedData_.isModifiable()) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         limitJourneyRetrievedData_ = new com.google.protobuf.LazyStringArrayList(limitJourneyRetrievedData_);
-      }
-      bitField0_ |= 0x04000000;
+        bitField0_ |= 0x00000004;
+       }
     }
     /**
      * <code>repeated string limit_journey_retrieved_data = 29 [json_name = "limitJourneyRetrievedData"];</code>
@@ -4389,8 +4496,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getLimitJourneyRetrievedDataList() {
-      limitJourneyRetrievedData_.makeImmutable();
-      return limitJourneyRetrievedData_;
+      return limitJourneyRetrievedData_.getUnmodifiableView();
     }
     /**
      * <code>repeated string limit_journey_retrieved_data = 29 [json_name = "limitJourneyRetrievedData"];</code>
@@ -4424,10 +4530,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLimitJourneyRetrievedData(
         int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureLimitJourneyRetrievedDataIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureLimitJourneyRetrievedDataIsMutable();
       limitJourneyRetrievedData_.set(index, value);
-      bitField0_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -4438,10 +4545,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addLimitJourneyRetrievedData(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureLimitJourneyRetrievedDataIsMutable();
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureLimitJourneyRetrievedDataIsMutable();
       limitJourneyRetrievedData_.add(value);
-      bitField0_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -4455,7 +4563,6 @@ private static final long serialVersionUID = 0L;
       ensureLimitJourneyRetrievedDataIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, limitJourneyRetrievedData_);
-      bitField0_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -4464,9 +4571,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLimitJourneyRetrievedData() {
-      limitJourneyRetrievedData_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x04000000);;
+      limitJourneyRetrievedData_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -4477,11 +4583,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addLimitJourneyRetrievedDataBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
       ensureLimitJourneyRetrievedDataIsMutable();
       limitJourneyRetrievedData_.add(value);
-      bitField0_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -4509,9 +4616,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setInitialAgentStatus(long value) {
-
+      
       initialAgentStatus_ = value;
-      bitField0_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -4524,7 +4630,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearInitialAgentStatus() {
-      bitField0_ = (bitField0_ & ~0x08000000);
+      
       initialAgentStatus_ = 0L;
       onChanged();
       return this;
@@ -4553,9 +4659,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDisplayWebLinks(boolean value) {
-
+      
       displayWebLinks_ = value;
-      bitField0_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -4568,7 +4673,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayWebLinks() {
-      bitField0_ = (bitField0_ & ~0x10000000);
+      
       displayWebLinks_ = false;
       onChanged();
       return this;
@@ -4597,9 +4702,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDisplaySkills(boolean value) {
-
+      
       displaySkills_ = value;
-      bitField0_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -4612,7 +4716,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplaySkills() {
-      bitField0_ = (bitField0_ & ~0x20000000);
+      
       displaySkills_ = false;
       onChanged();
       return this;
@@ -4621,9 +4725,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> interruptPeering_ =
       java.util.Collections.emptyList();
     private void ensureInterruptPeeringIsMutable() {
-      if (!((bitField0_ & 0x40000000) != 0)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         interruptPeering_ = new java.util.ArrayList<java.lang.Integer>(interruptPeering_);
-        bitField0_ |= 0x40000000;
+        bitField0_ |= 0x00000008;
       }
     }
     /**
@@ -4727,7 +4831,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearInterruptPeering() {
       interruptPeering_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x40000000);
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -4761,8 +4865,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .api.commons.InterruptedPeeringStatus interrupt_peering = 33 [json_name = "interruptPeering"];</code>
-     * @param index The index to set the value at.
-     * @param value The enum numeric value on the wire for interruptPeering to set.
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of interruptPeering at the given index.
      * @return This builder for chaining.
      */
     public Builder setInterruptPeeringValue(
@@ -4838,18 +4942,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new HuntGroupAgentSettings(input, extensionRegistry);
     }
   };
 

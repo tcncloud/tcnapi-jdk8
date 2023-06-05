@@ -32,6 +32,107 @@ private static final long serialVersionUID = 0L;
     return new UpdateLicensesRequest();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private UpdateLicensesRequest(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            orgId_ = s;
+            break;
+          }
+          case 16: {
+            int rawValue = input.readEnum();
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              addedLicenses_ = new java.util.ArrayList<java.lang.Integer>();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            addedLicenses_.add(rawValue);
+            break;
+          }
+          case 18: {
+            int length = input.readRawVarint32();
+            int oldLimit = input.pushLimit(length);
+            while(input.getBytesUntilLimit() > 0) {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                addedLicenses_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              addedLicenses_.add(rawValue);
+            }
+            input.popLimit(oldLimit);
+            break;
+          }
+          case 24: {
+            int rawValue = input.readEnum();
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              revokedLicenses_ = new java.util.ArrayList<java.lang.Integer>();
+              mutable_bitField0_ |= 0x00000002;
+            }
+            revokedLicenses_.add(rawValue);
+            break;
+          }
+          case 26: {
+            int length = input.readRawVarint32();
+            int oldLimit = input.pushLimit(length);
+            while(input.getBytesUntilLimit() > 0) {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                revokedLicenses_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              revokedLicenses_.add(rawValue);
+            }
+            input.popLimit(oldLimit);
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        addedLicenses_ = java.util.Collections.unmodifiableList(addedLicenses_);
+      }
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        revokedLicenses_ = java.util.Collections.unmodifiableList(revokedLicenses_);
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.org.PermissionsProto.internal_static_api_v1alpha1_org_UpdateLicensesRequest_descriptor;
@@ -46,8 +147,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ORG_ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object orgId_ = "";
+  private volatile java.lang.Object orgId_;
   /**
    * <pre>
    * Org ID to update the assigned licenses for.
@@ -93,14 +193,14 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ADDED_LICENSES_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> addedLicenses_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, com.tcn.cloud.api.api.commons.auth.Permission> addedLicenses_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.tcn.cloud.api.api.commons.auth.Permission>() {
             public com.tcn.cloud.api.api.commons.auth.Permission convert(java.lang.Integer from) {
-              com.tcn.cloud.api.api.commons.auth.Permission result = com.tcn.cloud.api.api.commons.auth.Permission.forNumber(from);
+              @SuppressWarnings("deprecation")
+              com.tcn.cloud.api.api.commons.auth.Permission result = com.tcn.cloud.api.api.commons.auth.Permission.valueOf(from);
               return result == null ? com.tcn.cloud.api.api.commons.auth.Permission.UNRECOGNIZED : result;
             }
           };
@@ -171,14 +271,14 @@ private static final long serialVersionUID = 0L;
   private int addedLicensesMemoizedSerializedSize;
 
   public static final int REVOKED_LICENSES_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> revokedLicenses_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, com.tcn.cloud.api.api.commons.auth.Permission> revokedLicenses_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.tcn.cloud.api.api.commons.auth.Permission>() {
             public com.tcn.cloud.api.api.commons.auth.Permission convert(java.lang.Integer from) {
-              com.tcn.cloud.api.api.commons.auth.Permission result = com.tcn.cloud.api.api.commons.auth.Permission.forNumber(from);
+              @SuppressWarnings("deprecation")
+              com.tcn.cloud.api.api.commons.auth.Permission result = com.tcn.cloud.api.api.commons.auth.Permission.valueOf(from);
               return result == null ? com.tcn.cloud.api.api.commons.auth.Permission.UNRECOGNIZED : result;
             }
           };
@@ -263,7 +363,7 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     getSerializedSize();
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
+    if (!getOrgIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orgId_);
     }
     if (getAddedLicensesList().size() > 0) {
@@ -280,7 +380,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < revokedLicenses_.size(); i++) {
       output.writeEnumNoTag(revokedLicenses_.get(i));
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -289,7 +389,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
+    if (!getOrgIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orgId_);
     }
     {
@@ -316,7 +416,7 @@ private static final long serialVersionUID = 0L;
           .computeUInt32SizeNoTag(dataSize);
       }revokedLicensesMemoizedSerializedSize = dataSize;
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -335,7 +435,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getOrgId())) return false;
     if (!addedLicenses_.equals(other.addedLicenses_)) return false;
     if (!revokedLicenses_.equals(other.revokedLicenses_)) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -356,7 +456,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + REVOKED_LICENSES_FIELD_NUMBER;
       hash = (53 * hash) + revokedLicenses_.hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -405,13 +505,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.org.UpdateLicensesRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.org.UpdateLicensesRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -479,23 +577,28 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.UpdateLicensesRequest.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       orgId_ = "";
+
       addedLicenses_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000001);
       revokedLicenses_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -522,30 +625,20 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.UpdateLicensesRequest buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.UpdateLicensesRequest result = new com.tcn.cloud.api.api.v1alpha1.org.UpdateLicensesRequest(this);
-      buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      onBuilt();
-      return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.org.UpdateLicensesRequest result) {
-      if (((bitField0_ & 0x00000002) != 0)) {
+      int from_bitField0_ = bitField0_;
+      result.orgId_ = orgId_;
+      if (((bitField0_ & 0x00000001) != 0)) {
         addedLicenses_ = java.util.Collections.unmodifiableList(addedLicenses_);
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.addedLicenses_ = addedLicenses_;
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         revokedLicenses_ = java.util.Collections.unmodifiableList(revokedLicenses_);
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
       }
       result.revokedLicenses_ = revokedLicenses_;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.UpdateLicensesRequest result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.orgId_ = orgId_;
-      }
+      onBuilt();
+      return result;
     }
 
     @java.lang.Override
@@ -594,13 +687,12 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v1alpha1.org.UpdateLicensesRequest.getDefaultInstance()) return this;
       if (!other.getOrgId().isEmpty()) {
         orgId_ = other.orgId_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.addedLicenses_.isEmpty()) {
         if (addedLicenses_.isEmpty()) {
           addedLicenses_ = other.addedLicenses_;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensureAddedLicensesIsMutable();
           addedLicenses_.addAll(other.addedLicenses_);
@@ -610,14 +702,14 @@ private static final long serialVersionUID = 0L;
       if (!other.revokedLicenses_.isEmpty()) {
         if (revokedLicenses_.isEmpty()) {
           revokedLicenses_ = other.revokedLicenses_;
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           ensureRevokedLicensesIsMutable();
           revokedLicenses_.addAll(other.revokedLicenses_);
         }
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -632,69 +724,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.org.UpdateLicensesRequest parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              orgId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 16: {
-              int tmpRaw = input.readEnum();
-              ensureAddedLicensesIsMutable();
-              addedLicenses_.add(tmpRaw);
-              break;
-            } // case 16
-            case 18: {
-              int length = input.readRawVarint32();
-              int oldLimit = input.pushLimit(length);
-              while(input.getBytesUntilLimit() > 0) {
-                int tmpRaw = input.readEnum();
-                ensureAddedLicensesIsMutable();
-                addedLicenses_.add(tmpRaw);
-              }
-              input.popLimit(oldLimit);
-              break;
-            } // case 18
-            case 24: {
-              int tmpRaw = input.readEnum();
-              ensureRevokedLicensesIsMutable();
-              revokedLicenses_.add(tmpRaw);
-              break;
-            } // case 24
-            case 26: {
-              int length = input.readRawVarint32();
-              int oldLimit = input.pushLimit(length);
-              while(input.getBytesUntilLimit() > 0) {
-                int tmpRaw = input.readEnum();
-                ensureRevokedLicensesIsMutable();
-                revokedLicenses_.add(tmpRaw);
-              }
-              input.popLimit(oldLimit);
-              break;
-            } // case 26
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.org.UpdateLicensesRequest) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -752,9 +792,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOrgId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       orgId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -767,8 +809,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOrgId() {
+      
       orgId_ = getDefaultInstance().getOrgId();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -783,10 +825,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOrgIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       orgId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -794,9 +838,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> addedLicenses_ =
       java.util.Collections.emptyList();
     private void ensureAddedLicensesIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         addedLicenses_ = new java.util.ArrayList<java.lang.Integer>(addedLicenses_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
       }
     }
     /**
@@ -900,7 +944,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearAddedLicenses() {
       addedLicenses_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -934,8 +978,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .api.commons.auth.Permission added_licenses = 2 [json_name = "addedLicenses"];</code>
-     * @param index The index to set the value at.
-     * @param value The enum numeric value on the wire for addedLicenses to set.
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of addedLicenses at the given index.
      * @return This builder for chaining.
      */
     public Builder setAddedLicensesValue(
@@ -982,9 +1026,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> revokedLicenses_ =
       java.util.Collections.emptyList();
     private void ensureRevokedLicensesIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         revokedLicenses_ = new java.util.ArrayList<java.lang.Integer>(revokedLicenses_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
       }
     }
     /**
@@ -1088,7 +1132,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearRevokedLicenses() {
       revokedLicenses_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1122,8 +1166,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .api.commons.auth.Permission revoked_licenses = 3 [json_name = "revokedLicenses"];</code>
-     * @param index The index to set the value at.
-     * @param value The enum numeric value on the wire for revokedLicenses to set.
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of revokedLicenses at the given index.
      * @return This builder for chaining.
      */
     public Builder setRevokedLicensesValue(
@@ -1199,18 +1243,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new UpdateLicensesRequest(input, extensionRegistry);
     }
   };
 

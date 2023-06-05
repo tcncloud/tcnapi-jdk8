@@ -91,5 +91,5 @@ public interface RadarFixedInnerChartOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.RadarFixedInnerChart.SplineOrBuilder getSplineOrBuilder();
 
-  com.tcn.cloud.api.api.v0alpha.RadarFixedInnerChart.InnerChartDetailsCase getInnerChartDetailsCase();
+  public com.tcn.cloud.api.api.v0alpha.RadarFixedInnerChart.InnerChartDetailsCase getInnerChartDetailsCase();
 }

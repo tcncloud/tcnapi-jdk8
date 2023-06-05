@@ -29,6 +29,79 @@ private static final long serialVersionUID = 0L;
     return new PackedBubbleChart();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private PackedBubbleChart(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            fieldDataPointId_ = s;
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            fieldLabel_ = s;
+            break;
+          }
+          case 26: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              groupingValues_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.PackedBubbleGroupingValue>();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            groupingValues_.add(
+                input.readMessage(com.tcn.cloud.api.api.v0alpha.PackedBubbleGroupingValue.parser(), extensionRegistry));
+            break;
+          }
+          case 32: {
+            int rawValue = input.readEnum();
+
+            packedChoice_ = rawValue;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        groupingValues_ = java.util.Collections.unmodifiableList(groupingValues_);
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.AnaProto.internal_static_api_v0alpha_PackedBubbleChart_descriptor;
@@ -43,8 +116,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FIELD_DATA_POINT_ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object fieldDataPointId_ = "";
+  private volatile java.lang.Object fieldDataPointId_;
   /**
    * <code>string field_data_point_id = 1 [json_name = "fieldDataPointId"];</code>
    * @return The fieldDataPointId.
@@ -82,8 +154,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FIELD_LABEL_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object fieldLabel_ = "";
+  private volatile java.lang.Object fieldLabel_;
   /**
    * <code>string field_label = 2 [json_name = "fieldLabel"];</code>
    * @return The fieldLabel.
@@ -121,7 +192,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GROUPING_VALUES_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v0alpha.PackedBubbleGroupingValue> groupingValues_;
   /**
    * <code>repeated .api.v0alpha.PackedBubbleGroupingValue grouping_values = 3 [json_name = "groupingValues"];</code>
@@ -162,7 +232,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PACKED_CHOICE_FIELD_NUMBER = 4;
-  private int packedChoice_ = 0;
+  private int packedChoice_;
   /**
    * <code>.api.commons.PackedBubbleChoice packed_choice = 4 [json_name = "packedChoice"];</code>
    * @return The enum numeric value on the wire for packedChoice.
@@ -175,7 +245,8 @@ private static final long serialVersionUID = 0L;
    * @return The packedChoice.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.PackedBubbleChoice getPackedChoice() {
-    com.tcn.cloud.api.api.commons.PackedBubbleChoice result = com.tcn.cloud.api.api.commons.PackedBubbleChoice.forNumber(packedChoice_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.PackedBubbleChoice result = com.tcn.cloud.api.api.commons.PackedBubbleChoice.valueOf(packedChoice_);
     return result == null ? com.tcn.cloud.api.api.commons.PackedBubbleChoice.UNRECOGNIZED : result;
   }
 
@@ -193,10 +264,10 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fieldDataPointId_)) {
+    if (!getFieldDataPointIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, fieldDataPointId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fieldLabel_)) {
+    if (!getFieldLabelBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, fieldLabel_);
     }
     for (int i = 0; i < groupingValues_.size(); i++) {
@@ -205,7 +276,7 @@ private static final long serialVersionUID = 0L;
     if (packedChoice_ != com.tcn.cloud.api.api.commons.PackedBubbleChoice.PACKED_BUBBLE_CHOICE_PACKED.getNumber()) {
       output.writeEnum(4, packedChoice_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -214,10 +285,10 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fieldDataPointId_)) {
+    if (!getFieldDataPointIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, fieldDataPointId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fieldLabel_)) {
+    if (!getFieldLabelBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, fieldLabel_);
     }
     for (int i = 0; i < groupingValues_.size(); i++) {
@@ -228,7 +299,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(4, packedChoice_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -250,7 +321,7 @@ private static final long serialVersionUID = 0L;
     if (!getGroupingValuesList()
         .equals(other.getGroupingValuesList())) return false;
     if (packedChoice_ != other.packedChoice_) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -271,7 +342,7 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + PACKED_CHOICE_FIELD_NUMBER;
     hash = (53 * hash) + packedChoice_;
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -320,13 +391,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.PackedBubbleChart parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.PackedBubbleChart parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -390,28 +459,35 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.PackedBubbleChart.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getGroupingValuesFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       fieldDataPointId_ = "";
+
       fieldLabel_ = "";
+
       if (groupingValuesBuilder_ == null) {
         groupingValues_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
-        groupingValues_ = null;
         groupingValuesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000004);
       packedChoice_ = 0;
+
       return this;
     }
 
@@ -438,35 +514,21 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.PackedBubbleChart buildPartial() {
       com.tcn.cloud.api.api.v0alpha.PackedBubbleChart result = new com.tcn.cloud.api.api.v0alpha.PackedBubbleChart(this);
-      buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      onBuilt();
-      return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.PackedBubbleChart result) {
+      int from_bitField0_ = bitField0_;
+      result.fieldDataPointId_ = fieldDataPointId_;
+      result.fieldLabel_ = fieldLabel_;
       if (groupingValuesBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           groupingValues_ = java.util.Collections.unmodifiableList(groupingValues_);
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.groupingValues_ = groupingValues_;
       } else {
         result.groupingValues_ = groupingValuesBuilder_.build();
       }
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.PackedBubbleChart result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.fieldDataPointId_ = fieldDataPointId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.fieldLabel_ = fieldLabel_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.packedChoice_ = packedChoice_;
-      }
+      result.packedChoice_ = packedChoice_;
+      onBuilt();
+      return result;
     }
 
     @java.lang.Override
@@ -515,19 +577,17 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v0alpha.PackedBubbleChart.getDefaultInstance()) return this;
       if (!other.getFieldDataPointId().isEmpty()) {
         fieldDataPointId_ = other.fieldDataPointId_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getFieldLabel().isEmpty()) {
         fieldLabel_ = other.fieldLabel_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (groupingValuesBuilder_ == null) {
         if (!other.groupingValues_.isEmpty()) {
           if (groupingValues_.isEmpty()) {
             groupingValues_ = other.groupingValues_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureGroupingValuesIsMutable();
             groupingValues_.addAll(other.groupingValues_);
@@ -540,7 +600,7 @@ private static final long serialVersionUID = 0L;
             groupingValuesBuilder_.dispose();
             groupingValuesBuilder_ = null;
             groupingValues_ = other.groupingValues_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
             groupingValuesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getGroupingValuesFieldBuilder() : null;
@@ -552,7 +612,7 @@ private static final long serialVersionUID = 0L;
       if (other.packedChoice_ != 0) {
         setPackedChoiceValue(other.getPackedChoiceValue());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -567,58 +627,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.PackedBubbleChart parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              fieldDataPointId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              fieldLabel_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 26: {
-              com.tcn.cloud.api.api.v0alpha.PackedBubbleGroupingValue m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v0alpha.PackedBubbleGroupingValue.parser(),
-                      extensionRegistry);
-              if (groupingValuesBuilder_ == null) {
-                ensureGroupingValuesIsMutable();
-                groupingValues_.add(m);
-              } else {
-                groupingValuesBuilder_.addMessage(m);
-              }
-              break;
-            } // case 26
-            case 32: {
-              packedChoice_ = input.readEnum();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 32
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.PackedBubbleChart) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -664,9 +683,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFieldDataPointId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       fieldDataPointId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -675,8 +696,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFieldDataPointId() {
+      
       fieldDataPointId_ = getDefaultInstance().getFieldDataPointId();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -687,10 +708,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFieldDataPointIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       fieldDataPointId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -736,9 +759,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFieldLabel(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       fieldLabel_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -747,8 +772,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFieldLabel() {
+      
       fieldLabel_ = getDefaultInstance().getFieldLabel();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -759,10 +784,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFieldLabelBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       fieldLabel_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -770,9 +797,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v0alpha.PackedBubbleGroupingValue> groupingValues_ =
       java.util.Collections.emptyList();
     private void ensureGroupingValuesIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         groupingValues_ = new java.util.ArrayList<com.tcn.cloud.api.api.v0alpha.PackedBubbleGroupingValue>(groupingValues_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -922,7 +949,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearGroupingValues() {
       if (groupingValuesBuilder_ == null) {
         groupingValues_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         groupingValuesBuilder_.clear();
@@ -999,7 +1026,7 @@ private static final long serialVersionUID = 0L;
         groupingValuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v0alpha.PackedBubbleGroupingValue, com.tcn.cloud.api.api.v0alpha.PackedBubbleGroupingValue.Builder, com.tcn.cloud.api.api.v0alpha.PackedBubbleGroupingValueOrBuilder>(
                 groupingValues_,
-                ((bitField0_ & 0x00000004) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         groupingValues_ = null;
@@ -1021,8 +1048,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPackedChoiceValue(int value) {
+      
       packedChoice_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1032,7 +1059,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.PackedBubbleChoice getPackedChoice() {
-      com.tcn.cloud.api.api.commons.PackedBubbleChoice result = com.tcn.cloud.api.api.commons.PackedBubbleChoice.forNumber(packedChoice_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.PackedBubbleChoice result = com.tcn.cloud.api.api.commons.PackedBubbleChoice.valueOf(packedChoice_);
       return result == null ? com.tcn.cloud.api.api.commons.PackedBubbleChoice.UNRECOGNIZED : result;
     }
     /**
@@ -1044,7 +1072,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000008;
+      
       packedChoice_ = value.getNumber();
       onChanged();
       return this;
@@ -1054,7 +1082,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPackedChoice() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      
       packedChoice_ = 0;
       onChanged();
       return this;
@@ -1092,18 +1120,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new PackedBubbleChart(input, extensionRegistry);
     }
   };
 

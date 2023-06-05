@@ -31,6 +31,74 @@ private static final long serialVersionUID = 0L;
     return new PreviewDialSettings();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private PreviewDialSettings(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+
+            enablePreviewDialCancel_ = input.readBool();
+            break;
+          }
+          case 16: {
+
+            enableAutoPauseOnCancel_ = input.readBool();
+            break;
+          }
+          case 24: {
+
+            timeoutMinutes_ = input.readInt64();
+            break;
+          }
+          case 32: {
+
+            requireNumberConfirmation_ = input.readBool();
+            break;
+          }
+          case 42: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            previewQueueConfig_ = s;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.org.HuntgroupProto.internal_static_api_commons_org_PreviewDialSettings_descriptor;
@@ -45,7 +113,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ENABLE_PREVIEW_DIAL_CANCEL_FIELD_NUMBER = 1;
-  private boolean enablePreviewDialCancel_ = false;
+  private boolean enablePreviewDialCancel_;
   /**
    * <pre>
    * Enable cancelling of Preview Dialing.  `AllowPreviewDialCancel`
@@ -60,7 +128,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ENABLE_AUTO_PAUSE_ON_CANCEL_FIELD_NUMBER = 2;
-  private boolean enableAutoPauseOnCancel_ = false;
+  private boolean enableAutoPauseOnCancel_;
   /**
    * <pre>
    * Enable automatic pausing when cancelling a Preview Dial call.
@@ -76,7 +144,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TIMEOUT_MINUTES_FIELD_NUMBER = 3;
-  private long timeoutMinutes_ = 0L;
+  private long timeoutMinutes_;
   /**
    * <pre>
    * Indicates when queued preview dial calls should no longer be presented
@@ -93,7 +161,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int REQUIRE_NUMBER_CONFIRMATION_FIELD_NUMBER = 4;
-  private boolean requireNumberConfirmation_ = false;
+  private boolean requireNumberConfirmation_;
   /**
    * <pre>
    * Indicates if agents must confirm numbers before calling.
@@ -109,8 +177,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PREVIEW_QUEUE_CONFIG_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object previewQueueConfig_ = "";
+  private volatile java.lang.Object previewQueueConfig_;
   /**
    * <pre>
    * The name of the Call Queue Configuration (folder name).
@@ -183,10 +250,10 @@ private static final long serialVersionUID = 0L;
     if (requireNumberConfirmation_ != false) {
       output.writeBool(4, requireNumberConfirmation_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(previewQueueConfig_)) {
+    if (!getPreviewQueueConfigBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, previewQueueConfig_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -211,10 +278,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(4, requireNumberConfirmation_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(previewQueueConfig_)) {
+    if (!getPreviewQueueConfigBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, previewQueueConfig_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -239,7 +306,7 @@ private static final long serialVersionUID = 0L;
         != other.getRequireNumberConfirmation()) return false;
     if (!getPreviewQueueConfig()
         .equals(other.getPreviewQueueConfig())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -264,7 +331,7 @@ private static final long serialVersionUID = 0L;
         getRequireNumberConfirmation());
     hash = (37 * hash) + PREVIEW_QUEUE_CONFIG_FIELD_NUMBER;
     hash = (53 * hash) + getPreviewQueueConfig().hashCode();
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -313,13 +380,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.commons.org.PreviewDialSettings parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.commons.org.PreviewDialSettings parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -388,23 +453,32 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.org.PreviewDialSettings.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       enablePreviewDialCancel_ = false;
+
       enableAutoPauseOnCancel_ = false;
+
       timeoutMinutes_ = 0L;
+
       requireNumberConfirmation_ = false;
+
       previewQueueConfig_ = "";
+
       return this;
     }
 
@@ -431,28 +505,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.org.PreviewDialSettings buildPartial() {
       com.tcn.cloud.api.api.commons.org.PreviewDialSettings result = new com.tcn.cloud.api.api.commons.org.PreviewDialSettings(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.enablePreviewDialCancel_ = enablePreviewDialCancel_;
+      result.enableAutoPauseOnCancel_ = enableAutoPauseOnCancel_;
+      result.timeoutMinutes_ = timeoutMinutes_;
+      result.requireNumberConfirmation_ = requireNumberConfirmation_;
+      result.previewQueueConfig_ = previewQueueConfig_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.commons.org.PreviewDialSettings result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.enablePreviewDialCancel_ = enablePreviewDialCancel_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.enableAutoPauseOnCancel_ = enableAutoPauseOnCancel_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.timeoutMinutes_ = timeoutMinutes_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.requireNumberConfirmation_ = requireNumberConfirmation_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.previewQueueConfig_ = previewQueueConfig_;
-      }
     }
 
     @java.lang.Override
@@ -513,10 +572,9 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getPreviewQueueConfig().isEmpty()) {
         previewQueueConfig_ = other.previewQueueConfig_;
-        bitField0_ |= 0x00000010;
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -531,58 +589,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.commons.org.PreviewDialSettings parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              enablePreviewDialCancel_ = input.readBool();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 16: {
-              enableAutoPauseOnCancel_ = input.readBool();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 16
-            case 24: {
-              timeoutMinutes_ = input.readInt64();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 24
-            case 32: {
-              requireNumberConfirmation_ = input.readBool();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 32
-            case 42: {
-              previewQueueConfig_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 42
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.commons.org.PreviewDialSettings) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private boolean enablePreviewDialCancel_ ;
     /**
@@ -607,9 +626,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEnablePreviewDialCancel(boolean value) {
-
+      
       enablePreviewDialCancel_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -622,7 +640,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnablePreviewDialCancel() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       enablePreviewDialCancel_ = false;
       onChanged();
       return this;
@@ -653,9 +671,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEnableAutoPauseOnCancel(boolean value) {
-
+      
       enableAutoPauseOnCancel_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -669,7 +686,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnableAutoPauseOnCancel() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       enableAutoPauseOnCancel_ = false;
       onChanged();
       return this;
@@ -702,9 +719,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTimeoutMinutes(long value) {
-
+      
       timeoutMinutes_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -719,7 +735,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTimeoutMinutes() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       timeoutMinutes_ = 0L;
       onChanged();
       return this;
@@ -750,9 +766,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRequireNumberConfirmation(boolean value) {
-
+      
       requireNumberConfirmation_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -766,7 +781,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRequireNumberConfirmation() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      
       requireNumberConfirmation_ = false;
       onChanged();
       return this;
@@ -828,9 +843,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPreviewQueueConfig(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       previewQueueConfig_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -844,8 +861,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPreviewQueueConfig() {
+      
       previewQueueConfig_ = getDefaultInstance().getPreviewQueueConfig();
-      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -861,10 +878,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPreviewQueueConfigBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       previewQueueConfig_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -901,18 +920,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new PreviewDialSettings(input, extensionRegistry);
     }
   };
 

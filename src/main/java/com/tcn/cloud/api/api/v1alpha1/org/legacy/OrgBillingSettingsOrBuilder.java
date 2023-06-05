@@ -114,11 +114,10 @@ public interface OrgBillingSettingsOrBuilder extends
    *
    * <code>map&lt;int32, .api.v1alpha1.org.legacy.BillingRegionMap&gt; country_region_overrides = 8 [json_name = "countryRegionOverrides"];</code>
    */
-  /* nullable */
-com.tcn.cloud.api.api.v1alpha1.org.legacy.BillingRegionMap getCountryRegionOverridesOrDefault(
+
+  com.tcn.cloud.api.api.v1alpha1.org.legacy.BillingRegionMap getCountryRegionOverridesOrDefault(
       int key,
-      /* nullable */
-com.tcn.cloud.api.api.v1alpha1.org.legacy.BillingRegionMap defaultValue);
+      com.tcn.cloud.api.api.v1alpha1.org.legacy.BillingRegionMap defaultValue);
   /**
    * <pre>
    * The given billing rates will be used for the region instead
@@ -128,6 +127,7 @@ com.tcn.cloud.api.api.v1alpha1.org.legacy.BillingRegionMap defaultValue);
    *
    * <code>map&lt;int32, .api.v1alpha1.org.legacy.BillingRegionMap&gt; country_region_overrides = 8 [json_name = "countryRegionOverrides"];</code>
    */
+
   com.tcn.cloud.api.api.v1alpha1.org.legacy.BillingRegionMap getCountryRegionOverridesOrThrow(
       int key);
 

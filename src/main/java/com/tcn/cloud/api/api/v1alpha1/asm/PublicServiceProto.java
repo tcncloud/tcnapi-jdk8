@@ -31,55 +31,55 @@ public final class PublicServiceProto {
       "api/annotations.proto2\364\017\n\003Asm\022\232\001\n\020Stream" +
       "AgentState\022%.api.v1alpha1.asm.StreamAgen" +
       "tStateReq\032 .api.commons.StreamAgentState" +
-      "Res\";\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002+\"&/api/v1alpha1/asm" +
-      "/asm/streamagentstate:\001*0\001\022\266\001\n\027ManagerSt" +
+      "Res\";\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002+:\001*\"&/api/v1alpha1/" +
+      "asm/asm/streamagentstate0\001\022\266\001\n\027ManagerSt" +
       "reamAgentState\022,.api.v1alpha1.asm.Manage" +
       "rStreamAgentStateReq\032\'.api.commons.Manag" +
-      "erStreamAgentStateRes\"B\272\270\221\002\005\n\003\010\220\003\202\323\344\223\0022\"" +
-      "-/api/v1alpha1/asm/asm/managerstreamagen" +
-      "tstate:\001*0\001\022\205\001\n\nPushEvents\022\037.api.v1alpha" +
+      "erStreamAgentStateRes\"B\272\270\221\002\005\n\003\010\220\003\202\323\344\223\0022:" +
+      "\001*\"-/api/v1alpha1/asm/asm/managerstreama" +
+      "gentstate0\001\022\205\001\n\nPushEvents\022\037.api.v1alpha" +
       "1.asm.PushEventsReq\032\037.api.v1alpha1.asm.P" +
-      "ushEventsRes\"5\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002%\" /api/v1a" +
-      "lpha1/asm/asm/pushevents:\001*\022\216\001\n\rCreateSe" +
+      "ushEventsRes\"5\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002%:\001*\" /api/" +
+      "v1alpha1/asm/asm/pushevents\022\216\001\n\rCreateSe" +
       "ssion\022\".api.v1alpha1.asm.CreateSessionRe" +
       "q\032\".api.v1alpha1.asm.CreateSessionRes\"5\272" +
-      "\270\221\002\002\030\001\202\323\344\223\002(\"#/api/v1alpha1/asm/asm/crea" +
-      "tesession:\001*\022\202\001\n\nEndSession\022\037.api.v1alph" +
+      "\270\221\002\002\030\001\202\323\344\223\002(:\001*\"#/api/v1alpha1/asm/asm/c" +
+      "reatesession\022\202\001\n\nEndSession\022\037.api.v1alph" +
       "a1.asm.EndSessionReq\032\037.api.v1alpha1.asm." +
-      "EndSessionRes\"2\272\270\221\002\002\030\001\202\323\344\223\002%\" /api/v1alp" +
-      "ha1/asm/asm/endsession:\001*\022\224\001\n\021GetCurrent" +
+      "EndSessionRes\"2\272\270\221\002\002\030\001\202\323\344\223\002%:\001*\" /api/v1" +
+      "alpha1/asm/asm/endsession\022\224\001\n\021GetCurrent" +
       "Session\022&.api.v1alpha1.asm.GetCurrentSes" +
       "sionReq\032\034.api.v1alpha1.asm.AsmSession\"9\272" +
-      "\270\221\002\002\030\001\202\323\344\223\002,\"\'/api/v1alpha1/asm/asm/getc" +
-      "urrentsession:\001*\022\206\001\n\013EnableVoice\022 .api.v" +
+      "\270\221\002\002\030\001\202\323\344\223\002,:\001*\"\'/api/v1alpha1/asm/asm/g" +
+      "etcurrentsession\022\206\001\n\013EnableVoice\022 .api.v" +
       "1alpha1.asm.EnableVoiceReq\032 .api.v1alpha" +
-      "1.asm.EnableVoiceRes\"3\272\270\221\002\002\030\001\202\323\344\223\002&\"!/ap" +
-      "i/v1alpha1/asm/asm/enablevoice:\001*\022\212\001\n\014Di" +
+      "1.asm.EnableVoiceRes\"3\272\270\221\002\002\030\001\202\323\344\223\002&:\001*\"!" +
+      "/api/v1alpha1/asm/asm/enablevoice\022\212\001\n\014Di" +
       "sableVoice\022!.api.v1alpha1.asm.DisableVoi" +
       "ceReq\032!.api.v1alpha1.asm.DisableVoiceRes" +
-      "\"4\272\270\221\002\002\030\001\202\323\344\223\002\'\"\"/api/v1alpha1/asm/asm/d" +
-      "isablevoice:\001*\022\241\001\n\021ListConversations\022&.a" +
+      "\"4\272\270\221\002\002\030\001\202\323\344\223\002\':\001*\"\"/api/v1alpha1/asm/as" +
+      "m/disablevoice\022\241\001\n\021ListConversations\022&.a" +
       "pi.v1alpha1.asm.ListConversationsReq\032&.a" +
       "pi.v1alpha1.asm.ListConversationsRes\"<\272\270" +
-      "\221\002\005\n\003\010\254\002\202\323\344\223\002,\"\'/api/v1alpha1/asm/asm/li" +
-      "stconversations:\001*\022\261\001\n\025AssignNewConversa" +
+      "\221\002\005\n\003\010\254\002\202\323\344\223\002,:\001*\"\'/api/v1alpha1/asm/asm" +
+      "/listconversations\022\261\001\n\025AssignNewConversa" +
       "tion\022*.api.v1alpha1.asm.AssignNewConvers" +
       "ationReq\032*.api.v1alpha1.asm.AssignNewCon" +
-      "versationRes\"@\272\270\221\002\005\n\003\010\254\002\202\323\344\223\0020\"+/api/v1a" +
-      "lpha1/asm/asm/assignnewconversation:\001*\022\205" +
+      "versationRes\"@\272\270\221\002\005\n\003\010\254\002\202\323\344\223\0020:\001*\"+/api/" +
+      "v1alpha1/asm/asm/assignnewconversation\022\205" +
       "\001\n\nListAgents\022\037.api.v1alpha1.asm.ListAge" +
       "ntsReq\032\037.api.v1alpha1.asm.ListAgentsRes\"" +
-      "5\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002%\" /api/v1alpha1/asm/asm" +
-      "/listagents:\001*\022\320\001\n\034SetConversationCollec" +
+      "5\272\270\221\002\005\n\003\010\260\t\202\323\344\223\002%:\001*\" /api/v1alpha1/asm/" +
+      "asm/listagents\022\320\001\n\034SetConversationCollec" +
       "tedData\0221.api.v1alpha1.asm.SetConversati" +
       "onCollectedDataReq\0321.api.v1alpha1.asm.Se" +
       "tConversationCollectedDataRes\"J\272\270\221\002\010\n\006\010\254" +
-      "\002\010\260\t\202\323\344\223\0027\"2/api/v1alpha1/asm/asm/setcon" +
-      "versationcollecteddata:\001*\022\230\001\n\020GetQueuesD" +
+      "\002\010\260\t\202\323\344\223\0027:\001*\"2/api/v1alpha1/asm/asm/set" +
+      "conversationcollecteddata\022\230\001\n\020GetQueuesD" +
       "etails\022%.api.v1alpha1.asm.GetQueuesDetai" +
       "lsReq\032 .api.commons.GetQueuesDetailsRes\"" +
-      ";\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002+\"&/api/v1alpha1/asm/asm" +
-      "/getqueuesdetails:\001*B\232\001\n\"com.tcn.cloud.a" +
+      ";\272\270\221\002\005\n\003\010\254\002\202\323\344\223\002+:\001*\"&/api/v1alpha1/asm/" +
+      "asm/getqueuesdetailsB\232\001\n\"com.tcn.cloud.a" +
       "pi.api.v1alpha1.asmB\022PublicServiceProtoP" +
       "\001\242\002\003AVA\252\002\020Api.V1alpha1.Asm\312\002\020Api\\V1alpha" +
       "1\\Asm\342\002\034Api\\V1alpha1\\Asm\\GPBMetadata\352\002\022A" +

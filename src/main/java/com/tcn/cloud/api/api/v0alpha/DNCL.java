@@ -25,6 +25,100 @@ private static final long serialVersionUID = 0L;
     return new DNCL();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private DNCL(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 90: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (countrySid_ != null) {
+              subBuilder = countrySid_.toBuilder();
+            }
+            countrySid_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(countrySid_);
+              countrySid_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 802: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (dnclNotes_ != null) {
+              subBuilder = dnclNotes_.toBuilder();
+            }
+            dnclNotes_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(dnclNotes_);
+              dnclNotes_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 810: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (dnclNumber_ != null) {
+              subBuilder = dnclNumber_.toBuilder();
+            }
+            dnclNumber_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(dnclNumber_);
+              dnclNumber_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 818: {
+            com.google.protobuf.Timestamp.Builder subBuilder = null;
+            if (expirationDate_ != null) {
+              subBuilder = expirationDate_.toBuilder();
+            }
+            expirationDate_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(expirationDate_);
+              expirationDate_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.P3apiProto.internal_static_api_v0alpha_DNCL_descriptor;
@@ -61,7 +155,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getCountrySidOrBuilder() {
-    return countrySid_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : countrySid_;
+    return getCountrySid();
   }
 
   public static final int DNCL_NOTES_FIELD_NUMBER = 100;
@@ -87,7 +181,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getDnclNotesOrBuilder() {
-    return dnclNotes_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : dnclNotes_;
+    return getDnclNotes();
   }
 
   public static final int DNCL_NUMBER_FIELD_NUMBER = 101;
@@ -113,7 +207,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getDnclNumberOrBuilder() {
-    return dnclNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : dnclNumber_;
+    return getDnclNumber();
   }
 
   public static final int EXPIRATION_DATE_FIELD_NUMBER = 102;
@@ -139,7 +233,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getExpirationDateOrBuilder() {
-    return expirationDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expirationDate_;
+    return getExpirationDate();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -168,7 +262,7 @@ private static final long serialVersionUID = 0L;
     if (expirationDate_ != null) {
       output.writeMessage(102, getExpirationDate());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -193,7 +287,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(102, getExpirationDate());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -228,7 +322,7 @@ private static final long serialVersionUID = 0L;
       if (!getExpirationDate()
           .equals(other.getExpirationDate())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -255,7 +349,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + EXPIRATION_DATE_FIELD_NUMBER;
       hash = (53 * hash) + getExpirationDate().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -304,13 +398,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.DNCL parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.DNCL parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -374,36 +466,44 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.DNCL.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      countrySid_ = null;
-      if (countrySidBuilder_ != null) {
-        countrySidBuilder_.dispose();
+      if (countrySidBuilder_ == null) {
+        countrySid_ = null;
+      } else {
+        countrySid_ = null;
         countrySidBuilder_ = null;
       }
-      dnclNotes_ = null;
-      if (dnclNotesBuilder_ != null) {
-        dnclNotesBuilder_.dispose();
+      if (dnclNotesBuilder_ == null) {
+        dnclNotes_ = null;
+      } else {
+        dnclNotes_ = null;
         dnclNotesBuilder_ = null;
       }
-      dnclNumber_ = null;
-      if (dnclNumberBuilder_ != null) {
-        dnclNumberBuilder_.dispose();
+      if (dnclNumberBuilder_ == null) {
+        dnclNumber_ = null;
+      } else {
+        dnclNumber_ = null;
         dnclNumberBuilder_ = null;
       }
-      expirationDate_ = null;
-      if (expirationDateBuilder_ != null) {
-        expirationDateBuilder_.dispose();
+      if (expirationDateBuilder_ == null) {
+        expirationDate_ = null;
+      } else {
+        expirationDate_ = null;
         expirationDateBuilder_ = null;
       }
       return this;
@@ -432,33 +532,28 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.DNCL buildPartial() {
       com.tcn.cloud.api.api.v0alpha.DNCL result = new com.tcn.cloud.api.api.v0alpha.DNCL(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      if (countrySidBuilder_ == null) {
+        result.countrySid_ = countrySid_;
+      } else {
+        result.countrySid_ = countrySidBuilder_.build();
+      }
+      if (dnclNotesBuilder_ == null) {
+        result.dnclNotes_ = dnclNotes_;
+      } else {
+        result.dnclNotes_ = dnclNotesBuilder_.build();
+      }
+      if (dnclNumberBuilder_ == null) {
+        result.dnclNumber_ = dnclNumber_;
+      } else {
+        result.dnclNumber_ = dnclNumberBuilder_.build();
+      }
+      if (expirationDateBuilder_ == null) {
+        result.expirationDate_ = expirationDate_;
+      } else {
+        result.expirationDate_ = expirationDateBuilder_.build();
+      }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.DNCL result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.countrySid_ = countrySidBuilder_ == null
-            ? countrySid_
-            : countrySidBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.dnclNotes_ = dnclNotesBuilder_ == null
-            ? dnclNotes_
-            : dnclNotesBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.dnclNumber_ = dnclNumberBuilder_ == null
-            ? dnclNumber_
-            : dnclNumberBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.expirationDate_ = expirationDateBuilder_ == null
-            ? expirationDate_
-            : expirationDateBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -517,7 +612,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasExpirationDate()) {
         mergeExpirationDate(other.getExpirationDate());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -532,61 +627,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.DNCL parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 90: {
-              input.readMessage(
-                  getCountrySidFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 90
-            case 802: {
-              input.readMessage(
-                  getDnclNotesFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 802
-            case 810: {
-              input.readMessage(
-                  getDnclNumberFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 810
-            case 818: {
-              input.readMessage(
-                  getExpirationDateFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 818
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.DNCL) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private com.google.protobuf.Int64Value countrySid_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -596,7 +649,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the countrySid field is set.
      */
     public boolean hasCountrySid() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return countrySidBuilder_ != null || countrySid_ != null;
     }
     /**
      * <code>.google.protobuf.Int64Value country_sid = 11 [json_name = "countrySid"];</code>
@@ -618,11 +671,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         countrySid_ = value;
+        onChanged();
       } else {
         countrySidBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -632,11 +685,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value.Builder builderForValue) {
       if (countrySidBuilder_ == null) {
         countrySid_ = builderForValue.build();
+        onChanged();
       } else {
         countrySidBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -644,38 +697,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCountrySid(com.google.protobuf.Int64Value value) {
       if (countrySidBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          countrySid_ != null &&
-          countrySid_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
-          getCountrySidBuilder().mergeFrom(value);
+        if (countrySid_ != null) {
+          countrySid_ =
+            com.google.protobuf.Int64Value.newBuilder(countrySid_).mergeFrom(value).buildPartial();
         } else {
           countrySid_ = value;
         }
+        onChanged();
       } else {
         countrySidBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.Int64Value country_sid = 11 [json_name = "countrySid"];</code>
      */
     public Builder clearCountrySid() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      countrySid_ = null;
-      if (countrySidBuilder_ != null) {
-        countrySidBuilder_.dispose();
+      if (countrySidBuilder_ == null) {
+        countrySid_ = null;
+        onChanged();
+      } else {
+        countrySid_ = null;
         countrySidBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.Int64Value country_sid = 11 [json_name = "countrySid"];</code>
      */
     public com.google.protobuf.Int64Value.Builder getCountrySidBuilder() {
-      bitField0_ |= 0x00000001;
+      
       onChanged();
       return getCountrySidFieldBuilder().getBuilder();
     }
@@ -715,7 +768,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dnclNotes field is set.
      */
     public boolean hasDnclNotes() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return dnclNotesBuilder_ != null || dnclNotes_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue dncl_notes = 100 [json_name = "dnclNotes"];</code>
@@ -737,11 +790,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dnclNotes_ = value;
+        onChanged();
       } else {
         dnclNotesBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -751,11 +804,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue.Builder builderForValue) {
       if (dnclNotesBuilder_ == null) {
         dnclNotes_ = builderForValue.build();
+        onChanged();
       } else {
         dnclNotesBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
@@ -763,38 +816,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDnclNotes(com.google.protobuf.StringValue value) {
       if (dnclNotesBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
-          dnclNotes_ != null &&
-          dnclNotes_ != com.google.protobuf.StringValue.getDefaultInstance()) {
-          getDnclNotesBuilder().mergeFrom(value);
+        if (dnclNotes_ != null) {
+          dnclNotes_ =
+            com.google.protobuf.StringValue.newBuilder(dnclNotes_).mergeFrom(value).buildPartial();
         } else {
           dnclNotes_ = value;
         }
+        onChanged();
       } else {
         dnclNotesBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.StringValue dncl_notes = 100 [json_name = "dnclNotes"];</code>
      */
     public Builder clearDnclNotes() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      dnclNotes_ = null;
-      if (dnclNotesBuilder_ != null) {
-        dnclNotesBuilder_.dispose();
+      if (dnclNotesBuilder_ == null) {
+        dnclNotes_ = null;
+        onChanged();
+      } else {
+        dnclNotes_ = null;
         dnclNotesBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.StringValue dncl_notes = 100 [json_name = "dnclNotes"];</code>
      */
     public com.google.protobuf.StringValue.Builder getDnclNotesBuilder() {
-      bitField0_ |= 0x00000002;
+      
       onChanged();
       return getDnclNotesFieldBuilder().getBuilder();
     }
@@ -834,7 +887,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dnclNumber field is set.
      */
     public boolean hasDnclNumber() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return dnclNumberBuilder_ != null || dnclNumber_ != null;
     }
     /**
      * <code>.google.protobuf.StringValue dncl_number = 101 [json_name = "dnclNumber"];</code>
@@ -856,11 +909,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dnclNumber_ = value;
+        onChanged();
       } else {
         dnclNumberBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -870,11 +923,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue.Builder builderForValue) {
       if (dnclNumberBuilder_ == null) {
         dnclNumber_ = builderForValue.build();
+        onChanged();
       } else {
         dnclNumberBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -882,38 +935,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDnclNumber(com.google.protobuf.StringValue value) {
       if (dnclNumberBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0) &&
-          dnclNumber_ != null &&
-          dnclNumber_ != com.google.protobuf.StringValue.getDefaultInstance()) {
-          getDnclNumberBuilder().mergeFrom(value);
+        if (dnclNumber_ != null) {
+          dnclNumber_ =
+            com.google.protobuf.StringValue.newBuilder(dnclNumber_).mergeFrom(value).buildPartial();
         } else {
           dnclNumber_ = value;
         }
+        onChanged();
       } else {
         dnclNumberBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.StringValue dncl_number = 101 [json_name = "dnclNumber"];</code>
      */
     public Builder clearDnclNumber() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      dnclNumber_ = null;
-      if (dnclNumberBuilder_ != null) {
-        dnclNumberBuilder_.dispose();
+      if (dnclNumberBuilder_ == null) {
+        dnclNumber_ = null;
+        onChanged();
+      } else {
+        dnclNumber_ = null;
         dnclNumberBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.StringValue dncl_number = 101 [json_name = "dnclNumber"];</code>
      */
     public com.google.protobuf.StringValue.Builder getDnclNumberBuilder() {
-      bitField0_ |= 0x00000004;
+      
       onChanged();
       return getDnclNumberFieldBuilder().getBuilder();
     }
@@ -953,7 +1006,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the expirationDate field is set.
      */
     public boolean hasExpirationDate() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return expirationDateBuilder_ != null || expirationDate_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp expiration_date = 102 [json_name = "expirationDate"];</code>
@@ -975,11 +1028,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         expirationDate_ = value;
+        onChanged();
       } else {
         expirationDateBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
@@ -989,11 +1042,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (expirationDateBuilder_ == null) {
         expirationDate_ = builderForValue.build();
+        onChanged();
       } else {
         expirationDateBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
@@ -1001,38 +1054,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeExpirationDate(com.google.protobuf.Timestamp value) {
       if (expirationDateBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0) &&
-          expirationDate_ != null &&
-          expirationDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getExpirationDateBuilder().mergeFrom(value);
+        if (expirationDate_ != null) {
+          expirationDate_ =
+            com.google.protobuf.Timestamp.newBuilder(expirationDate_).mergeFrom(value).buildPartial();
         } else {
           expirationDate_ = value;
         }
+        onChanged();
       } else {
         expirationDateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000008;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp expiration_date = 102 [json_name = "expirationDate"];</code>
      */
     public Builder clearExpirationDate() {
-      bitField0_ = (bitField0_ & ~0x00000008);
-      expirationDate_ = null;
-      if (expirationDateBuilder_ != null) {
-        expirationDateBuilder_.dispose();
+      if (expirationDateBuilder_ == null) {
+        expirationDate_ = null;
+        onChanged();
+      } else {
+        expirationDate_ = null;
         expirationDateBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp expiration_date = 102 [json_name = "expirationDate"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getExpirationDateBuilder() {
-      bitField0_ |= 0x00000008;
+      
       onChanged();
       return getExpirationDateFieldBuilder().getBuilder();
     }
@@ -1096,18 +1149,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new DNCL(input, extensionRegistry);
     }
   };
 

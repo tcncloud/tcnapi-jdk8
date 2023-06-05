@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.50.0)",
     comments = "Source: api/v1alpha1/vanalytics/service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class VanalyticsGrpc {
@@ -929,7 +929,7 @@ public final class VanalyticsGrpc {
 
   /**
    */
-  public interface AsyncService {
+  public static abstract class VanalyticsImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
@@ -938,7 +938,7 @@ public final class VanalyticsGrpc {
      * until fields.
      * </pre>
      */
-    default void audit(com.tcn.cloud.api.api.v1alpha1.vanalytics.AuditRequest request,
+    public void audit(com.tcn.cloud.api.api.v1alpha1.vanalytics.AuditRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.AuditResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAuditMethod(), responseObserver);
     }
@@ -948,7 +948,7 @@ public final class VanalyticsGrpc {
      * GetRecordingUrl gets a signed url to download a transcript recording.
      * </pre>
      */
-    default void getRecordingUrl(com.tcn.cloud.api.api.v1alpha1.vanalytics.GetRecordingUrlRequest request,
+    public void getRecordingUrl(com.tcn.cloud.api.api.v1alpha1.vanalytics.GetRecordingUrlRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.GetRecordingUrlResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetRecordingUrlMethod(), responseObserver);
     }
@@ -958,7 +958,7 @@ public final class VanalyticsGrpc {
      * ListBillingSpan lists billing spans.
      * </pre>
      */
-    default void listBillingSpan(com.tcn.cloud.api.api.v1alpha1.vanalytics.ListBillingSpanRequest request,
+    public void listBillingSpan(com.tcn.cloud.api.api.v1alpha1.vanalytics.ListBillingSpanRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.ListBillingSpanResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListBillingSpanMethod(), responseObserver);
     }
@@ -970,7 +970,7 @@ public final class VanalyticsGrpc {
      * achieved through subsequent requests using the response sort field.
      * </pre>
      */
-    default void search(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest request,
+    public void search(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSearchMethod(), responseObserver);
     }
@@ -980,7 +980,7 @@ public final class VanalyticsGrpc {
      * ListTranscriptGroupNames lists transcript group names.
      * </pre>
      */
-    default void listTranscriptGroupNames(com.tcn.cloud.api.api.v1alpha1.vanalytics.ListTranscriptGroupNamesRequest request,
+    public void listTranscriptGroupNames(com.tcn.cloud.api.api.v1alpha1.vanalytics.ListTranscriptGroupNamesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.ListTranscriptGroupNamesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListTranscriptGroupNamesMethod(), responseObserver);
     }
@@ -990,7 +990,7 @@ public final class VanalyticsGrpc {
      * BulkDeleteTranscripts bulk deletes transcripts matching the provided query.
      * </pre>
      */
-    default void bulkDeleteTranscripts(com.tcn.cloud.api.api.v1alpha1.vanalytics.BulkDeleteTranscriptsRequest request,
+    public void bulkDeleteTranscripts(com.tcn.cloud.api.api.v1alpha1.vanalytics.BulkDeleteTranscriptsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.BulkDeleteTranscriptsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBulkDeleteTranscriptsMethod(), responseObserver);
     }
@@ -1000,7 +1000,7 @@ public final class VanalyticsGrpc {
      * BulkRestoreTranscripts bulk restores transcripts matching the provided query.
      * </pre>
      */
-    default void bulkRestoreTranscripts(com.tcn.cloud.api.api.v1alpha1.vanalytics.BulkRestoreTranscriptsRequest request,
+    public void bulkRestoreTranscripts(com.tcn.cloud.api.api.v1alpha1.vanalytics.BulkRestoreTranscriptsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.BulkRestoreTranscriptsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBulkRestoreTranscriptsMethod(), responseObserver);
     }
@@ -1010,7 +1010,7 @@ public final class VanalyticsGrpc {
      * ListAgentResponseValues lists transcript agent response values.
      * </pre>
      */
-    default void listAgentResponseValues(com.tcn.cloud.api.api.v1alpha1.vanalytics.ListAgentResponseValuesRequest request,
+    public void listAgentResponseValues(com.tcn.cloud.api.api.v1alpha1.vanalytics.ListAgentResponseValuesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.ListAgentResponseValuesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAgentResponseValuesMethod(), responseObserver);
     }
@@ -1021,7 +1021,7 @@ public final class VanalyticsGrpc {
      * to filter transcripts.
      * </pre>
      */
-    default void createFilter(com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateFilterRequest request,
+    public void createFilter(com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateFilterRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.Filter> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateFilterMethod(), responseObserver);
     }
@@ -1031,7 +1031,7 @@ public final class VanalyticsGrpc {
      * ListFilters lists filters.
      * </pre>
      */
-    default void listFilters(com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFiltersRequest request,
+    public void listFilters(com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFiltersRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFiltersResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListFiltersMethod(), responseObserver);
     }
@@ -1041,7 +1041,7 @@ public final class VanalyticsGrpc {
      * UpdateFilter updates a filter search request and/or name.
      * </pre>
      */
-    default void updateFilter(com.tcn.cloud.api.api.v1alpha1.vanalytics.UpdateFilterRequest request,
+    public void updateFilter(com.tcn.cloud.api.api.v1alpha1.vanalytics.UpdateFilterRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.Filter> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateFilterMethod(), responseObserver);
     }
@@ -1051,7 +1051,7 @@ public final class VanalyticsGrpc {
      * DeleteFilter deletes filter given a filter_sid.
      * </pre>
      */
-    default void deleteFilter(com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFilterRequest request,
+    public void deleteFilter(com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFilterRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFilterResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteFilterMethod(), responseObserver);
     }
@@ -1061,7 +1061,7 @@ public final class VanalyticsGrpc {
      * GetFilter gets filter given a filter_sid, name or search request.
      * </pre>
      */
-    default void getFilter(com.tcn.cloud.api.api.v1alpha1.vanalytics.GetFilterRequest request,
+    public void getFilter(com.tcn.cloud.api.api.v1alpha1.vanalytics.GetFilterRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.Filter> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetFilterMethod(), responseObserver);
     }
@@ -1071,7 +1071,7 @@ public final class VanalyticsGrpc {
      * GetFlag gets a flag.
      * </pre>
      */
-    default void getFlag(com.tcn.cloud.api.api.v1alpha1.vanalytics.GetFlagRequest request,
+    public void getFlag(com.tcn.cloud.api.api.v1alpha1.vanalytics.GetFlagRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.Flag> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetFlagMethod(), responseObserver);
     }
@@ -1081,7 +1081,7 @@ public final class VanalyticsGrpc {
      * CreateFlag creates a new flag.
      * </pre>
      */
-    default void createFlag(com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateFlagRequest request,
+    public void createFlag(com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateFlagRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.Flag> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateFlagMethod(), responseObserver);
     }
@@ -1091,7 +1091,7 @@ public final class VanalyticsGrpc {
      * ListFlags lists flags in an organization.
      * </pre>
      */
-    default void listFlags(com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagsRequest request,
+    public void listFlags(com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListFlagsMethod(), responseObserver);
     }
@@ -1101,7 +1101,7 @@ public final class VanalyticsGrpc {
      * UpdateFlag updates a flag.
      * </pre>
      */
-    default void updateFlag(com.tcn.cloud.api.api.v1alpha1.vanalytics.UpdateFlagRequest request,
+    public void updateFlag(com.tcn.cloud.api.api.v1alpha1.vanalytics.UpdateFlagRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.Flag> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateFlagMethod(), responseObserver);
     }
@@ -1111,7 +1111,7 @@ public final class VanalyticsGrpc {
      * DeleteFlag deletes the flag identified by the given flag_sid.
      * </pre>
      */
-    default void deleteFlag(com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagRequest request,
+    public void deleteFlag(com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteFlagMethod(), responseObserver);
     }
@@ -1121,7 +1121,7 @@ public final class VanalyticsGrpc {
      * CreateFlagReview creates a flag review.
      * </pre>
      */
-    default void createFlagReview(com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateFlagReviewRequest request,
+    public void createFlagReview(com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateFlagReviewRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagReview> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateFlagReviewMethod(), responseObserver);
     }
@@ -1131,7 +1131,7 @@ public final class VanalyticsGrpc {
      * BulkCreateFlagReview creates flag reviews.
      * </pre>
      */
-    default void bulkCreateFlagReview(com.tcn.cloud.api.api.v1alpha1.vanalytics.BulkCreateFlagReviewRequest request,
+    public void bulkCreateFlagReview(com.tcn.cloud.api.api.v1alpha1.vanalytics.BulkCreateFlagReviewRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.BulkCreateFlagReviewResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBulkCreateFlagReviewMethod(), responseObserver);
     }
@@ -1141,7 +1141,7 @@ public final class VanalyticsGrpc {
      * ListFlagReviews lists reviews in an organization.
      * </pre>
      */
-    default void listFlagReviews(com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagReviewsRequest request,
+    public void listFlagReviews(com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagReviewsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagReviewsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListFlagReviewsMethod(), responseObserver);
     }
@@ -1151,7 +1151,7 @@ public final class VanalyticsGrpc {
      * CreateFlagTranscript creates a flag transcript.
      * </pre>
      */
-    default void createFlagTranscript(com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateFlagTranscriptRequest request,
+    public void createFlagTranscript(com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateFlagTranscriptRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateFlagTranscriptResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateFlagTranscriptMethod(), responseObserver);
     }
@@ -1161,7 +1161,7 @@ public final class VanalyticsGrpc {
      * SearchFlagTranscripts searches flag transcripts.
      * </pre>
      */
-    default void searchFlagTranscripts(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchFlagTranscriptsRequest request,
+    public void searchFlagTranscripts(com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchFlagTranscriptsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchFlagTranscriptsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSearchFlagTranscriptsMethod(), responseObserver);
     }
@@ -1171,7 +1171,7 @@ public final class VanalyticsGrpc {
      * DEPRECATED.
      * </pre>
      */
-    default void createFlagFilter(com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateFlagFilterRequest request,
+    public void createFlagFilter(com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateFlagFilterRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagFilter> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateFlagFilterMethod(), responseObserver);
     }
@@ -1181,7 +1181,7 @@ public final class VanalyticsGrpc {
      * ListFlagFilters lists flag filter associations.
      * </pre>
      */
-    default void listFlagFilters(com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagFiltersRequest request,
+    public void listFlagFilters(com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagFiltersRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagFiltersResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListFlagFiltersMethod(), responseObserver);
     }
@@ -1191,7 +1191,7 @@ public final class VanalyticsGrpc {
      * DEPRECATED.
      * </pre>
      */
-    default void deleteFlagFilter(com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagFilterRequest request,
+    public void deleteFlagFilter(com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagFilterRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagFilterResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteFlagFilterMethod(), responseObserver);
     }
@@ -1201,7 +1201,7 @@ public final class VanalyticsGrpc {
      * ListFlagSnapshots lists flag snapshots in an organization.
      * </pre>
      */
-    default void listFlagSnapshots(com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagSnapshotsRequest request,
+    public void listFlagSnapshots(com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagSnapshotsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagSnapshotsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListFlagSnapshotsMethod(), responseObserver);
     }
@@ -1211,28 +1211,216 @@ public final class VanalyticsGrpc {
      * ListFlagTranscriptFilters lists flag transcript filters in an organization.
      * </pre>
      */
-    default void listFlagTranscriptFilters(com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagTranscriptFiltersRequest request,
+    public void listFlagTranscriptFilters(com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagTranscriptFiltersRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagTranscriptFiltersResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListFlagTranscriptFiltersMethod(), responseObserver);
     }
-  }
-
-  /**
-   * Base class for the server implementation of the service Vanalytics.
-   */
-  public static abstract class VanalyticsImplBase
-      implements io.grpc.BindableService, AsyncService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return VanalyticsGrpc.bindService(this);
+      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getAuditMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.AuditRequest,
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.AuditResponse>(
+                  this, METHODID_AUDIT)))
+          .addMethod(
+            getGetRecordingUrlMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.GetRecordingUrlRequest,
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.GetRecordingUrlResponse>(
+                  this, METHODID_GET_RECORDING_URL)))
+          .addMethod(
+            getListBillingSpanMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.ListBillingSpanRequest,
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.ListBillingSpanResponse>(
+                  this, METHODID_LIST_BILLING_SPAN)))
+          .addMethod(
+            getSearchMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest,
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchResponse>(
+                  this, METHODID_SEARCH)))
+          .addMethod(
+            getListTranscriptGroupNamesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.ListTranscriptGroupNamesRequest,
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.ListTranscriptGroupNamesResponse>(
+                  this, METHODID_LIST_TRANSCRIPT_GROUP_NAMES)))
+          .addMethod(
+            getBulkDeleteTranscriptsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.BulkDeleteTranscriptsRequest,
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.BulkDeleteTranscriptsResponse>(
+                  this, METHODID_BULK_DELETE_TRANSCRIPTS)))
+          .addMethod(
+            getBulkRestoreTranscriptsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.BulkRestoreTranscriptsRequest,
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.BulkRestoreTranscriptsResponse>(
+                  this, METHODID_BULK_RESTORE_TRANSCRIPTS)))
+          .addMethod(
+            getListAgentResponseValuesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.ListAgentResponseValuesRequest,
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.ListAgentResponseValuesResponse>(
+                  this, METHODID_LIST_AGENT_RESPONSE_VALUES)))
+          .addMethod(
+            getCreateFilterMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateFilterRequest,
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.Filter>(
+                  this, METHODID_CREATE_FILTER)))
+          .addMethod(
+            getListFiltersMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFiltersRequest,
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFiltersResponse>(
+                  this, METHODID_LIST_FILTERS)))
+          .addMethod(
+            getUpdateFilterMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.UpdateFilterRequest,
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.Filter>(
+                  this, METHODID_UPDATE_FILTER)))
+          .addMethod(
+            getDeleteFilterMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFilterRequest,
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFilterResponse>(
+                  this, METHODID_DELETE_FILTER)))
+          .addMethod(
+            getGetFilterMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.GetFilterRequest,
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.Filter>(
+                  this, METHODID_GET_FILTER)))
+          .addMethod(
+            getGetFlagMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.GetFlagRequest,
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.Flag>(
+                  this, METHODID_GET_FLAG)))
+          .addMethod(
+            getCreateFlagMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateFlagRequest,
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.Flag>(
+                  this, METHODID_CREATE_FLAG)))
+          .addMethod(
+            getListFlagsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagsRequest,
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagsResponse>(
+                  this, METHODID_LIST_FLAGS)))
+          .addMethod(
+            getUpdateFlagMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.UpdateFlagRequest,
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.Flag>(
+                  this, METHODID_UPDATE_FLAG)))
+          .addMethod(
+            getDeleteFlagMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagRequest,
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagResponse>(
+                  this, METHODID_DELETE_FLAG)))
+          .addMethod(
+            getCreateFlagReviewMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateFlagReviewRequest,
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagReview>(
+                  this, METHODID_CREATE_FLAG_REVIEW)))
+          .addMethod(
+            getBulkCreateFlagReviewMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.BulkCreateFlagReviewRequest,
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.BulkCreateFlagReviewResponse>(
+                  this, METHODID_BULK_CREATE_FLAG_REVIEW)))
+          .addMethod(
+            getListFlagReviewsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagReviewsRequest,
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagReviewsResponse>(
+                  this, METHODID_LIST_FLAG_REVIEWS)))
+          .addMethod(
+            getCreateFlagTranscriptMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateFlagTranscriptRequest,
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateFlagTranscriptResponse>(
+                  this, METHODID_CREATE_FLAG_TRANSCRIPT)))
+          .addMethod(
+            getSearchFlagTranscriptsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchFlagTranscriptsRequest,
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchFlagTranscriptsResponse>(
+                  this, METHODID_SEARCH_FLAG_TRANSCRIPTS)))
+          .addMethod(
+            getCreateFlagFilterMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateFlagFilterRequest,
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagFilter>(
+                  this, METHODID_CREATE_FLAG_FILTER)))
+          .addMethod(
+            getListFlagFiltersMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagFiltersRequest,
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagFiltersResponse>(
+                  this, METHODID_LIST_FLAG_FILTERS)))
+          .addMethod(
+            getDeleteFlagFilterMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagFilterRequest,
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagFilterResponse>(
+                  this, METHODID_DELETE_FLAG_FILTER)))
+          .addMethod(
+            getListFlagSnapshotsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagSnapshotsRequest,
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagSnapshotsResponse>(
+                  this, METHODID_LIST_FLAG_SNAPSHOTS)))
+          .addMethod(
+            getListFlagTranscriptFiltersMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagTranscriptFiltersRequest,
+                com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagTranscriptFiltersResponse>(
+                  this, METHODID_LIST_FLAG_TRANSCRIPT_FILTERS)))
+          .build();
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service Vanalytics.
    */
-  public static final class VanalyticsStub
-      extends io.grpc.stub.AbstractAsyncStub<VanalyticsStub> {
+  public static final class VanalyticsStub extends io.grpc.stub.AbstractAsyncStub<VanalyticsStub> {
     private VanalyticsStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -1559,10 +1747,8 @@ public final class VanalyticsGrpc {
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service Vanalytics.
    */
-  public static final class VanalyticsBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<VanalyticsBlockingStub> {
+  public static final class VanalyticsBlockingStub extends io.grpc.stub.AbstractBlockingStub<VanalyticsBlockingStub> {
     private VanalyticsBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -1861,10 +2047,8 @@ public final class VanalyticsGrpc {
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service Vanalytics.
    */
-  public static final class VanalyticsFutureStub
-      extends io.grpc.stub.AbstractFutureStub<VanalyticsFutureStub> {
+  public static final class VanalyticsFutureStub extends io.grpc.stub.AbstractFutureStub<VanalyticsFutureStub> {
     private VanalyticsFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -2224,10 +2408,10 @@ public final class VanalyticsGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AsyncService serviceImpl;
+    private final VanalyticsImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AsyncService serviceImpl, int methodId) {
+    MethodHandlers(VanalyticsImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -2362,207 +2546,6 @@ public final class VanalyticsGrpc {
           throw new AssertionError();
       }
     }
-  }
-
-  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
-    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-        .addMethod(
-          getAuditMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.AuditRequest,
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.AuditResponse>(
-                service, METHODID_AUDIT)))
-        .addMethod(
-          getGetRecordingUrlMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.GetRecordingUrlRequest,
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.GetRecordingUrlResponse>(
-                service, METHODID_GET_RECORDING_URL)))
-        .addMethod(
-          getListBillingSpanMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.ListBillingSpanRequest,
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.ListBillingSpanResponse>(
-                service, METHODID_LIST_BILLING_SPAN)))
-        .addMethod(
-          getSearchMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchRequest,
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchResponse>(
-                service, METHODID_SEARCH)))
-        .addMethod(
-          getListTranscriptGroupNamesMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.ListTranscriptGroupNamesRequest,
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.ListTranscriptGroupNamesResponse>(
-                service, METHODID_LIST_TRANSCRIPT_GROUP_NAMES)))
-        .addMethod(
-          getBulkDeleteTranscriptsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.BulkDeleteTranscriptsRequest,
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.BulkDeleteTranscriptsResponse>(
-                service, METHODID_BULK_DELETE_TRANSCRIPTS)))
-        .addMethod(
-          getBulkRestoreTranscriptsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.BulkRestoreTranscriptsRequest,
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.BulkRestoreTranscriptsResponse>(
-                service, METHODID_BULK_RESTORE_TRANSCRIPTS)))
-        .addMethod(
-          getListAgentResponseValuesMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.ListAgentResponseValuesRequest,
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.ListAgentResponseValuesResponse>(
-                service, METHODID_LIST_AGENT_RESPONSE_VALUES)))
-        .addMethod(
-          getCreateFilterMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateFilterRequest,
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.Filter>(
-                service, METHODID_CREATE_FILTER)))
-        .addMethod(
-          getListFiltersMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFiltersRequest,
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFiltersResponse>(
-                service, METHODID_LIST_FILTERS)))
-        .addMethod(
-          getUpdateFilterMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.UpdateFilterRequest,
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.Filter>(
-                service, METHODID_UPDATE_FILTER)))
-        .addMethod(
-          getDeleteFilterMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFilterRequest,
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFilterResponse>(
-                service, METHODID_DELETE_FILTER)))
-        .addMethod(
-          getGetFilterMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.GetFilterRequest,
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.Filter>(
-                service, METHODID_GET_FILTER)))
-        .addMethod(
-          getGetFlagMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.GetFlagRequest,
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.Flag>(
-                service, METHODID_GET_FLAG)))
-        .addMethod(
-          getCreateFlagMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateFlagRequest,
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.Flag>(
-                service, METHODID_CREATE_FLAG)))
-        .addMethod(
-          getListFlagsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagsRequest,
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagsResponse>(
-                service, METHODID_LIST_FLAGS)))
-        .addMethod(
-          getUpdateFlagMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.UpdateFlagRequest,
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.Flag>(
-                service, METHODID_UPDATE_FLAG)))
-        .addMethod(
-          getDeleteFlagMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagRequest,
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagResponse>(
-                service, METHODID_DELETE_FLAG)))
-        .addMethod(
-          getCreateFlagReviewMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateFlagReviewRequest,
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagReview>(
-                service, METHODID_CREATE_FLAG_REVIEW)))
-        .addMethod(
-          getBulkCreateFlagReviewMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.BulkCreateFlagReviewRequest,
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.BulkCreateFlagReviewResponse>(
-                service, METHODID_BULK_CREATE_FLAG_REVIEW)))
-        .addMethod(
-          getListFlagReviewsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagReviewsRequest,
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagReviewsResponse>(
-                service, METHODID_LIST_FLAG_REVIEWS)))
-        .addMethod(
-          getCreateFlagTranscriptMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateFlagTranscriptRequest,
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateFlagTranscriptResponse>(
-                service, METHODID_CREATE_FLAG_TRANSCRIPT)))
-        .addMethod(
-          getSearchFlagTranscriptsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchFlagTranscriptsRequest,
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.SearchFlagTranscriptsResponse>(
-                service, METHODID_SEARCH_FLAG_TRANSCRIPTS)))
-        .addMethod(
-          getCreateFlagFilterMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.CreateFlagFilterRequest,
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.FlagFilter>(
-                service, METHODID_CREATE_FLAG_FILTER)))
-        .addMethod(
-          getListFlagFiltersMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagFiltersRequest,
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagFiltersResponse>(
-                service, METHODID_LIST_FLAG_FILTERS)))
-        .addMethod(
-          getDeleteFlagFilterMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagFilterRequest,
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.DeleteFlagFilterResponse>(
-                service, METHODID_DELETE_FLAG_FILTER)))
-        .addMethod(
-          getListFlagSnapshotsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagSnapshotsRequest,
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagSnapshotsResponse>(
-                service, METHODID_LIST_FLAG_SNAPSHOTS)))
-        .addMethod(
-          getListFlagTranscriptFiltersMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagTranscriptFiltersRequest,
-              com.tcn.cloud.api.api.v1alpha1.vanalytics.ListFlagTranscriptFiltersResponse>(
-                service, METHODID_LIST_FLAG_TRANSCRIPT_FILTERS)))
-        .build();
   }
 
   private static abstract class VanalyticsBaseDescriptorSupplier

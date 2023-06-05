@@ -25,6 +25,63 @@ private static final long serialVersionUID = 0L;
     return new CustomUnsubscribeSettingsRes();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private CustomUnsubscribeSettingsRes(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+
+            emailUseCustomUnsubscribeLinks_ = input.readBool();
+            break;
+          }
+          case 16: {
+
+            emailClientAcknowledgesThatTheyAreResponsibleForOptOuts_ = input.readBool();
+            break;
+          }
+          case 24: {
+
+            emailDefaultUnsubscribeLink_ = input.readBool();
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.EmailapiProto.internal_static_api_v0alpha_CustomUnsubscribeSettingsRes_descriptor;
@@ -39,7 +96,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EMAIL_USE_CUSTOM_UNSUBSCRIBE_LINKS_FIELD_NUMBER = 1;
-  private boolean emailUseCustomUnsubscribeLinks_ = false;
+  private boolean emailUseCustomUnsubscribeLinks_;
   /**
    * <code>bool email_use_custom_unsubscribe_links = 1 [json_name = "emailUseCustomUnsubscribeLinks"];</code>
    * @return The emailUseCustomUnsubscribeLinks.
@@ -50,7 +107,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EMAIL_CLIENT_ACKNOWLEDGES_THAT_THEY_ARE_RESPONSIBLE_FOR_OPT_OUTS_FIELD_NUMBER = 2;
-  private boolean emailClientAcknowledgesThatTheyAreResponsibleForOptOuts_ = false;
+  private boolean emailClientAcknowledgesThatTheyAreResponsibleForOptOuts_;
   /**
    * <code>bool email_client_acknowledges_that_they_are_responsible_for_opt_outs = 2 [json_name = "emailClientAcknowledgesThatTheyAreResponsibleForOptOuts"];</code>
    * @return The emailClientAcknowledgesThatTheyAreResponsibleForOptOuts.
@@ -61,7 +118,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EMAIL_DEFAULT_UNSUBSCRIBE_LINK_FIELD_NUMBER = 3;
-  private boolean emailDefaultUnsubscribeLink_ = false;
+  private boolean emailDefaultUnsubscribeLink_;
   /**
    * <code>bool email_default_unsubscribe_link = 3 [json_name = "emailDefaultUnsubscribeLink"];</code>
    * @return The emailDefaultUnsubscribeLink.
@@ -94,7 +151,7 @@ private static final long serialVersionUID = 0L;
     if (emailDefaultUnsubscribeLink_ != false) {
       output.writeBool(3, emailDefaultUnsubscribeLink_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -115,7 +172,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(3, emailDefaultUnsubscribeLink_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -136,7 +193,7 @@ private static final long serialVersionUID = 0L;
         != other.getEmailClientAcknowledgesThatTheyAreResponsibleForOptOuts()) return false;
     if (getEmailDefaultUnsubscribeLink()
         != other.getEmailDefaultUnsubscribeLink()) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -156,7 +213,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + EMAIL_DEFAULT_UNSUBSCRIBE_LINK_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getEmailDefaultUnsubscribeLink());
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -205,13 +262,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.CustomUnsubscribeSettingsRes parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.CustomUnsubscribeSettingsRes parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -275,21 +330,28 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.CustomUnsubscribeSettingsRes.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       emailUseCustomUnsubscribeLinks_ = false;
+
       emailClientAcknowledgesThatTheyAreResponsibleForOptOuts_ = false;
+
       emailDefaultUnsubscribeLink_ = false;
+
       return this;
     }
 
@@ -316,22 +378,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.CustomUnsubscribeSettingsRes buildPartial() {
       com.tcn.cloud.api.api.v0alpha.CustomUnsubscribeSettingsRes result = new com.tcn.cloud.api.api.v0alpha.CustomUnsubscribeSettingsRes(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.emailUseCustomUnsubscribeLinks_ = emailUseCustomUnsubscribeLinks_;
+      result.emailClientAcknowledgesThatTheyAreResponsibleForOptOuts_ = emailClientAcknowledgesThatTheyAreResponsibleForOptOuts_;
+      result.emailDefaultUnsubscribeLink_ = emailDefaultUnsubscribeLink_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.CustomUnsubscribeSettingsRes result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.emailUseCustomUnsubscribeLinks_ = emailUseCustomUnsubscribeLinks_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.emailClientAcknowledgesThatTheyAreResponsibleForOptOuts_ = emailClientAcknowledgesThatTheyAreResponsibleForOptOuts_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.emailDefaultUnsubscribeLink_ = emailDefaultUnsubscribeLink_;
-      }
     }
 
     @java.lang.Override
@@ -387,7 +438,7 @@ private static final long serialVersionUID = 0L;
       if (other.getEmailDefaultUnsubscribeLink() != false) {
         setEmailDefaultUnsubscribeLink(other.getEmailDefaultUnsubscribeLink());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -402,48 +453,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.CustomUnsubscribeSettingsRes parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              emailUseCustomUnsubscribeLinks_ = input.readBool();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 16: {
-              emailClientAcknowledgesThatTheyAreResponsibleForOptOuts_ = input.readBool();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 16
-            case 24: {
-              emailDefaultUnsubscribeLink_ = input.readBool();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 24
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.CustomUnsubscribeSettingsRes) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private boolean emailUseCustomUnsubscribeLinks_ ;
     /**
@@ -460,9 +482,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEmailUseCustomUnsubscribeLinks(boolean value) {
-
+      
       emailUseCustomUnsubscribeLinks_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -471,7 +492,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEmailUseCustomUnsubscribeLinks() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       emailUseCustomUnsubscribeLinks_ = false;
       onChanged();
       return this;
@@ -492,9 +513,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEmailClientAcknowledgesThatTheyAreResponsibleForOptOuts(boolean value) {
-
+      
       emailClientAcknowledgesThatTheyAreResponsibleForOptOuts_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -503,7 +523,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEmailClientAcknowledgesThatTheyAreResponsibleForOptOuts() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       emailClientAcknowledgesThatTheyAreResponsibleForOptOuts_ = false;
       onChanged();
       return this;
@@ -524,9 +544,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEmailDefaultUnsubscribeLink(boolean value) {
-
+      
       emailDefaultUnsubscribeLink_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -535,7 +554,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEmailDefaultUnsubscribeLink() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       emailDefaultUnsubscribeLink_ = false;
       onChanged();
       return this;
@@ -573,18 +592,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new CustomUnsubscribeSettingsRes(input, extensionRegistry);
     }
   };
 

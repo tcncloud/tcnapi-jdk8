@@ -29,6 +29,111 @@ private static final long serialVersionUID = 0L;
     return new CallDataByInterval();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private CallDataByInterval(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            com.google.protobuf.Timestamp.Builder subBuilder = null;
+            if (startDatetime_ != null) {
+              subBuilder = startDatetime_.toBuilder();
+            }
+            startDatetime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(startDatetime_);
+              startDatetime_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 16: {
+
+            skillProfileSid_ = input.readInt64();
+            break;
+          }
+          case 24: {
+
+            totalCalls_ = input.readInt32();
+            break;
+          }
+          case 37: {
+
+            averageSpeedOfAnswerInSeconds_ = input.readFloat();
+            break;
+          }
+          case 45: {
+
+            averageHandleTimeInSeconds_ = input.readFloat();
+            break;
+          }
+          case 53: {
+
+            averageAfterCallWorkInSeconds_ = input.readFloat();
+            break;
+          }
+          case 61: {
+
+            averageTimeToAbortInSeconds_ = input.readFloat();
+            break;
+          }
+          case 64: {
+
+            totalAbandonedCalls_ = input.readInt32();
+            break;
+          }
+          case 72: {
+
+            isDelta_ = input.readBool();
+            break;
+          }
+          case 80: {
+
+            forecastDataIntervalSid_ = input.readInt64();
+            break;
+          }
+          case 88: {
+
+            intervalWidthInMinutes_ = input.readInt32();
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_CallDataByInterval_descriptor;
@@ -77,11 +182,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getStartDatetimeOrBuilder() {
-    return startDatetime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startDatetime_;
+    return getStartDatetime();
   }
 
   public static final int SKILL_PROFILE_SID_FIELD_NUMBER = 2;
-  private long skillProfileSid_ = 0L;
+  private long skillProfileSid_;
   /**
    * <pre>
    * ID of the skill profile to forecast for (not set in profile forecasts).
@@ -96,7 +201,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTAL_CALLS_FIELD_NUMBER = 3;
-  private int totalCalls_ = 0;
+  private int totalCalls_;
   /**
    * <pre>
    * the number of calls in this interval with this skill profile (answered + unanswered).
@@ -111,7 +216,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AVERAGE_SPEED_OF_ANSWER_IN_SECONDS_FIELD_NUMBER = 4;
-  private float averageSpeedOfAnswerInSeconds_ = 0F;
+  private float averageSpeedOfAnswerInSeconds_;
   /**
    * <pre>
    * optional
@@ -126,7 +231,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AVERAGE_HANDLE_TIME_IN_SECONDS_FIELD_NUMBER = 5;
-  private float averageHandleTimeInSeconds_ = 0F;
+  private float averageHandleTimeInSeconds_;
   /**
    * <pre>
    * optional
@@ -141,7 +246,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AVERAGE_AFTER_CALL_WORK_IN_SECONDS_FIELD_NUMBER = 6;
-  private float averageAfterCallWorkInSeconds_ = 0F;
+  private float averageAfterCallWorkInSeconds_;
   /**
    * <pre>
    * optional
@@ -156,7 +261,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AVERAGE_TIME_TO_ABORT_IN_SECONDS_FIELD_NUMBER = 7;
-  private float averageTimeToAbortInSeconds_ = 0F;
+  private float averageTimeToAbortInSeconds_;
   /**
    * <pre>
    * optional
@@ -171,7 +276,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTAL_ABANDONED_CALLS_FIELD_NUMBER = 8;
-  private int totalAbandonedCalls_ = 0;
+  private int totalAbandonedCalls_;
   /**
    * <pre>
    * the number of abandoned calls in this interval for this skill profile.
@@ -186,7 +291,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int IS_DELTA_FIELD_NUMBER = 9;
-  private boolean isDelta_ = false;
+  private boolean isDelta_;
   /**
    * <pre>
    * Whether the interval has been modified or not
@@ -201,7 +306,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FORECAST_DATA_INTERVAL_SID_FIELD_NUMBER = 10;
-  private long forecastDataIntervalSid_ = 0L;
+  private long forecastDataIntervalSid_;
   /**
    * <pre>
    * ID of the forecast interval that the delta/interval belongs to
@@ -216,7 +321,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INTERVAL_WIDTH_IN_MINUTES_FIELD_NUMBER = 11;
-  private int intervalWidthInMinutes_ = 0;
+  private int intervalWidthInMinutes_;
   /**
    * <pre>
    * Interval width minutes that the interval used on creation.
@@ -254,16 +359,16 @@ private static final long serialVersionUID = 0L;
     if (totalCalls_ != 0) {
       output.writeInt32(3, totalCalls_);
     }
-    if (java.lang.Float.floatToRawIntBits(averageSpeedOfAnswerInSeconds_) != 0) {
+    if (averageSpeedOfAnswerInSeconds_ != 0F) {
       output.writeFloat(4, averageSpeedOfAnswerInSeconds_);
     }
-    if (java.lang.Float.floatToRawIntBits(averageHandleTimeInSeconds_) != 0) {
+    if (averageHandleTimeInSeconds_ != 0F) {
       output.writeFloat(5, averageHandleTimeInSeconds_);
     }
-    if (java.lang.Float.floatToRawIntBits(averageAfterCallWorkInSeconds_) != 0) {
+    if (averageAfterCallWorkInSeconds_ != 0F) {
       output.writeFloat(6, averageAfterCallWorkInSeconds_);
     }
-    if (java.lang.Float.floatToRawIntBits(averageTimeToAbortInSeconds_) != 0) {
+    if (averageTimeToAbortInSeconds_ != 0F) {
       output.writeFloat(7, averageTimeToAbortInSeconds_);
     }
     if (totalAbandonedCalls_ != 0) {
@@ -278,7 +383,7 @@ private static final long serialVersionUID = 0L;
     if (intervalWidthInMinutes_ != 0) {
       output.writeInt32(11, intervalWidthInMinutes_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -299,19 +404,19 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(3, totalCalls_);
     }
-    if (java.lang.Float.floatToRawIntBits(averageSpeedOfAnswerInSeconds_) != 0) {
+    if (averageSpeedOfAnswerInSeconds_ != 0F) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(4, averageSpeedOfAnswerInSeconds_);
     }
-    if (java.lang.Float.floatToRawIntBits(averageHandleTimeInSeconds_) != 0) {
+    if (averageHandleTimeInSeconds_ != 0F) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(5, averageHandleTimeInSeconds_);
     }
-    if (java.lang.Float.floatToRawIntBits(averageAfterCallWorkInSeconds_) != 0) {
+    if (averageAfterCallWorkInSeconds_ != 0F) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(6, averageAfterCallWorkInSeconds_);
     }
-    if (java.lang.Float.floatToRawIntBits(averageTimeToAbortInSeconds_) != 0) {
+    if (averageTimeToAbortInSeconds_ != 0F) {
       size += com.google.protobuf.CodedOutputStream
         .computeFloatSize(7, averageTimeToAbortInSeconds_);
     }
@@ -331,7 +436,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(11, intervalWidthInMinutes_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -375,7 +480,7 @@ private static final long serialVersionUID = 0L;
         != other.getForecastDataIntervalSid()) return false;
     if (getIntervalWidthInMinutes()
         != other.getIntervalWidthInMinutes()) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -417,7 +522,7 @@ private static final long serialVersionUID = 0L;
         getForecastDataIntervalSid());
     hash = (37 * hash) + INTERVAL_WIDTH_IN_MINUTES_FIELD_NUMBER;
     hash = (53 * hash) + getIntervalWidthInMinutes();
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -466,13 +571,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -540,33 +643,48 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      startDatetime_ = null;
-      if (startDatetimeBuilder_ != null) {
-        startDatetimeBuilder_.dispose();
+      if (startDatetimeBuilder_ == null) {
+        startDatetime_ = null;
+      } else {
+        startDatetime_ = null;
         startDatetimeBuilder_ = null;
       }
       skillProfileSid_ = 0L;
+
       totalCalls_ = 0;
+
       averageSpeedOfAnswerInSeconds_ = 0F;
+
       averageHandleTimeInSeconds_ = 0F;
+
       averageAfterCallWorkInSeconds_ = 0F;
+
       averageTimeToAbortInSeconds_ = 0F;
+
       totalAbandonedCalls_ = 0;
+
       isDelta_ = false;
+
       forecastDataIntervalSid_ = 0L;
+
       intervalWidthInMinutes_ = 0;
+
       return this;
     }
 
@@ -593,48 +711,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval result = new com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      if (startDatetimeBuilder_ == null) {
+        result.startDatetime_ = startDatetime_;
+      } else {
+        result.startDatetime_ = startDatetimeBuilder_.build();
+      }
+      result.skillProfileSid_ = skillProfileSid_;
+      result.totalCalls_ = totalCalls_;
+      result.averageSpeedOfAnswerInSeconds_ = averageSpeedOfAnswerInSeconds_;
+      result.averageHandleTimeInSeconds_ = averageHandleTimeInSeconds_;
+      result.averageAfterCallWorkInSeconds_ = averageAfterCallWorkInSeconds_;
+      result.averageTimeToAbortInSeconds_ = averageTimeToAbortInSeconds_;
+      result.totalAbandonedCalls_ = totalAbandonedCalls_;
+      result.isDelta_ = isDelta_;
+      result.forecastDataIntervalSid_ = forecastDataIntervalSid_;
+      result.intervalWidthInMinutes_ = intervalWidthInMinutes_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.startDatetime_ = startDatetimeBuilder_ == null
-            ? startDatetime_
-            : startDatetimeBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.skillProfileSid_ = skillProfileSid_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.totalCalls_ = totalCalls_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.averageSpeedOfAnswerInSeconds_ = averageSpeedOfAnswerInSeconds_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.averageHandleTimeInSeconds_ = averageHandleTimeInSeconds_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.averageAfterCallWorkInSeconds_ = averageAfterCallWorkInSeconds_;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.averageTimeToAbortInSeconds_ = averageTimeToAbortInSeconds_;
-      }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.totalAbandonedCalls_ = totalAbandonedCalls_;
-      }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
-        result.isDelta_ = isDelta_;
-      }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
-        result.forecastDataIntervalSid_ = forecastDataIntervalSid_;
-      }
-      if (((from_bitField0_ & 0x00000400) != 0)) {
-        result.intervalWidthInMinutes_ = intervalWidthInMinutes_;
-      }
     }
 
     @java.lang.Override
@@ -714,7 +807,7 @@ private static final long serialVersionUID = 0L;
       if (other.getIntervalWidthInMinutes() != 0) {
         setIntervalWidthInMinutes(other.getIntervalWidthInMinutes());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -729,90 +822,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              input.readMessage(
-                  getStartDatetimeFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 16: {
-              skillProfileSid_ = input.readInt64();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 16
-            case 24: {
-              totalCalls_ = input.readInt32();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 24
-            case 37: {
-              averageSpeedOfAnswerInSeconds_ = input.readFloat();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 37
-            case 45: {
-              averageHandleTimeInSeconds_ = input.readFloat();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 45
-            case 53: {
-              averageAfterCallWorkInSeconds_ = input.readFloat();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 53
-            case 61: {
-              averageTimeToAbortInSeconds_ = input.readFloat();
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 61
-            case 64: {
-              totalAbandonedCalls_ = input.readInt32();
-              bitField0_ |= 0x00000080;
-              break;
-            } // case 64
-            case 72: {
-              isDelta_ = input.readBool();
-              bitField0_ |= 0x00000100;
-              break;
-            } // case 72
-            case 80: {
-              forecastDataIntervalSid_ = input.readInt64();
-              bitField0_ |= 0x00000200;
-              break;
-            } // case 80
-            case 88: {
-              intervalWidthInMinutes_ = input.readInt32();
-              bitField0_ |= 0x00000400;
-              break;
-            } // case 88
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private com.google.protobuf.Timestamp startDatetime_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -826,7 +848,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the startDatetime field is set.
      */
     public boolean hasStartDatetime() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return startDatetimeBuilder_ != null || startDatetime_ != null;
     }
     /**
      * <pre>
@@ -856,11 +878,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         startDatetime_ = value;
+        onChanged();
       } else {
         startDatetimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -874,11 +896,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (startDatetimeBuilder_ == null) {
         startDatetime_ = builderForValue.build();
+        onChanged();
       } else {
         startDatetimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -890,18 +912,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeStartDatetime(com.google.protobuf.Timestamp value) {
       if (startDatetimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          startDatetime_ != null &&
-          startDatetime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getStartDatetimeBuilder().mergeFrom(value);
+        if (startDatetime_ != null) {
+          startDatetime_ =
+            com.google.protobuf.Timestamp.newBuilder(startDatetime_).mergeFrom(value).buildPartial();
         } else {
           startDatetime_ = value;
         }
+        onChanged();
       } else {
         startDatetimeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -912,13 +933,14 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp start_datetime = 1 [json_name = "startDatetime"];</code>
      */
     public Builder clearStartDatetime() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      startDatetime_ = null;
-      if (startDatetimeBuilder_ != null) {
-        startDatetimeBuilder_.dispose();
+      if (startDatetimeBuilder_ == null) {
+        startDatetime_ = null;
+        onChanged();
+      } else {
+        startDatetime_ = null;
         startDatetimeBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -929,7 +951,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp start_datetime = 1 [json_name = "startDatetime"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getStartDatetimeBuilder() {
-      bitField0_ |= 0x00000001;
+      
       onChanged();
       return getStartDatetimeFieldBuilder().getBuilder();
     }
@@ -992,9 +1014,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSkillProfileSid(long value) {
-
+      
       skillProfileSid_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1007,7 +1028,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSkillProfileSid() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       skillProfileSid_ = 0L;
       onChanged();
       return this;
@@ -1036,9 +1057,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalCalls(int value) {
-
+      
       totalCalls_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1051,7 +1071,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalCalls() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       totalCalls_ = 0;
       onChanged();
       return this;
@@ -1080,9 +1100,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAverageSpeedOfAnswerInSeconds(float value) {
-
+      
       averageSpeedOfAnswerInSeconds_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1095,7 +1114,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAverageSpeedOfAnswerInSeconds() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      
       averageSpeedOfAnswerInSeconds_ = 0F;
       onChanged();
       return this;
@@ -1124,9 +1143,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAverageHandleTimeInSeconds(float value) {
-
+      
       averageHandleTimeInSeconds_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1139,7 +1157,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAverageHandleTimeInSeconds() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      
       averageHandleTimeInSeconds_ = 0F;
       onChanged();
       return this;
@@ -1168,9 +1186,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAverageAfterCallWorkInSeconds(float value) {
-
+      
       averageAfterCallWorkInSeconds_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1183,7 +1200,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAverageAfterCallWorkInSeconds() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      
       averageAfterCallWorkInSeconds_ = 0F;
       onChanged();
       return this;
@@ -1212,9 +1229,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAverageTimeToAbortInSeconds(float value) {
-
+      
       averageTimeToAbortInSeconds_ = value;
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1227,7 +1243,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAverageTimeToAbortInSeconds() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      
       averageTimeToAbortInSeconds_ = 0F;
       onChanged();
       return this;
@@ -1256,9 +1272,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalAbandonedCalls(int value) {
-
+      
       totalAbandonedCalls_ = value;
-      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1271,7 +1286,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalAbandonedCalls() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      
       totalAbandonedCalls_ = 0;
       onChanged();
       return this;
@@ -1300,9 +1315,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIsDelta(boolean value) {
-
+      
       isDelta_ = value;
-      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1315,7 +1329,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIsDelta() {
-      bitField0_ = (bitField0_ & ~0x00000100);
+      
       isDelta_ = false;
       onChanged();
       return this;
@@ -1344,9 +1358,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setForecastDataIntervalSid(long value) {
-
+      
       forecastDataIntervalSid_ = value;
-      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1359,7 +1372,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearForecastDataIntervalSid() {
-      bitField0_ = (bitField0_ & ~0x00000200);
+      
       forecastDataIntervalSid_ = 0L;
       onChanged();
       return this;
@@ -1390,9 +1403,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIntervalWidthInMinutes(int value) {
-
+      
       intervalWidthInMinutes_ = value;
-      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -1406,7 +1418,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIntervalWidthInMinutes() {
-      bitField0_ = (bitField0_ & ~0x00000400);
+      
       intervalWidthInMinutes_ = 0;
       onChanged();
       return this;
@@ -1444,18 +1456,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new CallDataByInterval(input, extensionRegistry);
     }
   };
 

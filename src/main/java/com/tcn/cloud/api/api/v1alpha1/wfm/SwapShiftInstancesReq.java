@@ -30,6 +30,83 @@ private static final long serialVersionUID = 0L;
     return new SwapShiftInstancesReq();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private SwapShiftInstancesReq(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+
+            wfmAgentSid1_ = input.readInt64();
+            break;
+          }
+          case 16: {
+
+            wfmAgentSid2_ = input.readInt64();
+            break;
+          }
+          case 24: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              shiftInstanceSids_ = newLongList();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            shiftInstanceSids_.addLong(input.readInt64());
+            break;
+          }
+          case 26: {
+            int length = input.readRawVarint32();
+            int limit = input.pushLimit(length);
+            if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+              shiftInstanceSids_ = newLongList();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            while (input.getBytesUntilLimit() > 0) {
+              shiftInstanceSids_.addLong(input.readInt64());
+            }
+            input.popLimit(limit);
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        shiftInstanceSids_.makeImmutable(); // C
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_SwapShiftInstancesReq_descriptor;
@@ -44,7 +121,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WFM_AGENT_SID1_FIELD_NUMBER = 1;
-  private long wfmAgentSid1_ = 0L;
+  private long wfmAgentSid1_;
   /**
    * <pre>
    * ID of the wfm agent sid that the shift instances had.
@@ -59,7 +136,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WFM_AGENT_SID2_FIELD_NUMBER = 2;
-  private long wfmAgentSid2_ = 0L;
+  private long wfmAgentSid2_;
   /**
    * <pre>
    * ID of the wfm agent sid that the shift instances will have.
@@ -74,7 +151,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SHIFT_INSTANCE_SIDS_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
   private com.google.protobuf.Internal.LongList shiftInstanceSids_;
   /**
    * <pre>
@@ -142,7 +218,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < shiftInstanceSids_.size(); i++) {
       output.writeInt64NoTag(shiftInstanceSids_.getLong(i));
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -173,7 +249,7 @@ private static final long serialVersionUID = 0L;
       }
       shiftInstanceSidsMemoizedSerializedSize = dataSize;
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -194,7 +270,7 @@ private static final long serialVersionUID = 0L;
         != other.getWfmAgentSid2()) return false;
     if (!getShiftInstanceSidsList()
         .equals(other.getShiftInstanceSidsList())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -215,7 +291,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SHIFT_INSTANCE_SIDS_FIELD_NUMBER;
       hash = (53 * hash) + getShiftInstanceSidsList().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -264,13 +340,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -338,21 +412,28 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       wfmAgentSid1_ = 0L;
+
       wfmAgentSid2_ = 0L;
+
       shiftInstanceSids_ = emptyLongList();
+      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -379,28 +460,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq result = new com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq(this);
-      buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      onBuilt();
-      return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq result) {
-      if (((bitField0_ & 0x00000004) != 0)) {
+      int from_bitField0_ = bitField0_;
+      result.wfmAgentSid1_ = wfmAgentSid1_;
+      result.wfmAgentSid2_ = wfmAgentSid2_;
+      if (((bitField0_ & 0x00000001) != 0)) {
         shiftInstanceSids_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.shiftInstanceSids_ = shiftInstanceSids_;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.wfmAgentSid1_ = wfmAgentSid1_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.wfmAgentSid2_ = wfmAgentSid2_;
-      }
+      onBuilt();
+      return result;
     }
 
     @java.lang.Override
@@ -456,14 +525,14 @@ private static final long serialVersionUID = 0L;
       if (!other.shiftInstanceSids_.isEmpty()) {
         if (shiftInstanceSids_.isEmpty()) {
           shiftInstanceSids_ = other.shiftInstanceSids_;
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensureShiftInstanceSidsIsMutable();
           shiftInstanceSids_.addAll(other.shiftInstanceSids_);
         }
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -478,56 +547,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              wfmAgentSid1_ = input.readInt64();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 16: {
-              wfmAgentSid2_ = input.readInt64();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 16
-            case 24: {
-              long v = input.readInt64();
-              ensureShiftInstanceSidsIsMutable();
-              shiftInstanceSids_.addLong(v);
-              break;
-            } // case 24
-            case 26: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              ensureShiftInstanceSidsIsMutable();
-              while (input.getBytesUntilLimit() > 0) {
-                shiftInstanceSids_.addLong(input.readInt64());
-              }
-              input.popLimit(limit);
-              break;
-            } // case 26
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -555,9 +585,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWfmAgentSid1(long value) {
-
+      
       wfmAgentSid1_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -570,7 +599,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWfmAgentSid1() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       wfmAgentSid1_ = 0L;
       onChanged();
       return this;
@@ -599,9 +628,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWfmAgentSid2(long value) {
-
+      
       wfmAgentSid2_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -614,7 +642,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearWfmAgentSid2() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       wfmAgentSid2_ = 0L;
       onChanged();
       return this;
@@ -622,10 +650,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList shiftInstanceSids_ = emptyLongList();
     private void ensureShiftInstanceSidsIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         shiftInstanceSids_ = mutableCopy(shiftInstanceSids_);
-        bitField0_ |= 0x00000004;
-      }
+        bitField0_ |= 0x00000001;
+       }
     }
     /**
      * <pre>
@@ -637,7 +665,7 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getShiftInstanceSidsList() {
-      return ((bitField0_ & 0x00000004) != 0) ?
+      return ((bitField0_ & 0x00000001) != 0) ?
                java.util.Collections.unmodifiableList(shiftInstanceSids_) : shiftInstanceSids_;
     }
     /**
@@ -675,7 +703,6 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setShiftInstanceSids(
         int index, long value) {
-
       ensureShiftInstanceSidsIsMutable();
       shiftInstanceSids_.setLong(index, value);
       onChanged();
@@ -691,7 +718,6 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder addShiftInstanceSids(long value) {
-
       ensureShiftInstanceSidsIsMutable();
       shiftInstanceSids_.addLong(value);
       onChanged();
@@ -724,7 +750,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearShiftInstanceSids() {
       shiftInstanceSids_ = emptyLongList();
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -761,18 +787,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new SwapShiftInstancesReq(input, extensionRegistry);
     }
   };
 

@@ -31,6 +31,99 @@ private static final long serialVersionUID = 0L;
     return new GetVoicemailMetadataRes();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private GetVoicemailMetadataRes(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            callerId_ = s;
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            callerSid_ = s;
+            break;
+          }
+          case 24: {
+            int rawValue = input.readEnum();
+
+            callerType_ = rawValue;
+            break;
+          }
+          case 34: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            dialedNumber_ = s;
+            break;
+          }
+          case 40: {
+
+            durationSeconds_ = input.readInt32();
+            break;
+          }
+          case 48: {
+
+            flagRead_ = input.readBool();
+            break;
+          }
+          case 58: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            mailBox_ = s;
+            break;
+          }
+          case 74: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            recordingFilename_ = s;
+            break;
+          }
+          case 80: {
+
+            recordingStart_ = input.readInt32();
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.VmdsProto.internal_static_api_v0alpha_GetVoicemailMetadataRes_descriptor;
@@ -45,8 +138,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALLER_ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object callerId_ = "";
+  private volatile java.lang.Object callerId_;
   /**
    * <code>string caller_id = 1 [json_name = "callerId"];</code>
    * @return The callerId.
@@ -84,8 +176,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALLER_SID_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object callerSid_ = "";
+  private volatile java.lang.Object callerSid_;
   /**
    * <code>string caller_sid = 2 [json_name = "callerSid"];</code>
    * @return The callerSid.
@@ -123,7 +214,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALLER_TYPE_FIELD_NUMBER = 3;
-  private int callerType_ = 0;
+  private int callerType_;
   /**
    * <code>.api.commons.CallType.Enum caller_type = 3 [json_name = "callerType"];</code>
    * @return The enum numeric value on the wire for callerType.
@@ -136,13 +227,13 @@ private static final long serialVersionUID = 0L;
    * @return The callerType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.CallType.Enum getCallerType() {
-    com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.forNumber(callerType_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.valueOf(callerType_);
     return result == null ? com.tcn.cloud.api.api.commons.CallType.Enum.UNRECOGNIZED : result;
   }
 
   public static final int DIALED_NUMBER_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object dialedNumber_ = "";
+  private volatile java.lang.Object dialedNumber_;
   /**
    * <code>string dialed_number = 4 [json_name = "dialedNumber"];</code>
    * @return The dialedNumber.
@@ -180,7 +271,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DURATION_SECONDS_FIELD_NUMBER = 5;
-  private int durationSeconds_ = 0;
+  private int durationSeconds_;
   /**
    * <code>int32 duration_seconds = 5 [json_name = "durationSeconds"];</code>
    * @return The durationSeconds.
@@ -191,7 +282,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FLAG_READ_FIELD_NUMBER = 6;
-  private boolean flagRead_ = false;
+  private boolean flagRead_;
   /**
    * <code>bool flag_read = 6 [json_name = "flagRead"];</code>
    * @return The flagRead.
@@ -202,8 +293,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MAIL_BOX_FIELD_NUMBER = 7;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object mailBox_ = "";
+  private volatile java.lang.Object mailBox_;
   /**
    * <code>string mail_box = 7 [json_name = "mailBox"];</code>
    * @return The mailBox.
@@ -241,8 +331,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RECORDING_FILENAME_FIELD_NUMBER = 9;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object recordingFilename_ = "";
+  private volatile java.lang.Object recordingFilename_;
   /**
    * <code>string recording_filename = 9 [json_name = "recordingFilename"];</code>
    * @return The recordingFilename.
@@ -280,7 +369,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RECORDING_START_FIELD_NUMBER = 10;
-  private int recordingStart_ = 0;
+  private int recordingStart_;
   /**
    * <code>int32 recording_start = 10 [json_name = "recordingStart"];</code>
    * @return The recordingStart.
@@ -304,16 +393,16 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callerId_)) {
+    if (!getCallerIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, callerId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callerSid_)) {
+    if (!getCallerSidBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, callerSid_);
     }
     if (callerType_ != com.tcn.cloud.api.api.commons.CallType.Enum.INBOUND.getNumber()) {
       output.writeEnum(3, callerType_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dialedNumber_)) {
+    if (!getDialedNumberBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, dialedNumber_);
     }
     if (durationSeconds_ != 0) {
@@ -322,16 +411,16 @@ private static final long serialVersionUID = 0L;
     if (flagRead_ != false) {
       output.writeBool(6, flagRead_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mailBox_)) {
+    if (!getMailBoxBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, mailBox_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordingFilename_)) {
+    if (!getRecordingFilenameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 9, recordingFilename_);
     }
     if (recordingStart_ != 0) {
       output.writeInt32(10, recordingStart_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -340,17 +429,17 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callerId_)) {
+    if (!getCallerIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, callerId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callerSid_)) {
+    if (!getCallerSidBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, callerSid_);
     }
     if (callerType_ != com.tcn.cloud.api.api.commons.CallType.Enum.INBOUND.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, callerType_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dialedNumber_)) {
+    if (!getDialedNumberBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, dialedNumber_);
     }
     if (durationSeconds_ != 0) {
@@ -361,17 +450,17 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(6, flagRead_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mailBox_)) {
+    if (!getMailBoxBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, mailBox_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recordingFilename_)) {
+    if (!getRecordingFilenameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, recordingFilename_);
     }
     if (recordingStart_ != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(10, recordingStart_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -403,7 +492,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getRecordingFilename())) return false;
     if (getRecordingStart()
         != other.getRecordingStart()) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -433,7 +522,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getRecordingFilename().hashCode();
     hash = (37 * hash) + RECORDING_START_FIELD_NUMBER;
     hash = (53 * hash) + getRecordingStart();
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -482,13 +571,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.GetVoicemailMetadataRes parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.GetVoicemailMetadataRes parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -552,27 +639,40 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.GetVoicemailMetadataRes.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       callerId_ = "";
+
       callerSid_ = "";
+
       callerType_ = 0;
+
       dialedNumber_ = "";
+
       durationSeconds_ = 0;
+
       flagRead_ = false;
+
       mailBox_ = "";
+
       recordingFilename_ = "";
+
       recordingStart_ = 0;
+
       return this;
     }
 
@@ -599,40 +699,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.GetVoicemailMetadataRes buildPartial() {
       com.tcn.cloud.api.api.v0alpha.GetVoicemailMetadataRes result = new com.tcn.cloud.api.api.v0alpha.GetVoicemailMetadataRes(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.callerId_ = callerId_;
+      result.callerSid_ = callerSid_;
+      result.callerType_ = callerType_;
+      result.dialedNumber_ = dialedNumber_;
+      result.durationSeconds_ = durationSeconds_;
+      result.flagRead_ = flagRead_;
+      result.mailBox_ = mailBox_;
+      result.recordingFilename_ = recordingFilename_;
+      result.recordingStart_ = recordingStart_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.GetVoicemailMetadataRes result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.callerId_ = callerId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.callerSid_ = callerSid_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.callerType_ = callerType_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.dialedNumber_ = dialedNumber_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.durationSeconds_ = durationSeconds_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.flagRead_ = flagRead_;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.mailBox_ = mailBox_;
-      }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.recordingFilename_ = recordingFilename_;
-      }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
-        result.recordingStart_ = recordingStart_;
-      }
     }
 
     @java.lang.Override
@@ -681,12 +758,10 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v0alpha.GetVoicemailMetadataRes.getDefaultInstance()) return this;
       if (!other.getCallerId().isEmpty()) {
         callerId_ = other.callerId_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getCallerSid().isEmpty()) {
         callerSid_ = other.callerSid_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.callerType_ != 0) {
@@ -694,7 +769,6 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getDialedNumber().isEmpty()) {
         dialedNumber_ = other.dialedNumber_;
-        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.getDurationSeconds() != 0) {
@@ -705,18 +779,16 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getMailBox().isEmpty()) {
         mailBox_ = other.mailBox_;
-        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (!other.getRecordingFilename().isEmpty()) {
         recordingFilename_ = other.recordingFilename_;
-        bitField0_ |= 0x00000080;
         onChanged();
       }
       if (other.getRecordingStart() != 0) {
         setRecordingStart(other.getRecordingStart());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -731,78 +803,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.GetVoicemailMetadataRes parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              callerId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              callerSid_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 24: {
-              callerType_ = input.readEnum();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 24
-            case 34: {
-              dialedNumber_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
-            case 40: {
-              durationSeconds_ = input.readInt32();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 40
-            case 48: {
-              flagRead_ = input.readBool();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 48
-            case 58: {
-              mailBox_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 58
-            case 74: {
-              recordingFilename_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000080;
-              break;
-            } // case 74
-            case 80: {
-              recordingStart_ = input.readInt32();
-              bitField0_ |= 0x00000100;
-              break;
-            } // case 80
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.GetVoicemailMetadataRes) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private java.lang.Object callerId_ = "";
     /**
@@ -845,9 +858,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallerId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       callerId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -856,8 +871,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallerId() {
+      
       callerId_ = getDefaultInstance().getCallerId();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -868,10 +883,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallerIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       callerId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -917,9 +934,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallerSid(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       callerSid_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -928,8 +947,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallerSid() {
+      
       callerSid_ = getDefaultInstance().getCallerSid();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -940,10 +959,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallerSidBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       callerSid_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -962,8 +983,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCallerTypeValue(int value) {
+      
       callerType_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -973,7 +994,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.CallType.Enum getCallerType() {
-      com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.forNumber(callerType_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.CallType.Enum result = com.tcn.cloud.api.api.commons.CallType.Enum.valueOf(callerType_);
       return result == null ? com.tcn.cloud.api.api.commons.CallType.Enum.UNRECOGNIZED : result;
     }
     /**
@@ -985,7 +1007,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000004;
+      
       callerType_ = value.getNumber();
       onChanged();
       return this;
@@ -995,7 +1017,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallerType() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       callerType_ = 0;
       onChanged();
       return this;
@@ -1042,9 +1064,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDialedNumber(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       dialedNumber_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1053,8 +1077,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDialedNumber() {
+      
       dialedNumber_ = getDefaultInstance().getDialedNumber();
-      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1065,10 +1089,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDialedNumberBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       dialedNumber_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1088,9 +1114,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDurationSeconds(int value) {
-
+      
       durationSeconds_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1099,7 +1124,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDurationSeconds() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      
       durationSeconds_ = 0;
       onChanged();
       return this;
@@ -1120,9 +1145,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFlagRead(boolean value) {
-
+      
       flagRead_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1131,7 +1155,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFlagRead() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      
       flagRead_ = false;
       onChanged();
       return this;
@@ -1178,9 +1202,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setMailBox(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       mailBox_ = value;
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1189,8 +1215,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMailBox() {
+      
       mailBox_ = getDefaultInstance().getMailBox();
-      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -1201,10 +1227,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setMailBoxBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       mailBox_ = value;
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1250,9 +1278,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRecordingFilename(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       recordingFilename_ = value;
-      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1261,8 +1291,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRecordingFilename() {
+      
       recordingFilename_ = getDefaultInstance().getRecordingFilename();
-      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -1273,10 +1303,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRecordingFilenameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       recordingFilename_ = value;
-      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1296,9 +1328,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRecordingStart(int value) {
-
+      
       recordingStart_ = value;
-      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1307,7 +1338,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRecordingStart() {
-      bitField0_ = (bitField0_ & ~0x00000100);
+      
       recordingStart_ = 0;
       onChanged();
       return this;
@@ -1345,18 +1376,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new GetVoicemailMetadataRes(input, extensionRegistry);
     }
   };
 

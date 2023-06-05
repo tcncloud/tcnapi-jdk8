@@ -10,7 +10,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.50.0)",
     comments = "Source: api/v0alpha/acd.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class AcdGrpc {
@@ -1652,186 +1652,186 @@ public final class AcdGrpc {
    * permissions.
    * </pre>
    */
-  public interface AsyncService {
+  public static abstract class AcdImplBase implements io.grpc.BindableService {
 
     /**
      */
-    default void agentGetStatusStream(com.tcn.cloud.api.api.v0alpha.AgentGetStatusRequest request,
+    public void agentGetStatusStream(com.tcn.cloud.api.api.v0alpha.AgentGetStatusRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AgentGetStatusReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAgentGetStatusStreamMethod(), responseObserver);
     }
 
     /**
      */
-    default void agentGetStatus(com.tcn.cloud.api.api.v0alpha.AgentGetStatusRequest request,
+    public void agentGetStatus(com.tcn.cloud.api.api.v0alpha.AgentGetStatusRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AgentGetStatusReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAgentGetStatusMethod(), responseObserver);
     }
 
     /**
      */
-    default void agentGetConnectedParty(com.tcn.cloud.api.api.v0alpha.AgentGetConnectedPartyRequest request,
+    public void agentGetConnectedParty(com.tcn.cloud.api.api.v0alpha.AgentGetConnectedPartyRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AgentGetConnectedPartyReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAgentGetConnectedPartyMethod(), responseObserver);
     }
 
     /**
      */
-    default void agentIntercom(com.tcn.cloud.api.api.v0alpha.AgentIntercomRequest request,
+    public void agentIntercom(com.tcn.cloud.api.api.v0alpha.AgentIntercomRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AgentIntercomReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAgentIntercomMethod(), responseObserver);
     }
 
     /**
      */
-    default void agentIntercomAccept(com.tcn.cloud.api.api.v0alpha.AgentIntercomAcceptRequest request,
+    public void agentIntercomAccept(com.tcn.cloud.api.api.v0alpha.AgentIntercomAcceptRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AgentIntercomAcceptReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAgentIntercomAcceptMethod(), responseObserver);
     }
 
     /**
      */
-    default void agentIntercomReject(com.tcn.cloud.api.api.v0alpha.AgentIntercomRejectRequest request,
+    public void agentIntercomReject(com.tcn.cloud.api.api.v0alpha.AgentIntercomRejectRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AgentIntercomRejectReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAgentIntercomRejectMethod(), responseObserver);
     }
 
     /**
      */
-    default void agentIntercomCancel(com.tcn.cloud.api.api.v0alpha.AgentIntercomCancelRequest request,
+    public void agentIntercomCancel(com.tcn.cloud.api.api.v0alpha.AgentIntercomCancelRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AgentIntercomCancelReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAgentIntercomCancelMethod(), responseObserver);
     }
 
     /**
      */
-    default void dialManualPrepare(com.tcn.cloud.api.api.v0alpha.DialManualPrepareRequest request,
+    public void dialManualPrepare(com.tcn.cloud.api.api.v0alpha.DialManualPrepareRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DialManualPrepareReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDialManualPrepareMethod(), responseObserver);
     }
 
     /**
      */
-    default void dialManualCancel(com.tcn.cloud.api.api.v0alpha.DialManualCancelRequest request,
+    public void dialManualCancel(com.tcn.cloud.api.api.v0alpha.DialManualCancelRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DialManualCancelReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDialManualCancelMethod(), responseObserver);
     }
 
     /**
      */
-    default void dialPreviewPrepare(com.tcn.cloud.api.api.v0alpha.DialPreviewPrepareRequest request,
+    public void dialPreviewPrepare(com.tcn.cloud.api.api.v0alpha.DialPreviewPrepareRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.DialPreviewPrepareReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDialPreviewPrepareMethod(), responseObserver);
     }
 
     /**
      */
-    default void agentPause(com.tcn.cloud.api.api.v0alpha.AgentPauseRequest request,
+    public void agentPause(com.tcn.cloud.api.api.v0alpha.AgentPauseRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AgentPauseReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAgentPauseMethod(), responseObserver);
     }
 
     /**
      */
-    default void agentSetReady(com.tcn.cloud.api.api.v0alpha.AgentSetReadyRequest request,
+    public void agentSetReady(com.tcn.cloud.api.api.v0alpha.AgentSetReadyRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AgentSetReadyReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAgentSetReadyMethod(), responseObserver);
     }
 
     /**
      */
-    default void agentGUIBusy(com.tcn.cloud.api.api.v0alpha.AgentGUIBusyRequest request,
+    public void agentGUIBusy(com.tcn.cloud.api.api.v0alpha.AgentGUIBusyRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AgentGUIBusyReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAgentGUIBusyMethod(), responseObserver);
     }
 
     /**
      */
-    default void reportAgentSessionEvent(com.tcn.cloud.api.api.v0alpha.AgentSessionEventReq request,
+    public void reportAgentSessionEvent(com.tcn.cloud.api.api.v0alpha.AgentSessionEventReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AgentSessionEventRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getReportAgentSessionEventMethod(), responseObserver);
     }
 
     /**
      */
-    default void callerRequeue(com.tcn.cloud.api.api.v0alpha.CallerRequeueRequest request,
+    public void callerRequeue(com.tcn.cloud.api.api.v0alpha.CallerRequeueRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CallerRequeueReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCallerRequeueMethod(), responseObserver);
     }
 
     /**
      */
-    default void agentDisconnect(com.tcn.cloud.api.api.v0alpha.AgentDisconnectRequest request,
+    public void agentDisconnect(com.tcn.cloud.api.api.v0alpha.AgentDisconnectRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AgentDisconnectReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAgentDisconnectMethod(), responseObserver);
     }
 
     /**
      */
-    default void transferWarmToOutboundCancel(com.tcn.cloud.api.api.v0alpha.TransferWarmToOutboundCancelRequest request,
+    public void transferWarmToOutboundCancel(com.tcn.cloud.api.api.v0alpha.TransferWarmToOutboundCancelRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.TransferWarmToOutboundCancelReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTransferWarmToOutboundCancelMethod(), responseObserver);
     }
 
     /**
      */
-    default void transferWarmToAgentCancel(com.tcn.cloud.api.api.v0alpha.TransferWarmToAgentCancelRequest request,
+    public void transferWarmToAgentCancel(com.tcn.cloud.api.api.v0alpha.TransferWarmToAgentCancelRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.TransferWarmToAgentCancelReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTransferWarmToAgentCancelMethod(), responseObserver);
     }
 
     /**
      */
-    default void transferWarmToOutboundApprove(com.tcn.cloud.api.api.v0alpha.TransferWarmToOutboundApproveRequest request,
+    public void transferWarmToOutboundApprove(com.tcn.cloud.api.api.v0alpha.TransferWarmToOutboundApproveRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.TransferWarmToOutboundApproveReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTransferWarmToOutboundApproveMethod(), responseObserver);
     }
 
     /**
      */
-    default void transferWarmToAgentApprove(com.tcn.cloud.api.api.v0alpha.TransferWarmToAgentApproveRequest request,
+    public void transferWarmToAgentApprove(com.tcn.cloud.api.api.v0alpha.TransferWarmToAgentApproveRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.TransferWarmToAgentApproveReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTransferWarmToAgentApproveMethod(), responseObserver);
     }
 
     /**
      */
-    default void callerSendToVoicemail(com.tcn.cloud.api.api.v0alpha.CallerSendToVoicemailRequest request,
+    public void callerSendToVoicemail(com.tcn.cloud.api.api.v0alpha.CallerSendToVoicemailRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CallerSendToVoicemailReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCallerSendToVoicemailMethod(), responseObserver);
     }
 
     /**
      */
-    default void agentInviteTransferCallerToConference(com.tcn.cloud.api.api.v0alpha.AgentInviteTransferCallerToConferenceRequest request,
+    public void agentInviteTransferCallerToConference(com.tcn.cloud.api.api.v0alpha.AgentInviteTransferCallerToConferenceRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AgentInviteTransferCallerToConferenceReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAgentInviteTransferCallerToConferenceMethod(), responseObserver);
     }
 
     /**
      */
-    default void agentMonitorCalls(com.tcn.cloud.api.api.v0alpha.AgentMonitorCallsRequest request,
+    public void agentMonitorCalls(com.tcn.cloud.api.api.v0alpha.AgentMonitorCallsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AgentMonitorCallsReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAgentMonitorCallsMethod(), responseObserver);
     }
 
     /**
      */
-    default void transferColdToOutbound(com.tcn.cloud.api.api.v0alpha.TransferColdToOutboundRequest request,
+    public void transferColdToOutbound(com.tcn.cloud.api.api.v0alpha.TransferColdToOutboundRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.TransferColdToOutboundReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTransferColdToOutboundMethod(), responseObserver);
     }
 
     /**
      */
-    default void transferColdToAgent(com.tcn.cloud.api.api.v0alpha.TransferColdToAgentRequest request,
+    public void transferColdToAgent(com.tcn.cloud.api.api.v0alpha.TransferColdToAgentRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.TransferColdToAgentReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTransferColdToAgentMethod(), responseObserver);
     }
 
     /**
      */
-    default void transferWarmToOutboundStart(com.tcn.cloud.api.api.v0alpha.TransferWarmToOutboundStartRequest request,
+    public void transferWarmToOutboundStart(com.tcn.cloud.api.api.v0alpha.TransferWarmToOutboundStartRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.TransferWarmToOutboundStartReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTransferWarmToOutboundStartMethod(), responseObserver);
     }
@@ -1841,7 +1841,7 @@ public final class AcdGrpc {
      * creates a new outbound transfer member using the given src/dst numbers
      * </pre>
      */
-    default void createWarmOutboundTransferMember(com.tcn.cloud.api.api.v0alpha.CreateWarmOutboundTransferMemberRequest request,
+    public void createWarmOutboundTransferMember(com.tcn.cloud.api.api.v0alpha.CreateWarmOutboundTransferMemberRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateWarmOutboundTransferMemberReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateWarmOutboundTransferMemberMethod(), responseObserver);
     }
@@ -1851,105 +1851,105 @@ public final class AcdGrpc {
      * hangups a transfer member using the given member identifier
      * </pre>
      */
-    default void removeTransferMember(com.tcn.cloud.api.api.v0alpha.RemoveTransferMemberRequest request,
+    public void removeTransferMember(com.tcn.cloud.api.api.v0alpha.RemoveTransferMemberRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.RemoveTransferMemberReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveTransferMemberMethod(), responseObserver);
     }
 
     /**
      */
-    default void transferWarmToAgentStart(com.tcn.cloud.api.api.v0alpha.TransferWarmToAgentStartRequest request,
+    public void transferWarmToAgentStart(com.tcn.cloud.api.api.v0alpha.TransferWarmToAgentStartRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.TransferWarmToAgentStartReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTransferWarmToAgentStartMethod(), responseObserver);
     }
 
     /**
      */
-    default void agentGetCallFromHold(com.tcn.cloud.api.api.v0alpha.AgentGetCallFromHoldRequest request,
+    public void agentGetCallFromHold(com.tcn.cloud.api.api.v0alpha.AgentGetCallFromHoldRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AgentGetCallFromHoldReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAgentGetCallFromHoldMethod(), responseObserver);
     }
 
     /**
      */
-    default void agentGetSpecificCallFromHold(com.tcn.cloud.api.api.v0alpha.AgentGetSpecificCallFromHoldRequest request,
+    public void agentGetSpecificCallFromHold(com.tcn.cloud.api.api.v0alpha.AgentGetSpecificCallFromHoldRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AgentGetSpecificCallFromHoldReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAgentGetSpecificCallFromHoldMethod(), responseObserver);
     }
 
     /**
      */
-    default void aCDGetAllAgentsStatuses(com.tcn.cloud.api.api.v0alpha.ACDGetAllAgentsStatusesRequest request,
+    public void aCDGetAllAgentsStatuses(com.tcn.cloud.api.api.v0alpha.ACDGetAllAgentsStatusesRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ACDGetAllAgentsStatusesReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getACDGetAllAgentsStatusesMethod(), responseObserver);
     }
 
     /**
      */
-    default void agentPutCallOnHold(com.tcn.cloud.api.api.v0alpha.AgentPutCallOnHoldRequest request,
+    public void agentPutCallOnHold(com.tcn.cloud.api.api.v0alpha.AgentPutCallOnHoldRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AgentPutCallOnHoldReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAgentPutCallOnHoldMethod(), responseObserver);
     }
 
     /**
      */
-    default void agentReceiveMessage(com.tcn.cloud.api.api.v0alpha.AgentReceiveMessageRequest request,
+    public void agentReceiveMessage(com.tcn.cloud.api.api.v0alpha.AgentReceiveMessageRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AgentReceiveMessageReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAgentReceiveMessageMethod(), responseObserver);
     }
 
     /**
      */
-    default void agentPBXApproveCall(com.tcn.cloud.api.api.v0alpha.AgentPBXApproveCallRequest request,
+    public void agentPBXApproveCall(com.tcn.cloud.api.api.v0alpha.AgentPBXApproveCallRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AgentPBXApproveCallReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAgentPBXApproveCallMethod(), responseObserver);
     }
 
     /**
      */
-    default void agentPBXRejectCall(com.tcn.cloud.api.api.v0alpha.AgentPBXRejectCallRequest request,
+    public void agentPBXRejectCall(com.tcn.cloud.api.api.v0alpha.AgentPBXRejectCallRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AgentPBXRejectCallReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAgentPBXRejectCallMethod(), responseObserver);
     }
 
     /**
      */
-    default void getCallerLostPeer(com.tcn.cloud.api.api.v0alpha.GetCallerLostPeerRequest request,
+    public void getCallerLostPeer(com.tcn.cloud.api.api.v0alpha.GetCallerLostPeerRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetCallerLostPeerReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCallerLostPeerMethod(), responseObserver);
     }
 
     /**
      */
-    default void callerGetRawEvent(com.tcn.cloud.api.api.v0alpha.CallerGetRawEventRequest request,
+    public void callerGetRawEvent(com.tcn.cloud.api.api.v0alpha.CallerGetRawEventRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CallerGetRawEventReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCallerGetRawEventMethod(), responseObserver);
     }
 
     /**
      */
-    default void peerAgentWithCaller(com.tcn.cloud.api.api.v0alpha.PeerAgentWithCallerRequest request,
+    public void peerAgentWithCaller(com.tcn.cloud.api.api.v0alpha.PeerAgentWithCallerRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.PeerAgentWithCallerReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPeerAgentWithCallerMethod(), responseObserver);
     }
 
     /**
      */
-    default void holdTransferMember(com.tcn.cloud.api.api.v0alpha.HoldTransferMemberReq request,
+    public void holdTransferMember(com.tcn.cloud.api.api.v0alpha.HoldTransferMemberReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.HoldTransferMemberRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getHoldTransferMemberMethod(), responseObserver);
     }
 
     /**
      */
-    default void unholdTransferMember(com.tcn.cloud.api.api.v0alpha.UnholdTransferMemberReq request,
+    public void unholdTransferMember(com.tcn.cloud.api.api.v0alpha.UnholdTransferMemberReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UnholdTransferMemberRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUnholdTransferMemberMethod(), responseObserver);
     }
 
     /**
      */
-    default void getAgentCallCounts(com.tcn.cloud.api.api.v0alpha.GetAgentCallCountsReq request,
+    public void getAgentCallCounts(com.tcn.cloud.api.api.v0alpha.GetAgentCallCountsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetAgentCallCountsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAgentCallCountsMethod(), responseObserver);
     }
@@ -1959,7 +1959,7 @@ public final class AcdGrpc {
      * endpoint used to start a warm caller transfer
      * </pre>
      */
-    default void warmCallerTransferStart(com.tcn.cloud.api.api.v0alpha.WarmCallerTransferStartReq request,
+    public void warmCallerTransferStart(com.tcn.cloud.api.api.v0alpha.WarmCallerTransferStartReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.WarmCallerTransferStartRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getWarmCallerTransferStartMethod(), responseObserver);
     }
@@ -1969,7 +1969,7 @@ public final class AcdGrpc {
      * endpoint used to cancel a warm caller transfer
      * </pre>
      */
-    default void warmCallerTransferCancel(com.tcn.cloud.api.api.v0alpha.WarmCallerTransferCancelReq request,
+    public void warmCallerTransferCancel(com.tcn.cloud.api.api.v0alpha.WarmCallerTransferCancelReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.WarmCallerTransferCancelRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getWarmCallerTransferCancelMethod(), responseObserver);
     }
@@ -1979,7 +1979,7 @@ public final class AcdGrpc {
      * endpoint used to approve a warm caller transfer
      * </pre>
      */
-    default void warmCallerTransferApprove(com.tcn.cloud.api.api.v0alpha.WarmCallerTransferApproveReq request,
+    public void warmCallerTransferApprove(com.tcn.cloud.api.api.v0alpha.WarmCallerTransferApproveReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.WarmCallerTransferApproveRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getWarmCallerTransferApproveMethod(), responseObserver);
     }
@@ -1989,7 +1989,7 @@ public final class AcdGrpc {
      * endpoint used to play a soundboard file for a customer
      * </pre>
      */
-    default void playSoundboardEntity(com.tcn.cloud.api.api.v0alpha.PlaySoundboardEntityReq request,
+    public void playSoundboardEntity(com.tcn.cloud.api.api.v0alpha.PlaySoundboardEntityReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.PlaySoundboardEntityRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPlaySoundboardEntityMethod(), responseObserver);
     }
@@ -1999,7 +1999,7 @@ public final class AcdGrpc {
      * endpoint used to stop a soundboard file for a customer
      * </pre>
      */
-    default void stopSoundboardEntity(com.tcn.cloud.api.api.v0alpha.StopSoundboardEntityReq request,
+    public void stopSoundboardEntity(com.tcn.cloud.api.api.v0alpha.StopSoundboardEntityReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StopSoundboardEntityRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStopSoundboardEntityMethod(), responseObserver);
     }
@@ -2009,7 +2009,7 @@ public final class AcdGrpc {
      * endpoint used to update an agent's skills
      * </pre>
      */
-    default void updateAgentSkills(com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillsRequest request,
+    public void updateAgentSkills(com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillsRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillsReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAgentSkillsMethod(), responseObserver);
     }
@@ -2019,7 +2019,7 @@ public final class AcdGrpc {
      * endpoint used to play a dtmf tone to all members of a the agent's conference
      * </pre>
      */
-    default void playDTMF(com.tcn.cloud.api.api.v0alpha.PlayDTMFRequest request,
+    public void playDTMF(com.tcn.cloud.api.api.v0alpha.PlayDTMFRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.PlayDTMFReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPlayDTMFMethod(), responseObserver);
     }
@@ -2029,7 +2029,7 @@ public final class AcdGrpc {
      * endpoint used to mute and agent's mic
      * </pre>
      */
-    default void agentMute(com.tcn.cloud.api.api.v0alpha.AgentMuteRequest request,
+    public void agentMute(com.tcn.cloud.api.api.v0alpha.AgentMuteRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AgentMuteReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAgentMuteMethod(), responseObserver);
     }
@@ -2039,38 +2039,382 @@ public final class AcdGrpc {
      * endpoint used to unmute and agent's mic
      * </pre>
      */
-    default void agentUnmute(com.tcn.cloud.api.api.v0alpha.AgentUnmuteRequest request,
+    public void agentUnmute(com.tcn.cloud.api.api.v0alpha.AgentUnmuteRequest request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.AgentUnmuteReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAgentUnmuteMethod(), responseObserver);
     }
-  }
-
-  /**
-   * Base class for the server implementation of the service Acd.
-   * <pre>
-   * Service for interacting with TCN's Agent Call Distribution system.
-   * Accessing all of the methods require an authenticated user with the correct
-   * permissions.
-   * </pre>
-   */
-  public static abstract class AcdImplBase
-      implements io.grpc.BindableService, AsyncService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return AcdGrpc.bindService(this);
+      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getAgentGetStatusStreamMethod(),
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.AgentGetStatusRequest,
+                com.tcn.cloud.api.api.v0alpha.AgentGetStatusReply>(
+                  this, METHODID_AGENT_GET_STATUS_STREAM)))
+          .addMethod(
+            getAgentGetStatusMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.AgentGetStatusRequest,
+                com.tcn.cloud.api.api.v0alpha.AgentGetStatusReply>(
+                  this, METHODID_AGENT_GET_STATUS)))
+          .addMethod(
+            getAgentGetConnectedPartyMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.AgentGetConnectedPartyRequest,
+                com.tcn.cloud.api.api.v0alpha.AgentGetConnectedPartyReply>(
+                  this, METHODID_AGENT_GET_CONNECTED_PARTY)))
+          .addMethod(
+            getAgentIntercomMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.AgentIntercomRequest,
+                com.tcn.cloud.api.api.v0alpha.AgentIntercomReply>(
+                  this, METHODID_AGENT_INTERCOM)))
+          .addMethod(
+            getAgentIntercomAcceptMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.AgentIntercomAcceptRequest,
+                com.tcn.cloud.api.api.v0alpha.AgentIntercomAcceptReply>(
+                  this, METHODID_AGENT_INTERCOM_ACCEPT)))
+          .addMethod(
+            getAgentIntercomRejectMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.AgentIntercomRejectRequest,
+                com.tcn.cloud.api.api.v0alpha.AgentIntercomRejectReply>(
+                  this, METHODID_AGENT_INTERCOM_REJECT)))
+          .addMethod(
+            getAgentIntercomCancelMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.AgentIntercomCancelRequest,
+                com.tcn.cloud.api.api.v0alpha.AgentIntercomCancelReply>(
+                  this, METHODID_AGENT_INTERCOM_CANCEL)))
+          .addMethod(
+            getDialManualPrepareMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.DialManualPrepareRequest,
+                com.tcn.cloud.api.api.v0alpha.DialManualPrepareReply>(
+                  this, METHODID_DIAL_MANUAL_PREPARE)))
+          .addMethod(
+            getDialManualCancelMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.DialManualCancelRequest,
+                com.tcn.cloud.api.api.v0alpha.DialManualCancelReply>(
+                  this, METHODID_DIAL_MANUAL_CANCEL)))
+          .addMethod(
+            getDialPreviewPrepareMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.DialPreviewPrepareRequest,
+                com.tcn.cloud.api.api.v0alpha.DialPreviewPrepareReply>(
+                  this, METHODID_DIAL_PREVIEW_PREPARE)))
+          .addMethod(
+            getAgentPauseMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.AgentPauseRequest,
+                com.tcn.cloud.api.api.v0alpha.AgentPauseReply>(
+                  this, METHODID_AGENT_PAUSE)))
+          .addMethod(
+            getAgentSetReadyMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.AgentSetReadyRequest,
+                com.tcn.cloud.api.api.v0alpha.AgentSetReadyReply>(
+                  this, METHODID_AGENT_SET_READY)))
+          .addMethod(
+            getAgentGUIBusyMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.AgentGUIBusyRequest,
+                com.tcn.cloud.api.api.v0alpha.AgentGUIBusyReply>(
+                  this, METHODID_AGENT_GUIBUSY)))
+          .addMethod(
+            getReportAgentSessionEventMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.AgentSessionEventReq,
+                com.tcn.cloud.api.api.v0alpha.AgentSessionEventRes>(
+                  this, METHODID_REPORT_AGENT_SESSION_EVENT)))
+          .addMethod(
+            getCallerRequeueMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.CallerRequeueRequest,
+                com.tcn.cloud.api.api.v0alpha.CallerRequeueReply>(
+                  this, METHODID_CALLER_REQUEUE)))
+          .addMethod(
+            getAgentDisconnectMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.AgentDisconnectRequest,
+                com.tcn.cloud.api.api.v0alpha.AgentDisconnectReply>(
+                  this, METHODID_AGENT_DISCONNECT)))
+          .addMethod(
+            getTransferWarmToOutboundCancelMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.TransferWarmToOutboundCancelRequest,
+                com.tcn.cloud.api.api.v0alpha.TransferWarmToOutboundCancelReply>(
+                  this, METHODID_TRANSFER_WARM_TO_OUTBOUND_CANCEL)))
+          .addMethod(
+            getTransferWarmToAgentCancelMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.TransferWarmToAgentCancelRequest,
+                com.tcn.cloud.api.api.v0alpha.TransferWarmToAgentCancelReply>(
+                  this, METHODID_TRANSFER_WARM_TO_AGENT_CANCEL)))
+          .addMethod(
+            getTransferWarmToOutboundApproveMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.TransferWarmToOutboundApproveRequest,
+                com.tcn.cloud.api.api.v0alpha.TransferWarmToOutboundApproveReply>(
+                  this, METHODID_TRANSFER_WARM_TO_OUTBOUND_APPROVE)))
+          .addMethod(
+            getTransferWarmToAgentApproveMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.TransferWarmToAgentApproveRequest,
+                com.tcn.cloud.api.api.v0alpha.TransferWarmToAgentApproveReply>(
+                  this, METHODID_TRANSFER_WARM_TO_AGENT_APPROVE)))
+          .addMethod(
+            getCallerSendToVoicemailMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.CallerSendToVoicemailRequest,
+                com.tcn.cloud.api.api.v0alpha.CallerSendToVoicemailReply>(
+                  this, METHODID_CALLER_SEND_TO_VOICEMAIL)))
+          .addMethod(
+            getAgentInviteTransferCallerToConferenceMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.AgentInviteTransferCallerToConferenceRequest,
+                com.tcn.cloud.api.api.v0alpha.AgentInviteTransferCallerToConferenceReply>(
+                  this, METHODID_AGENT_INVITE_TRANSFER_CALLER_TO_CONFERENCE)))
+          .addMethod(
+            getAgentMonitorCallsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.AgentMonitorCallsRequest,
+                com.tcn.cloud.api.api.v0alpha.AgentMonitorCallsReply>(
+                  this, METHODID_AGENT_MONITOR_CALLS)))
+          .addMethod(
+            getTransferColdToOutboundMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.TransferColdToOutboundRequest,
+                com.tcn.cloud.api.api.v0alpha.TransferColdToOutboundReply>(
+                  this, METHODID_TRANSFER_COLD_TO_OUTBOUND)))
+          .addMethod(
+            getTransferColdToAgentMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.TransferColdToAgentRequest,
+                com.tcn.cloud.api.api.v0alpha.TransferColdToAgentReply>(
+                  this, METHODID_TRANSFER_COLD_TO_AGENT)))
+          .addMethod(
+            getTransferWarmToOutboundStartMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.TransferWarmToOutboundStartRequest,
+                com.tcn.cloud.api.api.v0alpha.TransferWarmToOutboundStartReply>(
+                  this, METHODID_TRANSFER_WARM_TO_OUTBOUND_START)))
+          .addMethod(
+            getCreateWarmOutboundTransferMemberMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.CreateWarmOutboundTransferMemberRequest,
+                com.tcn.cloud.api.api.v0alpha.CreateWarmOutboundTransferMemberReply>(
+                  this, METHODID_CREATE_WARM_OUTBOUND_TRANSFER_MEMBER)))
+          .addMethod(
+            getRemoveTransferMemberMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.RemoveTransferMemberRequest,
+                com.tcn.cloud.api.api.v0alpha.RemoveTransferMemberReply>(
+                  this, METHODID_REMOVE_TRANSFER_MEMBER)))
+          .addMethod(
+            getTransferWarmToAgentStartMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.TransferWarmToAgentStartRequest,
+                com.tcn.cloud.api.api.v0alpha.TransferWarmToAgentStartReply>(
+                  this, METHODID_TRANSFER_WARM_TO_AGENT_START)))
+          .addMethod(
+            getAgentGetCallFromHoldMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.AgentGetCallFromHoldRequest,
+                com.tcn.cloud.api.api.v0alpha.AgentGetCallFromHoldReply>(
+                  this, METHODID_AGENT_GET_CALL_FROM_HOLD)))
+          .addMethod(
+            getAgentGetSpecificCallFromHoldMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.AgentGetSpecificCallFromHoldRequest,
+                com.tcn.cloud.api.api.v0alpha.AgentGetSpecificCallFromHoldReply>(
+                  this, METHODID_AGENT_GET_SPECIFIC_CALL_FROM_HOLD)))
+          .addMethod(
+            getACDGetAllAgentsStatusesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.ACDGetAllAgentsStatusesRequest,
+                com.tcn.cloud.api.api.v0alpha.ACDGetAllAgentsStatusesReply>(
+                  this, METHODID_ACDGET_ALL_AGENTS_STATUSES)))
+          .addMethod(
+            getAgentPutCallOnHoldMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.AgentPutCallOnHoldRequest,
+                com.tcn.cloud.api.api.v0alpha.AgentPutCallOnHoldReply>(
+                  this, METHODID_AGENT_PUT_CALL_ON_HOLD)))
+          .addMethod(
+            getAgentReceiveMessageMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.AgentReceiveMessageRequest,
+                com.tcn.cloud.api.api.v0alpha.AgentReceiveMessageReply>(
+                  this, METHODID_AGENT_RECEIVE_MESSAGE)))
+          .addMethod(
+            getAgentPBXApproveCallMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.AgentPBXApproveCallRequest,
+                com.tcn.cloud.api.api.v0alpha.AgentPBXApproveCallReply>(
+                  this, METHODID_AGENT_PBXAPPROVE_CALL)))
+          .addMethod(
+            getAgentPBXRejectCallMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.AgentPBXRejectCallRequest,
+                com.tcn.cloud.api.api.v0alpha.AgentPBXRejectCallReply>(
+                  this, METHODID_AGENT_PBXREJECT_CALL)))
+          .addMethod(
+            getGetCallerLostPeerMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.GetCallerLostPeerRequest,
+                com.tcn.cloud.api.api.v0alpha.GetCallerLostPeerReply>(
+                  this, METHODID_GET_CALLER_LOST_PEER)))
+          .addMethod(
+            getCallerGetRawEventMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.CallerGetRawEventRequest,
+                com.tcn.cloud.api.api.v0alpha.CallerGetRawEventReply>(
+                  this, METHODID_CALLER_GET_RAW_EVENT)))
+          .addMethod(
+            getPeerAgentWithCallerMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.PeerAgentWithCallerRequest,
+                com.tcn.cloud.api.api.v0alpha.PeerAgentWithCallerReply>(
+                  this, METHODID_PEER_AGENT_WITH_CALLER)))
+          .addMethod(
+            getHoldTransferMemberMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.HoldTransferMemberReq,
+                com.tcn.cloud.api.api.v0alpha.HoldTransferMemberRes>(
+                  this, METHODID_HOLD_TRANSFER_MEMBER)))
+          .addMethod(
+            getUnholdTransferMemberMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.UnholdTransferMemberReq,
+                com.tcn.cloud.api.api.v0alpha.UnholdTransferMemberRes>(
+                  this, METHODID_UNHOLD_TRANSFER_MEMBER)))
+          .addMethod(
+            getGetAgentCallCountsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.GetAgentCallCountsReq,
+                com.tcn.cloud.api.api.v0alpha.GetAgentCallCountsRes>(
+                  this, METHODID_GET_AGENT_CALL_COUNTS)))
+          .addMethod(
+            getWarmCallerTransferStartMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.WarmCallerTransferStartReq,
+                com.tcn.cloud.api.api.v0alpha.WarmCallerTransferStartRes>(
+                  this, METHODID_WARM_CALLER_TRANSFER_START)))
+          .addMethod(
+            getWarmCallerTransferCancelMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.WarmCallerTransferCancelReq,
+                com.tcn.cloud.api.api.v0alpha.WarmCallerTransferCancelRes>(
+                  this, METHODID_WARM_CALLER_TRANSFER_CANCEL)))
+          .addMethod(
+            getWarmCallerTransferApproveMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.WarmCallerTransferApproveReq,
+                com.tcn.cloud.api.api.v0alpha.WarmCallerTransferApproveRes>(
+                  this, METHODID_WARM_CALLER_TRANSFER_APPROVE)))
+          .addMethod(
+            getPlaySoundboardEntityMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.PlaySoundboardEntityReq,
+                com.tcn.cloud.api.api.v0alpha.PlaySoundboardEntityRes>(
+                  this, METHODID_PLAY_SOUNDBOARD_ENTITY)))
+          .addMethod(
+            getStopSoundboardEntityMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.StopSoundboardEntityReq,
+                com.tcn.cloud.api.api.v0alpha.StopSoundboardEntityRes>(
+                  this, METHODID_STOP_SOUNDBOARD_ENTITY)))
+          .addMethod(
+            getUpdateAgentSkillsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillsRequest,
+                com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillsReply>(
+                  this, METHODID_UPDATE_AGENT_SKILLS)))
+          .addMethod(
+            getPlayDTMFMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.PlayDTMFRequest,
+                com.tcn.cloud.api.api.v0alpha.PlayDTMFReply>(
+                  this, METHODID_PLAY_DTMF)))
+          .addMethod(
+            getAgentMuteMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.AgentMuteRequest,
+                com.tcn.cloud.api.api.v0alpha.AgentMuteReply>(
+                  this, METHODID_AGENT_MUTE)))
+          .addMethod(
+            getAgentUnmuteMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.AgentUnmuteRequest,
+                com.tcn.cloud.api.api.v0alpha.AgentUnmuteReply>(
+                  this, METHODID_AGENT_UNMUTE)))
+          .build();
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service Acd.
    * <pre>
    * Service for interacting with TCN's Agent Call Distribution system.
    * Accessing all of the methods require an authenticated user with the correct
    * permissions.
    * </pre>
    */
-  public static final class AcdStub
-      extends io.grpc.stub.AbstractAsyncStub<AcdStub> {
+  public static final class AcdStub extends io.grpc.stub.AbstractAsyncStub<AcdStub> {
     private AcdStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -2525,15 +2869,13 @@ public final class AcdGrpc {
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service Acd.
    * <pre>
    * Service for interacting with TCN's Agent Call Distribution system.
    * Accessing all of the methods require an authenticated user with the correct
    * permissions.
    * </pre>
    */
-  public static final class AcdBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<AcdBlockingStub> {
+  public static final class AcdBlockingStub extends io.grpc.stub.AbstractBlockingStub<AcdBlockingStub> {
     private AcdBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -2938,15 +3280,13 @@ public final class AcdGrpc {
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service Acd.
    * <pre>
    * Service for interacting with TCN's Agent Call Distribution system.
    * Accessing all of the methods require an authenticated user with the correct
    * permissions.
    * </pre>
    */
-  public static final class AcdFutureStub
-      extends io.grpc.stub.AbstractFutureStub<AcdFutureStub> {
+  public static final class AcdFutureStub extends io.grpc.stub.AbstractFutureStub<AcdFutureStub> {
     private AcdFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -3449,10 +3789,10 @@ public final class AcdGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AsyncService serviceImpl;
+    private final AcdImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AsyncService serviceImpl, int methodId) {
+    MethodHandlers(AcdImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -3679,368 +4019,6 @@ public final class AcdGrpc {
           throw new AssertionError();
       }
     }
-  }
-
-  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
-    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-        .addMethod(
-          getAgentGetStatusStreamMethod(),
-          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.AgentGetStatusRequest,
-              com.tcn.cloud.api.api.v0alpha.AgentGetStatusReply>(
-                service, METHODID_AGENT_GET_STATUS_STREAM)))
-        .addMethod(
-          getAgentGetStatusMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.AgentGetStatusRequest,
-              com.tcn.cloud.api.api.v0alpha.AgentGetStatusReply>(
-                service, METHODID_AGENT_GET_STATUS)))
-        .addMethod(
-          getAgentGetConnectedPartyMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.AgentGetConnectedPartyRequest,
-              com.tcn.cloud.api.api.v0alpha.AgentGetConnectedPartyReply>(
-                service, METHODID_AGENT_GET_CONNECTED_PARTY)))
-        .addMethod(
-          getAgentIntercomMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.AgentIntercomRequest,
-              com.tcn.cloud.api.api.v0alpha.AgentIntercomReply>(
-                service, METHODID_AGENT_INTERCOM)))
-        .addMethod(
-          getAgentIntercomAcceptMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.AgentIntercomAcceptRequest,
-              com.tcn.cloud.api.api.v0alpha.AgentIntercomAcceptReply>(
-                service, METHODID_AGENT_INTERCOM_ACCEPT)))
-        .addMethod(
-          getAgentIntercomRejectMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.AgentIntercomRejectRequest,
-              com.tcn.cloud.api.api.v0alpha.AgentIntercomRejectReply>(
-                service, METHODID_AGENT_INTERCOM_REJECT)))
-        .addMethod(
-          getAgentIntercomCancelMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.AgentIntercomCancelRequest,
-              com.tcn.cloud.api.api.v0alpha.AgentIntercomCancelReply>(
-                service, METHODID_AGENT_INTERCOM_CANCEL)))
-        .addMethod(
-          getDialManualPrepareMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.DialManualPrepareRequest,
-              com.tcn.cloud.api.api.v0alpha.DialManualPrepareReply>(
-                service, METHODID_DIAL_MANUAL_PREPARE)))
-        .addMethod(
-          getDialManualCancelMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.DialManualCancelRequest,
-              com.tcn.cloud.api.api.v0alpha.DialManualCancelReply>(
-                service, METHODID_DIAL_MANUAL_CANCEL)))
-        .addMethod(
-          getDialPreviewPrepareMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.DialPreviewPrepareRequest,
-              com.tcn.cloud.api.api.v0alpha.DialPreviewPrepareReply>(
-                service, METHODID_DIAL_PREVIEW_PREPARE)))
-        .addMethod(
-          getAgentPauseMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.AgentPauseRequest,
-              com.tcn.cloud.api.api.v0alpha.AgentPauseReply>(
-                service, METHODID_AGENT_PAUSE)))
-        .addMethod(
-          getAgentSetReadyMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.AgentSetReadyRequest,
-              com.tcn.cloud.api.api.v0alpha.AgentSetReadyReply>(
-                service, METHODID_AGENT_SET_READY)))
-        .addMethod(
-          getAgentGUIBusyMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.AgentGUIBusyRequest,
-              com.tcn.cloud.api.api.v0alpha.AgentGUIBusyReply>(
-                service, METHODID_AGENT_GUIBUSY)))
-        .addMethod(
-          getReportAgentSessionEventMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.AgentSessionEventReq,
-              com.tcn.cloud.api.api.v0alpha.AgentSessionEventRes>(
-                service, METHODID_REPORT_AGENT_SESSION_EVENT)))
-        .addMethod(
-          getCallerRequeueMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.CallerRequeueRequest,
-              com.tcn.cloud.api.api.v0alpha.CallerRequeueReply>(
-                service, METHODID_CALLER_REQUEUE)))
-        .addMethod(
-          getAgentDisconnectMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.AgentDisconnectRequest,
-              com.tcn.cloud.api.api.v0alpha.AgentDisconnectReply>(
-                service, METHODID_AGENT_DISCONNECT)))
-        .addMethod(
-          getTransferWarmToOutboundCancelMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.TransferWarmToOutboundCancelRequest,
-              com.tcn.cloud.api.api.v0alpha.TransferWarmToOutboundCancelReply>(
-                service, METHODID_TRANSFER_WARM_TO_OUTBOUND_CANCEL)))
-        .addMethod(
-          getTransferWarmToAgentCancelMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.TransferWarmToAgentCancelRequest,
-              com.tcn.cloud.api.api.v0alpha.TransferWarmToAgentCancelReply>(
-                service, METHODID_TRANSFER_WARM_TO_AGENT_CANCEL)))
-        .addMethod(
-          getTransferWarmToOutboundApproveMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.TransferWarmToOutboundApproveRequest,
-              com.tcn.cloud.api.api.v0alpha.TransferWarmToOutboundApproveReply>(
-                service, METHODID_TRANSFER_WARM_TO_OUTBOUND_APPROVE)))
-        .addMethod(
-          getTransferWarmToAgentApproveMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.TransferWarmToAgentApproveRequest,
-              com.tcn.cloud.api.api.v0alpha.TransferWarmToAgentApproveReply>(
-                service, METHODID_TRANSFER_WARM_TO_AGENT_APPROVE)))
-        .addMethod(
-          getCallerSendToVoicemailMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.CallerSendToVoicemailRequest,
-              com.tcn.cloud.api.api.v0alpha.CallerSendToVoicemailReply>(
-                service, METHODID_CALLER_SEND_TO_VOICEMAIL)))
-        .addMethod(
-          getAgentInviteTransferCallerToConferenceMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.AgentInviteTransferCallerToConferenceRequest,
-              com.tcn.cloud.api.api.v0alpha.AgentInviteTransferCallerToConferenceReply>(
-                service, METHODID_AGENT_INVITE_TRANSFER_CALLER_TO_CONFERENCE)))
-        .addMethod(
-          getAgentMonitorCallsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.AgentMonitorCallsRequest,
-              com.tcn.cloud.api.api.v0alpha.AgentMonitorCallsReply>(
-                service, METHODID_AGENT_MONITOR_CALLS)))
-        .addMethod(
-          getTransferColdToOutboundMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.TransferColdToOutboundRequest,
-              com.tcn.cloud.api.api.v0alpha.TransferColdToOutboundReply>(
-                service, METHODID_TRANSFER_COLD_TO_OUTBOUND)))
-        .addMethod(
-          getTransferColdToAgentMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.TransferColdToAgentRequest,
-              com.tcn.cloud.api.api.v0alpha.TransferColdToAgentReply>(
-                service, METHODID_TRANSFER_COLD_TO_AGENT)))
-        .addMethod(
-          getTransferWarmToOutboundStartMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.TransferWarmToOutboundStartRequest,
-              com.tcn.cloud.api.api.v0alpha.TransferWarmToOutboundStartReply>(
-                service, METHODID_TRANSFER_WARM_TO_OUTBOUND_START)))
-        .addMethod(
-          getCreateWarmOutboundTransferMemberMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.CreateWarmOutboundTransferMemberRequest,
-              com.tcn.cloud.api.api.v0alpha.CreateWarmOutboundTransferMemberReply>(
-                service, METHODID_CREATE_WARM_OUTBOUND_TRANSFER_MEMBER)))
-        .addMethod(
-          getRemoveTransferMemberMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.RemoveTransferMemberRequest,
-              com.tcn.cloud.api.api.v0alpha.RemoveTransferMemberReply>(
-                service, METHODID_REMOVE_TRANSFER_MEMBER)))
-        .addMethod(
-          getTransferWarmToAgentStartMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.TransferWarmToAgentStartRequest,
-              com.tcn.cloud.api.api.v0alpha.TransferWarmToAgentStartReply>(
-                service, METHODID_TRANSFER_WARM_TO_AGENT_START)))
-        .addMethod(
-          getAgentGetCallFromHoldMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.AgentGetCallFromHoldRequest,
-              com.tcn.cloud.api.api.v0alpha.AgentGetCallFromHoldReply>(
-                service, METHODID_AGENT_GET_CALL_FROM_HOLD)))
-        .addMethod(
-          getAgentGetSpecificCallFromHoldMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.AgentGetSpecificCallFromHoldRequest,
-              com.tcn.cloud.api.api.v0alpha.AgentGetSpecificCallFromHoldReply>(
-                service, METHODID_AGENT_GET_SPECIFIC_CALL_FROM_HOLD)))
-        .addMethod(
-          getACDGetAllAgentsStatusesMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.ACDGetAllAgentsStatusesRequest,
-              com.tcn.cloud.api.api.v0alpha.ACDGetAllAgentsStatusesReply>(
-                service, METHODID_ACDGET_ALL_AGENTS_STATUSES)))
-        .addMethod(
-          getAgentPutCallOnHoldMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.AgentPutCallOnHoldRequest,
-              com.tcn.cloud.api.api.v0alpha.AgentPutCallOnHoldReply>(
-                service, METHODID_AGENT_PUT_CALL_ON_HOLD)))
-        .addMethod(
-          getAgentReceiveMessageMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.AgentReceiveMessageRequest,
-              com.tcn.cloud.api.api.v0alpha.AgentReceiveMessageReply>(
-                service, METHODID_AGENT_RECEIVE_MESSAGE)))
-        .addMethod(
-          getAgentPBXApproveCallMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.AgentPBXApproveCallRequest,
-              com.tcn.cloud.api.api.v0alpha.AgentPBXApproveCallReply>(
-                service, METHODID_AGENT_PBXAPPROVE_CALL)))
-        .addMethod(
-          getAgentPBXRejectCallMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.AgentPBXRejectCallRequest,
-              com.tcn.cloud.api.api.v0alpha.AgentPBXRejectCallReply>(
-                service, METHODID_AGENT_PBXREJECT_CALL)))
-        .addMethod(
-          getGetCallerLostPeerMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.GetCallerLostPeerRequest,
-              com.tcn.cloud.api.api.v0alpha.GetCallerLostPeerReply>(
-                service, METHODID_GET_CALLER_LOST_PEER)))
-        .addMethod(
-          getCallerGetRawEventMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.CallerGetRawEventRequest,
-              com.tcn.cloud.api.api.v0alpha.CallerGetRawEventReply>(
-                service, METHODID_CALLER_GET_RAW_EVENT)))
-        .addMethod(
-          getPeerAgentWithCallerMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.PeerAgentWithCallerRequest,
-              com.tcn.cloud.api.api.v0alpha.PeerAgentWithCallerReply>(
-                service, METHODID_PEER_AGENT_WITH_CALLER)))
-        .addMethod(
-          getHoldTransferMemberMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.HoldTransferMemberReq,
-              com.tcn.cloud.api.api.v0alpha.HoldTransferMemberRes>(
-                service, METHODID_HOLD_TRANSFER_MEMBER)))
-        .addMethod(
-          getUnholdTransferMemberMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.UnholdTransferMemberReq,
-              com.tcn.cloud.api.api.v0alpha.UnholdTransferMemberRes>(
-                service, METHODID_UNHOLD_TRANSFER_MEMBER)))
-        .addMethod(
-          getGetAgentCallCountsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.GetAgentCallCountsReq,
-              com.tcn.cloud.api.api.v0alpha.GetAgentCallCountsRes>(
-                service, METHODID_GET_AGENT_CALL_COUNTS)))
-        .addMethod(
-          getWarmCallerTransferStartMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.WarmCallerTransferStartReq,
-              com.tcn.cloud.api.api.v0alpha.WarmCallerTransferStartRes>(
-                service, METHODID_WARM_CALLER_TRANSFER_START)))
-        .addMethod(
-          getWarmCallerTransferCancelMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.WarmCallerTransferCancelReq,
-              com.tcn.cloud.api.api.v0alpha.WarmCallerTransferCancelRes>(
-                service, METHODID_WARM_CALLER_TRANSFER_CANCEL)))
-        .addMethod(
-          getWarmCallerTransferApproveMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.WarmCallerTransferApproveReq,
-              com.tcn.cloud.api.api.v0alpha.WarmCallerTransferApproveRes>(
-                service, METHODID_WARM_CALLER_TRANSFER_APPROVE)))
-        .addMethod(
-          getPlaySoundboardEntityMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.PlaySoundboardEntityReq,
-              com.tcn.cloud.api.api.v0alpha.PlaySoundboardEntityRes>(
-                service, METHODID_PLAY_SOUNDBOARD_ENTITY)))
-        .addMethod(
-          getStopSoundboardEntityMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.StopSoundboardEntityReq,
-              com.tcn.cloud.api.api.v0alpha.StopSoundboardEntityRes>(
-                service, METHODID_STOP_SOUNDBOARD_ENTITY)))
-        .addMethod(
-          getUpdateAgentSkillsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillsRequest,
-              com.tcn.cloud.api.api.v0alpha.UpdateAgentSkillsReply>(
-                service, METHODID_UPDATE_AGENT_SKILLS)))
-        .addMethod(
-          getPlayDTMFMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.PlayDTMFRequest,
-              com.tcn.cloud.api.api.v0alpha.PlayDTMFReply>(
-                service, METHODID_PLAY_DTMF)))
-        .addMethod(
-          getAgentMuteMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.AgentMuteRequest,
-              com.tcn.cloud.api.api.v0alpha.AgentMuteReply>(
-                service, METHODID_AGENT_MUTE)))
-        .addMethod(
-          getAgentUnmuteMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.AgentUnmuteRequest,
-              com.tcn.cloud.api.api.v0alpha.AgentUnmuteReply>(
-                service, METHODID_AGENT_UNMUTE)))
-        .build();
   }
 
   private static abstract class AcdBaseDescriptorSupplier

@@ -37,6 +37,97 @@ private static final long serialVersionUID = 0L;
     return new ConstructedFilename();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private ConstructedFilename(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 26: {
+            com.google.protobuf.StringValue.Builder subBuilder = null;
+            if (overrideFilename_ != null) {
+              subBuilder = overrideFilename_.toBuilder();
+            }
+            overrideFilename_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(overrideFilename_);
+              overrideFilename_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 34: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            prefix_ = s;
+            break;
+          }
+          case 42: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            dateFormat_ = s;
+            break;
+          }
+          case 50: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            suffix_ = s;
+            break;
+          }
+          case 58: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            fileExtension_ = s;
+            break;
+          }
+          case 64: {
+            int rawValue = input.readEnum();
+
+            datePosition_ = rawValue;
+            break;
+          }
+          case 72: {
+            int rawValue = input.readEnum();
+
+            dayToUse_ = rawValue;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.LmsProto.internal_static_api_commons_ConstructedFilename_descriptor;
@@ -94,12 +185,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.StringValueOrBuilder getOverrideFilenameOrBuilder() {
-    return overrideFilename_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : overrideFilename_;
+    return getOverrideFilename();
   }
 
   public static final int PREFIX_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object prefix_ = "";
+  private volatile java.lang.Object prefix_;
   /**
    * <pre>
    * prefix is prepended to the filename (or override_filename)
@@ -145,8 +235,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DATE_FORMAT_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object dateFormat_ = "";
+  private volatile java.lang.Object dateFormat_;
   /**
    * <pre>
    * format string like: YYYY-MM-DDhhmmss
@@ -192,8 +281,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SUFFIX_FIELD_NUMBER = 6;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object suffix_ = "";
+  private volatile java.lang.Object suffix_;
   /**
    * <pre>
    * suffix is appeneded to the filename (or override_filename)
@@ -243,8 +331,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FILE_EXTENSION_FIELD_NUMBER = 7;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object fileExtension_ = "";
+  private volatile java.lang.Object fileExtension_;
   /**
    * <pre>
    * extension to add to the file, (if none already exists as part of the
@@ -292,7 +379,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DATE_POSITION_FIELD_NUMBER = 8;
-  private int datePosition_ = 0;
+  private int datePosition_;
   /**
    * <pre>
    * If 0 (default) date is positioned very first (before prefix)
@@ -317,12 +404,13 @@ private static final long serialVersionUID = 0L;
    * @return The datePosition.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.DatePosition getDatePosition() {
-    com.tcn.cloud.api.api.commons.DatePosition result = com.tcn.cloud.api.api.commons.DatePosition.forNumber(datePosition_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.DatePosition result = com.tcn.cloud.api.api.commons.DatePosition.valueOf(datePosition_);
     return result == null ? com.tcn.cloud.api.api.commons.DatePosition.UNRECOGNIZED : result;
   }
 
   public static final int DAY_TO_USE_FIELD_NUMBER = 9;
-  private int dayToUse_ = 0;
+  private int dayToUse_;
   /**
    * <pre>
    * Day to use for date
@@ -343,7 +431,8 @@ private static final long serialVersionUID = 0L;
    * @return The dayToUse.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.RelativeDay getDayToUse() {
-    com.tcn.cloud.api.api.commons.RelativeDay result = com.tcn.cloud.api.api.commons.RelativeDay.forNumber(dayToUse_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.RelativeDay result = com.tcn.cloud.api.api.commons.RelativeDay.valueOf(dayToUse_);
     return result == null ? com.tcn.cloud.api.api.commons.RelativeDay.UNRECOGNIZED : result;
   }
 
@@ -364,16 +453,16 @@ private static final long serialVersionUID = 0L;
     if (overrideFilename_ != null) {
       output.writeMessage(3, getOverrideFilename());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prefix_)) {
+    if (!getPrefixBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, prefix_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dateFormat_)) {
+    if (!getDateFormatBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, dateFormat_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(suffix_)) {
+    if (!getSuffixBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, suffix_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fileExtension_)) {
+    if (!getFileExtensionBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, fileExtension_);
     }
     if (datePosition_ != com.tcn.cloud.api.api.commons.DatePosition.DATE_POSITION_FIRST.getNumber()) {
@@ -382,7 +471,7 @@ private static final long serialVersionUID = 0L;
     if (dayToUse_ != com.tcn.cloud.api.api.commons.RelativeDay.RELATIVE_DAY_TODAY.getNumber()) {
       output.writeEnum(9, dayToUse_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -395,16 +484,16 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getOverrideFilename());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prefix_)) {
+    if (!getPrefixBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, prefix_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dateFormat_)) {
+    if (!getDateFormatBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, dateFormat_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(suffix_)) {
+    if (!getSuffixBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, suffix_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fileExtension_)) {
+    if (!getFileExtensionBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, fileExtension_);
     }
     if (datePosition_ != com.tcn.cloud.api.api.commons.DatePosition.DATE_POSITION_FIRST.getNumber()) {
@@ -415,7 +504,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(9, dayToUse_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -445,7 +534,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getFileExtension())) return false;
     if (datePosition_ != other.datePosition_) return false;
     if (dayToUse_ != other.dayToUse_) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -472,7 +561,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + datePosition_;
     hash = (37 * hash) + DAY_TO_USE_FIELD_NUMBER;
     hash = (53 * hash) + dayToUse_;
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -521,13 +610,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.commons.ConstructedFilename parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.commons.ConstructedFilename parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -597,29 +684,40 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.ConstructedFilename.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      overrideFilename_ = null;
-      if (overrideFilenameBuilder_ != null) {
-        overrideFilenameBuilder_.dispose();
+      if (overrideFilenameBuilder_ == null) {
+        overrideFilename_ = null;
+      } else {
+        overrideFilename_ = null;
         overrideFilenameBuilder_ = null;
       }
       prefix_ = "";
+
       dateFormat_ = "";
+
       suffix_ = "";
+
       fileExtension_ = "";
+
       datePosition_ = 0;
+
       dayToUse_ = 0;
+
       return this;
     }
 
@@ -646,36 +744,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.ConstructedFilename buildPartial() {
       com.tcn.cloud.api.api.commons.ConstructedFilename result = new com.tcn.cloud.api.api.commons.ConstructedFilename(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      if (overrideFilenameBuilder_ == null) {
+        result.overrideFilename_ = overrideFilename_;
+      } else {
+        result.overrideFilename_ = overrideFilenameBuilder_.build();
+      }
+      result.prefix_ = prefix_;
+      result.dateFormat_ = dateFormat_;
+      result.suffix_ = suffix_;
+      result.fileExtension_ = fileExtension_;
+      result.datePosition_ = datePosition_;
+      result.dayToUse_ = dayToUse_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.commons.ConstructedFilename result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.overrideFilename_ = overrideFilenameBuilder_ == null
-            ? overrideFilename_
-            : overrideFilenameBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.prefix_ = prefix_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.dateFormat_ = dateFormat_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.suffix_ = suffix_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.fileExtension_ = fileExtension_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.datePosition_ = datePosition_;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.dayToUse_ = dayToUse_;
-      }
     }
 
     @java.lang.Override
@@ -727,22 +808,18 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getPrefix().isEmpty()) {
         prefix_ = other.prefix_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getDateFormat().isEmpty()) {
         dateFormat_ = other.dateFormat_;
-        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getSuffix().isEmpty()) {
         suffix_ = other.suffix_;
-        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.getFileExtension().isEmpty()) {
         fileExtension_ = other.fileExtension_;
-        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (other.datePosition_ != 0) {
@@ -751,7 +828,7 @@ private static final long serialVersionUID = 0L;
       if (other.dayToUse_ != 0) {
         setDayToUseValue(other.getDayToUseValue());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -766,70 +843,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.commons.ConstructedFilename parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 26: {
-              input.readMessage(
-                  getOverrideFilenameFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 26
-            case 34: {
-              prefix_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 34
-            case 42: {
-              dateFormat_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 42
-            case 50: {
-              suffix_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 50
-            case 58: {
-              fileExtension_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 58
-            case 64: {
-              datePosition_ = input.readEnum();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 64
-            case 72: {
-              dayToUse_ = input.readEnum();
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 72
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.commons.ConstructedFilename) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private com.google.protobuf.StringValue overrideFilename_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -846,7 +872,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the overrideFilename field is set.
      */
     public boolean hasOverrideFilename() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return overrideFilenameBuilder_ != null || overrideFilename_ != null;
     }
     /**
      * <pre>
@@ -882,11 +908,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         overrideFilename_ = value;
+        onChanged();
       } else {
         overrideFilenameBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -903,11 +929,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.StringValue.Builder builderForValue) {
       if (overrideFilenameBuilder_ == null) {
         overrideFilename_ = builderForValue.build();
+        onChanged();
       } else {
         overrideFilenameBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -922,18 +948,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeOverrideFilename(com.google.protobuf.StringValue value) {
       if (overrideFilenameBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          overrideFilename_ != null &&
-          overrideFilename_ != com.google.protobuf.StringValue.getDefaultInstance()) {
-          getOverrideFilenameBuilder().mergeFrom(value);
+        if (overrideFilename_ != null) {
+          overrideFilename_ =
+            com.google.protobuf.StringValue.newBuilder(overrideFilename_).mergeFrom(value).buildPartial();
         } else {
           overrideFilename_ = value;
         }
+        onChanged();
       } else {
         overrideFilenameBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -947,13 +972,14 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue override_filename = 3 [json_name = "overrideFilename"];</code>
      */
     public Builder clearOverrideFilename() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      overrideFilename_ = null;
-      if (overrideFilenameBuilder_ != null) {
-        overrideFilenameBuilder_.dispose();
+      if (overrideFilenameBuilder_ == null) {
+        overrideFilename_ = null;
+        onChanged();
+      } else {
+        overrideFilename_ = null;
         overrideFilenameBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -967,7 +993,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.StringValue override_filename = 3 [json_name = "overrideFilename"];</code>
      */
     public com.google.protobuf.StringValue.Builder getOverrideFilenameBuilder() {
-      bitField0_ |= 0x00000001;
+      
       onChanged();
       return getOverrideFilenameFieldBuilder().getBuilder();
     }
@@ -1066,9 +1092,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPrefix(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       prefix_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1081,8 +1109,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPrefix() {
+      
       prefix_ = getDefaultInstance().getPrefix();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1097,10 +1125,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPrefixBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       prefix_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1158,9 +1188,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDateFormat(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       dateFormat_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1173,8 +1205,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDateFormat() {
+      
       dateFormat_ = getDefaultInstance().getDateFormat();
-      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1189,10 +1221,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDateFormatBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       dateFormat_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1256,9 +1290,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSuffix(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       suffix_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1273,8 +1309,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSuffix() {
+      
       suffix_ = getDefaultInstance().getSuffix();
-      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1291,10 +1327,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSuffixBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       suffix_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1355,9 +1393,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFileExtension(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       fileExtension_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1371,8 +1411,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFileExtension() {
+      
       fileExtension_ = getDefaultInstance().getFileExtension();
-      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1388,10 +1428,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFileExtensionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       fileExtension_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1422,8 +1464,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDatePositionValue(int value) {
+      
       datePosition_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1439,7 +1481,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.DatePosition getDatePosition() {
-      com.tcn.cloud.api.api.commons.DatePosition result = com.tcn.cloud.api.api.commons.DatePosition.forNumber(datePosition_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.DatePosition result = com.tcn.cloud.api.api.commons.DatePosition.valueOf(datePosition_);
       return result == null ? com.tcn.cloud.api.api.commons.DatePosition.UNRECOGNIZED : result;
     }
     /**
@@ -1457,7 +1500,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000020;
+      
       datePosition_ = value.getNumber();
       onChanged();
       return this;
@@ -1473,7 +1516,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDatePosition() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      
       datePosition_ = 0;
       onChanged();
       return this;
@@ -1501,8 +1544,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDayToUseValue(int value) {
+      
       dayToUse_ = value;
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1516,7 +1559,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.RelativeDay getDayToUse() {
-      com.tcn.cloud.api.api.commons.RelativeDay result = com.tcn.cloud.api.api.commons.RelativeDay.forNumber(dayToUse_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.RelativeDay result = com.tcn.cloud.api.api.commons.RelativeDay.valueOf(dayToUse_);
       return result == null ? com.tcn.cloud.api.api.commons.RelativeDay.UNRECOGNIZED : result;
     }
     /**
@@ -1532,7 +1576,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000040;
+      
       dayToUse_ = value.getNumber();
       onChanged();
       return this;
@@ -1546,7 +1590,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDayToUse() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      
       dayToUse_ = 0;
       onChanged();
       return this;
@@ -1584,18 +1628,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new ConstructedFilename(input, extensionRegistry);
     }
   };
 

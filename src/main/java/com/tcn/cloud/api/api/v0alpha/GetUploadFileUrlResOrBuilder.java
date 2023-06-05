@@ -23,7 +23,6 @@ public interface GetUploadFileUrlResOrBuilder extends
    * <pre>
    * "bucket" is not safe to provide to the front end
    * string bucket = 2;
-   *
    * identifier so we can get this file back at a later point
    * </pre>
    *
@@ -35,7 +34,6 @@ public interface GetUploadFileUrlResOrBuilder extends
    * <pre>
    * "bucket" is not safe to provide to the front end
    * string bucket = 2;
-   *
    * identifier so we can get this file back at a later point
    * </pre>
    *

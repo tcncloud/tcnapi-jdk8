@@ -35,6 +35,102 @@ private static final long serialVersionUID = 0L;
     return new ScorecardsDeleteScorecardEvent();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private ScorecardsDeleteScorecardEvent(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            userId_ = s;
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            title_ = s;
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            description_ = s;
+            break;
+          }
+          case 33: {
+
+            passScore_ = input.readDouble();
+            break;
+          }
+          case 40: {
+            int rawValue = input.readEnum();
+
+            scoreType_ = rawValue;
+            break;
+          }
+          case 48: {
+            int rawValue = input.readEnum();
+
+            evaluationType_ = rawValue;
+            break;
+          }
+          case 56: {
+            int rawValue = input.readEnum();
+
+            state_ = rawValue;
+            break;
+          }
+          case 66: {
+            com.tcn.cloud.api.api.commons.Scorecard.Builder subBuilder = null;
+            if (scorecard_ != null) {
+              subBuilder = scorecard_.toBuilder();
+            }
+            scorecard_ = input.readMessage(com.tcn.cloud.api.api.commons.Scorecard.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(scorecard_);
+              scorecard_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.audit.ScorecardsEventsProto.internal_static_api_commons_audit_ScorecardsDeleteScorecardEvent_descriptor;
@@ -49,8 +145,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int USER_ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object userId_ = "";
+  private volatile java.lang.Object userId_;
   /**
    * <pre>
    * unique id of tcn user triggering event
@@ -96,8 +191,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TITLE_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object title_ = "";
+  private volatile java.lang.Object title_;
   /**
    * <pre>
    * the title of the scorecard
@@ -143,8 +237,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTION_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object description_ = "";
+  private volatile java.lang.Object description_;
   /**
    * <pre>
    * extra info or context for the scorecard
@@ -190,7 +283,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PASS_SCORE_FIELD_NUMBER = 4;
-  private double passScore_ = 0D;
+  private double passScore_;
   /**
    * <pre>
    * passing score for the scorecard
@@ -205,7 +298,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SCORE_TYPE_FIELD_NUMBER = 5;
-  private int scoreType_ = 0;
+  private int scoreType_;
   /**
    * <pre>
    * method of score calculation
@@ -226,12 +319,13 @@ private static final long serialVersionUID = 0L;
    * @return The scoreType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.ScoreType getScoreType() {
-    com.tcn.cloud.api.api.commons.ScoreType result = com.tcn.cloud.api.api.commons.ScoreType.forNumber(scoreType_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.ScoreType result = com.tcn.cloud.api.api.commons.ScoreType.valueOf(scoreType_);
     return result == null ? com.tcn.cloud.api.api.commons.ScoreType.UNRECOGNIZED : result;
   }
 
   public static final int EVALUATION_TYPE_FIELD_NUMBER = 6;
-  private int evaluationType_ = 0;
+  private int evaluationType_;
   /**
    * <pre>
    * method of evaluation (i.e. manual, auto)
@@ -252,12 +346,13 @@ private static final long serialVersionUID = 0L;
    * @return The evaluationType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.EvaluationType getEvaluationType() {
-    com.tcn.cloud.api.api.commons.EvaluationType result = com.tcn.cloud.api.api.commons.EvaluationType.forNumber(evaluationType_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.EvaluationType result = com.tcn.cloud.api.api.commons.EvaluationType.valueOf(evaluationType_);
     return result == null ? com.tcn.cloud.api.api.commons.EvaluationType.UNRECOGNIZED : result;
   }
 
   public static final int STATE_FIELD_NUMBER = 7;
-  private int state_ = 0;
+  private int state_;
   /**
    * <pre>
    * state of the scorecard (i.e. draft, ready, in_use)
@@ -278,7 +373,8 @@ private static final long serialVersionUID = 0L;
    * @return The state.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.ScorecardState getState() {
-    com.tcn.cloud.api.api.commons.ScorecardState result = com.tcn.cloud.api.api.commons.ScorecardState.forNumber(state_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.ScorecardState result = com.tcn.cloud.api.api.commons.ScorecardState.valueOf(state_);
     return result == null ? com.tcn.cloud.api.api.commons.ScorecardState.UNRECOGNIZED : result;
   }
 
@@ -317,7 +413,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.commons.ScorecardOrBuilder getScorecardOrBuilder() {
-    return scorecard_ == null ? com.tcn.cloud.api.api.commons.Scorecard.getDefaultInstance() : scorecard_;
+    return getScorecard();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -334,16 +430,16 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
+    if (!getUserIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, userId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+    if (!getTitleBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, title_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+    if (!getDescriptionBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
     }
-    if (java.lang.Double.doubleToRawLongBits(passScore_) != 0) {
+    if (passScore_ != 0D) {
       output.writeDouble(4, passScore_);
     }
     if (scoreType_ != com.tcn.cloud.api.api.commons.ScoreType.SCORE_SIMPLE_SUM.getNumber()) {
@@ -358,7 +454,7 @@ private static final long serialVersionUID = 0L;
     if (scorecard_ != null) {
       output.writeMessage(8, getScorecard());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -367,16 +463,16 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
+    if (!getUserIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, userId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+    if (!getTitleBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, title_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+    if (!getDescriptionBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
     }
-    if (java.lang.Double.doubleToRawLongBits(passScore_) != 0) {
+    if (passScore_ != 0D) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(4, passScore_);
     }
@@ -396,7 +492,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getScorecard());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -428,7 +524,7 @@ private static final long serialVersionUID = 0L;
       if (!getScorecard()
           .equals(other.getScorecard())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -458,7 +554,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SCORECARD_FIELD_NUMBER;
       hash = (53 * hash) + getScorecard().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -507,13 +603,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteScorecardEvent parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteScorecardEvent parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -581,28 +675,40 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteScorecardEvent.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       userId_ = "";
+
       title_ = "";
+
       description_ = "";
+
       passScore_ = 0D;
+
       scoreType_ = 0;
+
       evaluationType_ = 0;
+
       state_ = 0;
-      scorecard_ = null;
-      if (scorecardBuilder_ != null) {
-        scorecardBuilder_.dispose();
+
+      if (scorecardBuilder_ == null) {
+        scorecard_ = null;
+      } else {
+        scorecard_ = null;
         scorecardBuilder_ = null;
       }
       return this;
@@ -631,39 +737,20 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteScorecardEvent buildPartial() {
       com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteScorecardEvent result = new com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteScorecardEvent(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.userId_ = userId_;
+      result.title_ = title_;
+      result.description_ = description_;
+      result.passScore_ = passScore_;
+      result.scoreType_ = scoreType_;
+      result.evaluationType_ = evaluationType_;
+      result.state_ = state_;
+      if (scorecardBuilder_ == null) {
+        result.scorecard_ = scorecard_;
+      } else {
+        result.scorecard_ = scorecardBuilder_.build();
+      }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteScorecardEvent result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.userId_ = userId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.title_ = title_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.description_ = description_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.passScore_ = passScore_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.scoreType_ = scoreType_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.evaluationType_ = evaluationType_;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.state_ = state_;
-      }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.scorecard_ = scorecardBuilder_ == null
-            ? scorecard_
-            : scorecardBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -712,17 +799,14 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteScorecardEvent.getDefaultInstance()) return this;
       if (!other.getUserId().isEmpty()) {
         userId_ = other.userId_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getTitle().isEmpty()) {
         title_ = other.title_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getDescription().isEmpty()) {
         description_ = other.description_;
-        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.getPassScore() != 0D) {
@@ -740,7 +824,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasScorecard()) {
         mergeScorecard(other.getScorecard());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -755,75 +839,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteScorecardEvent parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              userId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              title_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 26: {
-              description_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            case 33: {
-              passScore_ = input.readDouble();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 33
-            case 40: {
-              scoreType_ = input.readEnum();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 40
-            case 48: {
-              evaluationType_ = input.readEnum();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 48
-            case 56: {
-              state_ = input.readEnum();
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 56
-            case 66: {
-              input.readMessage(
-                  getScorecardFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000080;
-              break;
-            } // case 66
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.commons.audit.ScorecardsDeleteScorecardEvent) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private java.lang.Object userId_ = "";
     /**
@@ -878,9 +906,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUserId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       userId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -893,8 +923,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUserId() {
+      
       userId_ = getDefaultInstance().getUserId();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -909,10 +939,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUserIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       userId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -970,9 +1002,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTitle(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       title_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -985,8 +1019,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTitle() {
+      
       title_ = getDefaultInstance().getTitle();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1001,10 +1035,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTitleBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       title_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1062,9 +1098,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       description_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1077,8 +1115,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
+      
       description_ = getDefaultInstance().getDescription();
-      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1093,10 +1131,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescriptionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       description_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1124,9 +1164,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPassScore(double value) {
-
+      
       passScore_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1139,7 +1178,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPassScore() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      
       passScore_ = 0D;
       onChanged();
       return this;
@@ -1167,8 +1206,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setScoreTypeValue(int value) {
+      
       scoreType_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1182,7 +1221,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.ScoreType getScoreType() {
-      com.tcn.cloud.api.api.commons.ScoreType result = com.tcn.cloud.api.api.commons.ScoreType.forNumber(scoreType_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.ScoreType result = com.tcn.cloud.api.api.commons.ScoreType.valueOf(scoreType_);
       return result == null ? com.tcn.cloud.api.api.commons.ScoreType.UNRECOGNIZED : result;
     }
     /**
@@ -1198,7 +1238,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000010;
+      
       scoreType_ = value.getNumber();
       onChanged();
       return this;
@@ -1212,7 +1252,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearScoreType() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      
       scoreType_ = 0;
       onChanged();
       return this;
@@ -1240,8 +1280,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEvaluationTypeValue(int value) {
+      
       evaluationType_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1255,7 +1295,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.EvaluationType getEvaluationType() {
-      com.tcn.cloud.api.api.commons.EvaluationType result = com.tcn.cloud.api.api.commons.EvaluationType.forNumber(evaluationType_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.EvaluationType result = com.tcn.cloud.api.api.commons.EvaluationType.valueOf(evaluationType_);
       return result == null ? com.tcn.cloud.api.api.commons.EvaluationType.UNRECOGNIZED : result;
     }
     /**
@@ -1271,7 +1312,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000020;
+      
       evaluationType_ = value.getNumber();
       onChanged();
       return this;
@@ -1285,7 +1326,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEvaluationType() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      
       evaluationType_ = 0;
       onChanged();
       return this;
@@ -1313,8 +1354,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStateValue(int value) {
+      
       state_ = value;
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1328,7 +1369,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.ScorecardState getState() {
-      com.tcn.cloud.api.api.commons.ScorecardState result = com.tcn.cloud.api.api.commons.ScorecardState.forNumber(state_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.ScorecardState result = com.tcn.cloud.api.api.commons.ScorecardState.valueOf(state_);
       return result == null ? com.tcn.cloud.api.api.commons.ScorecardState.UNRECOGNIZED : result;
     }
     /**
@@ -1344,7 +1386,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000040;
+      
       state_ = value.getNumber();
       onChanged();
       return this;
@@ -1358,7 +1400,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearState() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      
       state_ = 0;
       onChanged();
       return this;
@@ -1376,7 +1418,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the scorecard field is set.
      */
     public boolean hasScorecard() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return scorecardBuilder_ != null || scorecard_ != null;
     }
     /**
      * <pre>
@@ -1406,11 +1448,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         scorecard_ = value;
+        onChanged();
       } else {
         scorecardBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000080;
-      onChanged();
+
       return this;
     }
     /**
@@ -1424,11 +1466,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.commons.Scorecard.Builder builderForValue) {
       if (scorecardBuilder_ == null) {
         scorecard_ = builderForValue.build();
+        onChanged();
       } else {
         scorecardBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000080;
-      onChanged();
+
       return this;
     }
     /**
@@ -1440,18 +1482,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeScorecard(com.tcn.cloud.api.api.commons.Scorecard value) {
       if (scorecardBuilder_ == null) {
-        if (((bitField0_ & 0x00000080) != 0) &&
-          scorecard_ != null &&
-          scorecard_ != com.tcn.cloud.api.api.commons.Scorecard.getDefaultInstance()) {
-          getScorecardBuilder().mergeFrom(value);
+        if (scorecard_ != null) {
+          scorecard_ =
+            com.tcn.cloud.api.api.commons.Scorecard.newBuilder(scorecard_).mergeFrom(value).buildPartial();
         } else {
           scorecard_ = value;
         }
+        onChanged();
       } else {
         scorecardBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000080;
-      onChanged();
+
       return this;
     }
     /**
@@ -1462,13 +1503,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.Scorecard scorecard = 8 [json_name = "scorecard"];</code>
      */
     public Builder clearScorecard() {
-      bitField0_ = (bitField0_ & ~0x00000080);
-      scorecard_ = null;
-      if (scorecardBuilder_ != null) {
-        scorecardBuilder_.dispose();
+      if (scorecardBuilder_ == null) {
+        scorecard_ = null;
+        onChanged();
+      } else {
+        scorecard_ = null;
         scorecardBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -1479,7 +1521,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.commons.Scorecard scorecard = 8 [json_name = "scorecard"];</code>
      */
     public com.tcn.cloud.api.api.commons.Scorecard.Builder getScorecardBuilder() {
-      bitField0_ |= 0x00000080;
+      
       onChanged();
       return getScorecardFieldBuilder().getBuilder();
     }
@@ -1551,18 +1593,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new ScorecardsDeleteScorecardEvent(input, extensionRegistry);
     }
   };
 

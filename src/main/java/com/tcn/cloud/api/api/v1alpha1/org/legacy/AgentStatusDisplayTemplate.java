@@ -38,6 +38,210 @@ private static final long serialVersionUID = 0L;
     return new AgentStatusDisplayTemplate();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private AgentStatusDisplayTemplate(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              readyStyles_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle>();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            readyStyles_.add(
+                input.readMessage(com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle.parser(), extensionRegistry));
+            break;
+          }
+          case 18: {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              inConferenceStyles_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle>();
+              mutable_bitField0_ |= 0x00000002;
+            }
+            inConferenceStyles_.add(
+                input.readMessage(com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle.parser(), extensionRegistry));
+            break;
+          }
+          case 26: {
+            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+              wrapUpStyles_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle>();
+              mutable_bitField0_ |= 0x00000004;
+            }
+            wrapUpStyles_.add(
+                input.readMessage(com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle.parser(), extensionRegistry));
+            break;
+          }
+          case 34: {
+            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+              pausedStyles_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle>();
+              mutable_bitField0_ |= 0x00000008;
+            }
+            pausedStyles_.add(
+                input.readMessage(com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle.parser(), extensionRegistry));
+            break;
+          }
+          case 42: {
+            if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+              transferCallStyles_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle>();
+              mutable_bitField0_ |= 0x00000010;
+            }
+            transferCallStyles_.add(
+                input.readMessage(com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle.parser(), extensionRegistry));
+            break;
+          }
+          case 50: {
+            if (!((mutable_bitField0_ & 0x00000020) != 0)) {
+              previewCallStyles_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle>();
+              mutable_bitField0_ |= 0x00000020;
+            }
+            previewCallStyles_.add(
+                input.readMessage(com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle.parser(), extensionRegistry));
+            break;
+          }
+          case 58: {
+            if (!((mutable_bitField0_ & 0x00000040) != 0)) {
+              manualCallStyles_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle>();
+              mutable_bitField0_ |= 0x00000040;
+            }
+            manualCallStyles_.add(
+                input.readMessage(com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle.parser(), extensionRegistry));
+            break;
+          }
+          case 66: {
+            if (!((mutable_bitField0_ & 0x00000080) != 0)) {
+              pbxCallStyles_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle>();
+              mutable_bitField0_ |= 0x00000080;
+            }
+            pbxCallStyles_.add(
+                input.readMessage(com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle.parser(), extensionRegistry));
+            break;
+          }
+          case 74: {
+            if (!((mutable_bitField0_ & 0x00000100) != 0)) {
+              agentIntercomStyles_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle>();
+              mutable_bitField0_ |= 0x00000100;
+            }
+            agentIntercomStyles_.add(
+                input.readMessage(com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle.parser(), extensionRegistry));
+            break;
+          }
+          case 80: {
+
+            xmlClientPropertySid_ = input.readInt64();
+            break;
+          }
+          case 90: {
+            if (!((mutable_bitField0_ & 0x00000200) != 0)) {
+              callConnectingStyles_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle>();
+              mutable_bitField0_ |= 0x00000200;
+            }
+            callConnectingStyles_.add(
+                input.readMessage(com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle.parser(), extensionRegistry));
+            break;
+          }
+          case 98: {
+            if (!((mutable_bitField0_ & 0x00000400) != 0)) {
+              intercomSourceStyles_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle>();
+              mutable_bitField0_ |= 0x00000400;
+            }
+            intercomSourceStyles_.add(
+                input.readMessage(com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle.parser(), extensionRegistry));
+            break;
+          }
+          case 106: {
+            if (!((mutable_bitField0_ & 0x00000800) != 0)) {
+              intercomDestinationStyles_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle>();
+              mutable_bitField0_ |= 0x00000800;
+            }
+            intercomDestinationStyles_.add(
+                input.readMessage(com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle.parser(), extensionRegistry));
+            break;
+          }
+          case 114: {
+            if (!((mutable_bitField0_ & 0x00001000) != 0)) {
+              transferLostStyles_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle>();
+              mutable_bitField0_ |= 0x00001000;
+            }
+            transferLostStyles_.add(
+                input.readMessage(com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle.parser(), extensionRegistry));
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        readyStyles_ = java.util.Collections.unmodifiableList(readyStyles_);
+      }
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        inConferenceStyles_ = java.util.Collections.unmodifiableList(inConferenceStyles_);
+      }
+      if (((mutable_bitField0_ & 0x00000004) != 0)) {
+        wrapUpStyles_ = java.util.Collections.unmodifiableList(wrapUpStyles_);
+      }
+      if (((mutable_bitField0_ & 0x00000008) != 0)) {
+        pausedStyles_ = java.util.Collections.unmodifiableList(pausedStyles_);
+      }
+      if (((mutable_bitField0_ & 0x00000010) != 0)) {
+        transferCallStyles_ = java.util.Collections.unmodifiableList(transferCallStyles_);
+      }
+      if (((mutable_bitField0_ & 0x00000020) != 0)) {
+        previewCallStyles_ = java.util.Collections.unmodifiableList(previewCallStyles_);
+      }
+      if (((mutable_bitField0_ & 0x00000040) != 0)) {
+        manualCallStyles_ = java.util.Collections.unmodifiableList(manualCallStyles_);
+      }
+      if (((mutable_bitField0_ & 0x00000080) != 0)) {
+        pbxCallStyles_ = java.util.Collections.unmodifiableList(pbxCallStyles_);
+      }
+      if (((mutable_bitField0_ & 0x00000100) != 0)) {
+        agentIntercomStyles_ = java.util.Collections.unmodifiableList(agentIntercomStyles_);
+      }
+      if (((mutable_bitField0_ & 0x00000200) != 0)) {
+        callConnectingStyles_ = java.util.Collections.unmodifiableList(callConnectingStyles_);
+      }
+      if (((mutable_bitField0_ & 0x00000400) != 0)) {
+        intercomSourceStyles_ = java.util.Collections.unmodifiableList(intercomSourceStyles_);
+      }
+      if (((mutable_bitField0_ & 0x00000800) != 0)) {
+        intercomDestinationStyles_ = java.util.Collections.unmodifiableList(intercomDestinationStyles_);
+      }
+      if (((mutable_bitField0_ & 0x00001000) != 0)) {
+        transferLostStyles_ = java.util.Collections.unmodifiableList(transferLostStyles_);
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.org.legacy.EntitiesProto.internal_static_api_v1alpha1_org_legacy_AgentStatusDisplayTemplate_descriptor;
@@ -167,6 +371,94 @@ private static final long serialVersionUID = 0L;
       return new AgentStatusSinceStyle();
     }
 
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AgentStatusSinceStyle(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              bgRed_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              bgGreen_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              bgBlue_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              fgRed_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              fgGreen_ = s;
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              fgBlue_ = s;
+              break;
+            }
+            case 56: {
+
+              agentGuiStatus_ = input.readInt64();
+              break;
+            }
+            case 64: {
+
+              durationInStatus_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.tcn.cloud.api.api.v1alpha1.org.legacy.EntitiesProto.internal_static_api_v1alpha1_org_legacy_AgentStatusDisplayTemplate_AgentStatusSinceStyle_descriptor;
@@ -181,8 +473,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int BG_RED_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object bgRed_ = "";
+    private volatile java.lang.Object bgRed_;
     /**
      * <code>string bg_red = 1 [json_name = "bgRed"];</code>
      * @return The bgRed.
@@ -220,8 +511,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int BG_GREEN_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object bgGreen_ = "";
+    private volatile java.lang.Object bgGreen_;
     /**
      * <code>string bg_green = 2 [json_name = "bgGreen"];</code>
      * @return The bgGreen.
@@ -259,8 +549,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int BG_BLUE_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object bgBlue_ = "";
+    private volatile java.lang.Object bgBlue_;
     /**
      * <code>string bg_blue = 3 [json_name = "bgBlue"];</code>
      * @return The bgBlue.
@@ -298,8 +587,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int FG_RED_FIELD_NUMBER = 4;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object fgRed_ = "";
+    private volatile java.lang.Object fgRed_;
     /**
      * <code>string fg_red = 4 [json_name = "fgRed"];</code>
      * @return The fgRed.
@@ -337,8 +625,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int FG_GREEN_FIELD_NUMBER = 5;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object fgGreen_ = "";
+    private volatile java.lang.Object fgGreen_;
     /**
      * <code>string fg_green = 5 [json_name = "fgGreen"];</code>
      * @return The fgGreen.
@@ -376,8 +663,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int FG_BLUE_FIELD_NUMBER = 6;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object fgBlue_ = "";
+    private volatile java.lang.Object fgBlue_;
     /**
      * <code>string fg_blue = 6 [json_name = "fgBlue"];</code>
      * @return The fgBlue.
@@ -415,7 +701,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int AGENT_GUI_STATUS_FIELD_NUMBER = 7;
-    private long agentGuiStatus_ = 0L;
+    private long agentGuiStatus_;
     /**
      * <code>int64 agent_gui_status = 7 [json_name = "agentGuiStatus"];</code>
      * @return The agentGuiStatus.
@@ -426,7 +712,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int DURATION_IN_STATUS_FIELD_NUMBER = 8;
-    private long durationInStatus_ = 0L;
+    private long durationInStatus_;
     /**
      * <code>int64 duration_in_status = 8 [json_name = "durationInStatus"];</code>
      * @return The durationInStatus.
@@ -450,22 +736,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bgRed_)) {
+      if (!getBgRedBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, bgRed_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bgGreen_)) {
+      if (!getBgGreenBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, bgGreen_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bgBlue_)) {
+      if (!getBgBlueBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, bgBlue_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fgRed_)) {
+      if (!getFgRedBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, fgRed_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fgGreen_)) {
+      if (!getFgGreenBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, fgGreen_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fgBlue_)) {
+      if (!getFgBlueBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, fgBlue_);
       }
       if (agentGuiStatus_ != 0L) {
@@ -474,7 +760,7 @@ private static final long serialVersionUID = 0L;
       if (durationInStatus_ != 0L) {
         output.writeInt64(8, durationInStatus_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -483,22 +769,22 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bgRed_)) {
+      if (!getBgRedBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, bgRed_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bgGreen_)) {
+      if (!getBgGreenBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, bgGreen_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bgBlue_)) {
+      if (!getBgBlueBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, bgBlue_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fgRed_)) {
+      if (!getFgRedBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, fgRed_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fgGreen_)) {
+      if (!getFgGreenBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, fgGreen_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fgBlue_)) {
+      if (!getFgBlueBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, fgBlue_);
       }
       if (agentGuiStatus_ != 0L) {
@@ -509,7 +795,7 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(8, durationInStatus_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -540,7 +826,7 @@ private static final long serialVersionUID = 0L;
           != other.getAgentGuiStatus()) return false;
       if (getDurationInStatus()
           != other.getDurationInStatus()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -569,7 +855,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DURATION_IN_STATUS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getDurationInStatus());
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -618,13 +904,11 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-
     public static com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-
     public static com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -688,26 +972,38 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         bgRed_ = "";
+
         bgGreen_ = "";
+
         bgBlue_ = "";
+
         fgRed_ = "";
+
         fgGreen_ = "";
+
         fgBlue_ = "";
+
         agentGuiStatus_ = 0L;
+
         durationInStatus_ = 0L;
+
         return this;
       }
 
@@ -734,37 +1030,16 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle buildPartial() {
         com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle result = new com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        result.bgRed_ = bgRed_;
+        result.bgGreen_ = bgGreen_;
+        result.bgBlue_ = bgBlue_;
+        result.fgRed_ = fgRed_;
+        result.fgGreen_ = fgGreen_;
+        result.fgBlue_ = fgBlue_;
+        result.agentGuiStatus_ = agentGuiStatus_;
+        result.durationInStatus_ = durationInStatus_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.bgRed_ = bgRed_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.bgGreen_ = bgGreen_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.bgBlue_ = bgBlue_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.fgRed_ = fgRed_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.fgGreen_ = fgGreen_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.fgBlue_ = fgBlue_;
-        }
-        if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.agentGuiStatus_ = agentGuiStatus_;
-        }
-        if (((from_bitField0_ & 0x00000080) != 0)) {
-          result.durationInStatus_ = durationInStatus_;
-        }
       }
 
       @java.lang.Override
@@ -813,32 +1088,26 @@ private static final long serialVersionUID = 0L;
         if (other == com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle.getDefaultInstance()) return this;
         if (!other.getBgRed().isEmpty()) {
           bgRed_ = other.bgRed_;
-          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getBgGreen().isEmpty()) {
           bgGreen_ = other.bgGreen_;
-          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getBgBlue().isEmpty()) {
           bgBlue_ = other.bgBlue_;
-          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getFgRed().isEmpty()) {
           fgRed_ = other.fgRed_;
-          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (!other.getFgGreen().isEmpty()) {
           fgGreen_ = other.fgGreen_;
-          bitField0_ |= 0x00000010;
           onChanged();
         }
         if (!other.getFgBlue().isEmpty()) {
           fgBlue_ = other.fgBlue_;
-          bitField0_ |= 0x00000020;
           onChanged();
         }
         if (other.getAgentGuiStatus() != 0L) {
@@ -847,7 +1116,7 @@ private static final long serialVersionUID = 0L;
         if (other.getDurationInStatus() != 0L) {
           setDurationInStatus(other.getDurationInStatus());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -862,73 +1131,19 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                bgRed_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                bgGreen_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 26: {
-                bgBlue_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
-              case 34: {
-                fgRed_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 34
-              case 42: {
-                fgGreen_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 42
-              case 50: {
-                fgBlue_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 50
-              case 56: {
-                agentGuiStatus_ = input.readInt64();
-                bitField0_ |= 0x00000040;
-                break;
-              } // case 56
-              case 64: {
-                durationInStatus_ = input.readInt64();
-                bitField0_ |= 0x00000080;
-                break;
-              } // case 64
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
-      private int bitField0_;
 
       private java.lang.Object bgRed_ = "";
       /**
@@ -971,9 +1186,11 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setBgRed(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
         bgRed_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -982,8 +1199,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearBgRed() {
+        
         bgRed_ = getDefaultInstance().getBgRed();
-        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -994,10 +1211,12 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setBgRedBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         bgRed_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1043,9 +1262,11 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setBgGreen(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
         bgGreen_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1054,8 +1275,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearBgGreen() {
+        
         bgGreen_ = getDefaultInstance().getBgGreen();
-        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -1066,10 +1287,12 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setBgGreenBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         bgGreen_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1115,9 +1338,11 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setBgBlue(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
         bgBlue_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1126,8 +1351,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearBgBlue() {
+        
         bgBlue_ = getDefaultInstance().getBgBlue();
-        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -1138,10 +1363,12 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setBgBlueBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         bgBlue_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1187,9 +1414,11 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setFgRed(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
         fgRed_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1198,8 +1427,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearFgRed() {
+        
         fgRed_ = getDefaultInstance().getFgRed();
-        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -1210,10 +1439,12 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setFgRedBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         fgRed_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1259,9 +1490,11 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setFgGreen(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
         fgGreen_ = value;
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1270,8 +1503,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearFgGreen() {
+        
         fgGreen_ = getDefaultInstance().getFgGreen();
-        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -1282,10 +1515,12 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setFgGreenBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         fgGreen_ = value;
-        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1331,9 +1566,11 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setFgBlue(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
         fgBlue_ = value;
-        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -1342,8 +1579,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearFgBlue() {
+        
         fgBlue_ = getDefaultInstance().getFgBlue();
-        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -1354,10 +1591,12 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setFgBlueBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         fgBlue_ = value;
-        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -1377,9 +1616,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setAgentGuiStatus(long value) {
-
+        
         agentGuiStatus_ = value;
-        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -1388,7 +1626,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearAgentGuiStatus() {
-        bitField0_ = (bitField0_ & ~0x00000040);
+        
         agentGuiStatus_ = 0L;
         onChanged();
         return this;
@@ -1409,9 +1647,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setDurationInStatus(long value) {
-
+        
         durationInStatus_ = value;
-        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -1420,7 +1657,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearDurationInStatus() {
-        bitField0_ = (bitField0_ & ~0x00000080);
+        
         durationInStatus_ = 0L;
         onChanged();
         return this;
@@ -1458,18 +1695,7 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new AgentStatusSinceStyle(input, extensionRegistry);
       }
     };
 
@@ -1490,7 +1716,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int READY_STYLES_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle> readyStyles_;
   /**
    * <code>repeated .api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle ready_styles = 1 [json_name = "readyStyles"];</code>
@@ -1531,7 +1756,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int IN_CONFERENCE_STYLES_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle> inConferenceStyles_;
   /**
    * <code>repeated .api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle in_conference_styles = 2 [json_name = "inConferenceStyles"];</code>
@@ -1572,7 +1796,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WRAP_UP_STYLES_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle> wrapUpStyles_;
   /**
    * <code>repeated .api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle wrap_up_styles = 3 [json_name = "wrapUpStyles"];</code>
@@ -1613,7 +1836,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PAUSED_STYLES_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle> pausedStyles_;
   /**
    * <code>repeated .api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle paused_styles = 4 [json_name = "pausedStyles"];</code>
@@ -1654,7 +1876,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TRANSFER_CALL_STYLES_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle> transferCallStyles_;
   /**
    * <code>repeated .api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle transfer_call_styles = 5 [json_name = "transferCallStyles"];</code>
@@ -1695,7 +1916,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PREVIEW_CALL_STYLES_FIELD_NUMBER = 6;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle> previewCallStyles_;
   /**
    * <code>repeated .api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle preview_call_styles = 6 [json_name = "previewCallStyles"];</code>
@@ -1736,7 +1956,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MANUAL_CALL_STYLES_FIELD_NUMBER = 7;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle> manualCallStyles_;
   /**
    * <code>repeated .api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle manual_call_styles = 7 [json_name = "manualCallStyles"];</code>
@@ -1777,7 +1996,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PBX_CALL_STYLES_FIELD_NUMBER = 8;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle> pbxCallStyles_;
   /**
    * <code>repeated .api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle pbx_call_styles = 8 [json_name = "pbxCallStyles"];</code>
@@ -1818,7 +2036,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AGENT_INTERCOM_STYLES_FIELD_NUMBER = 9;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle> agentIntercomStyles_;
   /**
    * <code>repeated .api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle agent_intercom_styles = 9 [json_name = "agentIntercomStyles"];</code>
@@ -1859,7 +2076,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int XML_CLIENT_PROPERTY_SID_FIELD_NUMBER = 10;
-  private long xmlClientPropertySid_ = 0L;
+  private long xmlClientPropertySid_;
   /**
    * <code>int64 xml_client_property_sid = 10 [json_name = "xmlClientPropertySid"];</code>
    * @return The xmlClientPropertySid.
@@ -1870,7 +2087,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALL_CONNECTING_STYLES_FIELD_NUMBER = 11;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle> callConnectingStyles_;
   /**
    * <code>repeated .api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle call_connecting_styles = 11 [json_name = "callConnectingStyles"];</code>
@@ -1911,7 +2127,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INTERCOM_SOURCE_STYLES_FIELD_NUMBER = 12;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle> intercomSourceStyles_;
   /**
    * <code>repeated .api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle intercom_source_styles = 12 [json_name = "intercomSourceStyles"];</code>
@@ -1952,7 +2167,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INTERCOM_DESTINATION_STYLES_FIELD_NUMBER = 13;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle> intercomDestinationStyles_;
   /**
    * <code>repeated .api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle intercom_destination_styles = 13 [json_name = "intercomDestinationStyles"];</code>
@@ -1993,7 +2207,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TRANSFER_LOST_STYLES_FIELD_NUMBER = 14;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle> transferLostStyles_;
   /**
    * <code>repeated .api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle transfer_lost_styles = 14 [json_name = "transferLostStyles"];</code>
@@ -2089,7 +2302,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < transferLostStyles_.size(); i++) {
       output.writeMessage(14, transferLostStyles_.get(i));
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -2154,7 +2367,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(14, transferLostStyles_.get(i));
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -2197,7 +2410,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getIntercomDestinationStylesList())) return false;
     if (!getTransferLostStylesList()
         .equals(other.getTransferLostStylesList())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -2263,7 +2476,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TRANSFER_LOST_STYLES_FIELD_NUMBER;
       hash = (53 * hash) + getTransferLostStylesList().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -2312,13 +2525,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2382,110 +2593,115 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getReadyStylesFieldBuilder();
+        getInConferenceStylesFieldBuilder();
+        getWrapUpStylesFieldBuilder();
+        getPausedStylesFieldBuilder();
+        getTransferCallStylesFieldBuilder();
+        getPreviewCallStylesFieldBuilder();
+        getManualCallStylesFieldBuilder();
+        getPbxCallStylesFieldBuilder();
+        getAgentIntercomStylesFieldBuilder();
+        getCallConnectingStylesFieldBuilder();
+        getIntercomSourceStylesFieldBuilder();
+        getIntercomDestinationStylesFieldBuilder();
+        getTransferLostStylesFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       if (readyStylesBuilder_ == null) {
         readyStyles_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
-        readyStyles_ = null;
         readyStylesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000001);
       if (inConferenceStylesBuilder_ == null) {
         inConferenceStyles_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
-        inConferenceStyles_ = null;
         inConferenceStylesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000002);
       if (wrapUpStylesBuilder_ == null) {
         wrapUpStyles_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
       } else {
-        wrapUpStyles_ = null;
         wrapUpStylesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000004);
       if (pausedStylesBuilder_ == null) {
         pausedStyles_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
       } else {
-        pausedStyles_ = null;
         pausedStylesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000008);
       if (transferCallStylesBuilder_ == null) {
         transferCallStyles_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);
       } else {
-        transferCallStyles_ = null;
         transferCallStylesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000010);
       if (previewCallStylesBuilder_ == null) {
         previewCallStyles_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);
       } else {
-        previewCallStyles_ = null;
         previewCallStylesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000020);
       if (manualCallStylesBuilder_ == null) {
         manualCallStyles_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000040);
       } else {
-        manualCallStyles_ = null;
         manualCallStylesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000040);
       if (pbxCallStylesBuilder_ == null) {
         pbxCallStyles_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000080);
       } else {
-        pbxCallStyles_ = null;
         pbxCallStylesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000080);
       if (agentIntercomStylesBuilder_ == null) {
         agentIntercomStyles_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000100);
       } else {
-        agentIntercomStyles_ = null;
         agentIntercomStylesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000100);
       xmlClientPropertySid_ = 0L;
+
       if (callConnectingStylesBuilder_ == null) {
         callConnectingStyles_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000200);
       } else {
-        callConnectingStyles_ = null;
         callConnectingStylesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000400);
       if (intercomSourceStylesBuilder_ == null) {
         intercomSourceStyles_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000400);
       } else {
-        intercomSourceStyles_ = null;
         intercomSourceStylesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000800);
       if (intercomDestinationStylesBuilder_ == null) {
         intercomDestinationStyles_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000800);
       } else {
-        intercomDestinationStyles_ = null;
         intercomDestinationStylesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00001000);
       if (transferLostStylesBuilder_ == null) {
         transferLostStyles_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00001000);
       } else {
-        transferLostStyles_ = null;
         transferLostStylesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00002000);
       return this;
     }
 
@@ -2512,13 +2728,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate result = new com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate(this);
-      buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      onBuilt();
-      return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate result) {
+      int from_bitField0_ = bitField0_;
       if (readyStylesBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           readyStyles_ = java.util.Collections.unmodifiableList(readyStyles_);
@@ -2600,49 +2810,45 @@ private static final long serialVersionUID = 0L;
       } else {
         result.agentIntercomStyles_ = agentIntercomStylesBuilder_.build();
       }
+      result.xmlClientPropertySid_ = xmlClientPropertySid_;
       if (callConnectingStylesBuilder_ == null) {
-        if (((bitField0_ & 0x00000400) != 0)) {
+        if (((bitField0_ & 0x00000200) != 0)) {
           callConnectingStyles_ = java.util.Collections.unmodifiableList(callConnectingStyles_);
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ = (bitField0_ & ~0x00000200);
         }
         result.callConnectingStyles_ = callConnectingStyles_;
       } else {
         result.callConnectingStyles_ = callConnectingStylesBuilder_.build();
       }
       if (intercomSourceStylesBuilder_ == null) {
-        if (((bitField0_ & 0x00000800) != 0)) {
+        if (((bitField0_ & 0x00000400) != 0)) {
           intercomSourceStyles_ = java.util.Collections.unmodifiableList(intercomSourceStyles_);
-          bitField0_ = (bitField0_ & ~0x00000800);
+          bitField0_ = (bitField0_ & ~0x00000400);
         }
         result.intercomSourceStyles_ = intercomSourceStyles_;
       } else {
         result.intercomSourceStyles_ = intercomSourceStylesBuilder_.build();
       }
       if (intercomDestinationStylesBuilder_ == null) {
-        if (((bitField0_ & 0x00001000) != 0)) {
+        if (((bitField0_ & 0x00000800) != 0)) {
           intercomDestinationStyles_ = java.util.Collections.unmodifiableList(intercomDestinationStyles_);
-          bitField0_ = (bitField0_ & ~0x00001000);
+          bitField0_ = (bitField0_ & ~0x00000800);
         }
         result.intercomDestinationStyles_ = intercomDestinationStyles_;
       } else {
         result.intercomDestinationStyles_ = intercomDestinationStylesBuilder_.build();
       }
       if (transferLostStylesBuilder_ == null) {
-        if (((bitField0_ & 0x00002000) != 0)) {
+        if (((bitField0_ & 0x00001000) != 0)) {
           transferLostStyles_ = java.util.Collections.unmodifiableList(transferLostStyles_);
-          bitField0_ = (bitField0_ & ~0x00002000);
+          bitField0_ = (bitField0_ & ~0x00001000);
         }
         result.transferLostStyles_ = transferLostStyles_;
       } else {
         result.transferLostStyles_ = transferLostStylesBuilder_.build();
       }
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000200) != 0)) {
-        result.xmlClientPropertySid_ = xmlClientPropertySid_;
-      }
+      onBuilt();
+      return result;
     }
 
     @java.lang.Override
@@ -2930,7 +3136,7 @@ private static final long serialVersionUID = 0L;
         if (!other.callConnectingStyles_.isEmpty()) {
           if (callConnectingStyles_.isEmpty()) {
             callConnectingStyles_ = other.callConnectingStyles_;
-            bitField0_ = (bitField0_ & ~0x00000400);
+            bitField0_ = (bitField0_ & ~0x00000200);
           } else {
             ensureCallConnectingStylesIsMutable();
             callConnectingStyles_.addAll(other.callConnectingStyles_);
@@ -2943,7 +3149,7 @@ private static final long serialVersionUID = 0L;
             callConnectingStylesBuilder_.dispose();
             callConnectingStylesBuilder_ = null;
             callConnectingStyles_ = other.callConnectingStyles_;
-            bitField0_ = (bitField0_ & ~0x00000400);
+            bitField0_ = (bitField0_ & ~0x00000200);
             callConnectingStylesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getCallConnectingStylesFieldBuilder() : null;
@@ -2956,7 +3162,7 @@ private static final long serialVersionUID = 0L;
         if (!other.intercomSourceStyles_.isEmpty()) {
           if (intercomSourceStyles_.isEmpty()) {
             intercomSourceStyles_ = other.intercomSourceStyles_;
-            bitField0_ = (bitField0_ & ~0x00000800);
+            bitField0_ = (bitField0_ & ~0x00000400);
           } else {
             ensureIntercomSourceStylesIsMutable();
             intercomSourceStyles_.addAll(other.intercomSourceStyles_);
@@ -2969,7 +3175,7 @@ private static final long serialVersionUID = 0L;
             intercomSourceStylesBuilder_.dispose();
             intercomSourceStylesBuilder_ = null;
             intercomSourceStyles_ = other.intercomSourceStyles_;
-            bitField0_ = (bitField0_ & ~0x00000800);
+            bitField0_ = (bitField0_ & ~0x00000400);
             intercomSourceStylesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getIntercomSourceStylesFieldBuilder() : null;
@@ -2982,7 +3188,7 @@ private static final long serialVersionUID = 0L;
         if (!other.intercomDestinationStyles_.isEmpty()) {
           if (intercomDestinationStyles_.isEmpty()) {
             intercomDestinationStyles_ = other.intercomDestinationStyles_;
-            bitField0_ = (bitField0_ & ~0x00001000);
+            bitField0_ = (bitField0_ & ~0x00000800);
           } else {
             ensureIntercomDestinationStylesIsMutable();
             intercomDestinationStyles_.addAll(other.intercomDestinationStyles_);
@@ -2995,7 +3201,7 @@ private static final long serialVersionUID = 0L;
             intercomDestinationStylesBuilder_.dispose();
             intercomDestinationStylesBuilder_ = null;
             intercomDestinationStyles_ = other.intercomDestinationStyles_;
-            bitField0_ = (bitField0_ & ~0x00001000);
+            bitField0_ = (bitField0_ & ~0x00000800);
             intercomDestinationStylesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getIntercomDestinationStylesFieldBuilder() : null;
@@ -3008,7 +3214,7 @@ private static final long serialVersionUID = 0L;
         if (!other.transferLostStyles_.isEmpty()) {
           if (transferLostStyles_.isEmpty()) {
             transferLostStyles_ = other.transferLostStyles_;
-            bitField0_ = (bitField0_ & ~0x00002000);
+            bitField0_ = (bitField0_ & ~0x00001000);
           } else {
             ensureTransferLostStylesIsMutable();
             transferLostStyles_.addAll(other.transferLostStyles_);
@@ -3021,7 +3227,7 @@ private static final long serialVersionUID = 0L;
             transferLostStylesBuilder_.dispose();
             transferLostStylesBuilder_ = null;
             transferLostStyles_ = other.transferLostStyles_;
-            bitField0_ = (bitField0_ & ~0x00002000);
+            bitField0_ = (bitField0_ & ~0x00001000);
             transferLostStylesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getTransferLostStylesFieldBuilder() : null;
@@ -3030,7 +3236,7 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -3045,204 +3251,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle.parser(),
-                      extensionRegistry);
-              if (readyStylesBuilder_ == null) {
-                ensureReadyStylesIsMutable();
-                readyStyles_.add(m);
-              } else {
-                readyStylesBuilder_.addMessage(m);
-              }
-              break;
-            } // case 10
-            case 18: {
-              com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle.parser(),
-                      extensionRegistry);
-              if (inConferenceStylesBuilder_ == null) {
-                ensureInConferenceStylesIsMutable();
-                inConferenceStyles_.add(m);
-              } else {
-                inConferenceStylesBuilder_.addMessage(m);
-              }
-              break;
-            } // case 18
-            case 26: {
-              com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle.parser(),
-                      extensionRegistry);
-              if (wrapUpStylesBuilder_ == null) {
-                ensureWrapUpStylesIsMutable();
-                wrapUpStyles_.add(m);
-              } else {
-                wrapUpStylesBuilder_.addMessage(m);
-              }
-              break;
-            } // case 26
-            case 34: {
-              com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle.parser(),
-                      extensionRegistry);
-              if (pausedStylesBuilder_ == null) {
-                ensurePausedStylesIsMutable();
-                pausedStyles_.add(m);
-              } else {
-                pausedStylesBuilder_.addMessage(m);
-              }
-              break;
-            } // case 34
-            case 42: {
-              com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle.parser(),
-                      extensionRegistry);
-              if (transferCallStylesBuilder_ == null) {
-                ensureTransferCallStylesIsMutable();
-                transferCallStyles_.add(m);
-              } else {
-                transferCallStylesBuilder_.addMessage(m);
-              }
-              break;
-            } // case 42
-            case 50: {
-              com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle.parser(),
-                      extensionRegistry);
-              if (previewCallStylesBuilder_ == null) {
-                ensurePreviewCallStylesIsMutable();
-                previewCallStyles_.add(m);
-              } else {
-                previewCallStylesBuilder_.addMessage(m);
-              }
-              break;
-            } // case 50
-            case 58: {
-              com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle.parser(),
-                      extensionRegistry);
-              if (manualCallStylesBuilder_ == null) {
-                ensureManualCallStylesIsMutable();
-                manualCallStyles_.add(m);
-              } else {
-                manualCallStylesBuilder_.addMessage(m);
-              }
-              break;
-            } // case 58
-            case 66: {
-              com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle.parser(),
-                      extensionRegistry);
-              if (pbxCallStylesBuilder_ == null) {
-                ensurePbxCallStylesIsMutable();
-                pbxCallStyles_.add(m);
-              } else {
-                pbxCallStylesBuilder_.addMessage(m);
-              }
-              break;
-            } // case 66
-            case 74: {
-              com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle.parser(),
-                      extensionRegistry);
-              if (agentIntercomStylesBuilder_ == null) {
-                ensureAgentIntercomStylesIsMutable();
-                agentIntercomStyles_.add(m);
-              } else {
-                agentIntercomStylesBuilder_.addMessage(m);
-              }
-              break;
-            } // case 74
-            case 80: {
-              xmlClientPropertySid_ = input.readInt64();
-              bitField0_ |= 0x00000200;
-              break;
-            } // case 80
-            case 90: {
-              com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle.parser(),
-                      extensionRegistry);
-              if (callConnectingStylesBuilder_ == null) {
-                ensureCallConnectingStylesIsMutable();
-                callConnectingStyles_.add(m);
-              } else {
-                callConnectingStylesBuilder_.addMessage(m);
-              }
-              break;
-            } // case 90
-            case 98: {
-              com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle.parser(),
-                      extensionRegistry);
-              if (intercomSourceStylesBuilder_ == null) {
-                ensureIntercomSourceStylesIsMutable();
-                intercomSourceStyles_.add(m);
-              } else {
-                intercomSourceStylesBuilder_.addMessage(m);
-              }
-              break;
-            } // case 98
-            case 106: {
-              com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle.parser(),
-                      extensionRegistry);
-              if (intercomDestinationStylesBuilder_ == null) {
-                ensureIntercomDestinationStylesIsMutable();
-                intercomDestinationStyles_.add(m);
-              } else {
-                intercomDestinationStylesBuilder_.addMessage(m);
-              }
-              break;
-            } // case 106
-            case 114: {
-              com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle.parser(),
-                      extensionRegistry);
-              if (transferLostStylesBuilder_ == null) {
-                ensureTransferLostStylesIsMutable();
-                transferLostStyles_.add(m);
-              } else {
-                transferLostStylesBuilder_.addMessage(m);
-              }
-              break;
-            } // case 114
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -5422,9 +5441,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setXmlClientPropertySid(long value) {
-
+      
       xmlClientPropertySid_ = value;
-      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -5433,7 +5451,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearXmlClientPropertySid() {
-      bitField0_ = (bitField0_ & ~0x00000200);
+      
       xmlClientPropertySid_ = 0L;
       onChanged();
       return this;
@@ -5442,9 +5460,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle> callConnectingStyles_ =
       java.util.Collections.emptyList();
     private void ensureCallConnectingStylesIsMutable() {
-      if (!((bitField0_ & 0x00000400) != 0)) {
+      if (!((bitField0_ & 0x00000200) != 0)) {
         callConnectingStyles_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle>(callConnectingStyles_);
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000200;
        }
     }
 
@@ -5594,7 +5612,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearCallConnectingStyles() {
       if (callConnectingStylesBuilder_ == null) {
         callConnectingStyles_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000200);
         onChanged();
       } else {
         callConnectingStylesBuilder_.clear();
@@ -5671,7 +5689,7 @@ private static final long serialVersionUID = 0L;
         callConnectingStylesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle, com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle.Builder, com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyleOrBuilder>(
                 callConnectingStyles_,
-                ((bitField0_ & 0x00000400) != 0),
+                ((bitField0_ & 0x00000200) != 0),
                 getParentForChildren(),
                 isClean());
         callConnectingStyles_ = null;
@@ -5682,9 +5700,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle> intercomSourceStyles_ =
       java.util.Collections.emptyList();
     private void ensureIntercomSourceStylesIsMutable() {
-      if (!((bitField0_ & 0x00000800) != 0)) {
+      if (!((bitField0_ & 0x00000400) != 0)) {
         intercomSourceStyles_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle>(intercomSourceStyles_);
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00000400;
        }
     }
 
@@ -5834,7 +5852,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearIntercomSourceStyles() {
       if (intercomSourceStylesBuilder_ == null) {
         intercomSourceStyles_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00000400);
         onChanged();
       } else {
         intercomSourceStylesBuilder_.clear();
@@ -5911,7 +5929,7 @@ private static final long serialVersionUID = 0L;
         intercomSourceStylesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle, com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle.Builder, com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyleOrBuilder>(
                 intercomSourceStyles_,
-                ((bitField0_ & 0x00000800) != 0),
+                ((bitField0_ & 0x00000400) != 0),
                 getParentForChildren(),
                 isClean());
         intercomSourceStyles_ = null;
@@ -5922,9 +5940,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle> intercomDestinationStyles_ =
       java.util.Collections.emptyList();
     private void ensureIntercomDestinationStylesIsMutable() {
-      if (!((bitField0_ & 0x00001000) != 0)) {
+      if (!((bitField0_ & 0x00000800) != 0)) {
         intercomDestinationStyles_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle>(intercomDestinationStyles_);
-        bitField0_ |= 0x00001000;
+        bitField0_ |= 0x00000800;
        }
     }
 
@@ -6074,7 +6092,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearIntercomDestinationStyles() {
       if (intercomDestinationStylesBuilder_ == null) {
         intercomDestinationStyles_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00000800);
         onChanged();
       } else {
         intercomDestinationStylesBuilder_.clear();
@@ -6151,7 +6169,7 @@ private static final long serialVersionUID = 0L;
         intercomDestinationStylesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle, com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle.Builder, com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyleOrBuilder>(
                 intercomDestinationStyles_,
-                ((bitField0_ & 0x00001000) != 0),
+                ((bitField0_ & 0x00000800) != 0),
                 getParentForChildren(),
                 isClean());
         intercomDestinationStyles_ = null;
@@ -6162,9 +6180,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle> transferLostStyles_ =
       java.util.Collections.emptyList();
     private void ensureTransferLostStylesIsMutable() {
-      if (!((bitField0_ & 0x00002000) != 0)) {
+      if (!((bitField0_ & 0x00001000) != 0)) {
         transferLostStyles_ = new java.util.ArrayList<com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle>(transferLostStyles_);
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00001000;
        }
     }
 
@@ -6314,7 +6332,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearTransferLostStyles() {
       if (transferLostStylesBuilder_ == null) {
         transferLostStyles_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00002000);
+        bitField0_ = (bitField0_ & ~0x00001000);
         onChanged();
       } else {
         transferLostStylesBuilder_.clear();
@@ -6391,7 +6409,7 @@ private static final long serialVersionUID = 0L;
         transferLostStylesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle, com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyle.Builder, com.tcn.cloud.api.api.v1alpha1.org.legacy.AgentStatusDisplayTemplate.AgentStatusSinceStyleOrBuilder>(
                 transferLostStyles_,
-                ((bitField0_ & 0x00002000) != 0),
+                ((bitField0_ & 0x00001000) != 0),
                 getParentForChildren(),
                 isClean());
         transferLostStyles_ = null;
@@ -6431,18 +6449,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new AgentStatusDisplayTemplate(input, extensionRegistry);
     }
   };
 

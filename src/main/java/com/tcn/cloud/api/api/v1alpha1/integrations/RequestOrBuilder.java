@@ -13,15 +13,6 @@ public interface RequestOrBuilder extends
    * </pre>
    *
    * <code>string journey_collection_id = 3 [json_name = "journeyCollectionId"];</code>
-   * @return Whether the journeyCollectionId field is set.
-   */
-  boolean hasJourneyCollectionId();
-  /**
-   * <pre>
-   * look up the values from this journey collection
-   * </pre>
-   *
-   * <code>string journey_collection_id = 3 [json_name = "journeyCollectionId"];</code>
    * @return The journeyCollectionId.
    */
   java.lang.String getJourneyCollectionId();
@@ -63,15 +54,6 @@ public interface RequestOrBuilder extends
    */
   com.tcn.cloud.api.api.v1alpha1.integrations.MethodCallOrBuilder getMethodCallOrBuilder();
 
-  /**
-   * <pre>
-   * look up data from this config
-   * </pre>
-   *
-   * <code>string config_id = 5 [json_name = "configId"];</code>
-   * @return Whether the configId field is set.
-   */
-  boolean hasConfigId();
   /**
    * <pre>
    * look up data from this config
@@ -131,11 +113,10 @@ public interface RequestOrBuilder extends
    *
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; static_data = 6 [json_name = "staticData"];</code>
    */
-  /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrations.Value getStaticDataOrDefault(
+
+  com.tcn.cloud.api.api.v1alpha1.integrations.Value getStaticDataOrDefault(
       java.lang.String key,
-      /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue);
+      com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue);
   /**
    * <pre>
    * add in this static data
@@ -143,6 +124,7 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue);
    *
    * <code>map&lt;string, .api.v1alpha1.integrations.Value&gt; static_data = 6 [json_name = "staticData"];</code>
    */
+
   com.tcn.cloud.api.api.v1alpha1.integrations.Value getStaticDataOrThrow(
       java.lang.String key);
 
@@ -185,11 +167,10 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Value defaultValue);
    *
    * <code>map&lt;string, string&gt; rename_response_keys = 7 [json_name = "renameResponseKeys"];</code>
    */
-  /* nullable */
-java.lang.String getRenameResponseKeysOrDefault(
+
+  java.lang.String getRenameResponseKeysOrDefault(
       java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue);
+      java.lang.String defaultValue);
   /**
    * <pre>
    * rename the keys to the values in the response from 'val'
@@ -197,6 +178,7 @@ java.lang.String defaultValue);
    *
    * <code>map&lt;string, string&gt; rename_response_keys = 7 [json_name = "renameResponseKeys"];</code>
    */
+
   java.lang.String getRenameResponseKeysOrThrow(
       java.lang.String key);
 
@@ -239,11 +221,10 @@ java.lang.String defaultValue);
    *
    * <code>map&lt;string, .api.v1alpha1.integrations.Validation&gt; reassign_validations = 8 [json_name = "reassignValidations"];</code>
    */
-  /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrations.Validation getReassignValidationsOrDefault(
+
+  com.tcn.cloud.api.api.v1alpha1.integrations.Validation getReassignValidationsOrDefault(
       java.lang.String key,
-      /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrations.Validation defaultValue);
+      com.tcn.cloud.api.api.v1alpha1.integrations.Validation defaultValue);
   /**
    * <pre>
    * reassigns the names in key to be the value's validation
@@ -251,8 +232,9 @@ com.tcn.cloud.api.api.v1alpha1.integrations.Validation defaultValue);
    *
    * <code>map&lt;string, .api.v1alpha1.integrations.Validation&gt; reassign_validations = 8 [json_name = "reassignValidations"];</code>
    */
+
   com.tcn.cloud.api.api.v1alpha1.integrations.Validation getReassignValidationsOrThrow(
       java.lang.String key);
 
-  com.tcn.cloud.api.api.v1alpha1.integrations.Request.ValCase getValCase();
+  public com.tcn.cloud.api.api.v1alpha1.integrations.Request.ValCase getValCase();
 }

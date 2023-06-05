@@ -31,8 +31,8 @@ public final class ServiceProto {
       ".api.v1alpha1.org.legacy.RegisterOrganiz" +
       "ationRequest\0325.api.v1alpha1.org.legacy.R" +
       "egisterOrganizationResponse\"C\272\270\221\002\005\n\003\010\310\001\202" +
-      "\323\344\223\0023\"./api/v1alpha1/org/legacy/organiza" +
-      "tion/register:\001*B\271\001\n)com.tcn.cloud.api.a" +
+      "\323\344\223\0023:\001*\"./api/v1alpha1/org/legacy/organ" +
+      "ization/registerB\271\001\n)com.tcn.cloud.api.a" +
       "pi.v1alpha1.org.legacyB\014ServiceProtoP\001\242\002" +
       "\004AVOL\252\002\027Api.V1alpha1.Org.Legacy\312\002\027Api\\V1" +
       "alpha1\\Org\\Legacy\342\002#Api\\V1alpha1\\Org\\Leg" +

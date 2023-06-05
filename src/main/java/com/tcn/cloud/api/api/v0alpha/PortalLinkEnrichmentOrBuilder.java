@@ -46,11 +46,10 @@ public interface PortalLinkEnrichmentOrBuilder extends
    *
    * <code>map&lt;string, string&gt; key_map = 1 [json_name = "keyMap"];</code>
    */
-  /* nullable */
-java.lang.String getKeyMapOrDefault(
+
+  java.lang.String getKeyMapOrDefault(
       java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue);
+      java.lang.String defaultValue);
   /**
    * <pre>
    * lms field names as keys, mapped to what they should be called in the portal
@@ -58,6 +57,7 @@ java.lang.String defaultValue);
    *
    * <code>map&lt;string, string&gt; key_map = 1 [json_name = "keyMap"];</code>
    */
+
   java.lang.String getKeyMapOrThrow(
       java.lang.String key);
 

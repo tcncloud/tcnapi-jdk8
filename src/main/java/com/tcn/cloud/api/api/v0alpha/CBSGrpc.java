@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.50.0)",
     comments = "Source: api/v0alpha/cbs.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class CBSGrpc {
@@ -371,32 +371,32 @@ public final class CBSGrpc {
 
   /**
    */
-  public interface AsyncService {
+  public static abstract class CBSImplBase implements io.grpc.BindableService {
 
     /**
      */
-    default void createServiceId(com.tcn.cloud.api.api.v0alpha.CreateServiceIdReq request,
+    public void createServiceId(com.tcn.cloud.api.api.v0alpha.CreateServiceIdReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateServiceIdRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateServiceIdMethod(), responseObserver);
     }
 
     /**
      */
-    default void createCallbackWithDetails(com.tcn.cloud.api.api.v0alpha.CreateCallbackWithDetailsReq request,
+    public void createCallbackWithDetails(com.tcn.cloud.api.api.v0alpha.CreateCallbackWithDetailsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CreateCallbackWithDetailsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateCallbackWithDetailsMethod(), responseObserver);
     }
 
     /**
      */
-    default void updateScheduledCallbackToReady(com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToReadyReq request,
+    public void updateScheduledCallbackToReady(com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToReadyReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToReadyRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateScheduledCallbackToReadyMethod(), responseObserver);
     }
 
     /**
      */
-    default void updateScheduledCallbackToCanceled(com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToCanceledReq request,
+    public void updateScheduledCallbackToCanceled(com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToCanceledReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToCanceledRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateScheduledCallbackToCanceledMethod(), responseObserver);
     }
@@ -413,14 +413,14 @@ public final class CBSGrpc {
      *                    callback is not found after updating the status of it to OPEN (shouldn't happen).
      * </pre>
      */
-    default void getNextScheduledCallbackWithDetails(com.tcn.cloud.api.api.v0alpha.GetNextScheduledCallbackWithDetailsReq request,
+    public void getNextScheduledCallbackWithDetails(com.tcn.cloud.api.api.v0alpha.GetNextScheduledCallbackWithDetailsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetNextScheduledCallbackWithDetailsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetNextScheduledCallbackWithDetailsMethod(), responseObserver);
     }
 
     /**
      */
-    default void updateScheduledCallbackToClosed(com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToClosedReq request,
+    public void updateScheduledCallbackToClosed(com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToClosedReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToClosedRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateScheduledCallbackToClosedMethod(), responseObserver);
     }
@@ -430,7 +430,7 @@ public final class CBSGrpc {
      * Updates a callback with the provided info, and replaces the details with the ones provided.
      * </pre>
      */
-    default void updateScheduledCallback(com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackReq request,
+    public void updateScheduledCallback(com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateScheduledCallbackMethod(), responseObserver);
     }
@@ -440,7 +440,7 @@ public final class CBSGrpc {
      * Gets a scheduled callback's info and it's details for the given scheduled_callback_id.
      * </pre>
      */
-    default void getScheduledCallbackWithDetails(com.tcn.cloud.api.api.v0alpha.GetScheduledCallbackWithDetailsReq request,
+    public void getScheduledCallbackWithDetails(com.tcn.cloud.api.api.v0alpha.GetScheduledCallbackWithDetailsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetScheduledCallbackWithDetailsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetScheduledCallbackWithDetailsMethod(), responseObserver);
     }
@@ -450,7 +450,7 @@ public final class CBSGrpc {
      * Lists callbacks by phone number, caller id, or time range
      * </pre>
      */
-    default void listScheduledCallbacksWithDetails(com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsReq request,
+    public void listScheduledCallbacksWithDetails(com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListScheduledCallbacksWithDetailsMethod(), responseObserver);
     }
@@ -460,28 +460,90 @@ public final class CBSGrpc {
      * List callbacks by skills
      * </pre>
      */
-    default void listScheduledCallbacksWithDetailsBySkills(com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsBySkillsReq request,
+    public void listScheduledCallbacksWithDetailsBySkills(com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsBySkillsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListScheduledCallbacksWithDetailsBySkillsMethod(), responseObserver);
     }
-  }
-
-  /**
-   * Base class for the server implementation of the service CBS.
-   */
-  public static abstract class CBSImplBase
-      implements io.grpc.BindableService, AsyncService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return CBSGrpc.bindService(this);
+      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getCreateServiceIdMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.CreateServiceIdReq,
+                com.tcn.cloud.api.api.v0alpha.CreateServiceIdRes>(
+                  this, METHODID_CREATE_SERVICE_ID)))
+          .addMethod(
+            getCreateCallbackWithDetailsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.CreateCallbackWithDetailsReq,
+                com.tcn.cloud.api.api.v0alpha.CreateCallbackWithDetailsRes>(
+                  this, METHODID_CREATE_CALLBACK_WITH_DETAILS)))
+          .addMethod(
+            getUpdateScheduledCallbackToReadyMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToReadyReq,
+                com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToReadyRes>(
+                  this, METHODID_UPDATE_SCHEDULED_CALLBACK_TO_READY)))
+          .addMethod(
+            getUpdateScheduledCallbackToCanceledMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToCanceledReq,
+                com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToCanceledRes>(
+                  this, METHODID_UPDATE_SCHEDULED_CALLBACK_TO_CANCELED)))
+          .addMethod(
+            getGetNextScheduledCallbackWithDetailsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.GetNextScheduledCallbackWithDetailsReq,
+                com.tcn.cloud.api.api.v0alpha.GetNextScheduledCallbackWithDetailsRes>(
+                  this, METHODID_GET_NEXT_SCHEDULED_CALLBACK_WITH_DETAILS)))
+          .addMethod(
+            getUpdateScheduledCallbackToClosedMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToClosedReq,
+                com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToClosedRes>(
+                  this, METHODID_UPDATE_SCHEDULED_CALLBACK_TO_CLOSED)))
+          .addMethod(
+            getUpdateScheduledCallbackMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackReq,
+                com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackRes>(
+                  this, METHODID_UPDATE_SCHEDULED_CALLBACK)))
+          .addMethod(
+            getGetScheduledCallbackWithDetailsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.GetScheduledCallbackWithDetailsReq,
+                com.tcn.cloud.api.api.v0alpha.GetScheduledCallbackWithDetailsRes>(
+                  this, METHODID_GET_SCHEDULED_CALLBACK_WITH_DETAILS)))
+          .addMethod(
+            getListScheduledCallbacksWithDetailsMethod(),
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsReq,
+                com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsRes>(
+                  this, METHODID_LIST_SCHEDULED_CALLBACKS_WITH_DETAILS)))
+          .addMethod(
+            getListScheduledCallbacksWithDetailsBySkillsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsBySkillsReq,
+                com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsRes>(
+                  this, METHODID_LIST_SCHEDULED_CALLBACKS_WITH_DETAILS_BY_SKILLS)))
+          .build();
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service CBS.
    */
-  public static final class CBSStub
-      extends io.grpc.stub.AbstractAsyncStub<CBSStub> {
+  public static final class CBSStub extends io.grpc.stub.AbstractAsyncStub<CBSStub> {
     private CBSStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -597,10 +659,8 @@ public final class CBSGrpc {
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service CBS.
    */
-  public static final class CBSBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<CBSBlockingStub> {
+  public static final class CBSBlockingStub extends io.grpc.stub.AbstractBlockingStub<CBSBlockingStub> {
     private CBSBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -707,10 +767,8 @@ public final class CBSGrpc {
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service CBS.
    */
-  public static final class CBSFutureStub
-      extends io.grpc.stub.AbstractFutureStub<CBSFutureStub> {
+  public static final class CBSFutureStub extends io.grpc.stub.AbstractFutureStub<CBSFutureStub> {
     private CBSFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -830,10 +888,10 @@ public final class CBSGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AsyncService serviceImpl;
+    private final CBSImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AsyncService serviceImpl, int methodId) {
+    MethodHandlers(CBSImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -896,81 +954,6 @@ public final class CBSGrpc {
           throw new AssertionError();
       }
     }
-  }
-
-  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
-    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-        .addMethod(
-          getCreateServiceIdMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.CreateServiceIdReq,
-              com.tcn.cloud.api.api.v0alpha.CreateServiceIdRes>(
-                service, METHODID_CREATE_SERVICE_ID)))
-        .addMethod(
-          getCreateCallbackWithDetailsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.CreateCallbackWithDetailsReq,
-              com.tcn.cloud.api.api.v0alpha.CreateCallbackWithDetailsRes>(
-                service, METHODID_CREATE_CALLBACK_WITH_DETAILS)))
-        .addMethod(
-          getUpdateScheduledCallbackToReadyMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToReadyReq,
-              com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToReadyRes>(
-                service, METHODID_UPDATE_SCHEDULED_CALLBACK_TO_READY)))
-        .addMethod(
-          getUpdateScheduledCallbackToCanceledMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToCanceledReq,
-              com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToCanceledRes>(
-                service, METHODID_UPDATE_SCHEDULED_CALLBACK_TO_CANCELED)))
-        .addMethod(
-          getGetNextScheduledCallbackWithDetailsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.GetNextScheduledCallbackWithDetailsReq,
-              com.tcn.cloud.api.api.v0alpha.GetNextScheduledCallbackWithDetailsRes>(
-                service, METHODID_GET_NEXT_SCHEDULED_CALLBACK_WITH_DETAILS)))
-        .addMethod(
-          getUpdateScheduledCallbackToClosedMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToClosedReq,
-              com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackToClosedRes>(
-                service, METHODID_UPDATE_SCHEDULED_CALLBACK_TO_CLOSED)))
-        .addMethod(
-          getUpdateScheduledCallbackMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackReq,
-              com.tcn.cloud.api.api.v0alpha.UpdateScheduledCallbackRes>(
-                service, METHODID_UPDATE_SCHEDULED_CALLBACK)))
-        .addMethod(
-          getGetScheduledCallbackWithDetailsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.GetScheduledCallbackWithDetailsReq,
-              com.tcn.cloud.api.api.v0alpha.GetScheduledCallbackWithDetailsRes>(
-                service, METHODID_GET_SCHEDULED_CALLBACK_WITH_DETAILS)))
-        .addMethod(
-          getListScheduledCallbacksWithDetailsMethod(),
-          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsReq,
-              com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsRes>(
-                service, METHODID_LIST_SCHEDULED_CALLBACKS_WITH_DETAILS)))
-        .addMethod(
-          getListScheduledCallbacksWithDetailsBySkillsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsBySkillsReq,
-              com.tcn.cloud.api.api.v0alpha.ListScheduledCallbacksWithDetailsRes>(
-                service, METHODID_LIST_SCHEDULED_CALLBACKS_WITH_DETAILS_BY_SKILLS)))
-        .build();
   }
 
   private static abstract class CBSBaseDescriptorSupplier

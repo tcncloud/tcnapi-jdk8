@@ -37,6 +37,87 @@ private static final long serialVersionUID = 0L;
     return new RecalculateBillingReq();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private RecalculateBillingReq(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+            int rawValue = input.readEnum();
+
+            month_ = rawValue;
+            break;
+          }
+          case 16: {
+            int rawValue = input.readEnum();
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              types_ = new java.util.ArrayList<java.lang.Integer>();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            types_.add(rawValue);
+            break;
+          }
+          case 18: {
+            int length = input.readRawVarint32();
+            int oldLimit = input.pushLimit(length);
+            while(input.getBytesUntilLimit() > 0) {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                types_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              types_.add(rawValue);
+            }
+            input.popLimit(oldLimit);
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            orgId_ = s;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        types_ = java.util.Collections.unmodifiableList(types_);
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.P3apiProto.internal_static_api_v0alpha_RecalculateBillingReq_descriptor;
@@ -51,7 +132,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MONTH_FIELD_NUMBER = 1;
-  private int month_ = 0;
+  private int month_;
   /**
    * <code>.api.commons.RecalculateBillingMonth month = 1 [json_name = "month"];</code>
    * @return The enum numeric value on the wire for month.
@@ -64,19 +145,20 @@ private static final long serialVersionUID = 0L;
    * @return The month.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.RecalculateBillingMonth getMonth() {
-    com.tcn.cloud.api.api.commons.RecalculateBillingMonth result = com.tcn.cloud.api.api.commons.RecalculateBillingMonth.forNumber(month_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.RecalculateBillingMonth result = com.tcn.cloud.api.api.commons.RecalculateBillingMonth.valueOf(month_);
     return result == null ? com.tcn.cloud.api.api.commons.RecalculateBillingMonth.UNRECOGNIZED : result;
   }
 
   public static final int TYPES_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> types_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, com.tcn.cloud.api.api.commons.RecalculateBillingType> types_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.tcn.cloud.api.api.commons.RecalculateBillingType>() {
             public com.tcn.cloud.api.api.commons.RecalculateBillingType convert(java.lang.Integer from) {
-              com.tcn.cloud.api.api.commons.RecalculateBillingType result = com.tcn.cloud.api.api.commons.RecalculateBillingType.forNumber(from);
+              @SuppressWarnings("deprecation")
+              com.tcn.cloud.api.api.commons.RecalculateBillingType result = com.tcn.cloud.api.api.commons.RecalculateBillingType.valueOf(from);
               return result == null ? com.tcn.cloud.api.api.commons.RecalculateBillingType.UNRECOGNIZED : result;
             }
           };
@@ -127,8 +209,7 @@ private static final long serialVersionUID = 0L;
   private int typesMemoizedSerializedSize;
 
   public static final int ORG_ID_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object orgId_ = "";
+  private volatile java.lang.Object orgId_;
   /**
    * <code>string org_id = 3 [json_name = "orgId"];</code>
    * @return The orgId.
@@ -190,10 +271,10 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < types_.size(); i++) {
       output.writeEnumNoTag(types_.get(i));
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
+    if (!getOrgIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, orgId_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -218,10 +299,10 @@ private static final long serialVersionUID = 0L;
           .computeUInt32SizeNoTag(dataSize);
       }typesMemoizedSerializedSize = dataSize;
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
+    if (!getOrgIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, orgId_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -240,7 +321,7 @@ private static final long serialVersionUID = 0L;
     if (!types_.equals(other.types_)) return false;
     if (!getOrgId()
         .equals(other.getOrgId())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -259,7 +340,7 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
     hash = (53 * hash) + getOrgId().hashCode();
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -308,13 +389,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.RecalculateBillingReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.RecalculateBillingReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -387,22 +466,28 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.RecalculateBillingReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       month_ = 0;
+
       types_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000001);
       orgId_ = "";
+
       return this;
     }
 
@@ -429,28 +514,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.RecalculateBillingReq buildPartial() {
       com.tcn.cloud.api.api.v0alpha.RecalculateBillingReq result = new com.tcn.cloud.api.api.v0alpha.RecalculateBillingReq(this);
-      buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      onBuilt();
-      return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v0alpha.RecalculateBillingReq result) {
-      if (((bitField0_ & 0x00000002) != 0)) {
+      int from_bitField0_ = bitField0_;
+      result.month_ = month_;
+      if (((bitField0_ & 0x00000001) != 0)) {
         types_ = java.util.Collections.unmodifiableList(types_);
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.types_ = types_;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.RecalculateBillingReq result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.month_ = month_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.orgId_ = orgId_;
-      }
+      result.orgId_ = orgId_;
+      onBuilt();
+      return result;
     }
 
     @java.lang.Override
@@ -503,7 +576,7 @@ private static final long serialVersionUID = 0L;
       if (!other.types_.isEmpty()) {
         if (types_.isEmpty()) {
           types_ = other.types_;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           ensureTypesIsMutable();
           types_.addAll(other.types_);
@@ -512,10 +585,9 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getOrgId().isEmpty()) {
         orgId_ = other.orgId_;
-        bitField0_ |= 0x00000004;
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -530,57 +602,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.RecalculateBillingReq parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              month_ = input.readEnum();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 16: {
-              int tmpRaw = input.readEnum();
-              ensureTypesIsMutable();
-              types_.add(tmpRaw);
-              break;
-            } // case 16
-            case 18: {
-              int length = input.readRawVarint32();
-              int oldLimit = input.pushLimit(length);
-              while(input.getBytesUntilLimit() > 0) {
-                int tmpRaw = input.readEnum();
-                ensureTypesIsMutable();
-                types_.add(tmpRaw);
-              }
-              input.popLimit(oldLimit);
-              break;
-            } // case 18
-            case 26: {
-              orgId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.RecalculateBillingReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -599,8 +631,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMonthValue(int value) {
+      
       month_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -610,7 +642,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.RecalculateBillingMonth getMonth() {
-      com.tcn.cloud.api.api.commons.RecalculateBillingMonth result = com.tcn.cloud.api.api.commons.RecalculateBillingMonth.forNumber(month_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.RecalculateBillingMonth result = com.tcn.cloud.api.api.commons.RecalculateBillingMonth.valueOf(month_);
       return result == null ? com.tcn.cloud.api.api.commons.RecalculateBillingMonth.UNRECOGNIZED : result;
     }
     /**
@@ -622,7 +655,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000001;
+      
       month_ = value.getNumber();
       onChanged();
       return this;
@@ -632,7 +665,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMonth() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       month_ = 0;
       onChanged();
       return this;
@@ -641,9 +674,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> types_ =
       java.util.Collections.emptyList();
     private void ensureTypesIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         types_ = new java.util.ArrayList<java.lang.Integer>(types_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
       }
     }
     /**
@@ -719,7 +752,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearTypes() {
       types_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -741,8 +774,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <code>repeated .api.commons.RecalculateBillingType types = 2 [json_name = "types"];</code>
-     * @param index The index to set the value at.
-     * @param value The enum numeric value on the wire for types to set.
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of types at the given index.
      * @return This builder for chaining.
      */
     public Builder setTypesValue(
@@ -819,9 +852,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOrgId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       orgId_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -830,8 +865,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOrgId() {
+      
       orgId_ = getDefaultInstance().getOrgId();
-      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -842,10 +877,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOrgIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       orgId_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -882,18 +919,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new RecalculateBillingReq(input, extensionRegistry);
     }
   };
 

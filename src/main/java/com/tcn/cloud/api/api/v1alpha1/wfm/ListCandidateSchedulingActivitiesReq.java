@@ -29,6 +29,66 @@ private static final long serialVersionUID = 0L;
     return new ListCandidateSchedulingActivitiesReq();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private ListCandidateSchedulingActivitiesReq(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.Builder subBuilder = null;
+            if (parentOfRule_ != null) {
+              subBuilder = parentOfRule_.toBuilder();
+            }
+            parentOfRule_ = input.readMessage(com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(parentOfRule_);
+              parentOfRule_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 16: {
+
+            scheduleScenarioSid_ = input.readInt64();
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.wfm.WfmProto.internal_static_api_v1alpha1_wfm_ListCandidateSchedulingActivitiesReq_descriptor;
@@ -83,11 +143,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntityOrBuilder getParentOfRuleOrBuilder() {
-    return parentOfRule_ == null ? com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.getDefaultInstance() : parentOfRule_;
+    return getParentOfRule();
   }
 
   public static final int SCHEDULE_SCENARIO_SID_FIELD_NUMBER = 2;
-  private long scheduleScenarioSid_ = 0L;
+  private long scheduleScenarioSid_;
   /**
    * <pre>
    * ID of the schedule scenario that this activity belongs to.
@@ -121,7 +181,7 @@ private static final long serialVersionUID = 0L;
     if (scheduleScenarioSid_ != 0L) {
       output.writeInt64(2, scheduleScenarioSid_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -138,7 +198,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, scheduleScenarioSid_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -160,7 +220,7 @@ private static final long serialVersionUID = 0L;
     }
     if (getScheduleScenarioSid()
         != other.getScheduleScenarioSid()) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -178,7 +238,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + SCHEDULE_SCENARIO_SID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getScheduleScenarioSid());
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -227,13 +287,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateSchedulingActivitiesReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateSchedulingActivitiesReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -301,24 +359,30 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateSchedulingActivitiesReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      parentOfRule_ = null;
-      if (parentOfRuleBuilder_ != null) {
-        parentOfRuleBuilder_.dispose();
+      if (parentOfRuleBuilder_ == null) {
+        parentOfRule_ = null;
+      } else {
+        parentOfRule_ = null;
         parentOfRuleBuilder_ = null;
       }
       scheduleScenarioSid_ = 0L;
+
       return this;
     }
 
@@ -345,21 +409,14 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateSchedulingActivitiesReq buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateSchedulingActivitiesReq result = new com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateSchedulingActivitiesReq(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      if (parentOfRuleBuilder_ == null) {
+        result.parentOfRule_ = parentOfRule_;
+      } else {
+        result.parentOfRule_ = parentOfRuleBuilder_.build();
+      }
+      result.scheduleScenarioSid_ = scheduleScenarioSid_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateSchedulingActivitiesReq result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.parentOfRule_ = parentOfRuleBuilder_ == null
-            ? parentOfRule_
-            : parentOfRuleBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.scheduleScenarioSid_ = scheduleScenarioSid_;
-      }
     }
 
     @java.lang.Override
@@ -412,7 +469,7 @@ private static final long serialVersionUID = 0L;
       if (other.getScheduleScenarioSid() != 0L) {
         setScheduleScenarioSid(other.getScheduleScenarioSid());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -427,45 +484,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateSchedulingActivitiesReq parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              input.readMessage(
-                  getParentOfRuleFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 16: {
-              scheduleScenarioSid_ = input.readInt64();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 16
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateSchedulingActivitiesReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity parentOfRule_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -481,7 +512,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the parentOfRule field is set.
      */
     public boolean hasParentOfRule() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return parentOfRuleBuilder_ != null || parentOfRule_ != null;
     }
     /**
      * <pre>
@@ -515,11 +546,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         parentOfRule_ = value;
+        onChanged();
       } else {
         parentOfRuleBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -535,11 +566,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.Builder builderForValue) {
       if (parentOfRuleBuilder_ == null) {
         parentOfRule_ = builderForValue.build();
+        onChanged();
       } else {
         parentOfRuleBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -553,18 +584,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeParentOfRule(com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity value) {
       if (parentOfRuleBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          parentOfRule_ != null &&
-          parentOfRule_ != com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.getDefaultInstance()) {
-          getParentOfRuleBuilder().mergeFrom(value);
+        if (parentOfRule_ != null) {
+          parentOfRule_ =
+            com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.newBuilder(parentOfRule_).mergeFrom(value).buildPartial();
         } else {
           parentOfRule_ = value;
         }
+        onChanged();
       } else {
         parentOfRuleBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -577,13 +607,14 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.wfm.ParentEntity parent_of_rule = 1 [json_name = "parentOfRule"];</code>
      */
     public Builder clearParentOfRule() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      parentOfRule_ = null;
-      if (parentOfRuleBuilder_ != null) {
-        parentOfRuleBuilder_.dispose();
+      if (parentOfRuleBuilder_ == null) {
+        parentOfRule_ = null;
+        onChanged();
+      } else {
+        parentOfRule_ = null;
         parentOfRuleBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -596,7 +627,7 @@ private static final long serialVersionUID = 0L;
      * <code>.api.v1alpha1.wfm.ParentEntity parent_of_rule = 1 [json_name = "parentOfRule"];</code>
      */
     public com.tcn.cloud.api.api.v1alpha1.wfm.ParentEntity.Builder getParentOfRuleBuilder() {
-      bitField0_ |= 0x00000001;
+      
       onChanged();
       return getParentOfRuleFieldBuilder().getBuilder();
     }
@@ -663,9 +694,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setScheduleScenarioSid(long value) {
-
+      
       scheduleScenarioSid_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -678,7 +708,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearScheduleScenarioSid() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       scheduleScenarioSid_ = 0L;
       onChanged();
       return this;
@@ -716,18 +746,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new ListCandidateSchedulingActivitiesReq(input, extensionRegistry);
     }
   };
 

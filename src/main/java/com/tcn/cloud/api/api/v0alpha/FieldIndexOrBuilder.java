@@ -59,5 +59,5 @@ public interface FieldIndexOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.DateTimeModifierOrBuilder getDatetimeOrBuilder();
 
-  com.tcn.cloud.api.api.v0alpha.FieldIndex.ModifierCase getModifierCase();
+  public com.tcn.cloud.api.api.v0alpha.FieldIndex.ModifierCase getModifierCase();
 }

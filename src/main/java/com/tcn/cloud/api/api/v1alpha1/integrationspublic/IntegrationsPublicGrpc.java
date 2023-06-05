@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.50.0)",
     comments = "Source: api/v1alpha1/integrationspublic/service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class IntegrationsPublicGrpc {
@@ -247,67 +247,101 @@ public final class IntegrationsPublicGrpc {
 
   /**
    */
-  public interface AsyncService {
+  public static abstract class IntegrationsPublicImplBase implements io.grpc.BindableService {
 
     /**
      */
-    default void getLinkData(com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetLinkDataReq request,
+    public void getLinkData(com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetLinkDataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetLinkDataRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetLinkDataMethod(), responseObserver);
     }
 
     /**
      */
-    default void submitVerification(com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitVerificationReq request,
+    public void submitVerification(com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitVerificationReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitVerificationRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSubmitVerificationMethod(), responseObserver);
     }
 
     /**
      */
-    default void sessionKeepAlive(com.tcn.cloud.api.api.v1alpha1.integrationspublic.SessionKeepAliveReq request,
+    public void sessionKeepAlive(com.tcn.cloud.api.api.v1alpha1.integrationspublic.SessionKeepAliveReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrationspublic.SessionKeepAliveRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSessionKeepAliveMethod(), responseObserver);
     }
 
     /**
      */
-    default void getInvoice(com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetInvoiceReq request,
+    public void getInvoice(com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetInvoiceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetInvoiceRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetInvoiceMethod(), responseObserver);
     }
 
     /**
      */
-    default void submitPayment(com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitPaymentReq request,
+    public void submitPayment(com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitPaymentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitPaymentRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSubmitPaymentMethod(), responseObserver);
     }
 
     /**
      */
-    default void getReceipt(com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetReceiptReq request,
+    public void getReceipt(com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetReceiptReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetReceiptRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetReceiptMethod(), responseObserver);
     }
-  }
-
-  /**
-   * Base class for the server implementation of the service IntegrationsPublic.
-   */
-  public static abstract class IntegrationsPublicImplBase
-      implements io.grpc.BindableService, AsyncService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return IntegrationsPublicGrpc.bindService(this);
+      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getGetLinkDataMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetLinkDataReq,
+                com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetLinkDataRes>(
+                  this, METHODID_GET_LINK_DATA)))
+          .addMethod(
+            getSubmitVerificationMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitVerificationReq,
+                com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitVerificationRes>(
+                  this, METHODID_SUBMIT_VERIFICATION)))
+          .addMethod(
+            getSessionKeepAliveMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.integrationspublic.SessionKeepAliveReq,
+                com.tcn.cloud.api.api.v1alpha1.integrationspublic.SessionKeepAliveRes>(
+                  this, METHODID_SESSION_KEEP_ALIVE)))
+          .addMethod(
+            getGetInvoiceMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetInvoiceReq,
+                com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetInvoiceRes>(
+                  this, METHODID_GET_INVOICE)))
+          .addMethod(
+            getSubmitPaymentMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitPaymentReq,
+                com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitPaymentRes>(
+                  this, METHODID_SUBMIT_PAYMENT)))
+          .addMethod(
+            getGetReceiptMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetReceiptReq,
+                com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetReceiptRes>(
+                  this, METHODID_GET_RECEIPT)))
+          .build();
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service IntegrationsPublic.
    */
-  public static final class IntegrationsPublicStub
-      extends io.grpc.stub.AbstractAsyncStub<IntegrationsPublicStub> {
+  public static final class IntegrationsPublicStub extends io.grpc.stub.AbstractAsyncStub<IntegrationsPublicStub> {
     private IntegrationsPublicStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -369,10 +403,8 @@ public final class IntegrationsPublicGrpc {
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service IntegrationsPublic.
    */
-  public static final class IntegrationsPublicBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<IntegrationsPublicBlockingStub> {
+  public static final class IntegrationsPublicBlockingStub extends io.grpc.stub.AbstractBlockingStub<IntegrationsPublicBlockingStub> {
     private IntegrationsPublicBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -428,10 +460,8 @@ public final class IntegrationsPublicGrpc {
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service IntegrationsPublic.
    */
-  public static final class IntegrationsPublicFutureStub
-      extends io.grpc.stub.AbstractFutureStub<IntegrationsPublicFutureStub> {
+  public static final class IntegrationsPublicFutureStub extends io.grpc.stub.AbstractFutureStub<IntegrationsPublicFutureStub> {
     private IntegrationsPublicFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -504,10 +534,10 @@ public final class IntegrationsPublicGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AsyncService serviceImpl;
+    private final IntegrationsPublicImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AsyncService serviceImpl, int methodId) {
+    MethodHandlers(IntegrationsPublicImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -554,53 +584,6 @@ public final class IntegrationsPublicGrpc {
           throw new AssertionError();
       }
     }
-  }
-
-  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
-    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-        .addMethod(
-          getGetLinkDataMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetLinkDataReq,
-              com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetLinkDataRes>(
-                service, METHODID_GET_LINK_DATA)))
-        .addMethod(
-          getSubmitVerificationMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitVerificationReq,
-              com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitVerificationRes>(
-                service, METHODID_SUBMIT_VERIFICATION)))
-        .addMethod(
-          getSessionKeepAliveMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.integrationspublic.SessionKeepAliveReq,
-              com.tcn.cloud.api.api.v1alpha1.integrationspublic.SessionKeepAliveRes>(
-                service, METHODID_SESSION_KEEP_ALIVE)))
-        .addMethod(
-          getGetInvoiceMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetInvoiceReq,
-              com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetInvoiceRes>(
-                service, METHODID_GET_INVOICE)))
-        .addMethod(
-          getSubmitPaymentMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitPaymentReq,
-              com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitPaymentRes>(
-                service, METHODID_SUBMIT_PAYMENT)))
-        .addMethod(
-          getGetReceiptMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetReceiptReq,
-              com.tcn.cloud.api.api.v1alpha1.integrationspublic.GetReceiptRes>(
-                service, METHODID_GET_RECEIPT)))
-        .build();
   }
 
   private static abstract class IntegrationsPublicBaseDescriptorSupplier

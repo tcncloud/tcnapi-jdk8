@@ -35,6 +35,83 @@ private static final long serialVersionUID = 0L;
     return new Organization();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private Organization(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 24: {
+
+            isManualOnlyAccount_ = input.readBool();
+            break;
+          }
+          case 128: {
+            int rawValue = input.readEnum();
+
+            backofficeTheme_ = rawValue;
+            break;
+          }
+          case 138: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            contractNumber_ = s;
+            break;
+          }
+          case 146: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            cRMID_ = s;
+            break;
+          }
+          case 152: {
+            int rawValue = input.readEnum();
+
+            timeZoneEnum_ = rawValue;
+            break;
+          }
+          case 162: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            name_ = s;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.OrgProto.internal_static_api_v0alpha_Organization_descriptor;
@@ -49,7 +126,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int IS_MANUAL_ONLY_ACCOUNT_FIELD_NUMBER = 3;
-  private boolean isManualOnlyAccount_ = false;
+  private boolean isManualOnlyAccount_;
   /**
    * <code>bool is_manual_only_account = 3 [json_name = "isManualOnlyAccount"];</code>
    * @return The isManualOnlyAccount.
@@ -60,7 +137,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BACKOFFICE_THEME_FIELD_NUMBER = 16;
-  private int backofficeTheme_ = 0;
+  private int backofficeTheme_;
   /**
    * <pre>
    * Requried. Must match one of the timezones returned by
@@ -83,13 +160,13 @@ private static final long serialVersionUID = 0L;
    * @return The backofficeTheme.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.ClientSkin getBackofficeTheme() {
-    com.tcn.cloud.api.api.commons.ClientSkin result = com.tcn.cloud.api.api.commons.ClientSkin.forNumber(backofficeTheme_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.ClientSkin result = com.tcn.cloud.api.api.commons.ClientSkin.valueOf(backofficeTheme_);
     return result == null ? com.tcn.cloud.api.api.commons.ClientSkin.UNRECOGNIZED : result;
   }
 
   public static final int CONTRACT_NUMBER_FIELD_NUMBER = 17;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object contractNumber_ = "";
+  private volatile java.lang.Object contractNumber_;
   /**
    * <pre>
    * DEPRECATED. Use CRM_ID.
@@ -135,8 +212,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CRM_ID_FIELD_NUMBER = 18;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object cRMID_ = "";
+  private volatile java.lang.Object cRMID_;
   /**
    * <code>string CRM_ID = 18 [json_name = "CRMID"];</code>
    * @return The cRMID.
@@ -174,7 +250,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TIME_ZONE_ENUM_FIELD_NUMBER = 19;
-  private int timeZoneEnum_ = 0;
+  private int timeZoneEnum_;
   /**
    * <code>.api.commons.TimeZone time_zone_enum = 19 [json_name = "timeZoneEnum"];</code>
    * @return The enum numeric value on the wire for timeZoneEnum.
@@ -187,13 +263,13 @@ private static final long serialVersionUID = 0L;
    * @return The timeZoneEnum.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.TimeZone getTimeZoneEnum() {
-    com.tcn.cloud.api.api.commons.TimeZone result = com.tcn.cloud.api.api.commons.TimeZone.forNumber(timeZoneEnum_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.TimeZone result = com.tcn.cloud.api.api.commons.TimeZone.valueOf(timeZoneEnum_);
     return result == null ? com.tcn.cloud.api.api.commons.TimeZone.UNRECOGNIZED : result;
   }
 
   public static final int NAME_FIELD_NUMBER = 20;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object name_ = "";
+  private volatile java.lang.Object name_;
   /**
    * <pre>
    * Required
@@ -258,19 +334,19 @@ private static final long serialVersionUID = 0L;
     if (backofficeTheme_ != com.tcn.cloud.api.api.commons.ClientSkin.CLIENT_SKIN_DEFAULT.getNumber()) {
       output.writeEnum(16, backofficeTheme_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractNumber_)) {
+    if (!getContractNumberBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 17, contractNumber_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cRMID_)) {
+    if (!getCRMIDBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 18, cRMID_);
     }
     if (timeZoneEnum_ != com.tcn.cloud.api.api.commons.TimeZone.TIME_ZONE_AMERICA_PUERTO_RICO.getNumber()) {
       output.writeEnum(19, timeZoneEnum_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+    if (!getNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 20, name_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -287,20 +363,20 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(16, backofficeTheme_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(contractNumber_)) {
+    if (!getContractNumberBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, contractNumber_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cRMID_)) {
+    if (!getCRMIDBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, cRMID_);
     }
     if (timeZoneEnum_ != com.tcn.cloud.api.api.commons.TimeZone.TIME_ZONE_AMERICA_PUERTO_RICO.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(19, timeZoneEnum_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+    if (!getNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, name_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -325,7 +401,7 @@ private static final long serialVersionUID = 0L;
     if (timeZoneEnum_ != other.timeZoneEnum_) return false;
     if (!getName()
         .equals(other.getName())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -349,7 +425,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + timeZoneEnum_;
     hash = (37 * hash) + NAME_FIELD_NUMBER;
     hash = (53 * hash) + getName().hashCode();
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -398,13 +474,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.Organization parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.Organization parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -473,24 +547,34 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.Organization.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       isManualOnlyAccount_ = false;
+
       backofficeTheme_ = 0;
+
       contractNumber_ = "";
+
       cRMID_ = "";
+
       timeZoneEnum_ = 0;
+
       name_ = "";
+
       return this;
     }
 
@@ -517,31 +601,14 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.Organization buildPartial() {
       com.tcn.cloud.api.api.v0alpha.Organization result = new com.tcn.cloud.api.api.v0alpha.Organization(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.isManualOnlyAccount_ = isManualOnlyAccount_;
+      result.backofficeTheme_ = backofficeTheme_;
+      result.contractNumber_ = contractNumber_;
+      result.cRMID_ = cRMID_;
+      result.timeZoneEnum_ = timeZoneEnum_;
+      result.name_ = name_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.Organization result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.isManualOnlyAccount_ = isManualOnlyAccount_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.backofficeTheme_ = backofficeTheme_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.contractNumber_ = contractNumber_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.cRMID_ = cRMID_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.timeZoneEnum_ = timeZoneEnum_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.name_ = name_;
-      }
     }
 
     @java.lang.Override
@@ -596,12 +663,10 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getContractNumber().isEmpty()) {
         contractNumber_ = other.contractNumber_;
-        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getCRMID().isEmpty()) {
         cRMID_ = other.cRMID_;
-        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.timeZoneEnum_ != 0) {
@@ -609,10 +674,9 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
-        bitField0_ |= 0x00000020;
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -627,63 +691,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.Organization parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 24: {
-              isManualOnlyAccount_ = input.readBool();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 24
-            case 128: {
-              backofficeTheme_ = input.readEnum();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 128
-            case 138: {
-              contractNumber_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 138
-            case 146: {
-              cRMID_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 146
-            case 152: {
-              timeZoneEnum_ = input.readEnum();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 152
-            case 162: {
-              name_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 162
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.Organization) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private boolean isManualOnlyAccount_ ;
     /**
@@ -700,9 +720,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIsManualOnlyAccount(boolean value) {
-
+      
       isManualOnlyAccount_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -711,7 +730,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIsManualOnlyAccount() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       isManualOnlyAccount_ = false;
       onChanged();
       return this;
@@ -741,8 +760,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBackofficeThemeValue(int value) {
+      
       backofficeTheme_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -757,7 +776,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.ClientSkin getBackofficeTheme() {
-      com.tcn.cloud.api.api.commons.ClientSkin result = com.tcn.cloud.api.api.commons.ClientSkin.forNumber(backofficeTheme_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.ClientSkin result = com.tcn.cloud.api.api.commons.ClientSkin.valueOf(backofficeTheme_);
       return result == null ? com.tcn.cloud.api.api.commons.ClientSkin.UNRECOGNIZED : result;
     }
     /**
@@ -774,7 +794,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000002;
+      
       backofficeTheme_ = value.getNumber();
       onChanged();
       return this;
@@ -789,7 +809,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBackofficeTheme() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       backofficeTheme_ = 0;
       onChanged();
       return this;
@@ -848,9 +868,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setContractNumber(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       contractNumber_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -863,8 +885,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearContractNumber() {
+      
       contractNumber_ = getDefaultInstance().getContractNumber();
-      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -879,10 +901,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setContractNumberBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       contractNumber_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -928,9 +952,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCRMID(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       cRMID_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -939,8 +965,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCRMID() {
+      
       cRMID_ = getDefaultInstance().getCRMID();
-      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -951,10 +977,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCRMIDBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       cRMID_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -973,8 +1001,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTimeZoneEnumValue(int value) {
+      
       timeZoneEnum_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -984,7 +1012,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.TimeZone getTimeZoneEnum() {
-      com.tcn.cloud.api.api.commons.TimeZone result = com.tcn.cloud.api.api.commons.TimeZone.forNumber(timeZoneEnum_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.TimeZone result = com.tcn.cloud.api.api.commons.TimeZone.valueOf(timeZoneEnum_);
       return result == null ? com.tcn.cloud.api.api.commons.TimeZone.UNRECOGNIZED : result;
     }
     /**
@@ -996,7 +1025,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000010;
+      
       timeZoneEnum_ = value.getNumber();
       onChanged();
       return this;
@@ -1006,7 +1035,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTimeZoneEnum() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      
       timeZoneEnum_ = 0;
       onChanged();
       return this;
@@ -1065,9 +1094,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       name_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1080,8 +1111,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
+      
       name_ = getDefaultInstance().getName();
-      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1096,10 +1127,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       name_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1136,18 +1169,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new Organization(input, extensionRegistry);
     }
   };
 

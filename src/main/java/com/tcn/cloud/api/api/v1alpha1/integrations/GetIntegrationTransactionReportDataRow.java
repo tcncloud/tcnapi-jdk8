@@ -25,6 +25,93 @@ private static final long serialVersionUID = 0L;
     return new GetIntegrationTransactionReportDataRow();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private GetIntegrationTransactionReportDataRow(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              countMetrics_ = com.google.protobuf.MapField.newMapField(
+                  CountMetricsDefaultEntryHolder.defaultEntry);
+              mutable_bitField0_ |= 0x00000001;
+            }
+            com.google.protobuf.MapEntry<java.lang.String, java.lang.Long>
+            countMetrics__ = input.readMessage(
+                CountMetricsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+            countMetrics_.getMutableMap().put(
+                countMetrics__.getKey(), countMetrics__.getValue());
+            break;
+          }
+          case 18: {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              linkData_ = com.google.protobuf.MapField.newMapField(
+                  LinkDataDefaultEntryHolder.defaultEntry);
+              mutable_bitField0_ |= 0x00000002;
+            }
+            com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+            linkData__ = input.readMessage(
+                LinkDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+            linkData_.getMutableMap().put(
+                linkData__.getKey(), linkData__.getValue());
+            break;
+          }
+          case 26: {
+            com.google.protobuf.Timestamp.Builder subBuilder = null;
+            if (date_ != null) {
+              subBuilder = date_.toBuilder();
+            }
+            date_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(date_);
+              date_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 33: {
+
+            paymentAmount_ = input.readDouble();
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_GetIntegrationTransactionReportDataRow_descriptor;
@@ -64,7 +151,6 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.INT64,
                 0L);
   }
-  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, java.lang.Long> countMetrics_;
   private com.google.protobuf.MapField<java.lang.String, java.lang.Long>
@@ -75,16 +161,18 @@ private static final long serialVersionUID = 0L;
     }
     return countMetrics_;
   }
+
   public int getCountMetricsCount() {
     return internalGetCountMetrics().getMap().size();
   }
   /**
    * <code>map&lt;string, int64&gt; count_metrics = 1 [json_name = "countMetrics"];</code>
    */
+
   @java.lang.Override
   public boolean containsCountMetrics(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     return internalGetCountMetrics().getMap().containsKey(key);
   }
   /**
@@ -99,6 +187,7 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, int64&gt; count_metrics = 1 [json_name = "countMetrics"];</code>
    */
   @java.lang.Override
+
   public java.util.Map<java.lang.String, java.lang.Long> getCountMetricsMap() {
     return internalGetCountMetrics().getMap();
   }
@@ -106,10 +195,11 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, int64&gt; count_metrics = 1 [json_name = "countMetrics"];</code>
    */
   @java.lang.Override
+
   public long getCountMetricsOrDefault(
       java.lang.String key,
       long defaultValue) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, java.lang.Long> map =
         internalGetCountMetrics().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -118,9 +208,10 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, int64&gt; count_metrics = 1 [json_name = "countMetrics"];</code>
    */
   @java.lang.Override
+
   public long getCountMetricsOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, java.lang.Long> map =
         internalGetCountMetrics().getMap();
     if (!map.containsKey(key)) {
@@ -141,7 +232,6 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "");
   }
-  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, java.lang.String> linkData_;
   private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -152,16 +242,18 @@ private static final long serialVersionUID = 0L;
     }
     return linkData_;
   }
+
   public int getLinkDataCount() {
     return internalGetLinkData().getMap().size();
   }
   /**
    * <code>map&lt;string, string&gt; link_data = 2 [json_name = "linkData"];</code>
    */
+
   @java.lang.Override
   public boolean containsLinkData(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     return internalGetLinkData().getMap().containsKey(key);
   }
   /**
@@ -176,6 +268,7 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; link_data = 2 [json_name = "linkData"];</code>
    */
   @java.lang.Override
+
   public java.util.Map<java.lang.String, java.lang.String> getLinkDataMap() {
     return internalGetLinkData().getMap();
   }
@@ -183,12 +276,11 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, string&gt; link_data = 2 [json_name = "linkData"];</code>
    */
   @java.lang.Override
-  public /* nullable */
-java.lang.String getLinkDataOrDefault(
+
+  public java.lang.String getLinkDataOrDefault(
       java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue) {
-    if (key == null) { throw new NullPointerException("map key"); }
+      java.lang.String defaultValue) {
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetLinkData().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -197,9 +289,10 @@ java.lang.String defaultValue) {
    * <code>map&lt;string, string&gt; link_data = 2 [json_name = "linkData"];</code>
    */
   @java.lang.Override
+
   public java.lang.String getLinkDataOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, java.lang.String> map =
         internalGetLinkData().getMap();
     if (!map.containsKey(key)) {
@@ -231,11 +324,11 @@ java.lang.String defaultValue) {
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getDateOrBuilder() {
-    return date_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : date_;
+    return getDate();
   }
 
   public static final int PAYMENT_AMOUNT_FIELD_NUMBER = 4;
-  private double paymentAmount_ = 0D;
+  private double paymentAmount_;
   /**
    * <code>double payment_amount = 4 [json_name = "paymentAmount"];</code>
    * @return The paymentAmount.
@@ -274,10 +367,10 @@ java.lang.String defaultValue) {
     if (date_ != null) {
       output.writeMessage(3, getDate());
     }
-    if (java.lang.Double.doubleToRawLongBits(paymentAmount_) != 0) {
+    if (paymentAmount_ != 0D) {
       output.writeDouble(4, paymentAmount_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -310,11 +403,11 @@ java.lang.String defaultValue) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getDate());
     }
-    if (java.lang.Double.doubleToRawLongBits(paymentAmount_) != 0) {
+    if (paymentAmount_ != 0D) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(4, paymentAmount_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -341,7 +434,7 @@ java.lang.String defaultValue) {
     if (java.lang.Double.doubleToLongBits(getPaymentAmount())
         != java.lang.Double.doubleToLongBits(
             other.getPaymentAmount())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -367,7 +460,7 @@ java.lang.String defaultValue) {
     hash = (37 * hash) + PAYMENT_AMOUNT_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         java.lang.Double.doubleToLongBits(getPaymentAmount()));
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -416,13 +509,11 @@ java.lang.String defaultValue) {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportDataRow parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportDataRow parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -512,26 +603,32 @@ java.lang.String defaultValue) {
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportDataRow.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       internalGetMutableCountMetrics().clear();
       internalGetMutableLinkData().clear();
-      date_ = null;
-      if (dateBuilder_ != null) {
-        dateBuilder_.dispose();
+      if (dateBuilder_ == null) {
+        date_ = null;
+      } else {
+        date_ = null;
         dateBuilder_ = null;
       }
       paymentAmount_ = 0D;
+
       return this;
     }
 
@@ -558,29 +655,19 @@ java.lang.String defaultValue) {
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportDataRow buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportDataRow result = new com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportDataRow(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      int from_bitField0_ = bitField0_;
+      result.countMetrics_ = internalGetCountMetrics();
+      result.countMetrics_.makeImmutable();
+      result.linkData_ = internalGetLinkData();
+      result.linkData_.makeImmutable();
+      if (dateBuilder_ == null) {
+        result.date_ = date_;
+      } else {
+        result.date_ = dateBuilder_.build();
+      }
+      result.paymentAmount_ = paymentAmount_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportDataRow result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.countMetrics_ = internalGetCountMetrics();
-        result.countMetrics_.makeImmutable();
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.linkData_ = internalGetLinkData();
-        result.linkData_.makeImmutable();
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.date_ = dateBuilder_ == null
-            ? date_
-            : dateBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.paymentAmount_ = paymentAmount_;
-      }
     }
 
     @java.lang.Override
@@ -629,17 +716,15 @@ java.lang.String defaultValue) {
       if (other == com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportDataRow.getDefaultInstance()) return this;
       internalGetMutableCountMetrics().mergeFrom(
           other.internalGetCountMetrics());
-      bitField0_ |= 0x00000001;
       internalGetMutableLinkData().mergeFrom(
           other.internalGetLinkData());
-      bitField0_ |= 0x00000002;
       if (other.hasDate()) {
         mergeDate(other.getDate());
       }
       if (other.getPaymentAmount() != 0D) {
         setPaymentAmount(other.getPaymentAmount());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -654,60 +739,17 @@ java.lang.String defaultValue) {
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportDataRow parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.Long>
-              countMetrics__ = input.readMessage(
-                  CountMetricsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              internalGetMutableCountMetrics().getMutableMap().put(
-                  countMetrics__.getKey(), countMetrics__.getValue());
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-              linkData__ = input.readMessage(
-                  LinkDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              internalGetMutableLinkData().getMutableMap().put(
-                  linkData__.getKey(), linkData__.getValue());
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 26: {
-              input.readMessage(
-                  getDateFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            case 33: {
-              paymentAmount_ = input.readDouble();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 33
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.integrations.GetIntegrationTransactionReportDataRow) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -715,7 +757,7 @@ java.lang.String defaultValue) {
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.Long> countMetrics_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.Long>
-        internalGetCountMetrics() {
+    internalGetCountMetrics() {
       if (countMetrics_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             CountMetricsDefaultEntryHolder.defaultEntry);
@@ -723,7 +765,8 @@ java.lang.String defaultValue) {
       return countMetrics_;
     }
     private com.google.protobuf.MapField<java.lang.String, java.lang.Long>
-        internalGetMutableCountMetrics() {
+    internalGetMutableCountMetrics() {
+      onChanged();;
       if (countMetrics_ == null) {
         countMetrics_ = com.google.protobuf.MapField.newMapField(
             CountMetricsDefaultEntryHolder.defaultEntry);
@@ -731,20 +774,20 @@ java.lang.String defaultValue) {
       if (!countMetrics_.isMutable()) {
         countMetrics_ = countMetrics_.copy();
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
       return countMetrics_;
     }
+
     public int getCountMetricsCount() {
       return internalGetCountMetrics().getMap().size();
     }
     /**
      * <code>map&lt;string, int64&gt; count_metrics = 1 [json_name = "countMetrics"];</code>
      */
+
     @java.lang.Override
     public boolean containsCountMetrics(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetCountMetrics().getMap().containsKey(key);
     }
     /**
@@ -759,6 +802,7 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, int64&gt; count_metrics = 1 [json_name = "countMetrics"];</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.String, java.lang.Long> getCountMetricsMap() {
       return internalGetCountMetrics().getMap();
     }
@@ -766,10 +810,11 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, int64&gt; count_metrics = 1 [json_name = "countMetrics"];</code>
      */
     @java.lang.Override
+
     public long getCountMetricsOrDefault(
         java.lang.String key,
         long defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.Long> map =
           internalGetCountMetrics().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -778,9 +823,10 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, int64&gt; count_metrics = 1 [json_name = "countMetrics"];</code>
      */
     @java.lang.Override
+
     public long getCountMetricsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.Long> map =
           internalGetCountMetrics().getMap();
       if (!map.containsKey(key)) {
@@ -788,8 +834,8 @@ java.lang.String defaultValue) {
       }
       return map.get(key);
     }
+
     public Builder clearCountMetrics() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       internalGetMutableCountMetrics().getMutableMap()
           .clear();
       return this;
@@ -797,9 +843,10 @@ java.lang.String defaultValue) {
     /**
      * <code>map&lt;string, int64&gt; count_metrics = 1 [json_name = "countMetrics"];</code>
      */
+
     public Builder removeCountMetrics(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableCountMetrics().getMutableMap()
           .remove(key);
       return this;
@@ -809,8 +856,7 @@ java.lang.String defaultValue) {
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.Long>
-        getMutableCountMetrics() {
-      bitField0_ |= 0x00000001;
+    getMutableCountMetrics() {
       return internalGetMutableCountMetrics().getMutableMap();
     }
     /**
@@ -819,28 +865,27 @@ java.lang.String defaultValue) {
     public Builder putCountMetrics(
         java.lang.String key,
         long value) {
-      if (key == null) { throw new NullPointerException("map key"); }
-
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      
       internalGetMutableCountMetrics().getMutableMap()
           .put(key, value);
-      bitField0_ |= 0x00000001;
       return this;
     }
     /**
      * <code>map&lt;string, int64&gt; count_metrics = 1 [json_name = "countMetrics"];</code>
      */
+
     public Builder putAllCountMetrics(
         java.util.Map<java.lang.String, java.lang.Long> values) {
       internalGetMutableCountMetrics().getMutableMap()
           .putAll(values);
-      bitField0_ |= 0x00000001;
       return this;
     }
 
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.String> linkData_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetLinkData() {
+    internalGetLinkData() {
       if (linkData_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             LinkDataDefaultEntryHolder.defaultEntry);
@@ -848,7 +893,8 @@ java.lang.String defaultValue) {
       return linkData_;
     }
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetMutableLinkData() {
+    internalGetMutableLinkData() {
+      onChanged();;
       if (linkData_ == null) {
         linkData_ = com.google.protobuf.MapField.newMapField(
             LinkDataDefaultEntryHolder.defaultEntry);
@@ -856,20 +902,20 @@ java.lang.String defaultValue) {
       if (!linkData_.isMutable()) {
         linkData_ = linkData_.copy();
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
       return linkData_;
     }
+
     public int getLinkDataCount() {
       return internalGetLinkData().getMap().size();
     }
     /**
      * <code>map&lt;string, string&gt; link_data = 2 [json_name = "linkData"];</code>
      */
+
     @java.lang.Override
     public boolean containsLinkData(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetLinkData().getMap().containsKey(key);
     }
     /**
@@ -884,6 +930,7 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, string&gt; link_data = 2 [json_name = "linkData"];</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.String, java.lang.String> getLinkDataMap() {
       return internalGetLinkData().getMap();
     }
@@ -891,12 +938,11 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, string&gt; link_data = 2 [json_name = "linkData"];</code>
      */
     @java.lang.Override
-    public /* nullable */
-java.lang.String getLinkDataOrDefault(
+
+    public java.lang.String getLinkDataOrDefault(
         java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLinkData().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -905,9 +951,10 @@ java.lang.String defaultValue) {
      * <code>map&lt;string, string&gt; link_data = 2 [json_name = "linkData"];</code>
      */
     @java.lang.Override
+
     public java.lang.String getLinkDataOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetLinkData().getMap();
       if (!map.containsKey(key)) {
@@ -915,8 +962,8 @@ java.lang.String defaultValue) {
       }
       return map.get(key);
     }
+
     public Builder clearLinkData() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       internalGetMutableLinkData().getMutableMap()
           .clear();
       return this;
@@ -924,9 +971,10 @@ java.lang.String defaultValue) {
     /**
      * <code>map&lt;string, string&gt; link_data = 2 [json_name = "linkData"];</code>
      */
+
     public Builder removeLinkData(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableLinkData().getMutableMap()
           .remove(key);
       return this;
@@ -936,8 +984,7 @@ java.lang.String defaultValue) {
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, java.lang.String>
-        getMutableLinkData() {
-      bitField0_ |= 0x00000002;
+    getMutableLinkData() {
       return internalGetMutableLinkData().getMutableMap();
     }
     /**
@@ -946,21 +993,20 @@ java.lang.String defaultValue) {
     public Builder putLinkData(
         java.lang.String key,
         java.lang.String value) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      if (value == null) { throw new NullPointerException("map value"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (value == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableLinkData().getMutableMap()
           .put(key, value);
-      bitField0_ |= 0x00000002;
       return this;
     }
     /**
      * <code>map&lt;string, string&gt; link_data = 2 [json_name = "linkData"];</code>
      */
+
     public Builder putAllLinkData(
         java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableLinkData().getMutableMap()
           .putAll(values);
-      bitField0_ |= 0x00000002;
       return this;
     }
 
@@ -972,7 +1018,7 @@ java.lang.String defaultValue) {
      * @return Whether the date field is set.
      */
     public boolean hasDate() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return dateBuilder_ != null || date_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp date = 3 [json_name = "date"];</code>
@@ -994,11 +1040,11 @@ java.lang.String defaultValue) {
           throw new NullPointerException();
         }
         date_ = value;
+        onChanged();
       } else {
         dateBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -1008,11 +1054,11 @@ java.lang.String defaultValue) {
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (dateBuilder_ == null) {
         date_ = builderForValue.build();
+        onChanged();
       } else {
         dateBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -1020,38 +1066,38 @@ java.lang.String defaultValue) {
      */
     public Builder mergeDate(com.google.protobuf.Timestamp value) {
       if (dateBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0) &&
-          date_ != null &&
-          date_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getDateBuilder().mergeFrom(value);
+        if (date_ != null) {
+          date_ =
+            com.google.protobuf.Timestamp.newBuilder(date_).mergeFrom(value).buildPartial();
         } else {
           date_ = value;
         }
+        onChanged();
       } else {
         dateBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp date = 3 [json_name = "date"];</code>
      */
     public Builder clearDate() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      date_ = null;
-      if (dateBuilder_ != null) {
-        dateBuilder_.dispose();
+      if (dateBuilder_ == null) {
+        date_ = null;
+        onChanged();
+      } else {
+        date_ = null;
         dateBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.google.protobuf.Timestamp date = 3 [json_name = "date"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getDateBuilder() {
-      bitField0_ |= 0x00000004;
+      
       onChanged();
       return getDateFieldBuilder().getBuilder();
     }
@@ -1098,9 +1144,8 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setPaymentAmount(double value) {
-
+      
       paymentAmount_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1109,7 +1154,7 @@ java.lang.String defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearPaymentAmount() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      
       paymentAmount_ = 0D;
       onChanged();
       return this;
@@ -1147,18 +1192,7 @@ java.lang.String defaultValue) {
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new GetIntegrationTransactionReportDataRow(input, extensionRegistry);
     }
   };
 

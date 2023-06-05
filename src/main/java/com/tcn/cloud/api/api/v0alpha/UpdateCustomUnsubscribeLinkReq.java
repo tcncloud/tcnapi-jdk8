@@ -32,6 +32,71 @@ private static final long serialVersionUID = 0L;
     return new UpdateCustomUnsubscribeLinkReq();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private UpdateCustomUnsubscribeLinkReq(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+
+            customUnsubscribeLinkSid_ = input.readInt64();
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            linkName_ = s;
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            linkUrl_ = s;
+            break;
+          }
+          case 34: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            description_ = s;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.OmniapiProto.internal_static_api_v0alpha_UpdateCustomUnsubscribeLinkReq_descriptor;
@@ -46,7 +111,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CUSTOM_UNSUBSCRIBE_LINK_SID_FIELD_NUMBER = 1;
-  private long customUnsubscribeLinkSid_ = 0L;
+  private long customUnsubscribeLinkSid_;
   /**
    * <pre>
    * custom unsubscribe link sid
@@ -61,8 +126,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LINK_NAME_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object linkName_ = "";
+  private volatile java.lang.Object linkName_;
   /**
    * <pre>
    * link name
@@ -108,8 +172,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LINK_URL_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object linkUrl_ = "";
+  private volatile java.lang.Object linkUrl_;
   /**
    * <pre>
    * link url
@@ -155,8 +218,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTION_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object description_ = "";
+  private volatile java.lang.Object description_;
   /**
    * <pre>
    * link description
@@ -218,16 +280,16 @@ private static final long serialVersionUID = 0L;
     if (customUnsubscribeLinkSid_ != 0L) {
       output.writeInt64(1, customUnsubscribeLinkSid_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(linkName_)) {
+    if (!getLinkNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, linkName_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(linkUrl_)) {
+    if (!getLinkUrlBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, linkUrl_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+    if (!getDescriptionBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -240,16 +302,16 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(1, customUnsubscribeLinkSid_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(linkName_)) {
+    if (!getLinkNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, linkName_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(linkUrl_)) {
+    if (!getLinkUrlBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, linkUrl_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+    if (!getDescriptionBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -272,7 +334,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getLinkUrl())) return false;
     if (!getDescription()
         .equals(other.getDescription())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -292,7 +354,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getLinkUrl().hashCode();
     hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
     hash = (53 * hash) + getDescription().hashCode();
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -341,13 +403,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.UpdateCustomUnsubscribeLinkReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.UpdateCustomUnsubscribeLinkReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -415,22 +475,30 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.UpdateCustomUnsubscribeLinkReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       customUnsubscribeLinkSid_ = 0L;
+
       linkName_ = "";
+
       linkUrl_ = "";
+
       description_ = "";
+
       return this;
     }
 
@@ -457,25 +525,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.UpdateCustomUnsubscribeLinkReq buildPartial() {
       com.tcn.cloud.api.api.v0alpha.UpdateCustomUnsubscribeLinkReq result = new com.tcn.cloud.api.api.v0alpha.UpdateCustomUnsubscribeLinkReq(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.customUnsubscribeLinkSid_ = customUnsubscribeLinkSid_;
+      result.linkName_ = linkName_;
+      result.linkUrl_ = linkUrl_;
+      result.description_ = description_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.UpdateCustomUnsubscribeLinkReq result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.customUnsubscribeLinkSid_ = customUnsubscribeLinkSid_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.linkName_ = linkName_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.linkUrl_ = linkUrl_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.description_ = description_;
-      }
     }
 
     @java.lang.Override
@@ -527,20 +582,17 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getLinkName().isEmpty()) {
         linkName_ = other.linkName_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getLinkUrl().isEmpty()) {
         linkUrl_ = other.linkUrl_;
-        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getDescription().isEmpty()) {
         description_ = other.description_;
-        bitField0_ |= 0x00000008;
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -555,53 +607,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.UpdateCustomUnsubscribeLinkReq parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              customUnsubscribeLinkSid_ = input.readInt64();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 18: {
-              linkName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 26: {
-              linkUrl_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            case 34: {
-              description_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.UpdateCustomUnsubscribeLinkReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private long customUnsubscribeLinkSid_ ;
     /**
@@ -626,9 +644,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCustomUnsubscribeLinkSid(long value) {
-
+      
       customUnsubscribeLinkSid_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -641,7 +658,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCustomUnsubscribeLinkSid() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       customUnsubscribeLinkSid_ = 0L;
       onChanged();
       return this;
@@ -700,9 +717,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLinkName(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       linkName_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -715,8 +734,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLinkName() {
+      
       linkName_ = getDefaultInstance().getLinkName();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -731,10 +750,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLinkNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       linkName_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -792,9 +813,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLinkUrl(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       linkUrl_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -807,8 +830,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLinkUrl() {
+      
       linkUrl_ = getDefaultInstance().getLinkUrl();
-      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -823,10 +846,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLinkUrlBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       linkUrl_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -884,9 +909,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       description_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -899,8 +926,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
+      
       description_ = getDefaultInstance().getDescription();
-      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -915,10 +942,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescriptionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       description_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -955,18 +984,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new UpdateCustomUnsubscribeLinkReq(input, extensionRegistry);
     }
   };
 

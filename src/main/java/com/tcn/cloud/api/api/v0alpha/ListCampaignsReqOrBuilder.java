@@ -188,5 +188,5 @@ public interface ListCampaignsReqOrBuilder extends
    */
   com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.BySmsNumberOrBuilder getBySmsNumberOrBuilder();
 
-  com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.FilterCase getFilterCase();
+  public com.tcn.cloud.api.api.v0alpha.ListCampaignsReq.FilterCase getFilterCase();
 }

@@ -27,6 +27,73 @@ private static final long serialVersionUID = 0L;
     return new TimeFilterEventReq();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private TimeFilterEventReq(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+            int rawValue = input.readEnum();
+
+            timeFilterType_ = rawValue;
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            timeFilterName_ = s;
+            break;
+          }
+          case 26: {
+            com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReq.Builder subBuilder = null;
+            if (dashPageType_ != null) {
+              subBuilder = dashPageType_.toBuilder();
+            }
+            dashPageType_ = input.readMessage(com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReq.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(dashPageType_);
+              dashPageType_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.AnaProto.internal_static_api_v0alpha_TimeFilterEventReq_descriptor;
@@ -41,7 +108,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TIME_FILTER_TYPE_FIELD_NUMBER = 1;
-  private int timeFilterType_ = 0;
+  private int timeFilterType_;
   /**
    * <code>.api.commons.TimeFilterType time_filter_type = 1 [json_name = "timeFilterType"];</code>
    * @return The enum numeric value on the wire for timeFilterType.
@@ -54,13 +121,13 @@ private static final long serialVersionUID = 0L;
    * @return The timeFilterType.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.TimeFilterType getTimeFilterType() {
-    com.tcn.cloud.api.api.commons.TimeFilterType result = com.tcn.cloud.api.api.commons.TimeFilterType.forNumber(timeFilterType_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.TimeFilterType result = com.tcn.cloud.api.api.commons.TimeFilterType.valueOf(timeFilterType_);
     return result == null ? com.tcn.cloud.api.api.commons.TimeFilterType.UNRECOGNIZED : result;
   }
 
   public static final int TIME_FILTER_NAME_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object timeFilterName_ = "";
+  private volatile java.lang.Object timeFilterName_;
   /**
    * <code>string time_filter_name = 2 [json_name = "timeFilterName"];</code>
    * @return The timeFilterName.
@@ -120,7 +187,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReqOrBuilder getDashPageTypeOrBuilder() {
-    return dashPageType_ == null ? com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReq.getDefaultInstance() : dashPageType_;
+    return getDashPageType();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -140,13 +207,13 @@ private static final long serialVersionUID = 0L;
     if (timeFilterType_ != com.tcn.cloud.api.api.commons.TimeFilterType.TIME_FILTER_TYPE_UNDEFINED.getNumber()) {
       output.writeEnum(1, timeFilterType_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timeFilterName_)) {
+    if (!getTimeFilterNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, timeFilterName_);
     }
     if (dashPageType_ != null) {
       output.writeMessage(3, getDashPageType());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -159,14 +226,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(1, timeFilterType_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timeFilterName_)) {
+    if (!getTimeFilterNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, timeFilterName_);
     }
     if (dashPageType_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getDashPageType());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -189,7 +256,7 @@ private static final long serialVersionUID = 0L;
       if (!getDashPageType()
           .equals(other.getDashPageType())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -208,7 +275,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DASH_PAGE_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getDashPageType().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -257,13 +324,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.TimeFilterEventReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.TimeFilterEventReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -327,23 +392,30 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.TimeFilterEventReq.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       timeFilterType_ = 0;
+
       timeFilterName_ = "";
-      dashPageType_ = null;
-      if (dashPageTypeBuilder_ != null) {
-        dashPageTypeBuilder_.dispose();
+
+      if (dashPageTypeBuilder_ == null) {
+        dashPageType_ = null;
+      } else {
+        dashPageType_ = null;
         dashPageTypeBuilder_ = null;
       }
       return this;
@@ -372,24 +444,15 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.TimeFilterEventReq buildPartial() {
       com.tcn.cloud.api.api.v0alpha.TimeFilterEventReq result = new com.tcn.cloud.api.api.v0alpha.TimeFilterEventReq(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.timeFilterType_ = timeFilterType_;
+      result.timeFilterName_ = timeFilterName_;
+      if (dashPageTypeBuilder_ == null) {
+        result.dashPageType_ = dashPageType_;
+      } else {
+        result.dashPageType_ = dashPageTypeBuilder_.build();
+      }
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.TimeFilterEventReq result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.timeFilterType_ = timeFilterType_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.timeFilterName_ = timeFilterName_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.dashPageType_ = dashPageTypeBuilder_ == null
-            ? dashPageType_
-            : dashPageTypeBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -441,13 +504,12 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getTimeFilterName().isEmpty()) {
         timeFilterName_ = other.timeFilterName_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasDashPageType()) {
         mergeDashPageType(other.getDashPageType());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -462,50 +524,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.TimeFilterEventReq parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              timeFilterType_ = input.readEnum();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 18: {
-              timeFilterName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 26: {
-              input.readMessage(
-                  getDashPageTypeFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.TimeFilterEventReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private int timeFilterType_ = 0;
     /**
@@ -521,8 +552,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTimeFilterTypeValue(int value) {
+      
       timeFilterType_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -532,7 +563,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.TimeFilterType getTimeFilterType() {
-      com.tcn.cloud.api.api.commons.TimeFilterType result = com.tcn.cloud.api.api.commons.TimeFilterType.forNumber(timeFilterType_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.TimeFilterType result = com.tcn.cloud.api.api.commons.TimeFilterType.valueOf(timeFilterType_);
       return result == null ? com.tcn.cloud.api.api.commons.TimeFilterType.UNRECOGNIZED : result;
     }
     /**
@@ -544,7 +576,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000001;
+      
       timeFilterType_ = value.getNumber();
       onChanged();
       return this;
@@ -554,7 +586,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTimeFilterType() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       timeFilterType_ = 0;
       onChanged();
       return this;
@@ -601,9 +633,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTimeFilterName(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       timeFilterName_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -612,8 +646,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTimeFilterName() {
+      
       timeFilterName_ = getDefaultInstance().getTimeFilterName();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -624,10 +658,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTimeFilterNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       timeFilterName_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -640,7 +676,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dashPageType field is set.
      */
     public boolean hasDashPageType() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return dashPageTypeBuilder_ != null || dashPageType_ != null;
     }
     /**
      * <code>.api.v0alpha.RecommendedDashPageReq dash_page_type = 3 [json_name = "dashPageType"];</code>
@@ -662,11 +698,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dashPageType_ = value;
+        onChanged();
       } else {
         dashPageTypeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -676,11 +712,11 @@ private static final long serialVersionUID = 0L;
         com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReq.Builder builderForValue) {
       if (dashPageTypeBuilder_ == null) {
         dashPageType_ = builderForValue.build();
+        onChanged();
       } else {
         dashPageTypeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -688,38 +724,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDashPageType(com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReq value) {
       if (dashPageTypeBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0) &&
-          dashPageType_ != null &&
-          dashPageType_ != com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReq.getDefaultInstance()) {
-          getDashPageTypeBuilder().mergeFrom(value);
+        if (dashPageType_ != null) {
+          dashPageType_ =
+            com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReq.newBuilder(dashPageType_).mergeFrom(value).buildPartial();
         } else {
           dashPageType_ = value;
         }
+        onChanged();
       } else {
         dashPageTypeBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.RecommendedDashPageReq dash_page_type = 3 [json_name = "dashPageType"];</code>
      */
     public Builder clearDashPageType() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      dashPageType_ = null;
-      if (dashPageTypeBuilder_ != null) {
-        dashPageTypeBuilder_.dispose();
+      if (dashPageTypeBuilder_ == null) {
+        dashPageType_ = null;
+        onChanged();
+      } else {
+        dashPageType_ = null;
         dashPageTypeBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
      * <code>.api.v0alpha.RecommendedDashPageReq dash_page_type = 3 [json_name = "dashPageType"];</code>
      */
     public com.tcn.cloud.api.api.v0alpha.RecommendedDashPageReq.Builder getDashPageTypeBuilder() {
-      bitField0_ |= 0x00000004;
+      
       onChanged();
       return getDashPageTypeFieldBuilder().getBuilder();
     }
@@ -783,18 +819,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new TimeFilterEventReq(input, extensionRegistry);
     }
   };
 

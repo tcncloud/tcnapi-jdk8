@@ -36,6 +36,90 @@ private static final long serialVersionUID = 0L;
     return new GenericStatisticFormatRule();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private GenericStatisticFormatRule(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            statisticId_ = s;
+            break;
+          }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            databaseFieldName_ = s;
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            headerText_ = s;
+            break;
+          }
+          case 34: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            headerTooltipText_ = s;
+            break;
+          }
+          case 42: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            simpleDateFormatString_ = s;
+            break;
+          }
+          case 50: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            timezoneIdString_ = s;
+            break;
+          }
+          case 56: {
+            int rawValue = input.readEnum();
+
+            timeZoneEnum_ = rawValue;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.org.legacy.EntitiesProto.internal_static_api_v1alpha1_org_legacy_GenericStatisticFormatRule_descriptor;
@@ -50,8 +134,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STATISTIC_ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object statisticId_ = "";
+  private volatile java.lang.Object statisticId_;
   /**
    * <pre>
    * Statistic id.
@@ -97,8 +180,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DATABASE_FIELD_NAME_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object databaseFieldName_ = "";
+  private volatile java.lang.Object databaseFieldName_;
   /**
    * <pre>
    * Database field name.
@@ -144,8 +226,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HEADER_TEXT_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object headerText_ = "";
+  private volatile java.lang.Object headerText_;
   /**
    * <pre>
    * Header field text.
@@ -191,8 +272,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HEADER_TOOLTIP_TEXT_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object headerTooltipText_ = "";
+  private volatile java.lang.Object headerTooltipText_;
   /**
    * <pre>
    * Header tool-tip text.
@@ -238,8 +318,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SIMPLE_DATE_FORMAT_STRING_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object simpleDateFormatString_ = "";
+  private volatile java.lang.Object simpleDateFormatString_;
   /**
    * <pre>
    * Date format string.
@@ -285,8 +364,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TIMEZONE_ID_STRING_FIELD_NUMBER = 6;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object timezoneIdString_ = "";
+  private volatile java.lang.Object timezoneIdString_;
   /**
    * <pre>
    * Timezone id.
@@ -332,7 +410,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TIME_ZONE_ENUM_FIELD_NUMBER = 7;
-  private int timeZoneEnum_ = 0;
+  private int timeZoneEnum_;
   /**
    * <pre>
    * Time Zone Enum
@@ -353,7 +431,8 @@ private static final long serialVersionUID = 0L;
    * @return The timeZoneEnum.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.TimeZone getTimeZoneEnum() {
-    com.tcn.cloud.api.api.commons.TimeZone result = com.tcn.cloud.api.api.commons.TimeZone.forNumber(timeZoneEnum_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.TimeZone result = com.tcn.cloud.api.api.commons.TimeZone.valueOf(timeZoneEnum_);
     return result == null ? com.tcn.cloud.api.api.commons.TimeZone.UNRECOGNIZED : result;
   }
 
@@ -371,28 +450,28 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(statisticId_)) {
+    if (!getStatisticIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, statisticId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(databaseFieldName_)) {
+    if (!getDatabaseFieldNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, databaseFieldName_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(headerText_)) {
+    if (!getHeaderTextBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, headerText_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(headerTooltipText_)) {
+    if (!getHeaderTooltipTextBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, headerTooltipText_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(simpleDateFormatString_)) {
+    if (!getSimpleDateFormatStringBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, simpleDateFormatString_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timezoneIdString_)) {
+    if (!getTimezoneIdStringBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, timezoneIdString_);
     }
     if (timeZoneEnum_ != com.tcn.cloud.api.api.commons.TimeZone.TIME_ZONE_AMERICA_PUERTO_RICO.getNumber()) {
       output.writeEnum(7, timeZoneEnum_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -401,29 +480,29 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(statisticId_)) {
+    if (!getStatisticIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, statisticId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(databaseFieldName_)) {
+    if (!getDatabaseFieldNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, databaseFieldName_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(headerText_)) {
+    if (!getHeaderTextBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, headerText_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(headerTooltipText_)) {
+    if (!getHeaderTooltipTextBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, headerTooltipText_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(simpleDateFormatString_)) {
+    if (!getSimpleDateFormatStringBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, simpleDateFormatString_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timezoneIdString_)) {
+    if (!getTimezoneIdStringBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, timezoneIdString_);
     }
     if (timeZoneEnum_ != com.tcn.cloud.api.api.commons.TimeZone.TIME_ZONE_AMERICA_PUERTO_RICO.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(7, timeZoneEnum_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -451,7 +530,7 @@ private static final long serialVersionUID = 0L;
     if (!getTimezoneIdString()
         .equals(other.getTimezoneIdString())) return false;
     if (timeZoneEnum_ != other.timeZoneEnum_) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -476,7 +555,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getTimezoneIdString().hashCode();
     hash = (37 * hash) + TIME_ZONE_ENUM_FIELD_NUMBER;
     hash = (53 * hash) + timeZoneEnum_;
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -525,13 +604,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.GenericStatisticFormatRule parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.org.legacy.GenericStatisticFormatRule parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -599,25 +676,36 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.org.legacy.GenericStatisticFormatRule.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       statisticId_ = "";
+
       databaseFieldName_ = "";
+
       headerText_ = "";
+
       headerTooltipText_ = "";
+
       simpleDateFormatString_ = "";
+
       timezoneIdString_ = "";
+
       timeZoneEnum_ = 0;
+
       return this;
     }
 
@@ -644,34 +732,15 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.org.legacy.GenericStatisticFormatRule buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.org.legacy.GenericStatisticFormatRule result = new com.tcn.cloud.api.api.v1alpha1.org.legacy.GenericStatisticFormatRule(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.statisticId_ = statisticId_;
+      result.databaseFieldName_ = databaseFieldName_;
+      result.headerText_ = headerText_;
+      result.headerTooltipText_ = headerTooltipText_;
+      result.simpleDateFormatString_ = simpleDateFormatString_;
+      result.timezoneIdString_ = timezoneIdString_;
+      result.timeZoneEnum_ = timeZoneEnum_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.org.legacy.GenericStatisticFormatRule result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.statisticId_ = statisticId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.databaseFieldName_ = databaseFieldName_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.headerText_ = headerText_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.headerTooltipText_ = headerTooltipText_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.simpleDateFormatString_ = simpleDateFormatString_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.timezoneIdString_ = timezoneIdString_;
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.timeZoneEnum_ = timeZoneEnum_;
-      }
     }
 
     @java.lang.Override
@@ -720,38 +789,32 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.v1alpha1.org.legacy.GenericStatisticFormatRule.getDefaultInstance()) return this;
       if (!other.getStatisticId().isEmpty()) {
         statisticId_ = other.statisticId_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getDatabaseFieldName().isEmpty()) {
         databaseFieldName_ = other.databaseFieldName_;
-        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getHeaderText().isEmpty()) {
         headerText_ = other.headerText_;
-        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getHeaderTooltipText().isEmpty()) {
         headerTooltipText_ = other.headerTooltipText_;
-        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.getSimpleDateFormatString().isEmpty()) {
         simpleDateFormatString_ = other.simpleDateFormatString_;
-        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (!other.getTimezoneIdString().isEmpty()) {
         timezoneIdString_ = other.timezoneIdString_;
-        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (other.timeZoneEnum_ != 0) {
         setTimeZoneEnumValue(other.getTimeZoneEnumValue());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -766,68 +829,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.org.legacy.GenericStatisticFormatRule parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              statisticId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              databaseFieldName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 26: {
-              headerText_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            case 34: {
-              headerTooltipText_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 34
-            case 42: {
-              simpleDateFormatString_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 42
-            case 50: {
-              timezoneIdString_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 50
-            case 56: {
-              timeZoneEnum_ = input.readEnum();
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 56
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.org.legacy.GenericStatisticFormatRule) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private java.lang.Object statisticId_ = "";
     /**
@@ -882,9 +896,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStatisticId(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       statisticId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -897,8 +913,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStatisticId() {
+      
       statisticId_ = getDefaultInstance().getStatisticId();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -913,10 +929,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStatisticIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       statisticId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -974,9 +992,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDatabaseFieldName(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       databaseFieldName_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -989,8 +1009,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDatabaseFieldName() {
+      
       databaseFieldName_ = getDefaultInstance().getDatabaseFieldName();
-      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1005,10 +1025,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDatabaseFieldNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       databaseFieldName_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1066,9 +1088,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHeaderText(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       headerText_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1081,8 +1105,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHeaderText() {
+      
       headerText_ = getDefaultInstance().getHeaderText();
-      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1097,10 +1121,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHeaderTextBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       headerText_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1158,9 +1184,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHeaderTooltipText(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       headerTooltipText_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1173,8 +1201,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHeaderTooltipText() {
+      
       headerTooltipText_ = getDefaultInstance().getHeaderTooltipText();
-      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1189,10 +1217,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHeaderTooltipTextBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       headerTooltipText_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1250,9 +1280,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSimpleDateFormatString(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       simpleDateFormatString_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1265,8 +1297,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSimpleDateFormatString() {
+      
       simpleDateFormatString_ = getDefaultInstance().getSimpleDateFormatString();
-      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1281,10 +1313,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSimpleDateFormatStringBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       simpleDateFormatString_ = value;
-      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1342,9 +1376,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTimezoneIdString(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       timezoneIdString_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1357,8 +1393,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTimezoneIdString() {
+      
       timezoneIdString_ = getDefaultInstance().getTimezoneIdString();
-      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1373,10 +1409,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTimezoneIdStringBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       timezoneIdString_ = value;
-      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1403,8 +1441,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTimeZoneEnumValue(int value) {
+      
       timeZoneEnum_ = value;
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1418,7 +1456,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.TimeZone getTimeZoneEnum() {
-      com.tcn.cloud.api.api.commons.TimeZone result = com.tcn.cloud.api.api.commons.TimeZone.forNumber(timeZoneEnum_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.TimeZone result = com.tcn.cloud.api.api.commons.TimeZone.valueOf(timeZoneEnum_);
       return result == null ? com.tcn.cloud.api.api.commons.TimeZone.UNRECOGNIZED : result;
     }
     /**
@@ -1434,7 +1473,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000040;
+      
       timeZoneEnum_ = value.getNumber();
       onChanged();
       return this;
@@ -1448,7 +1487,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTimeZoneEnum() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      
       timeZoneEnum_ = 0;
       onChanged();
       return this;
@@ -1486,18 +1525,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new GenericStatisticFormatRule(input, extensionRegistry);
     }
   };
 

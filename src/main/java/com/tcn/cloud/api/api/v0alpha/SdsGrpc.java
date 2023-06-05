@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.50.0)",
     comments = "Source: api/v0alpha/sds.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class SdsGrpc {
@@ -185,14 +185,14 @@ public final class SdsGrpc {
 
   /**
    */
-  public interface AsyncService {
+  public static abstract class SdsImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
      * Gets the agent_response_data field for a document in the mongodb calls collection.
      * </pre>
      */
-    default void getAgentResponseData(com.tcn.cloud.api.api.v0alpha.GetAgentResponseDataReq request,
+    public void getAgentResponseData(com.tcn.cloud.api.api.v0alpha.GetAgentResponseDataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.GetAgentResponseDataRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAgentResponseDataMethod(), responseObserver);
     }
@@ -202,7 +202,7 @@ public final class SdsGrpc {
      * Gets a document from the mongodb calls collection.
      * </pre>
      */
-    default void getCall(com.tcn.cloud.api.api.v0alpha.GetCallReq request,
+    public void getCall(com.tcn.cloud.api.api.v0alpha.GetCallReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.CallObject> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCallMethod(), responseObserver);
     }
@@ -212,7 +212,7 @@ public final class SdsGrpc {
      * Updates the agent_response_data field for a document in the mongodb calls collection.
      * </pre>
      */
-    default void updateAgentResponseData(com.tcn.cloud.api.api.v0alpha.UpdateAgentResponseDataReq request,
+    public void updateAgentResponseData(com.tcn.cloud.api.api.v0alpha.UpdateAgentResponseDataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateAgentResponseDataRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAgentResponseDataMethod(), responseObserver);
     }
@@ -222,28 +222,48 @@ public final class SdsGrpc {
      * Updates the voicemail_box field for a document in the mongodb calls collection.
      * </pre>
      */
-    default void updateVoicemailBox(com.tcn.cloud.api.api.v0alpha.UpdateVoicemailBoxReq request,
+    public void updateVoicemailBox(com.tcn.cloud.api.api.v0alpha.UpdateVoicemailBoxReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateVoicemailBoxRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateVoicemailBoxMethod(), responseObserver);
     }
-  }
-
-  /**
-   * Base class for the server implementation of the service Sds.
-   */
-  public static abstract class SdsImplBase
-      implements io.grpc.BindableService, AsyncService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return SdsGrpc.bindService(this);
+      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getGetAgentResponseDataMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.GetAgentResponseDataReq,
+                com.tcn.cloud.api.api.v0alpha.GetAgentResponseDataRes>(
+                  this, METHODID_GET_AGENT_RESPONSE_DATA)))
+          .addMethod(
+            getGetCallMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.GetCallReq,
+                com.tcn.cloud.api.api.v0alpha.CallObject>(
+                  this, METHODID_GET_CALL)))
+          .addMethod(
+            getUpdateAgentResponseDataMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.UpdateAgentResponseDataReq,
+                com.tcn.cloud.api.api.v0alpha.UpdateAgentResponseDataRes>(
+                  this, METHODID_UPDATE_AGENT_RESPONSE_DATA)))
+          .addMethod(
+            getUpdateVoicemailBoxMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.UpdateVoicemailBoxReq,
+                com.tcn.cloud.api.api.v0alpha.UpdateVoicemailBoxRes>(
+                  this, METHODID_UPDATE_VOICEMAIL_BOX)))
+          .build();
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service Sds.
    */
-  public static final class SdsStub
-      extends io.grpc.stub.AbstractAsyncStub<SdsStub> {
+  public static final class SdsStub extends io.grpc.stub.AbstractAsyncStub<SdsStub> {
     private SdsStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -301,10 +321,8 @@ public final class SdsGrpc {
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service Sds.
    */
-  public static final class SdsBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<SdsBlockingStub> {
+  public static final class SdsBlockingStub extends io.grpc.stub.AbstractBlockingStub<SdsBlockingStub> {
     private SdsBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -358,10 +376,8 @@ public final class SdsGrpc {
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service Sds.
    */
-  public static final class SdsFutureStub
-      extends io.grpc.stub.AbstractFutureStub<SdsFutureStub> {
+  public static final class SdsFutureStub extends io.grpc.stub.AbstractFutureStub<SdsFutureStub> {
     private SdsFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -428,10 +444,10 @@ public final class SdsGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AsyncService serviceImpl;
+    private final SdsImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AsyncService serviceImpl, int methodId) {
+    MethodHandlers(SdsImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -470,39 +486,6 @@ public final class SdsGrpc {
           throw new AssertionError();
       }
     }
-  }
-
-  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
-    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-        .addMethod(
-          getGetAgentResponseDataMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.GetAgentResponseDataReq,
-              com.tcn.cloud.api.api.v0alpha.GetAgentResponseDataRes>(
-                service, METHODID_GET_AGENT_RESPONSE_DATA)))
-        .addMethod(
-          getGetCallMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.GetCallReq,
-              com.tcn.cloud.api.api.v0alpha.CallObject>(
-                service, METHODID_GET_CALL)))
-        .addMethod(
-          getUpdateAgentResponseDataMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.UpdateAgentResponseDataReq,
-              com.tcn.cloud.api.api.v0alpha.UpdateAgentResponseDataRes>(
-                service, METHODID_UPDATE_AGENT_RESPONSE_DATA)))
-        .addMethod(
-          getUpdateVoicemailBoxMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.UpdateVoicemailBoxReq,
-              com.tcn.cloud.api.api.v0alpha.UpdateVoicemailBoxRes>(
-                service, METHODID_UPDATE_VOICEMAIL_BOX)))
-        .build();
   }
 
   private static abstract class SdsBaseDescriptorSupplier

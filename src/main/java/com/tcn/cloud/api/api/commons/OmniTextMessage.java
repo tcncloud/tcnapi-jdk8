@@ -27,6 +27,80 @@ private static final long serialVersionUID = 0L;
     return new OmniTextMessage();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private OmniTextMessage(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            message_ = s;
+            break;
+          }
+          case 18: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              attachments_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.OmniAttachment>();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            attachments_.add(
+                input.readMessage(com.tcn.cloud.api.api.commons.OmniAttachment.parser(), extensionRegistry));
+            break;
+          }
+          case 26: {
+            com.google.protobuf.Int64Value.Builder subBuilder = null;
+            if (primaryAsmSessionSid_ != null) {
+              subBuilder = primaryAsmSessionSid_.toBuilder();
+            }
+            primaryAsmSessionSid_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(primaryAsmSessionSid_);
+              primaryAsmSessionSid_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        attachments_ = java.util.Collections.unmodifiableList(attachments_);
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.OmnichannelProto.internal_static_api_commons_OmniTextMessage_descriptor;
@@ -41,8 +115,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MESSAGE_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object message_ = "";
+  private volatile java.lang.Object message_;
   /**
    * <pre>
    * message containing Urls
@@ -88,7 +161,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ATTACHMENTS_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.OmniAttachment> attachments_;
   /**
    * <pre>
@@ -183,7 +255,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.Int64ValueOrBuilder getPrimaryAsmSessionSidOrBuilder() {
-    return primaryAsmSessionSid_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : primaryAsmSessionSid_;
+    return getPrimaryAsmSessionSid();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -200,7 +272,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
+    if (!getMessageBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, message_);
     }
     for (int i = 0; i < attachments_.size(); i++) {
@@ -209,7 +281,7 @@ private static final long serialVersionUID = 0L;
     if (primaryAsmSessionSid_ != null) {
       output.writeMessage(3, getPrimaryAsmSessionSid());
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -218,7 +290,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
+    if (!getMessageBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, message_);
     }
     for (int i = 0; i < attachments_.size(); i++) {
@@ -229,7 +301,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getPrimaryAsmSessionSid());
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -253,7 +325,7 @@ private static final long serialVersionUID = 0L;
       if (!getPrimaryAsmSessionSid()
           .equals(other.getPrimaryAsmSessionSid())) return false;
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -274,7 +346,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + PRIMARY_ASM_SESSION_SID_FIELD_NUMBER;
       hash = (53 * hash) + getPrimaryAsmSessionSid().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -323,13 +395,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.commons.OmniTextMessage parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.commons.OmniTextMessage parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -393,29 +463,35 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.OmniTextMessage.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getAttachmentsFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       message_ = "";
+
       if (attachmentsBuilder_ == null) {
         attachments_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
-        attachments_ = null;
         attachmentsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000002);
-      primaryAsmSessionSid_ = null;
-      if (primaryAsmSessionSidBuilder_ != null) {
-        primaryAsmSessionSidBuilder_.dispose();
+      if (primaryAsmSessionSidBuilder_ == null) {
+        primaryAsmSessionSid_ = null;
+      } else {
+        primaryAsmSessionSid_ = null;
         primaryAsmSessionSidBuilder_ = null;
       }
       return this;
@@ -444,34 +520,24 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.OmniTextMessage buildPartial() {
       com.tcn.cloud.api.api.commons.OmniTextMessage result = new com.tcn.cloud.api.api.commons.OmniTextMessage(this);
-      buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      onBuilt();
-      return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.OmniTextMessage result) {
+      int from_bitField0_ = bitField0_;
+      result.message_ = message_;
       if (attachmentsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           attachments_ = java.util.Collections.unmodifiableList(attachments_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.attachments_ = attachments_;
       } else {
         result.attachments_ = attachmentsBuilder_.build();
       }
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.commons.OmniTextMessage result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.message_ = message_;
+      if (primaryAsmSessionSidBuilder_ == null) {
+        result.primaryAsmSessionSid_ = primaryAsmSessionSid_;
+      } else {
+        result.primaryAsmSessionSid_ = primaryAsmSessionSidBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.primaryAsmSessionSid_ = primaryAsmSessionSidBuilder_ == null
-            ? primaryAsmSessionSid_
-            : primaryAsmSessionSidBuilder_.build();
-      }
+      onBuilt();
+      return result;
     }
 
     @java.lang.Override
@@ -520,14 +586,13 @@ private static final long serialVersionUID = 0L;
       if (other == com.tcn.cloud.api.api.commons.OmniTextMessage.getDefaultInstance()) return this;
       if (!other.getMessage().isEmpty()) {
         message_ = other.message_;
-        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (attachmentsBuilder_ == null) {
         if (!other.attachments_.isEmpty()) {
           if (attachments_.isEmpty()) {
             attachments_ = other.attachments_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureAttachmentsIsMutable();
             attachments_.addAll(other.attachments_);
@@ -540,7 +605,7 @@ private static final long serialVersionUID = 0L;
             attachmentsBuilder_.dispose();
             attachmentsBuilder_ = null;
             attachments_ = other.attachments_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000001);
             attachmentsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getAttachmentsFieldBuilder() : null;
@@ -552,7 +617,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasPrimaryAsmSessionSid()) {
         mergePrimaryAsmSessionSid(other.getPrimaryAsmSessionSid());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -567,55 +632,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.commons.OmniTextMessage parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              message_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 18: {
-              com.tcn.cloud.api.api.commons.OmniAttachment m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.commons.OmniAttachment.parser(),
-                      extensionRegistry);
-              if (attachmentsBuilder_ == null) {
-                ensureAttachmentsIsMutable();
-                attachments_.add(m);
-              } else {
-                attachmentsBuilder_.addMessage(m);
-              }
-              break;
-            } // case 18
-            case 26: {
-              input.readMessage(
-                  getPrimaryAsmSessionSidFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.commons.OmniTextMessage) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -673,9 +700,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setMessage(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       message_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -688,8 +717,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMessage() {
+      
       message_ = getDefaultInstance().getMessage();
-      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -704,10 +733,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setMessageBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       message_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -715,9 +746,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.commons.OmniAttachment> attachments_ =
       java.util.Collections.emptyList();
     private void ensureAttachmentsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         attachments_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.OmniAttachment>(attachments_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -911,7 +942,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearAttachments() {
       if (attachmentsBuilder_ == null) {
         attachments_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         attachmentsBuilder_.clear();
@@ -1016,7 +1047,7 @@ private static final long serialVersionUID = 0L;
         attachmentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.OmniAttachment, com.tcn.cloud.api.api.commons.OmniAttachment.Builder, com.tcn.cloud.api.api.commons.OmniAttachmentOrBuilder>(
                 attachments_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         attachments_ = null;
@@ -1036,7 +1067,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the primaryAsmSessionSid field is set.
      */
     public boolean hasPrimaryAsmSessionSid() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return primaryAsmSessionSidBuilder_ != null || primaryAsmSessionSid_ != null;
     }
     /**
      * <pre>
@@ -1066,11 +1097,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         primaryAsmSessionSid_ = value;
+        onChanged();
       } else {
         primaryAsmSessionSidBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -1084,11 +1115,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Int64Value.Builder builderForValue) {
       if (primaryAsmSessionSidBuilder_ == null) {
         primaryAsmSessionSid_ = builderForValue.build();
+        onChanged();
       } else {
         primaryAsmSessionSidBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -1100,18 +1131,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergePrimaryAsmSessionSid(com.google.protobuf.Int64Value value) {
       if (primaryAsmSessionSidBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0) &&
-          primaryAsmSessionSid_ != null &&
-          primaryAsmSessionSid_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
-          getPrimaryAsmSessionSidBuilder().mergeFrom(value);
+        if (primaryAsmSessionSid_ != null) {
+          primaryAsmSessionSid_ =
+            com.google.protobuf.Int64Value.newBuilder(primaryAsmSessionSid_).mergeFrom(value).buildPartial();
         } else {
           primaryAsmSessionSid_ = value;
         }
+        onChanged();
       } else {
         primaryAsmSessionSidBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
-      onChanged();
+
       return this;
     }
     /**
@@ -1122,13 +1152,14 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Int64Value primary_asm_session_sid = 3 [json_name = "primaryAsmSessionSid"];</code>
      */
     public Builder clearPrimaryAsmSessionSid() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      primaryAsmSessionSid_ = null;
-      if (primaryAsmSessionSidBuilder_ != null) {
-        primaryAsmSessionSidBuilder_.dispose();
+      if (primaryAsmSessionSidBuilder_ == null) {
+        primaryAsmSessionSid_ = null;
+        onChanged();
+      } else {
+        primaryAsmSessionSid_ = null;
         primaryAsmSessionSidBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -1139,7 +1170,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Int64Value primary_asm_session_sid = 3 [json_name = "primaryAsmSessionSid"];</code>
      */
     public com.google.protobuf.Int64Value.Builder getPrimaryAsmSessionSidBuilder() {
-      bitField0_ |= 0x00000004;
+      
       onChanged();
       return getPrimaryAsmSessionSidFieldBuilder().getBuilder();
     }
@@ -1211,18 +1242,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new OmniTextMessage(input, extensionRegistry);
     }
   };
 

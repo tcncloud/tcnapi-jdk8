@@ -47,14 +47,14 @@ public interface UpdateAgentResponseDataReqOrBuilder extends
   /**
    * <code>map&lt;string, string&gt; responses = 4 [json_name = "responses"];</code>
    */
-  /* nullable */
-java.lang.String getResponsesOrDefault(
+
+  java.lang.String getResponsesOrDefault(
       java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue);
+      java.lang.String defaultValue);
   /**
    * <code>map&lt;string, string&gt; responses = 4 [json_name = "responses"];</code>
    */
+
   java.lang.String getResponsesOrThrow(
       java.lang.String key);
 }

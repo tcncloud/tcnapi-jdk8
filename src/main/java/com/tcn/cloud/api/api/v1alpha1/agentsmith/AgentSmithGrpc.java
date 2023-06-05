@@ -9,7 +9,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.50.0)",
     comments = "Source: api/v1alpha1/agentsmith/service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class AgentSmithGrpc {
@@ -100,7 +100,7 @@ public final class AgentSmithGrpc {
    * to follow agents and/or create virtual agents.
    * </pre>
    */
-  public interface AsyncService {
+  public static abstract class AgentSmithImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
@@ -111,36 +111,31 @@ public final class AgentSmithGrpc {
      * contains a sip dial url that can be used to connect to the agent's voice session.
      * </pre>
      */
-    default void followAgent(com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentReq request,
+    public void followAgent(com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFollowAgentMethod(), responseObserver);
     }
-  }
-
-  /**
-   * Base class for the server implementation of the service AgentSmith.
-   * <pre>
-   * AgentSmith is the Public API for the AgentSmith service. This service provides the methods for public integrations
-   * to follow agents and/or create virtual agents.
-   * </pre>
-   */
-  public static abstract class AgentSmithImplBase
-      implements io.grpc.BindableService, AsyncService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return AgentSmithGrpc.bindService(this);
+      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getFollowAgentMethod(),
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentReq,
+                com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentRes>(
+                  this, METHODID_FOLLOW_AGENT)))
+          .build();
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service AgentSmith.
    * <pre>
    * AgentSmith is the Public API for the AgentSmith service. This service provides the methods for public integrations
    * to follow agents and/or create virtual agents.
    * </pre>
    */
-  public static final class AgentSmithStub
-      extends io.grpc.stub.AbstractAsyncStub<AgentSmithStub> {
+  public static final class AgentSmithStub extends io.grpc.stub.AbstractAsyncStub<AgentSmithStub> {
     private AgentSmithStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -169,14 +164,12 @@ public final class AgentSmithGrpc {
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service AgentSmith.
    * <pre>
    * AgentSmith is the Public API for the AgentSmith service. This service provides the methods for public integrations
    * to follow agents and/or create virtual agents.
    * </pre>
    */
-  public static final class AgentSmithBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<AgentSmithBlockingStub> {
+  public static final class AgentSmithBlockingStub extends io.grpc.stub.AbstractBlockingStub<AgentSmithBlockingStub> {
     private AgentSmithBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -205,14 +198,12 @@ public final class AgentSmithGrpc {
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service AgentSmith.
    * <pre>
    * AgentSmith is the Public API for the AgentSmith service. This service provides the methods for public integrations
    * to follow agents and/or create virtual agents.
    * </pre>
    */
-  public static final class AgentSmithFutureStub
-      extends io.grpc.stub.AbstractFutureStub<AgentSmithFutureStub> {
+  public static final class AgentSmithFutureStub extends io.grpc.stub.AbstractFutureStub<AgentSmithFutureStub> {
     private AgentSmithFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -232,10 +223,10 @@ public final class AgentSmithGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AsyncService serviceImpl;
+    private final AgentSmithImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AsyncService serviceImpl, int methodId) {
+    MethodHandlers(AgentSmithImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -262,18 +253,6 @@ public final class AgentSmithGrpc {
           throw new AssertionError();
       }
     }
-  }
-
-  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
-    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-        .addMethod(
-          getFollowAgentMethod(),
-          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentReq,
-              com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentRes>(
-                service, METHODID_FOLLOW_AGENT)))
-        .build();
   }
 
   private static abstract class AgentSmithBaseDescriptorSupplier

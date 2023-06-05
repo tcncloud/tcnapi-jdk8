@@ -30,6 +30,117 @@ private static final long serialVersionUID = 0L;
     return new FollowAgentRes();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private FollowAgentRes(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            com.google.protobuf.Timestamp.Builder subBuilder = null;
+            if (ts_ != null) {
+              subBuilder = ts_.toBuilder();
+            }
+            ts_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(ts_);
+              ts_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 82: {
+            com.tcn.cloud.api.api.v1alpha1.agentsmith.AgentStateChangeEvent.Builder subBuilder = null;
+            if (eventCase_ == 10) {
+              subBuilder = ((com.tcn.cloud.api.api.v1alpha1.agentsmith.AgentStateChangeEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.v1alpha1.agentsmith.AgentStateChangeEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v1alpha1.agentsmith.AgentStateChangeEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 10;
+            break;
+          }
+          case 90: {
+            com.tcn.cloud.api.api.v1alpha1.agentsmith.AgentVoiceStartEvent.Builder subBuilder = null;
+            if (eventCase_ == 11) {
+              subBuilder = ((com.tcn.cloud.api.api.v1alpha1.agentsmith.AgentVoiceStartEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.v1alpha1.agentsmith.AgentVoiceStartEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v1alpha1.agentsmith.AgentVoiceStartEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 11;
+            break;
+          }
+          case 98: {
+            com.tcn.cloud.api.api.v1alpha1.agentsmith.AgentVoiceEndEvent.Builder subBuilder = null;
+            if (eventCase_ == 12) {
+              subBuilder = ((com.tcn.cloud.api.api.v1alpha1.agentsmith.AgentVoiceEndEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.v1alpha1.agentsmith.AgentVoiceEndEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v1alpha1.agentsmith.AgentVoiceEndEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 12;
+            break;
+          }
+          case 106: {
+            com.tcn.cloud.api.api.v1alpha1.agentsmith.AgentSessionEndEvent.Builder subBuilder = null;
+            if (eventCase_ == 13) {
+              subBuilder = ((com.tcn.cloud.api.api.v1alpha1.agentsmith.AgentSessionEndEvent) event_).toBuilder();
+            }
+            event_ =
+                input.readMessage(com.tcn.cloud.api.api.v1alpha1.agentsmith.AgentSessionEndEvent.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v1alpha1.agentsmith.AgentSessionEndEvent) event_);
+              event_ = subBuilder.buildPartial();
+            }
+            eventCase_ = 13;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.agentsmith.ServiceProto.internal_static_api_v1alpha1_agentsmith_FollowAgentRes_descriptor;
@@ -44,7 +155,6 @@ private static final long serialVersionUID = 0L;
   }
 
   private int eventCase_ = 0;
-  @SuppressWarnings("serial")
   private java.lang.Object event_;
   public enum EventCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -124,7 +234,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getTsOrBuilder() {
-    return ts_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : ts_;
+    return getTs();
   }
 
   public static final int AGENT_STATE_CHANGE_FIELD_NUMBER = 10;
@@ -331,7 +441,7 @@ private static final long serialVersionUID = 0L;
     if (eventCase_ == 13) {
       output.writeMessage(13, (com.tcn.cloud.api.api.v1alpha1.agentsmith.AgentSessionEndEvent) event_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -360,7 +470,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(13, (com.tcn.cloud.api.api.v1alpha1.agentsmith.AgentSessionEndEvent) event_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -401,7 +511,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -436,7 +546,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -485,13 +595,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentRes parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentRes parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -560,34 +668,27 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentRes.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      ts_ = null;
-      if (tsBuilder_ != null) {
-        tsBuilder_.dispose();
+      if (tsBuilder_ == null) {
+        ts_ = null;
+      } else {
+        ts_ = null;
         tsBuilder_ = null;
-      }
-      if (agentStateChangeBuilder_ != null) {
-        agentStateChangeBuilder_.clear();
-      }
-      if (agentVoiceStartBuilder_ != null) {
-        agentVoiceStartBuilder_.clear();
-      }
-      if (agentVoiceEndBuilder_ != null) {
-        agentVoiceEndBuilder_.clear();
-      }
-      if (agentSessionEndBuilder_ != null) {
-        agentSessionEndBuilder_.clear();
       }
       eventCase_ = 0;
       event_ = null;
@@ -617,40 +718,42 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentRes buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentRes result = new com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentRes(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      buildPartialOneofs(result);
+      if (tsBuilder_ == null) {
+        result.ts_ = ts_;
+      } else {
+        result.ts_ = tsBuilder_.build();
+      }
+      if (eventCase_ == 10) {
+        if (agentStateChangeBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = agentStateChangeBuilder_.build();
+        }
+      }
+      if (eventCase_ == 11) {
+        if (agentVoiceStartBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = agentVoiceStartBuilder_.build();
+        }
+      }
+      if (eventCase_ == 12) {
+        if (agentVoiceEndBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = agentVoiceEndBuilder_.build();
+        }
+      }
+      if (eventCase_ == 13) {
+        if (agentSessionEndBuilder_ == null) {
+          result.event_ = event_;
+        } else {
+          result.event_ = agentSessionEndBuilder_.build();
+        }
+      }
+      result.eventCase_ = eventCase_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentRes result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.ts_ = tsBuilder_ == null
-            ? ts_
-            : tsBuilder_.build();
-      }
-    }
-
-    private void buildPartialOneofs(com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentRes result) {
-      result.eventCase_ = eventCase_;
-      result.event_ = this.event_;
-      if (eventCase_ == 10 &&
-          agentStateChangeBuilder_ != null) {
-        result.event_ = agentStateChangeBuilder_.build();
-      }
-      if (eventCase_ == 11 &&
-          agentVoiceStartBuilder_ != null) {
-        result.event_ = agentVoiceStartBuilder_.build();
-      }
-      if (eventCase_ == 12 &&
-          agentVoiceEndBuilder_ != null) {
-        result.event_ = agentVoiceEndBuilder_.build();
-      }
-      if (eventCase_ == 13 &&
-          agentSessionEndBuilder_ != null) {
-        result.event_ = agentSessionEndBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -721,7 +824,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -736,65 +839,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentRes parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              input.readMessage(
-                  getTsFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 82: {
-              input.readMessage(
-                  getAgentStateChangeFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 10;
-              break;
-            } // case 82
-            case 90: {
-              input.readMessage(
-                  getAgentVoiceStartFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 11;
-              break;
-            } // case 90
-            case 98: {
-              input.readMessage(
-                  getAgentVoiceEndFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 12;
-              break;
-            } // case 98
-            case 106: {
-              input.readMessage(
-                  getAgentSessionEndFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              eventCase_ = 13;
-              break;
-            } // case 106
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.agentsmith.FollowAgentRes) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int eventCase_ = 0;
@@ -812,7 +867,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int bitField0_;
 
     private com.google.protobuf.Timestamp ts_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -826,7 +880,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the ts field is set.
      */
     public boolean hasTs() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return tsBuilder_ != null || ts_ != null;
     }
     /**
      * <pre>
@@ -856,11 +910,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         ts_ = value;
+        onChanged();
       } else {
         tsBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -874,11 +928,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (tsBuilder_ == null) {
         ts_ = builderForValue.build();
+        onChanged();
       } else {
         tsBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -890,18 +944,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeTs(com.google.protobuf.Timestamp value) {
       if (tsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          ts_ != null &&
-          ts_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getTsBuilder().mergeFrom(value);
+        if (ts_ != null) {
+          ts_ =
+            com.google.protobuf.Timestamp.newBuilder(ts_).mergeFrom(value).buildPartial();
         } else {
           ts_ = value;
         }
+        onChanged();
       } else {
         tsBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
+
       return this;
     }
     /**
@@ -912,13 +965,14 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp ts = 1 [json_name = "ts"];</code>
      */
     public Builder clearTs() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      ts_ = null;
-      if (tsBuilder_ != null) {
-        tsBuilder_.dispose();
+      if (tsBuilder_ == null) {
+        ts_ = null;
+        onChanged();
+      } else {
+        ts_ = null;
         tsBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -929,7 +983,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp ts = 1 [json_name = "ts"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getTsBuilder() {
-      bitField0_ |= 0x00000001;
+      
       onChanged();
       return getTsFieldBuilder().getBuilder();
     }
@@ -1063,9 +1117,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 10) {
           agentStateChangeBuilder_.mergeFrom(value);
-        } else {
-          agentStateChangeBuilder_.setMessage(value);
         }
+        agentStateChangeBuilder_.setMessage(value);
       }
       eventCase_ = 10;
       return this;
@@ -1143,7 +1196,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 10;
-      onChanged();
+      onChanged();;
       return agentStateChangeBuilder_;
     }
 
@@ -1241,9 +1294,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 11) {
           agentVoiceStartBuilder_.mergeFrom(value);
-        } else {
-          agentVoiceStartBuilder_.setMessage(value);
         }
+        agentVoiceStartBuilder_.setMessage(value);
       }
       eventCase_ = 11;
       return this;
@@ -1321,7 +1373,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 11;
-      onChanged();
+      onChanged();;
       return agentVoiceStartBuilder_;
     }
 
@@ -1419,9 +1471,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 12) {
           agentVoiceEndBuilder_.mergeFrom(value);
-        } else {
-          agentVoiceEndBuilder_.setMessage(value);
         }
+        agentVoiceEndBuilder_.setMessage(value);
       }
       eventCase_ = 12;
       return this;
@@ -1499,7 +1550,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 12;
-      onChanged();
+      onChanged();;
       return agentVoiceEndBuilder_;
     }
 
@@ -1602,9 +1653,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (eventCase_ == 13) {
           agentSessionEndBuilder_.mergeFrom(value);
-        } else {
-          agentSessionEndBuilder_.setMessage(value);
         }
+        agentSessionEndBuilder_.setMessage(value);
       }
       eventCase_ = 13;
       return this;
@@ -1686,7 +1736,7 @@ private static final long serialVersionUID = 0L;
         event_ = null;
       }
       eventCase_ = 13;
-      onChanged();
+      onChanged();;
       return agentSessionEndBuilder_;
     }
     @java.lang.Override
@@ -1722,18 +1772,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new FollowAgentRes(input, extensionRegistry);
     }
   };
 

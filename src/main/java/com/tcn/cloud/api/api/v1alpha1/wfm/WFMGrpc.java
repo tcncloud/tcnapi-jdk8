@@ -8,7 +8,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.50.0)",
     comments = "Source: api/v1alpha1/wfm/wfm.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class WFMGrpc {
@@ -3384,7 +3384,7 @@ public final class WFMGrpc {
    * WFM is responsible for call prediction and call volume calculations based on call skills and other parameters.
    * </pre>
    */
-  public interface AsyncService {
+  public static abstract class WFMImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
@@ -3395,7 +3395,7 @@ public final class WFMGrpc {
      * Errors:
      * </pre>
      */
-    default void listSkillProfiles(com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfilesReq request,
+    public void listSkillProfiles(com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfilesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfilesRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSkillProfilesMethod(), responseObserver);
     }
@@ -3412,7 +3412,7 @@ public final class WFMGrpc {
      *   - grpc.NotFound: entry to be updated doesn't exist.
      * </pre>
      */
-    default void updateSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileReq request,
+    public void updateSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateSkillProfileMethod(), responseObserver);
     }
@@ -3427,7 +3427,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when updating the skill profiles proficiencies.
      * </pre>
      */
-    default void updateSkillProfileProficiencies(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq request,
+    public void updateSkillProfileProficiencies(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateSkillProfileProficienciesMethod(), responseObserver);
     }
@@ -3446,7 +3446,7 @@ public final class WFMGrpc {
      *   - grpc.NotFound: skill profile doesn't exist.
      * </pre>
      */
-    default void getSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileReq request,
+    public void getSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSkillProfileMethod(), responseObserver);
     }
@@ -3461,7 +3461,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the new skills and skill profiles.
      * </pre>
      */
-    default void resyncSkillProfiles(com.tcn.cloud.api.api.v1alpha1.wfm.ResyncSkillProfilesReq request,
+    public void resyncSkillProfiles(com.tcn.cloud.api.api.v1alpha1.wfm.ResyncSkillProfilesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ResyncSkillProfilesRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getResyncSkillProfilesMethod(), responseObserver);
     }
@@ -3476,7 +3476,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the resync date.
      * </pre>
      */
-    default void getLastSkillProfileResyncDate(com.tcn.cloud.api.api.v1alpha1.wfm.GetLastSkillProfileResyncDateReq request,
+    public void getLastSkillProfileResyncDate(com.tcn.cloud.api.api.v1alpha1.wfm.GetLastSkillProfileResyncDateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetLastSkillProfileResyncDateRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetLastSkillProfileResyncDateMethod(), responseObserver);
     }
@@ -3492,7 +3492,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when upserting the parameters.
      * </pre>
      */
-    default void upsertForecastingParameters(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastingParametersReq request,
+    public void upsertForecastingParameters(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastingParametersReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastingParametersRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpsertForecastingParametersMethod(), responseObserver);
     }
@@ -3507,7 +3507,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the parameters.
      * </pre>
      */
-    default void getForecastingParameters(com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastingParametersReq request,
+    public void getForecastingParameters(com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastingParametersReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastingParametersRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetForecastingParametersMethod(), responseObserver);
     }
@@ -3528,7 +3528,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the historical data.
      * </pre>
      */
-    default void listHistoricalData(com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq request,
+    public void listHistoricalData(com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListHistoricalDataMethod(), responseObserver);
     }
@@ -3544,7 +3544,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when upserting the historical data interval.
      * </pre>
      */
-    default void upsertHistoricalDataDelta(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltaReq request,
+    public void upsertHistoricalDataDelta(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltaReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltaRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpsertHistoricalDataDeltaMethod(), responseObserver);
     }
@@ -3561,7 +3561,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when upserting the historical data deltas.
      * </pre>
      */
-    default void upsertHistoricalDataDeltas(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltasReq request,
+    public void upsertHistoricalDataDeltas(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltasReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltasRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpsertHistoricalDataDeltasMethod(), responseObserver);
     }
@@ -3576,7 +3576,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the skills.
      * </pre>
      */
-    default void listSkills(com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillsReq request,
+    public void listSkills(com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSkillsMethod(), responseObserver);
     }
@@ -3597,7 +3597,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when building the call profile template.
      * </pre>
      */
-    default void buildCallProfileTemplateForSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileReq request,
+    public void buildCallProfileTemplateForSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBuildCallProfileTemplateForSkillProfileMethod(), responseObserver);
     }
@@ -3614,7 +3614,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the inactive skill profile mapping.
      * </pre>
      */
-    default void createInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingReq request,
+    public void createInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateInactiveSkillProfileMappingMethod(), responseObserver);
     }
@@ -3628,7 +3628,7 @@ public final class WFMGrpc {
      *  -grpc.Internal: error occurs when contacting the forecaster to get the available forecaster types.
      * </pre>
      */
-    default void getAvailableRegressionForecasterModelTypes(com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesReq request,
+    public void getAvailableRegressionForecasterModelTypes(com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAvailableRegressionForecasterModelTypesMethod(), responseObserver);
     }
@@ -3645,7 +3645,7 @@ public final class WFMGrpc {
      *				            the given &#64;inactive_skill_profile_sid is of an active skill profile.
      * </pre>
      */
-    default void disconnectInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq request,
+    public void disconnectInactiveSkillProfileMapping(com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDisconnectInactiveSkillProfileMappingMethod(), responseObserver);
     }
@@ -3662,7 +3662,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs during the deletion of the historical data interval.
      * </pre>
      */
-    default void deleteHistoricalDataDeltas(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteHistoricalDataDeltasReq request,
+    public void deleteHistoricalDataDeltas(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteHistoricalDataDeltasReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteHistoricalDataDeltasRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteHistoricalDataDeltasMethod(), responseObserver);
     }
@@ -3679,7 +3679,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the skill profiles.
      * </pre>
      */
-    default void listTopSkillProfiles(com.tcn.cloud.api.api.v1alpha1.wfm.ListTopSkillProfilesReq request,
+    public void listTopSkillProfiles(com.tcn.cloud.api.api.v1alpha1.wfm.ListTopSkillProfilesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListTopSkillProfilesRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListTopSkillProfilesMethod(), responseObserver);
     }
@@ -3693,7 +3693,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the skill profiles count.
      * </pre>
      */
-    default void getSkillProfilesCount(com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfilesCountReq request,
+    public void getSkillProfilesCount(com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfilesCountReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfilesCountRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSkillProfilesCountMethod(), responseObserver);
     }
@@ -3712,7 +3712,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs during the building of the profile forecast.
      * </pre>
      */
-    default void buildProfileForecastByInterval(com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalReq request,
+    public void buildProfileForecastByInterval(com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBuildProfileForecastByIntervalMethod(), responseObserver);
     }
@@ -3732,7 +3732,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs during the building of the profile forecast.
      * </pre>
      */
-    default void buildProfileForecastByIntervalWithStats(com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalWithStatsReq request,
+    public void buildProfileForecastByIntervalWithStats(com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalWithStatsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalWithStatsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBuildProfileForecastByIntervalWithStatsMethod(), responseObserver);
     }
@@ -3753,7 +3753,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when upserting the profile forecast.
      * </pre>
      */
-    default void upsertProfileForecast(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertProfileForecastReq request,
+    public void upsertProfileForecast(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertProfileForecastReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertProfileForecastRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpsertProfileForecastMethod(), responseObserver);
     }
@@ -3768,7 +3768,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs during the creation of the call profile.
      * </pre>
      */
-    default void createCallProfileTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.CreateCallProfileTemplateReq request,
+    public void createCallProfileTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.CreateCallProfileTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateCallProfileTemplateRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateCallProfileTemplateMethod(), responseObserver);
     }
@@ -3783,7 +3783,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs during the deletion of the call profile.
      * </pre>
      */
-    default void deleteCallProfileTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteCallProfileTemplateReq request,
+    public void deleteCallProfileTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteCallProfileTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteCallProfileTemplateRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteCallProfileTemplateMethod(), responseObserver);
     }
@@ -3798,7 +3798,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the regression template.
      * </pre>
      */
-    default void createRegressionTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateReq request,
+    public void createRegressionTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateRegressionTemplateMethod(), responseObserver);
     }
@@ -3813,7 +3813,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs during the deletion of the regression template.
      * </pre>
      */
-    default void deleteRegressionTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRegressionTemplateReq request,
+    public void deleteRegressionTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRegressionTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRegressionTemplateRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteRegressionTemplateMethod(), responseObserver);
     }
@@ -3827,7 +3827,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the regression templates.
      * </pre>
      */
-    default void listRegressionTemplates(com.tcn.cloud.api.api.v1alpha1.wfm.ListRegressionTemplatesReq request,
+    public void listRegressionTemplates(com.tcn.cloud.api.api.v1alpha1.wfm.ListRegressionTemplatesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListRegressionTemplatesRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListRegressionTemplatesMethod(), responseObserver);
     }
@@ -3842,7 +3842,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the forecast data intervals.
      * </pre>
      */
-    default void listForecastIntervalsForSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsForSkillProfileReq request,
+    public void listForecastIntervalsForSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsForSkillProfileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListForecastIntervalsForSkillProfileMethod(), responseObserver);
     }
@@ -3861,7 +3861,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs during the building of the regression forecast.
      * </pre>
      */
-    default void buildRegressionForecastByInterval(com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalReq request,
+    public void buildRegressionForecastByInterval(com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBuildRegressionForecastByIntervalMethod(), responseObserver);
     }
@@ -3879,7 +3879,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs either during the when building the forecast or calculating the stats.
      * </pre>
      */
-    default void buildRegressionForecastByIntervalWithStats(com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsReq request,
+    public void buildRegressionForecastByIntervalWithStats(com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBuildRegressionForecastByIntervalWithStatsMethod(), responseObserver);
     }
@@ -3893,7 +3893,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the templates.
      * </pre>
      */
-    default void listCallProfileTemplates(com.tcn.cloud.api.api.v1alpha1.wfm.ListCallProfileTemplatesReq request,
+    public void listCallProfileTemplates(com.tcn.cloud.api.api.v1alpha1.wfm.ListCallProfileTemplatesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListCallProfileTemplatesRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCallProfileTemplatesMethod(), responseObserver);
     }
@@ -3911,7 +3911,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when upserting the regression forecast.
      * </pre>
      */
-    default void upsertRegressionForecast(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRegressionForecastReq request,
+    public void upsertRegressionForecast(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRegressionForecastReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRegressionForecastRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpsertRegressionForecastMethod(), responseObserver);
     }
@@ -3927,7 +3927,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when upserting the forecast data delta.
      * </pre>
      */
-    default void upsertForecastDataDelta(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltaReq request,
+    public void upsertForecastDataDelta(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltaReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltaRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpsertForecastDataDeltaMethod(), responseObserver);
     }
@@ -3943,7 +3943,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when upserting the forecast data deltas.
      * </pre>
      */
-    default void upsertForecastDataDeltas(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltasReq request,
+    public void upsertForecastDataDeltas(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltasReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltasRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpsertForecastDataDeltasMethod(), responseObserver);
     }
@@ -3963,7 +3963,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs during the deletion of the forecast data intervals/deltas.
      * </pre>
      */
-    default void deleteForecastIntervals(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq request,
+    public void deleteForecastIntervals(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteForecastIntervalsMethod(), responseObserver);
     }
@@ -3980,7 +3980,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when retriving the history.
      * </pre>
      */
-    default void listHistoricalDataForAllSkillProfiles(com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataForAllSkillProfilesReq request,
+    public void listHistoricalDataForAllSkillProfiles(com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataForAllSkillProfilesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataForAllSkillProfilesRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListHistoricalDataForAllSkillProfilesMethod(), responseObserver);
     }
@@ -3995,7 +3995,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when building the ProfileDOW or ProfileMOY.
      * </pre>
      */
-    default void buildDOWAndMOYProfiles(com.tcn.cloud.api.api.v1alpha1.wfm.BuildDOWAndMOYProfilesReq request,
+    public void buildDOWAndMOYProfiles(com.tcn.cloud.api.api.v1alpha1.wfm.BuildDOWAndMOYProfilesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildDOWAndMOYProfilesRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBuildDOWAndMOYProfilesMethod(), responseObserver);
     }
@@ -4013,7 +4013,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when calculating the averages from the training data.
      * </pre>
      */
-    default void calculateTrainingDataAveragesForSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.CalculateTrainingDataAveragesForSkillProfileReq request,
+    public void calculateTrainingDataAveragesForSkillProfile(com.tcn.cloud.api.api.v1alpha1.wfm.CalculateTrainingDataAveragesForSkillProfileReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CalculateTrainingDataAveragesForSkillProfileRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCalculateTrainingDataAveragesForSkillProfileMethod(), responseObserver);
     }
@@ -4032,7 +4032,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when calculating the averages from the historical data.
      * </pre>
      */
-    default void updateSkillProfileAveragesUsingHistoricalData(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataReq request,
+    public void updateSkillProfileAveragesUsingHistoricalData(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateSkillProfileAveragesUsingHistoricalDataMethod(), responseObserver);
     }
@@ -4051,7 +4051,7 @@ public final class WFMGrpc {
      *   - grpc.NotFound: entry to be updated doesn't exist.
      * </pre>
      */
-    default void updateCallCenterNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateCallCenterNodeReq request,
+    public void updateCallCenterNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateCallCenterNodeReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateCallCenterNodeRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateCallCenterNodeMethod(), responseObserver);
     }
@@ -4071,7 +4071,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the client node.
      * </pre>
      */
-    default void createClientNode(com.tcn.cloud.api.api.v1alpha1.wfm.CreateClientNodeReq request,
+    public void createClientNode(com.tcn.cloud.api.api.v1alpha1.wfm.CreateClientNodeReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateClientNodeRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateClientNodeMethod(), responseObserver);
     }
@@ -4090,7 +4090,7 @@ public final class WFMGrpc {
      *   - grpc.NotFound: entry to be updated doesn't exist, or the given &#64;parent_sid (call_center_node_sid) belongs to a different scenario than this &#64;node.
      * </pre>
      */
-    default void updateClientNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateClientNodeReq request,
+    public void updateClientNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateClientNodeReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateClientNodeRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateClientNodeMethod(), responseObserver);
     }
@@ -4110,7 +4110,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the location node.
      * </pre>
      */
-    default void createLocationNode(com.tcn.cloud.api.api.v1alpha1.wfm.CreateLocationNodeReq request,
+    public void createLocationNode(com.tcn.cloud.api.api.v1alpha1.wfm.CreateLocationNodeReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateLocationNodeRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateLocationNodeMethod(), responseObserver);
     }
@@ -4129,7 +4129,7 @@ public final class WFMGrpc {
      *   - grpc.NotFound: entry to be updated doesn't exist, or the given parent &#64;client_node_sid belongs to a different scenario than the node to update.
      * </pre>
      */
-    default void updateLocationNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateLocationNodeReq request,
+    public void updateLocationNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateLocationNodeReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateLocationNodeRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateLocationNodeMethod(), responseObserver);
     }
@@ -4149,7 +4149,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the program node.
      * </pre>
      */
-    default void createProgramNode(com.tcn.cloud.api.api.v1alpha1.wfm.CreateProgramNodeReq request,
+    public void createProgramNode(com.tcn.cloud.api.api.v1alpha1.wfm.CreateProgramNodeReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateProgramNodeRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateProgramNodeMethod(), responseObserver);
     }
@@ -4168,7 +4168,7 @@ public final class WFMGrpc {
      *   - grpc.NotFound: entry to be updated doesn't exist, or the given parent &#64;location_node_sid belongs to a different scenario than the program node to update.
      * </pre>
      */
-    default void updateProgramNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeReq request,
+    public void updateProgramNode(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateProgramNodeMethod(), responseObserver);
     }
@@ -4190,7 +4190,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the constraint rule.
      * </pre>
      */
-    default void createConstraintRule(com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleReq request,
+    public void createConstraintRule(com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateConstraintRuleMethod(), responseObserver);
     }
@@ -4214,7 +4214,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when updating the constraint rule.
      * </pre>
      */
-    default void updateConstraintRule(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateConstraintRuleReq request,
+    public void updateConstraintRule(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateConstraintRuleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateConstraintRuleRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateConstraintRuleMethod(), responseObserver);
     }
@@ -4231,7 +4231,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when removing the constraint rule.
      * </pre>
      */
-    default void deleteConstraintRule(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteConstraintRuleReq request,
+    public void deleteConstraintRule(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteConstraintRuleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteConstraintRuleRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteConstraintRuleMethod(), responseObserver);
     }
@@ -4249,7 +4249,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the non skill activity or scheduling activity.
      * </pre>
      */
-    default void createNonSkillActivity(com.tcn.cloud.api.api.v1alpha1.wfm.CreateNonSkillActivityReq request,
+    public void createNonSkillActivity(com.tcn.cloud.api.api.v1alpha1.wfm.CreateNonSkillActivityReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateNonSkillActivityRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateNonSkillActivityMethod(), responseObserver);
     }
@@ -4265,7 +4265,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when updating the non skill activity.
      * </pre>
      */
-    default void updateNonSkillActivity(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityReq request,
+    public void updateNonSkillActivity(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateNonSkillActivityMethod(), responseObserver);
     }
@@ -4280,7 +4280,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when listing the associations.
      * </pre>
      */
-    default void listNonSkillActivityAssociations(com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsReq request,
+    public void listNonSkillActivityAssociations(com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListNonSkillActivityAssociationsMethod(), responseObserver);
     }
@@ -4300,7 +4300,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when applying inheritance or getting the nodes from &#64;parent_of_rule.
      * </pre>
      */
-    default void listCandidateSchedulingActivities(com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateSchedulingActivitiesReq request,
+    public void listCandidateSchedulingActivities(com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateSchedulingActivitiesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateSchedulingActivitiesRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCandidateSchedulingActivitiesMethod(), responseObserver);
     }
@@ -4319,7 +4319,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the agent group.
      * </pre>
      */
-    default void createAgentGroup(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentGroupReq request,
+    public void createAgentGroup(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentGroupRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateAgentGroupMethod(), responseObserver);
     }
@@ -4339,7 +4339,7 @@ public final class WFMGrpc {
      *   - grpc.NotFound: entry to be updated doesn't exist, or the &#64;parent_entity has a different &#64;schedule_scenario_sid than the agent group.
      * </pre>
      */
-    default void updateAgentGroup(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentGroupReq request,
+    public void updateAgentGroup(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentGroupRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAgentGroupMethod(), responseObserver);
     }
@@ -4358,7 +4358,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when updating the wfm agent.
      * </pre>
      */
-    default void updateWFMAgent(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateWFMAgentReq request,
+    public void updateWFMAgent(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateWFMAgentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateWFMAgentRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateWFMAgentMethod(), responseObserver);
     }
@@ -4376,7 +4376,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the wfm agents.
      * </pre>
      */
-    default void listAllWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListAllWFMAgentsReq request,
+    public void listAllWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListAllWFMAgentsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListAllWFMAgentsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAllWFMAgentsMethod(), responseObserver);
     }
@@ -4393,7 +4393,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the wfm agents.
      * </pre>
      */
-    default void listCandidateWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateWFMAgentsReq request,
+    public void listCandidateWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateWFMAgentsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateWFMAgentsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCandidateWFMAgentsMethod(), responseObserver);
     }
@@ -4411,7 +4411,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the wfm agents.
      * </pre>
      */
-    default void listUngroupedWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq request,
+    public void listUngroupedWFMAgents(com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListUngroupedWFMAgentsMethod(), responseObserver);
     }
@@ -4426,7 +4426,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when listing the wfm agents.
      * </pre>
      */
-    default void listWFMAgentsAssociatedWithAgentGroup(com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentsAssociatedWithAgentGroupReq request,
+    public void listWFMAgentsAssociatedWithAgentGroup(com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentsAssociatedWithAgentGroupReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentsAssociatedWithAgentGroupRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListWFMAgentsAssociatedWithAgentGroupMethod(), responseObserver);
     }
@@ -4443,7 +4443,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the association.
      * </pre>
      */
-    default void createWFMAgentMemberships(com.tcn.cloud.api.api.v1alpha1.wfm.CreateWFMAgentMembershipsReq request,
+    public void createWFMAgentMemberships(com.tcn.cloud.api.api.v1alpha1.wfm.CreateWFMAgentMembershipsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateWFMAgentMembershipsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateWFMAgentMembershipsMethod(), responseObserver);
     }
@@ -4459,7 +4459,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when deleting the association.
      * </pre>
      */
-    default void deleteWFMAgentMemberships(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsReq request,
+    public void deleteWFMAgentMemberships(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteWFMAgentMembershipsMethod(), responseObserver);
     }
@@ -4477,7 +4477,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs building the diagnostics.
      * </pre>
      */
-    default void buildAgentDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.BuildAgentDiagnosticsReq request,
+    public void buildAgentDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.BuildAgentDiagnosticsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildAgentDiagnosticsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBuildAgentDiagnosticsMethod(), responseObserver);
     }
@@ -4497,7 +4497,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the shift template.
      * </pre>
      */
-    default void createShiftTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftTemplateReq request,
+    public void createShiftTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftTemplateRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateShiftTemplateMethod(), responseObserver);
     }
@@ -4517,7 +4517,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when updating the shift template.
      * </pre>
      */
-    default void updateShiftTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftTemplateReq request,
+    public void updateShiftTemplate(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftTemplateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftTemplateRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateShiftTemplateMethod(), responseObserver);
     }
@@ -4532,7 +4532,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the data.
      * </pre>
      */
-    default void listShiftTemplatesBySids(com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftTemplatesBySidsReq request,
+    public void listShiftTemplatesBySids(com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftTemplatesBySidsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftTemplatesBySidsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListShiftTemplatesBySidsMethod(), responseObserver);
     }
@@ -4547,7 +4547,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occours building the diagnostics for the shift template.
      * </pre>
      */
-    default void buildShiftTemplateDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.BuildShiftTemplateDiagnosticsReq request,
+    public void buildShiftTemplateDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.BuildShiftTemplateDiagnosticsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildShiftTemplateDiagnosticsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBuildShiftTemplateDiagnosticsMethod(), responseObserver);
     }
@@ -4567,7 +4567,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the placement rule.
      * </pre>
      */
-    default void createPlacementRule(com.tcn.cloud.api.api.v1alpha1.wfm.CreatePlacementRuleReq request,
+    public void createPlacementRule(com.tcn.cloud.api.api.v1alpha1.wfm.CreatePlacementRuleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreatePlacementRuleRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreatePlacementRuleMethod(), responseObserver);
     }
@@ -4587,7 +4587,7 @@ public final class WFMGrpc {
      *                  : the parent shift template or related scheduling activity don't exist or belong to a different scenario than the placement rule to update.
      * </pre>
      */
-    default void updatePlacementRule(com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePlacementRuleReq request,
+    public void updatePlacementRule(com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePlacementRuleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePlacementRuleRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdatePlacementRuleMethod(), responseObserver);
     }
@@ -4604,7 +4604,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when removing the placement rule.
      * </pre>
      */
-    default void deletePlacementRule(com.tcn.cloud.api.api.v1alpha1.wfm.DeletePlacementRuleReq request,
+    public void deletePlacementRule(com.tcn.cloud.api.api.v1alpha1.wfm.DeletePlacementRuleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeletePlacementRuleRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeletePlacementRuleMethod(), responseObserver);
     }
@@ -4622,7 +4622,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the open times pattern.
      * </pre>
      */
-    default void createOpenTimesPattern(com.tcn.cloud.api.api.v1alpha1.wfm.CreateOpenTimesPatternReq request,
+    public void createOpenTimesPattern(com.tcn.cloud.api.api.v1alpha1.wfm.CreateOpenTimesPatternReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateOpenTimesPatternRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateOpenTimesPatternMethod(), responseObserver);
     }
@@ -4640,7 +4640,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when updating the open times pattern.
      * </pre>
      */
-    default void updateOpenTimesPattern(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateOpenTimesPatternReq request,
+    public void updateOpenTimesPattern(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateOpenTimesPatternReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateOpenTimesPatternRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateOpenTimesPatternMethod(), responseObserver);
     }
@@ -4656,7 +4656,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when removing the open times pattern.
      * </pre>
      */
-    default void deleteOpenTimesPattern(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteOpenTimesPatternReq request,
+    public void deleteOpenTimesPattern(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteOpenTimesPatternReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteOpenTimesPatternRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteOpenTimesPatternMethod(), responseObserver);
     }
@@ -4675,7 +4675,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the open times pattern bitmaps.
      * </pre>
      */
-    default void getOpenTimesBitmaps(com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsReq request,
+    public void getOpenTimesBitmaps(com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetOpenTimesBitmapsMethod(), responseObserver);
     }
@@ -4693,7 +4693,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the agent availability pattern.
      * </pre>
      */
-    default void createAgentAvailabilityPattern(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentAvailabilityPatternReq request,
+    public void createAgentAvailabilityPattern(com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentAvailabilityPatternReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentAvailabilityPatternRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateAgentAvailabilityPatternMethod(), responseObserver);
     }
@@ -4711,7 +4711,7 @@ public final class WFMGrpc {
      *   - grpc.NotFound: entry to be updated doesn't exist, or the &#64;parent_entity has a different &#64;schedule_scenario_sid than the agent availability pattern.
      * </pre>
      */
-    default void updateAgentAvailabilityPattern(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentAvailabilityPatternReq request,
+    public void updateAgentAvailabilityPattern(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentAvailabilityPatternReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentAvailabilityPatternRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAgentAvailabilityPatternMethod(), responseObserver);
     }
@@ -4727,7 +4727,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when removing the agent availability pattern.
      * </pre>
      */
-    default void deleteAgentAvailabilityPattern(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAgentAvailabilityPatternReq request,
+    public void deleteAgentAvailabilityPattern(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAgentAvailabilityPatternReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAgentAvailabilityPatternRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteAgentAvailabilityPatternMethod(), responseObserver);
     }
@@ -4748,7 +4748,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the agent availability pattern bitmaps.
      * </pre>
      */
-    default void getAvailabilityBitmaps(com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailabilityBitmapsReq request,
+    public void getAvailabilityBitmaps(com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailabilityBitmapsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailabilityBitmapsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAvailabilityBitmapsMethod(), responseObserver);
     }
@@ -4770,7 +4770,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when upserting the association.
      * </pre>
      */
-    default void upsertNonSkillActivityAssociation(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationReq request,
+    public void upsertNonSkillActivityAssociation(com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpsertNonSkillActivityAssociationMethod(), responseObserver);
     }
@@ -4791,7 +4791,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the skill proficiencies.
      * </pre>
      */
-    default void createSkillProficiencies(com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProficienciesReq request,
+    public void createSkillProficiencies(com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProficienciesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProficienciesRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateSkillProficienciesMethod(), responseObserver);
     }
@@ -4812,7 +4812,7 @@ public final class WFMGrpc {
      *   - grpc.AlreadyExists: a skill proficiency with the given &#64;skill_sid and &#64;parent_entity already exists.
      * </pre>
      */
-    default void updateSkillProficiencies(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProficienciesReq request,
+    public void updateSkillProficiencies(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProficienciesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProficienciesRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateSkillProficienciesMethod(), responseObserver);
     }
@@ -4828,7 +4828,7 @@ public final class WFMGrpc {
      *   -grpc.Internal: error occurs when removing the skill proficiency.
      * </pre>
      */
-    default void deleteSkillProficiency(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSkillProficiencyReq request,
+    public void deleteSkillProficiency(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSkillProficiencyReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSkillProficiencyRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteSkillProficiencyMethod(), responseObserver);
     }
@@ -4846,7 +4846,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating/coping the new scenario.
      * </pre>
      */
-    default void copyScenario(com.tcn.cloud.api.api.v1alpha1.wfm.CopyScenarioReq request,
+    public void copyScenario(com.tcn.cloud.api.api.v1alpha1.wfm.CopyScenarioReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CopyScenarioRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCopyScenarioMethod(), responseObserver);
     }
@@ -4866,7 +4866,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the new scenario, or any of the node entities.
      * </pre>
      */
-    default void createScheduleScenarioWithNodes(com.tcn.cloud.api.api.v1alpha1.wfm.CreateScheduleScenarioWithNodesReq request,
+    public void createScheduleScenarioWithNodes(com.tcn.cloud.api.api.v1alpha1.wfm.CreateScheduleScenarioWithNodesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateScheduleScenarioWithNodesRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateScheduleScenarioWithNodesMethod(), responseObserver);
     }
@@ -4885,7 +4885,7 @@ public final class WFMGrpc {
      *   -grpc.Internal: error occurs when updating the scenario.
      * </pre>
      */
-    default void updateScheduleScenario(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateScheduleScenarioReq request,
+    public void updateScheduleScenario(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateScheduleScenarioReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateScheduleScenarioRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateScheduleScenarioMethod(), responseObserver);
     }
@@ -4903,7 +4903,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the config entities.
      * </pre>
      */
-    default void listConfigEntities(com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesReq request,
+    public void listConfigEntities(com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListConfigEntitiesMethod(), responseObserver);
     }
@@ -4919,7 +4919,7 @@ public final class WFMGrpc {
      *   -grpc.Internal: error occurs when removing the shift instances.
      * </pre>
      */
-    default void deleteShiftInstances(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteShiftInstancesReq request,
+    public void deleteShiftInstances(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteShiftInstancesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteShiftInstancesRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteShiftInstancesMethod(), responseObserver);
     }
@@ -4936,7 +4936,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when building the diagnostics.
      * </pre>
      */
-    default void buildNodeDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.BuildNodeDiagnosticsReq request,
+    public void buildNodeDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.BuildNodeDiagnosticsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildNodeDiagnosticsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBuildNodeDiagnosticsMethod(), responseObserver);
     }
@@ -4952,7 +4952,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when building the diagnostics.
      * </pre>
      */
-    default void buildGlobalDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.BuildGlobalDiagnosticsReq request,
+    public void buildGlobalDiagnostics(com.tcn.cloud.api.api.v1alpha1.wfm.BuildGlobalDiagnosticsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildGlobalDiagnosticsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBuildGlobalDiagnosticsMethod(), responseObserver);
     }
@@ -4975,7 +4975,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the published schedule.
      * </pre>
      */
-    default void getPublishedSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleReq request,
+    public void getPublishedSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPublishedScheduleMethod(), responseObserver);
     }
@@ -4991,7 +4991,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the data.
      * </pre>
      */
-    default void getPublishedScheduleRequiredCalls(com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRequiredCallsReq request,
+    public void getPublishedScheduleRequiredCalls(com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRequiredCallsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRequiredCallsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPublishedScheduleRequiredCallsMethod(), responseObserver);
     }
@@ -5007,7 +5007,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the data.
      * </pre>
      */
-    default void getDraftScheduleRequiredCalls(com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRequiredCallsReq request,
+    public void getDraftScheduleRequiredCalls(com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRequiredCallsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRequiredCallsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDraftScheduleRequiredCallsMethod(), responseObserver);
     }
@@ -5025,7 +5025,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the draft schedule.
      * </pre>
      */
-    default void createDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.CreateDraftScheduleReq request,
+    public void createDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.CreateDraftScheduleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateDraftScheduleRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateDraftScheduleMethod(), responseObserver);
     }
@@ -5038,7 +5038,7 @@ public final class WFMGrpc {
      * Will return diagnostics for the newly built schedule, or just diagnostics if the schedule cannot be built successfully due to diagnostic error.
      * </pre>
      */
-    default void buildDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleReq request,
+    public void buildDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBuildDraftScheduleMethod(), responseObserver);
     }
@@ -5058,7 +5058,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when publishing the draft schedule.
      * </pre>
      */
-    default void publishDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.PublishDraftScheduleReq request,
+    public void publishDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.PublishDraftScheduleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.PublishDraftScheduleRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPublishDraftScheduleMethod(), responseObserver);
     }
@@ -5081,7 +5081,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the draft schedule.
      * </pre>
      */
-    default void getDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleReq request,
+    public void getDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDraftScheduleMethod(), responseObserver);
     }
@@ -5097,7 +5097,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when listing the draft schedules.
      * </pre>
      */
-    default void listDraftSchedules(com.tcn.cloud.api.api.v1alpha1.wfm.ListDraftSchedulesReq request,
+    public void listDraftSchedules(com.tcn.cloud.api.api.v1alpha1.wfm.ListDraftSchedulesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListDraftSchedulesRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListDraftSchedulesMethod(), responseObserver);
     }
@@ -5114,7 +5114,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when removing the draft schedule.
      * </pre>
      */
-    default void deleteDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleReq request,
+    public void deleteDraftSchedule(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteDraftScheduleMethod(), responseObserver);
     }
@@ -5129,7 +5129,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when creating the shift instance.
      * </pre>
      */
-    default void createShiftInstance(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceReq request,
+    public void createShiftInstance(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateShiftInstanceMethod(), responseObserver);
     }
@@ -5144,7 +5144,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when swapping the shift instances.
      * </pre>
      */
-    default void swapShiftInstances(com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq request,
+    public void swapShiftInstances(com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSwapShiftInstancesMethod(), responseObserver);
     }
@@ -5159,7 +5159,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when updating the shift instance.
      * </pre>
      */
-    default void updateShiftInstance(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceReq request,
+    public void updateShiftInstance(com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateShiftInstanceMethod(), responseObserver);
     }
@@ -5177,7 +5177,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the data.
      * </pre>
      */
-    default void listShiftSegmentsByShiftInstanceSids(com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftSegmentsByShiftInstanceSidsReq request,
+    public void listShiftSegmentsByShiftInstanceSids(com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftSegmentsByShiftInstanceSidsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftSegmentsByShiftInstanceSidsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListShiftSegmentsByShiftInstanceSidsMethod(), responseObserver);
     }
@@ -5195,7 +5195,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occours when setting the scheduling target.
      * </pre>
      */
-    default void setSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.SetSchedulingTargetReq request,
+    public void setSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.SetSchedulingTargetReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.SetSchedulingTargetRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetSchedulingTargetMethod(), responseObserver);
     }
@@ -5211,7 +5211,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occours when getting the scheduling target.
      * </pre>
      */
-    default void getSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.GetSchedulingTargetReq request,
+    public void getSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.GetSchedulingTargetReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetSchedulingTargetRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSchedulingTargetMethod(), responseObserver);
     }
@@ -5227,7 +5227,7 @@ public final class WFMGrpc {
      *   -grpc.Internal: error occurs when removing the scheduling target.
      * </pre>
      */
-    default void deleteSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetReq request,
+    public void deleteSchedulingTarget(com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteSchedulingTargetMethod(), responseObserver);
     }
@@ -5245,7 +5245,7 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the data.
      * </pre>
      */
-    default void getPerformanceMetrics(com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsReq request,
+    public void getPerformanceMetrics(com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPerformanceMetricsMethod(), responseObserver);
     }
@@ -5261,34 +5261,772 @@ public final class WFMGrpc {
      *   - grpc.Internal: error occurs when getting the data.
      * </pre>
      */
-    default void listRequiredCallsIntervals(com.tcn.cloud.api.api.v1alpha1.wfm.ListRequiredCallsIntervalsReq request,
+    public void listRequiredCallsIntervals(com.tcn.cloud.api.api.v1alpha1.wfm.ListRequiredCallsIntervalsReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v1alpha1.wfm.ListRequiredCallsIntervalsRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListRequiredCallsIntervalsMethod(), responseObserver);
     }
-  }
-
-  /**
-   * Base class for the server implementation of the service WFM.
-   * <pre>
-   * WFM is responsible for call prediction and call volume calculations based on call skills and other parameters.
-   * </pre>
-   */
-  public static abstract class WFMImplBase
-      implements io.grpc.BindableService, AsyncService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return WFMGrpc.bindService(this);
+      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getListSkillProfilesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfilesReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfilesRes>(
+                  this, METHODID_LIST_SKILL_PROFILES)))
+          .addMethod(
+            getUpdateSkillProfileMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileRes>(
+                  this, METHODID_UPDATE_SKILL_PROFILE)))
+          .addMethod(
+            getUpdateSkillProfileProficienciesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesRes>(
+                  this, METHODID_UPDATE_SKILL_PROFILE_PROFICIENCIES)))
+          .addMethod(
+            getGetSkillProfileMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes>(
+                  this, METHODID_GET_SKILL_PROFILE)))
+          .addMethod(
+            getResyncSkillProfilesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.ResyncSkillProfilesReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.ResyncSkillProfilesRes>(
+                  this, METHODID_RESYNC_SKILL_PROFILES)))
+          .addMethod(
+            getGetLastSkillProfileResyncDateMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.GetLastSkillProfileResyncDateReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.GetLastSkillProfileResyncDateRes>(
+                  this, METHODID_GET_LAST_SKILL_PROFILE_RESYNC_DATE)))
+          .addMethod(
+            getUpsertForecastingParametersMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastingParametersReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastingParametersRes>(
+                  this, METHODID_UPSERT_FORECASTING_PARAMETERS)))
+          .addMethod(
+            getGetForecastingParametersMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastingParametersReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastingParametersRes>(
+                  this, METHODID_GET_FORECASTING_PARAMETERS)))
+          .addMethod(
+            getListHistoricalDataMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataRes>(
+                  this, METHODID_LIST_HISTORICAL_DATA)))
+          .addMethod(
+            getUpsertHistoricalDataDeltaMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltaReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltaRes>(
+                  this, METHODID_UPSERT_HISTORICAL_DATA_DELTA)))
+          .addMethod(
+            getUpsertHistoricalDataDeltasMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltasReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltasRes>(
+                  this, METHODID_UPSERT_HISTORICAL_DATA_DELTAS)))
+          .addMethod(
+            getListSkillsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillsReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillsRes>(
+                  this, METHODID_LIST_SKILLS)))
+          .addMethod(
+            getBuildCallProfileTemplateForSkillProfileMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileRes>(
+                  this, METHODID_BUILD_CALL_PROFILE_TEMPLATE_FOR_SKILL_PROFILE)))
+          .addMethod(
+            getCreateInactiveSkillProfileMappingMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingRes>(
+                  this, METHODID_CREATE_INACTIVE_SKILL_PROFILE_MAPPING)))
+          .addMethod(
+            getGetAvailableRegressionForecasterModelTypesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesRes>(
+                  this, METHODID_GET_AVAILABLE_REGRESSION_FORECASTER_MODEL_TYPES)))
+          .addMethod(
+            getDisconnectInactiveSkillProfileMappingMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingRes>(
+                  this, METHODID_DISCONNECT_INACTIVE_SKILL_PROFILE_MAPPING)))
+          .addMethod(
+            getDeleteHistoricalDataDeltasMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteHistoricalDataDeltasReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteHistoricalDataDeltasRes>(
+                  this, METHODID_DELETE_HISTORICAL_DATA_DELTAS)))
+          .addMethod(
+            getListTopSkillProfilesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListTopSkillProfilesReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListTopSkillProfilesRes>(
+                  this, METHODID_LIST_TOP_SKILL_PROFILES)))
+          .addMethod(
+            getGetSkillProfilesCountMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfilesCountReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfilesCountRes>(
+                  this, METHODID_GET_SKILL_PROFILES_COUNT)))
+          .addMethod(
+            getBuildProfileForecastByIntervalMethod(),
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval>(
+                  this, METHODID_BUILD_PROFILE_FORECAST_BY_INTERVAL)))
+          .addMethod(
+            getBuildProfileForecastByIntervalWithStatsMethod(),
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalWithStatsReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalWithStatsRes>(
+                  this, METHODID_BUILD_PROFILE_FORECAST_BY_INTERVAL_WITH_STATS)))
+          .addMethod(
+            getUpsertProfileForecastMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpsertProfileForecastReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpsertProfileForecastRes>(
+                  this, METHODID_UPSERT_PROFILE_FORECAST)))
+          .addMethod(
+            getCreateCallProfileTemplateMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreateCallProfileTemplateReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreateCallProfileTemplateRes>(
+                  this, METHODID_CREATE_CALL_PROFILE_TEMPLATE)))
+          .addMethod(
+            getDeleteCallProfileTemplateMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteCallProfileTemplateReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteCallProfileTemplateRes>(
+                  this, METHODID_DELETE_CALL_PROFILE_TEMPLATE)))
+          .addMethod(
+            getCreateRegressionTemplateMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateRes>(
+                  this, METHODID_CREATE_REGRESSION_TEMPLATE)))
+          .addMethod(
+            getDeleteRegressionTemplateMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRegressionTemplateReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRegressionTemplateRes>(
+                  this, METHODID_DELETE_REGRESSION_TEMPLATE)))
+          .addMethod(
+            getListRegressionTemplatesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListRegressionTemplatesReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListRegressionTemplatesRes>(
+                  this, METHODID_LIST_REGRESSION_TEMPLATES)))
+          .addMethod(
+            getListForecastIntervalsForSkillProfileMethod(),
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsForSkillProfileReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval>(
+                  this, METHODID_LIST_FORECAST_INTERVALS_FOR_SKILL_PROFILE)))
+          .addMethod(
+            getBuildRegressionForecastByIntervalMethod(),
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval>(
+                  this, METHODID_BUILD_REGRESSION_FORECAST_BY_INTERVAL)))
+          .addMethod(
+            getBuildRegressionForecastByIntervalWithStatsMethod(),
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsRes>(
+                  this, METHODID_BUILD_REGRESSION_FORECAST_BY_INTERVAL_WITH_STATS)))
+          .addMethod(
+            getListCallProfileTemplatesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListCallProfileTemplatesReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListCallProfileTemplatesRes>(
+                  this, METHODID_LIST_CALL_PROFILE_TEMPLATES)))
+          .addMethod(
+            getUpsertRegressionForecastMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRegressionForecastReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRegressionForecastRes>(
+                  this, METHODID_UPSERT_REGRESSION_FORECAST)))
+          .addMethod(
+            getUpsertForecastDataDeltaMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltaReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltaRes>(
+                  this, METHODID_UPSERT_FORECAST_DATA_DELTA)))
+          .addMethod(
+            getUpsertForecastDataDeltasMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltasReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltasRes>(
+                  this, METHODID_UPSERT_FORECAST_DATA_DELTAS)))
+          .addMethod(
+            getDeleteForecastIntervalsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsRes>(
+                  this, METHODID_DELETE_FORECAST_INTERVALS)))
+          .addMethod(
+            getListHistoricalDataForAllSkillProfilesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataForAllSkillProfilesReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataForAllSkillProfilesRes>(
+                  this, METHODID_LIST_HISTORICAL_DATA_FOR_ALL_SKILL_PROFILES)))
+          .addMethod(
+            getBuildDOWAndMOYProfilesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.BuildDOWAndMOYProfilesReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.BuildDOWAndMOYProfilesRes>(
+                  this, METHODID_BUILD_DOWAND_MOYPROFILES)))
+          .addMethod(
+            getCalculateTrainingDataAveragesForSkillProfileMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.CalculateTrainingDataAveragesForSkillProfileReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.CalculateTrainingDataAveragesForSkillProfileRes>(
+                  this, METHODID_CALCULATE_TRAINING_DATA_AVERAGES_FOR_SKILL_PROFILE)))
+          .addMethod(
+            getUpdateSkillProfileAveragesUsingHistoricalDataMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataRes>(
+                  this, METHODID_UPDATE_SKILL_PROFILE_AVERAGES_USING_HISTORICAL_DATA)))
+          .addMethod(
+            getUpdateCallCenterNodeMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateCallCenterNodeReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateCallCenterNodeRes>(
+                  this, METHODID_UPDATE_CALL_CENTER_NODE)))
+          .addMethod(
+            getCreateClientNodeMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreateClientNodeReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreateClientNodeRes>(
+                  this, METHODID_CREATE_CLIENT_NODE)))
+          .addMethod(
+            getUpdateClientNodeMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateClientNodeReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateClientNodeRes>(
+                  this, METHODID_UPDATE_CLIENT_NODE)))
+          .addMethod(
+            getCreateLocationNodeMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreateLocationNodeReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreateLocationNodeRes>(
+                  this, METHODID_CREATE_LOCATION_NODE)))
+          .addMethod(
+            getUpdateLocationNodeMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateLocationNodeReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateLocationNodeRes>(
+                  this, METHODID_UPDATE_LOCATION_NODE)))
+          .addMethod(
+            getCreateProgramNodeMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreateProgramNodeReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreateProgramNodeRes>(
+                  this, METHODID_CREATE_PROGRAM_NODE)))
+          .addMethod(
+            getUpdateProgramNodeMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeRes>(
+                  this, METHODID_UPDATE_PROGRAM_NODE)))
+          .addMethod(
+            getCreateConstraintRuleMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleRes>(
+                  this, METHODID_CREATE_CONSTRAINT_RULE)))
+          .addMethod(
+            getUpdateConstraintRuleMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateConstraintRuleReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateConstraintRuleRes>(
+                  this, METHODID_UPDATE_CONSTRAINT_RULE)))
+          .addMethod(
+            getDeleteConstraintRuleMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteConstraintRuleReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteConstraintRuleRes>(
+                  this, METHODID_DELETE_CONSTRAINT_RULE)))
+          .addMethod(
+            getCreateNonSkillActivityMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreateNonSkillActivityReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreateNonSkillActivityRes>(
+                  this, METHODID_CREATE_NON_SKILL_ACTIVITY)))
+          .addMethod(
+            getUpdateNonSkillActivityMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityRes>(
+                  this, METHODID_UPDATE_NON_SKILL_ACTIVITY)))
+          .addMethod(
+            getListNonSkillActivityAssociationsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsRes>(
+                  this, METHODID_LIST_NON_SKILL_ACTIVITY_ASSOCIATIONS)))
+          .addMethod(
+            getListCandidateSchedulingActivitiesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateSchedulingActivitiesReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateSchedulingActivitiesRes>(
+                  this, METHODID_LIST_CANDIDATE_SCHEDULING_ACTIVITIES)))
+          .addMethod(
+            getCreateAgentGroupMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentGroupReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentGroupRes>(
+                  this, METHODID_CREATE_AGENT_GROUP)))
+          .addMethod(
+            getUpdateAgentGroupMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentGroupReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentGroupRes>(
+                  this, METHODID_UPDATE_AGENT_GROUP)))
+          .addMethod(
+            getUpdateWFMAgentMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateWFMAgentReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateWFMAgentRes>(
+                  this, METHODID_UPDATE_WFMAGENT)))
+          .addMethod(
+            getListAllWFMAgentsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListAllWFMAgentsReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListAllWFMAgentsRes>(
+                  this, METHODID_LIST_ALL_WFMAGENTS)))
+          .addMethod(
+            getListCandidateWFMAgentsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateWFMAgentsReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateWFMAgentsRes>(
+                  this, METHODID_LIST_CANDIDATE_WFMAGENTS)))
+          .addMethod(
+            getListUngroupedWFMAgentsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsRes>(
+                  this, METHODID_LIST_UNGROUPED_WFMAGENTS)))
+          .addMethod(
+            getListWFMAgentsAssociatedWithAgentGroupMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentsAssociatedWithAgentGroupReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentsAssociatedWithAgentGroupRes>(
+                  this, METHODID_LIST_WFMAGENTS_ASSOCIATED_WITH_AGENT_GROUP)))
+          .addMethod(
+            getCreateWFMAgentMembershipsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreateWFMAgentMembershipsReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreateWFMAgentMembershipsRes>(
+                  this, METHODID_CREATE_WFMAGENT_MEMBERSHIPS)))
+          .addMethod(
+            getDeleteWFMAgentMembershipsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsRes>(
+                  this, METHODID_DELETE_WFMAGENT_MEMBERSHIPS)))
+          .addMethod(
+            getBuildAgentDiagnosticsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.BuildAgentDiagnosticsReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.BuildAgentDiagnosticsRes>(
+                  this, METHODID_BUILD_AGENT_DIAGNOSTICS)))
+          .addMethod(
+            getCreateShiftTemplateMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftTemplateReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftTemplateRes>(
+                  this, METHODID_CREATE_SHIFT_TEMPLATE)))
+          .addMethod(
+            getUpdateShiftTemplateMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftTemplateReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftTemplateRes>(
+                  this, METHODID_UPDATE_SHIFT_TEMPLATE)))
+          .addMethod(
+            getListShiftTemplatesBySidsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftTemplatesBySidsReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftTemplatesBySidsRes>(
+                  this, METHODID_LIST_SHIFT_TEMPLATES_BY_SIDS)))
+          .addMethod(
+            getBuildShiftTemplateDiagnosticsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.BuildShiftTemplateDiagnosticsReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.BuildShiftTemplateDiagnosticsRes>(
+                  this, METHODID_BUILD_SHIFT_TEMPLATE_DIAGNOSTICS)))
+          .addMethod(
+            getCreatePlacementRuleMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreatePlacementRuleReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreatePlacementRuleRes>(
+                  this, METHODID_CREATE_PLACEMENT_RULE)))
+          .addMethod(
+            getUpdatePlacementRuleMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePlacementRuleReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePlacementRuleRes>(
+                  this, METHODID_UPDATE_PLACEMENT_RULE)))
+          .addMethod(
+            getDeletePlacementRuleMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.DeletePlacementRuleReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.DeletePlacementRuleRes>(
+                  this, METHODID_DELETE_PLACEMENT_RULE)))
+          .addMethod(
+            getCreateOpenTimesPatternMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreateOpenTimesPatternReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreateOpenTimesPatternRes>(
+                  this, METHODID_CREATE_OPEN_TIMES_PATTERN)))
+          .addMethod(
+            getUpdateOpenTimesPatternMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateOpenTimesPatternReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateOpenTimesPatternRes>(
+                  this, METHODID_UPDATE_OPEN_TIMES_PATTERN)))
+          .addMethod(
+            getDeleteOpenTimesPatternMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteOpenTimesPatternReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteOpenTimesPatternRes>(
+                  this, METHODID_DELETE_OPEN_TIMES_PATTERN)))
+          .addMethod(
+            getGetOpenTimesBitmapsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsRes>(
+                  this, METHODID_GET_OPEN_TIMES_BITMAPS)))
+          .addMethod(
+            getCreateAgentAvailabilityPatternMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentAvailabilityPatternReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentAvailabilityPatternRes>(
+                  this, METHODID_CREATE_AGENT_AVAILABILITY_PATTERN)))
+          .addMethod(
+            getUpdateAgentAvailabilityPatternMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentAvailabilityPatternReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentAvailabilityPatternRes>(
+                  this, METHODID_UPDATE_AGENT_AVAILABILITY_PATTERN)))
+          .addMethod(
+            getDeleteAgentAvailabilityPatternMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAgentAvailabilityPatternReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAgentAvailabilityPatternRes>(
+                  this, METHODID_DELETE_AGENT_AVAILABILITY_PATTERN)))
+          .addMethod(
+            getGetAvailabilityBitmapsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailabilityBitmapsReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailabilityBitmapsRes>(
+                  this, METHODID_GET_AVAILABILITY_BITMAPS)))
+          .addMethod(
+            getUpsertNonSkillActivityAssociationMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationRes>(
+                  this, METHODID_UPSERT_NON_SKILL_ACTIVITY_ASSOCIATION)))
+          .addMethod(
+            getCreateSkillProficienciesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProficienciesReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProficienciesRes>(
+                  this, METHODID_CREATE_SKILL_PROFICIENCIES)))
+          .addMethod(
+            getUpdateSkillProficienciesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProficienciesReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProficienciesRes>(
+                  this, METHODID_UPDATE_SKILL_PROFICIENCIES)))
+          .addMethod(
+            getDeleteSkillProficiencyMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSkillProficiencyReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSkillProficiencyRes>(
+                  this, METHODID_DELETE_SKILL_PROFICIENCY)))
+          .addMethod(
+            getCopyScenarioMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.CopyScenarioReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.CopyScenarioRes>(
+                  this, METHODID_COPY_SCENARIO)))
+          .addMethod(
+            getCreateScheduleScenarioWithNodesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreateScheduleScenarioWithNodesReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreateScheduleScenarioWithNodesRes>(
+                  this, METHODID_CREATE_SCHEDULE_SCENARIO_WITH_NODES)))
+          .addMethod(
+            getUpdateScheduleScenarioMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateScheduleScenarioReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateScheduleScenarioRes>(
+                  this, METHODID_UPDATE_SCHEDULE_SCENARIO)))
+          .addMethod(
+            getListConfigEntitiesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesRes>(
+                  this, METHODID_LIST_CONFIG_ENTITIES)))
+          .addMethod(
+            getDeleteShiftInstancesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteShiftInstancesReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteShiftInstancesRes>(
+                  this, METHODID_DELETE_SHIFT_INSTANCES)))
+          .addMethod(
+            getBuildNodeDiagnosticsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.BuildNodeDiagnosticsReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.BuildNodeDiagnosticsRes>(
+                  this, METHODID_BUILD_NODE_DIAGNOSTICS)))
+          .addMethod(
+            getBuildGlobalDiagnosticsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.BuildGlobalDiagnosticsReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.BuildGlobalDiagnosticsRes>(
+                  this, METHODID_BUILD_GLOBAL_DIAGNOSTICS)))
+          .addMethod(
+            getGetPublishedScheduleMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRes>(
+                  this, METHODID_GET_PUBLISHED_SCHEDULE)))
+          .addMethod(
+            getGetPublishedScheduleRequiredCallsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRequiredCallsReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRequiredCallsRes>(
+                  this, METHODID_GET_PUBLISHED_SCHEDULE_REQUIRED_CALLS)))
+          .addMethod(
+            getGetDraftScheduleRequiredCallsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRequiredCallsReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRequiredCallsRes>(
+                  this, METHODID_GET_DRAFT_SCHEDULE_REQUIRED_CALLS)))
+          .addMethod(
+            getCreateDraftScheduleMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreateDraftScheduleReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreateDraftScheduleRes>(
+                  this, METHODID_CREATE_DRAFT_SCHEDULE)))
+          .addMethod(
+            getBuildDraftScheduleMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes>(
+                  this, METHODID_BUILD_DRAFT_SCHEDULE)))
+          .addMethod(
+            getPublishDraftScheduleMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.PublishDraftScheduleReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.PublishDraftScheduleRes>(
+                  this, METHODID_PUBLISH_DRAFT_SCHEDULE)))
+          .addMethod(
+            getGetDraftScheduleMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRes>(
+                  this, METHODID_GET_DRAFT_SCHEDULE)))
+          .addMethod(
+            getListDraftSchedulesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListDraftSchedulesReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListDraftSchedulesRes>(
+                  this, METHODID_LIST_DRAFT_SCHEDULES)))
+          .addMethod(
+            getDeleteDraftScheduleMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleRes>(
+                  this, METHODID_DELETE_DRAFT_SCHEDULE)))
+          .addMethod(
+            getCreateShiftInstanceMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceRes>(
+                  this, METHODID_CREATE_SHIFT_INSTANCE)))
+          .addMethod(
+            getSwapShiftInstancesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesRes>(
+                  this, METHODID_SWAP_SHIFT_INSTANCES)))
+          .addMethod(
+            getUpdateShiftInstanceMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceRes>(
+                  this, METHODID_UPDATE_SHIFT_INSTANCE)))
+          .addMethod(
+            getListShiftSegmentsByShiftInstanceSidsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftSegmentsByShiftInstanceSidsReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftSegmentsByShiftInstanceSidsRes>(
+                  this, METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS)))
+          .addMethod(
+            getSetSchedulingTargetMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.SetSchedulingTargetReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.SetSchedulingTargetRes>(
+                  this, METHODID_SET_SCHEDULING_TARGET)))
+          .addMethod(
+            getGetSchedulingTargetMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.GetSchedulingTargetReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.GetSchedulingTargetRes>(
+                  this, METHODID_GET_SCHEDULING_TARGET)))
+          .addMethod(
+            getDeleteSchedulingTargetMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetRes>(
+                  this, METHODID_DELETE_SCHEDULING_TARGET)))
+          .addMethod(
+            getGetPerformanceMetricsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsRes>(
+                  this, METHODID_GET_PERFORMANCE_METRICS)))
+          .addMethod(
+            getListRequiredCallsIntervalsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListRequiredCallsIntervalsReq,
+                com.tcn.cloud.api.api.v1alpha1.wfm.ListRequiredCallsIntervalsRes>(
+                  this, METHODID_LIST_REQUIRED_CALLS_INTERVALS)))
+          .build();
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service WFM.
    * <pre>
    * WFM is responsible for call prediction and call volume calculations based on call skills and other parameters.
    * </pre>
    */
-  public static final class WFMStub
-      extends io.grpc.stub.AbstractAsyncStub<WFMStub> {
+  public static final class WFMStub extends io.grpc.stub.AbstractAsyncStub<WFMStub> {
     private WFMStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -7289,13 +8027,11 @@ public final class WFMGrpc {
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service WFM.
    * <pre>
    * WFM is responsible for call prediction and call volume calculations based on call skills and other parameters.
    * </pre>
    */
-  public static final class WFMBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<WFMBlockingStub> {
+  public static final class WFMBlockingStub extends io.grpc.stub.AbstractBlockingStub<WFMBlockingStub> {
     private WFMBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -9194,13 +9930,11 @@ public final class WFMGrpc {
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service WFM.
    * <pre>
    * WFM is responsible for call prediction and call volume calculations based on call skills and other parameters.
    * </pre>
    */
-  public static final class WFMFutureStub
-      extends io.grpc.stub.AbstractFutureStub<WFMFutureStub> {
+  public static final class WFMFutureStub extends io.grpc.stub.AbstractFutureStub<WFMFutureStub> {
     private WFMFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -11217,10 +11951,10 @@ public final class WFMGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AsyncService serviceImpl;
+    private final WFMImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AsyncService serviceImpl, int methodId) {
+    MethodHandlers(WFMImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -11671,760 +12405,6 @@ public final class WFMGrpc {
           throw new AssertionError();
       }
     }
-  }
-
-  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
-    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-        .addMethod(
-          getListSkillProfilesMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfilesReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillProfilesRes>(
-                service, METHODID_LIST_SKILL_PROFILES)))
-        .addMethod(
-          getUpdateSkillProfileMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileRes>(
-                service, METHODID_UPDATE_SKILL_PROFILE)))
-        .addMethod(
-          getUpdateSkillProfileProficienciesMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileProficienciesRes>(
-                service, METHODID_UPDATE_SKILL_PROFILE_PROFICIENCIES)))
-        .addMethod(
-          getGetSkillProfileMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfileRes>(
-                service, METHODID_GET_SKILL_PROFILE)))
-        .addMethod(
-          getResyncSkillProfilesMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.ResyncSkillProfilesReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.ResyncSkillProfilesRes>(
-                service, METHODID_RESYNC_SKILL_PROFILES)))
-        .addMethod(
-          getGetLastSkillProfileResyncDateMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.GetLastSkillProfileResyncDateReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.GetLastSkillProfileResyncDateRes>(
-                service, METHODID_GET_LAST_SKILL_PROFILE_RESYNC_DATE)))
-        .addMethod(
-          getUpsertForecastingParametersMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastingParametersReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastingParametersRes>(
-                service, METHODID_UPSERT_FORECASTING_PARAMETERS)))
-        .addMethod(
-          getGetForecastingParametersMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastingParametersReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.GetForecastingParametersRes>(
-                service, METHODID_GET_FORECASTING_PARAMETERS)))
-        .addMethod(
-          getListHistoricalDataMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataRes>(
-                service, METHODID_LIST_HISTORICAL_DATA)))
-        .addMethod(
-          getUpsertHistoricalDataDeltaMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltaReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltaRes>(
-                service, METHODID_UPSERT_HISTORICAL_DATA_DELTA)))
-        .addMethod(
-          getUpsertHistoricalDataDeltasMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltasReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertHistoricalDataDeltasRes>(
-                service, METHODID_UPSERT_HISTORICAL_DATA_DELTAS)))
-        .addMethod(
-          getListSkillsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillsReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListSkillsRes>(
-                service, METHODID_LIST_SKILLS)))
-        .addMethod(
-          getBuildCallProfileTemplateForSkillProfileMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.BuildCallProfileTemplateForSkillProfileRes>(
-                service, METHODID_BUILD_CALL_PROFILE_TEMPLATE_FOR_SKILL_PROFILE)))
-        .addMethod(
-          getCreateInactiveSkillProfileMappingMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateInactiveSkillProfileMappingRes>(
-                service, METHODID_CREATE_INACTIVE_SKILL_PROFILE_MAPPING)))
-        .addMethod(
-          getGetAvailableRegressionForecasterModelTypesMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailableRegressionForecasterModelTypesRes>(
-                service, METHODID_GET_AVAILABLE_REGRESSION_FORECASTER_MODEL_TYPES)))
-        .addMethod(
-          getDisconnectInactiveSkillProfileMappingMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.DisconnectInactiveSkillProfileMappingRes>(
-                service, METHODID_DISCONNECT_INACTIVE_SKILL_PROFILE_MAPPING)))
-        .addMethod(
-          getDeleteHistoricalDataDeltasMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteHistoricalDataDeltasReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteHistoricalDataDeltasRes>(
-                service, METHODID_DELETE_HISTORICAL_DATA_DELTAS)))
-        .addMethod(
-          getListTopSkillProfilesMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListTopSkillProfilesReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListTopSkillProfilesRes>(
-                service, METHODID_LIST_TOP_SKILL_PROFILES)))
-        .addMethod(
-          getGetSkillProfilesCountMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfilesCountReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.GetSkillProfilesCountRes>(
-                service, METHODID_GET_SKILL_PROFILES_COUNT)))
-        .addMethod(
-          getBuildProfileForecastByIntervalMethod(),
-          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval>(
-                service, METHODID_BUILD_PROFILE_FORECAST_BY_INTERVAL)))
-        .addMethod(
-          getBuildProfileForecastByIntervalWithStatsMethod(),
-          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalWithStatsReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.BuildProfileForecastByIntervalWithStatsRes>(
-                service, METHODID_BUILD_PROFILE_FORECAST_BY_INTERVAL_WITH_STATS)))
-        .addMethod(
-          getUpsertProfileForecastMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertProfileForecastReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertProfileForecastRes>(
-                service, METHODID_UPSERT_PROFILE_FORECAST)))
-        .addMethod(
-          getCreateCallProfileTemplateMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateCallProfileTemplateReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateCallProfileTemplateRes>(
-                service, METHODID_CREATE_CALL_PROFILE_TEMPLATE)))
-        .addMethod(
-          getDeleteCallProfileTemplateMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteCallProfileTemplateReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteCallProfileTemplateRes>(
-                service, METHODID_DELETE_CALL_PROFILE_TEMPLATE)))
-        .addMethod(
-          getCreateRegressionTemplateMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateRegressionTemplateRes>(
-                service, METHODID_CREATE_REGRESSION_TEMPLATE)))
-        .addMethod(
-          getDeleteRegressionTemplateMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRegressionTemplateReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteRegressionTemplateRes>(
-                service, METHODID_DELETE_REGRESSION_TEMPLATE)))
-        .addMethod(
-          getListRegressionTemplatesMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListRegressionTemplatesReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListRegressionTemplatesRes>(
-                service, METHODID_LIST_REGRESSION_TEMPLATES)))
-        .addMethod(
-          getListForecastIntervalsForSkillProfileMethod(),
-          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListForecastIntervalsForSkillProfileReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval>(
-                service, METHODID_LIST_FORECAST_INTERVALS_FOR_SKILL_PROFILE)))
-        .addMethod(
-          getBuildRegressionForecastByIntervalMethod(),
-          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.CallDataByInterval>(
-                service, METHODID_BUILD_REGRESSION_FORECAST_BY_INTERVAL)))
-        .addMethod(
-          getBuildRegressionForecastByIntervalWithStatsMethod(),
-          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.BuildRegressionForecastByIntervalWithStatsRes>(
-                service, METHODID_BUILD_REGRESSION_FORECAST_BY_INTERVAL_WITH_STATS)))
-        .addMethod(
-          getListCallProfileTemplatesMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListCallProfileTemplatesReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListCallProfileTemplatesRes>(
-                service, METHODID_LIST_CALL_PROFILE_TEMPLATES)))
-        .addMethod(
-          getUpsertRegressionForecastMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRegressionForecastReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertRegressionForecastRes>(
-                service, METHODID_UPSERT_REGRESSION_FORECAST)))
-        .addMethod(
-          getUpsertForecastDataDeltaMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltaReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltaRes>(
-                service, METHODID_UPSERT_FORECAST_DATA_DELTA)))
-        .addMethod(
-          getUpsertForecastDataDeltasMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltasReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertForecastDataDeltasRes>(
-                service, METHODID_UPSERT_FORECAST_DATA_DELTAS)))
-        .addMethod(
-          getDeleteForecastIntervalsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteForecastIntervalsRes>(
-                service, METHODID_DELETE_FORECAST_INTERVALS)))
-        .addMethod(
-          getListHistoricalDataForAllSkillProfilesMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataForAllSkillProfilesReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListHistoricalDataForAllSkillProfilesRes>(
-                service, METHODID_LIST_HISTORICAL_DATA_FOR_ALL_SKILL_PROFILES)))
-        .addMethod(
-          getBuildDOWAndMOYProfilesMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.BuildDOWAndMOYProfilesReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.BuildDOWAndMOYProfilesRes>(
-                service, METHODID_BUILD_DOWAND_MOYPROFILES)))
-        .addMethod(
-          getCalculateTrainingDataAveragesForSkillProfileMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.CalculateTrainingDataAveragesForSkillProfileReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.CalculateTrainingDataAveragesForSkillProfileRes>(
-                service, METHODID_CALCULATE_TRAINING_DATA_AVERAGES_FOR_SKILL_PROFILE)))
-        .addMethod(
-          getUpdateSkillProfileAveragesUsingHistoricalDataMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProfileAveragesUsingHistoricalDataRes>(
-                service, METHODID_UPDATE_SKILL_PROFILE_AVERAGES_USING_HISTORICAL_DATA)))
-        .addMethod(
-          getUpdateCallCenterNodeMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateCallCenterNodeReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateCallCenterNodeRes>(
-                service, METHODID_UPDATE_CALL_CENTER_NODE)))
-        .addMethod(
-          getCreateClientNodeMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateClientNodeReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateClientNodeRes>(
-                service, METHODID_CREATE_CLIENT_NODE)))
-        .addMethod(
-          getUpdateClientNodeMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateClientNodeReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateClientNodeRes>(
-                service, METHODID_UPDATE_CLIENT_NODE)))
-        .addMethod(
-          getCreateLocationNodeMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateLocationNodeReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateLocationNodeRes>(
-                service, METHODID_CREATE_LOCATION_NODE)))
-        .addMethod(
-          getUpdateLocationNodeMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateLocationNodeReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateLocationNodeRes>(
-                service, METHODID_UPDATE_LOCATION_NODE)))
-        .addMethod(
-          getCreateProgramNodeMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateProgramNodeReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateProgramNodeRes>(
-                service, METHODID_CREATE_PROGRAM_NODE)))
-        .addMethod(
-          getUpdateProgramNodeMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateProgramNodeRes>(
-                service, METHODID_UPDATE_PROGRAM_NODE)))
-        .addMethod(
-          getCreateConstraintRuleMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateConstraintRuleRes>(
-                service, METHODID_CREATE_CONSTRAINT_RULE)))
-        .addMethod(
-          getUpdateConstraintRuleMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateConstraintRuleReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateConstraintRuleRes>(
-                service, METHODID_UPDATE_CONSTRAINT_RULE)))
-        .addMethod(
-          getDeleteConstraintRuleMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteConstraintRuleReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteConstraintRuleRes>(
-                service, METHODID_DELETE_CONSTRAINT_RULE)))
-        .addMethod(
-          getCreateNonSkillActivityMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateNonSkillActivityReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateNonSkillActivityRes>(
-                service, METHODID_CREATE_NON_SKILL_ACTIVITY)))
-        .addMethod(
-          getUpdateNonSkillActivityMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateNonSkillActivityRes>(
-                service, METHODID_UPDATE_NON_SKILL_ACTIVITY)))
-        .addMethod(
-          getListNonSkillActivityAssociationsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListNonSkillActivityAssociationsRes>(
-                service, METHODID_LIST_NON_SKILL_ACTIVITY_ASSOCIATIONS)))
-        .addMethod(
-          getListCandidateSchedulingActivitiesMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateSchedulingActivitiesReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateSchedulingActivitiesRes>(
-                service, METHODID_LIST_CANDIDATE_SCHEDULING_ACTIVITIES)))
-        .addMethod(
-          getCreateAgentGroupMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentGroupReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentGroupRes>(
-                service, METHODID_CREATE_AGENT_GROUP)))
-        .addMethod(
-          getUpdateAgentGroupMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentGroupReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentGroupRes>(
-                service, METHODID_UPDATE_AGENT_GROUP)))
-        .addMethod(
-          getUpdateWFMAgentMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateWFMAgentReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateWFMAgentRes>(
-                service, METHODID_UPDATE_WFMAGENT)))
-        .addMethod(
-          getListAllWFMAgentsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListAllWFMAgentsReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListAllWFMAgentsRes>(
-                service, METHODID_LIST_ALL_WFMAGENTS)))
-        .addMethod(
-          getListCandidateWFMAgentsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateWFMAgentsReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListCandidateWFMAgentsRes>(
-                service, METHODID_LIST_CANDIDATE_WFMAGENTS)))
-        .addMethod(
-          getListUngroupedWFMAgentsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListUngroupedWFMAgentsRes>(
-                service, METHODID_LIST_UNGROUPED_WFMAGENTS)))
-        .addMethod(
-          getListWFMAgentsAssociatedWithAgentGroupMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentsAssociatedWithAgentGroupReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListWFMAgentsAssociatedWithAgentGroupRes>(
-                service, METHODID_LIST_WFMAGENTS_ASSOCIATED_WITH_AGENT_GROUP)))
-        .addMethod(
-          getCreateWFMAgentMembershipsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateWFMAgentMembershipsReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateWFMAgentMembershipsRes>(
-                service, METHODID_CREATE_WFMAGENT_MEMBERSHIPS)))
-        .addMethod(
-          getDeleteWFMAgentMembershipsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteWFMAgentMembershipsRes>(
-                service, METHODID_DELETE_WFMAGENT_MEMBERSHIPS)))
-        .addMethod(
-          getBuildAgentDiagnosticsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.BuildAgentDiagnosticsReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.BuildAgentDiagnosticsRes>(
-                service, METHODID_BUILD_AGENT_DIAGNOSTICS)))
-        .addMethod(
-          getCreateShiftTemplateMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftTemplateReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftTemplateRes>(
-                service, METHODID_CREATE_SHIFT_TEMPLATE)))
-        .addMethod(
-          getUpdateShiftTemplateMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftTemplateReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftTemplateRes>(
-                service, METHODID_UPDATE_SHIFT_TEMPLATE)))
-        .addMethod(
-          getListShiftTemplatesBySidsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftTemplatesBySidsReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftTemplatesBySidsRes>(
-                service, METHODID_LIST_SHIFT_TEMPLATES_BY_SIDS)))
-        .addMethod(
-          getBuildShiftTemplateDiagnosticsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.BuildShiftTemplateDiagnosticsReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.BuildShiftTemplateDiagnosticsRes>(
-                service, METHODID_BUILD_SHIFT_TEMPLATE_DIAGNOSTICS)))
-        .addMethod(
-          getCreatePlacementRuleMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreatePlacementRuleReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreatePlacementRuleRes>(
-                service, METHODID_CREATE_PLACEMENT_RULE)))
-        .addMethod(
-          getUpdatePlacementRuleMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePlacementRuleReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdatePlacementRuleRes>(
-                service, METHODID_UPDATE_PLACEMENT_RULE)))
-        .addMethod(
-          getDeletePlacementRuleMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.DeletePlacementRuleReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.DeletePlacementRuleRes>(
-                service, METHODID_DELETE_PLACEMENT_RULE)))
-        .addMethod(
-          getCreateOpenTimesPatternMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateOpenTimesPatternReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateOpenTimesPatternRes>(
-                service, METHODID_CREATE_OPEN_TIMES_PATTERN)))
-        .addMethod(
-          getUpdateOpenTimesPatternMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateOpenTimesPatternReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateOpenTimesPatternRes>(
-                service, METHODID_UPDATE_OPEN_TIMES_PATTERN)))
-        .addMethod(
-          getDeleteOpenTimesPatternMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteOpenTimesPatternReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteOpenTimesPatternRes>(
-                service, METHODID_DELETE_OPEN_TIMES_PATTERN)))
-        .addMethod(
-          getGetOpenTimesBitmapsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.GetOpenTimesBitmapsRes>(
-                service, METHODID_GET_OPEN_TIMES_BITMAPS)))
-        .addMethod(
-          getCreateAgentAvailabilityPatternMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentAvailabilityPatternReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateAgentAvailabilityPatternRes>(
-                service, METHODID_CREATE_AGENT_AVAILABILITY_PATTERN)))
-        .addMethod(
-          getUpdateAgentAvailabilityPatternMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentAvailabilityPatternReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateAgentAvailabilityPatternRes>(
-                service, METHODID_UPDATE_AGENT_AVAILABILITY_PATTERN)))
-        .addMethod(
-          getDeleteAgentAvailabilityPatternMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAgentAvailabilityPatternReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteAgentAvailabilityPatternRes>(
-                service, METHODID_DELETE_AGENT_AVAILABILITY_PATTERN)))
-        .addMethod(
-          getGetAvailabilityBitmapsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailabilityBitmapsReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.GetAvailabilityBitmapsRes>(
-                service, METHODID_GET_AVAILABILITY_BITMAPS)))
-        .addMethod(
-          getUpsertNonSkillActivityAssociationMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpsertNonSkillActivityAssociationRes>(
-                service, METHODID_UPSERT_NON_SKILL_ACTIVITY_ASSOCIATION)))
-        .addMethod(
-          getCreateSkillProficienciesMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProficienciesReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateSkillProficienciesRes>(
-                service, METHODID_CREATE_SKILL_PROFICIENCIES)))
-        .addMethod(
-          getUpdateSkillProficienciesMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProficienciesReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateSkillProficienciesRes>(
-                service, METHODID_UPDATE_SKILL_PROFICIENCIES)))
-        .addMethod(
-          getDeleteSkillProficiencyMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSkillProficiencyReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSkillProficiencyRes>(
-                service, METHODID_DELETE_SKILL_PROFICIENCY)))
-        .addMethod(
-          getCopyScenarioMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.CopyScenarioReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.CopyScenarioRes>(
-                service, METHODID_COPY_SCENARIO)))
-        .addMethod(
-          getCreateScheduleScenarioWithNodesMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateScheduleScenarioWithNodesReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateScheduleScenarioWithNodesRes>(
-                service, METHODID_CREATE_SCHEDULE_SCENARIO_WITH_NODES)))
-        .addMethod(
-          getUpdateScheduleScenarioMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateScheduleScenarioReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateScheduleScenarioRes>(
-                service, METHODID_UPDATE_SCHEDULE_SCENARIO)))
-        .addMethod(
-          getListConfigEntitiesMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListConfigEntitiesRes>(
-                service, METHODID_LIST_CONFIG_ENTITIES)))
-        .addMethod(
-          getDeleteShiftInstancesMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteShiftInstancesReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteShiftInstancesRes>(
-                service, METHODID_DELETE_SHIFT_INSTANCES)))
-        .addMethod(
-          getBuildNodeDiagnosticsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.BuildNodeDiagnosticsReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.BuildNodeDiagnosticsRes>(
-                service, METHODID_BUILD_NODE_DIAGNOSTICS)))
-        .addMethod(
-          getBuildGlobalDiagnosticsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.BuildGlobalDiagnosticsReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.BuildGlobalDiagnosticsRes>(
-                service, METHODID_BUILD_GLOBAL_DIAGNOSTICS)))
-        .addMethod(
-          getGetPublishedScheduleMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRes>(
-                service, METHODID_GET_PUBLISHED_SCHEDULE)))
-        .addMethod(
-          getGetPublishedScheduleRequiredCallsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRequiredCallsReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.GetPublishedScheduleRequiredCallsRes>(
-                service, METHODID_GET_PUBLISHED_SCHEDULE_REQUIRED_CALLS)))
-        .addMethod(
-          getGetDraftScheduleRequiredCallsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRequiredCallsReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRequiredCallsRes>(
-                service, METHODID_GET_DRAFT_SCHEDULE_REQUIRED_CALLS)))
-        .addMethod(
-          getCreateDraftScheduleMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateDraftScheduleReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateDraftScheduleRes>(
-                service, METHODID_CREATE_DRAFT_SCHEDULE)))
-        .addMethod(
-          getBuildDraftScheduleMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.BuildDraftScheduleRes>(
-                service, METHODID_BUILD_DRAFT_SCHEDULE)))
-        .addMethod(
-          getPublishDraftScheduleMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.PublishDraftScheduleReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.PublishDraftScheduleRes>(
-                service, METHODID_PUBLISH_DRAFT_SCHEDULE)))
-        .addMethod(
-          getGetDraftScheduleMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.GetDraftScheduleRes>(
-                service, METHODID_GET_DRAFT_SCHEDULE)))
-        .addMethod(
-          getListDraftSchedulesMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListDraftSchedulesReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListDraftSchedulesRes>(
-                service, METHODID_LIST_DRAFT_SCHEDULES)))
-        .addMethod(
-          getDeleteDraftScheduleMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteDraftScheduleRes>(
-                service, METHODID_DELETE_DRAFT_SCHEDULE)))
-        .addMethod(
-          getCreateShiftInstanceMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceRes>(
-                service, METHODID_CREATE_SHIFT_INSTANCE)))
-        .addMethod(
-          getSwapShiftInstancesMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.SwapShiftInstancesRes>(
-                service, METHODID_SWAP_SHIFT_INSTANCES)))
-        .addMethod(
-          getUpdateShiftInstanceMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.UpdateShiftInstanceRes>(
-                service, METHODID_UPDATE_SHIFT_INSTANCE)))
-        .addMethod(
-          getListShiftSegmentsByShiftInstanceSidsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftSegmentsByShiftInstanceSidsReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListShiftSegmentsByShiftInstanceSidsRes>(
-                service, METHODID_LIST_SHIFT_SEGMENTS_BY_SHIFT_INSTANCE_SIDS)))
-        .addMethod(
-          getSetSchedulingTargetMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.SetSchedulingTargetReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.SetSchedulingTargetRes>(
-                service, METHODID_SET_SCHEDULING_TARGET)))
-        .addMethod(
-          getGetSchedulingTargetMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.GetSchedulingTargetReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.GetSchedulingTargetRes>(
-                service, METHODID_GET_SCHEDULING_TARGET)))
-        .addMethod(
-          getDeleteSchedulingTargetMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.DeleteSchedulingTargetRes>(
-                service, METHODID_DELETE_SCHEDULING_TARGET)))
-        .addMethod(
-          getGetPerformanceMetricsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.GetPerformanceMetricsRes>(
-                service, METHODID_GET_PERFORMANCE_METRICS)))
-        .addMethod(
-          getListRequiredCallsIntervalsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListRequiredCallsIntervalsReq,
-              com.tcn.cloud.api.api.v1alpha1.wfm.ListRequiredCallsIntervalsRes>(
-                service, METHODID_LIST_REQUIRED_CALLS_INTERVALS)))
-        .build();
   }
 
   private static abstract class WFMBaseDescriptorSupplier

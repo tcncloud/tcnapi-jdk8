@@ -26,6 +26,64 @@ private static final long serialVersionUID = 0L;
     return new CustomDashboardsSummary();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private CustomDashboardsSummary(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 8: {
+
+            dashboardsCurrent_ = input.readInt64();
+            break;
+          }
+          case 16: {
+
+            dashboardsPeak_ = input.readInt64();
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            customDashboardsEditor_ = s;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.AnaProto.internal_static_api_v0alpha_CustomDashboardsSummary_descriptor;
@@ -40,7 +98,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DASHBOARDS_CURRENT_FIELD_NUMBER = 1;
-  private long dashboardsCurrent_ = 0L;
+  private long dashboardsCurrent_;
   /**
    * <code>int64 dashboards_current = 1 [json_name = "dashboardsCurrent"];</code>
    * @return The dashboardsCurrent.
@@ -51,7 +109,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DASHBOARDS_PEAK_FIELD_NUMBER = 2;
-  private long dashboardsPeak_ = 0L;
+  private long dashboardsPeak_;
   /**
    * <code>int64 dashboards_peak = 2 [json_name = "dashboardsPeak"];</code>
    * @return The dashboardsPeak.
@@ -62,8 +120,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CUSTOM_DASHBOARDS_EDITOR_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object customDashboardsEditor_ = "";
+  private volatile java.lang.Object customDashboardsEditor_;
   /**
    * <code>string custom_dashboards_editor = 3 [json_name = "customDashboardsEditor"];</code>
    * @return The customDashboardsEditor.
@@ -120,10 +177,10 @@ private static final long serialVersionUID = 0L;
     if (dashboardsPeak_ != 0L) {
       output.writeInt64(2, dashboardsPeak_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customDashboardsEditor_)) {
+    if (!getCustomDashboardsEditorBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, customDashboardsEditor_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -140,10 +197,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, dashboardsPeak_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customDashboardsEditor_)) {
+    if (!getCustomDashboardsEditorBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, customDashboardsEditor_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -164,7 +221,7 @@ private static final long serialVersionUID = 0L;
         != other.getDashboardsPeak()) return false;
     if (!getCustomDashboardsEditor()
         .equals(other.getCustomDashboardsEditor())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -183,7 +240,7 @@ private static final long serialVersionUID = 0L;
         getDashboardsPeak());
     hash = (37 * hash) + CUSTOM_DASHBOARDS_EDITOR_FIELD_NUMBER;
     hash = (53 * hash) + getCustomDashboardsEditor().hashCode();
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -232,13 +289,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.CustomDashboardsSummary parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.CustomDashboardsSummary parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -302,21 +357,28 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v0alpha.CustomDashboardsSummary.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       dashboardsCurrent_ = 0L;
+
       dashboardsPeak_ = 0L;
+
       customDashboardsEditor_ = "";
+
       return this;
     }
 
@@ -343,22 +405,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.CustomDashboardsSummary buildPartial() {
       com.tcn.cloud.api.api.v0alpha.CustomDashboardsSummary result = new com.tcn.cloud.api.api.v0alpha.CustomDashboardsSummary(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      result.dashboardsCurrent_ = dashboardsCurrent_;
+      result.dashboardsPeak_ = dashboardsPeak_;
+      result.customDashboardsEditor_ = customDashboardsEditor_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.CustomDashboardsSummary result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.dashboardsCurrent_ = dashboardsCurrent_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.dashboardsPeak_ = dashboardsPeak_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.customDashboardsEditor_ = customDashboardsEditor_;
-      }
     }
 
     @java.lang.Override
@@ -413,10 +464,9 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getCustomDashboardsEditor().isEmpty()) {
         customDashboardsEditor_ = other.customDashboardsEditor_;
-        bitField0_ |= 0x00000004;
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -431,48 +481,19 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.CustomDashboardsSummary parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              dashboardsCurrent_ = input.readInt64();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 8
-            case 16: {
-              dashboardsPeak_ = input.readInt64();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 16
-            case 26: {
-              customDashboardsEditor_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.CustomDashboardsSummary) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
-    private int bitField0_;
 
     private long dashboardsCurrent_ ;
     /**
@@ -489,9 +510,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDashboardsCurrent(long value) {
-
+      
       dashboardsCurrent_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -500,7 +520,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDashboardsCurrent() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       dashboardsCurrent_ = 0L;
       onChanged();
       return this;
@@ -521,9 +541,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDashboardsPeak(long value) {
-
+      
       dashboardsPeak_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -532,7 +551,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDashboardsPeak() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       dashboardsPeak_ = 0L;
       onChanged();
       return this;
@@ -579,9 +598,11 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomDashboardsEditor(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       customDashboardsEditor_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -590,8 +611,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCustomDashboardsEditor() {
+      
       customDashboardsEditor_ = getDefaultInstance().getCustomDashboardsEditor();
-      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -602,10 +623,12 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomDashboardsEditorBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       customDashboardsEditor_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -642,18 +665,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new CustomDashboardsSummary(input, extensionRegistry);
     }
   };
 

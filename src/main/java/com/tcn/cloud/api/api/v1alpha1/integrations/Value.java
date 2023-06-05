@@ -30,6 +30,108 @@ private static final long serialVersionUID = 0L;
     return new Value();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private Value(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
+            valCase_ = 1;
+            val_ = s;
+            break;
+          }
+          case 17: {
+            valCase_ = 2;
+            val_ = input.readDouble();
+            break;
+          }
+          case 24: {
+            valCase_ = 3;
+            val_ = input.readBool();
+            break;
+          }
+          case 34: {
+            com.google.protobuf.Timestamp.Builder subBuilder = null;
+            if (valCase_ == 4) {
+              subBuilder = ((com.google.protobuf.Timestamp) val_).toBuilder();
+            }
+            val_ =
+                input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.protobuf.Timestamp) val_);
+              val_ = subBuilder.buildPartial();
+            }
+            valCase_ = 4;
+            break;
+          }
+          case 40: {
+
+            sensitive_ = input.readBool();
+            break;
+          }
+          case 50: {
+            com.tcn.cloud.api.api.v1alpha1.integrations.CompositeVal.Builder subBuilder = null;
+            if (valCase_ == 6) {
+              subBuilder = ((com.tcn.cloud.api.api.v1alpha1.integrations.CompositeVal) val_).toBuilder();
+            }
+            val_ =
+                input.readMessage(com.tcn.cloud.api.api.v1alpha1.integrations.CompositeVal.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.tcn.cloud.api.api.v1alpha1.integrations.CompositeVal) val_);
+              val_ = subBuilder.buildPartial();
+            }
+            valCase_ = 6;
+            break;
+          }
+          case 56: {
+            valCase_ = 7;
+            val_ = input.readInt64();
+            break;
+          }
+          case 64: {
+            int rawValue = input.readEnum();
+
+            validation_ = rawValue;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.integrations.ServiceProto.internal_static_api_v1alpha1_integrations_Value_descriptor;
@@ -44,7 +146,6 @@ private static final long serialVersionUID = 0L;
   }
 
   private int valCase_ = 0;
-  @SuppressWarnings("serial")
   private java.lang.Object val_;
   public enum ValCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -96,13 +197,6 @@ private static final long serialVersionUID = 0L;
   public static final int STR_VAL_FIELD_NUMBER = 1;
   /**
    * <code>string str_val = 1 [json_name = "strVal"];</code>
-   * @return Whether the strVal field is set.
-   */
-  public boolean hasStrVal() {
-    return valCase_ == 1;
-  }
-  /**
-   * <code>string str_val = 1 [json_name = "strVal"];</code>
    * @return The strVal.
    */
   public java.lang.String getStrVal() {
@@ -148,14 +242,6 @@ private static final long serialVersionUID = 0L;
   public static final int NUM_VAL_FIELD_NUMBER = 2;
   /**
    * <code>double num_val = 2 [json_name = "numVal"];</code>
-   * @return Whether the numVal field is set.
-   */
-  @java.lang.Override
-  public boolean hasNumVal() {
-    return valCase_ == 2;
-  }
-  /**
-   * <code>double num_val = 2 [json_name = "numVal"];</code>
    * @return The numVal.
    */
   @java.lang.Override
@@ -167,14 +253,6 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BOOL_VAL_FIELD_NUMBER = 3;
-  /**
-   * <code>bool bool_val = 3 [json_name = "boolVal"];</code>
-   * @return Whether the boolVal field is set.
-   */
-  @java.lang.Override
-  public boolean hasBoolVal() {
-    return valCase_ == 3;
-  }
   /**
    * <code>bool bool_val = 3 [json_name = "boolVal"];</code>
    * @return The boolVal.
@@ -252,14 +330,6 @@ private static final long serialVersionUID = 0L;
   public static final int INT_VAL_FIELD_NUMBER = 7;
   /**
    * <code>int64 int_val = 7 [json_name = "intVal"];</code>
-   * @return Whether the intVal field is set.
-   */
-  @java.lang.Override
-  public boolean hasIntVal() {
-    return valCase_ == 7;
-  }
-  /**
-   * <code>int64 int_val = 7 [json_name = "intVal"];</code>
    * @return The intVal.
    */
   @java.lang.Override
@@ -271,7 +341,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SENSITIVE_FIELD_NUMBER = 5;
-  private boolean sensitive_ = false;
+  private boolean sensitive_;
   /**
    * <pre>
    * whether this value should be allowed to be stored
@@ -286,7 +356,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VALIDATION_FIELD_NUMBER = 8;
-  private int validation_ = 0;
+  private int validation_;
   /**
    * <pre>
    * what type of data value we *want* to validate as.
@@ -311,7 +381,8 @@ private static final long serialVersionUID = 0L;
    * @return The validation.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.integrations.Validation getValidation() {
-    com.tcn.cloud.api.api.commons.integrations.Validation result = com.tcn.cloud.api.api.commons.integrations.Validation.forNumber(validation_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.integrations.Validation result = com.tcn.cloud.api.api.commons.integrations.Validation.valueOf(validation_);
     return result == null ? com.tcn.cloud.api.api.commons.integrations.Validation.UNRECOGNIZED : result;
   }
 
@@ -356,7 +427,7 @@ private static final long serialVersionUID = 0L;
     if (validation_ != com.tcn.cloud.api.api.commons.integrations.Validation.VALIDATION_NONE.getNumber()) {
       output.writeEnum(8, validation_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -399,7 +470,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(8, validation_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -447,7 +518,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -494,7 +565,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -543,13 +614,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.integrations.Value parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.integrations.Value parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -617,26 +686,26 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrations.Value.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
-      if (timeValBuilder_ != null) {
-        timeValBuilder_.clear();
-      }
-      if (compValBuilder_ != null) {
-        compValBuilder_.clear();
-      }
       sensitive_ = false;
+
       validation_ = 0;
+
       valCase_ = 0;
       val_ = null;
       return this;
@@ -665,33 +734,37 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.integrations.Value buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.integrations.Value result = new com.tcn.cloud.api.api.v1alpha1.integrations.Value(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      buildPartialOneofs(result);
+      if (valCase_ == 1) {
+        result.val_ = val_;
+      }
+      if (valCase_ == 2) {
+        result.val_ = val_;
+      }
+      if (valCase_ == 3) {
+        result.val_ = val_;
+      }
+      if (valCase_ == 4) {
+        if (timeValBuilder_ == null) {
+          result.val_ = val_;
+        } else {
+          result.val_ = timeValBuilder_.build();
+        }
+      }
+      if (valCase_ == 6) {
+        if (compValBuilder_ == null) {
+          result.val_ = val_;
+        } else {
+          result.val_ = compValBuilder_.build();
+        }
+      }
+      if (valCase_ == 7) {
+        result.val_ = val_;
+      }
+      result.sensitive_ = sensitive_;
+      result.validation_ = validation_;
+      result.valCase_ = valCase_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrations.Value result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.sensitive_ = sensitive_;
-      }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.validation_ = validation_;
-      }
-    }
-
-    private void buildPartialOneofs(com.tcn.cloud.api.api.v1alpha1.integrations.Value result) {
-      result.valCase_ = valCase_;
-      result.val_ = this.val_;
-      if (valCase_ == 4 &&
-          timeValBuilder_ != null) {
-        result.val_ = timeValBuilder_.build();
-      }
-      if (valCase_ == 6 &&
-          compValBuilder_ != null) {
-        result.val_ = compValBuilder_.build();
-      }
     }
 
     @java.lang.Override
@@ -775,7 +848,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -790,75 +863,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.integrations.Value parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-              valCase_ = 1;
-              val_ = s;
-              break;
-            } // case 10
-            case 17: {
-              val_ = input.readDouble();
-              valCase_ = 2;
-              break;
-            } // case 17
-            case 24: {
-              val_ = input.readBool();
-              valCase_ = 3;
-              break;
-            } // case 24
-            case 34: {
-              input.readMessage(
-                  getTimeValFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              valCase_ = 4;
-              break;
-            } // case 34
-            case 40: {
-              sensitive_ = input.readBool();
-              bitField0_ |= 0x00000040;
-              break;
-            } // case 40
-            case 50: {
-              input.readMessage(
-                  getCompValFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              valCase_ = 6;
-              break;
-            } // case 50
-            case 56: {
-              val_ = input.readInt64();
-              valCase_ = 7;
-              break;
-            } // case 56
-            case 64: {
-              validation_ = input.readEnum();
-              bitField0_ |= 0x00000080;
-              break;
-            } // case 64
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.integrations.Value) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int valCase_ = 0;
@@ -876,16 +891,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int bitField0_;
 
-    /**
-     * <code>string str_val = 1 [json_name = "strVal"];</code>
-     * @return Whether the strVal field is set.
-     */
-    @java.lang.Override
-    public boolean hasStrVal() {
-      return valCase_ == 1;
-    }
     /**
      * <code>string str_val = 1 [json_name = "strVal"];</code>
      * @return The strVal.
@@ -938,8 +944,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStrVal(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      valCase_ = 1;
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  valCase_ = 1;
       val_ = value;
       onChanged();
       return this;
@@ -963,21 +971,16 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStrValBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
       valCase_ = 1;
       val_ = value;
       onChanged();
       return this;
     }
 
-    /**
-     * <code>double num_val = 2 [json_name = "numVal"];</code>
-     * @return Whether the numVal field is set.
-     */
-    public boolean hasNumVal() {
-      return valCase_ == 2;
-    }
     /**
      * <code>double num_val = 2 [json_name = "numVal"];</code>
      * @return The numVal.
@@ -994,7 +997,6 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setNumVal(double value) {
-
       valCase_ = 2;
       val_ = value;
       onChanged();
@@ -1015,13 +1017,6 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <code>bool bool_val = 3 [json_name = "boolVal"];</code>
-     * @return Whether the boolVal field is set.
-     */
-    public boolean hasBoolVal() {
-      return valCase_ == 3;
-    }
-    /**
-     * <code>bool bool_val = 3 [json_name = "boolVal"];</code>
      * @return The boolVal.
      */
     public boolean getBoolVal() {
@@ -1036,7 +1031,6 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBoolVal(boolean value) {
-
       valCase_ = 3;
       val_ = value;
       onChanged();
@@ -1129,9 +1123,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (valCase_ == 4) {
           timeValBuilder_.mergeFrom(value);
-        } else {
-          timeValBuilder_.setMessage(value);
         }
+        timeValBuilder_.setMessage(value);
       }
       valCase_ = 4;
       return this;
@@ -1193,7 +1186,7 @@ private static final long serialVersionUID = 0L;
         val_ = null;
       }
       valCase_ = 4;
-      onChanged();
+      onChanged();;
       return timeValBuilder_;
     }
 
@@ -1271,9 +1264,8 @@ private static final long serialVersionUID = 0L;
       } else {
         if (valCase_ == 6) {
           compValBuilder_.mergeFrom(value);
-        } else {
-          compValBuilder_.setMessage(value);
         }
+        compValBuilder_.setMessage(value);
       }
       valCase_ = 6;
       return this;
@@ -1335,17 +1327,10 @@ private static final long serialVersionUID = 0L;
         val_ = null;
       }
       valCase_ = 6;
-      onChanged();
+      onChanged();;
       return compValBuilder_;
     }
 
-    /**
-     * <code>int64 int_val = 7 [json_name = "intVal"];</code>
-     * @return Whether the intVal field is set.
-     */
-    public boolean hasIntVal() {
-      return valCase_ == 7;
-    }
     /**
      * <code>int64 int_val = 7 [json_name = "intVal"];</code>
      * @return The intVal.
@@ -1362,7 +1347,6 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIntVal(long value) {
-
       valCase_ = 7;
       val_ = value;
       onChanged();
@@ -1404,9 +1388,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSensitive(boolean value) {
-
+      
       sensitive_ = value;
-      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1419,7 +1402,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSensitive() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      
       sensitive_ = false;
       onChanged();
       return this;
@@ -1451,8 +1434,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setValidationValue(int value) {
+      
       validation_ = value;
-      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1468,7 +1451,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.integrations.Validation getValidation() {
-      com.tcn.cloud.api.api.commons.integrations.Validation result = com.tcn.cloud.api.api.commons.integrations.Validation.forNumber(validation_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.integrations.Validation result = com.tcn.cloud.api.api.commons.integrations.Validation.valueOf(validation_);
       return result == null ? com.tcn.cloud.api.api.commons.integrations.Validation.UNRECOGNIZED : result;
     }
     /**
@@ -1486,7 +1470,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000080;
+      
       validation_ = value.getNumber();
       onChanged();
       return this;
@@ -1502,7 +1486,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValidation() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      
       validation_ = 0;
       onChanged();
       return this;
@@ -1540,18 +1524,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new Value(input, extensionRegistry);
     }
   };
 

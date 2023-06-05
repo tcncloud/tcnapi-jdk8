@@ -31,6 +31,113 @@ private static final long serialVersionUID = 0L;
     return new AutoEvaluationSection();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private AutoEvaluationSection(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 16: {
+
+            autoEvaluationSectionId_ = input.readInt64();
+            break;
+          }
+          case 24: {
+
+            autoEvaluationId_ = input.readInt64();
+            break;
+          }
+          case 32: {
+
+            sectionId_ = input.readInt64();
+            break;
+          }
+          case 40: {
+
+            sortOrder_ = input.readInt32();
+            break;
+          }
+          case 50: {
+            com.google.protobuf.Timestamp.Builder subBuilder = null;
+            if (deletedAt_ != null) {
+              subBuilder = deletedAt_.toBuilder();
+            }
+            deletedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(deletedAt_);
+              deletedAt_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 58: {
+            com.google.protobuf.Timestamp.Builder subBuilder = null;
+            if (createdAt_ != null) {
+              subBuilder = createdAt_.toBuilder();
+            }
+            createdAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(createdAt_);
+              createdAt_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
+          case 66: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              autoEvaluationQuestions_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.AutoEvaluationQuestion>();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            autoEvaluationQuestions_.add(
+                input.readMessage(com.tcn.cloud.api.api.commons.AutoEvaluationQuestion.parser(), extensionRegistry));
+            break;
+          }
+          case 72: {
+            int rawValue = input.readEnum();
+
+            riskLevel_ = rawValue;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        autoEvaluationQuestions_ = java.util.Collections.unmodifiableList(autoEvaluationQuestions_);
+      }
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.commons.ScorecardsProto.internal_static_api_commons_AutoEvaluationSection_descriptor;
@@ -45,7 +152,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AUTO_EVALUATION_SECTION_ID_FIELD_NUMBER = 2;
-  private long autoEvaluationSectionId_ = 0L;
+  private long autoEvaluationSectionId_;
   /**
    * <pre>
    * unique id of auto evaluation section
@@ -60,7 +167,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AUTO_EVALUATION_ID_FIELD_NUMBER = 3;
-  private long autoEvaluationId_ = 0L;
+  private long autoEvaluationId_;
   /**
    * <pre>
    * unique id of auto evaluation
@@ -75,7 +182,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SECTION_ID_FIELD_NUMBER = 4;
-  private long sectionId_ = 0L;
+  private long sectionId_;
   /**
    * <pre>
    * unique id of section
@@ -90,7 +197,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SORT_ORDER_FIELD_NUMBER = 5;
-  private int sortOrder_ = 0;
+  private int sortOrder_;
   /**
    * <pre>
    * order number of evaluation section
@@ -139,7 +246,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getDeletedAtOrBuilder() {
-    return deletedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deletedAt_;
+    return getDeletedAt();
   }
 
   public static final int CREATED_AT_FIELD_NUMBER = 7;
@@ -177,11 +284,10 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
-    return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    return getCreatedAt();
   }
 
   public static final int AUTO_EVALUATION_QUESTIONS_FIELD_NUMBER = 8;
-  @SuppressWarnings("serial")
   private java.util.List<com.tcn.cloud.api.api.commons.AutoEvaluationQuestion> autoEvaluationQuestions_;
   /**
    * <pre>
@@ -242,7 +348,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RISK_LEVEL_FIELD_NUMBER = 9;
-  private int riskLevel_ = 0;
+  private int riskLevel_;
   /**
    * <pre>
    * The risk level of the evaluation section
@@ -263,7 +369,8 @@ private static final long serialVersionUID = 0L;
    * @return The riskLevel.
    */
   @java.lang.Override public com.tcn.cloud.api.api.commons.RiskLevel getRiskLevel() {
-    com.tcn.cloud.api.api.commons.RiskLevel result = com.tcn.cloud.api.api.commons.RiskLevel.forNumber(riskLevel_);
+    @SuppressWarnings("deprecation")
+    com.tcn.cloud.api.api.commons.RiskLevel result = com.tcn.cloud.api.api.commons.RiskLevel.valueOf(riskLevel_);
     return result == null ? com.tcn.cloud.api.api.commons.RiskLevel.UNRECOGNIZED : result;
   }
 
@@ -305,7 +412,7 @@ private static final long serialVersionUID = 0L;
     if (riskLevel_ != com.tcn.cloud.api.api.commons.RiskLevel.RISK_LEVEL_NONE.getNumber()) {
       output.writeEnum(9, riskLevel_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -346,7 +453,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(9, riskLevel_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -382,7 +489,7 @@ private static final long serialVersionUID = 0L;
     if (!getAutoEvaluationQuestionsList()
         .equals(other.getAutoEvaluationQuestionsList())) return false;
     if (riskLevel_ != other.riskLevel_) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -418,7 +525,7 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + RISK_LEVEL_FIELD_NUMBER;
     hash = (53 * hash) + riskLevel_;
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -467,13 +574,11 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.commons.AutoEvaluationSection parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.commons.AutoEvaluationSection parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -541,40 +646,51 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.tcn.cloud.api.api.commons.AutoEvaluationSection.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+        getAutoEvaluationQuestionsFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       autoEvaluationSectionId_ = 0L;
+
       autoEvaluationId_ = 0L;
+
       sectionId_ = 0L;
+
       sortOrder_ = 0;
-      deletedAt_ = null;
-      if (deletedAtBuilder_ != null) {
-        deletedAtBuilder_.dispose();
+
+      if (deletedAtBuilder_ == null) {
+        deletedAt_ = null;
+      } else {
+        deletedAt_ = null;
         deletedAtBuilder_ = null;
       }
-      createdAt_ = null;
-      if (createdAtBuilder_ != null) {
-        createdAtBuilder_.dispose();
+      if (createdAtBuilder_ == null) {
+        createdAt_ = null;
+      } else {
+        createdAt_ = null;
         createdAtBuilder_ = null;
       }
       if (autoEvaluationQuestionsBuilder_ == null) {
         autoEvaluationQuestions_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
-        autoEvaluationQuestions_ = null;
         autoEvaluationQuestionsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000040);
       riskLevel_ = 0;
+
       return this;
     }
 
@@ -601,51 +717,33 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.AutoEvaluationSection buildPartial() {
       com.tcn.cloud.api.api.commons.AutoEvaluationSection result = new com.tcn.cloud.api.api.commons.AutoEvaluationSection(this);
-      buildPartialRepeatedFields(result);
-      if (bitField0_ != 0) { buildPartial0(result); }
-      onBuilt();
-      return result;
-    }
-
-    private void buildPartialRepeatedFields(com.tcn.cloud.api.api.commons.AutoEvaluationSection result) {
+      int from_bitField0_ = bitField0_;
+      result.autoEvaluationSectionId_ = autoEvaluationSectionId_;
+      result.autoEvaluationId_ = autoEvaluationId_;
+      result.sectionId_ = sectionId_;
+      result.sortOrder_ = sortOrder_;
+      if (deletedAtBuilder_ == null) {
+        result.deletedAt_ = deletedAt_;
+      } else {
+        result.deletedAt_ = deletedAtBuilder_.build();
+      }
+      if (createdAtBuilder_ == null) {
+        result.createdAt_ = createdAt_;
+      } else {
+        result.createdAt_ = createdAtBuilder_.build();
+      }
       if (autoEvaluationQuestionsBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           autoEvaluationQuestions_ = java.util.Collections.unmodifiableList(autoEvaluationQuestions_);
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.autoEvaluationQuestions_ = autoEvaluationQuestions_;
       } else {
         result.autoEvaluationQuestions_ = autoEvaluationQuestionsBuilder_.build();
       }
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.commons.AutoEvaluationSection result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.autoEvaluationSectionId_ = autoEvaluationSectionId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.autoEvaluationId_ = autoEvaluationId_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.sectionId_ = sectionId_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.sortOrder_ = sortOrder_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.deletedAt_ = deletedAtBuilder_ == null
-            ? deletedAt_
-            : deletedAtBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.createdAt_ = createdAtBuilder_ == null
-            ? createdAt_
-            : createdAtBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.riskLevel_ = riskLevel_;
-      }
+      result.riskLevel_ = riskLevel_;
+      onBuilt();
+      return result;
     }
 
     @java.lang.Override
@@ -714,7 +812,7 @@ private static final long serialVersionUID = 0L;
         if (!other.autoEvaluationQuestions_.isEmpty()) {
           if (autoEvaluationQuestions_.isEmpty()) {
             autoEvaluationQuestions_ = other.autoEvaluationQuestions_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureAutoEvaluationQuestionsIsMutable();
             autoEvaluationQuestions_.addAll(other.autoEvaluationQuestions_);
@@ -727,7 +825,7 @@ private static final long serialVersionUID = 0L;
             autoEvaluationQuestionsBuilder_.dispose();
             autoEvaluationQuestionsBuilder_ = null;
             autoEvaluationQuestions_ = other.autoEvaluationQuestions_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000001);
             autoEvaluationQuestionsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getAutoEvaluationQuestionsFieldBuilder() : null;
@@ -739,7 +837,7 @@ private static final long serialVersionUID = 0L;
       if (other.riskLevel_ != 0) {
         setRiskLevelValue(other.getRiskLevelValue());
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -754,82 +852,17 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.commons.AutoEvaluationSection parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 16: {
-              autoEvaluationSectionId_ = input.readInt64();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 16
-            case 24: {
-              autoEvaluationId_ = input.readInt64();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 24
-            case 32: {
-              sectionId_ = input.readInt64();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 32
-            case 40: {
-              sortOrder_ = input.readInt32();
-              bitField0_ |= 0x00000008;
-              break;
-            } // case 40
-            case 50: {
-              input.readMessage(
-                  getDeletedAtFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 50
-            case 58: {
-              input.readMessage(
-                  getCreatedAtFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 58
-            case 66: {
-              com.tcn.cloud.api.api.commons.AutoEvaluationQuestion m =
-                  input.readMessage(
-                      com.tcn.cloud.api.api.commons.AutoEvaluationQuestion.parser(),
-                      extensionRegistry);
-              if (autoEvaluationQuestionsBuilder_ == null) {
-                ensureAutoEvaluationQuestionsIsMutable();
-                autoEvaluationQuestions_.add(m);
-              } else {
-                autoEvaluationQuestionsBuilder_.addMessage(m);
-              }
-              break;
-            } // case 66
-            case 72: {
-              riskLevel_ = input.readEnum();
-              bitField0_ |= 0x00000080;
-              break;
-            } // case 72
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.commons.AutoEvaluationSection) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -857,9 +890,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAutoEvaluationSectionId(long value) {
-
+      
       autoEvaluationSectionId_ = value;
-      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -872,7 +904,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAutoEvaluationSectionId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      
       autoEvaluationSectionId_ = 0L;
       onChanged();
       return this;
@@ -901,9 +933,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAutoEvaluationId(long value) {
-
+      
       autoEvaluationId_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -916,7 +947,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAutoEvaluationId() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       autoEvaluationId_ = 0L;
       onChanged();
       return this;
@@ -945,9 +976,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSectionId(long value) {
-
+      
       sectionId_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -960,7 +990,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSectionId() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      
       sectionId_ = 0L;
       onChanged();
       return this;
@@ -989,9 +1019,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSortOrder(int value) {
-
+      
       sortOrder_ = value;
-      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1004,7 +1033,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSortOrder() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      
       sortOrder_ = 0;
       onChanged();
       return this;
@@ -1022,7 +1051,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the deletedAt field is set.
      */
     public boolean hasDeletedAt() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return deletedAtBuilder_ != null || deletedAt_ != null;
     }
     /**
      * <pre>
@@ -1052,11 +1081,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         deletedAt_ = value;
+        onChanged();
       } else {
         deletedAtBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
@@ -1070,11 +1099,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (deletedAtBuilder_ == null) {
         deletedAt_ = builderForValue.build();
+        onChanged();
       } else {
         deletedAtBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
@@ -1086,18 +1115,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDeletedAt(com.google.protobuf.Timestamp value) {
       if (deletedAtBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0) &&
-          deletedAt_ != null &&
-          deletedAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getDeletedAtBuilder().mergeFrom(value);
+        if (deletedAt_ != null) {
+          deletedAt_ =
+            com.google.protobuf.Timestamp.newBuilder(deletedAt_).mergeFrom(value).buildPartial();
         } else {
           deletedAt_ = value;
         }
+        onChanged();
       } else {
         deletedAtBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000010;
-      onChanged();
+
       return this;
     }
     /**
@@ -1108,13 +1136,14 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp deleted_at = 6 [json_name = "deletedAt"];</code>
      */
     public Builder clearDeletedAt() {
-      bitField0_ = (bitField0_ & ~0x00000010);
-      deletedAt_ = null;
-      if (deletedAtBuilder_ != null) {
-        deletedAtBuilder_.dispose();
+      if (deletedAtBuilder_ == null) {
+        deletedAt_ = null;
+        onChanged();
+      } else {
+        deletedAt_ = null;
         deletedAtBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -1125,7 +1154,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp deleted_at = 6 [json_name = "deletedAt"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getDeletedAtBuilder() {
-      bitField0_ |= 0x00000010;
+      
       onChanged();
       return getDeletedAtFieldBuilder().getBuilder();
     }
@@ -1177,7 +1206,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the createdAt field is set.
      */
     public boolean hasCreatedAt() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return createdAtBuilder_ != null || createdAt_ != null;
     }
     /**
      * <pre>
@@ -1207,11 +1236,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         createdAt_ = value;
+        onChanged();
       } else {
         createdAtBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+
       return this;
     }
     /**
@@ -1225,11 +1254,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Timestamp.Builder builderForValue) {
       if (createdAtBuilder_ == null) {
         createdAt_ = builderForValue.build();
+        onChanged();
       } else {
         createdAtBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+
       return this;
     }
     /**
@@ -1241,18 +1270,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
       if (createdAtBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0) &&
-          createdAt_ != null &&
-          createdAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-          getCreatedAtBuilder().mergeFrom(value);
+        if (createdAt_ != null) {
+          createdAt_ =
+            com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
         } else {
           createdAt_ = value;
         }
+        onChanged();
       } else {
         createdAtBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000020;
-      onChanged();
+
       return this;
     }
     /**
@@ -1263,13 +1291,14 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp created_at = 7 [json_name = "createdAt"];</code>
      */
     public Builder clearCreatedAt() {
-      bitField0_ = (bitField0_ & ~0x00000020);
-      createdAt_ = null;
-      if (createdAtBuilder_ != null) {
-        createdAtBuilder_.dispose();
+      if (createdAtBuilder_ == null) {
+        createdAt_ = null;
+        onChanged();
+      } else {
+        createdAt_ = null;
         createdAtBuilder_ = null;
       }
-      onChanged();
+
       return this;
     }
     /**
@@ -1280,7 +1309,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp created_at = 7 [json_name = "createdAt"];</code>
      */
     public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
-      bitField0_ |= 0x00000020;
+      
       onChanged();
       return getCreatedAtFieldBuilder().getBuilder();
     }
@@ -1323,9 +1352,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.tcn.cloud.api.api.commons.AutoEvaluationQuestion> autoEvaluationQuestions_ =
       java.util.Collections.emptyList();
     private void ensureAutoEvaluationQuestionsIsMutable() {
-      if (!((bitField0_ & 0x00000040) != 0)) {
+      if (!((bitField0_ & 0x00000001) != 0)) {
         autoEvaluationQuestions_ = new java.util.ArrayList<com.tcn.cloud.api.api.commons.AutoEvaluationQuestion>(autoEvaluationQuestions_);
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000001;
        }
     }
 
@@ -1519,7 +1548,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearAutoEvaluationQuestions() {
       if (autoEvaluationQuestionsBuilder_ == null) {
         autoEvaluationQuestions_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
         autoEvaluationQuestionsBuilder_.clear();
@@ -1624,7 +1653,7 @@ private static final long serialVersionUID = 0L;
         autoEvaluationQuestionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.tcn.cloud.api.api.commons.AutoEvaluationQuestion, com.tcn.cloud.api.api.commons.AutoEvaluationQuestion.Builder, com.tcn.cloud.api.api.commons.AutoEvaluationQuestionOrBuilder>(
                 autoEvaluationQuestions_,
-                ((bitField0_ & 0x00000040) != 0),
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
         autoEvaluationQuestions_ = null;
@@ -1654,8 +1683,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRiskLevelValue(int value) {
+      
       riskLevel_ = value;
-      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1669,7 +1698,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.tcn.cloud.api.api.commons.RiskLevel getRiskLevel() {
-      com.tcn.cloud.api.api.commons.RiskLevel result = com.tcn.cloud.api.api.commons.RiskLevel.forNumber(riskLevel_);
+      @SuppressWarnings("deprecation")
+      com.tcn.cloud.api.api.commons.RiskLevel result = com.tcn.cloud.api.api.commons.RiskLevel.valueOf(riskLevel_);
       return result == null ? com.tcn.cloud.api.api.commons.RiskLevel.UNRECOGNIZED : result;
     }
     /**
@@ -1685,7 +1715,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000080;
+      
       riskLevel_ = value.getNumber();
       onChanged();
       return this;
@@ -1699,7 +1729,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRiskLevel() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      
       riskLevel_ = 0;
       onChanged();
       return this;
@@ -1737,18 +1767,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new AutoEvaluationSection(input, extensionRegistry);
     }
   };
 

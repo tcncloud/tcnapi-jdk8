@@ -26,6 +26,73 @@ private static final long serialVersionUID = 0L;
     return new SubmitPaymentRes();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private SubmitPaymentRes(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              fields_ = com.google.protobuf.MapField.newMapField(
+                  FieldsDefaultEntryHolder.defaultEntry);
+              mutable_bitField0_ |= 0x00000001;
+            }
+            com.google.protobuf.MapEntry<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value>
+            fields__ = input.readMessage(
+                FieldsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+            fields_.getMutableMap().put(
+                fields__.getKey(), fields__.getValue());
+            break;
+          }
+          case 17: {
+
+            amountPaid_ = input.readDouble();
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            amountPaidKey_ = s;
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v1alpha1.integrationspublic.ServiceProto.internal_static_api_v1alpha1_integrationspublic_SubmitPaymentRes_descriptor;
@@ -63,7 +130,6 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.MESSAGE,
                 com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value.getDefaultInstance());
   }
-  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value> fields_;
   private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value>
@@ -74,16 +140,18 @@ private static final long serialVersionUID = 0L;
     }
     return fields_;
   }
+
   public int getFieldsCount() {
     return internalGetFields().getMap().size();
   }
   /**
    * <code>map&lt;string, .api.v1alpha1.integrationspublic.Value&gt; fields = 1 [json_name = "fields"];</code>
    */
+
   @java.lang.Override
   public boolean containsFields(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     return internalGetFields().getMap().containsKey(key);
   }
   /**
@@ -98,6 +166,7 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, .api.v1alpha1.integrationspublic.Value&gt; fields = 1 [json_name = "fields"];</code>
    */
   @java.lang.Override
+
   public java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value> getFieldsMap() {
     return internalGetFields().getMap();
   }
@@ -105,12 +174,11 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, .api.v1alpha1.integrationspublic.Value&gt; fields = 1 [json_name = "fields"];</code>
    */
   @java.lang.Override
-  public /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value getFieldsOrDefault(
+
+  public com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value getFieldsOrDefault(
       java.lang.String key,
-      /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
-    if (key == null) { throw new NullPointerException("map key"); }
+      com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value> map =
         internalGetFields().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -119,9 +187,10 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
    * <code>map&lt;string, .api.v1alpha1.integrationspublic.Value&gt; fields = 1 [json_name = "fields"];</code>
    */
   @java.lang.Override
+
   public com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value getFieldsOrThrow(
       java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
+    if (key == null) { throw new java.lang.NullPointerException(); }
     java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value> map =
         internalGetFields().getMap();
     if (!map.containsKey(key)) {
@@ -131,7 +200,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
   }
 
   public static final int AMOUNT_PAID_FIELD_NUMBER = 2;
-  private double amountPaid_ = 0D;
+  private double amountPaid_;
   /**
    * <code>double amount_paid = 2 [json_name = "amountPaid"];</code>
    * @return The amountPaid.
@@ -142,8 +211,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
   }
 
   public static final int AMOUNT_PAID_KEY_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object amountPaidKey_ = "";
+  private volatile java.lang.Object amountPaidKey_;
   /**
    * <code>string amount_paid_key = 3 [json_name = "amountPaidKey"];</code>
    * @return The amountPaidKey.
@@ -200,13 +268,13 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
         internalGetFields(),
         FieldsDefaultEntryHolder.defaultEntry,
         1);
-    if (java.lang.Double.doubleToRawLongBits(amountPaid_) != 0) {
+    if (amountPaid_ != 0D) {
       output.writeDouble(2, amountPaid_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amountPaidKey_)) {
+    if (!getAmountPaidKeyBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, amountPaidKey_);
     }
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -225,14 +293,14 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, fields__);
     }
-    if (java.lang.Double.doubleToRawLongBits(amountPaid_) != 0) {
+    if (amountPaid_ != 0D) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(2, amountPaid_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(amountPaidKey_)) {
+    if (!getAmountPaidKeyBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, amountPaidKey_);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -254,7 +322,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
             other.getAmountPaid())) return false;
     if (!getAmountPaidKey()
         .equals(other.getAmountPaidKey())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -274,7 +342,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
         java.lang.Double.doubleToLongBits(getAmountPaid()));
     hash = (37 * hash) + AMOUNT_PAID_KEY_FIELD_NUMBER;
     hash = (53 * hash) + getAmountPaidKey().hashCode();
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -323,13 +391,11 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitPaymentRes parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitPaymentRes parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -415,21 +481,27 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
 
     // Construct using com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitPaymentRes.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       internalGetMutableFields().clear();
       amountPaid_ = 0D;
+
       amountPaidKey_ = "";
+
       return this;
     }
 
@@ -456,23 +528,13 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
     @java.lang.Override
     public com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitPaymentRes buildPartial() {
       com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitPaymentRes result = new com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitPaymentRes(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      int from_bitField0_ = bitField0_;
+      result.fields_ = internalGetFields();
+      result.fields_.makeImmutable();
+      result.amountPaid_ = amountPaid_;
+      result.amountPaidKey_ = amountPaidKey_;
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitPaymentRes result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.fields_ = internalGetFields();
-        result.fields_.makeImmutable();
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.amountPaid_ = amountPaid_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.amountPaidKey_ = amountPaidKey_;
-      }
     }
 
     @java.lang.Override
@@ -521,16 +583,14 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
       if (other == com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitPaymentRes.getDefaultInstance()) return this;
       internalGetMutableFields().mergeFrom(
           other.internalGetFields());
-      bitField0_ |= 0x00000001;
       if (other.getAmountPaid() != 0D) {
         setAmountPaid(other.getAmountPaid());
       }
       if (!other.getAmountPaidKey().isEmpty()) {
         amountPaidKey_ = other.amountPaidKey_;
-        bitField0_ |= 0x00000004;
         onChanged();
       }
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -545,49 +605,17 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitPaymentRes parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.google.protobuf.MapEntry<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value>
-              fields__ = input.readMessage(
-                  FieldsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              internalGetMutableFields().getMutableMap().put(
-                  fields__.getKey(), fields__.getValue());
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            case 17: {
-              amountPaid_ = input.readDouble();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 17
-            case 26: {
-              amountPaidKey_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 26
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v1alpha1.integrationspublic.SubmitPaymentRes) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -595,7 +623,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
     private com.google.protobuf.MapField<
         java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value> fields_;
     private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value>
-        internalGetFields() {
+    internalGetFields() {
       if (fields_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             FieldsDefaultEntryHolder.defaultEntry);
@@ -603,7 +631,8 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
       return fields_;
     }
     private com.google.protobuf.MapField<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value>
-        internalGetMutableFields() {
+    internalGetMutableFields() {
+      onChanged();;
       if (fields_ == null) {
         fields_ = com.google.protobuf.MapField.newMapField(
             FieldsDefaultEntryHolder.defaultEntry);
@@ -611,20 +640,20 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
       if (!fields_.isMutable()) {
         fields_ = fields_.copy();
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
       return fields_;
     }
+
     public int getFieldsCount() {
       return internalGetFields().getMap().size();
     }
     /**
      * <code>map&lt;string, .api.v1alpha1.integrationspublic.Value&gt; fields = 1 [json_name = "fields"];</code>
      */
+
     @java.lang.Override
     public boolean containsFields(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       return internalGetFields().getMap().containsKey(key);
     }
     /**
@@ -639,6 +668,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
      * <code>map&lt;string, .api.v1alpha1.integrationspublic.Value&gt; fields = 1 [json_name = "fields"];</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value> getFieldsMap() {
       return internalGetFields().getMap();
     }
@@ -646,12 +676,11 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
      * <code>map&lt;string, .api.v1alpha1.integrationspublic.Value&gt; fields = 1 [json_name = "fields"];</code>
      */
     @java.lang.Override
-    public /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value getFieldsOrDefault(
+
+    public com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value getFieldsOrDefault(
         java.lang.String key,
-        /* nullable */
-com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+        com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value> map =
           internalGetFields().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -660,9 +689,10 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
      * <code>map&lt;string, .api.v1alpha1.integrationspublic.Value&gt; fields = 1 [json_name = "fields"];</code>
      */
     @java.lang.Override
+
     public com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value getFieldsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value> map =
           internalGetFields().getMap();
       if (!map.containsKey(key)) {
@@ -670,8 +700,8 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
       }
       return map.get(key);
     }
+
     public Builder clearFields() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       internalGetMutableFields().getMutableMap()
           .clear();
       return this;
@@ -679,9 +709,10 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
     /**
      * <code>map&lt;string, .api.v1alpha1.integrationspublic.Value&gt; fields = 1 [json_name = "fields"];</code>
      */
+
     public Builder removeFields(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableFields().getMutableMap()
           .remove(key);
       return this;
@@ -691,8 +722,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value>
-        getMutableFields() {
-      bitField0_ |= 0x00000001;
+    getMutableFields() {
       return internalGetMutableFields().getMutableMap();
     }
     /**
@@ -701,21 +731,20 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
     public Builder putFields(
         java.lang.String key,
         com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value value) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      if (value == null) { throw new NullPointerException("map value"); }
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (value == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableFields().getMutableMap()
           .put(key, value);
-      bitField0_ |= 0x00000001;
       return this;
     }
     /**
      * <code>map&lt;string, .api.v1alpha1.integrationspublic.Value&gt; fields = 1 [json_name = "fields"];</code>
      */
+
     public Builder putAllFields(
         java.util.Map<java.lang.String, com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value> values) {
       internalGetMutableFields().getMutableMap()
           .putAll(values);
-      bitField0_ |= 0x00000001;
       return this;
     }
 
@@ -734,9 +763,8 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setAmountPaid(double value) {
-
+      
       amountPaid_ = value;
-      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -745,7 +773,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearAmountPaid() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      
       amountPaid_ = 0D;
       onChanged();
       return this;
@@ -792,9 +820,11 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
      */
     public Builder setAmountPaidKey(
         java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       amountPaidKey_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -803,8 +833,8 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearAmountPaidKey() {
+      
       amountPaidKey_ = getDefaultInstance().getAmountPaidKey();
-      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -815,10 +845,12 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
      */
     public Builder setAmountPaidKeyBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
       amountPaidKey_ = value;
-      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -855,18 +887,7 @@ com.tcn.cloud.api.api.v1alpha1.integrationspublic.Value defaultValue) {
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new SubmitPaymentRes(input, extensionRegistry);
     }
   };
 

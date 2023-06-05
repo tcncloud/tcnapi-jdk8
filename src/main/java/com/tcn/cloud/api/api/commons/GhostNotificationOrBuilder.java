@@ -216,5 +216,5 @@ public interface GhostNotificationOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.AgentQueuedCallsNotificationOrBuilder getAgentQueuedCallsNotificationOrBuilder();
 
-  com.tcn.cloud.api.api.commons.GhostNotification.PayloadCase getPayloadCase();
+  public com.tcn.cloud.api.api.commons.GhostNotification.PayloadCase getPayloadCase();
 }

@@ -25,6 +25,62 @@ private static final long serialVersionUID = 0L;
     return new GetOrganizationNamesRes();
   }
 
+  @java.lang.Override
+  public final com.google.protobuf.UnknownFieldSet
+  getUnknownFields() {
+    return this.unknownFields;
+  }
+  private GetOrganizationNamesRes(
+      com.google.protobuf.CodedInputStream input,
+      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+      throws com.google.protobuf.InvalidProtocolBufferException {
+    this();
+    if (extensionRegistry == null) {
+      throw new java.lang.NullPointerException();
+    }
+    int mutable_bitField0_ = 0;
+    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+        com.google.protobuf.UnknownFieldSet.newBuilder();
+    try {
+      boolean done = false;
+      while (!done) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            done = true;
+            break;
+          case 10: {
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              names_ = com.google.protobuf.MapField.newMapField(
+                  NamesDefaultEntryHolder.defaultEntry);
+              mutable_bitField0_ |= 0x00000001;
+            }
+            com.google.protobuf.MapEntry<java.lang.Long, java.lang.String>
+            names__ = input.readMessage(
+                NamesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+            names_.getMutableMap().put(
+                names__.getKey(), names__.getValue());
+            break;
+          }
+          default: {
+            if (!parseUnknownField(
+                input, unknownFields, extensionRegistry, tag)) {
+              done = true;
+            }
+            break;
+          }
+        }
+      }
+    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      throw e.setUnfinishedMessage(this);
+    } catch (java.io.IOException e) {
+      throw new com.google.protobuf.InvalidProtocolBufferException(
+          e).setUnfinishedMessage(this);
+    } finally {
+      this.unknownFields = unknownFields.build();
+      makeExtensionsImmutable();
+    }
+  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.tcn.cloud.api.api.v0alpha.AnaProto.internal_static_api_v0alpha_GetOrganizationNamesRes_descriptor;
@@ -62,7 +118,6 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.STRING,
                 "");
   }
-  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.Long, java.lang.String> names_;
   private com.google.protobuf.MapField<java.lang.Long, java.lang.String>
@@ -73,16 +128,18 @@ private static final long serialVersionUID = 0L;
     }
     return names_;
   }
+
   public int getNamesCount() {
     return internalGetNames().getMap().size();
   }
   /**
    * <code>map&lt;int64, string&gt; names = 1 [json_name = "names"];</code>
    */
+
   @java.lang.Override
   public boolean containsNames(
       long key) {
-
+    
     return internalGetNames().getMap().containsKey(key);
   }
   /**
@@ -97,6 +154,7 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;int64, string&gt; names = 1 [json_name = "names"];</code>
    */
   @java.lang.Override
+
   public java.util.Map<java.lang.Long, java.lang.String> getNamesMap() {
     return internalGetNames().getMap();
   }
@@ -104,12 +162,11 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;int64, string&gt; names = 1 [json_name = "names"];</code>
    */
   @java.lang.Override
-  public /* nullable */
-java.lang.String getNamesOrDefault(
-      long key,
-      /* nullable */
-java.lang.String defaultValue) {
 
+  public java.lang.String getNamesOrDefault(
+      long key,
+      java.lang.String defaultValue) {
+    
     java.util.Map<java.lang.Long, java.lang.String> map =
         internalGetNames().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -118,9 +175,10 @@ java.lang.String defaultValue) {
    * <code>map&lt;int64, string&gt; names = 1 [json_name = "names"];</code>
    */
   @java.lang.Override
+
   public java.lang.String getNamesOrThrow(
       long key) {
-
+    
     java.util.Map<java.lang.Long, java.lang.String> map =
         internalGetNames().getMap();
     if (!map.containsKey(key)) {
@@ -149,7 +207,7 @@ java.lang.String defaultValue) {
         internalGetNames(),
         NamesDefaultEntryHolder.defaultEntry,
         1);
-    getUnknownFields().writeTo(output);
+    unknownFields.writeTo(output);
   }
 
   @java.lang.Override
@@ -168,7 +226,7 @@ java.lang.String defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, names__);
     }
-    size += getUnknownFields().getSerializedSize();
+    size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -185,7 +243,7 @@ java.lang.String defaultValue) {
 
     if (!internalGetNames().equals(
         other.internalGetNames())) return false;
-    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+    if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
 
@@ -200,7 +258,7 @@ java.lang.String defaultValue) {
       hash = (37 * hash) + NAMES_FIELD_NUMBER;
       hash = (53 * hash) + internalGetNames().hashCode();
     }
-    hash = (29 * hash) + getUnknownFields().hashCode();
+    hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -249,13 +307,11 @@ java.lang.String defaultValue) {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.GetOrganizationNamesRes parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-
   public static com.tcn.cloud.api.api.v0alpha.GetOrganizationNamesRes parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -341,18 +397,22 @@ java.lang.String defaultValue) {
 
     // Construct using com.tcn.cloud.api.api.v0alpha.GetOrganizationNamesRes.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessageV3
+              .alwaysUseFieldBuilders) {
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      bitField0_ = 0;
       internalGetMutableNames().clear();
       return this;
     }
@@ -380,17 +440,11 @@ java.lang.String defaultValue) {
     @java.lang.Override
     public com.tcn.cloud.api.api.v0alpha.GetOrganizationNamesRes buildPartial() {
       com.tcn.cloud.api.api.v0alpha.GetOrganizationNamesRes result = new com.tcn.cloud.api.api.v0alpha.GetOrganizationNamesRes(this);
-      if (bitField0_ != 0) { buildPartial0(result); }
+      int from_bitField0_ = bitField0_;
+      result.names_ = internalGetNames();
+      result.names_.makeImmutable();
       onBuilt();
       return result;
-    }
-
-    private void buildPartial0(com.tcn.cloud.api.api.v0alpha.GetOrganizationNamesRes result) {
-      int from_bitField0_ = bitField0_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.names_ = internalGetNames();
-        result.names_.makeImmutable();
-      }
     }
 
     @java.lang.Override
@@ -439,8 +493,7 @@ java.lang.String defaultValue) {
       if (other == com.tcn.cloud.api.api.v0alpha.GetOrganizationNamesRes.getDefaultInstance()) return this;
       internalGetMutableNames().mergeFrom(
           other.internalGetNames());
-      bitField0_ |= 0x00000001;
-      this.mergeUnknownFields(other.getUnknownFields());
+      this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
     }
@@ -455,39 +508,17 @@ java.lang.String defaultValue) {
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
+      com.tcn.cloud.api.api.v0alpha.GetOrganizationNamesRes parsedMessage = null;
       try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.google.protobuf.MapEntry<java.lang.Long, java.lang.String>
-              names__ = input.readMessage(
-                  NamesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              internalGetMutableNames().getMutableMap().put(
-                  names__.getKey(), names__.getValue());
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
-            default: {
-              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                done = true; // was an endgroup tag
-              }
-              break;
-            } // default:
-          } // switch (tag)
-        } // while (!done)
+        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        parsedMessage = (com.tcn.cloud.api.api.v0alpha.GetOrganizationNamesRes) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        onChanged();
-      } // finally
+        if (parsedMessage != null) {
+          mergeFrom(parsedMessage);
+        }
+      }
       return this;
     }
     private int bitField0_;
@@ -495,7 +526,7 @@ java.lang.String defaultValue) {
     private com.google.protobuf.MapField<
         java.lang.Long, java.lang.String> names_;
     private com.google.protobuf.MapField<java.lang.Long, java.lang.String>
-        internalGetNames() {
+    internalGetNames() {
       if (names_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             NamesDefaultEntryHolder.defaultEntry);
@@ -503,7 +534,8 @@ java.lang.String defaultValue) {
       return names_;
     }
     private com.google.protobuf.MapField<java.lang.Long, java.lang.String>
-        internalGetMutableNames() {
+    internalGetMutableNames() {
+      onChanged();;
       if (names_ == null) {
         names_ = com.google.protobuf.MapField.newMapField(
             NamesDefaultEntryHolder.defaultEntry);
@@ -511,20 +543,20 @@ java.lang.String defaultValue) {
       if (!names_.isMutable()) {
         names_ = names_.copy();
       }
-      bitField0_ |= 0x00000001;
-      onChanged();
       return names_;
     }
+
     public int getNamesCount() {
       return internalGetNames().getMap().size();
     }
     /**
      * <code>map&lt;int64, string&gt; names = 1 [json_name = "names"];</code>
      */
+
     @java.lang.Override
     public boolean containsNames(
         long key) {
-
+      
       return internalGetNames().getMap().containsKey(key);
     }
     /**
@@ -539,6 +571,7 @@ java.lang.String defaultValue) {
      * <code>map&lt;int64, string&gt; names = 1 [json_name = "names"];</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.Long, java.lang.String> getNamesMap() {
       return internalGetNames().getMap();
     }
@@ -546,12 +579,11 @@ java.lang.String defaultValue) {
      * <code>map&lt;int64, string&gt; names = 1 [json_name = "names"];</code>
      */
     @java.lang.Override
-    public /* nullable */
-java.lang.String getNamesOrDefault(
-        long key,
-        /* nullable */
-java.lang.String defaultValue) {
 
+    public java.lang.String getNamesOrDefault(
+        long key,
+        java.lang.String defaultValue) {
+      
       java.util.Map<java.lang.Long, java.lang.String> map =
           internalGetNames().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -560,9 +592,10 @@ java.lang.String defaultValue) {
      * <code>map&lt;int64, string&gt; names = 1 [json_name = "names"];</code>
      */
     @java.lang.Override
+
     public java.lang.String getNamesOrThrow(
         long key) {
-
+      
       java.util.Map<java.lang.Long, java.lang.String> map =
           internalGetNames().getMap();
       if (!map.containsKey(key)) {
@@ -570,8 +603,8 @@ java.lang.String defaultValue) {
       }
       return map.get(key);
     }
+
     public Builder clearNames() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       internalGetMutableNames().getMutableMap()
           .clear();
       return this;
@@ -579,9 +612,10 @@ java.lang.String defaultValue) {
     /**
      * <code>map&lt;int64, string&gt; names = 1 [json_name = "names"];</code>
      */
+
     public Builder removeNames(
         long key) {
-
+      
       internalGetMutableNames().getMutableMap()
           .remove(key);
       return this;
@@ -591,8 +625,7 @@ java.lang.String defaultValue) {
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.Long, java.lang.String>
-        getMutableNames() {
-      bitField0_ |= 0x00000001;
+    getMutableNames() {
       return internalGetMutableNames().getMutableMap();
     }
     /**
@@ -601,21 +634,20 @@ java.lang.String defaultValue) {
     public Builder putNames(
         long key,
         java.lang.String value) {
-
-      if (value == null) { throw new NullPointerException("map value"); }
+      
+      if (value == null) { throw new java.lang.NullPointerException(); }
       internalGetMutableNames().getMutableMap()
           .put(key, value);
-      bitField0_ |= 0x00000001;
       return this;
     }
     /**
      * <code>map&lt;int64, string&gt; names = 1 [json_name = "names"];</code>
      */
+
     public Builder putAllNames(
         java.util.Map<java.lang.Long, java.lang.String> values) {
       internalGetMutableNames().getMutableMap()
           .putAll(values);
-      bitField0_ |= 0x00000001;
       return this;
     }
     @java.lang.Override
@@ -651,18 +683,7 @@ java.lang.String defaultValue) {
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      Builder builder = newBuilder();
-      try {
-        builder.mergeFrom(input, extensionRegistry);
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(builder.buildPartial());
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e)
-            .setUnfinishedMessage(builder.buildPartial());
-      }
-      return builder.buildPartial();
+      return new GetOrganizationNamesRes(input, extensionRegistry);
     }
   };
 

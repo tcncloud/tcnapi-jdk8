@@ -23,15 +23,6 @@ public interface ForecastingParametersOrBuilder extends
    * </pre>
    *
    * <code>int32 historical_data_range_in_months = 6 [json_name = "historicalDataRangeInMonths"];</code>
-   * @return Whether the historicalDataRangeInMonths field is set.
-   */
-  boolean hasHistoricalDataRangeInMonths();
-  /**
-   * <pre>
-   * number of months back from the current datetime to look up history.
-   * </pre>
-   *
-   * <code>int32 historical_data_range_in_months = 6 [json_name = "historicalDataRangeInMonths"];</code>
    * @return The historicalDataRangeInMonths.
    */
   int getHistoricalDataRangeInMonths();
@@ -79,15 +70,6 @@ public interface ForecastingParametersOrBuilder extends
    * </pre>
    *
    * <code>int32 forecast_range_in_weeks = 9 [json_name = "forecastRangeInWeeks"];</code>
-   * @return Whether the forecastRangeInWeeks field is set.
-   */
-  boolean hasForecastRangeInWeeks();
-  /**
-   * <pre>
-   * number of weeks from the current datetime that forecast will be made.
-   * </pre>
-   *
-   * <code>int32 forecast_range_in_weeks = 9 [json_name = "forecastRangeInWeeks"];</code>
    * @return The forecastRangeInWeeks.
    */
   int getForecastRangeInWeeks();
@@ -119,15 +101,6 @@ public interface ForecastingParametersOrBuilder extends
    */
   com.tcn.cloud.api.api.commons.DatetimeRangeOrBuilder getForecastDatetimeRangeOrBuilder();
 
-  /**
-   * <pre>
-   * number of months in the past from the current datetime that the training data will be generated from.
-   * </pre>
-   *
-   * <code>int32 training_data_range_in_months = 11 [json_name = "trainingDataRangeInMonths"];</code>
-   * @return Whether the trainingDataRangeInMonths field is set.
-   */
-  boolean hasTrainingDataRangeInMonths();
   /**
    * <pre>
    * number of months in the past from the current datetime that the training data will be generated from.
@@ -178,9 +151,9 @@ public interface ForecastingParametersOrBuilder extends
    */
   int getAveragesCalculationRangeInMonths();
 
-  com.tcn.cloud.api.api.commons.ForecastingParameters.HistoricalDataRangeCase getHistoricalDataRangeCase();
+  public com.tcn.cloud.api.api.commons.ForecastingParameters.HistoricalDataRangeCase getHistoricalDataRangeCase();
 
-  com.tcn.cloud.api.api.commons.ForecastingParameters.ForecastRangeCase getForecastRangeCase();
+  public com.tcn.cloud.api.api.commons.ForecastingParameters.ForecastRangeCase getForecastRangeCase();
 
-  com.tcn.cloud.api.api.commons.ForecastingParameters.TrainingDataRangeCase getTrainingDataRangeCase();
+  public com.tcn.cloud.api.api.commons.ForecastingParameters.TrainingDataRangeCase getTrainingDataRangeCase();
 }

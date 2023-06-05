@@ -30,12 +30,14 @@ public interface ConversationSkillsOrBuilder extends
   /**
    * <code>map&lt;string, bool&gt; skills = 1 [json_name = "skills"];</code>
    */
+
   boolean getSkillsOrDefault(
       java.lang.String key,
       boolean defaultValue);
   /**
    * <code>map&lt;string, bool&gt; skills = 1 [json_name = "skills"];</code>
    */
+
   boolean getSkillsOrThrow(
       java.lang.String key);
 }

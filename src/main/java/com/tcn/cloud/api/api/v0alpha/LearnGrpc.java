@@ -8,7 +8,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.55.1)",
+    value = "by gRPC proto compiler (version 1.50.0)",
     comments = "Source: api/v0alpha/learn.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class LearnGrpc {
@@ -346,32 +346,32 @@ public final class LearnGrpc {
    * A service for creating and reading learning material
    * </pre>
    */
-  public interface AsyncService {
+  public static abstract class LearnImplBase implements io.grpc.BindableService {
 
     /**
      */
-    default void exist(com.tcn.cloud.api.api.v0alpha.ExistReq request,
+    public void exist(com.tcn.cloud.api.api.v0alpha.ExistReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ExistRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getExistMethod(), responseObserver);
     }
 
     /**
      */
-    default void content(com.tcn.cloud.api.api.v0alpha.ContentReq request,
+    public void content(com.tcn.cloud.api.api.v0alpha.ContentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ContentRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getContentMethod(), responseObserver);
     }
 
     /**
      */
-    default void contentEditorData(com.tcn.cloud.api.api.v0alpha.ContentEditorDataReq request,
+    public void contentEditorData(com.tcn.cloud.api.api.v0alpha.ContentEditorDataReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ContentEditorDataRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getContentEditorDataMethod(), responseObserver);
     }
 
     /**
      */
-    default void update(com.tcn.cloud.api.api.v0alpha.UpdateReq request,
+    public void update(com.tcn.cloud.api.api.v0alpha.UpdateReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UpdateRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
@@ -381,7 +381,7 @@ public final class LearnGrpc {
      * exports multiple pages of the learning center markdown as PDF
      * </pre>
      */
-    default void exportMany(com.tcn.cloud.api.api.v0alpha.ExportManyReq request,
+    public void exportMany(com.tcn.cloud.api.api.v0alpha.ExportManyReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.ExportRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getExportManyMethod(), responseObserver);
     }
@@ -391,7 +391,7 @@ public final class LearnGrpc {
      * upload url for static images
      * </pre>
      */
-    default void storeStaticImage(com.tcn.cloud.api.api.v0alpha.StoreStaticImageReq request,
+    public void storeStaticImage(com.tcn.cloud.api.api.v0alpha.StoreStaticImageReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StoreStaticImageRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStoreStaticImageMethod(), responseObserver);
     }
@@ -401,7 +401,7 @@ public final class LearnGrpc {
      * search content in learning pages
      * </pre>
      */
-    default void searchContent(com.tcn.cloud.api.api.v0alpha.SearchContentReq request,
+    public void searchContent(com.tcn.cloud.api.api.v0alpha.SearchContentReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.SearchRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSearchContentMethod(), responseObserver);
     }
@@ -411,7 +411,7 @@ public final class LearnGrpc {
      * upload dynamic learning image screenshot
      * </pre>
      */
-    default void uploadDynamicScreenshot(com.tcn.cloud.api.api.v0alpha.UploadDynamicScreenshotReq request,
+    public void uploadDynamicScreenshot(com.tcn.cloud.api.api.v0alpha.UploadDynamicScreenshotReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.UploadDynamicScreenshotRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUploadDynamicScreenshotMethod(), responseObserver);
     }
@@ -421,34 +421,86 @@ public final class LearnGrpc {
      * get standalone articles from learning pages
      * </pre>
      */
-    default void standalone(com.tcn.cloud.api.api.v0alpha.StandaloneReq request,
+    public void standalone(com.tcn.cloud.api.api.v0alpha.StandaloneReq request,
         io.grpc.stub.StreamObserver<com.tcn.cloud.api.api.v0alpha.StandaloneRes> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStandaloneMethod(), responseObserver);
     }
-  }
-
-  /**
-   * Base class for the server implementation of the service Learn.
-   * <pre>
-   * A service for creating and reading learning material
-   * </pre>
-   */
-  public static abstract class LearnImplBase
-      implements io.grpc.BindableService, AsyncService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return LearnGrpc.bindService(this);
+      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getExistMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.ExistReq,
+                com.tcn.cloud.api.api.v0alpha.ExistRes>(
+                  this, METHODID_EXIST)))
+          .addMethod(
+            getContentMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.ContentReq,
+                com.tcn.cloud.api.api.v0alpha.ContentRes>(
+                  this, METHODID_CONTENT)))
+          .addMethod(
+            getContentEditorDataMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.ContentEditorDataReq,
+                com.tcn.cloud.api.api.v0alpha.ContentEditorDataRes>(
+                  this, METHODID_CONTENT_EDITOR_DATA)))
+          .addMethod(
+            getUpdateMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.UpdateReq,
+                com.tcn.cloud.api.api.v0alpha.UpdateRes>(
+                  this, METHODID_UPDATE)))
+          .addMethod(
+            getExportManyMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.ExportManyReq,
+                com.tcn.cloud.api.api.v0alpha.ExportRes>(
+                  this, METHODID_EXPORT_MANY)))
+          .addMethod(
+            getStoreStaticImageMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.StoreStaticImageReq,
+                com.tcn.cloud.api.api.v0alpha.StoreStaticImageRes>(
+                  this, METHODID_STORE_STATIC_IMAGE)))
+          .addMethod(
+            getSearchContentMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.SearchContentReq,
+                com.tcn.cloud.api.api.v0alpha.SearchRes>(
+                  this, METHODID_SEARCH_CONTENT)))
+          .addMethod(
+            getUploadDynamicScreenshotMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.UploadDynamicScreenshotReq,
+                com.tcn.cloud.api.api.v0alpha.UploadDynamicScreenshotRes>(
+                  this, METHODID_UPLOAD_DYNAMIC_SCREENSHOT)))
+          .addMethod(
+            getStandaloneMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.tcn.cloud.api.api.v0alpha.StandaloneReq,
+                com.tcn.cloud.api.api.v0alpha.StandaloneRes>(
+                  this, METHODID_STANDALONE)))
+          .build();
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service Learn.
    * <pre>
    * A service for creating and reading learning material
    * </pre>
    */
-  public static final class LearnStub
-      extends io.grpc.stub.AbstractAsyncStub<LearnStub> {
+  public static final class LearnStub extends io.grpc.stub.AbstractAsyncStub<LearnStub> {
     private LearnStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -549,13 +601,11 @@ public final class LearnGrpc {
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service Learn.
    * <pre>
    * A service for creating and reading learning material
    * </pre>
    */
-  public static final class LearnBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<LearnBlockingStub> {
+  public static final class LearnBlockingStub extends io.grpc.stub.AbstractBlockingStub<LearnBlockingStub> {
     private LearnBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -647,13 +697,11 @@ public final class LearnGrpc {
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service Learn.
    * <pre>
    * A service for creating and reading learning material
    * </pre>
    */
-  public static final class LearnFutureStub
-      extends io.grpc.stub.AbstractFutureStub<LearnFutureStub> {
+  public static final class LearnFutureStub extends io.grpc.stub.AbstractFutureStub<LearnFutureStub> {
     private LearnFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -768,10 +816,10 @@ public final class LearnGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AsyncService serviceImpl;
+    private final LearnImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AsyncService serviceImpl, int methodId) {
+    MethodHandlers(LearnImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -830,74 +878,6 @@ public final class LearnGrpc {
           throw new AssertionError();
       }
     }
-  }
-
-  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
-    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-        .addMethod(
-          getExistMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.ExistReq,
-              com.tcn.cloud.api.api.v0alpha.ExistRes>(
-                service, METHODID_EXIST)))
-        .addMethod(
-          getContentMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.ContentReq,
-              com.tcn.cloud.api.api.v0alpha.ContentRes>(
-                service, METHODID_CONTENT)))
-        .addMethod(
-          getContentEditorDataMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.ContentEditorDataReq,
-              com.tcn.cloud.api.api.v0alpha.ContentEditorDataRes>(
-                service, METHODID_CONTENT_EDITOR_DATA)))
-        .addMethod(
-          getUpdateMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.UpdateReq,
-              com.tcn.cloud.api.api.v0alpha.UpdateRes>(
-                service, METHODID_UPDATE)))
-        .addMethod(
-          getExportManyMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.ExportManyReq,
-              com.tcn.cloud.api.api.v0alpha.ExportRes>(
-                service, METHODID_EXPORT_MANY)))
-        .addMethod(
-          getStoreStaticImageMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.StoreStaticImageReq,
-              com.tcn.cloud.api.api.v0alpha.StoreStaticImageRes>(
-                service, METHODID_STORE_STATIC_IMAGE)))
-        .addMethod(
-          getSearchContentMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.SearchContentReq,
-              com.tcn.cloud.api.api.v0alpha.SearchRes>(
-                service, METHODID_SEARCH_CONTENT)))
-        .addMethod(
-          getUploadDynamicScreenshotMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.UploadDynamicScreenshotReq,
-              com.tcn.cloud.api.api.v0alpha.UploadDynamicScreenshotRes>(
-                service, METHODID_UPLOAD_DYNAMIC_SCREENSHOT)))
-        .addMethod(
-          getStandaloneMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.tcn.cloud.api.api.v0alpha.StandaloneReq,
-              com.tcn.cloud.api.api.v0alpha.StandaloneRes>(
-                service, METHODID_STANDALONE)))
-        .build();
   }
 
   private static abstract class LearnBaseDescriptorSupplier

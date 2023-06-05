@@ -144,5 +144,5 @@ public interface NewDatapointOrBuilder extends
    */
   int getTagsValue(int index);
 
-  com.tcn.cloud.api.api.v0alpha.NewDatapoint.ActionCase getActionCase();
+  public com.tcn.cloud.api.api.v0alpha.NewDatapoint.ActionCase getActionCase();
 }
