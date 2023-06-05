@@ -20,8 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CreateShiftInstanceReq() {
-    wfmAgentSid_ = java.util.Collections.emptyList();
-    metricTypes_ = java.util.Collections.emptyList();
+    wfmAgentSids_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -142,9 +141,9 @@ private static final long serialVersionUID = 0L;
     return isLocked_;
   }
 
-  public static final int WFM_AGENT_SID_FIELD_NUMBER = 6;
+  public static final int WFM_AGENT_SIDS_FIELD_NUMBER = 6;
   @SuppressWarnings("serial")
-  private java.util.List<com.google.protobuf.Int64Value> wfmAgentSid_;
+  private java.util.List<com.google.protobuf.Int64Value> wfmAgentSids_;
   /**
    * <pre>
    * ID of the wfm agents for the shift instance.
@@ -152,11 +151,11 @@ private static final long serialVersionUID = 0L;
    * If given more than one sid, then a copy of the instance will be created for each agent.
    * </pre>
    *
-   * <code>repeated .google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+   * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.google.protobuf.Int64Value> getWfmAgentSidList() {
-    return wfmAgentSid_;
+  public java.util.List<com.google.protobuf.Int64Value> getWfmAgentSidsList() {
+    return wfmAgentSids_;
   }
   /**
    * <pre>
@@ -165,12 +164,12 @@ private static final long serialVersionUID = 0L;
    * If given more than one sid, then a copy of the instance will be created for each agent.
    * </pre>
    *
-   * <code>repeated .google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+   * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.google.protobuf.Int64ValueOrBuilder> 
-      getWfmAgentSidOrBuilderList() {
-    return wfmAgentSid_;
+      getWfmAgentSidsOrBuilderList() {
+    return wfmAgentSids_;
   }
   /**
    * <pre>
@@ -179,11 +178,11 @@ private static final long serialVersionUID = 0L;
    * If given more than one sid, then a copy of the instance will be created for each agent.
    * </pre>
    *
-   * <code>repeated .google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+   * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
    */
   @java.lang.Override
-  public int getWfmAgentSidCount() {
-    return wfmAgentSid_.size();
+  public int getWfmAgentSidsCount() {
+    return wfmAgentSids_.size();
   }
   /**
    * <pre>
@@ -192,11 +191,11 @@ private static final long serialVersionUID = 0L;
    * If given more than one sid, then a copy of the instance will be created for each agent.
    * </pre>
    *
-   * <code>repeated .google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+   * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.Int64Value getWfmAgentSid(int index) {
-    return wfmAgentSid_.get(index);
+  public com.google.protobuf.Int64Value getWfmAgentSids(int index) {
+    return wfmAgentSids_.get(index);
   }
   /**
    * <pre>
@@ -205,91 +204,13 @@ private static final long serialVersionUID = 0L;
    * If given more than one sid, then a copy of the instance will be created for each agent.
    * </pre>
    *
-   * <code>repeated .google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+   * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.Int64ValueOrBuilder getWfmAgentSidOrBuilder(
+  public com.google.protobuf.Int64ValueOrBuilder getWfmAgentSidsOrBuilder(
       int index) {
-    return wfmAgentSid_.get(index);
+    return wfmAgentSids_.get(index);
   }
-
-  public static final int METRIC_TYPES_FIELD_NUMBER = 7;
-  @SuppressWarnings("serial")
-  private java.util.List<java.lang.Integer> metricTypes_;
-  private static final com.google.protobuf.Internal.ListAdapter.Converter<
-      java.lang.Integer, com.tcn.cloud.api.api.commons.PerformanceMetricType> metricTypes_converter_ =
-          new com.google.protobuf.Internal.ListAdapter.Converter<
-              java.lang.Integer, com.tcn.cloud.api.api.commons.PerformanceMetricType>() {
-            public com.tcn.cloud.api.api.commons.PerformanceMetricType convert(java.lang.Integer from) {
-              com.tcn.cloud.api.api.commons.PerformanceMetricType result = com.tcn.cloud.api.api.commons.PerformanceMetricType.forNumber(from);
-              return result == null ? com.tcn.cloud.api.api.commons.PerformanceMetricType.UNRECOGNIZED : result;
-            }
-          };
-  /**
-   * <pre>
-   * Metric types for the shift instance.
-   * </pre>
-   *
-   * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
-   * @return A list containing the metricTypes.
-   */
-  @java.lang.Override
-  public java.util.List<com.tcn.cloud.api.api.commons.PerformanceMetricType> getMetricTypesList() {
-    return new com.google.protobuf.Internal.ListAdapter<
-        java.lang.Integer, com.tcn.cloud.api.api.commons.PerformanceMetricType>(metricTypes_, metricTypes_converter_);
-  }
-  /**
-   * <pre>
-   * Metric types for the shift instance.
-   * </pre>
-   *
-   * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
-   * @return The count of metricTypes.
-   */
-  @java.lang.Override
-  public int getMetricTypesCount() {
-    return metricTypes_.size();
-  }
-  /**
-   * <pre>
-   * Metric types for the shift instance.
-   * </pre>
-   *
-   * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
-   * @param index The index of the element to return.
-   * @return The metricTypes at the given index.
-   */
-  @java.lang.Override
-  public com.tcn.cloud.api.api.commons.PerformanceMetricType getMetricTypes(int index) {
-    return metricTypes_converter_.convert(metricTypes_.get(index));
-  }
-  /**
-   * <pre>
-   * Metric types for the shift instance.
-   * </pre>
-   *
-   * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
-   * @return A list containing the enum numeric values on the wire for metricTypes.
-   */
-  @java.lang.Override
-  public java.util.List<java.lang.Integer>
-  getMetricTypesValueList() {
-    return metricTypes_;
-  }
-  /**
-   * <pre>
-   * Metric types for the shift instance.
-   * </pre>
-   *
-   * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
-   * @param index The index of the value to return.
-   * @return The enum numeric value on the wire of metricTypes at the given index.
-   */
-  @java.lang.Override
-  public int getMetricTypesValue(int index) {
-    return metricTypes_.get(index);
-  }
-  private int metricTypesMemoizedSerializedSize;
 
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
@@ -305,7 +226,6 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    getSerializedSize();
     if (draftScheduleSid_ != 0L) {
       output.writeInt64(1, draftScheduleSid_);
     }
@@ -321,15 +241,8 @@ private static final long serialVersionUID = 0L;
     if (isLocked_ != false) {
       output.writeBool(5, isLocked_);
     }
-    for (int i = 0; i < wfmAgentSid_.size(); i++) {
-      output.writeMessage(6, wfmAgentSid_.get(i));
-    }
-    if (getMetricTypesList().size() > 0) {
-      output.writeUInt32NoTag(58);
-      output.writeUInt32NoTag(metricTypesMemoizedSerializedSize);
-    }
-    for (int i = 0; i < metricTypes_.size(); i++) {
-      output.writeEnumNoTag(metricTypes_.get(i));
+    for (int i = 0; i < wfmAgentSids_.size(); i++) {
+      output.writeMessage(6, wfmAgentSids_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -360,21 +273,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(5, isLocked_);
     }
-    for (int i = 0; i < wfmAgentSid_.size(); i++) {
+    for (int i = 0; i < wfmAgentSids_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6, wfmAgentSid_.get(i));
-    }
-    {
-      int dataSize = 0;
-      for (int i = 0; i < metricTypes_.size(); i++) {
-        dataSize += com.google.protobuf.CodedOutputStream
-          .computeEnumSizeNoTag(metricTypes_.get(i));
-      }
-      size += dataSize;
-      if (!getMetricTypesList().isEmpty()) {  size += 1;
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32SizeNoTag(dataSize);
-      }metricTypesMemoizedSerializedSize = dataSize;
+        .computeMessageSize(6, wfmAgentSids_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -404,9 +305,8 @@ private static final long serialVersionUID = 0L;
         != other.getWidthInMinutes()) return false;
     if (getIsLocked()
         != other.getIsLocked()) return false;
-    if (!getWfmAgentSidList()
-        .equals(other.getWfmAgentSidList())) return false;
-    if (!metricTypes_.equals(other.metricTypes_)) return false;
+    if (!getWfmAgentSidsList()
+        .equals(other.getWfmAgentSidsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -433,13 +333,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + IS_LOCKED_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getIsLocked());
-    if (getWfmAgentSidCount() > 0) {
-      hash = (37 * hash) + WFM_AGENT_SID_FIELD_NUMBER;
-      hash = (53 * hash) + getWfmAgentSidList().hashCode();
-    }
-    if (getMetricTypesCount() > 0) {
-      hash = (37 * hash) + METRIC_TYPES_FIELD_NUMBER;
-      hash = (53 * hash) + metricTypes_.hashCode();
+    if (getWfmAgentSidsCount() > 0) {
+      hash = (37 * hash) + WFM_AGENT_SIDS_FIELD_NUMBER;
+      hash = (53 * hash) + getWfmAgentSidsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -585,15 +481,13 @@ private static final long serialVersionUID = 0L;
       }
       widthInMinutes_ = 0;
       isLocked_ = false;
-      if (wfmAgentSidBuilder_ == null) {
-        wfmAgentSid_ = java.util.Collections.emptyList();
+      if (wfmAgentSidsBuilder_ == null) {
+        wfmAgentSids_ = java.util.Collections.emptyList();
       } else {
-        wfmAgentSid_ = null;
-        wfmAgentSidBuilder_.clear();
+        wfmAgentSids_ = null;
+        wfmAgentSidsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000020);
-      metricTypes_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000040);
       return this;
     }
 
@@ -627,20 +521,15 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceReq result) {
-      if (wfmAgentSidBuilder_ == null) {
+      if (wfmAgentSidsBuilder_ == null) {
         if (((bitField0_ & 0x00000020) != 0)) {
-          wfmAgentSid_ = java.util.Collections.unmodifiableList(wfmAgentSid_);
+          wfmAgentSids_ = java.util.Collections.unmodifiableList(wfmAgentSids_);
           bitField0_ = (bitField0_ & ~0x00000020);
         }
-        result.wfmAgentSid_ = wfmAgentSid_;
+        result.wfmAgentSids_ = wfmAgentSids_;
       } else {
-        result.wfmAgentSid_ = wfmAgentSidBuilder_.build();
+        result.wfmAgentSids_ = wfmAgentSidsBuilder_.build();
       }
-      if (((bitField0_ & 0x00000040) != 0)) {
-        metricTypes_ = java.util.Collections.unmodifiableList(metricTypes_);
-        bitField0_ = (bitField0_ & ~0x00000040);
-      }
-      result.metricTypes_ = metricTypes_;
     }
 
     private void buildPartial0(com.tcn.cloud.api.api.v1alpha1.wfm.CreateShiftInstanceReq result) {
@@ -723,41 +612,31 @@ private static final long serialVersionUID = 0L;
       if (other.getIsLocked() != false) {
         setIsLocked(other.getIsLocked());
       }
-      if (wfmAgentSidBuilder_ == null) {
-        if (!other.wfmAgentSid_.isEmpty()) {
-          if (wfmAgentSid_.isEmpty()) {
-            wfmAgentSid_ = other.wfmAgentSid_;
+      if (wfmAgentSidsBuilder_ == null) {
+        if (!other.wfmAgentSids_.isEmpty()) {
+          if (wfmAgentSids_.isEmpty()) {
+            wfmAgentSids_ = other.wfmAgentSids_;
             bitField0_ = (bitField0_ & ~0x00000020);
           } else {
-            ensureWfmAgentSidIsMutable();
-            wfmAgentSid_.addAll(other.wfmAgentSid_);
+            ensureWfmAgentSidsIsMutable();
+            wfmAgentSids_.addAll(other.wfmAgentSids_);
           }
           onChanged();
         }
       } else {
-        if (!other.wfmAgentSid_.isEmpty()) {
-          if (wfmAgentSidBuilder_.isEmpty()) {
-            wfmAgentSidBuilder_.dispose();
-            wfmAgentSidBuilder_ = null;
-            wfmAgentSid_ = other.wfmAgentSid_;
+        if (!other.wfmAgentSids_.isEmpty()) {
+          if (wfmAgentSidsBuilder_.isEmpty()) {
+            wfmAgentSidsBuilder_.dispose();
+            wfmAgentSidsBuilder_ = null;
+            wfmAgentSids_ = other.wfmAgentSids_;
             bitField0_ = (bitField0_ & ~0x00000020);
-            wfmAgentSidBuilder_ = 
+            wfmAgentSidsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getWfmAgentSidFieldBuilder() : null;
+                 getWfmAgentSidsFieldBuilder() : null;
           } else {
-            wfmAgentSidBuilder_.addAllMessages(other.wfmAgentSid_);
+            wfmAgentSidsBuilder_.addAllMessages(other.wfmAgentSids_);
           }
         }
-      }
-      if (!other.metricTypes_.isEmpty()) {
-        if (metricTypes_.isEmpty()) {
-          metricTypes_ = other.metricTypes_;
-          bitField0_ = (bitField0_ & ~0x00000040);
-        } else {
-          ensureMetricTypesIsMutable();
-          metricTypes_.addAll(other.metricTypes_);
-        }
-        onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -817,31 +696,14 @@ private static final long serialVersionUID = 0L;
                   input.readMessage(
                       com.google.protobuf.Int64Value.parser(),
                       extensionRegistry);
-              if (wfmAgentSidBuilder_ == null) {
-                ensureWfmAgentSidIsMutable();
-                wfmAgentSid_.add(m);
+              if (wfmAgentSidsBuilder_ == null) {
+                ensureWfmAgentSidsIsMutable();
+                wfmAgentSids_.add(m);
               } else {
-                wfmAgentSidBuilder_.addMessage(m);
+                wfmAgentSidsBuilder_.addMessage(m);
               }
               break;
             } // case 50
-            case 56: {
-              int tmpRaw = input.readEnum();
-              ensureMetricTypesIsMutable();
-              metricTypes_.add(tmpRaw);
-              break;
-            } // case 56
-            case 58: {
-              int length = input.readRawVarint32();
-              int oldLimit = input.pushLimit(length);
-              while(input.getBytesUntilLimit() > 0) {
-                int tmpRaw = input.readEnum();
-                ensureMetricTypesIsMutable();
-                metricTypes_.add(tmpRaw);
-              }
-              input.popLimit(oldLimit);
-              break;
-            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1190,17 +1052,17 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.util.List<com.google.protobuf.Int64Value> wfmAgentSid_ =
+    private java.util.List<com.google.protobuf.Int64Value> wfmAgentSids_ =
       java.util.Collections.emptyList();
-    private void ensureWfmAgentSidIsMutable() {
+    private void ensureWfmAgentSidsIsMutable() {
       if (!((bitField0_ & 0x00000020) != 0)) {
-        wfmAgentSid_ = new java.util.ArrayList<com.google.protobuf.Int64Value>(wfmAgentSid_);
+        wfmAgentSids_ = new java.util.ArrayList<com.google.protobuf.Int64Value>(wfmAgentSids_);
         bitField0_ |= 0x00000020;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> wfmAgentSidBuilder_;
+        com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> wfmAgentSidsBuilder_;
 
     /**
      * <pre>
@@ -1209,13 +1071,13 @@ private static final long serialVersionUID = 0L;
      * If given more than one sid, then a copy of the instance will be created for each agent.
      * </pre>
      *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
      */
-    public java.util.List<com.google.protobuf.Int64Value> getWfmAgentSidList() {
-      if (wfmAgentSidBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(wfmAgentSid_);
+    public java.util.List<com.google.protobuf.Int64Value> getWfmAgentSidsList() {
+      if (wfmAgentSidsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(wfmAgentSids_);
       } else {
-        return wfmAgentSidBuilder_.getMessageList();
+        return wfmAgentSidsBuilder_.getMessageList();
       }
     }
     /**
@@ -1225,13 +1087,13 @@ private static final long serialVersionUID = 0L;
      * If given more than one sid, then a copy of the instance will be created for each agent.
      * </pre>
      *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
      */
-    public int getWfmAgentSidCount() {
-      if (wfmAgentSidBuilder_ == null) {
-        return wfmAgentSid_.size();
+    public int getWfmAgentSidsCount() {
+      if (wfmAgentSidsBuilder_ == null) {
+        return wfmAgentSids_.size();
       } else {
-        return wfmAgentSidBuilder_.getCount();
+        return wfmAgentSidsBuilder_.getCount();
       }
     }
     /**
@@ -1241,13 +1103,13 @@ private static final long serialVersionUID = 0L;
      * If given more than one sid, then a copy of the instance will be created for each agent.
      * </pre>
      *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
      */
-    public com.google.protobuf.Int64Value getWfmAgentSid(int index) {
-      if (wfmAgentSidBuilder_ == null) {
-        return wfmAgentSid_.get(index);
+    public com.google.protobuf.Int64Value getWfmAgentSids(int index) {
+      if (wfmAgentSidsBuilder_ == null) {
+        return wfmAgentSids_.get(index);
       } else {
-        return wfmAgentSidBuilder_.getMessage(index);
+        return wfmAgentSidsBuilder_.getMessage(index);
       }
     }
     /**
@@ -1257,19 +1119,19 @@ private static final long serialVersionUID = 0L;
      * If given more than one sid, then a copy of the instance will be created for each agent.
      * </pre>
      *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
      */
-    public Builder setWfmAgentSid(
+    public Builder setWfmAgentSids(
         int index, com.google.protobuf.Int64Value value) {
-      if (wfmAgentSidBuilder_ == null) {
+      if (wfmAgentSidsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureWfmAgentSidIsMutable();
-        wfmAgentSid_.set(index, value);
+        ensureWfmAgentSidsIsMutable();
+        wfmAgentSids_.set(index, value);
         onChanged();
       } else {
-        wfmAgentSidBuilder_.setMessage(index, value);
+        wfmAgentSidsBuilder_.setMessage(index, value);
       }
       return this;
     }
@@ -1280,16 +1142,16 @@ private static final long serialVersionUID = 0L;
      * If given more than one sid, then a copy of the instance will be created for each agent.
      * </pre>
      *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
      */
-    public Builder setWfmAgentSid(
+    public Builder setWfmAgentSids(
         int index, com.google.protobuf.Int64Value.Builder builderForValue) {
-      if (wfmAgentSidBuilder_ == null) {
-        ensureWfmAgentSidIsMutable();
-        wfmAgentSid_.set(index, builderForValue.build());
+      if (wfmAgentSidsBuilder_ == null) {
+        ensureWfmAgentSidsIsMutable();
+        wfmAgentSids_.set(index, builderForValue.build());
         onChanged();
       } else {
-        wfmAgentSidBuilder_.setMessage(index, builderForValue.build());
+        wfmAgentSidsBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
@@ -1300,18 +1162,18 @@ private static final long serialVersionUID = 0L;
      * If given more than one sid, then a copy of the instance will be created for each agent.
      * </pre>
      *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
      */
-    public Builder addWfmAgentSid(com.google.protobuf.Int64Value value) {
-      if (wfmAgentSidBuilder_ == null) {
+    public Builder addWfmAgentSids(com.google.protobuf.Int64Value value) {
+      if (wfmAgentSidsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureWfmAgentSidIsMutable();
-        wfmAgentSid_.add(value);
+        ensureWfmAgentSidsIsMutable();
+        wfmAgentSids_.add(value);
         onChanged();
       } else {
-        wfmAgentSidBuilder_.addMessage(value);
+        wfmAgentSidsBuilder_.addMessage(value);
       }
       return this;
     }
@@ -1322,19 +1184,19 @@ private static final long serialVersionUID = 0L;
      * If given more than one sid, then a copy of the instance will be created for each agent.
      * </pre>
      *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
      */
-    public Builder addWfmAgentSid(
+    public Builder addWfmAgentSids(
         int index, com.google.protobuf.Int64Value value) {
-      if (wfmAgentSidBuilder_ == null) {
+      if (wfmAgentSidsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureWfmAgentSidIsMutable();
-        wfmAgentSid_.add(index, value);
+        ensureWfmAgentSidsIsMutable();
+        wfmAgentSids_.add(index, value);
         onChanged();
       } else {
-        wfmAgentSidBuilder_.addMessage(index, value);
+        wfmAgentSidsBuilder_.addMessage(index, value);
       }
       return this;
     }
@@ -1345,16 +1207,16 @@ private static final long serialVersionUID = 0L;
      * If given more than one sid, then a copy of the instance will be created for each agent.
      * </pre>
      *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
      */
-    public Builder addWfmAgentSid(
+    public Builder addWfmAgentSids(
         com.google.protobuf.Int64Value.Builder builderForValue) {
-      if (wfmAgentSidBuilder_ == null) {
-        ensureWfmAgentSidIsMutable();
-        wfmAgentSid_.add(builderForValue.build());
+      if (wfmAgentSidsBuilder_ == null) {
+        ensureWfmAgentSidsIsMutable();
+        wfmAgentSids_.add(builderForValue.build());
         onChanged();
       } else {
-        wfmAgentSidBuilder_.addMessage(builderForValue.build());
+        wfmAgentSidsBuilder_.addMessage(builderForValue.build());
       }
       return this;
     }
@@ -1365,16 +1227,16 @@ private static final long serialVersionUID = 0L;
      * If given more than one sid, then a copy of the instance will be created for each agent.
      * </pre>
      *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
      */
-    public Builder addWfmAgentSid(
+    public Builder addWfmAgentSids(
         int index, com.google.protobuf.Int64Value.Builder builderForValue) {
-      if (wfmAgentSidBuilder_ == null) {
-        ensureWfmAgentSidIsMutable();
-        wfmAgentSid_.add(index, builderForValue.build());
+      if (wfmAgentSidsBuilder_ == null) {
+        ensureWfmAgentSidsIsMutable();
+        wfmAgentSids_.add(index, builderForValue.build());
         onChanged();
       } else {
-        wfmAgentSidBuilder_.addMessage(index, builderForValue.build());
+        wfmAgentSidsBuilder_.addMessage(index, builderForValue.build());
       }
       return this;
     }
@@ -1385,17 +1247,17 @@ private static final long serialVersionUID = 0L;
      * If given more than one sid, then a copy of the instance will be created for each agent.
      * </pre>
      *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
      */
-    public Builder addAllWfmAgentSid(
+    public Builder addAllWfmAgentSids(
         java.lang.Iterable<? extends com.google.protobuf.Int64Value> values) {
-      if (wfmAgentSidBuilder_ == null) {
-        ensureWfmAgentSidIsMutable();
+      if (wfmAgentSidsBuilder_ == null) {
+        ensureWfmAgentSidsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, wfmAgentSid_);
+            values, wfmAgentSids_);
         onChanged();
       } else {
-        wfmAgentSidBuilder_.addAllMessages(values);
+        wfmAgentSidsBuilder_.addAllMessages(values);
       }
       return this;
     }
@@ -1406,15 +1268,15 @@ private static final long serialVersionUID = 0L;
      * If given more than one sid, then a copy of the instance will be created for each agent.
      * </pre>
      *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
      */
-    public Builder clearWfmAgentSid() {
-      if (wfmAgentSidBuilder_ == null) {
-        wfmAgentSid_ = java.util.Collections.emptyList();
+    public Builder clearWfmAgentSids() {
+      if (wfmAgentSidsBuilder_ == null) {
+        wfmAgentSids_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
       } else {
-        wfmAgentSidBuilder_.clear();
+        wfmAgentSidsBuilder_.clear();
       }
       return this;
     }
@@ -1425,15 +1287,15 @@ private static final long serialVersionUID = 0L;
      * If given more than one sid, then a copy of the instance will be created for each agent.
      * </pre>
      *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
      */
-    public Builder removeWfmAgentSid(int index) {
-      if (wfmAgentSidBuilder_ == null) {
-        ensureWfmAgentSidIsMutable();
-        wfmAgentSid_.remove(index);
+    public Builder removeWfmAgentSids(int index) {
+      if (wfmAgentSidsBuilder_ == null) {
+        ensureWfmAgentSidsIsMutable();
+        wfmAgentSids_.remove(index);
         onChanged();
       } else {
-        wfmAgentSidBuilder_.remove(index);
+        wfmAgentSidsBuilder_.remove(index);
       }
       return this;
     }
@@ -1444,11 +1306,11 @@ private static final long serialVersionUID = 0L;
      * If given more than one sid, then a copy of the instance will be created for each agent.
      * </pre>
      *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
      */
-    public com.google.protobuf.Int64Value.Builder getWfmAgentSidBuilder(
+    public com.google.protobuf.Int64Value.Builder getWfmAgentSidsBuilder(
         int index) {
-      return getWfmAgentSidFieldBuilder().getBuilder(index);
+      return getWfmAgentSidsFieldBuilder().getBuilder(index);
     }
     /**
      * <pre>
@@ -1457,13 +1319,13 @@ private static final long serialVersionUID = 0L;
      * If given more than one sid, then a copy of the instance will be created for each agent.
      * </pre>
      *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
      */
-    public com.google.protobuf.Int64ValueOrBuilder getWfmAgentSidOrBuilder(
+    public com.google.protobuf.Int64ValueOrBuilder getWfmAgentSidsOrBuilder(
         int index) {
-      if (wfmAgentSidBuilder_ == null) {
-        return wfmAgentSid_.get(index);  } else {
-        return wfmAgentSidBuilder_.getMessageOrBuilder(index);
+      if (wfmAgentSidsBuilder_ == null) {
+        return wfmAgentSids_.get(index);  } else {
+        return wfmAgentSidsBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
@@ -1473,14 +1335,14 @@ private static final long serialVersionUID = 0L;
      * If given more than one sid, then a copy of the instance will be created for each agent.
      * </pre>
      *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
      */
     public java.util.List<? extends com.google.protobuf.Int64ValueOrBuilder> 
-         getWfmAgentSidOrBuilderList() {
-      if (wfmAgentSidBuilder_ != null) {
-        return wfmAgentSidBuilder_.getMessageOrBuilderList();
+         getWfmAgentSidsOrBuilderList() {
+      if (wfmAgentSidsBuilder_ != null) {
+        return wfmAgentSidsBuilder_.getMessageOrBuilderList();
       } else {
-        return java.util.Collections.unmodifiableList(wfmAgentSid_);
+        return java.util.Collections.unmodifiableList(wfmAgentSids_);
       }
     }
     /**
@@ -1490,10 +1352,10 @@ private static final long serialVersionUID = 0L;
      * If given more than one sid, then a copy of the instance will be created for each agent.
      * </pre>
      *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
      */
-    public com.google.protobuf.Int64Value.Builder addWfmAgentSidBuilder() {
-      return getWfmAgentSidFieldBuilder().addBuilder(
+    public com.google.protobuf.Int64Value.Builder addWfmAgentSidsBuilder() {
+      return getWfmAgentSidsFieldBuilder().addBuilder(
           com.google.protobuf.Int64Value.getDefaultInstance());
     }
     /**
@@ -1503,11 +1365,11 @@ private static final long serialVersionUID = 0L;
      * If given more than one sid, then a copy of the instance will be created for each agent.
      * </pre>
      *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
      */
-    public com.google.protobuf.Int64Value.Builder addWfmAgentSidBuilder(
+    public com.google.protobuf.Int64Value.Builder addWfmAgentSidsBuilder(
         int index) {
-      return getWfmAgentSidFieldBuilder().addBuilder(
+      return getWfmAgentSidsFieldBuilder().addBuilder(
           index, com.google.protobuf.Int64Value.getDefaultInstance());
     }
     /**
@@ -1517,213 +1379,25 @@ private static final long serialVersionUID = 0L;
      * If given more than one sid, then a copy of the instance will be created for each agent.
      * </pre>
      *
-     * <code>repeated .google.protobuf.Int64Value wfm_agent_sid = 6 [json_name = "wfmAgentSid"];</code>
+     * <code>repeated .google.protobuf.Int64Value wfm_agent_sids = 6 [json_name = "wfmAgentSids"];</code>
      */
     public java.util.List<com.google.protobuf.Int64Value.Builder> 
-         getWfmAgentSidBuilderList() {
-      return getWfmAgentSidFieldBuilder().getBuilderList();
+         getWfmAgentSidsBuilderList() {
+      return getWfmAgentSidsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
         com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-        getWfmAgentSidFieldBuilder() {
-      if (wfmAgentSidBuilder_ == null) {
-        wfmAgentSidBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+        getWfmAgentSidsFieldBuilder() {
+      if (wfmAgentSidsBuilder_ == null) {
+        wfmAgentSidsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                wfmAgentSid_,
+                wfmAgentSids_,
                 ((bitField0_ & 0x00000020) != 0),
                 getParentForChildren(),
                 isClean());
-        wfmAgentSid_ = null;
+        wfmAgentSids_ = null;
       }
-      return wfmAgentSidBuilder_;
-    }
-
-    private java.util.List<java.lang.Integer> metricTypes_ =
-      java.util.Collections.emptyList();
-    private void ensureMetricTypesIsMutable() {
-      if (!((bitField0_ & 0x00000040) != 0)) {
-        metricTypes_ = new java.util.ArrayList<java.lang.Integer>(metricTypes_);
-        bitField0_ |= 0x00000040;
-      }
-    }
-    /**
-     * <pre>
-     * Metric types for the shift instance.
-     * </pre>
-     *
-     * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
-     * @return A list containing the metricTypes.
-     */
-    public java.util.List<com.tcn.cloud.api.api.commons.PerformanceMetricType> getMetricTypesList() {
-      return new com.google.protobuf.Internal.ListAdapter<
-          java.lang.Integer, com.tcn.cloud.api.api.commons.PerformanceMetricType>(metricTypes_, metricTypes_converter_);
-    }
-    /**
-     * <pre>
-     * Metric types for the shift instance.
-     * </pre>
-     *
-     * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
-     * @return The count of metricTypes.
-     */
-    public int getMetricTypesCount() {
-      return metricTypes_.size();
-    }
-    /**
-     * <pre>
-     * Metric types for the shift instance.
-     * </pre>
-     *
-     * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
-     * @param index The index of the element to return.
-     * @return The metricTypes at the given index.
-     */
-    public com.tcn.cloud.api.api.commons.PerformanceMetricType getMetricTypes(int index) {
-      return metricTypes_converter_.convert(metricTypes_.get(index));
-    }
-    /**
-     * <pre>
-     * Metric types for the shift instance.
-     * </pre>
-     *
-     * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
-     * @param index The index to set the value at.
-     * @param value The metricTypes to set.
-     * @return This builder for chaining.
-     */
-    public Builder setMetricTypes(
-        int index, com.tcn.cloud.api.api.commons.PerformanceMetricType value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      ensureMetricTypesIsMutable();
-      metricTypes_.set(index, value.getNumber());
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Metric types for the shift instance.
-     * </pre>
-     *
-     * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
-     * @param value The metricTypes to add.
-     * @return This builder for chaining.
-     */
-    public Builder addMetricTypes(com.tcn.cloud.api.api.commons.PerformanceMetricType value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      ensureMetricTypesIsMutable();
-      metricTypes_.add(value.getNumber());
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Metric types for the shift instance.
-     * </pre>
-     *
-     * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
-     * @param values The metricTypes to add.
-     * @return This builder for chaining.
-     */
-    public Builder addAllMetricTypes(
-        java.lang.Iterable<? extends com.tcn.cloud.api.api.commons.PerformanceMetricType> values) {
-      ensureMetricTypesIsMutable();
-      for (com.tcn.cloud.api.api.commons.PerformanceMetricType value : values) {
-        metricTypes_.add(value.getNumber());
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Metric types for the shift instance.
-     * </pre>
-     *
-     * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearMetricTypes() {
-      metricTypes_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000040);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Metric types for the shift instance.
-     * </pre>
-     *
-     * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
-     * @return A list containing the enum numeric values on the wire for metricTypes.
-     */
-    public java.util.List<java.lang.Integer>
-    getMetricTypesValueList() {
-      return java.util.Collections.unmodifiableList(metricTypes_);
-    }
-    /**
-     * <pre>
-     * Metric types for the shift instance.
-     * </pre>
-     *
-     * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of metricTypes at the given index.
-     */
-    public int getMetricTypesValue(int index) {
-      return metricTypes_.get(index);
-    }
-    /**
-     * <pre>
-     * Metric types for the shift instance.
-     * </pre>
-     *
-     * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
-     * @param index The index to set the value at.
-     * @param value The enum numeric value on the wire for metricTypes to set.
-     * @return This builder for chaining.
-     */
-    public Builder setMetricTypesValue(
-        int index, int value) {
-      ensureMetricTypesIsMutable();
-      metricTypes_.set(index, value);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Metric types for the shift instance.
-     * </pre>
-     *
-     * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
-     * @param value The enum numeric value on the wire for metricTypes to add.
-     * @return This builder for chaining.
-     */
-    public Builder addMetricTypesValue(int value) {
-      ensureMetricTypesIsMutable();
-      metricTypes_.add(value);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Metric types for the shift instance.
-     * </pre>
-     *
-     * <code>repeated .api.commons.PerformanceMetricType metric_types = 7 [json_name = "metricTypes"];</code>
-     * @param values The enum numeric values on the wire for metricTypes to add.
-     * @return This builder for chaining.
-     */
-    public Builder addAllMetricTypesValue(
-        java.lang.Iterable<java.lang.Integer> values) {
-      ensureMetricTypesIsMutable();
-      for (int value : values) {
-        metricTypes_.add(value);
-      }
-      onChanged();
-      return this;
+      return wfmAgentSidsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
